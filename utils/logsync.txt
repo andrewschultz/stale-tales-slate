@@ -549,6 +549,7 @@ spear>pears
 lumps>plums
 slime>limes
 moss cap>compass
+sated stead>dates
 magenta rope>pomegranate
 megaton pear>pomegranate
 rampage note>pomegranate

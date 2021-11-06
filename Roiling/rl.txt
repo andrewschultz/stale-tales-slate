@@ -828,7 +828,14 @@ Yes. ?RYRY leaves us with (IA)/S/(AI)/(SD)/(AIE).
 That gives us (AI)S(AI)DE.
 ISADE doesn't work, so, ASIDE.
 >STORE H
->>CURTIS'S COIN(S)
+>>RUSTIC CITRUS
+# logic for sated stead
+?What can I figure from the sated stead?
+The three ambiguous readings in the middle actually eliminate possibilities for where a couple letters can be.
+DT AT ET AE ST are the readings, leaving D in slot 1 and S in slot 5, since they can't be elsewhere.
+That leaves only two possibilities for D (AT) (ET) (AE) S.
+DTEAS is nonsense, so...
+DATES.
 # logic for coins
 ?Why are the coins giving me such confusing clues?
 The (plain) coins near the end are, unavoidably, confusing. That's because they can, like the USB, get a description and become a thing which has no letters in common.

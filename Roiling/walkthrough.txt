@@ -1826,7 +1826,7 @@ And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even..
 
 STORE H
 
-This is a sort of catch-all area that I hope is still entertaining. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. I left out the tougher ones for expedience.
+This is a sort of catch-all area that I hope is still entertaining. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. I tried to write up the easier ones for expedience.
 
 You can actually win Store H/Others without visiting the Clangier Clearing, if you plan right, but I figure I'd give the whole panoramic view.
 
@@ -1839,8 +1839,8 @@ If you've already completed the game, you can
 > X STAND
 > PEARS
 > PLUMS
-> GRAPES
-> BLUEBERRIES
+> LIMES
+> DATES
 
 Hmm! What to do with a moss cap?
 
@@ -1859,7 +1859,7 @@ Some goofy puzzles here. You probably figured the general theme.
 
 Yay, a tekno-token for money.
 
-> LIMES
+> GRAPES
 > POMEGRANATE
 > CANTALOUPE
 > PERSIMMON

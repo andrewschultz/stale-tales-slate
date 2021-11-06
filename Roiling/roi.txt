@@ -1696,6 +1696,9 @@ A coin (13 points, 8 more fruits),
 Another coin (17 points, 12 more fruits),
 And a droll dollar (21 points, 16 more fruits).
 Beyond that, he just takes stuff. But you don't need any one specific fruit for any quest.
+?Is the sated stead useful?
+Yes.
+It can become <b>DATES</b>.
 ?Mad Train?
 <b>TAMARIND</b>.
 ?Peanut Cola?

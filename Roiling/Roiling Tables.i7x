@@ -1732,6 +1732,7 @@ pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers 
 slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry."
 spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold!"
 lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around."
+sated stead	dates	true	350407000	--	"dates"	"dates" or "date"	--	--	"The sated stead shakes a bit, then disappears. In its place are some dates."
 eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	--	--	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes." [start rustic citrus hard]
 peanut cola	cantaloupe	true	637943038	--	"cantaloupe"	"cantaloupe"	--	--	"The cola bottle turns into a sort of tannish sphere, and you hear pulps splup inside."
 harmonicas	maraschino cherry	true	494589373	--	"maraschino"	"maraschino" or "maraschino cherries/cherry"	--	--	"Several painfully tinny chords later, the off-red harmonicas become a maraschino cherry."
@@ -3361,6 +3362,7 @@ stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and 
 
 table of others scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
+sated stead	true	true	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice."
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."

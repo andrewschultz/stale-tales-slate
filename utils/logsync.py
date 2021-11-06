@@ -517,14 +517,16 @@ def check_scannotes():
     last_table_line = 0
     table_start = 0
     scannotes_start = -1
-    with open(i7.hdr('roi', 'ta')) as file:
+    this_file = i7.hdr('roi', 'ta')
+    this_file_b = os.path.basename(this_file)
+    with open(this_file) as file:
         for (line_count, line) in enumerate(file, 1):
             if reading_header:
                 in_table = True
                 reading_header = False
                 continue
             if line.startswith('table of') and 'scannotes' in line:
-                scannotes_start = "{} line {}+".format(r_src, line_count)
+                scannotes_start = "{} line {}+".format(this_file_b, line_count)
                 table_start = line_count
                 reading_header = True
                 continue
@@ -564,7 +566,7 @@ def check_scannotes():
     for my_idx in range(0, len(source_logic_approximate_order)):
         x = source_logic_approximate_order[my_idx]
         if table_shorten(x) not in in_scannotes.keys():# and x not in abbrevs.keys():
-            print("May need", x, "in scannotes table {}. Best guess: line {}.".format(scannotes_start, last_scannotes))
+            print("May need {} in scannotes table {}. Best guess: line {}.".format(x, scannotes_start, max(last_scannotes, table_start + 2)))
             mt.add_postopen(r_src, last_scannotes + 1)
             mayneedscannote += 1
         else:

@@ -19450,7 +19450,7 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "Greenish sheering surrounds you on all sides. It'd be easy to get lost in, [if player has compass]but your compass will help you keep on track to the north[else]as you'd get turned around quickly[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
+description of Rustic Citrus is "Greenish sheering surrounds you on all sides. It'd be easy to get lost in, [if player has compass]but your compass will help you keep on track to the north[else]as you'd get turned around quickly[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[else if dates stead is in rustic citrus].[paragraph break]You can still see the sated stead where the rust circuits were[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
 
 for printing the name of a start-pre-fruit (called spf) while printing the locale description: say "[locale-text of spf]"
 
@@ -19778,7 +19778,8 @@ chapter ruts circuits
 
 the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, a mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
-after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 conditions should be all true or all false, but just in case...]
+after examining ruts circuits (this is the reveal ruts circuits rule) :
+	move sated stead to Rustic Citrus;
 	move peanut cola to Rustic Citrus;
 	if pears are not off-stage, move megaton pear to Rustic Citrus;
 	move magenta rope to Rustic Citrus;
@@ -19789,8 +19790,16 @@ after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 c
 	move mad train to Rustic Citrus;
 	move eerie blurbs to Rustic Citrus;
 	moot ruts circuits;
-	say "Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
+	say "Now that you've found everything they contain, the ruts circuits have become a sated stead.";
 	continue the action;
+
+chapter sated stead
+
+a sated stead is boring vanishing scenery. description is "It seems like it's done all it can ... or has it?". bore-text of sated stead is "Well, there's not much to do with the [stead]. Not much normal, anyway."
+
+a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "D[sp]?[sp]?[sp]-[sp]S".
+
+the dates are a fruit.
 
 chapter maraschino
 
@@ -22349,6 +22358,7 @@ this is the others-misses rule:
 	if ruts circuits is unexamined:
 		say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
 	else:
+		if dates are not moot, say "[2drm of dates]the sated stead could've become [b]DATES[r].";
 		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a [b]TAMARIND[r].";
 		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become [b]MARASCHINO[r] cherries.";
 		if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become [b]BLUEBERRIES[r].";
