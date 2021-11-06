@@ -463,6 +463,8 @@ gooseberry,yeborersgo
 coconuts,scoutcon,onstucco,suncotco
 #clangier clearing
 among,mango,goman
+#qver of i solve voiles
+olives,YR?R??=isolve=voiles
 #qver of prices precis
 cripes,RP?R?P=prices=precis
 #filed field

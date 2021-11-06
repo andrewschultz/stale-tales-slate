@@ -1807,6 +1807,8 @@ Uno, duo, tre, quattre, ...
 <b>CINQUE</b>.
 ?Lemons?
 <b>SOLEMN</b>.
+?The I-Solve Voiles?
+<b>OLIVES</b>.
 ?The prices precis?
 An error makes you want to lash out at the prices precis.
 <b>CRIPES</b>!

@@ -637,7 +637,7 @@ understand the command "mis" as something new.
 understand "mis" as mising.
 
 carry out mising:
-	carry out the showing what the player missed activity;
+	process the show what the player missed rule;
 	the rule succeeds;
 
 chapter ieming
@@ -1369,7 +1369,7 @@ understand "missed" as misseding.
 carry out misseding:
 	say "[miss-types].[paragraph break]";
 	now mrlp is solved;
-	carry out the showing what the player missed activity;
+	process the show what the player missed rule;
 	now mrlp is unsolved;
 	the rule succeeds;
 
@@ -1387,7 +1387,7 @@ understand "alt" as missalting.
 
 carry out missalting:
 	say "[miss-types].[paragraph break]";
-	carry out the showing alternate routes activity;
+	process the show alternate routes rule;
 	the rule succeeds;
 
 to say miss-types:

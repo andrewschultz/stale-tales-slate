@@ -884,6 +884,12 @@ Yes. The two question marks don't mean much. In fact, they give good information
 Divide the words as NOAMM / OGANG. Then O can't be in slot 1, which is a vowel. So A-O--.
 Also, G must be in slot 5. It can't be in slot 2, and the question mark means MN is in slot 4.
 That leaves ANOMG or AMONG. Now, AN OMG is ... possible, but AMONG is a better way to mingle.
+# logic for i solve voiles
+?What is behind the I-Solve Voiles?
+Two of the three ambiguous slots are vowels. One of the vowels must be 3, as otherwise 5 and 6 would both be E. So 3 is I.
+However, one of 5 and 6 now must be E, or we won't have enough vowels. Slot 1, then, is O.
+O(LV)I(SV)(EV)(ES) is left. So slot 2 is L, but that leaves two possibilities.
+OLISVE isn't a word, but OLIVES is.
 >>SCAPE SPACE
 # logic for reserved deserver dr severe
 ?What should the inapt paint become?

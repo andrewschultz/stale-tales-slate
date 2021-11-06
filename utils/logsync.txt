@@ -589,6 +589,7 @@ lemons>solemn
 >IGNORE=melon
 prices precis>cripes
 no ammo gang>among
+i solve voiles>olives
 ####scape space
 engaro orange>go near
 a banna~naa na b a banna>banana

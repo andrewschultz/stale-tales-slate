@@ -2063,8 +2063,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "drol"	234519308	lord al	--	"[count-enuf]."
 "droll"	288333147	dollar	--	"[count-enuf]."
 "dollar"	290520965	dollar	--	"[count-enuf]."
-"guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it."
-"kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape. Just return it to Curtis."
+["guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it."
+"kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape. Just return it to Curtis."]
 "feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP."
 
 to say coin-icon:
@@ -2199,6 +2199,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "clearing"	434637210	--	--	"[locname]."
 "len"	250527456	--	--	"[len-part]."
 "craig"	184109754	--	--	"[len-part]."
+"voile"	408130191	voiles	--	"No, it's what's behind the voiles."
 "price"	358594302	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already helped correct the prices precis[end if]."
 "overpriced"	774270700	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
 "lemon"	388955186	--	lemnomel rule	"You can't focus on just one of the lemons, but you don't need to." [this needs to be here if you got LEMON but not MELONS]
