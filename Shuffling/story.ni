@@ -153,22 +153,24 @@ a region has a table name called done reject table.
 
 a region has a table name called hintobjstable.
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule.
+a region has a rule called altrule.
+
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.]
 [LLP(s): both bulge/blot, darnels, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule.
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.]
 [LLP(s): cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule.
 [LLP(s): slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.]
 [LLP(s): cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule.
 [LLP(s): antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule.
 [LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 orig-region is Ordeal Loader.
@@ -10677,10 +10679,13 @@ volume endgame
 book final question options (see what missed)
 
 Table of Final Question Options (continued)
-final question wording	only if victorious	topic		final response rule		final response activity
-"see what you may've MISSED (with minor spoilers for alternate routes) point-wise"	true	"missed"	--	showing what the player missed
+final question wording	only if victorious	topic	final response rule		final response activity
+"see what you may've MISSED point-wise"	true	"missed"	show what the player missed rule	--
+"see ALTernate mutually exclusive ways through"	true	"alt"	show alternate paths rule	--
 
-showing what the player missed is an activity.
+this is the show alternate paths rule:
+	repeat with zq running through solved regions:
+		process the altrule of zq;
 
 sect-missed is a truth state that varies.
 
@@ -10692,7 +10697,7 @@ to say 2da of (rg - a region):
 
 to say 2dn: say "[unless sr-acc is true]--[end if]".
 
-rule for showing what the player missed:
+this is the show what the player missed rule:
 	now sect-missed is false;
 	let missed-points be 0;
 	repeat with zq running through solved regions:
@@ -10752,9 +10757,6 @@ this is the sortie-misses rule:
 
 this is the metros-misses rule:
 	if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the [bastion] could've become [b]RENTALS[r].";
-	say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
-	say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
-	say "[2dn]the other ways to get the tulip are to [alt-sols].";
 
 this is the resort-misses rule:
 	if found-lies is false, say "[2da of resort]you could've said [b]LIES[r] [if l2 are in Leis Isle]to expose the [isle] as an illusion[else]instead of taking the leis[end if].";
@@ -10764,8 +10766,27 @@ this is the resort-misses rule:
 	if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to [b]GRIPS[r][toolwood].";
 	if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to [b]TOEHOLDS[r] for 2 points.";
 	if china is off-stage, say "[2da of resort]the chain links in [potshot hotspot] could've become [b]CHINA[r]. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
-	if resort is solved: [so there are no testing artifacts with MISSES before]
-		say "[line break]There were three final commands to win the game. You chose [if end-path is 0][b]EXIST[r][else if end-path is 1][b]NAMES[r][else][b]AMENS[r][end if], but [one of]there are two other ways to win. Type [b]MISSED[r] again to see them, unless you want to type [b]UNDO[r] to guess[or]you could also have tried [if end-path is 0][b]NAMES[r]/[b]AMENS[r][else if end-path is 1][b]EXIST[r]/[b]AMENS[r][else][b]EXIST[r]/[b]NAMES[r][end if][stopping]."
+
+chapter alt rules
+
+guider-dir is a truth state that varies.
+
+rule for printing the name of a guider (called gu) when guider-dir is true:
+	say " ([godir of gu])";
+
+this is the forest-alt rule:
+	say "Since the forest had only two directions you had to choose, you'll probably not be surprised there were two other things that cued different ways.";
+	now guider-dir is true;
+	say "[list of not moot guiders].";
+	now guider-dir is false;
+
+this is the metros-alt rule:
+	say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose from [florae] (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.";
+	say "You could have gotten the [if begonias are not moot]begonias[else]heaths[end if] from [florae].";
+	say "[2dn]the other ways to get the tulip are to [alt-sols].";
+
+this is the resort-alt rule:
+	say "[line break]There were three final commands to win the game. You chose [if end-path is 0][b]EXIST[r][else if end-path is 1][b]NAMES[r][else][b]AMENS[r][end if], but [one of]there are two other ways to win. Type [b]MISSED[r] again to see them, unless you want to type [b]UNDO[r] to guess[or]you could also have tried [if end-path is 0][b]NAMES[r]/[b]AMENS[r][else if end-path is 1][b]EXIST[r]/[b]AMENS[r][else][b]EXIST[r]/[b]NAMES[r][end if][stopping]."
 
 book amusing
 

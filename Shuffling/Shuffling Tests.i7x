@@ -755,7 +755,9 @@ understand the command "shomis" as something new.
 understand "shomis" as shomising.
 
 carry out shomising:
-	carry out the showing what the player missed activity;
+	process the show what the player missed rule;
+	say "[line break]ALTERNATE PATHS:[paragraph break]";
+	process the show alternate paths rule;
 	the rule succeeds;
 
 chapter tnting
