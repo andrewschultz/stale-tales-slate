@@ -293,9 +293,9 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather. misses-rule of others is others-misses rule.
-[There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
-only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 44. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather. misses-rule of others is others-misses rule.
+[There are so many possibilities for a minimum solution--about 38 choose 20, or 33.6 billion--I won't go through them all. Well, technically, take away 10c3*28c17 + 10c2*28c18 + 10c1*28c19 + 10c0*28c20 to get 31.9 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
+only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (38) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.] [general blather table of demo dome is table of demo dome general blather.] [reflexive blather table of demo dome is table of demo dome reflexive blather.] [misses-rule of demo dome is demo dome-misses rule.]
 
@@ -7387,9 +7387,8 @@ after fliptoing (this is the fruit cue rule):
 	if ncf > 5 and remainder after dividing ncf by 4 is 2:
 		say "You can carry all those fruits in your super purse without them getting mushed, but they are piling up. If you can't find a way to make any more fruits, maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
 		now another-break is true;
-	let frr be frroom of noun;
 	repeat with myf running through fruits:
-		if frr is frroom of myf:
+		if location of player is frroom of myf:
 			unless player has myf or myf is moot:
 				d "[myf] still to do.";
 				continue the action;
@@ -19457,7 +19456,7 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "Greenish sheering surrounds you on all sides. It'd be easy to get lost in, [if player has compass]but your compass will help you keep on track to the north[else]as you'd get turned around quickly[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[else if dates stead is in rustic citrus].[paragraph break]You can still see the sated stead where the rust circuits were[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
+description of Rustic Citrus is "Greenish sheering surrounds you on all sides. It'd be easy to get lost in, [if player has compass]but your compass will help you keep on track to the north[else]as you'd get turned around quickly[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[else if sated stead is in rustic citrus].[paragraph break]You can still see the sated stead where the rust circuits were[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
 
 for printing the name of a start-pre-fruit (called spf) while printing the locale description: say "[locale-text of spf]"
 
@@ -19804,9 +19803,9 @@ chapter sated stead
 
 a sated stead is boring vanishing scenery. description is "It seems like it's done all it can ... or has it?". bore-text of sated stead is "Well, there's not much to do with the [stead]. Not much normal, anyway."
 
-a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "D[sp]?[sp]?[sp]-[sp]S".
+a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "d[sp]?[sp]?[sp]-[sp]s".
 
-the dates are a fruit.
+the dates are a plural-named fruit. description is "They're dates. They're edible.". frroom of dates is Rustic Citrus.
 
 chapter maraschino
 
@@ -20263,7 +20262,7 @@ check going east in swell wells:
 	if tekno token is off-stage, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
 	if tekno token is moot, say "You bartered for everything you could in the Clangier Clearing." instead
 
-Clangier Clearing is a sideroom. it is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges. missed-text of Clangier Clearing is "a sales area east of Swell Wells with a lot of fruits"
+Clangier Clearing is a sideroom. it is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION[if voiles are in Clangier Clearing]. I-Solve Voiles advertise a free prize to anyone who guesses what is behind them[end if].[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges. missed-text of Clangier Clearing is "a sales area east of Swell Wells with a lot of fruits"
 
 after looking in Clangier Clearing:
 	set the pronoun them to nameless salesmen;
@@ -20339,6 +20338,14 @@ before talking to nameless salesmen:
 Include (-
 	has transparent talkable
 -) when defining nameless salesmen.
+
+chapter i solve voiles
+
+the i solve voiles are plural-named vanishing scenery in Clangier Clearing. "Something is behind the voiles, but you're not sure what.".
+
+a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "o[sp]l[sp]i[sp]x[sp]e[sp]x".
+
+the jar of olives is a boring fruit. "Some green (with and without pimentos,) some black.". bore-text of olives is "You can put olives on your fingers or whatever once you're done with this little exploit. You'll have all the olives you want. For now, you're doing stuff for Curtis."
 
 chapter prices precis
 
@@ -22335,7 +22342,7 @@ this is the others-misses rule:
 	if ruts circuits is unexamined:
 		say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
 	else:
-		if dates are not moot, say "[2drm of dates]the sated stead could've become [b]DATES[r].";
+		if dates are not moot, say "[2drm of Rustic Citrus]the sated stead could've become [b]DATES[r].";
 		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a [b]TAMARIND[r].";
 		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become [b]MARASCHINO[r] cherries.";
 		if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become [b]BLUEBERRIES[r].";
@@ -22356,13 +22363,14 @@ this is the others-misses rule:
 	if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a [b]RASPBERRY[r].";
 	if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become [b]BLACKBERRIES[r].";
 	if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a [b]WATERMELON[r].";
-	if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked [b]SOLEMN[r] to get lemons."; [Clangier Clearing]
-	if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said [b]MO LEN[r] or [b]LEN MO[r] to get a melon.";
-	if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten [b]PAPAYAS[r] from the 'Pay [b]ASAP[r]' Auction Caution.";
-	if mango is not moot, say "[2drm of Clangier Clearing]you could've gone [b]AMONG[r] the No-Ammo Gang for a mango.";
+	if mango is not moot, say "[2drm of Clangier Clearing]you could've gone [b]AMONG[r] the No-Ammo Gang for a mango."; [Clangier Clearing]
 	if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach [b]CHEAP[r].";
-	if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said [b]CRIPES[r] at the prices precis.";
+	if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said [b]MO LEN[r] or [b]LEN MO[r] to get a melon.";
 	if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs [b]CINQUE[r].";
+	if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said [b]CRIPES[r] at the prices precis.";
+	if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked [b]SOLEMN[r] to get lemons.";
+	if olives are not dislodged, say "[2drm of Clangier Clearing]you could've found [b]OLIVES[r] behind the I-Solve Voiles.";
+	if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten [b]PAPAYAS[r] from the 'Pay [b]ASAP[r]' Auction Caution.";
 	if nectarine is not dislodged, say "[2drm of Clangier Clearing]you could've made the nectarine [b]ANCIENTER[r].";
 	if orange is not dislodged, say "[2drm of Scape Space]you could've tried to [b]GO NEAR[r] to get the orange."; [Scape Space]
 	if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a [b]BANANA[r].";
