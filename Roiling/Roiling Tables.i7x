@@ -337,6 +337,7 @@ Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	post-desire rule	
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	--	--	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus.[paragraph break]Si Reed sees you gazing at DIVORCES, picks it up, throws it away, and says 'So what's the deal? You motivated to move ahead in life, or not?' Why, yes. Yes you are."
 praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]"
+sectarian craniates	sectarian craniates	false	549795471	--	"ascertain"	"ascertain"	--	--	"You look this way and that at [craniates] and, yes, you think you have a revelation or two. Maybe it is only a revelation about how to pretend you had a real revelation, but it will serve you well to seem thoughtful to important people in the future. Who knows, maybe one of them actually has gotten something from [craniates], and if you impress them enough, they might show you whatever the heck it might be."
 END PRONER POD	END PRONER POD	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	post-pod-ponder rule	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 red vees	red vees	false	693210005	--	"deserve"	"deserve"	--	post-redvees-deserve rule	"You believe you can, and you can! Once you do, your office fills up with meaningful and productive stuff. The salt, though the smallest, may be the most important. The rest is just trappings."
 salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start lastin['] like Stalin. [']Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom.[paragraph break]In addition, there's more 'fine art' to help you focus on your work. [bb-st] now look down on you disapprovingly. For motivation, of course. For motivation."
@@ -441,6 +442,7 @@ this is the post-rivets-strive rule:
 
 this is the post-pod-ponder rule:
 	if cone-points < 2, poss-d;
+	if sectarian craniates is reflexive, poss-d;
 	now econ cone is shunned;
 
 this is the post-redvees-deserve rule:
@@ -3233,6 +3235,7 @@ me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. Eas
 LEAD	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!"
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
 rivets	false	true	false	false	"Hmm, along with the information for scanning Trevis, you might really have something here." [??what if already STRIVEd]
+sectarian craniates	true	true	false	false	"Wow. You have even more to think about, now! It's certainly a thoughtful piece of art, whatever it is. You are sure the reading provides you with a good deal of concrete and subjective thoughts to analyze."
 marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
@@ -3457,14 +3460,16 @@ SNORE SO ARENA	"The SNORE SO ARENA flashes weirdly."
 evil bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track."
 L Clear Cellar	"It's...hmm...you remember all the clues, but what order to place them in, now."
 diapers	"Staring again at the diapers, you are depressed you couldn't even get being depressed right."
-rivets	"Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want."
-END PRONER POD	"The END PRONER POD seems to pulse slightly."
 large regal lager	"No...that is not quite the way to fight the temptation of the wicked brew."
-Si Reed	"Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!"
-praise spirea	"That's not quite the way to look forward to praise. But it may be a start."
-red vees	"The red vees seem like they should link together somehow, but you don't have things right."
 lobster	"That's not quite the way to deserve that lobster."
 ME ARTS	"That's not quite the way to focus on the ME ARTS."
+pleaser leapers	"The leapers almost seem to dance around for a bit."
+Si Reed	"Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!"
+rivets	"Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want."
+praise spirea	"That's not quite the way to look forward to praise. But it may be a start."
+sectarian craniates	"Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet."
+END PRONER POD	"The END PRONER POD seems to pulse slightly."
+red vees	"The red vees seem like they should link together somehow, but you don't have things right."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 Id Cede	"You try to groove to [Id Cede], but that's not quite it."
@@ -3799,6 +3804,7 @@ SNORE SO ARENA	"Drowning something without reason further in reason is unreasona
 evil bee	"The bee's already taken enough of your in-my-heartitude."
 praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
+sectarian craniates	"Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you."
 
 table of presto done rejects
 specdone	spectalk

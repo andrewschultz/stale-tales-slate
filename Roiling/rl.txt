@@ -355,6 +355,16 @@ Since 4 is I or R, it's I.
 Since 2 can't be R or P and is a consonant, it's S.
 That leaves four possibilities: (AE)S(PR)I(PR)(AE).
 ASPIRE is the one that works.
+# logic for sectarian craniates
+?Can I get something out of Sectarian Craniates?
+You can't get all the way with logic, but you can get close.
+Slot 8 is a vowel, but it can't be A or E, so it is I.
+Vowel-counting makes slot 3 a consonant, so it is C.
+Slots 2 and 6 cannot be R, but 5 is the only remaining consonant. So it is R.
+Now we have 12 possibilities, but you might guess ..AIS or ..EIS don't make verbs. You'd be right. So N it is.
+From here it's a bit of trial and error, or noticing ETC.. and ATC.. don't make good verbs. So S in slot 2 and T in slot 6.
+That leaves 3 possibilities of where the E is.
+ASCERTAIN it is.
 >>UPSCALE CAPSULE
 # logic for st al salt
 ?What about the salt?

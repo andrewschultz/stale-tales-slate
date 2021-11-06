@@ -15,8 +15,8 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 ~	verbs	t6
 #~	pad	t5
 
-}}MAX=29
-}}CURMAX=29
+}}MAX=30
+}}CURMAX=30
 }}SCORE=0
 }}CURMIN=17
 
@@ -1189,6 +1189,18 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 >striev
 You're striving too hard, now.
 
+@sli
+#slider test for ascertain
+>saareicnt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!mina,minb
+>ascertain
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
+
 @nud
 #nudge for edn
 >end
@@ -1238,7 +1250,7 @@ In particular, you feel the need to DESERVE right now.
 
 @mina,minb
 #lose a maximum point for only one of aspire/strive
-}}CURMAX--
+}}CURMAX-=2
 
 }}SCORE++
 >score

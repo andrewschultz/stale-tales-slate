@@ -668,6 +668,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pod"	176847625	--	--	"[full-pod]."
 "card"	127546295	r cad card	--	"The card's writing is more important."
 "cad"	42222492	r cad card	--	"The card's writing is more important."
+"ectarian"	453521505	--	--	"Plural craniates[if craniates is reflexed]. But you knew that, since you already 'appreciated' it[end if]."
 
 to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter [the lodgings][else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering [the lodgings] or being sure you deserve to[end if]"
 

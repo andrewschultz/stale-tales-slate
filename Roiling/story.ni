@@ -180,7 +180,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 29. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather. misses-rule of troves is troves-misses rule.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 30. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather. misses-rule of troves is troves-misses rule.
 [LLP list:
 1/18=Pa Egg Pea
 2/19=tears taser
@@ -192,8 +192,9 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 8/25=both of BORTLES lobster/ME ARTS stream,
 9/26=DIVORCES
 10/27=both of Trevis Vister/praise
-11/28=both of Sister Tressi/Marble Blamer Balmer-Mr Beal
-12/29=Creationism Reactionism
+11/28=Sectarian Craniates
+12/29=both of Sister Tressi/Marble Blamer Balmer-Mr Beal
+13/30=Creationism Reactionism
 ]
 
 Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather. misses-rule of routes is routes-misses rule.
@@ -702,7 +703,7 @@ section compiler non-syntax section
 
 use MAX_DICT_ENTRIES of 3100.
 
-use MAX_OBJECTS of 980.
+use MAX_OBJECTS of 990.
 
 use MAX_SYMBOLS of 150000.
 
@@ -718,7 +719,7 @@ use MAX_VERBS of 830.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_PROP_TABLE_SIZE of 650000.
+use MAX_PROP_TABLE_SIZE of 660000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
@@ -740,9 +741,9 @@ use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
 
 use ALLOC_CHUNK_SIZE of 39000 [delta = 4000]
 
-use MAX_OBJECTS of 990. [delta=10]
+use MAX_OBJECTS of 1000. [delta=10]
 
-use MAX_PROP_TABLE_SIZE of 660000. [delta=10000]
+use MAX_PROP_TABLE_SIZE of 670000. [delta=10000]
 
 use MAX_STATIC_DATA of 760000.
 
@@ -11373,7 +11374,7 @@ understand "exhibit" as See Dir when player is in Browse Bowers.
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because [the lodgings] in the center form the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Save aves branch out each way. They're okay for lesser people, but the astute statue of Trevis Vister and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to [the lodgings][end if].". roomnud of Econ Cone is table of Econ Cone nudges.
+Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because [the lodgings] in the center form the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]The famous artwork Sectarian Craniates rests here, which you [if craniates is reflexive]can decipher if you want[else]already got soemthing from[end if]. Save aves branch out each way. They're okay for lesser people, but the astute statue of Trevis Vister and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to [the lodgings][end if].". roomnud of Econ Cone is table of Econ Cone nudges.
 
 understand "econ-cone" as Econ Cone.
 
@@ -11399,6 +11400,12 @@ check scaning godlings lodgings:
 	if END PRONER POD is off-stage, say "The godlings lodgings shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on. Perhaps something will come along that you can focus on." instead;
 	say "Your settler seems to give the same reading for lodgings as for the END PRONER POD.";
 	try scaning END PRONER POD instead;
+
+chapter Sectarian Craniates
+
+Sectarian Craniates is reflexive LLPish boring scenery in Econ Cone. "It's about as portentious as you'd imagine something called Sectarian Craniates would be. But [if craniates is reflexed]you got something out of it[else]maybe you can get something out of it, if it's worth your time. It might not be[end if].". bore-text of Sectarian Craniates is "Hmm. Something passive [if craniates is reflexive]will work better[else]worked better[end if]."
+
+a-text of sectarian craniates is "YRRYRRYYR". b-text of sectarian craniates is "YR?YRRYY?". parse-text of sectarian craniates is "-[sp]x[sp]c[sp]-[sp]r[sp]x[sp]-[sp]i[sp]x".
 
 chapter statue parts
 
@@ -21751,8 +21758,8 @@ part real options
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
-"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate routes rule
-"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	--	the show what the player missed rule
+"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate routes rule	--
+"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	--
 --	false	"l/list"	--	potzing about
 --	false	"n/ln/nl"	--	putzing about
 --	false	"p/pl"	--	putzing around
@@ -22137,7 +22144,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 rule for printing the name of a sideroom (called rm) when show-siderooms is true:
 	say "[if missed-text of rm is empty]([rm], but write missed-text)[else][missed-text of rm][end if]"
 
-this is the showing what the player missed rule:
+this is the show what the player missed rule:
 	say "An all-feat leaflet flutters over the fourth wall.";
 	now all regions are not tickedoff;
 	now anything-missed is false;
@@ -22200,7 +22207,8 @@ this is the troves-misses rule:
 	if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
 	if DIVORCES is not moot, say "[2drm of Browse Bowers]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
 	if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to [b]STRIVE[r] by the statue of Trevis Vister."; [1 of 2]
-	if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise in the Econ-Cone.";
+	if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise spirea.";
+	if sectarian craniates is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASCERTAIN[r] stuff from [craniates].";
 	if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
 	if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
 	if reactionism is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]ROMANTICISE[r] around [reactionism].";
