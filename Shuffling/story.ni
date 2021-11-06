@@ -10687,18 +10687,7 @@ this is the show alternate paths rule:
 	repeat with zq running through solved regions:
 		process the altrule of zq;
 
-sect-missed is a truth state that varies.
-
-to say 2da of (rg - a region):
-	if sect-missed is false:
-		say "Missed in [rg]:[line break]";
-	now sect-missed is true;
-	say "[2dn]";
-
-to say 2dn: say "[unless sr-acc is true]--[end if]".
-
 this is the show what the player missed rule:
-	now sect-missed is false;
 	let missed-points be 0;
 	repeat with zq running through solved regions:
 		increase missed-points by (max-score of zq - cur-score of zq);
@@ -10706,6 +10695,8 @@ this is the show what the player missed rule:
 		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
 	else:
 		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun.[paragraph break]";
+	now anything-missed is false;
+	now all regions are not tickedoff;
 	repeat with zq running through solved regions:
 		show-miss zq and true;
 
@@ -10728,44 +10719,47 @@ sol	chosen
 
 chapter missed rules
 
+to say 2dn: say "[unless sr-acc is true]--[end if]"
+
 to show-miss (myreg - a region) and (ts - a truth state):
 	if ts is true and myreg is not solved, continue the action;
 	if cur-score of myreg is max-score of myreg:
 		unless myreg is metros or myreg is resort, continue the action;
-	now sect-missed is false;
+	now anything-missed is false;
 	process the misses-rule of myreg;
 
 this is the ordeal-loader-misses rule:
-	if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt in Rested Desert into a [b]BLOT[r].";
-	if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge in Rested Desert into a [b]BUGLE[r].";
-	if darn-slan is false, say "[2da of Ordeal Loader]you could've tried to [b]SLANDER[r] the darnels in Thickest Thickets.";
-	if attics are off-stage, say "[2da of Ordeal Loader]the static in Notices Section was changeable to [b]ATTICS[r].";
+	if blot is off-stage, say "[2drm of Rested Desert]you could've changed the bolt into a [b]BLOT[r].";
+	if bugle is off-stage, say "[2drm of Rested Desert]you could've changed the bulge into a [b]BUGLE[r].";
+	if darn-slan is false, say "[2drm of Thickest Thickets]you could've tried to [b]SLANDER[r] the darnels.";
+	if attics are off-stage, say "[2drm of Notices Section]the static was changeable to [b]ATTICS[r].";
 
 this is the stores-misses rule:
-	if store b is in Trips Strip, say "[2da of stores]store B had some food for you. [b]SORBET[r].";
-	if store f is in Trips Strip, say "[2da of stores]store F in the Trips Strip led to a forest.";
-	if store i is in Trips Strip, say "[2da of stores]store I in the Trips Strip led to a sortie. Which is both an exit and a missile launch.";
-	if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
-	if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with [b]BACTINE[r].";
+	if store b is in Trips Strip, say "[2drm of Trips Strip]store B had some food for you. [b]SORBET[r].";
+	if store f is in Trips Strip, say "[2drm of Trips Strip]store F led to a forest.";
+	if store i is in Trips Strip, say "[2drm of Trips Strip]store I led to a sortie. Which is both an exit and a missile launch.";
+	if store m is in Trips Strip, say "[2drm of Trips Strip]store M led to the Metros.";
+	if cabinet is in Trips Strip, say "[2drm of Trips Strip]the cabinet, once it followed you, could've been cured a bit with [b]BACTINE[r].";
+
 this is the forest-misses rule:
-	if slit is in Self ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to [b]SILT[r].";
-	if banshee is not moot, say "[2da of forest]the banshee in Emptiness Sepiments could've become a [b]HASBEEN[r] (space or not).";
+	if slit is in Self ID Fields, say "[2drm of Self ID Fields]the slit could've been turned to [b]SILT[r].";
+	if banshee is not moot, say "[2drm of Emptiness Sepiments]the banshee could've become a [b]HASBEEN[r] (space or not).";
 
 this is the sortie-misses rule:
-	if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a [b]PANCAKE[r].";
-	if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become [b]GRITS[r].";
+	if pancake is off-stage, say "[2drm of kitchen]the cake pan in the fridge could've become a [b]PANCAKE[r].";
+	if grits are off-stage, say "[2drm of kitchen]the grist in the fridge could've become [b]GRITS[r].";
 
 this is the metros-misses rule:
-	if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the [bastion] could've become [b]RENTALS[r].";
+	if antlers are in Obtains Boastin Bastion, say "[2drm of bastion]the antlers in the [bastion] could've become [b]RENTALS[r].";
 
 this is the resort-misses rule:
-	if found-lies is false, say "[2da of resort]you could've said [b]LIES[r] [if l2 are in Leis Isle]to expose the [isle] as an illusion[else]instead of taking the leis[end if].";
-	if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to [b]CORK[r].";
-	if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to [b]WINGS[r].";
-	if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to [b]ROPES[r][toolwood].";
-	if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to [b]GRIPS[r][toolwood].";
-	if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to [b]TOEHOLDS[r] for 2 points.";
-	if china is off-stage, say "[2da of resort]the chain links in [potshot hotspot] could've become [b]CHINA[r]. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
+	if found-lies is false, say "[2drm of leis isle]you could've said [b]LIES[r] [if l2 are in Leis Isle]to expose the [isle] as an illusion[else]instead of taking the leis[end if].";
+	if rock is in Leis Isle, say "[2drm of leis isle]the rock was changeable to [b]CORK[r].";
+	if swing is in Leis Isle, say "[2drm of leis isle]the swing was changeable to [b]WINGS[r].";
+	if spore is in Rived Drive, say "[2drm of rived drive]the spore was changeable to [b]ROPES[r][toolwood].";
+	if sprig is in Rived Drive, say "[2drm of rived drive]the sprig was changeable to [b]GRIPS[r][toolwood].";
+	if tool shed is in Rived Drive, say "[2drm of rived drive]the tool shed was changeable to [b]TOEHOLDS[r] for 2 points.";
+	if china is off-stage, say "[2drm of potshot hotspot]the chain links could've become [b]CHINA[r]. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
 
 chapter alt rules
 

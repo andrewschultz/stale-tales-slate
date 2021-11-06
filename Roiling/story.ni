@@ -21678,17 +21678,6 @@ towers	"REPAIR TOASTER?"
 others	"OTHERS:"
 others	"making GAPERS around the pagers or grapes?"
 
-to say 2dg of (rg - a region):
-	if rg is not tickedoff:
-		say "[eqls][b][rg][r][line break]";
-		now rg is tickedoff;
-
-to say eqls: if screenread is false, say "====";
-
-to say eq2: if screenread is false, say "[eqls][eqls]";
-
-to say 2da: if screenread is false, say "--";
-
 Rule for amusing a victorious player:
 	say "Have you tried:[paragraph break]";
 	repeat through table of big yucks:
@@ -21762,8 +21751,8 @@ part real options
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
-"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	--	showing alternate routes
-"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	--	showing what the player missed
+"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate routes rule
+"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	--	the show what the player missed rule
 --	false	"l/list"	--	potzing about
 --	false	"n/ln/nl"	--	putzing about
 --	false	"p/pl"	--	putzing around
@@ -21970,8 +21959,6 @@ showing a list is an activity.
 rule for showing a list:
 	try liliing the number understood instead;
 
-showing alternate routes is an activity.
-
 to say remap-unset: say "[if remapped is true][b]UNSET[r] the tunes[else][b]REMAP[r] the perma-amper[end if]";
 
 a region has a rule called altroutes.
@@ -22077,7 +22064,7 @@ altroutes of towers is the towers-alt rule.
 altroutes of otters is the otters-alt rule.
 altroutes of others is the others-alt rule.
 
-rule for showing alternate routes:
+this is the show alternate routes rule:
 	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. Ordeal Reload and Routes have no mutually exclusive solutions. This list overlaps very little with the [b]MISSED[r] list which shows actual points missed.";
 	d "[list of solved regions].";
 	repeat with myr running through regions-in-order:
@@ -22099,8 +22086,6 @@ to say how-players:
 			choose row with the-from of QQ in table of otters anagrams;
 			say "[right-word entry]";
 	if t-tearily-irately is moot and t-tearily-irately is not passed-on, say "[if irately is true][b]TEARILY[r] instead of [b]IRATELY[r][else][b]IRATELY[r] instead of [b]TEARILY[r][end if]";
-
-showing what the player missed is an activity.
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
@@ -22137,22 +22122,6 @@ to say how-pills-used:
 			continue the action;
 	say "BUG should've found something but didn't"
 
-a region can be tickedoff. a region is usually not tickedoff.
-
-to say 2dmiss of (cr2 - a region):
-	now anything-missed is true;
-	say "[2dg of cr2][2da]";
-
-miss-room is a room that varies.
-
-to say 2drm of (rr - a room):
-	if anything-missed is false, say "[2dg of map region of rr]";
-	unless miss-room is rr, say "[eqls][b][rr][r][eqls][line break]";
-	now miss-room is rr;
-	say "[2da]";
-
-anything-missed is a truth state that varies.
-
 show-siderooms is a truth state that varies.
 
 to show-miss (myreg - a region) and (needsolve - a truth state):
@@ -22168,7 +22137,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 rule for printing the name of a sideroom (called rm) when show-siderooms is true:
 	say "[if missed-text of rm is empty]([rm], but write missed-text)[else][missed-text of rm][end if]"
 
-rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
+this is the showing what the player missed rule:
 	say "An all-feat leaflet flutters over the fourth wall.";
 	now all regions are not tickedoff;
 	now anything-missed is false;
