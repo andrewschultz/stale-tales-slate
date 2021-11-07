@@ -17,6 +17,7 @@ import sys
 import mytools as mt
 import time
 
+date_warn_yet = False
 warn_dates = True
 debug = False
 ignore_nudmis = False
@@ -42,6 +43,7 @@ wrong_count = 0
 out_to_file = False
 launch_outfile = False
 houtfile = "hch_out.txt"
+process_regs = False
 
 with open("c:/games/inform/roiling.inform/source/hch.txt") as file:
     for (line_count, line) in enumerate (file, 1):
@@ -157,7 +159,6 @@ def match_slider_tests():
             if y == 'lamp' or y == 'satchel': continue # kludge for now
             if not slider_tracking[x][y]:
                 print("Did not find", y, "/", "#slider test for", y, "in target file", file_name, "... you may wish to amak.py", y)
-    exit()
 
 def verify_reg_files(my_proj):
     i7.go_proj(my_proj)
@@ -260,7 +261,7 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
                     print("WARNING", rox, "modified after", x, time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(rox))), "vs", time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(x))))
                     global date_warn_yet
                     if not date_warn_yet:
-                        print("    (Turn off date warning with -nwd/-ndw)")
+                        print("    (Turn off date warning with -nwd/-ndw--this may throw false positives if the main file *meant* to tweak just one sub-file)")
                         date_warn_yet = True
                 rbr_warn[rox] += 1
         with open(x) as file:
@@ -369,8 +370,9 @@ def sync_check(a, b, region=""):
     if b not in valids_reverse:
         print("WARNING {} not in valids_reverse in hch.txt.")
         return ret_val
-    reg_find = "*-{}*".format(valids_reverse[b])
-    ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail, [])
+    if process_regs:
+        reg_find = "*-{}*".format(valids_reverse[b])
+        ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail, [])
     #if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail)
     return ret_val
 
@@ -410,6 +412,8 @@ while count < len(sys.argv):
     elif arg == 'sv' or arg == 'vs': verify_sa = True
     elif arg == 'wd' or arg == 'dw': warn_dates = True
     elif mt.alpha_match('dwn', arg): warn_dates = False
+    elif arg == 'rp' or arg == 'pr': process_regs = True
+    elif mt.alpha_match('nrp', arg): process_regs = False
     elif re.search("^[asdir]+", arg):
         if 'a' in arg: tabs.append('aftertexts')
         if 's' in arg: tabs.append('spechelp')
@@ -453,6 +457,9 @@ print(big_error_count, "total global error count.")
 
 if big_error_count and not print_details:
     print("NOTE: if you want to add code, print_details can be set to TRUE with -pd/-dp.")
+
+if not big_error_count and not process_regs:
+    print("NOTE: -pr will process reg-* files and not just rbr")
 
 if out_to_file:
     print("Wrote to", houtfile)

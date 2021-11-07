@@ -301,7 +301,7 @@ def find_poss(word_array, bail=False):
                 else:
                     poss_array.append('?')
             my_object = ' '.join(original)
-            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(my_object, my_red, my_object, hints.upper(), my_object, '[sp]'.join(poss_array)))
+            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(my_object, my_red, my_object, hints.upper(), my_object, '[sp]'.join(poss_array).lower()))
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:

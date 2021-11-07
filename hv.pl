@@ -535,6 +535,7 @@ comma separated list gives several words
 -m = match anagram table and nudge table
 -o/ = edit the output file hv.txt
 -!/-e = open hv.pl
+-----slash at end tests a word and its duplicate e.g. date/ looks for date and dates
 EOT
   exit;
 }
