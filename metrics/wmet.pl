@@ -233,7 +233,7 @@ sub evaluate {
       $inHere,
       torgb( $t1, 18, 360, "total letters in puzzles" ),
       $t1,
-      torgb( $t2, 97, 2715, "puzzle letter square sum" ),
+      torgb( $t2, 97, 2876, "puzzle letter square sum" ),
       $t2,
       torgb( $t1a, 4, 7.84, "average letters in puzzle" ),
       $t1a,
@@ -243,7 +243,7 @@ sub evaluate {
       $thislog,
       torgb( $tla, 4, 9.53, "average of logs of possibilities, no settler" ),
       $tla,
-      torgb( $thisset, 8, 233, "sum of logs of possibilities with settlers" ),
+      torgb( $thisset, 8, 237, "sum of logs of possibilities with settlers" ),
       $thisset,
       torgb( $tlb, 2, 5.5, "average of logs of possibilities with settlers" ),
       $tlb

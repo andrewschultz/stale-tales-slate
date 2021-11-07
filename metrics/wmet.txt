@@ -77,7 +77,7 @@ stay/believe/reason/recall
 despair/decide/relapse
 glare/master/bolster/deal
 discover/desire
-aspire/strive/ponder
+aspire/strive/ponder/ascertain
 deserve/last/resist/ramble/romanticise/recant
 Routes (min)
 inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
@@ -186,15 +186,16 @@ among/cheap/cripes/mo len
 cinque/solemn/papayas/rhubarb
 #small detail here: raspberry/pineapple have more letters but fewer possibilities than tamarind
 reversed/tamarind
-coconuts/ancienter/raspberry/pineapple
+coconuts/ancienter/dates/olives
 icon/sonic/prep/review
 Others (max)
 limes/grapes/pears/plums/compass
-blueberries/maraschino/tamarind/pomegranate/persimmon/cantaloupe
+dates/blueberries/maraschino/tamarind/pomegranate/persimmon/cantaloupe
 tangerines/mulberries/apples/apricot/gooseberry/coconuts
 blackberries/cranberries/strawberries/breadfruit/watermelon/pineapple/raspberry/grapefruit
-among/papayas/solemn/mo len/ancienter/cheap/cripes/cinque
+among/papayas/solemn/mo len/ancienter/cheap/cripes/cinque/olives
 rhubarb/reversed/banana/go near
+concisions
 sonic/icons/research/review
 ;
 ######For reference, all the Store T stuff
