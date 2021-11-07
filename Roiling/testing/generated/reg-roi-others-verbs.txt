@@ -236,6 +236,8 @@ Clangier Clearing
 >listen ammo gang
 A small voice is saying, "Go, man!" You see red as it begins to nag mo'. Where? How?
 
+>olives
+
 >cinque
 Your score has just gone up by one point.
 >score

@@ -190,6 +190,19 @@ You have 23 of 42 total points for the post-Elvira Others region, though you onl
 
 >n
 
+>cinque
+Your score has just gone up by one point.
+>score
+You have 24 of 42 total points for the post-Elvira Others region, though you only need 26 to win.
+>cheap
+Your score has just gone up by one point.
+>score
+You have 25 of 42 total points for the post-Elvira Others region, though you only need 27 to win.
+>papayas
+Your score has just gone up by one point.
+>score
+You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
+
 >d
 Scape Space
 
@@ -207,7 +220,7 @@ Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourse
 >guru dr severe
 One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 >score
-You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
 You can't get the maximum score, since you used the arugula
 
 >u
@@ -245,7 +258,7 @@ No need to over-study or over-think. Through the gates!
 by one point
 >score
 
-You have 24 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 27 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
 
 >review
 by one point
@@ -253,10 +266,10 @@ by one point
 >score
 
 # let's check "here/valence enclave" conditional text in the score
-You have 25 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
+You have 28 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
 >s
 >score
-You have 25 of 42 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
+You have 28 of 42 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
 >n
 
 #pre-gates-stage-flip rule retry

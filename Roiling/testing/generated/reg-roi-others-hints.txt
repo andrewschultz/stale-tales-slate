@@ -86,7 +86,7 @@ You'll eventually want to get that So-Great Storage down the road.
 
 >x ruts circuits
 
-/DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (dates|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
 
 /DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
 
@@ -285,7 +285,9 @@ You have 27 of 42 total points for the post-Elvira Others region, though you onl
 >e
 Clangier Clearing
 
-/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
+/DEBUG INFO: (I-Solve Voiles|No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
+
+>olives
 
 >cinque
 Your score has just gone up by one point.

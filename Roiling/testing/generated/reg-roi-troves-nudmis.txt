@@ -98,6 +98,9 @@ The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes
 #nudges for tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
+#readables for tears taser
+>tears taser
+RATES is written on the tears taser, in red.
 
 >stare
 Your score has just gone up by one point
@@ -230,6 +233,10 @@ You're already observing by reflex now. No need to tweak things.
 >scan stop post
 !Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
+
+#scannotes for mussier misuser
+>scan misuser
+Those question marks ... hmm. Oh, you get it now. Not VERY sneaky, but the mussier misuser isn't, either, really.
 
 >surmise
 Your score has just gone up by one point
@@ -491,6 +498,9 @@ SAP-LEER is the "ironic" name of the company that produced this monstrosity. The
 #scannotes for pleaser leapers
 >scan pleaser leapers
 You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
+#spechelp for pleaser leapers
+>pleaser leapers
+The leapers almost seem to dance around for a bit.
 
 >relapse
 Your score has just gone up by one point
@@ -705,11 +715,29 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #done rejects for rivets
 >striev
 You're striving too hard, now.
+#nudge for ectarian
+>ectarina
+Plural craniates.
+#readables for sectarian craniates
+>sectarian craniates
+/You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
+#scannotes for sectarian craniates
+>scan sectarian craniates
+Wow. You have even more to think about, now! It's certainly a thoughtful piece of art, whatever it is. You are sure the reading provides you with a good deal of concrete and subjective thoughts to analyze.
+#spechelp for sectarian craniates
+>sectarian craniates
+Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet.
 
 >ascertain
 >score
 Score in a scenario: 23 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
+#done rejects for sectarian craniates
+>craniatse
+Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
+#renudge for ectarian
+>ectarina
+Plural craniates. But you knew that, since you already 'appreciated' it.
 #nudge for edn
 >end
 You must deal with the full END PRONER POD.
@@ -886,6 +914,12 @@ Well of course the final challenge wouldn't have any positive IDs, and the two v
 #nudge for siter
 >sitre
 All the siters.
+#scannotes for creationism reactionism
+>scan creationism reactionism
+Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic.
+#spechelp for creationism reactionism
+>reactionims
+You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, it IS an eleven-word puzzle, and it IS optional.
 
 >romanticise
 >score

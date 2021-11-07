@@ -2229,6 +2229,7 @@ large regal lager	"[one of]The story on the lager is mostly in black, except whe
 pleaser leapers	"SAP-LEER is the 'ironic' name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't."
 See Dir	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
+sectarian craniates	"You note, written in red, one of the two creators of this piece of work is [one of]Cat Raines[or]Stan Ciera[in random order]."
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 END PRONER POD	"It is, apparently, produced by N-E-PROD corporation."

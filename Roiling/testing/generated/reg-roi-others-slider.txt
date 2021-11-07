@@ -65,6 +65,9 @@ Your score has just gone up by one point.
 
 >x ruts circuits
 
+#slider test for dates
+>adest
+Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tamarind
 >atamirdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -281,6 +284,10 @@ Blam!
 >score
 You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
+#slider test for concisions
+>ocisncsnoi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >n
 
 >w
@@ -305,6 +312,9 @@ You have 27 of 42 total points for the post-Elvira Others region, though you onl
 >e
 Clangier Clearing
 
+#slider test for olives
+>lovise
+Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for among
 >magon
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -329,6 +339,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for solemn
 >oselnm
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>olives
 
 >cinque
 Your score has just gone up by one point.

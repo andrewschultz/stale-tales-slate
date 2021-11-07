@@ -76,13 +76,13 @@ You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The afte
 >son 4
 Giving you the icons.
 >gx icons
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+You realize the icons could be made SONIC, or SONIC ICONS. The aftertaste of arugula finally dissipates.
 >undo
 >undo
 >son 5
 Giving you the sonic coins.
 >gx sonic coins
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+You realize the sonic coins could become ICONS, or SONIC ICONS. The aftertaste of arugula finally dissipates.
 >undo
 >undo
 >son 6
@@ -99,6 +99,11 @@ Your score has just gone up by one point.
 
 >x ruts circuits
 
+>gx lumps
+You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
+>undo
+>gx sated stead
+You have a vision of a fruit: DATES. The aftertaste of arugula finally dissipates.
 >gx eerie blurbs
 You have a vision of a fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
 >gx peanut cola
@@ -319,6 +324,8 @@ Clangier Clearing
 
 >gx len craig
 Nothing, despite all Len Craig has to sell.
+>gx voiles
+You have a vision of a fruit: OLIVES. The aftertaste of arugula finally dissipates
 >gx ammo gang
 You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
 >gx nectarine
@@ -335,6 +342,8 @@ You feel a need to haggle with MO LEN. The aftertaste of arugula finally dissipa
 You have a vision of a fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
 >gx lemons
 You feel an urge to look SOLEMN. The aftertaste of arugula finally dissipates.
+
+>olives
 
 >cinque
 Your score has just gone up by one point.

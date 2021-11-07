@@ -16,8 +16,8 @@ files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,re
 
 ALSO-IGNORE:t
 
-}}MAX=42
-}}CURMAX=42
+}}MAX=45
+}}CURMAX=45
 }}SCORE=0
 }}CURMIN=25
 
@@ -293,13 +293,13 @@ You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The afte
 >son 4
 Giving you the icons.
 >gx icons
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+You realize the icons could be made SONIC, or SONIC ICONS. The aftertaste of arugula finally dissipates.
 >undo
 >undo
 >son 5
 Giving you the sonic coins.
 >gx sonic coins
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+You realize the sonic coins could become ICONS, or SONIC ICONS. The aftertaste of arugula finally dissipates.
 >undo
 >undo
 >son 6
@@ -381,9 +381,14 @@ The needle is working fine. No need to meddle.
 >x ruts circuits
 
 @hin
-/DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (dates|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
 
 @spoi
+>gx lumps
+You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
+>undo
+>gx sated stead
+You have a vision of a fruit: DATES. The aftertaste of arugula finally dissipates.
 >gx eerie blurbs
 You have a vision of a fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
 >gx peanut cola
@@ -407,12 +412,23 @@ You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dis
 You have a vision of a fruit: TAMARIND. The aftertaste of arugula finally dissipates.
 
 @sli
+#slider test for dates
+>adest
+Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tamarind
 >atamirdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for maraschino
 >amarcsihon
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for sated stead
+>scan sated stead
+Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad.
+#spechelp for sated stead
+>sated stead
+The sated stead bubbles slightly.
 
 @nud
 >read mad train
@@ -514,7 +530,7 @@ Not just omen, or prism. It's an omen prism.
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
 @hin
-/DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (dates|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
 
 >score
 }}SCORE++
@@ -540,7 +556,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (dates|eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
 
 >score
 }}SCORE++
@@ -549,7 +565,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (harmonicas|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (dates|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
 
 >score
 }}SCORE++
@@ -558,7 +574,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (harmonicas|magenta rope|omen prism) hinting\.
+/DEBUG INFO: (dates|harmonicas|magenta rope|omen prism) hinting\.
 
 >score
 }}SCORE++
@@ -593,12 +609,21 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-DEBUG INFO: magenta rope hinting.
+DEBUG INFO: (dates|magenta rope) hinting.
 
 >score
 }}SCORE++
 {$SCOS}
 >pomegranate
+Your score has just gone up by one point.
+
+@hin
+DEBUG INFO: dates hinting.
+
+>score
+}}SCORE++
+{$SCOS}
+>dates
 Your score has just gone up by one point.
 
 >score
@@ -1172,6 +1197,8 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
+
+@!min
 >pineapple
 Your score has just gone up by one point.
 !min-up
@@ -1179,9 +1206,11 @@ Your score has just gone up by one point.
 @hin
 /DEBUG INFO: (barriers west|buried raft|pryer bars|rapt figure) hinting\.
 
+@!min
 >score
 }}SCORE++
 {$SCOS}
+
 >e
 >s
 Nice going.
@@ -1241,6 +1270,11 @@ Money, or something like it, should not be the guide of you.
 >icons
 The sonic icons seem right. No use meddling.
 
+@sli
+#slider test for concisions
+>ocisncsnoi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >n
 
 @!min
@@ -1279,11 +1313,13 @@ Your score has just gone up by one point.
 Clangier Clearing
 
 @hin
-/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
+/DEBUG INFO: (I-Solve Voiles|No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
 
 @spoi
 >gx len craig
 Nothing, despite all Len Craig has to sell.
+>gx voiles
+You have a vision of a fruit: OLIVES. The aftertaste of arugula finally dissipates
 >gx ammo gang
 You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
 >gx nectarine
@@ -1318,6 +1354,9 @@ You don't need to summon someone who deals in spices, or (dated political joke) 
 That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
 
 @sli
+#slider test for olives
+>lovise
+Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for among
 >magon
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1344,6 +1383,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#spechelp for i solve voiles
+>i solve voiles
+The I-Solve Voiles rustle slightly.
+#scannotes for i solve voiles
+>scan i solve voiles
+You make sure it's not just the I-Solve Voiles fluttering about that give such an ambiguous reading. No, it is not.
+#nudge for voile
+>voiel
+No, it's what's behind the voiles.
 ###########below is melon/lemon nudge trickiness
 >abstract melon to ll
 #nudge for lemon
@@ -1412,6 +1460,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach
 A small voice is saying, "Go, man!" You see red as it begins to nag mo'. Where? How?
 
 @!min
+>olives
+Your score has just gone up by one point.
+{--hin}/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
+>score
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >cinque
 Your score has just gone up by one point.
 {--hin}/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis) hinting\.
@@ -1527,6 +1582,9 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
+#done rejects for olives
+>olives
+The olives are just find as they are. They're even pitted! No need to change them. I mean, what if they became SO EVIL?
 #renudge for price
 >priec
 No, you already helped correct the prices precis.
