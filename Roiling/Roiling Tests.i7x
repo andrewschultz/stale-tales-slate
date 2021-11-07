@@ -902,12 +902,30 @@ carry out soning:
 	repeat with ZZ running from 1 to number of entries in coinlist:
 		if ZZ is number understood:
 			now player has entry ZZ in coinlist;
+			if ZZ > 4:
+				now player has concisions;
 		else:
 			now entry ZZ in coinlist is off-stage;
 	if number understood is 0:
 		say "All coinish items are out of play.";
 	else:
 		say "Giving you [the entry number understood in coinlist].";
+	the rule succeeds;
+
+chapter posting
+
+posting is an action out of world.
+
+understand the command "post" as something new.
+
+understand "post" as posting.
+
+carry out posting:
+	if location of player is not dusty study, say "Going to the post-script Others area is not available post-Dusty Study." instead;
+	try roveovering;
+	try fliptoing hoster;
+	try entering hoster;
+	say "TESTING NOTE: SON [bracket]1-6[close bracket] gives [coinlist].";
 	the rule succeeds;
 
 chapter mowing
