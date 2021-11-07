@@ -7,7 +7,10 @@
 # and of course no comment if b-text has no question mark
 #
 
+from itertools import permutations
 from collections import defaultdict
+
+import btext
 
 import __main__ as main
 import i7
@@ -157,6 +160,7 @@ def read_data_file():
             print("Unknown or absent command for line", line_count, "text", line.lower().strip())
 
 def things_of(q):
+    q = q.lower()
     ret_2 = re.sub(" +is .*", "", q)
     ret_2 = re.sub(".* of +", "", ret_2)
     if ret_2 in sa_trans:
@@ -340,9 +344,95 @@ def settler_read(ltr, ma, mi):
         if mi: return 'r'
     return "!"
 
+def nopunc(x):
+    return x.replace(' ', '').replace('-', '').replace("'", '')
+
+def poss_to_parsetext_entry(one_char):
+    must_be_consonant = must_be_vowel = True
+    if len(one_char) == 1:
+        return one_char.upper()
+    for x in one_char:
+        if x not in vowels:
+            must_be_vowel = False
+        if x not in consonants:
+            must_be_consonant = False
+    if must_be_vowel:
+        return "-"
+    if must_be_consonant:
+        return "x"
+    return "?"
+
+def my_parse_text(from_text, to_text, b_text, max_length = 14, include_question_logic = False):
+    from_mod = nopunc(from_text)
+    to_mod = nopunc(to_text)
+    b_text = b_text.lower().replace('*', '')
+    my_poss = []
+    if len(to_mod) > max_length:
+        print("Skipping", to_text)
+        return ''
+    if len(from_mod) % len(to_mod):
+        print("Imbalance, can't calculate parse_text")
+        print(from_text, "vs", to_text)
+        print(from_mod, "vs", to_mod)
+        return ''
+    while len(from_mod) > 0:
+        my_poss.append(from_mod[:len(to_mod)])
+        from_mod = from_mod[len(to_mod):]
+    my_ary = btext.poss_list_word(to_mod, b_text)
+    final_answers = []
+    for m in my_ary:
+        failure = False
+        for r in range(0, len(b_text)):
+            #print(m, r, b_text, p[r], to_mod[r])
+            if b_text[r] == 'r' or b_text[r] == 'y' or b_text[r] == 'o':
+                for p in my_poss:
+                    if p[r] == m[r]:
+                        failure = True
+                        break
+            elif b_text[r] == 'p' or b_text[r] == 'g' or b_text[r] == 'b':
+                for p in my_poss:
+                    if p[r] != m[r]:
+                        failure = True
+                        break
+            elif b_text[r] == '?':
+                if not include_question_logic:
+                    continue
+                yesses = 0
+                noes = 0
+                for p in my_poss:
+                    yesses += (p[r] == m[r])
+                    noes += (p[r] != m[r])
+                failure = not yesses or not noes
+                if failure:
+                    break
+            else:
+                sys.exit("Bad character in {}.".format(b_text))
+            if failure:
+                break
+        if failure:
+            continue
+        final_answers.append(m)
+    poss_array = [ '' ] * len(to_mod)
+    for fa in final_answers:
+        for r in range(0, len(fa)):
+            if fa[r] not in poss_array[r]:
+                poss_array[r] += fa[r]
+    for r in range(0, len(fa)):
+        poss_array[r] = ''.join(sorted(list(poss_array[r])))
+    parse_display = [poss_to_parsetext_entry(x) for x in poss_array]
+    if '?' in parse_display or '-' in parse_display or 'x' in parse_display:
+        parse_text_string = "[sp]".join(parse_display)
+    else:
+        parse_text_string = ''.join(parse_display)
+    #print(to_text, '/'.join(poss_array), parse_text_string, len(final_answers))
+    return parse_text_string
+
 def aro_settler_check():
     count = 0
+    a_count = 0
     b_count = 0
+    p_count = 0
+    u_count = 0
     desc_count = 0
     in_bore_rule = False
     with open(r_src) as file:
@@ -378,7 +468,7 @@ def aro_settler_check():
                 elif 'parse-text of' not in line:
                     pass
                     #print("CODE PEDANTRY fill in object name after parse-text in line", line_count)
-                sent = re.split("\. *", line.lower().strip())
+                sent = re.split("\. *", line.strip())
                 for q in sent:
                     if 'a-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
@@ -411,8 +501,8 @@ def aro_settler_check():
                                 if wd[idx] in vowels: vo[idx] = 1
                                 if wd[idx] in consonants: co[idx] = 1
                                 if wd[idx] == 'y': ys[idx] = 1
-                        got_errors_here = False
                         wanted_string = ''
+                        got_string = ''
                         for idx in range(0, lf):
                             if sp[idx] + vo[idx] + co[idx] + ys[idx] > 1:
                                 needed_char = '?'
@@ -424,12 +514,12 @@ def aro_settler_check():
                                 needed_char = 'y'
                             elif ys[idx]:
                                 needed_char = 'o'
-                            if v[idx] != needed_char:
-                                print("Have {}, need {} at slot {} at line {} source/{} rawfile".format(v[idx], needed_char, idx+1, line_count, aro_line[my_raw]), "for", my_thing, ">", aro_flips[my_raw])
-                                got_errors_here = True
                             wanted_string += needed_char if v[idx] == needed_char else needed_char.upper()
-                        if got_errors_here:
-                            print("SUMMARY: have {}, need {}.".format(v, wanted_string))
+                            got_string += v[idx]
+                        if wanted_string != got_string:
+                            a_count += 1
+                            count += 1
+                            print("{}a/{} Uh oh line {} {} -> {} had {} as the given a-text but should have {}".format(a_count, count, line_count, my_raw, aro_flips[my_raw], got_string, wanted_string))
                     if 'b-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         if global_raw and my_raw != global_raw: continue
@@ -439,7 +529,7 @@ def aro_settler_check():
                             break
                         aro_got[my_raw] = True
                         sol = nosp(aro_flips[my_raw])
-                        v = val_of(q)
+                        latest_b_text = v = val_of(q)
                         v = re.sub("\*", "", v)
                         sary = sol.split(",")
                         lf = len(sary[0])
@@ -487,11 +577,44 @@ def aro_settler_check():
                             elif co[y]: the_string += "p" if matches[y] else "r"
                             elif ys[y]: the_string += "b" if matches[y] else "o"
                             else: sys.exit("Uh oh couldn't find anything to add to " + s + " of " + ','.join(sary))
+                        v = v.upper()
+                        the_string = the_string.upper()
                         if v != the_string:
                             b_count += 1
-                            print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v.upper(), "as the given b-text but should have", the_string.upper())
+                            count += 1
+                            print("{}b/{} Uh oh line {} {} -> {} had {} as the given b-text but should have {}.".format(b_count, count, line_count, my_raw, sol, v.upper(), the_string.upper()))
                             mt.add_postopen(r_src, line_count)
-                    if q == 'parse-text':
+                    if 'parse-text' in q:
+                        (my_thing, my_raw, my_nosp) = things_of(q)
+                        v = val_of(q)
+                        if my_raw not in aro_flips:
+                            print(my_raw, "should be in aro_flips but isn't")
+                            sys.exit()
+                        #else:
+                            #print(my_raw, "goes to", aro_flips[my_raw])
+                        #if my_raw not in aro_trans:
+                            #print(my_raw, "should be in aro_trans but isn't")
+                            #continue
+                        this_from = my_raw
+                        if this_from in aro_trans:
+                            this_from = aro_trans[this_from]
+                        this_to = aro_flips[my_raw]
+                        parse_expected = my_parse_text(this_from, this_to, latest_b_text)
+                        if v != parse_expected:
+                            #pass
+                            if v.lower() == parse_expected.lower():
+                                u_count += 1
+                                print(u_count, "You need to uppercase the parsetext at line", line_count, v, "=>", parse_expected)
+                            else:
+                                p_count += 1
+                                print(p_count, line_count, my_thing, aro_trans[my_raw], "->", aro_flips[my_raw])
+                                print("exp text: parse-text of {} is \"{}\".".format(my_thing, parse_expected))
+                                print("got text: parse-text of {} is \"{}\".".format(my_thing, v))
+                                if p_count == 20:
+                                    return
+                        else:
+                            pass
+                            #print(parse_expected, "!!!!", this_from, '/', this_to)
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
                 if global_raw and my_raw != global_raw:
