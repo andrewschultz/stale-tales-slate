@@ -1269,11 +1269,22 @@ Money, or something like it, should not be the guide of you.
 #done rejects for s-i
 >icons
 The sonic icons seem right. No use meddling.
+#scannotes for concisions
+>scan sonic coins
+Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do.
 
 @sli
 #slider test for concisions
 >ocisncsnoi
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!min
+>concisions
+Your score has just gone up by one point.
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
 
 >n
 
@@ -1751,6 +1762,12 @@ After all that work getting it to appear, you don't want to make the lost slot v
 >put icons in slot
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
 !Your score has just gone up by one point.
+
+@min
+# with the icons in the slot, you can no longer get CONCISIONS
+}}CURMAX--
+>score
+{$SCOS}
 
 @nud
 #nudge for banna

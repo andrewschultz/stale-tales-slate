@@ -133,22 +133,22 @@ You've parsed the spelling of quite a few words so far. Just a bit more, now.
 Your score has just gone up by one point.
 
 >score
-You have 1 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 1 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >pears
 Your score has just gone up by one point.
 
 >score
-You have 2 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 2 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >grapes
 Your score has just gone up by one point.
 
 >score
-You have 3 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 3 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >plums
 Your score has just gone up by one point.
 
 >score
-You have 4 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 4 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 #nudge for moss
 >msso
@@ -285,7 +285,7 @@ Not just omen, or prism. It's an omen prism.
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
 >score
-You have 5 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 5 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 #only three points here to test the reject case of going east to the clearing without a token
 
@@ -293,34 +293,39 @@ You have 5 of 42 total points for the post-Elvira Others region, though you only
 Your score has just gone up by one point.
 
 >score
-You have 6 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 6 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >blueberries
 Your score has just gone up by one point.
 
 >score
-You have 7 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 7 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >cantaloupe
 Your score has just gone up by one point.
 
 >score
-You have 8 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 8 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >persimmon
 Take on a token
 Your score has just gone up by one point.
 
 >score
-You have 9 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 9 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >maraschino
 Your score has just gone up by one point.
 
 >score
-You have 10 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 10 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >pomegranate
 Your score has just gone up by one point.
 
 >score
-You have 11 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 11 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+>dates
+Your score has just gone up by one point.
+
+>score
+You have 12 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 #nudge for tekno
 >tenok
@@ -406,22 +411,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. Tha
 Your score has just gone up by one point.
 
 >score
-You have 12 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 13 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >apples
 Your score has just gone up by one point.
 
 >score
-You have 13 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 14 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >mulberries
 Your score has just gone up by one point.
 
 >score
-You have 14 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 15 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >gooseberry
 Your score has just gone up by one point.
 
 >score
-You have 15 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 16 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -510,13 +515,13 @@ by one point
 >icon
 Your score has just gone up by one point.
 >score
-You have 16 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 17 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >coconuts
 Your score has just gone up by one point.
 
 >score
-You have 17 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 18 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 #done rejects for icon
 >inco
@@ -529,7 +534,7 @@ Maybe if you had more than one icon.
 Your score has just gone up by one point.
 
 >score
-You have 18 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 19 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >s
 You fiddle with the coin you got
@@ -686,23 +691,25 @@ There's no red text, but there is a mention of how people finally tweaked it to 
 Your score has just gone up by one point.
 
 >score
-You have 19 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 20 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 20 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 21 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 >watermelon
 Your score has just gone up by one point.
 
 >score
-You have 21 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 22 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+
 >pineapple
 Your score has just gone up by one point.
 !min-up
 
 >score
-You have 22 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 23 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+
 >e
 >s
 Nice going.
@@ -733,7 +740,7 @@ by one point
 Blam!
 
 >score
-You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 24 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
 #mistake retest for scion
 >scion
@@ -742,6 +749,14 @@ Money, or something like it, should not be the guide of you.
 #done rejects for s-i
 >icons
 The sonic icons seem right. No use meddling.
+#scannotes for concisions
+>scan sonic coins
+Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do.
+
+>concisions
+Your score has just gone up by one point.
+>score
+You have 25 of 45 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >n
 
@@ -749,20 +764,20 @@ The sonic icons seem right. No use meddling.
 >strawberries
 Your score has just gone up by one point.
 >score
-You have 24 of 42 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 26 of 45 total points for the post-Elvira Others region, though you only need 27 to win.
 #strawberries = last with minimum at base
 >grapefruit
 Your score has just gone up by one point.
 >score
-You have 25 of 42 total points for the post-Elvira Others region, though you only need 27 to win.
+You have 27 of 45 total points for the post-Elvira Others region, though you only need 28 to win.
 >raspberry
 Your score has just gone up by one point.
 >score
-You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
+You have 28 of 45 total points for the post-Elvira Others region, though you only need 29 to win.
 >breadfruit
 Your score has just gone up by one point.
 >score
-You have 27 of 42 total points for the post-Elvira Others region, though you only need 29 to win.
+You have 29 of 45 total points for the post-Elvira Others region, though you only need 30 to win.
 >e
 >e
 Clangier Clearing
@@ -851,19 +866,21 @@ The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
 
 >olives
-
+Your score has just gone up by one point.
+>score
+You have 30 of 45 total points for the post-Elvira Others region, though you only need 31 to win.
 >cinque
 Your score has just gone up by one point.
 >score
-You have 28 of 42 total points for the post-Elvira Others region, though you only need 30 to win.
+You have 31 of 45 total points for the post-Elvira Others region, though you only need 32 to win.
 >cheap
 Your score has just gone up by one point.
 >score
-You have 29 of 42 total points for the post-Elvira Others region, though you only need 31 to win.
+You have 32 of 45 total points for the post-Elvira Others region, though you only need 33 to win.
 >papayas
 Your score has just gone up by one point.
 >score
-You have 30 of 42 total points for the post-Elvira Others region, though you only need 32 to win.
+You have 33 of 45 total points for the post-Elvira Others region, though you only need 34 to win.
 
 #mistake test for mango
 >mango
@@ -913,23 +930,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. T
 Whoah, only reds and greens. Interesting.
 
 >score
-You have 31 of 42 total points for the post-Elvira Others region, though you only need 33 to win.
+You have 34 of 45 total points for the post-Elvira Others region, though you only need 35 to win.
 >ancienter
 Your score has just gone up by one point.
 >score
-You have 32 of 42 total points for the post-Elvira Others region, though you only need 34 to win.
+You have 35 of 45 total points for the post-Elvira Others region, though you only need 36 to win.
 >solemn
 Your score has just gone up by one point.
 >score
-You have 33 of 42 total points for the post-Elvira Others region, though you only need 35 to win.
+You have 36 of 45 total points for the post-Elvira Others region, though you only need 37 to win.
 >len mo
 Your score has just gone up by one point.
 >score
-You have 34 of 42 total points for the post-Elvira Others region, though you only need 36 to win.
+You have 37 of 45 total points for the post-Elvira Others region, though you only need 38 to win.
 >cripes
 Your score has just gone up by one point.
 >score
-You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
+You have 38 of 45 total points for the post-Elvira Others region, though you only need 39 to win.
 
 #done rejects for olives
 >olives
@@ -1117,19 +1134,19 @@ You need to change Dr. Severe, title and all.
 >banana
 Your score has just gone up by one point.
 >score
-You have 36 of 42 total points for the post-Elvira Others region, though you only need 38 to win.
+You have 39 of 45 total points for the post-Elvira Others region, though you only need 40 to win.
 >go near
 Your score has just gone up by one point.
 >score
-You have 37 of 42 total points for the post-Elvira Others region, though you only need 39 to win.
+You have 40 of 45 total points for the post-Elvira Others region, though you only need 41 to win.
 >rhubarb
 Your score has just gone up by one point.
 >score
-You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
+You have 41 of 45 total points for the post-Elvira Others region, though you only need 42 to win.
 >reversed
 Your score has just gone up by one point.
 >score
-You have 39 of 42 total points for the post-Elvira Others region.
+You have 42 of 45 total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 #nudge for guava
@@ -1224,7 +1241,7 @@ You've done enough reviewing, and now you need to try something else.
 by one point
 >score
 
-You have 40 of 42 total points for the post-Elvira Others region.
+You have 43 of 45 total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 #done rejects for searcher
@@ -1236,7 +1253,7 @@ by one point
 
 >score
 
-You have 41 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+You have 44 of 45 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 #redone rejects for searcher
 >searchre

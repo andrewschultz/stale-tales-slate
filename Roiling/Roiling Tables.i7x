@@ -3225,6 +3225,8 @@ data dim mists	true	true	false	false	"Well! The data isn't dim from the settler.
 admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great logical problems."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all."
 
+book troves
+
 table of troves scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
@@ -3253,6 +3255,8 @@ creationism reactionism	true	true	false	false	"Well, it's a big book, so you pro
 
 to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
 
+book presto
+
 table of presto scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
@@ -3271,6 +3275,8 @@ USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
 peels speel	true	true	false	false	"Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue..."
+
+book oyster
 
 table of oyster scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
@@ -3293,6 +3299,8 @@ papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easie
 templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
 natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
 bogus-psalm	true	true	false	false	"Perhaps finding where the vowel is would be a good start."
+
+book towers
 
 table of towers scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
@@ -3356,6 +3364,8 @@ section towers auxiliary
 to say sadly-curst:
 	say "Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler";
 
+book otters
+
 table of otters scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess."
@@ -3372,6 +3382,8 @@ sullenness us	true	false	false	false	"The voices seem bummed at your settler's a
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters."
 
+book others
+
 table of others scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 sated stead	true	true	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
@@ -3386,6 +3398,7 @@ ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang 
 a banna	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
 Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'[paragraph break]Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities."
+concisions	false	true	false	false	"Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do."
 
 volume specific help for things you need to flip
 
