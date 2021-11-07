@@ -17,6 +17,7 @@ import sys
 import mytools as mt
 import time
 
+warn_dates = True
 debug = False
 ignore_nudmis = False
 print_details = False
@@ -255,8 +256,12 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
                     print("WARNING no rbr file for", x)
                 continue
             if mt.last_mod(rox) > mt.last_mod(x):
-                if rox not in rbr_warn:
+                if warn_dates and rox not in rbr_warn:
                     print("WARNING", rox, "modified after", x, time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(rox))), "vs", time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(x))))
+                    global date_warn_yet
+                    if not date_warn_yet:
+                        print("    (Turn off date warning with -nwd/-ndw)")
+                        date_warn_yet = True
                 rbr_warn[rox] += 1
         with open(x) as file:
             if not quiet: print("Checking", x)
@@ -337,17 +342,19 @@ def sync_check(a, b, region=""):
     for fi in main_or_table:
         with open(fi) as file:
             for (line_count, line) in enumerate(file, 1):
-                if line.startswith(table_to_find):
+                if line.startswith('table of') and b in line.lower():
                     in_syncable_table = True
                     ever_syncable_table = True
                     reading_header = '(continued)' not in line
-                    if not super_quiet: print("Started", table_to_find, "at line", line_count, "file", os.path.basename(fi))
+                    if not super_quiet: print("Started", line.strip(), "at line", line_count, "file", os.path.basename(fi))
                     continue
                 if not in_syncable_table: continue
                 if reading_header:
                     reading_header = False
                     continue
-                if not line.strip() or "\t" not in line: break
+                if not line.strip() or "\t" not in line:
+                    in_syncable_table = False
+                    continue
                 ary = line.strip().split("\t")
                 ary[0] = ary[0].lower()
                 if ary[0] in needs_sync_test.keys(): sys.exit("STORY.NI duplication ({:s}): {:s} already defined at line {:d}, redefined at line {:d}.".format(b, ary[0], needs_sync_test[ary[0]], line_count))
@@ -388,7 +395,7 @@ while count < len(sys.argv):
             print("WARNING: You may have wanted RB instead of R, to run RBR.")
         projs = ['roi']
     elif arg == 'q': quiet = True
-    elif arg == 'sq' or arg == 'qs': super_quiet = quiet = True
+    elif arg == 'sq' or arg == 'qs' or arg == 'qq': super_quiet = quiet = True
     elif arg == 'rb' or arg == 'br': rbr_before = True
     elif arg == 'o': out_to_file = True
     elif arg == 'w': show_wrongs = True
@@ -401,6 +408,8 @@ while count < len(sys.argv):
     elif arg == 'v': verify_roi = verify_sa = True
     elif arg == 'rv' or arg == 'vr': verify_roi = True
     elif arg == 'sv' or arg == 'vs': verify_sa = True
+    elif arg == 'wd' or arg == 'dw': warn_dates = True
+    elif mt.alpha_match('dwn', arg): warn_dates = False
     elif re.search("^[asdir]+", arg):
         if 'a' in arg: tabs.append('aftertexts')
         if 's' in arg: tabs.append('spechelp')
@@ -441,6 +450,9 @@ for q in projs:
         match_slider_tests()
 
 print(big_error_count, "total global error count.")
+
+if big_error_count and not print_details:
+    print("NOTE: if you want to add code, print_details can be set to TRUE with -pd/-dp.")
 
 if out_to_file:
     print("Wrote to", houtfile)
