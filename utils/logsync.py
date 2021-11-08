@@ -39,6 +39,7 @@ aro_trans = defaultdict(str)
 aro_ignore = defaultdict(str)
 aro_got = defaultdict(bool)
 aro_line = defaultdict(int)
+parse_text_ignore = defaultdict(int)
 
 logic_invis_file = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds_file = "c:\\writing\\dict\\reds.txt"
@@ -51,6 +52,8 @@ open_after = False
 open_first = True
 
 verbose = False
+
+max_count = 10
 
 # this is for oddly, badly or privately named items
 # note HONESTLY currently has no ?'s in its b-text
@@ -99,6 +102,11 @@ def read_data_file():
                 l2 = re.sub(".*=", "", ll)
                 if in_roiling: aro_ignore[l2] = True
                 else: sa_ignore[l2] = True
+                continue
+            if ll.startswith("parseignore"):
+                ary = re.sub(".*:", "", ll).split(",")
+                for a in ary:
+                    parse_text_ignore[a] = True
                 continue
             if ll == "roiling":
                 in_roiling = True
@@ -417,7 +425,7 @@ def my_parse_text(from_text, to_text, b_text, max_length = 14, include_question_
         for r in range(0, len(fa)):
             if fa[r] not in poss_array[r]:
                 poss_array[r] += fa[r]
-    for r in range(0, len(fa)):
+    for r in range(0, len(to_mod)):
         poss_array[r] = ''.join(sorted(list(poss_array[r])))
     parse_display = [poss_to_parsetext_entry(x) for x in poss_array]
     if '?' in parse_display or '-' in parse_display or 'x' in parse_display:
@@ -586,6 +594,8 @@ def aro_settler_check():
                             mt.add_postopen(r_src, line_count)
                     if 'parse-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
+                        if my_raw in parse_text_ignore:
+                            continue
                         v = val_of(q)
                         if my_raw not in aro_flips:
                             print(my_raw, "should be in aro_flips but isn't")
@@ -608,13 +618,10 @@ def aro_settler_check():
                             else:
                                 p_count += 1
                                 print(p_count, line_count, my_thing, aro_trans[my_raw], "->", aro_flips[my_raw])
-                                print("exp text: parse-text of {} is \"{}\".".format(my_thing, parse_expected))
-                                print("got text: parse-text of {} is \"{}\".".format(my_thing, v))
-                                if p_count == 20:
+                                print("exp text: parse-text of {} is \"{}\".".format(my_raw, parse_expected))
+                                print("got text: parse-text of {} is \"{}\".".format(my_raw, v))
+                                if p_count == max_count:
                                     return
-                        else:
-                            pass
-                            #print(parse_expected, "!!!!", this_from, '/', this_to)
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
                 if global_raw and my_raw != global_raw:
@@ -763,6 +770,8 @@ while arg_count < len(sys.argv):
         open_first = False
     elif x == 'v': verbose = True
     elif x == 'nv' or x == 'vn': verbose = False
+    elif x.isdigit():
+        max_count = int(x)
     elif x == '?' or x == '-?': usage()
     else:
         print("Unknown flag", x)

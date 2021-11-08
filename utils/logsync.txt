@@ -1,3 +1,4 @@
+PARSEIGNORE:palm,latches,rifle
 #ordeal loader
 #odor>door
 #bolt>blot
@@ -165,7 +166,7 @@ hurt hog>through
 bent ewe>between
 rude n nuder>under
 the bean>beneath
-darkness~unlit>until
+darkness~null it unit>until
 yob den>beyond
 # note that "all" is clipped in the table_shorten function
 all noon gag>along
@@ -209,6 +210,7 @@ see dir>desire
 praise spirea>aspire
 rivets>strive
 trevis vister>strive
+sectarian craniates>ascertain
 >IGNORE=pernod
 end proner pod>ponder
 r cad card~derp on epdorn dr peno ned orp>ponder
@@ -590,6 +592,7 @@ lemons>solemn
 prices precis>cripes
 no ammo gang>among
 i solve voiles>olives
+sonicicons>concisions
 ####scape space
 engaro orange>go near
 a banna~naa na b a banna>banana

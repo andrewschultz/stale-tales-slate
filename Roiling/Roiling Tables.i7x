@@ -34,7 +34,7 @@ steel pad	pedestal	false	613492907	--	"pedestal"	"pedestal"	--	--	"The steel pad
 pram	ramp	false	233052733	--	"ramp"	"ramp"	--	post-pram-ramp rule	"The pram folds out -- boy, there are all sorts of compartments there -- and becomes a ramp, given revamping. [b]DOWN[r] to a basement you have forgot you had."
 sitar	stair	false	331888451	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."
 stria	stair	false	331888451	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The stria glow and cascade into a stair leading back up."
-niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney rule	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
+my niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney rule	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
 meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
@@ -378,6 +378,8 @@ this is the bee-less-active rule:
 		min-up;
 	else:
 		say "You're able to focus on L'Clear Cellar and how to get into it, now[if cellar is prefigured]. Maybe you could focus perfectly if you wanted, or you could just RECALL now[end if].";
+		now b-text of evil bee is "RYPYYRG";
+		now parse-text of evil bee is "BELIEVE";
 	now noun is realized;
 
 this is the pre-cellar-recall rule:
