@@ -182,6 +182,10 @@ The needle is working fine. No need to meddle.
 
 >x ruts circuits
 
+#mistake test for tased
+>tased
+You don't need that, and neither does Curtis.
+
 #scannotes for sated stead
 >scan sated stead
 Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad.

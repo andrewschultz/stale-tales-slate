@@ -3545,7 +3545,8 @@ carry out requesting the score:
 			say ", though you only need [min-score of mrlp] to win";
 		if fruits-left is 0:
 			say ". There are no fruits left to find or give back to Curtis";
-		say "[if did-guru is true]. You can't get the maximum score, since you used the arugula[end if].";
+		if poss-score of others < max-score of others:
+			say "You can't get the maximum score, since you [if arugula is moot]used the arugula[end if][if poss-score of others is 43] and [end if][if s-i are moot and concisions are reflexive]missed a chance for something obscure with the sonic icons[end if].";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
@@ -18182,7 +18183,6 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 		ital-say "PLOP drops all the pickup lines here.";
 	continue the action;
 
-
 chapter parleys splayer players
 
 the parleys splayer players are plural-named reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
@@ -20255,7 +20255,11 @@ understand "concisions" as concisions when debug-state is true.
 
 check scaning s-c: try scaning concisions instead;
 
-a-text of sonicicons is "RYRRYRYYRR". b-text of sonicicons is "RGPRYRYGPP". parse-text of sonicicons is "C[sp]O[sp]N[sp]x[sp]I[sp]x[sp]I[sp]O[sp]N[sp]S".
+a-text of concisions is "RYRRYRYYRR". b-text of concisions is "RGPRYRYGPP". parse-text of concisions is "C[sp]O[sp]N[sp]x[sp]I[sp]x[sp]I[sp]O[sp]N[sp]S".
+
+check scaning s-i when concisions are reflexive:
+	say "Hmm. This is interesting. Not quite the sonic icons, but the whole area around them, gives a reading. Maybe there's something odd you can do with them, or get from them, before they achieve their ultimate purpose.";
+	try scaning concisions instead;
 
 section final-puzness defined here after thing definitions so articles are right
 
@@ -20379,7 +20383,7 @@ Include (-
 
 chapter i solve voiles
 
-the i solve voiles are plural-named vanishing scenery in Clangier Clearing. "Something is behind the voiles, but you're not sure what.".
+the i solve voiles are plural-named vanishing scenery in Clangier Clearing. "They're black and green. Something is behind the voiles, since (non-red) writing on them says 'guess what's behind here and win it,' but you're not sure what.".
 
 a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "-[sp]x[sp]?[sp]x[sp]?[sp]?".
 

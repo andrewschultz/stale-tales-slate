@@ -4117,6 +4117,7 @@ Trevis Vister	--	rivets
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 cark rack	"Just part of the scenery."
 godlings lodgings	"[if END PRONER POD is off-stage]You can't think of getting into [the lodgings] until you are in tune with Trevis Vister.[else]The END PRONER POD holds a clue how to get into [the lodgings].[end if]"
+sectarian craniates	"[one of]This is optional, but you can find another way to think and move ahead.[plus][or]ASCERTAIN.[minus][cycling]"
 END PRONER POD	"[one of]You don't want to wind up in the END PRONER POD, but part of you still worries about the risk of failure. Or it advertises itself that way.[plus][or]You need a way to reflect, to balance your desiring.[plus][or]You can READ the END PRONER POD for clues if you want. They will logically eliminate all possibilities.[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
 r cad card	"The r-cad card gives a clue, along with the END PRONER POD, of how to get into [the lodgings]."
 red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them.[minus][cycling]"	--	"DESERVE"
@@ -4592,6 +4593,7 @@ moss cap	"[one of]That moss cap is useless as-is. Curtis claimed it helped you t
 compass	"You don't need to do anything to get the compass to work for you[if swell wells is unvisited]. It lets you go north and leave Rustic Citrus[end if]."
 ruts circuits	"Once you examine the ruts circuits, tougher-to-flip items will appear. The circuits are not useful on their own."
 lumps	"[one of]Hmm, the lumps are purplish, maybe even a bit soft.[plus][or]You're trying to retrieve fruit, so that should be a clue.[plus][or]The settler will tell you where to place a vowel.[plus][or]PLUMS.[minus][cycling]"
+sated stead	"[one of]The sated stead blends in with the brownish dirt. What is a brown fruit?[plus][or]DATES.[minus][cycling]"
 mad train	"[one of]This is an odd one, but the mad train can become a fruit. The train is pod-like. It seems to be from some place far away.[plus][or]The settler knocks out the vowels.[plus][or]Dr. Nimata tells you the other thing.[plus][or]TAMARIND.[minus][cycling]"
 briar screen	"[one of]What's a darkish red, bitter fruit?[plus][or]The settler helps a bit.[plus][or]CRANBERRIES.[minus][cycling]"
 barren cries	"[one of]The barren cries are sour and bitter and tiny. What fruit is sour and bitter and tiny? Well, there are a lot, but...[plus][or]The barren cries can become CRANBERRIES.[minus][cycling]"
@@ -4618,6 +4620,7 @@ sorer bogey	"[one of]The sorer bogey makes your skin break out in--well, not pim
 un mod mound	--	sorer bogey
 stucco	"[one of]A message is written ON STUCCO, in red. Plus it's for ScoutCon. Those are two clues right there.[plus][or]COCONUTS.[minus][cycling]"
 Len Craig	"Len Craig wants to haggle. You need to poke around, see what fruits and things are in the clearing, and bargain accordingly." [Clangier Clearing hints]
+i solve voiles	"[one of]Some fruits are behind [the voiles], though some think they're a vegetable.[plus][or]Green or black...[plus][or]OLIVES.[minus][cycling]"
 auction caution	"[one of]The Auction Caution says you need to PAY ASAP.[plus][or]What could you buy with that message?[plus][or]PAPAYAS.[minus][cycling]"
 prices precis	"[one of]The prices precis has an error that makes you exclaim something.[plus][or]The mistake in the list won't drive you to profanity, but...[plus][or]CRIPES.[minus][cycling]"
 lemons	"[one of]The price, as is, makes you frown.[plus][or]Maybe being depressing will depress prices.[plus][or]Get SOLEMN.[minus][cycling]"
@@ -4640,7 +4643,7 @@ icon	"You've done what you can with the icon. You need to [if number of moot fru
 icons	"[one of]The icons are too inert.[plus][or]The icons can become SONIC.[minus][cycling]"
 Sagest Gate	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has So Great Storage]You have the So-Great Storage[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
 s-c	"[one of]The sonic coins aren't quite what you need. Nobody wants singing money.[plus][or]The coins can become ICONS.[minus][cycling]"
-s-i	"[if player has So Great Storage]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
+s-i	"[if concisions are not reflexed][one of]There's something you can anagram with the sonic icons before their more practical purpose. It's a word with two of each letter. It's not critical, though. Also...[paragraph break][or][stopping][end if][if player has So Great Storage]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
 So Great Storage	"[if player has dollar]You can trade the dollar for the So-Great Storage.[else if player has storage and lost slot is touchable]You can put something in the box's slot.[else]There's a way to open the So-Great Storage. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
 Art Erd	"[trader-clue]"
 Dr Tera	"[trader-clue]"

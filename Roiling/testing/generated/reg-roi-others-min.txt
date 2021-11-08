@@ -201,6 +201,10 @@ Dr. Severe
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
 !Your score has just gone up by one point.
 
+# with the icons in the slot, you can no longer get CONCISIONS
+>score
+You have 23 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
 Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.

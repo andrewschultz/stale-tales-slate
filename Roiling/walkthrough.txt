@@ -1877,7 +1877,7 @@ You can do a lot of things here in the Clangier Clearing.
 > SOLEMN
 > MO LEN
 > CRIPES
-> ANCIENTER
+> OLIVES
 
 > W
 
@@ -1907,6 +1907,8 @@ There's a lot more to do here and elsewhere, and you can probably guess a lot of
 > GIVE DOLLAR TO TRADER
 
 That gives you the "useless" so-great storage.
+
+There's something LLPish you can do with the sonic icons. Not a fruit, but a sort of utility with words. Maybe it belongs more in Troves, as it's abstract. But it slightly affects the game's end.
 
 > PUT ICONS IN SLOT
 
@@ -2072,7 +2074,7 @@ Ordeal Reload has a minimum of 37 and a maximum of 78. Find the direct way to th
 
 Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
 
-Store V has a minimum of 95 and a maximum of 165. The eleven Last Lousy Points account for most of the difference, but the alternate stream/lobster and bee/arena puzzles provide the other two letters. The siters are technically slightly easier than the marble as well, because of the duplicate S.
+Store V has a minimum of 95 and a maximum of 181. The nine Last Lousy Points account for most of the difference (one in each room, plus what you start with,) but the alternate stream/lobster and bee/arena and spirea/rivets and Blamer/Sister puzzles provide the other two letters. The siters are technically slightly easier than the marble as well, because of the duplicate S.
 
 Store U has a minimum of 120 and a maximum of 134. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, and V may be a bit longer to clear completely, since the optional points can get skipped. But V is potentially quicker. So the "fewest letters or necessary anagrams" metric may not tell it all.
 
@@ -2084,9 +2086,9 @@ Store W has a minimum of 164-168 and a maximum of 356-360, subjected to some ran
 
 You can save keystrokes with other alternate puzzles, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two based on randomness since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why the totals are not exact: the prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip too much to list here. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store T has a minimum of 146 and a maximum of 235. The bran barn forces you to use one more letter, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (19) vs the minimum (16) or decide whether to pick the long option for the imp (15 vs. 17). The players' solutions in letters also can swing from 21 (the players plus their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
+Store T has a minimum of 143 and a maximum of 235. The bran barn forces you to use one more letter, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (21) vs the minimum (17) or decide whether to pick the long option for the imp (19 vs. 16). The players' solutions in letters also can swing from 21 (the players plus their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
 
-Store H has a minimum of 170 and a maximum of 321. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet. The last two points are intentionally close to trivial, as well. Walking through the gates gives an even easier optional puzzle to end.
+Store H has a minimum of 163 and a maximum of 342. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet. The last two points are intentionally close to trivial, as well. Walking through the gates gives an even easier optional puzzle to end.
 
 LAST LOUSY POINTS
 
@@ -2151,6 +2153,8 @@ TYNER at the lager in Drain Nadir. (Again, interesting ROT13.)
 ERYNCFR by the Pleaser Leapers in Boredom Bedroom.
 
 QVFPBIRE something about Divorces magazine in Browse Bowers. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than DIVORCES.
+
+NFPREGNVA around Sectarian Craniates in the Econ-Cone.
 
 EBZNAGVPVFR about Creationism, Reactionism.
 
@@ -2260,6 +2264,9 @@ Reserved Deserver Dr. Severe: (appears after you trade)
 
 CLANGIER CLEARING
 
+Nectarine:
+> NAPVRAGRE
+
 Mango:
 > NZBAT
 
@@ -2281,6 +2288,9 @@ Harmonicas:
 
 Mad Train:
 > GNZNEVAQ
+
+Eerie blurbs:
+> OYHROREEVRF
 
 SWELL WELLS
 
@@ -2316,3 +2326,7 @@ CLANGIER CLEARING
 
 PAY ASAP: (from reading the auction caution)
 > CNCNLNF
+
+Oh. There's one final. The sonic icons can become ...
+
+> PBAPVFVBAF

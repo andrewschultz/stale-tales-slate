@@ -4,6 +4,8 @@
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
+# gxv.py is used to verify the GX commands (guru-extended, can reuse arugula)
+#
 files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,reg-roi-others-slider.txt,reg-roi-others-hints.txt,reg-roi-others-spoiler.txt,reg-roi-others-verbs.txt
 
 ~	max	t0
@@ -382,6 +384,11 @@ The needle is working fine. No need to meddle.
 
 @hin
 /DEBUG INFO: (dates|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+
+@mis
+#mistake test for tased
+>tased
+You don't need that, and neither does Curtis.
 
 @spoi
 >gx lumps
