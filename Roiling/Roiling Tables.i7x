@@ -119,6 +119,8 @@ this is the post-specter-scepter rule:
 	say "'Oh. One more thing. Instead of the scepter you could've had, have [deductin]. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is.'";
 	now player has Inducted Deductin;
 	set the pronoun it to Inducted Deductin;
+	say "[line break]The [specter] leaves for a bit but then pops out from behind a fourth wall. 'Oh. I said one more thing, but I meant two. You can [b]PARSE[r], and with the settler in cheat mode, the game will tell you what can logically be figured out. [b]SPARE[r] undoes this.";
+	moot respect specter; [not necessary if you solve the specter, but if you pass by it, this makes some if statements easier]
 
 to say scep-scan-track:
 	if got-thru-respect is true:

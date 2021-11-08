@@ -164,7 +164,8 @@ carry out tsing:
 	move player to Strip of Profits;
 	get-cool-stuff;
 	moot lamp;
-	moot teariest treatise; [ for testing purposes ]
+	moot teariest treatise;
+	moot respect specter; [ all for testing purposes ]
 	now Ordeal Reload is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;

@@ -6744,7 +6744,7 @@ parseing is an action out of world.
 
 understand the command "parse" as something new.
 
-understand "parse" as parseing when Strip of Profits is visited.
+understand "parse" as parseing when know-parse-spare.
 
 parse-mist is a truth state that varies.
 
@@ -6752,7 +6752,7 @@ carry out parseing:
 	if spear is touchable and parse-mist is false:
 		now parse-mist is true;
 		say "You've parsed the spelling of quite a few words so far. Just a bit more, now.";
-		say "[line break](If you wanted to change how you see the letters settler's output, you can type PARSE again.)" instead;
+		say "[line break](If you wanted to change how you see the letters settler's output, you can type [b]PARSE[r] again.)" instead;
 	say "Parsing letters settler output is [if parse-now is false]now[else]already[end if] on[but-if-parse].";
 	now parse-now is true;
 	the rule succeeds;
@@ -6767,7 +6767,7 @@ spareing is an action out of world.
 
 understand the command "spare" as something new.
 
-understand "spare" as spareing when Strip of Profits is visited.
+understand "spare" as spareing when know-parse-spare.
 
 spare-mist is a truth state that varies.
 
@@ -6775,7 +6775,7 @@ carry out spareing:
 	if spear is touchable and spare-mist is false:
 		now spare-mist is true;
 		say "No, not adjectives. Well, not here by Curtis.";
-		say "[line break](If you wanted to change how you see the letters settler output, you can type SPARE again.)" instead;
+		say "[line break](If you wanted to change how you see the letters settler output, you can type [b]SPARE[r] again.)" instead;
 	say "Parsing letters settler output is [if parse-now is true]now[else]already[end if] off.";
 	now parse-now is false;
 	the rule succeeds;
@@ -8584,8 +8584,13 @@ check taking the pen: say "Bad idea. You tend to lose those things like nobody's
 
 qmspoil is a truth state that varies.
 
+to decide whether know-parse-spare:
+	if respect specter is moot, yes;
+	if strip of profits is visited, yes;
+	no;
+
 to say verb-list:
-	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN are used occasionally, and [b]IN[r] or [b]OUT[r] may work.";
+	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN[r] are used occasionally, and [b]IN[r] or [b]OUT[r] may work.";
 	say "[b]X[r] or [r]EXAMINE may provide clues about something, and if it has writing on it, [b]READ[r] will show the writing, which is often a hint.";
 	say "[2da][b]TALK[r] to an NPC gives general information, while [b]ASK X ABOUT Y[r] gives detailed information.";
 	say "[2da][b]OPTIONS[r] or [b]OPTS[r] or [b]POST OPTS[r] gives you a list of game options that can simplify play or add detail.";
@@ -8594,16 +8599,18 @@ to say verb-list:
 	say "[2da][b]VERBS[r] shows this again, and informational meta-commands include [b]ABOUT[r], [b]CREDITS[r], [b]TECH[r], [b]SITES[r], and [b]RELEASE[r]. These give no hints, but you may find them interesting.";
 	if player has settler:
 		say "[2da][b]SCAN[r] various things to see if they can be changed and how.";
-		say "[2da][b]TEACH[r] or [b]CHEAT[r] can change how much the settler helps. CHEAT tells a bit more than TEACH. [b]C[r] and [b]T[r] are abbreviations.";
+		say "[2da][b]TEACH[r] or [b]CHEAT[r] can change how much the settler helps. [b]CHEAT[r] tells a bit more than [b]TEACH[r]. [b]C[r] and [b]T[r] are abbreviations.";
 		say "[2da]Settler shortcuts: [b]LA[r]=recall what you scanned last, [b]SL[r]=turns slider on, [b]SY[r]=scan once with cheat on, [b]SN[r]=scan once with cheat off, SS=shake settler (or switch the Whichs Shwich) to see what can be changed.";
+		if know-parse-spare:
+			say "[2da][b]PARSE[r] and [b]SPARE[r] turn on displaying all the letters you can figure logically from a cheat-scan.";
 	if player has whistle, say "[2da][b]PLAY[r] the whistle.";
 	verbsplain "xray";
 	verbsplain "go to";
 	verbsplain "rove over";
 	verbsplain "retry";
 	if in-beta is true:
-		say "BETA COMMANDS BELOW.";
-		say "[2da]MISSED shows what you missed in all regions. MISSES shows this region's. MISSALT shows alternate routes.";
+		say "[b]BETA COMMANDS BELOW:[r][line break]";
+		say "[2da][b]MISSED[r] shows what you missed in all regions. [b]MISSES[r] shows this region's. [b]MISSALT[r] shows alternate routes.";
 
 to say opts-list:
 	verbsplain "access";
@@ -8624,7 +8631,7 @@ table of pad-stuff [??what does thinking do elsewhere]
 topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
 "options" or "opts" or "post opts"	true	"[opts-list]"	"options"	false	--	false
-"parse/spare"	false	"[b]PARSE[r] processes the settler's data for you, but SPARE hides it."	"parse"	false	--	false
+"parse/spare"	false	"[b]PARSE[r] processes the settler's data for you, but [b]SPARE[r] hides it."	"parse"	false	--	false
 "access"	true	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like SCORE, will not cost you time if you are in a tight situation."	"free turns"	false
 "saying"	false	"Instead of [b]SAY[r]ing or [b]THINK[r]ing, you can just type the word."	"saying"	false
@@ -8664,7 +8671,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "shuffling/ around" or "shuffling around"	true	"Postmortems? Most sport em. Details: I lasted. I miss my tagged gadget and how it helped me through the Forest (store F,) Sortie (store I,) and Metros (store M) in the Trips Strip. To the resort (store R.) Redness = guised guides (letters all wrong.)"	"Shuffling Around"	true
 "no lag" or "logan" or "no lag logan"	false	"No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road."	"No-Lag Logan"	true	routes
 "tagged/gadget" or "tagged gadget"	true	"You wrote some notes about the Tagged Gadget in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."	"tagged gadget"	true
-"retry" or "terry"	true	"You wrote notes about how you can RETRY thanks to Terry if you get stuck somewhere past a store."	"retry"	true
+"retry" or "terry"	true	"You wrote notes about how you can [b]RETRY[r] thanks to Terry if you get stuck somewhere past a store."	"retry"	true
 "warp"	true	"[i][bracket]FOURTH WALL NOTE: if you solved Store P, U, V, W, or Y in an earlier release, you can type the final command to bypass it. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"	"warp"	true
 "directions/dirs"	true	"A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."	"directions/dirs"	false	--
 "casper"	false	"Casper talked to you about how this place is full of action, how there's a haunter beneath Anger Range, and it may have lost something. Casper also explained you'll need a way through the Horned Hedron."	"casper"	true	oyster
@@ -9081,7 +9088,7 @@ check going inside in Carven Cavern:
 	if plaster is in Carven Cavern, say "There's nowhere to go in, yet." instead;
 	if act ruin curtain is in Carven Cavern:
 		now curtain-know is true;
-		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it." instead;
+		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be an [b]ACT-RUIN CURTAIN[r]. You'll have to disable it somehow without touching it." instead;
 	if respect specter is touchable:
 		say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness.[wfak]";
 		process the post-specter-scepter rule;
@@ -12812,7 +12819,7 @@ chapter Drive E
 
 Drive E is proper-named reflexive LLPish boring scenery in Hacks Shack. description of drive e is "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if].". bore-text is "[if drive e is reflexed]You already improved Drive E[else]There's probably a way to make Drive E more efficient, but it's probably some irregular action[end if].".
 
-a-text of drive e is "RYRYRY". b-text of drive e is "?Y???G". parse-text of drive e is "x[sp]-[sp]x[sp]-[sp]x[sp]-".
+a-text of drive e is "RYRYRY". b-text of drive e is "?Y???G". parse-text of drive e is "?[sp]-[sp]?[sp]?[sp]?[sp]E".
 
 understand "e drive" as drive e.
 
@@ -15670,12 +15677,11 @@ Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightl
 
 last-loc of Towers is Loftier Trefoil.
 
-trefoil-debug-warn is a truth state that varies.
-
 after looking in Loftier Trefoil:
-	if debug-state is true and trefoil-debug-warn is false:
+	if loftier trefoil is unvisited and debug-state is true:
+		say "[line break]";
 		ital-say "Remember, WARWAR skips through the warriors.";
-		now trefoil-debug-warn is true;
+		say "[line break]";
 		ital-say "Also, PLOP drops all the picaros here, but crazy things may happen if you move on from unit testing.";
 	set the pronoun him to rodney;
 	set the pronoun them to w-p;
@@ -18152,12 +18158,6 @@ check going west in Disowned Downside:
 	if atmo moat is in Disowned Downside, say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
 	if Gretta is touchable, say "[cree-pee]." instead;
 
-section debug notes - not for release
-
-after looking for the first time in disowned downside:
-	ital-say "PLOP drops all the pickup lines here.";
-	continue the action;
-
 chapter atmo-moat
 
 the atmo moat is vanishing scenery in Disowned Downside. understand "atmo/moat" and "atmo moat" as atmo moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red.". printed name of atmo moat is "atmo-moat".
@@ -18176,7 +18176,12 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 		now all pickup-lines are in Meatier Emerita Emirate;
 		try talking to gretta;
 		the rule succeeds;
-	say "[line break]But whatever they call themselves, you know [pla-ma]s['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
+	say "[line break]But whatever they call themselves, you know [pla-ma]s['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance.";
+	if debug-state is true:
+		say "[line break]";
+		ital-say "PLOP drops all the pickup lines here.";
+	continue the action;
+
 
 chapter parleys splayer players
 
@@ -19821,7 +19826,7 @@ chapter sated stead
 
 a sated stead is boring vanishing scenery. description is "It seems like it's done all it can ... or has it?". bore-text of sated stead is "Well, there's not much to do with the [stead]. Not much normal, anyway."
 
-a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "d[sp]?[sp]?[sp]-[sp]s".
+a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "x[sp]?[sp]?[sp]?[sp]x".
 
 the dates are a plural-named fruit. description is "They're dates. They're edible.". frroom of dates is Rustic Citrus.
 
@@ -19839,7 +19844,7 @@ chapter tamarind
 
 A mad train is a generic-rut-pre. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.".
 
-a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]a[sp]x[sp]-[sp]r[sp]-[sp]x[sp]x".
+a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]A[sp]x[sp]A[sp]R[sp]I[sp]x[sp]x".
 
 check taking mad train: say "You'd strain to find a use for trains here." instead;
 
@@ -19849,7 +19854,7 @@ chapter blueberries
 
 the eerie blurbs are scenery. description is "A weird blue-purple. None of them make sense, but you can read them."
 
-a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP". parse-text of eerie blurbs is "b[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]s".
+a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP". parse-text of eerie blurbs is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]S".
 
 check scaning blurbs when cheat-on is true: say "You just generally scan the blurbs, not noting them, and it turns up one positive..."
 
@@ -19887,7 +19892,7 @@ the magenta rope is a vanishing boring thing. initial appearance of the magenta 
 this is the bore-magenta-rope rule:
 	if current action is taking, say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow.";
 
-a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]-[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x[sp]-[sp]x[sp]e".
+a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]O[sp]x[sp]E[sp]x[sp]x[sp]A[sp]x[sp]A[sp]x[sp]E".
 
 section megaton pear plans
 
@@ -19907,7 +19912,7 @@ section mopeage rant
 
 the mopeage rant is auxiliary boring scenery. description of mopeage rant is "[pre-pom-blah].". bore-text of mopeage rant is "It's useless to you in its current form. Try examining it."
 
-a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]o[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]a[sp]x[sp]-".
+a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]O[sp]x[sp]E[sp]x[sp]x[sp]A[sp]x[sp]A[sp]x[sp]E".
 
 book Swell Wells
 
@@ -19957,7 +19962,7 @@ the stucco is scenery in Swell Wells. "One of two advertisements is for [stucco-
 to say stucco-ad:
 	say "[one of]ScoutCon[or]SunCotCo[in random order]"
 
-a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR". parse-text of stucco is "x[sp]-[sp]x[sp]o[sp]x[sp]-[sp]x[sp]x".
+a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR". parse-text of stucco is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
 the coconuts are a plural-named fruit.
 
@@ -19983,7 +19988,7 @@ the sorer bogey is ghostly vanishing scenery in Swell Wells. "You can't see the 
 
 check taking sorer bogey: say "Don't be a silly goose." instead;
 
-a-text of sorer bogey is "RYYRYRYRRO". b-text of sorer bogey is "RGYRYPYRRB". parse-text of sorer bogey is "x[sp]o[sp]-[sp]x[sp]-[sp]b[sp]-[sp]x[sp]x[sp]y".
+a-text of sorer bogey is "RYYRYRYRRO". b-text of sorer bogey is "RGYRYPYRRB". parse-text of sorer bogey is "x[sp]O[sp]-[sp]x[sp]-[sp]B[sp]E[sp]x[sp]x[sp]Y".
 
 the gooseberry is a fruit.
 
@@ -20573,7 +20578,7 @@ chapter Dr Severe
 
 Reserved Deserver Dr Severe is a boring terse person. description is "Kvetching and muttering to themselves about how good it is Elvira is gone, but that doesn't solve any REAL problems. [he-she-c] looks worried, maybe almost guilty the way they treated you. You're not n the mood to argue, but maybe they have something for you. A peace offering. If you're interested.". "Reserved Deserver Dr. Severe paces (of course) around here, complaining things aren't good enough yet.". bore-text is "Dr. Severe seems interested only in complaining right now.". printed name is "Reserved Deserver Dr. Severe".
 
-a-text of Reserved Deserver Dr Severe is "RYRYRRYR". b-text of Reserved Deserver Dr Severe is "??RG?R??". parse-text of Reserved Deserver Dr Severe is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
+a-text of Reserved Deserver Dr Severe is "RYRYRRYR". b-text of Reserved Deserver Dr Severe is "??RG?R??". parse-text of Reserved Deserver Dr Severe is "?[sp]?[sp]x[sp]E[sp]?[sp]x[sp]?[sp]?".
 
 the guava is a fruit. [Dr Severe gives guava]
 
@@ -20581,7 +20586,7 @@ chapter banana/a
 
 a banna is boring scenery in Scape Space. description of a banna is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna. printed name is "banna[']". indefinite article of banna is "a".
 
-a-text of a banna is "RYRYRY". b-text of a banna is "R?RY??". parse-text of a banna is "b[sp]-[sp]n[sp]a[sp]-[sp]-". a banna is parse-spoilable.
+a-text of a banna is "RYRYRY". b-text of a banna is "R?RY??". parse-text of a banna is "B[sp]?[sp]N[sp]A[sp]?[sp]?". a banna is parse-spoilable.
 
 The small yellow banana is a fruit.
 
@@ -20592,6 +20597,31 @@ a brr hub is a boring thing in Scape Space. "A brr hub looms here, making the Sc
 a-text of a brr hub is "RRYRYRR". b-text of a brr hub is "RRYRYRP". parse-text of a brr hub is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]B".
 
 rhubarb is a fruit.
+
+chapter ENGARO orange
+
+the ENGARO orange is a boring reflexive fruit in Scape Space. "An orange lies here. It looks like you could read the orange to find its brand name.". bore-check of ENGARO orange is bore-orange rule. description of ENGARO orange is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping].". bore-text of ENGARO orange is "You [if ENGARO orange is reflexed]don't need to do anything more with the orange except maybe return it to Curtis[else]think you'll have to do something unusual to get that orange[end if]."
+
+a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO orange is "RY*RYYR". parse-text of ENGARO orange is "x[sp]-[sp] [sp]x[sp]-[sp]-[sp]x".
+
+this is the bore-orange rule:
+	if current action is taking, say "The orange bounces away, to become a goner. You must have tried to grab it too quickly. You see red and feel like an ogre for grabbing it so unsubtly." instead;
+
+section gonearing
+
+gonearing is an action applying to nothing.
+
+understand the command "go near" as something new.
+
+understand "go near" as gonearing.
+
+carry out gonearing:
+	if orange is in Scape Space and orange is touchable:
+		try fliptoing orange;
+		the rule succeeds;
+	say "[reject]" instead;
+
+check dropping the orange: say "But you worked so hard to get it!" instead;
 
 chapter gender dependent greedy person
 
@@ -20654,31 +20684,6 @@ check opening slot: say "It will fit if you give it the right thing." instead;
 
 check closing slot: say "It needs to be open--or how will you pass the gate?" instead;
 
-chapter ENGARO orange
-
-the ENGARO orange is a boring reflexive fruit in Scape Space. "An orange lies here. It looks like you could read the orange to find its brand name.". bore-check of ENGARO orange is bore-orange rule. description of ENGARO orange is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping].". bore-text of ENGARO orange is "You [if ENGARO orange is reflexed]don't need to do anything more with the orange except maybe return it to Curtis[else]think you'll have to do something unusual to get that orange[end if]."
-
-a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO orange is "RY*RYYR". parse-text of ENGARO orange is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
-
-this is the bore-orange rule:
-	if current action is taking, say "The orange bounces away, to become a goner. You must have tried to grab it too quickly. You see red and feel like an ogre for grabbing it so unsubtly." instead;
-
-section gonearing
-
-gonearing is an action applying to nothing.
-
-understand the command "go near" as something new.
-
-understand "go near" as gonearing.
-
-carry out gonearing:
-	if orange is in Scape Space and orange is touchable:
-		try fliptoing orange;
-		the rule succeeds;
-	say "[reject]" instead;
-
-check dropping the orange: say "But you worked so hard to get it!" instead;
-
 chapter fruits by hintability
 
 maraschino is not hintable. pears are not hintable. plums are not hintable. limes are not hintable.
@@ -20688,7 +20693,7 @@ gooseberry is not hintable. apricot is not hintable. apples are not hintable. ma
 kumquat is not hintable. papayas are not hintable. breadfruit is not hintable. watermelon is not hintable.
 cranberries are not hintable. grapefruit is not hintable. raspberry is not hintable. strawberries are not hintable.
 blackberries are not hintable. guava is not hintable. rhubarb is not hintable. banana is not hintable.
-grapes are not hintable. pineapple is not hintable.
+grapes are not hintable. pineapple is not hintable. dates are not hintable. olives are not hintable.
 
 chapter fruits by room
 
