@@ -53,6 +53,8 @@ open_first = True
 
 verbose = False
 
+test_parse_text = False
+max_parse_length = 15
 max_count = 10
 
 # this is for oddly, badly or privately named items
@@ -375,9 +377,6 @@ def my_parse_text(from_text, to_text, b_text, max_length = 14, include_question_
     to_mod = nopunc(to_text)
     b_text = b_text.lower().replace('*', '')
     my_poss = []
-    if len(to_mod) > max_length:
-        print("Skipping", to_text)
-        return ''
     if len(from_mod) % len(to_mod):
         print("Imbalance, can't calculate parse_text")
         print(from_text, "vs", to_text)
@@ -428,6 +427,10 @@ def my_parse_text(from_text, to_text, b_text, max_length = 14, include_question_
     for r in range(0, len(to_mod)):
         poss_array[r] = ''.join(sorted(list(poss_array[r])))
     parse_display = [poss_to_parsetext_entry(x) for x in poss_array]
+    count = 0
+    for x in range(0, len(to_text)):
+        if to_text[x] == ' ':
+            parse_display.insert(x, ' ')
     if '?' in parse_display or '-' in parse_display or 'x' in parse_display:
         parse_text_string = "[sp]".join(parse_display)
     else:
@@ -593,6 +596,8 @@ def aro_settler_check():
                             print("{}b/{} Uh oh line {} {} -> {} had {} as the given b-text but should have {}.".format(b_count, count, line_count, my_raw, sol, v.upper(), the_string.upper()))
                             mt.add_postopen(r_src, line_count)
                     if 'parse-text' in q:
+                        if not test_parse_text:
+                            continue
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         if my_raw in parse_text_ignore:
                             continue
@@ -609,6 +614,12 @@ def aro_settler_check():
                         if this_from in aro_trans:
                             this_from = aro_trans[this_from]
                         this_to = aro_flips[my_raw]
+                        if len(this_to) > max_parse_length and len(this_from) > max_parse_length:
+                            #print("Skipping", this_to)
+                            continue
+                        if ',' in this_to:
+                            print("Skipping ambiguous two-solution parse-text (check by hand) for {}/{}.".format(this_from, this_to))
+                            continue
                         parse_expected = my_parse_text(this_from, this_to, latest_b_text)
                         if v != parse_expected:
                             #pass
@@ -617,16 +628,19 @@ def aro_settler_check():
                                 print(u_count, "You need to uppercase the parsetext at line", line_count, v, "=>", parse_expected)
                             else:
                                 p_count += 1
-                                print(p_count, line_count, my_thing, aro_trans[my_raw], "->", aro_flips[my_raw])
+                                print("{} {} {}{} => {}".format(p_count, line_count, this_from, '' if this_from == my_thing else '({})'.format(my_thing), aro_flips[my_raw]))
                                 print("exp text: parse-text of {} is \"{}\".".format(my_raw, parse_expected))
                                 print("got text: parse-text of {} is \"{}\".".format(my_raw, v))
                                 if p_count == max_count:
                                     return
+                            mt.add_postopen(r_src, line_count)
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
                 if global_raw and my_raw != global_raw:
                     print("WARNING code rewrite of", global_raw, "to", my_thing, "at line", line_count)
     flip_miss = [x for x in aro_flips if x not in aro_got]
+    if count == 0 and not test_parse_text:
+        print("The a- and b- text showed no errors. -pt will check the parse-text, with an optional # for max letters in a solution.")
     if len(flip_miss):
         print("{:02d}".format(len(flip_miss)), "Flips from logsync.txt to ARO source missed:", ', '.join(["{:s}/{:d}".format(f, aro_line[f]) for f in flip_miss]))
         for f in flip_miss:
@@ -770,6 +784,12 @@ while arg_count < len(sys.argv):
         open_first = False
     elif x == 'v': verbose = True
     elif x == 'nv' or x == 'vn': verbose = False
+    elif x.startswith('pt'):
+        test_parse_text = True
+        try:
+            max_parse_length = int(x[2:])
+        except:
+            print("A number after PT gives max_parse_count.")
     elif x.isdigit():
         max_count = int(x)
     elif x == '?' or x == '-?': usage()

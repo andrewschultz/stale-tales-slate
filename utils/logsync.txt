@@ -166,7 +166,7 @@ hurt hog>through
 bent ewe>between
 rude n nuder>under
 the bean>beneath
-darkness~null it unit>until
+null it unit>until
 yob den>beyond
 # note that "all" is clipped in the table_shorten function
 all noon gag>along
