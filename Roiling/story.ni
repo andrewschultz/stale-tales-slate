@@ -8078,7 +8078,7 @@ a-text of event map is "RYRYRYRR". b-text of event map is "RYRYRYRR". parse-text
 
 the platform is part of the diorama. it is hinthelpy. the platform is spacy. description is "It's one of those speaking platforms that people would stand behind. If it weren't so small."
 
-a-text of platform is "RYRR*RRYR". b-text of platform is "RYRR*RRYR". parse-text of platform is "x[sp]-[sp]x[sp]x[sp]x[sp]x[sp]-[sp]x".
+a-text of platform is "RYRR*RRYR". b-text of platform is "RYRR*RRYR". parse-text of platform is "x[sp]-[sp]x[sp]x[sp] [sp]x[sp]x[sp]-[sp]x".
 
 the farm plot is a thing. it is hinthelpy. description is "It doesn't actually have any dirt on it or it'd have crumbled long ago. If the words FARM PLOT weren't traced in it, in fact, you'd probably think it was just a dirt road. Hooray for helpful documentation."
 
@@ -8086,7 +8086,7 @@ a-text of farm plot is "RRYRRYRR". b-text of farm plot is "RRYRRYRR". parse-text
 
 the pedestal is part of the diorama. the pedestal is hinthelpy and spacy. description is "Too small to put anything on, but it's a good size for instructional purposes."
 
-a-text of pedestal is "RRYYR*RYR". b-text of pedestal is "RRYGR*RGR". parse-text of pedestal is "x[sp]x[sp]E[sp]E[sp]x[sp]x[sp]A[sp]x".
+a-text of pedestal is "RRYYR*RYR". b-text of pedestal is "RRYGR*RGR". parse-text of pedestal is "x[sp]x[sp]E[sp]E[sp]x[sp] [sp]x[sp]A[sp]x".
 
 does the player mean scaning steel pad: it is likely.
 
@@ -8098,7 +8098,7 @@ some crabgrass is part of the diorama. the crabgrass is hinthelpy and spacy and 
 
 indefinite article of crabgrass is "some".
 
-a-text of crabgrass is "RRYRR*RRYR". b-text of crabgrass is "RPGRR*RRYR". parse-text of crabgrass is "x[sp]R[sp]A[sp]x[sp]x[sp]x[sp]x[sp]A[sp]x".
+a-text of crabgrass is "RRYRR*RRYR". b-text of crabgrass is "RPGRR*RRYR". parse-text of crabgrass is "x[sp]R[sp]A[sp]x[sp]x[sp] [sp]x[sp]x[sp]A[sp]x".
 
 the brass crag is a hinthelpy thing. description is "It would be majestic if it weren't so miniature. You think. Well, it wasn't meant as scenery."
 
@@ -10506,7 +10506,7 @@ check touching sit a nag:
 
 check taking sit a nag: say "The [sit a nag] is too big." instead;
 
-a-text of anti sag sit a nag is "YRYYRRR". b-text of anti sag sit a nag is "?RY??RR". parse-text of anti sag sit a nag is "A[sp]G[sp]-[sp]-[sp]N[sp]x[sp]x".
+a-text of anti sag sit a nag is "YRYYRRR". b-text of anti sag sit a nag is "?RY??RR". parse-text of anti sag sit a nag is "?[sp]x[sp]-[sp]?[sp]?[sp]x[sp]x".
 
 check scaning sit a nag:
 	if Gast is off-stage, continue the action;
@@ -10538,7 +10538,7 @@ this is the bore-bell rule:
 	if current action is taking, say "The WOE BOW BELL is distant and loud." instead;
 	if current action is listening, now boring-exception is true;
 
-a-text of woe bow bell is "RYRYR". b-text of woe bow bell is "RYRYR". parse-text of woe bow bell is "-[sp]E[sp]-[sp]O[sp]-".
+a-text of woe bow bell is "RYRYR". b-text of woe bow bell is "RYRYR". parse-text of woe bow bell is "x[sp]E[sp]x[sp]O[sp]x".
 
 chapter Rude N Nuder
 
@@ -10566,7 +10566,7 @@ the worst ad is LLPish vanishing scenery in Same Mesa. "Dang it, a giant ad for 
 
 to say go-worst: if worst ad is prefigured, say "--the one you tried to go TOWARDS with [Gast] around";
 
-a-text of worst ad is "RYRYRRR". b-text of worst ad is "R??Y??R". parse-text of worst ad is "x[sp]O[sp]x[sp]A[sp]x[sp]x[sp]x".
+a-text of worst ad is "RYRYRRR". b-text of worst ad is "R??Y??R". parse-text of worst ad is "x[sp]?[sp]?[sp]-[sp]?[sp]?[sp]x".
 
 check taking worst ad: say "You'd need to get closer. Which isn't easy." instead;
 
@@ -10580,7 +10580,7 @@ check taking MORF FORM: say "It'd crush you. You need another way to bring it do
 
 check going when MORF FORM is touchable: say "That MORF-FORM is lingering threateningly. Maybe you should deal with it now." instead;
 
-a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of MORF FORM is "x[sp]R[sp]O[sp]x". MORF FORM is cheat-spoilable.
+a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of morf form is "x[sp]x[sp]O[sp]x". MORF FORM is cheat-spoilable.
 
 chapter THE BEAN
 
@@ -10590,7 +10590,7 @@ check taking THE BEAN:	say "You can't move it. Maybe you can find a way to get i
 
 check entering THE BEAN: say "It doesn't appear cracked." instead;
 
-a-text of THE BEAN is "RYRYYRR". b-text of THE BEAN is "RYRYYRR". parse-text of THE BEAN is "x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]x".
+a-text of THE BEAN is "RYRYYRR". b-text of THE BEAN is "RYRYYRR". parse-text of the bean is "x[sp]E[sp]x[sp]E[sp]A[sp]x[sp]x".
 
 check going when THE BEAN is in Same Mesa and player is in Same Mesa:
 	if noun is down, say "Maybe there is something below, or something. But you can't prove it." instead;
@@ -10600,7 +10600,7 @@ chapter A Bev O' Be Ova'
 
 A Bev O Be Ova is a proper-named thing. printed name is "A Bev O['] Be Ova[']". "A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them ... somehow.". bore-text of A Bev O Be Ova is "It's not to drink, but it is a clue where to look next.". bore-check of A Bev O Be Ova is the bore-bev rule. description is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look."
 
-a-text of A Bev O Be Ova is "YRYRY". b-text of A Bev O Be Ova is "???PY". parse-text of A Bev O Be Ova is "-[sp]-[sp]-[sp]V[sp]E".
+a-text of A Bev O Be Ova is "YRYRY". b-text of A Bev O Be Ova is "???PY". parse-text of a bev o be ova is "?[sp]?[sp]?[sp]V[sp]E".
 
 this is the bore-bev rule:
 	if current action is drinking, say "No. You know you're nowhere near the end, and you don't just want to give up. [bev] has a different message." instead;
@@ -10877,13 +10877,15 @@ section NULL IT unit
 
 the NULL IT unit is a vanishing boring thing in Harms Marsh. description of NULL IT unit is "It seems to be a source of at least some of the darkness. It also seems like it's been here a good long while. It looks rather sturdy, but maybe there's a way to neutralize it."
 
-a-text of NULL IT unit is "YRRYR". b-text of NULL IT unit is "YRR?R". parse-text of NULL IT unit is "-[sp]x[sp]x[sp]-[sp]x". NULL IT unit is cheat-spoilable.
+a-text of NULL IT unit is "YRRYR". b-text of NULL IT unit is "YRR?R". parse-text of null it unit is "-[sp]x[sp]T[sp]-[sp]x". NULL IT unit is cheat-spoilable.
 
 section darkness
 
 the darkness is boring auxiliary scenery in Harms Marsh. description of darkness is "There's not much to see of the darkness. You just need to get rid of it.". bore-text is "You rage against the darkness, randomly thinking 'Ill unit, nut.' Well, you see red after that."
 
-a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of darkness is "U[sp]N[sp]x[sp]I[sp]x". darkness is cheat-spoilable.
+check scaning darkness:
+	say "The darkness leaves your settler ... dark. But the [it unit] seems to pick up something.";
+	try scaning null it unit instead;
 
 to say to-o: say "Brother Horbert talked about how if you had faith, and patience to see them right, they might lead you to an un-road or to No-Lag Logan if you knew how to study them."
 
@@ -10891,7 +10893,7 @@ section odd run on aura
 
 the odd run on aura is boring scenery. description of odd run on aura is "It seems to beckon you, but you're not sure how to follow it.". bore-text of aura is "It's ephemeral, just a guide."
 
-a-text of odd run on aura is "YRYYRR". b-text of odd run on aura is "YRY?RR". parse-text of odd run on aura is "-[sp]x[sp]-[sp]x[sp]-[sp]-".
+a-text of odd run on aura is "YRYYRR". b-text of odd run on aura is "YRY?RR". parse-text of odd run on aura is "-[sp]R[sp]-[sp]-[sp]N[sp]D".
 
 section all noon gag
 
@@ -10905,7 +10907,7 @@ the un road is vanishing boring scenery. description of un road is "The un-road 
 
 understand "trail" and "un/road/unroad" as un road when mrlp is routes.
 
-a-text of un road is "YRYYRR". b-text of un road is "YRYYRP". parse-text of un road is "-[sp]x[sp]-[sp]-[sp]x[sp]D". un road is cheat-spoilable.
+a-text of un road is "YRYYRR". b-text of un road is "YRYYRP". parse-text of un road is "-[sp]R[sp]-[sp]-[sp]N[sp]D". un road is cheat-spoilable.
 
 book Ripe Pier
 
@@ -10927,13 +10929,13 @@ this is the bore-mists rule:
 	if current action is taking, say "Mist-ake. Ha ha ha." instead;
 	if current action is entering, say "Part of you admits it will be tricky to figure out. Maybe if you entered the mist behind the ad the right way, with a good plan... or even a bad one... it would work out." instead;
 
-a-text of data dim mists is "YRYRRR". b-text of data dim mists is "Y??RRR". parse-text of data dim mists is "-[sp]?[sp]I[sp]x[sp]x[sp]x". data dim mists is parse-spoilable.
+a-text of data dim mists is "YRYRRR". b-text of data dim mists is "Y??RRR". parse-text of data dim mists is "-[sp]?[sp]?[sp]x[sp]x[sp]x". data dim mists is parse-spoilable.
 
 section admits mist ad
 
 the admits mist ad is auxiliary boring scenery in Ripe Pier. description of admits mist ad is "Apparently, behind it are DATA-DIM MISTS. There must be some nonlinear way to navigate things, though. You might be able to READ parts of it in red for clues, though.".
 
-a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". parse-text of admits mist ad is "A[sp]-[sp]I[sp]-[sp]-[sp]-". admits mist ad is parse-spoilable.
+a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". parse-text of admits mist ad is "-[sp]x[sp]-[sp]x[sp]x[sp]x". admits mist ad is parse-spoilable.
 
 book Cripple Clipper
 
@@ -10952,7 +10954,9 @@ the thickness sketchins are plural-named vanishing scenery in Cripple Clipper. "
 
 understand "sketchin" and "thickness sketchin" as thickness sketchins.
 
-a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?RRR?RR". parse-text of thickness sketchins is "A[sp]x[sp]x[sp]x[sp]A[sp]x[sp]x[sp]". [whattar tawrath thatraw artthaw <=> athwart]
+a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?RRR?RR". parse-text of thickness sketchins is "A[sp]T[sp]x[sp]x[sp]A[sp]x[sp]T".
+
+[whattar tawrath thatraw artthaw <=> athwart]
 
 chapter free reef
 
@@ -11021,7 +11025,7 @@ does the player mean doing something with LEAD when mrlp is troves: it is very l
 
 description of Pa Egg Pea is "[randbla]".
 
-a-text of Pa Egg Pea is "RYRY". b-text of Pa Egg Pea is "??R?". parse-text of Pa Egg Pea is "x[sp]?[sp]-[sp]?".
+a-text of Pa Egg Pea is "RYRY". b-text of Pa Egg Pea is "??R?". parse-text of pa egg pea is "?[sp]?[sp]P[sp]?".
 
 understand "book" as Pa Egg Pea.
 
@@ -11059,7 +11063,7 @@ chapter eh at heat
 
 Eh At Heat is boring reflexive scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could contact THEM.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil.". printed name of Eh At Heat is "[i]Eh, At Heat[r]".
 
-a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of eh at heat is "[sp]x[sp]A[sp]x[sp]E". heat is parse-spoilable.
+a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of eh at heat is "x[sp]A[sp]x[sp]E". heat is parse-spoilable.
 
 this is the bore-heat rule:
 	if current action is entering, say "[one of]You know you will get thrown out again, but maybe if you try to enter again, you will hear something that will help you.[or]You try to enter but lose your will at the last minute. Still, you hear' 'Tea! Hat? Eh!' It makes you see red.[stopping]".
@@ -11086,7 +11090,7 @@ chapter tears taser
 
 the tears taser is vanishing boring LLPish scenery in Loather Rathole. "The tears taser winks menacingly at you. It is there to cull the weaklings: those who cry at the sight or thought of it, and those who buckle at a little pain. You need to show it no fear, whether you ignore or confront it.". bore-text of tears taser is "You can't really do anything active to destroy it."
 
-a-text of tears taser is "RRYRY". b-text of tears taser is "RR??Y". parse-text of tears taser is "x[sp]T[sp]?[sp]?[sp]-".
+a-text of tears taser is "RRYRY". b-text of tears taser is "RR??Y". parse-text of tears taser is "x[sp]x[sp]?[sp]?[sp]-".
 
 book Bustle Sublet
 
@@ -11102,7 +11106,7 @@ chapter mussier misuser
 
 the mussier misuser is LLPish vanishing boring scenery in Bustle Sublet. "The misuser skulks just out of sight, probably plotting how to use people. Perhaps they are worth showing to yourself you're better than that, perhaps not. But you will have to think your way to feeling better than them.". bore-text of mussier misuser is "The mussier misuser can probably be safely ignored, but you may be able to look at it, or think of it, effectively."
 
-a-text of mussier misuser is "RYRRYRY". b-text of mussier misuser is "R?RR?RY". parse-text of mussier misuser is "S[sp]U[sp]x[sp]x[sp]I[sp]S[sp]E".
+a-text of mussier misuser is "RYRRYRY". b-text of mussier misuser is "R?RR?RY". parse-text of mussier misuser is "S[sp]-[sp]x[sp]x[sp]-[sp]S[sp]-".
 
 chapter useless scenery
 
@@ -11132,7 +11136,7 @@ after doing something with sob ever verbose:
 check taking sob ever verbose:
 	say "It's not something you can take. It's just something you can pay attention to." instead;
 
-a-text of sob ever verbose is "YRRYRRY". b-text of sob ever verbose is "YRR?RR?". parse-text of sob ever verbose is "-[sp]x[sp]x[sp]?[sp]x[sp]x[sp]?".
+a-text of sob ever verbose is "YRRYRRY". b-text of sob ever verbose is "YRR?RR?". parse-text of sob ever verbose is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 verbose-sob-check is a truth state that varies.
 
@@ -11161,7 +11165,7 @@ check scaning stop post:
 		say "Nothing happens until you move the settler away from the post and towards the sob ever verbose.";
 		try scaning sob ever verbose instead;
 
-a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "S[sp]x[sp]O[sp]x". stop post is parse-spoilable.
+a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "?[sp]x[sp]?[sp]?". stop post is parse-spoilable.
 
 book Boarded Roadbed
 
@@ -11222,7 +11226,7 @@ section SNORE SO ARENA
 
 the SNORE SO ARENA is scenery in Boarded Roadbed. the SNORE SO ARENA is reflexive. description is "It's bright red, and the [evil bee] dances around it. There's also red writing[if snore so arena is reflexive], and it emits noise, too[end if]."
 
-a-text of SNORE SO ARENA is "RYYRYR". b-text of SNORE SO ARENA is "RYYRYR". parse-text of SNORE SO ARENA is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
+a-text of SNORE SO ARENA is "RYYRYR". b-text of SNORE SO ARENA is "RYYRYR". parse-text of SNORE SO ARENA is "x[sp]-[sp]-[sp]S[sp]-[sp]x".
 
 to decide which number is bee-score:
 	let temp be 0;
@@ -11243,7 +11247,7 @@ chapter A Sty, Tasty, Say
 
 A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
 
-a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
+a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "S[sp]T[sp]?[sp]?".
 
 book Drain Nadir
 
@@ -11258,11 +11262,11 @@ check examining Ires Pad for the first time:
 
 the Ires Pad is auxiliary scenery in Drain Nadir. "It is the Hail-Maryest of motivational tools. Currently it contains a picture [one of]labeled AS I DERP[or]labeled ERA DIPS[or]labeled RIPE, SAD[or]labeled SPA RIDE[or]labeled RAP SIDE[or]by Si Preda[or]by Pa Dries[in random order]. So much red, too!"
 
-a-text of Ires Pad is "RYRRYYR". b-text of Ires Pad is "RYRRYYR". parse-text of Ires Pad is "x[sp]-[sp]S[sp]x[sp]-[sp]-[sp]x".
+a-text of Ires Pad is "RYRRYYR". b-text of Ires Pad is "RYRRYYR". parse-text of ires pad is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 the box of diapers is vanishing scenery in Drain Nadir. "The diapers are a symbol of a new rebirth by starting from nothing, or something. At least, you hope they are."
 
-a-text of diapers is "RYRRYYR". b-text of diapers is "PYRPYYR". parse-text of diapers is "D[sp]-[sp]x[sp]P[sp]-[sp]-[sp]x".
+a-text of diapers is "RYRRYYR". b-text of diapers is "PYRPYYR". parse-text of diapers is "D[sp]-[sp]S[sp]P[sp]-[sp]-[sp]R".
 
 a spider is scenery in Drain Nadir. "You're don't know whether to crush it or even think 'I spared a spider.'"
 
@@ -11274,7 +11278,7 @@ The can of Large Regal Lager is a vanishing LLPish thing in Drain Nadir. descrip
 
 check opening Large Regal Lager: try drinking Large Regal Lager instead;
 
-a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
+a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of large regal lager is "G[sp]x[sp]-[sp]x[sp]-".
 
 check eating lager: say "It drinks like a meal, you're sure, but you need more nourishment than that." instead;
 
@@ -11313,7 +11317,7 @@ section ME ARTS
 
 The ME ARTS are plural-named vanishing boring scenery in Boredom Bedroom. description of ME ARTS is "It's labeled MR. EAST STREAM TAMERS. It's really weird and abstract, but maybe you can get the hang of it. It shimmers based on how you stare at it[if lobster is moot]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if].". bore-text is "You should probably futz with the ME ARTS mentally and not physically."
 
-a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of ME ARTS is "?[sp]?[sp]x[sp]x[sp]-[sp]x".
+a-text of ME ARTS is "RYRRYR". b-text of ME ARTS is "??RRYR". parse-text of me arts is "?[sp]?[sp]x[sp]x[sp]E[sp]R".
 
 to decide which number is bedroom-solve:
 	let temp be 0;
@@ -11325,7 +11329,7 @@ chapter LEAD
 
 LEAD is a vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "LEAD, All: a Deed".
 
-a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of LEAD is "x[sp]E[sp]A[sp]x". LEAD is parse-spoilable.
+a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of lead is "?[sp]?[sp]?[sp]L". LEAD is parse-spoilable.
 
 understand "copy" and "book" as LEAD when player is in Boredom Bedroom.
 
@@ -11337,7 +11341,7 @@ chapter pleaser leapers
 
 the pleaser leapers are a plural-named vanishing LLPish thing in Boredom Bedroom. "Pleaser Leapers[one of], a weird automated toy that give something like cheer if you don't think too hard, frolic around here. You suddenly have a memory of needing them emotionally, even though they gave nothing[or] continue to frolic[stopping]. Perhaps the right sort of action will help make you ditch them for good and your story more gripping. Or you could just move on.". description is "They all look very cheery. They jump and hop and skip and almost make you feel as if you aren't wasting your life. Red writing on them gives the name of the company that produced them."
 
-a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". parse-text of pleaser leapers is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]".
+a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". parse-text of pleaser leapers is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 book Browse Bowers
 
@@ -11364,11 +11368,11 @@ chapter Si Reed
 
 Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheery and dressed in bright red.". "[one of]'Hey! I'm Si Reed. I'll help with your mental attitude so you deserve better than the Shmoe Homes, here.'[or]Si Reed continues to pump his fist and Believe In You.[stopping]"
 
-a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si Reed is "x[sp]-[sp]x[sp]-[sp]x[sp]-". Si Reed is cheat-spoilable.
+a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of si reed is "x[sp]E[sp]x[sp]I[sp]x[sp]E". Si Reed is cheat-spoilable.
 
 the See Dir is boring scenery in Browse Bowers. description of See Dir is "One random real estate ad in the See Dir advertises [randbla]. You could also READ the See Dir [if See Dir is read-yet]again [end if]for anything that might catch your eye.". bore-text is "The See Dir is just there for the (useless) advertising. And a clue, along with Si Reed, to get out of the Browse Bowers[if See Dir is not read-yet]. It may be worth reading[end if].".
 
-a-text of See Dir is "RYRYRY". b-text of See Dir is "RGRYRY". parse-text of See Dir is "-[sp]E[sp]-[sp]-[sp]-[sp]-".
+a-text of See Dir is "RYRYRY". b-text of See Dir is "RGRYRY". parse-text of see dir is "x[sp]E[sp]x[sp]-[sp]x[sp]-".
 
 understand "exhibit" as See Dir when player is in Browse Bowers.
 
@@ -11405,7 +11409,7 @@ chapter Sectarian Craniates
 
 Sectarian Craniates is reflexive LLPish boring scenery in Econ Cone. "It's about as portentious as you'd imagine something called Sectarian Craniates would be. But [if craniates is reflexed]you got something out of it[else]maybe you can get something out of it, if it's worth your time. It might not be[end if].". bore-text of Sectarian Craniates is "Hmm. Something passive [if craniates is reflexive]will work better[else]worked better[end if]."
 
-a-text of sectarian craniates is "YRRYRRYYR". b-text of sectarian craniates is "YR?YRRYY?". parse-text of sectarian craniates is "-[sp]x[sp]C[sp]-[sp]R[sp]x[sp]-[sp]I[sp]x".
+a-text of sectarian craniates is "YRRYRRYYR". b-text of sectarian craniates is "YR?YRRYY?". parse-text of sectarian craniates is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]I[sp]x".
 
 chapter statue parts
 
@@ -11442,7 +11446,7 @@ the praise spirea is reflexive scenery in Econ Cone. "It's beautiful and inspiri
 check examining praise spirea:
 	if praise spirea is reflexive, say "[one of]You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.[or]The praise spirea seems to turn red as you hear: 'Spare, I ape SIR! I reaps, I reaps! Ire? Sap!'[stopping]" instead;
 
-a-text of praise spirea is "YRRYRY". b-text of praise spirea is "YRR?R?". parse-text of praise spirea is "-[sp]x[sp]x[sp]?[sp]x[sp]?". praise spirea is cheat-spoilable.
+a-text of praise spirea is "YRRYRY". b-text of praise spirea is "YRR?R?". parse-text of praise spirea is "-[sp]S[sp]x[sp]-[sp]x[sp]-". praise spirea is cheat-spoilable.
 
 check scaning rivets (this is the switch to praise rule): if rivets are reflexed and praise spirea is reflexive, try scaning praise spirea instead;
 
@@ -11472,7 +11476,7 @@ the r cad card is scenery. "It's got red writing on it that you could read.". pr
 
 check taking the r cad card: say "It's stuck next to the END PRONER POD. And it's not for you. If it were for you, you'd be in trouble, anyway." instead;
 
-a-text of r cad card is "RYRRYR". b-text of r cad card is "RYRRYR". parse-text of r cad card is "x[sp]O[sp]x[sp]x[sp]E[sp]x".
+a-text of r cad card is "RYRRYR". b-text of r cad card is "RYRRYR". parse-text of r cad card is "P[sp]O[sp]N[sp]x[sp]E[sp]x".
 
 to say trev:
 	say "Trevis Vister[one of], Ph.D in Life Success[or][stopping]";
@@ -11507,7 +11511,7 @@ chapter red vees
 
 The red vees are vanishing plural-named boring scenery in Upscale Capsule. description of the red vees is "They look like they could be hooked together, but you can't do so by standard means.". bore-text is "Hmm. You need to know what to do with the vees, or around them, to fill up your office."
 
-a-text of red vees is "RYRYRRY". b-text of red vees is "RGRYRRY". parse-text of red vees is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
+a-text of red vees is "RYRYRRY". b-text of red vees is "RGRYRRY". parse-text of red vees is "x[sp]E[sp]x[sp]E[sp]x[sp]x[sp]E".
 
 [?? er go in = old ignore erin/go go/erin One Rig / Rig One Region]
 
@@ -11524,13 +11528,13 @@ this is the bore-salt rule:
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
-a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]A[sp]x[sp]T". salt is parse-spoilable.
+a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]?[sp]x[sp]?". salt is parse-spoilable.
 
 chapter Creationism Reactionism
 
 Creationism Reactionism is vanishing boring LLPish scenery. "It's ... well, big and long and [i]there[r] and impressive. Everyone important has a copy. Apparently it's a good practical read, but you never have and probably never will. You suspect you don't have to, in any sense, but all the same, it's there to wrestle with, if you want. You feel a rebellious urge to daydream, just looking at it. The authors['] names are in red writing.". printed name is "[i]Creationism, Reactionism[r]". bore-text is "It would distract you both from attempts to keep up the corporate life as well as attempts to free yourself. You need to ignore it or do something to dispel it."
 
-a-text of creationism reactionism is "RYRYRRYRYRY". b-text of creationism reactionism is "?YR?RRYRGPY". parse-text of creationism reactionism is "x[sp]-[sp]x[sp]A[sp]x[sp]x[sp]-[sp]x[sp]I[sp]S[sp]-".
+a-text of creationism reactionism is "RYRYRRYRYRY". b-text of creationism reactionism is "?YR?RRYRGPY". parse-text of creationism reactionism is "?[sp]-[sp]x[sp]?[sp]x[sp]x[sp]-[sp]x[sp]I[sp]S[sp]-".
 
 chapter glarers
 
@@ -11562,13 +11566,13 @@ Marble Blamer Mr Beal is proper-named vanishing boring scenery. description of m
 
 printed name of Mr Beal is "Marble Blamer Mr. Beal".
 
-a-text of Marble Blamer Mr Beal is "RYRRRY". b-text of Marble Blamer Mr Beal is "R?R???". parse-text of Marble Blamer Mr Beal is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of Marble Blamer Mr Beal is "RYRRRY". b-text of Marble Blamer Mr Beal is "R?R???". parse-text of Marble Blamer Mr Beal is "x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 chapter marble blamer balmer
 
 Marble Blamer Balmer is proper-named vanishing boring scenery. description of marble blamer balmer is "[mbb-txt].". bore-text is "Balmer can't be moved by normal means. Maybe you can fight mentally against him."
 
-a-text of Marble Blamer Balmer is "RYRRRY". b-text of Marble Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of Marble Blamer Balmer is "RYRRRY". b-text of Marble Blamer Balmer is "R?R???". parse-text of Marble Blamer Balmer is "x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 mbb is a thing that varies. mbb is Marble Blamer Balmer.
 
@@ -11760,7 +11764,7 @@ the ether is vanishing scenery. "It's trickier to see through than moist-o-mist.
 check entering ether:
 	try going north instead;
 
-a-text of ether is "RRYRY". b-text of ether is "RRYRY". parse-text of ether is "x[sp]x[sp]-[sp]x[sp]-". ether is cheat-spoilable.
+a-text of ether is "RRYRY". b-text of ether is "RRYRY". parse-text of ether is "x[sp]x[sp]E[sp]x[sp]E". ether is cheat-spoilable.
 
 chapter lamb
 
@@ -12039,7 +12043,7 @@ chapter tsar star
 
 a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is mired in some tars here. You might be able to take it, if you are in the right emotional state: not too confident, not too despondent."
 
-a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "RATS". tsar star is cheat-spoilable.
+a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "R[sp]A[sp]x[sp]x". tsar star is cheat-spoilable.
 
 description of tsar star is "It's not some paper gold star from Mrs. Crabtree's third grade class. It's actual dull metal. Shows you are a tsar of some sort of arts.". bore-text of tsar star is "Straightforward taking won't work, and neither will other manipulation. You wonder what sort of magic might get the tsar star out.". bore-check of tsar star is bore-tsar-star rule.
 
@@ -12052,7 +12056,7 @@ section tars (clue tsar star)
 
 the tars are cluey scenery in Char Arch. "Ucky and grimy. You may need to do or say something special to pull the tsar star out."
 
-a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tars is "x[sp]A[sp]x[sp]S". tars are cheat-spoilable.
+a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tars is "RATS". tars are cheat-spoilable.
 
 check scaning tars:
 	say "Nothing, until you aim at the tsar star.";
@@ -12160,7 +12164,7 @@ chapter sods gone odes song
 
 the sods gone odes song is LLPish vanishing boring scenery in Dirge Ridge. description of sods gone odes song is "The song fits Dirge Ridge well, but that's not necessarily a compliment.". bore-text is "You can really only listen to (or X) the song. But maybe, with the right word, you could get rid of it. Not that you need to.". bore-check is bore-sods rule.
 
-a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R?YRRYRR".  parse-text of sods gone odes song is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+a-text of sods gone odes song is "RYYRRYRR". b-text of sods gone odes song is "R?YRRYRR". parse-text of sods gone odes song is "x[sp]O[sp]O[sp]x[sp]x[sp]E[sp]S[sp]S".
 
 this is the bore-sods rule:
 	if current action is examining:
@@ -12224,7 +12228,7 @@ section N E Recs Censer (earring, after visiting Hacks Shack)
 
 the N E Recs censer is a thing. description of censer is "N-E-Recs is a popular brand name in Yorpwald for stuff you can pass off as classier or more vintage or whatever than it is. It's black with blocky flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "The N-E-Recs censer, black with flecks of black green, rests here.". printed name of censer is "N-E-Recs Censer"
 
-a-text of n e recs censer is "RRRYYR". b-text of n e recs censer is "RR???R". parse-text of n e recs censer is "x[sp]x[sp]x[sp]E[sp]E[sp]x".
+a-text of n e recs censer is "RRRYYR". b-text of n e recs censer is "RR???R". parse-text of n e recs censer is "x[sp]x[sp]?[sp]?[sp]?[sp]x".
 
 check taking N E Recs censer: say "It's too heavy and bulky. You see no need to lug it around. Perhaps whatever it could change into will be more manageable." instead;
 
@@ -12280,7 +12284,7 @@ section boing go bin (part of popgun)
 
 The boing go bin is a boring thing. it is part of the popgun. the boing go bin is reflexive. description of the boing go bin is "[if boing is reflexive]It's sort of springy, but it doesn't seem to really bounce around. You may need a eureka moment to figure how to fix it[else]The boing mechanism is fully equipped to go boing again. Yay[end if].". bore-text is "Your mechanical abilities won't help[if boing is reflexed], but they don't need to[else], but there may be a slick way to get the BOING back[end if].". printed name of boing go bin is "boing-go bin".
 
-a-text of boing go bin is "RYRRY". b-text of boing go bin is "?YRRY". parse-text of boing go bin is "B[sp]-[sp]x[sp]x[sp]-". boing go bin is cheat-spoilable.
+a-text of boing go bin is "RYRRY". b-text of boing go bin is "?YRRY". parse-text of boing go bin is "x[sp]I[sp]x[sp]x[sp]O". boing go bin is cheat-spoilable.
 
 section serial number (part of popgun)
 
@@ -12393,7 +12397,7 @@ chapter hawt thaw
 
 the clump of hawt thaw is LLPish vanishing boring scenery in Saps Pass. description of hawt thaw is "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit.". bore-text is "From what you know of hawt thaw, it may not be entirely safe. It sort of appears and disappears with little rhyme or reason."
 
-a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "?[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
+a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "W[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
 
 chapter mutism summit
 
@@ -12440,13 +12444,13 @@ the alert letters are a plural-named reflexive thing. the alert letters are part
 
 understand "alter letters" and "alter/letters" as alert letters.
 
-a-text of alert is "RYRYR". b-text of alert is "RY???". parse-text of alert is "x[sp]-[sp]?[sp]?[sp]?".
+a-text of alert is "RYRYR". b-text of alert is "RY???". parse-text of alert is "x[sp]A[sp]?[sp]?[sp]?".
 
 section ought
 
 the ought letters are a plural-named reflexive thing. the ought letters are part of the harpings phrasing. description is "[if ought letters are reflexed]The letters seem dull now you said tough[else]They're bolded, IN CAPS and slightly raised. They're also red[end if]."
 
-a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "x[sp]-[sp]-[sp]x[sp]x". ought is cheat-spoilable.
+a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "x[sp]O[sp]U[sp]x[sp]x". ought is cheat-spoilable.
 
 chapter yrnet entry
 
@@ -12461,7 +12465,7 @@ chapter Starch Charts
 
 the Starch Charts are vanishing LLPish plural-named scenery. "The starch charts seem a bit beyond you, yet they seem to be indicating something. You're not sure what, and you're not sure you need to 'solve' the charts to know. But they're covered with all the interjections you've used so far--well, up to a certain point. Where the interjections become, well, actual concrete nouns or even verbs you could spit out in disgust to similar effect. Some are misspelled for effect, but you still recognize them."
 
-a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of starch charts is "x[sp]x[sp]A[sp]x[sp]?[sp]?".
+a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-text of starch charts is "x[sp]x[sp]A[sp]x[sp]x[sp]x".
 
 to say desc-starch: say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the mutism summit[else]Some starch charts on the side of the mutism summit may or may not be an interesting distraction[end if]";
 
@@ -12609,13 +12613,13 @@ the Clack Ops Locs Pack is a flippable thing in Hacks Shack. "A Clack Ops Locs P
 
 check taking locs pack: say "It seems to have no use for you in that form." instead;
 
-a-text of Clack Ops Locs Pack is "RYRRRYRR". b-text of Clack Ops Locs Pack is "?YR?R???". parse-text of Clack Ops Locs Pack is "?[sp]-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
+a-text of Clack Ops Locs Pack is "RYRRRYRR". b-text of Clack Ops Locs Pack is "?YR?R???". parse-text of clack ops locs pack is "?[sp]A[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 chapter trim socks / rom sticks
 
 a pair of trim socks are plural-named things in Hacks Shack. "Trim socks lie here. They're too small for you to wear, but they look comfortable and efficient."
 
-a-text of trim socks is "RYR*RRYRRR". b-text of trim socks is "RYR*RRYPPP". parse-text of trim socks is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]C[sp]K[sp]S".
+a-text of trim socks is "RYR*RRYRRR". b-text of trim socks is "RYR*RRYPPP". parse-text of trim socks is "x[sp]O[sp]x[sp] [sp]x[sp]x[sp]I[sp]C[sp]K[sp]S".
 
 description of trim socks is "Small and narrow. Probably not critical to figure what they do, but they might save time down the road."
 
@@ -12756,7 +12760,7 @@ Drive A is proper-named reflexive LLPish container on the labs slab. understand 
 
 understand "a drive" as drive a.
 
-a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "?[sp]x[sp]?[sp]x[sp]?[sp]x".
+a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "-[sp]V[sp]-[sp]D[sp]-[sp]R".
 
 does the player mean inserting the disk into Drive A: it is very likely.
 does the player mean inserting the disk into Drive E: it is likely.
@@ -12785,7 +12789,7 @@ this is the bore-robot rule:
 
 understand "oberto" as Be Troo E Robot when Be Troo E Robot is read-yet.
 
-a-text of Be Troo E Robot is "RYRYYR". b-text of Be Troo E Robot is "R?RYG?". parse-text of Be Troo E Robot is "x[sp]-[sp]B[sp]-[sp]O[sp]x". be troo e robot is cheat-spoilable.
+a-text of Be Troo E Robot is "RYRYYR". b-text of Be Troo E Robot is "R?RYG?". parse-text of Be Troo E Robot is "x[sp]?[sp]x[sp]-[sp]O[sp]?". Be Troo E Robot is cheat-spoilable.
 
 description of Be Troo E Robot is "[if robot is reflexive]It looks back up at you, eager for an order[else]You check where it's hidden. It looks to be sleeping after helping you reboot[end if]."
 
@@ -12863,7 +12867,7 @@ a-text of Day Broke is "RYORYYRR". b-text of Day Broke is "RYBPYYRR". parse-text
 
 Dear Koby is a badbook. author of Dear Koby is "Yoda Berk". theme of Dear Koby is "thinly-veiled wishful-thinking autobiography and cyberspace epistles".
 
-a-text of Dear Koby is "RYORYYRR". b-text of Dear Koby is "RGORYYRR". parse-text of dear koby is "x[sp]E[sp]Y[sp]x[sp]-[sp]-[sp]x[sp]x".
+a-text of Dear Koby is "RYORYYRR". b-text of Dear Koby is "RGORYYRR". parse-text of dear koby is "x[sp]E[sp]Y[sp]x[sp]O[sp]A[sp]x[sp]x".
 
 eBay Dork is a badbook. author of eBay Dork is "Kary Bode". theme of eBay Dork is "puberty and predictable nonconformity".
 
@@ -12871,7 +12875,7 @@ a-text of eBay Dork is "RYORYYRR". b-text of eBay Dork is "RYORYYPR". parse-text
 
 Yo Be Dark is a badbook. author of Yo Be Dark is "Dr. Bo Kaye". theme of Yo Be Dark is "the hopelessness of hopelessness". printed name of Yo Be is "Yo, Be Dark".
 
-a-text of Yo Be Dark is "RYORYYRR". b-text of Yo Be Dark is "RYORYGPR". parse-text of Yo Be Dark is "x[sp]-[sp]Y[sp]x[sp]-[sp]A[sp]R[sp]x". yo be dark is cheat-spoilable.
+a-text of Yo Be Dark is "RYORYYRR". b-text of Yo Be Dark is "RYORYGPR". parse-text of Yo Be Dark is "x[sp]E[sp]Y[sp]x[sp]O[sp]A[sp]R[sp]x". yo be dark is cheat-spoilable.
 
 description of a badbook is "[the item described], by [author], is a hopelessly simplistic look at [theme of item described] that rose to inexplicable bestsellerdom and consequent bestseller-movie adaptation. You've never read it, though you recall it's even worse than [ev-worse]. Or maybe it's the other way around. Or maybe it's true both ways, somehow."
 
@@ -13024,7 +13028,7 @@ report taking polemic: say "You take it. You don't need to, but it'd be nice to 
 
 does the player mean doing something with the teariest treatise when Strip of Profits is visited: it is unlikely.
 
-a-text of Im Le Cop polemic is "RYRRYRY". b-text of Im Le Cop polemic is "R?RRYRY". parse-text of Im Le Cop polemic is "x[sp]O[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of Im Le Cop polemic is "RYRRYRY". b-text of Im Le Cop polemic is "R?RRYRY". parse-text of Im Le Cop polemic is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 the signature is part of the Im Le Cop polemic.
 
@@ -13036,7 +13040,7 @@ chapter BUB DUDE EGG
 
 BUB DUDE EGG is proper-named reflexive boring scenery. description of Bub Dude Egg is "Ugh! There must be something wrong with the code you compiled, to print such a defiant message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!". bore-text is "You can really only examine it--other actions leave you seeing red, thinking 'BUDGE! BUDGE!'".
 
-a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text of BUB DUDE EGG is "x[sp]-[sp]x[sp]-[sp]x".
+a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text of BUB DUDE EGG is "?[sp]?[sp]?[sp]-[sp]?".
 
 check scaning computer screen: if BUB DUDE EGG is touchable, try scaning BUB DUDE EGG instead;
 
@@ -13336,7 +13340,7 @@ a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "
 
 The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
 
-a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "x[sp]x[sp]I[sp]x". tips pits are cheat-spoilable.
+a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "S[sp]x[sp]I[sp]x". tips pits are cheat-spoilable.
 
 check scaning jukebox:
 	if perma amper is touchable:
@@ -13367,7 +13371,7 @@ chapter LOLstr Trolls
 
 the LOLstr trolls are plural-named reflexive people in Posh Hops Shop. description is "LOLstr trolls have gained prominence in Yorpwald by being especially good at baiting patrons they don't like. Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets['] vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]LOLstr return your gapin['] with aping, menacingly. They probably don't want an apology[else]LOLstr block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
 
-a-text of LOLstr trolls is "RRRYRR". b-text of LOLstr trolls is "RRRY?R". parse-text of LOLstr trolls is "x[sp]x[sp]x[sp]O[sp]L[sp]x".
+a-text of LOLstr trolls is "RRRYRR". b-text of LOLstr trolls is "RRRY?R". parse-text of LOLstr trolls is "x[sp]x[sp]x[sp]O[sp]x[sp]x".
 
 the vets vest is a useless thing. description is "It reads: [i]We toss sots. Ew![r] You suspect this means probably only the disruptive, broke sots who patronise this noise trap.". printed name of vets vest is "vets['] vest".
 
@@ -13414,7 +13418,7 @@ check scaning casper: try scaning recaps instead;
 check scaning recaps when recaps is not reflexed and cheat-on is true:
 	say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
 
-a-text of capers recaps is "RRRYRY". b-text of capers recaps is "RRR??Y". parse-text of capers recaps is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of capers recaps is "RRRYRY". b-text of capers recaps is "RRR??Y". parse-text of capers recaps is "x[sp]x[sp]x[sp]?[sp]?[sp]-".
 
 check taking capers recaps: say "The whole bar would beat you up for that. Think of other ways to distract the trolls. Disturb the peace more directly." instead;
 
@@ -13425,7 +13429,7 @@ a stein is a thing in Posh Hops Shop. initial appearance is "You see a stein her
 check inserting stein into tines:
 	say "It almost fits when you try to insert it. About five-sixths of the way. Perhaps you could find some other way to do things." instead;
 
-a-text of stein is "YRRYR". b-text of stein is "YRRYR". parse-text of stein is "-[sp]x[sp]x[sp]-[sp]x". stein is cheat-spoilable.
+a-text of stein is "YRRYR". b-text of stein is "YRRYR". parse-text of stein is "I[sp]x[sp]x[sp]E[sp]x". stein is cheat-spoilable.
 
 description of stein is "It's undoubtedly from the Set-In-Nites corporation, mostly black but with red writing[one of]. You mentally compare it to the tines, and you reckon if you inserted it, it'd be 20% too big[or][stopping]."
 
@@ -13584,7 +13588,7 @@ the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P'
 
 understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are touchable.
 
-a-text of Lil Ps Pills is "RRYRR". b-text of Lil Ps Pills is "RRY?R.". parse-text of Lil Ps Pills is "x[sp]x[sp]I[sp]L[sp]x".
+a-text of Lil Ps Pills is "RRYRR". b-text of Lil Ps Pills is "RRY?R.". parse-text of lil ps pills is "S[sp]x[sp]I[sp]x[sp]x".
 
 after printing the name of the Lil Ps pills while taking inventory:
 	if jar-empty is true, say " (empty)";
@@ -13818,7 +13822,7 @@ chapter sabot boats
 
 The sabot boats are vanishing plural-named boring scenery in Disease Seaside. bore-check is bore-boats rule. bore-text is "Sabot is not short for sabotage but a rather small boat. They're moving quickly past, but perhaps you could draw enough attention to yourself that one might see you and dump you at the far shore.".
 
-a-text of sabot boats is "RYYRR". b-text of sabot boats is "???R?". parse-text of sabot boats is "B[sp]O[sp]A[sp]x[sp]x". sabot boats are cheat-spoilable.
+a-text of sabot boats is "RYYRR". b-text of sabot boats is "???R?". parse-text of sabot boats is "?[sp]?[sp]?[sp]x[sp]?". sabot boats are cheat-spoilable.
 
 this is the bore-boats rule:
 	if current action is sobating, now boring-exception is true;
@@ -13829,7 +13833,7 @@ chapter frat raft
 
 the frat raft is scenery in Disease Seaside. description is "It's a frat raft, by the looks of it. All sorts of Greek symbols and crude jokes are written on it. You probably have to do something pretty hokey to get it fueled up, or whatever.[paragraph break]It's made of oaks-as-OK which soak and carry interlocking--and completely locked--oars."
 
-a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat raft is "x[sp]A[sp]x[sp]T". frat raft is parse-spoilable.
+a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat raft is "?[sp]?[sp]R[sp]T". frat raft is parse-spoilable.
 
 the frat raft is an enterable reflexive supporter. the frat raft is fixed in place.
 
@@ -14108,7 +14112,7 @@ understand "ghost" as sausage when sausage is touchable.
 
 understand "etahn/ru" and "etahn ru" as sausage when sausage is touchable.
 
-a-text of use saga sausage is "YRRYYRY". b-text of use saga sausage is "Y?RYGP?". parse-text of use saga sausage is "-[sp]x[sp]x[sp]-[sp]A[sp]G[sp]E". use saga sausage is cheat-spoilable.
+a-text of use saga sausage is "YRRYYRY". b-text of use saga sausage is "Y?RYGP?". parse-text of use saga sausage is "-[sp]?[sp]S[sp]-[sp]A[sp]G[sp]?". use saga sausage is cheat-spoilable.
 
 this is the wrong-sausage-direction rule:
 	if player is in anger range and noun is not west, say "That'd be leading away from where you buried the ruby." instead;
@@ -14305,7 +14309,7 @@ After printing the name of the wrap while taking inventory:
 
 some Paw R Wrap is a singular-named flippable thing. indefinite article of Paw R Wrap is "some". understand "bubble/bubbles" and "bubble wrap" as Paw R Wrap.
 
-a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of Paw R Wrap is "W[sp]A[sp]R[sp]P". Paw R Wrap is parse-spoilable.
+a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of paw r wrap is "?[sp]?[sp]x[sp]?". Paw R Wrap is parse-spoilable.
 
 description of Paw R Wrap is "Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.". printed name of Paw R Wrap is "Paw-R-Wrap".
 
@@ -14485,7 +14489,7 @@ the crate is reflexive boring scenery in Lapsin Plains. description of the crate
 this is the bore-crate rule:
 	if current action is traceing, now boring-exception is true;
 
-a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]R[sp]A[sp]x[sp]T". crate is parse-spoilable.
+a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]E[sp]A[sp]x[sp]x". crate is parse-spoilable.
 
 understand "debris" and "crates" as crate.
 
@@ -14581,7 +14585,7 @@ to say pan-block:
 	else:
 		say "skis"
 
-a-text of span pans is "RRYR". b-text of span pans is "?R?R". parse-text of span pans is "?[sp]?[sp]?[sp]P". span pans are cheat-spoilable.
+a-text of span pans is "RRYR". b-text of span pans is "?R?R". parse-text of span pans is "?[sp]x[sp]?[sp]P". span pans are cheat-spoilable.
 
 understand "pan" and "snap pan" as span pans when player is in Lapsin Plains and span pans are in Lapsin Plains.
 
@@ -14965,7 +14969,7 @@ Plasm Lamps is an innie sideroom in oyster. "It's a bit disorienting here, but y
 
 bogus-psalm is privately-named reflexive LLPish scenery in Plasm Lamps. description of bogus-psalm is "They light this murky area, [if bogus-psalm are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].". printed name of bogus-psalm is "area around".
 
-a-text of bogus-psalm is "RRYRR". b-text of bogus-psalm is "?R?R?". parse-text of bogus-psalm is "x[sp]x[sp]-[sp]x[sp]x".
+a-text of bogus-psalm is "RRYRR". b-text of bogus-psalm is "?R?R?". parse-text of bogus-psalm is "?[sp]x[sp]?[sp]x[sp]?".
 
 plasm-warn is a truth state that varies.
 
@@ -15026,7 +15030,7 @@ after printing the locale description when player is in Tenfold Teflond Den Loft
 		say "This time around, you notice something you didn't before. A templar ramplet leading off to the side!";
 	continue the action;
 
-a-text of papery yapper is "RRYRYO". b-text of papery yapper is "?RY?Y?". parse-text of papery yapper is "?[sp]x[sp]-[sp]?[sp]-[sp]?".
+a-text of papery yapper is "RRYRYO". b-text of papery yapper is "?RY?Y?". parse-text of papery yapper is "?[sp]x[sp]E[sp]?[sp]A[sp]?".
 
 section stupid paper necklace
 
@@ -15154,7 +15158,7 @@ this is the bore-ramplet rule:
 	if current action is entering or current action is climbing, say "Too tame a way to get on the templar ramplet." instead;
 	if current action is trampleing, now boring-exception is true;
 
-a-text of templar ramplet is "RRYRRRY". b-text of templar ramplet is "?RYRRRY". parse-text of templar ramplet is "x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]".
+a-text of templar ramplet is "RRYRRRY". b-text of templar ramplet is "?RYRRRY". parse-text of templar ramplet is "x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 section trampleing
 
@@ -15672,6 +15676,7 @@ after looking in Loftier Trefoil:
 	if debug-state is true and trefoil-debug-warn is false:
 		ital-say "Remember, WARWAR skips through the warriors.";
 		now trefoil-debug-warn is true;
+		ital-say "Also, PLOP drops all the picaros here, but crazy things may happen if you move on from unit testing.";
 	set the pronoun him to rodney;
 	set the pronoun them to w-p;
 	continue the action;
@@ -15757,7 +15762,7 @@ check taking a picaro: say "You'll have to deal with him[if noun is rodney] and/
 
 Yo Rend Or Deny Rodney is a leaderly picaro. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1. printed name of Rodney is "Yo-Rend-Or-Deny Rodney".
 
-a-text of Yo Rend or Deny Rodney is "OYRRYR". b-text of Yo Rend or Deny Rodney is "??RR?R". parse-text of Yo Rend or Deny Rodney is "Y[sp]O[sp]x[sp]x[sp]E[sp]x". rodney is cheat-spoilable.
+a-text of Yo Rend or Deny Rodney is "OYRRYR". b-text of Yo Rend or Deny Rodney is "??RR?R". parse-text of yo rend or deny rodney is "?[sp]?[sp]N[sp]D[sp]?[sp]R". rodney is cheat-spoilable.
 
 the chum of a picaro is usually Andres. [moved here so Rodney appears first when iterating through picaros]
 
@@ -15809,29 +15814,29 @@ a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR". parse-text of bredo is "
 
 Edwin is a picaro. description is "Edwin looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here he isn't allowed to destroy yet.". pod-num of Edwin is 3. pod-ord of Edwin is 3.
 
-a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]-[sp]x[sp]-[sp]x". edwin is cheat-spoilable.
+a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]I[sp]x[sp]E[sp]x". edwin is cheat-spoilable.
 
 Eldon is a picaro. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.". pod-num of Eldon is 3. pod-ord of Eldon is 4.
 
-a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "ELDON". eldon is parse-spoilable.
+a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "OLDEN". eldon is parse-spoilable.
 
 section picaro pod 4
 
 Archie is a picaro. description is "Archie looks free of pain, big or small.". pod-num of Archie is 4. pod-ord of Archie is 1.
 
-a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". parse-text of archie is "A[sp]x[sp]x[sp]-[sp]-[sp]x". archie is cheat-spoilable.
+a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". parse-text of archie is "A[sp]x[sp]x[sp]I[sp]E[sp]x". archie is cheat-spoilable.
 
 Barney is a picaro. description is "Barney feels close and far at the same time, like he should be placed somewhere else.". pod-num of Barney is 4. pod-ord of Barney is 2.
 
-a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". parse-text of barney is "x[sp]-[sp]-[sp]x[sp]x[sp]Y". barney is cheat-spoilable.
+a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". parse-text of barney is "x[sp]E[sp]A[sp]x[sp]x[sp]Y". barney is cheat-spoilable.
 
 Ernest is a picaro. description is "Ernest looks relaxed and ready to gaffle tavernlings.". pod-num of Ernest is 4. pod-ord of Ernest is 3.
 
-a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". parse-text of ernest is "x[sp]-[sp]N[sp]x[sp]-[sp]x".
+a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". parse-text of ernest is "x[sp]E[sp]N[sp]x[sp]E[sp]x".
 
 Reggie is a picaro. description is "Reggie looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". pod-num of Reggie is 4. pod-ord of Reggie is 4.
 
-a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". parse-text of reggie is "-[sp]x[sp]G[sp]-[sp]-[sp]x". reggie is cheat-spoilable.
+a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". parse-text of reggie is "-[sp]x[sp]G[sp]-[sp]E[sp]x". reggie is cheat-spoilable.
 
 section picaro pod 5
 
@@ -15849,7 +15854,7 @@ a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". parse-text of marcel
 
 Marlon is a picaro. description is "Marlon doesn't look like all the rest. In fact, he's sort of looking down his nose at them a bit.". pod-num of Marlon is 5. pod-ord of Marlon is 4.
 
-a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". parse-text of marlon is "x[sp]-[sp]R[sp]x[sp]-[sp]x". marlon is cheat-spoilable.
+a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". parse-text of marlon is "x[sp]O[sp]R[sp]x[sp]A[sp]x". marlon is cheat-spoilable.
 
 section picaro pod 6
 
@@ -15859,7 +15864,7 @@ a-text of Cedrick is "RRYRRYR". b-text of Cedrick is "PRYRRYR". parse-text of ce
 
 Demitri is a picaro. description is "Demitri stares out confidently, bolder than his compatriots.". pod-num of Demitri is 6. pod-ord of Demitri is 2.
 
-a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR". parse-text of demitri is "x[sp]-[sp]M[sp]I[sp]x[sp]-[sp]x". demitri is cheat-spoilable.
+a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR". parse-text of demitri is "x[sp]I[sp]M[sp]I[sp]x[sp]E[sp]x". demitri is cheat-spoilable.
 
 Leander is a picaro. description is "Leander looks too dumb to contemplate anything besides knocking people's heads in.". pod-num of Leander is 6. pod-ord of Leander is 3.
 
@@ -15867,11 +15872,11 @@ a-text of Leander is "RYYRRYR". b-text of Leander is "PGGRRGR". parse-text of le
 
 Preston is a picaro. description is "Preston appears to be the best protected of your persecutors.". pod-num of Preston is 6. pod-ord of Preston is 4.
 
-a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR". parse-text of preston is "P[sp]R[sp]-[sp]x[sp]-[sp]x[sp]x". preston is cheat-spoilable.
+a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR". parse-text of preston is "P[sp]R[sp]O[sp]x[sp]E[sp]x[sp]x". preston is cheat-spoilable.
 
 Terrance is a picaro. description is "Terrance constantly looks at Rodney and nods obediently. Perhaps you could help him gain a freer mindset.". pod-num of Terrance is 6. pod-ord of Terrance is 5.
 
-a-text of Terrance is "RYRRYYRR". b-text of terrance is "RGRPYYRR". parse-text of terrance is "x[sp]E[sp]x[sp]R[sp]-[sp]-[sp]x[sp]x".
+a-text of Terrance is "RYRRYYRR". b-text of terrance is "RGRPYYRR". parse-text of terrance is "x[sp]E[sp]x[sp]R[sp]E[sp]A[sp]x[sp]x".
 
 The chum of Andres is yourself.
 
@@ -15923,7 +15928,7 @@ The dreads adders are a plural-named terse purple guardian in Topside Deposit. "
 to say sade-sard:
 	say "[one of]Dr. Sade[or]Ed Sard[in random order] was one of their creators, you remember now, as you see red"
 
-a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]?[sp]x[sp]-[sp]x".
+a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think, even though they outnumber you!".
 
@@ -15988,7 +15993,7 @@ this is the bore-yurt rule:
 
 understand "yurt" as try us yurts.
 
-a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]-[sp]x[sp]-[sp]y". try us yurts are cheat-spoilable.
+a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]?[sp]x[sp]?[sp]Y". try us yurts are cheat-spoilable.
 
 section Owers' Bin Brownies
 
@@ -16056,7 +16061,7 @@ A diverse deviser is a cheat-spoilable reflexive thing in Outer Route. "A divers
 
 understand "revised" and "revised deviser" as diverse deviser when diverse deviser is reflexed.
 
-a-text of diverse deviser is "RYRYRYR". b-text of diverse deviser is "R?P???R". parse-text of diverse deviser is "x[sp]-[sp]V[sp]-[sp]x[sp]?[sp]x".
+a-text of diverse deviser is "RYRYRYR". b-text of diverse deviser is "R?P???R". parse-text of diverse deviser is "x[sp]?[sp]V[sp]?[sp]?[sp]?[sp]x".
 
 check taking diverse deviser: say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if deviser is reflexive]And it's not useful in its current state[else if dagger is moot]Plus you already used it[else]Better to find something that'd fit into IT[end if]." instead;
 
@@ -16133,7 +16138,7 @@ section docile old ice LLP
 
 the docile old ice is LLPish reflexive scenery in Baldest Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if][one of]. Another look and you'll remember where you saw a beautiful carved ice sculpture[or]. You see red remembering an LiedCo sculpture that showed this[stopping]."
 
-a-text of docile old ice is "RYYRYR". b-text of docile old ice is "R?YRYR". parse-text of docile old ice is "x[sp]?-[sp]x[sp]-[sp]x"
+a-text of docile old ice is "RYYRYR". b-text of docile old ice is "R?YRYR". parse-text of docile old ice is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 check taking old ice: say "You'd get your hands stuck. And I won't double dog dare you." instead;
 
@@ -16154,7 +16159,7 @@ section organised ego drains LLP
 
 the organised ego drains are plural-named LLPish vanishing boring scenery in Leveraged Everglade. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.".
 
-a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "R?YRR?YRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
+a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "R?YRR?YRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]?[sp]-[sp]x[sp]-".
 
 book Anemic Cinema
 
@@ -16235,7 +16240,7 @@ understand "tape recorder" and "tape/recorder" as raves saver.
 
 check opening raves saver: say "It's cheap and rickety enough, the tapes are stuck in like paste. It has no open button or mechanism." instead;
 
-a-text of raves saver is "RYYRRO". b-text of raves saver is "???RR?". parse-text of raves saver is "?[sp]?[sp]?[sp]l[sp]a[sp]?".
+a-text of raves saver is "RYYRRO". b-text of raves saver is "???RR?". parse-text of raves saver is "?[sp]?[sp]?[sp]x[sp]x[sp]?".
 
 description of raves saver is "[if saver is reflexive]It has an inscription REPLAY PLAYER, which is a violation of copyright law--those have video--but nobody's going to sue or care. But[else]It's slightly more polished now you made it pearly, and[end if] it also has a REPEAT button and a RETAPE button[one of].[paragraph break]It doesn't even have a socket for Hears-Share earphones.[stopping]"
 
@@ -16682,7 +16687,7 @@ ag-atten is a truth state that varies.
 
 understand "atblock" as atblock when debug-state is true.
 
-a-text of atblock is "YRRYRRYRY". b-text of atblock is "YRRYRPGPG". parse-text of atblock is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
+a-text of atblock is "YRRYRRYRY". b-text of atblock is "YRRYRPGPG". parse-text of atblock is "-[sp]x[sp]T[sp]-[sp]x[sp]T[sp]I[sp]V[sp]E".
 
 a bot boat is a reflexive thing. understand "botboat" and "bot-boat" as a bot boat.
 
@@ -16690,7 +16695,7 @@ the weirder red wire is part of the bot boat. description is "You know, it's not
 
 the weirder red wire is LLPish and vanishing.
 
-a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "?GRYR?R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
+a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "?GRYR?R". parse-text of weirder red wire is "?[sp]E[sp]x[sp]-[sp]x[sp]?[sp]x".
 
 check scaning bot boat (this is the scan boat components and not boat rule):
 	[showme whether or not blaster is reflexive;
@@ -16794,7 +16799,7 @@ printed name of Reading a Dinger is "[i]READING: a Dinger[r]"
 check taking dinger:
 	say "You hear a rage din from the coasting agnostic. You both see red. They might not be particularly fond of the book, but since it's there and it's theirs, they don't want to give it up. Maybe you can make it more unattractive somehow." instead;
 
-a-text of reading a dinger is "RRYYRYR". b-text of reading a dinger is "RR?YR?R". parse-text of reading a dinger is "x[sp]x[sp]?[sp]-[sp]x[sp]?[sp]x".
+a-text of reading a dinger is "RRYYRYR". b-text of reading a dinger is "RR?YR?R". parse-text of reading a dinger is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 chapter scenery
 
@@ -16861,7 +16866,7 @@ section turbos
 
 the turbos are a reflexive boring plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the agnostic's technical knowledge by tweaking it.". bore-text is "The turbos are too technical for you--you can probably just examine or scan them.".
 
-a-text of turbos is "RYRYRR". b-text of turbos is "RYRYRR". parse-text of turbos is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
+a-text of turbos is "RYRYRR". b-text of turbos is "RYRYRR". parse-text of turbos is "x[sp]O[sp]x[sp]U[sp]x[sp]x".
 
 section blaster
 
@@ -16904,7 +16909,7 @@ section sporties ripostes
 
 the sporties ripostes are plural-named vanishing boring LLPish scenery in Lost Lots. description of sporties ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.". bore-check of sporties ripostes is bore-ripostes rule. printed name is "sporties['] ripostes".
 
-a-text of sporties ripostes is "RRYRYYRR". b-text of sporties ripostes is "RR?RYYRR". parse-text of sporties ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
+a-text of sporties ripostes is "RRYRYYRR". b-text of sporties ripostes is "RR?RYYRR". parse-text of sporties ripostes is "x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]x".
 
 this is the bore-ripostes rule:
 	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
@@ -16953,7 +16958,7 @@ section sled rut
 
 The sled rut is auxiliary scenery in Fringe Finger. "It's flecked with red, oddly[if strudel is in Fringe Finger], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
 
-a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of sled rut is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x".
+a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of sled rut is "x[sp]U[sp]x[sp]x[sp]x[sp]E[sp]x".
 
 check taking sled rut: say "[if strudel is in Fringe Finger]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
@@ -16970,7 +16975,7 @@ section Earnest Eastern Neaters (flippable)
 
 the Earnest Eastern Neaters are boring plural-named reflexive scenery in Rawest Waters. "The Earnest Eastern Neaters can help you, but they just feel a bit too far away. You may need to help them, too."
 
-a-text of Earnest Eastern Neaters is "RYYRYRR". b-text of Earnest Eastern Neaters is "???RG??". parse-text of Earnest Eastern Neaters is "x[sp]-[sp]-[sp]x[sp]e[sp]x[sp]x".
+a-text of Earnest Eastern Neaters is "RYYRYRR". b-text of Earnest Eastern Neaters is "???RG??". parse-text of Earnest Eastern Neaters is "?[sp]?[sp]?[sp]x[sp]E[sp]?[sp]?".
 
 section raspy spray (bounding)
 
@@ -16987,7 +16992,7 @@ Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Me
 
 the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
-a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
+a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]S[sp]x[sp]-".
 
 understand "st/teri" and "st teri" as tetris sitter when tetris sitter is reflexed.
 
@@ -17094,7 +17099,7 @@ the unripe ur pine is boring vanishing LLPish scenery in Mislit Limits. understa
 this is the bore-ur-pine rule:
 	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
 
-a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". parse-text of unripe ur pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
+a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". parse-text of unripe ur pine is "x[sp]-[sp]N[sp]I[sp]-[sp]x".
 
 chapter Nastier Stainer Retinas
 
@@ -17111,7 +17116,7 @@ understand the command "present" as something new.
 
 A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of repents serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of repents serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as repents serpent.
 
-a-text of repents serpent is "RRYRYRR". b-text of repents serpent is "RRYR???". parse-text of repents serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
+a-text of repents serpent is "RRYRYRR". b-text of repents serpent is "RRYR???". parse-text of repents serpent is "x[sp]x[sp]E[sp]x[sp]?[sp]?[sp]?".
 
 rule for supplying a missing second noun when showing:
 	if repents serpent is touchable, now second noun is repents serpent.
@@ -17178,7 +17183,7 @@ the packet of clear catsup is auxiliary cluey scenery. "The packet of clear cats
 
 check opening clear catsup: say "Not only is it litter, but it doesn't have any ridged bits to make it open easier. Still, a potential clue is a potential clue." instead;
 
-a-text of clear catsup is "RRYRRYRYRYR". b-text of clear catsup is "RRGRRYRYRYR". parse-text of clear catsup is "x[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
+a-text of clear catsup is "RRYRRYRYRYR". b-text of clear catsup is "RRGRRYRYRYR". parse-text of clear catsup is "x[sp]x[sp]E[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]A[sp]x".
 
 the pest accrual is auxiliary cluey scenery. "Eww! Maybe they're good for nature or something."
 
@@ -17283,13 +17288,13 @@ chapter bogus-dandier (flippable scenery for room)
 
 the bogus-dandier is privately-named ssno vanishing scenery in Arid Den. description is "BUG: you should not see this.". printed name is "Dire and Arid Den".
 
-a-text of bogus-dandier is "RYRRYYR". b-text of bogus-dandier is "?YR?Y?R". parse-text of bogus-dandier is "?[sp]-[sp]x[sp]?[sp]-[sp]?[sp]x".
+a-text of bogus-dandier is "RYRRYYR". b-text of bogus-dandier is "?YR?Y?R". parse-text of bogus-dandier is "?[sp]-[sp]x[sp]?[sp]-[sp]?[sp]R".
 
 section drained dreadin
 
 drained dreadin is ssno boring scenery in Arid Den. description is "It works doubly on you to make you feel cheerless.". bore-text is "You need some way to dispel the drained dreadin[']. Replace it with a more positive emotion.". printed name of drained dreadin is "drained dreadin[']".
 
-a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "D[sp]-[sp]x[sp]x[sp]-[sp]-[sp]R".
 
 check scaning the player when player is in Arid Den:
 	say "You can't escape the feeling of drained dreadin['].";
@@ -17299,7 +17304,7 @@ section nerd aid
 
 the Nerd Aid Diner ad is boring auxiliary scenery in Arid Den. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.".
 
-a-text of Nerd Aid Diner ad is "RYRRYYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid Diner Ad is "?[sp]a[sp]?[sp]?[sp]i[sp]e[sp]x".
+a-text of Nerd Aid Diner ad is "RYRRYYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid Diner Ad is "x[sp]A[sp]x[sp]x[sp]I[sp]E[sp]x".
 
 book Dourest Detours
 
@@ -17363,7 +17368,7 @@ a denier nereid is a red guardian. "A denier nereid, surprisingly far from shore
 
 description of denier nereid is "Alluring and all that, but very languid. She's not doing much, and she's doing a lot (for her) to tell you you don't need to do much."
 
-a-text of denier nereid is "RYYRYR". b-text of denier nereid is "RGYR??". parse-text of denier nereid is "r[sp]e[sp]?[sp]x[sp]?[sp]x". denier nereid is cheat-spoilable.
+a-text of denier nereid is "RYYRYR". b-text of denier nereid is "RGYR??". parse-text of denier nereid is "R[sp]E[sp]-[sp]x[sp]?[sp]?". denier nereid is cheat-spoilable.
 
 gualoc of denier nereid is Scope Copse. guadir of denier nereid is north. block-text of denier nereid is "She languidly expresses how you don't really need to go [psgdir of denier nereid], and anyway, if you do save somebody or something, they won't be properly grateful, so why bother. She sees you getting tired and says 'END IRE!' This causes you to see red.". clue-text of denier nereid is "Looking again at the denier nereid, she is rather far away from her native water. Perhaps she should be pulled back.". taunt-text of denier nereid is "The denier nereid gives a 'why bother' gesture."
 
@@ -17392,7 +17397,7 @@ to say imposer-guard:
 	else:
 		say "You don't have full documentation why you NEED to get to the other side"
 
-a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
+a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 gualoc of promise imposer is Baldest Blasted Saltbed. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they're good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, or whomever they make promise something, the promise imposer is the best at their job.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
 
@@ -17412,7 +17417,7 @@ every turn when traipse pirates are touchable:
 			say "One of the pirates swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
 			now pirate-countdown is 3;
 
-a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "?YRRY?R". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
+a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "?YRRY?R". parse-text of traipse pirates is "?[sp]-[sp]x[sp]x[sp]-[sp]?[sp]x". traipse pirates are cheat-spoilable.
 
 gualoc of pirates is Baldest Blasted Saltbed. guadir of traipse pirates is north. block-text of traipse pirates is "'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this.". clue-text of traipse pirates is "You can't make the pirates less in-shape, but maybe something more cosmetic will work.". taunt-text of traipse pirates is "A wry, wary 'Yawr!' from the pirates makes you feel awry."
 
@@ -17426,7 +17431,7 @@ understand "ingrate" and "angriest ingrate" as ingrates.
 
 description of angriest ingrates is "They're spouting some of the angriest ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
 
-a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRRY?R". parse-text of angriest ingrates is "-[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRRY?R". parse-text of angriest ingrates is "-[sp]N[sp]G[sp]x[sp]x[sp]-[sp]-[sp]R".
 
 gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.". taunt-text of ingrates is "The ingrates seem almost upset they are not important enough to get rid of."
 
@@ -17439,13 +17444,17 @@ a-text of Reeds Ale is "RYRYYRYR". b-text of Reeds Ale is "PGRYYRYR". parse-text
 to say deal-seer:
 	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or][el-la-full], Deal Seer, remains here, with that bottle of Reeds Ale[stopping]"
 
-Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
+Lars Eede is a red guardian. "[deal-seer]."
+
+a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]E[sp]x[sp]E[sp]A[sp]x[sp]E[sp]x".
 
 description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
 
 gualoc of Lars Eede is Anemic Cinema. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Lars Eede is "Lars Eede reaches for a hidden bottle of Reed's Ale and takes a swig."
 
-Elsa Erde is a red guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
+Elsa Erde is a red female guardian. "[deal-seer].".
+
+a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]E[sp]x[sp]E[sp]A[sp]x[sp]E[sp]x".
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
@@ -17469,7 +17478,7 @@ section mardier admirer
 
 A mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their 'honest' evaluations than go past them."
 
-a-text of mardier admirer is "RYRRYYR". b-text of mardier admirer is "???R?GR". parse-text of mardier admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
+a-text of mardier admirer is "RYRRYYR". b-text of mardier admirer is "???R?GR". parse-text of mardier admirer is "?[sp]?[sp]?[sp]x[sp]?[sp]E[sp]x".
 
 gualoc of mardier admirer is Anemic Cinema. guadir of mardier admirer is north. block-text of mardier admirer is "The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them.". clue-text of mardier admirer is "If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!". taunt-text of mardier admirer is "'Good job, I guess,' calls the mardier admirer."
 
@@ -17486,7 +17495,7 @@ the realist tailers are blue plural-named guardians. "Realist tailers to the [ps
 
 description of realist tailers is "Looking very smug. One or two, you could deal with and dismiss. But a whole deluge? Probably not, even though you know their brand of 'realism' is quite silly. And yet, perhaps you could make them too silly for each other."
 
-a-text of realist tailers is "RYRRYYR". b-text of realist tailers is "R?RR?YR". parse-text of realist tailers is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x".
+a-text of realist tailers is "RYRRYYR". b-text of realist tailers is "R?RR?YR". parse-text of realist tailers is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 gualoc of realist tailers is Leveraged Everglade. guadir of realist tailers is north. block-text of realist tailers is "The realist tailers let you by ... at first. But then, from behind, they start pointing out that's not the only way through, and besides, do you really need to go past? Their arguments aren't much, but they bog you down and pull you back.". clue-text of realist tailers is "Perhaps you can subject the realist tailers to too much of their realism, even for them.". taunt-text of realist tailers is "The realist tailers mention that sort of thing happens to people who aren't as living-in-the-real-world as they are."
 
@@ -17494,7 +17503,7 @@ section fluster self rut
 
 the fluster self rut is a boring red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut].". bore-text of fluster self rut is "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way.". printed name is "fluster-self rut".
 
-a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
+a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x".
 
 gualoc of fluster self rut is Leveraged Everglade. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.". taunt-text of fluster self rut is "nonsensical yabbering from the fluster-self rut leaves you wondering if you just got rid of the [if number of touchable guardians > 1]easiest[else]easier[end if] obstacle."
 
@@ -17512,7 +17521,7 @@ section sweatier wait-seer
 
 The sweatier wait seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait seer].". printed name of wait seer is "sweatier wait-seer". description of sweatier wait seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
 
-a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YYRY?RR". parse-text of sweatier wait seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
+a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YYRY?RR". parse-text of sweatier wait seer is "?[sp]-[sp]A[sp]x[sp]-[sp]?[sp]x[sp]x".
 
 gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.". taunt-text of wait seer is "The sweatier wait-seer nods slowly and mumbles some Hakuna Matata nonsense.".
 
@@ -17522,7 +17531,7 @@ section atheists
 
 the asset hit atheists are plural-named purple guardians. "Asset-hit atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping].". printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
 
-a-text of asset hit atheists is "RYRRYYRR". b-text of asset hit atheists is "RY?R?YR?". parse-text of asset hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
+a-text of asset hit atheists is "RYRRYYRR". b-text of asset hit atheists is "RY?R?YR?". parse-text of asset hit atheists is "x[sp]-[sp]?[sp]x[sp]?[sp]-[sp]x[sp]?".
 
 gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of atheists is "The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude.". clue-text of atheists is "The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted.". taunt-text of atheists is "The atheists commend your logic. Piffling, compared to theirs. But a start."
 
@@ -17542,7 +17551,7 @@ section natives' site van
 
 the natives site van is a white guardian. "A natives['] site van block your way [psgdir of natives site van], though you don't really see anything interesting there.". printed name is "natives['] site van". description of natives site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Wildest Wilteds like they know all about it, and they're looking at you funny, as if they know you don't fit in."
 
-a-text of natives site van is "RYYRYRR". b-text of natives site van is "??YRYRR". parse-text of natives site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
+a-text of natives site van is "RYYRYRR". b-text of natives site van is "??YRYRR". parse-text of natives site van is "?[sp]?[sp]-[sp]x[sp]-[sp]x[sp]x".
 
 understand "native" and "native site/van" and "native site van" as natives site van.
 
@@ -17552,7 +17561,7 @@ section bonker
 
 The REB NOK bonker is a purple guardian. "You [one of]recognize a[or]still see that[stopping] REB-NOK bonker guarding the way [psgdir of bonker][one of]. Something must be behind--while they're usually just for intimidation, they can, well, knock rebels like you[or][stopping].". description of bonker is "It's twice your height and upright and club-shaped and ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. While it's not quite as violent as a boot-o-bot or space-taking as Obst-Bots, its presence indicates something important to the east[or][stopping].". printed name of REB NOK bonker is "REB-NOK bonker".
 
-a-text of REB NOK bonker is "RRYRYR". b-text of REB NOK bonker is "?RY??R". parse-text of REB NOK bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
+a-text of REB NOK bonker is "RRYRYR". b-text of REB NOK bonker is "?RY??R". parse-text of REB NOK bonker is "?[sp]x[sp]-[sp]?[sp]?[sp]x". bonker is parse-spoilable.
 
 retrytext of REB NOK bonker is ", poised to re-bonk"
 
@@ -17574,7 +17583,7 @@ section lois the hostile
 
 Lois the Hostile is a female proper-named purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She doesn't exactly look happy, but she doesn't look irredeemably evil."
 
-a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR". parse-text of lois the hostile is "?[sp]O[sp]x[sp]-[sp]-[sp]x[sp]x".
+a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR". parse-text of lois the hostile is "x[sp]O[sp]x[sp]I[sp]E[sp]x[sp]x".
 
 gualoc of lois the hostile is Artist Traits Strait. guadir of lois the hostile is north. block-text of lois the hostile is "She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that.". clue-text of lois the hostile is "Boy! Lois sure could use some down-home kindness.". taunt-text of lois the hostile is "Lois the Hostile sniffs as if to say, they deserved what they got. Then she looks at you askance."
 
@@ -17582,7 +17591,7 @@ section hostile is he lot
 
 The Hostile Is He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile is he lot].". description is "It's amazing, the variety of hostile expressions!". printed name of Hostile Is He Lot is "Hostile-Is-He Lot".
 
-a-text of he lot is "RYRYYRR". b-text of he lot is "??RYYR?". parse-text of he lot is "-[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
+a-text of he lot is "RYRYYRR". b-text of he lot is "??RYYR?". parse-text of he lot is "?[sp]?[sp]x[sp]-[sp]-[sp]x[sp]?".
 
 other-g of Lois the Hostile is he lot. other-g of he lot is Lois the Hostile.
 
@@ -18105,7 +18114,7 @@ check taking deli rye: say "Ed Riley snatches it away forcefully. 'I'm no YIELDE
 
 the deli rye is an edible auxiliary thing. description is "It looks delicious enough for Ed not to share with you.". Ed Riley carries the deli rye.
 
-a-text of deli rye is "RYYRYRO". b-text of deli rye is "RGYRYRO". parse-text of deli rye is "x[sp]E[sp]-[sp]x[sp]-[sp]L[sp]Y". deli rye is cheat-spoilable.
+a-text of deli rye is "RYYRYRO". b-text of deli rye is "RGYRYRO". parse-text of deli rye is "x[sp]E[sp]-[sp]x[sp]-[sp]x[sp]Y". deli rye is cheat-spoilable.
 
 this is the bore-ed-riley rule:
 	if action is procedural, continue the action;
@@ -18143,11 +18152,17 @@ check going west in Disowned Downside:
 	if atmo moat is in Disowned Downside, say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
 	if Gretta is touchable, say "[cree-pee]." instead;
 
+section debug notes - not for release
+
+after looking for the first time in disowned downside:
+	ital-say "PLOP drops all the pickup lines here.";
+	continue the action;
+
 chapter atmo-moat
 
 the atmo moat is vanishing scenery in Disowned Downside. understand "atmo/moat" and "atmo moat" as atmo moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red.". printed name of atmo moat is "atmo-moat".
 
-a-text of atmo moat is "YRYR". b-text of atmo moat is "??YR". parse-text of atmo moat is "-[sp]x[sp]O[sp]M". atmo moat is parse-spoilable.
+a-text of atmo moat is "YRYR". b-text of atmo moat is "??YR". parse-text of atmo moat is "?[sp]?[sp]O[sp]M". atmo moat is parse-spoilable.
 
 Include (-
 	has transparent animate
@@ -18175,7 +18190,7 @@ to say pla-ma: say "[if parleys splayer players are reflexed]mack[else]player[en
 
 understand "mack/player" as parleys splayer players.
 
-a-text of parleys splayer players is "RRYRYRO". b-text of parleys splayer players is "???R?RO". parse-text of parleys splayer players is "BUG".
+a-text of parleys splayer players is "RRYRYRO". b-text of parleys splayer players is "???R?RO". parse-text of parleys splayer players is "?[sp]?[sp]?[sp]x[sp]?[sp]x[sp]Y".
 
 rule for printing a locale paragraph about parleys splayer players:
 	say "[one of]Wait a minute. You think you recognize whom the parleys splayer players are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. It's strong enough, they're not just macks, but parleys splayer players. There'a nothing to STOP Gretta from running, but it's easy to feel boxed-in[how-played][stopping].";
@@ -18273,7 +18288,7 @@ chapter cut ya all cult laya
 
 the Cut Ya All Cult Laya is LLPish vanishing scenery. printed name of laya is "Cut-Ya-All Cult Laya[']". description is "The [laya] keeps chirping away with inane ramblings of how great Elvira is, only it's all buried under ten levels of irony, so it can't be cultish. You can LISTEN for a clue, if you really want to. The designers['] names are also written in red on here."
 
-a-text of Cut Ya All Cult Laya is "YRRYYRRO". b-text of Cut Ya All Cult Laya is "YR?Y?R?O". parse-text of Cut Ya All Cult Laya is "-[sp]x[sp]x[sp]-[sp]a[sp]l[sp]y".
+a-text of Cut Ya All Cult Laya is "YRRYYRRO". b-text of Cut Ya All Cult Laya is "YR?Y?R?O". parse-text of Cut Ya All Cult Laya is "-[sp]x[sp]?[sp]-[sp]?[sp]x[sp]?[sp]Y".
 
 chapter boring scenery
 
@@ -18463,19 +18478,19 @@ For printing a locale paragraph about a pickup-line (called the item):
 
 section 7 letters repeating - pod 1
 
-t-bossily is a pickup-line. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". player-move is "Fake plaintiveness makes you see red! 'Sly bois? I? Sly SOB? Si Bloy's...'". pickup-description is "(not) being sly bois".
+t-bossily is a pickup-line. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]O[sp]S[sp]x[sp]I[sp]x[sp]Y". player-move is "Fake plaintiveness makes you see red! 'Sly bois? I? Sly SOB? Si Bloy's...'". pickup-description is "(not) being sly bois".
 
-t-cattily is a pickup-line. pod-num is 1. pod-ord is 2. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "TACITLY". player-move is "Each [pla-ma] discusses tacitly why he's got something the others don't.". pickup-description is "acting tacitly".
+t-cattily is a pickup-line. pod-num is 1. pod-ord is 2. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "CATTILY". player-move is "Each [pla-ma] discusses tacitly why he's got something the others don't.". pickup-description is "acting tacitly".
 
-t-seedily is a pickup-line. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. player-move is "A few [pla-ma]s do something stupid with their eyelids to get her attention.". pickup-description is "twiddling their eyelids".
+t-seedily is a pickup-line. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]E[sp]E[sp]x[sp]I[sp]x[sp]Y". t-seedily is cheat-spoilable. player-move is "A few [pla-ma]s do something stupid with their eyelids to get her attention.". pickup-description is "twiddling their eyelids".
 
 t-tearily-irately is a pickup-line. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". player-move is "The [players] ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". pickup-description is "defining reality".
 
-t-tersely is a pickup-line. pod-num is 1. pod-ord is 5. a-text of t-tersely is "RYRRYRO". b-text of t-tersely is "RGRRYPO". parse-text of t-tersely is "x[sp]e[sp]x[sp]x[sp]x[sp]e[sp]l[sp]y". player-move is "The [players] continually restyle and restyle their various positive attributes.". pickup-description is "continuing to restyle and restyle".
+t-tersely is a pickup-line. pod-num is 1. pod-ord is 5. a-text of t-tersely is "RYRRYRO". b-text of t-tersely is "RGRRYPO". parse-text of t-tersely is "x[sp]E[sp]x[sp]x[sp]E[sp]L[sp]Y". player-move is "The [players] continually restyle and restyle their various positive attributes.". pickup-description is "continuing to restyle and restyle".
 
 section 7 letters non-repeating - pod 2
 
-t-angrily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-angrily is "YRRRYRO". b-text of t-angrily is "YRRRGPB". parse-text of t-angrily is "-[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". player-move is "The [players] discuss topics rangily, even saying 'Any girl: I, gnarly!' It's too ridiculous to see red over.". pickup-description is "discoursing rangily".
+t-angrily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-angrily is "YRRRYRO". b-text of t-angrily is "YRRRGPB". parse-text of t-angrily is "A[sp]x[sp]x[sp]x[sp]I[sp]L[sp]Y". player-move is "The [players] discuss topics rangily, even saying 'Any girl: I, gnarly!' It's too ridiculous to see red over.". pickup-description is "discoursing rangily".
 
 t-nastily is a pickup-line. pod-num is 2. pod-ord is 2. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]A[sp]x[sp]x[sp]I[sp]L[sp]Y". player-move is "The [players] suddenly start acting very saintly.". pickup-description is "acting saintly".
 
@@ -18483,7 +18498,7 @@ t-shadily is a pickup-line. pod-num is 2. pod-ord is 3. a-text of t-shadily is "
 
 t-snidely is a pickup-line. pod-num is 2. pod-ord is 4. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]D[sp]-[sp]x[sp]Y". player-move is "The [players] blather about how she is better than Lindsey.". pickup-description is "negging Lindsey".
 
-t-starkly is a pickup-line. pod-num is 2. pod-ord is 5. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]L[sp]Y". player-move is "Some of the [players] compare her to Krystal, being sort-of favorable to both. Still, it's icky.". pickup-description is "comparing Gretta and Krystal".
+t-starkly is a pickup-line. pod-num is 2. pod-ord is 5. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]A[sp]x[sp]x[sp]x[sp]Y". player-move is "Some of the [players] compare her to Krystal, being sort-of favorable to both. Still, it's icky.". pickup-description is "comparing Gretta and Krystal".
 
 section 8 letters repeating - pod 3
 
@@ -18491,31 +18506,31 @@ t-blearily is a pickup-line. pod-num is 3. pod-ord is 1. a-text of t-blearily is
 
 t-coitally is a pickup-line. pod-num is 3. pod-ord is 2. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]O[sp]-[sp]x[sp]-[sp]x[sp]x[sp]Y". player-move is "The [players] discuss how nice it is to meet her in this locality.". pickup-description is "'admiring' this locality".
 
-t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". player-move is "The [players] manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". pickup-description is "acting too formally".
+t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]O[sp]x[sp]x[sp]A[sp]x[sp]x[sp]Y". player-move is "The [players] manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". pickup-description is "acting too formally".
 
 t-ribaldly is a pickup-line. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]L[sp]Y". player-move is "The [players] ask if she has been thinking bridally.". pickup-description is "talking bridally".
 
-t-shabbily is a pickup-line. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". player-move is "A [pla-ma], going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". pickup-description is "describing things shabbily".
+t-shabbily is a pickup-line. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]Y". player-move is "A [pla-ma], going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". pickup-description is "describing things shabbily".
 
-t-shoddily is a pickup-line. pod-num is 3. pod-ord is 6. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". player-move is "A tag-team effort. One [pla-ma] gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.". pickup-description is "giving an odd sly hi".
+t-shoddily is a pickup-line. pod-num is 3. pod-ord is 6. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]O[sp]x[sp]x[sp]I[sp]x[sp]Y". player-move is "A tag-team effort. One [pla-ma] gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.". pickup-description is "giving an odd sly hi".
 
-t-silently is a pickup-line. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "The [players] perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". pickup-description is "having a snit-yell".
+t-silently is a pickup-line. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "S[sp]?[sp]?[sp]-[sp]x[sp]x[sp]?[sp]Y". player-move is "The [players] perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". pickup-description is "having a snit-yell".
 
-t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". player-move is "The [players] incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". pickup-description is "not stopping suddenly.".
+t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]U[sp]x[sp]x[sp]E[sp]x[sp]x[sp]Y". player-move is "The [players] incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". pickup-description is "not stopping suddenly.".
 
 section 8 letters non-repeating - pod 4
 
-t-modestly is a pickup-line. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "Three [pla-ma]s put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". pickup-description is "behaving fake-modestly".
+t-modestly is a pickup-line. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]O[sp]x[sp]E[sp]x[sp]x[sp]x[sp]Y". player-move is "Three [pla-ma]s put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". pickup-description is "behaving fake-modestly".
 
-t-steamily is a pickup-line. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". player-move is "The [players] claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". pickup-description is "mis-discussing Misty Ale".
+t-steamily is a pickup-line. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]I[sp]x[sp]Y". player-move is "The [players] claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". pickup-description is "mis-discussing Misty Ale".
 
-t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". player-move is "One [pla-ma] idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
+t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]Y". player-move is "One [pla-ma] idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
 section 9 letters - pod 5
 
 t-martially is a pickup-line. pod-num is 5. pod-ord is 1. a-text of t-martially is "RYRRYYRRO". b-text of t-martially is "PGPRYGPPB". parse-text of t-martially is "MARTIALLY". player-move is "Some of the [players] even begin to talk maritally.". pickup-description is "blabbing maritally". t-martially is parse-spoilable.
 
-t-sincerely is a pickup-line. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". player-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". pickup-description is "speaking too sincerely".
+t-sincerely is a pickup-line. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]I[sp]x[sp]x[sp]E[sp]x[sp]E[sp]x[sp]Y". player-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". pickup-description is "speaking too sincerely".
 
 t-sobbingly is a pickup-line. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]O[sp]B[sp]B[sp]I[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s continuing their lobbyings, far too cheery and confident.". pickup-description is "making lobbyings".
 
@@ -18525,7 +18540,7 @@ t-wearingly is a pickup-line. pod-num is 5. pod-ord is 4. a-text of t-wearingly 
 
 section 10-11 letters - pod 6
 
-t-desperately is a pickup-line. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". player-move is "The [pla-ma]s stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". pickup-description is "continuing to stare deeply".
+t-desperately is a pickup-line. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]E[sp]x[sp]x[sp]E[sp]x[sp]A[sp]x[sp]E[sp]x[sp]Y". player-move is "The [pla-ma]s stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". pickup-description is "continuing to stare deeply".
 
 t-drawlingly is a pickup-line. pod-num is 6. pod-ord is 2. a-text of t-drawlingly is "RRYRRYRRRO". b-text of t-drawlingly is "PPYPRYRRRO". parse-text of t-drawlingly is "D[sp]R[sp]-[sp]W[sp]x[sp]-[sp]x[sp]x[sp]x[sp]Y". player-move is "Amazingly, the [pla-ma]s make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". pickup-description is "blabbing about drywalling".
 
@@ -18535,7 +18550,7 @@ t-reactively is a pickup-line. pod-num is 6. pod-ord is 4. a-text of t-reactivel
 
 section 12 letters - pod 7
 
-t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their 'greatness'"
+t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]E[sp]x[sp]x[sp]-[sp]-[sp]x[sp]I[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their 'greatness'"
 
 t-indiscreetly is a pickup-line. pod-num is 7. pod-ord is 2. a-text of t-indiscreetly is "YRRYRRRYYRRO". b-text of t-indiscreetly is "GRRYRRRGYPPB". parse-text of t-indiscreetly is "I[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]E[sp]-[sp]T[sp]L[sp]Y". player-move is "The [pla-ma]s continue to babble, their clothes shining iridescently.". pickup-description is "wearing clothes shining iridescently".
 
@@ -19113,7 +19128,7 @@ section holy nest
 
 the holy nest is boring LLPish vanishing scenery. "It's only nominally holy. It's covered with writing you could sneak a look at.". bore-text of holy nest is "The holy nest isn't important to finding Elvira, but maybe it could help you expose that much more of [e-n-m]'s hypocrisy.".
 
-a-text of holy nest is "RYRYRRRO". b-text of holy nest is "PGRYRRRO". parse-text of holy nest is "H[sp]O[sp]x[sp]E[sp]x[sp]x[sp]x[sp]y".
+a-text of holy nest is "RYRYRRRO". b-text of holy nest is "PGRYRRRO". parse-text of holy nest is "H[sp]O[sp]x[sp]E[sp]x[sp]x[sp]x[sp]Y".
 
 chapter useless scenery
 
@@ -19627,7 +19642,7 @@ A spear is a start-pre-fruit in Rustic Citrus. description of spear is "It'd mak
 
 to say cutoff: stop game abruptly;
 
-a-text of spear is "RYYRR". b-text of spear is "RYYRR". parse-text of spear is "x[sp]-[sp]-[sp]x[sp]x".
+a-text of spear is "RYYRR". b-text of spear is "RYYRR". parse-text of spear is "x[sp]E[sp]A[sp]x[sp]x".
 
 check taking spear: say "This is a thinking puzzling game, not a violence game. Though I hope the puzzles have not given you violent thoughts." instead;
 
@@ -20361,7 +20376,7 @@ chapter i solve voiles
 
 the i solve voiles are plural-named vanishing scenery in Clangier Clearing. "Something is behind the voiles, but you're not sure what.".
 
-a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "o[sp]l[sp]i[sp]x[sp]e[sp]x".
+a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "-[sp]x[sp]?[sp]x[sp]?[sp]?".
 
 the jar of olives is a fruit. "Some green (with and without pimentos,) some black.". bore-text of olives is "You can put olives on your fingers or whatever once you're done with this little exploit. You'll have all the olives you want. For now, you're doing stuff for Curtis.". frroom of olives is clangier clearing.
 
@@ -20373,7 +20388,7 @@ check taking prices precis: say "That'd leave everyone in the market confused[if
 
 understand "price" and "price precis" as prices precis.
 
-a-text of prices precis is "RRYRYR". b-text of prices precis is "RP?R?P". parse-text of prices precis is "x[sp]r[sp]i[sp]x[sp]e[sp]s". prices precis is parse-spoilable.
+a-text of prices precis is "RRYRYR". b-text of prices precis is "RP?R?P". parse-text of prices precis is "C[sp]R[sp]-[sp]P[sp]-[sp]S".
 
 the kumquat is a fruit. description is "Weird and orange and oblong."
 
@@ -20394,7 +20409,7 @@ some lemons are a reflexive fruit in Clangier Clearing.
 
 description of lemons is "Sour and frowny."
 
-a-text of lemons is "RYRYRR". b-text of lemons is "RYRYRR". parse-text of lemons is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
+a-text of lemons is "RYRYRR". b-text of lemons is "RYRYRR". parse-text of lemons is "x[sp]O[sp]x[sp]E[sp]x[sp]x".
 
 chapter melon
 
@@ -20416,7 +20431,7 @@ chapter quince
 
 A quince is a reflexive fruit in Clangier Clearing. description of quince is "[if quince is reflexive]Written on it is NAME A PRICE IN ITALIAN[else]Nothing too special about it[end if]. It looks like your average combination of an apple and a pear."
 
-a-text of quince is "RYRRYY". b-text of quince is "RYRRYG". parse-text of quince is "x[sp]-[sp]x[sp]x[sp]-[sp]e". quince is cheat-spoilable.
+a-text of quince is "RYRRYY". b-text of quince is "RYRRYG". parse-text of quince is "x[sp]I[sp]x[sp]x[sp]U[sp]E". quince is cheat-spoilable.
 
 chapter peach
 
@@ -20424,13 +20439,13 @@ An overpriced peach is a reflexive fruit in Clangier Clearing.
 
 description of the overpriced peach is "[if peach is reflexive]Len Craig sees you looking at it and assures you it's expensive[else]Plump and fuzzy[end if]."
 
-a-text of peach is "RRYYR". b-text of peach is "RRYYR". parse-text of peach is "x[sp]x[sp]-[sp]-[sp]x". peach is cheat-spoilable.
+a-text of peach is "RRYYR". b-text of peach is "RRYYR". parse-text of peach is "x[sp]x[sp]E[sp]A[sp]x". peach is cheat-spoilable.
 
 chapter no ammo gang
 
 people called the No Ammo Gang are in Clangier Clearing. they are plural-named. "People labeled the No Ammo Gang wander about, babbling. Maybe you could find the right way to chat them up.". description of No Ammo Gang is "Harmless traders. But how to schmooze correctly to get them to trade?"
 
-a-text of No Ammo Gang is "YRYRR". b-text of No Ammo Gang is "YRY??". parse-text of No Ammo Gang is "-[sp]x[sp]-[sp]x[sp]x".
+a-text of No Ammo Gang is "YRYRR". b-text of No Ammo Gang is "YRY??". parse-text of no ammo gang is "A[sp]x[sp]O[sp]x[sp]x".
 
 a mango is a fruit.
 
@@ -20466,7 +20481,7 @@ the watermelon is a fruit. description is "It isn't too heavy or big to carry, t
 
 the mean trowel is a thing in Filed Field. description is "It has some red writing saying who made it and also what it protects against.". "A mean trowel has been discarded here. Perhaps it can become something nicer.".
 
-a-text of mean trowel is "RYRYRRYRYR". b-text of mean trowel is "RYRYRRYRYR". parse-text of mean trowel is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]".
+a-text of mean trowel is "RYRYRRYRYR". b-text of mean trowel is "RYRYRRYRYR". parse-text of mean trowel is "x[sp]-[sp]x[sp]E[sp]x[sp]x[sp]E[sp]x[sp]-[sp]x".
 
 check taking the mean trowel:
 	say "You can't find anything to dig, dig?" instead;
@@ -20503,7 +20518,7 @@ the pipe panel lie pen app is scenery in Filed Field. "It details how to make a 
 
 check taking pipe panel lie pen app: say "You don't need any instructions for something you can't build. Perhaps they can become something more nourishing." instead;
 
-a-text of pipe panel lie pen app is "RYRYYRRRY". b-text of pipe panel lie pen app is "?GR?YRRRY". parse-text of pipe panel lie pen app is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of pipe panel lie pen app is "RYRYYRRRY". b-text of pipe panel lie pen app is "?GR?YRRRY". parse-text of pipe panel lie pen app is "?[sp]I[sp]x[sp]?[sp]A[sp]P[sp]P[sp]x[sp]E".
 
 the pineapple is a fruit.
 
