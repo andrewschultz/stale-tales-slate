@@ -278,10 +278,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
-#readables for creationism reactionism
->read creationism
-One of the two authors is (Scot Manieri|Cristi Emano)\.
-
 >ramble
 In particular, you feel the need to RECANT right now.
 >undo

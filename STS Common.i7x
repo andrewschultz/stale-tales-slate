@@ -587,8 +587,9 @@ to say 2dg of (rg - a region):
 
 to say 2dmiss of (cr2 - a region):
 	if anything-missed is false:
-		say "[2da][cr2]:[line break]";
+		say "[eqls][b][cr2][r]:[line break]";
 	now anything-missed is true;
+	say "[2da]";
 
 miss-room is a room that varies.
 

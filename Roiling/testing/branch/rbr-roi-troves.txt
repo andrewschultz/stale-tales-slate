@@ -159,7 +159,7 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 @nud
 #spechelp for pa egg pea
 >gaep
-You look blankly at Pa, Egg, Pea, but you're not quite doing it right.
+You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
 #scannotes for pa egg pea
 >scan pa egg pea
@@ -184,13 +184,13 @@ You probably did what you could. Or not-did.
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
 #scannotes for tears taser
->staer
+>scan taser
 The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
-#nudges for tear
+#nudge for tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
 #readables for tears taser
->tears taser
+>read tears taser
 RATES is written on the tears taser, in red.
 
 @sli
@@ -256,6 +256,9 @@ You've done nothing to deserve a rec yet. You need to think for yourself. Maybe 
 >care
 Your score has just gone up by one point
 }}SCORE++
+
+@mina,minb
+}}CURMAX--
 
 @hin
 DEBUG INFO: sob ever verbose hinting.
@@ -413,6 +416,9 @@ Your score has just gone up by one point
 
 @spoi
 /In particular, you feel the need to (REASON|BELIEVE) right now\.
+
+@mina,minb
+}}CURMAX--
 
 @hin
 /DEBUG INFO: (SNORE SO ARENA|evil bee) hinting.
@@ -1203,7 +1209,7 @@ You're striving too hard, now.
 >ectarina
 Plural craniates.
 #readables for sectarian craniates
->sectarian craniates
+>read sectarian craniates
 /You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
 #scannotes for sectarian craniates
 >scan sectarian craniates
@@ -1230,7 +1236,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
 #renudge for ectarian
 >ectarina
-Plural craniates. But you knew that, since you already 'appreciated' it.
+Plural craniates. But you knew that, since you already "appreciated" it.
 #nudge for edn
 >end
 You must deal with the full END PRONER POD.
@@ -1399,9 +1405,10 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@nud
 #readables for creationism reactionism
 >read creationism
-One of the two authors is (Scot Manieri|Cristi Emano)\.
+/One of the two authors is (Scot Manieri|Cristi Emano)\.
 
 @nud
 #nudge for salt
@@ -1489,7 +1496,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #pre-nectar-recant rule
 >recant
 !by one point
-It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
+It ... you know you should drink the Trance Nectar, for the good of society and the economy, but something nags at you. You've come to loathe the Trance Nectar, and yet you can't quite break free of it. With
 #preefcheck trance nectar
 >pf
 You can RECANT once you feel less watched.
@@ -1568,7 +1575,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. T
 @mina,minb
 >misses
 Troves
---you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.
+--you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
 Loather Rathole====
 --you could've tried to STARE at the tears taser.
 Boarded Roadbed====
@@ -1601,11 +1608,11 @@ Econ-Cone====
 
 @mina
 --you could've tried to STRIVE by the statue of Trevis Vister.
-!--you could've tried to ASPIRE, from the praise in the Econ-Cone.
+!--you could've tried to ASPIRE by the praise spirea.
 
 @minb
 !--you could've tried to STRIVE by the statue of Trevis Vister.
---you could've tried to ASPIRE, from the praise in the Econ-Cone.
+--you could've tried to ASPIRE by the praise spirea.
 
 @mina,minb
 Browse Bowers====

@@ -73,7 +73,7 @@ Score in a scenario: 0 out of 30 total points in the current region, Troves. Low
 
 #spechelp for pa egg pea
 >gaep
-You look blankly at Pa, Egg, Pea, but you're not quite doing it right.
+You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
 #scannotes for pa egg pea
 >scan pa egg pea
@@ -93,13 +93,13 @@ You probably did what you could. Or not-did.
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
 #scannotes for tears taser
->staer
+>scan taser
 The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
-#nudges for tear
+#nudge for tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
 #readables for tears taser
->tears taser
+>read tears taser
 RATES is written on the tears taser, in red.
 
 >stare
@@ -719,7 +719,7 @@ You're striving too hard, now.
 >ectarina
 Plural craniates.
 #readables for sectarian craniates
->sectarian craniates
+>read sectarian craniates
 /You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
 #scannotes for sectarian craniates
 >scan sectarian craniates
@@ -737,7 +737,7 @@ Score in a scenario: 23 out of 30 total points in the current region, Troves. Lo
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
 #renudge for ectarian
 >ectarina
-Plural craniates. But you knew that, since you already 'appreciated' it.
+Plural craniates. But you knew that, since you already "appreciated" it.
 #nudge for edn
 >end
 You must deal with the full END PRONER POD.
@@ -855,7 +855,7 @@ Score in a scenario: 26 out of 30 total points in the current region, Troves. Lo
 
 #readables for creationism reactionism
 >read creationism
-One of the two authors is (Scot Manieri|Cristi Emano)\.
+/One of the two authors is (Scot Manieri|Cristi Emano)\.
 
 #nudge for salt
 >lats

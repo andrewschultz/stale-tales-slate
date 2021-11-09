@@ -478,7 +478,7 @@ this is the post-mbb-ramble rule:
 
 this is the pre-nectar-recant rule:
 	if mbb-sis-points is 0:
-		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe [the nectar], and yet you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
+		say "It ... you know you should drink [the nectar], for the good of society and the economy, but something nags at you. You've come to loathe [the nectar], and yet you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
 		preef trance nectar instead;
 
 this is the post-nectar-recant rule:
@@ -3472,7 +3472,7 @@ yob den	"Some different noises from the yob den."
 
 table of troves spechelp
 xtrhelp	helptxt
-Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right."
+Pa Egg Pea	"You gloss blankly over [i]Pa, Egg, Pea[r], but you're not quite doing it right."
 tears taser	"The tears taser makes an odd noise, as if it is recalibrating."
 Eh At Heat	"You feel slightly less cold but mad at yourself for not doing better."
 Race Acre	"For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though."

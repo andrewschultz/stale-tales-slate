@@ -30,6 +30,8 @@ You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipat
 You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
 >gx spear
 You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
+>gx lumps
+You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 >limes
 Your score has just gone up by one point.
@@ -99,9 +101,6 @@ Your score has just gone up by one point.
 
 >x ruts circuits
 
->gx lumps
-You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
->undo
 >gx sated stead
 You have a vision of a fruit: DATES. The aftertaste of arugula finally dissipates.
 >gx eerie blurbs
@@ -288,10 +287,10 @@ You have 22 of 45 total points for the post-Elvira Others region, though you onl
 
 >pineapple
 Your score has just gone up by one point.
-!min-up
+min-up
 
 >score
-You have 23 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 23 of 45 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >e
 >s
@@ -303,12 +302,12 @@ by one point
 Blam!
 
 >score
-You have 24 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 24 of 45 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >concisions
 Your score has just gone up by one point.
 >score
-You have 25 of 45 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 25 of 45 total points for the post-Elvira Others region, though you only need 27 to win.
 
 >n
 
@@ -316,20 +315,20 @@ You have 25 of 45 total points for the post-Elvira Others region, though you onl
 >strawberries
 Your score has just gone up by one point.
 >score
-You have 26 of 45 total points for the post-Elvira Others region, though you only need 27 to win.
+You have 26 of 45 total points for the post-Elvira Others region, though you only need 28 to win.
 #strawberries = last with minimum at base
 >grapefruit
 Your score has just gone up by one point.
 >score
-You have 27 of 45 total points for the post-Elvira Others region, though you only need 28 to win.
+You have 27 of 45 total points for the post-Elvira Others region, though you only need 29 to win.
 >raspberry
 Your score has just gone up by one point.
 >score
-You have 28 of 45 total points for the post-Elvira Others region, though you only need 29 to win.
+You have 28 of 45 total points for the post-Elvira Others region, though you only need 30 to win.
 >breadfruit
 Your score has just gone up by one point.
 >score
-You have 29 of 45 total points for the post-Elvira Others region, though you only need 30 to win.
+You have 29 of 45 total points for the post-Elvira Others region, though you only need 31 to win.
 >e
 >e
 Clangier Clearing
@@ -358,42 +357,42 @@ You feel an urge to look SOLEMN. The aftertaste of arugula finally dissipates.
 >olives
 Your score has just gone up by one point.
 >score
-You have 30 of 45 total points for the post-Elvira Others region, though you only need 31 to win.
+You have 30 of 45 total points for the post-Elvira Others region, though you only need 32 to win.
 >cinque
 Your score has just gone up by one point.
 >score
-You have 31 of 45 total points for the post-Elvira Others region, though you only need 32 to win.
+You have 31 of 45 total points for the post-Elvira Others region, though you only need 33 to win.
 >cheap
 Your score has just gone up by one point.
 >score
-You have 32 of 45 total points for the post-Elvira Others region, though you only need 33 to win.
+You have 32 of 45 total points for the post-Elvira Others region, though you only need 34 to win.
 >papayas
 Your score has just gone up by one point.
 >score
-You have 33 of 45 total points for the post-Elvira Others region, though you only need 34 to win.
+You have 33 of 45 total points for the post-Elvira Others region, though you only need 35 to win.
 
 #not a mistake
 >among
 Your score has just gone up by one point.
 
 >score
-You have 34 of 45 total points for the post-Elvira Others region, though you only need 35 to win.
+You have 34 of 45 total points for the post-Elvira Others region, though you only need 36 to win.
 >ancienter
 Your score has just gone up by one point.
 >score
-You have 35 of 45 total points for the post-Elvira Others region, though you only need 36 to win.
+You have 35 of 45 total points for the post-Elvira Others region, though you only need 37 to win.
 >solemn
 Your score has just gone up by one point.
 >score
-You have 36 of 45 total points for the post-Elvira Others region, though you only need 37 to win.
+You have 36 of 45 total points for the post-Elvira Others region, though you only need 38 to win.
 >len mo
 Your score has just gone up by one point.
 >score
-You have 37 of 45 total points for the post-Elvira Others region, though you only need 38 to win.
+You have 37 of 45 total points for the post-Elvira Others region, though you only need 39 to win.
 >cripes
 Your score has just gone up by one point.
 >score
-You have 38 of 45 total points for the post-Elvira Others region, though you only need 39 to win.
+You have 38 of 45 total points for the post-Elvira Others region, though you only need 40 to win.
 
 >w
 
@@ -421,15 +420,15 @@ One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aft
 >banana
 Your score has just gone up by one point.
 >score
-You have 39 of 45 total points for the post-Elvira Others region, though you only need 40 to win.
+You have 39 of 45 total points for the post-Elvira Others region, though you only need 41 to win.
 >go near
 Your score has just gone up by one point.
 >score
-You have 40 of 45 total points for the post-Elvira Others region, though you only need 41 to win.
+You have 40 of 45 total points for the post-Elvira Others region, though you only need 42 to win.
 >rhubarb
 Your score has just gone up by one point.
 >score
-You have 41 of 45 total points for the post-Elvira Others region, though you only need 42 to win.
+You have 41 of 45 total points for the post-Elvira Others region, though you only need 43 to win.
 >reversed
 Your score has just gone up by one point.
 >score

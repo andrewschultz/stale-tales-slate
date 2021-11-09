@@ -228,14 +228,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
-#readables for creationism reactionism
->read creationism
-One of the two authors is (Scot Manieri|Cristi Emano)\.
-
 #pre-nectar-recant rule
 >recant
 !by one point
-It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
+It ... you know you should drink the Trance Nectar, for the good of society and the economy, but something nags at you. You've come to loathe the Trance Nectar, and yet you can't quite break free of it. With
 #preefcheck trance nectar
 >pf
 You can RECANT once you feel less watched.

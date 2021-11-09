@@ -531,6 +531,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "poverty"	701582538	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	--	degen-true rule	"[not-the-reg]."
+"tear"	318427748	tears taser	--	"No, something as powerful as a tears taser will cause more than one tear to be shed."
 
 to say no-spoil: say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"
 

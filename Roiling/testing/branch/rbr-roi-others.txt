@@ -85,6 +85,8 @@ You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipat
 You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
 >gx spear
 You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
+>gx lumps
+You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 @nud
 #mistake test for boarder
@@ -383,7 +385,7 @@ The needle is working fine. No need to meddle.
 >x ruts circuits
 
 @hin
-/DEBUG INFO: (dates|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
 
 @mis
 #mistake test for tased
@@ -391,9 +393,6 @@ The needle is working fine. No need to meddle.
 You don't need that, and neither does Curtis.
 
 @spoi
->gx lumps
-You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
->undo
 >gx sated stead
 You have a vision of a fruit: DATES. The aftertaste of arugula finally dissipates.
 >gx eerie blurbs
@@ -434,7 +433,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >scan sated stead
 Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad.
 #spechelp for sated stead
->sated stead
+>estad
 The sated stead bubbles slightly.
 
 @nud
@@ -537,7 +536,7 @@ Not just omen, or prism. It's an omen prism.
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
 @hin
-/DEBUG INFO: (dates|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
 
 >score
 }}SCORE++
@@ -563,7 +562,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (dates|eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
 
 >score
 }}SCORE++
@@ -572,7 +571,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (dates|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
 
 >score
 }}SCORE++
@@ -581,7 +580,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (dates|harmonicas|magenta rope|omen prism) hinting\.
+/DEBUG INFO: (sated stead|harmonicas|magenta rope|omen prism) hinting\.
 
 >score
 }}SCORE++
@@ -607,7 +606,7 @@ Take on a token
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (harmonicas|magenta rope) hinting\.
+/DEBUG INFO: (sated stead|harmonicas|magenta rope) hinting\.
 
 >score
 }}SCORE++
@@ -616,7 +615,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-DEBUG INFO: (dates|magenta rope) hinting.
+/DEBUG INFO: (sated stead|magenta rope) hinting.
 
 >score
 }}SCORE++
@@ -625,7 +624,7 @@ DEBUG INFO: (dates|magenta rope) hinting.
 Your score has just gone up by one point.
 
 @hin
-DEBUG INFO: dates hinting.
+DEBUG INFO: sated stead hinting.
 
 >score
 }}SCORE++
@@ -1198,6 +1197,7 @@ Your score has just gone up by one point.
 >watermelon
 Your score has just gone up by one point.
 
+
 @hin
 /DEBUG INFO: (barriers west|buried raft|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
@@ -1208,7 +1208,8 @@ Your score has just gone up by one point.
 @!min
 >pineapple
 Your score has just gone up by one point.
-!min-up
+min-up
+}}CURMIN++
 
 @hin
 /DEBUG INFO: (barriers west|buried raft|pryer bars|rapt figure) hinting\.
@@ -1217,6 +1218,7 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
+
 
 >e
 >s
@@ -1277,7 +1279,7 @@ Money, or something like it, should not be the guide of you.
 >icons
 The sonic icons seem right. No use meddling.
 #scannotes for concisions
->scan sonic coins
+>scan sonic icons
 Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do.
 
 @sli
@@ -1402,7 +1404,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #spechelp for i solve voiles
->i solve voiles
+>evliso
 The I-Solve Voiles rustle slightly.
 #scannotes for i solve voiles
 >scan i solve voiles
@@ -2055,10 +2057,10 @@ by one point
 
 @min
 # let's check "here/valence enclave" conditional text in the score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >s
 >score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >n
 @!
 {$SCOVERYLAST}

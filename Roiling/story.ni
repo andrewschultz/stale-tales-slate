@@ -3545,8 +3545,11 @@ carry out requesting the score:
 			say ", though you only need [min-score of mrlp] to win";
 		if fruits-left is 0:
 			say ". There are no fruits left to find or give back to Curtis";
+		say ". ";
 		if poss-score of others < max-score of others:
 			say "You can't get the maximum score, since you [if arugula is moot]used the arugula[end if][if poss-score of others is 43] and [end if][if s-i are moot and concisions are reflexive]missed a chance for something obscure with the sonic icons[end if].";
+		else:
+			say "[line break]";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
@@ -4372,13 +4375,13 @@ section random fruit hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-rustic-hard-items is a list of things variable. rustic-hard-items is { dates, eerie blurbs, harmonicas, mad train, magenta rope, omen prism, peanut cola }
+rustic-hard-items is a list of things variable. rustic-hard-items is { sated stead, eerie blurbs, harmonicas, mad train, magenta rope, omen prism, peanut cola }
 
 wells-hintables is a list of things variable. wells-hintables is { green stain, miser ruble, PSA Elp, riot cap, sorer bogey, stucco }.
 
 field-hintables is a list of things variable. field-hintables is { barber sickle, barren cries, barriers west, buried raft, mean trowel, pipe panel lie pen app, pryer bars, rapt figure }.
 
-clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince, olives }.
+clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince, i solve voiles }.
 
 scapespace-hintables is a list of things variable. scapespace-hintables is { a banna, a brr hub, Dr Severe, orange }
 
@@ -5787,7 +5790,7 @@ this is the can-i-heat rule:
 		say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Topside Deposit]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
 
 check eating a hintpastry (this is the try to eat a hint tart rule) :
-	if xrayvision is true, say "You're already under the influence of a pastry. XRAY something before continuing." instead;
+	if xrayvision is true, say "You're already under the influence of a pastry. [b]XRAY[r] something before continuing." instead;
 	if noun is not heated:
 		abide by the can-i-heat rule;
 		try inserting noun into toaster instead;
@@ -7418,6 +7421,7 @@ to say tables-beams: if tables are in Dusty Study or meet bans are in Dusty Stud
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
 	ital-say "you may wish to type ABOUT or VERBS to see information about the game and what words work best.";
+	if debug-state is true, ital-say "The [b]POST[i] command sends you to Rustic Citrus.";
 	continue the action;
 
 to say think-cue:
@@ -15678,16 +15682,6 @@ Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightl
 
 last-loc of Towers is Loftier Trefoil.
 
-after looking in Loftier Trefoil:
-	if loftier trefoil is unvisited and debug-state is true:
-		say "[line break]";
-		ital-say "Remember, WARWAR skips through the warriors.";
-		say "[line break]";
-		ital-say "Also, PLOP drops all the picaros here, but crazy things may happen if you move on from unit testing.";
-	set the pronoun him to rodney;
-	set the pronoun them to w-p;
-	continue the action;
-
 w-p is privately-named plural-named boring abstract scenery in Loftier Trefoil. printed name of w-p is "picaros". description of w-p is "Deal with the picaros individually.". bore-check of w-p is bore-picaros rule. bore-text of w-p is "Deal with the picaros individually."
 
 understand "picaros/picaro" as w-p.
@@ -15698,8 +15692,15 @@ to decide which number is moot-picaros: decide on number of moot picaros;
 this is the bore-picaros rule:
 	if here-picaros is 1, try objhinting rodney instead;
 
-after printing the locale description for Loftier Trefoil when Loftier Trefoil is unvisited:
+after printing the locale description for Loftier Trefoil when Loftier Trefoil was unvisited:
 	say "The ambience here makes you think 'Lo, I fret.'";
+	if debug-state is true:
+		say "[line break]";
+		ital-say "Remember, WARWAR skips through the warriors.";
+		say "[line break]";
+		ital-say "Also, PLOP drops all the picaros here, but crazy things may happen if you move on from unit testing.";
+	set the pronoun him to rodney;
+	set the pronoun them to w-p;
 	continue the action;
 
 rule for printing a locale paragraph about a picaro (called pp):
@@ -18171,7 +18172,7 @@ Include (-
 
 check entering atmo moat: say "It's too gulfy. Things'd get fugly. You've no diver pod provided. Plus you might get poked by strident tridents." instead;
 
-after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
+after printing the locale description for Disowned Downside when Disowned Downside was unvisited:
 	if do-i-chat is true:
 		moot parleys splayer players;
 		now all pickup-lines are in Meatier Emerita Emirate;
@@ -20253,8 +20254,6 @@ the concisions are a privately-named LLPish reflexive thing. printed name of con
 
 understand "concisions" as concisions when debug-state is true.
 
-check scaning s-c: try scaning concisions instead;
-
 a-text of concisions is "RYRRYRYYRR". b-text of concisions is "RGPRYRYGPP". parse-text of concisions is "C[sp]O[sp]N[sp]x[sp]I[sp]x[sp]I[sp]O[sp]N[sp]S".
 
 check scaning s-i when concisions are reflexive:
@@ -20383,7 +20382,7 @@ Include (-
 
 chapter i solve voiles
 
-the i solve voiles are plural-named vanishing scenery in Clangier Clearing. "They're black and green. Something is behind the voiles, since (non-red) writing on them says 'guess what's behind here and win it,' but you're not sure what.".
+the I Solve Voiles are plural-named vanishing scenery in Clangier Clearing. "They're black and green. Something is behind the voiles, since (non-red) writing on them says 'guess what's behind here and win it,' but you're not sure what.". printed name of voiles is "I-Solve Voiles".
 
 a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "-[sp]x[sp]?[sp]x[sp]?[sp]?".
 
@@ -22245,7 +22244,7 @@ this is the routes-misses rule:
 
 this is the troves-misses rule:
 	if Pa Egg Pea is reflexive, say "[2dmiss of troves]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page at any time.";
-	if tears taser is reflexive, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
+	if tears taser is not moot, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
 	if mussier misuser is not moot, say "[2drm of Bustle Sublet]you could've tried to [b]SURMISE[r] about the mussier misuser.";
 	if a sty tasty say is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
 	if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
@@ -22256,7 +22255,7 @@ this is the troves-misses rule:
 	if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
 	if DIVORCES is not moot, say "[2drm of Browse Bowers]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
 	if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to [b]STRIVE[r] by the statue of Trevis Vister."; [1 of 2]
-	if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise spirea.";
+	if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r] by the praise spirea.";
 	if sectarian craniates is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASCERTAIN[r] stuff from [craniates].";
 	if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
 	if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
