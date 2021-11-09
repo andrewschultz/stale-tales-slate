@@ -123,6 +123,8 @@ master,??RRYR=mearts=mreast=stream=tamers
 strive,trevis,vister
 #qver of praise spirea
 aspire,YRR?R?=praise=spirea
+#qver of sectarian craniates
+ascertain,YR?YRRYY?=sectarian=craniates
 ponder,derpon,epdorn,drpeno,nedorp
 #browse bowers
 desire,R???RG=sirdee=reside
@@ -490,6 +492,7 @@ lenmo/molen,?????=melon
 among,YRY??=noamm=ogang
 #qver of naa na b a banna
 banana,R?RY??=abanna=naanab
+concisions,RGPRYRYGPP=sonicicons
 ;
 nerdiest treedsin % dinester ridesten sitender endtries steenrid sterndie edenstir drsteine eternids
 grained diregan % regdain nedriga indegar

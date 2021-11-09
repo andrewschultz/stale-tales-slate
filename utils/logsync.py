@@ -697,7 +697,7 @@ def check_scannotes():
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in nsl:
                 if l0 not in okay.keys() and l0 not in abbrevs.values():
-                    suggestions.append("{:s} may be superfluous scannote at line {:d}".format(l0, line_count))
+                    suggestions.append("{:s} may be superfluous scannote at line {:d}. Add it with AFT= in logsync.txt if it needs scannotes despite no ambiguities.".format(l0, line_count))
                     mayneedsource += 1
                 #print(ll[5])
             else:

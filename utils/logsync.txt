@@ -592,7 +592,7 @@ lemons>solemn
 prices precis>cripes
 no ammo gang>among
 i solve voiles>olives
-sonicicons>concisions
+concisions~sonicicons>concisions
 ####scape space
 engaro orange>go near
 a banna~naa na b a banna>banana
@@ -619,4 +619,5 @@ AFT=medals
 #others
 AFT=a brr hub
 AFT=auction caution
+AFT=concisions
 ;
