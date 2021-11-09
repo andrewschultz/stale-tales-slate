@@ -902,14 +902,15 @@ carry out soning:
 	repeat with ZZ running from 1 to number of entries in coinlist:
 		if ZZ is number understood:
 			now player has entry ZZ in coinlist;
-			if ZZ > 4:
-				now player has concisions;
 		else:
 			now entry ZZ in coinlist is off-stage;
 	if number understood is 0:
 		say "All coinish items are out of play.";
 	else:
 		say "Giving you [the entry number understood in coinlist].";
+		if number understood > 4:
+			say "[line break](giving you concisions as well)[line break]";
+			now player has concisions;
 	the rule succeeds;
 
 chapter posting
@@ -925,7 +926,7 @@ carry out posting:
 	try roveovering;
 	try fliptoing hoster;
 	try entering hoster;
-	say "TESTING NOTE: SON [bracket]1-6[close bracket] gives [coinlist].";
+	ital-say "TESTING NOTE: [b]SON[i] gives various stages of the coins. 1=coin 2=icon 3=coins 4=icons 5=sonic coins 6=sonic icons.";
 	the rule succeeds;
 
 chapter mowing
