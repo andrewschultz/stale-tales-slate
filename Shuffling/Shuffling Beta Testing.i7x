@@ -4,12 +4,12 @@ Version 1/211021 of Shuffling Beta Testing by Andrew Schultz begins here.
 
 volume beta testing
 
-include STS tests by Andrew Schultz.
+include Full Monty Testing by Andrew Schultz.
 
 description of main-window is "bug"
 
 when play begins (this is the beta tester instruction rule):
-	say "This version of the game involves special tricks for the player to warp through the game. It is 'volume beta testing' in the source and should be marked as NOT FOR RELEASE before release. However, it's okay now.[paragraph break]Type [b]dc[r] for all debug commands, but the one most helpful to me is [b]HF[r], which tracks the hints you receive. [file of gamehints] is a text file created and appended every move that you can send to me to make sure hints are valid. It's 2 dirs up in Windows and in /home in Mac. It's not nearly as critical now that I can run my own hints, but if you remember it, wonderful.";
+	say "This version of the game involves special tricks for the player to warp through the game. It is 'volume beta testing' in the source and should be marked as NOT FOR RELEASE before release. However, it's okay now.[paragraph break]Type [b]DC[r] for all debug commands.";
 	if debug-state is false:
 		say "After pushing a key, you'll be asked to save to a transcript file immediately, so you don't forget. Thanks for Beta testing![wfak]";
 		try switching the story transcript on;
@@ -253,7 +253,7 @@ understand the command "dc" as something new.
 
 understand "dc" as dcing.
 
-carry out dcing: say "[b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[line break]ff freezes flips, so if you want to try, say, X BUTTON and X without undoing, you can.[line break][b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break]hf shows full hints every move.[line break][b]CAP[r] caps the number of random texts printed at the number you type. It is useful for testing the text that appears for the last random text, but lots has been done by me.[line break][b]hd toggles printing full hints to a debug file called shufhints, or shufhints.glkdata. This is bolded annoyingly to stress that any hint transcript is helpful to me, if you can get it working, but don't force it. [r]Shufhints(.glkdata) is a text file that appears in c:\program files\inform 7 (or 2 directories up) on Windows and in your home directory on the Mac.[line break]hn turns hints off.[line break]stit toggles whether you always have x-ray vision."
+carry out dcing: say "[b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break][b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[paragraph break]Also extra fun is XC, which gets you [if saltine is not in cabinet]a hint item that can only be used once in release mode[else]unlimited uses of the saltine[end if]."
 
 chapter tsing
 
@@ -271,7 +271,7 @@ carry out ts0ing:
 	try tsing 0 instead;
 
 carry out tsing:
-	if Trips Strip is visited, say "Already beat Ordeal Loader. RETRY to get back." instead;
+	if Trips Strip is visited, say "You can't use TS from the Trips Strip or beyond. You will need to restart the game and try again." instead;
 	increase the cur-score of Ordeal Loader by 4;
 	if Rested Desert is unvisited:
 		move player to Rested Desert, without printing a room description;
