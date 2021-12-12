@@ -597,7 +597,7 @@ understand "hoser" as a mistake ("It's sort of appropriate now that you're in th
 
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in Anger Range and player is in Anger Range.
 
-understand "landers" as a mistake ("[location of player] won't be helped by an advice column or columnist.") when player is in Thickest Thickets.
+understand "landers" as a mistake ("[location of player] won't be helped by an advice column or columnist.") when player is in Anger Range.
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
 

@@ -716,7 +716,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 830.
+use MAX_VERBS of 840.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -736,7 +736,7 @@ section compiler non-syntax section - not for release
 
 use MAX_DICT_ENTRIES of 3200.
 
-use MAX_VERBS of 850. [delta=20]
+use MAX_VERBS of 860. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
 
@@ -13936,7 +13936,7 @@ carry out leaping:
 
 book Anger Range
 
-Anger Range is a room in Oyster. "This place [if sausage is moot]no longer [end if]manages to n-rage you, [if sausage is moot]now you helped [the sausage][else if carps are touchable]as well as the fish who live here[else if sausage is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][else]even without [the sausage]'s whining[end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if sausage is moot]. There are also snarled darnels here, which [if darnels are reflexed]no longer upset you[else]upset and distract you, for whatever reason[end if].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
+Anger Range is a room in Oyster. "This place [if sausage is moot]no longer [end if]manages to n-rage you, [if sausage is moot]now you helped [the sausage][else if carps are touchable]as well as the fish who live here[else if sausage is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][else]even without [the sausage]'s whining[end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping]. There are also snarled darnels here, which [if darnels are reflexed]no longer upset you[else]upset and distract you, for whatever reason[end if][if sausage is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
 
 understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when sausage is moot.
 
@@ -14029,19 +14029,18 @@ slandering is an action applying to one thing.
 
 understand the command "slander" as something new.
 
+understand "slander" as slandering.
 understand "slander [something]" as slandering.
 
+rule for supplying a missing noun when slandering:
+	if darnels are touchable:
+		now the noun is the darnels;
+	else:
+		now the noun is the player;
+
 carry out slandering:
-	if noun is darnels:
-		if darn-slan is false:
-			say "You take some cheap shots at the darnels, pretending they're out to get you, and you feel clever. They're as forbidding as ever, but you feel a confidence boost.";
-			now darn-slan is true;
-			min-and; [this isn't the way we want to do things, but since the darnels aren't vanishing, it gets tricky.]
-		else:
-			say "It won't be as fun the second time around. Plus, between anagramming and thinking up falsehoods, you're out of ideas.";
-		the rule succeeds;
-	if player is in Thickest Thickets, say "There's something more logical to slander. I mean, slander isn't logical, but yeah." instead;
-	if noun is deadbeat, say "No way, man! You're not with him, but you're not with The Man, man." instead;
+	if noun is darnels, try fliptoing darnels instead;
+	if player is in Anger Range, say "There's something more logical to slander. I mean, slander isn't logical, but yeah." instead;
 	say "That's not a useful action here. I mean, slander's never REALLY useful, but yeah." instead;
 	the rule succeeds.
 
@@ -18218,7 +18217,7 @@ chapter parleys splayer players
 the parleys splayer players are plural-named reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
 after examining parleys splayer players for the first time:
-	say "Oh, and I couldn't resist: they're definitely not going to be yer pals. You need to get rid of them!"
+	say "Oh, and I couldn't resist: they're definitely not going to be yer pals. You need to get rid of them!";
 	continue the action;
 
 printed name of parleys splayer players is "[if parleys splayer players are reflexed]macks[else]parleys splayer players[end if]"
@@ -20285,7 +20284,7 @@ section concisions
 to say s-i-c:
 	say "[if player has s-i][s-i][else if player has s-c][s-c][else]BUG coin related item should show[end if]"
 
-the concisions are a privately-named LLPish reflexive thing. printed name of concisions is "weird glow around the [s-i-c]".
+the concisions are a privately-named LLPish reflexive thing. printed name of concisions is "weird glow around the [s-i-c]". description is "(you shouldn't be able to see this.)"
 
 understand "concisions" as concisions when debug-state is true.
 
@@ -22318,6 +22317,7 @@ this is the oyster-misses rule:
 	check-oyster-spill disease seaside;
 	check-oyster-spill anger range;
 	check-oyster-spill dearths;
+	if snarled darnels are not reflexed, say "[2drm of anger range]you could've tried to [b]SLANDER[r] the snarled darnels.";
 	if cans are not moot, say "[2drm of dearths]you could've tried to [b]SCAN[r] the cans.";
 	check-oyster-spill lean lane;
 	if dent is not moot, say "[2drm of lean lane]you could've stopped to [b]TEND[r] the dent in Aunt Tuna's raw red drawer.";

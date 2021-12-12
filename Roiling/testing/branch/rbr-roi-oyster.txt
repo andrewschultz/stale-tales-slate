@@ -950,6 +950,10 @@ There will be better hints than a manners advice column once you move on, though
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
+@max
+>misses
+you could've tried to SLANDER the snarled darnels.
+
 @!min
 >slander
 by one point
@@ -958,6 +962,10 @@ by one point
 \\
 >score
 {$SCOS}
+
+@max
+>misses
+!you could've tried to SLANDER the snarled darnels.
 
 @mis
 #mistake retest for landers
