@@ -2,7 +2,7 @@
 #
 # this covers maximum points, minimum points and nudges.
 #
-# hch.py ti check help-stuff, mist.py to check mistakes, nuch.py to check nudges
+# hch.py to check help-stuff, mist.py to check mistakes, nuch.py to check nudges
 #
 files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-loader-nudmis.txt,reg-sa-ordeal-loader-hints.txt,reg-sa-ordeal-loader-detail.txt
 ~	max	t0
@@ -340,27 +340,10 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #nudge for thicket
 >thickte
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
-\\
-#nudge for darnel
->darnle
-If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
-\\
-#nudge for darnels
->darnesl
-You might be able to clear the darnels a bit, but they're not as thick as, well, the thicket.
-
-@mis
-#mistake test for landers
->landers
-There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
-#mistake test for sandler
->sandler
-I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
 @gn
 >n
 You hit a snag, and the toga nags you. Or seems to.
-You suppress an insult that would maybe only make sense if the darnels were sentient.
 
 @gt
 >gt subsite
@@ -369,33 +352,46 @@ Goodness, no.
 >gt rested desert
 The door from Rested Desert was one-way. You can't even see it now.
 
-@!min
->slander
-by one point
-}}CURMIN++
-}}SCORE++
-
 @gn
 >n
 !You suppress an insult that would maybe only make sense if the darnels were sentient.
 
 @mis
-#mistake retest for landers
->landers
-There will be better hints than a manners advice column once you move on.
-#mistake retest for sandler
->sandler
-I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
+#mistake test for ent/ents
+>ent
+While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
+>ents
+While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
 
 @nud
-#renudge for darnel
->darnle
-You already got mad at all the darnels. You need to move on
-\\
-#renudge for darnels
->darnesl
-You already messed with the darnels.
-\\
+#nudge for net
+>nte
+There's something you can do with all the nets, if you think about it.
+
+@nud
+#spechelp for sent nets
+>etns
+The sent nets rustle slightly.
+
+@!min
+>nest
+by one point
+}}CURMIN++
+}}SCORE++
+
+@nud
+#done rejects for nest
+>ntse
+The nest just looks right here, now that you summoned it.
+
+@mis
+#mistake retest for ent/ents
+>ent
+That's a bit too magical for here and now. The nest is nice enough.
+>ents
+That's a bit too magical for here and now. The nest is nice enough.
+
+@nud
 #nudge for shrub
 >shrbu
 The shrub and brush waver, then point towards the toga.

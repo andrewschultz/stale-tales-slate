@@ -152,9 +152,9 @@ chapter Ordeal Loader
 
 [* maximum and minimum Ordeal Loader points]
 
-test ordeal-loader with "in/door/blot/bugle/in/goat/slander/in/gateman/ask gateman about cabinet/get all/attics/in/v ts" in subsite
+test ordeal-loader with "in/door/blot/bugle/in/goat/nest/in/gateman/ask gateman about cabinet/get all/attics/in/v ts" in subsite
 
-test nos with "in/door/blot/bugle/in/goat/slander/in"
+test nos with "in/door/blot/bugle/in/goat/nest/in"
 
 chapter stores tests
 

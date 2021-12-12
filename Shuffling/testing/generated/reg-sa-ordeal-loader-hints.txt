@@ -65,7 +65,6 @@ DEBUG: toga being objhinted.
 
 >n
 You hit a snag, and the toga nags you. Or seems to.
-You suppress an insult that would maybe only make sense if the darnels were sentient.
 
 >gt subsite
 Goodness, no.
@@ -73,11 +72,11 @@ Goodness, no.
 >gt rested desert
 The door from Rested Desert was one-way. You can't even see it now.
 
->slander
-by one point
-
 >n
 !You suppress an insult that would maybe only make sense if the darnels were sentient.
+
+>nest
+by one point
 
 >goat
 Your score has just gone up by one point.

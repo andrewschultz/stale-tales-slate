@@ -199,38 +199,32 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >thickte
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
 
-#nudge for darnel
->darnle
-If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
+#mistake test for ent/ents
+>ent
+While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
+>ents
+While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
 
-#nudge for darnels
->darnesl
-You might be able to clear the darnels a bit, but they're not as thick as, well, the thicket.
+#nudge for net
+>nte
+There's something you can do with all the nets, if you think about it.
 
-#mistake test for landers
->landers
-There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
-#mistake test for sandler
->sandler
-I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
+#spechelp for sent nets
+>etns
+The sent nets rustle slightly.
 
->slander
+>nest
 by one point
 
-#mistake retest for landers
->landers
-There will be better hints than a manners advice column once you move on.
-#mistake retest for sandler
->sandler
-I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
+#done rejects for nest
+>ntse
+The nest just looks right here, now that you summoned it.
 
-#renudge for darnel
->darnle
-You already got mad at all the darnels. You need to move on
-
-#renudge for darnels
->darnesl
-You already messed with the darnels.
+#mistake retest for ent/ents
+>ent
+That's a bit too magical for here and now. The nest is nice enough.
+>ents
+That's a bit too magical for here and now. The nest is nice enough.
 
 #nudge for shrub
 >shrbu
