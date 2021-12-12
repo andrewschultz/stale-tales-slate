@@ -28,6 +28,30 @@ AIP=check if action is procedural
 Ancient note to self: there are many places to put in a SKIP UPCOMING RULEBOOK BREAK, but they're too minor to hunt down & probably dealt with better with PROCESS. Still, they'd be nice to fix, and anyone who helps me with this will get my gratitude and probably a place in the credits.
 ]
 
+the story description is "Yorpwald's a weirdly-named land. Perfect for your weird powers to save it."
+
+the story headline is "Putzing around is unmagical. Shuffling around, though..."
+
+the story genre is "Humor/wordplay"
+
+[release along with a solution.]
+
+the release number is 5.
+
+release along with cover art. [and a website?]
+
+release along with a website.
+
+release along with the "Parchment" interpreter.
+
+use American dialect.
+
+use authorial modesty.
+
+include Conditional Undo by Jesse McGrew.
+
+include Punctuation Removal by Emily Short.
+
 book i6 replacement
 
 Include (-
@@ -114,6 +138,8 @@ include Punctuation Stripper by Andrew Schultz.
 section test module(s) - not for release
 
 include STS Tests by Andrew Schultz
+
+section beta testing module - not for release
 
 include Shuffling Beta Testing by Andrew Schultz
 
@@ -247,27 +273,7 @@ to dn (a - indexed text):
 	if debug-print is true:
 		say "DEBUG INFO: [a]"
 
-volume globals
-
-the release number is 5.
-
-release along with cover art. [and a website?]
-
-use American dialect.
-
-use authorial modesty.
-
-include Conditional Undo by Jesse McGrew.
-
-include Punctuation Removal by Emily Short.
-
-the story description is "Yorpwald's a weirdly-named land. Perfect for your weird powers to save it."
-
-the story headline is "Putzing around is unmagical. Shuffling around, though..."
-
-the story genre is "Humor/wordplay"
-
-[release along with a solution.]
+volume basic variables
 
 section variables i'd like to NFR but can't quite--mostly debug stubs
 
@@ -345,7 +351,7 @@ use MAX_VERBSPACE of 5000.
 
 use MAX_SYMBOLS of 35000.
 
-use MAX_PROP_TABLE_SIZE of 230000.
+use MAX_PROP_TABLE_SIZE of 240000.
 
 section compiler adjust constant section - not for release
 
@@ -357,7 +363,7 @@ use MAX_VERBSPACE of 5300.
 
 use MAX_SYMBOLS of 36000.
 
-use MAX_PROP_TABLE_SIZE of 250000.
+use MAX_PROP_TABLE_SIZE of 260000.
 
 use MAX_STATIC_DATA of 300000.
 
@@ -1849,6 +1855,7 @@ carry out blowing:
 	try playing noun instead;
 
 carry out playing:
+	if noun is bulge, say "You can't quite play the bulge--not in its current form. But maybe a small change? Like when you changed the odor to a door?" instead;
 	if noun is not bugle, say "That's not an instrument you can play." instead;
 	if player is in Notices Section, say "[if mega ant is in Notices Section]The mega ant is not moved[else]Nothing seems to happen to the gateway[end if][if bugle-played is true]. Maybe you need to do something different than play the bugle here[end if]." instead;
 	if player is not in Rested Desert, say "You should not have the bugle at this point, so this is a [bug-report]" instead;
@@ -3128,7 +3135,7 @@ check wearing the magenta nametag:
 
 book Busiest Subsite
 
-Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a vacate caveat over an odd side passage, and also, an Oafs['] Sofa is planted squarely in the center.".  roomnud of Busiest Subsite is table of Busiest Subsite nudges.
+Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an slim neat name list tacked on by it.[paragraph break]There's a vacate caveat over an odd side passage, and also, an Oafs['] Sofa is planted squarely in the center.".  roomnud of Busiest Subsite is table of Busiest Subsite nudges.
 
 last-loc of Ordeal Loader is Busiest Subsite.
 
@@ -10653,7 +10660,7 @@ to say cabinet-loop:
 check reading (this is the reading is almost examining rule):
 	if noun is gadget, try examining tag instead;
 	repeat through table of readables:
-		if noun is to-read entry, say "[the-red entry]" instead;
+		if noun is to-read entry, say "[the-red entry][line break]" instead;
 	say "You found nothing to read, so you just EXAMINE, instead.";
 	try examining the noun instead;
 
