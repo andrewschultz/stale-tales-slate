@@ -455,8 +455,6 @@ carry out showtabing:
 
 chapter postiging
 
-post-ignore-needkey is a truth state that varies.
-
 postiging is an action applying to nothing.
 
 understand the command "postig" as something new.

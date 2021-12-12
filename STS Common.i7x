@@ -4,7 +4,7 @@ Version 1/190507 of STS Common by Andrew Schultz begins here.
 
 include STS Hashes by Andrew Schultz.
 
-part game-dependant variables and super-stubs
+part game-dependent variables and super-stubs
 
 is-roiling is a truth state that varies.
 
@@ -600,6 +600,10 @@ to say 2drm of (rr - a room):
 	say "[2da]";
 
 anything-missed is a truth state that varies.
+
+volume debug variables that must be in common file since they appear in release functions
+
+post-ignore-needkey is a truth state that varies.
 
 volume specific items
 
