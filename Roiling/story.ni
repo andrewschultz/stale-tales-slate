@@ -220,20 +220,21 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather. readable table of oyster is table of oyster readables. general blather table of oyster is table of oyster general blather. reflexive blather table of oyster is table of oyster reflexive blather. misses-rule of oyster is oyster-misses rule.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 43. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather. readable table of oyster is table of oyster readables. general blather table of oyster is table of oyster general blather. reflexive blather table of oyster is table of oyster reflexive blather. misses-rule of oyster is oyster-misses rule.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
-1/32=scan cans
-2/33=tend dent
-3/34=SPLAIN in the plains
-4/35=shape heaps
-5/36=swipe wipes (start side quest)
-6/37=sweat (over waste)
-7/38=clean lance
-8/39=trample templar ramplet
-9/40=PSALM in the Plasm Lamps
-10/41=TAN ant (not optional once in Plasm Lamps)
-11/42=REVEL by the lever
+1/32=SLANDER snarled darnels
+2/33=scan cans
+3/34=tend dent
+4/35=SPLAIN in the plains
+5/36=shape heaps
+6/37=swipe wipes (start side quest)
+7/38=sweat (over waste)
+8/39=clean lance
+9/40=trample templar ramplet
+10/41=PSALM in the Plasm Lamps
+11/42=TAN ant (not optional once in Plasm Lamps)
+12/43=REVEL by the lever
 Special spill rules:
 you get -3 if you use the pills right away in the shop.
 you get -1 if you use the pills on Tortu before EAT.
@@ -13935,7 +13936,7 @@ carry out leaping:
 
 book Anger Range
 
-Anger Range is a room in Oyster. "This place [if sausage is moot]no longer [end if]manages to n-rage you, [if sausage is moot]now you helped [the sausage][else if carps are touchable]as well as the fish who live here[else if sausage is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][else]even without [the sausage]'s whining[end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if sausage is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
+Anger Range is a room in Oyster. "This place [if sausage is moot]no longer [end if]manages to n-rage you, [if sausage is moot]now you helped [the sausage][else if carps are touchable]as well as the fish who live here[else if sausage is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][else]even without [the sausage]'s whining[end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if sausage is moot]. There are also snarled darnels here, which [if darnels are reflexed]no longer upset you[else]upset and distract you, for whatever reason[end if].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
 
 understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when sausage is moot.
 
@@ -14019,6 +14020,34 @@ understand "tortu" as trout.
 a-text of trout is "RYRYR". b-text of trout is "PYRYR". parse-text of trout is "TUTOR". trout is cheat-spoilable.
 
 check taking trout: say "You can't just take him and run. You need to fight back." instead;
+
+chapter snarled darnels
+
+does the player mean slandering the darnels: it is likely.
+
+slandering is an action applying to one thing.
+
+understand the command "slander" as something new.
+
+understand "slander [something]" as slandering.
+
+carry out slandering:
+	if noun is darnels:
+		if darn-slan is false:
+			say "You take some cheap shots at the darnels, pretending they're out to get you, and you feel clever. They're as forbidding as ever, but you feel a confidence boost.";
+			now darn-slan is true;
+			min-and; [this isn't the way we want to do things, but since the darnels aren't vanishing, it gets tricky.]
+		else:
+			say "It won't be as fun the second time around. Plus, between anagramming and thinking up falsehoods, you're out of ideas.";
+		the rule succeeds;
+	if player is in Thickest Thickets, say "There's something more logical to slander. I mean, slander isn't logical, but yeah." instead;
+	if noun is deadbeat, say "No way, man! You're not with him, but you're not with The Man, man." instead;
+	say "That's not a useful action here. I mean, slander's never REALLY useful, but yeah." instead;
+	the rule succeeds.
+
+the snarled darnels are plural-named LLPish reflexive scenery in Anger Range. "The snarled darnels do make [location of player] a bit untidy, a plant-kingdom comb-over with prickles all up and down. You can't tell they start or end, but [if darnels are reflexed]at least you vented about them[else]they just seem to be nagging you to say something, as a distraction[end if].".
+
+a-text of snarled darnels is "RRYRRYR". b-text of snarled darnels is "?R??R?R". parse-text of snarled darnels is "x[sp]x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
 chapter Shoer Osher
 
@@ -18187,6 +18216,10 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 chapter parleys splayer players
 
 the parleys splayer players are plural-named reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
+
+after examining parleys splayer players for the first time:
+	say "Oh, and I couldn't resist: they're definitely not going to be yer pals. You need to get rid of them!"
+	continue the action;
 
 printed name of parleys splayer players is "[if parleys splayer players are reflexed]macks[else]parleys splayer players[end if]"
 

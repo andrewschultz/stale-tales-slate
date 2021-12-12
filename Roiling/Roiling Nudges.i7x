@@ -1146,6 +1146,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "scrawl"	364539784	HUNTER HUNT AREA	--	"It's a HUNTER HUNT AREA, which seems more important."
 "pike"	307198092	pikes	--	"[all-fish]."
 "carp"	187983165	carps	--	"[all-fish]."
+"darnel"	359068166	--	--	"[if snarled darnels are reflexed]You already got mad at all [the darnels]. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
 
 this is the now-shore rule:
 	if player is in Anger Range and sausage is moot, the rule succeeds;

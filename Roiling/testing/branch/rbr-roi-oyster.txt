@@ -9,8 +9,8 @@ files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,re
 ~	hints,hin	t4
 ~	verbs	verbs
 
-}}MAX=42
-}}CURMAX=42
+}}MAX=43
+}}CURMAX=4
 }}SCORE=0
 }}CURMIN=28
 
@@ -930,6 +930,50 @@ Etahn Ru. Near-Hut Haunter.
 #nudge for scrawl
 >scralw
 It's a HUNTER HUNT AREA, which seems more important.
+
+@nud
+#nudge for darnel
+>darnle
+If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
+#scannotes for snarled darnels
+>scan snarled darnels
+So very tangled! No vowels showed up for certain, which makes it tougher ... or does it?
+#spechelp for snarled darnels
+>snarled darnels
+The snarled darnels rustle a bit.
+
+@mis
+#mistake test for landers
+>landers
+There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
+#mistake test for sandler
+>sandler
+I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
+
+@!min
+>slander
+by one point
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
+
+@mis
+#mistake retest for landers
+>landers
+There will be better hints than a manners advice column once you move on.
+#mistake retest for sandler
+>sandler
+I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
+
+@nud
+#renudge for darnel
+>darnle
+You already got mad at all the darnels. You need to move on
+#done rejects for snarled darnels
+>snarled darnels
+It's okay to get mad, but staying mad? No.
 
 >e
 Hardest Trashed Dearths

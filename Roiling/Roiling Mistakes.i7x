@@ -597,7 +597,11 @@ understand "hoser" as a mistake ("It's sort of appropriate now that you're in th
 
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in Anger Range and player is in Anger Range.
 
+understand "landers" as a mistake ("[location of player] won't be helped by an advice column or columnist.") when player is in Thickest Thickets.
+
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
+
+understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if snarled darnels are moot]. You already got a point, anyway, for fixing the snarled darnels[else]There is another try that WILL get a point, though[end if].") when player is in Anger Range.
 
 understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 
