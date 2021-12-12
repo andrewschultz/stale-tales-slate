@@ -87,11 +87,9 @@ chapter Thickest Thickets
 
 understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is touchable.
 
+understand "ent" and "ents" as a mistake ("[if sent nets are touchable]While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers[else]That's a bit too magical for here and now. The nets are nice enough[end if].") when player is in Thickest Thickets.
+
 understand "gato" as a mistake ("Nice try, but wrong language. Another animal would be more likely to eat through the thickets.") when player is in Thickest Thickets.
-
-understand "landers" as a mistake ("There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].") when player is in Thickest Thickets.
-
-understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[else] for trying to sneak another point[end if].") when player is in Thickest Thickets.
 
 chapter Notices Section
 

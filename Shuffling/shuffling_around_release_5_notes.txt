@@ -5,6 +5,7 @@ This fixed one bug Sean M. Shore found that I didn't have time to fix before rel
 The big fixes are probably area names. The two flanking rooms in store F are renamed, as are several rooms in Store R. The first two room names are different. The opening room for Store I is named differently, the dial doesn't quite disappear, and Lord Ablemiser's name was changed too.
 
 --bug where TAKEing a liver would seem to prevent you from PEELing it. You could actually TAKE it again, but this broke immersion, to say the least.
+--new last lousy point in the third room is easier and location-appropriate than the snarled darnels
 --liver in Store F is more appropriately named
 --1000 poem codas and 1000 job competitor names
 --hinting disambiguation is better

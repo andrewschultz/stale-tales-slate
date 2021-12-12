@@ -182,7 +182,7 @@ a region has a table name called hintobjstable.
 a region has a rule called altrule.
 
 Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.]
-[LLP(s): both bulge/blot, darnels, static]
+[LLP(s): both bulge/blot, static]
 
 Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.]
 [LLP(s): cabinet]
@@ -1261,8 +1261,7 @@ understand "eat [something]" as eating.
 chapter eating
 
 check eating: [?? eat weird stuff]
-	if noun is snarled darnels, say "[if goat is touchable]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead; [ordeal loader]
-	if noun is tin foil info lit, say "If this were a spy game, that would be ideal. But it isn't." instead;
+	if noun is tin foil info lit, say "If this were a spy game, that would be ideal. But it isn't." instead; [ordeal loader]
 	if noun is bread, say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use." instead; [forest]
 	if noun is beard, say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww." instead;
 	if noun is a glopmeat, say "Uggh. No way[if noun is examined]. Even though someone stamped it as eatable[end if]." instead;
@@ -3403,7 +3402,7 @@ check entering OR DO door:
 
 book Thickest Thickets
 
-Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
+Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. It's too, uh, thick to go in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if nest is touchable]. That nest you made lies off to the side[else]. Some nets have been, uh, sent here. They're littering up the ground. If you wanted, you could clean them up[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
 
 chapter toga
 
@@ -3419,8 +3418,6 @@ description of the toga is "On it you see a four-legged animal with a sort of be
 
 check wearing the toga: say "If the barnyard smell weren't unpleasant enough, you feel pricked by hairs--like a beard--and maybe even horns. You remove the toga and flip it inside-out, but you don't see anything. Odd." instead;
 
-the lgth of snarled darnels is 7. gpos of snarled darnels is 7. rpos of snarled darnels is 3. cert-text of snarled darnels is "[set-bug]". rect-text of snarled darnels is "[set-bug]". the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]".
-
 section goat
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
@@ -3433,43 +3430,15 @@ check taking the goat: say "Trying to get the goat would more likely get the goa
 
 description of goat is "It seems ill-tempered despite, or perhaps because of, its eclectic recent meal."
 
-chapter snarled darnels
+chapter sent nets
 
-understand "thickets/thickest" and "thickest thickets" as darnels when player is in Thickest Thickets.
-
-the snarled darnels are plural-named LLPish scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is moot]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
-
-darn-slan is a truth state that varies.
+the sent nets are plural-named LLPish scenery in Thickest Thickets. "The sent nets seem sort of stuck in the ground. They're not very nature-like. I mean, maybe they're biodegradable, but perhaps you could find a way to get rid of them or change them into something useful."
 
 check going inside in thickest:
 	if goat is off-stage, say "There's nowhere to go in." instead;
-	if darn-slan is false, poss-d;
+	if sent nets are touchable, poss-d;
 	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
 	move player to Notices Section instead;
-
-chapter slandering
-
-does the player mean slandering the darnels: it is likely.
-
-slandering is an action applying to one thing.
-
-understand the command "slander" as something new.
-
-understand "slander [something]" as slandering.
-
-carry out slandering:
-	if noun is darnels:
-		if darn-slan is false:
-			say "You take some cheap shots at the darnels, pretending they're out to get you, and you feel clever. They're as forbidding as ever, but you feel a confidence boost.";
-			now darn-slan is true;
-			min-and; [this isn't the way we want to do things, but since the darnels aren't vanishing, it gets tricky.]
-		else:
-			say "It won't be as fun the second time around. Plus, between anagramming and thinking up falsehoods, you're out of ideas.";
-		the rule succeeds;
-	if player is in Thickest Thickets, say "There's something more logical to slander. I mean, slander isn't logical, but yeah." instead;
-	if noun is deadbeat, say "No way, man! You're not with him, but you're not with The Man, man." instead;
-	say "That's not a useful action here. I mean, slander's never REALLY useful, but yeah." instead;
-	the rule succeeds.
 
 book Notices Section
 
@@ -10120,7 +10089,7 @@ to say can-go of (d - a direction):
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
-Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
+Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
 Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[if gateman is in Notices Section]![else], though it'd be nice to have some help.[end if]"
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
@@ -10738,7 +10707,7 @@ to show-miss (myreg - a region) and (ts - a truth state):
 this is the ordeal-loader-misses rule:
 	if blot is off-stage, say "[2drm of Rested Desert]you could've changed the bolt into a [b]BLOT[r].";
 	if bugle is off-stage, say "[2drm of Rested Desert]you could've changed the bulge into a [b]BUGLE[r].";
-	if darn-slan is false, say "[2drm of Thickest Thickets]you could've tried to [b]SLANDER[r] the darnels.";
+	if sent nets are not moot is false, say "[2drm of Thickest Thickets]you could've changed the sent nets to a [b]NEST[r].";
 	if attics are off-stage, say "[2drm of Notices Section]the static was changeable to [b]ATTICS[r].";
 
 this is the stores-misses rule:
@@ -10796,7 +10765,7 @@ to say nfi: say "[one of]? [or]? (region suggestions are not fully inclusive--se
 table of big yucks
 reg	yux
 --	"[b]XYZZY[r] several times?"
---	"In the Ordeal Loader, trying [b]SANDLER[r] or [b]LANDERS[r] around the snarled darnels, or changing the toga to a gato[nfi]"
+--	"In the Ordeal Loader, changing the toga to a gato[nfi]"
 --	"Reading the name list until the editorializing doesn't change?"
 --	"Examining store c? Several times?"
 --	"[b]STROBE[r] in the Trips Strip?"

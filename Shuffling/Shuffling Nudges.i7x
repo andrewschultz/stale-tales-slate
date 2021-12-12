@@ -75,11 +75,8 @@ table of Thickest Thickets nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "thickets"	584514019	--	--	"[loc-rej]."
 "thicket"	488240053	--	--	"[loc-rej]"
-"darnel"	359068166	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
 "shrub"	342404780	--	--	"The [if goat is touchable]remains of the [end if]shrub and brush waver, then point towards the [if toga is touchable]toga[else]opening in the thickets[end if]."
-"darnels"	455342132	darnels	--	"[darnels-inst]."
-
-to say darnels-inst: say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
+"net"	299823635	sent nets	--	"There's something you can do with all the nets, if you think about it."
 
 chapter Notices Section
 

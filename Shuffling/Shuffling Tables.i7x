@@ -4,14 +4,13 @@ volume main anagram tables
 
 book Ordeal Loader
 
-[NOTE: Snarled Darnels is not in here because we don't have an easy mechanism for dealing with something hat has been flipped]
-
 table of Ordeal Loader anagrams [toa] [NOTE: PUT NON SCENERY FIRST] [xxta]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
 bulge	bugle	"bugle"	"bulge"	a rule	post-bulge-bugle rule	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is touchable]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	nowhere
 odor	OR DO door	"door"	"odor"	--	post-odor-door rule	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
 bolt	blot	"blot"	"bolt"	--	post-bolt-blot rule	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339
-toga	goat	"goat"	"toga"	--	post-toga-goat rule	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115
+toga	goat	"goat"	"toga"	--	post-toga-goat rule	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets, one you'd never have seen, and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. You can go [b]IN[r][if nets are touchable], but you may want to see if you can do anything with the sent nets, if you're the completionist sort[end if]."	false	212250115
+sent nets	nest	"nest"	"nets"	--	--	"The nets, seemingly stuck in the ground, pull up and fly around and compact themselves into a nice-sized nest. It looks a lot more in tune with the scenery. While you gained nothing practical other than the experience, you're glad you could use your powers to make things a bit nicer."	false	396097601
 nametag	gateman	"gateman" or "gate man"	"nametag"	pre-nametag-gateman rule	post-nametag-gateman rule	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	true
 static	attics	"attics" or "attic"	--	--	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is touchable]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	true
 attics	static	"static"	--	--	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	true
@@ -538,6 +537,7 @@ odor	"The odor doesn't seem too complex. You pause. You can figure what it shoul
 bolt	"You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here."
 bulge	"The bulge swells and makes a squeal, like it's trying to make music."
 toga	"The toga blows in an unseen breeze, exposing what's written on it a bit more."
+sent nets	"The sent nets rustle slightly."
 nametag	"The nametag peels infinitesimally."
 static	"You [if attics are moot]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
 attics	"Hm, you can't think of anything to do with the attics but change them back."
@@ -678,6 +678,7 @@ donething	donemsg
 OR DO door	"The door is probably the way out. Best not change it into something else."
 bugle	"The bugle emits a sad 'don't change me back' noise."
 goat	"The goat is happy as-is. No need to go tag a ..."
+nest	"The nest just looks right here, now that you summoned it."
 gateman	"Don't scramble the gateman. He's here to help."
 
 table of stores done rejects
@@ -770,10 +771,10 @@ bolt	"[one of]You don't have any key, but that bolt is stopping the door from op
 blot	"The blot is there to clue [if bugle is touchable]making the bugle[else]what the bulge could become[end if] for a bonus point. It's not useful by itself, but it can't hinder you as the bolt did."
 bugle	"You [if bolt is moot]can just walk through the door. If you hadn't gotten rid of the bolt, you'd need to[else]can[end if] PLAY the bugle to go through the door."
 OR DO door	"You can just ENTER the door[if bugle-played is false and bolt is touchable] once you figure how to open it[end if]."
-toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the darnels?[plus][or]The toga can become a GOAT.[minus][cycling]"
+toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the thickets?[plus][or]The toga can become a GOAT.[minus][cycling]"
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
 brush	--	shrub
-snarled darnels	"[if darn-slan is true]You've already vented your frustrations on the darnels.[else][one of]You don't need to do anything with the darnels, but you'll get an extra point out of it.[plus][or]It may be useful to get mad at them, maybe even say something nasty or nonsensical. For the good of society.[plus][or]It's a bit early for a puzzle this long, but you can import intentions to the plants that aren't there. I think we've all done it.[plus][or]You can SLANDER the darnels.[minus][cycling][end if]"
+sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not ruining anything, and they don't trap you from getting out. Still, you may see what you can do with them.[plus][or]The sent nets don't really belong in a nature area, but something spelled similarly does.[plus][or]The sent nets can become a NEST.[minus][cycling]"
 goat	"The goat's done its job."
 magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a GATE MAN. With or without the space.[minus][cycling][end if]"
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
