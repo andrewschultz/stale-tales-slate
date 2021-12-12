@@ -775,6 +775,7 @@ toga	"[one of]The toga can become something else, though it's a bit trickier tha
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
 brush	--	shrub
 sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not ruining anything, and they don't trap you from getting out. Still, you may see what you can do with them.[plus][or]The sent nets don't really belong in a nature area, but something spelled similarly does.[plus][or]The sent nets can become a NEST.[minus][cycling]"
+nest	"You changed the nets to the nest, and that's enough."
 goat	"The goat's done its job."
 magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a GATE MAN. With or without the space.[minus][cycling][end if]"
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."

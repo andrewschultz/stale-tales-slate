@@ -182,7 +182,7 @@ a region has a table name called hintobjstable.
 a region has a rule called altrule.
 
 Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.]
-[LLP(s): both bulge/blot, static]
+[LLP(s): both bulge/blot, sent nets, static]
 
 Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.]
 [LLP(s): cabinet]
@@ -3432,13 +3432,19 @@ description of goat is "It seems ill-tempered despite, or perhaps because of, it
 
 chapter sent nets
 
-the sent nets are plural-named LLPish scenery in Thickest Thickets. "The sent nets seem sort of stuck in the ground. They're not very nature-like. I mean, maybe they're biodegradable, but perhaps you could find a way to get rid of them or change them into something useful."
+the sent nets are plural-named LLPish scenery in Thickest Thickets. "The sent nets seem sort of stuck in the ground. They're not very nature-like. I mean, maybe they're biodegradable, but perhaps you could find a way to get rid of them or change them into something useful.[paragraph break]You try counting them, but there must be TENS."
 
 check going inside in thickest:
 	if goat is off-stage, say "There's nowhere to go in." instead;
 	if sent nets are touchable, poss-d;
 	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
 	move player to Notices Section instead;
+
+the lgth of sent nets is 4. gpos of sent nets is 1. rpos of sent nets is 4. cert-text of sent nets is "[set-bug]". rect-text of sent nets is "[set-bug]". the rgtext of sent nets is "[rcn][rc][rc][rc]". [ note: you don't have the tagged gadget when you see the sent nets. ]
+
+section nest
+
+the nest is boring scenery. description of nest is "It's about the same color as the nets it replaced, but it's less of an eyesore. Some bird family will be glad it's there.". bore-text of the nest is "There's nothing more to do with the nest. Birds probably won't visit it until you leave."
 
 book Notices Section
 
@@ -10698,6 +10704,7 @@ chapter missed rules
 to say 2dn: say "[unless sr-acc is true]--[end if]"
 
 to show-miss (myreg - a region) and (ts - a truth state):
+	now miss-room is adorb bardo;
 	if ts is true and myreg is not solved, continue the action;
 	if cur-score of myreg is max-score of myreg:
 		unless myreg is metros or myreg is resort, continue the action;
@@ -10707,7 +10714,7 @@ to show-miss (myreg - a region) and (ts - a truth state):
 this is the ordeal-loader-misses rule:
 	if blot is off-stage, say "[2drm of Rested Desert]you could've changed the bolt into a [b]BLOT[r].";
 	if bugle is off-stage, say "[2drm of Rested Desert]you could've changed the bulge into a [b]BUGLE[r].";
-	if sent nets are not moot is false, say "[2drm of Thickest Thickets]you could've changed the sent nets to a [b]NEST[r].";
+	if sent nets are not moot, say "[2drm of Thickest Thickets]you could've changed the sent nets to a [b]NEST[r].";
 	if attics are off-stage, say "[2drm of Notices Section]the static was changeable to [b]ATTICS[r].";
 
 this is the stores-misses rule:
