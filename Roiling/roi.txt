@@ -1309,6 +1309,10 @@ Say, a rigged digger.
 ?How do I calm the ghost down once he's here?
 The haunter is a Use-Saga Sausage.
 <b>ASSUAGE</b> him.
+?What's with the snarled darnels?
+They won't stop you, but if you're a completionist, they're fun.
+You can do something relatively active or forceful to show they're kind of irking you.
+SLANDER them.
 ?Why did Anger Range change names?
 Well, nobody's angry any more. So there's no point.
 Also, Hero's Shore is the old name of the Disease Seaside.

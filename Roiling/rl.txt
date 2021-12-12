@@ -703,6 +703,12 @@ We could also note HAUNTER is in red, which helps with slots 1 and 2 immediately
 You actually have a lot to start with. (AE)(SA)(SG)(SU)AG(AE) is what falls out from the colors.
 U can only be in slot 4, and you need S in 2 slots, so that gives (AE)SSUAG(AE). ESSUAGA is not a word.
 ASSUAGE it is.
+# logic for snarled darnels
+?How can I untangle the snarled darnels?
+The starting ?R??R?R has no vowels. You need two. Only two slots might have vowels, 3 and 6.
+So --A--E- comes up. (DS)(DLRS)A(NR)(DNRS)E(LNR) is what's left, and you may notice DS and DL don't make for good starts. DR gives DRANSEL. So slot 1 is S.
+S(DLR)A(NR)(DNR)E(LNR) is left, but SD isn't a good start, and SR give SRANDEL. So SLA--E- it is. But now slots 4 and 7 have only N and R, so slot 5 mmust be D!
+THat leaves two guesses. SLARDEN doesn't work, so SLANDER it is.
 >>LEAN LANE
 # logic for paw r wrap
 ?What to do with the Paw-R-Wrap?

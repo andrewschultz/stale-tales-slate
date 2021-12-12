@@ -8,9 +8,7 @@ PARSEIGNORE:palm,latches,rifle
 >IGNORE=bolt
 >IGNORE=bulge
 >IGNORE=toga
->IGNORE=snarled darnels
 #the stuff above, you don't have the gadget yet, so scan values don't matter. I could code it, but it has no practical value.
-snarled darnels~darnels>slander
 static>attics
 attics>static
 nametag>gateman
@@ -313,6 +311,7 @@ carps>scrap
 pikes>spike
 hunter hunt area>unearth
 use saga sausage>assuage
+snarled darnels>slander
 ####hardest trashed dearths
 cans>scan
 eeks>seek

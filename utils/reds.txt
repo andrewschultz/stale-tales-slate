@@ -233,6 +233,8 @@ unearth,haunter,etahnru,nearhut
 spike,pikes
 #qver of hunter hunt area
 unearth,??Y??R?=hunterh=untarea
+#qver of snarled darnels
+slander,?r??r?r=snarled=darnels
 #lean lane
 #qver of paw r wrap
 warp,??R?=pawr=wrap
