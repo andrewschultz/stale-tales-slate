@@ -4848,6 +4848,7 @@ check taking the roster: say "It's taped inside the front door, and besides, it'
 definition: a region (called reg) is passed-up:
 	unless reg is forest or reg is sortie or reg is metros, no;
 	if reg is solved, yes;
+	if reg is bypassed, yes;
 	no;
 
 to decide whether you-can-advance:

@@ -207,12 +207,15 @@ The banshee can be disposed of and made a thing of the past for a last lousy poi
 
 > s
 > w
-> peel chicken
-> peel cow
-> put chicken in canister
-> put cow in canister
 
-Now we have what we need to go past the Emptiness Sepiments.
+The two types of liver are functionally identical. You can also say "river" or "ville" for the RiverVille liver to save keystrokes.
+
+> peel riverville
+> peel viler
+> put viler in canister
+> put riverville in canister
+
+Now that you've made livers, you have what you need to go past the Emptiness Sepiments.
 
 > e
 > n
@@ -634,49 +637,87 @@ Store R (again, there are multiple ways through. This covers them all.)
 > resort
 > enter resort
 
-The Astral Altars seem to be a "yay, good end" place. But you have not beaten Red Bull Burdell yet.
+The Astral Altars seem to be a "yay, good end" place. But you have not beaten Red Bull Burdell yet. So something is wrong here. You need a way out.
 
 > islet
 
-Not quite an islet, but a Leis Isle.
+Not quite an islet, but a Leis Isle. Again, something is wrong here, as if you'd already finished things! But you haven't. You can react to the Leis Isle for a bonus point.
 
-> wings
+> lies
 
-And, for full points, also knock off
+Whether you do that or not, you need a way out. There are two. Getting both gets an extra point. They are functionally equivalent, though one saves keystrokes.
+
+The rock can't help you across water as-is.
 
 > cork
 
-> e
-> slope
+Neither can the swing.
+
+> wings
+
 > e
 
-Not quite, yet.
+Now the poles blocking your way can become more climbable and less vertical.
+
+> slope
+
+> e
+
+Not quite, yet. There's material around to collect. You need to make two five-letter matches or one eight-letter match to go further east. The five-letter ones may be easier in-game, but the eight-letter one requires fewer keystrokes.
+
+The spore and the grips can become something new.
 
 > ropes
-> grips (the toolshed can be changed instead of, or in addition to, both of these)
+> grips
+
+Now you can just go east, but the toolshed can be changed to something more practical. Well, practical for you, right now.
+
+> toeholds
+
 > e
+
+Oh no! Too many people protesting you!
+
 > trio
+
+The protest needs something better to do than protest. Maybe an artistic interest.
+
 > potters
 
-To get a Last Lousy Point,
+The chain links have two pieces. You only need to change one. If you change the "right" one first, you don't get a bonus point. So, to get a Last Lousy Point,
 
 > china
 
+To make the potters happy:
+
 > kilns
+
+Oh no, again! Red Bull Burdell, finally! He pushes you down, then yells GET OUT a lot! It means something. Examine him, and he has a weakness. Holey footwear.
+
 > tug toe
+
 > e
+
+Now there are three ways through at the end. The EXITS, or ... well, it's a Means Manse. It's pretty empty, but it has possibilities.
+
 > exist
 
+You can do something to make your new home feel homier. Start labeling everything and giving them roles.
 
+> names
 
+Or you can also close the book (books?) in another way.
 
+> amens
 
-I hope you enjoyed this game!
+There's very little difference between the three endings, but you can UNDO to retry them all.
+
+I hope you enjoyed this game! The sequel, A Roiling Original, really beats the concept to death.
 
 Note: if you want to replay but skip a section, here are some cheats.
 
 LOGOI skips the forest. (An IGLOO is in Frost Forst.)
-SOOTH skips the sortie.
-SAY BS skips the metros.
+SOOTH skips the sortie. (A riff on the HOOTS button.)
+SAY BS skips the metros. (A riff on BASSY ABYSS.)
 
 ==========
