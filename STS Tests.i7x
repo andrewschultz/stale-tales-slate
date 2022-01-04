@@ -227,36 +227,6 @@ carry out caping:
 	say "Capped all random table entries at [number understood].";
 	the rule succeeds;
 
-chapter ffing
-
-[* FF toggles if flips are unfrozen. Useful to test if you -could- flip something.]
-
-ffing is an action out of world.
-
-understand the command "ff" as something new.
-
-understand "ff" as ffing.
-
-carry out ffing:
-	now ff is whether or not ff is false;
-	say "Flips [if ff is false]un[end if]frozen.";
-	the rule succeeds;
-
-chapter hfing
-
-[* shows full hints each turn]
-
-hfing is an action applying to nothing.
-
-understand the command "hf" as something new.
-
-understand "hf" as hfing.
-
-carry out hfing:
-	now hintfull is whether or not hintfull is false;
-	say "Showing full hints with the game (not recommended for testers unless you are bulldozing through) is [on-off of hintfull].";
-	the rule succeeds;
-
 chapter hfing
 
 [* HF allows you to export hints to roilhints.glksave ]

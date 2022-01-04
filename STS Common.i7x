@@ -160,9 +160,9 @@ to min-and:
 	reg-inc;
 	d "min-and codepath -- forcing point and min point adding. This should be used for odd non-flip points. Current=[cur-score of mrlp] min=[min-score of mrlp].";
 
-chapter person stuff
+chapter person/animal stuff
 
-definition: a person (called pe) is npcish:
+definition: an animal (called pe) is npcish:
 	if pe is the player, no;
 	if pe is touchable, yes;
 	decide no;
