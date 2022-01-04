@@ -6,6 +6,8 @@ volume beta testing
 
 include Full Monty Testing by Andrew Schultz.
 
+include STS Beta Testing by Andrew Schultz.
+
 description of main-window is "bug"
 
 when play begins (this is the beta tester instruction rule):

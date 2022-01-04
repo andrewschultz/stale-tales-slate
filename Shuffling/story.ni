@@ -181,8 +181,8 @@ a region has a table name called hintobjstable.
 
 a region has a rule called altrule.
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.]
-[LLP(s): both bulge/blot, sent nets, static]
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.]
+[LLP(s): both bulge/blot, both deer/goat, sent nets, static]
 
 Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.]
 [LLP(s): cabinet]
@@ -3402,7 +3402,15 @@ check entering OR DO door:
 
 book Thickest Thickets
 
-Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. It's too, uh, thick to go in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if nest is touchable]. That nest you made lies off to the side[else]. Some nets have been, uh, sent here. They're littering up the ground. If you wanted, you could clean them up[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
+Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. It's too, uh, thick to go in [if goat is in Thickest Thickets or deer is in thickest thickets]almost all directions, but you can go IN[else]all directions[end if][if nest is touchable]. That nest you made lies off to the side[else]. Some nets have been, uh, sent here. They're littering up the ground. If you wanted, you could clean them up[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
+
+chapter reed
+
+the reed is a thing in Thickest Thickets. "A large reed has grown here, even though you don't seem to be near a swamp or a river. It seems out of place."
+
+check taking the reed: say "Too big and tall and impractial. It just doesn't belong here, at least not in its current form." instead;
+
+description of the reed is "It's very tall, but it doesn't belong here, you sense."
 
 chapter toga
 
@@ -3418,17 +3426,35 @@ description of the toga is "On it you see a four-legged animal with a sort of be
 
 check wearing the toga: say "If the barnyard smell weren't unpleasant enough, you feel pricked by hairs--like a beard--and maybe even horns. You remove the toga and flip it inside-out, but you don't see anything. Odd." instead;
 
+section deer
+
+the deer is an animal. "The deer is half-sleeping here. It's probably best left that way."
+
+check taking the deer: say "Dear, dear. That would not be endearin['] to the deer." instead;
+
+description of the deer is "It seems quite peaceful, sleeping. That meal did it some good. You've done all you can for it, and it's done all it can for you."
+
 section goat
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 
-understand "animal" as goat when goat is touchable.
-
-check waking the goat: say "If the goat is having a bad dream, you'll probably get kicked at. If you interrupt a good dream, you'll probably get kicked at." instead;
+understand "animal" as goat when goat is touchable and deer is not touchable.
 
 check taking the goat: say "Trying to get the goat would more likely get the goat's goat." instead;
 
 description of goat is "It seems ill-tempered despite, or perhaps because of, its eclectic recent meal."
+
+section both animals
+
+to decide whether both-thickets-animals:
+	if goat is touchable and deer is touchable, yes;
+	no;
+
+for printing a locale paragraph about an animal in Thickest Thickets:
+	say "The [list of all npcish animals in Thickest Thickets] [if both-thickets-animals]are[else]is[end if] half-sleeping here. [if both-thickets-animals]They're[else]It is[end if] probably best left that way.";
+	now all animals are mentioned;
+
+check waking an animal in thickest thickets: say "If [the noun] is having a bad dream, you'll probably get kicked at. If you interrupt a good dream, you'll probably get kicked at." instead;
 
 chapter sent nets
 
