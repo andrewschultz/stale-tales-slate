@@ -1,7 +1,7 @@
 Ordeal Loader (min)
 door/blot/goat/gateman
 Ordeal Loader (max)
-door/blot/bugle/goat/slander/gateman/attics
+door/blot/bugle/goat/deer/nest/gateman/attics
 Stores (min)
 forest/sortie/metros/resort
 Stores (max)
@@ -109,7 +109,7 @@ calm/run/boast/leap
 scrap/scan/seek/eat/tutor/tend/swipe
 trace/react/kiss/bonk/snap/splain
 bust/drop/sweat/clean/shape
-warp/bury/unearth/assuage
+warp/bury/unearth/assuage/slander
 search/enlarge/patrol/prepay
 trample/psalm/tan/revel/derail/spin/redial
 Towers (min)

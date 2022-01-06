@@ -2072,7 +2072,7 @@ I think that this overview of complexity isn't fully accurate since the complexi
 
 Ordeal Reload has a minimum of 37 and a maximum of 78. Find the direct way to the gallery and ignore the giant pin, snib and respect specter for the minimum score. Incidentally, the direct way to the gallery makes the puzzles, on average, tougher. I think there is a very strong case for claiming a four-letter puzzle plus a five-letter puzzle is easier than an eight-letter puzzle. But in this case, I'm going strictly by linear numbers.
 
-Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
+Stores has a minimum of 36 and a maximum of 67. The minimum is 18 if you use the patcher, but that is an edge case. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
 
 Store V has a minimum of 95 and a maximum of 181. The nine Last Lousy Points account for most of the difference (one in each room, plus what you start with,) but the alternate stream/lobster and bee/arena and spirea/rivets and Blamer/Sister puzzles provide the other two letters. The siters are technically slightly easier than the marble as well, because of the duplicate S.
 
@@ -2080,7 +2080,7 @@ Store U has a minimum of 120 and a maximum of 134. The last lousy points give yo
 
 Store P has a minimum of 131 and a maximum of 198. You can gain or lose a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 4 letters in the maze. How you deal with Ye Hoop also means a shift of two letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack. But then the necessary things to change are often simple.
 
-Store Y has a minimum of 130 and a maximum of 202. Many solutions are short words. The five-command side quest is a big one. You can spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right actions in the Posh Hopa Shop and crossing the river via the boats and not the raft. Several LLPa raise the maximum above Store P.
+Store Y has a minimum of 130 and a maximum of 209. Many solutions are short words. The five-command side quest makes a big swing between minimum and maximum. Spilling the pills right away knocks 14 off the minimum as well, as you avoid puzzles of length 4/4/5/6, at least. Without the pills, there's three letters of wiggle room for alternate puzzles in the Posh Hops Shop, and crossing the river via the boats and not the raft gets a letter. Several LLPa raise the maximum above Store P.
 
 Store W has a minimum of 164-168 and a maximum of 356-360, subjected to some randomness. Both the "H" and "I" paths through the guardians have 36 letters total in the anagrams you need to use. The proof is a bit tricky, but you'll note that guardians with 6 letters guard squares 1N and 1E of Scope Copse. Guardians with 7 letters guard squares 2 away from Scope Copse, and guardians with 8 letters guard squares 3 away. You must pass one guardian with 8 letters, clearly, but trying to avoid passing two (except for the hostile/atheists) means you have to pass six. The basic idea below is that, if you only defeated one eight-letter guardian, you would need to defeat four guardians to link up the six rooms in the southwest diagonal, but that's impossible, since each guardian would only open up one new room as you went through.
 
@@ -2217,6 +2217,8 @@ FPNA the cans in Hardest Trashed Dearths. Once you leave to Lean Lane, this LLP 
 GRAQ the dent in Lean Lane.
 
 FCYNVA in the Lapsin' Plains.
+
+FYNAQRE the snarled darnels in Anger Range.
 
 Side quest:
 * FJVCR wipes in Lean Lane.
