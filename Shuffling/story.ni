@@ -726,8 +726,6 @@ carry out hinting:
 
 to say got-r: say "[if store r is prefigured]already guessed right--it's a resort[else]can still guess it. If you don't, this hint will tell you what it should be once you can advance".
 
-blot-first is a truth state that varies.
-
 carry out mainhelping:
 	if hintsoff is true, all-say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
 	abide by the reg-hint-rule of mrlp;
@@ -857,6 +855,10 @@ carry out objhinting:
 
 section Ordeal Loader
 
+blot-first is a truth state that varies.
+
+toga-first is a truth state that varies.
+
 this is the ordeal-loader-hinting rule:
 	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
 	if player is in Rested Desert:
@@ -868,7 +870,9 @@ this is the ordeal-loader-hinting rule:
 		if bugle is touchable and bugle-played is false, try objhinting bugle instead;
 		try objhinting OR DO door instead;
 	if player is in Thickest Thickets:
-		if toga is touchable, try objhinting toga instead;
+		if toga is touchable and reed is touchable:
+			if toga-first is true, try objhinting toga instead;
+			try objhinting reed instead;
 		all-say "You can just go IN, now." instead;
 	if player is in Notices Section:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
@@ -3061,6 +3065,7 @@ to shuffle-chat-lists:
 
 to place-random-garbage:
 	if a random chance of 1 in 2 succeeds, now blot-first is true; [hint blot or bugle at door]
+	if a random chance of 1 in 2 succeeds, now toga-first is true; [hint toga or reed in thickets]
 	if a random chance of 1 in 2 succeeds, now rock-first is true;	[hint rock or swing 1st]
 	move random guider to sf;
 	d "[random guider in sf] in SF.";
@@ -3408,6 +3413,8 @@ chapter reed
 
 the reed is a thing in Thickest Thickets. "A large reed has grown here, even though you don't seem to be near a swamp or a river. It seems out of place."
 
+the lgth of reed is 4. gpos of reed is 4. rpos of reed is 1. cert-text of reed is "-[ast]E[ast]E[d1]". rect-text of reed is "D[d1][d1][ast]R". the rgtext of reed is "[rc][gc][gc][rc]".
+
 check taking the reed: say "Too big and tall and impractial. It just doesn't belong here, at least not in its current form." instead;
 
 description of the reed is "It's very tall, but it doesn't belong here, you sense."
@@ -3463,6 +3470,7 @@ the sent nets are plural-named LLPish scenery in Thickest Thickets. "The sent ne
 check going inside in thickest:
 	if goat is off-stage, say "There's nowhere to go in." instead;
 	if sent nets are touchable, poss-d;
+	if reed is touchable or toga is touchable, poss-d;
 	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
 	move player to Notices Section instead;
 
@@ -9805,8 +9813,17 @@ check asking about (This is the check for specific topics rule):
 	say "[bug-report] no default blather for [noun].";
 
 to say goat-toga:
-	say "[one of]'Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify.'[or]You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.[stopping]";
+	if toga is not moot:
+		say "'Oh, yes, the toga could've become a GOAT.'";
+	else:
+		say "[one of]'Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify.'[or]You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.[stopping]";
 	pad-rec "the goat";
+
+to say reed-deer:
+	if reed is not moot:
+		say "'Oh, yes, the reed could've become a DEER.'";
+	else:
+		say "[one of]'Hm, yes, good job with the deer. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Green-Red in Certify mode and Red-Blue-Blue-Green in Rectify.'[or]You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.[stopping]";
 
 check asking gateman about "world peace": say "That goal's a slog, but I've got confidence." instead;
 
@@ -9877,9 +9894,8 @@ gateman	Recent Center	"'The Recent Center is a fancy name for a screen. It will 
 gateman	handle	"You can't imagine anything tricky about the handle, so you decide not to ask."
 gateman	goat	"[goat-toga]"
 gateman	toga	"[goat-toga]"
-gateman	shrub	"[goat-toga]"
-gateman	brush	"[goat-toga]"
-gateman	thorn	"'Sorry if it scratched you. And by you I mean your nametag. And by your nametag I mean me.'"
+gateman	reed	"[reed-deer]"
+gateman	deer	"[reed-deer]"
 gateman	getaway	"[oma-gate]"
 gateman	gadget	"'[one of]Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you[or]It can SCAN other things[stopping]. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red.'"
 gateman	s-r	"'Could make things tougher at first, but then easier for you. Forces you into only CERTIFYing or RECTIFYing if you push it. But you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so.'[pad-sec]"
@@ -10741,6 +10757,8 @@ to show-miss (myreg - a region) and (ts - a truth state):
 this is the ordeal-loader-misses rule:
 	if blot is off-stage, say "[2drm of Rested Desert]you could've changed the bolt into a [b]BLOT[r].";
 	if bugle is off-stage, say "[2drm of Rested Desert]you could've changed the bulge into a [b]BUGLE[r].";
+	if toga is not moot, say "[2drm of Thickest Thickets]you could've changed the toga into a [b]GOAT[r].";
+	if reed is not moot, say "[2drm of Thickest Thickets]you could've changed the reed into a [b]DEER[r].";
 	if sent nets are not moot, say "[2drm of Thickest Thickets]you could've changed the sent nets to a [b]NEST[r].";
 	if attics are off-stage, say "[2drm of Notices Section]the static was changeable to [b]ATTICS[r].";
 

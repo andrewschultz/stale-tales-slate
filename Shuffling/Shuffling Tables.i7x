@@ -127,6 +127,7 @@ this is the post-bolt-blot rule:
 this is the post-reed-deer rule:
 	set the pronoun him to deer;
 	set the pronoun her to deer;
+	deer-goat-min;
 
 this is the post-toga-goat rule:
 	if player has toga or player has goat:
@@ -134,6 +135,7 @@ this is the post-toga-goat rule:
 		move goat to location of player;
 	set the pronoun him to goat;
 	set the pronoun her to goat;
+	deer-goat-min;
 
 to say goat-deer-eat:
 	say "[one of]It finds a relatively weak spot in the thickets, one you'd never have seen, and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time[or]The [if goat is touchable]goat[else]deer[end if] left enough for a full meal, which [if goat is touchable]the deer[else]the goat[end if] seems to enjoy, and the result is, it's even easier to go [b]IN[r] now[stopping].[paragraph break]";
@@ -178,6 +180,9 @@ to say check-plur:
 		say "(Okay, no need to be pedantic about plurals.) [run paragraph on]";
 
 to say what-about-gate: say ". [if player has gadget]Not much left to do for you here[else]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
+
+to deer-goat-min:
+	if reed is moot or toga is moot, min-up;
 
 section stores auxiliary
 
@@ -547,6 +552,7 @@ odor	"The odor doesn't seem too complex. You pause. You can figure what it shoul
 bolt	"You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here."
 bulge	"The bulge swells and makes a squeal, like it's trying to make music."
 toga	"The toga blows in an unseen breeze, exposing what's written on it a bit more."
+reed	"The reed blows in an unseen breeze."
 sent nets	"The sent nets rustle slightly."
 nametag	"The nametag peels infinitesimally."
 static	"You [if attics are moot]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
@@ -782,11 +788,13 @@ blot	"The blot is there to clue [if bugle is touchable]making the bugle[else]wha
 bugle	"You [if bolt is moot]can just walk through the door. If you hadn't gotten rid of the bolt, you'd need to[else]can[end if] PLAY the bugle to go through the door."
 OR DO door	"You can just ENTER the door[if bugle-played is false and bolt is touchable] once you figure how to open it[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the thickets?[plus][or]The toga can become a GOAT.[minus][cycling]"
+reed	"[one of]The reed can become something else. Something that fits better with a less swampy area.[plus][or]What could the reed become that might eat through the thickets?[plus][or]The reed can become a DEER.[minus][cycling]"
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
 brush	--	shrub
 sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not ruining anything, and they don't trap you from getting out. Still, you may see what you can do with them.[plus][or]The sent nets don't really belong in a nature area, but something spelled similarly does.[plus][or]The sent nets can become a NEST.[minus][cycling]"
 nest	"You changed the nets to the nest, and that's enough."
 goat	"The goat's done its job."
+goat	"The deer's done its job."
 magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a GATE MAN. With or without the space.[minus][cycling][end if]"
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
 Recent Center	"The Recent Center tracks the most recent thing you managed to CERTIFY or RECTIFY."
