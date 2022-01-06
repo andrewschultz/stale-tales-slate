@@ -14,7 +14,7 @@ Posh Hops Shop
 >posf
 
 >score
-Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 43.
+Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 4.
 
 >slon
 #slider test for sing
@@ -57,15 +57,15 @@ Your score has just gone up by one point
 >remap
 !Your score has just gone up by one point
 >score
-Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 43.
+Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 4.
 >sing
 by one point
 >score
-Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 >scrape
 by one point
 >score
-Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 
 >inset
 Perhaps you should've played it cool and fled, instead.
@@ -85,7 +85,7 @@ SPIT
 INSET
 
 >score
-Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 
 #slider test for calm
 >acml
@@ -95,7 +95,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 
 #slider test for run
 >nru
@@ -107,7 +107,7 @@ Your score has just gone up by one point
 Disease Seaside
 
 >score
-Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 
 #slider test for fart
 >aftr
@@ -126,7 +126,7 @@ Your score has just gone up by one point
 Fighter Freight
 
 >score
-Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 
 #slider test for leap
 >elpa
@@ -138,7 +138,7 @@ Your score has just gone up by one point
 Anger Range
 
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
 
 #slider test for spike
 >pskei
@@ -150,11 +150,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >scrap
 Your score has just gone up by one
 
+#slider test for slander
+>lsnaerd
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >slander
 by one point
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
+Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 4.
 
 >e
 Hardest Trashed Dearths
@@ -167,7 +171,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
+Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 4.
 
 >scan
 #notana 'nudge for cans'
@@ -175,7 +179,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
+Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
 
 >seek
 Your score has just gone up by one point
@@ -183,7 +187,7 @@ Your score has just gone up by one point
 Lean Lane
 
 >score
-Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
+Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
 
 #slider test for tend
 >etdn
@@ -197,7 +201,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
+Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
 
 >tend
 #notana 'nudge for dent'
@@ -205,7 +209,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 43.
+Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 4.
 
 #slider test for tutor
 >utort
@@ -218,13 +222,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 43.
+Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 4.
 
 >swipe
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 43.
+Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 4.
 
 >w
 >n
@@ -251,13 +255,13 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 >trace
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 #slider test for react
 >ercta
@@ -267,25 +271,25 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 >kiss
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 >bonk
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 >snap
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 >in
 
@@ -299,7 +303,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 #slider test for drop
 >rdpo
@@ -309,7 +313,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
 
 #slider test for sweat
 >wsate
@@ -320,7 +324,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 43.
+Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 4.
 
 #slider test for shape
 >hspea
@@ -331,7 +335,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
+Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 4.
 
 #slider test for clean
 >lcane
@@ -343,7 +347,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >out
 
@@ -363,13 +367,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >search
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 #slider test for enlarge
 >neergal
@@ -381,7 +385,7 @@ Your score has just gone up by one point
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
-Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >n
 Horned Hedron
@@ -397,7 +401,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >e
 >s
@@ -413,7 +417,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 #slider test for assuage
 >saagseu
@@ -423,14 +427,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >ask haunter about ruby
 #notana
 by one point
 
 >score
-Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >w
 
@@ -448,7 +452,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
@@ -465,7 +469,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
 
 #slider test for trample
 >rtmalep
@@ -476,7 +480,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Plasm Lamps
 
 >score
-Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 43.
+Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 4.
 
 #slider test for psalm
 >splma
@@ -489,14 +493,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 4.
 
 >tan
 #notana 'nudge for ant'
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 4.
 
 #slider test for revel
 >erlve
@@ -507,7 +511,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
 
 #slider test for derail
 >edarli
@@ -517,7 +521,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
 
 #slider test for spin
 >psni
@@ -527,7 +531,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
 
 #slider test for redial
 >eridla

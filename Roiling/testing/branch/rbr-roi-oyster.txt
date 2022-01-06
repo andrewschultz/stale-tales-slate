@@ -950,6 +950,11 @@ There will be better hints than a manners advice column once you move on, though
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
+@sli
+#slider test for slander
+>lsnaerd
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @max
 >misses
 you could've tried to SLANDER the snarled darnels.
