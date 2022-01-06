@@ -8,6 +8,8 @@ PARSEIGNORE:palm,latches,rifle
 >IGNORE=bolt
 >IGNORE=bulge
 >IGNORE=toga
+>IGNORE=reed
+>IGNORE=sent nets
 #the stuff above, you don't have the gadget yet, so scan values don't matter. I could code it, but it has no practical value.
 static>attics
 attics>static
