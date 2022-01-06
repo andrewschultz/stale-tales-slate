@@ -144,7 +144,7 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 by one point
 
 >score
-You currently have 1 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
+You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
 #mistake retest for or do door
 >rood
@@ -186,10 +186,18 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 by one point
 
 >score
-You currently have 3 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 7
+You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
 >open door
 Thickest Thickets
+
+#mistake test for erde
+>erde
+There's enough earth around here, and this game's not in German.
+
+#mistake test for rede
+>rede
+You probably don't want medieval-style advice. You don't need it. HINT should work better.
 
 #nudge for thickets
 >thicktes
@@ -230,6 +238,10 @@ That's a bit too magical for here and now. The nest is nice enough.
 >shrbu
 The shrub and brush waver, then point towards the toga.
 
+#spechelp for reed
+>eder
+The reed blows in an unseen breeze.
+
 #spechelp for toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
@@ -248,8 +260,11 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 >goat
 Your score has just gone up by one point.
 
+>deer
+Your score has just gone up by one point.
+
 >score
-You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #done rejects for goat
 >gota
@@ -261,6 +276,9 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 
 >in
 Notices Section
+
+>score
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #readables for gateway
 >read gateway
@@ -294,13 +312,13 @@ You think a bit, and the static seems like a bad extension to the doll house.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
 
 >score
-You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >attics
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 7 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+You currently have 7 out of 8 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 #spechelp for attics
 >attisc
@@ -348,7 +366,7 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 Your score has just gone up by one point.
 
 >score
-You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
 #mistake retest for get a man
 >get a man
@@ -385,7 +403,7 @@ As you pick it up, you see it's a weird go-hint thingo, all right. The show hows
 Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
 
 >score
-You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
+You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
 
 >ask gateman about cabinet
 

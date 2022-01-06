@@ -16,8 +16,8 @@ files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-lo
 ## *FILE
 ## *FORK
 
-}}MAX=7
-}}CURMAX=7
+}}MAX=8
+}}CURMAX=8
 }}SCORE=0
 }}CURMIN=4
 
@@ -329,6 +329,15 @@ Thickest Thickets
 @min
 }}CURMAX--
 
+@mis
+#mistake test for erde
+>erde
+There's enough earth around here, and this game's not in German.
+\\
+#mistake test for rede
+>rede
+You probably don't want medieval-style advice. You don't need it. HINT should work better.
+
 @hin
 DEBUG: toga being objhinted.
 
@@ -397,6 +406,11 @@ That's a bit too magical for here and now. The nest is nice enough.
 The shrub and brush waver, then point towards the toga.
 
 @nud
+#spechelp for reed
+>eder
+The reed blows in an unseen breeze.
+
+@nud
 #spechelp for toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
@@ -420,6 +434,12 @@ Your score has just gone up by one point.
 @hin
 You can just go IN, now.
 
+@!min
+>deer
+Your score has just gone up by one point.
+}}SCORE++
+}}CURMIN++
+\\
 >score
 {$SCOS}
 
@@ -436,7 +456,10 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 Notices Section
 
 @min
-}}CURMAX--
+}}CURMAX-=2
+
+>score
+{$SCOS}
 
 @hin
 DEBUG: magenta nametag being objhinted.

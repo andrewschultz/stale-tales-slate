@@ -40,7 +40,7 @@ by one point
 /DEBUG: (bolt|bulge) being objhinted\.
 
 >score
-You currently have 1 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
+You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
@@ -53,7 +53,7 @@ Your score has just gone up by one point.
 by one point
 
 >score
-You currently have 3 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 7
+You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
 >n
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
@@ -83,11 +83,17 @@ Your score has just gone up by one point.
 
 You can just go IN, now.
 
+>deer
+Your score has just gone up by one point.
+
 >score
-You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >in
 Notices Section
+
+>score
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 DEBUG: magenta nametag being objhinted.
 >monty glean
@@ -106,13 +112,13 @@ Goodness, no.
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
 
 >score
-You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >attics
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 7 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+You currently have 7 out of 8 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >gateman
 Your score has just gone up by one point.
@@ -125,14 +131,14 @@ You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is!
 
 >score
-You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
 >take gadget
 As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
 Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
 
 >score
-You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
+You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
 
 >ask gateman about cabinet
 
