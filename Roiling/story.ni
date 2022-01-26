@@ -698,58 +698,6 @@ use DICT_WORD_SIZE of 12
 
 [We need all 12 letters. For instance, some adverbs get to 12 and, okay, those, you can count the last two letters. But BLACKBERRIES is 12.]
 
-section compiler non-syntax section
-
-[This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in. If something fails, increase from ab0* a(b+1)0*. Or b+2 if I did a lot of work, or whatever.]
-
-use MAX_DICT_ENTRIES of 3100.
-
-use MAX_OBJECTS of 990.
-
-use MAX_SYMBOLS of 150000.
-
-use SYMBOLS_CHUNK_SIZE of 16000.
-
-use ALLOC_CHUNK_SIZE of 35000.
-
-use MAX_VERBSPACE of 10240.
-
-use MAX_ACTIONS of 635.
-
-use MAX_VERBS of 840.
-
-Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
-
-use MAX_PROP_TABLE_SIZE of 660000.
-
-use MAX_NUM_STATIC_STRINGS of 90000.
-
-use MAX_PROP_TABLE_SIZE of 610000.
-
-use MAX_STATIC_DATA of 750000.
-
-Use MAX_LABELS of 16000.
-
-section compiler non-syntax section - not for release
-
-[there shouldn't be much difference but it's worth checking just because]
-
-use MAX_DICT_ENTRIES of 3200.
-
-use MAX_VERBS of 860. [delta=20]
-
-use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
-
-use ALLOC_CHUNK_SIZE of 39000 [delta = 4000]
-
-use MAX_OBJECTS of 1000. [delta=10]
-
-use MAX_PROP_TABLE_SIZE of 670000. [delta=10000]
-
-use MAX_STATIC_DATA of 760000.
-
-use MAX_SYMBOLS of 150000. [delta=10000]
-
 section debug on - not for release
 
 [needs to be near the top--well, could place it before all other when play begins rules]
