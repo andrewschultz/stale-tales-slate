@@ -335,40 +335,6 @@ when play begins (this is the status window rule):
 	set the text color of the status window to g-white;
 	open the status window;
 
-section compiler adjust constant section
-
-[This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in]
-
-use MAX_STATIC_DATA of 280000.
-
-use MAX_NUM_STATIC_STRINGS of 21000.
-
-use MAX_ACTIONS of 250.
-
-use MAX_VERBS of 470. [-40 from debug]
-
-use MAX_VERBSPACE of 5000.
-
-use MAX_SYMBOLS of 35000.
-
-use MAX_PROP_TABLE_SIZE of 240000.
-
-section compiler adjust constant section - not for release
-
-use MAX_ACTIONS of 290.
-
-use MAX_VERBS of 510.
-
-use MAX_VERBSPACE of 5300.
-
-use MAX_SYMBOLS of 36000.
-
-use MAX_PROP_TABLE_SIZE of 260000.
-
-use MAX_STATIC_DATA of 300000.
-
-use MAX_NUM_STATIC_STRINGS of 22000.
-
 section about the player
 
 does the player mean examining the player: it is unlikely.
