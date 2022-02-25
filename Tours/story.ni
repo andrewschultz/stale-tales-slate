@@ -103,6 +103,13 @@ check requesting the score:
 	say "You've figured [score] of [maximum score] areas of the Torus.";
 	the rule succeeds;
 
+the block swearing obscenely rule is not listed in any rulebook.
+the block swearing mildly rule is not listed in any rulebook.
+
+check swearing mildly: try swearing obscenely instead;
+
+check swearing obscenely: say "Appall? Pal! PAL!" instead;
+
 volume parsing
 
 after reading a command:
