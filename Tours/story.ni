@@ -89,3 +89,26 @@ after going:
 	continue the action;
 
 to decide which number is heptcount: decide on number of solved dubrooms;
+
+volume when play begins
+
+when play begins:
+	now the right hand status line is "[score]/[maximum score]";
+
+volume meta verbs
+
+check requesting the score:
+	say "You've figured [score] of [maximum score] areas of the Torus.";
+	the rule succeeds;
+
+volume parsing
+
+after reading a command:
+	if the player's command exactly matches the text "[word-to-include of location of player]":
+		if location of player is solved:
+			say "Already got that.";
+		now location of player is solved;
+		say "[guess-right-text of location of player][line break]";
+		increment the score;
+		process the notify score changes rule;
+		reject the player's command;
