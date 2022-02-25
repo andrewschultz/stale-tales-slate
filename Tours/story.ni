@@ -16,6 +16,10 @@ include Trivial Niceties by Andrew Schultz.
 
 section includes
 
+volume globals and such
+
+solved-heptagon is a truth state that varies.
+
 volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
@@ -48,9 +52,15 @@ understand "aaaaaa" and "b" and "a6" as b1.
 
 book basic going
 
-check going a not rotational direction: say "Directions other than inside and the rotational directions (L1-6, R1-6) are meaningless here." instead;
+check going a not rotational direction:
+	if player is in Scene Scene, say "You need to lay down roots first." instead;
+	say "Directions other than inside (once you find what's in the center of the torus) and the rotational directions (L1-6, R1-6) are meaningless here." instead;
 
-check going inside: if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
+check going inside:
+	if location of player is scene scene, say "You already are." instead;
+	if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
+	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
+	move player to Scene Scene instead;
 
 book rooms
 
