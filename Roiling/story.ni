@@ -5989,6 +5989,8 @@ thinko is a truth state that varies.
 
 understand "ponder" as thinking when END PRONER POD is not touchable.
 
+in-think is a truth state that varies.
+
 check thinking:
 	if player is in Dusty Study:
 		if stuff-found < 3:
@@ -5998,6 +6000,10 @@ check thinking:
 			say "Hard to think with that knocking." instead;
 	if player is in Econ Cone and END PRONER POD is in Econ Cone, say "No, you need to think a little differently to move." instead;
 	if mrlp is troves and number of unfigured things is 0, say "Yes, how you think is extra important here. But generic thinking won't get you through." instead;
+	if parleys splayer players are touchable:
+		now in-think is true;
+		say "So far, the [players] have been [list of ment pickup-lines].";
+		now in-think is false;
 	if mrlp is demo dome, try requesting the score instead;
 	if number of unfigured things > 0:
 		say "[line break][prefigured-things]"; [?? this creates a problem: are things wiped from "unfigured" once we're done? Should we define unfigured + in-region?]
@@ -15672,7 +15678,7 @@ after printing the locale description for Loftier Trefoil when Loftier Trefoil w
 	say "The ambience here makes you think 'Lo, I fret.'";
 	if debug-state is true:
 		say "[line break]";
-		ital-say "Remember, WARWAR skips through the warriors.";
+		ital-say "For testing purposes, note WARWAR skips through the warriors.";
 		say "[line break]";
 		ital-say "Also, PLOP drops all the picaros here, but crazy things may happen if you move on from unit testing.";
 	set the pronoun him to rodney;
@@ -18157,7 +18163,7 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 	say "[line break]But whatever they call themselves, you know [pla-ma]s['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance.";
 	if debug-state is true:
 		say "[line break]";
-		ital-say "PLOP drops all the pickup lines here.";
+		ital-say "For testing purposes, PLOP drops all the pickup lines here.";
 	continue the action;
 
 chapter parleys splayer players
