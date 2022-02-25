@@ -1,5 +1,21 @@
 "Tours Roust Torus" by Andrew Schultz
 
+volume top level stuff
+
+the release number is 1.
+
+release along with the "parchment" interpreter.
+
+release along with a website.
+
+release along with cover art.
+
+the maximum score is 8.
+
+include Trivial Niceties by Andrew Schultz.
+
+section includes
+
 volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
