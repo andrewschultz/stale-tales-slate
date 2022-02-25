@@ -36,6 +36,7 @@ check going to Einstein St:
 	say "You stride nervously [hexdir], wondering who or what you will see. People all around are forming or creating logic puzzles. There is no war between crossword, Sudoku, Kakuro general logic-problem aficionados or people who like odder, weirder puzzles. There's something for everyone, and everyone is doing their own thing. People can even rate Karateka! It's all quite nice. But of course it can't last forever. It might get boring. Fortunately, an estates tat (with a very legible gib) explains the magic words 'meantime, anti' means you need to summon escapees['] capes to go back to the real world, and 'Rehire! Hi!' forms a request to come back. Which might not succeed. But eventually, when you really need the break, you will get it.[paragraph break]Oh, wait. I forgot to tell you the name of this place. It is:";
 	end the story finally saying "EINSTEIN ST."
 
+Latte Latte is a dubroom. "All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.".
 
 stats-x is a truth state that varies.
 
