@@ -15,11 +15,26 @@ to say heptround:
 		if number of visited dubrooms is 7 and heptcount is 0:
 			say ". You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no things to change, so you need to do something new, here"
 
+book directions
+
+a directions can be rotational. a direction is usually not rotational.
+
+a1 is a direction. the opposite of a1 is b1. b1 is a direction.  the opposite of b1 is a1. a1 is rotational. b1 is rotational.
+a2 is a direction. the opposite of a2 is b2. b2 is a direction.  the opposite of b2 is a2. a2 is rotational. b2 is rotational.
+a3 is a direction. the opposite of a3 is b3. b3 is a direction.  the opposite of b3 is a3. a3 is rotational. b3 is rotational.
+
+understand "a" and "bbbbbb" and "b6" as a1.
+understand "aa" and "bbbbb" and "b5" as a2.
+understand "aaa" and "bbbb" and "b4" as a3.
+understand "aaaa" and "bbb" and "a4" as b3.
+understand "aaaaa" and "bb" and "a5" as b2.
+understand "aaaaaa" and "b" and "a6" as b1.
+
 book basic going
 
-check going inside: if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
+check going a not rotational direction: say "Directions other than inside and the rotational directions (L1-6, R1-6) are meaningless here." instead;
 
-check going: say "Directions other than inside are meaningless here." instead;
+check going inside: if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
 
 book rooms
 
