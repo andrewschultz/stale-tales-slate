@@ -18,6 +18,15 @@ section includes
 
 volume globals and such
 
+solved-initials is a truth state that varies.
+
+in-heptagon-puzzle is a truth state that varies.
+
+ever-heptagon-puzzle is a truth state that varies.
+
+every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false:
+	say "A voice booms 'Noon? No! No!' Perhaps there's a simple way to try to repel it."
+
 solved-heptagon is a truth state that varies.
 
 volume dubroom definitions
@@ -59,7 +68,7 @@ check going a not rotational direction:
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
 	if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
-	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
+	if solved-initials is false, say "You're still blocked from entering the center of the torus." instead;
 	move player to Scene Scene instead;
 
 book rooms
@@ -106,6 +115,31 @@ volume when play begins
 
 when play begins:
 	now the right hand status line is "[score]/[maximum score]";
+
+volume game progress verb
+
+chapter oning
+
+oning is an action out of world.
+
+understand the command "on" as something new.
+
+understand "on" as oning.
+
+carry out oning:
+	if solved-initials is false, say "You're not ready to really go on yet. But you'll know when you are." instead;
+	if in-heptagon-puzzle is true, say "You're already in the process of going on." instead;
+	if player is in scene scene, say "You already successfully went on." instead;
+	now in-heptagon-puzzle is true;
+	say "You've started going on[one of]. [location of player] seems as good as any others. It seems to brighten up as you make your decision[or]again. Maybe you'll find the right way through this time. [location of player] brightens, slightly[stopping].";
+	now ever-heptagon-puzzle is true;
+	now location of player is hep-traversed;
+	the rule succeeds;
+
+section failure
+
+to fail-heptagon:
+	now all dubrooms are not hep-traversed;
 
 volume meta verbs
 
