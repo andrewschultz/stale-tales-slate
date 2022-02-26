@@ -6009,6 +6009,8 @@ check thinking:
 		say "[line break][prefigured-things]"; [?? this creates a problem: are things wiped from "unfigured" once we're done? Should we define unfigured + in-region?]
 	say "Nothing immediate comes up. If you need help, just say HINT. K?" instead;
 
+for printing the name of a pickup-line when in-think is true: say "[pickup-description]"
+
 chapter touching
 
 check touching:
