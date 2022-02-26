@@ -154,6 +154,26 @@ check swearing mildly: try swearing obscenely instead;
 
 check swearing obscenely: say "Appall? Pal! PAL!" instead;
 
+volume progress
+
+table of progress
+ruley	texty
+a rule	"You think you see something vague in the center of the torus."
+--	"lorem ipsum"
+--	"lorem ipsum"
+--	"lorem ipsum"
+--	"lorem ipsum"
+--	"lorem ipsum"
+prep-traversal rule	"Yes, there is something at the center of the torus. But it's blocked off. You have a feeling you need to do some sort of odd dance before entering."
+bye-dude rule	"lorem ipsum"
+
+this is the prep-traversal rule:
+	now solved-initials is true;
+
+this is the bye-dude rule:
+	end the story saying "Feats! Fates-Feast! Taffetases!";
+	follow the shutdown rules;
+
 volume parsing
 
 after reading a command:
@@ -163,5 +183,8 @@ after reading a command:
 		now location of player is solved;
 		say "[guess-right-text of location of player][line break]";
 		increment the score;
+		choose row score in table of progress;
+		say "[texty entry][line break]";
+		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
 		reject the player's command;
