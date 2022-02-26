@@ -12,9 +12,11 @@ release along with cover art.
 
 the maximum score is 8.
 
-include Trivial Niceties by Andrew Schultz.
-
 section includes
+
+include Tours Roust Torus Tests by Andrew Schultz.
+
+include Trivial Niceties by Andrew Schultz.
 
 volume globals and such
 
@@ -35,6 +37,8 @@ rule for printing the name of a solved dubroom: say "[word-to-include of the ite
 
 a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be solved. a dubroom is usually not solved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern.
 
+a dubroom can be hep-traversed. a dubroom is usually not hep-traversed.
+
 a dubroom has text called clue-text.
 
 to say heptround:
@@ -46,7 +50,7 @@ to say heptround:
 
 book directions
 
-a directions can be rotational. a direction is usually not rotational.
+a direction can be rotational. a direction is usually not rotational.
 
 a1 is a direction. the opposite of a1 is b1. b1 is a direction.  the opposite of b1 is a1. a1 is rotational. b1 is rotational.
 a2 is a direction. the opposite of a2 is b2. b2 is a direction.  the opposite of b2 is a2. a2 is rotational. b2 is rotational.
@@ -143,9 +147,13 @@ to fail-heptagon:
 
 volume meta verbs
 
+section score
+
 check requesting the score:
 	say "You've figured [score] of [maximum score] areas of the Torus.";
 	the rule succeeds;
+
+section swearing
 
 the block swearing obscenely rule is not listed in any rulebook.
 the block swearing mildly rule is not listed in any rulebook.
@@ -173,6 +181,8 @@ this is the prep-traversal rule:
 this is the bye-dude rule:
 	end the story saying "Feats! Fates-Feast! Taffetases!";
 	follow the shutdown rules;
+
+The print final score rule is not listed in for printing the player's obituary.
 
 volume parsing
 
