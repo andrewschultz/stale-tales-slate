@@ -31,6 +31,8 @@ every turn when solved-initials is true and in-heptagon-puzzle is false and ever
 
 solved-heptagon is a truth state that varies.
 
+heptagon-path is a list of numbers variable. heptagon-path is {}.
+
 volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
@@ -52,9 +54,14 @@ book directions
 
 a direction can be rotational. a direction is usually not rotational.
 
+a direction can be clockwise, counterclockwise or neutral. a direction is usually neutral.
+
 a1 is a direction. the opposite of a1 is b1. b1 is a direction.  the opposite of b1 is a1. a1 is rotational. b1 is rotational.
 a2 is a direction. the opposite of a2 is b2. b2 is a direction.  the opposite of b2 is a2. a2 is rotational. b2 is rotational.
 a3 is a direction. the opposite of a3 is b3. b3 is a direction.  the opposite of b3 is a3. a3 is rotational. b3 is rotational.
+
+a1 is clockwise. a2 is clockwise. a3 is clockwise.
+b1 is counterclockwise. b2 is counterclockwise. b3 is counterclockwise.
 
 understand "a" and "bbbbbb" and "b6" as a1.
 understand "aa" and "bbbbb" and "b5" as a2.
@@ -63,7 +70,46 @@ understand "aaaa" and "bbb" and "a4" as b3.
 understand "aaaaa" and "bb" and "a5" as b2.
 understand "aaaaaa" and "b" and "a6" as b1.
 
+init-hept-dir is a direction that varies.
+
+to decide which number is dist of (x - a direction):
+	if x is a1 or x is b1, decide on 1;
+	if x is a2 or x is b2, decide on 2;
+	if x is a3 or x is b3, decide on 3;
+	decide on 0;
+
 book basic going
+
+definition: a direction (called d) is hep-illegal:
+	let r1 be whether or not d is clockwise;
+	let r2 be whether or not init-hept-dir is counterclockwise;
+	if r1 is r2, yes;
+	no;
+
+check going when in-heptagon-puzzle is true:
+	if noun is not rotational, continue the action;
+	if noun is a1 or noun is b1, say "You can't go nearby. You have to make a bit of a jump." instead;
+	if init-hept-dir is up:
+		now init-hept-dir is noun;
+		continue the action;
+	if noun is hep-illegal, say "You can't reverse direction on the torus like that." instead;
+
+after going when in-heptagon-puzzle is true:
+	if location of player is hep-traversed:
+		say "The torus dims. You must have made a wrong step. You have already been to [location of player] during this trip. But you figure you can go [b]ON[r] and try again.";
+		now in-heptagon-puzzle is false;
+		continue the action;
+	now location of player is hep-traversed;
+	say "[list of hep-traversed rooms]";
+	add dist of noun to heptagon-path;
+	if number of hep-traversed rooms is 7:
+		if 2 is not listed in heptagon-path or 3 is not listed in heptagon-path:
+			say "The interior of the Torus shudders, but nothing conclusive happens. Perhaps you [one of][or]again [or]once again [stopping]took an easy way to touch all the rooms.";
+		else:
+			say "The way to the center unlocks! You can go [b]INSIDE[r] now.";
+			now solved-heptagon is true;
+		now in-heptagon-puzzle is false;
+	continue the action;
 
 check going a not rotational direction:
 	if player is in Scene Scene, say "You need to lay down roots first." instead;
@@ -72,7 +118,7 @@ check going a not rotational direction:
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
 	if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
-	if solved-initials is false, say "You're still blocked from entering the center of the torus." instead;
+	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
 	move player to Scene Scene instead;
 
 book rooms
@@ -135,9 +181,12 @@ carry out oning:
 	if in-heptagon-puzzle is true, say "You're already in the process of going on." instead;
 	if player is in scene scene, say "You already successfully went on." instead;
 	now in-heptagon-puzzle is true;
-	say "You've started going on[one of]. [location of player] seems as good as any others. It seems to brighten up as you make your decision[or]again. Maybe you'll find the right way through this time. [location of player] brightens, slightly[stopping].";
+	say "You've started going on[one of]. [location of player] seems as good a place to start as any others. It seems to brighten up as you make your decision[or] again. Maybe you'll find the right way through this time. [location of player] brightens, slightly[stopping].";
 	now ever-heptagon-puzzle is true;
+	now all rooms are not hep-traversed;
 	now location of player is hep-traversed;
+	now heptagon-path is {};
+	now init-hept-dir is up;
 	the rule succeeds;
 
 section failure
