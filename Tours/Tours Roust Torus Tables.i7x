@@ -14,7 +14,7 @@ cmd-val (text)	cmd-hash (number)	cmd-loc	nudge-text
 
 to say whole-torus: say "You don't need to act on the whole torus, here"
 
-to say asym-area: say "Act on the whole area, here."
+to say asym-area: say "Act on the whole area, here"
 
 to say plural: say "You're missing an (s) to make things plural, here"
 

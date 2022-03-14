@@ -32,7 +32,7 @@ in-heptagon-puzzle is a truth state that varies.
 
 ever-heptagon-puzzle is a truth state that varies.
 
-every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false:
+every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false (this is the clue ON rule):
 	say "A voice booms 'Noon? No! No!' Perhaps there's a simple way to try to repel it."
 
 solved-heptagon is a truth state that varies.
@@ -257,8 +257,10 @@ bye-dude rule	"lorem ipsum"
 
 this is the prep-traversal rule:
 	now solved-initials is true;
+	process the clue ON rule;
 
 this is the bye-dude rule:
+	process the notify score changes rule;
 	end the story saying "Feats! Fates-Feast! Taffetases!";
 	follow the shutdown rules;
 
@@ -277,6 +279,7 @@ after reading a command:
 		say "[texty entry][line break]";
 		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
+		say "[b][location of player][r][line break]";
 		reject the player's command;
 
 volume parser errors
