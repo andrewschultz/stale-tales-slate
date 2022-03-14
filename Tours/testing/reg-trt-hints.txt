@@ -1,0 +1,55 @@
+
+
+## reg-trt-hints.txt
+
+** game: /home/andrew/prt/debug-tours-roust-torus.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* trt-thru
+
+> sheesh
+by one point
+
+> a
+
+>reappear
+by one point
+
+>a
+>arraigning
+by one point
+
+> a
+>teammate
+by one point
+
+>a
+>intestines
+by one point
+
+>a
+>happenchance
+by one point
+
+>a
+>tattletale
+by one point
+
+A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
+
+>on
+>aaa
+>aa
+>aaa
+>aaa
+>aa
+>aaa
+The way to the center unlocks! You can go INSIDE now.
+
+>in
+Scene Scene
+
+>senescence
+by one point
+
+*** Feats! Fates-Feast! Taffetases! ***

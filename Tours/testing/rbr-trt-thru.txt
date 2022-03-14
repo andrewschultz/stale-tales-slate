@@ -1,0 +1,78 @@
+files=reg-trt-max.txt,reg-trt-min.txt,reg-trt-nudmis.txt,reg-trt-hints.txt
+
+~	max	t0
+~	min	t1
+~	nudges,nud,nu,mis	t2
+~	hints,hin	t3
+
+## *FILE
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## walkthrough with hints
+
+** game: /home/andrew/prt/debug-tours-roust-torus.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* trt-thru
+
+> sheesh
+by one point
+
+> a
+
+@mis
+#mistake test for rapparee
+>rapparee
+You don't need to consort with thieves.
+!Besides
+
+>reappear
+by one point
+
+@mis
+#mistake retest for rapparee
+>rapparee
+You don't need to consort with thieves. Besides, you already did what you needed, here.
+
+>a
+>arraigning
+by one point
+
+> a
+>teammate
+by one point
+
+>a
+>intestines
+by one point
+
+>a
+>happenchance
+by one point
+
+>a
+>tattletale
+by one point
+
+A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
+
+>on
+>aaa
+>aa
+>aaa
+>aaa
+>aa
+>aaa
+The way to the center unlocks! You can go INSIDE now.
+
+>in
+Scene Scene
+
+@mis
+#mistake test for senescense
+>senescense
+Almost, but I'm going to play spelling cop, here.
+
+>senescence
+by one point
+
+*** Feats! Fates-Feast! Taffetases! ***
