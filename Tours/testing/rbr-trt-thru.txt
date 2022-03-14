@@ -1,11 +1,14 @@
-files=reg-trt-max.txt,reg-trt-min.txt,reg-trt-nudmis.txt,reg-trt-hints.txt
+files=reg-trt-max.txt,reg-trt-min.txt,reg-trt-nudmis.txt,reg-trt-hints.txt,reg-trt-alt.txt
 
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis	t2
 ~	hints,hin	t3
+~	alt	t4
 
 ## *FILE
+
+ALSO_IGNORE:a,b,aa,bb,aaa,bbb
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## walkthrough with hints
 
@@ -55,7 +58,92 @@ by one point
 
 A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
 
+@alt
 >on
+You've started going on.
+>on
+You're already in the process of going on.
+>a
+You can't go nearby. You have to make a bit of a jump.
+>b
+You can't go nearby. You have to make a bit of a jump.
+>aa
+>aa
+>aa
+>aa
+>aa
+>aa
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you took an easy way to touch all the rooms.
+\\
+>on
+You've started going on again.
+>aaa
+>aaa
+>aaa
+>aaa
+>aaa
+>aaa
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you again took an easy way to touch all the rooms.
+\\
+>on
+You've started going on again.
+>bb
+>bb
+>bb
+>bb
+>bb
+>bb
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
+\\
+>on
+You've started going on again.
+>bbb
+>bbb
+>bbb
+>bbb
+>bbb
+>bbb
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
+\\
+# test reversal from b
+>on
+You've started going on again.
+>bb
+>aa
+You can't reverse direction on the torus like that.
+>aaa
+You can't reverse direction on the torus like that.
+>bbb
+>bb
+\\
+# test reversal from a
+>on
+You've started going on again.
+>aa
+>bb
+You can't reverse direction on the torus like that.
+>bbb
+You can't reverse direction on the torus like that.
+>aaa
+>aa
+# test alternate path through
+>on
+You've started going on again.
+>bbb
+>bb
+>bbb
+>bbb
+>bb
+>bbb
+The way to the center unlocks! You can go INSIDE now.
+>undo
+>bb
+
+>on
+
+@!alt
+You've started going on. Tattletale seems as good a place to start as any others. It seems to brighten up as you make your decision.
+
 >aaa
 >aa
 >aaa
