@@ -119,7 +119,7 @@ after going when in-heptagon-puzzle is true:
 
 check going a not rotational direction:
 	if player is in Scene Scene, say "You need to lay down roots first." instead;
-	say "Directions other than inside (once you find what's in the center of the torus) and the rotational directions (L1-6, R1-6) are meaningless here." instead;
+	say "Directions other than inside (once you find what's in the center of the torus), outside and the rotational directions (A, AA, AAA, B, BB, BBB) are meaningless here." instead;
 
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
@@ -208,6 +208,31 @@ check requesting the score:
 	say "You've figured [score] of [maximum score] areas of the Torus.";
 	the rule succeeds;
 
+section going outside
+
+the convert exit into go out rule is not listed in any rulebook.
+
+check going outside:
+	if location of player is Scene Scene, say "There's no way back out. Here's where you want to be." instead;
+	say "You'd fall off the [this-game] that way." instead;
+
+section verbing
+
+verbing is an action out of world.
+
+understand the command "v" as something new.
+understand the command "verb" as something new.
+understand the command "verbs" as something new.
+
+understand "v" as verbing.
+understand "verb" as verbing.
+understand "verbs" as verbing.
+
+carry out verbing:
+	say "Compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are A and B to move clockwise and counterclockwise around the torus.";
+	say "You can also move multiple times with AA, AAA, BB, or BBB. Note anything more than that is accepted but impractical, as AAA and BBBB are equivalent.";
+	the rule succeeds;
+
 section swearing
 
 the block swearing obscenely rule is not listed in any rulebook.
@@ -270,10 +295,13 @@ to say reject:
 	if cmdhash is 2 * sts-hash of location of player or firstwordhash is 2 * sts-hash of location of player:
 		say "[if location is solved]You already figured what to do here[else]Hmm, rearrange things[end if].";
 		continue the action;
-	repeat through table of nudge hashes:
-		if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
-			if there is no cmd-loc entry or location of player is cmd-loc entry:
-				say "[nudge-text entry]";
+	if location is not solved:
+		repeat through table of nudge hashes:
+			if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
+				if there is no cmd-loc entry or location of player is cmd-loc entry:
+					say "[nudge-text entry]";
+					continue the action;
+	say "There aren't very many verbs to use in [this-game], though each room has something special that needs doing. For a general list of verbs, type [b]VERBS[r]."
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error:
 	say "[reject]";
