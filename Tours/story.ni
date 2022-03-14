@@ -18,6 +18,8 @@ include Tours Roust Torus Tests by Andrew Schultz.
 
 include Trivial Niceties by Andrew Schultz.
 
+include Tours Roust Torus Mistakes by Andrew Schultz.
+
 volume globals and such
 
 solved-initials is a truth state that varies.
