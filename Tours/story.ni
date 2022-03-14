@@ -18,6 +18,8 @@ include Tours Roust Torus Tests by Andrew Schultz.
 
 include Trivial Niceties by Andrew Schultz.
 
+include STS Hashes by Andrew Schultz.
+
 include Tours Roust Torus Tables by Andrew Schultz.
 
 include Tours Roust Torus Mistakes by Andrew Schultz.
@@ -251,3 +253,27 @@ after reading a command:
 		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
 		reject the player's command;
+
+volume parser errors
+
+cmdhash is a number that varies.
+
+firstwordhash is a number that varies.
+
+to say reject:
+	now cmdhash is the hash of the player's command;
+	now firstwordhash is the hash of word number 1 in the player's command;
+	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
+	if cmdhash is sts-hash of location of player or firstwordhash is sts-hash of location of player:
+		say "[if location is solved]You already figured what to do here[else]You felt like you might've been halfway there to something[end if].";
+		continue the action;
+	if cmdhash is 2 * sts-hash of location of player or firstwordhash is 2 * sts-hash of location of player:
+		say "[if location is solved]You already figured what to do here[else]Hmm, rearrange things[end if].";
+		continue the action;
+	repeat through table of nudge hashes:
+		if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
+			if there is no cmd-loc entry or location of player is cmd-loc entry:
+				say "[nudge-text entry]";
+
+Rule for printing a parser error when the latest parser error is the not a verb I recognise error:
+	say "[reject]";
