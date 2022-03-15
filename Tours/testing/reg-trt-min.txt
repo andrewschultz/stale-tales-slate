@@ -9,25 +9,33 @@
 
 * trt-thru
 
-> sheesh
+>sheesh
 by one point
+Sheesh
 
-> a
+>a
 
 >reappear
 by one point
+Reappear
 
 >a
+
 >arraigning
 by one point
 
-> a
+>a
 >teammate
 by one point
 
 >a
+
 >intestines
 by one point
+
+#mistake retest for stein
+>stein
+You have nothing to drink, so you do not need a drink container. Besides, you already did what you needed, here.
 
 >a
 >happenchance

@@ -17,10 +17,38 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * trt-thru
 
-> sheesh
-by one point
+@mis
+#mistake test for he/hes
+>he
+You don't need to deal with pronouns. Maybe a different sort of word.
+!halfway
+!Besides
+>hes
+You don't need to deal with pronouns. Maybe a different sort of word.
+!Besides
+!halfway
 
-> a
+@mis
+#mistake test for she
+>she
+You don't need to deal with pronouns. Maybe a different sort of word. In a weird way, you feel you're halfway there, though.
+!Besides
+
+>sheesh
+by one point
+Sheesh
+
+@mis
+#mistake retest for he/hes
+>he
+You don't need to deal with pronouns. Besides, you already did what you needed, here.
+>hes
+You don't need to deal with pronouns. Besides, you already did what you needed, here.
+>she
+You don't need to deal with pronouns. Besides, you already did what you needed, here.
+!halfway
+
+>a
 
 @mis
 #mistake test for rapparee
@@ -28,25 +56,118 @@ by one point
 You don't need to consort with thieves.
 !Besides
 
+@mis
+#mistake test for reap
+>reap
+Perhaps there is something to reap once you figure what to do here. In a weird way, you feel you're halfway there, though.
+
+@mis
+#mistake test for perp
+>perp
+That doesn't take care of the whole area.
+
+@mis
+#mistake test for pear
+>pear
+You already got fruits for Curtis in Rustic Citrus long ago. In a weird way, you feel you're halfway there, though.
+
+@mis
+#mistake test for rape
+>rape
+Tours Roust Torus is about light-hearted jokes, and there's nothing light-hearted about that. So, yeah, don't try it again.
+
+@mis
+#mistake test for earp
+>earp
+No daredevil gunman appears to help you out.
+!Besides
+
 >reappear
 by one point
+Reappear
 
 @mis
 #mistake retest for rapparee
 >rapparee
 You don't need to consort with thieves. Besides, you already did what you needed, here.
 
+@mis
+#mistake retest for reap
+>reap
+Perhaps there is something to reap once you figure what to do here. Besides, you already did what you needed, here.
+
+@mis
+#mistake test for perp
+>perp
+very many verbs to use
+#PREP AREA is now nothing
+
+@mis
+#mistake retest for pear
+>pear
+You already got fruits for Curtis in Rustic Citrus long ago. Besides, you already did what you needed, here.
+
+@mis
+#mistake retest for earp
+>earp
+No daredevil gunman appears to help you out. Besides, you already did what you needed, here.
+
 >a
+
+@mis
+#mistake test for ragin
+>ragin
+Getting mad won't help.
+!Besides
+
 >arraigning
 by one point
 
-> a
+@mis
+#mistake retest for ragin
+>ragin
+Getting mad won't help. Besides, you already did what you needed, here.
+
+>a
 >teammate
 by one point
 
 >a
+
+@mis
+#mistake test for stein
+>stein
+You have nothing to drink, so you do not need a drink container.
+!Besides
+
+@mis
+#mistake test for nites
+>nites
+You're too old for the nightlife. Or bad spelling.
+!Besides
+
+@mis
+#mistake test for tiens
+>tiens
+You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
+!Besides
+
 >intestines
 by one point
+
+#mistake retest for stein
+>stein
+You have nothing to drink, so you do not need a drink container. Besides, you already did what you needed, here.
+
+@mis
+#mistake retest for nites
+>nites
+You're too old for the nightlife. Or bad spelling. Besides, you already did what you needed, here.
+
+@mis
+#mistake retest for tiens
+>tiens
+You mentally show off your anagramming skills in languages other than English. Not that you need to do anything more here.
 
 >a
 >happenchance
