@@ -290,19 +290,37 @@ after reading a command:
 
 volume parser errors
 
+cheats is a truth state that varies.
+
 cmdhash is a number that varies.
 
 firstwordhash is a number that varies.
+
+to say how-many-right:
+	let x1 be filtered name of the player's command;
+	let count be 0;
+	repeat with y running from 1 to number of characters in x1:
+		if character number y in x1 is character number y in word-to-include of location of player:
+			increment count;
+	say "[count] of [number of characters in x1]";
 
 to say reject:
 	now cmdhash is the hash of the player's command;
 	now firstwordhash is the hash of word number 1 in the player's command;
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	if cmdhash is sts-hash of location of player or firstwordhash is sts-hash of location of player:
-		say "[if location is solved]You already figured what to do here[else]You felt like you might've been halfway there to something[end if].";
+		if location is solved:
+			say "You already figured what to do here.";
+		else:
+			say "You felt like you might've been halfway there to something.";
 		continue the action;
 	if cmdhash is 2 * sts-hash of location of player or firstwordhash is 2 * sts-hash of location of player:
-		say "[if location is solved]You already figured what to do here[else]Hmm, rearrange things[end if].";
+		if location is solved:
+			say "You already figured what to do here";
+		else if cheats is false:
+			say "Hmm, rearrange things.";
+		else:
+			say "[how-many-right].";
 		continue the action;
 	if location is not solved:
 		repeat through table of nudge hashes:
