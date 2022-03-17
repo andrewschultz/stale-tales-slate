@@ -67,6 +67,8 @@ a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroo
 
 a dubroom can be hep-traversed. a dubroom is usually not hep-traversed.
 
+a dubroom can be perimeter or internal. a dubroom is usually perimeter.
+
 a dubroom has text called clue-text.
 
 to say heptround:
@@ -165,7 +167,7 @@ Pechan Pechan is a dubroom. it is a1 of Tines Inset. it is a2 of Meta Meat. it i
 
 Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. printed name is "Latte, Latte". "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.". sts-hash of Latte Latte is 390027802.
 
-Scene Scene is a dubroom. "Here's a good place to just wind down your life. It's fun. You've earned it. But how to effect that?". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years.". sts-hash of Scene Scene is 439799277.
+Scene Scene is an internal dubroom. "Here's a good place to just wind down your life. It's fun. You've earned it. But how to effect that?". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years.". sts-hash of Scene Scene is 439799277.
 
 stats-x is a truth state that varies.
 
@@ -280,6 +282,37 @@ carry out creditsing:
 	say "[line break]Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
 	say "[line break]Thanks to wordsmith.org for so many anagrams verified and inspired.";
 	the rule succeeds;
+
+chapter listening
+
+the block listening rule is not listed in any rulebook.
+
+cheat-voice is a truth state that varies.
+
+ever-voice is a truth state that varies.
+
+to say sestet: say "'Sestet! Set! SET!!!'"
+
+check listening:
+	if cheat-voice is false, say "Nothing... yet..." instead;
+	if score is 0:
+		say "[one of]A voice whispers [sestet][line break]Maybe that will help a bit, you think. But where is the voice coming from? You can't see anyone, or anything.[paragraph break]Wait. That's it. It's got to be something small. A tsetse fly! Of course![or]The tsetse fly again: [sestet][stopping]";
+		move tsetse backdrop to all perimeter rooms;
+		now ever-voice is true;
+		the rule succeeds;
+	if ever-voice is true:
+		say "You strain but hear nothing more from the voice that helped you get started.";
+	else:
+		say "Nothing. Maybe there would've been something to help you start if you needed it, but you're doing okay now. You hope. You think.";
+	the rule succeeds;
+
+section tsetse
+
+the tsetse fly is a backdrop. "Sadly, you can't examine the tsetse fly, as you can't completely locate it. But it's there, and it's helping you.".
+
+instead of doing something with tsetse fly:
+	if current action is examining, continue the action;
+	say "The tsetse fly is doing all it can. You don't want to do anything to, or with, it."
 
 section score
 
