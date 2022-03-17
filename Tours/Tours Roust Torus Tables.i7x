@@ -2,6 +2,25 @@ Version 1/220314 of Tours Roust Torus Tables by Andrew Schultz begins here.
 
 "This contains tables that aren't nudges but seem better away from the main code."
 
+volume times around
+
+voice-listen is a truth state that varies.
+
+table of times around
+max-to-see	clue-text
+0	"You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to listen. [oh-voice]"
+0	"You've been around the torus twice, seen everything again. You notice some sort of repetition. you think back to how you had to TAN ANT behind Store Y. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will make you recall. [oh-voice]"
+0	"You've run around the torus again. You remember now! When you had to TAN the ANT! It was a NATANT ant! Maybe that will help you here. [oh-voice]"
+0	"Ugh. This is still tricky. But you remember the coins, too. You made them icons, then sonic as well. But they inspired one more thing. A weird word. What was it? [oh-voice]"
+0	"Ah yes. That's what the sonic coins gave you. CONCISIONS! [oh-voice]"
+0	"Tan ant, natant. Sonic coins, concisions. [oh-voice]"
+
+to say oh-voice:
+	if voice-listen is false:
+		say "Oh. You could always listen to that voice, too.";
+	else:
+		say "[line break]"
+
 volume room combos
 
 table of room combos
