@@ -22,6 +22,8 @@ include STS Hashes by Andrew Schultz.
 
 include Tours Roust Torus Tables by Andrew Schultz.
 
+include Tours Roust Torus Nudges by Andrew Schultz.
+
 include Tours Roust Torus Mistakes by Andrew Schultz.
 
 volume globals and such
@@ -327,27 +329,7 @@ check swearing mildly: try swearing obscenely instead;
 
 check swearing obscenely: say "Appall? Pal! PAL!" instead;
 
-volume progress
-
-table of progress
-ruley	texty
-a rule	"You think you see something vague in the center of the torus."
---	"lorem ipsum"
---	"lorem ipsum"
---	"lorem ipsum"
---	"lorem ipsum"
---	"lorem ipsum"
-prep-traversal rule	"Yes, there is something at the center of the torus. But it's blocked off. You have a feeling you need to do some sort of odd dance before entering."
-bye-dude rule	"lorem ipsum"
-
-this is the prep-traversal rule:
-	now solved-initials is true;
-	process the clue ON rule;
-
-this is the bye-dude rule:
-	process the notify score changes rule;
-	end the story saying "Feats! Fates-Feast! Taffetases!";
-	follow the shutdown rules;
+volume endgame
 
 The print final score rule is not listed in for printing the player's obituary.
 
