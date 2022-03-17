@@ -51,4 +51,16 @@ to decide what number is the hash of (t - a value of kind K):
 		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
 	decide on hash;
 
+volume other trivia
+
+to say sts: say "Stale Tales Slate";
+
+to say tsts: say "the [sts]";
+
+to say aro: say "[i]A Roiling Original[r]"
+
+to say shuf: say "[i]Shuffling Around[r]"
+
+to say trt: say "[i]Tours Roust Torus[r]"
+
 STS Hashes ends here.
