@@ -31,6 +31,7 @@ details = False
 check_v_c = False
 show_red_text = False
 input_different_reds = False
+show_slots = False
 
 red_anagrams = defaultdict(list)
 my_match = defaultdict(str)
@@ -286,6 +287,11 @@ def find_poss(word_array, bail=False):
             print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original, answer))
         else:
             print(len(answers), poss_string(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
+        if show_slots:
+            for slot in range(0, len(answer)):
+                if len(freqs[slot]) == 1:
+                    continue
+                print('Slot {}:'.format(slot), ', '.join(['{}={}'.format(x,freqs[slot][x]) for x in freqs[slot]]))
         if show_red_text:
             my_red = red_text(answer)
             print("    RED TEXT:", my_red)
@@ -409,6 +415,7 @@ while count < len(sys.argv):
     elif arg == 'i': input_different_reds = True
     elif arg in ( 'ns', 'sn' ): show_all_grids = False
     elif arg in ( 'vc', 'cv', 'c', 'v'): check_vc = True
+    elif arg == 'ss': show_slots = True
     elif arg[0] == 'x' and arg[1:].isdigit():
         temp = int(arg[1:])
         if temp < 1 or temp > len(examples_array):
