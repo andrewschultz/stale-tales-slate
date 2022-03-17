@@ -1,5 +1,8 @@
+# rbr-roi-demo-dome.txt
+#
 #--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
+#--this should be done for all RBR files and not just demo dome
+#--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
 # test cases are a bit squashed: MAX tries all the odd verbs, but NUD tried the nudges

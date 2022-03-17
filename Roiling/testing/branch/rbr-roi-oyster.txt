@@ -1,5 +1,10 @@
-# run this file with rbr.py
+# rbr-roi-oyster.txt
 #
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just demo dome
+#--vtc.py checks for verb cases
+#--rbr.py v to verify nothing slipped
+
 files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,reg-roi-oyster-slider.txt,reg-roi-oyster-hints.txt,reg-roi-oyster-verbs.txt
 
 ~	max	t0

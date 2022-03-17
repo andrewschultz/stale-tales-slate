@@ -1,5 +1,9 @@
+# rbr-roi-ordeal-reload.txt
+#
 #--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just means manse
+#--this should be done for all RBR files and not just ordeal reload
+#--vtc.py checks for verb cases
+#--rbr.py v to verify nothing slipped
 
 files=reg-roi-ordeal-reload-max.txt,reg-roi-ordeal-reload-min.txt,reg-roi-ordeal-reload-nudmis.txt,reg-roi-ordeal-reload-slider.txt,reg-roi-ordeal-reload-hints.txt,reg-roi-ordeal-reload-verbs.txt
 ~	max	t0

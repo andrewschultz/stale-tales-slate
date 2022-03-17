@@ -1,10 +1,11 @@
+# rbr-roi-towers.txt
+#
 #--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
+#--this should be done for all RBR files and not just demo dome
+#--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
-# this is a special case--usually MIN comes first, but because of alternate routes, I have to push it second.
-
-# spechelp should be right before @!minh,mini
+# stylistic notes: spechelp sections should be right before @!minh,mini or I may get false-positive errors
 
 files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,reg-roi-towers-nudmis.txt,reg-roi-towers-slider.txt,reg-roi-towers-hints.txt,reg-roi-towers-verbs.txt
 

@@ -1,5 +1,8 @@
+# rbr-roi-presto.txt
+#
 #--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
+#--this should be done for all RBR files and not just demo dome
+#--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
 files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,reg-roi-presto-slider.txt,reg-roi-presto-hints.txt,reg-roi-presto-verbs.txt

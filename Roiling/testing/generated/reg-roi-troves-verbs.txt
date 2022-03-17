@@ -169,7 +169,13 @@ Ew--mild mildew. A mustier semi-rut.
 
 #verbcase listen-troves-if-noun-is-id-cede
 >listen
-Eddie C.'s song
+Eddie C.'s song echoes. You listen closely to "I'd Cede." Oh man, that one part that gets your eyes watery is up next.
+>listen
+Eddie C.'s song, I'd Cede, echoes. You listen closely to "I'd Cede." The song's chorus. Five notes. C, D, E, D, E... "I..." just right to get your eyes red. There's just a little more.
+>listen
+Eddie C.'s song echoes. You listen closely to "I'd Cede." Three notes: E, C, E, "...did." It gets you. You know your eyes are red now. Boy. You find yourself hoping for more, almost completely believing you deserve it.
+>listen
+Eddie C.'s song, I'd Cede, echoes. You listen closely to "I'd Cede." There is no more. It is the end. But you see red at the memory of Eddie C.'s followup, a vapid rehash, I Ceded.
 
 >decide
 Your score has just gone up by one point

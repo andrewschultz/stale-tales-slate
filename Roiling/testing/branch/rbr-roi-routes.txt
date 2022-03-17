@@ -1,5 +1,8 @@
+# rbr-roi-routes.txt
+#
 #--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
+#--this should be done for all RBR files and not just demo dome
+#--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
 files=reg-roi-routes-max.txt,reg-roi-routes-min.txt,reg-roi-routes-nudmis.txt,reg-roi-routes-slider.txt,reg-roi-routes-hints.txt,reg-roi-routes-verbs.txt

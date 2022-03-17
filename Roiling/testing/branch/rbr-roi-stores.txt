@@ -1,5 +1,9 @@
+# rbr-roi-stores.txt
+#
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just stores
+#--vtc.py checks for verb cases
+#--rbr.py v to verify nothing slipped
 
 files=reg-roi-stores-max.txt,reg-roi-stores-min.txt,reg-roi-stores-nudmis.txt,reg-roi-stores-slider.txt,reg-roi-stores-hints.txt,reg-roi-stores-verbs.txt
 ~	max	t0
@@ -385,7 +389,8 @@ It smells depressingly antiseptic here.
 #verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
-#verbcase listen-stores-if-player-is-in-cruelest-lectures
+#verbcase listen-stores-if-noun-is-suit-ode
+You listen for anything at all besides the blabber babbler. You pick up some background music--why, yes, it is the the horrendous self-helpy song Suit Ode: Douse It.
 >listen
 You're hearing enough without trying, sadly.
 
@@ -486,6 +491,10 @@ The speaker parkees aren't what, or who, you need to change, here. It'll still b
 #nudge for parkees
 >parkese
 The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious.
+\\
+#scannotes for suit ode douse it
+>scan suit ode
+Well, that's a lot of question marks, but if you're sharp, maybe you can figure it out from this or find other clues.
 
 @!min
 #pre-babbler-outside rule

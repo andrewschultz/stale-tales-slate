@@ -57,7 +57,7 @@ Score in a scenario: 4 out of 30 total points in the current region, Troves. Low
 #pre-spot-stop-post rule
 >spot
 !by one point
-That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.
+That should work, but you--your eyes are wandering now. You're not taking it all in. Around the post, the sob ever verbose echoes aid distracts you. You must deal with it first!
 #preefcheck stop post
 >pf
 You should SPOT once you're able to focus better.

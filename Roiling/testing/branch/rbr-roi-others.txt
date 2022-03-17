@@ -1,11 +1,17 @@
 # rbr-roi-others.txt
 #
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just routes
+#--vtc.py checks for verb cases
+#--rbr.py v to verify nothing slipped
+#
 # this covers maximum points, minimum points and nudges.
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
 # gxv.py is used to verify the GX commands (guru-extended, can reuse arugula)
 #
+
 files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,reg-roi-others-slider.txt,reg-roi-others-hints.txt,reg-roi-others-spoiler.txt,reg-roi-others-verbs.txt
 
 ~	max	t0
