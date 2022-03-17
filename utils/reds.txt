@@ -21,6 +21,8 @@ ramp,mrpa
 #qver of palest pastel plates
 staple,epstal
 staple,RR?RRY=palest=pastel=plates
+#qver of respect specter
+scepter,?R?????=respect=specter
 ################stores
 sorbet,oberts,restbo,bestor
 towers,westor,restow
@@ -32,8 +34,8 @@ presto,sopert
 presto,??YRRY=tropes=poster
 routes,sureto,setour
 oyster,toyers
-#qver of respect specter
-scepter,?R?????=respect=specter
+#qver of suit ode douse it
+outside,Y?R?Y??=douseit=suitode
 ################routes
 #same mesa
 #qver of warts do sow drat

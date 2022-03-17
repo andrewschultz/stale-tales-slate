@@ -710,7 +710,7 @@ def check_scannotes():
     for my_idx in range(0, len(source_logic_approximate_order)):
         x = source_logic_approximate_order[my_idx]
         if table_shorten(x) not in in_scannotes.keys():# and x not in abbrevs.keys():
-            print("May need {} in scannotes table {}. Best guess: line {}.".format(x, scannotes_start, max(last_scannotes, table_start + 2)))
+            print("May need {} in scannotes table {}. Best guess: line {}.".format(x, scannotes_start, max(last_scannotes, table_start + 2))) # this is inaccurate as we don't check WHICH table to look into, but it might be too much work for too little results now
             mt.add_postopen(r_src, last_scannotes + 1)
             mayneedscannote += 1
         else:
@@ -816,8 +816,11 @@ with open(r_src) as file:
                 if re.search("is a pickup-line", line):
                     scanned = re.sub(" is a pickup-line.*", "", line.strip().lower())
                 else:
-                    scanned = re.sub(" is \".*", "", line.strip().lower())
+                    scanned = re.sub(" +is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)
+                if scanned != scanned.strip():
+                    print("Trivial spacing error for", scanned.strip(), line_count, r_src)
+                scanned = scanned.strip()
                 need_source_logic[scanned] = line_count
                 if scanned.startswith("t-") and 'ly' in scanned: scanned = scanned[2:]
                 # print(scanned, "/", shortcutcheck(scanned), "/", line_count)

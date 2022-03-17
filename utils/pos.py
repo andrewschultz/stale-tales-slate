@@ -209,9 +209,11 @@ def poss_string(my_answers):
     full_poss = [ ''.join(sorted(freqs[q])).upper() for q in freqs ]
     return ''.join(["({})".format(x) if len(x) > 1 else x for x in full_poss])
 
-def find_poss(word_array, bail=False):
+def find_poss(word_array_raw, bail=False):
+    word_array = [x.replace(' ', '').replace('-', '') for x in word_array_raw]
     hints = word_array[1].lower()
-    original = word_array[2:]
+    original = [x.replace('-', '') for x in word_array_raw][2:]
+    original_raw = word_array_raw[2:]
     answer = word_array[0].split("/")[0]
     got_yet = defaultdict(bool)
     check_overall = False
@@ -286,7 +288,7 @@ def find_poss(word_array, bail=False):
     if got_answer:
         answers.insert(0, answer.upper())
         if len(answers) == 1:
-            print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original, answer))
+            print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original_raw, answer))
         else:
             print(len(answers), poss_string(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
         if show_slots:
@@ -308,7 +310,7 @@ def find_poss(word_array, bail=False):
                     poss_array.append('x')
                 else:
                     poss_array.append('?')
-            my_object = ' '.join(original)
+            my_object = ' '.join(original_raw).replace('-', ' ')
             print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(my_object, my_red, my_object, hints.upper(), my_object, '[sp]'.join(poss_array).lower()))
         else:
             print("-r shows generated red/source text, if you want to show that.")
@@ -333,7 +335,7 @@ def find_poss(word_array, bail=False):
 
 def cheat_reading(words_array, go_lower = True):
     my_string = ''
-    words_array = [x.lower() for x in words_array]
+    words_array = [x.lower().replace('-', '').replace(' ', '') for x in words_array]
     rights = [0] * len(words_array[0])
     wrongs = [0] * len(words_array[0])
     for y in range(0, len(words_array[0])):

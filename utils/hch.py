@@ -45,6 +45,9 @@ launch_outfile = False
 houtfile = "hch_out.txt"
 process_regs = False
 
+big_error_count = 0
+misplaced_error_count = 0
+
 with open("c:/games/inform/roiling.inform/source/hch.txt") as file:
     for (line_count, line) in enumerate (file, 1):
         if line.startswith('#'): continue
@@ -225,6 +228,7 @@ def rbr_of(loc_proj, x):
 def catch_bad_reg(p):
     i7.go_proj(p)
     reg_pattern = "reg-*.txt"
+    global misplaced_error_count
     for x in glob.glob(reg_pattern):
         if 'sa-thru' in x: continue
         with open(x) as file:
@@ -237,6 +241,7 @@ def catch_bad_reg(p):
                     if ll.startswith(y) and valids_reverse[y] not in x:
                         print(y, valids_reverse[y], x)
                         print("Misplaced test case", x, line_count, line.lower().strip())
+                        misplaced_error_count += 1
                 if 'hints' not in x and ll.startswith("DEBUG INFO") and "objhinting" in ll:
                     print("Erroneous hint check", x, line_count, line.lower().strip())
 
@@ -444,8 +449,6 @@ if out_to_file: hout = open(houtfile, "w")
 if not len(projs): sys.exit("No projects defined. Bailing.")
 if not len(tabs): sys.exit("No tables defined. Bailing.")
 
-big_error_count = 0
-
 for q in projs:
     for t in tabs[q]:
         if not super_quiet: print(">>>>>>>>>>>>>>>>>>>>Sync check for ...", q, t, region_wildcard)
@@ -453,7 +456,11 @@ for q in projs:
     if q == 'roi':
         match_slider_tests()
 
-print(big_error_count, "total global error count.")
+if big_error_count or misplaced_error_count:
+    print(big_error_count, "total global error count.")
+    print(misplaced_error_count, "misplaced test case error count.")
+else:
+    print("No missing or misplaced test cases.")
 
 if big_error_count and not print_details:
     print("NOTE: if you want to add code, print_details can be set to TRUE with -pd/-dp.")
