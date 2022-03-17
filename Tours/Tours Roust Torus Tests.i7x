@@ -20,4 +20,31 @@ test bigone with "test p1/test p2a/test p2b/test p2c/test p2d".
 
 Tours Roust Torus Tests ends here.
 
+chapter cheatying
+
+cheatying is an action out of world.
+
+understand the command "cheaty" as something new.
+
+understand "cheaty" as cheatying.
+
+carry out cheatying:
+	say "Cheats is [if cheats is true]already[else]now[end if] on.";
+	now cheats is true;
+	the rule succeeds;
+
+chapter cheatning
+
+cheatning is an action out of world.
+
+understand the command "cheatn" as something new.
+
+understand "cheatn" as cheatning.
+
+carry out cheatning:
+	say "Cheats is [if cheats is false]already[else]now[end if] off.";
+	now cheats is false;
+	the rule succeeds;
+
+
 ---- DOCUMENTATION ----

@@ -1,0 +1,495 @@
+#anagram red/settler verification file
+#
+#usage: reds.pl rf
+#
+#logsync.py should check to make sure that everything "questionable" (ha, ha) is checked off in reds.txt. This may be a slight duplicate with QVER, but otherwise, we sweep up a lot of red text.
+sortie,riseto
+################forest
+################sortie
+################metros
+################resort
+#
+#You can take any line and paste it  to the command line to see how well certain clues help you.
+#
+#this line below is important because it notifies reds.pl to let you use the settler by default, so DON'T DELETE IT
+#roil-start
+################manor
+stable,tables,ablest,bleats,labset,belast
+flier,irelf,efril
+stair,trisa,israt,ratsi
+ramp,mrpa
+#qver of palest pastel plates
+staple,epstal
+staple,RR?RRY=palest=pastel=plates
+################stores
+sorbet,oberts,restbo,bestor
+towers,westor,restow
+tokers,restok,ktrose,stroke
+others,hoster,ershot,esroth
+nestor,storen,toners
+#qver of tropes poster
+presto,sopert
+presto,??YRRY=tropes=poster
+routes,sureto,setour
+oyster,toyers
+#qver of respect specter
+scepter,?R?????=respect=specter
+################routes
+#same mesa
+#qver of warts do sow drat
+towards,R??Y??R=wartsdo=sowdrat
+inside,diesin,dinesi,edisin
+towards,radwost
+#qver of pats stap
+past,??RR=pats=stap
+#qver of oscar's sos arc
+across,YRRYR?=oscars=sosarc
+#qver of anti sag sit a nag
+against,?RY??RR=antisag=sitanag
+#qver of rude n nuder
+under,YRPG?=ruden=nuder
+#qver of morf form
+from,?RY?=morf=form
+beneath,thebean,hatbeen
+astride,itsared,edastir,staider
+#pat's
+despite,speedit,sitdeep
+#qver of a bev o be ova
+above,???PY=abevo=beova
+above,evabo
+#harms marsh
+#qver of null it unit
+until,YRR?R=nulli=tunit
+#qver of odd run on aura
+around,YRY?RR=oddrun=onaura
+#qver of all noon gag
+along,??Y??=allno=ongag
+along,nogal,logan
+#ripe pier
+#qver of data dim mists
+amidst,Y??RRR=datadi=mmists
+amidst,staimd
+#qver of admits mist ad
+amidst,?RYRRR=admits=mistad
+amidst,tdasim,sadtim,msdita,itsmad
+#cripple clipper
+#qver of whattar tawrath thatraw artthaw~thickness sketchins
+athwart,?RRR?RR=whattar=tawrath=thatraw=artthaw
+################troves
+#qver of pa egg pea peg a page
+gape,??R?=paeg=gpea=pega=page
+#qver of tears taser
+stare,RR??Y=tears=taser
+#qver of eh at heat
+hate,?YRY=ehat=heat
+hate,thea
+#qver of race acre
+care,R??G=race=acre
+#boarded roadbed
+#qver of stop post
+spot,?R??=stop=post
+spot,pops,tots
+stay,yays,tats
+#qver of mussier misuser
+surmise,R?RR?RY=mussier=misuser
+#qver of sob ever verbose
+observe,YRR?RR?=sobever=verbose
+observe,evesbro,boevers,beevors,ervbeso
+#qver of a sty tasty say
+stay,RR??=asty=tast=ysay
+stay,yays,tats
+#qver of l clear cellar
+recall,R?RYRR=lclear=cellar
+derive,idveer,viered,everid
+#ignore,ergnio,onregi,region,goerin
+reason,noears,sorena,anorse,oasner,asnero
+#drain nadir
+decide,iceded,cdedei,ecedid
+#qver of pleaser leapers
+relapse,R?R?RRY=pleaser=leapers
+relapse,sapleer
+#boredom bedroom
+#qver of large regal lager
+glare,RRYR?=large=regal=lager
+glare,regal,lager,ergal,agler
+despair,irespad,asiderp,eradips,ripesad,sparide,rapside,sipreda,padries
+#qver of lead all a deed
+deal,???R=lead=dale=elda=leda=adle
+#qver of bortles lobster
+bolster,?GR??G?=bortles=lobster
+#qver of me arts mr east stream tamers
+master,??RRYR=mearts=mreast=stream=tamers
+#econ cone
+strive,trevis,vister
+#qver of praise spirea
+aspire,YRR?R?=praise=spirea
+ponder,derpon,epdorn,drpeno,nedorp
+#browse bowers
+desire,R???RG=sirdee=reside
+#upscale capsule
+deserve,edevers,ervdees
+discover,rodsvice,revdisco,veridocs,scorediv
+#qver of st al salt
+last,R?R?=stal=salt
+resign,sireng,grines,singer,snegri,nregis,isnerg
+#qver of marble blamer balmer
+ramble,R?R???=marble=blamer=balmer
+#qver of marble blamer mr beal
+ramble,R?R???=marble=blamer=mrbeal
+ramble,mrbeal,erlamb
+#qver of sister tressi siters
+resist,RY?Y?R=sister=tressi
+#qver of trance nectar
+recant,R??YRR=trance=nectar
+#qver of creationism reactionism
+romanticise,?YR?RRYRGPY=creationism=reactionism
+################presto
+#grey gyre
+blam,lamb
+there,ether
+mazeltov,ezolavtm,vztlameo,zvtlameo,ltovmaze,olavmetz,zemovalt
+#austerer treasure
+phooey,oyehop
+#qver of n e recs censer
+screen,RR???R=nerecs=censer
+#char arch
+drat,tard
+rats,RYRR=tsar=star
+rats,RGRP=tars
+#marines seminar remains
+#qver of boing go bin
+bingo,?YRRY=boing=gobin
+#qver of sport ports
+prost,?R?R?=sport=ports
+#dirge ridge
+whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
+#qver of sods gone odes song
+goodness,R?YRRYRR=sodsgone=odessong
+goodness,negssodo,densosgo,segsdoon
+#nowt town
+wont,RGR?=nowt=town
+#phat path/saps pass
+keys,syke
+#qver of alert alter retreat all
+later,RY???=alert=alter=retre=atall
+later,alert
+tough,ought
+trasch,RRGR??=starch=charts
+#qver of hawt thaw
+what,R???=hawt=thaw
+#qver of starch charts
+trasch,RRGR??=starch=charts
+#hacks shack
+disk,skid,idks
+skid,disk,idks
+compile,melcopi,imlecop,mcpoeil,licemop
+keyboard,darkeboy,robadkey,oakderby,brokeday
+reboot,boreto
+#qver of clack ops locs pack
+capslock,?YR?R???=clackops=locspack
+#qver of drive a a drive varied
+avider,?R?R?R=drivea=varied=adrive
+#qver of drive e e drive
+derive,?Y???G=drivee=edrive
+derive,idveer
+#qver of peels speel
+sleep,?RG?R=peels=speel
+#qver of be troo e robot
+reboot,R?RYG?=betroo=erobot
+#qver of im le cop polemic
+compile,R?RRYRY=imlecop=polemic
+#qver of bub dude egg
+debug,???Y?=bubdu=deegg
+#qver of usb
+bus/sub,RY?=usb
+################oyster
+#hops shop
+#qver of lolstr trolls
+stroll,RRRY?R=lolstr=trolls
+#qver of lil ps pills
+spill,RRY?R=lilps=pills
+#qver of gins sign
+sing,?G?R=gins=sign
+#qver of perma amper
+remap,R?RYR=perma=amper
+#qver of casper spacer
+scrape,?RRYRY=casper=spacer
+#qver of capers recaps
+scrape,RRR??Y=capers=recaps
+spill,lilps
+spit,tips,pits
+inset,tiens
+#disease seaside
+ocean,canoe
+#qver of frat raft
+fart,??RP=frat=raft
+soar,oars
+#qver of sabot boats
+boast,???R?=sabot=boats
+#anger range
+unearth,haunter,etahnru,nearhut
+spike,pikes
+#qver of hunter hunt area
+unearth,??Y??R?=hunterh=untarea
+#lean lane
+#qver of paw r wrap
+warp,??R?=pawr=wrap
+swipe,ispew,wipes
+#qver of general gleaner
+enlarge,YRR??RY=general=gleaner
+enlarge,algreen
+#achers arches
+#qver of achers chaser arches
+search,RY?RRR=chaser=achers=arches
+#lapsin' plains
+#qver of lapsin plains
+splain,RRRY??=lapsin=plains
+#qver of span pans
+snap,?R?R=span=pans
+snap,nans,apps
+#qver of use saga sausage
+assuage,Y?RYGP?=usesaga=sausage
+#qver of templar ramplet
+trample,?RYRRRY=templar=ramplet
+trample,lampert
+#plasm lamps
+#qver of plasm lamps
+psalm,?R?R?=plasm=lamps
+#qver of natant ant
+tan,R?R=nat=ant=ant
+#den loft
+#qver of papery yapper
+prepay,?RY?Y?=papery=yapper
+prepay,rapyep,yaperp
+derail,ialder,laired
+redail,ialder,laired
+#airshed
+bust,stub
+derail,ialder,laired
+redial,ialder,laired
+###############towers
+#loftier trefoil
+#qver of yo rend or deny rodney
+yonder,??RR?R=yoredn=ordeny=rodney
+#topside deposit
+#qver of dreads adders
+sadder,RY?RYR=dreads=adders
+sadder,dreads,drsade,edsard
+#scope copse
+#qver of try us yurts
+rusty,R?R?O=tryus=yurts
+#qver of bluster butlers
+subtler,lesburt
+subtler,R?RRR??=bluster=butlers
+#qver of snider diners
+rinsed,R??R?R=snider=diners
+rinsed,isdern,drenis,nerdis
+#qver of denier nereid
+reined,RGYR??=denier=nereid
+#outer route
+#qver of diverse deviser
+revised,R?P???R=diverse=deviser
+#(random anywhere)
+creaky,kcayer,rayeck,keycar,yacker
+weariest,treesawi,treesiaw,sitweare,ewitears
+restful,truself,furlets
+#hintpastries
+#qver of mended mini denim
+mined,?Y?YR=mende=dmini=denim
+#qver of nerd aid diner ad
+dandier,?Y??YYR=nerdaid=dinerad
+#qver of dire and arid den
+dandier,?YR?Y?R=direand=aridden
+#qver of drained dreadin
+dandier,PYRRY?R=drained=dreadin
+#this looks very wrong
+#docile,idleco,liedoc,olecid,cledio,ecolid
+strudel,dreltus
+#obscurest subsector
+unlocked,dunkelco,loudneck,conklude,loneduck,elcundok
+#qver of fries us fissure
+fussier,PY??YYR=friesus=fissure
+#qver of mardier admirer
+married,???R?GR=mardier=admirer
+married,iraderm,edmirra,redirma
+#outer route
+rustled,dreltus,sledrut
+#saltbed
+#qver of docile old ice
+coiled,R?YRYR=docile=oldice
+#this is an artifact of coiled -> docile
+#docile,idleco,liedoc,olecid,cledio,ecolid
+pastier,airpest,reapsit,tipsare,spareit
+broken,rebonk
+#anemic cinema
+#qver of angriest ingrates
+angstier,?PPRRY?R=angriest=ingrates
+angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
+#leveraged everglades
+#qver of realist tailers
+saltier,R?RR?YR=realist=tailers
+saltier,itsreal,literas,tiresal
+grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
+#qver of traipse pirates
+pastier,?YRRY?R=traipse=pirates
+#qver of alarming grailman
+marginal,RYRRYR?R=alarming=grailman
+marginal,armalign
+#treading gradient
+#qver of replay player
+pearly,???RR?=replay=player
+released,dreleesa,eredeals,lardeese,edsleare
+weariest,ewitears,treesawi,treesiaw,iwestare
+mined,?Y?YR=mende=dmini=denim
+#danger garden
+vainest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
+naivest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
+#qver of natives site van
+vainest/naivest,??YRYRR=natives=sitevan
+#qver of reb nok bonker
+broken,?RY??R=rebnok=bonker
+#lost lots
+#qver of sporties ripostes
+prosiest,RR?RYYRR=sporties=ripostes
+#actionless coastlines
+#qver of asset hit atheists
+hastiest,RY?R?YR?=assethit=atheists
+#qver of reading a dinger
+grained,RR?YR?R=reading=adinger
+#qver of weirder red wire
+rewired,?GRYR?R=weirder=redwire
+holiest,thelois,sithole,liestho,sthelio,thesoil,theoils,thisole
+#qver of lois the hostile
+holiest,?GRYYRR=loisthe=hostile
+#qver of hostile is he lot
+holiest,??RYYR?=hostile=ishelot
+#qver of organised ego drains
+grandiose,R?YRR?YRY=organised=egodrains
+grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
+weirder,drewrie
+stabler,alberts
+hastiest,setithas,thiseats,tieshats
+#rawest waters
+#qver of earnest eastern neaters
+nearest,ernesta,strenae,stearne
+nearest,???RG??=earnest=eastern=neaters
+#mislit limits
+#qver of repents serpent
+present,RRYR???=repents=serpent
+punier,inpure,iprune,inperu,unrIpe,urpIne
+#qver of curst palace
+#qver-ignore
+spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
+#mesprise premises
+#qver of tetris sitter
+triste,?RYRRY=tetris=sitter
+triste,restit
+#### reorg a bit
+#qver of sweatier wait seer
+weariest,?YYRY?RR=sweatier=waitseer
+#qver of fluster self rut
+restful,R?RRR?R=fluster=selfrut
+#qver of resident trendies
+nerdiest,R?RRY?R?=resident=trendies
+#qver of dourest detours
+rousted,R??RRYR=dourest=detours
+rousted,ourdest,setdour,trodsue
+#qver of seismal samiels
+aimless,YY?R?R?=seismal=samiels
+#qver of nastier stainer retinas
+antsier,YR?R???=nastier=stainer=retinas
+################otters
+#bleary barley/burnt brunt
+#qver of bleary barley
+barely,P??YRB=bleary=barley
+reedily,lyredie,drilyee
+#qver of cinders
+#qver ignore because all 3 clues give no ?'s
+discern,nrdices,icnerds,srindec
+rescind,nrdices,icnerds,srindec
+#clarthead cathedral
+loathingly,allnightyo,aholyglint,onlylaghit,hatinglyol,halyinglot
+#disowned downside
+#qver of parleys splayer players
+sparely,???R?RO=parleys=splayer=players
+#qver of tearily-irately
+tearily/irately,??GR?RB=reality
+#qver of steamily
+steamily,?RYYRY?O=mayislet=mistyale=slimytea
+#qver of formally
+formally,?YR?YRRO=flymoral=allyfrom=myfloral
+wearingly,lawyering
+modestly,ed my lost,styledom,yet old ms,ty sod mel
+#qver of silently
+silently,P??YRR?O=stylenet=sillynet=snityell
+#qver of cut ya all cult laya
+actually,YR?Y?R?O=cut ya all=cult laya
+#qver of atmo moat
+atom,??YR=atmo=moat
+#qver of iqluckyluckyiq
+quickly,R?YRRR?=iqlucky=luckyiq
+#loop pool
+#qver of sullenness us
+unless,YR?YR?=sullen=nessus
+#bran barn
+although,ghoulhat,holathug,ughohalt
+ergo,gore,ogre
+however,eehrowv,veerhow,revhowe,whereov
+#lamer realm
+#qver of stray satyr
+artsy,tsyra
+artsy,YR?R?=stray=satyr
+#coevals alcoves
+#qver of ideas aides
+aside,?RYRY=aides=ideas
+honestly,lhenyost,elsynoth,sthoylen,ethylsno,shytolen,......LY
+#perverse preserve
+hornets,shorten
+#girding ridging
+#gloathuh/hotlaugh work but don't give red
+deeply,edplye,....L.
+#################others
+#rustic citrus
+#qver of sated stead
+dates,R???R=sated=stead
+blueberries,ereisrubble,reelrisebub,rubberielse,rublebeesir,reelrusebib
+tamarind,drnimata
+persimmon,mrpinsome,onemrspim,monisperm,nopemrsim,rompsinme,mosirpenm
+#swell wells
+mulberries,bemireslur
+tangerines,greenstain,resentgain
+apricot,patrico,captori,itarpco
+gooseberry,yeborersgo
+coconuts,scoutcon,onstucco,suncotco
+#clangier clearing
+among,mango,goman
+#qver of i solve voiles
+olives,YR?R??=isolve=voiles
+#qver of prices precis
+cripes,RP?R?P=prices=precis
+#filed field
+watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
+#qver of pipe panel lie pen app
+pineapple,?GR?YRRRY=pipepanel=liepenapp
+#scape space
+#qver of reserved deserver dr severe
+reversed,??RG?R??=reserved=deserver=drsevere
+gonear,anogre,onearg,engaro
+rhubarb,burrbah
+#coins sequence
+#qver of sonic coins
+icons,YRY??=sonic=coins
+#qver of coins
+icons/sonic,?????=coins
+coins,nisco
+icons,nisco
+sonic,nisco
+#qver of melon
+lenmo/molen,?????=melon
+#qver of no ammo gang
+among,YRY??=noamm=ogang
+#qver of naa na b a banna
+banana,R?RY??=abanna=naanab
+;
+nerdiest treedsin % dinester ridesten sitender endtries steenrid sterndie edenstir drsteine eternids
+grained diregan % regdain nedriga indegar
