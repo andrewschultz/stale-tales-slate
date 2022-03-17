@@ -145,7 +145,9 @@ check going a not rotational direction:
 
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
-	if heptcount < 7, say "You don't see any way to the center of the Torus, yet. [if location of player is unsolved]Maybe you can chip away at that right here[else if number of unsolved not visited rooms is 0]You haven't explored the whole torus yet. Maybe there is more to do there[else]Perhaps you could take another look at [random unsolved visited room][end if]." instead;
+	if heptcount < 7:
+		say "A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]";
+		say "No, you don't see any way to the center of the Torus, yet. [if location of player is unsolved]Maybe you can chip away at that right here[else if number of unsolved not visited rooms is 0]You haven't explored the whole torus yet. Maybe there is more to do there[else]Perhaps you could take another look at [random unsolved visited room][end if]." instead;
 	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
 	move player to Scene Scene instead;
 
@@ -398,6 +400,7 @@ after reading a command:
 		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
 		say "[b][location of player][r][line break]";
+		let got-one be false;
 		repeat through table of room combos:
 			unless location of player is room1 entry or location of player is room2 entry:
 				next;
@@ -409,8 +412,13 @@ after reading a command:
 				say "[second entry][line break]";
 			else:
 				say "Oops. There is a very very odd bug here. It won't affect you winning the game, but you'll miss out on story.";
+			now got-one is true;
+			break;
 			reject the player's command;
-		say "Oops. We should have done something here, but we didn't.";
+		if got-one is false:
+			say "Oops. We should have done something here, but we didn't.";
+		if ever-voice is true and score is 1:
+			say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
 		reject the player's command;
 
 volume help stuff
@@ -463,7 +471,7 @@ to say reject:
 				if there is no cmd-loc entry or location of player is cmd-loc entry:
 					say "[nudge-text entry]";
 					continue the action;
-	say "There aren't very many verbs to use in [this-game], though each room has something special that needs doing. For a general list of verbs, type [b]VERBS[r]."
+	say "There aren't very many verbs to use in [this-game], though each section has something special that needs doing. For a general list of verbs, type [b]VERBS[r]."
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";
