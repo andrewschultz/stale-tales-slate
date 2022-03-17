@@ -266,7 +266,7 @@ carry out abouting:
 	else:
 		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro], but it does sweep up some undone things. I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--the Tours Torus--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be tough.";
 		say "[line break]I also wanted to fit in a non-anagram puzzle based on something I'd always wondered about.";
-		say "[line break]Source code for [this-game] is at https://github.com/andrewschultz/stale-tales-slate/tree/main/Tours."
+		say "[line break]Source code for [this-game] is at https://github.com/andrewschultz/stale-tales-slate/tree/main/Tours.";
 	now big-details is whether or not big-details is false;
 	say "[line break][b]ABOUT[r] again will show [if big-details is false]a big-picture overview[else]technical details[end if].";
 	the rule succeeds;
@@ -365,7 +365,16 @@ after reading a command:
 		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
 		say "[b][location of player][r][line break]";
+		process the score-rule of location of player;
 		reject the player's command;
+
+volume help stuff
+
+to say verbs: say "[b]V/VERB/VERBS[r]"
+
+after printing the locale description for Ehs Ehs when Ehs Ehs is unvisited:
+	say "[i][bracket]NOTE: to see general information about [this-game][i], type [b]ABOUT[i]. To see the verbs used, type [verbs][i]. In particular, you may want to note the directions used.[close bracket][r]";
+	continue the action;
 
 volume parser errors
 
@@ -378,9 +387,11 @@ firstwordhash is a number that varies.
 to say how-many-right:
 	let x1 be filtered name of the player's command;
 	let count be 0;
+	let binary be 0;
 	repeat with y running from 1 to number of characters in x1:
+		now binary is 2 * binary;
 		if character number y in x1 is character number y in word-to-include of location of player:
-			increment count;
+			increment binary;
 	say "[count] of [number of characters in x1]";
 
 to say reject:
