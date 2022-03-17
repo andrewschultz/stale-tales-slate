@@ -49,7 +49,7 @@ volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
 
-a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be solved. a dubroom is usually not solved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash. a dubroom has a rule called score-rule.
+a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be solved. a dubroom is usually not solved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash.
 
 a dubroom can be hep-traversed. a dubroom is usually not hep-traversed.
 
@@ -137,19 +137,19 @@ book rooms
 
 to say torus-area: say "area of the torus"
 
-Ehs Ehs is a dubroom. "This is the west [torus-area]. [heptround].". printed name is "Ehs, Ehs". word-to-include is "sheesh". guess-right-text is "You effectively dismiss the eh's with something more powerful.". clue-text is "The EHs you hear make you wish you could throw back something at them. Something double-powered, perhaps". sts-hash of Ehs Ehs is 261362374. score-rule of Ehs Ehs is ehs-ehs rule.
+Ehs Ehs is a dubroom. "This is the west [torus-area]. [heptround].". printed name is "Ehs, Ehs". word-to-include is "sheesh". guess-right-text is "You effectively dismiss the eh's with something more powerful.". clue-text is "The EHs you hear make you wish you could throw back something at them. Something double-powered, perhaps". sts-hash of Ehs Ehs is 261362374.
 
-Prep Area is a dubroom. it is a1 of Ehs Ehs. "This is the northwest [torus-area]. [heptround].". word-to-include is "reappear". guess-right-text is "You back out a bit, then reappear.". clue-text is "You feel like you are being watched. You want to duck out and in, but not in the standard directions". sts-hash of Prep Area is 296783689. score-rule of Prep Area is the reappear-teammate rule.
+Prep Area is a dubroom. it is a1 of Ehs Ehs. "This is the northwest [torus-area]. [heptround].". word-to-include is "reappear". guess-right-text is "You back out a bit, then reappear.". clue-text is "You feel like you are being watched. You want to duck out and in, but not in the standard directions". sts-hash of Prep Area is 296783689.
 
-Grain Grain is a dubroom. it is a1 of Prep Area. it is a2 of Ehs Ehs. "This is the northeast [torus-area]. [heptround].". printed name is "Grain, Grain". word-to-include is "arraigning". guess-right-text is "The grain turns into a court of law, but since you have no guilt, you are free to go.". clue-text is "You feel on trial. Well, not quite, but you feel a need for acquital for ... something". sts-hash of Grain Grain is 234011677. score-rule of Grain Grain is arraigning-tattletale rule.
+Grain Grain is a dubroom. it is a1 of Prep Area. it is a2 of Ehs Ehs. "This is the northeast [torus-area]. [heptround].". printed name is "Grain, Grain". word-to-include is "arraigning". guess-right-text is "The grain turns into a court of law, but since you have no guilt, you are free to go.". clue-text is "You feel on trial. Well, not quite, but you feel a need for acquital for ... something". sts-hash of Grain Grain is 234011677.
 
-Meta Meat is a dubroom. it is a1 of Grain Grain. it is a2 of Prep Area. it is a3 of Ehs Ehs. "This is the east [torus-area]. [heptround].". word-to-include is "teammate". guess-right-text is "Someone comes along and bangs at the barrier inside. You hear a small cracking.". clue-text is "You feel as if a friend or confidante could help you make a dent in the Attentat Tent, here". sts-hash of Meta Meat is 297179098. score-rule of Meta Meat is the reappear-teammate rule.
+Meta Meat is a dubroom. it is a1 of Grain Grain. it is a2 of Prep Area. it is a3 of Ehs Ehs. "This is the east [torus-area]. [heptround].". word-to-include is "teammate". guess-right-text is "Someone comes along and bangs at the barrier inside. You hear a small cracking.". clue-text is "You feel as if a friend or confidante could help you make a dent in the Attentat Tent, here". sts-hash of Meta Meat is 297179098.
 
-Tines Inset is a dubroom. it is a1 of Meta Meat. it is a2 of Grain Grain. it is a3 of Prep Area. it is b3 of Ehs Ehs. "This is the southeast [torus-area]. [heptround].". word-to-include is "intestines". guess-right-text is "You find the guts to turn the place into something more gross, but manageable.". clue-text is "You feel disjointed from the whole body of rooms here". sts-hash of Tines Inset is 441090447. score-rule of Tines Inset is the happenchance-intestines rule.
+Tines Inset is a dubroom. it is a1 of Meta Meat. it is a2 of Grain Grain. it is a3 of Prep Area. it is b3 of Ehs Ehs. "This is the southeast [torus-area]. [heptround].". word-to-include is "intestines". guess-right-text is "You find the guts to turn the place into something more gross, but manageable.". clue-text is "You feel disjointed from the whole body of rooms here". sts-hash of Tines Inset is 441090447.
 
-Pechan Pechan is a dubroom. it is a1 of Tines Inset. it is a2 of Meta Meat. it is a3 of Grain Grain. it is b3 of Prep Area. it is b2 of Ehs Ehs. "This is the south [torus-area]. [heptround].". word-to-include is "happenchance". guess-right-text is "You suddenly find a lucky way out.". clue-text is "Oh, a pechan is an odd word for stomach. You may need luck to solve the secret of this room. Some skill, maybe, but enough skill so your luck matters". sts-hash of Pechan Pechan is 336655278. score-rule of Pechan Pechan is the happenchance-intestines rule.
+Pechan Pechan is a dubroom. it is a1 of Tines Inset. it is a2 of Meta Meat. it is a3 of Grain Grain. it is b3 of Prep Area. it is b2 of Ehs Ehs. "This is the south [torus-area]. [heptround].". word-to-include is "happenchance". guess-right-text is "You suddenly find a lucky way out.". clue-text is "Oh, a pechan is an odd word for stomach. You may need luck to solve the secret of this room. Some skill, maybe, but enough skill so your luck matters". sts-hash of Pechan Pechan is 336655278.
 
-Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.". sts-hash of Latte Latte is 390027802. score-rule of Latte Latte is arraigning-tattletale rule.
+Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.". sts-hash of Latte Latte is 390027802.
 
 Scene Scene is a dubroom. "Here's a good place to just wind down your life. It's fun. You've earned it. But how to effect that?". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years.". sts-hash of Scene Scene is 439799277.
 
@@ -174,46 +174,6 @@ after going:
 	continue the action;
 
 to decide which number is heptcount: decide on number of solved dubrooms;
-
-book solvings
-
-to say rest-of-tor:
-	if number of visited rooms <= 4:
-		say "some";
-	else if number of unvisited rooms > 0:
-		say "most";
-	else:
-		say "all"
-
-this is the ehs-ehs rule:
-	if score > 1:
-		say "You feel a bit silly figuring this area at first, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but, sheesh?";
-	else:
-		say "You [if number of visited rooms > 1]reckon this has to be the easiest area to figure[else]have seen [rest-of-tor] of the rest of the torus[end if]. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.";
-
-this is the reappear-teammate rule:
-	if prep area is solved and meta meat is solved:
-		say "Now that you have a teammate and a reason to reappear, you have a plan to brainstorm separately and then together. You figure a lot of things that make the Torus a lot more alive. It glows significantly.";
-	else if prep area is solved:
-		say "You get some practice in reappearing. Maybe soon you will have someone to reappear for.";
-	else if meta meat is solved:
-		say "You meet (hah) up with a teammate! It's good to have one on this forbidding torus. After some talk, they admit they're out of ideas. But maybe when you come back at the right time, you'll have something to think up. You can only hope."
-
-this is the arraigning-tattletale rule:
-	if Latte Latte is solved and Grain Grain is solved:
-		say "Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.";
-	else if Grain Grain is solved:
-		say "You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.";
-	else if Latte Latte is solved:
-		say "You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.";
-
-this is the happenchance-intestines rule:
-	if Pechan Pechan is solved and Tines Inset is solved:
-		say "The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.";
-	else if Tines Inset is solved:
-		say "Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.";
-	else if Pechan Pechan is solved:
-		say "You've made your own luck in this stomach-y room. But a stomach by itself can't do much."
 
 volume when play begins
 
@@ -347,7 +307,19 @@ after reading a command:
 		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
 		say "[b][location of player][r][line break]";
-		process the score-rule of location of player;
+		repeat through table of room combos:
+			unless location of player is not room1 entry or location of player is room2 entry:
+				next;
+			if room1 entry is solved and room2 entry is solved:
+				say "[both entry][line break]";
+			else if room1 entry is solved:
+				say "[first entry][line break]";
+			else if room2 entry is solved:
+				say "[second entry][line break]";
+			else:
+				say "Oops. There is a very very odd bug here. It won't affect you winning the game, but you'll miss out on story.";
+			reject the player's command;
+		say "Oops. We should have done something here, but we didn't.";
 		reject the player's command;
 
 volume help stuff
