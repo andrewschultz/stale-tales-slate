@@ -29,7 +29,7 @@ ALSO-IGNORE:cheat,t
 ## *FILE
 ## *FORK
 
-TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

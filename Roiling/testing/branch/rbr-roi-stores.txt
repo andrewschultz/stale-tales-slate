@@ -25,7 +25,7 @@ files=reg-roi-stores-max.txt,reg-roi-stores-min.txt,reg-roi-stores-nudmis.txt,re
 
 ALSO-IGNORE:t
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

@@ -24,7 +24,7 @@ ALSO-IGNORE:t
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -492,10 +492,12 @@ The plebe looks confused, as if you garbled what you said.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
 #readables for volt maze
 >read volt maze
+#OK-APOSTROPHE
 The writing says EZ-Ol'-Av' (TM) Volt Maze.
 >read volt maze
 Olav Metz and Zemo Valt were the main architects.
 >read volt maze
+#OK-APOSTROPHE
 It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 
 @verbs
@@ -990,6 +992,7 @@ No, you're trying to get RID of the evil, here. Plus, you don't need to encourag
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 #mistake test for rondale
 >rondale
+#OK-APOSTROPHE
 /Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
 
 @sli
@@ -1093,7 +1096,8 @@ Your score has just gone up by one point
 You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
 
 @hin
-/You're done here in Dirge Ridge. Maybe (Leo and Rand|Rand and Leo)'s combined muscle could help you somewhere\.
+#OK-APOSTROPHE
+/You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
 
 >score
 {$SCOS}
@@ -2194,6 +2198,7 @@ A DISK, I'D ASK pops up. You realize that the disk would fit fine.
 @max
 >compile
 !by one point
+#OK-APOSTROPHE
 You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
 
 @sli
@@ -2545,6 +2550,7 @@ The cola has already been reprocessed enough. You'll drink it when the time come
 
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
+#OK-APOSTROPHE
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
 @nud

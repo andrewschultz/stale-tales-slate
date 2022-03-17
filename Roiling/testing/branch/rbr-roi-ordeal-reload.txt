@@ -13,7 +13,7 @@ ALSO-IGNORE:c,t
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## slider testing
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## slider testing	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

@@ -22,7 +22,7 @@ ALSO-IGNORE:t
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -795,6 +795,7 @@ Anger Range
 @verbs
 #verbcase listen-oyster-if-noun-is-carps-or-noun-is-pikes
 >listen
+#OK-APOSTROPHE
 You can't help but listen to the carps' and pikes' immature, nasty jibes.
 #verbcase listen-oyster-if-noun-is-trout
 >listen trout

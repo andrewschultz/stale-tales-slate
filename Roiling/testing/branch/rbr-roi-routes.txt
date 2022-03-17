@@ -24,7 +24,7 @@ ALSO-IGNORE:t
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -769,8 +769,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That'
 @nud
 #readables for trashy ashtray
 >read ashtray
+#OK-APOSTROPHE
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side if you want\.
 >read ashtray
+#OK-APOSTROPHE
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side again if you want\.
 
 @verbs
@@ -1039,7 +1041,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
 #scannotes for rude n nuder
->scan rude 'n nuder
+>scan rude n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
 #nudge for rude
 >urde
@@ -1372,6 +1374,7 @@ You'll have to deal with the whole data-dim mists.
 You'll have to deal with the whole data-dim mists.
 #readables for admits mist ad
 >read mist ad
+#OK-APOSTROPHE
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
 @nud
@@ -1633,7 +1636,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #mistake retest for tapster
 >tapster
-!No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.
+!No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start playing, either.
 #mistake retest for spatter
 >spatter
 !No violence!

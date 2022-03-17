@@ -9,6 +9,10 @@ files=reg-roi-demo-dome-max.txt,reg-roi-demo-dome-nudmis.txt
 ~	max	max
 ~	nudges,nud,nu,mis	nudmis
 
+## *FILE
+
+TSV:## maximum walkthrough	## walkthrough with nudges
+
 ###############################
 #
 #reg-roi-demo-dome.txt

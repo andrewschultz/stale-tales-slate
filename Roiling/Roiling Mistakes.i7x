@@ -972,7 +972,9 @@ chapter Clarthead Cathedral
 
 understand "sherwin" as a mistake ("No cryptozookeeper appears.") when shrewin whiners are touchable.
 
-chapter Perverse Preserve
+chapter Perverse Preserve / Uprates Pasture
+
+understand "pasteur" and "paseturs" as a mistake ("Microbes aren't the problem in Yorpwald.") when player is in Perverse Preserve and nounsolve >= 3.
 
 understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are in location of player or snipe is in location of player.
 
@@ -1019,6 +1021,8 @@ understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when pla
 understand "cruits" as a mistake ("Alas, no recruits named Ric or Stu arrive for you to delegate anything to.") when player is in Rustic Citrus.
 
 understand "deign" and "deigns" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
+
+understand "earp" as a mistake ("No daredevil gunman appears to help you. This isn't that sort of game.") when spear is touchable.
 
 understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in Rustic Citrus and pagers are in Rustic Citrus.
 

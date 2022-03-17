@@ -29,7 +29,7 @@ ALSO-IGNORE:t
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough with arugula spoiler	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -89,6 +89,9 @@ You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipate
 You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 @nud
+#mistake test for earp
+>earp
+No daredevil gunman appears to help you. This isn't that sort of game.
 #mistake test for boarder
 >boarder
 Rustic Citrus doesn't make for great living quarters.
@@ -503,6 +506,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 \\
 #readables for eerie blurbs
 >read eerie blurbs
+#OK-APOSTROPHE
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 #spechelp for eerie blurbs
 >eerieblursb

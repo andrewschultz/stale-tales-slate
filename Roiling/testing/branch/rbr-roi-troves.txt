@@ -28,7 +28,7 @@ ALSO-IGNORE:mbb *,t
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges	## walkthrough with slider readings
+TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -771,6 +771,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @verbs
 #verbcase listen-troves-if-noun-is-id-cede
 >listen
+#OK-APOSTROPHE
 Eddie C.'s song
 
 >decide
@@ -1337,6 +1338,7 @@ DEBUG INFO: St. Al Salt hinting.
 @nud
 #mistake test for lsat
 >lsat
+#OK-APOSTROPHE
 Oh dear. Is a standardized lawyers' aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.
 #mistake test for slat
 >slat
