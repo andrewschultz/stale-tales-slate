@@ -14,6 +14,7 @@ max-to-see	clue-text
 0	"Ugh. This is still tricky. But you remember the coins, too. You made them icons, then sonic as well. But they inspired one more thing. A weird word. What was it? [oh-voice]"
 0	"Ah yes. That's what the sonic coins gave you. CONCISIONS! [oh-voice]"
 0	"Tan ant, natant. Sonic coins, concisions. [oh-voice]"
+0	"You feel hounded [one of][or]once again [stopping]by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is."
 
 to say oh-voice:
 	if voice-listen is false:
@@ -44,7 +45,7 @@ volume point progress table
 
 table of progress
 ruley	texty
-a rule	"You think you see something vague in the center of the torus."
+bye-bye-tsetse rule	"You think you see something vague in the center of the torus."
 --	"lorem ipsum"
 --	"lorem ipsum"
 --	"lorem ipsum"
@@ -52,6 +53,9 @@ a rule	"You think you see something vague in the center of the torus."
 --	"lorem ipsum"
 prep-traversal rule	"Yes, there is something at the center of the torus. But it's blocked off. You have a feeling you need to do some sort of odd dance before entering."
 bye-dude rule	"lorem ipsum"
+
+this is the bye-bye-tsetse rule:
+	remove tsetse from play;
 
 this is the prep-traversal rule:
 	now solved-initials is true;
