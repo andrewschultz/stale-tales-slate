@@ -63,7 +63,7 @@ volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
 
-a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be unsolved or solved. a dubroom is usually unsolved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash.
+a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be unsolved or solved. a dubroom is usually unsolved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash. a dubroom can be cluevisited. a dubroom is usually not cluevisited.
 
 a dubroom can be hep-traversed. a dubroom is usually not hep-traversed.
 
@@ -193,6 +193,24 @@ volume when play begins
 
 when play begins:
 	now the right hand status line is "[score]/[maximum score]";
+
+volume clue-visiting
+
+times-around is a number that varies.
+
+after printing the locale description:
+	if location of player is scene scene, continue the action;
+	now location of player is cluevisited;
+	say "[number of cluevisited rooms]. [list of cluevisited rooms].";
+	if number of cluevisited rooms is 7:
+		increment times-around;
+		if times-around > number of rows in table of times around:
+			decrement times-around;
+		choose row times-around in table of times around;
+		say "[clue-text entry]";
+		now all rooms are not cluevisited;
+		now cheat-voice is true;
+	continue the action;
 
 volume game progress verb
 
