@@ -435,8 +435,18 @@ while count < len(sys.argv):
                 print("Processing example", arg)
                 process_from_string(arg)
     else:
-        arg = arg.replace('=', '')
-        process_from_string(arg)
+        if arg.startswith('='):
+            arg = arg.replace('=', '')
+            process_from_string(arg)
+        elif '=' in arg:
+            if arg.count('=') > 1:
+                print("Oh no! We can't have more than one =.")
+            arg = '=' + arg.replace('=', ',')
+            print("= should be at the start of the string, so I am moving it there and throwing in a comma.")
+            process_from_string(arg)
+        else:
+            print("I couldn't do anything with", arg)
+            sys.exit()
     count += 1
 
 if file_search:
