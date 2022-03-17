@@ -45,6 +45,20 @@ section defaults
 
 procedural rule: ignore the print final score rule.
 
+section your description
+
+description of the player is "You have some tats which, in a pinch, could be changed to a STAT to help you out if you need help."
+
+tats-stat is a truth state that varies.
+
+check taking inventory:
+	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is true]may give you a stat as you guess what to anagram, where[else]you can get a STAT from, if you want[end if]." instead
+
+the player carries the tats. description of tats is "(BUG)."
+
+instead of doing something with the tats:
+	say "The tats will change as you make guesses. You can [if tats-stat is true]deactivate them with the TATS[else]activate them with the STAT[end if] command."
+
 volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
@@ -263,6 +277,32 @@ check going outside:
 	if location of player is Scene Scene, say "There's no way back out. Here's where you want to be." instead;
 	say "You'd fall off the [this-game] that way." instead;
 
+chapter stating
+
+stating is an action out of world.
+
+understand the command "stat" as something new.
+
+understand "stat" as stating.
+
+carry out stating:
+	say "Your tats are [if tats-stat is true]already[else]now[end if] in stat-giving mode.";
+	now tats-stat is true;
+	the rule succeeds;
+
+chapter tatsing
+
+tatsing is an action out of world.
+
+understand the command "tats" as something new.
+
+understand "tats" as tatsing.
+
+carry out tatsing:
+	say "Your tats are [if tats-stat is false]already[else]now[end if] not in stat-giving mode.";
+	now tats-state is false;
+	the rule succeeds;
+
 section verbing
 
 verbing is an action out of world.
@@ -356,12 +396,12 @@ to say reject:
 		if location is solved:
 			say "You already figured what to do here.";
 		else:
-			say "You felt like you might've been halfway there to something.";
+			say "[if tats-stat is true]The stat tats seem to halfway make something, but no[else]You felt like whatever you just did or thought wasn't enough. Somehow you have to do more[end if].";
 		continue the action;
 	if cmdhash is 2 * sts-hash of location of player or firstwordhash is 2 * sts-hash of location of player:
 		if location is solved:
-			say "You already figured what to do here";
-		else if cheats is false:
+			say "You already figured what to do here.";
+		else if tats-stat is false:
 			say "Hmm, rearrange things.";
 		else:
 			say "[how-many-right].";
