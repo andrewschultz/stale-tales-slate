@@ -49,7 +49,7 @@ volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
 
-a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be solved. a dubroom is usually not solved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash.
+a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be unsolved or solved. a dubroom is usually unsolved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash.
 
 a dubroom can be hep-traversed. a dubroom is usually not hep-traversed.
 
@@ -129,7 +129,7 @@ check going a not rotational direction:
 
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
-	if heptcount < 7, say "You don't see any way to the center of the Torus, yet." instead;
+	if heptcount < 7, say "You don't see any way to the center of the Torus, yet. [if location of player is unsolved]Maybe you can chip away at that right here[else if number of unsolved not visited rooms is 0]You haven't explored the whole torus yet. Maybe there is more to do there[else]Perhaps you could take another look at [random unsolved visited room][end if]." instead;
 	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
 	move player to Scene Scene instead;
 
@@ -149,7 +149,7 @@ Tines Inset is a dubroom. it is a1 of Meta Meat. it is a2 of Grain Grain. it is 
 
 Pechan Pechan is a dubroom. it is a1 of Tines Inset. it is a2 of Meta Meat. it is a3 of Grain Grain. it is b3 of Prep Area. it is b2 of Ehs Ehs. "This is the south [torus-area]. [heptround].". word-to-include is "happenchance". guess-right-text is "You suddenly find a lucky way out.". clue-text is "Oh, a pechan is an odd word for stomach. You may need luck to solve the secret of this room. Some skill, maybe, but enough skill so your luck matters". sts-hash of Pechan Pechan is 336655278.
 
-Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.". sts-hash of Latte Latte is 390027802.
+Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. printed name is "Latte, Latte". "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.". sts-hash of Latte Latte is 390027802.
 
 Scene Scene is a dubroom. "Here's a good place to just wind down your life. It's fun. You've earned it. But how to effect that?". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years.". sts-hash of Scene Scene is 439799277.
 
@@ -252,7 +252,7 @@ carry out creditsing:
 section score
 
 check requesting the score:
-	say "You've figured [score] of [maximum score] areas of the Torus[if scene scene is unvisited and score < 7][one of]. Why, yes, there is a way to the center[or][stopping].";
+	say "You've figured [score] of [maximum score] areas of the Torus. [if number of unvisited rooms is 1 and score < 7][one of]Why, yes, there is a way to the center[or][stopping][else if number of unvisited rooms > 1]You may wish to explore the whole torus to see what you might be able to do[end if].";
 	the rule succeeds;
 
 section going outside
@@ -308,7 +308,7 @@ after reading a command:
 		process the notify score changes rule;
 		say "[b][location of player][r][line break]";
 		repeat through table of room combos:
-			unless location of player is not room1 entry or location of player is room2 entry:
+			unless location of player is room1 entry or location of player is room2 entry:
 				next;
 			if room1 entry is solved and room2 entry is solved:
 				say "[both entry][line break]";

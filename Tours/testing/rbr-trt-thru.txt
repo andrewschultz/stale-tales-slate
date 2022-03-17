@@ -1,16 +1,17 @@
-files=reg-trt-max.txt,reg-trt-min.txt,reg-trt-nudmis.txt,reg-trt-hints.txt,reg-trt-alt.txt
+files=reg-trt-max.txt,reg-trt-min-a.txt,reg-trt-min-b.txt,reg-trt-nudmis.txt,reg-trt-hints.txt,reg-trt-alt.txt
 
 ~	max	t0
-~	min	t1
-~	nudges,nud,nu,mis	t2
-~	hints,hin	t3
-~	alt	t4
+~	mina,min-a	t1
+~	minb,min-b	t2
+~	nudges,nud,nu,mis	t3
+~	hints,hin	t4
+~	alt	t5
 
 ## *FILE
 
 ALSO_IGNORE:a,b,aa,bb,aaa,bbb
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## walkthrough with hints
+TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## walkthrough with all nudges	## walkthrough with hints	## alternate paths/solutions
 
 ** game: /home/andrew/prt/debug-tours-roust-torus.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -48,6 +49,9 @@ You don't need to deal with pronouns. Besides, you already did what you needed, 
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
 !halfway
 
+@min-b
+>b
+@!
 >a
 
 @mis
@@ -82,6 +86,11 @@ Tours Roust Torus is about light-hearted jokes, and there's nothing light-hearte
 No daredevil gunman appears to help you out.
 !Besides
 
+@min-b
+>tattletale
+by one point
+Tattletale
+@!
 >reappear
 by one point
 Reappear
@@ -112,6 +121,9 @@ You already got fruits for Curtis in Rustic Citrus long ago. Besides, you alread
 >earp
 No daredevil gunman appears to help you out. Besides, you already did what you needed, here.
 
+@min-b
+>b
+@!
 >a
 
 @mis
@@ -120,18 +132,37 @@ No daredevil gunman appears to help you out. Besides, you already did what you n
 Getting mad won't help.
 !Besides
 
+@min-b
+>happenchance
+by one point
+Happenchance
+@!
 >arraigning
 by one point
+Arraigning
 
 @mis
 #mistake retest for ragin
 >ragin
 Getting mad won't help. Besides, you already did what you needed, here.
 
+@min-b
+>b
+@!
 >a
+
+@min-b
+>intestines
+by one point
+Intestines
+@!
 >teammate
 by one point
+Teammate
 
+@min-b
+>b
+@!
 >a
 
 @mis
@@ -152,9 +183,16 @@ You're too old for the nightlife. Or bad spelling.
 You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
 !Besides
 
+@min-b
+>teammate
+by one point
+Teammate
+@!
 >intestines
 by one point
+Intestines
 
+@mis
 #mistake retest for stein
 >stein
 You have nothing to drink, so you do not need a drink container. Besides, you already did what you needed, here.
@@ -169,13 +207,33 @@ You're too old for the nightlife. Or bad spelling. Besides, you already did what
 >tiens
 You mentally show off your anagramming skills in languages other than English. Not that you need to do anything more here.
 
+@min-b
+>b
+@!
 >a
+
+@min-b
+>arraigning
+by one point
+Arraigning
+@!
 >happenchance
 by one point
+Happenchance
 
+@min-b
+>b
+@!
 >a
+
+@min-b
+>reappear
+by one point
+Reappear
+@!
 >tattletale
 by one point
+Tattletale
 
 A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
 
@@ -263,7 +321,14 @@ The way to the center unlocks! You can go INSIDE now.
 >on
 
 @!alt
-You've started going on. Tattletale seems as good a place to start as any others. It seems to brighten up as you make your decision.
+You've started going on.
+seems as good a place to start as any others. It seems to brighten up as you make your decision.
+
+@!alt,min-b
+Tattletale
+
+@min-b
+Reappear
 
 >aaa
 >aa

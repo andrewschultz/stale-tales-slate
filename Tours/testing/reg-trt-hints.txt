@@ -1,6 +1,6 @@
-
-
 ## reg-trt-hints.txt
+
+## walkthrough with hints
 
 ** game: /home/andrew/prt/debug-tours-roust-torus.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -21,33 +21,40 @@ Reappear
 
 >arraigning
 by one point
+Arraigning
 
 >a
+
 >teammate
 by one point
+Teammate
 
 >a
 
 >intestines
 by one point
-
-#mistake retest for stein
->stein
-You have nothing to drink, so you do not need a drink container. Besides, you already did what you needed, here.
+Intestines
 
 >a
+
 >happenchance
 by one point
+Happenchance
 
 >a
+
 >tattletale
 by one point
+Tattletale
 
 A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
 
 >on
 
-You've started going on. Tattletale seems as good a place to start as any others. It seems to brighten up as you make your decision.
+You've started going on.
+seems as good a place to start as any others. It seems to brighten up as you make your decision.
+
+Tattletale
 
 >aaa
 >aa

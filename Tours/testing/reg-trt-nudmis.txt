@@ -1,8 +1,6 @@
-
-
 ## reg-trt-nudmis.txt
 
-## walkthrough with all nudges ## walkthrough with hints
+## walkthrough with all nudges
 
 ** game: /home/andrew/prt/debug-tours-roust-torus.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -99,14 +97,17 @@ Getting mad won't help.
 
 >arraigning
 by one point
+Arraigning
 
 #mistake retest for ragin
 >ragin
 Getting mad won't help. Besides, you already did what you needed, here.
 
 >a
+
 >teammate
 by one point
+Teammate
 
 >a
 
@@ -127,6 +128,7 @@ You mentally show off your anagramming skills in languages other than English. P
 
 >intestines
 by one point
+Intestines
 
 #mistake retest for stein
 >stein
@@ -141,18 +143,25 @@ You're too old for the nightlife. Or bad spelling. Besides, you already did what
 You mentally show off your anagramming skills in languages other than English. Not that you need to do anything more here.
 
 >a
+
 >happenchance
 by one point
+Happenchance
 
 >a
+
 >tattletale
 by one point
+Tattletale
 
 A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
 
 >on
 
-You've started going on. Tattletale seems as good a place to start as any others. It seems to brighten up as you make your decision.
+You've started going on.
+seems as good a place to start as any others. It seems to brighten up as you make your decision.
+
+Tattletale
 
 >aaa
 >aa
