@@ -1,7 +1,7 @@
-
 ## reg-roi-routes-min.txt
 
 ## minimum walkthrough
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 

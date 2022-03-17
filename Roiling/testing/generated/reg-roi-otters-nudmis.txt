@@ -1,7 +1,7 @@
-
 ## reg-roi-otters-nudmis.txt
 
 ## walkthrough with all nudges
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -1116,6 +1116,12 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 #nudge for tail
 >tali
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
+
+#mistake test for pasteur/paseturs
+>pasteur
+Microbes aren't the problem in Yorpwald.
+>paseturs
+Microbes aren't the problem in Yorpwald.
 
 >n
 >n

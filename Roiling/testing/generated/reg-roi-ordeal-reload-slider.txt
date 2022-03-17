@@ -1,5 +1,6 @@
-
 ## reg-roi-ordeal-reload-slider.txt
+
+## slider testing
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

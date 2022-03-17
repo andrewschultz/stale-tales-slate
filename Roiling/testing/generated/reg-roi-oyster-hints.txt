@@ -1,5 +1,6 @@
-
 ## reg-roi-oyster-hints.txt
+
+## walkthrough with hints
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

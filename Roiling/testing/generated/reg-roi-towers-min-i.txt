@@ -1,8 +1,8 @@
-
 ## reg-roi-towers-min-i.txt
 ## GENERATOR FILE: rbr-roi-towers.txt
 
 ## minimum walkthrough i
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 

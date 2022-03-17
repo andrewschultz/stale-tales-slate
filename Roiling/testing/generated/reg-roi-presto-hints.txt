@@ -1,5 +1,6 @@
-
 ## reg-roi-presto-hints.txt
+
+## walkthrough with hints
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -181,7 +182,7 @@ Your score has just gone up by one point
 
 You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
 
-/You're done here in Dirge Ridge. Maybe (Leo and Rand|Rand and Leo)'s combined muscle could help you somewhere\.
+/You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
 
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.

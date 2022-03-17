@@ -1,7 +1,7 @@
-
 ## reg-roi-oyster-slider.txt
 
 ## walkthrough with slider readings
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 

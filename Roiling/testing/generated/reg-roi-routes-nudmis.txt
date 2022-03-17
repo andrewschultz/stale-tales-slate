@@ -1,7 +1,7 @@
-
 ## reg-roi-routes-nudmis.txt
 
 ## walkthrough with all nudges
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -720,7 +720,7 @@ Nia Gast is too old and set in her ways. You may just need to listen to her from
 The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
 #scannotes for rude n nuder
->scan rude 'n nuder
+>scan rude n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
 #nudge for rude
 >urde
@@ -1083,7 +1083,7 @@ Score in a scenario: 21 out of 22 total points in the current region, Routes. Th
 
 #mistake retest for tapster
 >tapster
-!No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.
+!No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start playing, either.
 #mistake retest for spatter
 >spatter
 !No violence!

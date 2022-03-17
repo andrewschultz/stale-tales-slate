@@ -1,5 +1,6 @@
-
 ## reg-roi-others-spoiler.txt
+
+## walkthrough with arugula spoiler
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

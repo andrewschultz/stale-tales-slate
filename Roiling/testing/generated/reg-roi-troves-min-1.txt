@@ -3,6 +3,7 @@
 ## reg-roi-troves-min-1.txt
 
 ## minimum walkthrough with first alternate
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 

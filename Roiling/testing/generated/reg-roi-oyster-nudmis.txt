@@ -1,7 +1,7 @@
-
 ## reg-roi-oyster-nudmis.txt
 
 ## walkthrough with all nudges
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 

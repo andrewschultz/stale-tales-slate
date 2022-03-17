@@ -1,7 +1,7 @@
-
 ## reg-roi-others-nudmis.txt
 
 ## walkthrough with all nudges
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -19,6 +19,9 @@ Rustic Citrus
 >z
 >z
 
+#mistake test for earp
+>earp
+No daredevil gunman appears to help you. This isn't that sort of game.
 #mistake test for boarder
 >boarder
 Rustic Citrus doesn't make for great living quarters.

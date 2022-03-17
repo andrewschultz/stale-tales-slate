@@ -1,5 +1,6 @@
-
 ## reg-roi-presto-verbs.txt
+
+## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

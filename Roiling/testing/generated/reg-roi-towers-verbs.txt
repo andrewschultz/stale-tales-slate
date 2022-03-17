@@ -1,6 +1,7 @@
-
 ## reg-roi-towers-verbs.txt
 ## GENERATOR FILE: rbr-roi-towers.txt
+
+## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
