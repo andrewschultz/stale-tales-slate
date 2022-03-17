@@ -3775,7 +3775,9 @@ understand "scan [thing]" as scaning.
 rule for supplying a missing noun while scaning or sying or sning or sbing (this is the how to scan the air rule):
 	if mrlp is stores:
 		if player is in Cruelest Lectures:
-			now noun is blabber babbler;
+			say "Nothing, until you catch [if suit ode is not examined]a song--which you recognize as the horribly motivational[else]more of[end if] [suit ode].";
+			now noun is suit ode;
+			now suit ode is examined;
 			continue the action;
 	else if mrlp is routes:
 		if location is Harms Marsh:
@@ -3983,6 +3985,7 @@ check scaning a prefigured thing:
 	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
 
 carry out scaning: [note: "the rule fails" is needed here because of the scan-both rule. I suppose we could have a scan-both flag, but that gets into global variables etc.]
+	if debug-state is true, say "DEBUG: [noun] being scanned.";
 	if mrlp is demo dome:
 		say "Questing time is over. No need.";
 		the rule fails;
@@ -6042,7 +6045,7 @@ to decide whether can-hear-posh:
 
 listen-list of ordeal reload is { elmo }.
 
-listen-list of stores is { tokers, nestor, odorant tornado }.
+listen-list of stores is { tokers, nestor, odorant tornado, suit ode }.
 
 listen-list of routes is { woe bow bell, gast, raptest patters }.
 
@@ -6092,7 +6095,7 @@ this is the listen-stores rule:
 	if noun is odorant tornado, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
 	if noun is tokers, say "[if nestor is touchable]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if noun is nestor, say "Nestor periodically mumbles about his lost buddies." instead;
-	if player is in Cruelest Lectures, say "You're hearing enough without trying, sadly." instead;
+	if noun is Suit Ode, say "You listen for anything at all besides [the babbler]. You pick up some background music--why, yes, it is the the horrendous self-helpy song [i]Suit Ode: Douse It[r]." instead;
 
 this is the listen-troves rule:
 	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
@@ -6108,7 +6111,7 @@ this is the listen-troves rule:
 		say "Nothing from [the noun][if snore so arena is reflexive], but the [snore so] is making noise[else]. Relative quiet now you dealt with the [snore so][end if]." instead;
 	if can-hear-gritty, say "[if talk-quiet is true]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is true]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
-	if noun is Id Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
+	if noun is Id Cede, say "[ecs] song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You find yourself hoping for more, almost completely believing you deserve it[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
 	if noun is praise spirea, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
@@ -10157,7 +10160,9 @@ Cruelest Lectures is an innie room in Stores. "You're standing in the back of an
 check looking in Cruelest Lectures for the first time: say "As you march through the smoke, you hear 'Pored? ... ROPED, doper! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
 check exiting in Cruelest Lectures:
-	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The blabber babbler even more tedious than coworker chitchat you never could pull yourself away[or]Tedious, tedious, tedious[or][tedcue]Your eyes wander to the top of the screen. Um, the screen behind the blabber babbler, that sort of blends in with the room[stopping]." instead;
+	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [t-d-s][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The blabber babbler even more tedious than coworker chitchat you never could pull yourself away[or]Tedious, tedious, tedious. You can't help seeing red[or][tedcue]Your eyes wander to the top of the screen. Um, the screen behind the blabber babbler, that sort of blends in with the room[stopping]." instead;
+
+to say t-d-s: say "[i]tedious[r], making you see red"
 
 tedious-cue is a truth state that varies.
 
@@ -10207,11 +10212,12 @@ outside-warned is a truth state that varies.
 
 chapter blabber babbler
 
-the blabber babbler is a reflexive person in Cruelest Lectures. "A blabber babbler rattles on about why and how [his-her] wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste [his-her-u] time. Real golden rule stuff."
+the blabber babbler is a reflexive person in Cruelest Lectures. "A blabber babbler rattles on about why and how [his-her] wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste [his-her-u] time. Real golden rule stuff. [if suit ode is examined][he-she-c] mostly drowns out [suit ode][else]You hear a song beneath all this. It might provide a clue as to how to leave[end if]."
 
-check scaning blabber babbler: say "'Geez, you're tedious,' you think as you point your settler at the blabber babbler.";
-
-a-text of blabber babbler is "YYRRYRY". b-text of blabber babbler is "YYRRYRY". parse-text of blabber babbler is "-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-".
+check scaning blabber babbler:
+	say "Nothing, when you point the settler at the babbler. But you wave the settler around, and you catch [if suit ode is not examined]a song--[end if][suit ode]. It gives a reading!";
+	now suit ode is examined;
+	try scaning suit ode instead;
 
 understand "example" as blabber babbler.
 
@@ -10225,11 +10231,20 @@ to say bab-name: say "[if player is male]Max Peel[else]Pam Exel[end if]"
 
 description of blabber babbler is "The blabber babbler is bedecked in a very expensive suit and jewelry. You're not sure why they should be expensive, but you know they are. They're probably about as showy as drug dealers['] $5,000 suits and jewelry--unaffordable if the blabber babbler actually used drugs, of course. You read [bab-name-u], EXAMPLE (sponsored by RutCorp, who help pull you out of ruts) projected behind [him-her]."
 
+section Suit Ode Douse It
+
+Suit Ode Douse It is boring reflexive scenery in Cruelest Lectures. description of Suit Ode is "It's a really terrible self-help anthem. Catchy, yes, and it doesn't let you go for a better tune.". printed name of Suit Ode is "[i]Suit Ode: Douse It[r]". bore-check of Suit Ode is the bore-suit-ode rule. bore-text of Suit Ode is "All you can really do is listen to [suit ode].".
+
+a-text of suit ode douse it  is "YYRRYRY". b-text of suit ode douse it is "Y?R?Y??". parse-text of suit ode douse it is "-[sp]-[sp]x[sp]x[sp]-[sp]?[sp]?".
+
+this is the bore-suit-ode rule:
+	if current action is listening, now boring-exception is true;
+
 chapter Rehabs Basher
 
-the Rehabs Basher is a boring person in Cruelest Lectures. description of Rehabs Basher is "In case you were wondering about [his-her] actual name, [his-her] shirt advertises [him-her] as [i-n-u], A DRUG GUARDIAN.[paragraph break]'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' [he-she-c] nods and points to the blabber babbler.". initial appearance of Rehabs Basher is "The Rehabs Basher guards the only exit. Whether [he-she] bashes people before, after or during rehabs, or all three, [he-she] will definitely bash you if you try to leave the standard way.". bore-check of the Rehabs Basher is the bore-rehabs-basher rule. bore-text of Rehabs Basher is "[ian-pamph]".
+the Rehabs Basher is a boring person in Cruelest Lectures. description of Rehabs Basher is "In case you were wondering about [his-her] actual name, [his-her] shirt advertises [him-her] as [i-n-u], A DRUG GUARDIAN.[paragraph break]'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' [he-she-c] nods and points to the blabber babbler.". initial appearance of Rehabs Basher is "The Rehabs Basher guards the only exit. Whether [he-she] bashes people before, after or during rehabs, or all three, [he-she] will definitely bash you if you try to leave the standard way.". bore-check of the Rehabs Basher is the bore-rehabs-basher rule. bore-text of Rehabs Basher is "[basher-pamph]".
 
-to say ian-pamph:
+to say basher-pamph:
 	if player has pamphlets:
 		say "Before you can do anything, the Rehabs Basher points at the pamphlets [he-she] shared on you. Or at you. But not just plain with you. [he-she-c]'s so much bigger than you, it distracts you from whatever you meant to do.";
 	else:
@@ -21800,7 +21815,7 @@ part real options
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
-"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate routes rule	--
+"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	--
 "check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	--
 --	false	"l/list"	--	potzing about
 --	false	"n/ln/nl"	--	putzing about
@@ -22113,7 +22128,7 @@ altroutes of towers is the towers-alt rule.
 altroutes of otters is the otters-alt rule.
 altroutes of others is the others-alt rule.
 
-this is the show alternate routes rule:
+this is the show alternate paths rule:
 	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. Ordeal Reload and Routes have no mutually exclusive solutions. This list overlaps very little with the [b]MISSED[r] list which shows actual points missed.";
 	d "[list of solved regions].";
 	repeat with myr running through regions-in-order:
