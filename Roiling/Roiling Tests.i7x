@@ -922,6 +922,7 @@ understand the command "post" as something new.
 understand "post" as posting.
 
 carry out posting:
+	if location of player is Bustle Sublet, say "(Note--actual response for POST is subverted by a testing command. Try OPST if you want to test the nudge.)";
 	if location of player is not dusty study, say "Going to the post-script Others area is not available post-Dusty Study." instead;
 	try roveovering;
 	try fliptoing hoster;

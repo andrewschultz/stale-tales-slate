@@ -11007,7 +11007,7 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if race acre is touchable]you see the Race Acre where the thief ran, but you're too bummed to follow, And you can't go back in[else][heat] stands. Lor['], [i]HEAT[r]. You're not getting back in.,feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to follow that thief through the Race Acre, though[end if]. Nothing but bone-chilling poverty here. Of course, with all this lost hope, there are plenty of potholes about to distract you from moving up in the world. Every possible exit[if race acre is touchable], even the Race Acre, [end if]looks like a hurt thru[if tears taser is touchable]. You also detect a hidden tears taser, which may be a distraction from or warmup for your challenges ahead[end if].". roomnud of Loather Rathole is table of Loather Rathole nudges.
+Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Nothing but bone-chilling poverty here in [one of]what must be [or][stopping]the forbidding Spoiloplis suburb of Retches-Chester. Of course, with all this lost hope, there are plenty of potholes about to distract you from moving up in the world. Every possible exit[if race acre is touchable], even the Race Acre,[end if] looks like a hurt thru[if tears taser is touchable]. You also detect a hidden tears taser, which may be a distraction from or warmup for your challenges ahead[end if].[paragraph break]Under the stinky tin sky, [if race acre is touchable]you see the Race Acre where the thief ran, but you're too bummed to follow, And you can't go back in[else][heat] stands. Lor['], [i]HEAT[r]! You're not getting back in. You feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to look for the thief. You temporarily lost the ability to emote when kicked out of [heat][end if].". roomnud of Loather Rathole is table of Loather Rathole nudges.
 
 the hurt thru is bounding boring scenery in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved. [care-hate-clue]."
 
@@ -11063,7 +11063,7 @@ a-text of tears taser is "RRYRY". b-text of tears taser is "RR??Y". parse-text o
 
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]You need to think less emotionally than in the Loather Rathole. [if sob ever verbose is in Bustle Sublet]Everything seems to be going too fast for you, except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. You'll need to look around to find what to do.". roomnud of Bustle Sublet is table of Bustle Sublet nudges.
+Bustle Sublet is a room in Troves. "A hopeless passe hole. Well, not totally. Grubburg is a step up from Retches-Chester, but you don't want to stay here forever. Reastier arteries seem too forbidding all around. Someone seedy owns this area, [randbla][if mussier misuser is touchable]. To make matters worse, a mussier misuser ducks in and out of view--you probably don't need to outsmart them, but it'd be nice to[end if]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]You need to think less emotionally than in the Loather Rathole. [if sob ever verbose is in Bustle Sublet]Everything seems to be going too fast for you, except for a stop post. Also, a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. You'll need to look around to find what to do.". roomnud of Bustle Sublet is table of Bustle Sublet nudges.
 
 [flipping the stop post now sends you to Boarded Roadbed.]
 
@@ -11138,7 +11138,7 @@ a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop
 
 book Boarded Roadbed
 
-Boarded Roadbed is a room in Troves. "It's odd...bare... except for one business, [tasty say], which [if tasty say is reflexed]you've neutralized in your mind[else]can't be where you need to be. It's up to you how directly you wish to ignore it[end if].[paragraph break]But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help.". roomnud of Boarded Roadbed is table of Boarded Roadbed nudges.
+Boarded Roadbed is a room in Troves. "You've moved up to Boorboro from Grubburg, though you've still a way to go! It's odd...bare... except for one business, [tasty say], which [if tasty say is reflexed]you've neutralized in your mind[else]can't be where you need to be. It's up to you how whether to ignore it completely or to make a show of ignoring it[end if].[paragraph break]But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help.". roomnud of Boarded Roadbed is table of Boarded Roadbed nudges.
 
 every turn when player is in Boarded Roadbed:
 	if bee-score > 0:
@@ -11220,7 +11220,9 @@ a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-
 
 book Drain Nadir
 
-Drain Nadir is a room in Troves. "While you could escape physically, there's nowhere better to go in your current mental state. [if diapers are in Drain Nadir]You notice trappings of spiritual and material poverty: an Ires Pad, to help you emote RIGHT, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now Eddie C's song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness of Drag-grad, here, to take control of your destiny[end if].". roomnud of Drain Nadir is table of Drain Nadir nudges.
+to say ecs: say "Eddie C.[']s"
+
+Drain Nadir is a room in Troves. "Ho hum. Phantomhampton would actually be a tolerable place to live, if you had no motivation. But you do, at least you think you do. Still, you have enough, and you want to be more than upset you don't have quite enough, really. [if diapers are in Drain Nadir]You notice trappings of spiritual and material poverty: an Ires Pad, to help you emote RIGHT, a box of diapers, and a spider crawling. They all point to a rock bottom you haven't hit yet, but it may be necessary now, to start to find a way out[else]But you're getting better, you've half cleared the Drain Nadir of negative influences, and now [ecs] song is playing. Perhaps listening could uplift you fully.[paragraph break]You want to break out of the funless fulness, here, to take control of your destiny[end if].". roomnud of Drain Nadir is table of Drain Nadir nudges.
 
 chapter adeiprs
 
@@ -11264,7 +11266,7 @@ this is the bore-id-cede rule:
 
 book Boredom Bedroom
 
-Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, even with the shmoe homes surrounding it outside, it beats Get-a-Cot Cottage, or Drag-Grad[if me arts are in Boredom Bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]. As with the Drain Nadir, you could leave physically, but you hope to soar mentally above your situation.". roomnud of Boredom Bedroom is table of Boredom Bedroom nudges.
+Boredom Bedroom is an innie room in Troves. "You've moved up in the world, to the suburb of Drag-Grad. Or is it Drag-Gard? Anyway, you should have more than enough, but it doesn't feel that way. Your domicile is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, even with the shmoe homes surrounding it outside, it beats Get-a-Cot Cottage[if me arts are in Boredom Bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]. As with the Drain Nadir, you could leave physically, but you hope to soar mentally above your situation.". roomnud of Boredom Bedroom is table of Boredom Bedroom nudges.
 
 chapter shmoe homes
 
@@ -11314,7 +11316,7 @@ a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". 
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires outside which--well, you think you can do even BETTER.[paragraph break]An exhibit called a See Dir advertises upscale housing[if divorces is touchable], with a copy of DIVORCES magazine off to the side[end if].". roomnud of Browse Bowers is table of Browse Bowers nudges.
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here in Trop-Port, where everything's a bit too gaudy and people try too hard to seem upper-crust. You note that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires beyond, which--well, you think you can do even BETTER.[paragraph break]An exhibit called a See Dir advertises upscale housing[if divorces is touchable], with a copy of DIVORCES magazine off to the side[end if].". roomnud of Browse Bowers is table of Browse Bowers nudges.
 
 chapter DIVORCES magazine
 
@@ -11347,7 +11349,9 @@ understand "exhibit" as See Dir when player is in Browse Bowers.
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because [the lodgings] in the center form the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]The famous artwork Sectarian Craniates rests here, which you [if craniates is reflexive]can decipher if you want[else]already got soemthing from[end if]. Save aves branch out each way. They're okay for lesser people, but the astute statue of Trevis Vister and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to [the lodgings][end if].". roomnud of Econ Cone is table of Econ Cone nudges.
+Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because [the lodgings] in the center form the top of a cone of buildings. The official name of the suburb is Potherthorpe. There's lots of pother, but it's the rich person's kind. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break][i]Sectarian Craniates[r], the famous artwork, rests here, which you [if craniates is reflexive]can decipher if you want[else]already got soemthing from[end if]. Save aves branch out each way. They're okay for lesser people, but the praise spirea and astute statue of Trevis Vister will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[or-myst][else]Now they've taught you all they could, so maybe you can move on--or in--to [the lodgings][end if][if end proner pod is touchable]. There MUST be a way into the [proner][end if].". roomnud of Econ Cone is table of Econ Cone nudges.
+
+to say or-myst: say ", or you could seek to grok [if rivets is reflexed]the praise spirea[else]Trevis Vister[end if]";
 
 understand "econ-cone" as Econ Cone.
 
@@ -11452,7 +11456,7 @@ to say trev:
 
 book Upscale Capsule
 
-Upscale Capsule is an innie room in Troves. "[capsule-desc].". roomnud of Upscale Capsule is table of Upscale Capsule nudges.
+Upscale Capsule is an innie room in Troves. "[if salt is moot]Perhaps your true destiny is not in Dest-Sted, but it's where you are[else]You've made it to Dest-Sted, the most distinguished suburb of Spoiloplis! But you haven't truly MADE IT, yet[end if]. [capsule-desc].". roomnud of Upscale Capsule is table of Upscale Capsule nudges.
 
 to say capsule-desc:
 	if red vees are in Upscale Capsule:
