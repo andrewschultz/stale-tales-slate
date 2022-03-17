@@ -37,6 +37,8 @@ red_anagrams = defaultdict(list)
 my_match = defaultdict(str)
 found_searched = defaultdict(bool)
 
+stuff_to_process = []
+
 examples_array = [ 'peas,apes,apse', 'rome,mere,moor', 'cadres,sacred,cedars',
   'sprite,esprit,stripe', 'sprite,esprit,stripe,!priest' ]
 
@@ -420,7 +422,7 @@ while count < len(sys.argv):
         temp = int(arg[1:])
         if temp < 1 or temp > len(examples_array):
             sys.exit("Not a valid example. x requires a digit from 0 to {}.".format(len(examples_array)))
-        process_from_string(examples_array[temp-1])
+        stuff_to_process.append(examples_array[temp-1])
     elif '=' not in arg:
         file_search = True
         if ',' in arg:
@@ -432,22 +434,28 @@ while count < len(sys.argv):
     elif arg in examples_flat:
         for u in examples_array:
             if arg in u:
-                print("Processing example", arg)
-                process_from_string(arg)
+                print("Will be processing example", arg)
+                stuff_to_process.append(arg)
     else:
         if arg.startswith('='):
             arg = arg.replace('=', '')
-            process_from_string(arg)
+            stuff_to_process.append(arg)
         elif '=' in arg:
             if arg.count('=') > 1:
                 print("Oh no! We can't have more than one =.")
             arg = '=' + arg.replace('=', ',')
             print("= should be at the start of the string, so I am moving it there and throwing in a comma.")
-            process_from_string(arg)
+            stuff_to_process.append(arg)
         else:
             print("I couldn't do anything with", arg)
             sys.exit()
     count += 1
+
+if len(stuff_to_process) == 0 and not file_search:
+    sys.exit("You didn't seem to specify anything to guess.")
+
+for stp in stuff_to_process:
+    process_from_string(stp)
 
 if file_search:
     process_reds()
