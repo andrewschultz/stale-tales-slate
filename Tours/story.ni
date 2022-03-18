@@ -41,6 +41,8 @@ solved-heptagon is a truth state that varies.
 
 heptagon-path is a list of numbers variable. heptagon-path is {}.
 
+to decide which number is heptcount: decide on number of solved dubrooms; [note: this is mostly equivalent to the score, but just in case...]
+
 section defaults
 
 procedural rule: ignore the print final score rule.
@@ -63,7 +65,7 @@ volume dubroom definitions
 
 rule for printing the name of a solved dubroom: say "[word-to-include of the item described in title case]"
 
-a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be unsolved or solved. a dubroom is usually unsolved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has text called right-pattern. a dubroom has a number called sts-hash. a dubroom can be cluevisited. a dubroom is usually not cluevisited.
+a dubroom is a kind of room. a dubroom has text called word-to-include. a dubroom has text called guess-right-text. a dubroom can be unsolved or solved. a dubroom is usually unsolved. a dubroom has a number called right-now. a dubroom has a number called total-length. a dubroom has a number called sts-hash. a dubroom can be cluevisited. a dubroom is usually not cluevisited.
 
 a dubroom can be hep-traversed. a dubroom is usually not hep-traversed.
 
@@ -78,6 +80,17 @@ to say heptround:
 		say ". [clue-text of location of player]";
 		if number of visited dubrooms is 7 and heptcount is 0:
 			say ".[one of] You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change, so you need to do something new, here[or][stopping]";
+
+volume flippable definitions
+
+a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text.
+
+when play begins:
+	repeat with F running through flippables:
+		move F to Scene Scene;
+	now maximum score is number of rooms + number of flippables;
+
+volume going and rooms
 
 book directions
 
