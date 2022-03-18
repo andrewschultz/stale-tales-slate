@@ -72,11 +72,12 @@ a dubroom can be perimeter or internal. a dubroom is usually perimeter.
 a dubroom has text called clue-text.
 
 to say heptround:
-	say "[if heptcount < 7]You feel like there should be something in the Torus, but nothing's there yet[else]You see a way inside to the center of the torus[end if]";
+	choose row (heptcount + 1) in table of center statuses;
+	say "[cylinder-desc entry]";
 	if location of player is not solved:
 		say ". [clue-text of location of player]";
 		if number of visited dubrooms is 7 and heptcount is 0:
-			say ". You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no things to change, so you need to do something new, here"
+			say ".[one of] You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change, so you need to do something new, here[or][stopping]";
 
 book directions
 
