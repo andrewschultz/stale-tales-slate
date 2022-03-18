@@ -5,15 +5,15 @@ Version 1/220314 of Tours Roust Torus Tables by Andrew Schultz begins here.
 volume center passage status
 
 table of center statuses
-cylinder-desc
-"Looking inward, the center of the torus seems slightly blurry, as if something should be there"
-"It looks like there's a hologram in the center of the torus: a ylindrical silo, or something. But you have no way to enter"
-"The cylinder at the center of the torus looks much more real now. But it is too solid to enter even if you had a passage"
-"You think you can see a crack here or there in the cylinder at the center of the torus. No way to get there, though"
-"You're pretty sure you see the faint outline of a door--wait, more than one outline--leading into the cylinder at the center of the torus. One for each area of the torus, you'd guess"
-"The cylinder now seems to have doors with handles. But there is no way to approach it"
-"There seems to almost be a walkway to the cylinder at the center from each area of the torus. But it doesn't quite look solid enough. Yet"
-"The walkways to the cylinder at the center seem solid. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r]"
+cylinder-desc	cylinder-block
+"Looking inward, the center of the torus seems slightly blurry, as if something should be there"	"There's nothing to go inside to, yet. Well, nothing enough. And no way to get there. Maybe figuring what to do elsewhere will help."
+"It looks like there's a hologram in the center of the torus: a ylindrical silo, or something. But you have no way to enter"	--
+"The cylinder at the center of the torus looks much more real now. But it is too solid to enter even if you had a passage"	--
+"You think you can see a crack here or there in the cylinder at the center of the torus. No way to get there, though"	--
+"You're pretty sure you see the faint outline of a door--wait, more than one outline--leading into the cylinder at the center of the torus. One for each area of the torus, you'd guess"	--
+"The cylinder now seems to have doors with handles. But there is no way to approach it"	--
+"There seems to almost be a walkway to the cylinder at the center from each area of the torus. But it doesn't quite look solid enough. Yet"	--
+"The walkways to the cylinder at the center seem solid. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r]"	--
 
 volume times around
 

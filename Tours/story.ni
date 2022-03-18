@@ -160,8 +160,12 @@ check going a not rotational direction:
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
 	if heptcount < 7:
-		say "A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]";
-		say "No, you don't see any way to the center of the Torus, yet. [if location of player is unsolved]Maybe you can chip away at that right here[else if number of unsolved not visited rooms is 0]You haven't explored the whole torus yet. Maybe there is more to do there[else]Perhaps you could take another look at [random unsolved visited room][end if]." instead;
+		say "A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?";
+		if number of unvisited perimeter rooms > 0:
+			say "[line break]Perhaps you should try and see everywhere on the torus." instead;
+		choose row (heptcount + 1) in table of center statuses;
+		say "[cylinder-block entry][paragraph break]";
+		say "It makes sense you can't just walk in, though. You still haven't figured what to do [if location of player is unsolved]here[else]over at [random unsolved visited room][end if].";
 	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
 	move player to Scene Scene instead;
 
