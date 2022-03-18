@@ -10,8 +10,6 @@ release along with a website.
 
 release along with cover art.
 
-the maximum score is 8.
-
 section includes
 
 include Tours Roust Torus Tests by Andrew Schultz.
@@ -191,12 +189,9 @@ Scene Scene is an internal dubroom. "Here's a good place to just wind down your 
 
 stats-x is a truth state that varies.
 
-check examining stats tat:
-	if location of player is solved, say "The stats tat shows nothing. You've figured what to do here." instead;
-	if stats-x is false:
-		now stats-x is true;
-		say "Various numbers seem to pop in and out of it. Perhaps staring at it may give various levels of help." instead;
+volume stats tat (deprecated?)
 
+[
 description of stats tat is "The stats tat [if this-examine > 1]still [end if]seems to show [if this-examine is 0][right-now of location of player] of [total-length of location of player][else]The pattern [right-pattern of location of player][end if].".
 
 this-examine is a number that varies.
@@ -209,7 +204,12 @@ after going:
 	now this-examine is 0;
 	continue the action;
 
-to decide which number is heptcount: decide on number of solved dubrooms;
+check examining stats tat:
+	if location of player is solved, say "The stats tat shows nothing. You've figured what to do here." instead;
+	if stats-x is false:
+		now stats-x is true;
+		say "Various numbers seem to pop in and out of it. Perhaps staring at it may give various levels of help." instead;
+]
 
 volume flippables
 
