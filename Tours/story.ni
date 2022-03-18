@@ -432,9 +432,28 @@ after printing the locale description for Ehs Ehs when Ehs Ehs is unvisited:
 	say "[i][bracket]NOTE: to see general information about [this-game][i], type [b]ABOUT[i]. To see the verbs used, type [verbs][i]. In particular, you may want to note the directions used.[close bracket][r]";
 	continue the action;
 
-volume parser errors
+volume endgames
 
-cheats is a truth state that varies.
+Table of Final Question Options (continued)
+final question wording	only if victorious	topic		final response rule		final response activity
+"see [b](REJ)ECTS[r]/[b]REJECTED[r] words"	true	"reject/rejected/rejects"	the show rejected words rule	--
+"see what you [b]MISSED[r]"	true	"miss/misses/missed"	the show what you missed rule
+
+this is the show rejected words rule:
+	say "Here are some rejected words:";
+	say "[line break]HORSESHOER could have been a good one, but there was already a Hero's Shore with Shoer Osher in [aro].";
+	say "APPEASES is definitely a word that could've come from APSE, APSE, but it's a verb in a weird tense, so I couldn't fit it in.";
+	say "SALALS are an evergreen shrub, but no three-letter words make sense.";
+	say "A MILLIEME is, apparently, Tunisian currency, so that's too obscure. LIME and MILE would've worked so well!";
+	say "BILABIAL means with both lips, but I saw no connection to BAIL.";
+	say "GENSENGS was flagged in my words file, but NEGS and GENS didn't work.";
+	say "NOTIONISTS came from oints, twice, but oint is not short for ointment but rather a verb tense of smearing with oil.";
+	say "Some other words were neat but too abstract or obscure, or they had nothing that half-anagrammed: JIPIJAPA, SASARARA (scolding), SASSARARAS, SNIFFINESSES (finess 'almost' works), SNIPPINESSES and TRISECTRICES.";
+
+this is the show what you missed rule:
+	say "The only opportunities for additional points are in [scene scene]. A bunch of random items are strewn around. Here [if score is maximum score - 1]is the one[else]are the ones[end if] you missed."
+
+volume parser errors
 
 cmdhash is a number that varies.
 
