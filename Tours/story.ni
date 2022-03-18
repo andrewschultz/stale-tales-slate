@@ -54,7 +54,7 @@ description of the player is "You have some tats which, in a pinch, could be cha
 tats-stat is a number that varies.
 
 check taking inventory:
-	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is true]may give you a stat as you guess what to anagram, where[else]you can get a STAT from, if you want[end if]." instead
+	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a STAT from, if you want[end if]." instead;
 
 the player carries the tats. description of tats is "(BUG)."
 
@@ -173,7 +173,7 @@ book rooms
 
 to say torus-area: say "area of the torus"
 
-Ehs Ehs is a dubroom. "This is the west [torus-area]. [heptround].". printed name is "Ehs, Ehs". word-to-include is "sheesh". guess-right-text is "You effectively dismiss the eh's with something more powerful.". clue-text is "The EHs you hear make you wish you could throw back something at them. Something double-powered, perhaps". sts-hash of Ehs Ehs is 261362374.
+Ehs Ehs is a dubroom. "This is the west [torus-area]. [heptround].". printed name is "Ehs, Ehs". word-to-include is "sheesh". guess-right-text is "You effectively dismiss the eh's with something more powerful.". clue-text is "The EHs you hear make you wish you could speak something back at them. Nothing profane, but forceful enough. But there's more than one.". sts-hash of Ehs Ehs is 261362374.
 
 Prep Area is a dubroom. it is a1 of Ehs Ehs. "This is the northwest [torus-area]. [heptround].". word-to-include is "reappear". guess-right-text is "You back out a bit, then reappear.". clue-text is "You feel like you are being watched. You want to duck out and in, but not in the standard directions". sts-hash of Prep Area is 296783689.
 
@@ -219,6 +219,16 @@ volume when play begins
 
 when play begins:
 	now the right hand status line is "[score]/[maximum score]";
+	say "Leading Yorpwald after defeating Red Bull Burdell and then Elvira wasn't what you asked for, but it's what you got, and you did well enough. But the job is exhausting. You've never wanted flatterers, and you expected criticism, even unfair criticism, but there are some things you can't avoid listening to by now.";
+	wfak;
+	say "The worst part, as you're getting older: you're maybe half the person you used to be. This, from people who never thought you were much to begin with. Still, you Got Stuff Done. But your heart was in things less. Others seemed to have better ideas. You felt you spent all your time delegating and getting credit for stuff you just signed off on.";
+	wfak;
+	say "You wanted adventure. But defeating Red Bull Burdell required changing just about every pair of things imaginable, and with Elvira, well, it was more abstract, deciding what to do or think or how to describe things. What could be left? Then, one day, a diplomat told you of distant structure. One worth visiting. A [this-game]. Nothing seemed there. But if anyone could unlock its secrets, you could.";
+	wfak;
+	say "You returned to the museum that held the tagged gadget and letters settler that helped you in your first two quests. You did so every few months and felt nothing. But this time, a surge! Still, they were too much a part of history to move from a museum. The curator had an idea--some stat tats that could help you, if needed.";
+	wfak;
+	say "You made your final choice. You resigned as leader, leaving things to trusted advisors. Your heart was in adventuring. Who knows what you'd find?";
+	wfak;
 
 volume clue-visiting
 
