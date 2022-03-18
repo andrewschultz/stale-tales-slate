@@ -49,7 +49,7 @@ section your description
 
 description of the player is "You have some tats which, in a pinch, could be changed to a STAT to help you out if you need help."
 
-tats-stat is a truth state that varies.
+tats-stat is a number that varies.
 
 check taking inventory:
 	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is true]may give you a stat as you guess what to anagram, where[else]you can get a STAT from, if you want[end if]." instead
@@ -57,7 +57,7 @@ check taking inventory:
 the player carries the tats. description of tats is "(BUG)."
 
 instead of doing something with the tats:
-	say "The tats will change as you make guesses. You can [if tats-stat is true]deactivate them with the TATS[else]activate them with the STAT[end if] command."
+	say "The tats will change as you make guesses. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command."
 
 volume dubroom definitions
 
@@ -205,7 +205,6 @@ times-around is a number that varies.
 after printing the locale description:
 	if location of player is scene scene, continue the action;
 	now location of player is cluevisited;
-	say "[number of cluevisited rooms]. [list of cluevisited rooms].";
 	if number of cluevisited rooms is 7:
 		increment times-around;
 		if times-around > number of rows in table of times around:
@@ -339,8 +338,12 @@ understand the command "stat" as something new.
 understand "stat" as stating.
 
 carry out stating:
-	say "Your tats are [if tats-stat is true]already[else]now[end if] in stat-giving mode.";
-	now tats-stat is true;
+	if tats-stat is 2, say "Your stat tats are already giving you as much help as they can." instead;
+	if tats-stat is 1:
+		say "You gaze at your tats to get an extra stat from them when you try to guess what to do.";
+	else:
+		say "Your tats are now in stat-giving mode. STAT again will give even more potentially revealing stats when you make guesses";
+	increment tats-stat;
 	the rule succeeds;
 
 chapter tatsing
@@ -352,8 +355,8 @@ understand the command "tats" as something new.
 understand "tats" as tatsing.
 
 carry out tatsing:
-	say "Your tats are [if tats-stat is false]already[else]now[end if] not in stat-giving mode.";
-	now tats-state is false;
+	say "Your tats are [if tats-stat is 0]already[else]now[end if] not in stat-giving mode.";
+	now tats-stat is 0;
 	the rule succeeds;
 
 section verbing
@@ -445,22 +448,43 @@ to say how-many-right:
 		now binary is 2 * binary;
 		if character number y in x1 is character number y in word-to-include of location of player:
 			increment binary;
-	say "[count] of [number of characters in x1]";
+			increment count;
+	if the remainder after dividing tats-stat by 2 is 1:
+		say "The stat tats show two numbers: [count] of [number of characters in x1]";
+	if tats-stat is 3:
+		say ".[paragraph break]CHEAT RELOAD[paragraph break]";
+	if the remainder after dividing (tats-stat / 2) by 2 is 1:
+		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1]";
+
+to decide which number is exp-1 of (n - a number):
+	let temp be 0;
+	let count be 0;
+	while count < n:
+		now temp is temp * 2;
+		increment temp;
+		increment count;
+	decide on temp;
+
+to decide which number is dubhash:
+	decide on sts-hash of location of player * 2.
+
+to decide which number is onehash:
+	decide on sts-hash of location of player.
 
 to say reject:
 	now cmdhash is the hash of the player's command;
 	now firstwordhash is the hash of word number 1 in the player's command;
-	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
-	if cmdhash is sts-hash of location of player or firstwordhash is sts-hash of location of player:
+	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash]. Location hash is [sts-hash of location of player].[line break]";
+	if cmdhash is onehash or firstwordhash is onehash:
 		if location is solved:
 			say "You already figured what to do here.";
 		else:
-			say "[if tats-stat is true]The stat tats seem to halfway make something, but no[else]You felt like whatever you just did or thought wasn't enough. Somehow you have to do more[end if].";
+			say "[if tats-stat > 0]The stat tats seem to halfway make something, but no[else]You felt like whatever you just did or thought wasn't enough. Somehow you have to do more[end if].";
 		continue the action;
-	if cmdhash is 2 * sts-hash of location of player or firstwordhash is 2 * sts-hash of location of player:
+	if cmdhash is dubhash or firstwordhash is dubhash:
 		if location is solved:
 			say "You already figured what to do here.";
-		else if tats-stat is false:
+		else if tats-stat is 0:
 			say "Hmm, rearrange things.";
 		else:
 			say "[how-many-right].";
