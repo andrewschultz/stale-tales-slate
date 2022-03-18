@@ -5,6 +5,16 @@
 import sys
 from collections import defaultdict
 
+def show_exacts(my_name, my_dict, my_description = "no description"):
+    matches = []
+    for x in my_dict:
+        if sorted(my_name) == sorted(x):
+            matches.extend(my_dict[x])
+    if len(matches):
+        print("Got matches for {} and {}: {}".format(my_name, my_description, ', '.join(matches)))
+    else:
+        print("No matches for {} and {}.".format(my_name, my_description))
+
 def read_names(file_string):
 	temp_dict = defaultdict(list)
 	with open(file_string) as file:
@@ -30,6 +40,11 @@ except:
 	sys.exit("Need a name or word.")
 
 smn = set(my_name)
+
+show_exacts(my_name, first_names, "first names")
+show_exacts(my_name, last_names, "last names")
+
+print("Two-name matches:")
 
 for f in first_names:
 	stemp = sorted(list(my_name))
