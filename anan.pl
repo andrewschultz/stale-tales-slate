@@ -39,6 +39,8 @@ my $thisMatch;
 
 my @prevs;
 
+print("NOTE: this is probably superseded by fln.py.\n");
+
 for my $thisarg ( 0 .. $#ARGV ) {
   if ( $ARGV[$thisarg] eq "-p" ) { $plurals = 1; next; }
   $thisMatch = lc( $ARGV[$thisarg] );
@@ -65,7 +67,7 @@ for my $thisarg ( 0 .. $#ARGV ) {
 
   if ( $thisMatch =~ /-/ ) {
     $toSub = $thisMatch;
-    $toSub =~ s/.*-([a-z]+).*/$1/g;
+    $toSub     =~ s/.*-([a-z]+).*/$1/g;
     $thisMatch =~ s/-[a-z]+//g;
   }
 
@@ -82,7 +84,7 @@ for my $thisarg ( 0 .. $#ARGV ) {
 
   if ($toSub) {
     $thisMatch = strdif( $thisMatch, $toSub );
-    $modify = 1;
+    $modify    = 1;
   }
   if ( $thisMatch =~ /[^a-z]/ ) {
     print "Bailing on bad string $thisMatch--has some non-alphabet letters.";
@@ -170,7 +172,7 @@ OUTER:
       if ( !defined( $mytimes{$_} ) || ( $mytimes{$_} == 0 ) ) { next OUTER; }
       $mytimes{$_}--;
     }
-    if ( !$a ) { next; }
+    if ( !$a )      { next; }
     if ( !$eqOnly ) { print "$a"; $count++; }
     my $toAdd = "";
     for my $q ( keys %times ) {

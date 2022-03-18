@@ -335,7 +335,7 @@ def find_poss(word_array_raw, bail=False):
 
 def cheat_reading(words_array, go_lower = True):
     my_string = ''
-    words_array = [x.lower().replace('-', '').replace(' ', '') for x in words_array]
+    words_array = [x.lower().replace('-', '').replace("'", '').replace(' ', '') for x in words_array]
     rights = [0] * len(words_array[0])
     wrongs = [0] * len(words_array[0])
     for y in range(0, len(words_array[0])):

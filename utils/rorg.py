@@ -35,7 +35,7 @@ verbose = False
 copy_file = False
 
 # default is to do everything
-game_ary = [ "sa", "roi" ]
+game_ary = [ "sa", "roi", 'trt' ]
 do_nudges = True
 do_tables = False
 
@@ -308,6 +308,7 @@ while cmd_count < len(sys.argv):
     elif arg == 'sr': game_ary = [ "sa", "roi" ]
     elif arg == 'r' or arg == 'roi': game_ary = [ "roi" ]
     elif arg == 'sa' or arg == 's': game_ary = [ "sa" ]
+    elif arg == 'trt' or arg == 'rtt': game_ary = [ "trt" ]
     elif arg == '?': usage()
     else: usage("Bad command " + arg)
     cmd_count += 1
@@ -328,6 +329,8 @@ with open(cfg_file) as file:
 
 for x in game_ary:
     if do_nudges:
-        alf_stuff(i7.hdr(x, "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", nudge_exp_cols)
+        alf_stuff(i7.hdr(x, "nu"), "volume nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", nudge_exp_cols)
     if do_tables:
         alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "book general auxiliary rules", 0)
+
+print("NOTE: this is deprecated in favor of the more general ott.py (organize table text).")
