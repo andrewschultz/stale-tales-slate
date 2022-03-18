@@ -29,22 +29,8 @@ understand the command "cheaty" as something new.
 understand "cheaty" as cheatying.
 
 carry out cheatying:
-	say "Cheats is [if cheats is true]already[else]now[end if] on.";
-	now cheats is true;
+	say "Setting tats stat to 3[if tats-stat is 3], though it already was[end if]. Unset this with TATS.";
+	now tats-stat is 3;
 	the rule succeeds;
-
-chapter cheatning
-
-cheatning is an action out of world.
-
-understand the command "cheatn" as something new.
-
-understand "cheatn" as cheatning.
-
-carry out cheatning:
-	say "Cheats is [if cheats is false]already[else]now[end if] off.";
-	now cheats is false;
-	the rule succeeds;
-
 
 ---- DOCUMENTATION ----
