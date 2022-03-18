@@ -7,14 +7,14 @@ volume times around
 voice-listen is a truth state that varies.
 
 table of times around
-max-to-see	clue-text
-0	"You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to listen. [oh-voice]"
-0	"You've been around the torus twice, seen everything again. You notice some sort of repetition. you think back to how you had to TAN ANT behind Store Y. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will make you recall. [oh-voice]"
-0	"You've run around the torus again. You remember now! When you had to TAN the ANT! It was a NATANT ant! Maybe that will help you here. [oh-voice]"
-0	"Ugh. This is still tricky. But you remember the coins, too. You made them icons, then sonic as well. But they inspired one more thing. A weird word. What was it? [oh-voice]"
-0	"Ah yes. That's what the sonic coins gave you. CONCISIONS! [oh-voice]"
-0	"Tan ant, natant. Sonic coins, concisions. [oh-voice]"
-0	"You feel hounded [one of][or]once again [stopping]by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is."
+clue-text
+"You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to listen. [oh-voice]"
+"You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you had to TAN ANT behind Store Y. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will make you recall. [oh-voice]"
+"You've run around the torus again. You remember now! When you had to TAN the ANT! It was a NATANT ant! Maybe that will help you here. [oh-voice]"
+"Ugh. Tricky. You remember the coins Curtis gave you back at Rustic Citrus for finding those fruits, after you got rid of Elvira. You made them icons, then sonic as well. Or was it the other way around? But they inspired one more thing. A weird word. One that helped you be better not at anagramming, but putting words together snappily What was it? [oh-voice]"
+"Ah yes. That's what the sonic coins gave you. CONCISIONS! [oh-voice]"
+"Tan ant, natant. Sonic coins, concisions. [oh-voice]"
+"You feel hounded [one of][or]once again [stopping]by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is."
 
 to say oh-voice:
 	if voice-listen is false:
@@ -64,7 +64,15 @@ this is the prep-traversal rule:
 this is the bye-dude rule:
 	process the notify score changes rule;
 	end the story saying "Feats! Fates-Feast! Taffetases!";
+	if score is maximum score:
+		choose row with final response rule of the show what you missed rule in Table of Final Question Options;
+		blank out the whole row;
 	follow the shutdown rules;
+
+Table of Final Question Options (continued)
+final question wording	only if victorious	topic		final response rule		final response activity
+"see [b](REJ)ECTS[r]/[b]REJECTED[r] words"	true	"reject/rejected/rejects"	the show rejected words rule	--
+"see what you [b]MISSED[r]"	true	"miss/misses/missed"	the show what you missed rule
 
 Tours Roust Torus Tables ends here.
 
