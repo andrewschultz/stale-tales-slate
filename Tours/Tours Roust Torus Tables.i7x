@@ -58,14 +58,14 @@ volume point progress table
 
 table of progress
 ruley	texty
-bye-bye-tsetse rule	"You think you see something vague in the center of the torus."
---	"lorem ipsum"
---	"lorem ipsum"
---	"lorem ipsum"
---	"lorem ipsum"
---	"lorem ipsum"
-prep-traversal rule	"Yes, there is something at the center of the torus. But it's blocked off. You have a feeling you need to do some sort of odd dance before entering."
-bye-dude rule	"lorem ipsum"
+bye-bye-tsetse rule	"A sort of cylindrical hologram appears in the center of the torus. More progress!"
+--	"The cylindrical hologram grows firmer. But there's no way to get there! Yet."
+--	"The cylinder in the center of the torus rumbles some more. It's no longer a solid block. But you can't see a door outline yet."
+--	"Yes. You're sure you see a door in the cylinder now."
+--	"Yes. The doors now have handles. They seem to open briefly, as if to beckon you, but ... not yet."
+--	"Well now! A rainbow-like path appears to lead you to the center from here or, well, the other places you visited, to the center. But you don't trust it yet. You have a bit more."
+prep-traversal rule	"The path to the center of the torus grows firmer. You try to rush inward, but something invisible bounces you back. Perhaps there's one more thing to do. Strange. You seem to have anagrammed everything."
+bye-dude rule	"That's all. You've found a new home, one where you don't have to do anything, but you'd like to. [if score is number of rooms]That stuff you put off here, well, you can take care of it later[else if score < maximum score]You made a good start at changing things right here, right now, but there's no rush[else]You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more[end if]. And yet the lessons you applied ruling Yorpwald will work here, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later."
 
 this is the bye-bye-tsetse rule:
 	remove tsetse from play;
