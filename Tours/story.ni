@@ -425,49 +425,46 @@ volume parsing
 
 after reading a command:
 	if the player's command exactly matches the text "[word-to-include of location of player]":
-		consider the room-solve rule;
-	if location of player is scene scene:
-		consider the bonus-point rule;
-
-this is the bonus-point rule:
-	repeat with F running through touchable flippables:
-		if the player's command exactly matches the text "[word-to-include of F]":
-			increment the score;
-			now F is off-stage;
-			say "[guess-right-text of F]";
+		if location of player is solved:
+			say "Already got that.";
+		now location of player is solved;
+		say "[guess-right-text of location of player][line break]";
+		increment the score;
+		choose row score in table of progress;
+		say "[texty entry][line break]";
+		if there is a ruley entry, process the ruley entry;
+		process the notify score changes rule;
+		say "[b][location of player][r][line break]";
+		let got-one be false;
+		repeat through table of room combos:
+			unless location of player is room1 entry or location of player is room2 entry:
+				next;
+			if room1 entry is solved and room2 entry is solved:
+				say "[both entry][line break]";
+			else if room1 entry is solved:
+				say "[first entry][line break]";
+			else if room2 entry is solved:
+				say "[second entry][line break]";
+			else:
+				say "Oops. There is a very very odd bug here. It won't affect you winning the game, but you'll miss out on story.";
+			now got-one is true;
+			break;
 			reject the player's command;
-
-this is the room-solve rule:
-	if location of player is solved:
-		say "Already got that.";
-	now location of player is solved;
-	say "[guess-right-text of location of player][line break]";
-	increment the score;
-	choose row score in table of progress;
-	say "[texty entry][line break]";
-	if there is a ruley entry, process the ruley entry;
-	process the notify score changes rule;
-	say "[b][location of player][r][line break]";
-	let got-one be false;
-	repeat through table of room combos:
-		unless location of player is room1 entry or location of player is room2 entry:
-			next;
-		if room1 entry is solved and room2 entry is solved:
-			say "[both entry][line break]";
-		else if room1 entry is solved:
-			say "[first entry][line break]";
-		else if room2 entry is solved:
-			say "[second entry][line break]";
-		else:
-			say "Oops. There is a very very odd bug here. It won't affect you winning the game, but you'll miss out on story.";
-		now got-one is true;
-		break;
+		if got-one is false:
+			say "Oops. We should have done something here, but we didn't.";
+		if ever-voice is true and score is 1:
+			say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
 		reject the player's command;
-	if got-one is false:
-		say "Oops. We should have done something here, but we didn't.";
-	if ever-voice is true and score is 1:
-		say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
-	reject the player's command;
+	if location of player is scene scene:
+		repeat with F running through touchable flippables:
+			if the player's command exactly matches the text "[word-to-include of F]":
+				increment the score;
+				now F is off-stage;
+				say "[guess-right-text of F][line break]";
+				increment the score;
+				process the notify score changes rule;
+				reject the player's command;
+
 
 volume help stuff
 
