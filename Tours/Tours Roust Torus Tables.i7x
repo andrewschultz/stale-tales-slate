@@ -7,13 +7,13 @@ volume center passage status
 table of center statuses
 cylinder-desc	cylinder-block
 "Looking inward, the center of the torus seems slightly blurry, as if something should be there"	"There's nothing to go inside to, yet. Well, nothing enough. And no way to get there. Maybe figuring what to do elsewhere will help."
-"It looks like there's a hologram in the center of the torus: a ylindrical silo, or something. But you have no way to enter"	--
-"The cylinder at the center of the torus looks much more real now. But it is too solid to enter even if you had a passage"	--
-"You think you can see a crack here or there in the cylinder at the center of the torus. No way to get there, though"	--
-"You're pretty sure you see the faint outline of a door--wait, more than one outline--leading into the cylinder at the center of the torus. One for each area of the torus, you'd guess"	--
-"The cylinder now seems to have doors with handles. But there is no way to approach it"	--
-"There seems to almost be a walkway to the cylinder at the center from each area of the torus. But it doesn't quite look solid enough. Yet"	--
-"The walkways to the cylinder at the center seem solid. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r]"	--
+"It looks like there's a hologram in the center of the torus: a cylindrical silo, or something. But you have no way to enter"	"There's something to maybe go inside but no way to get there."
+"The cylinder at the center of the torus looks much more real now. But it is too solid to enter even if you had a passage"	"The cylinder in the center of the torus probably has something in it, but you have no way to get there or get in."
+"You think you can see a crack here or there in the cylinder at the center of the torus. No way to get there, though"	"You still don't have a passage to the cylinder or a way in."
+"You're pretty sure you see the faint outline of a door--wait, more than one outline--leading into the cylinder at the center of the torus. One for each area of the torus, you'd guess"	"Even if you could make it to the cylinder, the door wouldn't seem to open."
+"The cylinder now seems to have doors with handles. But there is no way to approach it"	"You must be close to being able to get near the cylinder."
+"There seems to almost be a walkway to the cylinder at the center from each area of the torus. But it doesn't quite look solid enough. Yet"	"Maybe if the walkway were a bit more solid."
+"The walkways to the cylinder at the center seem solid. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r]"	"You walk to the center of the torus. The door nearby opens readily. You enter and fall down a slope..."
 
 volume times around
 
@@ -44,7 +44,7 @@ Prep Area	Meta Meat	"Now that you have a teammate and a reason to reappear, you 
 Grain Grain	Latte Latte	"Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice."	"You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people."	"You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account."
 Tines Inset	Pechan Pechan	"The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function."	"Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start."	"You've made your own luck in this stomach-y room. But a stomach by itself can't do much."
 
-to say room-visit-eh: say "[if number of visited rooms is 1]reckon this [i]has[r] to be the easiest area to figure[else]have seen [rest-of-tor] of the rest of the torus[end if]"
+to say room-visit-eh: say "[if number of visited rooms is 1]reckon this [i]had[r] to be the easiest area to figure[else]have seen [rest-of-tor] of the rest of the torus[end if]"
 
 to say rest-of-tor:
 	if number of visited rooms <= 4:
