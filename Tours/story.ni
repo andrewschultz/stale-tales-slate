@@ -47,7 +47,7 @@ procedural rule: ignore the print final score rule.
 
 section your description
 
-description of the player is "You have some tats which, in a pinch, could be changed to a STAT to help you out if you need help."
+description of the player is "Looking at your body, you're not as strong as you used to be. In good enough shape, you hope, but those jibes about not being half the person you used to be hurt--even if they're not true.[paragraph break]You have some tats which, in a pinch, could be changed to a STAT to help you out if you need help."
 
 tats-stat is a number that varies.
 
@@ -218,7 +218,7 @@ the hams are flippables. description is "Both sorts of hams. Jokesters carrying 
 volume when play begins
 
 when play begins:
-	now the right hand status line is "[score]/[maximum score]";
+	now the right hand status line is "[score]/[number of rooms]";
 	say "Leading Yorpwald after defeating Red Bull Burdell and then Elvira wasn't what you asked for, but it's what you got, and you did well enough. But the job is exhausting. You've never wanted flatterers, and you expected criticism, even unfair criticism, but there are some things you can't avoid listening to by now.";
 	wfak;
 	say "The worst part, as you're getting older: you're maybe half the person you used to be. This, from people who never thought you were much to begin with. Still, you Got Stuff Done. But your heart was in things less. Others seemed to have better ideas. You felt you spent all your time delegating and getting credit for stuff you just signed off on.";
@@ -468,7 +468,7 @@ after reading a command:
 
 volume help stuff
 
-to say verbs: say "[b]V/VERB/VERBS[r]"
+to say verbs: say "[b]V[r]/[b]VERB[r]/[b]VERBS[r]"
 
 after printing the locale description for Ehs Ehs when Ehs Ehs is unvisited:
 	say "[i][bracket]NOTE: to see general information about [this-game][i], type [b]ABOUT[i]. To see the verbs used, type [verbs][i]. In particular, you may want to note the directions used.[close bracket][r]";
