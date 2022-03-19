@@ -54,10 +54,17 @@ tats-stat is a number that varies.
 check taking inventory:
 	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a STAT from, if you want[end if]." instead;
 
-the player carries the tats. description of tats is "(BUG)."
+the player carries the tats. description of tats is "[tat-desc]."
+
+to say tat-desc:
+	if location of player is solved:
+		say "The tats are blank. Well, you don't need them. You figured what to do here";
+		continue the action;
+	say "[how-many-right of printed name of location of player]";
 
 instead of doing something with the tats:
-	say "The tats will change as you make guesses. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command."
+	say "The tats will change as you make guesses. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command.";
+	if current action is examining and tats-stat > 0, continue the action;
 
 volume dubroom definitions
 
@@ -503,8 +510,17 @@ cmdhash is a number that varies.
 
 firstwordhash is a number that varies.
 
-to say how-many-right:
-	let x1 be filtered name of the player's command;
+to decide whether tat-cheat-regular:
+	if the remainder after dividing tats-stat by 2 is 1, yes;
+	no;
+
+to decide whether tat-cheat-extra:
+	let temp be tats-stat / 2;
+	if the remainder after dividing temp by 2 is 1, yes;
+	no;
+
+to say how-many-right of (myit - indexed text):
+	let x1 be filtered name of myit;
 	let count be 0;
 	let binary be 0;
 	repeat with y running from 1 to number of characters in x1:
@@ -512,11 +528,11 @@ to say how-many-right:
 		if character number y in x1 is character number y in word-to-include of location of player:
 			increment binary;
 			increment count;
-	if the remainder after dividing tats-stat by 2 is 1:
+	if tat-cheat-regular:
 		say "The stat tats show two numbers: [count] of [number of characters in x1]";
 	if tats-stat is 3:
 		say ".[paragraph break]CHEAT RELOAD[paragraph break]";
-	if the remainder after dividing (tats-stat / 2) by 2 is 1:
+	if tat-cheat-extra:
 		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1]";
 
 to decide which number is exp-1 of (n - a number):
@@ -550,7 +566,7 @@ to say reject:
 		else if tats-stat is 0:
 			say "Hmm, rearrange things.";
 		else:
-			say "[how-many-right].";
+			say "[how-many-right of the player's command].";
 		continue the action;
 	if location is not solved:
 		repeat through table of nudge hashes:
