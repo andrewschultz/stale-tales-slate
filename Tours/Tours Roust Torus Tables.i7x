@@ -76,7 +76,7 @@ this is the prep-traversal rule:
 
 this is the bye-dude rule:
 	process the notify score changes rule;
-	end the story saying "Feats! Fates-Feast! Taffetases!";
+	end the story finally saying "Feats! Fates-Feast! Taffetases!";
 	if score is maximum score:
 		choose row with final response rule of the show what you missed rule in Table of Final Question Options;
 		blank out the whole row;

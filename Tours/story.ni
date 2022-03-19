@@ -137,7 +137,7 @@ definition: a direction (called d) is hep-illegal:
 
 check going when in-heptagon-puzzle is true:
 	if noun is not rotational, continue the action;
-	if noun is a1 or noun is b1, say "You can't go nearby. You have to make a bit of a jump." instead;
+	if noun is a1 or noun is b1, say "Odd. You feel a jab as you try to walk over. Maybe you have to make a bit more of a jump." instead;
 	if init-hept-dir is up:
 		now init-hept-dir is noun;
 		continue the action;
@@ -149,13 +149,12 @@ after going when in-heptagon-puzzle is true:
 		now in-heptagon-puzzle is false;
 		continue the action;
 	now location of player is hep-traversed;
-	say "[list of hep-traversed rooms]";
 	add dist of noun to heptagon-path;
 	if number of hep-traversed rooms is 7:
 		if 2 is not listed in heptagon-path or 3 is not listed in heptagon-path:
 			say "The interior of the Torus shudders, but nothing conclusive happens. Perhaps you [one of][or]again [or]once again [stopping]took an easy way to touch all the rooms.";
 		else:
-			say "The way to the center unlocks! You can go [b]INSIDE[r] now.";
+			say "All manner of whirring seems to flow in from around you. The cylinder in the center of the torus lights up. You take a tentative step inward ... and this time, you're not bounced.[paragraph break]Now's probably a good time to go [b]INSIDE[r].";
 			now solved-heptagon is true;
 		now in-heptagon-puzzle is false;
 	continue the action;
@@ -271,7 +270,7 @@ carry out oning:
 	if in-heptagon-puzzle is true, say "You're already in the process of going on." instead;
 	if player is in scene scene, say "You already successfully went on." instead;
 	now in-heptagon-puzzle is true;
-	say "You've started going on[one of]. [location of player] seems as good a place to start as any others. It seems to brighten up as you make your decision[or] again. Maybe you'll find the right way through this time. [location of player] brightens, slightly[stopping].";
+	say "You decide it's time to start going on[one of]. [location of player] seems as good a place to start as any others. The whole torus seems to brighten up as you make your decision[or] again. Maybe you'll find the right way through this time[stopping].";
 	now ever-heptagon-puzzle is true;
 	now all rooms are not hep-traversed;
 	now location of player is hep-traversed;
@@ -413,8 +412,8 @@ understand "verb" as verbing.
 understand "verbs" as verbing.
 
 carry out verbing:
-	say "Compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are A and B to move clockwise and counterclockwise around the torus.";
-	say "You can also move multiple times with AA, AAA, BB, or BBB. Note anything more than that is accepted but impractical, as AAA and BBBB are equivalent.";
+	say "Compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are [b]A[r] and [b]B[r] to move clockwise and counterclockwise around the torus.";
+	say "You can also skip over adjacent torus areas with [b]AA[r], [b]AAA[r], [b]BB[r], or [b]BBB[r]. Note anything more than that is accepted but impractical, as [b]AAA[r] and [b]BBBB[r] are equivalent.";
 	the rule succeeds;
 
 section swearing
