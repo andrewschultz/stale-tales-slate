@@ -9278,6 +9278,8 @@ Rule for printing a parser error when the latest parser error is didn't understa
 
 book parsing
 
+the last-command is indexed text that varies.
+
 Rule for printing a parser error when the latest parser error is the can't see any such thing error:
 	if the player's command includes "writing":
 		say "[one of]There's a lot of writing in this game[if Notices Section is visited], especially red writing[end if]. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand[or]Try to READ the object you want, instead[stopping].";
@@ -9286,7 +9288,21 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	say "You can't see anything like that here. If you're trying to view the room, L or LOOK should work.";
 	the rule succeeds;
 
-Rule for printing a parser error when the latest parser error is the only understood as far as error: say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just [b][word number 1 in the player's command in upper case][r] should work to [verbdetail].".
+the parser error flag is a truth state that varies.
+
+Rule for printing a parser error when the latest parser error is the only understood as far as error:
+	say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just [b][word number 1 in the player's command in upper case][r] should work to [verbdetail].";
+	say "Do so now?";
+	if the player dir-consents:
+		now the last-command is "[word number 1 in the player's command]";
+		now parser error flag is true;
+	else:
+		if debug-state is false, say "OK.";
+
+Rule for reading a command when the parser error flag is true:
+	d "Reading [last-command].";
+	now the parser error flag is false;
+	change the text of the player's command to the last-command.
 
 to say verbdetail:
 (- LanguageVerb(verb_word); -)
