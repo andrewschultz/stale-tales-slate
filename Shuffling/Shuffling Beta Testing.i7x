@@ -45,7 +45,7 @@ rule for supplying a missing noun while sring (this is the switch directions rul
 carry out sring:
 	if player is in sf or player is in rf, say "In here, odd things might happen if you change the puzzle. But changing it at the fields will send you to the Trips Strip." instead;
 	let uf be false;
-	if noun is inside or noun is outside or noun is up or noun is down, say "You need to specify a planar compass direction for SR/RS. Usage is as follows:[paragraph break]SR NW means you should go north in Softer, west in Rest of.[line break]SR W means you go west in Softer, east in Rest of.[line break]RS flips these two directions in all cases." instead;
+	if noun is inside or noun is outside or noun is up or noun is down, say "You need to specify a planar compass direction for [b]SR[r]/[b]RS[r]. Usage is as follows:[paragraph break][b]SR NW[r] means you should go north in Softer, west in Rest of.[line break][b]SR W[r] means you go west in Softer, east in Rest of.[line break]RS flips these two directions in all cases." instead;
 	if noun is north or noun is west or noun is south or noun is east:
 		repeat with gi running through guiders:
 			if godir of gi is noun:
@@ -115,9 +115,9 @@ every turn (this is the haha-debug rule):
 		if helpdebugflag is true:
 			let temp-haha be just-print;
 			now just-print is false;
-			all-say "DEBUG: GLEAN = [run paragraph on]";
+			all-say "DEBUG: GLEAN = [run paragraph on]"; [bold-ok]
 			try gleaning;
-			all-say "DEBUG: ANGLE = [run paragraph on]";
+			all-say "DEBUG: ANGLE = [run paragraph on]"; [bold-ok]
 			try angleing;
 			now just-print is temp-haha;
 
@@ -185,10 +185,10 @@ understand the command "xray" as something new.
 understand "xray" as xraying.
 
 carry out xraying:
-	repeat with ABC running through touchable things:
-		if ABC is flippable or ABC is the location:
-			say "Xraying [ABC]:";
-			try xmxing ABC;
+	repeat with a-thing running through touchable things:
+		if a-thing is flippable or a-thing is the location:
+			say "Xraying [a-thing]:";
+			try xmxing a-thing;
 	the rule succeeds;
 
 chapter stiting
@@ -222,9 +222,9 @@ understand "sc1" as sc1ing.
 carry out sc1ing:
 	if player does not have tagged gadget, say "Giving you the gadget." instead;
 	now player has tagged gadget;
-	repeat with ABC running through touchable things:
-		say "Scanning [ABC]:[line break]";
-		try scaning ABC;
+	repeat with a-thing running through touchable things:
+		say "Scanning [a-thing]:[line break]";
+		try scaning a-thing;
 	the rule succeeds;
 
 test sfs with "sc1/switch gadget/sc1/switch gadget"
@@ -255,7 +255,7 @@ understand the command "dc" as something new.
 
 understand "dc" as dcing.
 
-carry out dcing: say "[b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break][b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[paragraph break]Also extra fun is XC, which gets you [if saltine is not in cabinet]a hint item that can only be used once in release mode[else]unlimited uses of the saltine[end if]."
+carry out dcing: say "[b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break][b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. [b]SR NE[r] puts them N and E, [b]SR E[r] puts them E and W, and [b]RS[r] reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break][b]SK 1-4[r] solves a region with 1=f 2=i 3=m and 4=r.[line break][b]DISAS[r] disassembles the disguise if you want to try to break that.[paragraph break]Also extra fun is [b]XC[r], which gets you [if saltine is not in cabinet]a hint item that can only be used once in release mode[else]unlimited uses of the saltine[end if]."
 
 chapter tsing
 
@@ -292,7 +292,7 @@ carry out tsing:
 	now Ordeal Loader is solved;
 	move cabinet to Trips Strip;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
-	say "Note that TS can be used with a number, or TSF can solve everything. 4=metros 2=sortie 1=forest.";
+	say "Note that [b]TS[r] can be used with a number, or [b]TSF[r] can solve everything. 4=metros 2=sortie 1=forest.";
 	let curstuff be number understood;
 	if curstuff > 8:
 		now curstuff is the remainder after dividing curstuff by 8;
@@ -331,7 +331,7 @@ carry out tsfing:
 		now ordeal loader is solved;
 		say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
 	else:
-		say "WARNING: you may not want to mess around in the Trips Strip if you run TSF after visiting the strip. Bad things may happen. Just a warning.";
+		say "WARNING: you may not want to mess around in the Trips Strip if you run [b]TSF[r] after visiting the strip. Bad things may happen. Just a warning.";
 	now sortie is solved;
 	now forest is solved;
 	now metros is solved;
@@ -432,7 +432,7 @@ carry out rjing:
 		move player to Astral Altars;
 	if rj is 5:
 		move player to Means Manse;
-		say "Debug-testing note: EXIST to win.";
+		say "Debug-testing note: [b]EXIST[r] or [b]NAMES[r] or [b]AMENS[r] to win.";
 
 chapter sking
 

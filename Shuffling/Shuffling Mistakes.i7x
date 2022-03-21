@@ -64,7 +64,7 @@ to say not-a-magnet:
 	else if player is in Busiest Subsite:
 		say "Your magenta nametag is on securely enough. Not that you actually like having it on, but you'd get scolded for not having it";
 	else:
-		say "[bug-report]. You shouldn't have the nametag, so the 'MAGNET' mistake text shouldn't appear";
+		say "[bug-report]. You shouldn't have the nametag, so the [b]MAGNET[r] mistake text shouldn't appear";
 	if player is not in Busiest Subsite:
 		say "[one of][or].[paragraph break]You also wonder if saying 'a magnet' instead of 'magnet' is cheating a bit. It probably is[stopping]"
 

@@ -249,7 +249,7 @@ when play begins (this is the check objects and rooms rule):
 		say "Rooms remaining to describe: [undescribed-rooms].";
 
 to say miss-types: [this is different from Roiling]
-	say "Shuffling Around only offers MISSES = this region's misses (may provide nonsense/spoilers).";
+	say "Shuffling Around only offers [b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
 	if mrlp is metros and nerd-sol > 1:
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	say "If nothing else is below, you found everything";
@@ -270,15 +270,15 @@ carry out yacking:
 	repeat through the table of subject-blather:
 		if him-who entry is not visible:
 			move him-who entry to location of player;
-		say "ASK [him-who entry] ABOUT [person-subj entry]: [him-say entry][line break]";
+		say "[b]ASK [printed name of him-who entry in upper case] ABOUT[r] [person-subj entry]: [him-say entry][line break]"; [bold-ok]
 	repeat through table of default-sub-blather:
 		if him-who entry is not visible:
 			move him-who entry to location of player;
-		say "ASK [him-who entry] ABOUT cork (e.g. object in game): [him-say entry][line break]";
+		say "[b]ASK [printed name of him-who entry in upper case] ABOUT SOFA[r] (e.g. object in game): [him-say entry][line break]"; [bold-ok]
 	repeat through the table of default-gen-blather:
 		if default-talker entry is not visible:
 			move default-talker entry to location of player;
-			say "ASK [default-talker entry] ABOUT mumblety-peg (e.g. object not in game): [gen-blah entry][line break]";
+			say "[b]ASK [printed name of him-who entry in upper case] ABOUT MUMBLETY-PEG[r] (e.g. object not in game): [gen-blah entry][line break]"; [bold-ok]
 	repeat through the table of general-blather:
 		if him-who entry is not visible:
 			move him-who entry to location of player;
@@ -286,7 +286,7 @@ carry out yacking:
 			now cur-guy is him-who entry;
 			now cur-line is 0;
 		increment cur-line;
-		say "ASK [him-who entry] ABOUT (topic [cur-line]): [him-say entry][line break]";
+		say "[b]ASK [him-who entry] ABOUT[r] (topic [cur-line]): [him-say entry][line break]"; [bold-ok]
 	the rule succeeds;
 
 chapter unsolve
@@ -537,7 +537,7 @@ understand "met [number]" as meting.
 carry out meting:
 	if number understood > 2 or number understood < 1, say "1 for heaths, 2 for begonias." instead;
 	if Bassy Abyss is visited:
-		say "Sorry, you need to restart to run the MET test command again.";
+		say "Sorry, you need to restart to run the [b]MET[r] test command again.";
 	now player has the lit up tulip;
 	now power-shut is true;
 	move player to terminal, without printing a room description;
@@ -727,10 +727,10 @@ this is the in-fields rule:
 
 this is the max-reg-score rule:
 	let tempbool be true;
-	repeat with REG running through solved regions:
-		if last-loc of REG is visited:
-			if cur-score of REG is not max-score of REG:
-				append "Region [REG] only has [cur-score of REG] of [max-score of REG] points.[line break]" to the file of test results;
+	repeat with this-reg running through solved regions:
+		if last-loc of this-reg is visited:
+			if cur-score of this-reg is not max-score of this-reg:
+				append "Region [this-reg] only has [cur-score of this-reg] of [max-score of this-reg] points.[line break]" to the file of test results;
 				now tempbool is false;
 	if tempbool is true, the rule succeeds;
 	the rule fails;
