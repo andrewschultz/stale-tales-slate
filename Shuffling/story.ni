@@ -65,42 +65,42 @@ Include (-
 			   print "take inventory";
 	  'a//':   print "ask about";
 	  'about':  print "see about the game";
-	  'options':  print "read about OPTIONS in your notepad";
-	  'walkthrough':  print "see a WALKTHROUGH";
-	  'reminders':  print "toggle restore-game REMINDERS";
+	  'options':  print "read about options in your notepad";
+	  'walkthrough':  print "see a walkthrough";
+	  'reminders':  print "toggle restore-game reminders";
 	  'tech':  print "see techincal details";
-	  'parse':  print "PARSE gadget output";
-	  'spare':  print "SPARE gadget output";
-	  'access':  print "toggle screen reader ACCESS";
+	  'parse':  print "parse gadget output";
+	  'spare':  print "spare gadget output";
+	  'access':  print "toggle screen reader access";
 	  'son', 'space', 'space on', 'spaces on':  print "add spaces to gadget output";
-	  'sg':  print "use SG to switch the gadget between SECURE and RECUSE";
-	  'release':  print "see RELEASE info";
-	  'sites':  print "see web SITES that helped the development of Shuffling Around";
+	  'sg':  print "use sg to switch the gadget between secure and recuse";
+	  'release':  print "see release info";
+	  'sites':  print "see web sites that helped the development of shuffling around";
 	  'nos', 'no space', 'no spaces':  print "remove spaces from gadget output";
 	  'credit', 'credits':  print "see credits";
-	  'hint', 'hints':  print "get HINTS";
-	  'help', 'info', 'instructions':  print "get basic HELP/INFO";
+	  'hint', 'hints':  print "get hints";
+	  'help', 'info', 'instructions':  print "get basic help or info";
 	  'verb', 'verbs':  print "see common verbs";
 	  'l//':   print "look";
 	  'flap':  print "fly";
 	  'pf':  print "consult your pad about flips";
 	  'x//':   print "examine";
-	  'angle', 'harken', 'hrn', 'hkn', 'rk', 'kn':  print "ANGLE the blue lube";
-	  'glean', 'hanker', 'hnr', 'hkr', 'kr', 'nk':  print "GLEAN the blue lube";
-	  'hush':  print "HUSH random text";
-	  'uhhs':  print "re-trigger random text with UHHS";
-	  'secure':  print "SECURE the gadget";
-	  'recuse':  print "RECUSE the gadget";
-	  'terry':  print "retry with TERRY";
+	  'angle', 'harken', 'hrn', 'hkn', 'rk', 'kn':  print "angle the blue lube";
+	  'glean', 'hanker', 'hnr', 'hkr', 'kr', 'nk':  print "glean the blue lube";
+	  'hush':  print "hush random text";
+	  'uhhs':  print "re-trigger random text with uhhs";
+	  'secure':  print "secure the gadget";
+	  'recuse':  print "recuse the gadget";
+	  'terry':  print "retry with terry";
 	  'optin':  print "opt in";
-	  'notip', 'no tip':  print "give NO TIP";
-	  'xyzzy':  print "say XYZZY";
+	  'notip', 'no tip':  print "give no tip";
+	  'xyzzy':  print "say xyzzy";
 	  'hints off', 'help off', 'info off', 'hint off':  print "turn hints off";
 	  'xx//':   print "examine magically";
 	  'rc//', 'cr//':   print "scan both ways";
 	  'r//', 'rec//', 'rect//':   print "rectify";
 	  'poss//':   print "track possible points";
-	  'consult pad', 'pad':   print "CONSULT your PAD about something";
+	  'consult pad', 'pad':   print "consult your pad about something";
 	  'c//', 'cert//', 'cer//':   print "certify";
 	  'z//':   print "wait";
 	  default: rfalse;
@@ -9286,7 +9286,10 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	say "You can't see anything like that here. If you're trying to view the room, L or LOOK should work.";
 	the rule succeeds;
 
-Rule for printing a parser error when the latest parser error is the only understood as far as error: say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just '[word number 1 in the player's command]' should work.".
+Rule for printing a parser error when the latest parser error is the only understood as far as error: say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just [b][word number 1 in the player's command in upper case][r] should work to [verbdetail].".
+
+to say verbdetail:
+(- LanguageVerb(verb_word); -)
 
 Rule for printing a parser error when the latest parser error is the I beg your pardon error: say "[one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
 
