@@ -254,16 +254,20 @@ volume clue-visiting
 
 times-around is a number that varies.
 
-after printing the locale description:
+after printing the locale description (this is the clue on complete tour rule):
 	if location of player is scene scene, continue the action;
+	if score > 0 and ever-heptagon-puzzle is false, continue the action;
 	now location of player is cluevisited;
 	if number of cluevisited rooms is 7:
+		now all rooms are not cluevisited;
+		if ever-heptagon-puzzle is true:
+			say "Hmm. Nothing new to do. You should really try going [b]ON[r] again.";
+			continue the action;
 		increment times-around;
 		if times-around > number of rows in table of times around:
 			decrement times-around;
 		choose row times-around in table of times around;
 		say "[clue-text entry]";
-		now all rooms are not cluevisited;
 		now cheat-voice is true;
 	continue the action;
 
