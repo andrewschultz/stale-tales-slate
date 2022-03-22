@@ -18442,6 +18442,7 @@ to install-pickup-line (x1 - a number) and (x2 - a number):
 				say "Oops [XX] is a duplicate.";
 			else:
 				now XX is in Disowned Downside;
+				now XX is available-this-time;
 				now one-yet is true;
 	if one-yet is false:
 		say "Oops [x1] pod [x2] ord had no pickup line.";
@@ -18489,7 +18490,7 @@ rule for deciding whether all includes pickup-lines:
 
 a pickup-line has a number called pickup-prio. pickup-prio of a pickup-line is usually 0. a pickup-line is usually abstract.
 
-a pickup-line can be ment. a pickup-line is usually not ment. a pickup-line can be passed-on. a pickup-line is usually not passed-on.
+a pickup-line can be ment. a pickup-line is usually not ment. a pickup-line can be available-this-time. a pickup-line is usually not available-this-time.
 
 max-pod-num is a number that varies. max-pod-num is 7. cur-player-blab is a number that varies. cur-player-blab is 0.
 
@@ -22118,9 +22119,13 @@ this is the towers-alt rule:
 
 to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure] [b]FUSSIER[r][else]using the lone duck to make the prison ropins [b]UNLOCKED[r][end if]"
 
+yellr-figured is a truth state that varies.
+
 this is the otters-alt rule:
-	say "[eqls]OTTERS[line break]";
-	say "[2da]there were several other ways you could've made the [pla-ma]s act (you only needed three of seven): [how-players].";
+	say "[eqls][b]OTTERS[r][line break]";
+	say "[2da]there were several other ways you could've made the [pla-ma]s act (you only needed three of seven): [how-players]";
+	if players are not reflexed, say "[2da][the players] could've been made to talk more [b]SPARELY[r].";
+	if yellr-figured is false, say "[2da]you could've said [b]REALLY[r] to dispel [yer all].";
 	say "[2da]you could've made the imp act [b][if number of forcemooted northern block-concepts is 0]<[b]BUG[r]>[else][flip-name of random forcemooted northern block-concept][end if][r], and the whiners could've spoken [b][if number of forcemooted southern block-concepts is 0]<[b]BUG[r]>[else][flip-name of random southern forcemooted block-concept][end if][r].";
 
 this is the others-alt rule:
@@ -22149,17 +22154,39 @@ to say presto-3 of (n - a number):
 	if n is not 2, say "[if n is not 1] and [end if]giving the yak a bad book to eat";
 	if n is not 3, say " and pushing the skid to Dirge Ridge when you [if escaroles are in Hacks Shack]change the escaroles to a casserole[else]have the casserole[end if]";
 
+definition: a pickup-line (called p) is unplayed:
+	if p is not available-this-time, no;
+	if p is ment, yes;
+	no;
+
+definition: a pickup-line (called p) is unreached:
+	if p is not available-this-time, no;
+	if p is ment, no;
+	yes;
+
+list-solves is a truth state that varies.
+
+rule for printing the name of a pickup-line (called pl) when list-solves is true:
+	say "[b]";
+	if pl is t-tearily-irately:
+		say "tearily/irately";
+	else:
+		choose row with the-from of pl in table of otters anagrams;
+		say "[right-word entry]";
+	say "[r]";
+
 to say how-players:
-	let got-yet be false;
-	repeat with QQ running through passed-on pickup-lines:
-		say "[unless got-yet is true] or [end if]";
-		now got-yet is true;
-		if QQ is t-tearily-irately:
-			say "[b]IRATELY[r]/[b]TEARILY[r]";
-		else:
-			choose row with the-from of QQ in table of otters anagrams;
-			say "[right-word entry]";
-	if t-tearily-irately is moot and t-tearily-irately is not passed-on, say "[if irately is true][b]TEARILY[r] instead of [b]IRATELY[r][else][b]IRATELY[r] instead of [b]TEARILY[r][end if]";
+	now list-solves is true;
+	let MYL be list of unplayed pickup-lines;
+	if number of entries in MYL > 0:
+		say ". Not acted on: [MYL]";
+	now MYL is list of unreached pickup-lines;
+	if number of entries in MYL > 0:
+		say ". Not seen because you finished quickly: [MYL]";
+	now list-solves is false;
+	if t-tearily-irately is reflexed:
+		say ". You could've also had [the players] discuss reality [if irately is true][b]TEARILY[r] instead of [b]IRATELY[r][else][b]IRATELY[r] instead of [b]TEARILY[r][end if]";
+	say ".";
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
