@@ -6,7 +6,7 @@ Version 1/220314 of Tours Roust Torus Nudges by Andrew Schultz begins here.
 
 volume nudge tables
 
-chapter general hashes
+book general hashes
 
 table of nudge hashes
 cmd-val (text)	cmd-hash (number)	cmd-loc	cmd-rule	nudge-text

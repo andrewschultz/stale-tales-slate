@@ -711,7 +711,7 @@ carry out saeing:
 	the rule succeeds;
 
 every turn when sae is true and player has settler:
-	say "AIR SCAN: [no line break]";
+	say "[b]AIR SCAN[r]: [no line break]";
 	try scaning the location;
 
 chapter tuting
@@ -798,7 +798,7 @@ carry out fruiing:
 		say "[f-and-rev of fru] still off-stage. From room = [frroom of fru].";
 	if number of off-stage fruits > 0, say "========================================[line break]";
 	repeat with fru running through in-play fruits:
-		say "[f-and-rev of fru] still in-play, in [location of fru][if location of fru is location of player] [b](HERE)[r][end if].";
+		say "[f-and-rev of fru] still in-play, in [location of fru][if location of fru is location of player] [b]([b]HERE[r])[r][end if].";
 	if number of in-play fruits > 0, say "========================================[line break]";
 	repeat with fru running through held fruits:
 		say "[f-and-rev of fru] held.";
@@ -922,12 +922,12 @@ understand the command "post" as something new.
 understand "post" as posting.
 
 carry out posting:
-	if location of player is Bustle Sublet, say "(Note--actual response for POST is subverted by a testing command. Try OPST if you want to test the nudge.)";
+	if location of player is Bustle Sublet, say "(Note--actual response for [b]POST[r] is subverted by a testing command. Try [b]OPST[r] if you want to test the nudge.)";
 	if location of player is not dusty study, say "Going to the post-script Others area is not available post-Dusty Study." instead;
 	try roveovering;
 	try fliptoing hoster;
 	try entering hoster;
-	ital-say "TESTING NOTE: [b]SON[i] gives various stages of the coins. 1=coin 2=icon 3=coins 4=icons 5=sonic coins 6=sonic icons.";
+	ital-say "[b]TESTING NOTE[r]: [b]SON[i] gives various stages of the coins. 1=coin 2=icon 3=coins 4=icons 5=sonic coins 6=sonic icons.";
 	the rule succeeds;
 
 chapter mowing
@@ -1050,8 +1050,8 @@ definition: a room (called rm) is deadendy:
 	no;
 
 carry out gforceing:
-	if mrlp is not towers, say "GFORCE only works in TOWERS." instead;
-	if map region of noun is not towers, say "GFORCE only works moving to another room in TOWERS." instead;
+	if mrlp is not towers, say "[b]GFORCE[r] only works in [b]TOWERS[r]." instead;
+	if map region of noun is not towers, say "[b]GFORCE[r] only works moving to another room in [b]TOWERS[r]." instead;
 	if progval of noun is not 2, say "[noun] is not a mainland room." instead;
 	if noun is deadendy, say "[noun] is a dead end room. The only way to get there is to remove its only guardian." instead;
 	repeat with QQ running through guardians:
@@ -1064,7 +1064,7 @@ carry out gforceing:
 			now QQ is off-stage;
 	move the player to noun;
 	choose-new-hint-guardian;
-	say "(You may wish to UNDO once you see the debug text.)";
+	say "(You may wish to [b]UNDO[r] once you see the debug text.)";
 
 chapter spbing
 
@@ -1076,7 +1076,7 @@ understand "spb" as spbing.
 
 carry out spbing:
 	now spill-block is whether or not spill-block is false;
-	say "Blocking the consequences of SPILL is now [on-off of spill-block].";
+	say "Blocking the consequences of [b]SPILL[r] is now [on-off of spill-block].";
 	the rule succeeds.
 
 chapter otwin
@@ -1104,7 +1104,7 @@ carry out otwining:
 		now adjsolve is 3;
 		now nounsolve is 3;
 		now player is in Reclusion Inclosure;
-	say "Otters endgame cheats are invoked! You may wish to QUICKLY before attacking Elvira, although of course the instadeath if you forget is relevant too. Also, you need to play the whistle DEEPLY or it won't work in Rancho Archon Anchor.";
+	say "Otters endgame cheats are invoked! You may wish to [b]QUICKLY[r] before attacking Elvira, although of course the instadeath if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[r] or it won't work in Rancho Archon Anchor.";
 	the rule succeeds;
 
 chapter mf
@@ -1152,7 +1152,7 @@ understand "puh" as puhing.
 
 carry out puhing:
 	repeat with X running through pickup-lines:
-		say "[X]: disrupt the [pla-ma]s [if pickup-description of X is empty]BLANK, FIX THIS[else][pickup-description of X][end if].";
+		say "[X]: disrupt the [pla-ma]s [if pickup-description of X is empty]BLANK, FIX THIS[else][pickup-description of X][end if]."; [bold-ok]
 		say "Make the [pla-ma]s talk more [pickup-spoil of X].";
 	the rule succeeds.
 
@@ -1265,7 +1265,7 @@ carry out seeding: [100 = ordering players, 200 = skip trefoil, 400 = skip Disow
 	let found-yet be false;
 	let act-index be the remainder after dividing number understood by 100;
 	let seedflags be number understood / 100;
-	say "USAGE NOTES:[line break]1=Balmer 2=Mr Beal[line break], 10 * the pod number (1..8) for the players, 1=the pod number(1..5) for the picaros.[paragraph break]Seed flags can be anything up to 4.";
+	say "[b]USAGE NOTES[r]:[line break]1=Balmer 2=Mr Beal[line break], 10 * the pod number (1..8) for the players, 1=the pod number(1..5) for the picaros.[paragraph break]Seed flags can be anything up to 4.";
 	if act-index > 8:
 		say "[b]WARNING: this is probably out of range, but we are rounding down.[r][line break]";
 	if act-index < 1:
@@ -1411,10 +1411,10 @@ carry out missalting:
 	the rule succeeds;
 
 to say miss-types:
-	say "MISSED = all (solved) regions['] misses--not including the current region.";
-	say "MISSES = this region's misses (may provide nonsense/spoilers).";
-	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
-	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
+	say "[b]MISSED[r] = all (solved) regions['] misses--not including the current region.";
+	say "[b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
+	say "[b]MISSALT[r] = show alternate mutually exclusive routes for solved regions.";
+	say "[b]THISALT[r] = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
 	say "[paragraph break]========================Real stuff below";
 
 chapter thisalting
@@ -1835,9 +1835,9 @@ carry out ptsing:
 		if location of the-from entry is shunned or the-from entry is llpish, next;
 		if any-yet is false:
 			now any-yet is true;
-			say "LIKELY FIRST NECESSARY: [right-word entry].";
+			say "[b]LIKELY FIRST NECESSARY[r]: [right-word entry].";
 		else:
-			say "UNDONE: [right-word entry].";
+			say "[b]UNDONE[r]: [right-word entry].";
 	the rule succeeds;
 
 definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for regular LLPs but rather for optional stuff like the 3-of-6 at the start of Oyster]
@@ -1893,7 +1893,7 @@ carry out twiding:
 		now debug-state is false; [for grepping, this is to see how a table looks earlier.]
 	choose row number understood in table of megachatter;
 	if go-ahead entry is not bzzt rule:
-		say "That does not follow the BZZT rule. Try one of [list-of-randos]." instead;
+		say "[mytab entry] follows [go-ahead entry] but needs to follow the trivially false rule. Try one of [list-of-randos]." instead;
 	let temp-tab be mytab entry;
 	say "[twiddle of temp-tab and 3]";
 	the rule succeeds;

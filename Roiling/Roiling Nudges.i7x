@@ -43,7 +43,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "abstract"	429617931	abstract painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining."
 "latch"	215399559	latches	--	"Not one latch. All of them."
 "table"	305336689	--	--	"A bleat: 'tableS!'"
-"ceiling"	392118435	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
+"ceiling"	392118435	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the words [b]MY NICHE[r] could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
 "subpoena"	574518649	--	perrot-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
 "gape"	244059588	dope op ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	--	x-oped rule	"[vs-oped]."
@@ -67,7 +67,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bowlingpin"	596386463	giant pin	--	"[g-pin]."
 "oped"	304653734	dope op ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
-"tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go DOWN to the [if Largely All Grey Gallery is visited]gallery[else]basement[end if]."
+"tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go [b]DOWN[r] to the [if Largely All Grey Gallery is visited]gallery[else]basement[end if]."
 "stable"	401610655	--	study-see-stable rule	"You probably just want to go IN to the stable."
 "chair"	188792351	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
@@ -145,7 +145,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "high"	152157146	high sign	--	"[hisin]."
 "highsign"	394931168	high sign	--	"[hisin]."
 "sign"	242774022	high sign	--	"[hisin]."
-"arifle"	340639311	rifle	--	"Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE."
+"arifle"	340639311	rifle	--	"Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE." [bold-ok]
 "hostage"	473612489	rifle	--	"It's not you that needs changing but the rifle."
 "ugn"	206613017	rifle	--	"It's not a gun but a rifle."
 "flier"	338451493	--	elmo-chat rule	"Better to pump Elmo for information."
@@ -245,11 +245,11 @@ to say engs: say "Nothing happens. The engravings on the montage stay as they ar
 
 to say just-in-routes: say "You don't need to do anything with an individual route. Just go in"
 
-to say tastee-there: say "The Tastee Estate can't be changed and doesn't need to be. Just ENTER"
+to say tastee-there: say "The Tastee Estate can't be changed and doesn't need to be. Just [b]ENTER[r]"
 
-to say turrets-ok: say "You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER"
+to say turrets-ok: say "You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you [b]ENTER[r]"
 
-to say idols-no: say "The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready"
+to say idols-no: say "The solid idols, being solid, are unchanged. They won't let you [b]ENTER[r] unless you're, well, ready"
 
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
 
@@ -276,7 +276,7 @@ to say blab-un: say "The blabber babbler is unchangeable, but perhaps indirectly
 
 to say ian-un: say "Ian is unchangeable, but maybe he is movable"
 
-to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
+to say pamph-ana: say "You're probably overthinking it. The I-Used-To examples are just plain [b]TEDIOUS[r]"
 
 to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead"
 
@@ -333,7 +333,7 @@ chapter same mesa
 table of same mesa nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesa"	290343046	--	--	"[locname]."
-"circle"	349947767	--	--	"[if cleric circle is visited]You already found a way INSIDE[else]You may need to read the scripture picturers to figure how to enter the Cleric Circle[end if]."
+"circle"	349947767	--	--	"[if cleric circle is visited]You already found a way [b]INSIDE[r][else]You may need to read the scripture picturers to figure how to enter the Cleric Circle[end if]."
 "orcas"	277143749	--	--	"[if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Oscar'S[end if]."
 "towards"	490212044	--	got-towards rule	"You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it."
 "uhh"	179670405	--	--	"[name-worry of adobe abode]."
@@ -363,7 +363,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "poison"	440345433	--	--	"[not-stripe]."
 "stripe"	538972701	--	--	"[not-stripe]."
 "poisonstripe"	979318134	--	--	"[not-stripe]."
-"pat"	186763795	--	--	"[if Idle Deli is visited]No, you already went PAST to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
+"pat"	186763795	--	--	"[if Idle Deli is visited]No, you already went [b]PAST[r] to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
 "resto"	486866473	--	--	"[name-worry of idle deli]."
 "woe"	310093459	WOE BOW BELL	--	"[whole-woe]."
 "bow"	200706255	WOE BOW BELL	--	"[whole-woe]."
@@ -371,7 +371,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rude"	339264808	nuder	--	"That's not quite the book's whole title."
 "bev"	253389834	be ova	--	"[whole-bev]."
 "ova"	183705215	be ova	--	"[whole-bev]."
-"bean"	217320340	THE BEAN	--	"THE BEAN has too much gravitas to be just a bean."
+"bean"	217320340	THE BEAN	--	"[b]THE BEAN[r] has too much gravitas to be just a bean."
 
 this is the got-towards rule:
 	if worst ad is moot, the rule succeeds;
@@ -381,7 +381,7 @@ to say name-worry of (rm - a room): say "[if rm is visited]You did well enough[e
 
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
-to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]"
+to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole [b]SOS ARC[r] in the lairage regalia can become[end if]"
 
 to say board-change: say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
 
@@ -393,7 +393,7 @@ to say die-sin: say "[if Cleric Circle is visited]The words themselves do nothin
 
 to say not-stripe: say "The poison stripe is too incorporeal to do bend to your will"
 
-to say whole-woe: say "It seems best to deal with the whole WOE BOW BELL"
+to say whole-woe: say "It seems best to deal with the whole [b]WOE BOW BELL[r]"
 
 to say whole-bev: say "The whole beverage name must be where it's at"
 
@@ -457,8 +457,8 @@ table of harms marsh nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "marsh"	285143039	--	--	"[locname]."
 "harm"	188869073	--	--	"[locname]."
-"null"	281640993	--	--	"The whole NULL IT unit."
-"unit"	322116179	--	--	"The whole NULL IT unit."
+"null"	281640993	--	--	"[whole-null]."
+"unit"	322116179	--	--	"[whole-null]."
 "darknses"	550735437	darkness	--	"[dark-been]."
 "dakr"	161473888	darkness	--	"[dark-been]."
 "sheol"	389528790	--	--	"[sheol-c]."
@@ -468,6 +468,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "odd"	116410755	odd run on aura	--	"The whole odd run on aura."
 "pyrites"	661331953	pyrites	--	"[py-glow]."
 "pyrite"	565057987	pyrites	--	"[py-glow]."
+
+to say whole-null: say "The whole [b]NULL IT UNIT[r]"
 
 to say dark-been: say "The darkness has always been there and always will be. You need to find a way to say it was dark"
 
@@ -485,8 +487,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "data"	128514743	--	--	"[all-dim]."
 "mists"	404725949	--	--	"[all-dim]."
 
-to say all-dim:
-	say "You'll have to deal with the whole data-dim mists"
+to say all-dim: say "You'll have to deal with the whole data-dim mists"
 
 chapter cripple clipper
 
@@ -587,8 +588,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "stop"	355202520	--	--	"The stop post is in the past. No need to p.s. tweaking it."
 "live"	333777614	evil bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	evil bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [evil bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
-"snore"	452663963	--	--	"[if SNORE SO ARENA is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
-"arena"	286413056	--	--	"[if SNORE SO ARENA is reflexive]Nothing happens. You may need to look at the full SNORE SO ARENA[else]You already managed to REASON your way around the SNORE SO ARENA[end if]."
+"snore"	452663963	--	--	"[if SNORE SO ARENA is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to [b]REASON[r] with a snore. Nothing else to do[end if]."
+"arena"	286413056	--	--	"[if SNORE SO ARENA is reflexive]Nothing happens. You may need to look at the full [b]SNORE SO ARENA[r][else]You already managed to [b]REASON[r] your way around the [b]SNORE SO ARENA[r][end if]."
 
 chapter drain nadir
 
@@ -596,13 +597,15 @@ table of Drain Nadir nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nadir"	222441064	--	--	"[locname]."
 "spider"	456891772	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
-"ires"	354396724	--	--	"It's an ires PAD."
-"pad"	104682866	--	--	"It's an IRES pad."
+"ires"	354396724	--	--	"[pad-not-just] a pad."
+"pad"	104682866	--	--	"[pad-not-just] ires."
 "song"	272133753	Id Cede	--	"[id-cede-full]."
 "cede"	295646892	Id Cede	--	"[id-cede-full]."
 "diapers"	459079590	Id Cede	--	"Don't twist yourself into knots to/from REAL despair." [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
 "eddie"	342663242	Id Cede	--	"[id-cede-full]."
 "glare"	301731271	--	glaring-futile rule	"You stare into space some more but get distracted."
+
+to say pad-not-just: say "It's an [b]IRES PAD[r], not just"
 
 to say id-cede-full: say "It's the full song name--[Id Cede]"
 
@@ -625,7 +628,7 @@ this is the master-moot rule:
 	if ME ARTS is moot, the rule succeeds;
 	the rule fails;
 
-to say boredom-move-on: say "[if me arts are moot]The ME ARTS nourished you spiritually. [end if][if lobster is moot]The lobster nourished you physically. [end if]Time to move on[if lobster is touchable], though you could poke at the lobster[else if me arts are touchable], though you could poke at the ME ARTS[end if]"
+to say boredom-move-on: say "[if me arts are moot]The [b]ME ARTS[r] nourished you spiritually. [end if][if lobster is moot]The lobster nourished you physically. [end if]Time to move on[if lobster is touchable], though you could poke at the lobster[else if me arts are touchable], though you could poke at the [b]ME ARTS[r][end if]"
 
 this is the lobster-moot rule:
 	if BORTLES lobster is moot, the rule succeeds;
@@ -646,7 +649,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "tan"	174205344	--	--	"[rotun]."
 "eder"	361965110	--	--	"It's Si Reed's full name."
 "divorce"	479674829	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
-"magazine"	465726572	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
+"magazine"	465726572	DIVORCES	--	"It's not just any magazine. It's [b]DIVORCES[r]!"
 
 to say mires-no: say "The [mires] are, well, mired. You need to focus on something else, or you might get mired, too"
 
@@ -675,7 +678,7 @@ to say cone-rec: say "You think about the econ-cone being the recent center, but
 
 to say scrapery: say "The godlings['] lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you";
 
-to say full-pod: say "You must deal with the full END PRONER POD"
+to say full-pod: say "You must deal with the full [b]END PRONER POD[r]"
 
 chapter upscale capsule
 
@@ -727,7 +730,7 @@ chapter presto
 table of presto nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "storep"	568332432	--	degen-true rule	"[not-the-reg]."
-"crust"	408819179	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
+"crust"	408819179	curst crust	--	"You shouldn't play with your food. Yes, even if it is less traumatic to play with than to eat."
 "mazeltov"	655479952	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	ether-gone rule	"The ether is gone. You can just go [if Saps Pass is visited]back [end if]north."
 "mazeroom"	615142808	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
@@ -776,8 +779,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mazeentry"	824545388	zany meter	--	"[mz-chg]."
 "zany"	316424196	zany meter	--	"[mz-chg]."
 "meter"	508121192	zany meter	--	"[mz-chg]."
-"volt"	338441254	--	can-see-volt-maze rule	"That can't be it. It's a volt MAZE."
-"maze"	317038698	--	can-see-volt-maze rule	"That can't be it. It's a VOLT maze."
+"volt"	338441254	--	can-see-volt-maze rule	"That can't be it. It's more than a volt: a [b]VOLT MAZE[r]."
+"maze"	317038698	--	can-see-volt-maze rule	"That can't be it. It's more than a maze: a [b]VOLT MAZE[r]."
 
 this is the hump-gone rule:
 	if player is in Grey Gyre and hump is moot, the rule succeeds;
@@ -1002,7 +1005,7 @@ to say full-pack: say "You need to deal with the full [locs pack]"
 
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
 
-to say tba-key-jazz: say "[if TBA key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]"
+to say tba-key-jazz: say "[if TBA key is reflexive]Nothing happens. It's probably just the [b]TBA[r] you need to work with, which certainly cuts things down[else]You already did enough with the [b]TAB[r] key[end if]"
 
 to say a-or-e: say "Drive [if Drive A is reflexive]A[else]E[end if]"
 
@@ -1018,7 +1021,7 @@ to say trimsox: say "They're not just socks, or trim. They're trim socks"
 
 to say romstix: say "You'll know what to do with the sticks when you're ready to program";
 
-to say budge-note: say "Nothing happens. 'Budge, BUDGE!' you mutter, turning red and reading the whole message"
+to say budge-note: say "Nothing happens. 'Budge, [b]BUDGE[r]!' you mutter, turning red and reading the whole message"
 
 this is the bookvis rule:
 	if number of touchable badbooks > 0, the rule succeeds;
@@ -1045,7 +1048,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "jar"	136472146	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills.[slider-activate]" [slider test spill]
 "digger"	344351251	rigged digger	--	"It's already been, err, rigged, enough."
-"howler"	486513400	sausage	--	"A howler or haunter is not specific enough. This is a big ol['] SAUSAGE, here."
+"howler"	486513400	sausage	--	"A howler or haunter is not specific enough. This is a big ol['] [b]SAUSAGE[r], here."
 "bubble"	341982470	paw r wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	paw r wrap	--	"It's just wrap, really."
 "pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
@@ -1143,7 +1146,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "anger"	316824940	--	--	"[locname]."
 "hoser"	421038754	--	now-shore rule	"[hero-er-oh]."
 "hero"	324764788	--	now-shore rule	"[hero-er-oh]."
-"scrawl"	364539784	HUNTER HUNT AREA	--	"It's a HUNTER HUNT AREA, which seems more important."
+"scrawl"	364539784	HUNTER HUNT AREA	--	"It's a [b]HUNTER HUNT AREA[r], which seems more important."
 "pike"	307198092	pikes	--	"[all-fish]."
 "carp"	187983165	carps	--	"[all-fish]."
 "darnel"	359068166	--	--	"[if snarled darnels are reflexed]You already got mad at all [the darnels]. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
@@ -1186,7 +1189,7 @@ chapter lapsin' plains
 
 table of Lapsin' Plains nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"plain"	251367970	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]"
+"plain"	251367970	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, '[b]I...PLANS[r]!'[end if]" [bold-ok]
 "polyp"	413457586	--	--	"[polyp-no]."
 "polyps"	509731552	--	--	"[polyp-no]."
 "inthere"	595228692	span pans	--	"The words on the pans don't change. They are just a generic taunt."
@@ -1300,8 +1303,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "torew"	498527280	--	degen-true rule	"[not-the-reg]."
 "wildest"	554960640	--	degen-true rule	"[wi-wi]."
 "wilted"	458686674	--	degen-true rule	"[wi-wi]."
-"curst"	408819179	--	degen-true rule	"It's not just that it's curst, it's a PALACE, too."
-"palace"	286467128	--	degen-true rule	"It's not just that it's a palace, it's CURST, too."
+"curst"	408819179	--	degen-true rule	"It's not just that it's curst, it's a [b]CURST PALACE[r]."
+"palace"	286467128	--	degen-true rule	"It's not just that it's a palace, it's a [b]CURST PALACE[r]."
 "castle"	402197335	--	degen-true rule	"Not just any castle. Castle Apcur."
 "apcur"	293088972	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
 "lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if Mislit Limits is visited]You're beyond the lake now.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
@@ -1342,8 +1345,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "reedale"	545772876	Reeds Ale	--	"[reed-ale]."
 "sere"	437209987	Reeds Ale	--	"[reed-ale]."
 "deal"	204836855	Reeds Ale	--	"[reed-ale]."
-"lone"	324880033	lone duck	--	"It's not just any lone animal. It's a lone DUCK."
-"duck"	198073659	lone duck	--	"It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if]."
+"lone"	324880033	lone duck	--	"It's not just any lone animal. It's a [b]LONE DUCK[r]."
+"duck"	198073659	lone duck	--	"It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a [b]LONE DUCK[r][end if]."
 "idtag"	203919473	ID Tag	--	"ID tag: dig at it? Gad."
 "unlocked"	522953692	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
 "maturation"	653353366	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway"
@@ -1648,8 +1651,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "baot"	198069318	bot boat	--	"[fix-boat-parts]."
 "boatbot"	393950818	bot boat	--	"[fix-boat-parts]."
 "turbo"	386311110	turbos	--	"You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos."
-"wire"	366057531	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
-"wires"	462331497	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
+"wire"	366057531	weirder red wire	--	"Each wire is [wires-ok]."
+"wires"	462331497	weirder red wire	--	"The wires are [wires-ok]."
+
+to say wires-ok: say "okay. They're just organized [b]WEIRDER[r]"
 
 to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
 
@@ -1722,7 +1727,7 @@ table of Dire And Arid Den nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nerd"	303066509	Nerd Aid	--	"[nerd-a]."
 "aid"	68209753	Nerd Aid	--	"[nerd-a]."
-"bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
+"bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of [b]NERD-AID[r]!" [bold-ok]
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. Here in the Dire and Arid Den"
 
@@ -1750,7 +1755,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "vow"	289452170	vow here	--	"The [i]whole[r] vow here."
 "here"	378218320	vow here	--	"The [i]whole[r] vow here."
 "hydra"	268182261	--	hydra-know rule	"[if player has whistle]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
-"coma"	159621133	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
+"coma"	159621133	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by [b]A-COM[r], and all their products are quality." [bold-ok]
 "weltish"	571213850	whistle	--	"You [if whistle is reflexed]already figured how to play the whistle[else if player does not have whistle]can't do anything to the whistle until you have it[else]don't see anything happen. Then you note red writing on the whistle which might tell more about it[end if]."
 "ottre"	493702525	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	degen-true rule	"[not-the-reg]."
@@ -1969,7 +1974,7 @@ this is the preserve-saved rule:
 
 to say lit-no: say "It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it"
 
-to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
+to say restrictr: say "The [restrict] can't be changed by your own will. Elvira made sure of that"
 
 chapter reclusion inclosure
 
@@ -2062,12 +2067,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "passport"	620454066	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "bluer"	390468463	tekno token	--	"That doesn't really describe the Tekno-Token."
-"repp"	376061830	--	perp-moot rule	"You don't want to bring back that fleeing feeling whispering 'PERP.' Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
+"repp"	376061830	--	perp-moot rule	"You don't want to bring back that fleeing feeling whispering '[b]PERP[r].' Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
 "lola"	184168073	dr lola	--	"[count-enuf]."
 "drol"	234519308	lord al	--	"[count-enuf]."
 "droll"	288333147	dollar	--	"[count-enuf]."
 "dollar"	290520965	dollar	--	"[count-enuf]."
-"feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP."
+"feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, [b]PERP[r], [b]PERP[r], [b]PERP[r]."
 "guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it." [since the guava and kumquat come from a way-outside puzzle, they must be kept here and can't be taken from in the table of anagrams proper]
 "kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape. Just return it to Curtis."
 
@@ -2426,8 +2431,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bastard"	328531417	--	degen-true rule	"[mild-swear]!"
 "ground"	387318486	--	degen-true rule	"Changing the ground beneath your feet is too dangerous a proposition."
 "jump"	299607444	--	degen-true rule	"You consider the costs and benefits of collapsing in an impressively uncoordinated heap, then decide against doing so."
-"point"	372828908	--	know-point rule	"There's no secret cheat between NO TIP and OPT IN."
-"parse"	393057655	--	can-i-parse rule	"There's no in-between for the PARSE and SPARE commands for the settler."
+"point"	372828908	--	know-point rule	"There's no secret cheat between [b]NO TIP[r] and [b]OPT IN[r]."
+"parse"	393057655	--	can-i-parse rule	"There's no in-between for the [b]PARSE[r] and [b]SPARE[r] commands for the settler."
 "verb"	338713637	--	degen-true rule	"[no-special-verb]."
 "verbs"	434987603	--	degen-true rule	"[no-special-verb]."
 "think"	307225849	--	degen-true rule	"Whenever you just try to too hard to think, things always get jumbled."

@@ -307,8 +307,7 @@ understand "pots" as a mistake ("You can't see what you would do with a bunch of
 
 chapter Boarded Roadbed
 
-to say snore-was-is:
-	say "[if SNORE SO ARENA is reflexed]was[else]is[end if]"
+to say snore-was-is: say "[if SNORE SO ARENA is reflexed]was[else]is[end if]"
 
 understand "norse" as a mistake ("The bee or arena's nationality is not relevant, and besides, it [snore-was-is] a snore.") when player is in Boarded Roadbed.
 

@@ -10,7 +10,7 @@ section instructions
 
 when play begins:
 	now in-beta is true;
-	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.[line break]--[b]warwar[r] wipes out the prosaic picaros in Store W.[line break]--[b]allrand[r] puts all random pods in one area, which may destabilize things.[line break]--[b]produce redo cup[r] brings back the hint-item in Oyster.[line break]--[b]GX[r] uses [b]GURU[r] on any OTHERS item.";
+	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.[line break]--[b]warwar[r] wipes out the prosaic picaros in Store W.[line break]--[b]allrand[r] puts all random pods in one area, which may destabilize things.[line break]--[b]produce redo cup[r] brings back the hint-item in Oyster.[line break]--[b]GX[r] uses [b]GURU[r] on any item in Others, or tries to.";
 
 section gxing
 
@@ -64,7 +64,7 @@ understand the command "allrand" as something new.
 understand "allrand" as allranding.
 
 carry out allranding:
-	say "ALLRAND[r] dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use MBB 1/2.";
+	say "[b]ALLRAND[r] dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use [b]MBB[r] 1/2.";
 	if parleys splayer players are moot:
 		say "WARNING you cleared the players/macks, so moving all pickup lines to [downside] may be useless or worse.";
 	else:
@@ -238,7 +238,7 @@ carry out a5ing:
 	now presto is solved;
 	now towers is solved;
 	now suppress-score is false;
-	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to OTTERS. I also gave you the settler and purse and notepad, in case.";
+	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to Otters behind Store T. I also gave you the settler and purse and notepad, in case.";
 	process the notify score changes rule;
 	ital-say "you may wish to [b]SEED[r] 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation."
 
@@ -277,7 +277,7 @@ carry out endgameing:
 	move player to Gates Stage;
 	now player has passport;
 	now no-tip is true;
-	say "Okay, you need to do 2 of 3 of RESEARCH/REVIEW/PREP.";
+	say "Okay, you need to do 2 of 3 of [b]RESEARCH[r]/[b]REVIEW[r]/[b]PREP[r].";
 	the rule succeeds;
 
 egalling is an action out of world.
