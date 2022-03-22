@@ -237,6 +237,7 @@ the hams are flippables. description is "Both sorts of hams. Jokesters carrying 
 volume when play begins
 
 when play begins:
+	now sts-sequence is 3;
 	now the right hand status line is "[score]/[number of rooms]";
 	say "Leading Yorpwald after defeating Red Bull Burdell and then Elvira wasn't what you asked for, but it's what you got, and you did well enough. But the job is exhausting. You've never wanted flatterers, and you expected criticism, even unfair criticism, but there are some things you can't avoid listening to by now.";
 	wfak;

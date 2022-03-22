@@ -720,7 +720,7 @@ include Object Response Tests by Juhana Leinonen.
 section screenreading and censoring
 
 when play begins (this is the screenread gender swears and precursor rule) :
-	now is-roiling is true;
+	now sts-sequence is 2;
 	if debug-state is true:
 		choose-male;
 		continue the action;

@@ -175,7 +175,7 @@ When play begins (this is the modified run property checks at the start of play 
 	repeat with person running through people:
 		if initial appearance of person is empty and person is not scenery:
 			increment init-mt-ppl;
-			say "APPEARANCE IN ROOM [init-mt-ppl] [person].";
+			say "[b]APPEARANCE IN ROOM[r] [init-mt-ppl] [person].";
 	repeat with item running through things:
 		if item is not a person, follow the property-check rules for item;
 	if undescribed-objects is 0, say "DEBUG Yay all objects described.";
@@ -195,17 +195,17 @@ A property-check rule for a thing (called the target) (this is the modified thin
 	if target is abstract, continue the action;
 	if target is a person:
 		increment undescribed-people;
-		say "PERSON [undescribed-people]";
+		say "[b]PERSON[r] [undescribed-people]";
 	else:
 		increment undescribed-objects;
-		say "OBJECT [undescribed-objects]";
+		say "[b]OBJECT[r] [undescribed-objects]";
 	say " [target] [if target is plural-named]have[else]has[end if] no description.";
 
 A property-check rule for a room (called the target) (this is the modified rooms must have descriptions rule):
 	if description of target is empty:
 		unless target is abstract:
 			increment undescribed-rooms;
-			say "ROOM [undescribed-rooms] [target] has no description.";
+			say "[b]ROOM[r] [undescribed-rooms] [target] has no description.";
 
 volume verbs for testing
 
@@ -276,15 +276,15 @@ carry out hintalling:
 	now stuff-to-duplicate is {};
 	let should-find be true;
 	let duplicate-this be false;
-	say "Running HINTALL to find which items need hinting. This may take a [if is-roiling]long [end if]while.";
-	say "You may wish to define something as AMUSING, USELESS or BOUNDING if it pops up here and doesn't need a hint.[paragraph break]";
+	say "Running [b]HINTALL[r] to find which items need hinting. This may take a [if is-roiling]long [end if]while.";
+	say "You may wish to define something as [b]AMUSING[r], [b]USELESS[r] or [b]BOUNDING[r] if it pops up here and doesn't need a hint.[paragraph break]";
 	now hintobjstable of meta team is table of general hintobjs;
-	repeat with VTH running through all things:
+	repeat with vth running through all things:
 		now should-find is true;
 		now times-found is 0;
 		now last-row is 0;
 		now duplicate-this is false;
-		follow the skip hinting rules for VTH;
+		follow the skip hinting rules for vth;
 		if the rule succeeded:
 			[say "skip rules succeeded for [vth].";]
 			now should-find is false;
@@ -298,24 +298,24 @@ carry out hintalling:
 		repeat with MYR running through regions:
 			repeat through hintobjstable of MYR:
 				increment this-row;
-				if hint-entry entry is not VTH, next;
+				if hint-entry entry is not vth, next;
 				increment times-found;
 				if should-find is true and times-found > 1:
-					say "Row [this-row]: duplicate [VTH] in table of hintobjs from row [last-row].";
+					say "Row [this-row]: duplicate [vth] in table of hintobjs from row [last-row].";
 					now duplicate-this is true;
 					increment my-count;
 				if should-find is false:
-					say "Row [this-row]: [VTH] shouldn't be in the table of hintobjs at all.";
+					say "Row [this-row]: [vth] shouldn't be in the table of hintobjs at all.";
 					increment my-count;
 				now last-row is this-row;
 		if should-find is true and times-found is 0:
-			add VTH to stuff-to-find;
+			add vth to stuff-to-find;
 			increment my-count;
 		else if should-find is false and times-found > 0:
-			add VTH to stuff-to-delete;
+			add vth to stuff-to-delete;
 			increment my-count;
 		else if duplicate-this is true:
-			add VTH to stuff-to-duplicate;
+			add vth to stuff-to-duplicate;
 			increment my-count;
 	if my-count is 0, say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!" instead;
 	say "[my-count] total things to fix.";
@@ -351,10 +351,10 @@ understand the command "hintvis" as something new.
 understand "hintvis" as hintvising.
 
 carry out hintvising:
-	repeat with VTH running through all visible things:
-		if VTH is vishintable:
-			all-say "Hinting [VTH]: ";
-			try objhinting VTH;
+	repeat with vth running through all visible things:
+		if vth is vishintable:
+			all-say "Hinting [vth]: ";
+			try objhinting vth;
 	the rule succeeds;
 
 definition: a thing (called VT) is vishintable:
@@ -539,7 +539,7 @@ section monty stuff
 
 table of monties (continued)
 montopic (topic)	on-off	test-title (text)	test-action	topic-as-text (text)
-"hint/hints"	false	"SHOWING BASIC HINTS"	try-hinting rule	"hint/hints"
+"hint/hints"	false	"[b]SHOWING BASIC HINTS[r]"	try-hinting rule	"hint/hints"
 
 this is the try-hinting rule:
 	let Q be scams;

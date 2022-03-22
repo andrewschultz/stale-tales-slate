@@ -2972,6 +2972,7 @@ volume when play begins
 sr-acc is a truth state that varies.
 
 when play begins (this is the initialise anagrams pad and beats rule) :
+	now sts-sequence is 1;
 	now all rooms in metros are noisy;
 	now Obtains Boastin Bastion is not noisy;
 	now Esoteric Coteries is not noisy;
