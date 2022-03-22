@@ -1,8 +1,8 @@
-
 ## reg-sa-resort-nudmis.txt
 ## GENERATOR FILE: rbr-sa-resort.txt
 
 ## walkthrough with all nudges and mistakes
+
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 

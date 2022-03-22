@@ -1,6 +1,7 @@
-
 ## reg-sa-forest-hints.txt
 ## GENERATOR FILE: rbr-sa-forest.txt
+
+## walkthrough with hints
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

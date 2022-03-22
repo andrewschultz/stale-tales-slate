@@ -25,7 +25,7 @@ files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-lo
 }$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 }$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your final possible score is fixed. You missed something you can't go back for.
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -444,6 +444,10 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
+#done rejects for deer
+>rdee
+The deer is very peaceful. You dere-n't disturb it.
+\\
 #done rejects for goat
 >gota
 The goat is happy as-is. No need to go tag a ...
@@ -799,6 +803,7 @@ Like I said, no time for that. Time to fix things!"
 Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary."
 \\
 >ask gateman about noble
+#APOSTROPHE-OK
 "He used to be fair and just. But he saw Red Bull Burdell 'leveling up,' whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol' Ben."
 \\
 >ask gateman about quest

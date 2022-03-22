@@ -16,7 +16,7 @@ files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt,reg-s
 ## *FILE
 ## *FORK
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

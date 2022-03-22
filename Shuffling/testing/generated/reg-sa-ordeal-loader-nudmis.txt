@@ -1,8 +1,8 @@
-
 ## reg-sa-ordeal-loader-nudmis.txt
 ## GENERATOR FILE: rbr-sa-ordeal-loader.txt
 
 ## walkthrough with all nudges and mistakes
+
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -265,6 +265,10 @@ Your score has just gone up by one point.
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+
+#done rejects for deer
+>rdee
+The deer is very peaceful. You dere-n't disturb it.
 
 #done rejects for goat
 >gota

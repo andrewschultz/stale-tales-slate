@@ -694,7 +694,7 @@ donething	donemsg
 OR DO door	"The door is probably the way out. Best not change it into something else."
 bugle	"The bugle emits a sad 'don't change me back' noise."
 goat	"The goat is happy as-is. No need to go tag a ..."
-goat	"The deer is very peaceful. You dere-n't disturb it."
+deer	"The deer is very peaceful. You dere-n't disturb it."
 nest	"The nest just looks right here, now that you summoned it."
 gateman	"Don't scramble the gateman. He's here to help."
 

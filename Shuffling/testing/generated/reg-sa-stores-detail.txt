@@ -1,6 +1,7 @@
-
 ## reg-sa-stores-detail.txt
 ## GENERATOR FILE: rbr-sa-stores.txt
+
+## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

@@ -23,7 +23,7 @@ files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-s
 }$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 }$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Sortie region. Your final possible score is fixed. You missed something you can't go back for.
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

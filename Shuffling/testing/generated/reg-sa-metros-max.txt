@@ -1,8 +1,8 @@
-
 ## reg-sa-metros-max.txt
 ## GENERATOR FILE: rbr-sa-metros.txt
 
 ## maximum walkthrough
+
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
