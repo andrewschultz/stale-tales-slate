@@ -1407,7 +1407,7 @@ understand "alt" as missalting.
 
 carry out missalting:
 	say "[miss-types].[paragraph break]";
-	process the show alternate routes rule;
+	process the show alternate paths rule;
 	the rule succeeds;
 
 to say miss-types:

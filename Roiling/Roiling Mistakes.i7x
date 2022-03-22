@@ -68,7 +68,7 @@ understand "astir" as a mistake ("[if stair is touchable]You don't need a moving
 
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All Grey Gallery and meet bans are in Dusty Study.
 
-understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All Grey Gallery.
+understand "bsin" and "bs in" as a mistake ("Now, now! [this-game] is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All Grey Gallery.
 
 understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.") when rifle is touchable.
 
@@ -173,7 +173,7 @@ understand "among" as a mistake ("Maybe if there were mango trees around.") when
 [def=ouster-in-routes]
 understand "ouster" as a mistake ("You're the ouster here, trying to get by the routes.") when mrlp is routes.
 
-understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
+understand "follow [text]" as a mistake ("[this-game] doesn't allow the [b]FOLLOW[r] verb--you should [b]ENTER[r] a road or something if you need to.") [for ROUTES]
 
 chapter Same Mesa
 
@@ -195,7 +195,7 @@ understand "bowel" and "elbow" and "bowels" and "elbows" as a mistake ("The WOE 
 
 understand "car" as a mistake ("Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.") when player is in Same Mesa.
 
-understand "gats" and "tags" as a mistake ("This game is not violent enough for tags with gats.") when Gast is touchable.
+understand "gats" and "tags" as a mistake ("[this-game] is not violent enough for tags with gats.") when Gast is touchable.
 
 understand "ides" and "rat" and "tar" as a mistake ("It's the whole side art you need[if tirades are moot]ed[end if] to deal with.") when player is in Same Mesa and side art is in Same Mesa.
 
@@ -217,7 +217,7 @@ understand "stag" as a mistake ("[gast] already came alone and does not deserve 
 
 understand "staider" as a mistake ("[if gast is off-stage]Nothing has gotten too riotous yet[else if side art is reflexed]You already did your best with the tirades and side art[else][Gast] fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit[end if].") when player is in Same Mesa.
 
-understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
+understand "taps" as a mistake ("You have no bugle. Well, not in [this-game].") when player is in Same Mesa or player is in Idle Deli.
 
 understand "tardies" as a mistake ("Actually, you have all the time in the world, and you don't need to delay anyone.") when side art is touchable.
 
@@ -338,7 +338,7 @@ understand "repeal" and "repeals" as a mistake ("That's the right sort of emotio
 
 chapter Browse Bowers
 
-understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
+understand "bowser" as a mistake ("[this-game] is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
 
 understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...") when player is in Browse Bowers
 
@@ -416,7 +416,7 @@ understand "spag" as a mistake ("You don't have time to read text-adventuring ma
 
 understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when tsar star is in Char Arch.
 
-understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.[else if dart is enclosed by the player]The interjections in Presto stop short of slurs. I hope.[else][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].[end if]") when dart is touchable
+understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.[else if dart is enclosed by the player]The interjections in Presto stop short of slurs. I hope.[else][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! [this-game] doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].[end if]") when dart is touchable
 
 understand "tars" as a mistake ("But you already took the tsar star FROM the tars. Plus, you'd get all sticky.") when player wears tsar star.
 
@@ -579,7 +579,7 @@ understand "fart" as a mistake ("[if buried raft is in location of player]This r
 
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Disease Seaside.
 
-understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are touchable.
+understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for [this-game].") when oars are touchable.
 
 chapter Fighter Freight
 
@@ -647,7 +647,7 @@ understand "nepo" as a mistake ("No world chess champion challenger comes by to 
 
 understand "nkob" as a mistake ("[if knob is moot]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
 
-understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin Plains.
+understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in [this-game].") when player is in Lapsin Plains.
 
 understand "pone" as a mistake ("The message [if span pans are moot]was[else]is[end if] corny, but the door[if span pans are moot] was[else]'s[end if] a piece of cake [if span pans are not moot]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
 
@@ -757,7 +757,7 @@ understand "bustler" as a mistake ("The butlers are plural, and anyway, they're 
 
 understand "copes" as a mistake ("You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.") when player is in Scope Copse.
 
-understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in Scope Copse.
+understand "pecos" as a mistake ("[this-game] ain't a dadgum Western.") when player is in Scope Copse.
 
 understand "ursty" and "ur sty" as a mistake ("You're trying to destroy the yurts, not build them up.") when player is in Scope Copse and yurts are in Scope Copse.
 
@@ -769,7 +769,7 @@ understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplica
 
 chapter Baldest Blasted Saltbed
 
-understand "fluters" as a mistake ("This game has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.
+understand "fluters" as a mistake ("[this-game] has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.
 
 chapter Leveraged Everglade
 
@@ -857,7 +857,7 @@ chapter Actionless Coastlines
 
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
-understand "eoliths" as a mistake ("Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for [hostile-guardian] to be.") when lois is touchable or he lot is touchable.
+understand "eoliths" as a mistake ("Whoah, [this-game]'s pretty retro, but nothing that ancient. Besides, you want a better way for [hostile-guardian] to be.") when lois is touchable or he lot is touchable.
 
 understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when weirder red wire is touchable.
 
@@ -1090,7 +1090,7 @@ chapter Scape Space
 
 understand "darter" as a mistake ("Art Erd has nowhere to run[if So Great Storage is in Scape Space], and you don't know if you want him taking that So-Great Storage with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
 
-understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
+understand "gorean" as a mistake ("[this-game] isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
 
 understand "red rat" as a mistake ("Red? Dr. Tera Darter is nowhere NEAR that left-wing. Rat? Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera Darter.
 
