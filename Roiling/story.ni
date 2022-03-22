@@ -20855,9 +20855,9 @@ xtraking is an action out of world.
 after printing the name of an exhibit (called myx) when xtraking: say " ([location of myx])";
 
 carry out xtraking:
-	say "UNNOTED exhibits: [list of unnoted exhibits].";
-	say "PERUSED exhibits: [list of perused exhibits].";
-	say "EXHAUSTED exhibits: [list of exhausted exhibits].";
+	say "[b]UNNOTED[r] exhibits: [list of unnoted exhibits].";
+	say "[b]PERUSED[r] exhibits: [list of perused exhibits].";
+	say "[b]EXHAUSTED[r] exhibits: [list of exhausted exhibits].";
 	the rule succeeds;
 
 chapter the basics
@@ -21085,7 +21085,7 @@ book Hows Show
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder decor and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
-	ital-say "the whos-show is already under CREDITS.";
+	ital-say "the whos-show is already under [b]CREDITS[r].";
 	continue the action;
 
 to decide whether nuf-hows-examined:
@@ -21095,7 +21095,7 @@ to decide whether nuf-hows-examined:
 
 section tester street
 
-Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of testing notes.
+Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type [b]CREDITS[r] for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of testing notes.
 
 section techs chest
 
@@ -21481,7 +21481,7 @@ to say pickup-spoil of (pl - a pickup-line):
 		if the-to entry is pl:
 			say "[right-word entry in upper case]";
 			continue the action;
-	say "BUG [pl] not hint-implemented. This should not happen"
+	say "[b]BUG[r] [pl] not hint-implemented. This should not happen"
 
 this is the hint-moot-objects rule:
 	if noun is disk:
@@ -21652,8 +21652,8 @@ carry out liliing:
 	let cur-e be 0;
 	now my-table is mytab entry;
 	let jjk be descr entry;
-	say "[if there is a lasties entry]LAST: [lasties entry][paragraph break][else]No final entry.[line break][end if]";
-	if there is a prefix entry, say "PREFIX: [prefix entry][paragraph break]";
+	say "[if there is a lasties entry][b]LAST[r]: [lasties entry][paragraph break][else]No final entry.[line break][end if]";
+	if there is a prefix entry, say "[b]PREFIX[r]: [prefix entry][paragraph break]";
 	repeat with ABC running from 1 to number of rows in my-table:
 		if remainder after dividing cur-e by threshold is 0 and cur-e > 0:
 			say "([cur-e] of [number of rows in my-table]) so far. Type q to quit the list or any other key to continue.";
@@ -21692,7 +21692,7 @@ book amusing
 table of big yucks
 reg-needed	yux
 --	"[b]KNOCK[r] when Report Porter Perrot knocks?"
---	"[b]KISSing Elvira or making her [b]ALIVER[r]?"
+--	"[b]KISS[r]ing Elvira or making her [b]ALIVER[r]?"
 --	"[b]TICKLE ELMO[r]?"
 --	"WAITing (Z) or not typing anything in a command a few times?"
 --	"READing all of the Dope Op-Ed? (It has far fewer entries than the random text)"
@@ -21713,45 +21713,45 @@ others	"Giving Curtis four or more fruits?"
 
 table of anayux
 reg-needed	yux	do-i-print
---	"MANSE:"	a rule
---	"making the plates or staple PLEATS or PETALS?"
---	"PSALTER around the plaster/stapler?"
-troves	"TROVES:"
-troves	"BROOMED in Boredom Bedroom?"
-troves	"ALED when you have the note from Dale?"
-troves	"PERSIA when by the statue saying PRAISE?"
-troves	"LSAT or ALTS around the salt?"
-troves	"saying SNOG when you hear the song in Very Top?"
-troves	"REDRAW by the raw red drawer?"
-troves	"STUB or BUTS by the tubs?"
-presto	"PRESTO:"
-presto	"ENEMY TZAR around the maze entry in the Grey Gyre?"
-presto	"ELO or EOL by Leo?"
-presto	"ASSWHUP or WHUPASS when [l-n-r] are commiserating?"
-presto	"SPAG or A GPS by the gasp-gaps in Char Arch?"
-presto	"PTAH in the Phat Path?"
-presto	"IDKS or KIDS around the disk or skid?"
-presto	"BAT by the keyboard's TBA key?"
-oyster	"OYSTER:"
-oyster	"Changing the canoe to an OCEAN?"
-oyster	"CARET in the plains?"
-oyster	"PALINS in the plains?"
-oyster	"Making a HORSE in Heros['] Shore?"
-towers	"TOWERS:"
-towers	"KALE by Leak Lake?"
-towers	"ICEMAN by Anemic Cinema?"
-towers	"DOPIEST or POSITED in the topside?"
-towers	"PORIN or PORINS by the prison ropin's?"
-towers	"REPAIR TOASTER?"
---	"OTTERS:"
---	"SLAIN or AS NIL by the nails?"
---	"(risque) saying SPINE around the pines? There's another one, too."
---	"Trying to PROD IT or DROP IT in the Rancho Archon Anchor (the torpid tripod is nearby)?"
---	"Making Elvira ALIVER in the Rancho Archon Anchor?"
---	"Trying to make Elvira a NICER SOUL in the Rancho Archon Anchor?"
---	"Saying COINS RULE or RULE, SCION in the Rancho Archon Anchor?"
-others	"OTHERS:"
-others	"making GAPERS around the pagers or grapes?"
+--	"[b]MANSE[r]:"	a rule
+--	"making the plates or staple [b]PLEATS[r] or [b]PETALS[r]?"
+--	"[b]PSALTER[r] around the plaster/stapler?"
+troves	"[b]TROVES[r]:"
+troves	"[b]BROOMED[r] in Boredom Bedroom?"
+troves	"[b]ALED[r] when you have the note from Dale?"
+troves	"[b]PERSIA[r] when by the statue saying [b]PRAISE[r]?"
+troves	"[b]LSAT[r] or [b]ALTS[r] around the salt?"
+troves	"saying [b]SNOG[r] when you hear the song in Very Top?"
+troves	"[b]REDRAW[r] by the raw red drawer?"
+troves	"[b]STUB[r] or [b]BUTS[r] by the tubs?"
+presto	"[b]PRESTO[r]:"
+presto	"[b]ENEMY TZAR[r] around the maze entry in the Grey Gyre?"
+presto	"[b]ELO[r] or [b]EOL[r] by Leo?"
+presto	"[b]ASSWHUP[r] or [b]WHUPASS[r] when [l-n-r] are commiserating?"
+presto	"[b]SPAG[r] or A [b]GPS[r] by the gasp-gaps in Char Arch?"
+presto	"[b]PTAH[r] in the Phat Path?"
+presto	"[b]IDKS[r] or [b]KIDS[r] around the disk or skid?"
+presto	"[b]BAT[r] by the keyboard's [b]TBA[r] key?"
+oyster	"[b]OYSTER[r]:"
+oyster	"Changing the canoe to an [b]OCEAN[r]?"
+oyster	"[b]CARET[r] in the plains?"
+oyster	"[b]PALINS[r] in the plains?"
+oyster	"Making a [b]HORSE[r] in Heros['] Shore?"
+towers	"[b]TOWERS[r]:"
+towers	"[b]KALE[r] by Leak Lake?"
+towers	"[b]ICEMAN[r] by Anemic Cinema?"
+towers	"[b]DOPIEST[r] or [b]POSITED[r] in the topside?"
+towers	"[b]PORIN[r] or [b]PORINS[r] by the prison ropin's?"
+towers	"[b]REPAIR TOASTER[r]?"
+--	"[b]OTTERS[r]:"
+--	"[b]SLAIN[r] or [b]AS NIL[r] by the nails?"
+--	"(risque) saying [b]SPINE[r] around the pines? There's another one, too."
+--	"Trying to [b]PROD IT[r] or [b]DROP IT[r] in the Rancho Archon Anchor (the torpid tripod is nearby)?"
+--	"Making Elvira [b]ALIVER[r] in the Rancho Archon Anchor?"
+--	"Trying to make Elvira a [b]NICER SOUL[r] in the Rancho Archon Anchor?"
+--	"Saying [b]COINS RULE[r] or [b]RULE[r], [b]SCION[r] in the Rancho Archon Anchor?"
+others	"[b]OTHERS[r]:"
+others	"making [b]GAPERS[r] around the pagers or grapes?"
 
 Rule for amusing a victorious player:
 	say "Have you tried:[paragraph break]";
@@ -22050,7 +22050,7 @@ this is the troves-alt rule:
 		say "[2da]You will have a choice of disposing of [mbb] or Sister Tressi at the end.";
 
 this is the presto-alt rule:
-	say "[eqls]PRESTO[line break]";
+	say "[eqls][b]PRESTO[r][line break]";
 	if hoop is moot:
 		say "[2da]you could've said [if phooeyed is true][b]POOH[r] instead of [b]PHOOEY[r][else][b]PHOOEY[r] instead of [b]POOH[r][end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
 	else:
@@ -22078,7 +22078,7 @@ unset-not-remap is a truth state that varies.
 spikes is a truth state that varies.
 
 this is the oyster-alt rule:
-	say "[eqls]OYSTER[line break]";
+	say "[eqls][b]OYSTER[r][line break]";
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if Olde Lode is visited:
 		say "[2da][remaining-actions of 0] are the other actions that would've annoyed Posh Hops Shop pesty types[if spill-target is trolls] instead of SPILLing the pills[else], as you only needed three of the five possible[end if].";
@@ -22103,7 +22103,7 @@ bredo-bored is a truth state that varies.
 naiv-nat is a truth state that varies.
 
 this is the towers-alt rule:
-	say "[eqls]TOWERS[line break]";
+	say "[eqls][b]TOWERS[r][line break]";
 	if bredo is moot:
 		say "[2da]Bredo could've also become [if bredo-bored is true][b]ROBED[r][else][b]BORED[r][instead].";
 	else if towers is not solved and Bredo is in Loftier Trefoil:
@@ -22129,7 +22129,7 @@ this is the otters-alt rule:
 	say "[2da]you could've made the imp act [b][if number of forcemooted northern block-concepts is 0]<[b]BUG[r]>[else][flip-name of random forcemooted northern block-concept][end if][r], and the whiners could've spoken [b][if number of forcemooted southern block-concepts is 0]<[b]BUG[r]>[else][flip-name of random southern forcemooted block-concept][end if][r].";
 
 this is the others-alt rule:
-	say "[eqls]OTHERS[line break]";
+	say "[eqls][b]OTHERS[r][line break]";
 	say "[2da]you only needed two ways to work the passport. The other was to [if viewer is reflexive]REVIEW the viewer[else if searcher is reflexive]RESEARCH the searcher[else]PREP after you are called a perp[end if]."
 
 regions-in-order is a list of regions variable. regions-in-order is { routes, troves, presto, oyster, towers, otters, others }.
