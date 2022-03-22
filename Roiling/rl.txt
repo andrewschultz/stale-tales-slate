@@ -797,6 +797,12 @@ AT(vowel)(consonant) means ATOM.
 The settler's initial logic gives (PS)(AP)(AR)(SPR)(EY)(SPL)Y. Even without knowing the nature of the area, slot 6 is L. That leaves E for slot 5.
 Now (PS)(AP)(AR)(SPR)ELY has 3 possibilities based on slot 4: PARSELY, SARPELY and SPARELY.
 SPARELY it is.
+# logic for yer all a yell'r
+?Can I get rid of Yer All a Yell'r?
+Yes, and it is not too bad at all.
+R?Y?PO gives you the LY at the end, and the question marks give E or Y, then A or L. One must be a vowel, and one must be a consonant.
+?E?LLY is left. But slot 3 must be a vowel, or A, and slot 1 must be R.
+REALLY.
 # logic for tearily-irately
 ?What is up with the players discussing reality?
 There are two solutions here. From the general theme, you can probably guess things end in LY. But from there, it's less clear. In fact, even the non-cheat settings gives question marks.

@@ -148,7 +148,7 @@ parrot/snail/snipe/racoon
 raptor/deep/quick
 Otters (min)
 barely/reedily
-seedily/sparely/snidely
+seedily/sparely/really
 because/else/atom
 brutely/remotely
 slow/coolest/artsy/garbed

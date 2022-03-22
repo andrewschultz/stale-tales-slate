@@ -1822,6 +1822,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "downside"	562325957	--	--	"[locname]."
 "sample"	425622844	--	--	"[maples-no]."
 "maple"	329348878	--	--	"[maples-no]."
+"real"	269131569	Yer All a Yell'r	--	"[add-ly]."
 "bossy"	407678666	t-bossily	--	"[add-li]."
 "bossi"	330312260	t-bossily	--	"[add-ly]."
 "nasti"	315472156	t-nastily	--	"[add-ly]."

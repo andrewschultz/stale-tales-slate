@@ -18219,7 +18219,9 @@ to say how-played:
 
 chapter Yer All a Yell'r
 
-Yer All a Yell'R is vanishing scenery in Disowned Downside. description is "It's a song and a bad one. You may wish to [b]LISTEN[r], as if you can suffer through it, you may get a hint.". bore-check of Yell'R is bore-yer-all rule. bore-text of Yell'R is "You don't want to do much more than [b]LISTEN[r] to [yell'r], if that,"
+Yer All a Yell'R is vanishing boring scenery in Disowned Downside. description is "It's a song and a bad one. You may wish to [b]LISTEN[r], as if you can suffer through it, you may get a hint.". bore-check of Yell'R is bore-yer-all rule. bore-text of Yell'R is "You don't want to do much more than [b]LISTEN[r] to [yell'r], if that,"
+
+a-text of Yer All a Yell'R is "RYYRRO". b-text of Yer All a Yell'R is "R?Y?PO". parse-text of Yer All a Yell'R is "r[sp]e[sp]a[sp]l[sp]l[sp]y".
 
 this is the bore-yer-all rule:
 	if current action is listening, continue the action;

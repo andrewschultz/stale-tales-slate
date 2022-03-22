@@ -418,6 +418,8 @@ loathingly,allnightyo,aholyglint,onlylaghit,hatinglyol,halyinglot
 #disowned downside
 #qver of parleys splayer players
 sparely,???R?RO=parleys=splayer=players
+#qver of yer all a yell'r
+really,R?Y?PO=yerall=ayellr
 #qver of tearily-irately
 tearily/irately,??GR?RB=reality
 #qver of steamily

@@ -1399,6 +1399,7 @@ sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rul
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if].[paragraph break][revelv]And yet, voices remain, asking, or stating, 'Sullenness? Us?' Or maybe 'Sullenness! Us!'"
 sullenness us	sullenness us	false	548181195	--	"unless"	"unless"	--	--	"You provide a counter-point. The voices need not remain sad, because you have a way to defeat Elvira. You think. You hope. You sense less tension in the air."
 atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
+yer all a yell'r	yer all a yell'r	false	445304660	--	"really"	"really"	--	post-gretta-help rule	"You point out just how bad [yer all] is. With logic, of course, but more importantly with an appeal to emotion. Why, the singer/author didn't have any remotely popular follow-ups! That sort of thing. But more importantly, you just keep nagging [the players] with 'Really?! REALLY?'[paragraph break]It's an effective strategy when logic isn't on your side, and here, it really (heh!) is. The [players] turn the music down, complaining that you are draining the energy all up in here. Gretta looks slightly relieved."
 parleys splayer players	parleys splayer players	false	569230746	--	"sparely"	"sparely"	--	post-gretta-help rule	"The [pla-ma]s['] enthusiasm drains a bit. They take breaks while they're speaking. Gretta looks relieved for a moment."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The [pla-ma]s cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin DOWNSIDE 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	--	--	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. The [pla-ma]s scramble to assure her they didn't mean it that way, but she's not fooled."
@@ -1565,6 +1566,8 @@ this is the post-gretta-help rule:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for interceding. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
 		moot players;
+		unless yer all a yell'r is in disowned downside, now yellr-figured is true;
+		moot yer all a yell'r;
 		mootl list of all pickup-lines;
 		try talking to Gretta;
 		continue the action;
@@ -3379,6 +3382,7 @@ thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess."
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
 parleys splayer players	true	true	false	false	"The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data."
+yer all a yell'r	true	true	true	false	"Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very."
 t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
@@ -3703,6 +3707,8 @@ jollity	"[whin-nag]."
 raptor	"The raptor recoils slightly."
 cinders	"The cinders glow and even warm up for a bit."
 aside-llp	"[e-n-m] rock back and forth a bit."
+parleys splayer players	"The [players] slip for a moment but quickly resume their incessant dialogue."
+Yer All a Yell'r	"[yer all] changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track."
 holy nest	"The holy nest flutters silently."
 atmo moat	"Hm, that's not it, but it must be elemental. No, elementary."
 sea cube	"The sea cube shakes a bit."
@@ -4042,7 +4048,8 @@ tokers	"[if nestor is off-stage]You can find the tokers['] friend in store N[els
 mangiest steaming	"[if blabber babbler is reflexive]You can enter the steaming for a mini-side-quest[else]You've been in the steaming. After how you upended things, it'd be unwise to go back[end if]."
 passage	"If you go there, you'll get a big hint."
 pamphlets	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a vowel out from I USED TO."
-Rehabs Basher	"[one of]You need to get the Rehabs Basher and the blabber babbler out of the way. Nouns won't work here.[plus][or]The Rehabs Basher's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO should give you a clue what to anagram. Studio E may clinch it.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
+Rehabs Basher	"[one of]You need to get the Rehabs Basher and the blabber babbler out of the way. Nouns won't work here.[plus][or]If you listen, a song may give you clues, too[plus][or]The Rehabs Basher's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO should give you a clue what to anagram. Studio E may clinch it.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
+Suit Ode Douse It	--	Rehabs Basher
 blabber babbler	--	Rehabs Basher
 
 table of routes hintobjs
@@ -4487,6 +4494,7 @@ Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphaticall
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."
 parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s['] parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARELY"
+yer all a yell'r	"[one of]The simplistic song's solution should not be too bad.[plus][or]Especially since you can guess what the last two letters can be.[plus][or]An expression of surprise and disgust that doubles as an adverb works quite well here. Do these people actually like this sort of music? Well, instead of actually...[plus][or]REALLY.[minus][cycling]"
 Cut Ya All Cult Laya	"[one of]A meaningless word will cut the [laya] down. It's one people use to win an argument.[plus][or]ACTUALLY.[minus][cycling]"
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-otters-east-ly].[minus][cycling]"	--	"[rand-otters-east-ly]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-otters-east-ly].[minus][cycling]"	--	"[rand-otters-east-ly]"
