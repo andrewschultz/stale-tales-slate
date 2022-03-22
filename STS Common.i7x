@@ -14,8 +14,6 @@ hub-region is a region that varies. [stores in each case]
 
 hub-room is a room that varies. [trips strip/strip of profits]
 
-to say this-sts: (- print (string) Story; -)
-
 to say gm-short: say "[if is-roiling is true]Roiling[else]Shuffling[end if]"
 
 to moot (th - a thing): move th to Emerita Emirate; [ it's meatier emerita emirate in roiling, but the namespace works out ok, so we don't need to specify moot-room.]
@@ -211,10 +209,10 @@ chapter diagonal movements
 
 check going when noun is not planar (this is the reject diagonals and up/down rule):
 	if noun is diagonal:
-		say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[in random order][one of][line break][i][bracket]Note: this game's confusing enough without diagonal directions. If you can't find a way to go, type EXITS.[close bracket][r][or][stopping][line break]" instead;
+		say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[in random order][one of][line break][i][bracket]Note: [this-game]'s taxing enough without diagonal directions. If you can't find a way to go, type [b]EXITS[r].[close bracket][r][or][stopping][line break]" instead;
 	if the noun is vertical:
 		if the room noun of the location of player is nowhere:
-			say "if there is a way [noun], it should be clear in the description. Hopefully. If not, try EXITS." instead;
+			say "if there is a way [noun], it should be clear in the description. Hopefully. If not, try [b]EXITS[r]." instead;
 
 chapter minor verbs and blocking rules
 
@@ -322,12 +320,12 @@ understand "examine [any room]" as xrooming.
 
 check examining location of player:
 	if noun is location of player:
-		say "X/EXAMINE (ROOM) is equivalent to LOOK in [this-sts].";
+		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is equivalent to [b]LOOK[r] in [this-game].";
 		try looking instead;
 
 check xrooming:
 	if noun is location of player:
-		say "X/EXAMINE (ROOM) is equivalent to LOOK in [this-sts].";
+		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is equivalent to [b]LOOK[r] in [this-game].";
 		try examining location of player instead; [shouldn't happen but just in case]
 	say "[if noun is visited]You've been there, but[else]You haven't gotten there yet, and[end if] you can't see that far[x-room-n].";
 
@@ -337,12 +335,12 @@ room-look-warn is a truth state that varies.
 
 check xrooming:
 	if room-look-warn is false:
-		say "X/EXAMINE (ROOM) is usually equivalent to LOOK in Shuffling Around. Sometimes it will describe scenery for you, but it doesn't have critical information.";
+		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is usually equivalent to [b]LOOK[r] in [this-game]. Sometimes it will describe scenery for you, but it doesn't have critical information.";
 		now room-look-warn is true;
 	if noun is location of player, try looking instead; [shouldn't happen but just in case]
 	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if]." instead;
 
-to say x-room-n: say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
+to say x-room-n: say "[one of]. [b]X ROOM[r] is really just the same as [b]LOOK[r] for the room you're in, and you don't need to look ahead or behind[or][stopping]"
 
 part sitesing
 
@@ -363,7 +361,7 @@ carry out sitesing:
 			do nothing;
 		else:
 			say "Ok. Back to the game." instead;
-	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
+	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct Perl anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]Perl for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
 	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds; [forgot where I found the names from]
 
@@ -393,7 +391,7 @@ report requesting the score for the first time: poss-display.
 
 to poss-display:
 	if possibles is false and min-alert is false:
-		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
+		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing [b]POSS[r]. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
 		now min-alert is true;
 		pad-rec "poss";
 
@@ -403,7 +401,7 @@ part bugtracking
 
 to say bug-report:
 	abort-if-bugfind;
-	say "BUG. You should not have seen this. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite], because this is something I want to fix. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc.[paragraph break]You can also report reproducible bugs at [ghsite]. Thanks so much for taking the time!"
+	say "BUG. You should not have seen this. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite], because this is something I want to fix. Use up arrow to see previous commands. Or use [b]UNDO[r] several times and hit [b]TRANSCRIPT[r] to show me how you got here, what your inventory was, etc.[paragraph break]You can also report reproducible bugs at [ghsite]. Thanks so much for taking the time!"
 
 bugsquash is a truth state that varies.
 
@@ -502,7 +500,7 @@ volume hinting stuff
 part hints
 
 to say plus:
-	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
+	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can [b]HINT[r] again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
 
 to say minus:
 	if prevent-thruhint-flag is false, now cur-item is thruhinted;
@@ -567,7 +565,7 @@ check quitting the game when currently transcripting:
 	say "Thanks for taking a transcript. Please send it to [email] and I'll be grateful. Thanks!";
 
 report switching the story transcript on:
-	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
+	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type [b]TRANSCRIPT[r] and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
 	continue the action;
 
 volume post-game stubs
