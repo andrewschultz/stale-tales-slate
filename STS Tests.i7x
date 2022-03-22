@@ -276,7 +276,7 @@ carry out hintalling:
 	now stuff-to-duplicate is {};
 	let should-find be true;
 	let duplicate-this be false;
-	say "Running HINTALL to find which items need hinting. This may take a [if is-roiling is true]long [end if]while.";
+	say "Running HINTALL to find which items need hinting. This may take a [if is-roiling]long [end if]while.";
 	say "You may wish to define something as AMUSING, USELESS or BOUNDING if it pops up here and doesn't need a hint.[paragraph break]";
 	now hintobjstable of meta team is table of general hintobjs;
 	repeat with VTH running through all things:

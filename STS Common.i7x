@@ -6,7 +6,7 @@ include STS Hashes by Andrew Schultz.
 
 part game-dependent variables and super-stubs
 
-is-roiling is a truth state that varies.
+sts-sequence is a number that varies.
 
 orig-region is a region that varies. [ordeal loader/ (means manse or ordeal reload)]
 
@@ -14,7 +14,11 @@ hub-region is a region that varies. [stores in each case]
 
 hub-room is a room that varies. [trips strip/strip of profits]
 
-to say gm-short: say "[if is-roiling is true]Roiling[else]Shuffling[end if]"
+to say gm-short: say "[if sts-sequence is 1]Shuffling[else if sts-sequence is 2]Roiling[else]Torus[end if]"
+
+to decide whether is-roiling:
+	if sts-sequence is 2, yes;
+	no;
 
 to moot (th - a thing): move th to Emerita Emirate; [ it's meatier emerita emirate in roiling, but the namespace works out ok, so we don't need to specify moot-room.]
 
