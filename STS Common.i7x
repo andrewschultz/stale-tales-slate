@@ -603,6 +603,33 @@ to say 2drm of (rr - a room):
 
 anything-missed is a truth state that varies.
 
+volume glulx stuff
+
+Table of Common Color Values (continued)
+glulx color value	assigned number
+g-pure-blue	255	[== $0000FF]
+g-pure-green	40960	[== $00A000]
+g-pure-red	16719904	[== $FF2020]
+
+Table of User Styles (continued)
+style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
+header-style	--	--	--	--	bold-weight	--	2	g-black
+special-style-1	--	--	--	--	regular-weight	proportional-font	0	g-pure-red
+special-style-2	--	--	--	--	regular-weight	proportional-font	0	g-pure-green
+italic-style	--	--	--	--	--	--	0	g-black
+fixed-letter-spacing-style	--	--	--	--	--	--	0	g-black
+bold-style	--	--	--	--	--	--	0	g-black
+alert-style	--	--	--	--	--	--	0	g-black
+note-style	--	--	--	--	--	--	0	g-black
+input-style	--	--	--	--	--	--	0	g-black
+blockquote-style	left-justified	no-obliquity	0	0	regular-weight	proportional-font	0	g-pure-blue
+[normal-style	--	--	--	--	--	--	0	g-black]
+
+The back-colour of the main-window is g-white.
+
+to say bluetext:
+	(- glk_set_style(style_BlockQuote); -)
+
 volume debug variables that must be in common file since they appear in release functions
 
 post-ignore-needkey is a truth state that varies.
