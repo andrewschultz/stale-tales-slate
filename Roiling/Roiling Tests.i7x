@@ -532,6 +532,20 @@ carry out heing:
 		all-say "This room is all clear!";
 	the rule succeeds;
 
+chapter iiing
+
+iiing is an action out of world.
+
+understand the command "ii" as something new.
+
+understand "ii" as iiing.
+
+carry out iiing:
+	say "DEBUG: Warpable [list of warpable things carried by player].";
+	say "DEBUG: Special carried [list of regspecial things carried by player].";
+	say "DEBUG: Special held [list of regspecial things held by player].";
+	say "DEBUG: Special enclosed [list of regspecial things enclosed by player].";
+
 chapter ceming
 
 [* CEM makes you curse every move. ]
