@@ -6057,7 +6057,7 @@ listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, eeks
 
 listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese }.
 
-listen-list of otters is { ed riley, parleys splayer players, vow here, whiners, sly imp, asyllabic lilac bays }.
+listen-list of otters is { ed riley, yer all a yell'r, parleys splayer players, vow here, whiners, sly imp, asyllabic lilac bays }.
 
 listen-list of others is { pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }.
 
@@ -6194,6 +6194,7 @@ this is the listen-towers rule:
 this is the listen-otters rule:
 	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead;
 	if noun is asyllabic lilac bays, say "[if lilac bays are reflexed]You can't hear anything from the bays now[else]An odd voice. [one of]'Silly Cab A ... Silly Cab A ...' You see red at such nonsense, but you didn't expect anything rigorously profound from flowers[or]'Clay Blais ... Clay Blais ...' oh, right! The exotic flower expert! You see red at his treatment under the new regime[in random order][one of]. The voice seems to change. Maybe there's something else[or][stopping][end if].";
+	if noun is Yer All a Yell'r, say "Goodness! [yer all] is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out. Sadly, now, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point." instead;
 	if noun is parleys splayer players, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
@@ -18215,6 +18216,13 @@ to say how-played:
 		say ", though not as much as when they started, since you got them";
 	else if gretta-score is 2:
 		say ", but they're wavering a bit. If you blow up their flow once more, you could probably get rid of them"
+
+chapter Yer All a Yell'r
+
+Yer All a Yell'R is vanishing scenery in Disowned Downside. description is "It's a song and a bad one. You may wish to [b]LISTEN[r], as if you can suffer through it, you may get a hint.". bore-check of Yell'R is bore-yer-all rule. bore-text of Yell'R is "You don't want to do much more than [b]LISTEN[r] to [yell'r], if that,"
+
+this is the bore-yer-all rule:
+	if current action is listening, continue the action;
 
 chapter Gretta Garett Tatger
 

@@ -147,7 +147,7 @@ def match_slider_tests():
                     need_cmd = True
                     temp = re.sub(".* test for +", "", ll)
                     if temp not in slider_tracking[x]:
-                        print(line_count, file_name, "Bad slider comment test", temp)
+                        print(line_count, file_name, "Bad slider comment test", temp, "... name may need editing")
                     elif slider_tracking[x][temp]:
                         print(line_count, file_name, "Duplicate slider comment test", temp)
                     else:
@@ -239,8 +239,7 @@ def catch_bad_reg(p):
                 if ll.startswith("#"): ll = ll[1:]
                 for y in valids_reverse:
                     if ll.startswith(y) and valids_reverse[y] not in x:
-                        print(y, valids_reverse[y], x)
-                        print("Misplaced test case", x, line_count, line.lower().strip())
+                        print("Misplaced test case", x, line_count, line.lower().strip(), "... maybe put this in another section")
                         misplaced_error_count += 1
                 if 'hints' not in x and ll.startswith("DEBUG INFO") and "objhinting" in ll:
                     print("Erroneous hint check", x, line_count, line.lower().strip())
@@ -346,6 +345,7 @@ def sync_check(a, b, region=""):
     main_or_table = [ i7.main_src(a), i7.hdr(a, 'ta') ]
     detail_column = cols[b] if b in cols else 1
     for fi in main_or_table:
+        fb = os.path.basename(fi)
         with open(fi) as file:
             for (line_count, line) in enumerate(file, 1):
                 if line.startswith('table of') and b in line.lower():
@@ -363,7 +363,7 @@ def sync_check(a, b, region=""):
                     continue
                 ary = line.strip().split("\t")
                 ary[0] = ary[0].lower()
-                if ary[0] in needs_sync_test.keys(): sys.exit("STORY.NI duplication ({:s}): {:s} already defined at line {:d}, redefined at line {:d}.".format(b, ary[0], needs_sync_test[ary[0]], line_count))
+                if ary[0] in needs_sync_test.keys(): sys.exit("STORY.NI duplication ({:s}): {:s} already defined at {:s} line {:d}, redefined at line {:d}.".format(b, ary[0], fb, needs_sync_test[ary[0]], line_count))
                 needs_sync_test[ary[0]] = line_count
                 sync_detail[ary[0]] = noquo(ary[detail_column])
                 if debug: print(ary[0])
