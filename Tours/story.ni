@@ -208,6 +208,9 @@ Scene Scene is an internal dubroom. "Here's a good place to just wind down your 
 
 stats-x is a truth state that varies.
 
+instead of exiting:
+	try going outside instead;
+
 volume stats tat (deprecated?)
 
 [
@@ -495,15 +498,10 @@ volume help stuff
 to say verbs: say "[b]V[r]/[b]VERB[r]/[b]VERBS[r]"
 
 after printing the locale description for Ehs Ehs when Ehs Ehs is unvisited:
-	say "[i][bracket]NOTE: to see general information about [this-game][i], type [b]ABOUT[i]. To see the verbs used, type [verbs][i]. In particular, you may want to note the directions used.[close bracket][r]";
+	say "[i][bracket]NOTE: to see general information about [this-game][i], type [b]ABOUT[i]. To see the verbs used, type [verbs][i]. In particular, you may want to note the directions used.[close bracket][r][line break]";
 	continue the action;
 
 volume endgames
-
-Table of Final Question Options (continued)
-final question wording	only if victorious	topic		final response rule		final response activity
-"see [b](REJ)ECTS[r]/[b]REJECTED[r] words"	true	"reject/rejected/rejects"	the show rejected words rule	--
-"see what you [b]MISSED[r]"	true	"miss/misses/missed"	the show what you missed rule
 
 this is the show rejected words rule:
 	say "Here are some rejected words:";
@@ -589,6 +587,14 @@ to say reject:
 				if there is no cmd-loc entry or location of player is cmd-loc entry:
 					say "[nudge-text entry]";
 					continue the action;
+	repeat with itm running through touchable flippables:
+		now itmhash is the hash of the printed name of itm;
+		if cmdhash is itmhash / 2:
+			say "No, no half-measures here.";
+			continue the action;
+		else if cmdhash is itmhash:
+			say "Hmm, that seems to sort of have had an effect."
+			continue the action;
 	say "There aren't very many verbs to use in [this-game], though each section has something special that needs doing. For a general list of verbs, type [b]VERBS[r]."
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
