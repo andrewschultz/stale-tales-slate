@@ -235,7 +235,7 @@ check examining stats tat:
 
 volume flippables
 
-the hams are flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash".
+the hams are flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general.".
 
 volume when play begins
 
@@ -320,7 +320,7 @@ carry out abouting:
 	if big-details is false:
 		say "[b]CREDITS[r] will give thanks to people involved specifically in [this-game].";
 	else:
-		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro], but it does sweep up some undone things. I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--the Tours Torus--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be tough.";
+		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro], but it does sweep up some undone things. I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be tough.";
 		say "[line break]I also wanted to fit in a non-anagram puzzle based on something I'd always wondered about.";
 		say "[line break]Source code for [this-game] is at https://github.com/andrewschultz/stale-tales-slate/tree/main/Tours.";
 	now big-details is whether or not big-details is false;
@@ -336,11 +336,13 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
+	say "Pre-emptive stuff:[paragraph break]";
 	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now.";
-	say "[line break]Thanks to J. J. Guest the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments.";
+	say "Thanks to (Jason/JJ) Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments.";
+	say "[line break]Set-in-stone stuff: [paragraph break]";
 	say "[line break]Thanks to Amanda Walker for starting the blurb thread on intfiction.org which helped me with ideas in general.";
-	say "[line break]Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
-	say "[line break]Thanks to wordsmith.org for so many anagrams verified and inspired.";
+	say "Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
+	say "Thanks to wordsmith.org for so many anagrams verified and inspired.";
 	the rule succeeds;
 
 chapter listening
