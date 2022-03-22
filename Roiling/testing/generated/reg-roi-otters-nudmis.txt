@@ -430,6 +430,22 @@ Well, you have a feeling you know what that question mark should be.
 >scan parleys splayer players
 The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data.
 
+#spechelp for parleys splayer players
+>sarpley
+The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
+
+#scannotes for yer all a yell'r
+>scan yer all
+Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very.
+
+#spechelp for yer all a yell'r
+>erlaly
+Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
+
+#nudge for real
+>elra
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
+
 >sparely
 by one point
 #done rejects for parleys splayer players
