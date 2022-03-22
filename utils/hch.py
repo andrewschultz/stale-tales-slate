@@ -7,6 +7,8 @@
 # todo: check for rules as well. They should always go in MAX.
 #
 # todo: table of towers anagrams could maybe have branch name or names. Check the config file for that.
+#
+# todo: check for errant scannotes test
 
 from collections import defaultdict
 import os
@@ -47,6 +49,8 @@ process_regs = False
 
 big_error_count = 0
 misplaced_error_count = 0
+
+rbr_lines_to_edit = []
 
 with open("c:/games/inform/roiling.inform/source/hch.txt") as file:
     for (line_count, line) in enumerate (file, 1):
@@ -95,6 +99,7 @@ def my_category(my_file):
 ignore_blank_cat = True
 
 def match_slider_tests():
+    global rbr_lines_to_edit
     i7.go_proj('roi')
     fi = i7.hdr('roi', 'ta')
     fi2 = i7.hdr('roi', 'nu')
@@ -139,15 +144,19 @@ def match_slider_tests():
         with open(file_name) as file:
             for (line_count, line) in enumerate(file, 1):
                 ll = line.lower().strip()
-                if ll.startswith(">"):
-                    need_cmd = False
-                if ll.startswith("#slider test for "):
-                    if need_cmd:
+                if need_cmd:
+                    if ll.startswith("#"):
+                        pass
+                    elif not ll.startswith(">"):
                         print("WARNING slider test untested line", line_count, "file", file_name)
+                    else:
+                        need_cmd = False
+                if ll.startswith("#slider test for "):
                     need_cmd = True
                     temp = re.sub(".* test for +", "", ll)
                     if temp not in slider_tracking[x]:
                         print(line_count, file_name, "Bad slider comment test", temp, "... name may need editing")
+                        rbr_lines_to_edit.append(line)
                     elif slider_tracking[x][temp]:
                         print(line_count, file_name, "Duplicate slider comment test", temp)
                     else:
@@ -156,8 +165,10 @@ def match_slider_tests():
                     temp = re.sub(".* test for +", "", ll)
                     if temp not in slider_tracking[x]:
                         print(line_count, file_name, "Bad reslider comment test", temp)
+                        rbr_lines_to_edit.append(line)
                     elif not slider_tracking[x][temp]:
-                        print(line_count, file_name, "Reslider comment withour slider test", temp)
+                        print(line_count, file_name, "Reslider comment without slider test", temp)
+                        rbr_lines_to_edit.append(line)
         for y in slider_tracking[x]:
             if y == 'lamp' or y == 'satchel': continue # kludge for now
             if not slider_tracking[x][y]:
@@ -467,6 +478,24 @@ if big_error_count and not print_details:
 
 if not big_error_count and not process_regs:
     print("NOTE: -pr will process reg-* files and not just rbr")
+
+if rbr_lines_to_edit:
+    rbr_wants = defaultdict(bool)
+    for r in rbr_lines_to_edit:
+        rbr_wants[r] = False
+    for x in glob.glob("c:/games/inform/roiling.inform/source/rbr*.txt"):
+        xb = os.path.basename(x)
+        with open(x) as file:
+            for (line_count, line) in enumerate(file, 1):
+                for r in rbr_lines_to_edit:
+                    if r == line:
+                        print("Found original", xb, line_count, "for", r.strip())
+                        mt.add_postopen_file_line(x, line_count)
+                        rbr_wants[line] = True
+    mt.postopen_files()
+    for r in rbr_wants:
+        if not rbr_wants[r]:
+            print("Not able to find original line for", r.strip())
 
 if out_to_file:
     print("Wrote to", houtfile)

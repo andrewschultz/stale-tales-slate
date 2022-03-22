@@ -86,11 +86,11 @@ def pre_process(sts):
                 say_dict[say_note] = say_stuff
                 continue
             if line.startswith("book "):
-                chapter_name = re.sub("^[^ ]+ +", "", line.strip().lower())
-                chapter_name = re.sub(" nudges.*", "", chapter_name.strip().lower())
-                current_chapter = sts + '-' + chapter_name
+                book_name = re.sub("^[^ ]+ +", "", line.strip().lower())
+                book_name = re.sub(" nudges.*", "", book_name.strip().lower())
+                current_book = sts + '-' + book_name
                 if not quiet:
-                    print("Current chapter now", current_chapter)
+                    print("Current chapter now", current_book)
                     continue
             if re.search("\"\t[0-9]", line) and not line.startswith('['):
                 line = re.sub(" *\[[^\]]+\]$", "", line.strip())
@@ -98,8 +98,8 @@ def pre_process(sts):
                 l = re.sub("\"", "", tlist[0])
                 if ' ' in l:
                     print("WARNING line", line_count, "has space in the word-key.")
-                cmd_tries[current_chapter][l] = line_count
-                got_nudges[current_chapter][l] = False
+                cmd_tries[current_book][l] = line_count
+                got_nudges[current_book][l] = False
                 if l in nudge_text[sts]:
                     print("Redefinition of {} at line {} in nudge file for {}.".format(l, line_count, sts))
                 nudge_text[sts][l] = re.sub("\"", "", tlist[TEXT_COLUMN])
@@ -355,7 +355,7 @@ if clear_files:
 cmd_tries = defaultdict(dict)
 got_nudges = defaultdict(dict)
 
-d = [ 'shuffling', 'roiling' ]
+d = [ 'shuffling', 'roiling' , 'tours-roust-torus' ]
 
 for gm in d:
     pre_process(gm)
