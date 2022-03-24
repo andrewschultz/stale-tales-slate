@@ -1,6 +1,6 @@
 Version 1/211107 of STS Hashes by Andrew Schultz begins here.
 
-[this is a collection of hashes common to the Stale Tales Slate games, with basic hashing functions.]
+[this is a collection of hashes common to the Stale Tales Slate games, with basic hashing functions. It contains other basic functions common to all 3 STS games, so it is inaccurately named.]
 
 volume command hashing -- thanks to Uncle David
 
@@ -52,6 +52,14 @@ to decide what number is the hash of (t - a value of kind K):
 	decide on hash;
 
 volume other trivia
+
+sts-sequence is a number that varies. [ 1 = shuffling 2 = roiling 3 = torus ]
+
+to say gm-short: say "[if sts-sequence is 1]Shuffling[else if sts-sequence is 2]Roiling[else]Torus[end if]"
+
+to decide whether is-roiling:
+	if sts-sequence is 2, yes;
+	no;
 
 to say sts: say "Stale Tales Slate";
 

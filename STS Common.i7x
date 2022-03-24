@@ -6,8 +6,6 @@ include STS Hashes by Andrew Schultz.
 
 part game-dependent variables and super-stubs
 
-sts-sequence is a number that varies.
-
 orig-region is a region that varies. [ordeal loader/ (means manse or ordeal reload)]
 
 hub-region is a region that varies. [stores in each case]
