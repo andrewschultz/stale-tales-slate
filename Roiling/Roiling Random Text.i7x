@@ -17,20 +17,20 @@ table of yessage	false	0	20	am-yessing rule	Meta Team	"Rejects for saying yes"	-
 table of singing rejects	false	0	20	is-singing rule	Meta Team	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
 table of wait responses	false	0	20	you-waited rule	Meta Team	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
 table of cussing rejects	false	0	20	you-cussed rule	Meta Team	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
-table of nonviolence messages	false	0	20	you-attacked rule	Meta Team	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
+table of nonviolence messages	false	0	20	you-attacked rule	Meta Team	"How the game blocks [b]ATTACK[r]"	--	""	"Ill touch? Chill out till...ouch!"
 table of death messages	false	0	0	bzzt rule	Meta Team	"Death notices"	--	""
 
 table of megachatter (continued) [this is organized by region then by alphabet, well, roughly]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
 table of random books	false	0	30	read-books rule	Ordeal Reload	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
 table of ad slogans	true	0	30	blurby rule	Ordeal Reload	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
-table of mob chants	false	0	30	mob-chanting rule	Ordeal Reload	"Mob chants (LISTEN post-Perrot in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
+table of mob chants	false	0	30	mob-chanting rule	Ordeal Reload	"Mob chants ([b]LISTEN[r] post-Perrot in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
 table of idiotic babbler points	true	0	15	babbler-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The blabber babbler "	" [ted-die]"	"The blabber babbler flips back to the start of [his-her] keystone keynotes, resuming [his-her] ol['] mongo monolog.[pre-brk]"	20
 table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The blabber babbler "	""	"The blabber babbler reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
 table of store c competitors	false	0	10	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
 table of store c ads	false	0	10	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
-table of tokers nonsense	true	0	30	ohai-tokers rule	stores	"The tokers['] chat[if tokers are off-stage and nestor is off-stage] (flip STORE K and STORE N in Strip of Profits)[end if]"	--	""	"'No weed? We done!' but they find some more, ready to repeat. You may wish to HUSH them to zone them out as they zone out.[pre-brk]"
+table of tokers nonsense	true	0	30	ohai-tokers rule	stores	"The tokers['] chat[if tokers are off-stage and nestor is off-stage] (flip STORE K and STORE N in Strip of Profits)[end if]"	--	""	"'No weed? We done!' but they find some more, ready to repeat. You may wish to [b]HUSH[r] them to zone them out as they zone out.[pre-brk]"
 table of moralizers	false	0	30	read-pious-1 rule	routes	"Moralizers[c-c-u]"	--	""	--
 table of mantle laments	false	0	30	read-pious-2 rule	routes	"Rev. Ali's hot takes[c-c-u]"	--	"[randexc]"	"wait, no, an epilogue hand-written in: [i]sad, rash [if censor-minor is true](mean name)[else]hardass[end if][r], which is refreshing." [p]
 table of horbert musings	true	0	30	horby rule	routes	"Brother Horbert's musings[c-c-u]"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa.[pre-brk]"	40
@@ -60,7 +60,7 @@ table of tuna gossip	true	0	15	gossip-over-chatter rule	oyster	"Aunt Tuna's goss
 table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
 table of theses	false	0	30	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
 table of rodney bluster	true	0	20	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if here-picaros is 7]informs his gang[else if here-picaros > 3]yells at his remaining troops[else if here-picaros is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
-table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts" [p]
+table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the [gizmo][indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts" [p]
 table of ideas aides squabbles	true	0	20	inclosure-talk rule	otters	"Elmer and Merle's chat"	--	""	"[e-m] blurts out 'EXACTLY!' His friend has no response. What is there to say? But they're all out of ideas, now, so they start over.[pre-lb]"
 table of Elvira battle cries	false	0	20	last-battle rule	otters	"Elvira's battle cries"	--	""	""
 table of Elvira machines	false	0	20	bzzt rule	otters	"Elvira's machines"	--	""	""
@@ -176,9 +176,9 @@ this is the find-blather rule:
 					if chat-rand is true:
 						if talk-quiet is true:
 							say "[line break]";
-							ital-say "the above was random dialogue that won't be repeated since you have HUSH on. You can undo this with UHHS.";
+							ital-say "the above was random dialogue that won't be repeated since you have [b]HUSH[r] on. You can undo this with [b]UHHS[r].";
 						if quiet-warn is false:
-							ital-say "the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.";
+							ital-say "the above was random dialogue that can be turned off with [b]HUSH[r] or on with [b]UHHS[r]. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.";
 							pad-rec-q "random dialogue";
 							now quiet-warn is true;
 					the rule succeeds;

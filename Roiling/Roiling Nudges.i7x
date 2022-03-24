@@ -68,7 +68,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "oped"	304653734	dope op ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
 "tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go [b]DOWN[r] to the [if Largely All Grey Gallery is visited]gallery[else]basement[end if]."
-"stable"	401610655	--	study-see-stable rule	"You probably just want to go IN to the stable."
+"stable"	401610655	--	study-see-stable rule	"You probably just want to go [b]IN[r] to the stable."
 "chair"	188792351	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	sad ads	--	"[w-twi]."
@@ -601,7 +601,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pad"	104682866	--	--	"[pad-not-just] ires."
 "song"	272133753	Id Cede	--	"[id-cede-full]."
 "cede"	295646892	Id Cede	--	"[id-cede-full]."
-"diapers"	459079590	Id Cede	--	"Don't twist yourself into knots to/from REAL despair." [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
+"diapers"	459079590	Id Cede	--	"You already twisted yourself into and out of knots from despair. Time to move on!" [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
 "eddie"	342663242	Id Cede	--	"[id-cede-full]."
 "glare"	301731271	--	glaring-futile rule	"You stare into space some more but get distracted."
 
@@ -1245,7 +1245,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hedrno"	414701385	--	--	"[locname]."
 "theses"	588552467	theses sheets	--	"The hedron's spirit will remain intact even if you meddle there. You must go into its heart."
 "these"	492278501	theses sheets	--	"It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead."
-"tarp"	272087598	ol trap	--	"You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating."
+"tarp"	272087598	ol trap	--	"You think of changing the trap--maybe even a tarp! But what if the tarp enfolded you and became a trap that way? Scary! No, thinking of it as an ol['] trap would make it less intimidating."
 "walleye"	595721739	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	walleyes	--	"The walleyes are a bad crowd, past redemption."
 
@@ -2199,7 +2199,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say no-pryer: say "No, it's the whole pryer bars"
 
-to say rapt-glare: say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon"
+to say rapt-glare: say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon"
 
 chapter clangier clearing
 
@@ -2457,7 +2457,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "opts"	355202520	--	degen-true rule	"[meta-rej]."
 "options"	543455451	--	degen-true rule	"[meta-rej]."
 "version"	604821629	--	degen-true rule	"[meta-rej]."
-"something"	649400178	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
+"something"	649400178	--	degen-true rule	"SOMETHING never anagrams to anything, so you'll want to tinker with whatever that SOMETHING is on or near or supporting."
 
 this is the elvira-here rule:
 	if otters is not solved, the rule succeeds;
@@ -2519,7 +2519,7 @@ to say adv-help-2: say ". [if power-back is true]Even with your powers back, you
 
 slab-pts is a number that varies.
 
-to say cussy: say "You're not fooling ME. Shame on you"
+to say cussy: say "I'm not fooled. Shame on you"
 
 volume comments I couldn't get rid of
 
