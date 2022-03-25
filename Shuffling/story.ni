@@ -814,7 +814,7 @@ this is the ordeal-loader-hinting rule:
 		if toga is touchable and reed is touchable:
 			if toga-first is true, try objhinting toga instead;
 			try objhinting reed instead;
-		all-say "You can just go IN, now." instead;
+		all-say "You can just go [b]IN[r], now." instead;
 	if player is in Notices Section:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
 		if player does not have gadget, all-say "You probably want to [b]TAKE GADGET[r] before entering the gate. Well, maybe even [b]TAKE ALL[r]." instead;
@@ -859,7 +859,7 @@ this is the forest-hinting rule:
 		if noughts are off-stage, try objhinting noughts instead;
 		if bread is part of the sandwich, try objhinting sandwich instead;
 		if beard is off-stage, try objhinting the bread instead;
-		all-say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] later. [b]PUT[r] (item) ON (item)[unless shades are part of beard or nose is part of beard] twice[end if] to create the full disguise." instead;
+		all-say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] later. [b]PUT[r] (item) [b]ON[r] (item)[unless shades are part of beard or nose is part of beard] twice[end if] to create the full disguise." instead;
 	if chisel is off-stage, try objhinting liches instead;
 	if livers are off-stage:
 		if player does not have River Ville liver and player does not have viler liver, try objhinting chisel instead;
@@ -1233,7 +1233,7 @@ check eating: [?? eat weird stuff]
 	if noun is motto, say "I hope you're not dumb enough to swallow that. Figuratively or literally." instead;
 	if noun is tomato, say "That might give you a gas saga. Or a hardier diarrhea." instead;
 	if noun is dry cake, say "It's in no state to taste[if cake is unexamined], as mentioned earlier[end if], and it won't be." instead;
-	if noun is ketchup, say "You don't know where it's been. Oh, wait, even worse, you DO." instead;
+	if noun is ketchup, say "You don't know where it's been. Oh, wait, even worse, you DO." instead; [bold-ok]
 	if noun is toe, say "That might hurt a bit, but you'd get the worst of toof-foot, or teef-feet, action." instead; [resort]
 	if noun is not edible, say "A new odd metabolism is not your magic power." instead;
 	say "[if location of player is the nick]Your hunger is a hint, not a necessity[else]You won't strictly need any food for [this-game]. Well, your character won't[end if]." instead;
@@ -1269,7 +1269,7 @@ check throwing tomato at:
 	if second noun is faeries, say "They could probably make it turn back and splatter you." instead;
 	if second noun is neon pig, say "That might feel good, but it wouldn't do anything." instead;
 	if second noun is ulcer or second noun is Night Thing:
-		say "A direct hit! The tomato goes into the cruel ulcer with a pulp's splup, a gish, a sigh. The Night Thing smiles at first at the ketchupiness of the tomato. Then the inner rottenness and backwards logic from the (oops, a) motto kicks in. The beast wonders what sort of villain would DO that to ketchup. It looks at you in fear, sure you have more where that came from, and retreats into an unseen hole, scratching and clawing, suddenly a Thing of no Fight.[paragraph break]The mattress the Night Thing was on is slightly but noticeably bumpy. It's also ripped open, and it's concealing something rather badly.";
+		say "A direct hit! The tomato goes into the cruel ulcer with a pulp's splup, a gish, a sigh. The Night Thing smiles at first at the ketchupiness of the tomato. Then the inner rottenness and backwards logic from the (oops, a) motto kicks in. The beast wonders what sort of villain would DO that to ketchup. It looks at you in fear, sure you have more where that came from, and retreats into an unseen hole, scratching and clawing, suddenly a Thing of no Fight.[paragraph break]The mattress the Night Thing was on is slightly but noticeably bumpy. It's also ripped open, and it's concealing something rather badly."; [bold-ok]
 		moot tomato;
 		moot night thing;
 		reg-inc;
@@ -1564,7 +1564,7 @@ after printing the name of the emitter while taking inventory: say " ([if emitte
 after taking inventory:
 	if stickyhanded is true and player is in Bassy Abyss, say "You also have sticky hands." instead;
 	if xray-vision is true:
-		say "The aftertaste from the salient saltine remains. If you stare at things, they can become--different. Perhaps you could XX something that's stumping you.";
+		say "The aftertaste from the salient saltine remains. If you stare at things, they can become--different. Perhaps you could [b]XX[r] something that's stumping you.";
 	continue the action;
 
 chapter tying / putting
@@ -2775,7 +2775,7 @@ to say verb-list:
 	if gadget-active:
 		if button-locked is false:
 			choose row with short of "macros" in table of pad-stuff;
-			if known entry is true, say "[2dn]RC or CR lets you scan both ways.";
+			if known entry is true, say "[2dn][b]RC[r] or [b]CR[r] lets you scan both ways.";
 	choose row with short of "rectify" in table of pad-stuff;
 	if known entry is true:
 		say "[2dn][b]RECTIFY[r][if rectify-short is true], or [b]RECT[r]/[b]REC[r]/[b]R[r] for short,[end if] has the gadget rectify the first and last letters of what you need.";
@@ -2798,7 +2798,7 @@ topic (topic)	known	blurb	short	verify
 "verbs/verb"	true	"[verb-list]"	"verbs"	false
 "options/option" or "post opts" or "ops"	true	"[opts-list]"	"options"	false
 "access"	true	"[b]ACCESS[r] toggles screen reader accessibility."	"access"	false
-"space/spaces"	false	"[b]SPACES[r] toggles whether you have an extra space in raw gadget results. [b]SPACE[r](S) ON/[b]SON[r] forces it on, while [b]NO SPACE[r](S)/[b]NOS[r] forces it off."	"spaces"	false
+"space/spaces"	false	"[b]SPACES[r] toggles whether you have an extra space in raw gadget results. [b]SPACE[r](S) [b]ON[r]/[b]SON[r] forces it on, while [b]NO SPACE[r](S)/[b]NOS[r] forces it off."	"spaces"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how [b]ONE WORD[r] could open a [b]NEW DOOR[r] in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
 "store/stores/malls/shop/shops/lots/mall"	false	"--[if scented descent is touchable]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are touchable]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is touchable]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is touchable]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"[b]OPT IN[r] gives you more detail when you are on the right track. [b]NO TIP[r] gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
@@ -2826,7 +2826,7 @@ topic (topic)	known	blurb	short	verify
 "to-do" or "todo" or "to do"	false	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."	"to-do"
 "flips"	false	"[what-can-flip]"	"flips"
 "random/dialogue" or "random dialogue" or "uhhs/hush"	false	"[b]UHHS[r] turns on random dialogue, [b]HUSH[r] turns it off."	"random dialogue"	true
-"xx"	false	"You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."	"xx"	true
+"xx"	false	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."	"xx"	true
 "red/redness"	false	"Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?"	"red"
 
 pf-warn is a truth state that varies.
@@ -2862,7 +2862,7 @@ store y	"Store Y -> [b]OYSTER[r] in A Roiling Original"
 to say what-can-flip:
 	if pf-warn is false:
 		if word number 1 in the player's command is not "pf":
-			say "[i][bracket]Note: you can abbreviate this with PF in the future.[close bracket][r][line break]";
+			say "[i][bracket]Note: you can abbreviate this with [b]PF[r] in the future.[close bracket][r][line break]";
 			now pf-warn is true;
 	if number of prefigured things is 0:
 		say "You have nothing else you figured in advance.[no line break]";
@@ -2881,7 +2881,7 @@ to say what-can-flip:
 
 to say tell-macros:
 	if marcos-trumped is true:
-		say "CR/RC (something) = C (something) + R(something).";
+		say "[b]CR[r]/[b]RC[r] (something) = C (something) + R(something).";
 	if h-short-told is true:
 		say "[b]ANGLE[r]=[b]AN[r] to see changeable items, [b]GLEAN[r]=[b]GL[r] to see the story ahead."
 
@@ -2909,7 +2909,7 @@ understand "flips" as pfing.
 carry out pfing:
 	now pf-warn is true;
 	if player does not have dope tan notepad:
-		say "You need your notepad to use the PF shortcut.";
+		say "You need your notepad to use the [b]PF[r] shortcut.";
 	else:
 		choose row with short of "flips" in table of pad-stuff;
 		if known entry is false, say "You consult your notepad but haven't figured any flips in advance yet." instead;
@@ -2978,7 +2978,7 @@ when play begins (this is the skip small intro if wanted rule):
 	say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
 	if the player no-consents, now sr-acc is true;
 	if skip-stuff is true, continue the action;
-	say "OK. This can be toggled at any time with [b]ACCESS[r].";
+	say "Okay. This can be toggled at any time with [b]ACCESS[r].";
 	say "[line break]So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
 
@@ -3010,9 +3010,9 @@ to place-random-garbage:
 	if a random chance of 1 in 2 succeeds, now toga-first is true; [hint toga or reed in thickets]
 	if a random chance of 1 in 2 succeeds, now rock-first is true;	[hint rock or swing 1st]
 	move random guider to sf;
-	d "[random guider in sf] in SF.";
+	d "[random guider in sf] in Softer Forest.";
 	move random off-stage guider to rf;
-	d "[random guider in rf] in RF.";
+	d "[random guider in rf] in Rest of Forest.";
 	now kitchen-hint-list is the list of all pregredients;
 	sort kitchen-hint-list in random order.
 
@@ -3349,7 +3349,7 @@ check entering OR DO door:
 
 book Thickest Thickets
 
-Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. It's too, uh, thick to go in [if goat is in Thickest Thickets or deer is in thickest thickets]almost all directions, but you can go IN[else]all directions[end if][if nest is touchable]. That nest you made lies off to the side[else]. Some nets have been, uh, sent here. They're littering up the ground. If you wanted, you could clean them up[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
+Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. It's too, uh, thick to go in [if goat is in Thickest Thickets or deer is in thickest thickets]almost all directions, but you can go [b]IN[r][else]all directions[end if][if nest is touchable]. That nest you made lies off to the side[else]. Some nets have been, uh, sent here. They're littering up the ground. If you wanted, you could clean them up[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
 
 chapter reed
 
@@ -3718,7 +3718,7 @@ sg-warn is a truth state that varies.
 
 check switching on gadget:
 	if sg-warn is false:
-		say "[i][bracket]Fourth wall note: SG may save you keystrokes in the future. You can also [b]C[r]/[b]CER[r]/[b]CERTIFY[r] (object) or [b]R[r]/[b]REC[r]/[b]RECTIFY[r] (object) to skip this altogether.[close bracket][r][line break]";
+		say "[i][bracket]Fourth wall note: [b]SG[r] may save you keystrokes in the future. You can also [b]C[r]/[b]CER[r]/[b]CERTIFY[r] (object) or [b]R[r]/[b]REC[r]/[b]RECTIFY[r] (object) to skip this altogether.[close bracket][r][line break]";
 		now sg-warn is true;
 	try sging instead;
 
@@ -3979,7 +3979,7 @@ chapter mention-marcos-macros
 
 to mention-marcos-macros:
 	if annoying-switches > 5 and marcos-trumped is false and location of player is not Notices Section:
-		say "A shady figure sidles up to you. 'Hey! Pal! The name's Marcos. Sellin['] macros. Ways to lump actions together. Streamline your thinking. Actually, not selling them at all, just hoping you remember me once you fix things here and are an acclaimed hero with clout.'[paragraph break]He takes the gadget away from you, fiddles with it, and gives it back. You are impressed with his dexterity, and yet, you feel it would not be too tough to imitate him.[paragraph break]'Just, if you think of one scan as R or C--you can make both of them with RC. Or CR. I won't judge.'[paragraph break]As you note this in your notepad, he pops out of view.";
+		say "A shady figure sidles up to you. 'Hey! Pal! The name's Marcos. Sellin['] macros. Ways to lump actions together. Streamline your thinking. Actually, not selling them at all, just hoping you remember me once you fix things here and are an acclaimed hero with clout.'[paragraph break]He takes the gadget away from you, fiddles with it, and gives it back. You are impressed with his dexterity, and yet, you feel it would not be too tough to imitate him.[paragraph break]'Just, if you think of one scan as R or C--you can make both of them with [b]RC[r]. Or [b]CR[r]. I won't judge.'[paragraph break]As you note this in your notepad, he pops out of view.";
 		pad-rec "macros";
 		now marcos-trumped is true;
 
@@ -4129,7 +4129,7 @@ rule for supplying a missing noun when xmxing:
 	if player is in Means Manse:
 		now noun is spire;
 		continue the action;
-	say "Nothing really sticks out. You may have to XX something specific.";
+	say "Nothing really sticks out. You may have to [b]XX[r] something specific.";
 	reject the player's command;
 
 xray-cheat is a truth state that varies.
@@ -4192,7 +4192,7 @@ carry out xmxing:
 	if noun is static:
 		say "[if gateman is touchable]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
 		unless the player regex-prompt-consents:
-			say "OK." instead;
+			say "Okay." instead;
 		say "[v-b]the static seems to form attics near the doll house[if gateman is touchable]. Nat Egam makes a dubious noise[end if].";
 		ditch-saltine instead;
 	if noun is attics, say "After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want." instead;
@@ -4724,7 +4724,7 @@ the roadsign is boring scenery. the roadsign is part of store f. understand "roa
 
 section store g
 
-Store G is a sto. description of store g is "A flier stapled to the front of the door says [unless you-can-advance]REST?! GO![else]GO REST![end if]. There's nothing else interesting about the store, though."
+Store G is a sto. description of store g is "A flier stapled to the front of the door says [unless you-can-advance]REST?! GO![else]GO REST![end if]. There's nothing else interesting about the store, though." [bold-ok]
 
 understand "store 7/seven" and "7/seven" as store g when player is in Trips Strip.
 
@@ -4854,7 +4854,7 @@ understand "store 21/twentyone" and "21/twentyone" as store u when player is in 
 
 section store v
 
-Store V is a sto. description of store v is "[gd][one of]You see people voting glumly and you think you hear them whisper it doesn't matter. Their votes go in the stove anyway. But politics wasn't in your job description. There are, apparently, more basic needs than that right now. Plus it's pervy to vote pry[or]Voters...but there's nothing to vote ON, yet[stopping].".
+Store V is a sto. description of store v is "[gd][one of]You see people voting glumly and you think you hear them whisper it doesn't matter. Their votes go in the stove anyway. But politics wasn't in your job description. There are, apparently, more even basic needs than the right to vote right now. Plus it's pervy to vote pry[or]Voters...but with [burdell] in control, election integrity isn't the biggest concern. Maybe you can deal with such first-world installment the next game you're called into action[stopping].".
 
 understand "store 22/twentytwo" and "22/twentytwo" as store v when player is in Trips Strip.
 
@@ -5287,7 +5287,7 @@ book Flesh Shelf
 
 Flesh Shelf is west of Self ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest. roomnud of Flesh Shelf is table of Flesh Shelf nudges.
 
-the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
+the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink." [bold-ok]
 
 check scaning when player is in Gnarliest Triangles (this is the scan what's in Gnarliest Triangles containers rule):
 	if noun is bucket and ones are in bucket:
@@ -6071,7 +6071,7 @@ check scaning dial when centrifuge-stopped is false: say "You scan the dial, the
 
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][else]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
-description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]ou see [b]EXITS[r] [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions[end if]. The dial's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with [b]TURN DIAL TO[r] or just the number[end if][dial-hints]."
+description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]ou see [b]EXITS [if numset of dial is 16]N E[r] [else]? ?[r]--you can see two letters, but they're scrolling through the four cardinal directions[end if]. The dial's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with [b]TURN DIAL TO[r] or just the number[end if][dial-hints]." [bold-ok]
 
 to say dial-hints:
 	if numset of dial is 16, the rule succeeds;
@@ -6839,7 +6839,7 @@ to say ifnv:
 
 section pat's expo flier
 
-the expo flier is a thing. description of expo flier is "It's two-sided. One says Stick Figure Connoisseur Expo and Open Poetry Session at [one of][first custom style]ST. PAEAN[r] the so-sinful-(s)he's-holy this Yorpday[or][first custom style]SANE TAP[r] pub and grill next Waldday[cycling]![paragraph break]Well, you know where you won't be."
+the expo flier is a thing. description of expo flier is "It's two-sided. One says Stick Figure Connoisseur Expo and Open Poetry Session at [one of][first custom style]ST. PAEAN[r] the so-sinful-(s)he's-holy this Yorpday[or][first custom style]SANE TAP[r] pub and grill next Waldday[cycling]![paragraph break]Well, you know where you won't be." [bold-ok]
 
 check scaning the expo flier: say "[if anapest is in moor]Your gadget makes no noise, but you can't help feeling the name St. Paean is totally wrong[else]No sound[end if]." instead;
 
@@ -7209,7 +7209,7 @@ check putting it on (this is the silo-put rule):
 			now the hoots button is part of the panel;
 			now the trees button is part of the panel instead;
 		if noun is missile:
-			say "I assume you mean IN the silo...";
+			say "I assume you mean IN the silo..."; [bold-ok]
 			try inserting missile into silo instead;
 		say "That doesn't seem to fit anywhere on the silo." instead;
 	if second noun is the straw or second noun is the hay, say "That'd crush [the second noun]." instead;
@@ -7463,7 +7463,7 @@ check putting barcode on friend finder:
 	say "You try holding the barcode up to the friend finder, which pulses a bit. But the door doesn't seem to open. Perhaps the barcode needs to be a part of something." instead;
 
 check inserting into friend finder:
-	say "The friend finder isn't a container. So you go with putting it ON, instead.";
+	say "The friend finder isn't a container. So you go with putting it ON, instead."; [bold-ok]
 	try putting noun on second noun instead;
 
 check putting on the friend finder (this is the reject silly friend finder tries rule) :
@@ -8372,7 +8372,7 @@ understand "earliest atelier" and "atelier" as Earliest Ateliers.
 
 book Elm Train Terminal
 
-Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if].". roomnud of Elm Train Terminal is table of Elm Train Terminal nudges.
+Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if].". roomnud of Elm Train Terminal is table of Elm Train Terminal nudges. [bold-ok]
 
 check going down in Elm Train Terminal: try going east instead;
 
@@ -8813,7 +8813,7 @@ this is the bore-ulock rule:
 		if the player yes-consents:
 			try scaning the tool shed instead;
 		else:
-			say "OK." instead;
+			say "Okay." instead;
 	if action is procedural:
 		if current action is reading, continue the action;
 		say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
@@ -9072,7 +9072,7 @@ book Means Manse
 
 Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
 
-check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead;
+check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead; [bold-ok]
 
 check scaning X ITES exits: try scaning the location instead;
 
@@ -9111,7 +9111,7 @@ carry out existing:
 		else:
 			say "You give a few quiet amens to your accomplishments. Perhaps you didn't solve any great philosophical problems, buy hey, you did pretty well.";
 			now end-path is 2;
-		say "[line break]It's time to become an adventurer emeritus. Resume it? One day, but for now, laurels['] allures are too great. You begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
+		say "[line break]It's time to become an adventurer emeritus. Resume it? One day, but for now, laurels['] allures are too great. You begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?"; [bold-ok]
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR)."; [bold-ok]
 		reg-inc;
 		now resort is solved;
@@ -9214,7 +9214,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 	if the player's command includes "bugle" and player has the bugle:
 		say "Hm, I didn't recognize that verb...maybe you want to [b]PLAY[r] the bugle?";
 		if the player yes-consents, try playing the bugle instead;
-		say "OK." instead;
+		say "Okay." instead;
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the nothing to do error:
@@ -9273,7 +9273,7 @@ Rule for printing a parser error when the latest parser error is the only unders
 		now the last-command is "[word number 1 in the player's command]";
 		now parser error flag is true;
 	else:
-		if debug-state is false, say "OK.";
+		if debug-state is false, say "Okay.";
 
 Rule for reading a command when the parser error flag is true:
 	d "Reading [last-command].";
@@ -9949,7 +9949,7 @@ gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat ba
 gy	"The men passing through seem in a hurry."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
-nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to [b]ASK NERDS[r] like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.[or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of [first custom style]SKASDREN[r] for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
+nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to [b]ASK NERDS[r] like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.[or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of [first custom style]SKASDREN[r] for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]" [bold-ok]
 night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
 peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
 red bull burdell	"Your pale plea meets with strung grunts."
@@ -10099,7 +10099,7 @@ to say can-go of (d - a direction):
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
-Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
+Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go [b]IN[r]--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
 Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[if gateman is in Notices Section]![else], though it'd be nice to have some help.[end if]"
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
@@ -10826,7 +10826,7 @@ listlasting is an activity.
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"see a L/[b]LIST[r] (1-[number of rows in table of megachatter]) of random [one of](now quasi-alphabetized) [or][stopping]NPC text, or LN for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
+"see a L/[b]LIST[r] (1-[number of rows in table of megachatter]) of random [one of](now quasi-alphabetized) [or][stopping]NPC text, or [b]LN[r] for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
 --	true	"l/list"	--	listlisting
 --	true	"ln"	--	listlasting
 
@@ -10896,7 +10896,7 @@ ln-yet is a truth state that varies.
 
 to try-ln:
 	if ln-yet is false:
-		say "Note: LN shows the next list.";
+		say "Note: [b]LN[r] shows the next list.";
 		now ln-yet is true;
 
 rule for listlisting:

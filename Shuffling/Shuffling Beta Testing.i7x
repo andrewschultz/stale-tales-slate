@@ -45,7 +45,7 @@ rule for supplying a missing noun while sring (this is the switch directions rul
 carry out sring:
 	if player is in sf or player is in rf, say "In here, odd things might happen if you change the puzzle. But changing it at the fields will send you to the Trips Strip." instead;
 	let uf be false;
-	if noun is inside or noun is outside or noun is up or noun is down, say "You need to specify a planar compass direction for [b]SR[r]/[b]RS[r]. Usage is as follows:[paragraph break][b]SR NW[r] means you should go north in Softer, west in Rest of.[line break][b]SR W[r] means you go west in Softer, east in Rest of.[line break]RS flips these two directions in all cases." instead;
+	if noun is inside or noun is outside or noun is up or noun is down, say "You need to specify a planar compass direction for [b]SR[r]/[b]RS[r]. Usage is as follows:[paragraph break][b]SR NW[r] means you should go north in Softer, west in Rest of.[line break][b]SR W[r] means you go west in Softer, east in Rest of.[line break][b]RS[r] flips these two directions in all cases." instead;
 	if noun is north or noun is west or noun is south or noun is east:
 		repeat with gi running through guiders:
 			if godir of gi is noun:
@@ -273,7 +273,7 @@ carry out ts0ing:
 	try tsing 0 instead;
 
 carry out tsing:
-	if Trips Strip is visited, say "You can't use TS from the Trips Strip or beyond. You will need to restart the game and try again." instead;
+	if Trips Strip is visited, say "You can't use [b]TS[r] from the Trips Strip or beyond. You will need to restart the game and try again." instead;
 	increase the cur-score of Ordeal Loader by 4;
 	if Rested Desert is unvisited:
 		move player to Rested Desert, without printing a room description;
@@ -329,7 +329,7 @@ carry out tsfing:
 	if Trips Strip is unvisited:
 		move player to Trips Strip;
 		now ordeal loader is solved;
-		say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
+		say "Okay. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
 	else:
 		say "WARNING: you may not want to mess around in the Trips Strip if you run [b]TSF[r] after visiting the strip. Bad things may happen. Just a warning.";
 	now sortie is solved;

@@ -719,7 +719,7 @@ rule-short (topic)	rule-name	rule-description
 "ts"	trips-strip rule	"At Trips Strip e.g. solved area"
 "sco"	max-reg-score rule	"All solved region scores are maximum"
 "rm"	in-means-manse rule	"In Means Manse"
-"fi"	in-fields rule	"in Self-ID Fields"
+"fi"	in-fields rule	"in [fields]"
 
 this is the in-fields rule:
 	if the player is in Self ID Fields, the rule succeeds;

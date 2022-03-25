@@ -834,6 +834,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "memo"	330308992	--	--	"[memo-tote-no]."
 "tote"	408378722	--	--	"[memo-tote-no]."
 "tome"	369343857	--	--	"[memo-tote-no]."
+"utensil"	600010093	--	--	"The [tulip] will stay lit. No need to futz with its brand name."
 
 to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough, and you don't need to do any more here. In fact, it's a bug if you're in here[else]. Maybe the nerds could help you another way, though[end if]"
 
@@ -962,9 +963,9 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "three"	481328338	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in Potshot Hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
 "tugtoe"	546084231	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
-"red"	234159001	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
-"bull"	231152390	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
-"burdell"	465311391	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
+"red"	234159001	red bull burdell	--	"[cant-change-bull]"
+"bull"	231152390	red bull burdell	--	"[cant-change-bull]"
+"burdell"	465311391	red bull burdell	--	"[cant-change-bull]"
 "rage"	247917432	red bull burdell	--	"No, the rage gear is too strong."
 "boot"	270234077	red bull burdell	--	"The boot is already a little--modified. You can see its toe. Maybe that is a weakness."
 "toe"	305268704	red bull burdell	--	"But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?"
@@ -973,6 +974,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "cutlery"	616524413	red bull burdell	--	"Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?"
 "tshirt"	470092950	red bull burdell	--	"[tshirt-no]."
 "shirt"	366982932	red bull burdell	--	"[tshirt-no]."
+
+to say cant-change-me: say "Burdell's laugh echoes. 'You think you can change ME?!'" [bold-ok]
 
 to say no-hotspot:
 	if red bull burdell is moot:
@@ -1008,7 +1011,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "spire"	435862683	--	--	"[ennui]."
 "toaster"	592164309	--	--	"[ennui]."
 
-to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
+to say ennui: say "You don't even want to TRY any more anagrams. You just want to downtime...contemplate the [b]EXITS[r], but not actually take any of them";
 
 book general
 

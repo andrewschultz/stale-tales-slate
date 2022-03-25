@@ -780,7 +780,7 @@ table of ordeal loader hintobjs
 hint-entry	advice-entry	parallel-entry
 name list	"The list hints what Shuffling Around is all about."
 vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what Shuffling Around is all about."
-odd side passage	"You can [b]ENTER[r] the odd side passage, or go IN."
+odd side passage	"You can [b]ENTER[r] the odd side passage, or go [b]IN[r]."
 odor	"[one of]What can the odor turn into? Your random thoughts are not so random.[plus][or]The clues and distractions collapse to anagrams.[plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram?[plus][or]A door.[minus][cycling]"
 musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."
 bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door.[plus][or]The musical chord is a clue.[plus][or]You want to change the bulge into a [b]BUGLE[r].[minus][cycling]."
@@ -796,7 +796,7 @@ sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not rui
 nest	"You changed the nets to the nest, and that's enough."
 goat	"The goat's done its job."
 goat	"The deer's done its job."
-magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a [b]GATE MAN[r]. With or without the space.[minus][cycling][end if]"
+magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a [b]GATE MAN[r]. With or without the space.[minus][cycling][end if]" [bold-ok]
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
 Recent Center	"The Recent Center tracks the most recent thing you managed to [b]CERTIFY[r] or [b]RECTIFY[r]."
 blurb	"Just a riff on what's going on with the gadget."
@@ -834,7 +834,7 @@ marquee	--	store b
 store f	"[one of]Store F has some real earth tones.[plus][or]Trees, leaves, mud.[plus][or]There's a [b]FOREST[r] behind it.[minus][cycling]"
 roadsign	"The road sign gives a clue as to the nature of Store F."
 store i	"[one of]The outline of a trap door is what you need to get to. what word is a synonym for exit and missile launch?[plus][or]The small poem has red writing which will clear which letters don't fit where.[plus][or]You can also use both settings of the gadget to get four letter placements.[plus][or]You need to create a [b]SORTIE[r].[minus][cycling]"
-store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something.[plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if].[plus][or]You need to discover the [b]METROS[r].[minus][cycling]."
+store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something.[plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if].[plus][or]You need to discover the [b]METROS[r].[minus][cycling]."[bold-ok]
 subway map	"The subway map gives a hint as to what Store M can be."
 store r	"[if you-can-advance][one of]You need to get into store R.[plus][or]The roster provides a hint. Where's a place you can rest?[plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word.[plus][or]You want to go to a [b]RESORT[r].[minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
 roster	"The roster is a bit more of a clue for Store R. If you [b]CERTIFY[r] it, it will make things a bit clearer."
@@ -968,7 +968,7 @@ spout	"[if caskfillings is 2]You've gotten all the oil you need[else if caskfill
 soil	"[if silo is off-stage]The soil is a good foundation for a structure[else]You've built a structure on the  soil[end if]."
 Woeful Pat	"Pat's poetry is useless, but its beat isn't."
 peasant	"[one of]The peasant has a bunch of hay he doesn't want. Mean Old Mondale-Doleman said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw. [if sack is off-stage]The cask can be made into a sack[else]It can fit in the sack[end if].[plus][or]GIVE STRAW TO PEASANT.[minus][cycling]"
-black door	"[if silo is not touchable]You probably need to build a structure to attach the black door to[else if black door is not part of the silo]Just PUT BLACK DOOR ON SILO[else]The black door's OK where it is[end if]."
+black door	"[if silo is not touchable]You probably need to build a structure to attach the black door to[else if black door is not part of the silo]Just PUT BLACK DOOR ON SILO[else]The black door's okay where it is[end if]."
 dashed boundary	"You need to put some sort of door on it[if black door is off-stage], but there are no doors in the moor, yet[else], and maybe that black door will work[end if]."
 dotted rectangle	"You need to put something in the rectangle[if panel is off-stage], but nothing is the right size[else], and the panel is the right size[end if]."
 silo	"There's a lot to do with the silo--maybe you should hint other items you have, instead."
