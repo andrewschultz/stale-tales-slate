@@ -18,7 +18,7 @@ understand the command "tap" as something new.
 
 book general
 
-understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.")
+understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can [b]SWITCH[r] something, or [b]PUT[r] something [b]IN[r]/[b]ON[r] something, or even [b]ATTACH[r] something to something. You can [b]PUSH[r] a button or [b]OPEN[r] something, as well. Specific items should clue you what to do if you [b]EXAMINE[r] them.")
 
 understand "get a man" as a mistake ("[get-a-man][run paragraph on]")
 
@@ -42,11 +42,11 @@ understand "rc" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
 understand "rc [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "remove [something] from [something]" as a mistake("To keep things simple for you (and, okay, for my coding efforts,) I recommend TAKE X instead of REMOVE/FROM. REMOVE defaults to carried or worn items, and I'm too lazy to tweak that.")
+understand "remove [something] from [something]" as a mistake("To keep things simple for you (and, okay, for my coding efforts,) I recommend [b]TAKE X[r] instead of [b]REMOVE[r]/[b]FROM[r]. [b]REMOVE[r] defaults to carried or worn items, and I'm too lazy to tweak that.")
 
 book Ordeal Loader
 
-understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.") when mrlp is Ordeal Loader.
+understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.") when mrlp is Ordeal Loader. [bold-ok]
 
 chapter Busiest Subsite
 
@@ -93,7 +93,7 @@ understand "erde" as a mistake ("There's enough earth around here, and this game
 
 understand "gato" as a mistake ("Nice try, but wrong language. [if goat is touchable]The goat already ate[else]Another animal would be more likely to eat[end if] through the thickets.") when player is in Thickest Thickets.
 
-understand "rede" as a mistake ("You probably don't want medieval-style advice. You don't need it. HINT should work better.") when player is in Thickest Thickets.
+understand "rede" as a mistake ("You probably don't want medieval-style advice. You don't need it. [b]HINT[r] should work better.") when player is in Thickest Thickets.
 
 chapter Notices Section
 
@@ -145,9 +145,9 @@ understand "troves" as a mistake ("Nice try, but that's next game! You do not ne
 
 book store f
 
-understand "fire [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want.") when player has shotgun.
+understand "fire [something] at [something]" as a mistake ("You can either [b]FIRE[r] the gun, or you can [b]SHOOT[r] the whatever you want.") when player has shotgun.
 
-understand "shoot [something] with [something]" and "shoot [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun.
+understand "shoot [something] with [something]" and "shoot [something] at [something]" as a mistake ("You can either [b]FIRE[r] the gun, or you can [b]SHOOT[r] the whatever you want. No need for a second noun.") when player has shotgun.
 
 chapter random forests / Softer Forest / Rest of Forest
 
@@ -212,7 +212,7 @@ understand "eon" and "eons" as a mistake ("No, you can't afford to wait that lon
 
 understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
 
-understand "gunshot" as a mistake ("[if noughts are touchable]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is touchable and silver is off-stage], but you don't have a bullet yet[else if shotgun is touchable and player has silver], but you need to load it first[end if].") when noughts are touchable or shotgun is touchable.
+understand "gunshot" as a mistake ("[if noughts are touchable]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to [b]SHOOT[r] the gun[end if][if shotgun is touchable and silver is off-stage], but you don't have a bullet yet[else if shotgun is touchable and player has silver], but you need to load it first[end if].") when noughts are touchable or shotgun is touchable.
 
 understand "integral" and "integrals" as a mistake ("I think this game is hard enough without bringing Calculus into it.") when player is in Gnarliest Triangles.
 
@@ -224,7 +224,7 @@ understand "tanglier" as a mistake ("Things are mixed up enough!") when player i
 
 understand "teraglin" and "teraglins" as a mistake ("But where would the fish go?") when player is in Gnarliest Triangles.
 
-understand "tone" and "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in Gnarliest Triangles.
+understand "tone" and "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can [b]EXAMINE[r].") when player is in Gnarliest Triangles.
 
 chapter Emptiness Sepiments
 
@@ -242,7 +242,7 @@ understand "spared" as a mistake ("That is too passive, to ask to be spared.") w
 
 chapter Ghouls' Slough
 
-understand "cluer" as a mistake ("[if player is in Ghouls Slough]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
+understand "cluer" as a mistake ("[if player is in Ghouls Slough]This place is too stark to offer clues, and if it did, they'd probably be wrong anyway[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
 
 understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.[paragraph break]Oh, and you can undo this, too.[end-it]") when player is in Ghouls Slough.
 
@@ -268,7 +268,7 @@ chapter Trap Part
 
 understand "a lid" as a mistake ("[if centrifuge-stopped is true]You don't need to deal with the dial, now[else]Changing the dial would leave you stuck[end if].") when player is in Trap Part.
 
-understand "turn [text]" as a mistake ("[if player is in Trap Part and centrifuge-stopped is false]You can probably TURN the dial to a number, e.g. 99[else]You can probably just SWITCH something with two text settings[end if].").
+understand "turn [text]" as a mistake ("[if player is in Trap Part and centrifuge-stopped is false]You can probably [b]TURN[r] the dial to a number, e.g. 99[else]You can probably just [b]SWITCH[r] something with two text settings[end if].").
 
 chapter the nick
 
@@ -331,11 +331,11 @@ understand "sooth" as a mistake ("Close...what you need to do will sooth, in a b
 
 understand "stere" as a mistake ("Units of measurements are abstract. We need something concrete.") when player is in moor and panel is part of silo.
 
-understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](TAP is not a standard verb. PUSH may work better, but Pat will be gone by then.)") when woeful pat is touchable.
+understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break]([b]TAP[r] is not a standard verb. [b]PUSH[r] may work better, but Pat will be gone by then.)") when woeful pat is touchable.
 
 understand "terse" as a mistake ("[if trees button is touchable]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
 
-understand "trade" and "trade [text]" as a mistake ("Instead of trading, use GIVE X to Y.");
+understand "trade" and "trade [text]" as a mistake ("Instead of trading, use [b]GIVE X TO Y[r].");
 
 understand "yah" as a mistake ("[if peasant is touchable]It's not nice to make fun of the peasant for having hay he doesn't want[else]You're glad you've got the hay, but you're not excited, and you can't fake it[end if].") when hay is touchable.
 
@@ -515,7 +515,7 @@ understand "blamer" as a mistake ("No, we know who's to blame. He's done with. T
 
 understand "mensa" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant or character-developing or literary enough. Sheesh.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone. You earned it.") when player is in Means Manse.
 
-understand "sex it" as a mistake ("[if player is not in means manse]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].")
+understand "sex it" as a mistake ("[if player is not in means manse]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].") [bold-ok]
 
 volume unsorted
 
