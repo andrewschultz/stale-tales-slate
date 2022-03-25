@@ -1,6 +1,6 @@
-Version 1/211107 of STS Hashes by Andrew Schultz begins here.
+Version 1/211107 of STS Universal by Andrew Schultz begins here.
 
-[this is a collection of hashes common to the Stale Tales Slate games, with basic hashing functions. It contains other basic functions common to all 3 STS games, so it is inaccurately named.]
+[this is a collection of hashes and trivial stubs common to all three Stale Tales Slate games. Stale Tales Slate Common captures the code that applies only to the two main games.]
 
 volume command hashing -- thanks to Uncle David
 
@@ -51,7 +51,7 @@ to decide what number is the hash of (t - a value of kind K):
 		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
 	decide on hash;
 
-volume other trivia
+volume game order/name abbreviation stubs
 
 sts-sequence is a number that varies. [ 1 = shuffling 2 = roiling 3 = torus ]
 
@@ -71,4 +71,4 @@ to say shuf: say "[i]Shuffling Around[r]"
 
 to say trt: say "[i]Tours Roust Torus[r]"
 
-STS Hashes ends here.
+STS Universal ends here.

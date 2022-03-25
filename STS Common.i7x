@@ -2,7 +2,7 @@ Version 1/190507 of STS Common by Andrew Schultz begins here.
 
 [this is a collection of functions common to A Roiling Original and Shuffling Around, two games from the Stale Tales Slate with common code.]
 
-include STS Hashes by Andrew Schultz.
+include STS Universal by Andrew Schultz.
 
 part game-dependent variables and super-stubs
 
@@ -11,12 +11,6 @@ orig-region is a region that varies. [ordeal loader/ (means manse or ordeal relo
 hub-region is a region that varies. [stores in each case]
 
 hub-room is a room that varies. [trips strip/strip of profits]
-
-to say gm-short: say "[if sts-sequence is 1]Shuffling[else if sts-sequence is 2]Roiling[else]Torus[end if]"
-
-to decide whether is-roiling:
-	if sts-sequence is 2, yes;
-	no;
 
 to moot (th - a thing): move th to Emerita Emirate; [ it's meatier emerita emirate in roiling, but the namespace works out ok, so we don't need to specify moot-room.]
 
