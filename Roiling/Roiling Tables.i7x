@@ -1218,7 +1218,7 @@ Shane	Shane	false	332457700	--	"ashen"	"ashen"	--	--	"Suddenly, the color rushes
 Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if here-picaros is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	--	--	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	--	--	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
-Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Wildest Wilteds are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato advises you that Pass-Rite Raspiest Pastries may be scattered in the Wildest Wilteds: not the most delicious snack, but they give your brain a boost to help you with obstacles in your way. While Elvira's made it a regular diet for certain henchmen, there is no moral punishment for using them.[paragraph break]Then he hands you a flowerpot. But not any old flowerpot. A top opt pot! It's for an old friend--one who bought property near Castle Apcur, the Curst Palace, and can't bring herself to move. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told, old hat.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut. As you exit, a voice booms 'STOP! DIE!' So you sort of expect where you end up next..." [bold-ok]
+Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Wildest Wilteds are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato advises you that [passrite] may be scattered in the Wildest Wilteds: not the most delicious snack, but they are a verified skan-snak that will help you to look into things. While Elvira's made it a regular diet for certain henchmen (not that it helps much,) there is no moral punishment for using them.[paragraph break]Then he hands you a flowerpot. But not any old flowerpot. A top opt pot! It's for an old friend--one who bought property near Castle Apcur, the Curst Palace, and can't bring herself to move. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told, old hat.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut. As you exit, a voice booms 'STOP! DIE!' So you sort of expect where you end up next..." [bold-ok]
 
 this is the post-reeds-ale rule:
 	moot lars eede;
@@ -1319,7 +1319,7 @@ this is the pre-curst-palace-spectacular rule:
 
 this is the post-curstpalace-spectacular rule:
 	if used-ray is false and cur-score of towers is max-score of towers - 1:
-		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere! [if xrayvision is true]And congratulations on resisting temptation after eating [the random moot hintpastry], too.[else][line break][end if]";
+		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere! [if xrayvision is true]And congratulations on resisting temptation after eating [the random moot skansnak], too.[else][line break][end if]";
 		increment cur-score of towers;
 
 to say what-about-ed:
@@ -2207,12 +2207,6 @@ Dr Tera Darter	"[not-even-trader]."
 to say not-even-trader: say "If anyone deserves it, [he-she] does. But [he-she] still doesn't. [he-she-c]'s already had enough physical abuse."
 
 volume readables
-
-every turn:
-	repeat with REG running through regions:
-		say "[REG][line break]";
-		repeat through readable table of REG:
-			say "[to-read entry] [what-read entry][line break]";
 
 table of ordeal reload readables
 to-read	what-read	alt-read

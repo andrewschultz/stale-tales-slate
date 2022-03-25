@@ -1375,7 +1375,7 @@ this is the got-pot rule:
 	the rule fails;
 
 this is the pas-vis rule:
-	if number of touchable hintpastries > 0, the rule succeeds;
+	if number of touchable skansnaks > 0, the rule succeeds;
 	the rule fails;
 
 to say eat-pastry: say "The pastry is for eating, not for changing[if toaster is not touchable]. It might be more edible if you heated it up, though[end if]"

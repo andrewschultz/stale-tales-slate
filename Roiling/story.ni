@@ -537,45 +537,61 @@ the player is terse.
 
 an animal is usually terse.
 
-chapter hintpastries
+chapter skan snaks
 
-a hintpastry is a kind of thing. a hintpastry can be heated. a hintpastry is usually not heated. a hintpastry is usually edible. a hintpastry can be brandnoted. a hintpastry is usually not brandnoted.
+a skansnak is a kind of thing. a skansnak can be heated. a skansnak is usually not heated. a skansnak is usually edible. a skansnak can be brandnoted. a skansnak is usually not brandnoted.
 
-a hintpastry has a number called deliciousness.
+understand "skansnak" and "skan snak" and "snak" and "skan" as a skansnak.
 
-after taking a hintpastry:
+a skansnak has a number called deliciousness.
+
+after taking a skansnak:
 	increase deliciousness of noun by 10;
 	continue the action;
 
-when play begins (this is the disambig-pastry rule) :
+when play begins (this is the disambig-skan-snak rule) : [ skan snaks are ordered randomly since they are equivalent ]
 	let tastee be 1;
-	repeat with HP running through hintpastries:
+	repeat with HP running through skansnaks:
 		now deliciousness of HP is tastee;
 		increment tastee;
 
-understand "pastry" as a hintpastry.
-
-check objasking about a hintpastry when mrlp is towers:
+check objasking about a skansnak when mrlp is towers:
 	if noun is Dr Yow or noun is agnostic, say "You might get a lecture about all the gross chemicals in there." instead;
 	if second noun is touchable:
-		say "You offer the hint-pastry as a gift, instead.";
+		say "You offer [the noun] as a gift, instead.";
 		try giving the second noun to the noun instead;
 
-the specification of a hintpastry is "A hintpastry, when heated, lets you see how a thing/item should be described."
+the specification of a skansnak is "A skansnak, when heated, lets you see how a thing/item should be described."
 
 this is the note-pastries rule:
 	if noun is brandnoted, continue the action;
 	now noun is brandnoted;
-	say "[one of]You note [the noun] is produced by [passrite], as Ornate Atoner Renato mentioned.[or]Another of those [passrite].[or]And yet another [passrite]! Even ify you don't need the clues, it's nice to know you won't starve in the wilderness, here.[or]Wow. A smorgabord of [passrite].[stopping]";
+	say "[one of]You note [the noun] is produced by [passrite], as Ornate Atoner Renato mentioned. It's definitely a skan-snak, as well. Good for if you need help.[or]Another of those [passrite].[or]And yet another [passrite]! Even ify you don't need the clues, it's nice to know you won't starve in the wilderness, here.[or]Wow. A smorgabord of [passrite].[stopping]";
 
-the hintpastry babble rule is listed last in the after rules.
+the skansnak babble rule is listed last in the after rules.
 
-this is the hintpastry babble rule:
-	if current action is not objhinting and noun is a hintpastry:
+this is the skansnak babble rule:
+	if current action is not objhinting and noun is a skansnak:
 		process  the note-pastries rule;
 	continue the action;
 
 to say passrite: say "Pass-Rite Raspiest Pastries"
+
+section acting on skan snaks
+
+check giving skansnak to Tetris Sitter:
+	if top opt pot is moot, say "You already gave [The tetris sitter] a much better gift." instead;
+	say "[if tetris sitter is reflexed][The tetris sitter] doesn't need comfort food, and the insights [the noun] would give won't help her[else]Now [the tetris sitter] is back in the real world, she probably needs something healthier[end if]." instead;
+
+check giving skansnak to a guardian:
+	if second noun is diners, say "They scoff at what your idea of fine cuisine seems to be." instead;
+	say "Bribery won't work." instead;
+
+check giving skansnak to agnostic: say "[he-she-c] has had enough empty short-term gratification with [dinger]." instead;
+
+check giving skansnak to Dr Yow: say "[he-she-c] doesn't seem hungry." instead;
+
+check giving skansnak to duck: say "It turns away as if to say, yuck." instead;
 
 chapter fruits
 
@@ -5334,7 +5350,7 @@ definition: a thing (called itm) is regspecial:
 After printing the name of the letters settler while taking inventory:
 	say "[set-det]";
 
-After printing the name of a hintpastry (called the curfood) while taking inventory:
+After printing the name of a skansnak (called the curfood) while taking inventory:
 	say " [if curfood is heated](heated)[else](cold)[end if]";
 
 to say set-det:
@@ -5355,7 +5371,7 @@ after printing the name of the stapler while taking inventory:
 	else:
 		say " (empty)";
 
-before listing contents while taking inventory: group hintpastries together giving articles.
+before listing contents while taking inventory: group skansnaks together giving articles.
 
 hows-show-tools is a truth state that varies. hows-show-tools is true.
 
@@ -5386,15 +5402,16 @@ check taking inventory:
 		now all regspecial things carried by player are marked for listing;
 		now concisions are unmarked for listing;
 		now rosetta toaster is not marked for listing;
-		now all hintpastries are not marked for listing;
+		now all skansnaks are not marked for listing;
 		say "Here in the [mrlp] region you have found:[line break]";
 		if mrlp is routes and read-list is true:
 			if number of quest-items carried by the player > 0, say "  [list of quest-items carried by the player with indefinite articles] (for Brother Horbert)[line break]";
 			now all quest-items carried by the player are unmarked for listing;
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
-		if mrlp is towers and number of hintpastries carried by player > 0:
-			say "You've found some snack foods[if player has rosetta toaster] and a Rosetta Toaster to heat them with:[line break]  ";
-			say "[list of hintpastries carried by the player][line break]";
+		let snaks-held be number of skansnaks carried by player;
+		if mrlp is towers and snaks-held > 0:
+			say "You've found [if snaks-held is 1]a skan-snak[else]some skan-snaks[end if][if player has rosetta toaster] and a Rosetta Toaster to heat them with:[line break]  ";
+			say "[list of skansnaks carried by the player][line break]";
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
 	if number of warpable things enclosed by player is 0:
@@ -5416,7 +5433,7 @@ check taking inventory:
 		if location of player is location of skid and bored yak is not moot, say "[line break]There's also that skid you can't carry, but you can push it around[if number of things on skid > 0]. It holds [the list of things on skid][end if]." instead;
 		if skid is not off-stage and skid is not moot, say "You remember leaving the skid in [location of skid]." instead;
 	if mrlp is otters and power-back is false, say "[line break]You also [b]DON'T[r] have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
-	if xrayvision is true, say "[line break]You also have x-ray vision from heating up a pastry.";
+	if xrayvision is true, say "[line break]You also have x-ray vision from heating up a skan snak.";
 	if player has compass, say "[line break]You also have a compass to tell direction.";
 	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to [b]GURU[r] things you could make fruits from.";
 	the rule succeeds;
@@ -5714,7 +5731,8 @@ check eating (this is the general eating rule):
 	if noun is ALocalCo cola or noun is peanut cola or noun is mug, try drinking noun instead;
 	if noun is Lil Ps Pills, say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]." instead; [oyster]
 	if noun is clam, say "Biting its shell would make you shout hells." instead;
-	if noun is a hintpastry and noun is not heated, say "You'll want to put [the noun] in the toaster[if toaster is in Topside Deposit] [hereish of Topside Deposit][end if], first, or it'll just be calories." instead; [towers]
+	if noun is a skansnak and noun is not heated:
+		say "[one of]Ugh. Without being heated up, a skan-snak tastes like, well, raspiest pastries.[paragraph break][or][stopping]You'll want to put [the noun] in the toaster[if toaster is in Topside Deposit] [hereish of Topside Deposit][end if], first, or it'll just be calories." instead; [towers]
 	if noun is clear catsup, say "Yuck." instead;
 	if noun is bleary barley, say "That'd go down terribly." instead; [otters]
 	if noun is the player, try swearing obscenely instead;
@@ -5742,8 +5760,8 @@ this is the can-i-heat rule:
 	else:
 		say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Topside Deposit]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
 
-check eating a hintpastry (this is the try to eat a hint tart rule) :
-	if xrayvision is true, say "You're already under the influence of a pastry. [b]XRAY[r] something before continuing." instead;
+check eating a skansnak (this is the try to eat a hint tart rule) :
+	if xrayvision is true, say "You're already under the influence of a skan-snak. [b]XRAY[r] something before continuing." instead;
 	if noun is not heated:
 		abide by the can-i-heat rule;
 		try inserting noun into toaster instead;
@@ -8662,13 +8680,13 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 
 to say xray-help:
 	if xrayvision is true:
-		say "You can [b]XRAY[r] something you can't describe to see what it can or should be, with that pastry you ate. You can wait as long as you want/need";
-	else if all hintpastries are moot:
+		say "You can [b]XRAY[r] something you can't describe to see what it can or should be, with that skan-snak you ate. You can wait as long as you want/need";
+	else if all skansnaks are moot:
 		say "You've used all the possible [b]XRAY[r]s";
 	else if toaster is moot:
 		say "You can't put any more pastries in the toaster to [b]XRAY[r] them";
 	else:
-		say "You can put a[if number of moot hintpastries > 1]nother[end if] pastry in the toaster to get [b]XRAY[r] vision to be able to describe what something can or should be"
+		say "You can put a[if number of moot skansnaks > 1]nother[end if] pastry in the toaster to get [b]XRAY[r] vision to be able to describe what something can or should be"
 
 pf-warn is a truth state that varies.
 
@@ -15215,7 +15233,7 @@ xrayvision is a truth state that varies.
 
 check inserting into the Rosetta toaster:
 	if xrayvision is true, say "You've already got some x-ray vision. So you can just [b]XRAY[r] whatever you want." instead;
-	if noun is not a hintpastry, say "That's not a toaster pastry." instead;
+	if noun is not a skansnak, say "That's not a toaster pastry." instead;
 	if noun is strudel and noun is reflexive:
 		say "You pause momentarily, wondering if you could've done something with the strudel to make it feel--well, yours. But you don't need style points.";
 	now noun is heated;
@@ -15295,14 +15313,6 @@ to say big-hint of (rayx - a thing) :
 	now xray-bug-sorry is true;
 
 xray-warn is a truth state that varies.
-
-check giving hintpastry to Tetris Sitter:
-	if top opt pot is moot, say "You already gave [The tetris sitter] a much better gift." instead;
-	say "[if tetris sitter is reflexed][The tetris sitter] doesn't need comfort food, and the insights [the noun] would give won't help her[else]Now [the tetris sitter] is back in the real world, she probably needs something healthier[end if]." instead;
-
-check giving hintpastry to a guardian:
-	if second noun is diners, say "They scoff at what your idea of fine cuisine seems to be." instead;
-	say "Bribery won't work." instead;
 
 palace-warn is a truth state that varies.
 
@@ -15971,7 +15981,7 @@ Report taking the Rosetta toaster:
 
 chapter start tarts
 
-a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though, as long as you warm them up first.". "A pack of start tarts lies here."
+a pack of start tarts is a skansnak in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though, as long as you warm them up first.". "A pack of start tarts lies here."
 
 after doing something with pack of start tarts:
 	set the pronoun them to start tarts;
@@ -16014,7 +16024,7 @@ a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text
 
 section Owers' Bin Brownies
 
-some Owers Bin Brownies are a plural-named LLPish hintpastry. description of Owers Bin Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems.". printed name of Owers Bin Brownies is "Owers[']-Bin Brownies".
+some Owers Bin Brownies are a plural-named LLPish skansnak. description of Owers Bin Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems.". printed name of Owers Bin Brownies is "Owers[']-Bin Brownies".
 
 understand "brownie" and "owers/bin/ower brownie" and "ower brownies" as Owers Bin Brownies.
 
@@ -16355,7 +16365,7 @@ carry out repeating: try pushing repeat button instead;
 
 chapter éclairs
 
-Claires Scalier Eclairs is an LLPish hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold.". printed name of Claires Scalier Eclairs is "Claire's Scalier Éclairs". "Some Claire's Scalier Eclairs are lying here, packaged neatly."
+Claires Scalier Eclairs is an LLPish skansnak. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold.". printed name of Claires Scalier Eclairs is "Claire's Scalier Éclairs". "Some Claire's Scalier Eclairs are lying here, packaged neatly."
 
 understand "éclair/éclairs" as Eclairs.
 
@@ -16754,12 +16764,6 @@ to say what-ag-sez:
 before taking gizmo:
 	if agnostic has gizmo, say "That'd be mean, since you gave it to the agnostic in the first place." instead;
 
-check giving hintpastry to agnostic: say "[he-she-c] has had enough empty short-term gratification with [dinger]." instead;
-
-check giving hintpastry to Dr Yow: say "[he-she-c] doesn't seem hungry." instead;
-
-check giving hintpastry to duck: say "It turns away as if to say, yuck." instead;
-
 check giving raves saver to agnostic: say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That isn't a useful tool for the agnostic to build anything.[stopping]" instead;
 
 before giving something to Dr Yow when Dr Yow is in prison ropins: say "Nothing fits through the prison ropins." instead;
@@ -16771,10 +16775,10 @@ check giving gizmo to Dr Yow: say "'A bit too applied for me.'" instead;
 check objasking agnostic about gizmo: try giving gizmo to agnostic instead;
 
 to say heat-remain:
-	if number of hintpastries carried by the player > 0:
-		say ", first heating your remaining pastr[if number of hintpastries carried by the player is 1]y[else]ies[end if] to get x-ray vision";
+	if number of skansnaks carried by the player > 0:
+		say ", first heating your remaining pastr[if number of skansnaks carried by the player is 1]y[else]ies[end if] to get x-ray vision";
 	now xrayvision is true;
-	now all carried hintpastries are heated;
+	now all carried skansnaks are heated;
 
 check giving gizmo to agnostic:
 	if Dr Yow is moot:
@@ -16840,7 +16844,7 @@ description of Thearchy Hatchery is "It's a pretty impressive structure, with a 
 
 section solve-a-loaves
 
-some solve a loaves are an edible plural-named hintpastry. "Some solve-a-loaves have been left here.". description is "Inscribed with 'lo, save,' they are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]."
+some solve a loaves are an edible plural-named skansnak. "Some solve-a-loaves have been left here.". description is "Inscribed with 'lo, save,' they are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]."
 
 printed name of solve a loaves is "solve-a-loaves".
 
@@ -16855,13 +16859,13 @@ check taking bot boat: try entering bot boat instead;
 check entering bot boat:
 	if turbos are not part of bot boat, say "'It's not even built yet, [mrmaam]! I need a tool to get the blaster and turbos working!'" instead;
 	if player has toaster:
-		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the agnostic could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The agnostic leaves the toaster on the sand.[line break]";
-		now all carried hintpastries are heated;
+		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried skansnaks > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the agnostic could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The agnostic leaves the toaster on the sand.[line break]";
+		now all carried skansnaks are heated;
 		now toaster is in Actionless Coastlines;
 	else if toaster is touchable:
-		if number of carried not heated hintpastries > 0:
+		if number of carried not heated skansnaks > 0:
 			say "You heat up the food you found since you were last here.";
-		now all carried hintpastries are heated;
+		now all carried skansnaks are heated;
 	if turbos are reflexive and blaster is reflexive, say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the agnostic mutters to herself.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
 	say "BRRRRM! The boat works great. 'I'll make a glider girdle next!' the agnostic shouts, out of view.";
 	if turbos are reflexed and blaster is reflexed:
@@ -16902,7 +16906,7 @@ to towers-min-adj: [this is when you leave the mainland]
 		min-up;
 	if used-ray is false:
 		increment poss-score of towers;
-		if number of carried hintpastries is 0, min-up; [no way to cheat if we have no hintpastries]
+		if number of carried skansnaks is 0, min-up; [no way to cheat if we have no skansnaks]
 	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
 
 to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
@@ -16920,7 +16924,7 @@ Report taking the strudel:
 
 the gadflies gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you.". printed name is "gadflies['] gasfield".
 
-check opening a hintpastry: say "You can just try to [if player has toaster][b]TOAST[r] or [end if][b]EAT[r] that if you want." instead;
+check opening a skansnak: say "You can just try to [if player has toaster][b]TOAST[r] or [end if][b]EAT[r] that if you want." instead;
 
 section sporties ripostes
 
@@ -16963,7 +16967,7 @@ understand "unorg" and "unorg ground" as unorgd ground.
 
 chapter strudel
 
-some strudel is a LLPish reflexive hintpastry in Fringe Finger. it is singular-named. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents['] cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+some strudel is a LLPish reflexive skansnak in Fringe Finger. it is singular-named. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents['] cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]U[sp]x[sp]x[sp]x[sp]E[sp]x".
 
@@ -17032,7 +17036,7 @@ check giving to Tetris Sitter:
 	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
 	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
-	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaining optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
+	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaining optional point is for not using any [passrite]. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	moot top opt pot instead;
 
 check going outside in Mesprise Premises: try going east instead;
@@ -21228,7 +21232,7 @@ check burning:
 	if noun is top opt pot or noun is crocus, say "Renato would be so upset." instead;
 	if noun is try us yurts, say "Perhaps another more natural way of decomposition would work better." instead;
 	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
-	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is touchable]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
+	if noun is a skansnak, say "There aren't many ways to botch food like that, but that's one[if toaster is touchable]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
 	if mrlp is towers and Topside Deposit is visited, say "Don't be a brushfire furbisher." instead;
 	if noun is bleary barley, say "You'd be right in the middle. So, bad idea." instead; [otters]
 	if noun is atmo moat, say "It's nowhere near greasy enough." instead;
@@ -22359,7 +22363,7 @@ to check-oyster-spill (rm - a room):
 	if spill-loc is rm, say "[2drm of rm][endgame-spill-instead] in [rm].";
 
 this is the towers-misses rule:
-	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from [list of moot hintpastries], which cost a style point.";
+	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from [list of moot skansnaks], which cost a style point.";
 	if keycar is off-stage, say "[2dmiss of towers]you didn't clear any location of guardians, besides edges or [coastlines], so you didn't get to see a [keycar].";
 	let xxx be unripe ur pine;
 	if number of not moot guardians > 0:
