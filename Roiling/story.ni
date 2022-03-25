@@ -80,6 +80,8 @@ include Rules-Based Testing by Andrew Schultz.
 
 include STS Common by Andrew Schultz.
 
+include First Word Retry by Andrew Schultz.
+
 bore-check of a thing is usually bore-eat-check rule.
 
 this is the bore-eat-check rule:
@@ -5228,17 +5230,15 @@ to say if-enter:
 	if word number 1 in the player's command is "enter":
 		say "--you may want to use a direction, instead";
 
-Rule for printing a parser error when the latest parser error is the only understood as far as error:
+Rule for printing a parser error when the latest parser error is the only understood as far as error (this is the jump for hoop error rule):
 	if player is in Austerer Treasure:
 		if ye hoop is in Austerer Treasure:
 			if word number 1 in the player's command is "jump":
 				if the player's command includes "wall", say "You think about jumping off the wall, but you wonder if that'd just be violating something sacred, and you might get zapped for that. You need a way to say, the heck with that." instead;
 				say "That's maybe not how to jump to reach Ye Hoop. Maybe you sort of need to jump a certain way to get there, and not care how." instead;
-	if number of words in the player's command > 1:
-		say "I understood the first word, but what came after didn't quite work[if number of words in the player's command is 2]. So just '[word number 1 in the player's command]' may work better[end if].";
-	else:
-		say "You wrote in a valid verb, or try, but the game didn't accept it, or maybe you can use the word in a different place. Sorry about that.";
-	the rule succeeds;
+			the rule succeeds;
+
+the jump for hoop error rule is listed before the retry first word in command error rule in the for printing a parser error rulebook.
 
 pardons is a truth state that varies.
 

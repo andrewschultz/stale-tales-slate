@@ -135,6 +135,8 @@ include STS Common by Andrew Schultz.
 
 include Punctuation Stripper by Andrew Schultz.
 
+include First Word Retry by Andrew Schultz.
+
 section test module(s) - not for release
 
 include STS Tests by Andrew Schultz
@@ -9254,8 +9256,6 @@ Rule for printing a parser error when the latest parser error is didn't understa
 
 book parsing
 
-the last-command is indexed text that varies.
-
 Rule for printing a parser error when the latest parser error is the can't see any such thing error:
 	if the player's command includes "writing":
 		say "[one of]There's a lot of writing in [this-game][if Notices Section is visited], especially red writing[end if]. If you're trying to read writing, you may want to [b]READ[r] what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand[or]Try to [b]READ[r] the object you want, instead[stopping].";
@@ -9263,25 +9263,6 @@ Rule for printing a parser error when the latest parser error is the can't see a
 		the rule succeeds;
 	say "You can't see anything like that here. If you're trying to view the room, [b]L[r] or [b]LOOK[r] should work.";
 	the rule succeeds;
-
-the parser error flag is a truth state that varies.
-
-Rule for printing a parser error when the latest parser error is the only understood as far as error:
-	say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just [b][word number 1 in the player's command in upper case][r] should work to [verbdetail].";
-	say "Do so now?";
-	if the player dir-consents:
-		now the last-command is "[word number 1 in the player's command]";
-		now parser error flag is true;
-	else:
-		if debug-state is false, say "Okay.";
-
-Rule for reading a command when the parser error flag is true:
-	d "Reading [last-command].";
-	now the parser error flag is false;
-	change the text of the player's command to the last-command.
-
-to say verbdetail:
-(- LanguageVerb(verb_word); -)
 
 Rule for printing a parser error when the latest parser error is the I beg your pardon error: say "[one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
 
