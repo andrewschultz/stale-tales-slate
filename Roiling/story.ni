@@ -3399,17 +3399,6 @@ no-tip is a truth state that varies.
 
 tip-warn is a truth state that varies.
 
-to reg-inc:
-	increment the score;
-	if mrlp is nothing:
-		say "BUG NOTE: This location needs a map region!";
-	else:
-		increment the cur-score of mrlp;
-		if mrlp is stores and cur-score of stores is max-score of stores:
-			now stores is solved;
-			now last-solved-region is stores;
-	score-notify;
-
 to score-notify:
 	if suppress-score is false, process the notify score changes rule;
 	let tru-sco be cur-score of mrlp;
@@ -7282,35 +7271,10 @@ carry out fliptoing (this is the main fliptoing rule):
 			else if suppress-score is false:
 				if debug-state is true and flip-spill-flag is true, say "(DEBUG) NO PILL USE MESSAGE FOR [the-from entry] -> [the-to entry].";
 				say "[the-msg entry][line break]";
-			if mrlp is stores:
-				if the-from entry is Store T or the-from entry is blabber babbler: [you need to get rid of the blabber babbler to leave Cruelest Lectures, so no min-up]
-					do nothing;
-				else if the-from entry is store H:
-					if roved is false, min-up;
-				else if the-from entry is bedruggled:
-					min-up;
-				else if number of supporting stos < 4:
-					min-up;
-			if the-from entry is maze walls:
-				increase the score by 2;
-				increase the cur-score of mrlp by 2;
-				increment the min-score of mrlp;
-				if Tom Avlez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned:
-					increment the score;
-					increment the cur-score of mrlp;
-					increment the min-score of mrlp;
-				else:
-					poss-d;
-				score-notify;
-			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
+			if mrlp is stores, store-min-adjust the-from entry;
+			if the-to entry is not moot or the-to entry is satchel: [more than one point here]
 				if the-from entry is sabot boats and frat raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
-				else if the-from entry is coins and the-to entry is s-i:
-					two-up;
-				else if the-to entry is meet bans:
-					if Largely All Grey Gallery is unvisited, two-up;
-				else if the-to entry is angrier earring and the player's command includes "phooey":
-					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
 			if the-from entry is a backdrop:
@@ -7348,6 +7312,16 @@ carry out fliptoing (this is the main fliptoing rule):
 		if noun is the-from entry and location of noun is location of player, say "You can't seem to change things back to how they were." instead;
 	say "This case with [the player's command] in [location of player] shouldn't have happened. BUG." instead;
 	the rule succeeds;
+
+to store-min-adjust (th - a thing):
+	if th is Store T or th is blabber babbler: [you need to get rid of the blabber babbler to leave Cruelest Lectures, so no min-up]
+		do nothing;
+	else if th is store H:
+		if roved is false, min-up;
+	else if th is bedruggled:
+		min-up;
+	else if number of supporting stos < 4:
+		min-up;
 
 The look around once light available rule is not listed in the for printing the announcement of light rulebook. [only used in Dusty Study]
 
@@ -7577,20 +7551,6 @@ The By Lil Billy page is propaganda. it is part of the dope op ed. printed name 
 description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!,[paragraph break]There's further crayony scrawl. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!![paragraph break]Elvira somehow established it was cute when seven-year-olds did it but horrible when you did, all the same excoriating your terrible influence on children." [bold-ok]
 
 dope-idx is a number that varies.
-
-after fliptoing when player is in Dusty Study (this is the more min points in Dusty Study rule) :
-	if noun is meet bans:
-		if tables are moot or niche is moot:
-			d "Min point for tables or niche.";
-			min-up; [already have way out of study]
-			if sitar is moot or pram is moot:
-				d "Min point for [if sitar is moot]sitar [end if][if pram is moot]pram [end if].";
-				min-up; [already have way out of study]
-	else if noun is chimney:
-		if meet bans are moot or tables are moot, min-up;
-	else if noun is tables:
-		if meet bans are moot or niche is moot, min-up;
-	continue the action;
 
 chapter rig one (ignore region)
 

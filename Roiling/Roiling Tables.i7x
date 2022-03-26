@@ -35,7 +35,7 @@ pram	ramp	false	233052733	--	"ramp"	"ramp"	--	post-pram-ramp rule	"The pram fold
 sitar	stair	false	331888451	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."
 stria	stair	false	331888451	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The stria glow and cascade into a stair leading back up."
 my niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney rule	"The square saying [b]MY NICHE[r] rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
-meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
+meet bans	meet bans	false	608585586	--	"basement"	"basement"	pre-meet-bans-basement rule	--	"[if Largely All Grey Gallery is visited]Having already visited the [gallery] below-ground, you pat yourself on the back for lateral thinking and generally exploring things thoroughly, as you realize the deeper nature of the [MEET BANS][else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to what must be a basement, even if it's called something different."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from [the bins]. They're still covered with long numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
@@ -87,16 +87,29 @@ this is the post-sitar-or-stria-to-stair rule:
 this is the post-my-niche-chimney rule:
 	now Highest Heights are mapped above Dusty Study;
 	now Dusty Study is mapped below Highest Heights;
+	if meet bans are moot or tables are moot:
+		d "My niche -> chimney is a min-up because stable and/or basement are already accessible.";
+		min-up;
 
-this is the post-meet-bans-basement rule:
+this is the pre-meet-bans-basement rule:
 	moot beams;
 	now Largely All Grey Gallery is mapped below study;
 	now study is mapped above Largely All Grey Gallery;
+	reg-inc-q;
+	if tables are moot or niche is moot:
+		d "Min point for tables or niche: we already have a way out of the study.";
+		min-up;
+	if sitar is moot or pram is moot:
+		d "Min point for [if sitar is moot]sitar [end if][if pram is moot]pram [end if]: we already have a way to [gallery].";
+		min-up;
 
 this is the post-tables-stable rule:
 	now study is mapped inside Farming Framing;
 	now study is mapped outside Farming Framing;
 	now Farming Framing is mapped inside study;
+	if meet bans are moot or niche is moot:
+		d "My niche -> chimney is a min-up because stable and/or basement are already accessible.";
+		min-up;
 
 to say dust-b:
 	say "[one of]. You say, 'Dust, be busted' to clear up the mess in the air. You can go [b]IN[r] to the stable, now, to look around there[or][stopping]";
@@ -516,8 +529,8 @@ odes song	odes song	false	591595494	--	"goodness"	"goodness"	--	--	"You manage t
 Leo	Leo	false	255972525	--	"ole"	"ole"	--	post-leo-ole rule	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	--	post-rand-darn rule	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break][l-n-r] begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	--	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, Nuts!'[paragraph break]They'll be following you around for a bit."
-ye hoop	angrier earring	true	267453412	--	"pooh"	"pooh"	--	post-pooh-phooey rule	"[get-earring]."
-ye hoop	angrier earring	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[get-earring]."
+ye hoop	angrier earring	true	267453412	--	"pooh"	"pooh"	--	pre-pooh-phooey rule	"[get-earring]."
+ye hoop	angrier earring	true	517618773	--	"phooey"	"phooey"	--	pre-pooh-phooey rule	"[get-earring]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"[l-n-r] look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' [l-n-r], busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo[']!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
@@ -592,9 +605,9 @@ this is the post-wzup rule:
 	now Leo is eager;
 	now Rand is eager;
 
-this is the post-pooh-phooey rule:
+this is the pre-pooh-phooey rule:
 	if the player's command includes "phooey":
-		min-up;
+		min-and-q;
 		now phooeyed is true;
 	else:
 		poss-d;
@@ -614,6 +627,15 @@ this is the pre-solve-maze rule:
 	if player is not in Grey Gyre:
 		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
 		move player to Grey Gyre, without printing a room description;
+	increase the score by 2;
+	increase the cur-score of mrlp by 2;
+	increment the min-score of mrlp;
+	if Tom Avlez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned:
+		increment the score;
+		increment the cur-score of mrlp;
+		increment the min-score of mrlp;
+	else:
+		poss-d;
 
 this is the post-nowt-town-wont rule:
 	poss-d;
@@ -1797,6 +1819,7 @@ coin	icon	false	207258516	--	"icon"	"icon"	--	post-iconic-flip rule	"You vacate 
 coins	s-c	false	303532482	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip rule	"Blam! The coins begin to rattle gently and don't stop."
 icons	s-i	false	303532482	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
 coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
+coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	pre-sonic-icons-double-flip rule		post-sonic-icons-double-flip rule	"You can't decide whether the coins should become sonic or icons first, but you know what? It doesn't matter. They become sonic icons, as you expected."
 s-c	s-i	false	303532482	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
 concisions	concisions	false	607064964	--	"concisions"	"concisions"	--	--	"Just gazing at [if player has s-i][the s-i][else][the s-c][end if] right, you ... gain wisdom. All your wordplay has made you realize you understand logic but not how to connect. You take a step back to look at the big picture. Yes, you see ways to give your words power even without anagramming."
 coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coin takes on a much cooler design."
@@ -1820,6 +1843,13 @@ this is the post-iconic-flip rule:
 this is the post-sonic-flip rule:
 	if player has So Great Storage, slot-appear;
 	if noun is s-i, process the force-others-guru-point rule;
+	concisions-check;
+
+this is the pre-sonic-icons-double-flip rule: [coins -> sonic icons = 2 points]
+	min-and-q;
+
+this is the post-sonic-icons-double-flip rule:
+	process the force-others-guru-point rule;
 	concisions-check;
 
 this is the pre-gates-stage-flip rule:
