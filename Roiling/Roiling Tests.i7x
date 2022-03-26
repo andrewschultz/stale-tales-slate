@@ -941,7 +941,7 @@ carry out posting:
 	try roveovering;
 	try fliptoing hoster;
 	try entering hoster;
-	ital-say "[b]TESTING NOTE[r]: [b]SON[i] gives various stages of the coins. 1=coin 2=icon 3=coins 4=icons 5=sonic coins 6=sonic icons.";
+	ital-say "[b]TESTING NOTE[i]: [b]SON[i] gives various stages of the coins. 1=coin 2=icon 3=coins 4=icons 5=sonic coins 6=sonic icons.";
 	the rule succeeds;
 
 chapter mowing
