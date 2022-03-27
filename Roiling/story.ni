@@ -20082,25 +20082,8 @@ check going north in Gates Stage:
 		process the notify score changes rule;
 	now others is solved;
 	if debug-state is true, append "Test passed for Others.[line break]" to the file of debuggery;
-	if epilogue rule is a final response rule listed in the Table of Final Question Options:
-		choose row with final response rule of epilogue rule in the Table of Final Question Options;
-		blank out the whole row; [don't let the player ROVE OVER again]
-	choose the row with final response activity of putzing about in the table of final question options;
-	now final response activity entry is nextlisting; [this is an awful hack but I'd rather not reveal this til after you beat OTHERS]
-	choose the row with final response activity of putzing around in the table of final question options;
-	now final response activity entry is prevlisting;
-	choose the row with final response activity of nrling about in the table of final question options;
-	now final response activity entry is nextreglisting;
-	choose the row with final response activity of potzing around in the table of final question options;
-	now final response activity entry is showing a list;
-	choose the row with final response activity of potzing about in the table of final question options;
-	now final response activity entry is showing list of lists;
-	choose the row with final response activity of reging about in the table of final question options;
-	now final response activity entry is showing regional lists;
-	choose the row with final response activity of ddming in the table of final question options;
-	now final response activity entry is demo dome moding;
-	now left hand status line is "VALENCE ENCLAVE";
-	end the story finally saying "A Giddy Route: You Did Great" instead;
+	store-h-end-adjust; [moved nearer the end table stuff so that if I need to make changes it will be less inconvenient]
+	the rule succeeds;
 
 to say mami:
 	if player is male:
@@ -20872,9 +20855,17 @@ check going south in Peek Keep:
 		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
 		if the player regex-prompt-consents:
 			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
+			dome-wipe-final-questions;
 			end the story saying "Epilogue's Up! Lie, Ego";
 		else:
 			say "Okay, why not look around a bit more." instead;
+
+to dome-wipe-final-questions:
+	if others is not solved:
+		choose row with final response activity of dummy altpath showing in table of final question options;
+		blank out the final response rule entry;
+		choose row with final response activity of dummy missed stuff showing in table of final question options;
+		blank out the final response rule entry;
 
 to say unex-left:
 	let Y be the number of unexamined things in Sparse Spares;
@@ -21610,14 +21601,16 @@ liliing is an action applying to one number.
 lili0ing is an action applying to nothing.
 
 carry out lili0ing:
-	carry out the showing list of lists activity instead;
+	process the showing regional lists rule;
 
 carry out liliing:
 	let my-table be table of random books;
 	let threshold be 40;
 	if number understood is 0, try lili0ing instead;
-	if number understood < 1 or number understood > number of rows in table of megachatter, say "Out of range. 1 through [number of rows in table of megachatter]. 0 shows list of all tracked." instead;
+	if number understood < 1 or number understood > number of rows in table of megachatter, say "Out of range. 1 through [table-list-max] are currently available. 0 shows a list of how and where random text occurs." instead;
 	now curlistnum is the number understood;
+	if curlistnum > table-list-max:
+		say "Oops! You can't reach that yet. You'll need to [if others is solved]look in the Demo Dome[else]see about Store H[end if] first." instead;
 	choose row number understood in table of megachatter;
 	say "[descr entry]:[paragraph break]";
 	if there is a maxbeforepause entry, now threshold is maxbeforepause entry;
@@ -21631,12 +21624,12 @@ carry out liliing:
 			say "([cur-e] of [number of rows in my-table]) so far. Type q to quit the list or any other key to continue.";
 			let cholet be the chosen letter;
 			if cholet is 113 or cholet is 81:
-				try-ln; [?? try-ln instead]
+				next-list-poke;
 				the rule succeeds;
 			say "[jjk] continued.";
 		increment cur-e;
 		say "[abc]. [blurb in row abc of my-table][if there is a suffix entry][suffix entry][end if][line break]";
-	try-ln;
+	next-list-poke;
 	if cur-e <= number of rows in my-table, say "Total elements = [number of rows in my-table].";
 
 to show-ads:
@@ -21647,17 +21640,12 @@ to show-ads:
 			say "[r]([county] of [number of rows in table of ad slogans]) so far. Type q to quit the list or any other key to continue.";
 			let cholet be the chosen letter;
 			if cholet is 113 or cholet is 81:
-				try-ln;
+				next-list-poke;
 				the rule succeeds;
 			say "Continuing ads.";
 		say "[if blare entry is true]One ad says: [end if][blurb entry][line break]";
 
 ln-yet is a truth state that varies.
-
-to try-ln:
-	if ln-yet is false:
-		ital-say "[b]LN[i] shows the next list.";
-		now ln-yet is true;
 
 book amusing
 
@@ -21756,62 +21744,76 @@ section bogus activities
 
 [bogus activities]
 
-nrling about is an activity. [nextreglisting]
-putzing around is an activity.
-putzing about is an activity.
-potzing around is an activity.
-potzing about is an activity.
-reging about is an activity.
-ddming is an activity.
-
 part modified rule
 
 the print the modified final question rule is listed before the print the final prompt rule in before handling the final question.
 
 the print the final question rule is not listed in any rulebook.
 
+to say satires-list:
+	if sparse spares is unvisited:
+		say "from something below Peek Keek, where you didn't visit";
+	else:
+		say "the [satires], which you [if satires are examined]examined[else]didn't examine[end if]"
+
 This is the print the modified final question rule:
 	let named options count be 0;
 	let pure-metas be 0;
-	if otters is solved or others is solved, say "[one of]Congratulations! You made it through[if others is solved] the extended ending[end if]. There's a lot of[or]Here's a rehash of the[stopping] meta-stuff you may find interesting listed below.";
+	if the story has not ended finally:
+		do nothing;
+	else if peek keep is not visited:
+		say "[one of]Congratulations! You made it through[if others is solved] the extended ending[end if]. There's a lot of[or]Here's a rehash of the[stopping] meta-stuff you may find interesting listed below.";
+	else:
+		say "You may've already seen the endgame meta-options, but just in case, they are included below. The only new thing after you've visited Demo Dome is [satires-list]. You can see it with [b]LD[r].";
 	repeat through the Table of Final Question Options:
 		if the only if victorious entry is false or the story has ended finally:
-			if there is a final response rule entry
-				or the final response activity entry [activity] is not empty:
+			if there is a final response rule entry:
 				if there is a final question wording entry:
 					if there is a final response activity entry:
-						say "[2da][final question wording entry][line break]";
+						say "[2da][final question wording entry][r][line break]";
 					else:
 						increment pure-metas;
 	say "You [if the story has ended finally]can also[else]probably want to [b]UNDO[r], but your full list of choices is to[end if] ";
 	repeat through the Table of Final Question Options:
 		if the only if victorious entry is false or the story has ended finally:
-			if there is a final response rule entry
-				or the final response activity entry [activity] is not empty:
+			if there is a final response rule entry:
 				if there is a final question wording entry:
 					unless there is a final response activity entry:
 						decrement pure-metas;
 						say "[if pure-metas is 0]or [end if][final question wording entry][if pure-metas is 0].[else], [end if]";
 	say "[line break]";
 
+part what happens when you solve store H
+
+to store-h-end-adjust:
+	if epilogue rule is a final response rule listed in the Table of Final Question Options:
+		choose row with final response rule of epilogue rule in the Table of Final Question Options;
+		blank out the whole row; [don't let the player ROVE OVER again if they already did]
+	choose row with final response activity of dummy demo dome mode activating in the Table of Final Question Options;
+	now the final response rule entry is the the activate demo dome mode rule; [notify the player about DEMO DOME MODE]
+	now left hand status line is "VALENCE ENCLAVE";
+	end the story finally saying "A Giddy Route: You Did Great";
+
 part real options
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
-"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	--
-"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	--
---	false	"l/list"	--	potzing about
---	false	"n/ln/nl"	--	putzing about
---	false	"p/pl"	--	putzing around
---	false	"la/lh/lm/lp/ls/lt/lu/lv/lw/ly"	--	reging about
---	false	"nr/lr"	--	nrling about
-"[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form"	--	sexsorting
-"[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r] for general or, say, [b]LU[r] for Routes), or [b]LR[r] for the region's next list"	false	"l/list [number]"	--	potzing around
-"[b]DEMO DOME MODE[r] (director's cut, can't undo)"	false	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	ddming
+"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	dummy altpath showing
+"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	dummy missed stuff showing
+--	false	"l/list"	the show list of lists rule	--
+--	false	"n/ln/nl"	the list next megachatter table rule	--
+--	false	"p/pl"	the list previous megachatter table rule	--
+--	true	"ld/lg/lh/lo/lp/ls/lt/lu/lv/lw/ly"	the showing regional lists rule	--
+--	false	"rj/lr/jr"	the list next region random text rule	--
+"[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form" or "m or f" or "of mr"	the sort male female out rule	--
+"[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload), or [b]LJ[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
+"[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
 
-sexsorting is an activity.
+dummy altpath showing is an activity.
+dummy missed stuff showing is an activity.
+dummy demo dome mode activating is an activity.
 
-rule for sexsorting:
+this is the sort male female out rule:
 	say "Here is what the game treats differently: (* = trivial)[line break]";
 	repeat through table of sexdif:
 		say "[2da][examp entry][line break]";
@@ -21864,9 +21866,7 @@ examp
 "Lord Al Ollard or Dr. Lola Ollard appears on a droll dollar."
 "Red Rat Art Erd or Dr. Tera Darter is the Tarred Trader."
 
-demo dome moding is an activity.
-
-rule for demo dome moding:
+this is the activate demo dome mode rule:
 	fully resume the story;
 	say "You stumble on a small museum chock full of meta-information about your quest.";
 	move the player to Peek Keep;
@@ -21876,58 +21876,85 @@ rule for demo dome moding:
 
 curlistnum is a number that varies.
 
-nextlisting is an activity.
+to decide which number is table-list-max:
+	if peek keep is visited, decide on number of rows in table of megachatter;
+	let count be 0;
+	repeat through table of megachatter:
+		if whichreg entry is Demo Dome and others is not solved, next;
+		if others-passed or whichreg entry is not others, increment count;
+	decide on count;
 
-rule for nextlisting:
+this is the list next megachatter table rule:
+	now listpoke is false;
 	increment curlistnum;
-	if curlistnum > number of rows in table of megachatter:
+	if curlistnum > table-list-max:
 		say "(Cycling back to 1.)[line break]";
 		now curlistnum is 1;
 	try liliing curlistnum;
 	next-list-poke;
 
-prevlisting is an activity.
-
-rule for prevlisting:
+this is the list previous megachatter table rule:
 	decrement curlistnum;
-	if curlistnum is 0:
-		say "(Cycling back to [number of rows in table of megachatter].)[line break]";
-		now curlistnum is number of rows in table of megachatter;
+	if curlistnum < 1:
+		say "(Cycling back to [table-list-max].)[line break]";
+		now curlistnum is table-list-max;
 	try liliing curlistnum;
 	next-list-poke;
 
-nextreglisting is an activity.
+to decide which number is next-region-start of (x - a number):
+	if x is 0, decide on 1;
+	choose row x in table of megachatter;
+	let temp-int be x;
+	let temp-reg be whichreg entry;
+	while whichreg entry is temp-reg:
+		increment temp-int;
+		if temp-int > table-list-max:
+			say "(Cycling back to the top.)";
+			decide on 1;
+		choose row temp-int in table of megachatter;
+	decide on temp-int;
 
-rule for nextreglisting:
-	let initnum be curlistnum;
-	increment curlistnum;
-	if curlistnum > number of rows in table of megachatter:
-		say "(Cycling back to 1.)[line break]";
-		now curlistnum is 1;
-	choose row curlistnum in table of megachatter;
-	while cur-reg is not whichreg entry:
-		increment curlistnum;
-		if curlistnum > number of rows in table of megachatter:
-			say "(Cycling back to the top.)[line break]";
-			now curlistnum is 1;
-		choose row curlistnum in table of megachatter;
-		if initnum is curlistnum:
-			say "There's only one list for [if cur-reg is Meta Team]stuff in general[else][cur-reg].";
-			the rule succeeds;
-	try liliing curlistnum;
+this is the list next region random text rule: [ lr command in post-game ]
+	now lj-cue-prod is false;
+	choose row (next-region-start of curlistnum) in table of megachatter;
+	region-random-list whichreg entry;
+	now curlistnum is (next-region-start of curlistnum);
 
-showing regional lists is an activity.
+to decide which number is rand-txt-count of (rg - a region):
+	let temp be 0;
+	repeat through table of megachatter:
+		if there is a whichreg entry and rg is whichreg entry:
+			increment temp;
+	decide on temp;
+
+to region-random-list (rg - a region):
+	let rtc be rand-txt-count of rg;
+	if rtc is 0:
+		say "There is no random text for [rg].";
+		continue the action;
+	say "Here [if rtc > 2]are all the lists[else if rtc is 2]are both the lists[else]is the only list[end if] for [if rg is Meta Team]general commands[else][rg][end if].";
+	let mycount be 0;
+	repeat through table of megachatter:
+		if there is a whichreg entry and rg is whichreg entry:
+			increment mycount;
+			let nr be number of rows in mytab entry;
+			if there is a lasties entry and number of characters in lasties entry > 2, increment nr; [account for the final message that is outside the table]
+			say "[mycount]. [descr entry] ([nr] anagrams)[line break]";
+	lj-cue;
+
+lj-cue-prod is a truth state that varies.
+
+to lj-cue:
+	if lj-cue-prod is false:
+		say "You can type [b]LJ[r]/[b]RJ[r]/[b]JR[r] to jump to the next region's lists.";
+		now lj-cue-prod is true;
 
 megsort is a truth state that varies.
 
-to sort-meg:
-	if megsort is false:
-		now megsort is true;
-		sort table of megachatter in reverse table-size order;
-
 table of regabr
 this-reg	this-top
-Meta Team	"mt"
+Meta Team	"lg"
+others	"ld"
 others	"lh"
 Ordeal Reload	"lo"
 presto	"lp"
@@ -21938,40 +21965,31 @@ troves	"lv"
 towers	"lw"
 oyster	"ly"
 
-cur-reg is a region that varies. cur-reg is usually Meta Team.
+to decide whether others-passed:
+	if peek keep is visited, yes;
+	if others is solved, yes;
+	no;
 
-rule for showing regional lists:
+this is the showing regional lists rule:
 	let myrow be 0;
-	if others is not solved and word number 1 in the player's command is "lh":
+	if not others-passed and word number 1 in the player's command is "lh":
 		say "I can't show you the list for Store H, yet. You haven't solved it.";
+		the rule succeeds;
+	if peek keep is unvisited and word number 1 in the player's command is "ld":
+		say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it.";
 		the rule succeeds;
 	repeat through table of regabr:
 		if word number 1 in the player's command is "[this-top entry]":
-			say "Here is a list of all the lists [if this-reg entry is Meta Team]of universal text[else]for [this-reg entry][end if].";
-			now cur-reg is this-reg entry;
-			sort-meg;
-			repeat through table of megachatter:
-				increment myrow;
-				if there is a mytab entry:
-					let nr be number of rows in mytab entry;
-					if there is a lasties entry and number of characters in lasties entry > 2, increment nr;
-					if there is a whichreg entry:
-						if whichreg entry is cur-reg:
-							say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
-				else if region is Meta Team and whichreg entry is cur-reg:
-					say "[myrow]. Undos[line break]";
-			say "You can type [b]LR[r] to see the next list in your current region.";
+			region-random-list this-reg entry;
 			the rule succeeds;
-	say "To specify a region, you need to say lh/lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload. [b]LA[r]=all.";
+	say "To specify a region, you need to say [if peek keep is visited]ld/[end if]lg/[if others-passed]lh/[end if]lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload (intro) and G being general stuff e.g. responses to empty commands. [b]LA[r]=all.";
 
-showing list of lists is an activity.
-
-rule for showing list of lists:
+this is the show list of lists rule:
 	let myrow be 0;
 	let nr be 0;
-	say "Here is a list of all the lists of random anagrams. If you did not visit a region, no spoilers are contained here. Pick a number to see which one, or [b]LN[r] lets you see the next. ";
+	say "Here is a list of all the lists of random anagrams. If you did not visit a region, no spoilers are contained here. Pick a number to see which one, or [b]N/[r]/[b]LN[r]/[b]LN[r] lets you see the next. ";
+	now listpoke is true;
 	ital-say "the distribution of list sizes (numbers or bytes) approximately obeys Benford's and Zipf's Law, which I think is very cool. Both the laws, and that the lists obey them.";
-	sort-meg;
 	repeat through table of megachatter:
 		increment myrow;
 		if there is a mytab entry:
@@ -21980,8 +21998,11 @@ rule for showing list of lists:
 			d "Blank row.";
 			now nr is 16; [undos]
 		if there is a lasties entry and number of characters in lasties entry > 2, increment nr;
-		if whichreg entry is others and others is unsolved:
-			say "[myrow]. ([b]REDACTED[r]) (for [b]OTHERS[r])[line break]";
+		if whichreg entry is others and not others-passed:
+			say "([b]REDACTED[r] post-Elvira stuff behind Store H.)[line break]";
+			the rule succeeds;
+		if whichreg entry is demo dome and peek keep is unvisited:
+			say "[b]REDACTED[r]) [b]DEMO DOME MODE[r] stuff.)[line break]";
 		say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
 		if the remainder after dividing myrow by 20 is 0:
 			say "<press Q to quit or another key to see more>";
@@ -22001,9 +22022,7 @@ to next-list-poke:
 		ital-say "you can see the next list if you type [b]N[i], [b]NL[i] or [b]LN[i]";
 		now listpoke is true;
 
-showing a list is an activity.
-
-rule for showing a list:
+this is the show a list by number rule:
 	try liliing the number understood instead;
 
 to say remap-unset: say "[if remapped is true][b]UNSET[r] the tunes[else][b]REMAP[r] the perma-amper[end if]";
@@ -22233,6 +22252,13 @@ definition: a region (called R) is test-jumped:
 	yes;
 
 to say keycar-loc: say "in [location of keycar]"
+
+section deprecated code
+
+to sort-meg: [i'd rather not sort random tables by number since we will have different cases when we look things up]
+	if megsort is false:
+		now megsort is true;
+		sort table of megachatter in reverse table-size order;
 
 chapter misses rules
 
