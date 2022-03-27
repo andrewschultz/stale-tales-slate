@@ -6,7 +6,7 @@ volume main anagram tables
 
 [ruch.py does general cleanup checks]
 
-[rorg.py checks organization order]
+[ott.py checks organization order, replacing rorg.py]
 
 [tables are arranged roughly in walkthrough order.]
 
@@ -1570,7 +1570,7 @@ this is the post-gretta-help rule:
 	d "Checking progress on flipping [the noun].";
 	if uber-rand-cheat is true:
 		if number of pickup-lines in Disowned Downside is 0:
-			say "You're done! Somehow. This shouldnt happen, but you are.";
+			say "You're done! Somehow. This shouldn't happen, but you are.";
 			moot parleys splayer players;
 			try talking to Gretta;
 			continue the action;
@@ -1878,7 +1878,8 @@ to concisions-check:
 		if concisions are off-stage:
 			now player has concisions;
 	if noun is s-i and concisions are not moot:
-		say "You have a feeling [the s-i] have a hidden use, one you don't need, but one that may give personal growth, a way to find a different sort of word manipulation."
+		say "You have a feeling [the s-i] have a hidden use, one you don't need, but one that may give personal growth, a way to find a different sort of word manipulation.";
+	skip upcoming rulebook break;
 
 volume demo dome tables
 

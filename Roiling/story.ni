@@ -51,6 +51,8 @@ include Large Game Speedup by Andrew Plotkin.
 
 include Punctuation Stripper by Andrew Schultz.
 
+include Bold Final Question Rows by Andrew Schultz.
+
 the story headline is "(or ailing) Squeeal! A Sequel!"
 
 the story description is "Dear, Lo! Ordeal reload!"
@@ -103,10 +105,6 @@ section undefine DEBUG
 understand the command "debug" as something new.
 
 chapter region specs
-
-a region has a number called max-score. a region has a number called min-score.
-
-a region has a number called poss-score. a region has a number called cur-score.
 
 a region has a number called turns-spent. a region has a number called last-hint-turns. last-hint-turns of a region is usually 10.
 
@@ -2126,7 +2124,7 @@ carry out reading:
 			now noun is read-yet;
 			the rule succeeds;
 		try reading alt-read entry instead;
-	say "[b]READ[i]ing mapped to examining, because there is no puzzle-cluing text to read.)[r][paragraph break]";
+	ital-say "[b]READ[i]ing mapped to examining, because there is no puzzle-cluing text to read.";
 	try examining noun instead;
 
 does the player mean reading LEAD: it is very likely.
@@ -7335,10 +7333,10 @@ after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule
 		coin-eval;
 	continue the action;
 
-after fliptoing when player is in stores (this is the reunite gang rule) :
+after fliptoing when mrlp is stores (this is the reunite gang rule) :
 	if noun is nestor or noun is tokers:
 		if nestor is in strip and tokers are in strip:
-			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
+			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!' They offer an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
 	continue the action;
 
 after fliptoing (this is the fruit cue rule):
@@ -7515,7 +7513,7 @@ this is the bore-propaganda rule:
 	if current action is taking, say "You don't need to take that blunt-lie bulletin, or any part of it. You don't need to take the insults therein, either, unless you really want to." instead;
 	if current action is scaning, say "Err, yeah, scanning is MUCH better than close reading in this case.[paragraph break]Oh, wait, you meant with the settler? Nothing shows up." instead;
 
-the dope op ed is propaganda. "That 'dope' op-ed Report Porter Perrot threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy.". printed name is "the dope op-ed"
+the dope op ed is propaganda. "That 'dope' op-ed Report Porter Perrot threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [art-trash], and By Li'l Billy.". printed name is "the dope op-ed"
 
 the Nitro Intro page is propaganda. it is part of the dope op ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro" and "nitro-intro page" as nitro intro page.
 
@@ -7536,6 +7534,8 @@ The Shatter Threats page is propaganda. it is part of the dope op ed. printed na
 description of Shatter Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers, Sombrest Mobsters and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To smash shams and give dissenter residents tiredness so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are actually only so many nouns left to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
 
 The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda.
+
+to say art-trash: say "[i][if player is male]I Trash His Art[else]Her Arts Er Trash[end if][r]"
 
 description of I Trash His Art is "[artrash]". description of Er Trash is "[artrash]".
 
@@ -7744,7 +7744,7 @@ check taking satchel:
 
 chapter MEET BANS
 
-The MEET BANS are plural-named vanishing boring scenery in Dusty Study. description of the meet bans is "The MEET-BANS look very secure, but you could unlock them with the right, uh, combination.". bore-text is "The MEET-BANS are too solid to move physically and have no obvious flaws. That is no surprise, really.". printed name of MEET BANS is "MEET-BANS".
+The MEET BANS are plural-named vanishing boring scenery in Dusty Study. description of the meet bans is "The [MEET BANS] look very secure, but you could unlock them with the right, uh, combination.". bore-text is "The MEET-BANS are too solid to move physically and have no obvious flaws. That is no surprise, really.". printed name of MEET BANS is "MEET-BANS".
 
 a-text of meet bans is "RYRYRYRR". b-text of meet bans is "RYRYRYPR". parse-text of meet bans is "x[sp]A[sp]x[sp]E[sp]x[sp]E[sp]N[sp]x".
 
@@ -7853,7 +7853,7 @@ table of quip texts (continued) [tqt-gu]
 quip	quiptext
 summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Report Porter Perrot glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Not really a compelling personal story, you have to admit! Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't many things you could anagram for the better. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Report Porter Perrot, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start PORTER text]
 powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
-necro-quip	"'No rec!' [porter] goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You [b]LIKE[r] her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' [porter] glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway [']til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
+necro-quip	"'No rec!' [porter] goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You [b]LIKE[r] her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' [porter] glosses over [urbfogel], and how he beat up monsters that came back anyway [']til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
 clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
 sit-quip	"'Going personal? Sore plan! No gig!' She's not perfect but that helps us see... 'Mr. Quasi-Marquis...you have to admit, not even a reruns nurser thinks you could save Yorpwald turning stuff into stuff again. Pedants did research! So one do-rite editor rioted.'"
 gustave-quip	"'Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe.'"	[option 4-1, fork of 4]
@@ -7869,6 +7869,8 @@ weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
 artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
 leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break][porter] pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end PORTER text]
+
+to say urbfogel: say "Blue Frog Urbfogel, Bugler of Foulberg"
 
 chapter diorama
 
@@ -8917,7 +8919,7 @@ rule for supplying a missing noun when entering:
 		now the noun is the evac cave.
 
 [x current room]
-the Largely All Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of [ISBN bins]. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are touchable]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].". roomnud of Largely All Grey Gallery is table of largely all-grey gallery nudges. printed name of Largely All Grey Gallery is "Largely All-Grey Gallery".
+the Largely All Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript underground hiding place. It's only largely all-grey because the paint is discolored in places, though you'll fix that after fixing Yorpwald.[paragraph break]. The gallery stands regally, for all that, though it's full of [ISBN bins]. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are touchable]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].". roomnud of Largely All Grey Gallery is table of largely all-grey gallery nudges. printed name of Largely All Grey Gallery is "Largely All-Grey Gallery".
 
 diorama is in Dusty Study and Largely All Grey Gallery. [this is written in here after defining the gallery as a room]
 
@@ -9968,8 +9970,8 @@ this is the enter-idols rule:
 	if number of otters-blocking regions > 0:
 		d "[list of otters-blocking regions].";
 		say "As you step between them, you feel a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
-	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
-	say "[if bleary barley is moot]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
+	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls, again. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
+	say "[if bleary barley is moot]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Seriously!'[end if][paragraph break]";
 	pad-rec-q "asking";
 
 chapter store u
@@ -17919,7 +17921,7 @@ to preef (thi - a thing): [text listed in table of preflip clues]
 	if player is in Dusty Study:
 		check-get-pad;
 	if thi is not prefigured:
-		say "[line break][i][bracket]You add the information to your pedanto-notepad under [b]FLIPS[r].[close bracket][r]";
+		say "[line break][i][bracket]You add the information to your pedanto-notepad under [b]FLIPS[r].[close bracket][r][paragraph break]";
 	now thi is prefigured;
 	if player is not in Dusty Study and player does not have pedanto notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
@@ -19264,6 +19266,8 @@ carry out playing:
 			note-denial;
 			clean-for-roving;
 			continue the action;
+		else if player is in Reclusion Inclosure:
+			say "You already took care of Merle and Elmer here. Somewhere, though, something or someone worse lurks.";
 		else:
 			say "You don't need to call anyone in this area." instead;
 	say "That doesn't seem like a toy or an instrument." instead;
@@ -19386,7 +19390,7 @@ check talking to Elvira when current quip is final-quip:
 	say "'[one of]Neat lob. Notable. Bleat on!' [or]State nag?! Stagnate!' [in random order] Reason won't work, here." instead;
 
 every turn when current quip is final-quip and player is in Rancho Archon Anchor:
-	say "Cordial, cold air. [one of]'Make a diss, punk? Kiss and make up!' She pauses. 'Enough of jollying you along with your anagram nonsense! It's not like YOU ALONE can kill me. No person is brave enough to join you.' [or][stopping][one of]Elvira points out you're just jealous she got here on charisma.[or]Elvira mentions she's making others happy, a more exciting happy than yours.[or]Elvira complains social engineering is not as easy as it looks![or]'I'm still vaguely worried you have something up your sleeve, like Blue Frog Urbfogel!'[or]'It would be kind of exciting to lose, you know. Versus just growing old and dying bored and boring. I get the kingdom I want, too. Win-win.' It all has a lilt.[in random order]";
+	say "Cordial, cold air. [one of]'Make a diss, punk? Kiss and make up!' She pauses. 'Enough of jollying you along with your anagram nonsense! It's not like YOU ALONE can kill me. No person is brave enough to join you.' [or][stopping][one of]Elvira points out you're just jealous she got here on charisma.[or]Elvira mentions she's making others happy, a more exciting happy than yours.[or]Elvira complains social engineering is not as easy as it looks![or]'I'm still vaguely worried you have something up your sleeve, like [urbfogel]!'[or]'It would be kind of exciting to lose, you know. Versus just growing old and dying bored and boring. I get the kingdom I want, too. Win-win.' It all has a lilt.[in random order]";
 
 section Elvira dialogue
 
