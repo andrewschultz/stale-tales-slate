@@ -240,7 +240,8 @@ carry out a5ing:
 	now suppress-score is false;
 	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to Otters behind Store T. I also gave you the settler and purse and notepad, in case.";
 	process the notify score changes rule;
-	ital-say "you may wish to [b]SEED[r] 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation."
+	ital-say "you may wish to [b]SEED[i] 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation.";
+	ital-say "you may also wish to [b]OTWIN[i] to almost-win Otters.";
 
 chapter endgameing
 
@@ -289,6 +290,37 @@ understand "endgame" as egalling.
 carry out egalling:
 	now end-jump is true;
 	try endgameing;
+	the rule succeeds;
+
+chapter otwin
+
+[* OTWIN almost-wins otters]
+
+otwining is an action out of world.
+
+understand the command "otwin" as something new.
+
+understand "otwin" as otwining.
+
+to say otw2: say "[b]OTWIN[i] in [inclosure] will cause [b]ADJSOLVE[i] and [b]NOUNSOLVE[i] (the variable determining how much you helped the animals) to drop to 2, thus getting you killed if you attack Elvira"
+
+carry out otwining:
+	if player is in Reclusion Inclosure and Merle is moot:
+		ital-say "[otw2]. This isn't a troll job--it just allows you to test losing.";
+		now adjsolve is 2;
+		now nounsolve is 2;
+	else:
+		now player has whistle;
+		now player wears medals;
+		moot hydra;
+		moot parrot;
+		moot raptor;
+		moot Merle;
+		moot Elmer;
+		now adjsolve is 3;
+		now nounsolve is 3;
+		now player is in Reclusion Inclosure;
+	ital-say "Otters endgame cheats are invoked! You can't win directly, because there are things worth testing. You will need to [b]QUICKLY[i] before attacking Elvira, although of course the insta-death if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[i] or it won't work in Rancho Archon Anchor. And for further testing, if you want, [otw2].";
 	the rule succeeds;
 
 Roiling Beta Testing ends here.

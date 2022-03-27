@@ -18,7 +18,9 @@ chapter randtext
 
 [* this tests all possibilities of random text, by region. Generic possibilities are included in rand-i.]
 
-test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear upscale capsule/deserve/bolster/last/resign/otwin/deeply/quickly/w/e/w/e/w/e/w/7/play whistle"
+test quick1 with "otwin/deeply/quickly/w/7/play whistle"
+
+test quick2 with "gonear gates stage/purloin sonic coins/purloin storage/icons/put icons in slot/research/review/n"
 
 test rand-i with "cap 3/x bookshelf/g/g/g/g/g/g/attack it/g/g/g/lamp/open door/1/1/1/1/1/1/1/1/2/lamp/x art/g/g/g/g/g/g/g/g/hint/n/y/g/g/g/n/g/g/g/shit/g/g/g/x ads/g/g/g/listen/g/g/g/basement/d/satchel/x settler/in/flier/2/2/1/1/1/1/1/1/8/8/8/10/10/staple/stapler/staple wall/z/z/z/z/////in"
 
@@ -160,13 +162,13 @@ chapter otters
 
 [* this includes tests for otters, otters with mistakes, otters min-points and otters max-points as well as alt ways through]
 
-test ottelv with "otters/enter otters/barely/rescind/reedily/w/shadily/martially/coitally/1/3/n/n/because/else/s/s/although/however/n/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/tersely/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/w/"
+test ottelv with "otters/enter otters/barely/rescind/reedily/w/shadily/martially/coitally/1/3/n/n/because/else/s/s/although/however/n/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/stoically/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/w/"
 
-test otters with "otters/enter otters/barely/rescind/reedily/w/shadily/martially/coitally/1/3/n/n/because/else/s/s/although/however/n/atom/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/tersely/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/quickly/w/7/e/w/play whistle"
+test otters with "otters/enter otters/barely/rescind/reedily/w/really/sparely/despairingly/indiscreetly/1/3/n/n/because/else/s/s/although/however/n/atom/e/n/enragedly/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/stoically/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/quickly/w/7/e/w/play whistle"
 
 test otters-pow with "seed 1/in/barely/reedily/w/tearily/snidely/nastily/1/3/n/n/else/because/s"
 
-test otters-cur with "otters/enter otters/barely/reedily/w/shadily/martially/coitally/1/3/w/e/s/db/although/however/n/n/because/else/s/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/tersely/s/parrot"
+test otters-cur with "otters/enter otters/barely/reedily/w/shadily/martially/coitally/1/3/w/e/s/db/although/however/n/n/because/else/s/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/stoically/s/parrot"
 [/snail/hornets/snipe/racoon/n/n/w/w/seriously/raptor/w/play whistle/quickly]
 
 test otters-oops with "sretto/otters/sretto/enter otters/ylerab/barely/ylerab/dnicser/rescind/dnicser/ylideer/reedily/ylideer/w/ylidahs/shadily/ylidahs/yllaitram/martially/yllaitram/yllatioc/coitally/yllatioc/w/e/n/esuaceb/because/esuaceb/esle/else/esle/s/s/hguohtla/although/hguohtla/revewoh/however/revewoh/n/e/n/ylirgna/angrily/ylirgna/yleturb/brutely/yleturb/n/wols/slow/wols/delorap/paroled/delorap/tselooc/coolest/tselooc/ystra/artsy/ystra/debrag/garbed/debrag/s/s/s/ylgnihtaol/loathingly/ylgnihtaol/ylesret/tersely/ylesret/s/torrap/parrot/torrap/lians/snail/lians/stenroh/hornets/stenroh/epins/snipe/epins/noocar/racoon/noocar/n/n/w/w/yltsenoh/honestly/yltsenoh/rotpar/raptor/rotpar/dleepy/deeply/dleepy/ylkciuq/quickly/ylkciuq/w/7/play whistle"
@@ -1093,34 +1095,6 @@ carry out spbing:
 	say "Blocking the consequences of [b]SPILL[r] is now [on-off of spill-block].";
 	the rule succeeds.
 
-chapter otwin
-
-[* OTWIN almost-wins otters]
-
-otwining is an action out of world.
-
-understand the command "otwin" as something new.
-
-understand "otwin" as otwining.
-
-carry out otwining:
-	if player is in Reclusion Inclosure:
-		now adjsolve is 2;
-		now nounsolve is 2;
-	else:
-		now player has whistle;
-		now player wears medals;
-		moot hydra;
-		moot parrot;
-		moot raptor;
-		moot Merle;
-		moot Elmer;
-		now adjsolve is 3;
-		now nounsolve is 3;
-		now player is in Reclusion Inclosure;
-	say "Otters endgame cheats are invoked! You may wish to [b]QUICKLY[r] before attacking Elvira, although of course the instadeath if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[r] or it won't work in Rancho Archon Anchor.";
-	the rule succeeds;
-
 chapter mf
 
 [* MF checks who is male or female]
@@ -1892,7 +1866,7 @@ cur-twid is a number that varies. cur-twid is usually 1.
 carry out twid0ing:
 	repeat with tempnum running from cur-twid + 1 to number of rows in table of megachatter:
 		choose row tempnum in table of megachatter;
-		if go-ahead entry is bzzt rule and reps entry > 1:
+		if go-ahead entry is trivially false rule and reps entry > 1:
 			now cur-twid is tempnum;
 			try twiding tempnum instead;
 	now cur-twid is 40;
@@ -1906,7 +1880,7 @@ carry out twiding:
 		say "(Turning debug state off)";
 		now debug-state is false; [for grepping, this is to see how a table looks earlier.]
 	choose row number understood in table of megachatter;
-	if go-ahead entry is not bzzt rule:
+	if go-ahead entry is not trivially false rule:
 		say "[mytab entry] follows [go-ahead entry] but needs to follow the trivially false rule. Try one of [list-of-randos]." instead;
 	let temp-tab be mytab entry;
 	say "[twiddle of temp-tab and 3]";
@@ -1916,7 +1890,7 @@ to say list-of-randos:
 	let comma-yet be false;
 	repeat with XX running from 1 to number of rows in table of megachatter:
 		choose row XX in table of megachatter;
-		if go-ahead entry is bzzt rule and reps entry > 1:
+		if go-ahead entry is trivially false rule and reps entry > 1:
 			say " [if comma-yet is true],[end if][XX]";
 			now comma-yet is true;
 
