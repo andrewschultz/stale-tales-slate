@@ -21127,6 +21127,13 @@ a sparething is a kind of thing. a sparething is always boring. bore-text of a s
 this is the bore-sparse-spares rule:
 	if current action is taking, say "That's a museum exhibit. About all you can/should do is examine it." instead;
 
+section artsies' satires
+
+the artsies satires are plural-named amusing boring scenery in Sparse Spares. description of artsies satires is "[one of]They seem discombobulated, as you'd expect from spares. [or][stopping]You see [one of][or]more [stopping]rough notes on [randbla].". bore-text is "The satires are just there to read.". bore-check is bore-satires rule. printed name of artsies satires is "artsies['] satires".
+
+this is the bore-satires rule:
+	if current action is taking, say "No, they're an exhibit. A particularly useless one, and one I couldn't incorporate into the game proper, but an exhibit." instead;
+
 section parcels clasper
 
 the parcels clasper is a sparething in Sparse Spares. description is "Oh, man! It's handy for picking stuff up and moving it around. It looks a bit odd, but boy, if you look for a minute, THAT's how it works.".

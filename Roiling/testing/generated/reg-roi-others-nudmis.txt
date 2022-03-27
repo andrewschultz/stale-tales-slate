@@ -386,6 +386,13 @@ Nothing happens. Perhaps it's the whole item that's important.
 #nudge for tangerine
 >tangerien
 The green stain could make just one fruit, but why not think bigger? It could become many.
+#readables for stucco
+>read stucco
+/One of two advertisements is for (ScoutCon|SunCotCo), whatever that is, in red.
+#readables for psa elp
+>psa elp
+It says Pal! ESP! in red. Not very good advice, but maybe it will help in its own odd way.
+
 #readables for riot cap
 >read riot cap
 /It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)

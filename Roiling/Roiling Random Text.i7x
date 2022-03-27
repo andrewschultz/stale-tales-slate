@@ -84,6 +84,7 @@ table of lousy hit songs	false	0	30	bzzt rule	Ordeal Reload	"Bad songs[elv-art]"
 table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestsellers[pep-clue]"	--	""
 table of songs you could write	false	0	30	bzzt rule	troves	"Songs you write on solving Troves"	--	""
 table of sleep rejects	false	0	30	am-sleeping rule	Meta Team	"Sleeping rejects"	--	"[pre-lb]"
+table of three way anagrams	false	0	2	reading-satires rule	demo dome	"Entries in [the satires] (Sparse Spares)"	""	""	"That's it. Well, they were just ideas."
 [tmc]
 
 volume megachatter rules and stubs
@@ -554,6 +555,12 @@ this is the sloganing rule:
 this is the clearing-listen rule:
 	if player is in Clangier Clearing and current action is listening, the rule succeeds;
 	the rule fails.
+
+section DEMO DOME random text rules
+
+this is the reading-satires rule:
+	if player is in Sparse Spares and current action is examining satires, the rule succeeds;
+	the rule fails;
 
 section deciding how to weight rules
 
@@ -40216,6 +40223,13 @@ blurb
 "'Yo, um, once you con me...'"
 "'Your needs ensured, yo!'"
 "'Zero pins! No prizes!'"
+
+table of three way anagrams
+blurb
+"Starlike? Stalkier! Larkiest!"
+"damneder demander, remanded"
+"deafest defeats, feasted"
+
 
 Roiling Random Text ends here.
 
