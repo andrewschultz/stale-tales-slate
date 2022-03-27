@@ -390,6 +390,23 @@ check going outside:
 	if location of player is Scene Scene, say "There's no way back out. Here's where you want to be." instead;
 	say "You'd fall off the [this-game] that way." instead;
 
+chapter no/yes
+
+the block saying no rule is not listed in any rulebook.
+the block saying yes rule is not listed in any rulebook.
+
+check saying no:
+	if solved-initials is true and player is not in scene scene:
+		if in-heptagon-puzzle is true:
+			say "You can't reverse that way. You don't need to. Worse case, you do-over and start again.";
+		else:
+			say "[if ever-heptagon-puzzle is true]Thinking [b]ON[r] was enough of a reverse of 'Noon? No! No!'[else]Just the opposite. And I don't mean saying yes.[end if]";
+		the rule succeeds;
+	say "No need for negativity. You want the opposite!";
+
+check saying yes:
+	say "You'll want the opposite of this at some point. Well, the opposite of the opposite. You'll see what I mean."
+
 chapter stating
 
 stating is an action out of world.
@@ -589,15 +606,33 @@ to say reject:
 				if there is no cmd-loc entry or location of player is cmd-loc entry:
 					say "[nudge-text entry]";
 					continue the action;
+	let itmhash be 0;
 	repeat with itm running through touchable flippables:
 		now itmhash is the hash of the printed name of itm;
 		if cmdhash is itmhash / 2:
 			say "No, no half-measures here.";
 			continue the action;
 		else if cmdhash is itmhash:
-			say "Hmm, that seems to sort of have had an effect."
+			say "Hmm, that seems to sort of have had an effect.";
 			continue the action;
-	say "There aren't very many verbs to use in [this-game], though each section has something special that needs doing. For a general list of verbs, type [b]VERBS[r]."
+	if solved-initials is true and player is not in scene scene:
+		let temp-hash be 0;
+		if the remainder after dividing cmdhash by 143260085 is 0:
+			now temp-hash is cmdhash;
+		else if the remainder after dividing firstwordhash by 143260085 is 0:
+			now temp-hash is cmdhash;
+		if temp-hash > 0:
+			if in-heptagon-puzzle is true:
+				say "You already started going [b]ON[r]. No need to overdo things.";
+				continue the action;
+			let ons be cmdhash / 143260085;
+			if ons > 2:
+				say "Your thoughts were racing too much. Simplify things.";
+				the rule succeeds;
+			else if ons is 2:
+				say "Hmm. Somehow, some way, you're overthinking things here. Well, that's your gut feeling.";
+				the rule succeeds;
+	say "There aren't very many verbs to use in [this-game], though each section has something special that needs doing. For a general list of verbs, type [b]VERBS[r].";
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";

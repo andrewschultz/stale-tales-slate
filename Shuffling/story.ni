@@ -251,9 +251,7 @@ section reg-inc
 
 ignore-line-break is a truth state that varies.
 
-to reg-inc:
-	increment the cur-score of mrlp;
-	increment the score;
+this is the post-score-check rule: the rule succeeds;
 
 book inform 6 stubs
 
@@ -1590,7 +1588,7 @@ the check for big quest item attachment rule is listed first in the check tying 
 
 check tying to (this is the check for big quest item attachment rule):
 	if tie-warn is false:
-		ital-say "while [this-game] generally maps [b]ATTACH[r] or [b]TIE X TO Y[r] to [b]PUT X ON Y[r] or [b]PUT X IN Y[r], the [b]PUT[r] syntax is generally recommended, since it is more specific.";
+		ital-say "while [this-game] generally maps [b]ATTACH[i] or [b]TIE X TO Y[i] to [b]PUT X ON Y[i] or [b]PUT X IN Y[i], the [b]PUT[i] syntax is generally recommended, since it is more specific.";
 		now tie-warn is true;
 	if noun is missile or noun is hay or noun is straw or noun is panel or noun is black door, try inserting noun into second noun instead;
 	if second noun is missile or second noun is hay or second noun is straw or second noun is panel or second noun is black door, try inserting second noun into noun instead;
