@@ -6046,7 +6046,7 @@ to decide whether can-hear-gritty:
 
 to decide whether can-hear-posh:
 	if player is in Browse Bowers, yes;
-	if player is in Econ Cone and praise spirea is reflexed, yes;
+	if player is in Econ Cone, yes;
 	no;
 
 listen-list of ordeal reload is { elmo }.
@@ -7830,7 +7830,10 @@ every turn when report-porter-knocks (this is the Report Porter Perrot Knocks ru
 		say "You're sick of the knocking, so you just answer the door, already.";
 		try opening isolani liaison instead;
 	say "[one of]Whoah! Bangish bashing at the isolani liaison[it-liaison]![or]The bangish bashing continues.[stopping]";
+	set the pronoun it to isolani liaison;
 	now knockage is true;
+
+does the player mean opening isolani liaison when knockage is true: it is very likely.
 
 to say it-liaison: set the pronoun it to the isolani liaison;
 
@@ -19908,7 +19911,7 @@ a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY"
 
 book Swell Wells
 
-Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing[one of][or], or down the un-mod mound[if mound-writing > 0], which also has writing on it[end if][stopping], or west to a Filed Field[if sorer bogey is in Swell Wells]. You think you hear something from the wells[end if][if green stain is touchable]. There's also a green stain among the wells[end if].". Swell Wells is in Others. roomnud of Swell Wells is table of Swell Wells nudges.
+Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing[one of][or], or down the un-mod mound[if mound-writing > 0], which also has writing on it[end if][stopping], or west to a Filed Field[if sorer bogey is in Swell Wells]. You think you hear something from the wells[end if][if green stain is touchable]. There's also a green stain among the wells[end if][if stucco is in Swell Wells]. You also see some red writing on stucco[end if].". Swell Wells is in Others. roomnud of Swell Wells is table of Swell Wells nudges.
 
 after printing the locale description for Swell Wells:
 	if miser ruble is off-stage:
@@ -19920,26 +19923,16 @@ after printing the locale description for Swell Wells:
 the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down to the scape space[else]down somewhere new[end if][what-on-mound]."
 
 to decide what number is mound-writing:
-	decide on touch-val of stucco + touch-val of stucco + touch-val of PSA Elp;
+	decide on touch-val of stucco + touch-val of sorer bogey + touch-val of PSA Elp;
 
 to say what-on-mound:
 	if mound-writing is 0:
 		say ". Many weird and uninteresting things are written on the mound. None are helpful any more. You got enough from it";
 		continue the action;
 		say ". [if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound";
-	if stucco is in swell wells, say ".[paragraph break]There's an advertisement in red for [stucco-ad].";
-	if sorer bogey is in swell wells, say ".[paragraph break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
+	if sorer bogey is in swell wells, say ".[paragraph break]'Ye borers, go!' is written in red. The sorer bogey from the wells seems a bit louder as you read this"; [?? sorer bogey not known yet]
+	if stucco is in swell wells, say ".[paragraph break]There's [if sorer bogey is in swell wells]also [end if]red writing on stucco";
 	if PSA Elp is in swell wells, say ".[paragraph break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail";
-
-to say what-clear:
-	if sorer bogey is not in Swell Wells and stucco is not in Swell Wells:
-		say "You got rid of some of it, and that's probably all you need to";
-	else if stucco is not in Swell Wells:
-		say "'Ye Borers, go!' is written in red";
-	else if sorer bogey is not in Swell Wells:
-		say "An advertisement for [stucco-ad] is on stucco and in red";
-	else:
-		say "Two prominent ones in red: 'Ye borers, go!' and [stucco-ad] on stucco"
 
 check inserting into un mod mound:
 	if noun is coin or noun is coins, say "Maybe make your own luck by doing something with/to the coin[if noun is coin]s." instead;
@@ -19949,10 +19942,7 @@ check going to Swell Wells for the first time: say "'Ramble, ambler!' Curtis cal
 
 chapter coconuts
 
-the stucco is scenery in Swell Wells. "One of two advertisements is for [stucco-ad], whatever that is, in red, on stucco, on the side of one of the wells.".
-
-to say stucco-ad:
-	say "[one of]ScoutCon[or]SunCotCo[in random order]"
+the stucco is boring scenery in Swell Wells. "You see red that an ad would be on stucco, for whatever reason, but you can probably [b]READ[r] the two things advertised on stucco.". bore-text of stucco is "You can really only [b]READ[r] what's, er, on stucco."
 
 a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR". parse-text of stucco is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
@@ -20005,6 +19995,8 @@ the apples are plural-named fruit. description is "Green, red, yellowish: all ki
 book Gates Stage
 
 Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The Swell Wells are back south, and important-looking gates, [if halt lath is in Gates Stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. [one of]What could be behind them? A near arena? You take a step back. Yes...it looks like you have found a secret rear entrance to the Valence Enclave, where great political debates and pronouncements are always held![or]The Valence Enclave lies ahead.[stopping]". Gates Stage is in Others. roomnud of Gates Stage is table of Gates Stage nudges.
+
+check going south in gates stage when gate-level is 2 and min-score of others is poss-score of others: say "You've done everything you possibly can. Time to see what's to the north!" instead;
 
 after looking in Gates Stage (this is the retract halt lath rule):
 	if halt lath is in Gates Stage and player has popstar passport:
