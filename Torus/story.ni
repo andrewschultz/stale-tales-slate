@@ -24,6 +24,8 @@ include Tours Roust Torus Nudges by Andrew Schultz.
 
 include Tours Roust Torus Mistakes by Andrew Schultz.
 
+include Bold Final Question Rows by Andrew Schultz.
+
 volume globals and such
 
 solved-initials is a truth state that varies.
@@ -93,9 +95,7 @@ volume flippable definitions
 a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text.
 
 when play begins:
-	repeat with F running through flippables:
-		move F to Scene Scene;
-	now maximum score is number of rooms + number of flippables;
+	now maximum score is number of rooms;
 
 volume going and rooms
 
@@ -533,8 +533,23 @@ this is the show rejected words rule:
 	say "NOTIONISTS came from oints, twice, but oint is not short for ointment but rather a verb tense of smearing with oil.";
 	say "Some other words were neat but too abstract or obscure, or they had nothing that half-anagrammed: JIPIJAPA, SASARARA (scolding), SASSARARAS, SNIFFINESSES (finess 'almost' works), SNIPPINESSES and TRISECTRICES.";
 
+after printing the name of a flippable (called fl) when detail-flippable is true:
+	say "([word-to-include of fl in upper case])";
+	continue the action;
+
+deed-spoil-warn is a truth state that varies. detail-flippable is a truth state that varies.
+
 this is the show what you missed rule:
-	say "The only opportunities for additional points are in [scene scene]. A bunch of random items are strewn around. Here [if score is maximum score - 1]is the one[else]are the ones[end if] you missed."
+	say "The only opportunities for additional points are in [scene scene]. ";
+	if deededed is false and deed-spoil-warn is false:
+		say "You could have typed [b]DEEDED[r] to bring out some new puzzles. ";
+		say "I'll make you type [b]MISSED[r] again to see spoilers for what is there.";
+		now deed-spoil-warn is true;
+	else:
+		now detail-flippable is true;
+		say "You missed [list of flippables in scene scene].";
+		now detail-flippable is false;
+	if ever-voice is false, say "[line break]You also missed a chance to have a friendly NPC help you. If you visited all the areas without solving any of the rooms, one would help you and continue to help you until you scored a point. I won't spoil it, as it's easy enough to traverse the rooms."
 
 volume parser errors
 
