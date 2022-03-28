@@ -286,11 +286,31 @@ after printing the locale description (this is the clue on complete tour rule):
 		if times-around > number of rows in table of times around:
 			decrement times-around;
 		choose row times-around in table of times around;
-		say "[clue-text entry]";
+		say "[clue-text entry][line break]";
 		now cheat-voice is true;
 	continue the action;
 
 volume game progress verb
+
+chapter deededing
+
+deededing is an action out of world.
+
+understand the command "deeded" as something new.
+
+understand "deeded" as deededing when player is in Scene Scene.
+
+deededed is a truth state that varies.
+
+carry out deededing:
+	if deededed is true, say "You already took on an additional challenge." instead;
+	say "Regardless of what [b]DEEDED[r] may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to do, but there's a lot to do! Oh, you can also still figure out what to do with [scene scene].";
+	now the right hand status line is "[score]/[number of rooms + number of flippables]";
+	repeat with fl running through flippables:
+		move fl to Scene Scene;
+	try looking;
+	now deededed is true;
+	the rule succeeds;
 
 chapter oning
 
@@ -395,6 +415,10 @@ instead of doing something with tsetse fly:
 section score
 
 check requesting the score:
+	if deededed is true:
+		say "You've gotten inside the torus. You still have to figure how to sit back and get on with your life[if deededed is false], though you can listen to the voice to try for one last pile of things to set straight[else if number of unflipped flippables is 0], especially now you've straightened out the challenges you were [b]DEEDED[r][else if number of flipped flippables is 0], and you can do so even without tackling what you were [b]DEEDED[r][else], though you've still got some stuff you were [b]DEEDED[r] to clean up, if you want[end if].";
+		say "You have figured [number of flipped flippables] of [number of flippables] things here in [scene scene].";
+		the rule succeeds;
 	say "You've figured [score] of [maximum score] areas of the Torus. [if number of unvisited rooms is 1 and score < 7][one of]Why, yes, there is a way to the center[or][stopping][else if number of unvisited rooms > 1]You may wish to explore the whole torus to see what you might be able to do[end if].";
 	the rule succeeds;
 
