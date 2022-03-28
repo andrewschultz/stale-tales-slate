@@ -51,12 +51,12 @@ procedural rule: ignore the print final score rule.
 
 section your description
 
-description of the player is "Looking at your body, you're not as strong as you used to be. In good enough shape, you hope, but those jibes about not being half the person you used to be hurt--even if they're not true.[paragraph break]You have some tats which, in a pinch, could be changed to a STAT to help you out if you need help."
+description of the player is "Looking at your body, you're not as strong as you used to be. In good enough shape, you hope, but those jibes about not being half the person you used to be hurt--even if they're not true.[paragraph break]You have some tats which, in a pinch, could be changed to a [b]STAT[r] to help you out if you need help."
 
 tats-stat is a number that varies.
 
 check taking inventory:
-	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a STAT from, if you want[end if]." instead;
+	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a [b]STAT[r] from, if you want[end if]." instead;
 
 the player carries the tats. description of tats is "[tat-desc]."
 
@@ -74,7 +74,7 @@ after examining a flippable:
 	continue the action;
 
 instead of doing something with the tats:
-	say "The tats will change as you make guesses. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command.";
+	say "The tats will change as you make guesses. You don't even have to examine them. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command.";
 	if current action is examining and tats-stat > 0, continue the action;
 
 volume dubroom definitions
@@ -219,8 +219,10 @@ to decide which number is fiss:
 	decide on number of flippables in scene scene;
 
 to say list-opt:
-	if fiss is 0:
-		say "have nothing left to do but deal with this place, as you did with the areas of the torus.";
+	if deededed is false:
+		say "don't see anything here, but a voice beckons you to do more ... if you want. Or you can just figure how to move on from adventuring";
+	else if fiss is 0:
+		say "have nothing left to do but deal with this place, as you did with the areas of the torus";
 	else if fiss is 1:
 		say "have one more thing to clear out, if you want";
 	else:
@@ -259,7 +261,7 @@ volume flippables
 
 book hams
 
-the hams are plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general.". printed name is "hams, hams"
+the hams are plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general. You get the sense they might be tougher customers than whatever you can [b]LISTEN[r] to.". printed name is "hams, hams"
 
 book item time
 
@@ -288,7 +290,7 @@ when play begins:
 	wfak;
 	say "The worst part, as you're getting older: you're maybe half the person you used to be. This, from people who never thought you were much to begin with. Still, you Got Stuff Done. But your heart was in things less. Others seemed to have better ideas. You felt you spent all your time delegating and getting credit for stuff you just signed off on.";
 	wfak;
-	say "You wanted adventure. But defeating Red Bull Burdell required changing just about every pair of things imaginable, and with Elvira, well, it was more abstract, deciding what to do or think or how to describe things. What could be left? Then, one day, a diplomat told you of distant structure. One worth visiting. A [this-game]. Nothing seemed there. But if anyone could unlock its secrets, you could.";
+	say "You wanted adventure. But defeating Red Bull Burdell required changing just about every pair of things imaginable, and with Elvira, well, it was more abstract, deciding what to do or think or how to describe things. What could be left? Then, one day, a diplomat told you of a distant structure. One worth visiting. A [this-game]. Nothing seemed there. But if anyone could unlock its secrets, you could.";
 	wfak;
 	say "You returned to the museum that held the tagged gadget and letters settler that helped you in your first two quests. You did so every few months and felt nothing. But this time, a surge! Still, they were too much a part of history to move from a museum. The curator had an idea--some stat tats that could help you, if needed.";
 	wfak;
@@ -305,7 +307,7 @@ after printing the locale description (this is the clue on complete tour rule):
 	now location of player is cluevisited;
 	if number of cluevisited rooms is 7:
 		now all rooms are not cluevisited;
-		if ever-heptagon-puzzle is true:
+		if ever-heptagon-puzzle is true and solved-heptagon is false:
 			say "Hmm. Nothing new to do. You should really try going [b]ON[r] again.";
 			continue the action;
 		increment times-around;
@@ -418,7 +420,9 @@ ever-voice is a truth state that varies.
 to say sestet: say "'Sestet! Set! SET!!!'"
 
 check listening:
-	if cheat-voice is false, say "Nothing... yet..." instead;
+	say "[one of]Ugh. You sometimes have to listen twice, to make sure you heard stuff right.[paragraph break][or][stopping]";
+	if cheat-voice is false and ever-voice is false, say "Nothing... yet... funny, you almost expected something by ABBA." instead;
+	if item time is touchable, try examining item time instead;
 	if score is 0:
 		say "[one of]A voice whispers [sestet][line break]Maybe that will help a bit, you think. But where is the voice coming from? You can't see anyone, or anything.[paragraph break]Wait. That's it. It's got to be something small. A tsetse fly! Of course![or]The tsetse fly again: [sestet][stopping]";
 		move tsetse backdrop to all perimeter rooms;
@@ -486,7 +490,7 @@ carry out stating:
 	if tats-stat is 1:
 		say "You gaze at your tats to get an extra stat from them when you try to guess what to do.";
 	else:
-		say "Your tats are now in stat-giving mode. STAT again will give even more potentially revealing stats when you make guesses";
+		say "Your tats are now in stat-giving mode. [b]STAT[r] again will give even more potentially revealing stats when you make guesses.";
 	increment tats-stat;
 	the rule succeeds;
 
@@ -600,7 +604,7 @@ this is the show rejected words rule:
 	say "Some other words were neat but too abstract or obscure, or they had nothing that half-anagrammed: JIPIJAPA, SASARARA (scolding), SASSARARAS, SNIFFINESSES (finess 'almost' works), SNIPPINESSES and TRISECTRICES.";
 
 after printing the name of a flippable (called fl) when detail-flippable is true:
-	say "([word-to-include of fl in upper case])";
+	say "([b][word-to-include of fl in upper case][r])";
 	continue the action;
 
 deed-spoil-warn is a truth state that varies. detail-flippable is a truth state that varies.
