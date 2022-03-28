@@ -26,6 +26,8 @@ include Tours Roust Torus Mistakes by Andrew Schultz.
 
 include Bold Final Question Rows by Andrew Schultz.
 
+include First Word Retry by Andrew Schultz.
+
 volume globals and such
 
 last-clue-thing is a thing that varies. last-clue-thing is yourself.
@@ -760,3 +762,28 @@ to say reject:
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";
+
+volume First Word Retry extra stuff
+
+Include (-
+Replace LanguageVerb;
+-) after "Definitions.i6t".
+
+Include (-
+[ LanguageVerb i;
+	switch (i) {
+	  'i//','inv','inventory':
+			   print "take inventory";
+	  'l//':   print "look";
+	  'r//','read':   print "read";
+	  'on': print "get on with your quest";
+	  'no': print "say no";
+	  'yes': print "say yes";
+	  'x//':   print "examine";
+	  'z//':   print "wait";
+	  default: rfalse;
+	}
+	rtrue;
+];
+
+-) after "Language.i6t".
