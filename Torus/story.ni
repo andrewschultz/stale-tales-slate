@@ -235,7 +235,23 @@ check examining stats tat:
 
 volume flippables
 
-the hams are flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general.".
+book hams
+
+the hams are plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general.".
+
+book item time
+
+item time is a flippable. it is scenery. "'Item time ... item time ...' a voice whispers. You don't know what sort of item you should be looking for.". guess-right-text is "Now you know what to look for, you find something interesting , slightly shiny ... yes! A mineral that can be used as export, in trade! You're not sure for what, but then, that sort of thing isn't your specialty. Perhaps your old friends Len Craig from the Clangier Clearing, or Curtis from Rustic Citrus, could help with the details.". word-to-include is "mimetite". sts-hash of item time is 679968252.
+
+book some emos
+
+there are plural-named flippables called some emos. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "They complain that that's not the sort of thing they want to study, but somehow, you manage to convince them it's what they were meant to. They grow noticeably more cheery and open to actually figuring stuff out.". description is "They look to be in their own little cell--well, mentally speaking, at least.". word-to-include is "mesosome". sts-hash of emos is 725015610.
+
+book since since
+
+Since Since is a flippable. It is scenery. "A nonsensical voice whispers 'since ... since ...' It's hard to tell what it wants or what it doesn't want or what it is trying to imply.". guess-right-text is "You see the nonsensical voice for what it is. Insciences! Ignorance! While you can't just wave your hand and make it go away, just identifying it is a huge first step.". word-to-include is "insciences". sts-hash of since since is 713972028.
+
+Reps Reps is a flippable. It is scenery. "A voice keeps whispering 'Reps ... reps ...' but what do the reps lead to? How are they productive?". guess-right-text is "Of course! You've always wanted to show you were good with words in a more than abstract sense. The more you practice writing, the more you will feel okay sending a work to pre-press.". word-to-include is "prepress". sts-hash of reps reps is 781739674.
 
 volume when play begins
 
