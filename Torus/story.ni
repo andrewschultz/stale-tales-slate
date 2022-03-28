@@ -513,6 +513,8 @@ check saying no:
 check saying yes:
 	say "You'll want the opposite of this at some point. Well, the opposite of the opposite. You'll see what I mean."
 
+understand "yes yes" and "yesyes" as saying yes.
+
 chapter stating
 
 stating is an action out of world.
@@ -607,6 +609,10 @@ after reading a command:
 		if ever-voice is true and score is 1:
 			say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
 		reject the player's command;
+	if at-on-puzzle:
+		if word number 1 in the player's command is "n" or word number 1 in the player's command is "o":
+			say "Weird! You felt halfway there, thinking that. But you froze up at the wrong moment.";
+			reject the player's command;
 	if location of player is scene scene:
 		repeat with F running through touchable flippables:
 			if the player's command exactly matches the text "[word-to-include of F]":
@@ -618,6 +624,20 @@ after reading a command:
 				now last-clue-thing is yourself;
 				reject the player's command;
 
+to decide whether at-on-puzzle:
+	if ever-heptagon-puzzle is false and all perimeter dubrooms are solved, yes;
+	no;
+
+Include (-
+
+	#Undef OOPS1__WD;
+	Constant OOPS1__WD = 'o o';
+	#Undef OOPS2__WD;
+	Constant OOPS2__WD = 'o o';
+	#Undef OOPS3__WD;
+	Constant OOPS3__WD = 'oops';
+
+-) after "Language.i6t".
 
 volume help stuff
 
