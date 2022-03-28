@@ -299,6 +299,20 @@ book reps reps
 
 Reps Reps is a flippable. It is scenery. "A voice keeps whispering 'Reps ... reps ...' but what do the reps lead to? How are they productive?". guess-right-text is "Of course! You've always wanted to show you were good with words in a more than abstract sense. The more you practice writing, the more you will feel okay sending a work to pre-press.". word-to-include is "prepress". sts-hash of reps reps is 781739674.
 
+volume backdrops
+
+the torus is a backdrop. "It's, well, round, and it's big and wide enough, you won't fall off."
+
+instead of doing something other than examining the torus: say "You can't do much with or to the torus besides [b]EXAMINE[r] it."
+
+the cylinder is a backdrop. "[which-cylinder-look]"
+
+to say which-cylinder-look:
+	choose row (score + 1) in table of cylinder descriptions;
+	say "[texty entry]";
+
+instead of doing something other than examining the torus: say "You can't do much with or to the torus besides [b]EXAMINE[r] it."
+
 volume when play begins
 
 when play begins:
