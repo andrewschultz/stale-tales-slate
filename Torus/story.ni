@@ -109,9 +109,6 @@ volume flippable definitions
 
 a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text. a flippable can be unflipped or flipped. a flippable is usually unflipped.
 
-when play begins:
-	now maximum score is number of rooms;
-
 volume going and rooms
 
 book directions
@@ -314,6 +311,11 @@ to say which-cylinder-look:
 instead of doing something other than examining the torus: say "You can't do much with or to the torus besides [b]EXAMINE[r] it."
 
 volume when play begins
+
+when play begins:
+	move torus backdrop to all perimeter dubrooms;
+	move cylinder backdrop to all perimeter dubrooms;
+	now maximum score is number of rooms;
 
 when play begins:
 	now sts-sequence is 3;
@@ -578,7 +580,7 @@ after reading a command:
 		now location of player is solved;
 		say "[guess-right-text of location of player][line break]";
 		increment the score;
-		choose row score in table of progress;
+		choose row (number of solved dubrooms) in table of progress;
 		say "[texty entry][line break]";
 		if there is a ruley entry, process the ruley entry;
 		process the notify score changes rule;
@@ -606,11 +608,12 @@ after reading a command:
 	if location of player is scene scene:
 		repeat with F running through touchable flippables:
 			if the player's command exactly matches the text "[word-to-include of F]":
-				increment the score;
 				now F is off-stage;
+				now F is flipped;
 				say "[guess-right-text of F][line break]";
 				increment the score;
 				process the notify score changes rule;
+				now last-clue-thing is yourself;
 				reject the player's command;
 
 
