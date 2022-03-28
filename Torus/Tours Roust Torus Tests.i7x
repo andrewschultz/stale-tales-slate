@@ -14,9 +14,15 @@ test p2c with "on/aaa/aaa/aaa/aaa/aaa/aaa".
 
 test p2d with "on/bbb/bbb/bbb/bbb/bbb/bbb".
 
-test p2y with "on/aaa/aa/aaa/aaa/aa/aaa/in/senescence".
+test p2y with "on/aaa/aa/aaa/aaa/aa/aaa/in".
 
-test bigone with "test p1/test p2a/test p2b/test p2c/test p2d".
+test p3 with "deeded/shammash/mimetite".
+
+test rotator with "test p1/test p2a/test p2b/test p2c/test p2d".
+
+test justwin with "test p1/test p2y/senescence".
+
+test allpoints with "test p1/test p2y/test p3/senescence".
 
 Tours Roust Torus Tests ends here.
 
