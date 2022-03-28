@@ -142,6 +142,16 @@ to decide which number is dist of (x - a direction):
 	if x is a3 or x is b3, decide on 3;
 	decide on 0;
 
+the examine directions rule is not listed in any rulebook.
+
+check examining a direction when location of player is perimeter:
+	if noun is inside or noun is guessdir of location of player, try examining cylinder instead;
+	if noun is outside or noun is opposite of guessdir of location of player:
+		if location of player is perimeter, say "You need to go inward." instead;
+		say "You see no way back to the torus, but it's nicer here, anyway." instead;
+	if noun is rotational, say "The torus [if number of unvisited perimeter rooms is 0]only has seven areas, as you've found from walking around[else]isn't too big around. It seems sturdy enough, though you haven't been all around it yet." instead;
+	say "You can't go in any of the staidard directions."
+
 book basic going
 
 definition: a direction (called d) is hep-illegal:
@@ -175,7 +185,15 @@ after going when in-heptagon-puzzle is true:
 	continue the action;
 
 check going a not rotational direction:
-	if player is in Scene Scene, say "You need to lay down roots first." instead;
+	if player is in Scene Scene, say "Maybe you'll explore what's around, but you need to lay down roots first." instead;
+	if noun is opposite of guessdir of location of player:
+		say "(converting to inside, based on the guessed direction of [location of player])[paragraph break]";
+		try going inside;
+		the rule succeeds;
+	if noun is guessdir of location of player:
+		say "(converting to outside, based on the guessed direction of [location of player])[paragraph break]";
+		try going outside;
+		the rule succeeds;
 	say "Directions other than inside (once you find what's in the center of the torus), outside and the rotational directions (A, AA, AAA, B, BB, BBB) are meaningless here." instead;
 
 check going inside:
