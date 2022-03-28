@@ -28,6 +28,8 @@ include Bold Final Question Rows by Andrew Schultz.
 
 volume globals and such
 
+last-clue-thing is a thing that varies. last-clue-thing is yourself.
+
 solved-initials is a truth state that varies.
 
 in-heptagon-puzzle is a truth state that varies.
@@ -62,7 +64,14 @@ to say tat-desc:
 	if location of player is solved:
 		say "The tats are blank. Well, you don't need them. You figured what to do here";
 		continue the action;
-	say "[how-many-right of printed name of location of player]";
+	if last-clue-thing is not yourself:
+		say "[how-many-right of printed name of last-clue-thing]";
+	else:
+		say "[how-many-right of printed name of location of player]";
+
+after examining a flippable:
+	now last-clue-thing is the noun;
+	continue the action;
 
 instead of doing something with the tats:
 	say "The tats will change as you make guesses. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command.";
@@ -86,13 +95,13 @@ to say heptround:
 	if location of player is not solved:
 		say "[clue-text of location of player]";
 		if number of visited dubrooms is 7 and heptcount is 0:
-			say ".[one of] You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change, so you need to do something new, here[or][stopping]";
+			say ". [one of]You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change, so you need to do something new, here[or][paragraph break][stopping]";
 	else:
 		say "[done-text of location of player]"
 
 volume flippable definitions
 
-a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text.
+a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text. a flippable can be unflipped or flipped. a flippable is usually unflipped.
 
 when play begins:
 	now maximum score is number of rooms;
@@ -237,7 +246,7 @@ volume flippables
 
 book hams
 
-the hams are plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general.".
+the hams are plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general.". printed name is "hams, hams"
 
 book item time
 
@@ -245,11 +254,15 @@ item time is a flippable. it is scenery. "'Item time ... item time ...' a voice 
 
 book some emos
 
-there are plural-named flippables called some emos. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "They complain that that's not the sort of thing they want to study, but somehow, you manage to convince them it's what they were meant to. They grow noticeably more cheery and open to actually figuring stuff out.". description is "They look to be in their own little cell--well, mentally speaking, at least.". word-to-include is "mesosome". sts-hash of emos is 725015610.
+emos are a plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "They complain that that's not the sort of thing they want to study, but somehow, you manage to convince them it's what they were meant to. They grow noticeably more cheery and open to actually figuring stuff out.". description is "They look to be in their own little cell--well, mentally speaking, at least.". word-to-include is "mesosome". sts-hash of emos is 725015610. printed name of emos is "some emos".
+
+understand "some emos" and "some" as emos.
 
 book since since
 
 Since Since is a flippable. It is scenery. "A nonsensical voice whispers 'since ... since ...' It's hard to tell what it wants or what it doesn't want or what it is trying to imply.". guess-right-text is "You see the nonsensical voice for what it is. Insciences! Ignorance! While you can't just wave your hand and make it go away, just identifying it is a huge first step.". word-to-include is "insciences". sts-hash of since since is 713972028.
+
+book reps reps
 
 Reps Reps is a flippable. It is scenery. "A voice keeps whispering 'Reps ... reps ...' but what do the reps lead to? How are they productive?". guess-right-text is "Of course! You've always wanted to show you were good with words in a more than abstract sense. The more you practice writing, the more you will feel okay sending a work to pre-press.". word-to-include is "prepress". sts-hash of reps reps is 781739674.
 
@@ -610,9 +623,11 @@ to say how-many-right of (myit - indexed text):
 	let x1 be filtered name of myit;
 	let count be 0;
 	let binary be 0;
+	let q be location of player;
+	if last-clue-thing is not the player, now q is last-clue-thing;
 	repeat with y running from 1 to number of characters in x1:
 		now binary is 2 * binary;
-		if character number y in x1 is character number y in word-to-include of location of player:
+		if character number y in x1 is character number y in word-to-include of q:
 			increment binary;
 			increment count;
 	if tat-cheat-regular:
@@ -621,6 +636,8 @@ to say how-many-right of (myit - indexed text):
 		say ".[paragraph break]CHEAT RELOAD[paragraph break]";
 	if tat-cheat-extra:
 		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1]";
+	if last-clue-thing is not yourself, say ".[paragraph break]The stat tats must refer to [the last-clue-thing]";
+	if debug-state is true, say ".[paragraph break]DEBUG NOTE: Comparing [x1] vs [word-to-include of q]";
 
 to decide which number is exp-1 of (n - a number):
 	let temp be 0;
