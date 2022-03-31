@@ -127,7 +127,7 @@ the description of a dubroom is usually "[torus-fake-dir of the item described].
 
 volume flippable definitions
 
-a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text. a flippable can be unflipped or flipped. a flippable is usually unflipped.
+a flippable is a kind of thing. a flippable has text called word-to-include. a flippable has a number called sts-hash. a flippable has text called guess-right-text. a flippable can be unflipped or flipped. a flippable is usually unflipped. a flippable can be audible or physical. a flippable is usually audible.
 
 volume going and rooms
 
@@ -395,6 +395,7 @@ volume clue-visiting
 times-around is a number that varies.
 
 after printing the locale description (this is the clue on complete tour rule):
+	if in-heptagon-puzzle is true, continue the action;
 	if location of player is scene scene, continue the action;
 	if score > 0 and ever-heptagon-puzzle is false, continue the action;
 	now location of player is cluevisited;
@@ -426,11 +427,11 @@ deededed is a truth state that varies.
 carry out deededing:
 	if deededed is true, say "You already took on an additional challenge." instead;
 	say "Regardless of what [b]DEEDED[r] may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to do, but there's a lot to do! Oh, you can also still figure out what to do with [scene scene].";
-	now the right hand status line is "[score]/[number of rooms + number of flippables]";
 	repeat with fl running through flippables:
 		move fl to Scene Scene;
 	try looking;
 	now deededed is true;
+	now maximum score is number of dubrooms + number of flippables;
 	the rule succeeds;
 
 chapter oning
@@ -461,7 +462,7 @@ carry out oning:
 		now in-heptagon-puzzle is true;
 	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping].";
 	now ever-heptagon-puzzle is true;
-	now all rooms are not hep-traversed;
+	now all dubrooms are not hep-traversed;
 	now location of player is hep-traversed;
 	now heptagon-path is {};
 	now init-hept-dir is up;
