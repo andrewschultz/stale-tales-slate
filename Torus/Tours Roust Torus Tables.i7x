@@ -2,29 +2,16 @@ Version 1/220314 of Tours Roust Torus Tables by Andrew Schultz begins here.
 
 "This contains tables that aren't nudges but seem better away from the main code."
 
-volume center passage status
-
-table of center statuses
-cylinder-desc	cylinder-block
-"Looking inward, the center of the torus seems slightly blurry, as if something should be there"	"There's nothing to go inside to, yet. Well, nothing enough. And no way to get there. Maybe figuring what to do elsewhere will help."
-"It looks like there's a hologram in the center of the torus: a cylindrical silo, or something. But you have no way to enter"	"There's something to maybe go inside but no way to get there."
-"The cylinder at the center of the torus looks much more real now. But it is too solid to enter even if you had a passage"	"The cylinder in the center of the torus probably has something in it, but you have no way to get there or get in."
-"You think you can see a crack here or there in the cylinder at the center of the torus. No way to get there, though"	"You still don't have a passage to the cylinder or a way in."
-"You're pretty sure you see the faint outline of a door--wait, more than one outline--leading into the cylinder at the center of the torus. One for each area of the torus, you'd guess"	"Even if you could make it to the cylinder, the door wouldn't seem to open."
-"The cylinder now seems to have doors with handles. But there is no way to approach it"	"You must be close to being able to get near the cylinder."
-"There seems to almost be a walkway to the cylinder at the center from each area of the torus. But it doesn't quite look solid enough. Yet"	"Maybe if the walkway were a bit more solid."
-"The walkways to the cylinder at the center seem solid. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r]"	"You walk to the center of the torus. The door nearby opens readily. You enter and fall down a slope..."
-
 volume times around
 
 voice-listen is a truth state that varies.
 
 table of times around
 clue-text
-"You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to listen. [oh-voice]"
-"You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you had to TAN ANT behind Store Y. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will make you recall. [oh-voice]"
-"You've run around the torus again. You remember now! When you had to TAN the ANT! It was a NATANT ant! Maybe that will help you here. [oh-voice]"
-"Ugh. Tricky. You remember the coins Curtis gave you back at Rustic Citrus for finding those fruits, after you got rid of Elvira. You made them icons, then sonic as well. Or was it the other way around? But they inspired one more thing. A weird word. One that helped you be better not at anagramming, but putting words together snappily What was it? [oh-voice]"
+"You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to [b]LISTEN[r]."
+"You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you managed to [b]TAN ANT[r] Store Y. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will make you recall. [oh-voice]"
+"You've run around the torus again. You remember now! When you had to [b]TAN ANT[r]! It was a [b]NATANT[r] ant! Maybe that will help you here. [oh-voice]"
+"Ugh. Tricky. You remember the coins Curtis gave you back at Rustic Citrus for finding those fruits, after you got rid of Elvira. You made them icons, then sonic as well. Or was it the other way around? But they inspired one more thing. A weird word. One that helped you be better not at anagramming, but putting words together snappily. What was it? [oh-voice]"
 "Ah yes. That's what the sonic coins gave you. CONCISIONS! [oh-voice]"
 "Tan ant, natant. Sonic coins, concisions. [oh-voice]"
 "You feel hounded [one of][or]once again [stopping]by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is."
@@ -54,18 +41,42 @@ to say rest-of-tor:
 	else:
 		say "all"
 
+volume the cylinder
+
+table of cylinder descriptions
+texty
+"Man! It's blurry. You're really seeing double. Or is it actually wobbling?"
+"Oh dear! The cylinder's not as wide as you thought, now it's started wobbling a bit. But you can't see any serious detail."
+"The cylinder's not wobbling as badly as it did, but you don't see any way in."
+"The cylinder's almost stopped wavering, but you still can't see anything more."
+"Now that the cylinder's stopped wavering so much, you think you see the outline of a door."
+"The door on the cylinder seems to have a handle. You're not sure."
+"You can see almost half a path--the sort you'd fall through--leading to the cylinder at the center."
+"The cylinder looks very solid. You have a path there. And it seems to have a door outline. The door seems to swing in and out randomly, so you can enter it. But you can't see what's inside until you get nearer [b]INSIDE[r]."
+
+table of center statuses
+cylinder-desc	cylinder-block
+"Looking inward, you see a cylinder at the center of the torus. It's very poorly defined, though"	"There's nothing to go inside to, yet. Well, nothing enough. And no way to get there. Maybe figuring what to do elsewhere will help."
+"The cylinder in the center seems less blurry and wobbly than when you started"	"There's something to maybe go inside but no way to get there."
+"The cylinder at the center of the torus has almost completely stopped wobbling"	"The cylinder in the center of the torus probably has something in it, but you have no way to get there or get in."
+"The cylinder at the center of the torus looks much more real now, but there's no entry"	"You still don't have a passage to the cylinder or a way in."
+"The cylinder now has a fuzzy outline of a door in it."	"Even if you could make it to the cylinder, the door wouldn't seem to open."
+"The door to the cylinder at the center of the torus is better defined now"	"You must be close to being able to get near the cylinder."
+"The cylinder at the center of the torus now seems to have doors with handles. But there is no way to approach it"	"Maybe if the walkway were a bit more solid."
+"You can see a door swinging in and out, which would allow you into the cylinder at the center of the torus. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r], or figure a way to"	"You walk to the center of the torus. The door nearby opens readily. You enter and fall down a slope..."
+
 volume point progress table
 
 table of progress
 ruley	texty
-bye-bye-tsetse rule	"A sort of cylindrical hologram appears in the center of the torus. More progress!"
---	"The cylindrical hologram grows firmer. But there's no way to get there! Yet."
---	"The cylinder in the center of the torus rumbles some more. It's no longer a solid block. But you can't see a door outline yet."
---	"Yes. You're sure you see a door in the cylinder now."
---	"Yes. The doors now have handles. They seem to open briefly, as if to beckon you, but ... not yet."
---	"Well now! A rainbow-like path appears to lead you to the center from here or, well, the other places you visited, to the center. But you don't trust it yet. You have a bit more."
-prep-traversal rule	"The path to the center of the torus grows firmer. You try to rush inward, but something invisible bounces you back. Perhaps there's one more thing to do. Strange. You seem to have anagrammed everything."
-bye-dude rule	"That's all. You've found a new home, one where you don't have to do anything, but you'd like to. [if score is number of rooms]That stuff you put off here, well, you can take care of it later[else if score < maximum score]You made a good start at changing things right here, right now, but there's no rush[else]You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more[end if]. And yet the lessons you applied ruling Yorpwald will work here, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later."
+bye-bye-tsetse rule	"The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too."
+--	"The cylinder continues to straighten up. It's barely wobbling now."
+--	"The cylinder -- well, it's almost still, but you can't make anything out there, yet."
+--	"The cylinder stops wavering. You're pretty sure you can see a door in it."
+--	"The cylinder clears up some more. Yes, that's definitely a door. And you can see a handle on it. You think!."
+--	"Well now! A rainbow-like path appears to lead you to the center cylinder from here, as well as everywhere else you visited. But you don't trust it yet. You sense there's just a bit more to do here."
+prep-traversal rule	"The path to the center of the torus grows firmer. You try to rush inward, but something invisible bounces you back. Perhaps there's one more thing to do. Strange. You seem to have figured out every area of the torus."
+bye-dude rule	"That's all. You've found a new home, one where you don't have to do anything, but you'd like to. [if score is number of rooms]That stuff that wasn't [b]DEEDED[r], well, you can take care of it later[else if score < maximum score]You made a good start at changing things right here, right now, but there's no rush[else]You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more[end if]. And yet the lessons you applied ruling Yorpwald will work here in [the strainer terrains], too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later."
 
 this is the bye-bye-tsetse rule:
 	remove tsetse from play;
@@ -74,10 +85,28 @@ this is the prep-traversal rule:
 	now solved-initials is true;
 	process the clue ON rule;
 
+to decide whether maxed-it:
+	if score is maximum score and deededed is true, yes;
+	no;
+
 this is the bye-dude rule:
 	process the notify score changes rule;
+	say "Soon after, you introduce yourself to people in [the strainer terrains]. They're glad to have met you, and they even organize a celebration! There are all sorts of foods to find and make. Yet there is one great delicacy. In the rivers float a sort of fish. You've never seen anything like it. Very exotic and tasty! But it's been impossible for anyone to catch.";
+	wfak;
+	if maxed-it:
+		say "You get close, but you can't help thinking ... if you knew the fishes['] true name, just as you learned the true nature of other things through anagrams, you'd know what to do. You futz with 'terrains' and 'terrain' for a while, but no.";
+		wfak;
+		say "Then it hits you! Why, [the terrains] are inside the [this-game-noi]! That cuts things down! You ponder the double-letter anagrams, and aha, yes, that's it.";
+		wfak;
+		say "SOURTROUTS!";
+		wfak;
+		say "Armed with this reasoning, you're able to catch a few. They're wonderfully delicious, but you also know they're part of the delicate ecosystem and such, so they should only be reserved for special occasions. Like this one. And the sourtrouts make it very special indeed!";
+		wfak;
+		say "For many years, you are the only one to catch the sourtrouts at a special ceremony, but with your teaching, others get closer. One day an eager youth manages to catch one. You are happy for them, and proud. You are also glad people will not have to rely on you for any future anagram-related disasters. And yet you feel in no way obsolete. It seems once a week you find the true name of some curiosity of nature in [the strainer terrains]. It's nice to be able to, with no pressure.";
+	else:
+		say "You get closer than anyone else, but it's so tricky, trickier even than clearing the torus[if deededed is true] and figuring what to do with everything else here[end if]. Maybe you'll find how to do so some day. Still, the celebration goes well. You're comfortable here.";
 	end the story finally saying "Feats! Fates-Feast! Taffetases!";
-	if score is maximum score and deededed is true and ever-voice is true:
+	if maxed-it and ever-voice is true:
 		choose row with final response rule of the show what you missed rule in Table of Final Question Options;
 		blank out the whole row;
 	follow the shutdown rules;
