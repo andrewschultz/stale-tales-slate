@@ -431,6 +431,8 @@ understand the command "on" as something new.
 
 understand "on" as oning.
 
+zero-one-warn is a truth state that varies.
+
 carry out oning:
 	if solved-initials is false, say "You're not ready to really go on yet. But you'll know when you are." instead;
 	if in-heptagon-puzzle is true, say "You're already in the process of going on." instead;
@@ -442,6 +444,54 @@ carry out oning:
 	now location of player is hep-traversed;
 	now heptagon-path is {};
 	now init-hept-dir is up;
+	now on-start-room is location of player;
+	if zero-one-warn is false:
+		ital-say "since the map of Tours Roust Torus is circular, you can use the verbs [b]0[i] and [b]1[i] to track the rooms as numbers to make things a bit easier, here.";
+		now zero-one-warn is true;
+	the rule succeeds;
+
+on-base is a number that varies. on-base is -1.
+
+after printing the name of a room (called rm) when in-heptagon-puzzle is true and on-base > -1:
+	say " ([cur-on-index of rm])";
+	continue the action;
+
+section zerobasing
+
+zerobasing is an action out of world.
+
+understand the command "0" as something new.
+
+understand "0" as zerobasing when zero-one-warn is true.
+
+carry out zerobasing:
+	if on-base is 0:
+		say "No longer mapping rooms to numbers.";
+		now on-base is -1;
+	else:
+		say "Now the initial room when you type [b]ON[r] is given a value of zero.";
+		now on-base is 0;
+		if debug-state is true, say "[list of perimeter rooms].";
+	now zero-one-warn is true;
+	the rule succeeds;
+
+section onebasing
+
+onebasing is an action out of world.
+
+understand the command "1" as something new.
+
+understand "1" as onebasing when zero-one-warn is true.
+
+carry out onebasing:
+	if on-base is 1:
+		say "No longer mapping rooms to numbers.";
+		now on-base is -1;
+	else:
+		say "Now the initial room when you type [b]ON[r] is given a value of one.";
+		now on-base is 1;
+		if debug-state is true, say "[list of perimeter rooms].";
+	now zero-one-warn is true;
 	the rule succeeds;
 
 section failure
