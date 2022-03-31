@@ -572,10 +572,28 @@ ever-voice is a truth state that varies.
 
 to say sestet: say "'Sestet! Set! SET!!!'"
 
+definition: a thing (called th) is end-bonus-hear:
+	unless th is touchable, no;
+	unless th is flippable, no;
+	unless th is audible, no;
+	yes;
+
+after printing the name of a flippable (called fl) when listening:
+	say "'";
+	continue the action;
+
+before printing the name of a flippable (called fl) when listening:
+	say "'";
+	continue the action;
+
 check listening:
+	if deededed is false and location of player is Scene Scene:
+		say "A voice whispers [b]DEEDED[r] ... [b]DEEDED[r] ... you're torn between just figuring what to do here and moving on, because 'deeded' would probably involve signing a lot of boring contracts, or just figuring how to settle in quickly.";
+		the rule succeeds;
+	let ebh be number of end-bonus-hear things;
+	if ebh  > 0, say "You hear [if ebh is 1]one last voices[else]various voices[end if] focusing on a specific word: [list of end-bonus-hear things]. You can probably [b]EXAMINE[r] one for more details." instead;
 	say "[one of]Ugh. You sometimes have to listen twice, to make sure you heard stuff right.[paragraph break][or][stopping]";
 	if cheat-voice is false and ever-voice is false, say "Nothing... yet... funny, you almost expected something by ABBA." instead;
-	if item time is touchable, try examining item time instead;
 	if score is 0:
 		say "[one of]A voice whispers [sestet][line break]Maybe that will help a bit, you think. But where is the voice coming from? You can't see anyone, or anything.[paragraph break]Wait. That's it. It's got to be something small. A tsetse fly! Of course![or]The tsetse fly again: [sestet][stopping]";
 		move tsetse backdrop to all perimeter rooms;
