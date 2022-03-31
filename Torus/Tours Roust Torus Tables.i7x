@@ -83,7 +83,6 @@ this is the bye-bye-tsetse rule:
 
 this is the prep-traversal rule:
 	now solved-initials is true;
-	process the clue ON rule;
 
 to decide whether maxed-it:
 	if score is maximum score and deededed is true, yes;

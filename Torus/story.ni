@@ -221,6 +221,9 @@ after going when in-heptagon-puzzle is true:
 		now in-heptagon-puzzle is false;
 	continue the action;
 
+check going a rotational direction when player is in scene scene:
+	say "You don't need to worry about walking around the torus any more here, thankfully. Just sit back and figure what to change and now." instead;
+
 check going a not rotational direction:
 	if player is in Scene Scene, say "Maybe you'll explore what's around, but you need to lay down roots first." instead;
 	if noun is opposite of guessdir of location of player:
@@ -756,10 +759,9 @@ after reading a command:
 		say "[guess-right-text of location of player][line break]";
 		increment the score;
 		choose row (number of solved dubrooms) in table of progress;
-		say "[texty entry][line break]";
+		say "[line break][texty entry][line break]";
 		if there is a ruley entry, process the ruley entry;
-		process the notify score changes rule;
-		say "[b][location of player][r][line break]";
+		say "[line break][b][location of player][r][line break]";
 		let got-one be false;
 		repeat through table of room combos:
 			unless location of player is room1 entry or location of player is room2 entry:
@@ -774,11 +776,11 @@ after reading a command:
 				say "Oops. There is a very very odd bug here. It won't affect you winning the game, but you'll miss out on story.";
 			now got-one is true;
 			break;
-			reject the player's command;
 		if got-one is false:
 			say "Oops. We should have done something here, but we didn't.";
 		if ever-voice is true and score is 1:
 			say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
+		process the notify score changes rule;
 		reject the player's command;
 	if at-on-puzzle:
 		if word number 1 in cmd-lo is "n" or word number 1 in cmd-lo is "o":
