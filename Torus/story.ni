@@ -616,9 +616,22 @@ The print final score rule is not listed in for printing the player's obituary.
 volume parsing
 
 after reading a command:
+	if location of player is not solved:
+		repeat through table of pre-brushoffs:
+			if location of player is not my-room entry, next;
+			if the player's command matches the regular expression "\b[my-topic entry]\b":
+				say "[my-brushoff entry][line break]";
+				reject the player's command;
+	if location of player is solved:
+		repeat through table of post-brushoffs:
+			if location of player is not my-room entry, next;
+			if the player's command matches the regular expression "\b[my-topic entry]\b":
+				say "[my-brushoff entry][line break]";
+				reject the player's command;
 	if the player's command exactly matches the text "[word-to-include of location of player]":
 		if location of player is solved:
 			say "Already got that.";
+			the rule succeeds;
 		now location of player is solved;
 		say "[guess-right-text of location of player][line break]";
 		increment the score;
@@ -780,7 +793,7 @@ to say reject:
 		if location is solved:
 			say "You already figured what to do here.";
 		else if tats-stat is 0:
-			say "Hmm, rearrange things.";
+			say "This area of the torus sways slightly. You must have done something, but not everything, right.";
 		else:
 			say "[how-many-right of the player's command].";
 		continue the action;
@@ -788,7 +801,7 @@ to say reject:
 		repeat through table of nudge hashes:
 			if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
 				if there is no cmd-loc entry or location of player is cmd-loc entry:
-					say "[nudge-text entry]";
+					say "[nudge-text entry][line break]";
 					continue the action;
 	let itmhash be 0;
 	repeat with itm running through touchable flippables:
@@ -797,7 +810,7 @@ to say reject:
 			say "No, no half-measures here.";
 			continue the action;
 		else if cmdhash is itmhash:
-			say "Hmm, that seems to sort of have had an effect.";
+			say "Hmm, [the itm] seems to waver a bit. You must be on the right track to change [the itm], here.";
 			continue the action;
 	if solved-initials is true and player is not in scene scene:
 		let temp-hash be 0;
@@ -821,6 +834,8 @@ to say reject:
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";
 
+volume parser check tables
+
 volume First Word Retry extra stuff
 
 Include (-
@@ -834,7 +849,7 @@ Include (-
 			   print "take inventory";
 	  'l//':   print "look";
 	  'r//','read':   print "read";
-	  'on': print "get on with your quest";
+	  'on': print "move on in your quest";
 	  'no': print "say no";
 	  'yes': print "say yes";
 	  'x//':   print "examine";
