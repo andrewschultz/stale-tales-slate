@@ -172,23 +172,43 @@ check examining a direction when location of player is perimeter:
 book basic going
 
 definition: a direction (called d) is hep-illegal:
+	if init-hept-dir is up, no;
 	let r1 be whether or not d is clockwise;
 	let r2 be whether or not init-hept-dir is counterclockwise;
 	if r1 is r2, yes;
 	no;
 
+to say skipped-room of (rm - a room) and (d - a direction):
+	if d is a2:
+		say "[the room a1 of rm] doesn't";
+	else if d is b2:
+		say "[the room b1 of rm] doesn't";
+	else if d is a3:
+		say "[the room a1 of rm] and [the room a2 of rm] don't";
+	else if d is b3:
+		say "[the room b1 of rm] and [the room b2 of rm] don't";
+	else:
+		say "(BUG IN SKIPPED-ROOM FINDING CODE: [rm] and [d]) doesn't/don't";
+
 check going when in-heptagon-puzzle is true:
 	if noun is not rotational, continue the action;
-	if noun is a1 or noun is b1, say "Odd. You feel a jab as you try to walk over. Maybe you have to make a bit more of a jump." instead;
+	if noun is a1 or noun is b1, say "Odd. You can't move that slowly. Moving one section over isn't really moving [b]ON[r], I guess. So going [b]A[r] or [b]B[r] is out." instead;
+	if noun is hep-illegal, say "You can't reverse direction on the torus like that." instead;
+	if number of hep-traversed rooms is 1:
+		say "You race around a bit. You notice [skipped-room of location of player and noun] light up as you run past [if dist of noun is 3]them[else]it[end if].";
 	if init-hept-dir is up:
 		now init-hept-dir is noun;
 		continue the action;
-	if noun is hep-illegal, say "You can't reverse direction on the torus like that." instead;
+
+leg-jump-warning is a truth state that varies.
 
 after going when in-heptagon-puzzle is true:
 	if location of player is hep-traversed:
-		say "The torus dims. You must have made a wrong step. You have already been to [location of player] during this trip. But you figure you can go [b]ON[r] and try again.";
 		now in-heptagon-puzzle is false;
+		say "As you go back to the [location of player] section, the glow emanating from it disappears. The whole torus dims. That must have been a wrong step, revisiting [location of player]. But there seems to be nothing to stop you from going [b]ON[r] and trying again.";
+		if leg-jump-warning is false:
+			say "Your legs feel less jumpy now, too. You can go [b]A[r] and [b]B[r] if you want to plot things out, or whatever.";
+			now leg-jump-warning is true;
 		continue the action;
 	now location of player is hep-traversed;
 	add dist of noun to heptagon-path;
