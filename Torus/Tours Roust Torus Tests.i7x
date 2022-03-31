@@ -16,7 +16,7 @@ test p2d with "on/bbb/bbb/bbb/bbb/bbb/bbb".
 
 test p2y with "on/aaa/aa/aaa/aaa/aa/aaa/in".
 
-test p3 with "deeded/shammash/mimetite".
+test p3 with "deeded/shammash/mimetite/prepress/mesosome/insciences".
 
 test rotator with "test p1/test p2a/test p2b/test p2c/test p2d".
 

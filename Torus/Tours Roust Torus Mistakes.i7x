@@ -24,6 +24,8 @@ book Grain Grain
 
 understand "ragin" as a mistake ("Getting mad won't help[besides].") when player is in Grain Grain.
 
+understand "raging rain" as a mistake ("You don't need to battle the weather as well[besides].") when player is in Grain Grain.
+
 book Latte Latte
 
 understand "let at" as a mistake ("You don't need permission to be let at anything[besides].") when player is in Latte Latte.
@@ -53,6 +55,10 @@ understand "rape" as a mistake ("[one of][this-game] is about light-hearted joke
 understand "earp" as a mistake ("No daredevil gunman appears to help you out[besides][half-solved].") when player is in prep area.
 
 book Scene Scene
+
+understand "trainer" as a mistake ("You're on your own here. If almost three games aren't enough to whip you in shape, I don't know what is.") when player is in scene scene.
+
+understand "retrain" and "retrains" as a mistake ("It's too late for that now, but you should be able to push through as needed.") when player is in scene scene.
 
 understand "senescense" as a mistake ("Almost, but I'm going to play spelling cop, here.") when player is in Scene Scene.
 
