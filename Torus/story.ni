@@ -216,7 +216,7 @@ after going when in-heptagon-puzzle is true:
 		if 2 is not listed in heptagon-path or 3 is not listed in heptagon-path:
 			say "The interior of the Torus shudders, but nothing conclusive happens. Perhaps you [one of][or]again [or]once again [stopping]took an easy way to touch all the rooms.";
 		else:
-			say "All manner of whirring seems to flow in from around you. The cylinder in the center of the torus lights up. You take a tentative step inward ... and this time, you're not bounced.[paragraph break]Now's probably a good time to go [b]INSIDE[r].";
+			say "All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.[paragraph break]There doesn't seem to be anything else to do. Now's probably a good time to go [b]INSIDE[r].";
 			now solved-heptagon is true;
 		now in-heptagon-puzzle is false;
 	continue the action;
@@ -236,13 +236,22 @@ check going a not rotational direction:
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
 	if heptcount < 7:
-		say "A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?";
+		say "[one of]A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?[or]That snarky 'Ah-ah' then 'Ha-ha' again! You'll need to do something special to get in[if score is number of perimeter rooms] beyond changing things on the outside[else if score > 0], in addition to what you've changed so far[else], and maybe you'll find what, later[end if].[stopping]";
 		if number of unvisited perimeter rooms > 0:
 			say "[line break]Perhaps you should try and see everywhere on the torus." instead;
 		choose row (heptcount + 1) in table of center statuses;
 		say "[cylinder-block entry][paragraph break]";
 		say "It makes sense you can't just walk in, though. You still haven't figured what to do [if location of player is unsolved]here[else]over at [random unsolved visited room][end if].";
-	if solved-heptagon is false, say "You're still blocked from entering the center of the torus." instead;
+	if solved-heptagon is false:
+		say "[if ever-heptagon-puzzle is false]The 'Noon, No, On' routine pushes you back with surprising force[else if in-heptagon-puzzle is true]You're in the middle of some sort of sideways dance right now. Maybe after you do it right, you can go inside[else]You're still blocked from entering the center of the torus. Perhaps you need to try going [b]ON[r] again[end if]." instead;
+	say "The path to the cylinder is solid. The door blows open as you get there. You walk in and tumble down a slope. Around you, voices boom 'RESTRAIN! RESTRAIN!' They are closing in! This is the end! But then they scatter. You pass out.";
+	wfak;
+	say "When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying 'RESTRAIN!' out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.";
+	wfak;
+	say "The Strainer Terrains!";
+	wfak;
+	say "Yes, after you dispatched Red Bull Burdell, you heard rumors. Travelers would occasionally come by from the Strainer Terrains but could not show anyone the way back. They were in no urgent danger. It just seemed like they would be a perfect ally or sibling country or whatever. You wondered how to get there, then forgot about it. But you are here now.";
+	wfak;
 	move player to Scene Scene instead;
 
 book rooms
@@ -283,12 +292,20 @@ to say list-opt:
 	else:
 		say "have a few distractions here you may or may not wish to take care of before changing the scene";
 
-Scene Scene is an internal dubroom. "Here's a good place to just wind down your life. It's fun. You've earned it. But how to effect that? You [list-opt].". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years[if score is not maximum score]. There's still stuff to do here if you want, you suspect[end if].". done-text is "You shouldn't see this description. Oops". sts-hash of Scene Scene is 439799277.
+Scene Scene is an internal dubroom. "You recognize this, err, scene as the mythical [strainer terrains]. It's fun. You've earned it. But how to effect that? You [list-opt].". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years[if score is not maximum score]. There's still stuff to do here if you want, you suspect[end if].". done-text is "You shouldn't see this description. Oops". sts-hash of Scene Scene is 439799277.
 
 stats-x is a truth state that varies.
 
 instead of exiting:
 	try going outside instead;
+
+section strainer terrains
+
+the strainer terrains are a backdrop in Scene Scene. "There's so much to look at in [the strainer terrains]! But you feel you need to get settled first."
+
+instead of doing something with strainer terrains:
+	if current action is examining, continue the action;
+	say "You may find things to do in [the terrains] once you're settled. Figure what to do in this, uh, scene."
 
 volume stats tat (deprecated?)
 
