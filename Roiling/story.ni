@@ -49,8 +49,6 @@ include Bypass Disambiguation by Climbing Stars.
 
 include Large Game Speedup by Andrew Plotkin.
 
-include Punctuation Stripper by Andrew Schultz.
-
 include Bold Final Question Rows by Andrew Schultz.
 
 the story headline is "(or ailing) Squeeal! A Sequel!"

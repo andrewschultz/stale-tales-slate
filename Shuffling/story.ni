@@ -50,8 +50,6 @@ use authorial modesty.
 
 include Conditional Undo by Jesse McGrew.
 
-include Punctuation Removal by Emily Short.
-
 book i6 replacement
 
 Include (-
@@ -132,8 +130,6 @@ include Rules-Based Testing by Andrew Schultz.
 include Shuffling Tests by Andrew Schultz. [must come after rules-based testing]
 
 include STS Common by Andrew Schultz.
-
-include Punctuation Stripper by Andrew Schultz.
 
 include First Word Retry by Andrew Schultz.
 
