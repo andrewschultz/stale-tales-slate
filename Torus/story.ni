@@ -47,7 +47,7 @@ in-heptagon-puzzle is a truth state that varies.
 ever-heptagon-puzzle is a truth state that varies.
 
 every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false (this is the clue ON rule):
-	say "A voice booms 'Noon? No! No!' Perhaps there's a simple way to try to repel it."
+	say "A voice booms 'Noon? No! No!' It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
 
 solved-heptagon is a truth state that varies.
 
@@ -456,8 +456,10 @@ carry out oning:
 	if solved-initials is false, say "You're not ready to really go on yet. But you'll know when you are." instead;
 	if in-heptagon-puzzle is true, say "You're already in the process of going on." instead;
 	if player is in scene scene, say "You already successfully went on." instead;
-	now in-heptagon-puzzle is true;
-	say "You decide it's time to start going on[one of]. [location of player] seems as good a place to start as any others. The whole torus seems to brighten up as you make your decision[or] again. Maybe you'll find the right way through this time[stopping].";
+	if in-heptagon-puzzle is false:
+		say "[b]NOON NO NO[r] is simple and devastating, but you found an even simpler retort to stop feeling paralyzed by it.[paragraph break]";
+		now in-heptagon-puzzle is true;
+	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping].";
 	now ever-heptagon-puzzle is true;
 	now all rooms are not hep-traversed;
 	now location of player is hep-traversed;
@@ -663,7 +665,7 @@ carry out stating:
 	if tats-stat is 1:
 		say "You gaze at your tats to get an extra stat from them when you try to guess what to do.";
 	else:
-		say "Your tats are now in stat-giving mode. [b]STAT[r] again will give even more potentially revealing stats when you make guesses.";
+		say "Your tats are now in stat-giving mode. [b]STAT[r] again will give even more potentially revealing stats when you make guesses. [b]TATS[r] will get rid of stat-giving mode.";
 	increment tats-stat;
 	the rule succeeds;
 
