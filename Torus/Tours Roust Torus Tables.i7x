@@ -116,6 +116,23 @@ final question wording	only if victorious	topic		final response rule		final resp
 "see [b](REJ)ECTS[r]/[b]REJECTED[r] words"	true	"reject/rejected/rejects"	the show rejected words rule	--
 "see what you [b]MISSED[r]"	true	"miss/misses/missed"	the show what you missed rule
 
+volume parser keyword tables
+
+table of pre-brushoffs
+my-room	my-topic	my-brushoff
+Ehs Ehs	"(eh|ehs)"	"No, you can't lackadaisically go along with what's there. You need to invent, or reinvent, something new, some different way of emoting."
+Prep Area	"(prep|area)"	"You're not sure what you are prepping--a thing or an action. But once you do, things will become clearer."
+Meta Meat	"(meta|meat)"	"The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?"
+Grain Grain	"grain"	"Grain is grain, to you. There's not much to be done with it as-is."
+Tines Inset	"(tines|inset)"	"The tines aren't budging. Not in their present form. But what could they become?"
+Pechan Pechan	"pechan"	"If there's a stomach here, you don't want to burst it."
+Latte Latte	"latte"	"Oh, man. You don't want to even think about caffeinated beverages. Even ones with milk in. These days you don't even go in for caffeinated pop. Perhaps the latte can become something less consumable?"
+
+table of post-brushoffs
+my-room	my-topic	my-brushoff
+Meta Meat	"(team|mate)"	"Your teammate will be there when you need them."
+Latte Latte	"(tattle|tale)"	"You probably don't want to encourage a tattletale in any way."
+
 Tours Roust Torus Tables ends here.
 
 ---- DOCUMENTATION ----
