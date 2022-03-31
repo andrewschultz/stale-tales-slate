@@ -28,7 +28,15 @@ include Bold Final Question Rows by Andrew Schultz.
 
 include First Word Retry by Andrew Schultz.
 
+include Undo Output Control by Erik Temple.
+
 volume globals and such
+
+report undoing an action:
+	say "Undoing. [if solved-heptagon is true]Now you opened up the center of the torus, there's no need to undo anything[else]Note that, while there's no way to get in an unwinnable state, [b]UNDO[r] may save you a few moves [when-undo-helps].";
+
+to say when-undo-helps:
+	say "[if ever-heptagon-puzzle is true]if you go the wrong way after [b]ON[r][else]if you slip up in a later puzzle and don't want to restart[end if]"
 
 last-clue-thing is a thing that varies. last-clue-thing is yourself.
 
