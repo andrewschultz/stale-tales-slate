@@ -66,7 +66,7 @@ description of the player is "Looking at your body, you're not as strong as you 
 tats-stat is a number that varies.
 
 check taking inventory:
-	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a [b]STAT[r] from, if you want[end if]." instead;
+	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a [b]STAT[r] from, if you want[end if][one of]. Being out of practice, it's nice to have the choice between using assistance and showing you've still 'got it,' whatever 'it' is[or][stopping]." instead;
 
 the player carries the tats. description of tats is "[tat-desc]."
 
@@ -534,9 +534,9 @@ carry out abouting:
 	say "[this-game] is installment 3 in [tsts]. It was originally published for Spring Thing 2022. Number one in the series was [shuf], published for IFComp 2012, and number two was [aro], published for Spring Thing 2013. These should all be on itch.io.";
 	say "[line break]";
 	if big-details is false:
-		say "[b]CREDITS[r] will give thanks to people involved specifically in [this-game].";
+		say "[b]CREDITS[r] will give thanks to people who helped in [this-game]. This includes cover art, testing and those who keep the community active and those who give general resources.";
 	else:
-		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro], but it does sweep up some undone things. I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be tough.";
+		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro]. It's much smaller, and it is [b]POLITE[r] on the Zarfian Cruelty scale, but it does sweep up some things I wanted to, and I wanted a good-bye from the other games beyond 'I hope I fixed all the bugs and added all the features I could!' I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus, for a circular map--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be tough.[paragraph break]The post-Spring Thing version of this game should come with a postmortem.";
 		say "[line break]I also wanted to fit in a non-anagram puzzle based on something I'd always wondered about.";
 		say "[line break]Source code for [this-game] is at https://github.com/andrewschultz/stale-tales-slate/tree/main/Tours.";
 	now big-details is whether or not big-details is false;
@@ -552,10 +552,11 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
-	say "Pre-emptive stuff:[paragraph break]";
-	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now.";
-	say "Thanks to (Jason/JJ) Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments.";
-	say "[line break]Set-in-stone stuff: [paragraph break]";
+	say "Direct thanks:[paragraph break]";
+	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now. I'm worried I'll miss a few names, but there were bg, David Welbourn, Jacqueline, MoyTW, pinkunz, and Roger, among others.";
+	say "Thanks to individuals for some late testing. I appreciate it. Their names: Olaf Nowacki.";
+	say "Thanks to J. J. Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments. I bet if you like [this-game], you'll like some of the games featured there, too.";
+	say "[line break]General thanks:";
 	say "[line break]Thanks to Amanda Walker for starting the blurb thread on intfiction.org which helped me with ideas in general.";
 	say "Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
 	say "Thanks to wordsmith.org for so many anagrams verified and inspired.";
@@ -673,9 +674,20 @@ understand "v" as verbing.
 understand "verb" as verbing.
 understand "verbs" as verbing.
 
+to stat-mention:
+	say "[line break][b]STAT[r] and [b]TATS[r] adjust whether your stat tats actually give meaningful stats. [b]STAT[r] twice in a row gives a bigger potential hint.";
+
+check verbing when player is in scene scene:
+	say "You're pretty much at the end, here. There's nowhere else left to go. [b]DEEDED[r] [if deededed is true]gave you some bonus point tries[else]can help you with a slightly nicer extended ending[end if]. However, all you need to do is figure how to manipulate [scene scene]. Just as with the outside area.";
+	stat-mention;
+	the rule succeeds;
+
 carry out verbing:
 	say "Compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are [b]A[r] and [b]B[r] to move clockwise and counterclockwise around the torus.";
-	say "You can also skip over adjacent torus areas with [b]AA[r], [b]AAA[r], [b]BB[r], or [b]BBB[r]. Note anything more than that is accepted but impractical, as [b]AAA[r] and [b]BBBB[r] are equivalent.";
+	say "[line break]You can also skip over adjacent torus areas with [b]AA[r], [b]AAA[r], [b]BB[r], or [b]BBB[r]. Note anything more than that is accepted but impractical, as [b]AAA[r] and [b]BBBB[r] are equivalent.";
+	stat-mention;
+	if zero-one-warn is true:
+		say "[line break]You also have the option of referring to areas of the torus as numbers after you've gone [b]ON[r]. This can be done with [b]0[r] or [b]1[r]. Typing the same number twice removes the numerical reference. Currently numerical referencing is [if on-base is -1]off[else][on-base in words]-based[end if].";
 	the rule succeeds;
 
 section swearing
