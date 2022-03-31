@@ -154,9 +154,27 @@ to min-and:
 	reg-inc;
 	d "min-and codepath -- forcing point and min point adding. This should be used for odd non-flip points. Current=[cur-score of mrlp] min=[min-score of mrlp].";
 
+to min-and-q:
+	increment min-score of mrlp;
+	reg-inc-q;
+	d "min-and-q codepath: maybe adding an additional point for especially neat actions";
+
+to reg-inc:
+	reg-inc-q;
+	score-notify;
+
+to reg-inc-q:
+	increment the score;
+	if mrlp is nothing:
+		say "BUG NOTE: This location needs a map region!";
+	else:
+		increment the cur-score of mrlp;
+
+last-solved-region is a region that varies.
+
 chapter person/animal stuff
 
-definition: an animal (called pe) is npcish:
+definition: a person (called pe) is npcish:
 	if pe is the player, no;
 	if pe is touchable, yes;
 	decide no;
@@ -300,7 +318,7 @@ definition: a thing (called th) is thing-goable:
 
 carry out gotothinging:
 	if noun is a backdrop, say "Unfortunately, since [the noun] can be seen from or in more than one place, I can't go there." instead;
-	if debug-state is true, say "Going to [location of noun], where [the noun] is.";
+	d "Going to [location of noun], where [the noun] is.";
 	try gotoing location of noun instead;
 
 Rule for supplying a missing noun while gotothinging:
