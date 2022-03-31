@@ -416,6 +416,15 @@ carry out deededing:
 
 chapter oning
 
+to decide which number is hep-prog:
+	decide on number of hep-traversed dubrooms;
+
+after printing the locale description when in-heptagon-puzzle is true and hep-prog > 1:
+	say "The torus is now [entry hep-prog of litness] lit. You have covered [list of hep-traversed dubrooms].";
+	continue the action;
+
+litness is a list of text variable. litness is { "barely", "somewhat", "moderately", "slightly more than half", "very", "almost fully", "completely" }.
+
 oning is an action out of world.
 
 understand the command "on" as something new.
