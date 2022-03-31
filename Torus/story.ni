@@ -726,22 +726,31 @@ The print final score rule is not listed in for printing the player's obituary.
 
 volume parsing
 
+caps-warn is a truth state that varies.
+
 after reading a command:
+	abide by the punctuation-munge rule;
+	let cmd-lo be indexed text;
+	if caps-warn is false:
+		if the player's command matches the regular expression "<A-Z>":
+			ital-say "The parser for [this-game] is case-insensitive, so don't worry about getting CAPS right.";
+			now caps-warn is true;
+	now cmd-lo is the player's command in lower case;
 	if location of player is not solved:
 		repeat through table of pre-brushoffs:
 			if location of player is not my-room entry, next;
-			if the player's command matches the regular expression "\b[my-topic entry]\b":
+			if cmd-lo matches the regular expression "\b[my-topic entry]\b":
 				say "[my-brushoff entry][line break]";
 				reject the player's command;
 	if location of player is solved:
 		repeat through table of post-brushoffs:
 			if location of player is not my-room entry, next;
-			if the player's command matches the regular expression "\b[my-topic entry]\b":
+			if cmd-lo matches the regular expression "\b[my-topic entry]\b":
 				say "[my-brushoff entry][line break]";
 				reject the player's command;
-	if the player's command exactly matches the text "[word-to-include of location of player]":
+	if cmd-lo exactly matches the text "[word-to-include of location of player]":
 		if location of player is solved:
-			say "Already got that.";
+			say "You look back to how you fixed things here and think how you can apply that going forward.";
 			the rule succeeds;
 		now location of player is solved;
 		say "[guess-right-text of location of player][line break]";
@@ -772,12 +781,12 @@ after reading a command:
 			say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
 		reject the player's command;
 	if at-on-puzzle:
-		if word number 1 in the player's command is "n" or word number 1 in the player's command is "o":
+		if word number 1 in cmd-lo is "n" or word number 1 in cmd-lo is "o":
 			say "Weird! You felt halfway there, thinking that. But you froze up at the wrong moment.";
 			reject the player's command;
 	if location of player is scene scene:
 		repeat with F running through touchable flippables:
-			if the player's command exactly matches the text "[word-to-include of F]":
+			if cmd-lo exactly matches the text "[word-to-include of F]":
 				now F is off-stage;
 				now F is flipped;
 				say "[guess-right-text of F][line break]";
