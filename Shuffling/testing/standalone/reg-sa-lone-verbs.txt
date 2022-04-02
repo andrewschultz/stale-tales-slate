@@ -11,7 +11,7 @@
 >follow me
 Tautological.
 >follow passage
-A Dry Yard
+Rested Desert
 >undo
 
 >help
@@ -884,7 +884,7 @@ The room seems to slow down for a bit before picking up speed and spinning as fa
 The nick is all around.
 
 >x gate
-Huge. Eugh. Old Man Almond couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read.
+Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read.
 
 >lift grate
 You utterly fail to move it. If it could speak, it might sarcastically say

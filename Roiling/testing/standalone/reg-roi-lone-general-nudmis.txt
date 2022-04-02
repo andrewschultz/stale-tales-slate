@@ -164,27 +164,27 @@ A hollow voice booms, "Lo! Of..."
 
 #nudge for iths
 >iths
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for kcuf
 >kcuf
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for mand
 >mand
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for lelh
 >lleh
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for parc
 >parc
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for heck
 >hcek
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for teach
 >echat
@@ -241,15 +241,15 @@ You can't change warnings. Warnings are there to protect you. Even offer hints i
 
 #nudge for curses
 >cusser
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for bother
 >obther
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 #nudge for bastard
 >astarbd
-You're not fooling ME. Shame on you!
+I'm not fooled. Shame on you!
 
 >abstract elmo to ll
 
@@ -351,7 +351,7 @@ Meta-commands don't have any easter eggs, sadly.
 
 #nudge for something
 >semithong
-Instead of messing with SOMETHING, maybe you can examine what the something is on.
+SOMETHING never anagrams to anything, so you'll want to tinker with whatever that SOMETHING is on or near or supporting.
 
 >ts
 #renudge for terry
@@ -367,9 +367,5 @@ Changing the ground beneath your feet is too dangerous a proposition.
 You consider the costs and benefits of collapsing in an impressively uncoordinated heap, then decide against doing so.
 
 #nudge for point
->poitn
-!There's no secret cheat between NO TIP and OPT IN.
-
-#renudge for point
 >poitn
 There's no secret cheat between NO TIP and OPT IN.

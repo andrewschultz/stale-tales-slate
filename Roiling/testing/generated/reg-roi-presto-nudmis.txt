@@ -39,16 +39,16 @@ joke death
 >undo
 #nudge for volt
 >votl
-That can't be it. It's a volt MAZE.
+That can't be it. It's more than a volt: a VOLT MAZE.
 #nudge for maze
 >maez
-That can't be it. It's a VOLT maze.
+That can't be it. It's more than a maze: a VOLT MAZE.
 #nudge for storep
 >storpe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for crust
 >cruts
-You should eat your food, not play with it. Yes, even if it's only MARGINALLY food.
+You shouldn't play with your food. Yes, even if it is less traumatic to play with than to eat.
 #nudge for grye
 >grey
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -194,7 +194,7 @@ You won't change the cistern, but maybe you can track down the dart.
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 #nudge for maddam
 >maddma
-It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.
+It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that--though in the future, it does give a bonus point, for a special but odd word.
 !Here in the
 >maddma
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
@@ -237,11 +237,11 @@ The tars remain heterogeneous. And very sticky. And the same size.
 Being an arts tsar won't help. You need a word that shows anger.
 #mistake test for tard
 >tard
-Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.
+Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! A Roiling Original doesn't want to be THAT sort of juvenile.
 You see red at your slight indiscretion
 >tard
-Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
-You don't feel dumb after doing this, so there's no need to use that word again
+Instead of using that word again, you think back to why you saw red after thinking it, beyond being embarrassed. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
+You don't feel dumb after doing this, so there's really no need to use that word again. Not that there ever was.
 >tard
 You are just trolling now. No further clues for you.
 
@@ -251,7 +251,7 @@ Your score has just gone up by one point
 
 #mistake retest for tars
 >tars
-But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
+But you already took the tsar star from the tars! Plus, you'd get all sticky.
 
 >score
 Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
@@ -548,7 +548,8 @@ Dirge Ridge
 
 #mistake test for evil
 >evil
-No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you, or that guy chasing you. That'd be mean.
+There's no sense in making the vile veil worse than it is and even less sense in turning Leo evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
+!That'd be mean.
 #nudge for dirge
 >direg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -589,14 +590,14 @@ There aren't that many things to do with Rand. So few, you could probably brute-
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decent omen.
 #spechelp for odes song
 >nessgood
-The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it, even if it's not REALLY hurting you.
+The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
 #scannotes for sods gone odes song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
 #mistake retest for evil
 >evil
-No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you, or that guy chasing you. That'd be mean.
+There's no sense in making the vile veil worse than it is and even less sense in turning Rand evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
 #mistake test for leonard/renaldo/leandro/rolande
 >leonard
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
@@ -623,7 +624,7 @@ Score in a scenario: 14 out of 41 total points in the current region, Presto. Lo
 
 #mistake retest for evil
 >evil
-No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
+There's no sense in making the vile veil worse than it is.
 #done rejects for rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
@@ -1095,7 +1096,7 @@ They're not just socks, or trim. They're trim socks.
 They're not just socks, or trim. They're trim socks.
 #nudge for trimsock
 >trimsokc
-You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 #spechelp for disk
 >skdi
 The disk seems to want to expand, but not quite into that. You must be close.
@@ -1106,9 +1107,9 @@ NO, REARRANGE AND TRY AGAIN, you think.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
 #readables for clack ops locs pack
 >read clack ops locs pack
-/(The Clack Ops Locs Pack mentions, in red, PC Cloaks are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!)
+/(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
 >read clack ops locs pack
-/(The Clack Ops Locs Pack mentions, in red, PC Cloaks are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!)
+/(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
 #scannotes for clack ops locs pack
 >scan clack ops locs pack
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
@@ -1188,7 +1189,7 @@ Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
 #spechelp for gum
 >gmu
-Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
+Ugg... umm... you stare at the gum. Not many ways to stretch it, really.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a decent omen.
 #mistake test for alco
 >alco
@@ -1199,7 +1200,7 @@ What you want needs to help programming more than water or French champagne or d
 
 #spechelp for fount
 >futno
-Hm, might be FUN TO try another guess. Or useful. Or both.
+Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
 #done rejects for leaf
 >lefa
@@ -1422,7 +1423,7 @@ The mug is no longer manipulable.
 After compiling, you often need to make small tweaks, but not like that.
 #spechelp for trim socks
 >romsticsk
-You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
 #readables for drive a
 >read drive a
@@ -1502,7 +1503,7 @@ No, the TAB key is what it should be.
 
 #spechelp for bub dude egg
 >debgu
-Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here, why BUB DUDE EGG is showing.
+Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
 
 #scannotes for bub dude egg

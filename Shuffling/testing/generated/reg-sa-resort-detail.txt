@@ -26,16 +26,16 @@ Astral Altars
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRGGR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: I---T.
-DEBUG INFO: CERT-TEXT: --LE-.
+DEBUG INFO: Rect-text: I---T.
+DEBUG INFO: Cert-text: --LE-.
 
 #gadget test: stile to islet
 >rc stile
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRGBB.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: I---T.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: I---T.
+DEBUG INFO: Cert-text: -----.
 
 >islet
 Your score has just gone up by one point.
@@ -50,24 +50,24 @@ You currently have 1 out of 15 total points for the Resort region. Your minimum 
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBR.
 The gadget beeps once. A series of lights comes across: GRRG.
-DEBUG INFO: RECT-TEXT: L--S.
-DEBUG INFO: CERT-TEXT: L--S.
+DEBUG INFO: Rect-text: L--S.
+DEBUG INFO: Cert-text: L--S.
 
 #gadget test: rock to cork
 >rc rock
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 The gadget beeps once. A series of lights comes across: RGRG.
-DEBUG INFO: RECT-TEXT: C--K.
-DEBUG INFO: CERT-TEXT: -O-K.
+DEBUG INFO: Rect-text: C--K.
+DEBUG INFO: Cert-text: -O-K.
 
 #gadget test: swing to wings
 >rc swing
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: W---S.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: W---S.
+DEBUG INFO: Cert-text: -----.
 
 >lies
 by one point
@@ -93,32 +93,32 @@ Rived Drive
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: S---E.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: S---E.
+DEBUG INFO: Cert-text: -----.
 
 #gadget test: toolshed to toeholds
 >rc toolshed
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRBBB.
 The gadget beeps once. A series of lights comes across: GGRRRRRR.
-DEBUG INFO: RECT-TEXT: T------S.
-DEBUG INFO: CERT-TEXT: TO------.
+DEBUG INFO: Rect-text: T------S.
+DEBUG INFO: Cert-text: TO------.
 
 #gadget test: sprig to grips
 >rc sprig
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: G---S.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: G---S.
+DEBUG INFO: Cert-text: -----.
 
 #gadget test: spore to ropes
 >rc spore
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBGB.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: R---S.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: R---S.
+DEBUG INFO: Cert-text: -----.
 
 >slope
 by one point
@@ -153,8 +153,8 @@ Potshot Hotspot
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: T--O.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: T--O.
+DEBUG INFO: Cert-text: ----.
 
 >trio
 Your score has just gone up by one point.
@@ -170,8 +170,8 @@ The trio remains unmoved. Perhaps you can give the protest more constructive aim
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBRB.
 The gadget beeps once. A series of lights comes across: GRRGGRR.
-DEBUG INFO: RECT-TEXT: P-----S.
-DEBUG INFO: CERT-TEXT: P--TE--.
+DEBUG INFO: Rect-text: P-----S.
+DEBUG INFO: Cert-text: P--TE--.
 
 >kilns
 by one point
@@ -198,8 +198,8 @@ You currently have 12 out of 15 total points for the Resort region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR.
 The gadget beeps once. A series of lights comes across: RGRRG.
-DEBUG INFO: RECT-TEXT: K---S.
-DEBUG INFO: CERT-TEXT: -I--S.
+DEBUG INFO: Rect-text: K---S.
+DEBUG INFO: Cert-text: -I--S.
 
 >kilns
 Your score has just gone up by one point.

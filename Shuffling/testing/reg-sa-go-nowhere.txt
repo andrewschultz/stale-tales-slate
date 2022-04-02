@@ -21,9 +21,8 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 >gonear thickest thickets
 #nowhere thickest thickets
 >w
-You hit a snag, and the toga nags you. Or seems to. You suppress an insult that would maybe only make sense if the darnels were sentient. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets.
+You hit a snag, and the toga nags you. Or seems to. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets.
 !you can go IN--there are no specific directions here
-You suppress an insult
 >goat
 >w
 you can go IN--there are no specific directions here
@@ -144,6 +143,8 @@ Only way out's back east.
 You wouldn't want to disturb them while they're measuring geraniums or anything back there.
 >e
 "Back rooms? Smack boor!" you imagine the faeries saying.
+>e
+That's where all the magic happens
 >n
 The only safe way out is back west.
 

@@ -210,8 +210,8 @@ HOW PILLS WERE USED: SPIN the pins.
 >gonear plasm lamps
 >z
 DEBUG INFO: Spilling natant ant.
-DEBUG: MISSES will show Instead of spilling the pills, you could've tried to <BUG, SORRY, FORGOT TO FILL IN A TABLE CELL>.
-HOW PILLS WERE USED: <BUG, SORRY, FORGOT TO FILL IN A TABLE CELL>.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TAN the ant.
+HOW PILLS WERE USED: TAN the ant.
 
 >z
 DEBUG INFO: Spilling repaired dialer.

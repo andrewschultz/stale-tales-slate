@@ -389,10 +389,9 @@ It smells depressingly antiseptic here.
 #verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
+>listen
 #verbcase listen-stores-if-noun-is-suit-ode
 You listen for anything at all besides the blabber babbler. You pick up some background music--why, yes, it is the the horrendous self-helpy song Suit Ode: Douse It.
->listen
-You're hearing enough without trying, sadly.
 
 @mis
 #mistake test for douse it
@@ -432,10 +431,10 @@ That might cause a bit too much commotion. Maybe you can pay attention to a comm
 #nudge for mangiets
 >mangiest
 You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and blabber babbler. Tedious.
-#spechelp for blabber babbler
+#spechelp for suit ode douse it
 >outsied
-The blabber babbler coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the blabber babbler. That's a decent omen.
+That tune in the background, Suit Ode: Douse It, takes an odd turn. But it doesn't quite shut down.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Suit Ode: Douse It. That's a decent omen.
 #mistake test for easting
 >easting
 Compass directions aren't relevant here. You need to upset everything, somehow.
@@ -456,12 +455,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 >gs
 >push rehabs basher
-Before you can do anything with or to the Rehabs Basher, she thrusts pamphlets labeled Help Stamp Hemp SPLAT at you. "It will help you in ways you don't know. And even I don't know." Do you take them?
+Before you can do anything with or to the Rehabs Basher, she thrusts pamphlets labeled Help Stamp Hemp: SPLAT at you. "It will help you in ways you don't know. And even I don't know." Do you take them?
 "Good choice. Say, if they're good enough, do you think you could I could become an even better blabber babbler than ... her?"
 >undo
 >gs
 >push rehabs basher
-Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you
+Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp: SPLAT at you
 #nudge for example
 >exampel
 The blabber babbler is unchangeable, but perhaps indirectly moving him will work.
@@ -473,10 +472,10 @@ Ian is unchangeable, but maybe he is movable.
 Ian is unchangeable, but maybe he is movable.
 #nudge for pamphlets
 >pamphlest
-You're probably overthinking it. The I-USED-TO examples are just plain tedious.
+You're probably overthinking it. The I-Used-To examples are just plain TEDIOUS.
 #nudge for pamphlet
 >pamphlte
-You're probably overthinking it. The I-USED-TO examples are just plain tedious.
+You're probably overthinking it. The I-Used-To examples are just plain TEDIOUS.
 #nudge for lectures
 >lecturse
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -486,11 +485,11 @@ You don't need to riff on any location names to win the game, unless there's not
 \\
 #nudge for parkee
 >pareek
-The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious.
+The speaker parkees aren't what, or who, you need to change, here. It'll still be TEDIOUS.
 \\
 #nudge for parkees
 >parkese
-The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious.
+The speaker parkees aren't what, or who, you need to change, here. It'll still be TEDIOUS.
 \\
 #scannotes for suit ode douse it
 >scan suit ode

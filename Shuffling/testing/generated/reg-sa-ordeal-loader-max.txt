@@ -49,6 +49,11 @@ Your score has just gone up by one point.
 
 >play bugle
 The note from the bugle causes the door to swing back and forth, even with the bolt in place. You can probably enter now.
+
+>misses
+you could've changed the bolt into a BLOT.
+!you could've changed the bulge into a BUGLE.
+
 >in
 Thickest Thickets
 >score
@@ -67,6 +72,14 @@ Thickest Thickets
 
 >nest
 by one point
+
+>deer
+by one point
+>misses
+--you could've changed the toga into a GOAT
+!--you could've changed the reed into a DEER
+>undo
+>undo
 
 >goat
 Your score has just gone up by one point.

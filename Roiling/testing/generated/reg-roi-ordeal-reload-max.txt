@@ -34,7 +34,7 @@ Your score has just gone up by one point.
 >t
 
 >basement
-Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Now you remember why there were ten beams. Of course, the ten beams lead down to what must be a basement, even if it's called something different.
 Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
@@ -89,7 +89,7 @@ Largely All-Grey Gallery
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
 >in
-You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas.
+You look at your settler and realize you didn't really EXAMINE it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas.
 !Hands up
 
 >score
@@ -189,7 +189,7 @@ by one point
 >undo
 >scan specter
 Your settler registers ?R?????
-"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any need to be vowels or consonants. You can SCAN again if you want more hints."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
 "Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
@@ -215,7 +215,7 @@ by one point
 >undo
 >t
 >scan specter
-"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any need to be vowels or consonants. You can SCAN again if you want more hints."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
 "Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."

@@ -158,7 +158,7 @@ You open the bag, and you feel the waves and sounds of the words swirling into t
 >sword
 #pre-words-sword rule retry
 The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.
-It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPENED it, though, being a noise bag.
+It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPEN it, though, being a noise bag.
 >undo
 >undo
 >undo
@@ -309,11 +309,13 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 >take sword
 
 >misses
-!Missed in Metros:
+!====Metros:
 !--the antlers in the Obtains Boastin Bastion could've become RENTALS.
-While the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
---the begonias could've made a noise bag.
---the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries.
+
+>alts
+While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
+You could have gotten the begonias from Fo' Real Florae Fare, Lo.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

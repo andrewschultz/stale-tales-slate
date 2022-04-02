@@ -390,7 +390,7 @@ The green stain could make just one fruit, but why not think bigger? It could be
 >read stucco
 /One of two advertisements is for (ScoutCon|SunCotCo), whatever that is, in red.
 #readables for psa elp
->psa elp
+>read psa elp
 It says Pal! ESP! in red. Not very good advice, but maybe it will help in its own odd way.
 
 #readables for riot cap
@@ -606,13 +606,13 @@ Nothing happens. Perhaps it's the whole item that's important.
 Nothing happens. Perhaps it's the whole item that's important.
 #nudge for utensil
 >utsenil
-The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
+The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
 #nudge for spono
 >spono
-The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
+The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
 #nudge for jagged
 >jaggde
-The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
+The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
 #nudge for fidle
 >edlif
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -862,7 +862,7 @@ That certainly sounds foreign--but it doesn't seem to sway Len.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
 #spechelp for auction caution
 >papaysa
-Everyone promises quick payment, but what are you promising to pay quickly FOR?
+Everyone promises quick payment, but what are you promising to pay quickly for? Hmm...
 DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
 #scannotes for auction caution
 >scan auction caution
@@ -1016,7 +1016,7 @@ You might break what is in the storage. Then it would be neither great nor so gr
 
 #mistake test for gorean
 >gorean
-This game isn't about that sort of stuff. Not that there's anything wrong with that.
+A Roiling Original isn't about that sort of stuff. Not that there's anything wrong with that.
 #mistake test for darter
 >darter
 Art Erd has nowhere to run, and you don't know if you want him taking that So-Great Storage with him.
@@ -1125,7 +1125,7 @@ The (a) banna' flutters about for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
 #scannotes for a banna
 >scan a banna
-It must be the/a banna' AND the message on it.
+The message on the/a banna' must be interfering with the/a banna' itself.
 #spechelp for Reserved Deserver Dr Severe
 >reservde
 You seem to see a mirror image of Dr. Severe for a moment.
@@ -1284,8 +1284,8 @@ You don't want to bring back that fleeing feeling whispering "PERP." Not in any 
 by one point
 #bonus point for not usuing arugula
 
-!And your time finding concisions with the sonic icons pays off.
-You do pretty well even if
+And your time finding concisions with the sonic icons pays off.
+!You do pretty well even if
 
 You Did Great
 

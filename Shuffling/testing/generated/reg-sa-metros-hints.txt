@@ -380,6 +380,11 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 
 >take sword
 
+>alts
+While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
+You could have gotten the begonias from Fo' Real Florae Fare, Lo.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
+
 >attack beast
 #notana
 

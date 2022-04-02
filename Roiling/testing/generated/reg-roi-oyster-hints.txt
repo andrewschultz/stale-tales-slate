@@ -19,7 +19,7 @@ Taken.
 >ptf 2
 
 >score
-Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 4.
+Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 43.
 
 >remap
 #notana 'nudge for remap'
@@ -35,15 +35,15 @@ Your score has just gone up by one point
 >remap
 !Your score has just gone up by one point
 >score
-Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 4.
+Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 43.
 >sing
 by one point
 >score
-Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 >scrape
 by one point
 >score
-Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 >inset
 Perhaps you should've played it cool and fled, instead.
@@ -65,7 +65,7 @@ SPIT
 INSET
 
 >score
-Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 >ptf 0
 >z
@@ -81,7 +81,7 @@ Your score has just gone up by one point
 DEBUG INFO: urn hinting.
 
 >score
-Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 >run
 Your score has just gone up by one point
@@ -98,7 +98,7 @@ DEBUG INFO: interlocking oars hinting.
 >undo
 
 >score
-Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #not a mistake
 >boast
@@ -109,7 +109,7 @@ Fighter Freight
 DEBUG INFO: pale plea hinting.
 
 >score
-Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 >leap
 Your score has just gone up by one point
@@ -119,7 +119,7 @@ Your score has just gone up by one point
 Anger Range
 
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 >scrap
 Your score has just gone up by one
@@ -130,7 +130,7 @@ DEBUG INFO: HUNTER HUNT AREA hinting.
 by one point
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 4.
+Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
 
 >e
 Hardest Trashed Dearths
@@ -138,7 +138,7 @@ Hardest Trashed Dearths
 DEBUG INFO: eeks hinting.
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 4.
+Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
 
 >scan
 #notana 'nudge for cans'
@@ -146,7 +146,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
+Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
 >seek
 Your score has just gone up by one point
@@ -156,7 +156,7 @@ Lean Lane
 DEBUG INFO: Tea-at-a-Tee hinting.
 
 >score
-Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
+Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
 >eat
 #notana 'nudge for eat'
@@ -165,7 +165,7 @@ Your score has just gone up by one point
 DEBUG INFO: trout hinting.
 
 >score
-Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
+Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
 >tend
 #notana 'nudge for dent'
@@ -173,7 +173,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 4.
+Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 43.
 
 >tutor
 Your score has just gone up by one point
@@ -181,13 +181,13 @@ Your score has just gone up by one point
 You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points, but a generic HINT will not reveal them.
 
 >score
-Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 4.
+Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 43.
 
 >swipe
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 4.
+Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 43.
 
 >w
 >n
@@ -201,7 +201,7 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >trace
 Your score has just gone up by one point
@@ -210,7 +210,7 @@ Your score has just gone up by one point
 DEBUG INFO: crate hinting.
 
 >score
-Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >react
 Your score has just gone up by one point
@@ -218,7 +218,7 @@ Your score has just gone up by one point
 DEBUG INFO: skis hinting.
 
 >score
-Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >kiss
 Your score has just gone up by one point
@@ -226,19 +226,19 @@ Your score has just gone up by one point
 DEBUG INFO: knob hinting.
 
 >score
-Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >bonk
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >snap
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >in
 
@@ -252,27 +252,27 @@ Your score has just gone up by one point
 DEBUG INFO: prod hinting.
 
 >score
-Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >drop
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >sweat
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 4.
+Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 43.
 
 >shape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 4.
+Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
 
 >clean
 #notana 'nudge for lance'
@@ -280,7 +280,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >out
 
@@ -297,7 +297,7 @@ Your score has just gone up by one point
 DEBUG INFO: Achers' Chaser Arches hinting.
 
 >score
-Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >search
 Your score has just gone up by one point
@@ -305,7 +305,7 @@ Your score has just gone up by one point
 DEBUG INFO: general gleaner hinting.
 
 >score
-Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >enlarge
 Your score has just gone up by one point
@@ -313,7 +313,7 @@ Your score has just gone up by one point
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
-Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >n
 Horned Hedron
@@ -329,7 +329,7 @@ DEBUG INFO: ruby hinting.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >e
 >s
@@ -343,13 +343,13 @@ by one point
 DEBUG INFO: Use-Saga Sausage hinting.
 
 >score
-Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >assuage
 by one point
 
 >score
-Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >ask haunter about ruby
 #notana
@@ -358,7 +358,7 @@ by one point
 DEBUG INFO: ol' trap hinting.
 
 >score
-Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >w
 
@@ -376,7 +376,7 @@ DEBUG INFO: ol' trap hinting.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
@@ -393,7 +393,7 @@ Your score has just gone up by one point
 DEBUG INFO: dialer hinting.
 
 >score
-Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >trample
 
@@ -402,13 +402,13 @@ Plasm Lamps
 DEBUG INFO: natant ant hinting.
 
 >score
-Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 4.
+Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 43.
 
 >psalm
 by one point
 
 >score
-Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 4.
+Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 >tan
 #notana 'nudge for ant'
@@ -417,14 +417,14 @@ Your score has just gone up by one point
 DEBUG INFO: dialer hinting.
 
 >score
-Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 4.
+Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 >revel
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 >derail
 Your score has just gone up by one point
@@ -432,7 +432,7 @@ Your score has just gone up by one point
 DEBUG INFO: pins hinting.
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 >spin
 Your score has just gone up by one point
@@ -440,7 +440,7 @@ Your score has just gone up by one point
 DEBUG INFO: repaired dialer hinting.
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
+Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 #not a mistake
 >redial

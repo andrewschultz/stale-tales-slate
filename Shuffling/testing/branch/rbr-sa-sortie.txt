@@ -225,8 +225,8 @@ The nick glows all around.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBBG (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRRRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: K-----N.
-DEBUG INFO: CERT-TEXT: -------.
+DEBUG INFO: Rect-text: K-----N.
+DEBUG INFO: Cert-text: -------.
 
 >kitchen
 by one point
@@ -247,8 +247,8 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
 The gadget beeps once. A series of lights comes across: RRGRR.
-DEBUG INFO: RECT-TEXT: S---W.
-DEBUG INFO: CERT-TEXT: --R--.
+DEBUG INFO: Rect-text: S---W.
+DEBUG INFO: Cert-text: --R--.
 
 @!min
 >open fridge
@@ -283,56 +283,56 @@ No, you don't want to go back there.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
 The gadget beeps once. A series of lights comes across: GRRRRRRR.
-DEBUG INFO: RECT-TEXT: T------A.
-DEBUG INFO: CERT-TEXT: T-------.
+DEBUG INFO: Rect-text: T------A.
+DEBUG INFO: Cert-text: T-------.
 \\
 #gadget test: cult tee to lettuce
 >rc cult tee
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
 The gadget beeps once. A series of lights comes across: RRRGRRG.
-DEBUG INFO: RECT-TEXT: L-----E.
-DEBUG INFO: CERT-TEXT: ---T--E.
+DEBUG INFO: Rect-text: L-----E.
+DEBUG INFO: Cert-text: ---T--E.
 \\
 #gadget test: skate to steak
 >rc skate
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
 The gadget beeps once. A series of lights comes across: GRRRR.
-DEBUG INFO: RECT-TEXT: S---K.
-DEBUG INFO: CERT-TEXT: S----.
+DEBUG INFO: Rect-text: S---K.
+DEBUG INFO: Cert-text: S----.
 \\
 #gadget test: cathouse to hotsauce
 >rc cathouse
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBBR.
 The gadget beeps once. A series of lights comes across: RRGRRGRG.
-DEBUG INFO: RECT-TEXT: H------E.
-DEBUG INFO: CERT-TEXT: --T--U-E.
+DEBUG INFO: Rect-text: H------E.
+DEBUG INFO: Cert-text: --T--U-E.
 \\
 #gadget test: spearman to parmesan
 >rc spearman
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBBBR.
 The gadget beeps once. A series of lights comes across: RRRRRRGG.
-DEBUG INFO: RECT-TEXT: P------N.
-DEBUG INFO: CERT-TEXT: ------AN.
+DEBUG INFO: Rect-text: P------N.
+DEBUG INFO: Cert-text: ------AN.
 \\
 #gadget test: cakepan to pancake
 >rc cakepan
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRGBB.
 The gadget beeps once. A series of lights comes across: RGRRRRR.
-DEBUG INFO: RECT-TEXT: P-----E.
-DEBUG INFO: CERT-TEXT: -A-----.
+DEBUG INFO: Rect-text: P-----E.
+DEBUG INFO: Cert-text: -A-----.
 \\
 #gadget test: grist to grits
 >rc grist
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
 The gadget beeps once. A series of lights comes across: GGGRR.
-DEBUG INFO: RECT-TEXT: G---S.
-DEBUG INFO: CERT-TEXT: GRI--.
+DEBUG INFO: Rect-text: G---S.
+DEBUG INFO: Cert-text: GRI--.
 
 >score
 {$SCOS}
@@ -344,7 +344,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 @gle
 >straw
 by one point
-You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
+You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes.
 >undo
 
 @mis
@@ -376,8 +376,8 @@ The spearman is what's important.
 @gn
 >w
 >w
-Mum, dud mud blocks your way west. You can only go south to the Trap Part or east
-!to the trellis.
+Mum, dud mud blocks your way west. You can only go south to Trap Part or east
+!to Stiller Trellis.
 >s
 >w
 Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
@@ -534,7 +534,7 @@ It's the full name brand that really catches your eye.
 @nud
 #spechelp for cathouse
 >hotsauec
-The CATHOUSE perfume suddenly smells a bit spicier.
+The bottle of CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
 #mistake test for sauce
 >sauce
@@ -753,8 +753,8 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGB.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: C--T.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: C--T.
+DEBUG INFO: Cert-text: ----.
 
 >coat
 Your score has just gone up by one point.
@@ -797,7 +797,7 @@ DEBUG: warts being objhinted.
 @gn
 >w
 >w
-Mum, dud mud blocks your way west. You can only go south to the Trap Part or east to the trellis.
+Mum, dud mud blocks your way west. You can only go south to Trap Part or east to Stiller Trellis.
 >e
 
 >s
@@ -827,8 +827,8 @@ The whole room seems lit up.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 The gadget beeps once. A series of lights comes across: RGRG.
-DEBUG INFO: RECT-TEXT: S--K.
-DEBUG INFO: CERT-TEXT: -A-K.
+DEBUG INFO: Rect-text: S--K.
+DEBUG INFO: Cert-text: -A-K.
 
 >sack
 Your score has just gone up by one point.
@@ -840,8 +840,8 @@ Your score has just gone up by one point.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 The gadget beeps once. A series of lights comes across: RGRG.
-DEBUG INFO: RECT-TEXT: C--K.
-DEBUG INFO: CERT-TEXT: -A-K.
+DEBUG INFO: Rect-text: C--K.
+DEBUG INFO: Cert-text: -A-K.
 
 >score
 @min
@@ -949,8 +949,8 @@ Your vision blurs a bit, and instead you see shoes.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
 The gadget beeps once. A series of lights comes across: RRRGG.
-DEBUG INFO: RECT-TEXT: S---S.
-DEBUG INFO: CERT-TEXT: ---ES.
+DEBUG INFO: Rect-text: S---S.
+DEBUG INFO: Cert-text: ---ES.
 
 @max
 #pre-room-moor rule
@@ -1039,8 +1039,8 @@ You stare into the blue lube for a bit, then look around. The whole moor seems l
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR.
 The gadget beeps once. A series of lights comes across: RRGRRRG.
-DEBUG INFO: RECT-TEXT: P-----T.
-DEBUG INFO: CERT-TEXT: --A---T.
+DEBUG INFO: Rect-text: P-----T.
+DEBUG INFO: Cert-text: --A---T.
 
 @gn
 >s
@@ -1221,9 +1221,9 @@ It's not nice to make fun of the peasant for having hay he doesn't want
 @mis
 #mistake test for trade/trade [text]
 >trade
-Instead of trading, use GIVE X to Y.
+Instead of trading, use GIVE X TO Y.
 >trade zozimus
-Instead of trading, use GIVE X to Y.
+Instead of trading, use GIVE X TO Y.
 
 @nud
 #done rejects for peasant
@@ -1374,8 +1374,8 @@ You stuffed the hay in the wall. What does the gadget offer? (+)
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBRBBBB.
 The gadget beeps once. A series of lights comes across: GGRRRRR.
-DEBUG INFO: RECT-TEXT: H-----Y.
-DEBUG INFO: CERT-TEXT: HA-----.
+DEBUG INFO: Rect-text: H-----Y.
+DEBUG INFO: Cert-text: HA-----.
 
 @gn
 >n
@@ -1574,7 +1574,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 
 @gn
 >s
-Mum, dud mud blocks your way south. You can only go west back to the Trap Part or north to the trellis.
+Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 
 @mis
 #mistake retest for pray
@@ -1636,8 +1636,8 @@ Your vision blurs a bit, and instead you see a missile.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBRB.
 The gadget beeps once. A series of lights comes across: RRRRGRR.
-DEBUG INFO: RECT-TEXT: M-----E.
-DEBUG INFO: CERT-TEXT: ----I--.
+DEBUG INFO: Rect-text: M-----E.
+DEBUG INFO: Cert-text: ----I--.
 
 >missile
 Your score has just gone up by one point.
@@ -1709,8 +1709,8 @@ You imagine a panel of experts critiquing the poem, before it was folded. Hm. Yo
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
 The gadget beeps once. A series of lights comes across: GRRRR.
-DEBUG INFO: RECT-TEXT: P---L.
-DEBUG INFO: CERT-TEXT: P----.
+DEBUG INFO: Rect-text: P---L.
+DEBUG INFO: Cert-text: P----.
 
 >panel
 Your score has just gone up by one point.
@@ -1742,8 +1742,8 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: S--L.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: S--L.
+DEBUG INFO: Cert-text: ----.
 
 @max
 #pre-oils-silo rule retry
@@ -1793,8 +1793,8 @@ Your vision blurs a bit, and instead you see a black door.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBGBBBB.
 You notice the gadget beeps twice. Hmm. A series of lights comes across: RRGRRRGRR.
-DEBUG INFO: RECT-TEXT: B-------R.
-DEBUG INFO: CERT-TEXT: --A---O--.
+DEBUG INFO: Rect-text: B-------R.
+DEBUG INFO: Cert-text: --A---O--.
 
 >black door
 Your score has just gone up by one point.
@@ -1918,8 +1918,8 @@ No, that wouldn't need the soil as a foundation.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 The gadget beeps once. A series of lights comes across: RGGR.
-DEBUG INFO: RECT-TEXT: S--O.
-DEBUG INFO: CERT-TEXT: -IL-.
+DEBUG INFO: Rect-text: S--O.
+DEBUG INFO: Cert-text: -IL-.
 
 >silo
 Your score has just gone up by one point.
@@ -2044,7 +2044,7 @@ You don't need to reset the steer button like you did the trees button. It's wha
 >undo
 >undo
 >reset
-Unfortunately, it's not QUITE as easy as just pushing a reset button, which only worked to undo the trees. But rearraning it? I hope that's not too bad.
+Unfortunately, it's not quite as easy as just pushing a reset button, which only worked to undo the trees. But rearraning it? I hope that's not too bad.
 >undo
 >undo
 >steer
@@ -2054,7 +2054,7 @@ You don't need to reset the steer button. It's what it's supposed to be.
 >undo
 >undo
 >reset
-Unfortunately, it's not QUITE as easy as just pushing a reset button. But rearraning it? I hope that's not too bad.
+Unfortunately, it's not quite as easy as just pushing a reset button. But rearraning it? I hope that's not too bad.
 >reset button
 Resetting twice won't get you anywhere. You need a new direction to change the TREES.
 
@@ -2064,8 +2064,8 @@ Resetting twice won't get you anywhere. You need a new direction to change the T
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG.
 The gadget beeps once. A series of lights comes across: RRGGR.
-DEBUG INFO: RECT-TEXT: S---R.
-DEBUG INFO: CERT-TEXT: --EE-.
+DEBUG INFO: Rect-text: S---R.
+DEBUG INFO: Cert-text: --EE-.
 
 >steer
 Your score has just gone up by one point.
@@ -2099,8 +2099,8 @@ Close...what you need to do will sooth, in a bit.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 The gadget beeps once. A series of lights comes across: RRGRR.
-DEBUG INFO: RECT-TEXT: S---T.
-DEBUG INFO: CERT-TEXT: --O--.
+DEBUG INFO: Rect-text: S---T.
+DEBUG INFO: Cert-text: --O--.
 
 >shoot
 Your score has just gone up by one point.
@@ -2147,13 +2147,13 @@ No, the shoot button HAS to be right.
 
 @min
 >misses
-Missed in Sortie:
+/====Sortie
 --the cake pan in the fridge could've become a PANCAKE.
 --the grist in the fridge could've become GRITS.
 
 @max
 >misses
-!Missed in Sortie:
+!====Sortie
 !--the cake pan in the fridge could've become a PANCAKE.
 !--the grist in the fridge could've become GRITS.
 

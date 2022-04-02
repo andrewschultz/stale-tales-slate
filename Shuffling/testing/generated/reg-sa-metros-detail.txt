@@ -24,8 +24,8 @@ Undesired Underside
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRRRRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: G------A.
-DEBUG INFO: CERT-TEXT: --------.
+DEBUG INFO: Rect-text: G------A.
+DEBUG INFO: Cert-text: --------.
 
 #gadget test: a reading to gardenia
 >purloin reading
@@ -33,8 +33,8 @@ DEBUG INFO: CERT-TEXT: --------.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRRRR.
-DEBUG INFO: RECT-TEXT: G------A.
-DEBUG INFO: CERT-TEXT: --------.
+DEBUG INFO: Rect-text: G------A.
+DEBUG INFO: Cert-text: --------.
 >undo
 >undo
 
@@ -88,16 +88,16 @@ Bile Libe
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
 The gadget beeps once. A series of lights comes across: RRRRGG.
-DEBUG INFO: RECT-TEXT: T----O.
-DEBUG INFO: CERT-TEXT: ----TO.
+DEBUG INFO: Rect-text: T----O.
+DEBUG INFO: Cert-text: ----TO.
 
 #gadget test: words to sword
 >rc words
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: S---D.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: S---D.
+DEBUG INFO: Cert-text: -----.
 
 >tomato
 Your score has just gone up by one point.
@@ -136,16 +136,16 @@ Someone puts their hand to their lips. Someone else shakes their head. You don't
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBBGR.
 The gadget beeps once. A series of lights comes across: RRRRRRG.
-DEBUG INFO: RECT-TEXT: R-----S.
-DEBUG INFO: CERT-TEXT: ------S.
+DEBUG INFO: Rect-text: R-----S.
+DEBUG INFO: Cert-text: ------S.
 
 #gadget test: dry cake to keycard
 >rc dry cake
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBGB.
 The gadget beeps once. A series of lights comes across: RRGGGRR.
-DEBUG INFO: RECT-TEXT: K-----D.
-DEBUG INFO: CERT-TEXT: --YCA--.
+DEBUG INFO: Rect-text: K-----D.
+DEBUG INFO: Cert-text: --YCA--.
 
 >rentals
 Your score has just gone up by one point.
@@ -178,16 +178,16 @@ It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat ab
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: V----O.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: V----O.
+DEBUG INFO: Cert-text: ------.
 
 #gadget test: lost corn to controls
 >rc lost corn
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB.
 The gadget beeps once. A series of lights comes across: RGRGRGRR.
-DEBUG INFO: RECT-TEXT: C------S.
-DEBUG INFO: CERT-TEXT: -O-T-O--.
+DEBUG INFO: Rect-text: C------S.
+DEBUG INFO: Cert-text: -O-T-O--.
 
 >controls
 Your score has just gone up by one point.
@@ -213,16 +213,16 @@ Fo' Real Florae
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: S----H.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: S----H.
+DEBUG INFO: Cert-text: ------.
 
 #gadget test: begonias to noisebag
 >rc begonias
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB.
 You notice the gadget beeps twice. Hmm. A series of lights comes across: RRRRRRGR.
-DEBUG INFO: RECT-TEXT: N------G.
-DEBUG INFO: CERT-TEXT: ------A-.
+DEBUG INFO: Rect-text: N------G.
+DEBUG INFO: Cert-text: ------A-.
 
 >ask faeries about xyzzy
 "You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim.
@@ -303,8 +303,8 @@ You currently have 10 out of 18 total points for the Metros region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBBR.
 The gadget beeps once. A series of lights comes across: GRRGRGG.
-DEBUG INFO: RECT-TEXT: B-----E.
-DEBUG INFO: CERT-TEXT: B--C-DE.
+DEBUG INFO: Rect-text: B-----E.
+DEBUG INFO: Cert-text: B--C-DE.
 
 >barcode
 
@@ -410,8 +410,8 @@ You get to scanning, twiddling from certify to rectify and back.
 As the nerds ask other questions, the gadget lights up, and you notice BBBGRBBB, until the nerds ask no more. Then it goes back to BRBBBBGB as you think how, why and what to ask nerds.
 "Still messing with technology over your head, eh? Like that Skansder you don't know what it is."
 As the nerds ask other questions, the gadget lights up, and you notice RRGRRRGR, until the nerds ask no more. Then it goes back to RRRRRRRG as you think how, why and what to ask nerds.
-DEBUG INFO: RECT-TEXT: D------S.
-DEBUG INFO: CERT-TEXT: -------S.
+DEBUG INFO: Rect-text: D------S.
+DEBUG INFO: Cert-text: -------S.
 
 >ask nerds about darkness
 #notana
@@ -436,8 +436,8 @@ Elm Train Terminal
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBBR.
 The gadget beeps once. A series of lights comes across: RRRGRRG.
-DEBUG INFO: RECT-TEXT: O-----G.
-DEBUG INFO: CERT-TEXT: ---N--G.
+DEBUG INFO: Rect-text: O-----G.
+DEBUG INFO: Cert-text: ---N--G.
 >undo
 >undo
 
@@ -465,16 +465,16 @@ Bassy Abyss
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
 The gadget beeps once. A series of lights comes across: RRRRG.
-DEBUG INFO: RECT-TEXT: R---N.
-DEBUG INFO: CERT-TEXT: ----N.
+DEBUG INFO: Rect-text: R---N.
+DEBUG INFO: Cert-text: ----N.
 
 #gadget test: beats to beast
 >rc beats
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
 The gadget beeps once. A series of lights comes across: GGGRR.
-DEBUG INFO: RECT-TEXT: B---T.
-DEBUG INFO: CERT-TEXT: BEA--.
+DEBUG INFO: Rect-text: B---T.
+DEBUG INFO: Cert-text: BEA--.
 
 >resin
 
@@ -487,6 +487,11 @@ You currently have 16 out of 18 total points for the Metros region. You have fou
 You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >take sword
+
+>alts
+While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
+You could have gotten the begonias from Fo' Real Florae Fare, Lo.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

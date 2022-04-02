@@ -1,4 +1,5 @@
 # rbr-sa-forest.txt
+
 #
 # this covers maximum points, minimum points and nudges.
 #
@@ -321,16 +322,16 @@ Your vision blurs, and you see a compass rose pointed west.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: GRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: S---H.
-DEBUG INFO: CERT-TEXT: S----.
+DEBUG INFO: Rect-text: S---H.
+DEBUG INFO: Cert-text: S----.
 >s
 #gadget test: stew to west
 >rc stew
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: W--T.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: W--T.
+DEBUG INFO: Cert-text: ----.
 >undo
 >undo
 >undo
@@ -359,8 +360,8 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: N---H.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: N---H.
+DEBUG INFO: Cert-text: -----.
 
 @nud
 #these are universal to SF/RF
@@ -409,8 +410,8 @@ You can't retrace your steps.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: E--T.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: E--T.
+DEBUG INFO: Cert-text: ----.
 
 >e
 by one point
@@ -436,8 +437,8 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBR.
 The gadget beeps once. A series of lights comes across: GRRG.
-DEBUG INFO: RECT-TEXT: S--T.
-DEBUG INFO: CERT-TEXT: S--T.
+DEBUG INFO: Rect-text: S--T.
+DEBUG INFO: Cert-text: S--T.
 
 @gn
 >s
@@ -560,24 +561,24 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR.
 The gadget beeps once. A series of lights comes across: RRRRGG.
-DEBUG INFO: RECT-TEXT: S----S.
-DEBUG INFO: CERT-TEXT: ----ES.
+DEBUG INFO: Rect-text: S----S.
+DEBUG INFO: Cert-text: ----ES.
 \\
 #gadget test: ones to nose
 >rc ones
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGRB.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: N--E.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: N--E.
+DEBUG INFO: Cert-text: ----.
 \\
 #gadget test: noughts to shotgun
 >rc noughts
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRRR.
-DEBUG INFO: RECT-TEXT: S-----N.
-DEBUG INFO: CERT-TEXT: -------.
+DEBUG INFO: Rect-text: S-----N.
+DEBUG INFO: Cert-text: -------.
 
 @nud
 #nudge for triangles
@@ -889,15 +890,15 @@ You have everything you need to enter Corses Crosse, now. You can worry about th
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBR.
 The gadget beeps once. A series of lights comes across: GRRRG.
-DEBUG INFO: RECT-TEXT: B---D.
-DEBUG INFO: CERT-TEXT: B---D.
+DEBUG INFO: Rect-text: B---D.
+DEBUG INFO: Cert-text: B---D.
 #gadget test: spam to maps
 >rc spam
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: M--S.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: M--S.
+DEBUG INFO: Cert-text: ----.
 
 @nud
 >eat spam
@@ -1011,8 +1012,8 @@ The scoffer coffers and scoffin' coffins are impenetrable. But even if they were
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB.
 The gadget beeps once. A series of lights comes across: RRRRGR.
-DEBUG INFO: RECT-TEXT: C----L.
-DEBUG INFO: CERT-TEXT: ----E-.
+DEBUG INFO: Rect-text: C----L.
+DEBUG INFO: Cert-text: ----E-.
 
 >score
 {$SCOS}
@@ -1098,8 +1099,8 @@ DEBUG: chisel being objhinted.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBB.
 The gadget beeps once. A series of lights comes across: RGRRRGR.
-DEBUG INFO: RECT-TEXT: H-----N.
-DEBUG INFO: CERT-TEXT: -A---E-.
+DEBUG INFO: Rect-text: H-----N.
+DEBUG INFO: Cert-text: -A---E-.
 
 @!min
 >hasbeen
@@ -1195,8 +1196,8 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: S----R.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: S----R.
+DEBUG INFO: Cert-text: ------.
 
 >score
 @min
@@ -1242,8 +1243,8 @@ Your score has just gone up by one point.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBR.
 The gadget beeps once. A series of lights comes across: GRRGGG.
-DEBUG INFO: RECT-TEXT: S----R.
-DEBUG INFO: CERT-TEXT: S--VER.
+DEBUG INFO: Rect-text: S----R.
+DEBUG INFO: Cert-text: S--VER.
 
 @nud
 >srelvi
@@ -1310,8 +1311,8 @@ No, the material of the spread isn't important, here.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: D----S.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: D----S.
+DEBUG INFO: Cert-text: ------.
 \\
 >n
 \\
@@ -1320,8 +1321,8 @@ DEBUG INFO: CERT-TEXT: ------.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBRB.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: D----S.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: D----S.
+DEBUG INFO: Cert-text: ------.
 
 >drapes
 by one point
@@ -1621,8 +1622,8 @@ You may mean to RETRY instead. Do so?
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR.
 The gadget beeps once. A series of lights comes across: RGRRRG.
-DEBUG INFO: RECT-TEXT: W----S.
-DEBUG INFO: CERT-TEXT: -O---S.
+DEBUG INFO: Rect-text: W----S.
+DEBUG INFO: Cert-text: -O---S.
 
 >wolves
 Your score has just gone up by one point.
@@ -1683,13 +1684,13 @@ They'd be much less dangerous left in a pile. Maybe you have something that can 
 
 @min
 >misses
-Missed in Forest:
+/====Forest
 --the slit on Corses Crosse could've been turned to SILT.
 --the banshee could've become a HASBEEN (space or not).
 
 @max
 >misses
-!Missed in Forest:
+!====Forest:
 !--the slit on Corses Crosse could've been turned to SILT.
 !--the banshee could've become a HASBEEN (space or not).
 

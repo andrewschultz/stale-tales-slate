@@ -110,6 +110,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+>au 2
 #mistake test for real hot
 >real hot
 But what emotion would provide heat?
@@ -403,7 +404,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #scannotes for mussier misuser
 >scan misuser
-Those question marks ... hmm. Oh, you get it now. Not VERY sneaky, but the mussier misuser isn't, either, really.
+Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the mussier misuser isn't, either, really.
 
 @!mina,minb
 >surmise
@@ -674,10 +675,10 @@ Staring again at the diapers, you are depressed you couldn't even get being depr
 DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
 #nudge for ires
 >irse
-It's an ires PAD.
+It's an IRES PAD, not just ires.
 #nudge for pad
 >pda
-It's an IRES pad.
+It's an IRES PAD, not just a pad.
 
 @sli
 #slider test for despair
@@ -719,9 +720,9 @@ There's only one unstable color for three names in the Large Regal Lager, so tha
 What would an Alger hero DO to such foul spirits as the lager, though?
 #readables for large regal lager
 >read lager
-The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it.
+The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago, in red. I'll spare the details, because the story would kill almost as many brain cells as actually drinking the stuff.
 >read lager
-Your eyes gloss over all but the red ERGAL AGLER.
+Your eyes gloss over all but the red name, ERGAL AGLER.
 
 @!mina,minb
 >glare
@@ -747,7 +748,7 @@ You stare into space some more but get distracted.
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
 #nudge for diapers
 >despari
-Don't twist yourself into knots to/from REAL despair.
+You already twisted yourself into and out of knots from despair. Time to move on!
 
 @nud
 #nudge for song
@@ -1032,7 +1033,7 @@ by one point
 @nud
 #mistake test for bowser
 >bowser
-This game is pretty old school, but it has enough obstacles.
+A Roiling Original is pretty old school, but it has enough obstacles.
 #mistake test for eiders
 >eiders
 But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
@@ -1068,7 +1069,7 @@ Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
 DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
 #readables for See Dir
 >read see dir
-Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out.
+Nothing catches your eye except an article on RIDEES, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out.
 
 @sli
 #slider test for desire
@@ -1168,7 +1169,7 @@ Anyway, no more badgering beggar din.
 Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!
 #mistake test for pernod
 >pernod
-There will be time for ritzy, overpriced alcohol AFTER you have made it to the top.
+There will be time for ritzy, overpriced alcohol once you have made it to the top. But until then, you need to keep focused.
 #mistake retest for once
 >once
 Yes! You only need a chance! Once! To get inside! You're enthused enough, but you need to strategize.
@@ -1181,9 +1182,9 @@ Staring at the rivets, you get the feeling you've not quite found the right way 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
 #readables for rivets
 >read rivets
-/The rivets have two messages. One is (RISE, TV|VET, SIR)!
+/The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 >read rivets
-/The rivets have two messages. One is (RISE, TV|VET, SIR)!
+/The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 #scannotes for rivets
 >scan rivets
 Hmm, along with the information for scanning Trevis, you might really have something here.
@@ -1327,7 +1328,9 @@ The red vees seem like they should link together somehow, but you don't have thi
 DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
 #readables for red vees
 >read red vees
-Etched into the vees are the names of this motivational device's inventors. One is
+/Etched into the vees in red are the names of this motivational device's inventors\. One is (Ed Evers|Erv Dees)\.
+>read red vees
+/Etched into the vees in red are the names of this motivational device's inventors\. One is (Ed Evers|Erv Dees)\.
 
 @sli
 #slider test for deserve
@@ -1422,7 +1425,9 @@ Your score has just gone up by one point
 @nud
 #readables for creationism reactionism
 >read creationism
-/One of the two authors is (Scot Manieri|Cristi Emano)\.
+/You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
+>read creationism
+/You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
 
 @nud
 #nudge for salt
@@ -1477,7 +1482,7 @@ Sister Tressi seems a bit more upset than usual.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
 #scannotes for sister tressi siters
 >scan sister tressi siters
-Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it.
+Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't 100% as you'd expect, maybe you'd better learn to think your way around it.
 #scannotes for trance nectar
 >scan trance nectar
 Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
@@ -1489,7 +1494,7 @@ All the siters.
 Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic.
 #spechelp for creationism reactionism
 >reactionims
-You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, it IS an eleven-word puzzle, and it IS optional.
+You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, figuring Creationism, Reactionism is the toughest optional puzzle in the game.
 
 @sli
 #slider test for ramble

@@ -41,8 +41,8 @@ The Nick
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBBG (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRRRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: K-----N.
-DEBUG INFO: CERT-TEXT: -------.
+DEBUG INFO: Rect-text: K-----N.
+DEBUG INFO: Cert-text: -------.
 
 >kitchen
 by one point
@@ -54,8 +54,8 @@ Kitchen
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
 The gadget beeps once. A series of lights comes across: RRGRR.
-DEBUG INFO: RECT-TEXT: S---W.
-DEBUG INFO: CERT-TEXT: --R--.
+DEBUG INFO: Rect-text: S---W.
+DEBUG INFO: Cert-text: --R--.
 
 >open fridge
 You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
@@ -84,56 +84,56 @@ Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
 The gadget beeps once. A series of lights comes across: GRRRRRRR.
-DEBUG INFO: RECT-TEXT: T------A.
-DEBUG INFO: CERT-TEXT: T-------.
+DEBUG INFO: Rect-text: T------A.
+DEBUG INFO: Cert-text: T-------.
 
 #gadget test: cult tee to lettuce
 >rc cult tee
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
 The gadget beeps once. A series of lights comes across: RRRGRRG.
-DEBUG INFO: RECT-TEXT: L-----E.
-DEBUG INFO: CERT-TEXT: ---T--E.
+DEBUG INFO: Rect-text: L-----E.
+DEBUG INFO: Cert-text: ---T--E.
 
 #gadget test: skate to steak
 >rc skate
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
 The gadget beeps once. A series of lights comes across: GRRRR.
-DEBUG INFO: RECT-TEXT: S---K.
-DEBUG INFO: CERT-TEXT: S----.
+DEBUG INFO: Rect-text: S---K.
+DEBUG INFO: Cert-text: S----.
 
 #gadget test: cathouse to hotsauce
 >rc cathouse
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBBR.
 The gadget beeps once. A series of lights comes across: RRGRRGRG.
-DEBUG INFO: RECT-TEXT: H------E.
-DEBUG INFO: CERT-TEXT: --T--U-E.
+DEBUG INFO: Rect-text: H------E.
+DEBUG INFO: Cert-text: --T--U-E.
 
 #gadget test: spearman to parmesan
 >rc spearman
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBBBR.
 The gadget beeps once. A series of lights comes across: RRRRRRGG.
-DEBUG INFO: RECT-TEXT: P------N.
-DEBUG INFO: CERT-TEXT: ------AN.
+DEBUG INFO: Rect-text: P------N.
+DEBUG INFO: Cert-text: ------AN.
 
 #gadget test: cakepan to pancake
 >rc cakepan
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRGBB.
 The gadget beeps once. A series of lights comes across: RGRRRRR.
-DEBUG INFO: RECT-TEXT: P-----E.
-DEBUG INFO: CERT-TEXT: -A-----.
+DEBUG INFO: Rect-text: P-----E.
+DEBUG INFO: Cert-text: -A-----.
 
 #gadget test: grist to grits
 >rc grist
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
 The gadget beeps once. A series of lights comes across: GGGRR.
-DEBUG INFO: RECT-TEXT: G---S.
-DEBUG INFO: CERT-TEXT: GRI--.
+DEBUG INFO: Rect-text: G---S.
+DEBUG INFO: Cert-text: GRI--.
 
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
@@ -199,8 +199,8 @@ You currently have 10 out of 27 total points for the Sortie region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGB.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: C--T.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: C--T.
+DEBUG INFO: Cert-text: ----.
 
 >coat
 Your score has just gone up by one point.
@@ -218,8 +218,8 @@ Room
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 The gadget beeps once. A series of lights comes across: RGRG.
-DEBUG INFO: RECT-TEXT: S--K.
-DEBUG INFO: CERT-TEXT: -A-K.
+DEBUG INFO: Rect-text: S--K.
+DEBUG INFO: Cert-text: -A-K.
 
 >sack
 Your score has just gone up by one point.
@@ -229,8 +229,8 @@ Your score has just gone up by one point.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 The gadget beeps once. A series of lights comes across: RGRG.
-DEBUG INFO: RECT-TEXT: C--K.
-DEBUG INFO: CERT-TEXT: -A-K.
+DEBUG INFO: Rect-text: C--K.
+DEBUG INFO: Cert-text: -A-K.
 
 >score
 You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -248,8 +248,8 @@ You currently have 13 out of 27 total points for the Sortie region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
 The gadget beeps once. A series of lights comes across: RRRGG.
-DEBUG INFO: RECT-TEXT: S---S.
-DEBUG INFO: CERT-TEXT: ---ES.
+DEBUG INFO: Rect-text: S---S.
+DEBUG INFO: Cert-text: ---ES.
 
 >shoes
 Your score has just gone up by one point.
@@ -270,8 +270,8 @@ Your score has just gone up by one point.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR.
 The gadget beeps once. A series of lights comes across: RRGRRRG.
-DEBUG INFO: RECT-TEXT: P-----T.
-DEBUG INFO: CERT-TEXT: --A---T.
+DEBUG INFO: Rect-text: P-----T.
+DEBUG INFO: Cert-text: --A---T.
 
 >score
 You currently have 15 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -372,8 +372,8 @@ Your score has just gone up by one point.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBRBBBB.
 The gadget beeps once. A series of lights comes across: GGRRRRR.
-DEBUG INFO: RECT-TEXT: H-----Y.
-DEBUG INFO: CERT-TEXT: HA-----.
+DEBUG INFO: Rect-text: H-----Y.
+DEBUG INFO: Cert-text: HA-----.
 
 >score
 You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -405,8 +405,8 @@ Gainly laying the cask under the spout, you pour in some oils.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBRB.
 The gadget beeps once. A series of lights comes across: RRRRGRR.
-DEBUG INFO: RECT-TEXT: M-----E.
-DEBUG INFO: CERT-TEXT: ----I--.
+DEBUG INFO: Rect-text: M-----E.
+DEBUG INFO: Cert-text: ----I--.
 
 >missile
 Your score has just gone up by one point.
@@ -423,8 +423,8 @@ You fold the paper, and it looks sort of like a paper plane.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
 The gadget beeps once. A series of lights comes across: GRRRR.
-DEBUG INFO: RECT-TEXT: P---L.
-DEBUG INFO: CERT-TEXT: P----.
+DEBUG INFO: Rect-text: P---L.
+DEBUG INFO: Cert-text: P----.
 
 >panel
 Your score has just gone up by one point.
@@ -437,8 +437,8 @@ You currently have 21 out of 27 total points for the Sortie region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: S--L.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: S--L.
+DEBUG INFO: Cert-text: ----.
 
 >soil
 Your score has just gone up by one point.
@@ -451,8 +451,8 @@ You currently have 22 out of 27 total points for the Sortie region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBGBBBB.
 You notice the gadget beeps twice. Hmm. A series of lights comes across: RRGRRRGRR.
-DEBUG INFO: RECT-TEXT: B-------R.
-DEBUG INFO: CERT-TEXT: --A---O--.
+DEBUG INFO: Rect-text: B-------R.
+DEBUG INFO: Cert-text: --A---O--.
 
 >black door
 Your score has just gone up by one point.
@@ -483,8 +483,8 @@ Crashing Archings
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 The gadget beeps once. A series of lights comes across: RGGR.
-DEBUG INFO: RECT-TEXT: S--O.
-DEBUG INFO: CERT-TEXT: -IL-.
+DEBUG INFO: Rect-text: S--O.
+DEBUG INFO: Cert-text: -IL-.
 
 >silo
 Your score has just gone up by one point.
@@ -506,8 +506,8 @@ You schlep the missile through the door. You hear some mechanics and whizzing. A
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG.
 The gadget beeps once. A series of lights comes across: RRGGR.
-DEBUG INFO: RECT-TEXT: S---R.
-DEBUG INFO: CERT-TEXT: --EE-.
+DEBUG INFO: Rect-text: S---R.
+DEBUG INFO: Cert-text: --EE-.
 
 >steer
 Your score has just gone up by one point.
@@ -520,8 +520,8 @@ You currently have 25 out of 27 total points for the Sortie region. You have fou
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 The gadget beeps once. A series of lights comes across: RRGRR.
-DEBUG INFO: RECT-TEXT: S---T.
-DEBUG INFO: CERT-TEXT: --O--.
+DEBUG INFO: Rect-text: S---T.
+DEBUG INFO: Cert-text: --O--.
 
 >shoot
 Your score has just gone up by one point.

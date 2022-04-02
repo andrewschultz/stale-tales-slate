@@ -8,20 +8,19 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* manor-go-to
+* ordeal-reload-go-to
 
+>au 2
 >go to me
 >go to study
 >go to perrot
 Who?
+>painting
+>think
+!Who?
 
 >go to rodney
 You haven't made it to that region, yet.
-
->go to xxx
-That's not a room or thing I recognize.
-
->go to elmo
 
 >think
 >x shelf
@@ -42,13 +41,16 @@ Dusty Study
 
 >stable
 >in
-A Blest Stable
+Farming Framing
 
->gt basement
-Basement
+# test GT (been there)
+>gt largely gallery
+Largely All-Grey Gallery
 
 >satchel
 >x settler
+
+# test GT (never been there)
 >gt cavern
 You've never been there yet, so you can't go back.
 
@@ -63,13 +65,13 @@ You can RECAP to see your options.
 Carven Cavern
 
 >gt study
-Your manor was surrounded, and you escaped. Bad idea to turn back.
->gt basement
-Your manor was surrounded, and you escaped. Bad idea to turn back.
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+>gt gallery
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >gt highest
-Your manor was surrounded, and you escaped. Bad idea to turn back.
->gt stable
-Your manor was surrounded, and you escaped. Bad idea to turn back.
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+>gt framing farming
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
 >staple
 >stapler
@@ -77,32 +79,37 @@ Your manor was surrounded, and you escaped. Bad idea to turn back.
 >staple
 >in
 
-* stores-go-to
+*stores-go-to
 
 >ts
 
 >gt study
-You already solved Roman Manor.
+You already solved Ordeal Reload.
 
 >tokers
 >nestor
 
->enter cloud
 >gt profits
-The command you may be looking for is RETRY.
+You're already here. Or there. The precise grammar's neither here nor there.
+
+>enter mangiest steaming
+>gt profits
+You'll need to find your way back. Don't worry. There are clues. And a small reward.
 
 >in
 >outside
 
 >gt lectures
-You already took care of things there.
+You kind of destroyed Cruelest Lectures, and you won't get any rewards for going back. It was neat and all but not as fun as watching Reefer Madness.
 
 * routes-go-to
 
 >ts
 
 >routes
->gt store u
+# bug cases but we should be able to test them eventually
+#>gt patcher
+#>gt store u
 
 >enter routes
 Same Mesa
@@ -122,7 +129,7 @@ Same Mesa
 
 >against
 >gt Circle
-You can't run from the giant!
+You can't run from Ian Gast!
 
 >astride
 >below
@@ -141,45 +148,65 @@ Adobe Abode
 >opposite
 
 >gt horbert
->out
-
->gt horbert
-That person has served the necessary purpose.
-
->from
-
->gt horbert
-That person has served the necessary purpose.
 
 >gt runed book
-That has served the necessary purpose.
+You don't need to do anything further with U NERD: ENDUR (REDUN). If you want to go where you last saw U NERD: ENDUR (REDUN), you'll need to specify the place.
+
+>out
+
+>above
+
+>gt horbert
+You don't need to do anything further with Brother Horbert. If you want to go where you last saw Brother Horbert, you'll need to specify the place.
+
+>from
 
 >beneath
 
 >gt mesa
-The crowd would be sad to see you return, unsuccessful.
+Brother Horbert would be sad to see you return, unsuccessful.
 
 >until
 >around
 >along
 
->gt underpass
+>gt marsh
+You already muddled your way out of Harms Marsh. You may be lost now, but walking back would be worse.
+
 >gt mesa
-The crowd would be sad to see you return, unsuccessful.
+Brother Horbert would be sad to see you return, unsuccessful.
 
 >amidst
 
 >gt pier
-You have no idea how to turn the cripple clipper around, and you don't want to.
+You have no idea how to turn the Cripple Clipper around, and you don't want to.
+
+>gt marsh
+You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
 
 >gt mesa
-Not from the boat, you aren't. You're much closer to your goal right now.
+You're not going back across the water. You're closer to the end of your quest.
 
->behind
+>athwart
+
+>gt cripple clipper
+The Sonancy Canyons lead to your destiny.
+
+>gt pier
+It's time to go forward, not backwards.
+
+>gt marsh
+You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
+
+>gt mesa
+You're not going back across the water. You're closer to the end of your quest.
+
 >between
+>through
+>beyond
 Strip of Profits
 
-* troves-go-to
+*troves-go-to
 
 >ts
 >troves
@@ -283,7 +310,7 @@ Going back would be a dereliction of your destiny.
 Going back would be a dereliction of your destiny.
 >gt cone
 Going back would be a dereliction of your destiny.
->gt fiefco
+>gt upscale capsule
 You're already here.
 
 >deserve
@@ -297,7 +324,7 @@ Your score has just gone up by one point
 
 Strip of Profits
 
-* presto-go-to
+*presto-go-to
 
 >ts
 
@@ -305,8 +332,9 @@ Strip of Profits
 >presto
 >in
 
+>blam
 >umph
->pooh
+>phooey
 >e
 >n
 >w
@@ -321,8 +349,21 @@ Strip of Profits
 >n
 >n
 
->gt lev matzo
-You'll have to walk through the mazeroom, from L to V. Or, well, just solve the volt maze.
+>n
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>n
+
+>gt zo mavelt
+GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
 
 >s
 >rats
@@ -340,12 +381,9 @@ You'll have to walk through the mazeroom, from L to V. Or, well, just solve the 
 >put dart in gun
 >w
 
->gt lev matzo
-You'll have to walk through the mazeroom, from L to V. Or, well, just solve the volt maze.
-
 >mazeltov
->gt lev matzo
-You don't want to go back to or through the volt maze you solved.
+>gt zo mavelt
+You don't want to, and can't, go back to or through the volt maze you solved.
 
 >there
 >n
@@ -355,9 +393,12 @@ You don't want to go back to or through the volt maze you solved.
 >so long
 
 >gt dirge ridge
-"Nyurgh! Hungry!" you recall Leo and Rand saying. Maybe if you can make some food, and if once you have some manual labor they'd be better suited for, you can visit them.
+"Nyurgh! Hungry!" you recall
+saying. Maybe if you can make some food, and once you have some manual labor they'd be better suited for, you can visit them.
+
 >gt leo
-"Nyurgh! Hungry!" you recall Leo and Rand saying. Maybe if you can make some food, and if once you have some manual labor they'd be better suited for, you can visit them.
+"Nyurgh! Hungry!" you recall
+saying. Maybe if you can make some food, and once you have some manual labor they'd be better suited for, you can visit them.
 
 >n
 >screen
@@ -365,8 +406,8 @@ You don't want to go back to or through the volt maze you solved.
 >casserole
 >leaf
 >skid
->gt disk
-You can flip back to the disk.
+#>gt disk
+#You can flip back to the disk.
 >push skid s
 >g
 >g
@@ -378,14 +419,14 @@ Phat Path
 >n
 >keyboard
 >gt Phat Path
-You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.
+You should have what you need. It's time to sit down and plow through some computer work, here.
 >put keyboard on slab
 >put screen on slab
 >disk
->gt skid
-You can flip back to the skid.
+#>gt skid
+#You can flip back to the skid.
 
-* oyster-go-to
+*oyster-go-to
 
 >ts
 >oyster
@@ -397,20 +438,20 @@ You can flip back to the skid.
 >stroll
 
 >gt shop
-The trolls would not welcome you back.
+The LOLstr trolls would not welcome you back.
 
 >calm
 >run
-Shore
+Disease Seaside
 
 >gt lode
 You don't want to go back near that urn.
 
 >gt shop
-The trolls would not welcome you back, and it'd take too long to get there.
+The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >boast
->gt shore
+>gt seaside
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
 >gt lode
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
@@ -420,12 +461,12 @@ If only it was that easy. Well, I hope it's not too hard to figure the right act
 >leap
 >gt freight
 You don't really want to revisit the crays.
->gt shore
+>gt seaside
 No sense crossing back. There's more on this side of the shore.
 >gt lode
 You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
 >gt shop
-The trolls would not welcome you back, and it'd take too long to get there.
+The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >spike
 >e
@@ -450,6 +491,8 @@ Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed 
 >clean lance
 >in
 
+>prepay
+>trample
 >gt anger range
 Aw, c'mon, the ant should be no problem.
 >tan ant
@@ -457,7 +500,7 @@ Tenfold
 >gt plasm lamps
 You got rid of the ant. Nothing more to do there.
 
-* towers-go-to
+*towers-go-to
 
 >seed 1
 >ts
@@ -465,7 +508,7 @@ You got rid of the ant. Nothing more to do there.
 >in
 
 >gone
->wined
+>lardy
 >bleak
 >yonder
 Topside Deposit
@@ -480,26 +523,28 @@ Progress isn't easy when you're flailing in water.
 
 >nearest
 >gt waters
-No, it wasn't fun the first time.
+Rawest Waters would probably be even less fun the second time around.
 >gt deposit
 You don't want to cross Leak Lake again.
 >gt trefoil
 That's way in the past.
 
-* otters-go-to
+*otters-go-to
 
+>au 2
 >seed 1
 >a5
 >in
 >barely
 >reedily
 >w
->nastily
->blearily
+>really
+>sparely
 >bossily
 >1
->gt barley
+>gt brunt
 Gretta looks around uneasily, but she doesn't seem to be glaring at you. So you should probably listen up, or you can RECAP to see your options.
+>3
 >3
 >n
 >because
@@ -507,7 +552,7 @@ Gretta looks around uneasily, but she doesn't seem to be glaring at you. So you 
 >s
 >e
 >n
->angrily
+>remotely
 >brutely
 >n
 >slow
@@ -533,23 +578,23 @@ Gretta looks around uneasily, but she doesn't seem to be glaring at you. So you 
 >deeply
 >quickly
 >w
->gt barley
+>gt brunt
 "Good fail of dialog!" Elvira can negotiate awkward silence better than you can.
 
 >7
->gt barley
+>gt brunt
 You leave her sin shrine with extra quickness before getting a shiner.
 
-Bleary Barley
+Burnt Brunt
 
-* others-go-to
+*others-go-to
 
 >ts
 >gonear rustic
 >pears
 >plums
 >grapes
->tamarind
+>limes
 
 >compass
 by one point

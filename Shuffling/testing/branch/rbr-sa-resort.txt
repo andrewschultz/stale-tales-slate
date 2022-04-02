@@ -120,16 +120,16 @@ As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRGGR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: I---T.
-DEBUG INFO: CERT-TEXT: --LE-.
+DEBUG INFO: Rect-text: I---T.
+DEBUG INFO: Cert-text: --LE-.
 \\
 #gadget test: stile to islet
 >rc stile
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRGBB.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: I---T.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: I---T.
+DEBUG INFO: Cert-text: -----.
 
 >islet
 Your score has just gone up by one point.
@@ -231,24 +231,24 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBR.
 The gadget beeps once. A series of lights comes across: GRRG.
-DEBUG INFO: RECT-TEXT: L--S.
-DEBUG INFO: CERT-TEXT: L--S.
+DEBUG INFO: Rect-text: L--S.
+DEBUG INFO: Cert-text: L--S.
 \\
 #gadget test: rock to cork
 >rc rock
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 The gadget beeps once. A series of lights comes across: RGRG.
-DEBUG INFO: RECT-TEXT: C--K.
-DEBUG INFO: CERT-TEXT: -O-K.
+DEBUG INFO: Rect-text: C--K.
+DEBUG INFO: Cert-text: -O-K.
 \\
 #gadget test: swing to wings
 >rc swing
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: W---S.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: W---S.
+DEBUG INFO: Cert-text: -----.
 
 @!min
 >lies
@@ -283,8 +283,8 @@ You reflect on how insidious it was to stick you here in a false paradise.
 >wings
 by one point
 >misses
-!--the swing on the Leis Isle was changeable to WINGS.
---the rock on the Leis Isle was changeable to CORK.
+!--the swing was changeable to WINGS.
+--the rock was changeable to CORK.
 >undo
 >undo
 
@@ -456,32 +456,32 @@ Your vision blurs a bit, and instead you see toeholds.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: S---E.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: S---E.
+DEBUG INFO: Cert-text: -----.
 \\
 #gadget test: toolshed to toeholds
 >rc toolshed
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRBBB.
 The gadget beeps once. A series of lights comes across: GGRRRRRR.
-DEBUG INFO: RECT-TEXT: T------S.
-DEBUG INFO: CERT-TEXT: TO------.
+DEBUG INFO: Rect-text: T------S.
+DEBUG INFO: Cert-text: TO------.
 \\
 #gadget test: sprig to grips
 >rc sprig
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: G---S.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: G---S.
+DEBUG INFO: Cert-text: -----.
 \\
 #gadget test: spore to ropes
 >rc spore
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBGB.
 The gadget beeps once. A series of lights comes across: RRRRR.
-DEBUG INFO: RECT-TEXT: R---S.
-DEBUG INFO: CERT-TEXT: -----.
+DEBUG INFO: Rect-text: R---S.
+DEBUG INFO: Cert-text: -----.
 
 >slope
 by one point
@@ -539,7 +539,7 @@ by one point
 >ropes
 by one point
 >misses
---the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
+--the tool shed was changeable to TOEHOLDS for 2 points.
 >undo
 >undo
 >undo
@@ -698,7 +698,7 @@ Perhaps it's best to keep it simple and cut down the riot.
 No, the clay is a clue to what the protest really wants to do.
 #spechelp for riot
 >troi
-The riot's still a crowd. A BIG crowd.
+The riot's still a crowd, and a big one, too.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
 
 @mis
@@ -716,8 +716,8 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
 The gadget beeps once. A series of lights comes across: RRRR.
-DEBUG INFO: RECT-TEXT: T--O.
-DEBUG INFO: CERT-TEXT: ----.
+DEBUG INFO: Rect-text: T--O.
+DEBUG INFO: Cert-text: ----.
 
 >trio
 Your score has just gone up by one point.
@@ -787,8 +787,8 @@ You see the trio stopping their protest to get to work as potters.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBRB.
 The gadget beeps once. A series of lights comes across: GRRGGRR.
-DEBUG INFO: RECT-TEXT: P-----S.
-DEBUG INFO: CERT-TEXT: P--TE--.
+DEBUG INFO: Rect-text: P-----S.
+DEBUG INFO: Cert-text: P--TE--.
 
 @ask
 >kilns
@@ -881,8 +881,8 @@ Your vision blurs a bit, and instead you see kilns, to bake clay in, or somethin
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR.
 The gadget beeps once. A series of lights comes across: RGRRG.
-DEBUG INFO: RECT-TEXT: K---S.
-DEBUG INFO: CERT-TEXT: -I--S.
+DEBUG INFO: Rect-text: K---S.
+DEBUG INFO: Cert-text: -I--S.
 
 >kilns
 Your score has just gone up by one point.
@@ -1046,7 +1046,7 @@ Means Manse
 
 @hin
 >xx exits
-They just seem to EXIST. Maybe you can, too.
+The X-ITES exits just seem to EXIST. Maybe you can, too.
 >xx
 Your vision blurs a bit, and you see names and hear AMENs.
 
@@ -1056,7 +1056,7 @@ But you want to NOT go anywhere. NOT take any exits.
 
 @gle
 >angle
-It's glowing all around here. The X ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
+It's glowing all around here. The X-ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
 
 @nud
 #nudge for manse
@@ -1067,13 +1067,13 @@ You'd like to feel more welcome in the Means Manse. There must be a way or two. 
 That's not quite the right sort of nothing.
 #nudge for marble
 >marbel
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 #nudge for spire
 >spier
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 #nudge for toaster
 >toastre
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 
 @mis
 #mistake test for amen/name
@@ -1108,26 +1108,26 @@ Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher o
 
 @min
 >misses
-Missed in Resort:
+/====Resort
 --you could've said LIES to expose the Leis Isle as an illusion.
-!--the rock on the Leis Isle was changeable to CORK.
---the swing on the Leis Isle was changeable to WINGS.
---the spore in the Rived Drive was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
---the sprig in the Rived Drive was changeable to GRIPS.
-!--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
+!--the rock was changeable to CORK.
+--the swing was changeable to WINGS.
+--the spore was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
+--the sprig was changeable to GRIPS.
+!--the tool shed was changeable to TOEHOLDS for 2 points.
 #brackets ok
---the chain links could've become china. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
+--the chain links could've become CHINA. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
 
 @max
-!Missed in Resort:
+!====Resort
 !--you could've said LIES to expose the Leis Isle as an illusion.
-!--the rock on the Leis Isle was changeable to CORK.
-!--the swing on the Leis Isle was changeable to WINGS.
-!--the spore in the Rived Drive was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
-!--the sprig in the Rived Drive was changeable to GRIPS.
-!--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
+!--the rock was changeable to CORK.
+!--the swing was changeable to WINGS.
+!--the spore was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
+!--the sprig was changeable to GRIPS.
+!--the tool shed was changeable to TOEHOLDS for 2 points.
 #brackets ok
-!--the chain links could've become china. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
+!--the chain links could've become CHINA. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
 
 >exist
 #notana
@@ -1136,24 +1136,26 @@ My Adieu to You: Made It!
 
 @max
 >missed
+!====Resort
+>alts
 You chose EXIST, but there are two other ways to win.
->missed
+>alt
 There were three final commands to win the game. You chose EXIST, but you could also have tried NAMES/AMENS.
 >undo
 >amens
 by one point
 My Adieu to You: Made It!
->missed
+>alt
 You chose AMENS, but there are two other ways to win.
->missed
+>alts
 There were three final commands to win the game. You chose AMENS, but you could also have tried EXIST/NAMES.
 >undo
 >names
 by one point
 My Adieu to You: Made It!
->missed
+>alts
 You chose NAMES, but there are two other ways to win.
->missed
+>alt
 There were three final commands to win the game. You chose NAMES, but you could also have tried EXIST/AMENS.
 
 

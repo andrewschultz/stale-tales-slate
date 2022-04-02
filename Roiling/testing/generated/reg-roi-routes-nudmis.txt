@@ -14,10 +14,11 @@
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
+>au 2
 >t
 #mistake test for follow [text]
 >follow zozimus
-This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
+A Roiling Original doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
 #mistake test for psat
 >psat
 You have enough word juggling now. You don't need a standardized test, too.
@@ -35,7 +36,7 @@ Picking a fight--or spitting--is uncouth.
 Nothing has gotten too riotous yet.
 #mistake test for taps
 >taps
-You have no bugle. Well, not in this game.
+You have no bugle. Well, not in A Roiling Original.
 #mistake test for satired
 >satired
 You find nothing to satirize.
@@ -53,9 +54,9 @@ There's nobody to hide from, though you could fit under the anti-sag sit-a-nag l
 Maybe if there were mango trees around.
 #mistake test for preposition/prepositions
 >preposition
-Yes, but WHICH prepositions?
+Yes, prepositions are the way, but you need to find which work, where. There are only so many, you think. You hope.
 >prepositions
-Yes, but WHICH prepositions?
+Yes, prepositions are the way, but you need to find which work, where. There are only so many, you think. You hope.
 #mistake test for ouster-in-routes
 >ouster
 You're the ouster here, trying to get by the routes.
@@ -172,7 +173,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 
 #spechelp for scripture picturers
 >insied
-You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
+You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not precisely like that. Your thoughts are close, but jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
 #mistake test for indies
 >indies
@@ -357,7 +358,7 @@ You have enough word juggling now. You don't need a standardized test, too.
 Picking a fight--or spitting--is uncouth.
 #mistake retest for taps
 >taps
-You have no bugle. Well, not in this game.
+You have no bugle. Well, not in A Roiling Original.
 #mistake retest for ptas
 >ptas
 Concerned parents won't be able to help you here.
@@ -597,9 +598,9 @@ Score in a scenario: 6 out of 22 total points in the current region, Routes. Low
 
 #mistake test for gats/tags
 >gats
-This game is not violent enough for tags with gats.
+A Roiling Original is not violent enough for tags with gats.
 >tags
-This game is not violent enough for tags with gats.
+A Roiling Original is not violent enough for tags with gats.
 #mistake test for stag
 >stag
 Ian Gast already came alone and does not deserve to be changed into an animal.
@@ -806,7 +807,7 @@ Your score has just gone up by one point
 You already went UNDER. You need something new. Something slightly different.
 #done rejects for the bean
 >ofmr
-The Morf-Form has, uh, morphed enough. Deal with THE BEAN.
+The MORF-FORM has, uh, morphed enough. Deal with THE BEAN.
 #nudge for bean
 >bena
 THE BEAN has too much gravitas to be just a bean.
@@ -828,10 +829,11 @@ Harms Marsh
 
 #nudge for null
 >null
-The whole NULL IT unit.
+The whole NULL-IT UNIT.
 #nudge for unit
 >unti
-The whole NULL IT unit.
+The whole NULL-IT UNIT.
+# above the proper name has unit lower-cased, but we want to tell the anagram
 #mistake test for helos
 >helos
 Helicopters can't make it underground.
@@ -862,11 +864,11 @@ Score in a scenario: 13 out of 22 total points in the current region, Routes. Lo
 
 #scannotes for null it unit
 >scan null it unit
-The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
+The NULL-IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
 #spechelp for null it unit
 >litun
-You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL IT unit. That's a decent omen.
+You feel it's quite near the right time for the NULL-IT unit to shut down, for the darkness to lift. And you must be on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. That's a decent omen.
 
 #mistake test for around
 >around

@@ -146,7 +146,7 @@ Your score has just gone up by one point
 Cripple Clipper
 
 >sleep
-This is no dreamboat!
+This is no dreamboat.
 >bother
 Siphon no pish on-ship.
 
@@ -157,8 +157,7 @@ Sonancy Canyons
 
 >listen
 An over-cheery voice: "Thou wit!"
->listen
-The raptest patters are gone, and you can fully focus on the hog and the ewe.
+!The raptest patters are gone, and you can fully focus on the hog and the ewe.
 >listen hog
 Squealing. It could be calmer
 
@@ -167,17 +166,23 @@ Your score has just gone up by one point
 
 >listen hog
 Less noisy now you've been peacemaking a bit.
+
+>without
 >listen
+!An over-cheery voice: "Thou wit!"
 The raptest patters are gone, and you can fully focus on the hurt hog.
+>undo
+>undo
 
 >through
 Your score has just gone up by one point
 
->listen
-The raptest patters are gone, and you can fully focus on the final step.
-
 >without
 Your score has just gone up by one point
+
+>listen
+!An over-cheery voice: "Thou wit!"
+The raptest patters are gone, and you can fully focus on the final step.
 
 >score
 

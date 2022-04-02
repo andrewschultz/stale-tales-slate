@@ -221,7 +221,7 @@ There's no secret cheat between NO TIP and OPT IN.
 
 #nudge for parse
 >pares
-There's no inbetween for the PARSE and SPARE commands for the gadget.
+There's no in-between for the PARSE and SPARE commands for the gadget.
 
 #nudge for tightknot
 >tightknto

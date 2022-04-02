@@ -310,7 +310,7 @@ The room seems to slow down for a bit before picking up speed and spinning as fa
 If you tried to spin it that high, you'd break the dial.
 
 >turn dial to -1
-NOTE: found a dash and replaced it with a space. You never need to use dashes in commands. Shuffling Around will replace dashes without nagging you in the future.
+NOTE: found a hyphen and replaced it with a space. You never need to use hyphens in commands. Shuffling Around will replace hyphens without nagging you in the future.
 >undo
 
 >turn dial to 0

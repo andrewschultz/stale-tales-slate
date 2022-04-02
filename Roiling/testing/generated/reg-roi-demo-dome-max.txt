@@ -40,7 +40,7 @@ Peek Keep
 Thankfully, nothing unusual like, say, a Med-O-Dome.
 #verbcase listen-demo-dome-default
 >listen
-It's nice and quiet. It IS a museum.
+It's nice and quiet. As you'd expect from a museum.
 
 >x me
 You look just fine.
@@ -90,7 +90,7 @@ PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep).
 
 >x ignsay
-UNFOLD OLD FUN, MEMOIR: I'M MORE.
+Unfold old fun! Memoir: I'm More!
 
 >x grate
 
@@ -394,11 +394,11 @@ PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 
 >score
-/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
+/You could still examine the (artsies' satires|parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
 
 >w
 >s
-You take a break, ignoring the final eight things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
+You take a break, ignoring the final nine things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
 
 >undo
 
@@ -406,27 +406,30 @@ You take a break, ignoring the final eight things in Sparse Spares, and get back
 Sparse Spares
 
 >score
-/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
+/You could still examine the (artsies' satires|parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
 
 >x trifle
 >score
-/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
+/You could still examine the (artsies' satires|parcel placer|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
 >x placer
 >score
-/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
+/You could still examine the (artsies' satires|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
 >x duster
 >score
-/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it) here.
+/You could still examine the (artsies' satires|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it) here.
 >x dustpan
 >score
-/You could still examine the (parcels clasper|bolt case|larded ladder|plastic scalp-it) here.
+/You could still examine the (artsies' satires|parcels clasper|bolt case|larded ladder|plastic scalp-it) here.
 >x ladder
 >score
-/You could still examine the (parcels clasper|bolt case|plastic scalp-it) here.
+/You could still examine the (artsies' satires|parcels clasper|bolt case|plastic scalp-it) here.
 >x plastic
 >score
-/You could still examine the (parcels clasper|bolt case) here.
+/You could still examine the (artsies' satires|parcels clasper|bolt case) here.
 >x bolt case
+>score
+/You could still examine the (artsies' satires|parcels clasper) here.
+>x satires
 >score
 You could still examine the parcels clasper here.
 

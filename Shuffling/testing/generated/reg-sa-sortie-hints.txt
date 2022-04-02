@@ -115,13 +115,13 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 
 >straw
 by one point
-You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
+You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes.
 >undo
 
 >w
 >w
-Mum, dud mud blocks your way west. You can only go south to the Trap Part or east
-!to the trellis.
+Mum, dud mud blocks your way west. You can only go south to Trap Part or east
+!to Stiller Trellis.
 >s
 >w
 Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
@@ -225,7 +225,7 @@ DEBUG: warts being objhinted.
 
 >w
 >w
-Mum, dud mud blocks your way west. You can only go south to the Trap Part or east to the trellis.
+Mum, dud mud blocks your way west. You can only go south to Trap Part or east to Stiller Trellis.
 >e
 
 >s
@@ -422,7 +422,7 @@ You can't pour the oils anywhere in this enclosed area. Try going back to the mo
 >s
 
 >s
-Mum, dud mud blocks your way south. You can only go west back to the Trap Part or north to the trellis.
+Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 
 >moor
 

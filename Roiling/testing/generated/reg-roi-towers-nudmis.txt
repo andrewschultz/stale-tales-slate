@@ -338,10 +338,10 @@ You need to take care of all the adders.
 You don't have time to think about, or change, Renato. You haven't yet found anyone who might want the top opt pot, anyway.
 #nudge for curst
 >curts
-It's not just that it's curst, it's a PALACE, too.
+It's not just that it's curst, it's a CURST PALACE.
 #nudge for palace
 >palaec
-It's not just that it's a palace, it's CURST, too.
+It's not just that it's a palace, it's a CURST PALACE.
 #nudge for castle
 >castel
 Not just any castle. Castle Apcur.
@@ -423,9 +423,9 @@ Score in a scenario: 9 out of 56 total points in the current region, Towers. Low
 
 #mistake test for retoast/retoast [text]
 >retoast
-You can just TOAST or EAT a pastry once you have it.
+A good try, but this isn't the right area. All you can do is TOAST and then EAT a skan snak once you have it.
 >retoast zozimus
-You can just TOAST or EAT a pastry once you have it.
+A good try, but this isn't the right area. All you can do is TOAST and then EAT a skan snak once you have it.
 #mistake retest for dopiest
 >dopiest
 You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
@@ -454,7 +454,7 @@ You don't see any new information about the curst palace this time. In fact, you
 You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.
 #mistake test for pecos
 >pecos
-This game ain't a dadgum Western.
+A Roiling Original ain't a dadgum Western.
 #mistake test for bustler
 >bustler
 The butlers are plural, and anyway, they're bustling plenty as-is.
@@ -837,10 +837,10 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for lone
 >loen
-It's not just any lone animal. It's a lone DUCK.
+It's not just any lone animal. It's a LONE DUCK.
 #nudge for duck
 >dukc
-It's not just any duck. It's a LONE duck.
+It's not just any duck. It's a LONE DUCK.
 #nudge for idtag
 >idtga
 ID tag: dig at it? Gad.
@@ -1141,7 +1141,7 @@ Well, this is tricky. There's her name, and it's probably interacting with itsel
 
 #mistake test for eoliths
 >eoliths
-Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for the Hostile-Is-He Lot to be.
+Whoah, A Roiling Original's pretty retro, but nothing that ancient. Besides, you want a better way for the Hostile-Is-He Lot to be.
 
 >marginal
 #notmax
@@ -1159,9 +1159,7 @@ Score in a scenario: 30 out of 56 total points in the current region, Towers. Lo
 
 #readables for fluster self rut
 >read fluster self rut
-You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There might be more if you read again.
->read fluster self rut
-You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There are also weird furlets around it.
+You focus and see that the brand is TRU-SELF. Which would make you see red on general principles.
 #spechelp for fluster self rut
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
@@ -1171,7 +1169,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut
 You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
 #mistake test for fluters
 >fluters
-This game has no soundtrack, and if I made one, it wouldn't be very good.
+A Roiling Original has no soundtrack, and if I made one, it wouldn't be very good.
 
 >restful
 Your score has just gone up by one point
@@ -1604,7 +1602,7 @@ You thought you heard a brief hum from the diverse deviser for a moment there.
 I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
 #scannotes for diverse deviser
 >scan deviser
-You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Gosh, those ambiguous clues might be MORE interesting and useful than the usual!"
+You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Turn that frown upside-down! Gosh, those ambiguous clues might be even more interesting and useful than the usual!"
 
 >revised
 
@@ -1872,10 +1870,10 @@ Hmm. It might be better to fix parts of the boat--the turbos and blaster.
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
 #nudge for wire
 >wier
-The wires are okay. They're just organized WEIRDER.
+Each wire is okay. They're just all organized WEIRDER.
 #nudge for wires
 >wirse
-The wires are okay. They're just organized WEIRDER.
+The wires are okay. They're just all organized WEIRDER.
 #nudge for turbo
 >turob
 You need to deal with both turbos.
@@ -1938,7 +1936,7 @@ You think you see how to untangle some of the mess inside the/a bot-boat, but yo
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire. That's a decent omen.
 #scannotes for weirder red wire
 >scan weirder red wire
-Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
+Hm, looks like the red wire doesn't make you see any extra red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
 #mistake test for were rid
 >were rid
 No, you can't just yank the red wire out.
@@ -2023,9 +2021,9 @@ Oh, no. Their icy gazes are quite enough.
 The retinas haven't stained you yet. You don't want to be stained, much less re-stained. You see red at the thought.
 #mistake test for retain/retains
 >retain
-You want them to STOP retaining you from getting behind them, here.
+Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.
 >retains
-You want them to STOP retaining you from getting behind them, here.
+Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.
 #mistake test for stearin
 >stearin
 The retinas are probably full of all kinds of indescribable weird organic compounds. But there may be a practical way to describe them better.

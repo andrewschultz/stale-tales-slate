@@ -63,7 +63,16 @@ The conversation is horrid enough.
 You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
 >listen
+#verbcase listen-otters-if-noun-is-yer-all-a-yell'r
+Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out. Sadly, now, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
+
+#verbcase listen-otters-if-noun-is-parleys-splayer-players
+>really
+by one point
+>listen
 Ick, man. Mackin'. You really don't want to pay attention to the details, but you get the general impression.
+>undo
+>undo
 
 >bossily
 Your score has just gone up by one point.

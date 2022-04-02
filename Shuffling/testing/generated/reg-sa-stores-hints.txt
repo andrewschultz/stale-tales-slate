@@ -69,11 +69,11 @@ You see yourself exploring the posted depots you created.
 >undo
 
 >n
-As you try to flee the Trips Strip, a voice boomes "Run off for fun? Urff, no!"
+As you try to flee the Trips Strip, a voice booms "Run off for fun? Urff, no!"
 Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
-Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip. Guess you'll need to explore the stores.
+Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip. Guess you'll need to explore the stores, or what you can make of them.
 >n
-The hubs bush forces you back to the center of the Trips Strip. Guess you'll need to explore the stores.
+The hubs bush forces you back to the center of the Trips Strip. Guess you'll need to explore the stores, or what you can make of them.
 >undo
 >undo
 
@@ -85,7 +85,7 @@ You can just enter the scented descent. If you want or need help with a particul
 You see yourself exploring the scented descent you created.
 
 >n
-As you try to flee the Trips Strip, a voice boomes "Run off for fun? Urff, no!"
+As you try to flee the Trips Strip, a voice booms "Run off for fun? Urff, no!"
 Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
 Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip. Guess you'll need to explore the stores, or what you made of them.
 >n

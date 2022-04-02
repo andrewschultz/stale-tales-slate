@@ -594,7 +594,7 @@ Your score has just gone up by one point
 Drive time
 Strip of Profits
 >missalt
-You could also have made the USB into a sub.
+You could also have made the USB into a SUB.
 >undo
 >undo
 
@@ -605,7 +605,7 @@ Diver time
 Strip of Profits
 
 >missalt
-You could also have made the USB into a bus.
+You could also have made the USB into a BUS.
 >undo
 
 >score

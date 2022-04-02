@@ -32,8 +32,8 @@ You currently have 1 out of 15 total points for the Resort region. Your minimum 
 >wings
 by one point
 >misses
-!--the swing on the Leis Isle was changeable to WINGS.
---the rock on the Leis Isle was changeable to CORK.
+!--the swing was changeable to WINGS.
+--the rock was changeable to CORK.
 >undo
 >undo
 
@@ -72,7 +72,7 @@ by one point
 >ropes
 by one point
 >misses
---the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
+--the tool shed was changeable to TOEHOLDS for 2 points.
 >undo
 >undo
 >undo
@@ -127,14 +127,14 @@ You currently have 9 out of 15 total points for the Resort region. Your final po
 Means Manse
 
 >misses
-Missed in Resort:
+/====Resort
 --you could've said LIES to expose the Leis Isle as an illusion.
-!--the rock on the Leis Isle was changeable to CORK.
---the swing on the Leis Isle was changeable to WINGS.
---the spore in the Rived Drive was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
---the sprig in the Rived Drive was changeable to GRIPS.
-!--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
---the chain links could've become china. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
+!--the rock was changeable to CORK.
+--the swing was changeable to WINGS.
+--the spore was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
+--the sprig was changeable to GRIPS.
+!--the tool shed was changeable to TOEHOLDS for 2 points.
+--the chain links could've become CHINA. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
 
 >exist
 #notana

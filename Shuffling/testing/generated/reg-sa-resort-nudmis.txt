@@ -378,7 +378,7 @@ Perhaps it's best to keep it simple and cut down the riot.
 No, the clay is a clue to what the protest really wants to do.
 #spechelp for riot
 >troi
-The riot's still a crowd. A BIG crowd.
+The riot's still a crowd, and a big one, too.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
 
 #mistake test for i rot
@@ -617,13 +617,13 @@ You'd like to feel more welcome in the Means Manse. There must be a way or two. 
 That's not quite the right sort of nothing.
 #nudge for marble
 >marbel
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 #nudge for spire
 >spier
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 #nudge for toaster
 >toastre
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 
 #mistake test for amen/name
 >amen

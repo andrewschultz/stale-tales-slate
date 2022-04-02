@@ -217,14 +217,6 @@ Score in a scenario: 13 out of 56 total points in the current region, Towers. Lo
 >rcaeyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#readables for keycar
->read keycar
-/(KC AYER|RAY ECK)
-has more information,
->read keycar
-/(KC AYER|RAY ECK)
-has a refresher,
-
 >creaky
 Your score has just gone up by one point
 

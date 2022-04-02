@@ -293,7 +293,7 @@ It's the full name brand that really catches your eye.
 
 #spechelp for cathouse
 >hotsauec
-The CATHOUSE perfume suddenly smells a bit spicier.
+The bottle of CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
 #mistake test for sauce
 >sauce
@@ -683,9 +683,9 @@ It's not nice to make fun of the peasant for having hay he doesn't want
 
 #mistake test for trade/trade [text]
 >trade
-Instead of trading, use GIVE X to Y.
+Instead of trading, use GIVE X TO Y.
 >trade zozimus
-Instead of trading, use GIVE X to Y.
+Instead of trading, use GIVE X TO Y.
 
 #done rejects for peasant
 >peasatn
@@ -1217,7 +1217,7 @@ You don't need to reset the steer button like you did the trees button. It's wha
 >undo
 >undo
 >reset
-Unfortunately, it's not QUITE as easy as just pushing a reset button, which only worked to undo the trees. But rearraning it? I hope that's not too bad.
+Unfortunately, it's not quite as easy as just pushing a reset button, which only worked to undo the trees. But rearraning it? I hope that's not too bad.
 >undo
 >undo
 >steer
@@ -1227,7 +1227,7 @@ You don't need to reset the steer button. It's what it's supposed to be.
 >undo
 >undo
 >reset
-Unfortunately, it's not QUITE as easy as just pushing a reset button. But rearraning it? I hope that's not too bad.
+Unfortunately, it's not quite as easy as just pushing a reset button. But rearraning it? I hope that's not too bad.
 >reset button
 Resetting twice won't get you anywhere. You need a new direction to change the TREES.
 

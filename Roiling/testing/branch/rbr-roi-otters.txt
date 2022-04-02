@@ -540,7 +540,18 @@ The conversation is horrid enough.
 You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
 >listen
+#verbcase listen-otters-if-noun-is-yer-all-a-yell'r
+Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out. Sadly, now, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
+
+@verbs
+##balance undos
+#verbcase listen-otters-if-noun-is-parleys-splayer-players
+>really
+by one point
+>listen
 Ick, man. Mackin'. You really don't want to pay attention to the details, but you get the general impression.
+>undo
+>undo
 
 @nud
 #mistake test for slap em
@@ -845,7 +856,7 @@ Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the origin
 \\
 #nudge for real
 >elra
-No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 
 @sli
 #slider test for really
@@ -1040,7 +1051,7 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say ER
 >ergo
 by one point
 >misses
---you could've checked north of the Disowned Downside for the other way to regain your powers.
+--you didn't see an alternate recharging room north of Disowned Downside in Otters.
 HOWEVER
 >undo
 >however
@@ -1092,7 +1103,7 @@ The eels aren't what needs to be reduced to rubble, here.
 The eels would be insulted to be referred to as dregs.
 #mistake test for polo
 >polo
-No time for games! You don't have your powers back, anyway. It's what's IN the water you want to change.
+No time for games! You don't have your powers back, anyway. Rather than change the water, change what's in it.
 #nudge for pool
 >ploo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1172,7 +1183,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #balance undos
 >misses
 !--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
---you could've checked south of the Disowned Downside for the other way to regain your powers.
+--you didn't see an alternate recharging room south of Disowned Downside in Otters.
 --you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 #balance undos
 >unless
@@ -1185,7 +1196,7 @@ min-up
 >s
 >misses
 --you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
-!--you could've checked south of the Disowned Downside for the other way to regain your powers.
+!--you didn't see an alternate recharging room south of Disowned Downside in Otters.
 >undo
 >undo
 >undo
@@ -2000,10 +2011,10 @@ So many pines, hard to pick one. Might as well take care of them all.
 So many nails, hard to pick one. Might as well take care of them all.
 #nudge for critters
 >crittesr
-The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that.
+The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
 #nudge for critter
 >crittre
-The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that.
+The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
 #nudge for raccoon
 >raccono
 The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn't really important.
@@ -2161,7 +2172,7 @@ DEBUG INFO: damsel medals hinting.
 @nud
 #mistake retest for slain/as nil
 >as nil
-You're trying to SAVE the animals, actually.
+Not the way to save the animals, surprisingly.
 #mistake retest for shorten
 >shorten
 They're more likely to shorten you with a few stings.
@@ -2313,9 +2324,9 @@ A clove, likely from one alcove.
 @mis
 #mistake test for edisa/sadie
 >edisa
-On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
+On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want more ideas aides annoying and blocking you?
 >sadie
-On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
+On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want more ideas aides annoying and blocking you?
 
 @nud
 ##balance undos

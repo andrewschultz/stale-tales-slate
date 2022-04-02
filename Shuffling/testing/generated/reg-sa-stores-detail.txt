@@ -20,56 +20,56 @@ Trips Strip
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: GRRRGR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: S----T.
-DEBUG INFO: CERT-TEXT: S---E-.
+DEBUG INFO: Rect-text: S----T.
+DEBUG INFO: Cert-text: S---E-.
 
 #gadget test: bertos to sorbet (marquee reading BERTOS)
 >rc marquee
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBG.
 The gadget beeps once. A series of lights comes across: RRGRRR.
-DEBUG INFO: RECT-TEXT: S----T.
-DEBUG INFO: CERT-TEXT: --R---.
+DEBUG INFO: Rect-text: S----T.
+DEBUG INFO: Cert-text: --R---.
 
 #gadget test: storef to forest
 >rc store f
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: F----T.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: F----T.
+DEBUG INFO: Cert-text: ------.
 
 #gadget test: store i to sortie
 >rc store i
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRB.
 The gadget beeps once. A series of lights comes across: GRRRRR.
-DEBUG INFO: RECT-TEXT: S----E.
-DEBUG INFO: CERT-TEXT: S-----.
+DEBUG INFO: Rect-text: S----E.
+DEBUG INFO: Cert-text: S-----.
 
 #gadget test: store m to metros
 >rc store m
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
 The gadget beeps once. A series of lights comes across: RRRGRR.
-DEBUG INFO: RECT-TEXT: M----S.
-DEBUG INFO: CERT-TEXT: ---R--.
+DEBUG INFO: Rect-text: M----S.
+DEBUG INFO: Cert-text: ---R--.
 
 #gadget test: store r to resort
 >rc store r
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBGBB.
 The gadget beeps once. A series of lights comes across: RRRRRR.
-DEBUG INFO: RECT-TEXT: R----T.
-DEBUG INFO: CERT-TEXT: ------.
+DEBUG INFO: Rect-text: R----T.
+DEBUG INFO: Cert-text: ------.
 
 #gadget test: roster to resort
 >rc roster
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRBB.
 The gadget beeps once. A series of lights comes across: GRGRRR.
-DEBUG INFO: RECT-TEXT: R----T.
-DEBUG INFO: CERT-TEXT: R-S---.
+DEBUG INFO: Rect-text: R----T.
+DEBUG INFO: Cert-text: R-S---.
 
 >forest
 by one point

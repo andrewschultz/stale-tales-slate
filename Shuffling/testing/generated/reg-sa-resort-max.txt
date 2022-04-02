@@ -133,14 +133,14 @@ You currently have 14 out of 15 total points for the Resort region. You have fou
 >e
 Means Manse
 
-!Missed in Resort:
+!====Resort
 !--you could've said LIES to expose the Leis Isle as an illusion.
-!--the rock on the Leis Isle was changeable to CORK.
-!--the swing on the Leis Isle was changeable to WINGS.
-!--the spore in the Rived Drive was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
-!--the sprig in the Rived Drive was changeable to GRIPS.
-!--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
-!--the chain links could've become china. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
+!--the rock was changeable to CORK.
+!--the swing was changeable to WINGS.
+!--the spore was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
+!--the sprig was changeable to GRIPS.
+!--the tool shed was changeable to TOEHOLDS for 2 points.
+!--the chain links could've become CHINA. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
 
 >exist
 #notana
@@ -148,23 +148,25 @@ by one point
 My Adieu to You: Made It!
 
 >missed
+!====Resort
+>alts
 You chose EXIST, but there are two other ways to win.
->missed
+>alt
 There were three final commands to win the game. You chose EXIST, but you could also have tried NAMES/AMENS.
 >undo
 >amens
 by one point
 My Adieu to You: Made It!
->missed
+>alt
 You chose AMENS, but there are two other ways to win.
->missed
+>alts
 There were three final commands to win the game. You chose AMENS, but you could also have tried EXIST/NAMES.
 >undo
 >names
 by one point
 My Adieu to You: Made It!
->missed
+>alts
 You chose NAMES, but there are two other ways to win.
->missed
+>alt
 There were three final commands to win the game. You chose NAMES, but you could also have tried EXIST/AMENS.
 

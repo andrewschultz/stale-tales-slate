@@ -218,7 +218,7 @@ Don't dwell on it. It's lies.
 #spechelp for meet bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET BANS. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS. That's a decent omen.
 #mistake test for net/net beams/beams net
 >net
 But the net would still block you.
@@ -257,7 +257,7 @@ Not even one of the beams rattles. You count them up again--there are ten.
 You change neither the number nor the makeup of the ten beams.
 
 >basement
-Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Now you remember why there were ten beams. Of course, the ten beams lead down to what must be a basement, even if it's called something different.
 Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
@@ -304,7 +304,7 @@ Hm, no, the niche--my niche--won't unfold that way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a decent omen.
 #nudge for ceiling
 >ceilign
-You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
+You wouldn't want to collapse the whole ceiling, but maybe the words MY NICHE could be changed.
 
 >chimney
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
@@ -556,9 +556,9 @@ The ISBN bins creak slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ISBN bins. That's a decent omen.
 #mistake test for bsin/bs in
 >bsin
-Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
+Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 >bs in
-Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
+Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 
 >snib
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
@@ -574,9 +574,9 @@ You already fixed the bins.
 The ISBN bins are secure. Best not tinker.
 #mistake retest for bsin/bs in
 >bsin
-Now, now! This game is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
+Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 >bs in
-Now, now! This game is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
+Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 
 >x settler
 
@@ -776,7 +776,7 @@ Score in a scenario: 14 out of 15 total points in the current region, Ordeal Rel
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
 >t
 >scan respect specter
-"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any need to be vowels or consonants. You can SCAN again if you want more hints."
 >undo
 >undo
 >undo

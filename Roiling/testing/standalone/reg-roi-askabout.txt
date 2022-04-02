@@ -417,37 +417,37 @@ Taking away a max point.
 >n
 
 >gonear mzend
->ask lev matzo about elvira
+>ask lev tzoma about elvira
 "I'm safe from her in this maze. I think?"
->ask lev matzo about lev matzo
+>ask lev tzoma about lev tzoma
 "I'm here to help, just by being me, apparently."
->ask lev matzo about xyzzy
+>ask lev tzoma about xyzzy
 "I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
->ask lev matzo about volt maze
+>ask lev tzoma about volt maze
 "I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
->ask lev matzo about matzo lev
+>ask lev tzoma about tzoma lev
 "I'm here to help, just by being me, apparently."
->ask lev matzo about tom alvez
+>ask lev tzoma about tom alvez
 "Oh! He'll drop by later. I hope you don't need his help too much."
 
->sb lev matzo
+>sb lev tzoma
 >n
 
 >gonear mzend
->ask matzo lev about elvira
+>ask tzoma lev about elvira
 "I'm safe from her in this maze. I think?"
->ask matzo lev about matzo lev
+>ask tzoma lev about tzoma lev
 "I'm here to help, just by being me, apparently."
->ask matzo lev about xyzzy
+>ask tzoma lev about xyzzy
 "I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
->ask matzo lev about volt maze
+>ask tzoma lev about volt maze
 "I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
->ask matzo lev about lev matzo
+>ask tzoma lev about lev tzoma
 "I'm here to help, just by being me, apparently."
->ask matzo lev about tom alvez
+>ask tzoma lev about tom alvez
 "Oh! He'll drop by later. I hope you don't need his help too much."
 
->sb matzo lev
+>sb tzoma lev
 >n
 
 >gonear mzend
@@ -459,48 +459,19 @@ Taking away a max point.
 "I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
 >ask tom alvez about volt maze
 "I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
->ask tom alvez about lev matzo
+>ask tom alvez about lev tzoma
 "Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
->ask tom alvez about matzo lev
+>ask tom alvez about tzoma lev
 "Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
-
-* fake-end
 
 >n
 
->s
-Burnt Brunt
-
->rats
-Your score has just gone up by one point
->drat
-Your score has just gone up by one point
-
->n
-
->ask plebe about elvira
-The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority.
->ask plebe about plebe
-You figure you should grill him about how worthless he thinks he is, but you lack the right word or words.
->ask plebe about xyzzy
-Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move.
 >ask plebe about leo
-You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force.
+!You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force.
+WRONG
 >ask plebe about rand
-You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force.
-
->bleep
-Your score has just gone up by one point
-
->e
-Marines Seminar
-
->bingo
-Your score has just gone up by one point
-
->w
->mazeltov
-Your score has just gone up by one point
+!You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force.
+WRONG
 
 >s
 >s
@@ -540,14 +511,37 @@ He flashes a thumbs-up at his friend.
 
 >n
 >n
+
+>ask plebe about elvira
+The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority.
+>ask plebe about plebe
+You figure you should grill him about how worthless he thinks he is, but you lack the right word or words.
+>ask plebe about xyzzy
+Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move.
+>ask plebe about leo
+You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force.
+>ask plebe about rand
+You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force.
+
+>bleep
+Your score has just gone up by one point
+
+>e
+Marines Seminar
+
+>bingo
+Your score has just gone up by one point
+
+>w
+>mazeltov
+Your score has just gone up by two points
+
+=======================================
 >load gun with dart
 >there
 Your score has just gone up by one point
 >n
 Phat Path
-
-##bingo *2 = no line break
-#different message for making it to the phat path 1st time?
 
 >ask leo about hogs
 "If only you was our size, we could just take 'em. But you ain't. No offense. Maybe you can out-clever 'em like you did us."
@@ -574,70 +568,6 @@ Your score has just gone up by one point
 
 >ask leo about hogs
 "Dat was fun. You was clever."
->later
-Your score has just gone up by one point
->tough
-Your score has just gone up by one point
-Hut! Go!
-Dat was a good dust-up
-
->n
-Hacks' Shack
-
->capslock
-Your score has just gone up by one point
->skid
-Your score has just gone up by one point
->cola
-Your score has just gone up by one point
->mug
->leaf
-Your score has just gone up by one point
->futon
-Your score has just gone up by one point
->screen
-Your score has just gone up by one point
->put screen on slab
-Only one more piece of hardware
-
->get book
->push skid s
->push skid s
->push skid s
-
->put leaf on skid
-
->push skid n
->push skid n
->push skid n
-Your score has just gone up by one point
-
->keyboard
-Your score has just gone up by one point
-
->put keyboard on slab
-You can now do computery things unimpeded!
-
->put lock on keyboard
-fits in perfectly
-
->disk
->put disk in drive
->reboot
-Your score has just gone up by one point
->sleep
-Your score has just gone up by one point
->compile
->pour cola in mug
->debug
-Your score has just gone up by one point
->sub
-Diver time
-Your score has just gone up by one point
-Strip of Profits
-
->score
-(28/33)
 
 * _oyster
 

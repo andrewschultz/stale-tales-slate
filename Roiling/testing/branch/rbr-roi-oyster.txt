@@ -15,7 +15,7 @@ files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,re
 ~	verbs	verbs
 
 }}MAX=43
-}}CURMAX=4
+}}CURMAX=43
 }}SCORE=0
 }}CURMIN=28
 
@@ -176,7 +176,7 @@ It almost fits when you try to insert it. About five-sixths of the way. Perhaps 
 Almost, with the stein, there.
 #mistake test for inset [text]
 >inset zozimus zozimus zozimus
-You may want to INSERT x in Y instead.
+You may want to INSERT X IN Y instead.
 >inset zozimus
 You may not be using an object in the game, and you may wish to inseRt, instead.
 #mistake test for nites
@@ -248,11 +248,11 @@ There's no other way to disobey the sign.
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
 #readables for jukebox
 >read jukebox
-Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo.
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo.
 >read jukebox
-Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Reset, set.
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Reset, set.
 >read jukebox
-Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo, set, reset? Hm.
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo, set, reset? Hm.
 #readables for tips pits
 >read tips pits
 IT'S P is written in red on the bottom.
@@ -273,7 +273,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That'
 \\
 #spechelp for tines
 >inste
-Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
+Hmm. There must be some way to destroy the stein, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
 \\
 #spechelp for tunes
@@ -575,7 +575,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #mistake test for rosa
 >rosa
-Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.
+Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for A Roiling Original.
 #mistake test for arrive
 >arrive
 Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
@@ -945,16 +945,17 @@ If it were just one darnel, there'd be no point in getting mad. But there are a 
 >scan snarled darnels
 So very tangled! No vowels showed up for certain, which makes it tougher ... or does it?
 #spechelp for snarled darnels
->snarled darnels
+>snadrel
 The snarled darnels rustle a bit.
 
 @mis
 #mistake test for landers
 >landers
-There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
+Anger Range won't be helped by an advice column or columnist.
 #mistake test for sandler
 >sandler
-I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
+I award you zero points for that anagramming try, and may God have mercy on your soul. Though another try actually gets a point here. You're really close.
+
 
 @sli
 #slider test for slander
@@ -981,7 +982,7 @@ by one point
 @mis
 #mistake retest for landers
 >landers
-There will be better hints than a manners advice column once you move on.
+Anger Range won't be helped further by an advice column or columnist.
 #mistake retest for sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
@@ -989,7 +990,7 @@ I award you zero points for that anagramming try, and may God have mercy on your
 @nud
 #renudge for darnel
 >darnle
-You already got mad at all the darnels. You need to move on
+You already got mad at all the snarled darnels. You need to move on.
 #done rejects for snarled darnels
 >snarled darnels
 It's okay to get mad, but staying mad? No.
@@ -1011,7 +1012,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #readables for cans
 >read cans
-You squint. NASC is the name of the company that produced these cans.
+You squint. NASC is the name of the company that produced these cans, written in red.
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!
@@ -1326,7 +1327,7 @@ You need action, here! Maybe nothing too exhausting, but some action nonetheless
 No world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!
 #mistake test for palins
 >palins
-Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.
+Michael and Sarah are both funny enough on their own. I really couldn't do them justice in A Roiling Original.
 #mistake test for pone
 >pone
 The message is corny, but the door's a piece of cake once you figure what to do with the knob.
@@ -1922,7 +1923,7 @@ There's not just one arch, there's two. And they've made more than one person ac
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
 #spechelp for achers chaser arches
 >searhc
-Hm, you almost thought you found something. Well, not QUITE like that.
+Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
 #scannotes for achers chaser arches
 >scan achers chaser arches
@@ -2097,7 +2098,7 @@ The hedron's spirit will remain intact even if you meddle there. You must go int
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
 #nudge for tarp
 >tapr
-You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol' trap would make it less intimidating.
+You think of changing the trap--maybe even a tarp! But what if the tarp enfolded you and became a trap that way? Scary! No, thinking of it as an ol' trap would make it less intimidating.
 #nudge for walleye
 >walleey
 Just tacking one walleye won't change the crowd. They're past redemption, anyway.
@@ -2429,10 +2430,10 @@ It's the words on the jumble you need to mess with. With which you need to mess.
 !yapper
 #readables for templar ramplet
 >read ramplet
-Someone named LAMPERT (written in red) constructed the templar ramplet.
+Someone named LAMPERT carved their name in red in the templar ramplet.
 #spechelp for templar ramplet
 >trampel
-There MUST be a way to storm down the templar ramplet. But not that.
+There has to be a way to storm down the templar ramplet. But not that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
 #scannotes for templar ramplet
 >scan templar ramplet

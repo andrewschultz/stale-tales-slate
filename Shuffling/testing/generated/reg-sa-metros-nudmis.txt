@@ -580,7 +580,7 @@ Probably best not to do stuff to even one heath while the faeries have them
 Probably best not to do stuff to even one begonia while the faeries have them.
 #nudge for fairies
 >fairise
-They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
+They could CERTAINLY out-magic you back, even if anagramming could have an effect on them. With a little extra for your misspelling.
 #nudge for fairy
 >faiyr
 If you mangled one of them, the rest of the fairies would mangle you back worse.
@@ -596,6 +596,7 @@ You don't need to do anything to the counter, and it's probably protected by a s
 #nudge for faeries
 >faerise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
+!With a little extra for your misspelling
 #nudge for tonr
 >tron
 The torn cue is just there to direct you to the brocade.
@@ -718,6 +719,10 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 >uptil
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
+
+#nudge for utensil
+>utensli
+The lit-up tulip will stay lit. No need to futz with its brand name.
 
 >w
 
@@ -961,7 +966,7 @@ You currently have 14 out of 18 total points for the Metros region. You have fou
 
 #readables for controls
 >read controls
-You notice that it's underwritten (in red) by Orton LSC, whoever they are.
+You notice that it's underwritten (in red) by ORTON LSC, whoever they are.
 #mistake retest for tar
 >tar
 That'd be neat, make the wall sticky so you could climb and deal with that opening you made...but you might get stuck to it, too. Need something clingy but less gooey.
@@ -1081,6 +1086,11 @@ No use messing with the aligns signal when you need to focus on the beast.
 #nudge for hilt
 >ilth
 The hilt serves a purpose, and besides, there's not much to change it to.
+
+>alts
+While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
+You could have gotten the begonias from Fo' Real Florae Fare, Lo.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

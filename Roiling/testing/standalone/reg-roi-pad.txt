@@ -1,5 +1,5 @@
-## reg-roi-others.txt
-## testing all possible passages through others, e.g. how much you can give Curtis, when
+## reg-roi-pad.txt
+## testing what you can PAD
 ##
 ## also tests nudges
 ##
@@ -9,7 +9,7 @@
 
 * everything
 
->au 1
+>au 2
 
 >pad
 Currently you can consult your pad about these general topics:
@@ -64,7 +64,7 @@ rove over
 
 >staple
 >stapler
->staple wall
+>staple curtain
 >in
 
 ################################trips strip
@@ -107,7 +107,7 @@ long commands
 >undo
 
 >scan store f with settler
-[NOTE: you don't need the prepostion WITH. You can just say SCAN, as the settler is the only item that can scan.]
+[NOTE: you don't need the preposition WITH. You can just say SCAN, as the settler is the only item that can scan.]
 
 >w x y z a
 [You record the information about long commands in your notepad.]
@@ -164,9 +164,13 @@ random dialogue
 >below
 >under
 >inside
-No-Gal Logan
+No-Lag Logan
 
 >out
+
+>pad
+!reagents
+
 >from
 >beneath
 
@@ -176,12 +180,7 @@ No-Gal Logan
 
 >amidst
 
->pad
-hit win
-
 >retry
->pad
-!reagents
 
 ########################troves specific
 
@@ -201,7 +200,7 @@ random dialogue
 >retry
 
 >presto
->enter spot
+>enter tornado
 
 >umph
 >pooh
@@ -299,24 +298,23 @@ DIE THOU
 ##################################towers specific
 
 >seed 1
+>ts
 >towers
 >enter towers
 
 >gone
+>lardy
 >bleak
->wined
 >yonder
-the Bland Sad Badlands are a cruel, difficult place
-about badlands in
+the Wildest Wilteds are a cruel, difficult place
+about the Wildest Wilteds in
 >pad
 You can also consult your pad about topics specific to this region:
-badlands
+the Wildest Wilteds
 curst palace
 
 >scan palace
 You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
-
-Your settler registers RRYR*******.
 
 >get tarts
 >put tarts in toaster
@@ -328,8 +326,8 @@ Your settler registers RRYR*******.
 >dingy
 >w
 >greyed
->give flowerpot to ed
->ask ed about palace
+>give flowerpot to sitter
+>ask sitter about palace
 >e
 
 >pad
@@ -341,16 +339,30 @@ scenery
 
 >a5
 
->x otters
->x field of barley
-
->barely
->pf
-You can make the barley be BARELY there once you get past the otters.
-
 >in
-Those otters weren't there to drain people for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.
+Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.
 
 >pad
 asking
+powers
 
+>barely
+>reedily
+
+>w
+>bossily
+>sparely
+>really
+
+>1
+>3
+>3
+
+>pad
+!asking
+
+>n
+>because
+>else
+>pad
+!powers

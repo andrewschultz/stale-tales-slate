@@ -444,7 +444,7 @@ Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the origin
 
 #nudge for real
 >elra
-No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 
 >sparely
 by one point
@@ -525,7 +525,7 @@ The eels aren't what needs to be reduced to rubble, here.
 The eels would be insulted to be referred to as dregs.
 #mistake test for polo
 >polo
-No time for games! You don't have your powers back, anyway. It's what's IN the water you want to change.
+No time for games! You don't have your powers back, anyway. Rather than change the water, change what's in it.
 #nudge for pool
 >ploo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1048,10 +1048,10 @@ So many pines, hard to pick one. Might as well take care of them all.
 So many nails, hard to pick one. Might as well take care of them all.
 #nudge for critters
 >crittesr
-The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that.
+The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
 #nudge for critter
 >crittre
-The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that.
+The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
 #nudge for raccoon
 >raccono
 The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn't really important.
@@ -1103,7 +1103,7 @@ Score in a scenario: 27 out of 35 total points in the current region, Otters. Lo
 
 #mistake retest for slain/as nil
 >as nil
-You're trying to SAVE the animals, actually.
+Not the way to save the animals, surprisingly.
 #mistake retest for shorten
 >shorten
 They're more likely to shorten you with a few stings.
@@ -1186,9 +1186,9 @@ You don't know if someone named Cornelius would help or hurt you.
 
 #mistake test for edisa/sadie
 >edisa
-On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
+On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want more ideas aides annoying and blocking you?
 >sadie
-On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
+On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want more ideas aides annoying and blocking you?
 
 >aside
 by one point

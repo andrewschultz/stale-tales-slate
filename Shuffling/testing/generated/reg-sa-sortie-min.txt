@@ -300,7 +300,7 @@ You currently have 24 out of 27 total points for the Sortie region. Your minimum
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
 
 >misses
-Missed in Sortie:
+/====Sortie
 --the cake pan in the fridge could've become a PANCAKE.
 --the grist in the fridge could've become GRITS.
 

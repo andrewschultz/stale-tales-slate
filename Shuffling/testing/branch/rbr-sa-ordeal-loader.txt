@@ -286,6 +286,11 @@ Your score has just gone up by one point.
 @max
 >play bugle
 The note from the bugle causes the door to swing back and forth, even with the bolt in place. You can probably enter now.
+\\
+>misses
+you could've changed the bolt into a BLOT.
+!you could've changed the bulge into a BUGLE.
+\\
 >in
 Thickest Thickets
 }}CURMAX--
@@ -427,6 +432,15 @@ Yes, but what do you believe you can do or change?
 >gato
 Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
 
+@max
+>deer
+by one point
+>misses
+--you could've changed the toga into a GOAT
+!--you could've changed the reed into a DEER
+>undo
+>undo
+
 >goat
 Your score has just gone up by one point.
 }}SCORE++
@@ -459,16 +473,16 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 >in
 Notices Section
 
+@hin
+DEBUG: magenta nametag being objhinted.
+>monty glean
+You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe find someone to ask.
+
 @min
 }}CURMAX-=2
 
 >score
 {$SCOS}
-
-@hin
-DEBUG: magenta nametag being objhinted.
->monty glean
-You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe find someone to ask.
 
 @nud
 #readables for gateway
@@ -525,8 +539,8 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: A----S.
-DEBUG INFO: CERT-TEXT: -T----.
+DEBUG INFO: Rect-text: A----S.
+DEBUG INFO: Cert-text: -T----.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 
@@ -551,8 +565,8 @@ Your score has just gone up by one point.
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
-DEBUG INFO: RECT-TEXT: S----C.
-DEBUG INFO: CERT-TEXT: -T----.
+DEBUG INFO: Rect-text: S----C.
+DEBUG INFO: Cert-text: -T----.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 
@@ -913,13 +927,13 @@ You can't imagine anything tricky about the handle, so you decide not to ask.
 You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
 \\
 >ask gateman about shrub
-You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
+"In the past now. Nothing more to learn from that."
 \\
 >ask gateman about brush
-You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
+"In the past now. Nothing more to learn from that."
 \\
 >ask gateman about thorn
-"Sorry if it scratched you. And by you I mean your nametag. And by your nametag I mean me."
+"Can't say anything about that. You'll have to find out for yourself later."
 \\
 >ask gateman about getaway
 "It's safe. Don't worry! Get going through there!"
@@ -928,7 +942,7 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 "Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red."
 \\
 >ask gateman about secure button
-"Could make things tougher at first, but then easier for you. Forces you into only CERTIFYing or RECTIFYing if you push it. But you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so."
+"Could make things tougher at first, but then easier, maybe. Switch it, and you can only CERTIFY or RECTIFY, but not both. Later, though, you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so."
 \\
 >ask gateman about noise bag
 "Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it."
@@ -938,6 +952,15 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 \\
 >ask gateman about cabinet
 "Everything in there's yours."
+
+@min
+>misses
+!you could've changed the bolt into a BLOT.
+you could've changed the bulge into a BUGLE.
+!--you could've changed the toga into a GOAT
+--you could've changed the reed into a DEER
+--you could've changed the sent nets into a NEST.
+--you could've changed the static into ATTICS.
 
 >in
 Trips Strip

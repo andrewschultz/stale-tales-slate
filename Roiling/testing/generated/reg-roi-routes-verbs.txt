@@ -102,7 +102,7 @@ Your score has just gone up by one point
 You can't hear Ian Gast over the WOE BOW BELL.
 #verbcase listen-routes-if-noun-is-woe-bow-bell
 >listen bell
-Through the Woe Bow Bell's resonance, you think you could hear something if you listen carefully.
+Through the WOE BOW BELL's resonance, you think you could hear something if you listen carefully.
 
 #not a mistake (mistake code is for general preposition reject)
 >below

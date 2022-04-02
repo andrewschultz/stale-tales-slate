@@ -12,6 +12,13 @@
 #nowhere dusty study
 >e
 You're just in the mood for quiet time, now, just looking around
+>painting
+>think
+>open door
+>1
+>5
+>lamp
+
 >d
 Ouch! You smack into the MEET-BANS.
 
@@ -81,7 +88,7 @@ You try going north and looking for that poison stripe--but it's invisible and m
 >inside
 #nowhere cleric circle
 >n
-"Directions are not important here, my son. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to." So you do.
+"Directions are not important here, seeker. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to." So you do.
 You go back outside.
 >in
 Cleric Circle
@@ -129,9 +136,11 @@ You might run into the spheric ciphers. You still don't have your sense of direc
 #nowhere loather rathole
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find temporary warmth now you were kicked out from Eh, At Heat.
+Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
 >hate
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find motivation to get through the Race Acre. You need to catch that thief!
+!Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
 
 >gonear bustle sublet
 #nowhere bustle sublet
@@ -149,7 +158,7 @@ There's a chance you might wind up in ruts: Rustin' Ruin St.!
 >gonear drain nadir
 #nowhere drain nadir
 >e
-No. You're so low, you might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies.
+No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
 >despair
 >e
 No. You're so low, you can picture yourself slipping on a rind or dinar. "I... darn." You need to build yourself up here, somehow.
@@ -167,12 +176,12 @@ You are definitely going places, but you are going even better places than the M
 >gonear econ cone
 #nowhere econ cone
 >e
-The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!
+The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!
 
 >gonear upscale capsule
 #nowhere upscale capsule
 >e
-You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out before doing ANYTHING.
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
 >deserve
 >e
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you'd need to have proved yourself. You haven't, yet.
@@ -545,9 +554,9 @@ You don't need to explore Mr. Lee's property. Your only way out is back north.
 >parrot
 #nowhere perverse preserve
 >w
-You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot!
+You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS-RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot!
 >w
-The CRITTERS RESTRICT field isn't worth risking.
+The CRITTERS-RESTRICT field isn't worth risking.
 
 >gonear reclusion inclosure
 #nowhere reclusion inclosure

@@ -9,7 +9,7 @@
 
 * everything
 
->au 1
+>au 2
 
 >score
 You haven't solved any regions yet.
@@ -102,7 +102,7 @@ You can XX after you eat the saltine in order to see what an item should be. Thi
 >undo
 
 >eat saltine
-Old Man Almond coughs. "You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static is just practice."
+Nat Egam coughs. "You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static is just practice."
 
 >pad xx
 You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it.
@@ -118,7 +118,7 @@ The gadget beeps once. A series of lights comes across: RGRRRR.
 >rectify static
 (switching to rectify first)(NOTE: when using RECTIFY, you can shorten it to RECT/REC/R in the future.)
 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB.  (R = red, G = green, B = blue).
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB (R = red, G = green, B = blue).
 
 >pad rectify
 You haven't written anything about that. Currently you can consult the notepad about:
@@ -159,9 +159,9 @@ RECTIFY: PASTE <-> TAPES. The red S/green T in PASTE and green P/red E in TAPES 
 
 >access
 >x examples
-CERTIFY: LEMON, two way arrow, and MELON. The m's and l's are red, but the other letters are green.
+CERTIFY: LEMON, two-way arrow, and MELON. The m's and l's are red, but the other letters are green.
 
-RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the PE of tapes being green and red. Hm, Tapes starts with T and ends with S, while Paste starts with P and ends with E.
+RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the PE of tapes being green and red. Hmm. Tapes starts with T and ends with S, while Paste starts with P and ends with E.
 
 >access
 
@@ -177,7 +177,7 @@ RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the
 Certify = RGRR and Rectify = RBGB.
 
 >eat writing
-There's a lot of writing in this game, especially red writing. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand.
+There's a lot of writing in Shuffling Around, especially red writing. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand.
 [You record the information about writing in your notepad.]
 
 >undo
@@ -218,7 +218,7 @@ Lets you glimpse what you need to do.
 >in
 
 >x stores
-They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them.
+They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only Store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them.
 [You record the information about stores in your notepad.]
 
 >pad stores
@@ -268,11 +268,11 @@ CR/RC (something) = C (something) + R(something).
 >purloin phail phial
 
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 [You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 
 >pad to-do
-What's on tap right now: Store R, store M, Store I, Store F and Store B.
+What's on tap right now: Store R, Store M, Store I, Store F and Store B.
 
 >glean
 >angle

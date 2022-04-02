@@ -259,14 +259,6 @@ There's an important location in the center of the Wildest Wilteds, northeast of
 >score
 Score in a scenario: 13 out of 56 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 56.
 
-#readables for keycar
->read keycar
-/(KC AYER|RAY ECK)
-has more information,
->read keycar
-/(KC AYER|RAY ECK)
-has a refresher,
-
 #towers anagrams for keycar
 >xr keycar
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?

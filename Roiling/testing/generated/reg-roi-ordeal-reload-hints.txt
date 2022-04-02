@@ -39,7 +39,7 @@ Your score has just gone up by one point.
 >t
 
 >basement
-Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Now you remember why there were ten beams. Of course, the ten beams lead down to what must be a basement, even if it's called something different.
 Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.

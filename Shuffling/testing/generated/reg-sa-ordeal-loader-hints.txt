@@ -93,12 +93,12 @@ You currently have 6 out of 8 total points for the Ordeal Loader region. Your mi
 >in
 Notices Section
 
->score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
-
 DEBUG: magenta nametag being objhinted.
 >monty glean
 You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe find someone to ask.
+
+>score
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >gt desert
 The door from Rested Desert was one-way.

@@ -101,14 +101,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 56 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 56.
 
-#readables for keycar
->read keycar
-/(KC AYER|RAY ECK)
-has more information,
->read keycar
-/(KC AYER|RAY ECK)
-has a refresher,
-
 >creaky
 Your score has just gone up by one point
 

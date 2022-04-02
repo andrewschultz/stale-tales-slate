@@ -14,7 +14,7 @@ Posh Hops Shop
 >posf
 
 >score
-Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 4.
+Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 43.
 
 >remap
 by one point
@@ -38,7 +38,7 @@ It almost fits when you try to insert it. About five-sixths of the way. Perhaps 
 Almost, with the stein, there.
 #mistake test for inset [text]
 >inset zozimus zozimus zozimus
-You may want to INSERT x in Y instead.
+You may want to INSERT X IN Y instead.
 >inset zozimus
 You may not be using an object in the game, and you may wish to inseRt, instead.
 #mistake test for nites
@@ -109,11 +109,11 @@ There's no other way to disobey the sign.
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
 #readables for jukebox
 >read jukebox
-Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo.
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo.
 >read jukebox
-Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Reset, set.
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Reset, set.
 >read jukebox
-Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo, set, reset? Hm.
+Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo, set, reset? Hm.
 #readables for tips pits
 >read tips pits
 IT'S P is written in red on the bottom.
@@ -134,7 +134,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That'
 
 #spechelp for tines
 >inste
-Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
+Hmm. There must be some way to destroy the stein, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
 
 #spechelp for tunes
@@ -237,15 +237,15 @@ Your score has just gone up by one point
 >remap
 !Your score has just gone up by one point
 >score
-Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 4.
+Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 43.
 >sing
 by one point
 >score
-Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 >scrape
 by one point
 >score
-Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 >inset
 Perhaps you should've played it cool and fled, instead.
@@ -265,7 +265,7 @@ SPIT
 INSET
 
 >score
-Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #mistake test for stroll [text]/stroll
 >stroll zozimus
@@ -313,7 +313,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a d
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #nudge for calm
 >clma
@@ -329,11 +329,11 @@ Your score has just gone up by one point
 Disease Seaside
 
 >score
-Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #mistake test for rosa
 >rosa
-Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.
+Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for A Roiling Original.
 #mistake test for arrive
 >arrive
 Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
@@ -430,7 +430,7 @@ You get onto the frat raft.
 >fart
 Your score has just gone up by one point
 >score
-Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 #altpath
 #done rejects for frat raft
 >ratf
@@ -439,7 +439,7 @@ The frat raft has fuel. It needs to use that fuel, now, with the oars.
 Your score has just gone up by one point
 Anger Range
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 #altpath
 >thisalt
 --you could've tried to BOAST to get the sabot boats' attention, then LEAP.
@@ -458,7 +458,7 @@ Your score has just gone up by one point
 Fighter Freight
 
 >score
-Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #mistake test for refight
 >refight
@@ -498,7 +498,7 @@ Your score has just gone up by one point
 Anger Range
 
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 4.
+Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #mistake test for boast
 >boast
@@ -573,32 +573,32 @@ If it were just one darnel, there'd be no point in getting mad. But there are a 
 >scan snarled darnels
 So very tangled! No vowels showed up for certain, which makes it tougher ... or does it?
 #spechelp for snarled darnels
->snarled darnels
+>snadrel
 The snarled darnels rustle a bit.
 
 #mistake test for landers
 >landers
-There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
+Anger Range won't be helped by an advice column or columnist.
 #mistake test for sandler
 >sandler
-I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
+I award you zero points for that anagramming try, and may God have mercy on your soul. Though another try actually gets a point here. You're really close.
 
 >slander
 by one point
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 4.
+Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
 
 #mistake retest for landers
 >landers
-There will be better hints than a manners advice column once you move on.
+Anger Range won't be helped further by an advice column or columnist.
 #mistake retest for sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
 #renudge for darnel
 >darnle
-You already got mad at all the darnels. You need to move on
+You already got mad at all the snarled darnels. You need to move on.
 #done rejects for snarled darnels
 >snarled darnels
 It's okay to get mad, but staying mad? No.
@@ -608,7 +608,7 @@ Hardest Trashed Dearths
 
 #readables for cans
 >read cans
-You squint. NASC is the name of the company that produced these cans.
+You squint. NASC is the name of the company that produced these cans, written in red.
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!
@@ -636,7 +636,7 @@ You wonder if there is some odd-yet-familiar way to clean the cans up. That's no
 You try to eke out an eek, but you only have one data point, and that's not enough.
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 4.
+Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
 
 #spechelp for cans
 >scna
@@ -659,7 +659,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
+Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
 >seek
 Your score has just gone up by one point
@@ -667,7 +667,7 @@ Your score has just gone up by one point
 Lean Lane
 
 >score
-Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
+Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
 #mistake test for a nut
 >a nut
@@ -714,7 +714,7 @@ She is a bit fussy, but she is more than okay as she is.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 4.
+Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
 >tend
 #notana 'nudge for dent'
@@ -722,7 +722,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 4.
+Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 43.
 
 #nudge for dent
 >detn
@@ -732,7 +732,7 @@ You already fixed the dent. It's gone.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 4.
+Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 43.
 
 #mistake test for wrap [text]
 >wrap zozimus
@@ -769,7 +769,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 4.
+Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 43.
 
 #renudge for wipe
 >wiep
@@ -802,7 +802,7 @@ You need action, here! Maybe nothing too exhausting, but some action nonetheless
 No world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!
 #mistake test for palins
 >palins
-Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.
+Michael and Sarah are both funny enough on their own. I really couldn't do them justice in A Roiling Original.
 #mistake test for pone
 >pone
 The message is corny, but the door's a piece of cake once you figure what to do with the knob.
@@ -916,7 +916,7 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #done rejects for bogus-plains
 >splani
@@ -936,7 +936,7 @@ Hmm, no, it's only one crate at a time.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #renudge for acters
 >actres
@@ -950,7 +950,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #renudge for acters
 >actres
@@ -972,7 +972,7 @@ Not worth messing with the fragments any more.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #readables for span pans
 >read span pans
@@ -982,7 +982,7 @@ Red writing indicates the pans were made by Nan's Apps.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #mistake retest for nkob
 >nkob
@@ -997,7 +997,7 @@ There are two entries that are ambiguous, but--maybe knowing they're span pans m
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #mistake retest for thus
 >thus
@@ -1044,7 +1044,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a d
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #spechelp for prod
 >prdo
@@ -1055,7 +1055,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a d
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 4.
+Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 #nudge for digger
 >diggre
@@ -1091,7 +1091,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 4.
+Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 43.
 
 #spechelp for lance
 >lanec
@@ -1113,7 +1113,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 4.
+Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
 
 #renudge for heap
 >hepa
@@ -1149,7 +1149,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #done rejects for heaps
 >heasp
@@ -1201,7 +1201,7 @@ There's not just one arch, there's two. And they've made more than one person ac
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
 #spechelp for achers chaser arches
 >searhc
-Hm, you almost thought you found something. Well, not QUITE like that.
+Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
 #scannotes for achers chaser arches
 >scan achers chaser arches
@@ -1211,13 +1211,13 @@ You note they're also CHASER arches, so maybe that accounts for some of the conf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >search
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #renudge for arch
 >arhc
@@ -1248,7 +1248,7 @@ Your score has just gone up by one point
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
-Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #mistake retest for reangle
 >reangle
@@ -1279,7 +1279,7 @@ The hedron's spirit will remain intact even if you meddle there. You must go int
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
 #nudge for tarp
 >tapr
-You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol' trap would make it less intimidating.
+You think of changing the trap--maybe even a tarp! But what if the tarp enfolded you and became a trap that way? Scary! No, thinking of it as an ol' trap would make it less intimidating.
 #nudge for walleye
 >walleey
 Just tacking one walleye won't change the crowd. They're past redemption, anyway.
@@ -1305,7 +1305,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a d
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #nudge for hint
 >hitn
@@ -1328,7 +1328,7 @@ You need a slightly more organized way to reveal what's under the ground with yo
 by one point
 
 >score
-Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #spechelp for use saga sausage
 >assuaeg
@@ -1345,7 +1345,7 @@ The Use-Saga Sausage's moans envelop you and almost make you believe your settle
 by one point
 
 >score
-Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #done rejects for use saga sausage
 >assuega
@@ -1356,7 +1356,7 @@ Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh)
 by one point
 
 >score
-Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >w
 
@@ -1397,7 +1397,7 @@ You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have wo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #done rejects for pol art portal
 >patrlo
@@ -1475,7 +1475,7 @@ You can't even dial with the yapper around.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 4.
+Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 #mistake retest for redial
 >redial
@@ -1487,10 +1487,10 @@ It's the words on the jumble you need to mess with. With which you need to mess.
 !yapper
 #readables for templar ramplet
 >read ramplet
-Someone named LAMPERT (written in red) constructed the templar ramplet.
+Someone named LAMPERT carved their name in red in the templar ramplet.
 #spechelp for templar ramplet
 >trampel
-There MUST be a way to storm down the templar ramplet. But not that.
+There has to be a way to storm down the templar ramplet. But not that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
 #scannotes for templar ramplet
 >scan templar ramplet
@@ -1501,7 +1501,7 @@ With so little positive information, this might be tough to bulldoze. Still, may
 Plasm Lamps
 
 >score
-Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 4.
+Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 43.
 
 #mistake test for nat
 >nat
@@ -1535,7 +1535,7 @@ Maybe riff on ALL the lamps. But only for fun.
 by one point
 
 >score
-Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 4.
+Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #renudge for plam
 >plma
@@ -1546,7 +1546,7 @@ You did enough.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 4.
+Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #spechelp for lever
 >levre
@@ -1558,7 +1558,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 #done rejects for lever
 >levre
@@ -1575,7 +1575,7 @@ A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIR
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 #spechelp for pins
 >spni
@@ -1599,7 +1599,7 @@ Maybe in a bit, but the pins are in the way at the moment. They can't be too har
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 4 points.
+Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 #spechelp for bogus-redial
 >redila

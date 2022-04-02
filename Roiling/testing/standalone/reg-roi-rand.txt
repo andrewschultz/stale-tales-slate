@@ -1,8 +1,10 @@
 ###############################
 #
-#reg-roi-rand.txt
+# reg-roi-rand.txt
 #
-#regression test for all the random text
+# regression test for all the random text
+#
+# to verify that all tests are included, run randreg.py.
 #
 
 ** game: /home/andrew/prt/debug-roiling.ulx
@@ -10,8 +12,11 @@
 
 * before-otters
 
->au 1
+>au 2
 >showtab
+
+>sing
+(table of singing rejects)
 
 >x bookshelf
 One book you won't remember next move is (table of random books)
@@ -31,6 +36,8 @@ Another book you won't read. (table of random books)
 >no
 (table of noage)
 
+>x chair
+>get notepad
 >x ads
 (table of ad slogans)
 >x ads
@@ -118,8 +125,6 @@ You listen about (table of elmo emo)
 >staple wall
 >in
 
-
-
 >ts
 
 >hint
@@ -159,15 +164,15 @@ table of store c ads
 >in
 
 >z
-/\(table of (idiotic lecture points|overdone movies)\)
+/\(table of (idiotic babbler points|overdone movies)\)
 >z
-/\(table of (idiotic lecture points|overdone movies)\)
+/\(table of (idiotic babbler points|overdone movies)\)
 >z
-/\(table of (idiotic lecture points|overdone movies)\)
+/\(table of (idiotic babbler points|overdone movies)\)
 >z
-/\(table of (idiotic lecture points|overdone movies)\)
+/\(table of (idiotic babbler points|overdone movies)\)
 >z
-/\(table of (idiotic lecture points|overdone movies)\)
+/\(table of (idiotic babbler points|overdone movies)\)
 
 >undo
 (table of undo allows)
@@ -206,8 +211,10 @@ Brother Horbert mumbles something to himself... (table of horbert musings)
 
 >past
 >talk to pat
+ASK (PERSON) ABOUT
 (table of missing deli foods)
 >g
+!ASK (PERSON) ABOUT
 (table of missing deli foods)
 
 >retry
@@ -241,59 +248,58 @@ Someone seedy owns this area, (table of posse bosses)maybe
 >recall
 
 >despair
+>decide
 
 >x lead
 It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of (table of prestigious bums)
 >x lead
 It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of (table of prestigious bums)
+
+>bolster
+>master
 
 >deal
 
->x brochure
+>x see dir
 (table of real estate ads)
 (table of posh dialogue)
 
+>x divorces
+One is (table of DIVORCES articles)
+
+>x divorces
+Another "worldly" article is (table of DIVORCES articles)
+
 >desire
->aspire
+
 >strive
 >ponder
 
->ignore
+>deserve
 
->x checklist
-You browse some steno-notes on your Slick-Tech Checklist: (table of checklist items)
->x checklist
-You browse some steno-notes on your Slick-Tech Checklist: (table of checklist items)
-
->x divorces
-Its motto: "A hipper, happier paper. Hi!" You note all sorts of lurid articles and features about depravity in high society and its "wonderful" fashion, too. One is (table of DIVORCES articles)
-
->x divorces
-Another "worldly" article is (table of DIVORCES articles)
-
->x divorces
-Another "worldly" article is (table of DIVORCES articles)
-
->bolster
->mater
 >last
 
->decide
-Your condensed rise to the top of this business business makes you efficient writing songs too. (table of songs you could write)
-
->undo
-
 >x desk
-Made of nice to notice eco-tin, it has a Slick-Tech Checklist (more popular and efficient than the (table of non-checklists)
+You browse some steno-notes on your Desk-Sked: (table of sked items)
 >x desk
-Made of nice to notice eco-tin, it has a Slick-Tech Checklist (more popular and efficient than the (table of non-checklists)
+You browse some steno-notes on your Desk-Sked: (table of sked items)
 
->resign
+>x rack
+Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the (table of non-skeds)
+, an inferior product for promoting productivity.
+>x rack
+Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the (table of non-skeds)
+, an inferior product for promoting productivity.
+
+>ramble
+
+>recant
+Your condensed rise to the top of this business business makes you efficient at doing enough nothing. Well, nothing profitable. You write wistful songs that someone has to like, surely: (table of songs you could write)
 
 ##################################presto
 
 >presto
->enter spot
+>enter tornado
 >eat crust
 >undo
 A booming voice yells "(table of undo rejects)
@@ -304,18 +310,19 @@ A booming voice yells "(table of undo rejects)
 >s
 >ole
 >darn
+# yeah, Leo-Rand is duplicated below, but I tweaked this so the verification script worked
 >z
-/\(table of Leo-Rand (chitchat|idols)\)
+/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
 >z
-/\(table of Leo-Rand (chitchat|idols)\)
+/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
 >z
-/\(table of Leo-Rand (chitchat|idols)\)
+/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
 >z
-/\(table of Leo-Rand (chitchat|idols)\)
+/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
 >z
-/\(table of Leo-Rand (chitchat|idols)\)
+/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
 >z
-/\(table of Leo-Rand (chitchat|idols)\)
+/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
 >whassup
 
 >n
@@ -339,7 +346,7 @@ A booming voice yells "(table of undo rejects)
 >n
 >n
 >x catechism
-The title is ALGORITHMS, LOGARITHMS, and it's by Olga Smirth.
+The title is Algorithms, Logarithms, and it's by Olga Smirth.
 /\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
 /\(table of (catechism pages|research topics|smartypants)\)
@@ -368,31 +375,23 @@ The title is ALGORITHMS, LOGARITHMS, and it's by Olga Smirth.
 
 >oyster
 >enter oyster
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
->z
-/\(table of (bar dialogue|competing bars)\)
 >talk to casper
+!ASK (PERSON) ABOUT
+GO HUNT A HANGOUT
+/\(table of (bar dialogue|competing bars)\)
 !(table of Casper mumbles)
 >talk to casper
+!GO HUNT A HANGOUT
+/\(table of (bar dialogue|competing bars)\)
 (table of Casper mumbles)
 >talk to casper
+/\(table of (bar dialogue|competing bars)\)
 (table of Casper mumbles)
 >talk to casper
+/\(table of (bar dialogue|competing bars)\)
 (table of Casper mumbles)
 >talk to casper
+/\(table of (bar dialogue|competing bars)\)
 (table of Casper mumbles)
 
 >spit
@@ -403,7 +402,7 @@ The title is ALGORITHMS, LOGARITHMS, and it's by Olga Smirth.
 >run
 
 >ocean
-[NOTE: this death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.]
+[NOTE: this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.]
 (table of death messages)
 >undo
 
@@ -482,7 +481,7 @@ or (table of gizmo parts)
 
 >showtab
 
->au 1
+>au 2
 >seed 1
 
 >a5
@@ -494,10 +493,11 @@ or (table of gizmo parts)
 >w
 
 >bossily
->nastily
->blearily
+>really
+>sparely
 
 >1
+>3
 >3
 
 >n
@@ -511,7 +511,7 @@ or (table of gizmo parts)
 >e
 >n
 >brutely
->angrily
+>remotely
 >n
 >slow
 
@@ -540,19 +540,20 @@ or (table of gizmo parts)
 >atom
 >w
 >z
-!(table of Elmer and Merle squabbles)
+!(table of ideas aides squabbles)
 >z
-!(table of Elmer and Merle squabbles)
+!(table of ideas aides squabbles)
 >z
-!(table of Elmer and Merle squabbles)
+!(table of ideas aides squabbles)
 
+>aside
 >honestly
 >z
-(table of Elmer and Merle squabbles)
+(table of ideas aides squabbles)
 >z
-(table of Elmer and Merle squabbles)
+(table of ideas aides squabbles)
 >z
-(table of Elmer and Merle squabbles)
+(table of ideas aides squabbles)
 
 >raptor
 >deeply
@@ -566,22 +567,24 @@ Elvira mocks you, but makes no attack: (table of Elvira taunts)
 >play whistle
 As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. "(table of Elvira battle cries)
 Elvira cries "New aid? Naw, die!" then "To arms! A storm!" at...all the lethal: (table of Elvira machines)
-But animals from the fabled Odd Pack Paddock find valence in this enclave: (table of animal friends)
+But animals from the fabled Odd Pack Paddock construe trounces and rifest strife: (table of animal friends)
 
-* others-rand
+* others-demo-rand
 
 >showtab
 >rove over
 >others
 >in
->x stand
+>grapes
+>limes
+>pears
+>plums
+>compass
+>x ruts
+>dates
 >tamarind
 >maraschino
->plums
->pears
->grapes
 >blueberries
->limes
 >pomegranate
 >cantaloupe
 >compass
@@ -590,8 +593,13 @@ But animals from the fabled Odd Pack Paddock find valence in this enclave: (tabl
 >n
 >e
 >listen
+!Selly yells
+>among
+>listen
+Selly yells, important to those yelling them but not you:
 (table of selly yells)
 >listen
+Selly yells:
 (table of selly yells)
 >listen
 (table of selly yells)
@@ -602,3 +610,7 @@ But animals from the fabled Odd Pack Paddock find valence in this enclave: (tabl
 >review
 >n
 (table of political slogans)
+>undo
+>gonear sparse spares
+>x satires
+You see rough notes on (table of three way anagrams)
