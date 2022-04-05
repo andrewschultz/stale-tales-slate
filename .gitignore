@@ -6,4 +6,8 @@
 # temporary: don't update PDF/PNG
 **/*.pdf
 **/*.png
+# backup story files I don't want to get swept up into source control
+**/*.nh
+**/*.nj
+# trizbort stuff
 appsettings.json
