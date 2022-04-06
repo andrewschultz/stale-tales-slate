@@ -20959,10 +20959,10 @@ check going south in Peek Keep:
 		end the story;
 	else:
 		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
-		if the player regex-prompt-consents:
+		if the player dir-consents:
 			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
 			dome-wipe-final-questions;
-			end the story saying "Epilogue's Up! Lie, Ego";
+			end the story finally saying "Epilogue's Up! Lie, Ego";
 		else:
 			say "Okay, why not look around a bit more." instead;
 
@@ -21712,7 +21712,7 @@ carry out lili0ing:
 carry out liliing:
 	let my-table be table of random books;
 	let threshold be 40;
-	if number understood is 0, try lili0ing instead;
+	if number understood is 0, process the show list of lists rule instead;
 	if number understood < 1 or number understood > number of rows in table of megachatter, say "Out of range. 1 through [table-list-max] are currently available. 0 shows a list of how and where random text occurs." instead;
 	now curlistnum is the number understood;
 	if curlistnum > table-list-max:
@@ -21727,7 +21727,8 @@ carry out liliing:
 	if there is a prefix entry, say "[b]PREFIX[r]: [prefix entry][paragraph break]";
 	repeat with ABC running from 1 to number of rows in my-table:
 		if remainder after dividing cur-e by threshold is 0 and cur-e > 0:
-			say "([cur-e] of [number of rows in my-table]) so far. Type q to quit the list or any other key to continue.";
+			say "([cur-e] of [number of rows in my-table]) so far. Type [b]Q[r] to quit the list or any other key to continue.";
+			abide by the avoid keypress in menu testing rule;
 			let cholet be the chosen letter;
 			if cholet is 113 or cholet is 81:
 				next-list-poke;
@@ -21909,10 +21910,10 @@ final question wording	only if victorious	topic		final response rule		final resp
 --	false	"l/list"	the show list of lists rule	--
 --	false	"n/ln/nl"	the list next megachatter table rule	--
 --	false	"p/pl"	the list previous megachatter table rule	--
---	false	"la/lb/lc/ld/le/lf/lg/lh/li/lj/ll/lm/lo/lp/lq/ls/lt/lu/lv/lw/lx/ly/lz"	the showing regional lists rule	--
+--	false	"la/lb/lc/ld/le/lf/lg/lh/li/lj/lk/ll/lm/lo/lp/lq/ls/lt/lu/lv/lw/lx/ly/lz"	the showing regional lists rule	--
 --	false	"rj/lr/jr"	the list next region random text rule	--
 "[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form" or "m or f" or "of mr"	the sort male female out rule	--
-"[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r]/[b]LG[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload, [b]LS[r] for Stores), or [b]LJ[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
+"[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r]/[b]LG[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload, [b]LS[r] for Stores), or [b]LJ[r]/[b]LR[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
 
 dummy altpath showing is an activity.
@@ -21987,7 +21988,7 @@ to decide which number is table-list-max:
 	if peek keep is visited, decide on number of rows in table of megachatter;
 	let count be 0;
 	repeat through table of megachatter:
-		if whichreg entry is Demo Dome and others is not solved, next;
+		if whichreg entry is Demo Dome and peek keep is not visited, next;
 		if others-passed or whichreg entry is not others, increment count;
 	decide on count;
 
@@ -22039,7 +22040,7 @@ to region-random-list (rg - a region):
 	if rtc is 0:
 		say "There is no random text for [rg].";
 		continue the action;
-	say "Here [if rtc > 2]are all the lists[else if rtc is 2]are both the lists[else]is the only list[end if] for [if rg is Meta Team]general commands[else][rg][end if].";
+	say "Here [if rtc > 2]are all the random text lists[else if rtc is 2]are both the random text lists[else]is the only random text list[end if] [if rg is Meta Team]for general commands[else]for [rg][end if].";
 	let mycount be 0;
 	repeat through table of megachatter:
 		if there is a whichreg entry and rg is whichreg entry:
@@ -22063,8 +22064,8 @@ this-reg	this-top (topic)	this-pre-rule	this-text
 Meta Team	"la/lg"
 --	"lc"	--	"There's nothing extra, or extra licentious, behind Store C."
 Demo Dome	"ld"	is-demo-visited rule
---	"lb/le//lj/ll/lq/lx/lz"	--	"That letter doesn't correspond to a store you can explore."
---	"lf/li/lm"	--	"That letter corresponds to a store you looked behind in [shuf]."
+--	"lb/le/lj/ll/lq/lx/lz"	--	"There was nothing to explore behind [sto-listed]."
+--	"lf/li/lm"	--	"[sto-listed] was available to explore in [shuf] but not [this-game]."
 Meta Team	"lg"
 others	"lh"	is-others-passed rule
 --	"lk"	--	"No region was behind Store K[if tokers are off-stage], though you could get a small bit of help from it[end if]."
@@ -22077,6 +22078,8 @@ troves	"lv"
 towers	"lw"
 oyster	"ly"
 
+to say sto-listed: say "Store [character number 2 in the player's command in upper case]".
+
 this is the is-demo-visited rule:
 	if peek keep is visited, continue the action;
 	say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it." instead;
@@ -22087,10 +22090,9 @@ to decide whether others-passed:
 
 this is the is-others-passed rule:
 	if others-passed, continue the action;
-	say "I can't show you the list for Store H, yet. You haven't solved it." instead;
+	say "I can't show you the random text lists for Store H, yet. You haven't solved it." instead;
 
 this is the showing regional lists rule:
-	let myrow be 0;
 	repeat through table of regabr:
 		if the player's command matches this-top entry:
 			if there is a this-pre-rule entry, abide by the this-pre-rule entry;

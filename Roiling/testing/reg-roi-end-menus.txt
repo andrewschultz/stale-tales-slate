@@ -1,0 +1,220 @@
+# reg-roi-end-menus.txt
+# tests the end menus for random text
+# does not test AMUSING, just L # and LN
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* end-menus-otters
+
+# this tests fixed commands that should be seen everywhere. LN and such are not tested.
+
+>emy
+>au 0
+>otw
+>quickly
+>deeply
+>w
+>7
+>play whistle
+
+>l 1
+Responses to an empty command:
+
+>la
+Here are all the random text lists for general commands.
+1. Responses to an empty command
+2. Undo rejects
+3. Successful undo responses
+4. Rejects for saying no
+5. Rejects for saying yes
+6. Rejects for singing
+7. Wait/Z messages
+8. How the game blocks profanity, mild or obscene
+9. How the game blocks ATTACK
+10. Sleeping rejects
+11. Death notices
+12. Hint guy t-shirt writing
+
+>lb
+There was nothing to explore behind Store B.
+
+>lc
+There's nothing extra, or extra licentious, behind Store C.
+
+>ld
+I can't show you the list for the final non-puzzle area, yet. You haven't solved it.
+
+>le
+
+>lf
+Store F was available to explore in Shuffling Around but not A Roiling Original.
+
+>lg
+Here are all the random text lists for general commands.
+
+>lh
+I can't show you the random text lists for Store H, yet. You haven't solved it.
+!Here are both the random text lists for Towers.
+
+>li
+Store I was available to explore in Shuffling Around but not A Roiling Original.
+
+>lj
+There was nothing to explore behind Store J.
+
+>lk
+No region was behind Store K, though you could get a small bit of help from it.
+
+>ll
+There was nothing to explore behind Store L.
+
+>lm
+Store M was available to explore in Shuffling Around but not A Roiling Original.
+
+>lo
+Here are all the random text lists for Ordeal Reload.
+1. Elmo's romantic complaints
+2. Elmo's sports banter
+3. Biopics, good and bad
+4. Bad rap music
+5. Computer games
+6. Comedians of Yorpwald
+7. Comedy joints
+8. Bad talk shows
+9. Bad movies
+10. Bad TV shows
+11. Initial oldies singers
+12. Bad songs
+13. All the books in your bookshelf
+14. All the ads in the Dope Op-Ed
+15. Mob chants
+
+>lp
+Here are all the random text lists for Presto.
+1. Leo and Rand's chatter
+2. Leo and Rand's idols
+3. Schematic Catechism research topics
+4. Some explanation of research by Arch Rees:
+5. Schematic Catechism Ph. D. researchers
+6. Sleep aide brands
+
+>ls
+Here are all the random text lists for Stores.
+1. Blabber babbler talk (Cruelest Lectures, behind Store N and Store K) (53 anagrams)
+2. Cruelest Lectures movies (STORE N/STORE K mini-puzzle) (168 anagrams)
+3. Store C videos (parental advisory) (Strip of Profits) (1382 anagrams)
+4. Store C competitors (Strip of Profits) (158 anagrams)
+5. Store C advertisements (parental advisory) (Strip of Profits) (54 anagrams)
+6. The tokers' chat (Strip of Profits after destroying Store K and Store N) (176 anagrams)
+
+>lt
+Here are all the random text lists for Otters.
+1. Elmer and Merle's chat
+2. Elvira's battle cries
+3. Elvira's machines
+4. Elvira's taunts
+5. Your animal friends
+
+>lu
+Here are all the random text lists for Routes.
+1. Moralizers
+2. Rev. Ali's hot takes
+3. Brother Horbert's musings
+4. Brother Horbert's blessings
+5. Non-foods at Pat's
+
+>lv
+1. Advice from Pa, Egg, Pea (Loather Rathole or beyond) (102 anagrams)
+2. Gang bosses (Bustle Sublet) (3898 anagrams)
+3. "Inspirational" Yorpwaldians in DEAL (Boredom Bedroom) (2493 anagrams)
+4. "Fascinating" DIVORCES Magazine articles (Browse Bowers) (221 anagrams)
+5. See Dir locations (Browse Bowers) (173 anagrams)
+6. Cark Rack alternatives (Upscale Capsule) (107 anagrams)
+7. Desk-Sked to-dos (Upscale Capsule) (1810 anagrams)
+8. Self-help bestsellers (read Pa, Egg, Pea) (Loather Rathole and on) (699 anagrams)
+9. Songs you write on escaping Upscale Capsule (824 anagrams)
+10. Gritty Spoiloplis dialogue (Bustle Sublet) (1478 anagrams)
+11. Posh Spoiloplis dialogue (Browse Bowers/Econ Cone) (1480 anagrams)
+
+>lw
+Here are both the random text lists for Towers.
+1. Rodney's bluster
+2. Parts of the I ZOMG Gizmo
+
+>lx
+There was nothing to explore behind Store X.
+
+>ly
+Here are all the random text lists for Oyster.
+1. Rough bar action (Posh Hops Shop)
+2. Competing bars (Posh Hops Shop)
+3. Casper's mumblings (Posh Hops Shop)
+4. Carps/pikes trout-bullying (Anger Range)
+5. Unpopular girls carps/pikes mention (Anger Range)
+6. Aunt Tuna's gossip (Lean Lane)
+7. Aunt Tuna's complaints (Lean Lane)
+8. Theses Sheets notes (X SHEETS in Sclerous Closures)
+
+>lz
+There was nothing to explore behind Store Z.
+
+>l 70
+Your animal friends (Rancho Archon Anchor):
+
+> l 71
+Oops! You can't reach that yet. You'll need to see about Store H first.
+
+> l 72
+Oops! You can't reach that yet. You'll need to see about Store H first.
+
+> l 73
+Oops! You can't reach that yet. You'll need to see about Store H first.
+
+> l 74
+Out of range. 1 through 70 are currently available. 0 shows a list of how and where random text occurs.
+
+>ln
+(Cycling back to 1.)
+Responses to an empty command:
+LAST: Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)
+
+>l 69
+Elvira's taunts (Rancho Archon Anchor):
+
+>lr
+(Cycling back to the top.)
+
+>demo dome mode
+Please give one of the answers above.
+
+* _end-menus-others
+
+>emy
+>endgame
+>research
+>review
+>n
+
+> lh
+Here are both the random text lists in Others.
+1. Political slogans at game's end
+2. Selly Yells
+
+>l 71
+Political slogans at game's end (north of Gates Stage):
+
+>l 72
+Selly Yells (Clangier Clearing):
+
+>l 73
+Oops! You can't reach that yet.
+
+* _end-menus-demo-dome
+
+>au 2
+>demo dome
+>s
+>l 73
+Entries in the artsies' satires (Sparse Spares):
+
