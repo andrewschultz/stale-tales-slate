@@ -247,12 +247,15 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 		do nothing instead;
 	if noun is reflexed: [this covers going back to the place]
 		if noun is picturers:
+			abide by the horbert-gone rule;
 			say "You go back inside, being a bit over-cautious with protocol. You could've just said [b]IN[r].";
 			move player to Cleric Circle instead;
 		if noun is lairage:
+			if pipe soot is not in Adobe Abode, say "There was nothing else but the pipe soot in Oscar's." instead;
 			say "Yeah, [b]ACROSS[r] is fewer keystrokes than [b]ENTER OSCAR[r]'S, so hey...";
 			move player to Adobe Abode instead;
 		if noun is adsorbing signboard:
+			if stupor sprout is not off-stage, say "You got the stupor sprout in Pat's. There wasn't much else there." instead;
 			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
 			move player to Idle Deli instead;
 
@@ -290,6 +293,7 @@ this is the post-under rule:
 
 this is the post-pipesoot-opposite rule:
 	check-list-realized;
+	now pipe soot is not scenery; [so we RETRY successfully]
 
 this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
@@ -350,7 +354,7 @@ pleaser leapers	pleaser leapers	false	574677603	--	"relapse"	"relapse"	--	--	"Yo
 LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..." [bold-ok]
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	post-desire rule	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	--	--	"On perusing [b]DIVORCES[r] with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. [b]DIVORCES[r] is not for you! You pitch it and re-focus.[paragraph break]Si Reed sees you gazing at [b]DIVORCES[r], picks it up, throws it away, and says 'So what's the deal? You motivated to move ahead in life, or not?' Why, yes. Yes you are."
-praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]" [bold-ok]
+praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-spirea-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid. As you grok the praise spirea, it quiets down -- or maybe you've just internalized its message[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]" [bold-ok]
 rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]" [bold-ok]
 sectarian craniates	sectarian craniates	false	549795471	--	"ascertain"	"ascertain"	--	--	"You look this way and that at [craniates] and, yes, you think you have a revelation or two. Maybe it is only a revelation about how to pretend you had a real revelation, but it will serve you well to seem thoughtful to important people in the future. Who knows, maybe one of them actually has gotten something from [craniates], and if you impress them enough, they might show you whatever the heck it might be."
 END PRONER POD	END PRONER POD	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	post-pod-ponder rule	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
@@ -442,16 +446,9 @@ this is the post-deal rule:
 this is the post-desire rule:
 	if DIVORCES is not moot, poss-d;
 
-this is the post-strive-or-aspire rule:
-	if cone-points is 2:
-		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at [the end proner pod]. You haven't fully balanced fear of winding up there with focusing on your goals.";
-		set the pronoun it to END PRONER POD;
-	else:
-		say "Your concentration is broken by a scuffle! When you turn around, you notice the person who originally gave you the Peg A. Page book. They have been escorted out by security. And not just escorted. Pushed into a structure you did not notice before. It is an [end proner pod]. You hear the end of the argument: apparently, they made their ambition too obvious.[paragraph break]You shudder to think what will happen to them. And yet ... this could be an opportunity for you. You almost believe you deserve to move further up in the world, but you need to think just a bit more, and perhaps you need to do more than just want, want, want ... or you need to seem to, at least.";
-		now END PRONER POD is in Econ Cone;
-		set the pronoun it to END PRONER POD;
-		if praise spirea is reflexive, now praise spirea is llpish;
-		if rivets are reflexive, now rivets are llpish;
+this is the post-spirea-aspire rule:
+	remove praise spirea from listen-list of troves, if present;
+	process the post-strive-or-aspire rule;
 
 this is the post-rivets-strive rule:
 	process the post-strive-or-aspire rule;
@@ -503,16 +500,27 @@ this is the post-nectar-recant rule:
 	increase cur-score of troves by temp;
 
 to say troend:
-	say "No more trance nectar for you. O glum mogul! You backtrack your trip to the top, gaining spirituality as efficiently as you gained worldly status. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient at doing enough nothing. You hear a knock on the door. You have been fired.[paragraph break]";
+	say "No more trance nectar for you. O glum mogul! You backtrack your trip to the top, gaining spirituality as efficiently as you gained worldly status. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient at doing enough nothing. Well, nothing profitable. You write wistful songs that someone has to like, surely: [twiddle of table of songs you could write and 5].[paragraph break]You hear a knock on the door. You have been fired.";
 	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
 		do nothing;
 	else if lager is moot and divorces is moot:
-		say "But you did something for society. A lot. Disposing of [b]DIVORCES[r] and the lager helped you.";
+		say "[line break]But you did something for society. A lot. Disposing of [b]DIVORCES[r] and the lager helped you.";
 	else if lager is in Boredom Bedroom:
-		say "At least you struck a blow against gossip culture in general.";
+		say "[line break]At least you struck a blow against gossip culture in general.";
 	else:
-		say "At least you struck a blow against alcohol in general.";
-	say "Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your Upscale Capsule. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
+		say "[line break]At least you struck a blow against alcohol in general.";
+	say "[line break]Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your Upscale Capsule. The ride's low-frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
+
+this is the post-strive-or-aspire rule:
+	if cone-points is 2:
+		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at [the end proner pod]. You haven't fully balanced fear of winding up there with focusing on your goals.";
+		set the pronoun it to END PRONER POD;
+	else:
+		say "Your concentration is broken by a scuffle! When you turn around, you notice the person who originally gave you the Peg A. Page book. They have been escorted out by security. And not just escorted. Pushed into a structure you did not notice before. It is an [end proner pod]. You hear the end of the argument: apparently, they made their ambition too obvious.[paragraph break]You shudder to think what will happen to them. And yet ... this could be an opportunity for you. You almost believe you deserve to move further up in the world, but you need to think just a bit more, and perhaps you need to do more than just want, want, want ... or you need to seem to, at least.";
+		now END PRONER POD is in Econ Cone;
+		set the pronoun it to END PRONER POD;
+		if praise spirea is reflexive, now praise spirea is llpish;
+		if rivets are reflexive, now rivets are llpish;
 
 book presto
 
@@ -1820,15 +1828,13 @@ a banna	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) b
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
 a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
 Dr Severe	guava	true	778533808	--	"reversed"	"reversed"	--	--	"Dr. Severe's expression suddenly changes. 'I hadn't thought of it that way... or that. I haven't been very helpful, can I? Well, instead of complaining about what can't be fixed, I should try to, uh, fix stuff. Hey, however you helped me, I'm grateful. Have this guava.'"
+concisions	concisions	false	607064964	--	"concisions"	"concisions"	--	--	"Just gazing at [if player has s-i][the s-i][else][the s-c][end if] right, you ... gain wisdom. All your wordplay has made you realize you understand logic but not how to connect. You take a step back to look at the big picture. Yes, you see ways to give your words power even without anagramming." [ this comes before the gift flips proper because we want to use the slider to act on the concisions first. ]
 coin	icon	false	207258516	--	"icon"	"icon"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money." [start curtis gift flips]
 coins	s-c	false	303532482	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip rule	"Blam! The coins begin to rattle gently and don't stop."
 icons	s-i	false	303532482	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
 coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
-coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	pre-sonic-icons-double-flip rule		post-sonic-icons-double-flip rule	"You can't decide whether the coins should become sonic or icons first, but you know what? It doesn't matter. They become sonic icons, as you expected."
+coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	pre-sonic-icons-double-flip rule		post-sonic-icons-double-flip rule	"You can't decide whether the coins should become sonic or icons first, but you know what? It doesn't matter. You just hope you've got enough brainpower, or whatever, to get a twofer. And you do!"
 s-c	s-i	false	303532482	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
-concisions	concisions	false	607064964	--	"concisions"	"concisions"	--	--	"Just gazing at [if player has s-i][the s-i][else][the s-c][end if] right, you ... gain wisdom. All your wordplay has made you realize you understand logic but not how to connect. You take a step back to look at the big picture. Yes, you see ways to give your words power even without anagramming."
-coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coin takes on a much cooler design."
-coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	--	post-iconic-flip rule	"You do a little double-think-move on the coins. They become something entirely different."
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 fleeing feeling	fleeing feeling	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."

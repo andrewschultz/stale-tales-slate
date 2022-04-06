@@ -345,13 +345,13 @@ understand "eiders" as a mistake ("But what would ducks DO in the big city? They
 
 chapter Econ Cone
 
-understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
-
 understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if cone-points is 0]But you're nowhere near enthused enough[else if cone-points is 1]You're enthused enough, but you need to strategize[else]You're more than enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
 understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and END PRONER POD is in Econ Cone.
 
 understand "pernod" as a mistake ("There will be time for ritzy, overpriced alcohol once you have made it to the top. But until then, you need to keep focused.") when player is in Econ Cone and END PRONER POD is in Econ Cone.
+
+understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
 chapter Upscale Capsule
 

@@ -6123,10 +6123,10 @@ this is the listen-troves rule:
 			say "[one of]A snore arises from the arena. You see red. There's more, if you can deal with it.[or]'[first custom style]NO EARS! NO EARS[r]!' you hear, seeing red, because that's obviously wrong.[or]'[first custom style]SENORA! SENORA![r]' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with [first custom style]O. ASNER AS NERO[r]. So weird. You see red.[cycling]" instead; [bold-ok]
 		say "Nothing from [the noun][if snore so arena is reflexive], but the [snore so] is making noise[else]. Relative quiet now you dealt with the [snore so][end if]." instead;
 	if can-hear-gritty, say "[if talk-quiet is true]You have shut off the random gritty dialogue with [b]HUSH[r][else]Actually, you can't help but hear gritty dialogue[end if]." instead;
+	if noun is praise spirea, try examining praise spirea instead;
 	if can-hear-posh, say "[if talk-quiet is true]You have shut off the random posh dialogue with [b]HUSH[r][else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if noun is Id Cede, say "[ecs] song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You find yourself hoping for more, almost completely believing you deserve it[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
-	if noun is praise spirea, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
 
 this is the listen-routes rule:
