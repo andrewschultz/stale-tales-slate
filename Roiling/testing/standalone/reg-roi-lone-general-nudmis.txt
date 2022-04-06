@@ -10,6 +10,10 @@
 
 * go weird places
 
+#nudge for resave
+>resaev
+Alas, there is nothing between RESAVE and AVERSE to load a special game state.
+
 #nudge for terry
 >ryter
 !You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.

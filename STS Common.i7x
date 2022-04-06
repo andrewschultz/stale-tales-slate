@@ -413,7 +413,7 @@ report requesting the score for the first time: poss-display.
 
 to poss-display:
 	if possibles is false and min-alert is false:
-		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing [b]POSS[r]. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
+		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing [b]POSS[i]. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
 		now min-alert is true;
 		pad-rec "poss";
 
@@ -647,6 +647,55 @@ The back-colour of the main-window is g-white.
 
 to say bluetext:
 	(- glk_set_style(style_BlockQuote); -)
+
+volume resave/averse
+
+chapter variables
+
+autosave is a truth state that varies. autosave is true.
+
+autosave-known is a truth state that varies.
+
+a region can be autosavable. a region is usually autosavable.
+
+chapter rules
+
+this is the autosave on region complete rule:
+	if autosave is true and mrlp is autosavable:
+		if autosave-known is false and mrlp is orig-region:
+			ital-say "[this-game][i] is configured to create an auto-save dialogue after each region you solve. This can be switched off with [b]AVERSE[i] or switched back on with [b]RESAVE[i]. You can also abort saving with no penalty. This nag will not reappear.";
+			wfak;
+		if debug-state is false:
+			try saving the game;
+		else:
+			say "<debug mode skips game-saving dialogue so test runs are continued>[line break]";
+	now autosave-known is true;
+
+chapter resaveing
+
+resaveing is an action out of world.
+
+understand the command "resave" as something new.
+
+understand "resave" as resaveing.
+
+carry out resaveing:
+	say "The auto-saving flag is [if autosave is true]already[else]now[end if] set to [b]RESAVE[r], or on.";
+	now autosave is true;
+	the rule succeeds;
+
+chapter averseing
+
+averseing is an action out of world.
+
+understand the command "averse" as something new.
+
+understand "averse" as averseing.
+
+carry out averseing:
+	say "The auto-saving flag is [if autosave is false]already[else]now[end if] set to [b]AVERSE[r], or off.";
+	now autosave is false;
+	the rule succeeds;
 
 volume debug variables that must be in common file since they appear in release functions
 

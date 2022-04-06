@@ -298,6 +298,8 @@ only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fru
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.] [general blather table of demo dome is table of demo dome general blather.] [reflexive blather table of demo dome is table of demo dome reflexive blather.] [misses-rule of demo dome is demo dome-misses rule.]
 
+Otters is not autosavable. Others is not autosavable.
+
 section region stuff for STS Common
 
 orig-region is Ordeal Reload.
@@ -2891,6 +2893,7 @@ to solve-region (sre - a region):
 	if wiped-any-out is true:
 		say "(You wipe out writing in your notepad that probably only applied to this region.)";
 	if min-score of mrlp > poss-score of mrlp, say "NOTE: somehow the minimum score processed by the code exceeded the possible score. If you are able to, and you can cut/paste the game transcript, I'd appreciate seeing it at [email] so I can fix it. This won't affect the game, but all the same--it's a nuisance bug. Thanks!";
+	process the autosave on region complete rule;
 	if player is in Strip of Profits:
 		d "BUG. Player shuld not be in Strip of Profits yet.";
 	else:

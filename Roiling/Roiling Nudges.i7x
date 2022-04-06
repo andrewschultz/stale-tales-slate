@@ -2,7 +2,7 @@ Version 1/151226 of Roiling Nudges by Andrew Schultz begins here.
 
 volume table of nudges
 
-[rorg.py sorts the "to say" and rules in the order they appear in the table]
+[ott.py sorts the "to say" and rules in the order they appear in the table]
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
 [all this should be in the post-commit hooks]
@@ -2462,6 +2462,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "options"	543455451	--	degen-true rule	"[meta-rej]."
 "version"	604821629	--	degen-true rule	"[meta-rej]."
 "something"	649400178	--	degen-true rule	"SOMETHING never anagrams to anything, so you'll want to tinker with whatever that SOMETHING is on or near or supporting."
+"resave"	546562625	--	--	"[know-resave]Alas, there is nothing between [b]RESAVE[r] and [b]AVERSE[r] to load a special game state."
+
+to say know-resave:
+	now autosave-known is true;
 
 this is the elvira-here rule:
 	if otters is not solved, the rule succeeds;

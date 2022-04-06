@@ -975,8 +975,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "tshirt"	470092950	red bull burdell	--	"[tshirt-no]."
 "shirt"	366982932	red bull burdell	--	"[tshirt-no]."
 
-to say cant-change-bull: say "Burdell's laugh echoes. 'You think you can change ME?!'" [bold-ok]
-
 to say no-hotspot:
 	if red bull burdell is moot:
 		say "You don't want to make this place a hotspot again";
@@ -998,6 +996,8 @@ this is the hotspot-no-kilns rule:
 this is the riot-gone rule:
 	if player is in Potshot Hotspot and riot is moot, the rule succeeds;
 	the rule fails;
+
+to say cant-change-bull: say "Burdell's laugh echoes. 'You think you can change ME?!'" [bold-ok]
 
 to say tshirt-no: say "You slur out a few consonants--maybe you should work with something closer, lower down"
 
@@ -1099,6 +1099,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "options"	543455451	--	degen-true rule	"[meta-rej]"
 "version"	604821629	--	degen-true rule	"[meta-rej]"
 "something"	649400178	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
+"resave"	546562625	--	--	"[know-resave]Alas, there is nothing between [b]RESAVE[r] and [b]AVERSE[r] to load a special game state."
 
 to say no-2: say "You can't really second-guess the help on the prep paper";
 
@@ -1151,6 +1152,9 @@ to say no-scram: say "There's no way to scramble your score. And scoring another
 to say no-cred-spec: say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
 
 to say meta-rej: say "Meta-commands don't have any easter eggs, sadly"
+
+to say know-resave:
+	now autosave-known is true;
 
 book support rules
 

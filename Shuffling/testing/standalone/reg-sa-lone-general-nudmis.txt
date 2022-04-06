@@ -9,6 +9,10 @@
 
 * dirtest-general-intro
 
+#nudge for resave
+>resaev
+Alas, there is nothing between RESAVE and AVERSE to load a special game state.
+
 #nudge for notepad
 >notepda
 You mess around with all the possibilities for a bit

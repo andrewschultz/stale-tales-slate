@@ -1070,6 +1070,8 @@ Red Bull Burdell	"[one of]Red Bull Burdell does like yelling GET OUT.[plus][or]A
 toe	--	Red Bull Burdell
 X ITES exits	"[one of]The exits remind you of something to do. Or not do. You don't have to. There is more than one solution to win. The other two deal with the Means Manse itself.[plus][or]You want to do something that completely ignores the [b]EXITS[r].[plus][or]You need to do something that doesn't match X [b]ITES[r] anywhere.[plus][or]Your work's done. Time to [b]EXIST[r].[minus][cycling]"
 
+to say toho: say "[if grips are touchable and ropes are touchable]you did a bit more[else]you can also meddle with the sprig and spore[end if]".
+
 to say no-sto: say "Nothing is hidden in that store".
 
 to say nxt-g: say "Maybe next game".
@@ -1077,8 +1079,6 @@ to say nxt-g: say "Maybe next game".
 to say snb:
 	let ostage be the number of off-stage disguise-pieces;
 	say "[if ostage is 0]can be combined with the other two pieces. PUT X ON Y[else if ostage is 1]can be combined with that other piece you have and one you don't have[else]needs a couple other things[i-gt] to become something[end if]"
-
-to say toho: say "[if grips are touchable and ropes are touchable]you did a bit more[else]you can also meddle with the sprig and spore[end if]".
 
 to say put-can: say "[one of]Examining the livers indicates they need to be processed.[plus][or]You need to put both livers in the canister.[plus][or][unless River Ville liver is moot][b]PUT RIVER VILLE IN CANISTER[r]. [end if][unless viler liver is moot][b]PUT VILER LIVER IN CANISTER[r]. [end if][minus][cycling][no line break]"
 

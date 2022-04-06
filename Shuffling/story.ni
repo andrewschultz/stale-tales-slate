@@ -197,6 +197,8 @@ Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud
 Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule.
 [LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
+Resort is not autosavable.
+
 orig-region is Ordeal Loader.
 
 hub-region is Stores.
@@ -216,6 +218,7 @@ to solve-region (sre - a region):
 			say "This is (hopefully) a testing bug, but [reg-sto of sre] should not be in the Trips Strip. Sending it away.";
 			moot reg-sto of sre;
 	item-warp;
+	process the autosave on region complete rule;
 	if player is not in Trips Strip, move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
 		say "Man! With the [b]SECURE[r] settings on your gadget, you can [b]RECUSE[r] if you want and hit Store R.";
