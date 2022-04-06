@@ -6099,7 +6099,7 @@ listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrat
 
 listen-list of otters is { ed riley, yer all a yell'r, parleys splayer players, vow here, whiners, sly imp, asyllabic lilac bays }.
 
-listen-list of others is { pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }.
+listen-list of others is { pagers, sorer bogey, barren cries, ammo gang, selly yells, brr hub, s-i, s-c }.
 
 listen-list of demo dome is { }.
 
@@ -6250,10 +6250,14 @@ this is the listen-others rule:
 	if noun is Rustic Citrus, say "Curtis [if cur-score of others < 4]mumbles various business ideas to himself[else]continues to sing and hum the tidiest dietist ditties[end if]." instead;
 	if noun is sorer bogey, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
 	if noun is barren cries, say "The barren cries are sour and bitter and tiny." instead;
-	if noun is ammo gang, say "A small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?" instead;
-	if player is in Clangier Clearing, say "Selly yells. [randbla]" instead;
+	if noun is ammo gang, say "One of the selly yells stands out from the others. A small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?" instead;
+	if noun is selly yells, say "[selyel]" instead;
+	if player is in Clangier Clearing, say "[selyel]" instead;
 	if noun is brr hub, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
 	if noun is s-i or noun is s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
+
+to say selyel:
+	say "Selly yells[one of], important to those yelling them but not you[or][stopping]: [randbla][line break]";
 
 this is the listen-demo-dome rule:
 	say "It's nice and quiet. As you'd expect from a museum." instead;
@@ -19190,7 +19194,7 @@ section parrot-flees
 
 [this is a bogus item -- it is simply something to flip to that can't be the parrot, as the raptor already flips to the parrot!]
 
-the parrot-flees is a thing. description is "BUG."
+the parrot-flees is an abstract thing. description is "BUG."
 
 book Reclusion Inclosure
 
@@ -20404,6 +20408,12 @@ check taking (this is the shoplift in Clangier Clearing rule) :
 check taking a fruit when player is in Clangier Clearing:
 	if player has noun, continue the action;
 	say "That'd be shoplifting. Surely you can try to bargain instead." instead;
+
+section selly yells
+
+the selly yells are boring amusing scenery in Clangier Clearing. "BUG.". bore-text of selly yells is "You can't do much with the selly yells except [b]LISTEN[r].".
+
+check examining selly yells: try listening to selly yells instead.
 
 chapter Len Craig
 

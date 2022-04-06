@@ -242,6 +242,14 @@ Score in a scenario: 20 out of 30 total points in the current region, Troves. Lo
 #verbcase listen-troves-if-noun-is-praise-spirea
 >listen praise spirea
 You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.
+>listen praise spirea
+The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I reaps! Ire? Sap!"
+>undo
+>undo
+>listen
+You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.
+>listen
+The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I reaps! Ire? Sap!"
 
 >aspire
 Your score has just gone up by one point

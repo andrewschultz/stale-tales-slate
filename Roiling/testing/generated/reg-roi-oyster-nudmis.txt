@@ -1563,7 +1563,7 @@ Score in a scenario: 40 out of 43 total points in the current region, Oyster. Th
 #done rejects for lever
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
-#spechelp for dialer
+#spechelp for bogus-derail
 >dilrae
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.

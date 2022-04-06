@@ -1043,7 +1043,7 @@ understand "reaps" as a mistake ("No, not verbs. Well, not here by Curtis.") whe
 
 understand "rust" as a mistake ("You're trying to make things MORE organic, not less.") when ruts circuits are touchable. [bold-ok]
 
-understand "sell" and "sell [text]" as a mistake ("You are paving the way for commerce, not interacting.") when player is in Rustic Citrus or player is in Clangier Clearing.
+understand "sell" and "sell [text]" as a mistake ("You are trying to buy or find stuff here, not sell it.") when player is in Rustic Citrus or player is in Clangier Clearing.
 
 understand "slump" as a mistake ("Don't get exhausted! This area should be a bit of a break! I hope.") when player is in rustic and lumps are in rustic.
 
@@ -1080,6 +1080,8 @@ understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plu
 understand "go man" as a mistake ("That's the right idea but the wrong sorts of words.") when player is in Clangier Clearing and mango is off-stage.
 
 understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in Clangier Clearing.
+
+understand "lyle" and "lyles" as a mistake ("Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.") when player is in Clangier Clearing.
 
 understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how.") when player is in Clangier Clearing and mango is off-stage.
 

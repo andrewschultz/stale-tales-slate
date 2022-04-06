@@ -2216,6 +2216,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "superstore"	982842117	--	--	"It's an eyesore, but unlike the Curst Palace, people are still in it--so destroying it would mean big problems. Best to concentrate on the open-air market."
 "auction"	417662159	caution	--	"[papay]."
 "banner"	371551651	caution	--	"[papay]."
+"yell"	357793039	--	--	"[selyel-at]."
+"yells"	454067005	--	--	"[selyel-at]."
 
 to say len-part: say "Len Craig doesn't change, and even if you messed with his full name, he wouldn't"
 
@@ -2224,6 +2226,8 @@ this is the lemnomel rule:
 	the rule fails;
 
 to say papay: say "[if auction caution is reflexive]You're probably over-thinking it--just pay attention to what it says, instead[else]You've taken the banner's advice well enough[end if]";
+
+to say selyel-at: say "The selly yells just add atmosphere. They can't be changed"
 
 chapter scape space
 

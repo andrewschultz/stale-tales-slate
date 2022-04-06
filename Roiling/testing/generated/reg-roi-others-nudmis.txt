@@ -798,9 +798,9 @@ Clangier Clearing
 
 #mistake test for sell/sell [text]
 >sell
-You are paving the way for commerce, not interacting.
+You are trying to buy or find stuff here, not sell it.
 >sell zozimus
-You are paving the way for commerce, not interacting.
+You are trying to buy or find stuff here, not sell it.
 #mistake test for lameness
 >lameness
 No need to judge the nameless salesmen. We can't all be heroes.
@@ -810,6 +810,21 @@ You don't need to summon someone who deals in spices, or (dated political joke) 
 #mistake test for cigar
 >cigar
 That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
+
+#nudge for yell
+>ylle
+The selly yells just add atmosphere. They can't be changed.
+
+#nudge for yells
+>yelsl
+The selly yells just add atmosphere. They can't be changed.
+
+#mistake test for lyle/lyles
+>lyle
+Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.
+
+>lyles
+Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.
 
 #spechelp for i solve voiles
 >evliso
