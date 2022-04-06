@@ -1776,6 +1776,16 @@ the persuasion disclaimer rule is listed first in the persuasion rulebook.
 
 volume dialogues, telling and asking about, etc
 
+this is the general-ask rule:
+	if noun is evil bee, reason-clue instead;
+	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
+	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
+	if noun is washed up, washup-clue instead;
+	if noun is not a person, try talking to noun instead;
+	if noun is rehabs basher and pamphlets are off-stage:
+		say "[basher-pamph]";
+		the rule succeeds;
+
 section generically asking
 
 asking generically is an action applying to one topic.
@@ -1853,11 +1863,7 @@ to reason-clue:
 
 check objasking it about (This is the check for object information rule):
 	d "noun=[noun] 2nd noun = [second noun] location = [location of second noun].";
-	if noun is evil bee, reason-clue instead;
-	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
-	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
-	if noun is not a person, try talking to noun instead;
-	if noun is washed up, washup-clue instead;
+	abide by the general-ask rule;
 	if noun is sausage and second noun is ruby:
 		if sausage is reflexive, say "You need to get the sausage to trust you, first." instead;
 		if player is not in Rascal Craals:
@@ -1902,22 +1908,19 @@ check objasking it about (This is the check for object information rule):
 			say "[gen-blah entry][line break]";
 			if noun is terse and noun is not terse-warned:
 				now noun is terse-warned;
-				say "[line break]Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
+				say "[line break]Hm, that wasn't very revealing. It doesn't look like talking with [the noun] can help you much. You note this in your notepad.";
 				pad-rec "talking";
 			do nothing instead;
 	if noun is not a person, say "You can only ask people about things." instead;
+	d "To fix the below bug, put [noun] in [general blather table of mrlp].";
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
 definition: a thing (called th) is to-gen-blather:
-	if th is bonker or th is grin set stinger or th is fluster self rut, yes;
+	if th is bonker or th is grin set stinger or th is fluster self rut or th is natant ant, yes;
 	no;
 
 check asking about (This is the check for specific topics rule):
-	if noun is evil bee, reason-clue instead;
-	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
-	if noun is duck, say "Quack, quack." instead;
-	if noun is not a person, try talking to noun instead;
-	if noun is washed up, washup-clue instead;
+	abide by the general-ask rule;
 	if noun is sausage:
 		if the topic understood matches the text "ruby", try objasking sausage about ruby instead;
 	if noun is Leo or noun is Rand:
@@ -1926,13 +1929,13 @@ check asking about (This is the check for specific topics rule):
 				now Rand-first is true;
 				say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
 			say "He's in a fighting mood, not a talking mood, right now." instead;
-	if the topic understood is a topic listed in the table of general-blather:
-		if noun is a person and noun is superchatty:
-			if him-who entry is the noun, say "[him-say entry][line break]" instead;
 	if the topic understood is a topic listed in the table of popular-blather:
 		if there is a right-region entry:
 			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
 		say "[him-say entry][line break]" instead;
+	if the topic understood is a topic listed in the table of general-blather:
+		if noun is a person and noun is superchatty:
+			if him-who entry is the noun, say "[him-say entry][line break]" instead;
 	repeat through general blather table of mrlp:
 		if the noun is default-talker entry:
 			say "[gen-blah entry][line break]";
@@ -1962,7 +1965,7 @@ pat-whine is a truth state that varies.
 check objasking agnostic about (this is the agnostic can spoil rule):
 	if second noun is lois the hostile and agnostic is male, say "'Wow! It woulda been too much to have anyone more snooping around.'" instead;
 	if second noun is hostile is he lot and agnostic is female, say "'Wow! It woulda been too much to have anyone more snooping around." instead;
-	if second noun is moot, say "[if second noun is not atheists and second noun is not the-hostile and second noun is not lois the hostile]Out of the way[else]The agnostic doesn't want to be reminded, probably[end if]." instead;
+	if second noun is moot, say "[if second noun is not atheists and second noun is not the-hostile and second noun is not lois the hostile]Out of the way[else][agnostic-first] doesn't want to be reminded, probably[end if]." instead;
 	unless second noun is guardian or second noun is curst palace:
 		continue the action;
 	if ag-cheat is false:
@@ -2071,7 +2074,7 @@ topic	right-region	him-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
 "old warpy" or "old/warpy"	--	"Nobody comes close to understanding Old Warpy. It gets you where you want to go."
-"horned/hedron" or "horned hedron"	--	"The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own."
+"horned/hedron" or "horned hedron"	--	"[if noun is walleyes]'Nice place, eh? Especially for not being very nice at all!'[else if horned hedron is visited]'Now you've gotten into the Horned Hedron, you don't need any more information.'[else]The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own.[end if]"
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the promise imposer is moot if this is not true]
