@@ -6,216 +6,93 @@ volume testing - not for release
 
 book basic tests
 
-[* this is simply stuff to make sure features work. Test NOUNS to see nouns.]
-
-chapter oddverbs
-
-[* this tests retry, for starters]
-
-test rtr with "ts/presto/in/s/drat/rats/retry/in"
-
-chapter randtext
-
-[* this tests all possibilities of random text, by region. Generic possibilities are included in rand-i.]
-
-test quick1 with "otwin/deeply/quickly/w/7/play whistle"
-
-test quick2 with "gonear gates stage/purloin sonic coins/purloin storage/icons/put icons in slot/research/review/n"
-
-test rand-i with "cap 3/x bookshelf/g/g/g/g/g/g/attack it/g/g/g/lamp/open door/1/1/1/1/1/1/1/1/2/lamp/x art/g/g/g/g/g/g/g/g/hint/n/y/g/g/g/n/g/g/g/shit/g/g/g/x ads/g/g/g/listen/g/g/g/basement/d/satchel/x settler/in/flier/2/2/1/1/1/1/1/1/8/8/8/10/10/staple/stapler/staple wall/z/z/z/z/////in"
-
-test rand-sto with "tokers/nestor/enter smoke/z/z/z/z/x ian/g/g/g/outside"
-
-test rand-p with "blam/s/rats/drat/s/ole/darn/z/z/z/z/whassup/n/n/umph/phooey/e/bleep/e/bingo/put dart in gun/w/n/mazeltov/there/n/syke/tough/later/n/x catechism/g/g/g/g/g/g/g/retry"
-
-test rand-r with "past/ask pat about food/g/g/despite/out/across/opposite/out/inside/out/in/out/in/out/in/out/in/z/z/z/z/x pious/y/x pious/g/g/g/retry"
-
-[this one actually wins, so I don't retry.]
-
-test rand-v with "z/z/z/z/x ethics/g/g/g/hate/care/l/l/l/l/observe/spot/reason/believe/recall/glare/gape/x lead/deal/x brochure/g/g/g/desire/aspire/strive/ponder/deserve/x desk/g/g/g/x sked/g/g/g/bolster/master/last/x divorces/g/g/g/discover/last/decide/y"
-
-test rand-y with "ask casper about xyz/g/g/g/g/g/g/g/sing/inset/remap/stroll/calm/run/boast/leap/z/z/z/z/z/z/z/z/spike/e/scan cans/seek/ask tuna about tuna/g/g/g/g/g/g/g/tutor/eat/w/w/warp/search/n/x theses/g/g/g/retry"
-
-test rand-w with "z/z/z/z/gonear unripe/punier/n/rinsed/e/saltier/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
-
-[capturing Elvira's text is done in test twi]
-
-test rand-t with "gonear elmer/honestly/z/z/z/z/retry"
-
-[this wins the game, so...no retry, either]
-
-test rand-h with "gonear len craig/z/z/z/z/purloin passport/w/n/research/review/n"
+[these are largely superseded by what I test with Zarf's scripts.]
 
 chapter combos
 
 [* this tests combinations of big tests e.g. going through each area]
 
-test win-quick with "test roman/test stores/test routes/test troves/switch patcher/test otters"
+test win-quick with "test ordealdreloadmin/test stores/test routes/test troves/switch patcher/test otters"
 
 test win-q-patchstore with "ts/y/zap store u/zap store w/zap store y/zap store v/zap store p/zap store t/test otters"
 
 test win-q-patchport with "ts/y/routes/towers/oyster/troves/presto/otters/zap routes/zap towers/zap oyster/zap troves/zap spot/zap otters/test otters"
 
-test win-all with "test roman/test stores/test routes/test troves/test presto/test oyster/test towers/test otters"
+test win-all with "test ordealdreloadmin/test stores/test routes/test troves/test presto/test oyster/test towers/test otters"
 
-test win-plus with "test roman/test stores/test routes/test troves/test presto/test oyster/test towers/a5/test otters/y/test others"
+test win-plus with "test ordealdreloadmin/test stores/test routes/test troves/test presto/test oyster/test towers/a5/test otters/y/test others"
 
 test win-dial with "cap 2/test win-plus"
 
-test oops-plus with "test roman-oops/test stores-oops/test towers-oops/test routes-oops/test oyster-oops/test troves-oops/test presto-oops/test otters-oops/y/test others-oops"
+test oops-plus with "test ordealdreloadmin-oops/test stores-oops/test towers-oops/test routes-oops/test oyster-oops/test troves-oops/test presto-oops/test otters-oops/y/test others-oops"
 
-chapter quickerr
+chapter ordeal reload
 
-[* this tests quick errors]
+test ordealreloadmin with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/d/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple curtain/in".
 
-test err-trout with "gonear range/ff/tutor/spike/spike carps/spike pikes/scrap/scrap carps/scrap pikes/ff"
+test ordealreloadmax with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/stable/chimney/painting/in/stair/out/u/ramp/d/snib/in/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple curtain/scepter/scepter/scan specter/t/scan specter/scepter/t/scan specter/scan specter/scan specter/scan specter/scan specter/scan specter/scan specter/x spectre/scepter/x 1/x 2/x 3/x 4/x 5/x 6/in".
 
-chapter roman
+chapter stores
 
-[* this includes tests for roman, roman with mistakes, roman min-points and roman max-points]
+test storesmin with "poss/ts/t/routes/troves/zap store b/zap store h/zap store y/patch course source/zap store t/otters/zap solid idols".
 
-test diora with "test 1st/satchel/scan platform/scan pavement/scan pedestal/scan crabgrass/pad diorama/event map/farm plot/steel pad/brass crag/scan map/scan plot/scan pad/scan crag/pad diorama"
-
-test elmq with "purloin settler/gonear basement/x settler/in/flier"
-
-test elmo with "test 1st/basement/satchel/d/x settler/in/flier"
-
-test elmox with "rom/test 1st/satchel/stable/painting/basement/chimney/u/ramp/d/stair/x settler/in/flier"
-
-test roman3 with "test 1st/chimney/u/ramp/d/satchel/x settler/in/flier/0/y/staple/stapler/put staple in stapler/staple wall/in"
-
-test roman2 with "test 1st/basement/d/satchel/x settler/in/flier/0/y/staple/stapler/put staple in stapler/staple wall/in/coff"
-
-test roman1 with "test 1st/stable/in/sitar/d/satchel/x settler/in/flier/0/y/staple/stapler/put staple in stapler/staple wall/in/coff"
-
-test 1st with "x shelf/lamp/x pad/pad red/open door/1/5/lamp"
-
-test toe with "x shelf/lamp/x pad/pad red/open door/1/0/lamp/basement/d/satchel/x settler/in"
-
-test means with "test 1st/satchel/basement/stable/chimney/u/ramp/enter closets/painting/in/stair/d/x settler/in/flier/0/y/staple/stapler/put staple in stapler/staple wall/in/coff"
-
-test manse with "test means"
-
-test roman-oops with "pmal/lamp/pmal/lehctas/satchel/lehctas/tnemesab/basement/tnemesab/elbats/stable/elbats/yenmihc/chimney/yenmihc/u/pmar/ramp/pmar/enter closets/gnitniap/painting/gnitniap/in/riats/stair/riats/d/in/reilf/flier/reilf/0/elpats/staple/elpats/relpats/stapler/relpats/put staple in stapler/staple wall/in/ffoc/coff/ffoc"
-
-[test roman2 with "lamp/stable/out/stapler/d/get all/x treatise/out"]
-
-test j with "gonear strip/purloin settler"
-
-test means-dia with "x shelf/lamp/open door/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/lamp/x ads/listen/basement/d/satchel/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/staple/stapler/put staple in stapler/staple wall/in"
-
-test randum with "sing//z/damn/hint/n/sleep"
-
-chapter towers
-
-[* this includes tests for towers, towers with mistakes, towers min-points and towers max-points]
-
-test towers with "seed 1/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/get tarts/creaky/n/rusty/weirder/reined/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/saltier/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
-
-test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/reined/rinsed/n/punier/weirder/coiled/n/married/weariest/angstier/e/marginal/s/saltier/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
-
-test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/reined/ysmulc/redriew/weirder/redriew/reitsim/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/saltier/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask agnostic about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
-
-test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/reined/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
-
-test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/saltier/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask agnostic about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/enter boat/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
-
-test towers-part with "towers/towers/enter towers/docile/n/poncier/greyed/punier/n/reined/weirder/n/unable/weariest/angstier/e/marginal/s/saltier/resealed/get dagger and saver/w/s/w/put dagger in rapier repair/e/e/drained/e/rusty/grandiose/married/e/wordy/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/pastier/n/holiest"
-
-test towers-alt with "towers/towers/enter towers/docile/n/poncier/greyed/e/saltier/n/get all/s/drained/e/married/wordy/e/push retape/w/w/n/marginal/n/holiest/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/w/w/put dagger in repair/e/e/n/n/e"
+test storesmax with "poss/ts/t/sorbet/nestor/tokers/enter steaming/outside/routes/troves/abstract patcher to strip of profits/towers/oyster/others/presto/otters".
 
 chapter troves
 
-[* this includes tests for troves, troves with mistakes, troves min-points and troves max-points as well as alt ways through]
+test trovesmin1 with "mbb 1/ts/t/troves/enter tastee/l/hate/care/observe/spot/believe/recall/despair/smell lager/decide/bolster/deal/desire/aspire/ponder/deserve/last/ramble/misses/recant".
 
-test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/stay/reason/believe/recall/despair/glare/decide/relapse/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
+test trovesmin2 with "mbb 1/ts/t/troves/enter tastee/l/hate/care/observe/spot/reason/recall/despair/smell lager/decide/master/deal/desire/strive/ponder/deserve/last/resist/misses/recant".
 
-test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
-
-test troves-alt with "troves/enter troves/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/deriev/derive/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/decied/decide/coff"
-
-test troves-oops with "sevort/troves/sevort/enter troves/teah/haet/teah/etah/hate/etah/reac/caer/reac/erac/care/erac/veresbo/obserev/veresbo/evresbo/observe/evresbo/otps/spto/otps/tops/spot/tops/onsaer/reasno/onsaer/nosaer/reason/nosaer/veeileb/belieev/veeileb/eveileb/believe/eveileb/lalcer/reclal/lalcer/llacer/recall/llacer/realg/glaer/realg/eralg/glare/eralg/irapsed/despari/irapsed/riapsed/despair/riapsed/aled/dela/aled/laed/deal/laed/reised/desier/reised/erised/desire/erised/reipsa/aspier/reipsa/eripsa/aspire/eripsa/veirts/striev/veirts/evirts/strive/evirts/erdnop/pondre/erdnop/rednop/ponder/rednop/reongi/ignoer/reongi/erongi/deserve/erongi/stal/lats/stal/tsal/last/tsal/ertsam/mastre/ertsam/retsam/master/retsam/ertslob/bolstre/ertslob/retslob/bolster/retslob/ervocsid/discovre/ervocsid/revocsid/discover/revocsid/stal/lats/stal/tsal/last/tsal/gniser/resing/gniser/ngiser/resign/ngiser/coff 1"
-
-test troves-0 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/reason/believe/recall/despair/deal/desire/aspire/strive/ponder/deserve/glare/last/master/bolster/last"
-
-test troves-1 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/believe/recall/despair/deal/desire/strive/ponder/deserve/master/last/resign"
-
-test troves-2 with "lamp/gonear strip of profits/troves/enter troves/eth/hate/care/observe/spot/reason/derive/despair/deal/desire/aspire/ponder/deserve/bolster/last/decide"
+test trovesmax with "mbb 1/ts/t/troves/enter tastee/l/gape/stare/hate/care/spot/pf/observe/surmise/spot/recall/pf/believe/reason/recall/despair/smell lager/glare/decide/relapse/deal/pf/bolster/master/deal/discover/desire/aspire/strive/ascertain/ponder/deserve/last/romanticise/ramble/resist/recant".
 
 chapter routes
 
-[* this includes tests for routes, routes with mistakes, routes min-points and routes max-points as well as alt ways through]
+test routesmin with "ts/routes/enter routes/inside/x list o toils/x toils/out/past/despite/out/across/opposite/out/against/astride/below/under/in/out/above/from/beneath/until/around/along/amidst/athwart/between/misses/beyond".
 
-test fixed with "ts/routes/in/inside/x list/pad/pad reagents/pad"
-
-test routes with "routes/enter routes/towards/inside/x list/out/against/astride/below/under/past/despite/exit/across/opposite/exit/inside/exit/above/from/beneath/until/around/along/amidst/athwart/without/between/through/beyond/coff"
-
-test routesord with "routes/enter routes/towards/astride/inside/x list/out/under/below/astride/against/under/below/astride/under/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/aboard/within/through/coff"
-
-test routes-oops with "setuor/routes/setuor/enter routes/sdrawot/towards/sdrawot/edisni/inside/edisni/x list/tuo/out/tuo/tsniaga/against/tsniaga/edirtsa/astride/edirtsa/woleb/below/woleb/etisoppo/opposite/etisoppo/tsap/past/tsap/etipsed/despite/etipsed/tixe/exit/tixe/ssorca/across/ssorca/rednu/under/rednu/tixe/exit/tixe/edisni/inside/edisni/tixe/exit/tixe/morf/from/morf/htaeneb/beneath/htaeneb/litnu/until/litnu/dnuora/around/dnuora/gnola/along/gnola/draoba/aboard/draoba/nihtiw/within/nihtiw/hguorht/through/hguorht/coff"
-
-test routes-alt with "gonear strip of profits/routes/enter routes/against/below/astride/opposite/inside/exit/past/despite/exit/across/under/exit/inside/exit/from/beneath/until/around/along/aboard/behind/between"
-
-test r2 with "routes/enter routes" in Strip of Profits
-
-chapter otters
-
-[* this includes tests for otters, otters with mistakes, otters min-points and otters max-points as well as alt ways through]
-
-test ottelv with "otters/enter otters/barely/rescind/reedily/w/shadily/martially/coitally/1/3/n/n/because/else/s/s/although/however/n/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/stoically/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/w/"
-
-test otters with "otters/enter otters/barely/rescind/reedily/w/really/sparely/despairingly/indiscreetly/1/3/n/n/because/else/s/s/although/however/n/atom/e/n/enragedly/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/stoically/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/quickly/w/7/e/w/play whistle"
-
-test otters-pow with "seed 1/in/barely/reedily/w/tearily/snidely/nastily/1/3/n/n/else/because/s"
-
-test otters-cur with "otters/enter otters/barely/reedily/w/shadily/martially/coitally/1/3/w/e/s/db/although/however/n/n/because/else/s/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/stoically/s/parrot"
-[/snail/hornets/snipe/racoon/n/n/w/w/seriously/raptor/w/play whistle/quickly]
-
-test otters-oops with "sretto/otters/sretto/enter otters/ylerab/barely/ylerab/dnicser/rescind/dnicser/ylideer/reedily/ylideer/w/ylidahs/shadily/ylidahs/yllaitram/martially/yllaitram/yllatioc/coitally/yllatioc/w/e/n/esuaceb/because/esuaceb/esle/else/esle/s/s/hguohtla/although/hguohtla/revewoh/however/revewoh/n/e/n/ylirgna/angrily/ylirgna/yleturb/brutely/yleturb/n/wols/slow/wols/delorap/paroled/delorap/tselooc/coolest/tselooc/ystra/artsy/ystra/debrag/garbed/debrag/s/s/s/ylgnihtaol/loathingly/ylgnihtaol/ylesret/tersely/ylesret/s/torrap/parrot/torrap/lians/snail/lians/stenroh/hornets/stenroh/epins/snipe/epins/noocar/racoon/noocar/n/n/w/w/yltsenoh/honestly/yltsenoh/rotpar/raptor/rotpar/dleepy/deeply/dleepy/ylkciuq/quickly/ylkciuq/w/7/play whistle"
-
-[w/w/s/s/parrot/n/w/bleah/e/e/bleah/w/u/bleah/d/n/n/u/coolest/d/w/paroled/e/n/garbed/s/s]
-
-test owl-die with "test intro/towers/towers/barely/reedily/e/shadily/martially/coitally/e/because/else/w/w/n/n"
-
-test raptor-die with "test intro/towers/towers/barely/reedily/e/shadily/martially/coitally/e/because/else/w/w/s/s/d/n/w/w/quickly"
-
-chapter oyster
-
-[* this includes tests for oyster, oyster with mistakes, oyster min-points and oyster max-points ]
-
-test oyster with "oyster/enter oyster/y/z/z/z/ask casper about casper/sing/sing/spit/inset/stroll/calm/run/enter raft/fart/soar/scrap/z/z/e/scan cans/seek/eat tea/tutor/tend/swipe/z/z/w/n/trace/react/bonk knob/kiss skis/snap/splain/in/bust/drop prod/sweat/clean lance/shape/out/s/w/warp/n/w/bury/e/s/e/unearth/assuage/w/search arches/enlarge/n/x theses/w/e/patrol/x gleaner/in/y/tan ant/prepay/revel/derail/pull lever/redial/coff 1"
-
-test oy1 with "oyster/enter oyster/spit/sing/inset/stroll/calm/run".
-test oy2 with "boast/leap/scrap/e/scan/seek/tend/swipe/tutor/eat".
-test oy3 with "w/n/trace/react/kiss skis/bonk knob/span/splain/in".
-test oy4 with "bust/drop/sweat/clean/shape/out/s/w".
-test oy5 with "w/warp/search/enlarge/x gleaner/n/w/bury/e/s/e".
-test oy6 with "unearth/ask about ruby/patrol/in/prepay/trample/psalm/tan".
-test oy7 with "derail/spin/revel/redial".
-
-test oyster-min with "oyster/enter oyster/spill pills/y/calm/run/boast/leap/scrap/n/kiss skis/bonk knob/trace/react/in/bust/out/s/e/seek/eat tea/tutor/tend/w/w/warp/n/bury/s/e/unearth/assuage/w/search arches/enlarge/n/x gleaner/patrol/enter portal/revel/derail/pull lever"
-
-test oyster-oops with "retsyo/oyster/retsyo/in/gnis/sing/gnis/gnis/sing/gnis/tips/spit/tips/tesni/inset/tesni/llorts/stroll/llorts/mlac/calm/run/mlac/enter raft/traf/fart/traf/raos/soar/raos/parcs/scrap/parcs/e/kees/seek/kees/eat tea/rotut/tutor/rotut/drawer/reward/drawer/epiws/swipe/epiws/w/n/kiss skis/ecart/trace/ecart/tcaer/react/tcaer/bonk knob/in/tsub/bust/tsub/drop prod/taews/sweat/taews/clean lance/epahs/shape/epahs/tuo/out/tuo/s/w/praw/warp/praw/n/w/yrub/bury/yrub/e/s/e/htraenu/unearth/htraenu/egaussa/assuage/egaussa/w/search arches/egralne/enlarge/egralne/n/w/e/lortap/patrol/lortap/x gleaner/in/y/tan ant/yaperp/prepay/yaperp/lever/revel/lever/liared/derail/liared/pull lever/laider/redial/laider/coff 1"
-
-[pill spilling test start below]
-
-test oypill with "ts/oyster/in/y/produce redo cup/spill pills/y/spill pills/spill pills"
+test routesmax with "ts/routes/enter routes/in/inside/x list o toils/x toils/out/past/despite/out/across/opposite/out/against/astride/below/under/towards/in/out/above/from/beneath/until/around/along/amidst/athwart/between/through/without/beyond".
 
 chapter presto
 
-[* this includes tests for presto, presto with mistakes, presto min-points and presto max-points and the alt way through]
+test prestomin with "ts/t/au 2/presto/enter tornado/umph/pooh/e/s/rats/drat/n/bleep/e/get popgun/w/wont/s/s/ole/darn/whassup/n/n/bingo/load gun with dart/there/n/syke/later/tough/n/screen/skid/leaf/get book/push skid s/push skid s/push skid s/put leaf on skid/push skid n/push skid n/push skid n/keyboard/put keyboard on slab/put screen on slab/disk/put disk in drive a/reboot/capslock/put lock on keyboard/futon/sleep/compile/cola/mug/pour cola in mug/debug/misses/sub".
 
-test presto with "presto/enter spot/blam/mazeltov/umph/phooey/e/s/drat/rats/s/ole/darn/z/whassup/n/n/bleep/e/bingo/put dart in popgun/w/n/there/n/syke/later/so long/n/caps lock/mug/leaf/casserole/skid/push skid s/g/g/put leaf on skid/push skid s/cola/pour cola in mug/futon/keyboard/screen/put screen on table/disk/rom sticks/put disk in drive/put keyboard on table/push reboot/put caps lock in keyboard/tab/sleep/compile/debug/sub/coff 1"
+test prestomax with "ts/t/au 2/presto/enter tornado/bleep/umph/phooey/e/s/keyboard/pf/rats/drat/n/bleep/e/get popgun/prost/w/mazeltov/blam/there/pf/s/s/ole/goodness/darn/whassup/n/n/abstract popgun to seminar/there/there/purloin popgun/there/bingo/load gun with dart/syke/what/later/tough/trasch/n/screen/get polemic/skid/leaf/reboot/pf/sleep/casserole/get book/push skid s/push skid s/push skid s/put leaf on skid/disk/push skid n/push skid n/push skid n/keyboard/compile/put keyboard on slab/compile/no/put screen on slab/compile/disk/compile/put disk in drive a/compile/reboot/capslock/compile/compile/put lock on keyboard/sleep/pf/futon/compile/compile/sleep/compile/abstract cola to phat path/cola/mug/avider/romsticks/tab/pour cola in mug/debug/misses/sub".
 
-test presto-a with "presto/enter spot/blam/mazeltov/umph/phooey/e/s/drat/rats/s/ole/darn/z/whassup/n/n/bleep/e/bingo/put dart in popgun/w/n/there/n/syke/later/so long/n/caps lock/mug/leaf/skid/push skid s/g/g/put leaf on skid/push skid n/g/g/cola/pour cola in mug/futon/keyboard/screen/put screen on table/disk/rom sticks/put disk in drive/put keyboard on table/push reboot/put caps lock in keyboard/tab/sleep/compile/debug/sub/y/coff 1"
+chapter oyster
 
-test presto-b with "presto/enter spot/blam/mazeltov/umph/phooey/e/s/drat/rats/s/ole/darn/z/whassup/n/n/bleep/e/bingo/put dart in popgun/w/n/there/n/syke/later/so long/n/caps lock/mug/leaf/skid/get all/push skid s/g/g/put leaf on skid/show bad book to yak/disk/y/get all/cola/pour cola in mug/futon/keyboard/screen/put screen on table/rom sticks/put disk in drive/put keyboard on table/push reboot/put caps lock in keyboard/tab/sleep/compile/debug/sub/y/coff 1"
+test oystermin with "ts/oyster/enter barnacle balancer/get pills/spill pills/calm/run/boast/leap/scrap/e/seek/eat/tutor/w/n/trace/react/kiss/bonk/snap/in/bust/drop/out/s/w/warp/search/enlarge/n/w/bury/e/s/e/unearth/assuage/ask haunter about ruby/w/n/w/e/patrol/x gleaner/in/prepay/derail/spin/redial".
 
-test presto-c with "presto/enter spot/blam/mazeltov/umph/phooey/e/s/drat/rats/s/ole/darn/z/whassup/n/n/bleep/e/bingo/put dart in popgun/w/n/there/n/syke/later/so long/n/caps lock/mug/leaf/skid/get all/push skid s/g/g/put leaf on skid/show day broke to yak/show ebay dork to yak/show bred okay to yak/show dear koby to yak/disk/y/get all/cola/pour cola in mug/futon/keyboard/screen/put screen on table/disk/rom sticks/put disk in drive/put keyboard on table/push reboot/put caps lock in keyboard/tab/sleep/compile/debug/sub/y/coff 1"
+test oystermax with "ts/oyster/enter barnacle balancer/unset/remap/sing/scrape/stroll/calm/run/soar/fart/pf/enter raft/boast/leap/tutor/scrap/unearth/pf/misses/slander/misses/e/scan/seek/eat/tend/tutor/warp/swipe/w/n/warp/splain/react/pf/kiss/pf/snap/pf/trace/kiss/bonk/react/kiss/bonk/snap/in/bust/drop/sweat/shape/clean/out/s/banish ruby/unearth/purloin ruby/unearth/w/search/pf/warp/search/x gleaner/e/x gleaner/w/enlarge/n/w/bury/e/s/e/unearth/assuage/ask haunter about ruby/w/n/w/e/patrol/x gleaner/in/derail/pf/revel/prepay/psalm/tan/revel/derail/redial/pf/spin/redial".
 
-test presto-s with "presto/enter spot/blam/mazeltov/umph/phooey/e/s/drat/rats/s/ole/darn/z/whassup/n/n/bleep/e/bingo/put dart in popgun/w/n/there/n/syke/later/so long/"
+chapter towers
 
-test presto-oops with "otserp/presto/otserp/enter spot/malb/blam/malb/votlezam/mazeltov/votlezam/hpmu/umph/hpmu/phyooe/poho/phooey/nrudlog/e/s/tard/drat/tard/star/rats/star/s/elo/ole/elo/nrad/darn/nrad/pussahw/whassup/pussahw/n/n/peelb/bleep/peelb/e/ognib/bingo/ognib/put dart in popgun/w/n/ereht/there/ereht/n/ekys/syke/ekys/retal/later/retal/so long/n/caps lock/gum/mug/gum/fael/leaf/fael/diks/skid/diks/push skid s/g/g/put leaf on skid/push skid n/g/g/aloc/cola/aloc/pour cola in mug/notuf/futon/notuf/show catechism to yak/draobyek/keyboard/draobyek/neercs/screen/neercs/put screen on table/ksid/disk/ksid/rom sticks/put disk in drive/put keyboard on table/push reboot/put caps lock in keyboard/bat/tab/bat/peels/sleep/peels/elipmoc/compile/elipmoc/gubed/debug/gubed/bus/sub/bus/coff 1"
+test towersminh with "ts/towers/seed 1/enter turrets/z/gone/lardy/bleak/yonder/sadder/get all/n/put tarts in toaster/xray butlers/purloin brownies/put brownies in toaster/xray nereid/subtler/reined/n/semipro/pastier/n/married/n/s/s/e/sewed/nerdiest/e/marginal/holiest/n/hastiest/s/s/broken/resting/e/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/rowdy/gt coastlines/give gizmo to agnostic/robust/stabler/enter boat/misses/spectacular".
+
+test towersmini with "ts/towers/seed 1/enter turrets/z/gone/lardy/bleak/yonder/sadder/get all/n/put tarts in toaster/xray butlers/purloin brownies/put brownies in toaster/xray nereid/subtler/rinsed/e/restful/saltier/e/w/n/sewed/weariest/n/hastiest/released/e/holiest/w/w/married/n/s/e/s/s/e/broken/resting/e/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/rowdy/gt coastlines/give gizmo to agnostic/robust/stabler/enter boat/misses/spectacular".
+
+test towersmax with "ts/towers/seed 1/enter turrets/z/yonder/pf/droney/pf/gone/lardy/bleak/achier/snared/cricked/talcier/yonder/spectacular/pf/sadder/get all/n/rusty/subtler/reined/rinsed/creaky/n/coiled/semipro/pastier/n/angstier/w/rustled/released/married/n/s/e/hastiest/weariest/s/nerdiest/saltier/sewed/mined/d/dandier/e/marginal/holiest/n/s/s/naivest/w/grandiose/e/s/aimless/rousted/prosiest/n/broken/resting/e/fussier/pf/unlocked/pf/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/pf/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/pearly/attentive/rowdy/gt coastlines/robust/rewired/enter boat/punier/antsier/present/in/spectacular/triste/give pot to sitter/out/misses/spectacular".
+
+chapter otters
+
+test ottersmin with "seed 1/ts/a5/t/otters/opt in/enter solid idols/barely/l/discern ed riley/discern/reedily/w/bossily/angrily/blearily/au 0/1/3/no/n/because/else/s/atom/e/n/enragedly/remotely/n/slow/coolest/paroled/artsy/l/s/s/s/loathingly/joltily/s/parrot/snail/hornets/racoon/l/n/n/w/w/raptor/quickly/w/7/e/deeply/w/misses/au 2/play whistle/y".
+
+test ottersmax with "seed 1/ts/a5/t/otters/opt in/enter solid idols/barely/l/rescind/reedily/w/atom/s/although/pf/ergo/n/n/because/pf/else/s/bossily/angrily/blearily/au 0/1/3/no/actually/atom/pf/quickly/pf/n/else/pf/because/else/unless/misses/s/s/ergo/although/pf/ergo/however/n/atom/e/n/enragedly/remotely/n/slow/coolest/paroled/artsy/quickly/l/garbed/s/s/s/loathingly/joltily/s/parrot/snail/hornets/racoon/l/snipe/n/n/basically/w/raptor/pf/deeply/pf/deeply/pf/w/honestly/aside/honestly/quickly/raptor/e/quickly/w/quickly/w/7/e/deeply/w/misses/au 2/play whistle/y".
+
+chapter others
+
+test othersmin with "rove over/others/in/t/z/z/limes/pears/grapes/plums/compass/x ruts circuits/tamarind/blueberries/cantaloupe/persimmon/maraschino/pomegranate/dates/n/apricot/apples/mulberries/gooseberry/s/n/icon/coconuts/tangerines/s/n/w/cranberries/blackberries/watermelon/e/s/sonic/n/d/give dollar/put icons in slot/eat arugula/guru dr severe/u/research/review/s/n/prep/n".
+
+test othersmax with "rove over/others/in/t/z/z/limes/pears/grapes/plums/compass/x ruts circuits/tamarind/blueberries/cantaloupe/persimmon/maraschino/pomegranate/dates/n/apricot/apples/mulberries/gooseberry/s/n/icon/coconuts/tangerines/s/n/w/cranberries/blackberries/watermelon/pineapple/e/s/sonic/concisions/n/w/strawberries/grapefruit/raspberry/breadfruit/e/e/olives/cinque/cheap/papayas/among/ancienter/solemn/len mo/cripes/w/d/give dollar/put icons in slot/banana/go near/rhubarb/reversed/u/n/n/research/review/n".
+
+chapter demo dome
+
+test demodomemax with "z/demo dome mode/smell/listen/x me/s/s/n/xtrak/xab tripods/xtrak/x tripods/xtrak/x ignsay/x grate/turn dial/turn dial on/turn dial off/n/x tester street/g/xab tester street/xtrak/x tester street/xtrak/x coder decor/xab coder decor/xtrak/x coder decor/xtrak/x raised aiders/xtrak/xab raised aiders/x raised aiders/xtrak/w/s/w/x chronicle/xtrak/xab chronicle/x chronicle/xtrak/e/in/n/x apses/xtrak/xab apses/x apses/xtrak/x calendar/xtrak/xab calendar/x calendar/x shiest thesis/xtrak/out/e/out/e/w/e/x novella/w/e/read/w/s/e/rr/read/rr/rr/rr/rr/rr/rr/rr/rr/rr/r/rr/xtrak/w/d/x trifle/x placer/x duster/x dustpan/x ladder/x plastic/x bolt case/x satires/u/d/x clasper/u/s".
+
+volume definitions
+
+definition: a thing (called th) is mass-hint-appropriate: [this is a definition that the STS test file needs]
+	unless th is touchable, no;
+	yes;
 
 chapter hint clashes
 
@@ -232,74 +109,6 @@ test clash-y with "oyster/enter oyster/get pills/remap/sing/scrape/stroll/calm/h
 test clash-w with "fixtow/towers/enter towers/gone/awed/bleak/olden/godly/lardy/yonder/n/creaky/get toaster/rustled/n/rinsed/e/drained/e/broken/e/unlocked/fussier/eat strudel/xray fissure/w/w/w/hint hulk/g/g/g/xray hulk"
 
 test clash-t with "a5/otters/enter otters/barely/reedily/w/snidely/tearily/n/because/else/discern/s/tediously/s/hint ghoul hat/g/g/g/discern"
-
-chapter others
-
-[* this includes tests for others, others with mistakes, others min-points and others max-points and the alt way through]
-
-test qw1 with "ts/y/a5/otters/test otters"
-
-test qw2 with "gonear gates/purloin settler/purloin passport/review/research/n"
-
-test others with "others/in/tamarind/maraschino/plums/pears/grapes/blueberries/cranberries/x stand/limes/pomegranate/cantaloupe/compass/persimmon/n/apples/apricot/mulberries/gooseberry/d/go near/nab an a/reversed/rhubarb/u/w/blackberries/pineapple/watermelon/grapefruit/strawberries/raspberry/e/s/n/e/listen/among/solemn/solemn/argentine/ancienter/cheap/cinque/cripes/papayas/w/s/icons/sonic/n/d/give dollar to trader/u/put icons in slot/review/research/n/n/coff"
-
-test others-oops with "srehto/others/srehto/in/dniramat/tamarind/dniramat/onihcsaram/maraschino/onihcsaram/smulp/plums/smulp/sraep/pears/sraep/separg/grapes/separg/seirrebeulb/blueberries/seirrebeulb/seirrebnarc/cranberries/seirrebnarc/x stand/persimmon/nommisrep/semil/limes/semil/etanargemop/pomegranate/etanargemop/epuolatnac/cantaloupe/epuolatnac/ssapmoc/compass/ssapmoc/n/selppa/apples/selppa/tocirpa/apricot/tocirpa/mulberrsei/mulberries/mulberrsei/yrrebesoog/gooseberry/yrrebesoog/d/go near/nab an a/desrever/reversed/desrever/brabuhr/rhubarb/brabuhr/u/w/seirrebkcalb/blackberries/seirrebkcalb/elppaenip/pineapple/elppaenip/awtermelno/awtermelno/tiurfeparg/grapefruit/tiurfeparg/seirrebwarts/strawberries/seirrebwarts/yrrebpsar/raspberry/yrrebpsar/e/e/gnoma/among/gnoma/nmelos/solemn/nmelos/nmelos/solemn/nmelos/enitnegra/argentine/enitnegra/retneicna/ancienter/retneicna/paehc/cheap/cinqeu/cinque/paehc/sepirc/cripes/sepirc/w/s/snoci/icons/snoci/cinos/sonic/cinos/n/d/give dollar to trader/u/put icons in slot/weiver/review/weiver/research/hcraesern/n/coff"
-
-[currently o04 is not possible without cheating]
-
-test o04 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/compass/n/apples/apricot/gooseberry/d/go near/nab an a/rhubarb/u/w/blackberries/raspberry/pineapple/grapefruit/strawberries/e/purloin melon/purloin lemons/s/n/d/give dollar/u/n/sonic/icons/put icons in slot/review viewer/research searcher/n/coff"
-
-test o034 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/compass/n/apples/apricot/gooseberry/d/go near/nab an a/rhubarb/u/w/blackberries/raspberry/pineapple/grapefruit/strawberries/e/s/n/e/solemn/solemn/w/s/n/d/give dollar/u/n/sonic/icons/put icons in slot/review viewer/research searcher/n/coff"
-
-test o024 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/compass/n/apples/apricot/gooseberry/d/go near/nab an a/rhubarb/u/s/n/w/blackberries/raspberry/pineapple/grapefruit/strawberries/e/e/solemn/solemn/w/s/n/d/give dollar/u/n/icons/sonic/put icons in slot/review viewer/n/prep/n/coff"
-
-test o014 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/maraschino/compass/n/e/argentine/solemn/solemn/ancienter/cheap/cripes/w/apples/gooseberry/apricot/d/go near/nab an a/rhubarb/u/s/icons/sonic/put icons in slot/n/d/give dollar/u/n/put icons in slot/n/prep/research searcher/n/coff"
-
-test o01234 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/maraschino/compass/cantaloupe/pomegranate/n/apples/apricot/gooseberry/s/icon/n/w/blackberries/pineapple/raspberry/grapefruit/strawberries/e/s/sonic/n/d/go near/rhubarb/nab an a/u/s/n/d/give dollar/u/n/put icons in slot/review/research/n"
-
-test o0134 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/maraschino/compass/cantaloupe/pomegranate/n/apples/apricot/gooseberry/w/blackberries/pineapple/raspberry/e/s/n/icon/coin/sonic/e/solemn/solemn/cripes/cheap/w/s/n/d/give dollar/u/n/icons/put icons in slot/review/research/n"
-
-test min1 with "rove over/others/in/x stand/limes/grapes/pears/plums/tamarind/maraschino/compass/n/apricot/apples/d/rhubarb/banana/orange/u/w/pineapple/grapefruit/raspberry/strawberries/blackberries/e/s/sonic icons/n/d/give dollar/u/n/review/n/coff"
-
-test min2 with "rove over/others/in/plums/tamarind/maraschino/blueberries/cantaloupe/pomegranate/compass/compass/n/gooseberry/e/among/solemn/solemn/ancienter/argentine/cheap/cripes/w/d/reversed/u/s/sonic/n/d/give dollar/icons/u/n/review/n/coff"
-
-test min3 with "rove over/others/in/limes/grapes/pears/blueberries/cantaloupe/pomegranate/compass/n/goosebery/apricot/apples/e/among/solemn/solemn/ancienter/argentine/cheap/cripes/w/s/icons/n/d/give dollar/sonic/u/n/review/n/coff"
-
-[/cheap/reversed/argentine/ancienter/solemn/solemn/w/s/put pear in chimney/push megaton/pomegranate/among/e/put peach in slot/eat tarts/n]
-
-[oops.pl allows me to test oops-scripts.]
-
-chapter stores
-
-[* this is a simple test to go through all the STORES possibilities, of which there are not many not covered in other tests.]
-
-test stores with "tokers/nestor/attack tokers/z/enter smoke/z/outside/sorbet/x c/g/g/g"
-
-test see-c with "cap 7/ts/x c/g/g/g/g/g/g/g/g/g/g/g/g"
-
-chapter demo dome
-
-[* basic tests. Not much to see here.]
-
-test dome-xp with "x it/x it/x it/x it/x it/x it/x it/x it/x it/x it"
-
-test dome-inlet with "in/x calendar/test dome-xp/test dome-xp/x thesis/out"
-
-test dome-show with "n/x raised aiders/test dome-xp/test dome-xp/x coder decor/test dome-xp/test dome-xp/s"
-
-test dome-dens with "w/x chronicle/test dome-xp/test dome-xp/e"
-
-test dome-nov with "e/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/w"
-
-test dome-spares with "d/x clasper/x bolt case/x ladder/x filter/x dustpan/x plastic/x placer/x duster/u"
-
-test dome-all with "demo dome/x tripods/test dome-inlet/test dome-show/test dome-dens/test dome-nov/test dome-spares"
-
-volume definitions
-
-definition: a thing (called th) is mass-hint-appropriate: [this is a definition that the STS test file needs]
-	unless th is touchable, no;
-	yes;
 
 volume talk-tests
 
