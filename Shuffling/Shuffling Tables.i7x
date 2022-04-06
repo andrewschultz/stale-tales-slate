@@ -779,8 +779,8 @@ cratered bits	"The cratered bits make the cabinet acne-bit and clue what it can 
 
 table of ordeal loader hintobjs
 hint-entry	advice-entry	parallel-entry
-name list	"The list hints what Shuffling Around is all about."
-vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what Shuffling Around is all about."
+name list	"The list hints what [this-game] is all about."
+vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what [this-game] is all about."
 odd side passage	"You can [b]ENTER[r] the odd side passage, or go [b]IN[r]."
 odor	"[one of]What can the odor turn into? Your random thoughts are not so random.[plus][or]The clues and distractions collapse to anagrams.[plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram?[plus][or]A door.[minus][cycling]"
 musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."

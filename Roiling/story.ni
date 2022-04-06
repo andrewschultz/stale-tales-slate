@@ -742,12 +742,12 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		continue the action;
 	process the check-skip-intro rule;
 	let skip-stuff be whether or not the rule succeeded;
-	say "A Roiling Original has some features that can be adjusted for screen readers. Are you using a screen reader?";
+	say "[this-game] has some features that can be adjusted for screen readers. Are you using a screen reader?";
 	if the player regex-prompt-consents:
 		say "Accessibility is turned on. It is something I had trouble meaningfully planning and testing, so please let me know at [email] if you feel it could be improved. Thank you!";
 		now screenread is true;
 		now setspace is true;
-	say "You can alternate accessibility mode with the [b]ACCESS[r] command.[paragraph break]Also, A Roiling Original contains some minor profanity. Unfortunately, it can't wipe out some implied profanity that results, but nothing is intended to be malicious. Disable profanity?";
+	say "You can alternate accessibility mode with the [b]ACCESS[r] command.[paragraph break]Also, [this-game] contains some minor profanity. Unfortunately, it can't wipe out some implied profanity that results, but nothing is intended to be malicious. Disable profanity?";
 	if the player regex-prompt-consents:
 		now censor-minor is true;
 	say "Also, this is not critical to game mechanics and only gives minor differences, but you can play as a male (M) or female (F) -- case insensitive. Which will it be?";
@@ -761,9 +761,9 @@ when play begins (this is the screenread gender swears and precursor rule) :
 	else:
 		choose-male;
 	if skip-stuff is true, continue the action;
-	say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
+	say "And one final thing: [this-game] is a sequel to [shuf]. It's strongly recommended you play [shuf] first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
 	if the player regex-prompt-consents:
-		say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Ordeal Reload as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
+		say "[shuf] was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Ordeal Reload as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
 		if the player consents: [start of game]
 			say "Things were, well, anagrams. Store F became the forest. Store I, the sortie. Store M, the metros. You were particularly proud of changing the liches to a chisel and the drapes to a spread.";
 		else:
@@ -3481,8 +3481,8 @@ when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of rank-increasing regions][close bracket][end if]";
 	if read-intro is false, continue the action;
-	ital-say "this game is a sequel to Shuffling Around. It has the same mechanics. But the back story is not important.";
-	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way, for some egghead to grind things out! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagramming acronyms (pro and con) and whether accents count, and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]" [bold-ok]
+	ital-say "this game is a sequel to [shuf]. It has the same mechanics. But the back story is not important.";
+	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn [shuf]. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way, for some egghead to grind things out! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagramming acronyms (pro and con) and whether accents count, and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]" [bold-ok]
 
 to say lhs:
 	if player is in cruelest lectures and tedious-cue is true:
@@ -6069,7 +6069,7 @@ check touching:
 	if noun is raves saver, say "Odd. It feels ... really papery." instead;
 	if noun is lone duck, say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else if duck is aloof]--maybe it needs some way to trust you[end if]." instead; [towers]
 	if noun is pryer bars, say "They feel like spry rebar." instead; [others]
-	say "You don't need to touch anything in A Roiling Original. Okay, you need to touch stuff to take it, but not [b]TOUCH[r] specifically." instead;
+	say "You don't need to touch anything in [this-game]. Okay, you need to touch stuff to take it, but not [b]TOUCH[r] specifically." instead;
 
 chapter listening
 
@@ -6990,7 +6990,7 @@ carry out abouting:
 		unless the player regex-prompt-consents:
 			say "OK." instead;
 	say "[this-game] is the sequel to [shuf] and part 2 in my Stale Tales Slate. The third is [trt], which is much shorter but milks the concept completely dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as [shuf] but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story and hinting in the post-comp release. You can see more abut the people who helped the game come to be by typing [b]CREDITS[r]. There are a lot of them!";
-	say "[line break]A Roiling Original is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, but you don't get anything special for that beyond a feeling of accomplishment.";
+	say "[line break][this-game] is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, but you don't get anything special for that beyond a feeling of accomplishment.";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing [b]TRANSCRIPT[i] at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [ghsite]--no need for an account." instead;
 
 part releaseing
@@ -7002,11 +7002,11 @@ understand the command "release" as something new.
 understand "release" as releaseing.
 
 carry out releaseing:
-	say "Each version of A Roiling Original should contain a text file with detailed release notes, but here is a brief summary:[paragraph break]";
-	say "A Roiling Original's first release was for Spring Thing 2013, on April 1st.";
-	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone. The code name was [i]Gad! Super Upgrades![r]";
-	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust. The code name was Past-Due Updates.";
-	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release. The code name was [i]Sustinent Nuttiness[r].";
+	say "Each version of [this-game] should contain a text file with detailed release notes, but here is a brief summary:[paragraph break]";
+	say "[this-game]'s first release was for Spring Thing 2013, on April 1st.";
+	say "[this-game]'s second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone. The code name was [i]Gad! Super Upgrades![r]";
+	say "[this-game]'s third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust. The code name was Past-Due Updates.";
+	say "[line break]The current edition of [this-game] should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release. The code name was [i]Sustinent Nuttiness[r].";
 	say "Any future update could be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings, Fun [']Nuf and We Task Tweaks are possibilities, but they feel kind of cheap.";
 
 part teching
@@ -7018,7 +7018,7 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of Ordeal Reload > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of [this-game]. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of Ordeal Reload > 0] in the Stale Tales Slate[end if], [shuf]. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
 	say "[line break]And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
@@ -7119,7 +7119,7 @@ understand the command "no tip" as something new.
 understand "no tip" as notiping.
 
 this is the no-instant-tips rule:
-	if mrlp is Ordeal Reload and cur-score of Ordeal Reload < 2, say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
+	if mrlp is Ordeal Reload and cur-score of Ordeal Reload < 2, say "You shouldn't know about this command, yet. I mean, it was in [shuf], but it's a bit different, this game." instead;
 
 carry out notiping:
 	abide by the no-instant-tips rule;
@@ -8690,7 +8690,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "tagged/gadget" or "tagged gadget"	true	"You wrote some notes about the Tagged Gadget in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."	"tagged gadget"	true
 "retry" or "terry"	true	"You wrote notes about how you can [b]RETRY[r] thanks to Terry if you get stuck somewhere past a store."	"retry"	true
 "warp"	true	"[i][bracket]FOURTH WALL NOTE: if you solved Store P, U, V, W, or Y in an earlier release, you can type the final command to bypass it. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"	"warp"	true
-"directions/dirs"	true	"A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."	"directions/dirs"	false	--
+"directions/dirs"	true	"[this-game] uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."	"directions/dirs"	false	--
 "casper"	false	"Casper talked to you about how this place is full of action, how there's a haunter beneath Anger Range, and it may have lost something. Casper also explained you'll need a way through the Horned Hedron."	"casper"	true	oyster
 "reagents/reagent"	false	"You need three reagents to help Brother Horbert: a stupor sprout[if player has stupor sprout] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."	"reagents"	true	routes
 "Leo/Rand" or "Leo and Rand"	false	"[l-n-r] may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
@@ -18335,7 +18335,7 @@ prompt	response	enabled
 
 table of quip texts (continued) [tqt-gr]
 quip	quiptext
-gre-players-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the parleys splayer players without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
+gre-players-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the parleys splayer players without doing anything. You're that [shuf] person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
 gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An [b]ICE[r] gal!['] Being called a gal was bad enough. But she used to rent the Edictal Citadel from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. And, well, it's secure now, all right. I haven't got by her ideas aides, but I found out she's--well, [i]augmenting[r] animals.'"
 gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
 gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
@@ -20185,7 +20185,7 @@ check going north in Gates Stage:
 		moot tekno token;
 	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fly-Heart Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now."; [bold-ok]
 	say "[line break][if concisions are reflexed]And your time finding concisions with the sonic icons pays off. It feels like cheating, a bit, giving a snappy phrase to say stuff and get people to do it. But that's leadership and better than, you know, having the bad guys do it. You become eminently quotable, but fortunately, you always make sure things never get to personality cult-level praise[else]You do pretty well even if you're not as suited to idioms and slick quotes as to anagrams. You get enough results, and you work well with people that disagree with you. And even though you feel you often could've said the right thing, and maybe you missed something (you did, a small thing,) your time in charge is one of progress and camaraderie[end if].";
-	say "[line break][b]Congratulations![r] You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. [b]DEMO DOME MODE[r], if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPRIEVAL PREVAILER!";
+	say "[line break][b]Congratulations![r] You achieved the 'extended' ending in [this-game]. But wait: there's a little more, if you can't get enough. [b]DEMO DOME MODE[r], if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPRIEVAL PREVAILER!";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
@@ -21155,7 +21155,7 @@ when play begins (this is the seed novella rule) :
 
 book Hows Show
 
-Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder decor and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
+Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder decor and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into [shuf] and [this-game]. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
 	ital-say "the whos-show is already under [b]CREDITS[i].";
