@@ -336,29 +336,31 @@ volume flippables
 
 book hams
 
-the hams are physical plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted. Someone serious about bridging cultural and religious gaps, for instance, someone willing to work for others and not take attention away. Perhaps even a little old-school.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general. You get the sense they might be tougher customers than whatever you can [b]LISTEN[r] to.". printed name is "hams, hams"
+the hams are physical plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted. Someone serious about bridging cultural and religious gaps, for instance, someone willing to work for others and not take attention away. Perhaps even a little old-school.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. uniq-hash of hams is 266369. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general. You get the sense they might be tougher customers than whatever you can [b]LISTEN[r] to.". printed name is "hams, hams"
 
 book item time
 
-item time is an audible flippable. it is scenery. "'Item time ... item time ...' a voice whispers. You don't know what sort of item you should be looking for.". guess-right-text is "Now you know what to look for, you find something interesting , slightly shiny ... yes! A mineral that can be used as export, in trade! You're not sure for what, but then, that sort of thing isn't your specialty. Perhaps your old friends Len Craig from the Clangier Clearing, or Curtis from Rustic Citrus, could help with the details.". word-to-include is "mimetite". sts-hash of item time is 679968252.
+item time is an audible flippable. it is scenery. "'Item time ... item time ...' a voice whispers. You don't know what sort of item you should be looking for.". guess-right-text is "Now you know what to look for, you find something interesting , slightly shiny ... yes! A mineral that can be used as export, in trade! You're not sure for what, but then, that sort of thing isn't your specialty. Perhaps your old friends Len Craig from the Clangier Clearing, or Curtis from Rustic Citrus, could help with the details.". word-to-include is "mimetite". sts-hash of item time is 679968252. uniq-hash of item is 528656.
 
 book some emos
 
-emos are an audible plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "The voices of some emos protest. This can't be what they need to study! But somehow, you manage to convince them it's what they were meant to. The conversation changes, and they give a reasonable showing of the scientific method.". description is "It seems to be in its own little cell--well, mentally speaking, at least. Some emos, indeed!". word-to-include is "mesosome". sts-hash of emos is 725015610. printed name of emos is "some emos".
+emos are an audible plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "The voices of some emos protest. This can't be what they need to study! But somehow, you manage to convince them it's what they were meant to. The conversation changes, and they give a reasonable showing of the scientific method.". description is "It seems to be in its own little cell--well, mentally speaking, at least. Some emos, indeed!". word-to-include is "mesosome". sts-hash of emos is 725015610. uniq-hash of emos is 282640. printed name of emos is "some emos".
 
 understand "some emos" and "some" as emos.
 
 book since since
 
-since since is an audible flippable. It is scenery. "A nonsensical voice whispers 'since ... since ...' It's hard to tell what it wants or what it doesn't want or what it is trying to imply.". guess-right-text is "You see the nonsensical voice for what it is. Insciences! Ignorance! While you can't just wave your hand and make it go away, just identifying it is a huge first step. You will be able to help others identify that sort of thing, too". word-to-include is "insciences". sts-hash of since since is 713972028.
+since since is an audible flippable. It is scenery. "A nonsensical voice whispers 'since ... since ...' It's hard to tell what it wants or what it doesn't want or what it is trying to imply.". guess-right-text is "You see the nonsensical voice for what it is. Insciences! Ignorance! While you can't just wave your hand and make it go away, just identifying it is a huge first step. You will be able to help others identify that sort of thing, too". word-to-include is "insciences". sts-hash of since since is 713972028. uniq-hash of since is 270612.
 
 book reps reps
 
-reps reps is an audible flippable. It is scenery. "A voice keeps whispering 'Reps ... reps ...' but what do the reps lead to? How are they productive?". guess-right-text is "Of course! You've always wanted to show you were good with words in a more than abstract sense. The more you practice writing, the more you will feel okay sending a work to pre-press.". word-to-include is "prepress". sts-hash of reps reps is 781739674.
+reps reps is an audible flippable. It is scenery. "A voice keeps whispering 'Reps ... reps ...' but what do the reps lead to? How are they productive?". guess-right-text is "Of course! You've always wanted to show you were good with words in a more than abstract sense. The more you practice writing, the more you will feel okay sending a work to pre-press.". word-to-include is "prepress". sts-hash of reps reps is 781739674. uniq-hash of reps is 426000.
 
 volume backdrops
 
 the torus is a backdrop. "It's, well, round, and it's big and wide enough, you won't fall off."
+
+understand "door" as torus when score >= 4.
 
 instead of doing something with torus:
 	if current action is examining, continue the action;
@@ -739,6 +741,11 @@ after reading a command:
 			ital-say "The parser for [this-game] is case-insensitive, so don't worry about getting CAPS right.";
 			now caps-warn is true;
 	now cmd-lo is the player's command in lower case;
+	repeat through table of one time warnings:
+		if warned-yet entry is true, continue the action;
+		if the player's command matches the regular expression "\b[my-topic entry]\b":
+			process the should-i-print entry;
+			if the rule succeeded, now warned-yet entry is true;
 	if location of player is not solved:
 		repeat through table of pre-brushoffs:
 			if location of player is not my-room entry, next;

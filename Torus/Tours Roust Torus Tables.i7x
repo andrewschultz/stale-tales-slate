@@ -132,6 +132,22 @@ my-room	my-topic	my-brushoff
 Meta Meat	"(team|mate)"	"Your teammate will be there when you need them."
 Latte Latte	"(tattle|tale)"	"You probably don't want to encourage a tattletale in any way."
 
+table of one time warnings
+my-topic	warned-yet	should-i-print
+"door"	false	door-appears rule
+"non"	false	on-puzzle rule
+
+this is the door-appears rule:
+	if score < 4, the rule fails;
+	ital-say "the door is just part of the torus. There's nothing special about it. You'll just walk through it when the time comes. Anything you try to do with the door goes to the torus.";
+	the rule succeeds;
+
+this is the on-puzzle rule:
+	if score is not 7, the rule fails;
+	ital-say "you [if ever-heptagon-puzzle is true]did the right thing with [b]ON[i]. No need to read further into the 'Noon' message[else]have the right idea, simplifying 'Noon,' but no need for a foreign language[end if].";
+	reject the player's command;
+	the rule succeeds;
+
 volume presentness hash tables
 
 table of presentness hashes
@@ -178,7 +194,7 @@ to decide which number is the rough-hash of (t - a value of kind K):
 		if S matches the text "[Letter entry]":
 			increase hash by Code entry;
 	decide on hash;
-	
+
 Tours Roust Torus Tables ends here.
 
 ---- DOCUMENTATION ----
