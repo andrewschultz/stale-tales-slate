@@ -22128,6 +22128,7 @@ this is the show list of lists rule:
 		if whichreg entry is demo dome and peek keep is unvisited:
 			say "[b]REDACTED[r]) [b]DEMO DOME MODE[r] stuff.)[line break]";
 		say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
+		abide by the avoid keypress in menu testing rule;
 		if the remainder after dividing myrow by 20 is 0:
 			say "<press Q to quit or another key to see more>";
 			let cholet be the chosen letter;

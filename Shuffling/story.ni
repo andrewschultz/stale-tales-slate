@@ -73,7 +73,7 @@ Include (-
 	  'son', 'space', 'space on', 'spaces on':  print "add spaces to gadget output";
 	  'sg':  print "use sg to switch the gadget between secure and recuse";
 	  'release':  print "see release info";
-	  'sites':  print "see web sites that helped the development of shuffling around";
+	  'sites':  print "see web sites that helped the development of Shuffling Around";
 	  'nos', 'no space', 'no spaces':  print "remove spaces from gadget output";
 	  'credit', 'credits':  print "see credits";
 	  'hint', 'hints':  print "get hints";
@@ -2850,11 +2850,11 @@ silo	"oils -> silo"
 sword	"words -> sword" [metros]
 keycard	"dry cake -> keycard"
 beast	"beats -> beast"
-store p	"Store P -> [b]PRESTO[r] in A Roiling Original"
-store u	"Store U -> [b]ROUTES[r] in A Roiling Original"
-store v	"Store V -> [b]TROVES[r] in A Roiling Original"
-store w	"Store W -> [b]TOWERS[r] in A Roiling Original"
-store y	"Store Y -> [b]OYSTER[r] in A Roiling Original"
+store p	"Store P -> [b]PRESTO[r] in [aro]"
+store u	"Store U -> [b]ROUTES[r] in [aro]"
+store v	"Store V -> [b]TROVES[r] in [aro]"
+store w	"Store W -> [b]TOWERS[r] in [aro]"
+store y	"Store Y -> [b]OYSTER[r] in [aro]"
 
 to say what-can-flip:
 	if pf-warn is false:
@@ -2972,7 +2972,7 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 when play begins (this is the skip small intro if wanted rule):
 	process the check-skip-intro rule;
 	let skip-stuff be whether or not the rule succeeded;
-	say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
+	say "[this-game] has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
 	if the player no-consents, now sr-acc is true;
 	if skip-stuff is true, continue the action;
 	say "Okay. This can be toggled at any time with [b]ACCESS[r].";
@@ -3447,7 +3447,8 @@ this is the enter-gateway rule:
 		now player has a prep paper;
 		pad-rec-q "retry";
 	say "[line break]The gate disappears behind you[if static is touchable] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
-	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
+	wfak;
+	say "...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
 	now cabinet is LLPish;
 	solve-region Ordeal Loader instead;
 
@@ -9113,7 +9114,7 @@ carry out existing:
 		reg-inc;
 		now resort is solved;
 		process the notify score changes rule;
-		say "[line break]Final rank: a smart gamin['] anagrammist.[paragraph break]...well, final, until you feel like playing the second installment in the Stale Tales Slate: [i]A Roiling Original[r].";
+		say "[line break]Final rank: a smart gamin['] anagrammist.[paragraph break]...well, final, until you feel like playing the second installment in the Stale Tales Slate: [aro].";
 		repeat through table of megachatter:
 			sort mytab entry in blurb order;
 			now maxidx entry is number of rows in mytab entry;
@@ -10478,8 +10479,8 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "Shuffling Around is the first of three wordplay games in [if cur-score of Ordeal Loader is 0]a series I don't want to spoil the name of until you get your first point[else]the Stale Tales Slate[end if]. It was inspired by playing Nord and Bert Couldn't Make Head or Tail of It and then wondering if there was any way to riff on it. Here's what I came up with. I suspect they thought of it, too, but it would've been impossible to stuff in two 140k disks.";
-	say "[line break]Shuffling Around is intended to be [b]POLITE[r] on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.";
+	say "[this-game] is the first of three wordplay games in [if cur-score of Ordeal Loader is 0]a series I don't want to spoil the name of until you get your first point[else]the Stale Tales Slate[end if]. It was inspired by replaying [i]Nord and Bert Couldn't Make Head or Tail of It[r] and then wondering if there was any way to riff on it. Here's what I came up with. I suspect Jeff O'Neil thought of it, too, but it would've been impossible to stuff any meaningful story in two 140k disks.";
+	say "[line break][this-game] is intended to be [b]POLITE[r] on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.";
 	say "[line break][b]POLITE[r] doesn't mean easy, though, and it doesn't guarantee user-friendliness. I also hope there is little guess-the-verb[if cur-score of Ordeal Loader > 0]--well, not [b]VERB[r], that's the sequel[end if]. Just find the right word to say, type it, and move on. My hope is that the tough ones are clued multiple ways, so you are not too frustrated[if Notices Section is unvisited]. There are hint items[end if].";
 	say "[line break]You can see the testers who gave me transcripts with the [b]CREDITS[r], which are rather long. They slugged through a lot! If you want to see technical contributions, type [b]TECH[r]. For general release information, type [b]RELEASE[r].[paragraph break]Also, I still appreciate transcripts! So, if you like, type [b]TRANSCRIPT[r], then send reports--especially ones with comments (* at the start of a line)--to [email].";
 	if cur-score of ordeal loader > 0:
@@ -10514,13 +10515,13 @@ understand the command "release" as something new.
 understand "release" as releaseing.
 
 carry out releaseing:
-	say "Each version of Shuffling Around should contain release notes, but here is a brief summary:[paragraph break]";
-	say "Shuffling Around's first release was for IFComp 2012, on September 29th.";
-	say "[line break]Shuffling Around's second release was mushier--I intended to make an open beta, but that didn't work, so we'll call it January 2013. It included Heartless Zombie's hash tables.";
-	say "[line break]Shuffling Around's third release went out in August of 2014. It was on the back burner a bit, but I refined the hash tables, added error checking, and also nailed down things like Last Lousy Points and in-game hints, both with the paper and with item descriptions. I finally fixed some blocker bugs in Store M, and I also normalized random text, adding things like map locations in Store F.";
-	say "[line break]Shuffling Around's fourth release went out in March of 2015. It was largely a maintenance release, but it simplified the introduction, put a random puzzle in Store F, and added object-based hinting.";
-	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, new area names, and a list of changes from the previous release. It's planned to be the last significant release, though there are always bug fixes.";
-	say "[line break]For amusement, yhe project 'super-secret' code names are A Purged Upgrade (2), Version I Revision (3), Le Redux Deluxer (4), and Few Neat New Feat (5). The last is a spoonerism, so it feels kind of trivial, but I was running out of options.";
+	say "Each version of [this-game] should contain release notes, but here is a brief summary:[paragraph break]";
+	say "[this-game]'s first release was for IFComp 2012, on September 29th.";
+	say "[line break][this-game]'s second release was mushier--I intended to make an open beta, but that didn't work, so we'll call it January 2013. It included Heartless Zombie's hash tables.";
+	say "[line break][this-game]'s third release went out in August of 2014. It was on the back burner a bit, but I refined the hash tables, added error checking, and also nailed down things like Last Lousy Points and in-game hints, both with the paper and with item descriptions. I finally fixed some blocker bugs in Store M, and I also normalized random text, adding things like map locations in Store F.";
+	say "[line break][this-game]'s fourth release went out in March of 2015. It was largely a maintenance release, but it simplified the introduction, put a random puzzle in Store F, and added object-based hinting.";
+	say "[line break]The current edition of [this-game] should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, new area names, and a list of changes from the previous release. It's planned to be the last significant release, though there are always bug fixes.";
+	say "[line break]For amusement, the project 'super-secret' code names are A Purged Upgrade (2), Version I Revision (3), Le Redux Deluxer (4), and Few Neat New Feat (5). The last is a spoonerism, so it feels kind of trivial, but I was running out of options.";
 
 part teching
 
@@ -10531,7 +10532,7 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present [']til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into [this-game]'s sequel[if cur-score of Ordeal Loader > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of [this-game]. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present [']til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into [this-game]'s sequel[if cur-score of Ordeal Loader > 0] in the Stale Tales Slate[end if], [aro]. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
 	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
@@ -10660,7 +10661,7 @@ this is the show what the player missed rule:
 	repeat with zq running through solved regions:
 		increase missed-points by (max-score of zq - cur-score of zq);
 	if missed-points is 0:
-		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
+		say "You got all the points! Well done! You are definitely ready for the extra challenge of [aro].";
 	else:
 		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun.[paragraph break]";
 	now anything-missed is false;
