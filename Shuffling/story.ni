@@ -229,7 +229,7 @@ to say espec-xtra:
 	now player has all things in cabinet;
 
 to item-warp:
-	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
+	if mrlp is not Stores, d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
 	now last-loc of mrlp is location of the player;
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
 		if mrlp is solved:
@@ -599,15 +599,6 @@ to say randbla:
 					choose row whrow in mytab entry;
 					say "[blurb entry][posties]";
 					the rule succeeds;
-
-to say post-brk:
-	if resort is solved:
-		say "[paragraph break]";
-
-[in case I need to use this, it's here]
-[to say post-lb:
-	if resort is solved:
-		say "[line break]";]
 
 bull-taunt is a number that varies.
 
@@ -10686,6 +10677,20 @@ sol	chosen
 "[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"	false
 "[b]SHOW EMITTER TO DEADBEAT[r] after using it in [bastion], then using it again in the Esoteric Coteries"	false
 
+chapter warning player who bypassed regions
+
+The warn missed random text rule is listed before the print the final question rule in before handling the final question.
+
+missed-random-warn is a truth state that varies.
+
+this is the warn missed random text rule:
+	if number of bypassed regions is 0, continue the action;
+	if missed-random-warn is true, continue the action;
+	now missed-random-warn is true;
+	ital-say "You bypassed [what-bypassed], so there may be minor spoilers if you list random text. This nag will not be repeated.";
+
+to say what-bypassed: say "[if number of bypassed regions is 1]a region behind a store[else]some regions behind some stores[end if]"
+
 chapter missed rules
 
 to say 2dn: say "[unless sr-acc is true]--[end if]"
@@ -10801,7 +10806,7 @@ listlasting is an activity.
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"see a L/[b]LIST[r] (1-[number of rows in table of megachatter]) of random [one of](now quasi-alphabetized) [or][stopping]NPC text, or [b]LN[r] for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
+"see a full [b]L[r]/[b]LIST[r] of random texts or specific ones (1-[number of rows in table of megachatter]) of random [one of] [or][stopping]NPC text, or [b]LN[r] for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
 --	true	"l/list"	--	listlisting
 --	true	"ln"	--	listlasting
 
@@ -10818,7 +10823,7 @@ rule for listshowing:
 		carry out the listlisting activity;
 		the rule succeeds;
 	if number understood > number of rows in table of megachatter or number understood < 0:
-		say "Please try 1-[number of rows in table of megachatter], or 0 to list everything.";
+		say "The valid lists are 1-[number of rows in table of megachatter]. If you forget what maps where, 0 lists everything.";
 		the rule succeeds;
 	now last-list is the number understood;
 	try lishing the number understood;
@@ -10827,16 +10832,15 @@ lishing is an action applying to one number.
 
 carry out lishing:
 	if listshowwarn is false:
-		say "(You can use no number at all to see which numbers give which lists)";
+		say "(You can use no number at all to see which numbers give which lists)[line break]";
 		now listshowwarn is true;
 	if number understood is 0:
 		carry out the listlisting activity;
 	if number understood > number of rows in the table of megachatter, say "Maximum choice is [number of rows in the table of megachatter]." instead;
 	choose row number understood in table of megachatter;
-	if number understood is 1: [hardcoded due to punctuational trickiness]
-		say "Name list's last entry is 'Boy--that's the last. You can't imagine you'll ever fit in.'";
-	else:
-		say "[descr entry]: [if there is a lasties entry][paragraph break]LAST ENTRY: [lasties entry][else](no last entry)[end if]";
+	say "[descr entry]:";
+	if there is a lasties entry:
+		say "[paragraph break]LAST ENTRY: [if there is a lasties entry][lasties entry][else](no last entry)[end if][line break]";
 	let this-tab be mytab entry;
 	let idx be 0;
 	let lump-amount be maxbeforepause entry;
@@ -10851,8 +10855,8 @@ carry out lishing:
 			choose row cur-count in this-tab;
 			say "[cur-count]. [blurb entry][line break]";
 		if cur-count < max-count:
+			abide by the avoid keypress in menu testing rule;
 			say "[cur-count] of [big-total] so far. Type q to quit, b to go to the beginning or any other key to continue.";
-			if post-ignore-needkey is true, the rule succeeds;
 			let cholet be the chosen letter;
 			if cholet is 66 or cholet is 98:
 				now cur-count is 0;
@@ -10877,7 +10881,7 @@ to try-ln:
 rule for listlisting:
 	let myrow be 0;
 	let listrows be number of rows in table of megachatter;
-	say "Below are lists of anagram texts that the game sorts randomly at the start. The parentheses are the region, then the number of texts. They are listed in approximate game order, assuming you go through alphabetically.";
+	say "Below are lists of anagram texts that the game sorts randomly at the start. The parentheses are the region, then the number of texts. They are listed in approximate game order, assuming the most efficient path through.";
 	repeat through table of megachatter:
 		increment myrow;
 		say "[myrow]. [descr entry] ([table-size entry]) [line break]";

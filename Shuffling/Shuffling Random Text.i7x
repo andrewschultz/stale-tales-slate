@@ -9,18 +9,27 @@ volume megachatter table
 
 table of megachatter [tmc]
 mytab	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (number)	done-once	table-size (number)	ent-per	end-count
-table of job searcher names	false	0	100	x-namelist rule	"Names of other job applicants (Ordeal Loader)"	""	""	". That's the last. Boy--you can't imagine you'll ever fit in[make-cycle]"	--	--	--	5
-table of evil locations	false	0	30	reading-the-slit rule	"Evil locations in the slit (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0 [p]
+table of job searcher names	false	0	100	x-namelist rule	"Names of other job applicants (Ordeal Loader)"	""	""	"[if resort is not solved]. [end if]That's the last. Boy--you can't imagine you'll ever fit in[make-cycle][post-per-lb]"	--	--	--	5
+table of evil locations	false	0	30	reading-the-slit rule	"Evil locations in the slit (F)"	""	""	"(worst and last) Hell's Shell[post-per-lb]"	20	false	0	1	0 [p]
 table of poem codas	true	0	30	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
 table of garrison chants	true	0	30	with-hippies rule	"Roarings Garrison chants (M)"	"[one of]Emosion (sic)[or]Mo['] noise[stopping] from the noisome Moonies: "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
 table of bastion dialogue	true	0	30	talk-in-bastion rule	"[Bastion] chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
-table of psas	false	0	30	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last one[post-brk]"
+table of psas	false	0	30	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last bit of advice[post-per-lb]"
 table of nerd natter	true	0	30	in-mensa rule	"Esoteric Coteries chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][if showtabname is true]BLANK. [end if][in random order]"	""	"For a second this anti-cool location ain't loco. Then, LO, ACTION.[line break]"
 table of riot slogans	true	0	30	protest-rant rule	"Rioters['] chants (R)"	"Voices babble[one of][or] on[stopping]. "	""	"The protesters seem out of ideas before egging to get going: 'Persons! Press on!' The swarm warms to a re-blab. Rabble.[line break]"
 table of red bull taunts	true	0	30	burdell-taunt rule	"Red Bull Burdell's taunts (R)"	"'GET OUT!!!!' yells Red Bull Burdell. "	" His boot, with his toe sticking out, swings within an inch of your chin[one of][or] again[or] yet again[or], prompting one of your finest feints[or]. But his smiting timings are just off[or]. Be neat if he got beaten[or]. You say, 'I fend, fiend!'[or]. He's stout-armed, but he can be outsmarted[or]. He's getting set-up for an upset[or]. He's on a roll, but you're rolling around ok[cycling][1-in-5]."	"Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?[line break]"
 
 to say make-cycle:
 	now cycled-yet is false;
+
+to say post-pb: if resort is solved, say "[paragraph break]";
+
+to say post-per-lb: if resort is solved, say ".[line break]";
+
+[in case I need to use this, it's here]
+[to say post-lb:
+	if resort is solved:
+		say "[line break]";]
 
 volume words for anagram verification
 
