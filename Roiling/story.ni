@@ -7177,6 +7177,7 @@ to check-get-pad:
 	if player does not have pedanto notepad:
 		say "[line break]In fact, you realize the notepad on the chair would be a great place to file that idea. It'll help tame lots that's meta, mate.";
 		now player has pedanto notepad;
+		check-sad-ads;
 
 to two-up:
 	increment the score;
@@ -7461,11 +7462,14 @@ check examining sad ads for the first time:
 
 chapter pedanto notepad
 
-report taking pedanto notepad:
-	say "Good choice taking the notepad. It'll help you tame lots that's meta, mate.";
+to check-sad-ads:
 	if sad ads are not in Dusty Study:
 		now sad ads are in Dusty Study;
 		say "[line break]Taking the pedanto-notepad uncovered some sad ads on the chair.";
+
+report taking pedanto notepad:
+	say "Good choice taking the notepad. It'll help you tame lots that's meta, mate.";
+	check-sad-ads;
 
 estim is a number that varies.
 
@@ -7561,7 +7565,7 @@ to say drt: now dope-read is true;
 
 The By Lil Billy page is propaganda. it is part of the dope op ed. printed name of By Lil Billy is "By Li'l Billy".
 
-description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!,[paragraph break]There's further crayony scrawl. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!![paragraph break]Elvira somehow established it was cute when seven-year-olds did it but horrible when you did, all the same excoriating your terrible influence on children." [bold-ok]
+description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed![paragraph break]There's further crayony scrawl. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!![paragraph break]Elvira somehow established it was cute when seven-year-olds did it but horrible when you did, all the same excoriating your terrible influence on children." [bold-ok]
 
 dope-idx is a number that varies.
 
@@ -7662,6 +7666,7 @@ to get-cool-stuff:
 	now player has super purse;
 	now player has letters settler;
 	now player has pedanto notepad;
+	now sad ads are in dusty study;
 
 chapter isolani liaison
 
@@ -8498,6 +8503,7 @@ check examining pedanto notepad for the first time:
 	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].[paragraph break](To use the notepad, you can type [b]PAD[r] (subject) or [b]CONSULT PAD ABOUT[r] (subject). If you forget what you've written about, you can type [b]PAD[r] or [b]CONSULT PAD[r].)";
 	if player does not have pedanto notepad:
 		now player has pedanto notepad;
+		check-sad-ads;
 	the rule succeeds;
 
 to decide whether (qq - a truth state) is unrelevant:
@@ -17960,6 +17966,7 @@ to preef (thi - a thing): [text listed in table of preflip clues]
 	if player is not in Dusty Study and player does not have pedanto notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
 		now player has pedanto notepad;
+		check-sad-ads;
 	pad-rec "flips";
 
 to preef-nol (thi - a thing):
