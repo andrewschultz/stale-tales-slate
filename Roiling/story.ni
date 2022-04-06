@@ -5416,8 +5416,10 @@ check taking inventory:
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 		let snaks-held be number of skansnaks carried by player;
 		if mrlp is towers and snaks-held > 0:
-			say "You've found [if snaks-held is 1]a skan-snak[else]some skan-snaks[end if][if player has rosetta toaster] and a Rosetta Toaster to heat them with:[line break]  ";
-			say "[list of skansnaks carried by the player][line break]";
+			say "You've found [if snaks-held is 1]a skan-snak[else]some skan-snaks[end if]";
+			if player has rosetta toaster:
+				say " and a Rosetta Toaster to heat [if snaks-held is 1]it[else]them[end if] with:[line break]  ";
+			say "  [list of skansnaks carried by the player with indefinite articles][line break]";
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
 	if number of warpable things enclosed by player is 0:
@@ -5489,14 +5491,23 @@ definition: a room (called r) is detourable:
 
 upwarned is a truth state that varies.
 
+general-troves-nowhere-warn is a truth state that varies.
+
 check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
 			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
 			now upwarned is true instead;
 	repeat through nowhere-table of mrlp:
-		if theloc entry is location of player, say "[thereject entry][line break]" instead;
-	if mrlp is troves, say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on." instead; [this should not be relevant, as all Troves locations should be in the table above, but just in case...]
+		if theloc entry is location of player:
+			say "[thereject entry][line break]";
+			if mrlp is troves and general-troves-nowhere-warn is false:
+				say "[line break]";
+				break;
+			the rule succeeds;
+	if mrlp is troves:
+		now general-troves-nowhere-warn is true;
+		say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on." instead; [this should not be relevant, as all Troves locations should be in the table above, but just in case...]
 	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
 	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
@@ -5605,6 +5616,8 @@ chapter attacking
 understand the command "kick" as something new.
 
 understand "kick [something]" as attacking.
+
+the block attacking rule is not listed in any rulebook.
 
 check attacking: [this takes responses for general types. The table file has specific NPCs/objects]
 	if noun is a store, say "Sore at a store?" instead; [general stuff here that can't fit into a table]
@@ -8609,6 +8622,18 @@ to verbsplain (t - text):
 	choose row with short of t in table of pad-stuff;
 	if known entry is true:
 		say "[2da][blurb entry][line break]";
+
+definition: a person (called per) is terse-ok:
+	unless per is terse-warned, no;
+	if mrlp is towers and per is a guardian, yes;
+	if mrlp is map region of location of per, yes;
+	no;
+
+to say terse-types:
+	let twp be number of terse-ok people;
+	if twp > 0:
+		let rtok be a random terse-ok person;
+		say ".[paragraph break]You've also found [if twp is 1 and rtok is singular-named]someone who isn't[else]some folks who aren't[end if] very useful except for general chat: [list of terse-ok people]"
 
 [top]
 table of pad-stuff [??what does thinking do elsewhere]
