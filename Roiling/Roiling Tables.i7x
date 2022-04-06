@@ -3138,7 +3138,7 @@ to say unless-max:
 	let my-tot be poss-score of oyster - cur-score of oyster;
 	if lever is reflexive:
 		decrement my-tot;
-	if dialer is reflexive:
+	if bogus-derail is reflexive:
 		decrement my-tot;
 	if bogus-redial is reflexive:
 		decrement my-tot;
@@ -3434,7 +3434,7 @@ thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess."
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
 parleys splayer players	true	true	false	false	"The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data."
-yer all a yell'r	true	true	true	false	"Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very."
+yer all a yell'r	true	true	false	false	"Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very."
 t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe [b]REALITY[r] can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
@@ -3504,7 +3504,7 @@ Store U	"Store U seems to light up with lines and curves for a second, but no, t
 Store V	"A single paper currency flutters off from Store V, lost forever."
 Store W	"Store W seems to push up from the ground and go narrower for a second."
 Store Y	"You hear grinding, then a slimy gulp, from store Y. But nothing definitive."
-blabber babbler	"The blabber babbler coughs and shakes [his-her] head, looking for someone who almost disrupted [his-her] speech. [he-she-c] doesn't close to finger you."
+Suit Ode Douse It	"That tune in the background, [suit ode], takes an odd turn. But it doesn't quite shut down."
 
 table of routes spechelp
 xtrhelp	helptxt
@@ -3521,7 +3521,7 @@ pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
 Rude N Nuder	"The pages of [Nuder] flutter a bit."
 odd run on aura	"You thought you saw an un-road for a second, but ... not quite."
-NULL IT unit	"You feel it's quite near the right time for [the null it unit] to shut down, for the darkness to lift."
+NULL IT unit	"You feel it's quite near the right time for [the null it unit] to shut down, for the darkness to lift. And you must be on the right track."
 noon gag	"You think of how to find a way to No-Lag Logan's boat."
 data dim mists	"Hmm, you almost see a way past the [mists]."
 thickness sketchins	"Your craft rocks and makes negligible forward progress. Still, it's a start."
@@ -3576,7 +3576,7 @@ sport ports	"The sport ports seem even shinier for a second."
 Leo	"There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force."
 Rand	"There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force."
 wzup	"You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it."
-odes song	"The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations."
+odes song	"The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though."
 ether	"[if ether is prefigured]No, you definitely need to say [b]THERE[r]. You just need to have backup and maybe weapons[else]The ether pulsates, but you still can't see through it[end if]."
 ye hoop	"The hoop dips a bit as if to taunt you."
 boing	"You try something that doesn't [i]quite[r] work, but now you're that much closer to an a-ha moment."
@@ -3617,7 +3617,7 @@ xtrhelp	helptxt
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe."
 gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
 tips pits	"The tips pits rattle a bit as you try to do ... something ... to them."
-tines	"Hm, the stein belongs somewhere you can destroy it, you have to find the right way to."
+tines	"Hmm. There must be some way to destroy the stein, but that's not it."
 perma amper	"You can't change the bad music selection. But you can neutralize it--the jukebox has instructions."
 tunes	"The tunes grow slightly less annoying, for a moment."
 trolls	"The trolls laugh at you a bit, but nervously."
@@ -3655,7 +3655,7 @@ use saga sausage	"You're a bit tongue-tied, but that seems close."
 ol trap	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
 gleaner	"The gleaner remains too small to read."
 papery yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
-dialer	"[di-cli]."
+bogus-derail	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
 pins	"You look at the pins. They're in the way, but they don't look particularly sturdy."
 bogus-redial	"[di-cli]."
@@ -3664,7 +3664,7 @@ bogus-psalm	"The plasm lamps flicker slightly."
 natant ant	"There must be a simple way to take down the ant. You haven't quite got it right yet, though."
 
 to say di-cli:
-	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
+	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if bogus-derail is touchable]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
 
 table of towers spechelp
 xtrhelp	helptxt
@@ -4371,17 +4371,18 @@ pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know w
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The [if sausage is off-stage]haunter, once you find it,[else][sausage][end if] will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea at a tee is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or][b]EAT TEA[r].[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or][b]SEARCH[r].[minus][cycling][end if]"
 gleaner	"[if gleaner is reflexed and gleaner is not examined][b]EXAMINE[r] the general gleaner, now you've enlarged it.[else if gleaner is reflexed]You've done what you needed.[else][one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the [b]GLEANER[r] bigger?[plus][or]The settler gives you where the vowels are.[plus][or][b]ENLARGE[r] the gleaner.[minus][cycling][end if]"	--	"[b]ENLARGE[r] the gleaner"
-ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or][b]TAN[r] the ant.[minus][cycling]"
+ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or][b]TAN[r] the ant.[minus][cycling]"	--	"[b]TAN[r] the ant"
 bogus-psalm	"[one of]The plasm lamps can inspire you to do something else. Something a templar might do.[plus][or]The action for a bonus point is more commonly known as a noun, but it works as a verb, too.[plus][or][b]PSALM[r].[minus][cycling]"	--	"[b]TAN[r] the natant ant"
 stupid paper necklace	"The paper necklace gives a clue what to do with the yapper."
 yapper	"[one of]The settler on cheat mode gives confusing readings here because [b]PAPERY[r] and [b]YAPPER[r] clash.[plus][or]So if you use the settler, you may note that five of the letters are right. But maybe you want to solve this the old-fashioned way.[plus][or]He seems to be asking for a bribe and not asking for one at the same time. He needs to be compensated before he lets you do anything.[plus][or]If you give the yapper an item, he indicates he could be bribed...if it were valuable. He likes the pearl.[plus][or]You can just [b]PREPAY[r] the yapper.[minus][cycling]"	--	"[b]PREPAY[r] the papery yapper"
 templar ramplet	"[if lance is not reflexed]You can't do what you need to with the ramplet[else if plasm lamps is visited]You can't go back up the ramplet.[else][one of]You need to storm the Templar Ramplet aggressively.[plus][or]Not just walk or run, but ...[plus][or]...[b]TRAMPLE[r].[minus][cycling]"
 intercom	"The intercom is controlled by the dialer."
 jumble	"The jumble reorganizes when you set the dialer."
-pins	"[one of]You need to futz with the pins to get them out of the way.[plus][or]The pins are tangled together, and they are too small to [b]SNIP[r].[plus][or][b]SPIN[r] the pins.[minus][cycling]"	--	"[b]SPIN[r] the pins"
+pins	"[one of]To fix the dialer, you need to straighten the pins out.[plus][or]The pins are tangled together, and they are too small to [b]SNIP[r].[plus][or][b]SPIN[r] the pins.[minus][cycling]"	--	"[b]SPIN[r] the pins"
 lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or [b]REVEL[r]?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, [b]PULL[r] the lever to do something else with the dialer.[minus][cycling][end if]"
-bogus-redial	--	dialer	"[b]REDIAL[r] with the dialer"
-dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can [b]DERAIL[r], but what else can you have it do?[plus][or]The dialer can [b]REDIAL[r] after you [b]DERAIL[r], though there is an in-between action, too.[minus][cycling]"	--	"[b]DERAIL[r] with the dialer"
+bogus-derail	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things, but let's tackle the first.[plus][or]What's a destructive anagram of [b]DIALER[r]?[plus][or]You can submit an order to [b]DERAIL[r].[minus][cycling]"	--	"[b]DERAIL[r] with the dialer"
+bogus-redial	"[one of]The dialer is dangerous and destructive. But it's also flexible. You've gotten it to [b]DERAIL[r], but it can do something else.[plus][or]Elvira wasn't happy about your attempts to [b]DERAIL[r], and she said you'd better not do it again. You need to buck her orders.[plus][or][or]The dialer can [b]REDIAL[r] as well.[minus][cycling]"	--	"[b]REDIAL[r] with the dialer"
+dialer	"You've reached a fallthrough case I didn't expect. Sorry about that."
 
 to say dh-true: now trolls-hinted is true;
 
