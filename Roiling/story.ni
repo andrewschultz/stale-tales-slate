@@ -19355,7 +19355,7 @@ carry out playing:
 			reg-inc;
 			force-status;
 			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him later. Or, if you're interested right now, would you like to go back to the Strip of Profits?";
-			unless the player regex-prompt-consents:
+			unless the player dir-consents:
 				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just [b]UNDO[r] at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
 				note-denial;
 				end the story finally saying "A MONSTER ROTS. AMEN.";
@@ -21909,10 +21909,10 @@ final question wording	only if victorious	topic		final response rule		final resp
 --	false	"l/list"	the show list of lists rule	--
 --	false	"n/ln/nl"	the list next megachatter table rule	--
 --	false	"p/pl"	the list previous megachatter table rule	--
---	true	"ld/lg/lh/lo/lp/ls/lt/lu/lv/lw/ly"	the showing regional lists rule	--
+--	false	"la/lb/lc/ld/le/lf/lg/lh/li/lj/ll/lm/lo/lp/lq/ls/lt/lu/lv/lw/lx/ly/lz"	the showing regional lists rule	--
 --	false	"rj/lr/jr"	the list next region random text rule	--
 "[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form" or "m or f" or "of mr"	the sort male female out rule	--
-"[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload), or [b]LJ[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
+"[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r]/[b]LG[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload, [b]LS[r] for Stores), or [b]LJ[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
 
 dummy altpath showing is an activity.
@@ -22059,10 +22059,15 @@ to lj-cue:
 megsort is a truth state that varies.
 
 table of regabr
-this-reg	this-top
-Meta Team	"lg"
+this-reg	this-top (topic)	this-text
+Meta Team	"la/lg"
+--	"lc"	"There's nothing extra, or extra licentious, behind Store C."
 others	"ld"
+--	"lb/le//lj/ll/lq/lx/lz"	"That letter doesn't correspond to a store you can explore."
+--	"lf/li/lm"	"That letter corresponds to a store you looked behind in [shuf]."
+Meta Team	"lg"
 others	"lh"
+--	"lk"	"No region was behind Store K[if tokers are off-stage], though you could get a small bit of help from it[end if]."
 Ordeal Reload	"lo"
 presto	"lp"
 stores	"ls"
@@ -22086,10 +22091,13 @@ this is the showing regional lists rule:
 		say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it.";
 		the rule succeeds;
 	repeat through table of regabr:
-		if word number 1 in the player's command is "[this-top entry]":
-			region-random-list this-reg entry;
+		if the player's command matches this-top entry:
+			if there is a this-text entry:
+				say "[this-text entry][line break]";
+			else:
+				region-random-list this-reg entry;
 			the rule succeeds;
-	say "To specify a region, you need to say [if peek keep is visited]ld/[end if]lg/[if others-passed]lh/[end if]lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload (intro) and G being general stuff e.g. responses to empty commands. [b]LA[r]=all.";
+	say "There was a code fall-through here. I should have given a more detailed message, but to specify a region, you need to say [if peek keep is visited]ld/[end if]lg/[if others-passed]lh/[end if]lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload (intro) and G being general stuff e.g. responses to empty commands. [b]LA[r]=all.";
 
 this is the show list of lists rule:
 	let myrow be 0;
@@ -22111,17 +22119,22 @@ this is the show list of lists rule:
 		if whichreg entry is demo dome and peek keep is unvisited:
 			say "[b]REDACTED[r]) [b]DEMO DOME MODE[r] stuff.)[line break]";
 		say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
-		abide by the avoid keypress in menu testing rule;
 		if the remainder after dividing myrow by 20 is 0:
+			abide by the avoid keypress in menu testing rule;
 			say "<press Q to quit or another key to see more>";
 			let cholet be the chosen letter;
 			if cholet is 113 or cholet is 81:
-				say "[reg-btw].";
+				general-randtext-nag;
 				the rule succeeds;
-	say "[reg-btw].";
+	general-randtext-nag;
 	next-list-poke;
 
-to say reg-btw: say "By the way, you can list a region's random text with, say, [b]LO[r] for Ordeal Reload, [b]LY[r] for oyster, etc"
+randtext-nag-yet is a truth state that varies.
+
+to general-randtext-nag:
+	if randtext-nag-yet is false:
+		now randtext-nag-yet is true;
+		say "By the way, you can list a region's random text with, say, [b]LO[r] for Ordeal Reload, [b]LY[r] for oyster, etc"
 
 listpoke is a truth state that varies.
 
