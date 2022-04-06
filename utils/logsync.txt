@@ -347,8 +347,7 @@ ruby>bury
 papery yapper>prepay
 templar ramplet>trample
 pins>spin
->IGNORE=dialer
-dialer1~dialer>derail
+bogus-derail~dialer>derail
 lever>revel
 bogus-redial~dialer>redial
 ####plasm lamps

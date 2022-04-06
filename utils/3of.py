@@ -2,7 +2,7 @@ import sys
 import re
 from collections import defaultdict
 
-min_match = 2
+min_match = 3
 
 print_alf_and_num = False
 
@@ -15,6 +15,8 @@ def alfy(a):
     return ''.join(sorted(a))
 
 my_file = "c:/writing/dict/brit-1word.txt"
+
+cmd_count = 1
 
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count]

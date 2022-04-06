@@ -374,7 +374,7 @@ def sync_check(a, b, region=""):
                     continue
                 ary = line.strip().split("\t")
                 ary[0] = ary[0].lower()
-                if ary[0] in needs_sync_test.keys(): sys.exit("STORY.NI duplication ({:s}): {:s} already defined at {:s} line {:d}, redefined at line {:d}.".format(b, ary[0], fb, needs_sync_test[ary[0]], line_count))
+                if ary[0] in needs_sync_test.keys(): sys.exit("{} duplication ({:s}): {:s} already defined at {:s} line {:d}, redefined at line {:d}.".format(fb, b, ary[0], fb, needs_sync_test[ary[0]], line_count))
                 needs_sync_test[ary[0]] = line_count
                 sync_detail[ary[0]] = noquo(ary[detail_column])
                 if debug: print(ary[0])
