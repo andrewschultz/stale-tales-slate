@@ -8950,6 +8950,8 @@ the Largely All Grey Gallery is an innie room in Ordeal Reload. It is stairy. "T
 
 diorama is in Dusty Study and Largely All Grey Gallery. [this is written in here after defining the gallery as a room]
 
+understand "basement" as Largely All Grey Gallery when Gallery is visited or beams are moot.
+
 chapter isbn bins and snib
 
 the ISBN bins are plural-named LLPish reflexive boring scenery in Largely All Grey Gallery. description of ISBN bins is "[if bins are reflexed]The bins are now locked and a bit securer with the snib[else]The [bins] are very red and very unlocked. One of them says [first custom style]NIBS[r] (in another still-prominent shade of red), an embarrassing reference to how folks fawned over you once and gave all sorts of embarrassing sobriquets you didn't want[end if].". bore-text is "You don't have much time to meddle in depth with the bins, [if bins are reflexed]now you've made them secure[else]but you could make them a bit more secure[end if].";
@@ -9504,6 +9506,8 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 book Farming Framing
 
 Farming Framing is an innie sideroom in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is touchable]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].". roomnud of farming framing is table of farming framing nudges. missed-text of Farming Framing is "a room behind the tables in Dusty Study".
+
+understand "stable" as Framing Farming when tables are moot or framing farming is visited.
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -10342,6 +10346,8 @@ part people and things
 chapter Gast
 
 Gast is a male person. "[gast] sits here on the [sit a nag][if Rude N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[else], going on some [i]tirades[r] about something or other. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[i-n] Gast".
+
+understand "giant" as Gast when mrlp is routes.
 
 description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if WOE BOW BELL is reflexed][his-her-c] is drowned out by [the woe bow bell][else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 
@@ -13300,10 +13306,14 @@ chapter pesty types
 
 the pesty types are useless boring plural-named people in Posh Hops Shop. description of pesty types is "Indistinguishable from most barflies, er, bar-fish. They're definitely not pets-y (sorry.)". bore-text of pesty types is "The pesty types aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if].". bore-check of pesty types is bore-pesty-types rule. the pesty types are scenery.
 
+understand "patrons" as pesty types when player is in posh hops shop.
+
 this is the bore-pesty-types rule:
 	if current action is attacking, say "You'd be outnumbered." instead;
 
 the tips pits are reflexive plural-named boring scenery in Posh Hops Shop. description of tips pits is "They're probably stumbler tumblers--mini things you could drink out of, but [if tips pits are reflexed]not now, after what you did[else]that'd be less apt[end if].". bore-text is "The tips['] pits are there for a specific purpose.". bore-check is bore-pits rule.
+
+understand "stumbler/tumblers" and "stumbler tumblers" as tips pits.
 
 this is the bore-pits rule:
 	if current action is taking, say "Even the people who didn't give tips would notice your rudeness." instead;
@@ -16095,6 +16105,8 @@ chapter diverse deviser
 
 A diverse deviser is a cheat-spoilable reflexive thing in Outer Route. "A diverse deviser [if deviser is reflexed]labeled RAPIER REPAIR[else]with some red writing on it[end if] [if dagger is held]chugs[else]fizzles[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if deviser is reflexive]It doesn't seem to work as well as it could. [else if dagger is moot]But it's done its job. [end if][if dagger is not moot]You could probably [b]PUT[r] any blade smaller than a rapier in there[else]You seem to have broken it creating the [gizmo][end if]."
 
+understand "machine" as deviser when player is in Outer Route.
+
 understand "revised" and "revised deviser" as diverse deviser when diverse deviser is reflexed.
 
 a-text of diverse deviser is "RYRYRYR". b-text of diverse deviser is "R?P???R". parse-text of diverse deviser is "x[sp]?[sp]V[sp]?[sp]?[sp]?[sp]x".
@@ -18096,6 +18108,8 @@ book Minded Midden
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
 Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley and can see the Edictal Citadel to the west[end if][if lilac bays are in minded midden][lilac-bay-desc][end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+
+understand "burnt brunt" and "burnt/brunt" as Minded Midden when bleary barley is moot.
 
 to say lilac-bay-desc:
 	if lilac bays are reflexed:
