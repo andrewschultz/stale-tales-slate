@@ -1,5 +1,6 @@
 # WinMerge sometimes dumps backup files, which is bad when I'm comparing test scripts
-*
+*.*
+*/*.*
 # you really, really want to add a file, use -f ... this repo should be pretty much stable
 #**/*.txt.bak
 #**/*.bak

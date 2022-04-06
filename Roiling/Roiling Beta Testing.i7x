@@ -273,6 +273,7 @@ carry out endgameing:
 	move player to Gates Stage;
 	now player has passport;
 	now no-tip is true;
+	now perp-check is true;
 	say "Okay, you need to do 2 of 3 of [b]RESEARCH[r]/[b]REVIEW[r]/[b]PREP[r].";
 	the rule succeeds;
 

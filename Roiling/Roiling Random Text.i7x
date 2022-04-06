@@ -50,17 +50,17 @@ table of mantle laments	false	0	30	read-pious-2 rule	routes	"Rev. Ali's hot take
 table of horbert musings	true	0	30	horby rule	routes	"Brother Horbert's musings (Cleric Circle)"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa.[pre-brk]"	40
 table of horbert farewells	false	0	20	horb-bye rule	routes	"Brother Horbert's blessings (Cleric Circle)"	"Brother Horbert speaks as you leave: [i]"	"[r][pre-brk]"	"Brother Horbert's face shows neat, epic patience as you leave, again.[pre-brk]"	40
 table of missing deli foods	false	0	20	ask-deli rule	routes	"Non-foods at Pat's (Idle Deli)"	--	""	"'Not even spoiled old pies...'"
-table of sked items	false	0	20	read-tec rule	troves	"Desk-Sked to-dos (Upscale Capsule)"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
-table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' [DIVORCES] articles (Browse Bowers)"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want." [p]
-table of iffy advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea (Loather Rathole or beyond)"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
-table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue (Bustle Sublet)"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
-table of non-skeds	false	0	20	desk-look rule	troves	"Cark Rack alternatives (Upscale Capsule)"	--	""	"Slick-Tech Checklist, which is rapidly catching up"
-table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue (Browse Bowers/Econ Cone)"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
+table of iffy advice	false	0	20	read-pa-egg-pea rule	troves	"Advice from Pa, Egg, Pea (Loather Rathole or beyond)"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
 table of posse bosses	false	0	20	in-bustle-sublet rule	troves	"Gang bosses (Bustle Sublet)"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them" [p]
 table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r] (Boredom Bedroom)"	--	""	"Aliver Elvira, in case anyone forgot" [p]
+table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' [DIVORCES] articles (Browse Bowers)"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want." [p]
 table of real estate ads	false	0	20	read-see-dir rule	troves	"See Dir locations (Browse Bowers)"	"It's got a sample of places Si Reed recommends. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! Well, that's the last and loudest listing."
+table of non-skeds	false	0	20	desk-look rule	troves	"Cark Rack alternatives (Upscale Capsule)"	--	""	"Slick-Tech Checklist, which is rapidly catching up"
+table of sked items	false	0	20	read-tec rule	troves	"Desk-Sked to-dos (Upscale Capsule)"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
 table of self-help bestsellers	false	0	30	trivially false rule	troves	"Self-help bestsellers (read [pa egg pea]) (Loather Rathole and on)"	--	""
 table of songs you could write	false	0	30	trivially false rule	troves	"Songs you write on escaping Upscale Capsule"	--	""
+table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue (Bustle Sublet)"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
+table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue (Browse Bowers/Econ Cone)"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
 table of Leo-Rand chitchat	true	0	15	chitchat-over-idols rule	presto	"Leo and Rand's chatter (Dirge Ridge)"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
 table of Leo-Rand idols	true	0	15	Leo-Rand-cry rule	presto	"Leo and Rand's idols (Dirge Ridge)"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no "	"."
 table of catechism pages	false	0	10	catechism-over-research rule	presto	"Schematic Catechism research topics ([shack])"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. You could flip through for more research topics or brainy types, but you've done enough. I appoint you a rarest raster starer. Have an, er, star."
@@ -402,7 +402,7 @@ this is the horb-bye rule:
 
 section TROVES random text rules
 
-this is the read-eths rule:
+this is the read-pa-egg-pea rule:
 	if current action is examining Pa Egg Pea, the rule succeeds;
 	the rule fails.
 
