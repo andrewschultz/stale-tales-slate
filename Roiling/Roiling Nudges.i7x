@@ -280,7 +280,7 @@ to say pamph-ana: say "You're probably overthinking it. The I-Used-To examples a
 
 to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead"
 
-to say no-park: say "The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious"
+to say no-park: say "The speaker parkees aren't what, or who, you need to change, here. It'll still be [b]TEDIOUS[r]"
 
 book routes nudges
 
@@ -469,7 +469,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pyrites"	661331953	pyrites	--	"[py-glow]."
 "pyrite"	565057987	pyrites	--	"[py-glow]."
 
-to say whole-null: say "The whole [b]NULL IT UNIT[r]"
+to say whole-null: say "The whole [b]NULL-IT UNIT[r]"
 
 to say dark-been: say "The darkness has always been there and always will be. You need to find a way to say it was dark"
 
@@ -597,8 +597,8 @@ table of Drain Nadir nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nadir"	222441064	--	--	"[locname]."
 "spider"	456891772	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
-"ires"	354396724	--	--	"[pad-not-just] a pad."
-"pad"	104682866	--	--	"[pad-not-just] ires."
+"ires"	354396724	--	--	"[pad-not-just] ires."
+"pad"	104682866	--	--	"[pad-not-just] a pad."
 "song"	272133753	Id Cede	--	"[id-cede-full]."
 "cede"	295646892	Id Cede	--	"[id-cede-full]."
 "diapers"	459079590	Id Cede	--	"You already twisted yourself into and out of knots from despair. Time to move on!" [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
@@ -1654,7 +1654,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "wire"	366057531	weirder red wire	--	"Each wire is [wires-ok]."
 "wires"	462331497	weirder red wire	--	"The wires are [wires-ok]."
 
-to say wires-ok: say "okay. They're just organized [b]WEIRDER[r]"
+to say wires-ok: say "okay. They're just all organized [b]WEIRDER[r]"
 
 to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
 
@@ -1747,7 +1747,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
 "cinder"	367064940	cinders	--	"You'll need to change more than one cinder."
 "cinders"	463338906	--	cinders-gone rule	"The cinders are gone for good."
-"citadel"	371945304	Edictal Citadel	--	"The whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Rancho Archon Anchor is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
+"citadel"	371945304	Edictal Citadel	--	"Transform the whole Citadel? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Rancho Archon Anchor is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
 "iq"	129398463	medals	--	"[both-medals]."
 "lucky"	353217661	medals	--	"[both-medals]."
 "medal"	268912008	medals	--	"It's what the medals say that makes them special."

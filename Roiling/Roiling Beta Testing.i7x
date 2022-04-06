@@ -208,6 +208,7 @@ understand the command "a5" as something new.
 understand "a5" as a5ing.
 
 carry out a5ing:
+	if mrlp is otters or mrlp is others or otters is solved, say "You will have to restart to run [b]a5[r]. You are too far along in the game." instead;
 	now Ordeal Reload is solved;
 	repeat with MI running through held things:
 		if MI is not warpable:

@@ -54,7 +54,7 @@ table of sked items	false	0	20	read-tec rule	troves	"Desk-Sked to-dos (Upscale C
 table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' [DIVORCES] articles (Browse Bowers)"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want." [p]
 table of iffy advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea (Loather Rathole or beyond)"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
 table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue (Bustle Sublet)"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
-table of non-skeds	false	0	20	desk-look rule	troves	"Cark Rack alternatives (Upscale Capsule)"	--	"Slick-Tech Checklist, which is rapidly catching up"
+table of non-skeds	false	0	20	desk-look rule	troves	"Cark Rack alternatives (Upscale Capsule)"	--	""	"Slick-Tech Checklist, which is rapidly catching up"
 table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue (Browse Bowers/Econ Cone)"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
 table of posse bosses	false	0	20	in-bustle-sublet rule	troves	"Gang bosses (Bustle Sublet)"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them" [p]
 table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r] (Boredom Bedroom)"	--	""	"Aliver Elvira, in case anyone forgot" [p]
@@ -483,7 +483,7 @@ this is the bar-over-comp rule:
 	the rule fails;
 
 this is the casper-talk rule:
-	if casper-mumble is true, the rule succeeds;
+	if casper-rand-mumble is true, the rule succeeds;
 	the rule fails;
 
 this is the ohai-bullies rule:
@@ -19576,7 +19576,7 @@ blurb
 "'Consult No Cults.'"
 "'A credo: do care!'"
 "'Cure cads accursed!'"
-"'Disperse no depression.'" []
+"'Dispense or disperse no depression.'" []
 "'Do no harm: MAD honor!'"
 "'Edify! Deify!'"
 "'Faith in God? Fight no aid! Oh, fading, it!'"

@@ -2598,7 +2598,7 @@ table of oyster reflexive blather
 him-asked	him-told
 trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh."
 pesty types	--
-Casper	"Once he starts, he won't stop. But he's feeling standoffish after his first big lecture."
+Casper	"[mumble-swap]Once he starts talking about himself, he won't stop. All sorts of random stuff: '[randbla]'[mumble-swap]"
 clam	"Asking the clam about its feelings is a start."
 sabot boats	"They're too far away for proper conversation. Maybe you can do something bold to show them you're worth having aboard."
 carps	"Asking these punks who they think they are won't stop them."
@@ -2610,6 +2610,10 @@ sausage	"It makes ghostly noises and talks about how it wants its jewel back."
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'"
+
+casper-rand-mumble is a truth state that varies.
+
+to say mumble-swap: now casper-rand-mumble is whether or not casper-rand-mumble is false;
 
 table of towers reflexive blather
 him-asked	him-told

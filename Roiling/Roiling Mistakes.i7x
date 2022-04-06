@@ -42,6 +42,8 @@ to say intro-warn: if Report Porter Perrot is off-stage, say "--well, once you'v
 
 understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying [b]STABLE[r][intro-warn][else]go [b]IN[r] to the stable[end if].") when player is in Dusty Study.
 
+understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.") when tables are touchable.
+
 understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying [b]BASEMENT[r][intro-warn][else]go [b]DOWN[r] to enter the basement[end if].") when player is in Dusty Study.
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
@@ -333,17 +335,17 @@ understand "broomed" as a mistake ("You are not rich and consequential enough to
 
 understand "maters" and "tamers" as a mistake ("Perhaps they know their trade, well, but you need to, too.") when ME ARTS is in location of player.
 
-understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but [b]REPEALS[r] is a noun, and [b]REPEAL[r] is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.") when pleaser leapers are touchable.
+understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but [b]REPEALS[r] is the wrong verb tense, and [b]REPEAL[r] is only six letters. There is a better way to forsake the false pleasure of the pleaser leapers!") when pleaser leapers are touchable.
 
 chapter Browse Bowers
 
 understand "bowser" as a mistake ("[this-game] is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
 
-understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...") when player is in Browse Bowers
-
-understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
+understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...") when player is in Browse Bowers.
 
 chapter Econ Cone
+
+understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
 understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if cone-points is 0]But you're nowhere near enthused enough[else if cone-points is 1]You're enthused enough, but you need to strategize[else]You're more than enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
@@ -415,7 +417,7 @@ understand "spag" as a mistake ("You don't have time to read text-adventuring ma
 
 understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when tsar star is in Char Arch.
 
-understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.[else if dart is enclosed by the player]The interjections in Presto stop short of slurs. I hope.[else][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! [this-game] doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to why you saw red after thinking it, beyond being embarrassed. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].[end if]") when dart is touchable. [bold-ok]
+understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.[else if dart is enclosed by the player]The interjections in Presto stop short of slurs. I hope.[else][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! [this-game] doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to why you saw red after thinking it, beyond being embarrassed. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's really no need to use that word again. Not that there ever was[or]You are just trolling now. No further clues for you[stopping].[end if]") when dart is touchable. [bold-ok]
 
 understand "tars" as a mistake ("But you already took the tsar star from the tars! Plus, you'd get all sticky.") when player wears tsar star.
 
@@ -600,11 +602,11 @@ understand "hoser" as a mistake ("It's sort of appropriate now that you're in th
 
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in Anger Range and player is in Anger Range.
 
-understand "landers" as a mistake ("[location of player] won't be helped by an advice column or columnist.") when player is in Anger Range.
+understand "landers" as a mistake ("[location of player] won't be helped [if snarled darnels are reflexed]further [end if]by an advice column or columnist.") when player is in Anger Range.
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
 
-understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if snarled darnels are moot]. You already got a point, anyway, for fixing the snarled darnels[else]Though actually another try gets a point here. You're really close[end if].") when player is in Anger Range.
+understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if snarled darnels are reflexed] for trying to sneak another point[else]. Though another try actually gets a point here. You're really close[end if].") when player is in Anger Range.
 
 understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 
@@ -1045,7 +1047,7 @@ understand "sell" and "sell [text]" as a mistake ("You are paving the way for co
 
 understand "slump" as a mistake ("Don't get exhausted! This area should be a bit of a break! I hope.") when player is in rustic and lumps are in rustic.
 
-understand "smile" as a mistake ("[if limes are in location of player]You are thrilled to have gotten those limes, yes.[else if slime is in location of player]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]") when player is in rustic and slime is in rustic.
+understand "smile" as a mistake ("[if limes are in location of player]You are thrilled to have gotten those limes, yes.[else if slime is in location of player]You smile at the slime. It can't be that hard to figure what to do. You even see red a bit, frustrated you haven't figured things out yet.[otherwise][reject][run paragraph on][end if]") when player is in rustic and slime is in rustic.
 
 understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis.") when spear is in location of player.
 
