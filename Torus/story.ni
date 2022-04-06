@@ -30,6 +30,8 @@ include First Word Retry by Andrew Schultz.
 
 include Undo Output Control by Erik Temple.
 
+include Old School Verb Total Carnage by Andrew Schultz.
+
 volume globals and such
 
 report undoing an action:
@@ -455,6 +457,7 @@ oning is an action out of world.
 understand the command "on" as something new.
 
 understand "on" as oning.
+understand "go on" as oning.
 
 zero-one-warn is a truth state that varies.
 
@@ -995,7 +998,7 @@ Include (-
 	  'yes': print "say yes";
 	  'x//':   print "examine";
 	  'z//':   print "wait";
-	  default: rfalse;
+	  default: print "get a potential response";
 	}
 	rtrue;
 ];
