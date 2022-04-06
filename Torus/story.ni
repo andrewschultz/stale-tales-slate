@@ -216,7 +216,7 @@ after going when in-heptagon-puzzle is true:
 	add dist of noun to heptagon-path;
 	if number of hep-traversed rooms is 7:
 		if 2 is not listed in heptagon-path or 3 is not listed in heptagon-path:
-			say "The interior of the Torus shudders, but nothing conclusive happens. Perhaps you [one of][or]again [or]once again [stopping]took an easy way to touch all the rooms.";
+			say "The interior of the Torus shudders, but nothing conclusive happens. Perhaps you [one of][or]again [or]once again [stopping]took an easy way to touch all the rooms. The whole torus dims. But there seems to be nothing to stop you from going [b]ON[r] and trying again.";
 		else:
 			say "All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.[paragraph break]There doesn't seem to be anything else to do. Now's probably a good time to go [b]INSIDE[r].";
 			now solved-heptagon is true;
@@ -501,7 +501,7 @@ carry out zerobasing:
 	else:
 		say "Now the initial room when you type [b]ON[r] is given a value of zero.";
 		now on-base is 0;
-		if debug-state is true, say "[list of perimeter rooms].";
+		if debug-state is true, d "[list of perimeter rooms].";
 	now zero-one-warn is true;
 	the rule succeeds;
 
@@ -565,8 +565,9 @@ understand "credits" as creditsing.
 carry out creditsing:
 	say "Direct thanks:[paragraph break]";
 	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now. I'm worried I'll miss a few names, but there were bg, David Welbourn, Jacqueline, MoyTW, pinkunz, and Roger, among others.";
-	say "Thanks to individuals for some late testing. I appreciate it. Their names: Olaf Nowacki.";
+	say "Thanks to individuals for some late testing. I appreciate it. Their names*: Dee Cooke, Olaf Nowacki, A Numb Scan Down.";
 	say "Thanks to J. J. Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments. I bet if you like [this-game], you'll like some of the games featured there, too.";
+	say "* [i]Thanks to one of them for an additional anagram puzzle[r].";
 	say "[line break]General thanks:";
 	say "[line break]Thanks to Amanda Walker for starting the blurb thread on intfiction.org which helped me with ideas in general.";
 	say "Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
@@ -606,7 +607,7 @@ check listening:
 	say "[one of]Ugh. You sometimes have to listen twice, to make sure you heard stuff right.[paragraph break][or][stopping]";
 	if cheat-voice is false and ever-voice is false, say "Nothing... yet... funny, you almost expected something by ABBA." instead;
 	if score is 0:
-		say "[one of]A voice whispers [sestet][line break]Maybe that will help a bit, you think. But where is the voice coming from? You can't see anyone, or anything.[paragraph break]Wait. That's it. It's got to be something small. A tsetse fly! Of course![or]The tsetse fly again: [sestet][stopping]";
+		say "[one of]A voice whispers [sestet][line break]That's odd! You counted seven locations, which would make a [i]heptet[r]. But maybe it's one of those deals where they're saying something slightly wrong to draw your attention to something else. Maybe that will help a bit, you think. But where is the voice coming from? You can't see anyone, or anything.[paragraph break]Wait. That's it. It's got to be something small. A tsetse fly! Of course![or]The tsetse fly again: [sestet][stopping]";
 		move tsetse backdrop to all perimeter rooms;
 		now ever-voice is true;
 		the rule succeeds;
@@ -670,7 +671,10 @@ understand the command "stat" as something new.
 understand "stat" as stating.
 
 carry out stating:
-	if tats-stat is 2, say "Your stat tats are already giving you as much help as they can." instead;
+	if tats-stat is 2:
+		say "You gaze at your stat tats so they don't give quite such big numbers as information.";
+		now tats-stat is 1;
+		the rule succeeds;
 	if tats-stat is 1:
 		say "You gaze at your tats to get an extra stat from them when you try to guess what to do.";
 	else:
@@ -880,6 +884,8 @@ to decide whether tat-cheat-extra:
 	if the remainder after dividing temp by 2 is 1, yes;
 	no;
 
+brainy-warn is a truth state that varies.
+
 to say how-many-right of (myit - indexed text):
 	let x1 be filtered name of myit;
 	let count be 0;
@@ -893,6 +899,9 @@ to say how-many-right of (myit - indexed text):
 			increment count;
 	if tat-cheat-regular:
 		say "The stat tats show two numbers: [count] of [number of characters in x1]";
+	if tats-stat >= 2 and brainy-warn is false:
+		say ". Whoah! You wonder if you're brainy enough to figure this out";
+		now brainy-warn is true;
 	if tats-stat is 3:
 		say ".[paragraph break]CHEAT RELOAD[paragraph break]";
 	if tat-cheat-extra:
@@ -973,7 +982,7 @@ to say reject:
 			else if ons is 2:
 				say "Hmm. Somehow, some way, you're overthinking things here. Well, that's your gut feeling.";
 				the rule succeeds;
-	say "There aren't very many verbs to use in [this-game], though each section has something special that needs doing. For a general list of verbs, type [b]VERBS[r].";
+	say "[this-game] doesn't have a deep bench of standard verbs, though in each room, you need to find something special to do or say or think. For a general list of verbs, type [b]VERBS[r].";
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";

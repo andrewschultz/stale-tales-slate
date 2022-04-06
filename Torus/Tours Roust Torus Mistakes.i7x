@@ -40,6 +40,8 @@ understand "mate" as a mistake ("[if Meta Meat is solved]But you already got a t
 
 book Pechan Pechan
 
+understand "happen chance" as a mistake ("You are very, very, very close indeed. Everything is in the right order.") when player is in pechan pechan and pechan pechan is unsolved.
+
 book Prep Area
 
 understand "rapparee" as a mistake ("You don't need to consort with thieves[besides].") when player is in prep area.
@@ -49,6 +51,8 @@ understand "perp" as a mistake ("That doesn't take care of the whole area.") whe
 understand "pear" as a mistake ("You already got fruits for Curtis in Rustic Citrus long ago[besides][half-solved].") when player is in prep area.
 
 understand "reap" as a mistake ("Perhaps there is something to reap once you figure what to do here[besides][half-solved].") when player is in prep area.
+
+understand "reap pear" as a mistake ("You are very, very, very close indeed. Everything is in the right order.") when player is in prep area and prep area is unsolved.
 
 understand "rape" as a mistake ("[one of][this-game] is about light-hearted jokes, and there's nothing light-hearted about that. So, yeah, don't try it again.[or][end-game][stopping]") when player is in prep area.
 

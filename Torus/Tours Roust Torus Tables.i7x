@@ -9,7 +9,7 @@ voice-listen is a truth state that varies.
 table of times around
 clue-text
 "You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to [b]LISTEN[r]."
-"You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you managed to [b]TAN ANT[r] Store Y. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will make you recall. [oh-voice]"
+"You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you managed to [b]TAN ANT[r] in Store Y, many years ago. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will help you recall ancient accomplishments. [oh-voice]"
 "You've run around the torus again. You remember now! When you had to [b]TAN ANT[r]! It was a [b]NATANT[r] ant! Maybe that will help you here. [oh-voice]"
 "Ugh. Tricky. You remember the coins Curtis gave you back at Rustic Citrus for finding those fruits, after you got rid of Elvira. You made them icons, then sonic as well. Or was it the other way around? But they inspired one more thing. A weird word. One that helped you be better not at anagramming, but putting words together snappily. What was it? [oh-voice]"
 "Ah yes. That's what the sonic coins gave you. CONCISIONS! [oh-voice]"
