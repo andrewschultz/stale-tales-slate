@@ -529,10 +529,10 @@ odes song	odes song	false	591595494	--	"goodness"	"goodness"	--	--	"You manage t
 Leo	Leo	false	255972525	--	"ole"	"ole"	--	post-leo-ole rule	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	--	post-rand-darn rule	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break][l-n-r] begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	--	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, Nuts!'[paragraph break]They'll be following you around for a bit."
-ye hoop	angrier earring	true	267453412	--	"pooh"	"pooh"	--	pre-pooh-phooey rule	"[get-earring]."
-ye hoop	angrier earring	true	517618773	--	"phooey"	"phooey"	--	pre-pooh-phooey rule	"[get-earring]."
-n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
-maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
+ye hoop	angrier earring	true	517618773	--	"phooey"	"phooey"	--	--	"[pooh-phooey-actions][get-earring]."
+ye hoop	angrier earring	true	267453412	--	"pooh"	"pooh"	--	--	"[pooh-phooey-actions][get-earring]."
+n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	--	post-nowt-town-wont rule	"[wont-maze]."
+maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-mazeltov rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"[l-n-r] look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' [l-n-r], busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo[']!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-or-keys rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, [l-n-r] grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	pre-hogs-not-keys rule	post-hogs-or-keys rule	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at [l-n-r] as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -605,12 +605,14 @@ this is the post-wzup rule:
 	now Leo is eager;
 	now Rand is eager;
 
-this is the pre-pooh-phooey rule:
+to say pooh-phooey-actions:
 	if the player's command includes "phooey":
 		min-and-q;
 		now phooeyed is true;
-	else:
+	else if the player's command includes "pooh":
 		poss-d;
+	else:
+		say "(BUG: you somehow found a third option you shouldn't have when getting Ye Hoop) "
 
 to say get-earring:
 	if the player's command includes "pooh":
@@ -619,33 +621,34 @@ to say get-earring:
 		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, shrinking into an angrier earring. Wow";
 	say "[if leo is touchable]! [l-n-r] applaud your agility[end if]![paragraph break]The angrier earring quivers as you pick it up. You think of various epithets it might anagram to, but you can't find any. Maybe you should save it for later";
 
-this is the pre-solve-maze rule:
-	if noun is maze walls and cur-score of presto < 3:
+this is the pre-mazeltov rule:
+	if cur-score of presto < 3:
 		say "You're not messing around! You see the best way to destroy the maze, and you're going for it.[line break]";
 	else if Nowt Town is unvisited:
 		say "No point actually going through the maze when you can destroy it.[line break]";
 	if player is not in Grey Gyre:
 		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
 		move player to Grey Gyre, without printing a room description;
-	increase the score by 2;
-	increase the cur-score of mrlp by 2;
-	increment the min-score of mrlp;
+	min-and-q; [ this puts you at 2 for the maze, not counting the carry out fliptoing point ]
 	if Tom Avlez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned:
-		increment the score;
-		increment the cur-score of mrlp;
-		increment the min-score of mrlp;
+		min-and-q; [ this puts you at 3 for the maze, not counting the carry out fliptoing point ]
 	else:
 		poss-d;
 
 this is the post-nowt-town-wont rule:
+	if player is not in grey gyre:
+		say "You figure it would be a very good idea to move out of Nowt Town before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
+		move player to Grey Gyre, without printing a room description;
 	poss-d;
-	shuffle-nowt-town;
 	if mazeguide-scanned is false, poss-d;
 	now maze-points is 1;
+	destroy-nowt-town;
 
 to say wont-maze:
+	if nowt town is unvisited:
+		say "When you say [b]WON'T[r], you mean [b]WON'T[r]! You won't even go in that awful maze.[line break]";
 	if cur-score of presto is 1:
-		say "Why not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say [b]WON'T[r]. And it works, here, too. The maze dissolved, leaving an ether to the north"; [bold-ok]
+		say "[if nowt town is unvisited or player was not in grey gyre]Also, why[else]Why[end if] not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say [b]WON'T[r]. And it works, here, too. The maze dissolved, leaving an ether to the north"; [bold-ok]
 		continue the action;
 	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, '[b]WON'T[r]!' The maze melts and collapses, but not before you escape back to the south."; [bold-ok]
 	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
@@ -653,7 +656,7 @@ to say wont-maze:
 this is the post-mazeltov rule:
 	now maze-points is 2;
 	if mazeguide-scanned is false, increment maze-points;
-	shuffle-nowt-town;
+	destroy-nowt-town;
 
 this is the pre-ether-there rule:
 	if Leo is not in Grey Gyre:

@@ -11796,7 +11796,7 @@ check entering volt maze: try going north instead;
 
 maze-points is a number that varies. maze-points is 0.
 
-to shuffle-nowt-town:
+to destroy-nowt-town:
 	moot maze entry zany meter;
 	moot volt maze;
 	remove maze walls from play;
