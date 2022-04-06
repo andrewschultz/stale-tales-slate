@@ -293,8 +293,10 @@ chapter otwin
 
 otwining is an action out of world.
 
+understand the command "otw" as something new.
 understand the command "otwin" as something new.
 
+understand "otw" as otwining.
 understand "otwin" as otwining.
 
 to say otw2: say "[b]OTWIN[i] in [inclosure] will cause [b]ADJSOLVE[i] and [b]NOUNSOLVE[i] (the variable determining how much you helped the animals) to drop to 2, thus getting you killed if you attack Elvira"

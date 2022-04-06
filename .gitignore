@@ -1,13 +1,15 @@
 # WinMerge sometimes dumps backup files, which is bad when I'm comparing test scripts
-**/*.txt.bak
-**/*.bak
+*
+# you really, really want to add a file, use -f ... this repo should be pretty much stable
+#**/*.txt.bak
+#**/*.bak
 # I don't want to save generated test files, because they can be....re-generated.
-**/*generated*.txt
+#**/*generated*.txt
 # temporary: don't update PDF/PNG
-**/*.pdf
-**/*.png
+#**/*.pdf
+#**/*.png
 # backup story files I don't want to get swept up into source control
-**/*.nh
-**/*.nj
+#**/*.nh
+#**/*.nj
 # trizbort stuff
-appsettings.json
+#appsettings.json

@@ -699,7 +699,36 @@ carry out averseing:
 
 volume debug variables that must be in common file since they appear in release functions
 
-post-ignore-needkey is a truth state that varies.
+end-menu-testing is a truth state that varies.
+
+this is the avoid keypress in menu testing rule: if end-menu-testing is true, say "Skipping the end-menu-testing options so automated testing doesn't get stuck." instead;
+
+book end menu testing - not for release
+
+chapter emying
+
+emying is an action out of world.
+
+understand the command "emy" as something new.
+
+understand "emy" as emying.
+
+carry out emying:
+	say "End menu testing (skip wait-for-key) is [if end-menu-testing is true]already[else]now[end if] on.";
+	now end-menu-testing is true;
+	the rule succeeds;
+
+chapter emning
+
+emning is an action out of world.
+
+understand the command "emn" as something new.
+
+understand "emn" as emning.
+
+carry out emning:
+	the rule succeeds;
+
 
 volume specific items
 

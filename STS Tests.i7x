@@ -423,19 +423,6 @@ carry out showtabing:
 	say "Showing table names in random text is now [on-off of showtabname].";
 	the rule succeeds;
 
-chapter postiging
-
-postiging is an action applying to nothing.
-
-understand the command "postig" as something new.
-
-understand "postig" as postiging.
-
-carry out postiging:
-	now post-ignore-needkey is whether or not post-ignore-needkey is false;
-	say "Ignoring need-key (and just bailing, for testing purposes) when listing random text is now [if post-ignore-needkey is true]on[else]off[end if].";
-	the rule succeeds.
-
 chapter missesing
 
 [* MISSES shows what all areas missed]

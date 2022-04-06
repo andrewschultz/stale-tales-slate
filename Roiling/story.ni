@@ -3460,23 +3460,6 @@ to say imp-or-whiners:
 
 read-intro is a truth state that varies.
 
-to intro-restore-skip:
-	now read-intro is true;
-	if debug-state is false:
-		let got-good-key be false;
-		while got-good-key is false:
-			let Q be the chosen letter;
-			if Q is 70 or Q is 73 or Q is 102 or Q is 105:
-				now read-intro is true;
-				now got-good-key is true;
-			else if Q is 82 or Q is 114:
-				say "Restoring...";
-				try restoring the game;
-			else if Q is 83 or Q is 115:
-				now read-intro is false;
-				now got-good-key is true;
-			if got-good-key is false, say "[line break][if q is 82 or q is 114]Restore failed. Let's try again[else]I didn't recognize that[end if]. Would you like to see the full introduction (F or I), restore a previous game (R), or skip the introduction (S)?";
-
 when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of rank-increasing regions][close bracket][end if]";
@@ -10770,7 +10753,7 @@ after examining summary (this is the notify last summary page rule) :
 	if summary-page is number of rows in table of summary text:
 		say "Whew. That was the last page.";
 		now summary-page is 1;
-	else:
+	else if debug-state is false:
 		say "Push P to read the next page (you're at [summary-page] of [number of rows in table of summary text]).";
 		let cho be the chosen letter;
 		if cho is 80 or cho is 112:
