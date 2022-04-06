@@ -652,6 +652,13 @@ You'll need a few more clues from the surrounding scenery to fix stuff, if you w
 With ?RYRRY, the first letter is a consonant, which is S or T.
 But what of the others? The fourth slot is a consonant, too, but it cannot be R or T. That means it is S. But since the first letter is T or S, it must be T. T-(IE)S-(IE).
 Since TT clogs things up, you get TR-ST-. TRISTE is a word, but TRESTI isn't.
+# logic for done-any anodyne
+?Can I, uh, do anything with the done-any anodyne?
+Yes. The ???Y?YR may be frustrating with all these question marks, but you may be a pro by now.
+First, note the letter Y must be in slot 5, as no other question-mark squares might contain it, and there are no exact matches elsewhere.
+(AD)(ON)(NO)(AO)Y(AOE)(DN) is what you have left, and we see E must be in slot 6. (AD)(ON)(NO)(AO)YE(DN). So which of the three possible slots is N not in?
+Let's try slot 7. Then D is in slot 1. 2 and 3 are ON/NO, leaving DONAYEN or DNOAYEN. So slot 7 is D.
+Since we have 2 N's left to place, A(ON)(NO)OYED gives us ANNOYED.
 >STORE Y
 >>POSH HOPS SHOP
 # logic for Lil Ps Pills
@@ -801,7 +808,7 @@ SPARELY it is.
 ?Can I get rid of Yer All a Yell'r?
 Yes, and it is not too bad at all.
 R?Y?PO gives you the LY at the end, and the question marks give E or Y, then A or L. One must be a vowel, and one must be a consonant.
-?E?LLY is left. But slot 3 must be a vowel, or A, and slot 1 must be R.
+What's left is ?E?LLY. But slot 3 must be a vowel, or A, and slot 1 must be R.
 REALLY.
 # logic for tearily-irately
 ?What is up with the players discussing reality?
