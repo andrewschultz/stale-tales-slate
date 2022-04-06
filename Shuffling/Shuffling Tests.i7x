@@ -254,6 +254,25 @@ to say miss-types: [this is different from Roiling]
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	say "If nothing else is below, you found everything";
 
+chapter alting
+
+alting is an action out of world.
+
+understand the command "alt" as something new.
+understand the command "alts" as something new.
+
+understand "alt" as alting.
+understand "alts" as alting.
+
+carry out alting:
+	if mrlp is not solved, say "Here are alternate paths through the current region, [mrlp].";
+	process the altrule of mrlp;
+	if number of solved regions is 0:
+		say "There are no solved regions to look through.";
+	else:
+		process the show alternate paths rule;
+	the rule succeeds;
+
 chapter yacking
 
 [ * this goes through all the subjects]

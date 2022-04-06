@@ -182,7 +182,7 @@ to say check-plur:
 to say what-about-gate: say ". [if player has gadget]Not much left to do for you here[else]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
 
 to deer-goat-min:
-	if reed is moot or toga is moot, min-up;
+	if reed is moot and toga is moot, min-up;
 
 section stores auxiliary
 
