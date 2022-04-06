@@ -1780,10 +1780,10 @@ book others
 table of others anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which is able to tell the direction! You look at where it points north. You will be able to progress without risk through the greenish sheering." [this must come first or Inform thinks we want a fruit in column 2]
-pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, less noise, more merchandise!'" [start rustic citrus easy]
-slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry."
+slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry." [start rustic citrus easy]
 spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold!"
 lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around."
+pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, less noise, more merchandise!'"
 sated stead	dates	true	350407000	--	"dates"	"dates/date"	--	--	"The sated stead shakes a bit, then disappears. In its place are some dates."
 eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	--	--	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes." [start rustic citrus hard]
 peanut cola	cantaloupe	true	637943038	--	"cantaloupe"	"cantaloupe"	--	--	"The cola bottle turns into a sort of tannish sphere, and you hear pulps splup inside."

@@ -19652,16 +19652,6 @@ check giving fruit to curtis:
 
 check going inside in Rustic Citrus: say "You can't go backward. There is enough to do here, including figuring where to go next." instead;
 
-chapter grapes
-
-some pagers are a plural-named start-pre-fruit in Rustic Citrus. description of pagers is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy.". bore-text is "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods. You don't need one.". locale-text is "pagers beeping all around".
-
-a-text of pagers is "RRYRYR". b-text of pagers is "RRYRYP". parse-text of pagers is "x[sp]x[sp]-[sp]x[sp]-[sp]S".
-
-check taking pagers: say "As much as you'd like to bash them, there's another way to shut them up." instead;
-
-grapes are a plural-named fruit.
-
 chapter pears
 
 A spear is a start-pre-fruit in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game.". locale-text is "a spear stuck in the ground".
@@ -19691,6 +19681,16 @@ a-text of slime is "RYRYR". b-text of slime is "RYRYR".parse-text of slime is "x
 check taking slime: say "Eww. Not in that form you won't." instead;
 
 some limes are a plural-named fruit.
+
+chapter grapes
+
+some pagers are a plural-named start-pre-fruit in Rustic Citrus. description of pagers is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy.". bore-text is "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods. You don't need one.". locale-text is "pagers beeping all around".
+
+a-text of pagers is "RRYRYR". b-text of pagers is "RRYRYP". parse-text of pagers is "x[sp]x[sp]-[sp]x[sp]-[sp]S".
+
+check taking pagers: say "As much as you'd like to bash them, there's another way to shut them up." instead;
+
+grapes are a plural-named fruit.
 
 chapter coin-give
 
@@ -19791,13 +19791,13 @@ levb4	levaf	get-token	get-coin	get-coins	get-dollar	blabber
 0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.' Curtis hands you a Tekno-Token."
 0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a Tekno-Token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something.'"
 0	3	1	0	1	0	"'Surprised you can lug all that back! Here's a Tekno-Token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!'"
-0	4	1	0	1	1	"'Wow! Impressive! I'm half curious if you cheated somehow! Here's a Tekno-Token for the clearing up north and east--not that you may need it--and a couple coins, and a dollar. Don't know if I can give you anything else.'"
+0	4	1	0	1	1	"'Wow! Impressive! I'm half curious if you cheated somehow! Here's a Tekno-Token for the clearing up north and east--not that you may need it--and a couple coins, and, err, a droll dollar, I think. Don't know if I can give you anything else.'"
 1	2	0	1	0	0	"'Glad you didn't say scru-it. We're getting somewhere[if player has moss cap]. Maybe if you physically get somewhere, we can get further[end if].' Curtis hands you a coin for your efforts."
 1	3	0	0	1	0	"'Wow. So much done at once.' Curtis hands you two coins for your efforts."
-1	4	0	0	1	1	"'Spurtin['] turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with.' Curtis, looking very pleased, hands you two coins and some sort of dollar."
+1	4	0	0	1	1	"'Spurtin['] turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with.' Curtis, looking very pleased, hands you two coins and a droll dollar."
 2	3	0	0	1	0	"Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before."
-2	4	0	0	1	1	"Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him."
-3	4	0	0	0	1	"'Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you.'"
+2	4	0	0	1	1	"Curtis hands you another coin and a suspicious bit of paper: a droll dollar. He nods as if to say, that's all you'll get from him."
+3	4	0	0	0	1	"'Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you.' It is a droll dollar."
 
 chapter moss cap
 
@@ -20260,7 +20260,7 @@ s-i is final-puz. s-c is final-puz. the coin is final-puz. the coins are final-p
 
 chapter passport
 
-the popstar passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too.[paragraph break]Written on the bottom is some blather about the makers['] commitment to user-friendly GUI, so you should be able to figure what to do with the viewer and searcher". printed name is "popstar's passport". understand "popstar/popstars" and "popstar/popstars passport" as popstar passport.
+the popstar passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too.[paragraph break]Written on the bottom is some blather about the makers['] commitment to user-friendly GUI, so you should be able to figure what to do with the viewer and searcher.". printed name is "popstar's passport". understand "popstar/popstars" and "popstar/popstars passport" as popstar passport.
 
 check scaning the passport:
 	if viewer is reflexed:
