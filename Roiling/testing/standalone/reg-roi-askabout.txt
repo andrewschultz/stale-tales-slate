@@ -7,45 +7,29 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _manor
-
->posf
+* _ordeal-reload
 
 >x chair
 You thought you preferred
 
->think
-CREATIVITY
+>painting
 
->x sad ads
-Bangish bashing
+>x bookshelf
 
 >open door
 
->ask gunter about gunter
-Gunter's kind of leading the conversation, here.
+>ask porter about porter
+Report Porter Perrot's kind of leading the conversation, here.
 
 >1
 >5
 
 It is now pitch dark
 
-
->lapm
-You think you feel the palm shake a bit, but nothing terribly magical happens.
 >lamp
 Your score has just gone up by one point
->lapm
-If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
-
->basemetn
-The ten beams creak slightly. Maybe not all of them. But a few.
-
 >basement
-Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
->basemetn
-You probably just want to go DOWN to the basement.
 
 >d
 
@@ -56,7 +40,8 @@ You fumble nervously
 Your score has just gone up
 
 >in
-haven't really EXAMINED it
+didn't really EXAMINE it
+
 >x settler
 
 ####line break problem after X SETTLER??
@@ -90,6 +75,8 @@ You don't want to go off on any tangents, here.
 >1
 >1
 >1
+>20
+[Valid responses range from 1-3. Type REPEAT to re-list the options.]
 >3
 Carven Cavern
 
@@ -99,16 +86,13 @@ Your score has just gone up by one point
 >stapler
 Your score has just gone up by one point
 
->staple wall
+>staple curtain
 >in
 Strip of Profits
 
->score
-Won now: Roman Manor (8/13).
-
 * _stores
 
->posf
+>ts
 
 >presto
 Your score has just gone up by one point
@@ -129,6 +113,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >tokers
+Your score has just gone up by one point
 
 >ask tokers about tokers
 "Missing our friend, man!"
@@ -140,10 +125,11 @@ They weep at hearing the name of a lost friend.
 The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do.
 >ask tokers about store k
 "Man, it was actually kind of sort of like fun in there. Until it wasn't."
->ask tokers about smoke cloud
-"Er, free reefer!" they say. You'd probably have SOME sort of experience going through those fumes.
+>ask tokers about mangiest steaming
+"Er, free reefer!" they say. Going through those fumes might provide experience, of a sort.
 
 >nestor
+Your score has just gone up by one point
 >ask nestor about tokers
 Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about nestor
@@ -156,45 +142,40 @@ Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about store n
 "Man, it was actually kind of sort of like fun in there. Until it wasn't."
 
-#?? nestor/tokers twice in file?
+>enter mangiest steaming
 
->enter cloud
-
->ask ian about ian
-Before you can do anything with or to Ian, he thrusts a sheet of heartfelt reflections on drug use at you. "It will help you in ways you don't know. And even I don't know." Do you take it?
->ask ian about ian
-The heartfelt reflections Ian gave you will say enough.
->ask ian about elvira
+>ask basher about basher
+Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp: SPLAT at you. "It will help you in ways you don't know. And even I don't know." Do you take them?
+"Good choice. Say, if they're good enough, do you think I could become an even better blabber babbler than ... him?"
+>ask basher about basher
+"I'm nothing without Max Peel's help." This continues for a minute, after which you sort of wish the Rehabs Basher WOULD be, or say, nothing. How tedious.
+>ask basher about elvira
 "She didn't get to her position of power by using DRUGS."
->ask ian about lecturer
-"A great man. Listen to him, not me."
->ask ian about xyzzy
-Before you can do anything, Ian points at the heartfelt reflections he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.
+>ask basher about babbler
+The Rehabs Basher nods enthusiastically.
+>ask basher about xyzzy
+He nods at you and the blabber babbler. It's remarkably effective psychological warfare, to repress you and all.
 
->ask lecturer about ian
+>ask babbler about basher
 If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff.
->ask lecturer about elvira
-You probably know he's in favor of her.
->ask lecturer about lecturer
-Oh, his good-for-society rant has enough of his own experiences sprinkled in.
->ask lecturer about xyzzy
+>ask babbler about elvira
+You probably missed the pro-Elvira introduction, which is all for the better.
+>ask babbler about babbler
+You probably don't have to ask to hear the blabber babbler's personal anecdotes.
+>ask babbler about xyzzy
 If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff.
 
 >outside
 
 * _routes
 
->posf
->score
-0 out of 18 total points in the current region, Routes
-
 >inside
 Your score has just gone up by one point
 
 >ask horbert about horbert
 He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall.
->ask horbert about giant
-"Well-meaning, but his wrath is misplaced. I can hear him from here. You may learn from listening to him, but there is nothing to fear."
+>ask horbert about gast
+"Well-meaning, but his wrath is misplaced. I can hear him from here. You may profit from listening to him, but there is really nothing to fear."
 >ask horbert about elvira
 "Perhaps she was good once. But her influence on religion is...disturbing."
 >ask horbert about xyzzy
@@ -228,10 +209,11 @@ Your score has just gone up by one point
 ## rev ali is a person ?? defined for routes only, off-stage, chum of Elvira
 
 >ask pat about pat
-"Still holding on to the Idle Deli here."
+"No dine. Done in. No
+Don't have your guts to explore the seed pit, either."
 >ask pat about horbert
-"He means well, but he can't really HELP us."
->ask pat about giant
+"Brother Horbert means well, but he's too unfocused to DO anything by himself."
+>ask pat about gast
 "Probably not good for business."
 >ask pat about elvira
 "Business is bad enough. I don't need trouble with her."
@@ -252,10 +234,10 @@ Adobe Abode
 Your score has just gone up by one point
 
 >ask oscar about oscar
-Oscar grumbles. "I'm ME, you know?"
+"I'm just this guy, in this house, with that ashtray some self-appointed do-gooder cleaned out. Well, I can make more." Nope, he doesn't seem to have much to say.
 >ask oscar about horbert
-"He means well, but he can't really HELP us."
->ask oscar about giant
+"Brother Horbert means well, but he's too unfocused to DO anything by himself."
+>ask oscar about gast
 "Keeps my home less quiet, I'm sure!"
 >ask oscar about elvira
 "Hmph. Glad she's kept away from ME, so far."
@@ -266,67 +248,25 @@ Best not to call attention to your thievery.
 >ask oscar about pipe soot
 You don't need to mention you have it.
 >ask oscar about pat
-"I went there once. That SEED PIT...ugh."
+"I went there once. That seed pit...ugh."
 
 >out
 
 >against
 Your score has just gone up by one point
 
->ask old giant about bench
-There's not much dispute over the ownership. And the giant isn't trying to shoo you away. Maybe you should listen to the giant in general.
->ask old giant about horbert
-The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
->ask old giant about giant
-He is already talking about himself, his complaints, and so forth.
->ask old giant about elvira
-The old giant becomes momentarily more vocal and upset.
->ask old giant about xyzzy
-The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
+>ask gast about sit a nag
+There's not much dispute over the ownership. And Ian Gast isn't trying to shoo you away. Maybe you should listen to him in general.
+>ask gast about horbert
+Ian Gast is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
+>ask gast about gast
+Ian Gast is already talking about himself, his complaints, and so forth.
+>ask gast about elvira
+Ian Gast becomes momentarily more vocal and upset.
+>ask gast about xyzzy
+Ian Gast is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
 
->astride
->below
->under
-Your score has just gone up by one point
-
-##no-gal needs a line break ??
-
->in
->out
->from
-Your score has just gone up by one point
-
->ask armada about armada
-They're not in the mood for remotely reasonable conversation.
->ask armada about giant
-They're not in the mood for remotely reasonable conversation.
->ask armada about elvira
-They're not in the mood for remotely reasonable conversation.
-
->beneath
-Sun-Spared Underpass
-
->until
-Your score has just gone up by one point
->around
-Your score has just gone up by one point
->along
-Your score has just gone up by one point
-
-Ripe Pier
-
->amidst
-Your score has just gone up by one point
-
-Cripple Clipper
-
->behind
-Your score has just gone up by one point
->through
-Your score has just gone up by one point
-
->score
-Routes (17/18)
+>retry
 
 * _troves
 
@@ -337,7 +277,8 @@ Loather Rathole
 Your score has just gone up by one point
 >care
 Your score has just gone up by one point
-Loudest Used Lot
+
+Bustle Sublet
 
 >observe
 Your score has just gone up by one point
@@ -347,26 +288,27 @@ Your score has just gone up by one point
 >reason
 Your score has just gone up by one point
 
->derive
-Pallid Li'L Pad
-DEBUG INFO: Taking away a max point.
-
->posf
+>recall
+Drain Nadir
 
 >despair
 Your score has just gone up by one point
 
->l
+>decide
+
 Boredom Bedroom
 
+>bolster
+
 >deal
-Your score has just gone up by one point
-DEBUG INFO: Taking away a max point.
-Dour Tan Rotunda
+
+Browse Bowers
 
 >desire
 Your score has just gone up by one point
+
 Econ-Cone
+
 >aspire
 Your score has just gone up by one point
 
@@ -377,26 +319,7 @@ Trevis Vister has strong opinions on everything and all kinds of success plans, 
 >ask statue about xyzzy
 Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that.
 
->ponder
-FiefCo Office
-Your score has just gone up by one point
-If only you could tune that out!
-DEBUG INFO: Taking away a max point.
-
->score
-
->ignore
-Your score has just gone up by one point
->bolster
-Your score has just gone up by one point
->last
-Your score has just gone up by one point
->resign
-Your score has just gone up by one point
-Strip of Profits
-
->score
-15/21
+>retry
 
 * _presto
 
@@ -411,67 +334,80 @@ Austerer Treasure
 Your score has just gone up by one point
 Taking away a max point.
 
->posf
-
->gonear mzend
+>gonear unwary runway
 >n
 
->gonear mzend
->ask lev tzoma about elvira
+>gonear unwary runway
+>ask zo mavelt about elvira
 "I'm safe from her in this maze. I think?"
->ask lev tzoma about lev tzoma
-"I'm here to help, just by being me, apparently."
->ask lev tzoma about xyzzy
+>ask zo mavelt about zo mavelt
+"If you scan me and go north, I'll go away, and someone else might appear."
+>ask zo mavelt about xyzzy
 "I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
->ask lev tzoma about volt maze
+>ask zo mavelt about volt maze
 "I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
->ask lev tzoma about tzoma lev
-"I'm here to help, just by being me, apparently."
->ask lev tzoma about tom alvez
+>ask zo mavelt about mavelt zo
+"If you scan me and go north, I'll go away, and someone else might appear."
+>ask zo mavelt about tom avlez
+>ask zo mavelt about lev tzoma
 "Oh! He'll drop by later. I hope you don't need his help too much."
 
->sb lev tzoma
+>sb zo mavelt
 >n
 
->gonear mzend
+>gonear unwary runway
+>ask tom avlez about elvira
+"I'm safe from her in this maze. I think?"
+>ask tom avlez about tom avlez
+"If you scan me and go north, I'll go away, and someone else might appear."
+>ask tom avlez about xyzzy
+"I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
+>ask tom avlez about volt maze
+"I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
+>ask tom avlez about zo mavelt
+"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
+>ask tom avlez about lev tzoma
+"Oh! He'll drop by later. I hope you don't need his help too much."
+>ask tom avlez about tzoma lev
+"Oh! He'll drop by later. I hope you don't need his help too much."
+
+>sb tom avlez
+>n
+
+>gonear unwary runway
 >ask tzoma lev about elvira
 "I'm safe from her in this maze. I think?"
 >ask tzoma lev about tzoma lev
-"I'm here to help, just by being me, apparently."
+"If you scan me and go north, I'll go away, and someone else might appear."
 >ask tzoma lev about xyzzy
 "I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
 >ask tzoma lev about volt maze
 "I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
 >ask tzoma lev about lev tzoma
-"I'm here to help, just by being me, apparently."
->ask tzoma lev about tom alvez
-"Oh! He'll drop by later. I hope you don't need his help too much."
+"If you scan me and go north, I'll go away, and someone else might appear."
+>ask tzoma lev about tom avlez
+"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
+>ask tzoma lev about tom avlez
+"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
+>ask tzoma lev about zo mavelt
+"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
 
 >sb tzoma lev
 >n
 
->gonear mzend
->ask tom alvez about elvira
-"I'm safe from her in this maze. I think?"
->ask tom alvez about tom alvez
-"I'm here to help, just by being me, apparently."
->ask tom alvez about xyzzy
-"I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
->ask tom alvez about volt maze
-"I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
->ask tom alvez about lev tzoma
-"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
->ask tom alvez about tzoma lev
-"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
-
+>s
+>drat
+>rats
 >n
 
 >ask plebe about leo
+Leo would be more intimidating if he were nearby.
 !You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force.
-WRONG
+Leo would be more intimidating if he were nearby.
 >ask plebe about rand
+Rand would be more intimidating if he were nearby.
 !You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force.
-WRONG
+Rand would be more intimidating if he were nearby.
 
 >s
 >s
@@ -487,14 +423,14 @@ Your score has just gone up by one point
 >ask rand about elvira
 "I guess she's good but I'm not smart enough to know why."
 >ask rand about rand
-He gives a whole new dimension to small talk. But not for long, thankfully.
+Rand gives a whole new dimension to small talk. But not for long, thankfully.
 >ask rand about xyzzy
 "I dunno much about that. I like do stuff not think stuff."
 
 >ask leo about elvira
 "I guess she's good but I'm not smart enough to know why."
 >ask leo about leo
-He gives a whole new dimension to small talk. But not for long, thankfully.
+Leo gives a whole new dimension to small talk. But not for long, thankfully.
 >ask leo about xyzzy
 "I dunno much about that. I like do stuff not think stuff."
 
@@ -517,10 +453,12 @@ The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with
 >ask plebe about plebe
 You figure you should grill him about how worthless he thinks he is, but you lack the right word or words.
 >ask plebe about xyzzy
-Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move.
+Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move.
 >ask plebe about leo
+!Leo would be more intimidating if he were nearby.
 You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force.
 >ask plebe about rand
+!Rand would be more intimidating if he were nearby.
 You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force.
 
 >bleep
@@ -536,12 +474,11 @@ Your score has just gone up by one point
 >mazeltov
 Your score has just gone up by two points
 
-=======================================
 >load gun with dart
 >there
 Your score has just gone up by one point
 >n
-Phat Path
+Saps' Pass
 
 >ask leo about hogs
 "If only you was our size, we could just take 'em. But you ain't. No offense. Maybe you can out-clever 'em like you did us."
@@ -577,7 +514,7 @@ Posh Hops Shop
 >ask casper about elvira
 Before you can pull a bar seat abreast... "Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad." He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says "Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back."
 >ask casper about casper
-Once he starts, he won't stop. But he's feeling standoffish after his first big lecture.
+Once he starts talking about himself, he won't stop. All sorts of random stuff:
 >ask casper about xyzzy
 Casper mutters to nobody in particular.
 >ask casper about haunter
@@ -597,11 +534,12 @@ Casper wants you to acknowledge he's writing it, but he's not going to hand out 
 >ask trolls about tunes
 "Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people."
 >ask trolls about gins sign
-"Lots of people think they're really cute, like they've got something special can make them disobey that sign."
+"Lotsa people think they're really cute, like they've got something special can make them disobey that sign."
 >ask trolls about stumbler tumblers
 "Best to cough up some tips in there. For the wait staff."
+>ask trolls about tips pits
+"Best to cough up some tips in there. For the wait staff."
 >ask trolls about haunter
-(the haunter in Anger Range)
 "Hasn't bugged us yet. What, you scared of it? Aww."
 >ask trolls about elvira
 "An inspiration and an example to keep our job fun!"
@@ -610,18 +548,19 @@ They'd affirm their right to privacy before asking YOU personal questions. Troll
 >ask trolls about xyzzy
 Talking wouldn't distract them from keeping you in the Posh Hops Shop. They'd just win the argument. They're trolls, after all.
 >ask trolls about hedron
-"Even more fun than here. So we hear."
+"The horned hedron's even more fun than here. Maybe we can get a job there some day."
 
->ask patrons about casper
+>ask pesty types about casper
 "Weirdo. With his books. Even if they're books where people drink a lot."
->ask patrons about trolls
+>ask pesty types about trolls
 "They rather keep us in and make us spend more than kick us out."
->ask patrons about elvira
+>ask pesty types about elvira
 You endure annoying pro- and anti-Elvira half-drunken banter for a bit.
->ask patrons about patrons
-The patrons would probably think YOU were drunk if you told them why you were here or asked questions.
->ask patrons about xyzzy
-The patrons aren't important. They're just trying to get drunk.
+>ask pesty types about pesty types
+The pesty types would probably think YOU were drunk if you told them why you were here or asked questions.
+>ask pesty types about xyzzy
+The pesty types would probably think YOU were drunk if you told them why you were here or asked questions.
+
 
 >unset
 Your score has just gone up by one point
@@ -639,7 +578,7 @@ Your score has just gone up by one point
 >run
 Your score has just gone up by one point
 
-Hero's Shore
+Disease Seaside
 >boast
 Your score has just gone up by one point
 Fighter Freight
@@ -677,8 +616,6 @@ They snot nots. Tons. Brusque, queer BS. You need to take action, instead.
 
 >scrap
 Your score has just gone up by one point
-
->posf
 
 >e
 >seek
@@ -728,7 +665,7 @@ Aunt Tuna probably has a lecture prepared about fish these days. One that won't 
 >ask aunt tuna about yapper
 Aunt Tuna probably has a lecture prepared about fish these days. One that won't help you go hunt a hangout.
 >ask aunt tuna about horned hedron
-"It is a terrible place full of horrible people! But we cannot organize to drive them out."
+"The Horned Hedron is a terrible place full of horrible people! But we cannot organize to drive them out."
 >ask aunt tuna about trout
 "He is a good boy despite no fine uncle influence, and you have helped him to ward off those weirdos so wired in the future." Tortu blushes at being treated like he might be eavesdropping.
 >ask aunt tuna about casper spacer
@@ -752,6 +689,8 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >bonk
 Your score has just gone up by one point
+>snap
+Your score has just gone up by one point
 
 >in
 a hut
@@ -767,7 +706,7 @@ Your score has just gone up by one point
 Arches
 
 >ask sardine about haunter
-He flashes a snider look as he reads in to your talk. "Ear dins. Wish I worked at Adrien's."
+"I'd be scared of it, if it existed. And if I was the one stole its jewel. We all would. Well, weak-os are, anyway."
 >ask sardine about elvira
 "I wouldn't have this job if it weren't for her."
 >ask sardine about sardine
@@ -806,7 +745,7 @@ They snicker menacingly and whisper loudly that you're probably scared of lots o
 "Nice place, eh? Especially for not being very nice at all!"
 
 >w
-Collapsed Old Places
+Rascal Craals
 
 >bury
 Your score has just gone up by one point
@@ -822,7 +761,7 @@ by one point
 by one point
 
 >ask haunter about elvira
-"Already marked for..." the haunter abruptly stops.
+"Horrible! Broil her!"
 >ask haunter about haunter
 It makes ghostly noises and talks about how it wants its jewel back.
 >ask haunter about xyzzy
@@ -861,21 +800,32 @@ Your score has just gone up by one point
 >ask yapper about yapper
 "I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what." He winks.
 >ask yapper about xyzzy
-The yapper does not shut up about how he cannot be bribed, but he's kind of winking at the same time, and coughing. It seems you may need to do things the right way.
+The yapper does not shut up about unbribability but still manages to wink and cough at the same time. It seems you may need to do things the right way.
 >ask yapper about hedron
 "That's where we are."
+
+>gonear ant
+>ask ant about elvira
+The ant twitches silently but menacingly.
+Hm, that wasn't very revealing. It doesn't look like talking with the natant ant can help you much. You note this in your notepad.
+>ask ant about ant
+The ant twitches silently but menacingly.
+>undo
+>undo
+>undo
 
 >prepay
 Your score has just gone up by one point
 
 >derail
 Your score has just gone up by one point
->pull lever
+>spin pins
+Your score has just gone up by one point
+
 >redial
 Your score has just gone up by one point
 
->score
-Oyster (30/39)
+>retry
 
 * _towers
 
@@ -886,7 +836,7 @@ Oyster (30/39)
 >gone
 Your score has just gone up by one point
 
->wined
+>lardy
 Your score has just gone up by one point
 
 >bleak
@@ -896,78 +846,45 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Topside Deposit
 
->get tarts
->put tarts in toaster
->xray keycar
-
->posf
-
->ask ray eck about settler
-Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help.
->ask ray eck about start tarts
-"Not mine."
->ask ray eck about toaster
-"Not nearly as sophisticated as my keycar."
->ask ray eck about keycar
-Ray Eck proceeds to tell you about its features and so forth. What a YACKER, you think, seeing red.
->ask ray eck about elvira
-He blathers on about what's wrong about her so annoyingly you almost sympathize with her.
->ask ray eck about ray eck
-Don't get him started.
->ask ray eck about xyzzy
-"Hmm? That's not as interesting as my bright red keycar, here."
->ask ray eck about curst palace
-"You'll never get there!"
-
->creaky
-Your score has just gone up by one point
+>sadder
 
 >n
 Scope Copse
 
 >ask butlers about elvira
-WRONG
+"Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?"
 >ask butlers about butlers
-WRONG
+"If we let you by, we'd have to answer to our mentor, Les Burt!" You see red at the name.
 >ask butlers about xyzzy
-WRONG
+"If we let you by, we'd have to answer to our mentor, Les Burt!" You see red at the name.
 >ask butlers about curst palace
-"You'll never get there!"
+"You'll never get close!"
 
->ask muscly hulk about elvira
-The hulk blinks and shrugs and grunts.
->ask muscly hulk about muscly hulk
-He kind of stumbles with dialogue. Maybe you can make him stumble physically.
->ask muscly hulk about xyzzy
-He kind of stumbles with dialogue. Maybe you can make him stumble physically.
->ask muscly hulk about curst palace
-"You'll never get there!"
-
->subtler
-Your score has just gone up by one point
->clumsy
-Your score has just gone up by one point
+>ask nereid about elvira
+The denier nereid mentions Elvira is one person not worth denying.
+>ask nereid about nereid
+She discourages you from anything too adventurous. She sees you getting mad and says "END IRE," which makes you a bit madder. You see red.
+>ask nereid about xyzzy
+She discourages you from anything too adventurous. She sees you getting mad and says "END IRE," which makes you a bit madder. You see red.
+>ask nereid about curst palace
+"You'll never get close!"
 
 >ask snider diners about elvira
 The diners extol her taste in food. Any drip knows she's no wet blanket.
 >ask snider diners about snider diners
-"We are EATING," they exclaim, drily. You'd like to rain on their parade, even a little.
+"Can't talk with our mouths full," they exclaim, dryly. You'd like to rain on their parade, even a little. You seem to have interrupted their talk, and maybe LISTENing would help.
 >ask snider diners about xyzzy
 /(is DERN|Dr. Enis|NERD IS)
 >ask snider diners about curst palace
-"You'll never get there!"
+"You'll never get close!"
+
+>subtler
+Your score has just gone up by one point
+>reined
+Your score has just gone up by one point
 
 >n
 Baldest Blasted Saltbed
-
->ask iprune about elvira
-"The longer she rules, the bigger plants like me will grow!"
->ask iprune about iprune
-"I?! Prune?!" it cries, turning red at a perceived slight.
->ask iprune about xyzzy
-"I may be UNRIPE, but I'm bigger than you!" it cries. "If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not." Hmph.
->ask iprune about curst palace
-"You'll never get there!"
 
 >ask pirates about elvira
 The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts.
@@ -976,26 +893,53 @@ The pirates explain colorfully how Elvira's rule has been good for piracy. Not t
 >ask pirates about xyzzy
 /(Harsh arrhs|Yarrh, Harry)
 >ask pirates about curst palace
-"You'll never get there!"
+"You'll never get close!"
 
 >pastier
 Your score has just gone up by one point
 
->punier
+>ask imposer about elvira
+"She has promised so much to Yorpwald! We must promise back to her."
+>ask imposer about imposer
+The promise imposer seems to talk about everything except what you want to. It makes you see red. Maybe that evasiveness can be a hint.
+>ask imposer about xyzzy
+The promise imposer seems to talk about everything except what you want to. It makes you see red. Maybe that evasiveness can be a hint.
+>ask imposer about curst palace
+"You'll never get close!"
+
+> semipro
 Your score has just gone up by one point
 
 >n
 Anemic Cinema
 
->ask sweatier about elvira
-The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end.
->ask sweatier about sweatier
-..." he says, making you see red. "I'm obviously sweatier than you, yet I am far less tired!"
-..." he says, making you see red. "I'm obviously sweatier than you, yet I am far less tired!"
->ask sweatier about xyzzy
-..." he says, making you see red. "I'm obviously sweatier than you, yet I am far less tired!"
->ask sweatier about curst palace
-The wait-seer points to the palace and shrugs, as if to say, why?
+> ask lars about elvira
+"If it weren't for her I wouldn't have this job. Which kind of stinks, but..."
+
+
+>ask lars about elvira
+"If it weren't for her I wouldn't have this job. Which kind of stinks, but..."
+>ask lars about lars
+He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+>ask lars about xyzzy
+He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+>ask lars about curst palace
+"You'll never get close!"
+
+>s
+>gs
+>n
+
+>ask elsa about elvira
+"If it weren't for her I wouldn't have this job. Which kind of stinks, but..."
+>ask elsa about elsa
+She seems to want to talk, really, and at the same time, she doesn't. She keeps mumbling a sales pitch under her breath, and maybe if you listen a bit, you can remember it.
+>ask elsa about xyzzy
+She seems to want to talk, really, and at the same time, she doesn't. She keeps mumbling a sales pitch under her breath, and maybe if you listen a bit, you can remember it.
+>ask elsa about curst palace
+"You'll never get close!"
+
+>gs
 
 >ask ingrates about elvira
 "She's been terrible for Yorpwald! But anyone else would be even worse. That's life!"
@@ -1004,16 +948,18 @@ They swat imaginary red ire-gnats as they brush you off.
 >ask ingrates about xyzzy
 You're shocked by the angriest interruption imaginable.
 >ask ingrates about curst palace
-"You'll never get there!"
+"You'll never get close!"
 
 >ask admirer about elvira
-"I'm not sure if she's even better than you, or you're even better than her!"
+"You both have your faults and your good sides. You might have more faults than her."
 >ask admirer about admirer
 "But enough about me! What about you?" You need a way to make them less interested in you.
 >ask admirer about xyzzy
-They claim they never thought they'd love someone the way they love you! Off-guard, red-faced, you mumble, "I? Rad? Erm..." Maybe you can stomach another compliment.
+They claim they are really impressed with you, though of course you have faults you need to fix! Off-guard, red-faced, you mumble, "I? Rad? Erm..." Maybe you can stomach another backhanded compliment.
+>ask admirer about xyzzy
+The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. What a couple! Though you see red at the pairing.
 >ask admirer about curst palace
-"It's not good enough for you-ou-ou!"
+"Well, I bet you could make it there. You're clever enough, but what would you do once you got there?"
 
 >married
 Your score has just gone up by one point
@@ -1024,7 +970,64 @@ Shaven Havens
 >s
 >s
 >e
-Savager Ravages
+Treading Gradient
+
+>ask sweatier about elvira
+The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end.
+>ask sweatier about sweatier
+/"(Sit! We are\.\.\.|Trees! Aw, I\.\.\.|Trees! I, aw\.\.\.)"
+the wait-seer says before going silent again. You see red.
+>ask sweatier about xyzzy
+/"(Sit! We are\.\.\.|Trees! Aw, I\.\.\.|Trees! I, aw\.\.\.)"
+the wait-seer says before going silent again. You see red.
+>ask sweatier about xyzzy
+/"(Sit! We are\.\.\.|Trees! Aw, I\.\.\.|Trees! I, aw\.\.\.)"
+the wait-seer says before going silent again. You see red.
+>ask sweatier about curst palace
+The wait-seer points to the palace and shrugs, as if to say, why?
+
+>ask tailers about elvira
+"Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!"
+>ask tailers about tailers
+"It's real," the realist tailers assure you, whatever it is. You see red.
+>ask tailers about xyzzy
+The realist tailers hope for more lit eras, which makes you see red.
+>ask tailers about xyzzy
+You see red at the realist tailers' lists of what may tire Sal.
+>ask tailers about curst palace
+"You'll never get close!"
+
+>ask trendies about elvira
+"We've got lots of good reasons to like her, but if she's defeated, we'll have lots of good reasons why we should've never trusted her."
+>ask trendies about trendies
+They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by.
+>ask trendies about xyzzy
+They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by.
+>ask trendies about curst palace
+"You'll never get close!"
+
+>pad talking
+You've also found some folks who aren't very useful except for general chat: Resident Trendies.
+
+>sewed
+
+>saltier
+
+>s
+
+>ask rut about elvira
+You hear nothing and imagine Elvira laughing at you.
+>ask rut about rut
+You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work.
+>ask rut about xyzzy
+You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work.
+>ask rut about curst palace
+You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work.
+
+>restful
+by one point
+
+>e
 
 >ask grailman about elvira
 "Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure."
@@ -1035,54 +1038,22 @@ Savager Ravages
 >ask grailman about curst palace
 "You can get there without getting by me, I bet!"
 
->ask inapt paint about elvira
-"I want to identify with me and not whatever nation she is promoting!"
->ask inapt paint about inapt paint
-He ignores your conversation
->ask inapt paint about xyzzy
-He ignores your conversation
->ask inapt paint about curst palace
-"You'll never get there!"
-
->listen
-Lars Eede mutters and moans
-
->sewed
-
->s
->e
-
->ask organised about elvira
-Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before.
->ask organised about organised
-The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
->ask organised about xyzzy
-The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
->ask organised about curst palace
-"You'll never get there!"
-
->grandiose
+>marginal
+by one point
 
 >n
-Ole Shrine Shoreline
+Artist Traits Strait
 
 >ask lot about elvira
 "Any one of us could do even better than her...Yorpwald is missing out..."
 >ask lot about lot
-They complain about something irrelevant to what you asked. Hostile!
+They complain about something irrelevant to what you asked, which makes you see red:
+Hostile!
 >ask lot about xyzzy
-They complain about something irrelevant to what you asked. Hostile!
+They complain about something irrelevant to what you asked, which makes you see red:
+Hostile!
 >ask lot about curst palace
-"You'll never get there!"
-
->ask lars about elvira
-"If it weren't for her I wouldn't have this job and costume. Which kind of stinks, but..."
->ask lars about lars
-He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
->ask lars about xyzzy
-He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
->ask lars about curst palace
-"You'll never get there!"
+"You'll never get close!"
 
 >w
 >gs
@@ -1090,26 +1061,20 @@ He seems to want to talk, really, and at the same time, he doesn't. He keeps mum
 >ask lois the hostile about elvira
 "I could do even better than her...Yorpwald is missing out..."
 >ask lois the hostile about lois the hostile
-She complains about something irrelevant to what you asked. Hostile!
+She complains about something irrelevant to what you asked, which makes you see red:
+Hostile!
 >ask lois the hostile about xyzzy
-She complains about something irrelevant to what you asked. Hostile!
+She complains about something irrelevant to what you asked, which makes you see red:
+Hostile!
 >ask lois the hostile about curst palace
-"You'll never get there!"
-
->ask elsa about elvira
-"If it weren't for her I wouldn't have this job and costume. Which kind of stinks, but..."
->ask elsa about elsa
-She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
->ask elsa about xyzzy
-She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
->ask elsa about curst palace
-"You'll never get there!"
+"You'll never get close!"
 
 >s
 >gs
 >n
 
 >holiest
+by one point
 
 >n
 Actionless Coastline
@@ -1117,50 +1082,51 @@ Actionless Coastline
 >ask atheists about elvira
 The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked.
 >ask atheists about atheists
-They start logic-bashing, when one of the junior atheists tries to make a point.
+/"(This eats\.\.\.|Set, it has,)"
+they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more.
 >ask atheists about xyzzy
 They start logic-bashing, when one of the junior atheists tries to make a point.
+The atheist turns red, wondering if they had a right to speak up.
 >ask atheists about curst palace
-"You'll never get there!"
+"You'll never get close!"
 
 >hastiest
+by one point
 
->ask smart kid about elvira
-"I don't get why other kids say she's so cool. Maybe I'm not cool enough to."
->ask smart kid about smart kid
-"I like gadgets and building things! I just need one more cool tool!"
->ask smart kid about xyzzy
+>ask agnostic about xyzzy
+Scot says "Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart."
+You need to pull Scot away from that book. Maybe make it less attractive.
+
+>grained
+by one point
+
+>ask agnostic about elvira
+"I don't get why other people say she's so cool. They say I'm too lazy to."
+>ask agnostic about agnostic
+"Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!"
+"IDK, kid."
+"Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you."
+>ask agnostic about xyzzy
 "Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!"
 "IDK, kid."
 "Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you."
 
->gifted
-
->ask smart kid about curst palace
-Dirk puts his hand to his face, then mumbles "Sorry, eleven letters is too much. Maybe something shorter."
+>ask agnostic about curst palace
+Scot puts his hand to his face, then mumbles "Sorry, eleven letters is too much. Maybe something shorter."
 
 >s
 >s
-
->ask arid den about nerd-aid
-"YES! NERD-AID!" booms some unseen response system in the arid den.
->ask dandier about elvira
-"WHETHER YOU LIKE OR HATE ELVIRA, NERD-AID TASTES GREAT!"
->ask dandier about dandier
-The automated response system you can't see keeps croaking "Nerd-Aid...Nerd-Aid..."
->ask dandier about xyzzy
-The automated response system you can't see keeps croaking "Nerd-Aid...Nerd-Aid..."
->ask dandier about curst palace
-If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace.
 
 >ask natives about elvira
-The natives mention she says everyone deserves their own place, unless they suck, which the natives don't.
+The natives mention she says everyone deserves their own place, unless they're lame, which the natives aren't.
 >ask natives about natives
-You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However
+You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However
+which makes you see red
 >ask natives about xyzzy
-You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However
+You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However
+which makes you see red
 >ask natives about curst palace
-"Why go there when you could live in the Badlands?"
+"Why go there when you could live in the Wildest Wilteds?"
 
 >ask bonker about elvira
 "She has increased bonker production by 1000%!"
@@ -1190,8 +1156,8 @@ You try to chat but feel like a, er, knob.
 >ask dr yow about bonker
 Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too.
 >ask dr yow about lake
-"My student will help you--there may be some risk. The carelessness of youth. You may be surprised what he can overlook."
->ask dr yow about kid
+"It's treacherous to get across the lake. I am too physically tired to make anything. I could use an apprentice. Maybe you. Or you can find me one."
+>ask dr yow about agnostic
 "It would be fun to tutor someone!"
 >ask dr yow about elvira
 Elvira probably had Dr. Yow put here, so you decide against asking.
@@ -1202,55 +1168,61 @@ Dr. Yow is too modest--and focused on his science--to bang on about previous ach
 >ask dr yow about curst palace
 Dr. Yow scrunches his head a bit, then shrugs. "Ouch. Eleven letters. Maybe if it was shorter. Unless you mean getting there...you'd need a craft to cross Leak Lake to the northeast."
 
->go to kid
+>go to agnostic
 
->ask dirk about elvira
-"I don't get why other kids say she's so cool. Maybe I'm not cool enough to."
->ask dirk about dirk
-"I like gadgets and building things! I just need one more cool tool!"
->ask dirk about xyzzy
+>ask agnostic about elvira
+"I don't get why other people say she's so cool. They say I'm too lazy to."
+>ask agnostic about agnostic
 "Boy! If only I had a tool to create a bot boat!"
->ask dirk about curst palace
-Dirk puts his hand to his face, then mumbles "Sorry, eleven letters is too much. Maybe something shorter."
->ask kid about bot boat
+>ask agnostic about xyzzy
+"Boy! If only I had a tool to create a bot boat!"
+>ask agnostic about curst palace
+Scot puts his hand to his face, then mumbles "Sorry, eleven letters is too much. Maybe something shorter."
+>ask agnostic about bot boat
 "Ooh, I'd like to make one. I just don't know enough, yet."
->ask kid about keycar
-That's out of the way.
->ask kid about atheists
-The kid doesn't want to be reminded, probably.
->ask kid about hostile-is-he lot
-The kid doesn't want to be reminded, probably.
->ask kid about lois the hostile
+>ask agnostic about keycar
+"Those things are annoying! But it'd be neat to know how they worked."
+>ask agnostic about atheists
+Scot doesn't want to be reminded, probably.
+>ask agnostic about hostile-is-he lot
+Scot doesn't want to be reminded, probably.
+>ask agnostic about lois the hostile
 "Wow! It woulda been too much to have anyone more snooping around."
->ask kid about settler
+>ask agnostic about settler
 "Wow! I'm real impressed with who built this! Whatever it is. I'd like to build something, too."
->ask kid about gizmo
+>ask agnostic about gizmo
 That isn't available.
->ask kid about duck
+>ask agnostic about duck
 "I'm not real big on biology. But I guess ducks are cute."
->ask kid about toaster
-You show the toaster to the kid, who's very interested, but he says he'd feel guilty taking it before actually helping you.
+>ask agnostic about toaster
+You think back to the toaster in Topside Deposit. It might be worth giving to Scot Agin, as a nice gift, if you ever leave.
+>purloin toaster
+>ask agnostic about toaster
+You show the toaster to Scot Agin, who's very interested, but he says he'd feel guilty taking it before actually helping you.
 
->ask kid about yow
+>ask agnostic about yow
 Obscurest
 
 >s
 >s
 >e
->rowdy
 >attentive
+by one point
+>rowdy
+by one point
 
 >go to copse
 >w
->put dagger in machine
+>revised
+>put dagger in deviser
 
->go to kid
->ask kid about gizmo
-Gee! Not as stone age...stage one...
+>go to agnostic
+>ask agnostic about gizmo
+"Gee! Not as stone age...stage one..."
 
 >undo
->give gizmo to kid
-Gee! Not as stone age...stage one...
+>give gizmo to agnostic
+"Gee! Not as stone age...stage one..."
 
 >robust
 >stabler
@@ -1268,22 +1240,47 @@ The serpent just hisses.
 
 >present
 
+>punier
+>antsier
+
 >w
->grey
+
+>ask sitter about x
+The Tetris Sitter has nothing to say. Her game is too important.
+
+>ask sitter about elvira
+"She drags us all down!"
+
+>ask sitter about crocus
+"Flowers? Oh, I don't know. They're nice, but ... they only help so much."
+
+>triste
 by one point
->ask yerg about elvira
-"I...I feel embarrassed ever supporting her!"
->ask yerg about yerg
-Ed Yerg mentions he needs something to cheer him up.
->ask yerg about xyzzy
-"Old clues, eh?" He colludes--babbles, spectacled, avuncular, a polite ole tip about the palace. Make it
->ask yerg about curst palace
+
+>ask sitter about x
+St. Teri looks at your top opt pot wistfully.
+
+>ask sitter about crocus
+Just give her the crocus.
+
+>give pot to sitter
+by one point
+
+>ask sitter about crocus
+Don't push-poll her about your generosity.
+
+>ask sitter about elvira
+"I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need!"
+>ask sitter about sitter
+St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace.
+>ask sitter about xyzzy
+"Old clues, eh?" She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it
+He-he. Eh? "No closure, counselor," you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head.
+>ask sitter about curst palace
 "It can be something super special.
->ask ed yerg about crocus
-"I haven't enjoyed flowers for a long time."
->ask ed yerg about flowerpot
-"From Daltho, eh? Very nice."
->ask ed yerg about old hat daltho
+>ask sitter about flowerpot
+"From Renato, eh? Very nice."
+>ask sitter about renato
 "Thank you for passing his wonderful gift on to me."
 
 >spectacular
@@ -1291,11 +1288,11 @@ Ed Yerg mentions he needs something to cheer him up.
 
 >out
 >spectacular
-
 Strip of Profits
 
 * _otters
 
+>au 2
 >seed 1
 >otters
 >in
@@ -1305,9 +1302,7 @@ Your score has just gone up by one point
 >ask ed riley about elvira
 "She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be."
 >ask ed riley about ed riley
-Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively.
->ask ed riley about ed riley
-You don't need another verbal smackdown, at least not in Ed's current tone of voice.
+"I'd ... LEERY!" Ed booms, puffing himself up a bit.
 >ask ed riley about xyzzy
 "Stay there in the rye, idle! Yielder!" he booms, and then he bangs on about not trying to sing or attack him. Be nice to quiet him down, somehow.
 
@@ -1317,32 +1312,27 @@ Your score has just gone up by one point
 >get cinders
 
 >w
-Gent-Fora Frontage
+Disowned Downside
 
->discern macks
->posf
->score
-
->ask macks about elvira
-"She would be too good for us. She deserves to have time by herself in the bulwark to the east."
->ask macks about macks
+>ask players about elvira
+"She is too good even for us. She deserves to have time by herself in the Edictal Citadel to the west."
+>ask players about players
 Their opinion would be slightly biased. You can probably learn more about them by observing them.
->ask macks about xyzzy
+>ask players about xyzzy
 "Talking's stalking," they yell at you before continuing to hit on Gretta.
 
->au -1
-
+>sparely
+Your score has just gone up by one point.
+>really
+Your score has just gone up by one point.
 >bossily
-Your score has just gone up by one point.
->nastily
-Your score has just gone up by one point.
->blearily
 Your score has just gone up by one point.
 
 >ask gretta about elvira
 She's heard enough rambling conversation on others' terms, here.
 
 >1
+>3
 >3
 
 >n
@@ -1372,11 +1362,11 @@ Your score has just gone up by one point
 >ask mr lee about elvira
 "She must be defeated. If you are not with her, show me a sign."
 >ask mr lee about mr lee
-You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed, though you wonder if you need a double-charge after talking to the eels.
+You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless, though you wonder if you need a double-charge after talking to the eels.
 >although
 >ask mr lee about elvira
 "She must be defeated. You might be that person. Just one more sign."
->however
+>ergo
 >ask mr lee about elvira
 "She must be defeated. You must be the one to lead us."
 >ask mr lee about xyzzy
@@ -1396,11 +1386,11 @@ It could talk circles around you as-is. So talking may not be the way to get pas
 
 >enragedly
 Your score has just gone up by one point
->angrily
+>remotely
 Your score has just gone up by one point
 
 >n
-Wickeder Wire Deck
+Lamer Realm
 
 >slow
 Your score has just gone up by one point
@@ -1438,11 +1428,11 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >s
-Tapering Inert Gap
->s
->s
+Shiner Shrine
 
-Rote Moan Anteroom
+>s
+>s
+Clarthead Cathedral
 
 >ask whiners about elvira
 They bang on about how Elvira would be furious if they let someone see the animals to the south.
@@ -1453,7 +1443,7 @@ Rational conversation won't make the whiners budge. You probably need to make th
 
 >loathingly
 Your score has just gone up by one point
->tersely
+>joltily
 Your score has just gone up by one point
 
 >s
@@ -1496,8 +1486,6 @@ The racoon skitters around.
 The racoon skitters around.
 
 >n
-Near-Moot Anteroom
-
 >n
 >w
 >w
@@ -1531,12 +1519,10 @@ Your score has just gone up by one point
 >w
 WTF FTW
 
->1
->8
->8
->8
+>au 2
 
->au -1
+>1
+>7
 
 >ask elvira about elvira
 She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!
@@ -1557,11 +1543,9 @@ She sniffs haughtily. As if you have to ask! As if you're NOT too biased to beli
 >ask elvira about ed riley
 "I didn't expect much from him."
 >ask elvira about whiners
-You explain you got past them, and she shrugs. Henchmen these days. That's why they're henchmen and not leaders.
+You explain you got past the shrewin' whiners, and she shrugs. Henchmen these days. That's why they're henchmen and not leaders.
 >ask elvira about sly imp
-You explain you got past it, and she shrugs. Henchmen these days. That's why they're henchmen and not leaders.
-
->play whistle
+You explain you got past the simply sly imp, and she shrugs. Henchmen these days. That's why they're henchmen and not leaders.
 
 * _others
 
@@ -1570,9 +1554,9 @@ You explain you got past it, and she shrugs. Henchmen these days. That's why the
 >x stand
 
 >ask curtis about rampage note
-"None of your business."
+"What note? You can't pin that on me."
 >ask curtis about mopeage rant
-"None of your business."
+"What note? You can't pin that on me."
 >ask curtis about art erd
 Curtis breathes deeply and gives a look of contempt and shakes his head. Curtis probably doesn't want to know if any fruit came from him.
 >ask curtis about len
@@ -1580,37 +1564,37 @@ Curtis breathes deeply and gives a look of contempt and shakes his head. Curtis 
 >ask curtis about elvira
 "She was terrible for business and innovation. Things are picking up again now, though."
 >ask curtis about curtis
-"Just trying to rustle up fruit and biotech business. Need to be growing more than iPrunes or those discussing yorpberries."
+"The more fruits, the better, for my biotech business. Unfortunately, those disgusting yorpberries Elvira made folks plant elsewhere aren't good for much."
 >ask curtis about xyzzy
 "Ehh?" says Curtis. "I don't have time for small talk. More fruit, more fruit."
-
->maraschino
-Your score has just gone up by one point.
->grapes
-Your score has just gone up by one point.
->cranberries
-Your score has just gone up by one point.
->tamarind
-Your score has just gone up by one point.
-
->compass
-Your score has just gone up by one point.
 
 >plums
 Your score has just gone up by one point.
 >pears
 Your score has just gone up by one point.
+>grapes
+Your score has just gone up by one point.
+>limes
+Your score has just gone up by one point.
+
+>compass
+Your score has just gone up by one point.
+
+>x ruts
+
+>dates
+Your score has just gone up by one point.
+>maraschino
+Your score has just gone up by one point.
+>tamarind
+Your score has just gone up by one point.
 >blueberries
 Your score has just gone up by one point.
 >pomegranate
 Your score has just gone up by one point.
-Take on a token
-
 >cantaloupe
 Your score has just gone up by one point.
 >persimmon
-Your score has just gone up by one point.
->limes
 Your score has just gone up by one point.
 
 >n
@@ -1625,40 +1609,42 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 >coconuts
 Your score has just gone up by one point.
-
->s
->icons
-Your score has just gone up by one point.
->sonic
-Your score has just gone up by one point.
-
->n
 >tangerines
 Your score has just gone up by one point.
 
+>w
+Filed Field
+>strawberries
+Your score has just gone up by one point.
+>pineapple
+Your score has just gone up by one point.
+>breadfruit
+Your score has just gone up by one point.
+>grapefruit
+Your score has just gone up by one point.
+
+>e
+>s
+>icons
+Your score has just gone up by one point.
+
+>n
 >e
 
 >ask len craig about curtis
-"Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't..."
+"Nice fella, interesting ideas about agriculture, but kinda bossy. Just sits looking for someone to do his dirty work for him. You don't..."
 >ask len craig about tekno-token
-He inspects the token and says it's valid.
+Len inspects the token and assures you it's valid.
 >ask len craig about art erd
 Len snorts and shakes his head. "What a weasel."
 >ask len about elvira
 "Less said, the better."
 >ask len about len
-"I'm a businessman. A trader. Lots of stuff if you know how to haggle."
+"I'm a businessman. A trader. All kinds of goods to swap. Let's haggle."
 >ask len about xyzzy
 Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general.
 >ask len about xyzzy
 Len's eyes glaze over a bit. Nothing personal, just business
-
->among
-Your score has just gone up by one point.
->papayas
-Your score has just gone up by one point.
->solemn
-Your score has just gone up by one point.
 
 >w
 >s
@@ -1671,10 +1657,15 @@ a droll dollar
 >ask tera about elvira
 "She wasn't as bad as she was smeared to be!"
 >ask tera about tera
-She mumbles "er, drat" and something about how money is very, very nice.
-
+"Traded a dead rat..." she mumbles.
 >ask tera about xyzzy
-Dr. Tera shrugs, then does the "let's swap" hand gesture. Hmm, what could you give her to get that so-great storage?
+She mumbles "er, drat" and then something about how money is very, very nice.
+>ask tera about curtis
+"There's people with silly science ideas like him. Pfft. Then there's REAL high-powered businessfolk like ME."
+>ask tera about great storage
+"It's very valuable! I could maybe part with it for the right price, though."
+>ask tera about len craig
+"Nicely? Len? Icy!" she mutters. "Cut Len's cluster..."
 
 >u
 >gs
@@ -1686,16 +1677,26 @@ Dr. Tera shrugs, then does the "let's swap" hand gesture. Hmm, what could you gi
 >ask art about art
 "Traded a dead rat..." he mumbles.
 >ask art about xyzzy
-Art Erd shrugs, then does the "let's swap" hand gesture. Hmm, what could you give him to get that so-great storage?
+He mumbles "er, drat" and then something about how money is very, very nice.
 >ask art erd about curtis
-"There's people with silly science ideas like him, then there's businessmen like ME. Pfft."
->ask art erd about storage box
-"It's...umm...worth something.."
+"There's people with silly science ideas like him. Pfft. Then there's REAL high-powered businessfolk like ME."
+>ask art erd about great storage
+"It's very valuable! I could maybe part with it for the right price, though."
 >ask art erd about len craig
 "Nicely? Len? Icy!" he mutters. "Cut Len's cluster..."
 
 >give dollar to trader
+
+>ask dr severe about xyzzy
+Shockingly, Reserved Deserver Dr. Severe has very little to say.
+>ask dr severe about storage
+Shockingly, Reserved Deserver Dr. Severe has very little to say.
+
+>sonic
+Your score has just gone up by one point.
+
 >put icons in slot
+
 >u
 >n
 
@@ -1713,74 +1714,26 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* current_focus
-#>{include} _only-manor
+* targeted_testing_comment_uncomment_as_needed
+
+#uncomment this is doing partial tests
+>ts
+
+#>{include} _only-ordeal-reload
+#>{include} _only-stores
 #>{include} _only-routes
 #>{include} _only-troves
-#>{include} _only-presto
+>{include} _only-presto
+#>{include} _only-oyster
 #>{include} _only-towers
 #>{include} _only-otters
-#>undo
 #>{include} _only-others
-#>undo
-#>{include} _only-oyster
 
-* big-go
+* _only-ordeal-reload
 
->au 1
+>{include} _ordeal-reload
 
->{include} _manor
->{include} _stores
-
->gonear trips strip
->enter routes
-Same Mesa
->{include} _routes
-
->enter troves
-Loather Rathole
->{include} _troves
-
->enter spot
-Grey Gyre
->{include} _presto
-
->enter oyster
-Posh Hops Shop
->{include} _oyster
-
->enter towers
-Loftier Trefoil
->{include} _towers
-
->enter otters
-Bleary Barley
->in
->{include} _otters
-
->rove over
->others
-Your score has just gone up
->enter hoster
-Rustic Citrus
->{include} _others
-
-* _summarize
-
->purloin passport
->gonear gates stage
->research
->review
->n
->missed
->undo
->undo
-
-* _only-manor
-
->{include} _manor
-
-* only-stores
+* _only-stores
 
 >gonear strip
 >{include} _stores
@@ -1789,41 +1742,35 @@ Rustic Citrus
 
 >gonear same mesa
 >{include} _routes
->{include} _summarize
 
 * _only-troves
 
 >gonear rathole
 >{include} _troves
->{include} _summarize
 
 * _only-presto
 
 >purloin settler
 >gonear gyre
 >{include} _presto
->{include} _summarize
 
-* only-oyster
+* _only-oyster
 
 >purloin settler
 >gonear posh hops shop
 >{include} _oyster
->{include} _summarize
 
 * _only-towers
 
 >seed 1
->gonear trefoil
+>gonear loftier trefoil
 >{include} _towers
->{include} _summarize
 
 * _only-otters
 
 >seed 1
->gonear barley
+>gonear minded midden
 >{include} _otters
->{include} _summarize
 
 * _only-others
 
