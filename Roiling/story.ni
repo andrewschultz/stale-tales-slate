@@ -19099,7 +19099,7 @@ after choosing notable locale objects when player is in Perverse Preserve (this 
 		set the locale priority of X to 5;
 	continue the action;
 
-section parrot (and back to raptor)
+section parrot
 
 the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "The parrot you changed from a raptor [if player is in Reclusion Inclosure]glares from the corner here at Elmer and Merle, like it could really damage them if they were big enough[else]flutters about here[end if].". the parrot wears the weltish whistle.
 
@@ -19108,6 +19108,12 @@ a-text of raptor is "RYRRYR". b-text of raptor is "RGRRGR". parse-text of raptor
 a-text of parrot is "RYRRYR". b-text of parrot is "RGRRGR". parse-text of parrot is "R[sp]A[sp]x[sp]x[sp]O[sp]R".
 
 raptor-trap is a truth state that varies. raptor-trap is false.
+
+section parrot-flees
+
+[this is a bogus item -- it is simply something to flip to that can't be the parrot, as the raptor already flips to the parrot!]
+
+the parrot-flees is a thing. description is "BUG."
 
 book Reclusion Inclosure
 

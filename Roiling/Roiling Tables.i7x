@@ -1466,7 +1466,7 @@ Cut Ya All Cult Laya	Cut Ya All Cult Laya	false	461583976	--	"actually"	"actuall
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]As you contemplate a new name for the Reclusion Inclosure, you realize that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	parrot-flees	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]As you contemplate a new name for the Reclusion Inclosure, you realize that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	post-perverse-preserve-flip rule	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	post-perverse-preserve-flip rule	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	post-perverse-preserve-flip rule	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -1635,7 +1635,6 @@ this is the post-parrot-raptor rule:
 	if holy nest is not moot, poss-d;
 	moot aside-llp;
 	moot holy nest;
-	reg-inc;
 
 this is the post-perverse-preserve-flip rule:
 	increment nounsolve;
@@ -1753,6 +1752,7 @@ after fliptoing a pickup-line (this is the weaken-players rule): [ i don't want 
 	continue the action;
 
 to de-inhib:
+	pad-del "powers";
 	now power-back is true;
 	if atmo moat is prefigured:
 		say "[line break]You feel strong enough to tackle the moat, now";
