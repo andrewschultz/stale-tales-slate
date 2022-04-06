@@ -3876,10 +3876,12 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is yapper;
 				continue the action;
 			say "The settler goes crazy when pointed at the dialer.";
-			if dialer is reflexive:
-				now noun is dialer;
-			else:
+			if bogus-redial is touchable:
 				now noun is bogus-redial;
+			else if bogus-derail is touchable:
+				now noun is bogus-derail;
+			else if pins are touchable:
+				now noun is pins;
 			continue the action;
 	else if mrlp is towers:
 		if player is in Rawest Waters:
@@ -4685,10 +4687,10 @@ to decide which thing is oyster-item:
 		if thin hint is touchable, decide on thin hint;
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
-		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
+		if yapper is touchable, decide on yapper;
+		if bogus-derail is touchable, decide on bogus-derail;
 		if pins are touchable, decide on pins;
-		if pins are moot, decide on bogus-redial;
-		decide on dialer;
+		if bogus-redial is touchable, decide on bogus-redial;
 	decide on the player;
 
 this is the oyster-hinting rule:
@@ -8762,7 +8764,7 @@ skis	oyster	"You can [b]KISS[r] the skis [now-if-dealt of bogus-trace] you are l
 span pans	oyster	"You can [b]SNAP[r] to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
 ruby	oyster	"You need to figure how and where to [b]BURY[r] the ruby."
 ol trap	oyster	"You can [b]PATROL[r] to disable the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
-dialer	oyster	"You can use the dialer to [b]DERAIL[r] [now-if-dealt of papery yapper] the papery yapper is gone."
+bogus-derail	oyster	"You can use the dialer to [b]DERAIL[r] [now-if-dealt of papery yapper] the papery yapper is gone."
 bogus-redial	oyster	"You can [b]REDIAL[r] the dialer [now-if-dealt of pins] the pins are not in your way."
 lance	oyster	"You'll want to [b]CLEAN[r] the lance [now-once of whether or not player has wipes] you have something to wash it with."
 templar ramplet	oyster	"You can [b]TRAMPLE[r] the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
@@ -15065,35 +15067,44 @@ Include (-
 
 check taking intercom: say "You'd probably get a nasty shock and set off an alarm." instead;
 
-the jumble is a boring thing. it is part of the dialer. description of jumble is "[if dialer is reflexive][b]DIALER[r][else][b]DERAIL[r][end if] seems to indicate its current task.". bore-text is "The lettering jumble looks like it can be shifted around to things you can do."
+the jumble is a boring thing. it is part of the dialer. description of jumble is "[if bogus-derail is touchable][b]DIALER[r][else][b]DERAIL[r][end if] seems to indicate its current task.". bore-text is "The lettering jumble looks like it can be shifted around to things you can do."
 
 check scaning jumble: try scaning dialer instead;
 
-check scaning dialer: if dialer is reflexed, try scaning bogus-redial instead;
-
 chapter dialer
 
-the dialer is reflexive scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive][b]DIALER[r][else][b]DERAIL[r][end if]. [if pins are reflexive and pins are touchable]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
+the dialer is boring scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if bogus-derail is touchable][b]DIALER[r][else][b]DERAIL[r][end if]. [if pins are reflexive and pins are touchable]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print.". bore-text of dialer is "There's probably something unusual to do with the dialer. It looks versatile."
 
 to say shift-dialer:
-	if dialer is reflexed, say " again"
+	if bogus-derail is moot, say " again"
 
 Include (-
 	has transparent talkable
 -) when defining dialer.
 
-a-text of dialer is "RYRYYR". b-text of dialer is "[if dialer is reflexive]PYRYYR[else]RYRYYR[end if]". parse-text of dialer is "[if dialer is reflexive]D[sp]-[sp]x[sp]-[sp]-[sp]x[else]x[sp]E[sp]x[sp]-[sp]-[sp]L[end if]".
-
-[
-a-text of dialer1 is "RYRYYR". b-text of dialer1 is "PYRYYR". parse-text of dialer1 is "D[sp]-[sp]x[sp]-[sp]-[sp]x".
-
-]
-
 check taking dialer: try attacking dialer instead;
+
+check scaning dialer:
+	if bogus-derail is touchable, try scaning bogus-derail instead;
+	if bogus-redial is touchable, try scaning bogus-redial instead;
+	if pins are touchable, try scaning pins instead;
+	say "Nothing up with the dialer at the moment. There should be later, but not now." instead;
+
+check objhinting dialer:
+	if papery yapper is touchable, say "You need to get the papery yapper out of the way before dealing with the dialer.";
+	if bogus-derail is touchable, try objhinting bogus-derail instead;
+	if pins are touchable, try objhinting pins instead;
+	if bogus-redial is touchable, try objhinting bogus-redial instead;
+
+section derailing
+
+the bogus-derail is privately-named vanishing scenery in Tenfold Teflond Den Loft. bogus-derail is undesc. printed name of bogus-derail is "dialer".
+
+a-text of bogus-derail is "RYRYYR". b-text of bogus-derail is "PYRYYR". parse-text of bogus-derail is "D[sp]-[sp]R[sp]-[sp]-[sp]L".
 
 section redialing
 
-the bogus-redial is privately-named unscannable reflexive scenery. bogus-redial is undesc. printed name of bogus-redial is "repaired dialer".
+the bogus-redial is privately-named vanishing scenery. bogus-redial is undesc. printed name of bogus-redial is "repaired dialer".
 
 a-text of bogus-redial is "RYRYYR". b-text of bogus-redial is "RYRYYR". parse-text of bogus-redial is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
