@@ -1237,7 +1237,9 @@ to say full-monty of (myobj - a thing):
 	if qnf is true:
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
-		if extra-taxer-warn is false, say ".[paragraph break]You can also disable clues for ambiguous/question mark settler-cheat readings with [b]TAXER[r] or [b]TAX ER[r]. You can recover them with [b]EXTRA[r]";
+		if extra-taxer-warn is false:
+			say ".[paragraph break]You can also disable clues for ambiguous/question mark settler-cheat readings with [b]TAXER[r] or [b]TAX ER[r]. You can recover them with [b]EXTRA[r]";
+			now extra-taxer-warn is true;
 	now settler-space-warned is sw;
 	now questions-not-flagged is qnf;
 
@@ -7044,7 +7046,7 @@ understand "extra" as extraing.
 
 carry out extraing:
 	now extra-taxer-warn is true;
-	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is false]already[else]now[end if] on.";
+	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is false]already[else]now[end if] on. Change it back with [b]TAX ER[r] or [b]TAXER[r].";
 	now taxer-not-extra is false;
 	the rule succeeds.
 
@@ -7053,12 +7055,14 @@ chapter taxering
 taxering is an action out of world.
 
 understand the command "taxer" as something new.
+understand the command "tax er" as something new.
 
 understand "taxer" as taxering.
+understand "tax er" as taxering.
 
 carry out taxering:
 	now extra-taxer-warn is true;
-	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is true]already[else]now[end if] off.";
+	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is true]already[else]now[end if] off. Change it back with [b]EXTRA[r].";
 	now taxer-not-extra is true;
 	the rule succeeds.
 
