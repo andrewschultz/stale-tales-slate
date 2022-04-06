@@ -243,11 +243,9 @@ to reset-regions:
 		now the item-list of r entry is {};
 		now the worn-list of r entry is {};
 
-section reg-inc
-
 ignore-line-break is a truth state that varies.
 
-this is the post-score-check rule: the rule succeeds;
+to score-notify: do nothing;
 
 book inform 6 stubs
 
@@ -761,7 +759,7 @@ this is the first-time-hint-check rule:
 	if first-hint-check is true, continue the action;
 	now first-hint-check is true;
 	say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
-	if player regex-prompt-consents:
+	if player dir-consents:
 		say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
 		continue the action;
 	else:
@@ -1092,7 +1090,7 @@ understand "help off" and "info off" and "hint off" and "hints off" as helpoffin
 carry out helpoffing:
 	if hintsoff is true, say "Hints are already disabled." instead;
 	say "This will shut off hints for the remainder of the play session. You will need to restart to see them again. Are you sure?";
-	if the player regex-prompt-consents:
+	if the player dir-consents:
 		say "Done.";
 		now hintsoff is true;
 	else:
@@ -2553,7 +2551,7 @@ carry out retrying:
 		if red bull burdell is in Potshot Hotspot, say "No wimping out now. You can do it!" instead;
 		if red bull burdell is moot, say "You've disposed of Red Bull Burdell[if number of solved regions < 4], so if you want to explore another region, you'll need to restart the game[end if]." instead;
 		say "You don't really need to[if number of solved regions is 4]. In fact, you have nowhere else to go[else], though there's one more region to solve[end if]. Are you sure?";
-		if the player regex-prompt-consents:
+		if the player dir-consents:
 			do nothing;
 		else:
 			say "Okay, back to the endgame." instead;
@@ -3806,7 +3804,7 @@ check taking the show hows tag:
 	say "If it were a mattress tag, you'd laugh and pull it off, but everything's gotten a bit weird. You don't know about the warranty on it, but the tag seems pretty important. It's made of some weird plastic you can't just rip[one of].[paragraph break]Plus, embarrassingly, you've no clue how to undo the knot tying the tag to the handle--and you're not strong enough to pull the tag off[or][stopping].";
 	if player does not have the gadget:
 		say "[line break]By the way, it seems you don't even have the gadget. Did you mean to take the tagged gadget instead?";
-		if the player regex-prompt-consents:
+		if the player dir-consents:
 			say "Ok, taking the gadget.";
 			try taking the gadget instead;
 		else:
@@ -4183,11 +4181,11 @@ carry out xmxing:
 		if xray-cheat is true:
 			say "BYPASSING FOR TESTING."; [bold-ok]
 		else:
-			unless the player regex-prompt-consents:
+			unless the player dir-consents:
 				say "Ok." instead;
 	if noun is static:
 		say "[if gateman is touchable]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
-		unless the player regex-prompt-consents:
+		unless the player dir-consents:
 			say "Okay." instead;
 		say "[v-b]the static seems to form attics near the doll house[if gateman is touchable]. Nat Egam makes a dubious noise[end if].";
 		ditch-saltine instead;
@@ -4587,7 +4585,7 @@ to say ment-not-phys: say "Your extreme powers are mental, not physical".
 
 to say sto-desc:
 	say "There are 26 of them. Would you like a general overview?";
-	if the player regex-prompt-consents:
+	if the player dir-consents:
 		say "[store-overview]";
 		the rule succeeds;
 	else:
@@ -4974,7 +4972,7 @@ to say sortie-have:
 
 section metros portal
 
-the trade tread is a portal. go-region of trade tread is Metros. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to [b]ENTER[r] or [b]FOLLOW[r] it, now that you've revealed it.". solved-text of trade tread is "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you.". entry-rule of trade tread is metros-entry rule.
+the trade tread is a portal. go-region of trade tread is Metros. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see the metros where the trade tread ends, but you probably want to [b]ENTER[r] or [b]FOLLOW[r] it, now that you've revealed it.". solved-text of trade tread is "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you.". entry-rule of trade tread is metros-entry rule.
 
 understand "metros" as trade tread when trade tread is touchable.
 
@@ -7952,7 +7950,7 @@ report going west in Fo Real Florae when violets is false:
 		now violets is true;
 	continue the action;
 
-check going east in Fo Real Florae: say "[one of]'Back rooms? Smack boor!' you imagine the faeries saying[or]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]That's where all the magic happens. It'll happen to you if you get nosy[at random]." instead;
+check going east in Fo Real Florae: say "[one of]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]'Back rooms? Smack boor!' you imagine the faeries saying[or]That's where all the magic happens. It'll happen to you if you get nosy[cycling]." instead;
 
 chapter freesia faeries
 
@@ -9072,7 +9070,7 @@ check going outside in Means Manse: say "You just want to get settled into the M
 
 check scaning X ITES exits: try scaning the location instead;
 
-the X ITES exits are flippable plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do.". understand "xites" and "xites exits" as X ITES exits when player is in Means Manse.
+the X ITES exits are flippable plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do.". understand "xites" and "xites exits" as X ITES exits when player is in Means Manse. printed name of X ITES exits is "X-ITES exits".
 
 the marble is amusing scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
 
@@ -9317,7 +9315,6 @@ after reading a command:
 		if the player's command matches the regular expression "\.":
 			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. This is fixed in later versions of Inform, but moving ahead proved too sticky. Sorry. That said, normal commands will work okay.[wfak]";
 			now period-warned is true;
-	remove stray punctuation;
 	let XX be indexed text;
 	let XX be the player's command in lower case;
 	change the text of the player's command to XX;
@@ -9879,7 +9876,7 @@ protest	kilns	"'If we were artsy, we'd use [']em. But we're not. Take some magic
 
 to say tip-dialogue:
 	say "'Well, one of rectify or certify is overall better than the other. Would you like to know which[one of][or], again[stopping]?'";
-	if the player regex-prompt-consents:
+	if the player dir-consents:
 		say "[line break]'Without getting too mathy, you can expect one of the letters to [b]CERTIFY[r] correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. [b]RECTIFY[r], you're always guaranteed the first and last right. So it's a bit more help if you [b]SECURE[r] later. But how much challenge you want is up to you. Either can work with any red writing you might see.'";
 		pad-rec-lump "certify";
 		pad-rec "rectify";
@@ -10141,7 +10138,7 @@ book gotoing
 check gotoing (this is the general goto check rule):
 	if noun is Trips Strip and Trips Strip is visited:
 		say "You may mean to [b]RETRY[r] instead. Do so?";
-		if the player regex-prompt-consents, try retrying instead;
+		if the player dir-consents, try retrying instead;
 	if map region of noun is not mrlp:
 		if map region of noun is solved, say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
@@ -10264,7 +10261,7 @@ before cutting:
 
 to ask-to-cut:
 	say "You could cut the tag off the gadget with that, but this might break the gadget. Are you sure?";
-	if the player regex-prompt-consents:
+	if the player dir-consents:
 		now printed name of tagged gadget is "a gadget";
 		now tagged gadget is broken;
 		say "With a sad BOOOOP, the gadget shuts down. The tag flutters off. Hooray for adding to the challenge!";
@@ -10648,9 +10645,10 @@ book final question options (see what missed)
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule		final response activity
 "see what you may've [b]MISSED[r] point-wise"	true	"missed"	show what the player missed rule	--
-"see ALTernate mutually exclusive ways through"	true	"alt"	show alternate paths rule	--
+"see [b]ALT[r]ernate mutually exclusive ways through"	true	"alt/alts"	show alternate paths rule	--
 
 this is the show alternate paths rule:
+	say "Here are alternate paths through [if number of not solved regions is 0]all the regions[else]the regions you solved[end if].";
 	repeat with zq running through solved regions:
 		process the altrule of zq;
 
@@ -10682,7 +10680,7 @@ table of tulip-acq
 sol	chosen
 "[b]ASK NERDS ABOUT DARKNESS[r]"	false
 "[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"	false
-"[b]SHOW EMITTER TO DEADBEAT[r] after using it the Bastion, then using it again in the Esoteric Coteries"	false
+"[b]SHOW EMITTER TO DEADBEAT[r] after using it in [bastion], then using it again in the Esoteric Coteries"	false
 
 chapter missed rules
 
@@ -10691,8 +10689,6 @@ to say 2dn: say "[unless sr-acc is true]--[end if]"
 to show-miss (myreg - a region) and (ts - a truth state):
 	now miss-room is adorb bardo;
 	if ts is true and myreg is not solved, continue the action;
-	if cur-score of myreg is max-score of myreg:
-		unless myreg is metros or myreg is resort, continue the action;
 	now anything-missed is false;
 	process the misses-rule of myreg;
 
@@ -10701,8 +10697,8 @@ this is the ordeal-loader-misses rule:
 	if bugle is off-stage, say "[2drm of Rested Desert]you could've changed the bulge into a [b]BUGLE[r].";
 	if toga is not moot, say "[2drm of Thickest Thickets]you could've changed the toga into a [b]GOAT[r].";
 	if reed is not moot, say "[2drm of Thickest Thickets]you could've changed the reed into a [b]DEER[r].";
-	if sent nets are not moot, say "[2drm of Thickest Thickets]you could've changed the sent nets to a [b]NEST[r].";
-	if attics are off-stage, say "[2drm of Notices Section]the static was changeable to [b]ATTICS[r].";
+	if sent nets are not moot, say "[2drm of Thickest Thickets]you could've changed the sent nets into a [b]NEST[r].";
+	if attics are off-stage, say "[2drm of Notices Section]you could've changed the static into [b]ATTICS[r].";
 
 this is the stores-misses rule:
 	if store b is in Trips Strip, say "[2drm of Trips Strip]store B had some food for you. [b]SORBET[r].";
@@ -10712,7 +10708,7 @@ this is the stores-misses rule:
 	if cabinet is in Trips Strip, say "[2drm of Trips Strip]the cabinet, once it followed you, could've been cured a bit with [b]BACTINE[r].";
 
 this is the forest-misses rule:
-	if slit is in Self ID Fields, say "[2drm of Self ID Fields]the slit could've been turned to [b]SILT[r].";
+	if slit is in Self ID Fields, say "[2drm of Self ID Fields]the slit on [crosse] could've been turned to [b]SILT[r].";
 	if banshee is not moot, say "[2drm of Emptiness Sepiments]the banshee could've become a [b]HASBEEN[r] (space or not).";
 
 this is the sortie-misses rule:
@@ -10745,7 +10741,7 @@ this is the forest-alt rule:
 	now guider-dir is false;
 
 this is the metros-alt rule:
-	say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose from [florae] (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.";
+	say "[line break]While the other regions are linear, the Metros has five paths based on the flowers you choose from [florae] (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.";
 	say "You could have gotten the [if begonias are not moot]begonias[else]heaths[end if] from [florae].";
 	say "[2dn]the other ways to get the tulip are to [alt-sols].";
 

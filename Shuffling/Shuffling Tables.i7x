@@ -557,6 +557,7 @@ sent nets	"The sent nets rustle slightly."
 nametag	"The nametag peels infinitesimally."
 static	"You [if attics are moot]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
 attics	"Hm, you can't think of anything to do with the attics but change them back."
+acne bit cabinet	"The cabinet wobbles a bit."
 
 table of stores spechelp
 xtrhelp	helptxt
@@ -565,7 +566,7 @@ Store F	"That seemed right but didn't seem quite natural."
 Store I	"Store I shakes a bit. 'RISE TO...' you think, as you see red. Rise to what?" [bold-ok]
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
-acne bit cabinet	"The cabinet wobbles a bit."
+acne bit cabinet [cabinet moves between regions]	"The cabinet wobbles a bit."
 
 table of forest spechelp
 xtrhelp	helptxt

@@ -975,7 +975,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "tshirt"	470092950	red bull burdell	--	"[tshirt-no]."
 "shirt"	366982932	red bull burdell	--	"[tshirt-no]."
 
-to say cant-change-me: say "Burdell's laugh echoes. 'You think you can change ME?!'" [bold-ok]
+to say cant-change-bull: say "Burdell's laugh echoes. 'You think you can change ME?!'" [bold-ok]
 
 to say no-hotspot:
 	if red bull burdell is moot:
@@ -1011,7 +1011,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "spire"	435862683	--	--	"[ennui]."
 "toaster"	592164309	--	--	"[ennui]."
 
-to say ennui: say "You don't even want to TRY any more anagrams. You just want to downtime...contemplate the [b]EXITS[r], but not actually take any of them";
+to say ennui: say "No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits";
 
 book general
 
