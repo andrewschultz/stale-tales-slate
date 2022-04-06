@@ -303,6 +303,14 @@ gotothinging is an action applying to one visible thing.
 
 does the player mean gotothinging a thing carried by the player: it is unlikely.
 does the player mean gotothinging a thing in location of the player: it is unlikely.
+does the player mean gotothinging a sameregion thing: it is likely.
+
+definition: a thing (called th) is sameregion:
+	if th is a backdrop, no;
+	if th is off-stage, no;
+	if th is touchable, no;
+	if mrlp is map region of location of th, yes;
+	no;
 
 understand "go to [any thing-goable thing]" as gotothinging.
 understand "goto [any thing-goable thing]" as gotothinging.
@@ -310,14 +318,14 @@ understand "gt [any thing-goable thing]" as gotothinging.
 understand "gi [any thing-goable thing]" as gotothinging.
 understand "go [any thing-goable thing]" as gotothinging.
 
-definition: a thing (called th) is thing-goable:
-	if th is in Emerita Emirate, no;
+definition: a thing (called th) is thing-goable: [note: this is trivially defined now, as if something is in an unvisitable room, "carry out gotoing" rejects it]
 	if th is off-stage, no;
-	if th is not a backdrop and location of th is unvisited, yes;
 	yes;
 
 carry out gotothinging:
 	if noun is a backdrop, say "Unfortunately, since [the noun] can be seen from or in more than one place, I can't go there." instead;
+	if location of noun is Adorb Bardo, say "Since [the noun] is sort of in an in-between state, I can't go to it. But you can probably recall it." instead;
+	if location of noun is Emerita Emirate, say "You don't need to do anything further with [the noun]. If you want to go where you last saw [the noun], you'll need to specify the place." instead;
 	d "Going to [location of noun], where [the noun] is.";
 	try gotoing location of noun instead;
 
