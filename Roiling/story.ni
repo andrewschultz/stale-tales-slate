@@ -7296,6 +7296,9 @@ carry out fliptoing (this is the main fliptoing rule):
 				moot the-from entry;
 			if taked entry is true or player has the-from entry:
 				if the-from entry is not ruby and the-from entry is not medals, now player has the-to entry; [else medals go from worn to carried]
+			if there is a post-rule entry:
+				d "Processing [post-rule entry].";
+				process the post-rule entry;
 			if there is a roomjump entry:
 				if roomjump entry is Strip of Profits and player is not in Cruelest Lectures:
 					solve-region the map region of the location of the player;
@@ -7303,7 +7306,7 @@ carry out fliptoing (this is the main fliptoing rule):
 					move player to roomjump entry;
 				process the show blues rule; [for debugging]
 				process the process random dialogue rule;
-			else if the-from entry is part of the diorama:
+			if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
 				process the Report Porter Perrot Knocks rule;
@@ -7316,9 +7319,6 @@ carry out fliptoing (this is the main fliptoing rule):
 			if the-to entry is LLPish:
 				d "General LLPish min-up for [noun].";
 				min-up;
-			if there is a post-rule entry:
-				d "Processing [post-rule entry].";
-				process the post-rule entry;
 			process the show blues rule instead; [for debugging]
 			the rule succeeds;
 	repeat through regana of mrlp:
