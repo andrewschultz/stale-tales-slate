@@ -96,9 +96,6 @@ Your score has just gone up by one point.
 >score
 You currently have 6 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
 
->ethre
-The trio remains unmoved. Perhaps you can give the protest more constructive aims?
-
 >potters
 Your score has just gone up by one point.
 

@@ -27,6 +27,3 @@ by one point
 >n
 hubs bush
 
->sorbet
-by one point
-

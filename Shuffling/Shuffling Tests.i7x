@@ -152,9 +152,9 @@ chapter Ordeal Loader
 
 [* maximum and minimum Ordeal Loader points]
 
-test ordeal-loader with "in/door/blot/bugle/in/goat/nest/in/gateman/ask gateman about cabinet/get all/attics/in/v ts" in subsite
+test ordealloadermin with "opt in/poss/in/door/blot/open door/goat/in/gateman/take gadget/ask gateman about cabinet/misses/in".
 
-test nos with "in/door/blot/bugle/in/goat/nest/in"
+test ordealloadermax with "opt in/poss/gateman/pf/bugle/play bugle/blot/open door/nest/goat/deer/in/attics/gateman/take gadget/ask gateman about cabinet/bactine/in".
 
 chapter stores tests
 
@@ -162,11 +162,15 @@ chapter stores tests
 
 test store-mega with "j/x 1/x 2/x 3/x 4/x 5/x 6/x 7/x 8/x 9/x 10/x 11/x 12/x 13/x 14/x 15/x 16/x 17/x 18/x 19/x 20/x 21/x 22/x 23/x 24/x 25/x 26/x a/x b/x c/x d/x e/x f/x g/x h/x i/x j/x k/x l/x m/x n/x o/x p/x q/x r/x s/x t/x u/x v/x w/x x/x y/x z/x one/x two/x three/x four/x five/x six/x seven/x eight/x nine/x ten/x eleven/x twelve/x thirteen/x fourteen/x fifteen/x sixteen/x seventeen/x eighteen/x nineteen/x twenty/x twentyone/x twentytwo/x twentythree/x twentyfour/x twentyfive/x twentysix"
 
+test storesmin with "z/opt in/ts/forest/sortie/metros/n/sorbet".
+
+test storesmax with "z/opt in/ts/resort/pf/forest/sortie/metros/n/sorbet/bactine".
+
 chapter forest
 
-[* we want to test doing the livers and the disguise in a different order. Also the drapes/spread]
+test forestmin with "ts/z/poss/opt in/forest/sr ne/in/n/e/e/nose/shades/shotgun/w/w/open sandwich/maps/beard/put shades on beard/put nose on beard/e/n/chisel/s/w/peel river ville/e/w/peel viler liver/put river ville in canister/put viler liver in canister/sliver/e/n/drapes/n/cut drapes/n/silver/put silver in shotgun/n/x maps/wolves/misses/shoot wolves".
 
-test fo with "forest/forest/smell/n/s/e/w/enter door" in Trips Strip
+test forestmax with "ts/z/poss/opt in/forest/sr ne/in/n/e/e/nose/shades/shotgun/w/w/open sandwich/maps/beard/put shades on beard/put nose on beard/e/silt/n/chisel/hasbeen/s/w/peel river ville/e/w/peel viler liver/put river ville in canister/put viler liver in canister/sliver/e/n/drapes/n/silver/pf/cut drapes/n/silver/put silver in shotgun/n/x maps/wolves/misses/shoot wolves".
 
 test shades with "w/get bread/e/e/dashes/ones/shades/nose/beard/put shades on nose/put nose on beard/disas/put shades on beard/put nose on beard/disas/put nose on beard/put shades on beard/disas/put nose on beard/put shades on nose" in Self ID Fields
 
@@ -178,13 +182,9 @@ chapter metros
 
 [* this is the trickiest. There are 5 ways through. The noise bag allows you to open it by the nerds, which the sheath doesn't. For both, can release the gnats or ask about darkness]
 
-test toma with "gonear underside/n/w/tomato/e/s/w/throw tomato"
+test metrosmin with "ts/poss/opt in/metros/in/gardenia/n/w/tomato/e/s/w/throw tomato at thing/x mattress/e/n/n/switch emitter/get dry cake/s/ltso/conr/controls/keycard/velcro/e/give gardenia to faeries/take heaths/sheath/take brocade/w/w/sword/e/barcode/s/put barcode on keycard/put card on sensor/e/w/put card on sensor/w/z/e/w/z/open metallic door/e/ask nerds about darkness/s/opening/u/put controls in opening/d/e/resin/beast/take sword/misses/alts/attack beast".
 
-test metbasic with "test ordeal-loader/metros/g/g/gardenia/n/w/tomato/e/s/w/give tomato to thing/x mattress/e/n/n/switch emitter/get cake/keycard/s/velcro/controls" in subsite
-
-test met-all with "test metros-s-n1/ua 3/test metros-s-n2/ua 3/test metros-n-n1/ua 3/test metros-n-n2/ua 3/test metros-n-n3"
-
-test metros with "test metros-s-n1" in Trips Strip
+test metrosmax with "ts/poss/opt in/metros/in/beast/pf/gardenia/n/w/sword/pf/tomato/e/s/w/throw tomato at thing/x mattress/e/n/controls/n/rentals/keycard/keycard/pf/switch emitter/get dry cake/s/give emitter to deadbeat/ltso/conr/controls/keycard/velcro/e/sheath/noise bag/give gardenia to faeries/take heaths/noise bag/sheath/take brocade/w/w/sword/e/barcode/s/put barcode on keycard/put card on sensor/e/w/put card on sensor/w/z/e/w/z/open metallic door/e/ask nerds about darkness/s/opening/u/d/u/put controls in opening/d/e/beast/resin/beast/take sword/misses/alts/attack beast".
 
 test metmin with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomato at night thing/search mattress/e/n/n/switch emitter/keycard/s/e/y/give gardenia to faeries/get brocade/get heaths/w/w/sheath/sword/barcode/put barcode on keycard/e/controls/velcro/wear velcro/s/e/ask nerds about darkness/s/opening/climb face/put controls in opening/attack beast/e/resin/beast/sword/attack beast/v ts/v sco" in Trips Strip
 
@@ -206,11 +206,9 @@ chapter sortie
 
 [*Not many alternate ways to go through the sortie but you can test different ways to make the taco]
 
-test sortie-e with "j/sortie/d" in Trips Strip
+test sortiemin with "opt in/ts/xc/sortie/poss/in/sixteen/n/kitchen/xx/xx grist/xx cake pan/xx cathouse/xx tall trio/xx cult tee/xx skate/xx spearman/tortilla/hotsauce/parmesan/steak/lettuce/put lettuce on tortilla/put steak on tortilla/put parmesan on tortilla/put hotsauce on tortilla/coat/e/s/sack/straw/put straw in sack/shoes/moor/mroo/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/peasant/ask peasant about straw/ask peasant about Woeful Pat/give straw to peasant/room/n/w/e/put hay in wall/hallway/e/cask/pour oils/w/s/moor/missile/fold paper/panel/soil/black door/room/n/e/pour oils/w/s/moor/silo/put panel in silo/put door in silo/put missile in silo/steer/shoot/push steer/misses/push shoot".
 
-test sortie with "sortie/enter sortie/sixteen/n/kitchen/s/e/straw/sack/put straw in sack/get sack/n/w/tortilla/lettuce/steak/parmesan/hotsauce/put hotsauce in tortilla/put steak on tortilla/put lettuce on tortilla/put parmesan on tortilla/open fridge/grits/pancake/coat/wear coat/e/s/shoes/moor/y/peasant/give straw/room/n/put hay in wall/hallway/e/cask/fill cask/w/s/moor/soil/room/n/e/fill cask/w/s/moor/silo/missile/black door/fold poem/panel/put door on silo/put missile in silo/put panel on silo/shoot button/steer button/push steer button/push shoot button/v ts" in Trips Strip
-
-test sortie-delete with "sortie/enter sortie/sixteen/n/kitchen/s/e/straw/sack/put straw in sack/get sack/n/w/tortilla/lettuce/steak/parmesan/hotsauce/put hotsauce in tortilla/put steak on tortilla/put lettuce on tortilla/put parmesan on tortilla/coat/wear coat/e/s/moor/peasant/give straw/room/n/put hay in wall/hallway/e/cask/fill cask/w/s/moor/soil/room/n/e/fill cask/w/s/moor/silo/missile/black door/fold poem/panel/put panel on silo/" in Trips Strip
+test sortiemax with "opt in/ts/xc/sortie/poss/in/sixteen/n/kitchen/open fridge/open fridge/xx/xx grist/xx cake pan/xx cathouse/xx tall trio/xx cult tee/xx skate/xx spearman/x fridge/grits/pancake/tortilla/hotsauce/parmesan/steak/lettuce/put lettuce on tortilla/put steak on tortilla/put parmesan on tortilla/put hotsauce on tortilla/coat/e/s/sack/straw/put straw in sack/moor/pf/shoes/moor/mroo/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/z/peasant/ask peasant about straw/ask peasant about Woeful Pat/give straw to peasant/room/n/w/e/hallway/pf/put hay in wall/hallway/e/pour oils/cask/pour oils/sack/soil/silo/pf/pour oils/w/s/missile/pf/moor/missile/panel/fold paper/panel/silo/soil/black door/room/n/e/pour oils/pour oils/w/s/moor/silo/put panel in silo/put door in silo/put missile in silo/steer/shoot/push steer/misses/push shoot".
 
 test cedars with "sortie/enter sortie/sixteen/n/kitchen/s/e/straw/sack/put straw in sack/get sack/n/w/tortilla/lettuce/steak/parmesan/hotsauce/put hotsauce in tortilla/put steak on tortilla/put lettuce on tortilla/put parmesan on tortilla/open fridge/grits/pancake/coat/wear coat/e/s/shoes/moor/y/peasant/give straw/room/y/n/put hay in wall/hallway/e/cask"
 
@@ -222,19 +220,9 @@ chapter resort
 
 [* maximum and minimum point tests, as well as medium points]
 
-test res-all with "sk 1/sk 2/sk 3/test r0/ua 4/test r1/ua 4/test r2/ua 4"
+test resortmin with "ts/tsf/opt in/poss/resort/enter resort/e/slope/toeholds/e/trio/potters/kilns/get out/tug toe/e/misses/exist".
 
-test resort with "resort/enter resort/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/china/kilns/tug toe/e/exist" in Trips Strip
-
-test rq with "gonear Astral Altars/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/kilns/tug toe/e/exist" in Trips Strip
-
-test r0 with "resort/enter resort/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/kilns/tug toe/e/v rm" in Trips Strip
-
-test r1 with "gonear Astral Altars/islet/cork/e/toeholds/slope/e/trio/potters/kilns/tug toe/e/v rm" in Astral Altars
-
-test r2 with "gonear Astral Altars/islet/wings/e/slope/grips/ropes/e/trio/kilns/potters/tug toe/e/v rm" in Astral Altars
-
-test toolclue with "scan tiles/swap/scan tiles/islet/cork/e/grips/ropes/v rm" in Astral Altars
+test resortmax with "ts/tsf/opt in/poss/resort/enter resort/islet/lies/cork/wings/e/slope/toeholds/ropes/grips/e/trio/potters/china/china/kilns/get out/tug toe/e/exist/missed/alts/amens/alt/names/alts/alt".
 
 volume programmer testing commands - not for release
 
