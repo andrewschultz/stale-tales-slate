@@ -2521,6 +2521,13 @@ before doing something when Elmo is touchable:
 		say "[convoforce].";
 		reject the player's command;
 
+before doing something when Gretta is touchable and parleys splayer players are moot (this is the Gretta forces initial convo rule):
+	if current action is fliptoing, say "Magic can wait. You're getting information now." instead;
+	if action is procedural, continue the action;
+	if current action is not talking to Gretta and current action is not QBC responding with:
+		say "[convoforce].";
+		reject the player's command;
+
 before doing something when player is in Rancho Archon Anchor and current quip is not final-quip (this is the Elvira forces initial convo rule):
 	if current action is fliptoing medals, say "You'll never out-talk Elvira." instead;
 	if current action is fliptoing whistle, say "You'd feel rude playing that whistle during a conversation, even one with Elvira." instead;
