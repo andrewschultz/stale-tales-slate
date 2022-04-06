@@ -487,9 +487,9 @@ The ME ARTS nourished you spiritually. Time to move on, though you could poke at
 
 #mistake test for repeal/repeals
 >repeal
-That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEAL is only six letters. There is a better way to forsake the false pleasure of the pleaser leapers!
 >repeals
-That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEAL is only six letters. There is a better way to forsake the false pleasure of the pleaser leapers!
 
 #nudge for leaper
 >leapre

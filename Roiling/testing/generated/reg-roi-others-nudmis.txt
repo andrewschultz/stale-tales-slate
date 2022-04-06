@@ -61,7 +61,7 @@ Some things, you can't joke about. So please, don't try that again.
 Some things, you can't joke about. So please, don't try that again.
 #mistake test for smile
 >smile
-You smile at the slime. It can't be that hard to figure what to do.
+You smile at the slime. It can't be that hard to figure what to do. You even see red a bit, frustrated you haven't figured things out yet.
 #mistake test for miles
 >miles
 You don't want miles and miles of slime.

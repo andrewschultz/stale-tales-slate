@@ -248,10 +248,20 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 21 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
 
-#verbcase listen-troves-if-can-hear-posh
 >listen
-Actually, you can't help but hear posh dialogue.
-Anyway, no more badgering beggar din.
+Actually, you can't help but hear posh dialogue. Anyway, no more badgering beggar din.
+#verbcase listen-troves-if-can-hear-posh
+>listen praise spirea
+The praise spirea is beautiful and inspiring and all, but you don't want to be caught staring at it just because it's pretty, or listening to it just because it sounds nice.
+
+>hush
+Random dialogue off.
+
+>listen
+You have shut off the random posh dialogue with HUSH. Anyway, no more badgering beggar din.
+
+>uhhs
+Random dialogue on again.
 
 >strive
 Your score has just gone up by one point

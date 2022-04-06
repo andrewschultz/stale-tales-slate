@@ -336,7 +336,7 @@ More like, you could use out-gates to leave, amirite?
 >gs
 >push rehabs basher
 Before you can do anything with or to the Rehabs Basher, she thrusts pamphlets labeled Help Stamp Hemp: SPLAT at you. "It will help you in ways you don't know. And even I don't know." Do you take them?
-"Good choice. Say, if they're good enough, do you think you could I could become an even better blabber babbler than ... her?"
+"Good choice. Say, if they're good enough, do you think I could become an even better blabber babbler than ... her?"
 >undo
 >gs
 >push rehabs basher

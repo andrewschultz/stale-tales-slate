@@ -76,7 +76,7 @@ Reorganizing the geography around the Edictal Citadel won't help.
 
 #nudge for citadel
 >citadle
-The whole Citadel? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there, with help and your powers back. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
+Transform the whole Citadel? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there, with help and your powers back. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
 #mistake test for end u
 >end u
 No, end *U*!

@@ -7,7 +7,7 @@
 
 * ordeal-reload-thru
 
->poss
+>posf
 
 #verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
 >sleep

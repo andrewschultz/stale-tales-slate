@@ -7,7 +7,7 @@
 
 * ordeal-reload-thru
 
->poss
+>posf
 
 #nudge for ordeal
 >ordela

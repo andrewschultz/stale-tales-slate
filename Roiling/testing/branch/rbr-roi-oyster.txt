@@ -916,7 +916,7 @@ DEBUG INFO: HUNTER HUNT AREA hinting.
 Nothing to unearth a haunter with.
 #preefcheck hunter hunt area
 >pf
-You can UNEARTH the HUNTER HUNT AREA with the right equipment.
+You can UNEARTH the HAUNTER (from under the HUNTER HUNT AREA) with the right equipment.
 
 @nud
 #spechelp for HUNTER HUNT AREA
