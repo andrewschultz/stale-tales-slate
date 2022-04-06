@@ -857,6 +857,10 @@ cmdhash is a number that varies.
 
 firstwordhash is a number that varies.
 
+rufhash is a number that varies.
+
+ruffirst is a number that varies.
+
 to decide whether tat-cheat-regular:
 	if the remainder after dividing tats-stat by 2 is 1, yes;
 	no;
@@ -903,7 +907,9 @@ to decide which number is onehash:
 
 to say reject:
 	now cmdhash is the hash of the player's command;
+	now rufhash is the rough-hash of the player's command;
 	now firstwordhash is the hash of word number 1 in the player's command;
+	now ruffirst is the rough-hash of word number 1 in the player's command;
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash]. Location hash is [sts-hash of location of player].[line break]";
 	if cmdhash is onehash or firstwordhash is onehash:
 		if location is solved:
@@ -925,6 +931,9 @@ to say reject:
 				if there is no cmd-loc entry or location of player is cmd-loc entry:
 					say "[nudge-text entry][line break]";
 					continue the action;
+	if rufhash is uniq-hash of location of player or ruffirst is uniq-hash of location of player:
+		say "Man! You had all the right letters, you think, but they didn't come together.";
+		continue the action;
 	let itmhash be 0;
 	repeat with itm running through touchable flippables:
 		now itmhash is the hash of the printed name of itm;
@@ -933,6 +942,9 @@ to say reject:
 			continue the action;
 		else if cmdhash is itmhash:
 			say "Hmm, [the itm] seems to waver a bit. You must be on the right track to change [the itm], here.";
+			continue the action;
+		if rufhash is uniq-hash of itm or ruffirst is uniq-hash of itm:
+			say "Man! You had all the right letters for [the itm], you think, but they didn't come together.";
 			continue the action;
 	if solved-initials is true and player is not in scene scene:
 		let temp-hash be 0;
