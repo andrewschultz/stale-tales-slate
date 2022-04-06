@@ -8596,7 +8596,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "access"	true	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like [b]SCORE[r], will not cost you time if you are in a tight situation."	"free turns"	false
 "saying"	false	"Instead of [b]SAY[r]ing or [b]THINK[r]ing, you can just type the word."	"saying"	false
-"talking"	false	"[b]TALK[r]ing is the equivalent of asking someone about themselves."	"talking"	false
+"talking"	false	"[b]TALK[r]ing is the equivalent of asking someone about themselves[terse-types]."	"talking"	false
 "sleep/sleeping"	false	"[b]SLEEP[r] is only advisable in a protected area."	"sleep"	false
 "long commands" or "long/command/commands"	false	"Commands over 4 words long aren't necessary. You can say [b]TAKE[r] or [b]GET ALL[r], eliminate THE, or use half an open compound word without repercussions."	"long commands"
 "random/ dialogue/dialog/"	false	"[b]HUSH[r] turns random dialogue off. [b]UHHS[r] turns it on. It is [on-off of talk-quiet]."	"random dialogue"	false
@@ -8621,6 +8621,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "parrot"	false	"He wants to come back some time. He wants revenge. As the raptor."	"parrot"	false	otters
 "asking"	false	"You will want to [b]ASK[r] about Elvira a lot."	"asking"	false	otters
 "the settler" or "settler"	false	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."	"the settler"	true
+"powers"	false	"You need to figure a way to get your powers back. They were drained when you passed by the solid idols."	"powers"	false	otters
 "la"	false	"Shortcut command to recall what you scanned last."	"la"	false
 "sl"	false	"Shortcut command to turn slider on."	"sl"	false
 "sy"	false	"Shortcut command to scan with hints, overriding the equals sign and the current setting."	"sy"	false
@@ -8647,7 +8648,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to miss."	"wilteds"	true	towers
+"wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to miss."	"the Wildest Wilteds"	true	towers
 "guru"	false	"You can [b]GURU[r] something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 "xtra/trax"	false	"[b]XTRA[r] or [b]XTRA TRAX[r] or [b]TRAX[r] gives more detailed advice if you have the right letters in the wrong order."	"xtra/trax"	false
 "extra/taxer" or "tax er"	false	"[b]EXTRA[r] or [b]TAX ER[r]/[b]TAXER[r] toggles more advice for ambiguous/question mark hints. This is close to [b]XTRA[r], but it is likely the player will want to set [b]TAXER[r] and not [b]EXTRA[r] back."	"extra/taxer"	false
@@ -8683,11 +8684,11 @@ to say what-can-flip:
 	if mrlp is demo dome:
 		say "This shouldn't have happened, but it did. BUG.";
 		continue the action;
-	say "Stuff you figured that may be handy later:[prefigured-things]";
+	say "Stuff you figured that may be handy later: [prefigured-things]";
 
 to say prefigured-things:
+	say "[list of not unfigured things with definite articles].";
 	repeat with pft running through not unfigured things:
-		say "[pft].";
 		let got-it be false;
 		repeat through table of preflip clues:
 			if pft is preflip entry:
@@ -8695,9 +8696,10 @@ to say prefigured-things:
 				now got-it is true;
 				break;
 		if got-it is true, next;
+		d "you may wish to put [pft] in the table of preflip clues.";
 		if pft is a the-from listed in regana of mrlp:
 			choose row with the-from of pft in regana of mrlp;
-			say "[line break]Deal with [the-from entry]: [right-word entry].";
+			say "[line break]To deal with [the-from entry]: [b][right-word entry in upper case][r].";
 		else:
 			say "[line break]You remember you need to think [pft] at some time.";
 
@@ -8757,7 +8759,7 @@ BUB DUDE EGG	presto	"You weren't ready to [b]DEBUG[r] yet."
 LOLstr trolls	oyster	"You can [b]STROLL[r] past the LOLstr trolls [now-once of whether or not silly-acts is 3] you're not worth stopping." [oyster]
 frat raft	oyster	"You can [if player is not on frat raft]get on the frat raft and [end if][b]FART[r]."
 trout	oyster	"You should be able to [b]TUTOR[r] the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
-hunter hunt area	oyster	"You can [b]UNEARTH[r] the [b]HUNTER HUNT AREA[r] with the right equipment."
+hunter hunt area	oyster	"You can [b]UNEARTH[r] the [b]HAUNTER[r] (from under the [b]HUNTER HUNT AREA[r]) with the right equipment."
 Achers Chaser Arches	oyster	"[b]SEARCH[r] the arches."
 crate	oyster	"You can [b]REACT[r] to the crate better [now-if-dealt of bogus-trace] you have more data."
 skis	oyster	"You can [b]KISS[r] the skis [now-if-dealt of bogus-trace] you are less distracted."
@@ -8769,7 +8771,7 @@ bogus-redial	oyster	"You can [b]REDIAL[r] the dialer [now-if-dealt of pins] the 
 lance	oyster	"You'll want to [b]CLEAN[r] the lance [now-once of whether or not player has wipes] you have something to wash it with."
 templar ramplet	oyster	"You can [b]TRAMPLE[r] the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
 rodney	towers	"Rodney can be [if roddro is false]sent [b]YONDER[r][else if rodyon is false]made [b]DRONEY[r][else]sent [b]YONDER[r] or made [b]DRONEY[r][end if] [now-once of whether or not moot-picaros >= 3] he's lost enough followers." [towers]
-luck node	towers	"[if node-preef is true]The luck node[else]Something[end if] needs to be [b]UNLOCKED[r], with [if duck-preef is true]the lone duck[else]something else you need to figure out[end if]."
+luck node	towers	"[if node-preef is true]The luck node[else]Something[end if] needs to be [b]UNLOCKED[r], [if duck-preef is true]with the lone duck[else]but what you had before didn't work[end if]."
 fries us fissure	towers	"The Fries-Us Fissure can be made [b]FUSSIER[r] to some effect [now-once of whether or not duck is midstage] there's something it can fuss at."
 curst palace	towers	"You can make the Curst Palace [b]SPECTACULAR[r] [now-once of whether or not player is in mislit limits] you're near it."
 sea cube	otters	"You can tell the eels in the sea cube [b]BECAUSE[r] [now-once-medals]." [otters]
@@ -9985,6 +9987,7 @@ this is the enter-idols rule:
 	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls, again. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
 	say "[if bleary barley is moot]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Seriously!'[end if][paragraph break]";
 	pad-rec-q "asking";
+	pad-rec-q "powers";
 
 chapter store u
 
@@ -18291,6 +18294,7 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 		terminate the conversation;
 		now the player wears medals;
 		move laya to disowned downside;
+		pad-del "asking";
 		moot Gretta;
 		if do-i-chat is true:
 			moot hydra;

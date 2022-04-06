@@ -1310,6 +1310,8 @@ this is the post-yow-free rule:
 	moot luck node;
 	now lone duck is returned;
 	now lone duck is realized;
+	now luck node is unfigured;
+	now fissure is unfigured;
 
 this is the pre-unlocked rule:
 	if duck is not touchable:
@@ -1402,7 +1404,7 @@ to say rodney-ditch:
 		say ". The remaining picaro[if here-picaros > 1]s[end if] even ask[if here-picaros is 1]s[end if] if you can work your magic to make [if here-picaros > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids major self-help cliches, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of picaros in Loftier Trefoil] thank you profusely before going on [if here-picaros > 1]their ways[else]his way[end if]";
 
 to say add-adj:
-	pad-rec "wilteds";
+	pad-rec "the Wildest Wilteds";
 
 section towers auxiliary
 
