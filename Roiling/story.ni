@@ -3374,7 +3374,11 @@ to say mb-ss-ped:
 
 last-hash is a number that varies.
 
-section answer
+chapter Adorb Bardo
+
+Adorb Bardo is a room in Meta Team. "MOVE THIS to STS Common."
+
+chapter answer
 
 [this is a small hack to allow ANSWER LIAISON]
 
@@ -4051,7 +4055,7 @@ to say sb-choose:
 	say "Your settler registers ";
 	if sb-cur is true, say "([if cheat-on is true]cheat on[else]no cheat[end if]) "
 
-chapter some scaning rules
+chapter some very general scaning rules
 
 before scaning (this is the check for cheats the player doesn't want rule):
 	if noun is a location, continue the action;
@@ -6086,7 +6090,6 @@ rule for supplying a missing noun when listening (this is the directed ambient s
 		if Q is touchable:
 			now the noun is Q;
 			if debug-state is true, say "DEBUG note: [Q] found as listen candidate.";
-			now the noun is Q;
 			continue the action;
 	if debug-state is true, say "DEBUG note: nothing found as listen candidate.";
 	now the noun is the location of the player;
@@ -17000,7 +17003,7 @@ check scaning strudel:
 
 section sled rut
 
-The sled rut is auxiliary scenery in Fringe Finger. "It's flecked with red, oddly[if strudel is in Fringe Finger], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+The sled rut is auxiliary scenery in Fringe Finger. "It's flecked with red, oddly[if strudel is in Fringe Finger], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if].".
 
 a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of sled rut is "x[sp]U[sp]x[sp]x[sp]x[sp]E[sp]x".
 
@@ -18907,7 +18910,7 @@ the saturnic curtains are plural-named bounding boring scenery in Lamer Realm. d
 
 for printing a locale paragraph about a reflexive puzanimal (called th) in Lamer Realm:
 	if th is mentioned, continue the action;
-	let X be number of reflexive puzanimals in Lamer Realm;
+	let X be number of reflexive puzanimals in Lamer Realm; [?? can this be adjsolve?]
 	if X < 4, say "[line break]";
 	say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of touchable reflexive puzanimals].";
 	now all touchable reflexive puzanimals are mentioned;
