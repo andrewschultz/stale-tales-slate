@@ -14065,22 +14065,23 @@ carry out spikeing:
 
 chapter unearthing (verb)
 
-unearthing is an action applying to one thing.
+understand "haunter" as sausage.
+
+unearthing is an action applying to one visible thing.
 
 understand "unearth" as unearthing.
-understand "unearth [something]" as unearthing.
+understand "unearth [any thing]" as unearthing.
 
 rule for supplying a missing noun when unearthing:
-	if sausage is not off-stage, say "You already did." instead;
+	if sausage is not off-stage, say "You already unearthed what you needed to." instead;
 	if player is in Rascal Craals:
 		if thin hint is in Rascal Craals:
 			now noun is thin hint;
 		else:
 			now noun is location;
-	else if player is not in Anger Range:
-		say "Nothing worth unearthing here." instead;
-	else if HUNTER HUNT AREA is touchable:
-		now the noun is HUNTER HUNT AREA;
+		continue the action;
+	if player is not in Anger Range, say "Nothing worth unearthing here." instead;
+	if HUNTER HUNT AREA is touchable, now the noun is the sausage;
 
 The HUNTER HUNT AREA is boring vanishing scenery. "You feel hate pulsing from it, even an odd urge to attack it. You can also [b]READ[r] its details.". bore-text of HUNTER HUNT AREA is "The [HUNTER HUNT AREA] is hiding something potentially malevolent. But what?". bore-check is bore-hunter-hunt-area rule.
 
@@ -14091,14 +14092,15 @@ this is the bore-hunter-hunt-area rule:
 
 a-text of HUNTER HUNT AREA is "YRYYRRR". b-text of HUNTER HUNT AREA is "??Y??R?". parse-text of HUNTER HUNT AREA is "?[sp]?[sp]-[sp]?[sp]?[sp]x[sp]?".
 
-understand "haunter" as HUNTER HUNT AREA when HUNTER HUNT AREA is in Anger Range.
-
-does the player mean unearthing the HUNTER HUNT AREA: it is very likely.
+does the player mean unearthing the sausage: it is very likely.
 
 carry out unearthing:
 	if mrlp is not oyster, say "[reject]" instead;
 	[if player does not have rigged digger:] [now covered in the pre-haunter rule]
-	if noun is sausage, say "It already is." instead;
+	if noun is HUNTER HUNT AREA, say "Close, but I'm going to make you unearth what's under the [hunt area]." instead;
+	if noun is sausage:
+		if location is not Anger Range, say "Wrong place to unearth the haunter." instead;
+		if the player's command includes "sausage", say "Somehow, you got ahead of yourself and used the haunter's 'real' name. I'm going to be pedantic and make you refer to it by the currently correct, anagrammatical one." instead;
 	if player is in Rascal Craals:
 		if noun is location, say "You haven't buried anything, and you're not aware of treasure here. Plus, if you dig too long without knowing what to look for, you might attract attention." instead;
 		if noun is ruby, say "That is wasted work." instead;
@@ -14119,9 +14121,7 @@ check taking sausage:
 check answering sausage that (this is the ruby answer rule):
 	if the player's command includes "ruby", try objasking sausage about ruby instead;
 
-understand "haunter" as sausage when sausage is touchable.
-
-understand "ghost" as sausage when sausage is touchable.
+understand "ghost" as sausage when sausage is touchable or player is in posh hops shop.
 
 understand "etahn/ru" and "etahn ru" as sausage when sausage is touchable.
 
@@ -14794,7 +14794,9 @@ to say hedron-if-v: if Horned Hedron is visited, say " to the Horned Hedron"
 
 section OH NERD HERD NO
 
-OH NERD HERD NO is boring scenery in Sclerous Closures. "OH NERD HERD NO covers the front of the Horned Hedron. I suppose it's not meant to be welcoming.". understand "horned/hedron" and "horned hedron" as OH NERD HERD NO when player is in Sclerous Closures. bore-text of OH NERD HERD NO is "Doing anything with or to a 'welcoming' message isn't constructive.". bore-check of OH NERD HERD NO is bore-onho rule.
+OH NERD HERD NO is boring scenery in Sclerous Closures. "OH NERD HERD NO covers the front of the Horned Hedron. I suppose it's not meant to be welcoming.". bore-text of OH NERD HERD NO is "Doing anything with or to a 'welcoming' message isn't constructive.". bore-check of OH NERD HERD NO is bore-onho rule.
+
+understand "horned/hedron" and "horned hedron" as OH NERD HERD NO when player is in Sclerous Closures or player is in posh hops shop or player is in Den Loft or player is in Lean Lane. [this is a potentially bad hack to redirect conversation to the hedron, because the game doesn't see the hedron as a topic of conversation]
 
 this is the bore-onho rule:
 	if current action is entering, try going north instead;
