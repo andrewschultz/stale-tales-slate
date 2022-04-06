@@ -22059,15 +22059,15 @@ to lj-cue:
 megsort is a truth state that varies.
 
 table of regabr
-this-reg	this-top (topic)	this-text
+this-reg	this-top (topic)	this-pre-rule	this-text
 Meta Team	"la/lg"
---	"lc"	"There's nothing extra, or extra licentious, behind Store C."
-others	"ld"
---	"lb/le//lj/ll/lq/lx/lz"	"That letter doesn't correspond to a store you can explore."
---	"lf/li/lm"	"That letter corresponds to a store you looked behind in [shuf]."
+--	"lc"	--	"There's nothing extra, or extra licentious, behind Store C."
+Demo Dome	"ld"	is-demo-visited rule
+--	"lb/le//lj/ll/lq/lx/lz"	--	"That letter doesn't correspond to a store you can explore."
+--	"lf/li/lm"	--	"That letter corresponds to a store you looked behind in [shuf]."
 Meta Team	"lg"
-others	"lh"
---	"lk"	"No region was behind Store K[if tokers are off-stage], though you could get a small bit of help from it[end if]."
+others	"lh"	is-others-passed rule
+--	"lk"	--	"No region was behind Store K[if tokers are off-stage], though you could get a small bit of help from it[end if]."
 Ordeal Reload	"lo"
 presto	"lp"
 stores	"ls"
@@ -22077,21 +22077,23 @@ troves	"lv"
 towers	"lw"
 oyster	"ly"
 
+this is the is-demo-visited rule:
+	if peek keep is visited, continue the action;
+	say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it." instead;
+
 to decide whether others-passed:
-	if peek keep is visited, yes;
-	if others is solved, yes;
+	if peek keep is visited or others is solved, yes;
 	no;
+
+this is the is-others-passed rule:
+	if others-passed, continue the action;
+	say "I can't show you the list for Store H, yet. You haven't solved it." instead;
 
 this is the showing regional lists rule:
 	let myrow be 0;
-	if not others-passed and word number 1 in the player's command is "lh":
-		say "I can't show you the list for Store H, yet. You haven't solved it.";
-		the rule succeeds;
-	if peek keep is unvisited and word number 1 in the player's command is "ld":
-		say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it.";
-		the rule succeeds;
 	repeat through table of regabr:
 		if the player's command matches this-top entry:
+			if there is a this-pre-rule entry, abide by the this-pre-rule entry;
 			if there is a this-text entry:
 				say "[this-text entry][line break]";
 			else:
