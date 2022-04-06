@@ -195,7 +195,7 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 13/30=Creationism Reactionism
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather. misses-rule of routes is routes-misses rule.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of routes scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather. misses-rule of routes is routes-misses rule.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
@@ -2452,8 +2452,8 @@ before quipping when player is in Disowned Downside (this is the Gretta checks r
 					now missed-one is true;
 			if missed-one is true:
 				say "'Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you,' Gretta says. Stay and ask a bit more?";
-				if the player regex-prompt-consents:
-					say "A bit of awkward silence follows, but it's nowhere near as awkward as the [players]['] conversation.[no line break]";
+				if the player dir-consents:
+					say "A bit of awkward silence follows, but it's nowhere near as awkward as the [players]['] conversation was.[no line break]";
 					now hold-it-up is true;
 					the rule succeeds;
 				say "OK.";
@@ -2545,7 +2545,7 @@ hold-it-up is a truth state that varies.
 before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you back for hints rule):
 	if got-it-quip is not mowered and showset-quip is not mowered and still-no-gp-quip is not mowered:
 		say "Elmo checks you for a second. 'You sure you know how to use the settler?'";
-		if the player regex-prompt-consents:
+		if the player dir-consents:
 			say "You nod. 'No clues counsel.'";
 			continue the action;
 		say "You shake your head and go back to thinking why the settler might flicker yellow/green on the lamp and so forth.[no line break]";
@@ -3113,7 +3113,7 @@ to recover-items:
 			continue the action;
 		say "Debug note: [item-list of mrlp] recovered.";
 	repeat with JJJ running through item-list of mrlp:
-		if JJJ is not scenery and JJJ is not a backdrop:
+		if JJJ is not a backdrop:
 			now player has JJJ;
 			if JJJ is tsar star or JJJ is medals, now player wears JJJ;
 
@@ -3708,7 +3708,7 @@ when play begins (this is the basic initialization rule):
 
 definition: a room (called myrm) is ominous:
 	unless map region of myrm is Otters, no;
-	if myrm is Minded Midden and bleary barley is touchable, no;
+	if myrm is Minded Midden and cinders are off-stage, no; [ "bleary barley is touchable" seems most straightforward, but because of how carry out fliptoing is organized to help other rules, having that condition would mean ominous rooms were rearranged before I moot the barley. ]
 	if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 	if myrm is Lamer Realm or myrm is Perverse Preserve, no;
 	yes;
@@ -4084,9 +4084,9 @@ after scaning (this is the tell us about x in parse mode rule) :
 
 before scaning a clue-used thing: say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
 
-before scaning a reflexed thing: if noun is not dialer and noun is not sit a nag and noun is not players, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
+before scaning a reflexed thing: if noun is not sit a nag and noun is not players, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
 
-chapter more scaning rules
+chapter room-specific check-scaning rules
 
 check scaning location of the player (this is the location scan rule):
 	d "scaning player location.";
@@ -5509,6 +5509,8 @@ check going nowhere in Carven Cavern (this is the cavern check rule):
 		if the player regex-prompt-consents, try going inside instead;
 		say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
 	do nothing instead;
+
+this is the horbert-gone rule: if brother horbert is moot, say "You don't need [horbert]'s help any more, and you've helped him all you can." instead;
 
 check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 	if Gast is in Same Mesa:
@@ -7246,7 +7248,9 @@ check fliptoing (this is the check off preconditions before flipping rule):
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
 			if the-from entry is reflexed and noun is not gast-affected, say "[reject]" instead;
-			if there is a pre-rule entry and flip-spill-flag is false, abide by the pre-rule entry;
+			if there is a pre-rule entry and flip-spill-flag is false:
+				if the hash of the player's command is hashkey entry or hash of word number 1 in the player's command is hashkey entry:
+					abide by the pre-rule entry;
 
 check fliptoing (this is the check region ending flip rule):
 	if noun is a thisflip listed in table of end-flips:
@@ -10720,7 +10724,7 @@ the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of reg
 
 check examining lament mantle for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
-	unless the player regex-prompt-consents, say "Okay. This warning will vanish next time." instead;
+	unless the player dir-consents, say "Okay. This warning will vanish next time." instead;
 	say "Man! Whoever wrote this is a grouch. You have morals and all, but geez."
 
 check asking Brother Horbert about: say "Brother Horbert shrugs. 'I should know more about the exotic outside world, but it's hard, with the poison stripe.'" instead;
@@ -13248,6 +13252,7 @@ to replace-mazeguide:
 	if maze-index is 0:
 		say "As you turn your head, you notice someone come into view behind the Riddle Dreidl.";
 		move Zo Mavelt to Unwary Runway;
+		increment maze-index;
 	else:
 		let X be entry maze-index in maze-guys;
 		if X is escanned:
@@ -13258,6 +13263,7 @@ to replace-mazeguide:
 				now guide-loop is true;
 			say "As you turn your head, you see someone [if guide-loop is true]familiar[else]new[end if] come into view in the Unwary Runway.";
 			move entry maze-index of maze-guys to Unwary Runway;
+		say "[guide-loop].";
 
 volume oyster
 
@@ -16160,6 +16166,8 @@ check taking old ice: say "You'd get your hands stuck. And I won't double dog da
 book Leveraged Everglade
 
 Leveraged Everglade is a sideroom in Towers. Leveraged Everglade is east of Scope Copse. "The land here is mucky, but something unseen and man-made allows passage every way except south, where screech creches block your way. You doubt there's much to do here besides get on[if guar-here is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Leveraged Everglade]. They're not blocking you, but they do leave you feeling slightly bummed[end if].". roomnud of Leveraged Everglade is table of Leveraged Everglade nudges. missed-text of Leveraged Everglade is "a room on the north edge west of [coastlines]".
+
+check going south in Leveraged Everglade: say "You aren't equipped to brave the screech creches to the south, and you won't be. Any other way is okay, though." instead;
 
 chapter scenery
 
@@ -22240,11 +22248,11 @@ to say d-then:
 		say "[b]DERAIL[r] then ";
 
 to say how-pills-used:
-	repeat through hintobjstable of mrlp:
+	repeat through hintobjstable of oyster:
 		if spill-target is hint-entry entry:
 			say "[if there is a spoil-entry entry][spoil-entry entry][else]<Bug! I forgot to fill in a table cell, and I'd like to know about this>[end if]";
 			continue the action;
-	say "BUG should've found something but didn't"
+	say "BUG should've found something for [spill-target] but didn't"
 
 show-siderooms is a truth state that varies.
 
