@@ -2268,7 +2268,7 @@ tears taser	"[first custom style]RATES[r] is written on the tears taser, in red.
 stop post	"[first custom style]POP'S TOTS[r] is written in red on the stop post."
 a sty tasty say	"[first custom style]YAY STATS[r] is nonsensically scrawled in red. Or maybe [first custom style]YAYS TATS[r] was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
-large regal lager	"[one of]The story on the lager is mostly in black, except where it mentions [first custom style]ERGAL AGLER[r], who brewed the first batch long ago. I'll spare the details, because the story woul kills almost as many brain cells as if you actually drank the stuff[or]Your eyes gloss over all but the red name, [first custom style]ERGAL AGLER[r][stopping]."
+large regal lager	"[one of]The story on the lager is mostly in black, except where it mentions [first custom style]ERGAL AGLER[r], who brewed the first batch long ago, in red. I'll spare the details, because the story would kill almost as many brain cells as actually drinking the stuff[or]Your eyes gloss over all but the red name, [first custom style]ERGAL AGLER[r][stopping]."
 pleaser leapers	"[first custom style]SAP-LEER[r] is the 'ironic' name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't."
 See Dir	"Nothing catches your eye except an article on [first custom style]RIDEES[r], captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out."
 DIVORCES	"All sorts of articles that make you see red. This one's about [first custom style][one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order][r]."
@@ -2310,7 +2310,7 @@ recital article	"This version was written by some lovely chap named [first custo
 diverse deviser	"[first custom style]I'D SERVE[r] is written in an overly-flowery font. A bit silly, but hey, a clue's a clue."
 strudel	"[first custom style]DR. ELTUS[r] recommends this strudel!"
 keycar	"When the car slows a bit, you read [one of]product of [first custom style]KC AYER[r][or]property of [first custom style]RAY ECK[r][in random order], in a slightly different shade of red. Maybe the other side has [one of]more information[or]a refresher[stopping], if you read again."
-fluster self rut	"You focus and see that the brand is [first custom style]TRU-SELF[r]. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
+fluster self rut	"You focus and see that the brand is [first custom style]TRU-SELF[r]. Which would make you see red on general principles."
 Thearchy Hatchery	"[first custom style]THE LOIS SIT HOLE[r] is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
 Dinger	"You notice it was co-authored. [first custom style]Di Regan[r] and [first custom style]Ned Riga[r]. The names elevated, embossed, in red."
 prison ropins	"Part of the red writing on the prison says [one of]Made by [first custom style]DunkelCo[r][or]Made in [first custom style]LOUDNECK[r][or][first custom style]CONKLUDE[r] there's no way to break in[or]Designed by [first custom style]EL CUNDOK[r][or]Violators have a [first custom style]CLONK DUE[r][cycling]. There're four other bits to read."
@@ -3082,12 +3082,12 @@ Ripe Pier	"You've lost all sense of direction here, but you need to figure how t
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor."
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
-Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]"
 
 book troves
 
 table of troves nowheres
 theloc	thereject
+Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]"
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where [cellar] must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red [first custom style]Ell Car[r] (Yorpwald public transport) rattle by[or]you ran into construction by [first custom style]LC Lear[r]--the name written in red[or]you ran into construction by [first custom style]Larlec[r], written in red[cycling][end if]." [bold-ok]
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to [b]SAD PIER[r] and end it all, maybe after eating a few rad pies that won't make you see red[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
