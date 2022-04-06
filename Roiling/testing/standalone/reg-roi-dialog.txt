@@ -10,27 +10,29 @@
 
 * quick-chat
 
->au 1
+>au 2
 >chat
 
 >1
 >5
-Bam, Tense Basement
+Largely All-Grey Gallery
 
 >3
 
-Gent-Fora Frontage
+Disowned Downside
+
 >1
 >3
 >3
 
-Reclusion Inclosure
+Rancho Archon Anchor
+
 >7
 No mercy, my crone!
 
 * detail-gunter-chat
 
->au 1
+>au 2
 >think
 >get notepad
 >open door
@@ -43,7 +45,7 @@ No mercy, my crone!
 [1] Elvira...necro-crone recon?
 [2] Powers? Me? Spew more!
 [3] Why so showy? Calm down, mad clown!
-[4] Ask Gunter how business is
+[4] Ask Report Porter Perrot how business is
 [5] One Beg: begone!
 
 >1
@@ -83,7 +85,7 @@ No mercy, my crone!
 [2] One Beg: begone!
 
 >1
-Gunter intones tension. Refusal earfuls. "Cad, no can do. Damn, uh, DUH, man." Refusal earfuls.
+Report Porter Perrot intones tension. Refusal earfuls. "Cad, no can do. Damn, uh, DUH, man." Refusal earfuls.
 
 [1] One Beg: begone!
 
@@ -123,7 +125,8 @@ Elvira notes Yorpwald's more profitable than ever!
 Elvira notes Yorpwald's more profitable than ever!
 
 >x i trash
-Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.
+
+Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. All kinds of examples, ahead.
 
 >x i trash
 Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others:
@@ -141,7 +144,7 @@ Elvira has harsh words for other genres, yet they keep cranking things out!
 Elvira ravages the rigidness of music in general. All the latest...hits.
 
 >x i trash
-Elvira "begs the question" of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.
+Elvira "begs the question" of who is getting a lot of royalties! Someone probably in a nice cosy hidden manse! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.
 
 >x i trash
 Elvira shows little respect for comedians like
@@ -157,11 +160,14 @@ that's the end of THIS article, thankfully.
 No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
 
 >x billy
-Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH AMISS, HE IS? SHAME!!!
+Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!
+There's further crayony scrawl. Re: tha heart-hater. MESSIAH AMISS, HE IS? SHAME!!!
 
 >gs
 >x billy
-Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH AIMS: SHE IS SHAME!!!
+Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!
+There's further crayony scrawl. Re: tha heart-hater. MESSIAH AIMS: SHE IS SHAME!!!
+Elvira somehow established it was cute when seven-year-olds did it but horrible when you did, all the same excoriating your terrible influence on children.
 
 >x op-ed
 Her Arts Er Trash
@@ -171,9 +177,9 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 
 * detail-elmo-chat-gp-first
 
->au 1
+>au 2
 
->gonear basement
+>gonear largely
 >purloin settler
 >x settler
 >in
@@ -215,7 +221,7 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 >1
 "LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though."
 
-DEBUG INFO: Went through settler-quip.
+DEBUG INFO: Went through settler-quip, holdup = false
 [1] Ask Elmo about the "Yorpwald-Wordplay" text on the laced decal.
 [2] Scan everything about the diorama.
 [3] Tell Elmo you got what the cheat button does, thanks!
@@ -234,7 +240,7 @@ With everything scanned now, you take a closer look.
 Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.
 
 >3
-You examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place.
+You examine the backside of the settler and note how Yorpwald lines up with Wordplay--those two orange letters stand out a bit. Then you both realize both orange letters go to a Y that's not in the right place.
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
 [2] Finish Fishin'.
 
@@ -243,9 +249,9 @@ You examine the backside of settler and note how Yorpwald lines up with Wordplay
 
 * detail-elmo-chat
 
->au 1
+>au 2
 
->gonear basement
+>gonear largely
 >purloin settler
 >x settler
 >in
@@ -261,9 +267,9 @@ You nod. "No clues counsel."
 
 A pause. "Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?"
 
-You leave, feeling less resave-averse, but run as you hear "Get Elmo!" / "Get ol' me? Let me go!" "Sympathy?" / "My hat, spy!" ... "A spy yaps, pays..."
+Elmo hands you an additional note--a Gird Grid--to help you on your way. You leave, feeling less resave-averse, but run as you hear "Get Elmo!" / "Get ol' me? Let me go!" "Sympathy?" / "My hat, spy!" ... "A spy yaps, pays..."
 
-You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.
+You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN in a font that feels rantier. Behind is a Carven Cavern. It looks as good a place as any to visit.
 
 >undo
 
@@ -277,7 +283,7 @@ You crawl through the evac-cave, which exits to writing behind a dune, man. UNNA
 [3] Finish Fishin'.
 
 >1
-You examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place.
+You examine the backside of the settler and note how Yorpwald lines up with Wordplay--those two orange letters stand out a bit. Then you both realize both orange letters go to a Y that's not in the right place.
 
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
 [2] Finish Fishin'.
@@ -445,7 +451,7 @@ Elmo thinks a minute and notes red plus blue is purple, and yellow plus blue is 
 [3] Finish Fishin'.
 
 >2
-You examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place.
+You examine the backside of the settler and note how Yorpwald lines up with Wordplay--those two orange letters stand out a bit. Then you both realize both orange letters go to a Y that's not in the right place.
 
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
 [2] Finish Fishin'.
@@ -465,11 +471,11 @@ You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the 
 [3] Finish Fishin'.
 
 >1
-You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (big deal, boring mathy stuff, not a SHRED of excitement, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.
+You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (not bad for boring old mathy stuff, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.
 
 Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.
 
-"She at the very least SEEMS to think you're behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?"
+"There's evidence you might possibly be behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?"
 
 [1] Ask Elmo about your trial trail
 [2] Finish Fishin'.
@@ -566,6 +572,7 @@ Carven Cavern
 
 * detail-gretta-and-elvira-chat
 
+>au 2
 >seed 1
 
 >a5
@@ -575,7 +582,7 @@ Carven Cavern
 
 >n
 >brutely
->angrily
+>remotely
 
 >n
 dangerous hooting
@@ -586,7 +593,7 @@ dangerous hooting
 The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments.
 
 >stoically
->tersely
+>joltily
 
 >s
 A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers back.
@@ -595,10 +602,10 @@ A very loud roar scares you. You doubt adverbs are up to the task of calming it.
 >w
 
 >bossily
->nastily
->blearily
+>sparely
+>really
 
-[1] Boy, those macks, huh?
+[1] Boy, those players, huh?
 
 >1
 
@@ -653,7 +660,7 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 >s
 >s
 >although
->however
+>ergo
 >n
 >e
 >n
@@ -680,8 +687,12 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 >n
 >w
 >atom
+by one point
 >w
+>aside
+by one point
 >honestly
+by one point
 >raptor
 
 >deeply
@@ -692,19 +703,19 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 [2] WTF FTW
 [3] LOL, how hollow!
 [4] Play God? Dopy gal!
-[5] Abhorsive Behaviors!
+[5] Abhorsive behaviors! Nastiest titaness!
 [6] Strong will? Still wrong. At bay, ya bat.
-[7] Scourge-curse, go! (yeah, yeah, get on with it)
+[7] Plot is spoilt! Scourge-curse, go! (yeah, yeah, get on with it)
 
 >1
 [1] WTF FTW
 [2] LOL, how hollow!
 [3] Play God? Dopy gal!
-[4] Abhorsive Behaviors!
+[4] Abhorsive behaviors! Nastiest titaness!
 [5] Strong will? Still wrong. At bay, ya bat.
 [6] Go bald, old bag!
 [7] Sinister Insister. Hypno-phony. Reposed? Deposer.
-[8] Scourge-curse, go! (yeah, yeah, get on with it)
+[8] Plot is spoilt! Scourge-curse, go! (yeah, yeah, get on with it)
 
 >1
 !/\[8\]
@@ -730,14 +741,15 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 >1
 !/\[1\]
 
->au 1
+>au 2
+>deeply
 >play whistle
 
 Strip of Profits
 
 * detail-gretta-chat-special-case
 
->au 1
+>au 2
 >seed 1
 >a5
 >in
@@ -752,8 +764,8 @@ Strip of Profits
 >s
 
 >bossily
->nastily
->blearily
+>sparely
+>really
 
 >1
 >1
@@ -763,7 +775,7 @@ Strip of Profits
 [2] What can I do in the barn to the south?
 !some nuisances
 
->abstract sly imp to lalaland
+>abstract sly imp to ll
 >recap
 some nuisances
 !, but I got chased after that.
