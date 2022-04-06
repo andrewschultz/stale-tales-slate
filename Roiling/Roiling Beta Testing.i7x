@@ -14,13 +14,9 @@ when play begins:
 
 section gxing
 
-gxing is an action applying to one thing.
-
 understand the command "gx" as something new.
 
 understand "gx [things]" as gxing when mrlp is others and debug-state is true.
-
-in-gx is a truth state that varies.
 
 carry out gxing:
 	if can-guru is false, now can-guru is true;
@@ -40,8 +36,6 @@ produceredocuping is an action out of world.
 understand the command "produce redo cup" as something new.
 
 understand "produce redo cup" as produceredocuping.
-
-produce-redo-cup is a truth state that varies. produce-redo-cup is false.
 
 carry out produceredocuping:
 	if mrlp is not oyster, say "[reject]" instead;

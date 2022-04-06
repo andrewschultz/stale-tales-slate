@@ -13665,6 +13665,8 @@ pill-warned is a truth state that varies.
 
 chapter spilling
 
+produce-redo-cup is a truth state that varies. produce-redo-cup is false. [ this is an option in the beta test module but needs to come here since code that must stay in the release section uses it]
+
 spilling is an action applying to one thing.
 
 understand the command "spill [something]" as something new.
@@ -19624,6 +19626,10 @@ after printing the name of arugula when taking inventory:
 can-guru is a truth state that varies.
 
 section guruing
+
+gxing is an action applying to one thing. [ this is a debug command, but it is mapped to procedural commands in release code. So I can't change that. ]
+
+in-gx is a truth state that varies. [similarly this truth state that determines whether to deduct a point for guruing is in "carry out guruing" and I don't see how to move it, so I have to put it in release even though it is just for beta testers. ]
 
 guruing is an action applying to one thing.
 
