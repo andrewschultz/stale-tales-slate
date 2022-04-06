@@ -20,7 +20,7 @@ TRIX = what I think are nice tricks that may be somewhere near the back of the I
 
 Rooms are divided into books, with each volume being a region.]
 
-[Build this at your own risk. I think you'll get the general idea, but really, it takes 45 seconds to build. Plus you may need special versions of certain modules. They can be found at
+[Build this at your own risk. I think you'll get the general idea, but really, it takes 30-45 seconds to build. Plus you may need special versions of certain modules. They can be found at
 
 Glulx Text Effects.i7x
 Flexible Windows.i7x
@@ -1350,6 +1350,8 @@ rule for deciding whether to allow undo:
 			now the have-died flag is true;
 		else if undo-code is 10:
 			ital-say "the 'you died' message is random--but there are [number of rows in table of death messages]. So if you're hunting them, it may be more efficient to win to see them all.";
+		else if undo-code is 11:
+			say "You can't undo from Demo Dome Mode. Well, if you really think you missed something, you can make a move and undo twice. But it'll look weird warping back to [if gates stage is visited]Gates Stage[else]the start[end if].";
 		else if scams is true:
 			say "Allowing undo because you are in scams mode.";
 		else if undo is prevented:
@@ -20829,6 +20831,7 @@ carry out demoing:
 	move player to Peek Keep;
 	now red writing is examined; [this is a silly hack to make sure Sparse Spares is tracked ok]
 	demo-dome-status;
+	now undo-code is 11;
 	the rule succeeds;
 
 to demo-dome-status:
@@ -21867,6 +21870,7 @@ examp
 this is the activate demo dome mode rule:
 	fully resume the story;
 	say "You stumble on a small museum chock full of meta-information about your quest.";
+	now undo-code is 11;
 	move the player to Peek Keep;
 	now all held things are in Meatier Emerita Emirate;
 	demo-dome-status;
