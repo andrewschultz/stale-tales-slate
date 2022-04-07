@@ -42,6 +42,10 @@ sts_hash = {
 
 rev_word = sorted(sts_hash, key=sts_hash.get, reverse = True)
 
+def usage():
+    print("Entering a number allows hash reverse-lookup. That is the only option so far.")
+    sys.exit()
+
 def letters_only(my_word):
     return re.sub("[^a-z]", "", my_word.lower())
 
@@ -118,3 +122,13 @@ def pick_reverse_word(hash_to_see, max_letters = 8, cur_word = ""):
     if cur_word == "" and not got_one:
         print("Nothing found for", hash_to_see)
     return
+
+cmd_count = 1
+
+while cmd_count < len(sys.argv):
+    arg = sys.argv[cmd_count]
+    if arg.isdigit():
+        pick_reverse_word(int(arg))
+    else:
+        usage()
+    cmd_count += 1
