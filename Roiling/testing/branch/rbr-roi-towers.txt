@@ -17,8 +17,8 @@ files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,r
 ~	hints,hin,spoi	hints
 ~	verbs	verbs
 
-}}MAX=56
-}}CURMAX=56
+}}MAX=57
+}}CURMAX=57
 }}SCORE=0
 }}CURMIN=26
 
@@ -3742,7 +3742,7 @@ Your word, stupendous as it is, has no effect. Yet. You may just need to go back
 !by one point
 
 @spoi
-#towers anagrams for tetris sitter
+#towers anagrams for itster
 >xr tetris #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -3760,9 +3760,56 @@ Your score has just gone up by one point
 #nudge for teri
 >teir
 St. Teri is fine as-is. If she needs more changing, it will come from life experience.
-#done rejects for tetris sitter
->settir
-St. Teri's back in the real world, now.
+\\
+#nudge for done
+>doen
+No, deal with the entire Any-Done Anodyne.
+\\
+#nudge for any
+>ayn
+No, deal with the entire Any-Done Anodyne.
+\\
+#nudge for stteri
+>stteir
+You helped St. Teri directly. Now you need to deal with the Any-Done Anodyne.
+#scannotes for done any anodyne
+>scan anodyne
+For a moment you guess you've, err, done enough, and you don't have to get rid of the anodyne for Teri. But you also figure, what's one more logic puzzle after all you've been through?
+\\
+#spechelp for done any anodyne
+>annyedo
+The Done-Any Anodyne rattles.
+\\
+#readables for done any anodyne
+>done any anodyne
+The Done-Any Anodyne has the signature of its inventor, Dyan Eno, in red.
+
+@spoi
+#towers anagrams for done any anodyne
+>xr article
+After a thoughtful gaze, you reckon the Done-Any Anodyne could be ANNOYED.
+
+@sli
+#slider test for annoyed
+>naonedy
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!minh,mini
+>annoyed
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
+@nud
+#renudge for stteri
+>stteir
+St. Teri is just fine now, thanks to you.
+
+
+>give pot to sitter
+WRONG
 
 @!minh,mini
 >give pot to sitter

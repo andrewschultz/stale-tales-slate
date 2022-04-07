@@ -525,7 +525,7 @@ You don't need a safe home, right now. You need adventure.
 >chalets
 You don't need a safe home, right now. You need adventure.
 !that many letters
-#done rejects for satchel
+#done rejects for letters settler
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
 #mistake test for cheat on/off/teach on/off
