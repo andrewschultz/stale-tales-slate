@@ -3,6 +3,8 @@
 # it can also reverse lookup any word from any integer, starting with E as the biggest number and working its way down
 # so that it doesn't go through too many possibilities
 #
+# this partially replaces hv.pl and extends it, but it doesn't have functions like "detect hash in file" ... yet
+#
 
 import mytools as mt
 import sys
@@ -11,6 +13,10 @@ import math
 from collections import defaultdict
 
 word_hash = defaultdict(list)
+
+write_to_file = False
+
+nudge_out_file = "c:/writing/dict/hv.txt"
 
 sts_hash = {
   "a" : 2187818,
@@ -129,6 +135,16 @@ while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count]
     if arg.isdigit():
         pick_reverse_word(int(arg))
+    elif arg == 'f':
+        write_to_file = True
+    elif len(arg) > 3:
+        for x in arg.split(","):
+            print(x, word_hash_match(x))
+            if write_to_file:
+                f = open(nudge_out_file, "a")
+                this_line = '"{}"\t{}\t--\t--\t"some text"\n'.format(x,word_hash_match(x))
+                f.write(this_line)
+                f.close()
     else:
         usage()
     cmd_count += 1
