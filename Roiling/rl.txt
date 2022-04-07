@@ -652,7 +652,7 @@ You'll need a few more clues from the surrounding scenery to fix stuff, if you w
 With ?RYRRY, the first letter is a consonant, which is S or T.
 But what of the others? The fourth slot is a consonant, too, but it cannot be R or T. That means it is S. But since the first letter is T or S, it must be T. T-(IE)S-(IE).
 Since TT clogs things up, you get TR-ST-. TRISTE is a word, but TRESTI isn't.
-# logic for done-any anodyne
+# logic for done any anodyne
 ?Can I, uh, do anything with the done-any anodyne?
 Yes. The ???Y?YR may be frustrating with all these question marks, but you may be a pro by now.
 First, note the letter Y must be in slot 5, as no other question-mark squares might contain it, and there are no exact matches elsewhere.

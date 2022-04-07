@@ -135,7 +135,7 @@ talcier/sewed/revised/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
 rusty/naivest/angstier/mined/creaky/pearly/coiled/rustled/grandiose/prosiest/attentive/rewired/rousted/aimless/dandier
 # more LLPs
-punier/antsier/present/triste
+punier/antsier/present/triste/annoyed
 #############################################lumping otters min together
 Otters adjusted (min)
 bare/reedi

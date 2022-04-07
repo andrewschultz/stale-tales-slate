@@ -1214,9 +1214,14 @@ Only if you want full points.
 Not really. Just wasting time, guessing she is happy.
 Maybe you could get her back to real emotions ...
 ... by making her <b>TRISTE</b>.
+?Wait! She has a new name, but she still isn't fully happy and/or motivated!
+Well, that Done-Any Anodyne is still on her mind.
+You need to put her in a mood that might reject anodyne.
+Make her ANNOYED.
 ?How do I get any useful concrete information from the (ex-)Tetris Sitter?
-Give him a gift.
-If you found the crocus behind the unripe ur-pine, you can do so.
+Give her a gift.
+If you found the crocus behind the unripe ur-pine, you can do so. You will, in fact, do so automatically.
+Talk to her, exit the premises and re-enter. It will give some clue as to what the Curst Palace can become.
 >STORE Y
 >>POSH HOPS SHOP
 ?Why do the pills have a warning?

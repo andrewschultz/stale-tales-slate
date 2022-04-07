@@ -389,7 +389,9 @@ spectacular,cactuspearl,pearlcactus,capsulecart,acurstplace
 #mesprise premises
 #qver of tetris sitter
 triste,?RYRRY=tetris=sitter
-triste,restit
+triste,restit,itster
+#qver of done any anodyne
+annoyed,???Y?YR=doneany=anodyne
 #### reorg a bit
 #qver of sweatier wait seer
 weariest,?YYRY?RR=sweatier=waitseer
