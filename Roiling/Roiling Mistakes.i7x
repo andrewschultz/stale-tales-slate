@@ -28,9 +28,13 @@ understand "hug [text]" and "hug" as a mistake ("Hug? Ugh. Guh.")
 
 understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
+understand "consult [text]" as a mistake ("You can [b]CONSULT PAD ABOUT X[r], [b]CONSULT ABOUT X[r], or [b]PAD X[r].") when player has pedanto notepad.
+
+chapter specific anagrams of universal commands or items
+
 understand "pace" and "paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
 
-understand "consult [text]" as a mistake ("You can [b]CONSULT PAD ABOUT X[r], [b]CONSULT ABOUT X[r], or [b]PAD X[r].") when player has pedanto notepad.
+understand "reaves" as a mistake ("You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.")
 
 book Ordeal Reload
 

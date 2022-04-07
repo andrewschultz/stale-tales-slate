@@ -10,10 +10,6 @@
 
 * go weird places
 
-#nudge for resave
->resaev
-Alas, there is nothing between RESAVE and AVERSE to load a special game state.
-
 #nudge for terry
 >ryter
 !You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
@@ -373,3 +369,16 @@ You consider the costs and benefits of collapsing in an impressively uncoordinat
 #nudge for point
 >poitn
 There's no secret cheat between NO TIP and OPT IN.
+
+# try weird things
+
+>averse
+
+#nudge for resave
+>resaev
+Alas, there is nothing between RESAVE and AVERSE to load a special game state.
+
+#mistake test for reaves
+>reaves
+You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
+

@@ -44,6 +44,10 @@ understand "rc [text]" as a mistake ("[verb-cue].") when Notices Section is unvi
 
 understand "remove [something] from [something]" as a mistake("To keep things simple for you (and, okay, for my coding efforts,) I recommend [b]TAKE X[r] instead of [b]REMOVE[r]/[b]FROM[r]. [b]REMOVE[r] defaults to carried or worn items, and I'm too lazy to tweak that.")
 
+chapter specific anagrams of universal commands or items
+
+understand "reaves" as a mistake ("You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.") when autosave-known is true.
+
 book Ordeal Loader
 
 understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.") when mrlp is Ordeal Loader. [bold-ok]

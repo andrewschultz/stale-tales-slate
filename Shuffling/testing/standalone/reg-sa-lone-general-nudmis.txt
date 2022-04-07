@@ -404,3 +404,16 @@ Being able to RETRY is good enough. You don't want to do anything too weird. It 
 ##nudge for retry
 >ryter
 You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
+
+# verb anagram(s)
+
+>averse
+
+#nudge for resave
+>resaev
+Alas, there is nothing between RESAVE and AVERSE to load a special game state.
+
+#mistake test for reaves
+>reaves
+You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
+
