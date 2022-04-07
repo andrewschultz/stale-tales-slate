@@ -471,6 +471,9 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >undo
 >undo
 
+>skid
+The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
+
 >reboot
 Your score has just gone up by one point
 

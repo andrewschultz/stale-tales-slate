@@ -12954,11 +12954,9 @@ check pouring it into:
 	if noun is ALocalCo cola, try inserting noun into second noun instead;
 	say "That won't work. You need to pour a liquid (a small amount) into something." instead;
 
-chapter clock sap
-
 chapter disk
 
-a disk is a thing. description is "This disk is plain, chunky and 3 1/4' square. Small print indicates the disk contains not only a powerful compression algorithm that allows portability but also critical system repair programs that only run on startup."
+a disk is a thing in Hacks Shack. description is "This disk is plain, chunky and 3 1/4' square. Small print indicates the disk contains not only a powerful compression algorithm that allows portability but also critical system repair programs that only run on startup.". "[if disk is handled]You see a disk lying on the labs slab here[else]A disk is lying on the floor here[end if]."
 
 a-text of disk is "RRYR". b-text of disk is "RRYR". parse-text of disk is "x[sp]x[sp]I[sp]x". disk is cheat-spoilable.
 
@@ -13001,10 +12999,6 @@ after reading catechism when yak is in Hacks Shack and no-yak is false:
 	say "The yak's ears perk up a little as you mumble to yourself on reading. It's all pretty neutral and over the yak's head. Perhaps something simpler would give it more of a reaction.";
 	now no-yak is true;
 	continue the action;
-
-chapter disk
-
-the disk is in Hacks Shack. "[if disk is handled]You see a disk lying on the labs slab here[else]A disk is lying on the floor here[end if]."
 
 chapter skid
 

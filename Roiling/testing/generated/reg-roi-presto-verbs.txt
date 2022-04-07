@@ -371,6 +371,8 @@ You can now do computery things unimpeded! Hooray!
 >put disk in drive a
 
 #verbcase sleep-presto-if-player-is-in-hacks-shack-if-peels-speel-is-off-stage
+>sleep
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
 #balance undo
 #pre-peels-speel-sleep rule

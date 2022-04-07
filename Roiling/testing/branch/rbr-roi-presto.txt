@@ -2220,6 +2220,8 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 
 @verbs
 #verbcase sleep-presto-if-player-is-in-hacks-shack-if-peels-speel-is-off-stage
+>sleep
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
 @max,verbs
 #balance undo
@@ -2235,6 +2237,10 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >undo
 >undo
 >undo
+
+@max
+>skid
+The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
 
 >reboot
 Your score has just gone up by one point

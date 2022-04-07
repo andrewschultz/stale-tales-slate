@@ -550,7 +550,7 @@ ought letters	ought letters	false	352450403	--	"tough"	"tough"	pre-harpings-flip
 hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	--	--	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest.[paragraph break]You make plans, once Yorpwald is back to normal, to lobby for a Thaws-Swath to answer these questions. It will frequently be wash't, so it doesn't get shawt."
 starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	--	--	"You half-memorize the charts, just in case, before dismissing them. Calling them tras(c)h sort of works as a noun or an interjection, and, well, you needed to rip up something harmless. This act [if shack-flip-yet is true]clues[else]reinforces[end if] to you that the main interjections are mostly used up, and it's probably all nouns and verbs, like the word trash itself, inside the Hacks['] Shack."
 Clack Ops Locs Pack	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	--	--	"You think WHOAH as the locs pack morphs into a caps lock button, which you pick up."
-disk	skid	false	215229079	--	"skid"	"skid"	--	post-disk-skid rule	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can [b]PUSH[r] or [b]PULL[r] it around[or] again[stopping]."
+disk	skid	false	215229079	--	"skid"	"skid"	pre-disk-skid rule	post-disk-skid rule	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can [b]PUSH[r] or [b]PULL[r] it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the familiar disk, which you take." [there was a pre-skid-disk rule, but it was trumped by the SHATTER THREATS rule]
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be, because they have odd special abilities. Maybe if you examine this mug, you can see if it does."
@@ -713,9 +713,14 @@ to say increm:
 		now Rand is dismissed;
 		now starch charts are in Saps Pass;
 
+this is the pre-disk-skid rule:
+	if disk is in drive a:
+		say "The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.";
+		the rule fails;
+
 this is the post-disk-skid rule:
 	if skid is off-stage:
-		say "[line break]You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
+		say "[line break]You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a [b]SKID[r], as long as it's physically possible.";
 	move skid to location of player;
 
 this is the pre-reboot rule:
@@ -930,7 +935,9 @@ this is the post-calm-clam rule:
 	set the pronoun it to urn;
 
 this is the pre-sabot-boats-boast rule:
-	if frat raft is reflexed, say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...";
+	if frat raft is reflexed:
+		say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...";
+		decrement cur-score of mrlp; [ otherwise you get 2 points for leaving the shore instead of 1 ]
 	now frat raft is unfigured;
 
 this is the pre-oars-soar rule:
