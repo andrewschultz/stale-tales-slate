@@ -344,6 +344,12 @@ definition: a thing (called xx) is fungible:
 	if xx is touchable, yes;
 	no.
 
+a thing can be spacy. a thing is usually not spacy.
+
+a thing can be hinthelpy. a thing is usually not hinthelpy.
+
+a thing can be score-once. a thing is usually not score-once.
+
 chapter rooms
 
 a room can be stairy. a room is usually not stairy.
@@ -7293,10 +7299,12 @@ carry out fliptoing (this is the main fliptoing rule):
 				if debug-state is true and flip-spill-flag is true, say "(DEBUG) NO PILL USE MESSAGE FOR [the-from entry] -> [the-to entry].";
 				say "[the-msg entry][line break]";
 			if mrlp is stores, store-min-adjust the-from entry;
-			if the-to entry is not moot or the-to entry is satchel: [more than one point here]
-				if the-from entry is sabot boats and frat raft is reflexed:
-					do nothing;	[a bailout not to add a point if you FART then BOAST]
-				else if the-from entry is not part of the diorama:
+			let to-bardo be whether or not the-to entry is in Adorb Bardo;
+			if the-to entry is not moot: [more than one point here]
+				if the-to entry is not in Adorb Bardo:
+					reg-inc;
+				else if the-from entry is score-once:
+					now the-from entry is not score-once;
 					reg-inc;
 			if the-from entry is a backdrop:
 				remove the-from entry from play;
@@ -7320,7 +7328,11 @@ carry out fliptoing (this is the main fliptoing rule):
 				process the Report Porter Perrot Knocks rule;
 			else if the-to entry is not touchable:	[components aren't broken off]
 				if the-to entry is not the-from entry and the-to entry is not a backdrop, move the-to entry to location of player;
-			if the-to entry is not the-from entry and the-from entry is not reflexed, moot the-from entry; [this is to drop a new item in place]
+			if the-to entry is not the-from entry and the-from entry is not reflexed:
+				if to-bardo is true:
+					move the-from entry to Adorb Bardo;
+				else:
+					moot the-from entry; [this is to drop a new item in place]
 			if the-to entry is touchable:
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
 				if the-to entry is plural-named, set the pronoun them to the-to entry;
@@ -8021,15 +8033,13 @@ before taking (this is the dumb take jokes rule) :
 	if noun is crabgrass or noun is brass crag, say "No need for a crass grab." instead;
 	if noun is part of the diorama, say "Don't pull the diorama apart. That was a gift! An instructional gift! From a recently deceased father figure!" instead;
 
-a thing can be spacy. a thing is usually not spacy.
-
-a thing can be hinthelpy. a thing is usually not hinthelpy.
+section pavement / event map
 
 the pavement is part of the diorama. the pavement is spacy. the pavement is hinthelpy. description is "It's sidewalk pavement. It seems like something has been written on it, but it's too bumpy to read, especially since the pavement is so small."
 
 a-text of pavement is "YRYRR*RYR". b-text of pavement is "YRYRR*RYR". parse-text of pavement is "-[sp]x[sp]-[sp]x[sp]x[sp] [sp]x[sp]-[sp]x".
 
-the event map is a thing. it is hinthelpy. description of event map is "You can read it from here--maybe because you remember it, but you can."
+the event map is a thing in Adorb Bardo. it is hinthelpy. description of event map is "You can read it from here--maybe because you remember it, but you can."
 
 after examining event map:
 	let bluh be false;
@@ -8057,13 +8067,17 @@ after examining event map:
 
 a-text of event map is "RYRYRYRR". b-text of event map is "RYRYRYRR". parse-text of event map is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
+section platform / farm plot
+
 the platform is part of the diorama. it is hinthelpy. the platform is spacy. description is "It's one of those speaking platforms that people would stand behind. If it weren't so small."
 
 a-text of platform is "RYRR*RRYR". b-text of platform is "RYRR*RRYR". parse-text of platform is "x[sp]-[sp]x[sp]x[sp] [sp]x[sp]x[sp]-[sp]x".
 
-the farm plot is a thing. it is hinthelpy. description is "It doesn't actually have any dirt on it or it'd have crumbled long ago. If the words [b]FARM PLOT[r] weren't traced in it, in fact, you'd probably think it was just a dirt road. Hooray for helpful documentation."
+the farm plot is a thing in Adorb Bardo. it is hinthelpy. description is "It doesn't actually have any dirt on it or it'd have crumbled long ago. If the words [b]FARM PLOT[r] weren't traced in it, in fact, you'd probably think it was just a dirt road. Hooray for helpful documentation."
 
 a-text of farm plot is "RRYRRYRR". b-text of farm plot is "RRYRRYRR". parse-text of farm plot is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+
+section pedestal / steel pad
 
 the pedestal is part of the diorama. the pedestal is hinthelpy and spacy. description is "Too small to put anything on, but it's a good size for instructional purposes."
 
@@ -8071,9 +8085,11 @@ a-text of pedestal is "RRYYR*RYR". b-text of pedestal is "RRYGR*RGR". parse-text
 
 does the player mean scaning steel pad: it is likely.
 
-the steel pad is a hinthelpy thing. description is "It's really wiry and reminds you that you don't do the dishes often enough. You probably don't have time, now."
+the steel pad is a hinthelpy thing in Adorb Bardo. description is "It's really wiry and reminds you that you don't do the dishes often enough. You probably don't have time, now."
 
 a-text of steel pad is "RYRYRRYR". b-text of steel pad is "RYRGRRGR". parse-text of steel pad is "x[sp]E[sp]x[sp]E[sp]x[sp]x[sp]A[sp]x".
+
+section brass crag / crabgrass
 
 some crabgrass is part of the diorama. the crabgrass is hinthelpy and spacy and singular-named. description is "It might be fake, seeing as how it hasn't died after all these years."
 
@@ -8081,7 +8097,7 @@ indefinite article of crabgrass is "some".
 
 a-text of crabgrass is "RRYRR*RRYR". b-text of crabgrass is "RPGRR*RRYR". parse-text of crabgrass is "x[sp]R[sp]A[sp]x[sp]x[sp] [sp]x[sp]x[sp]A[sp]x".
 
-the brass crag is a hinthelpy thing. description is "It would be majestic if it weren't so miniature. You think. Well, it wasn't meant as scenery."
+the brass crag is a hinthelpy thing in Adorb Bardo. description is "It would be majestic if it weren't so miniature. You think. Well, it wasn't meant as scenery."
 
 a-text of brass crag is "RRYRRRYRR". b-text of brass crag is "RPGRRRYRR". parse-text of brass crag is "x[sp]R[sp]A[sp]x[sp]x[sp]x[sp]A[sp]x[sp]x".
 
