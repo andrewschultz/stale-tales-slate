@@ -13,6 +13,8 @@
 
 * main
 
+>au 2
+
 >z
 >gonear strip
 >demo dome mode

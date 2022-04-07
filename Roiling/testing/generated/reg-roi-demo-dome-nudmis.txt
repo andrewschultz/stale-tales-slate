@@ -13,6 +13,8 @@
 
 * main
 
+>au 2
+
 >demo dome
 Peek Keep
 
@@ -283,23 +285,6 @@ You don't need to flip anything here, really. Certainly not a room.
 
 >d
 Sparse Spares
-
->u
-
->score
-You could still examine the parcels clasper in Sparse Spares.
-
->s
-You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-
->undo
->d
->x clasper
-
->u
->s
-You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-!ignoring
 
 #mistake test for spears
 >spears

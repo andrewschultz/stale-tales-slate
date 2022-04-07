@@ -28,6 +28,8 @@ TSV:## maximum walkthrough	## walkthrough with nudges
 
 * main
 
+>au 2
+
 @max
 >z
 >gonear strip
@@ -745,7 +747,6 @@ Sparse Spares
 ###skip test checking
 >score
 You could still examine the parcels clasper here.
-
 \\
 >u
 \\

@@ -3591,11 +3591,6 @@ to check-guru: if guru-bonus-forced, say "[line break]Since you've changed all t
 
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
-report requesting the score for the first time:
-	if possibles is false and min-alert is false and mrlp is not demo dome:
-		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing [b]POSS[i]. This is a potential meta-spoiler, since the minimum score increasing indicates you found a fun side quest, and the maximum score decreasing means you left something behind, but it may be helpful.";
-		now min-alert is true;
-
 definition: a region is markable:
 	if it is mrlp, no;
 	if it is solved, yes;
