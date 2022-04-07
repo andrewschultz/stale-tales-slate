@@ -239,7 +239,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather. readable table of towers is table of towers readables. general blather table of towers is table of towers general blather. reflexive blather table of towers is table of towers reflexive blather. misses-rule of towers is towers-misses rule.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 57. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather. readable table of towers is table of towers readables. general blather table of towers is table of towers general blather. reflexive blather table of towers is table of towers reflexive blather. misses-rule of towers is towers-misses rule.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -274,8 +274,8 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=23 for tentative (agnostic meets dr yow)
 1=24 for rewired (bot-boat)
 1=25 for giving Tetris Sitter the top opt pot NON-ANAGRAM
-4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
-1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+5=30 for unripe ur-pine/serpent/antsier/triste/annoyed in Mislit Limits/Mesprise Premises
+1=31 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather. readable table of otters is table of otters readables. general blather table of otters is table of otters general blather. reflexive blather table of otters is table of otters reflexive blather. misses-rule of otters is otters-misses rule.
 [LLP list:
@@ -585,7 +585,7 @@ section acting on skan snaks
 
 check giving skansnak to Tetris Sitter:
 	if top opt pot is moot, say "You already gave [The tetris sitter] a much better gift." instead;
-	say "[if tetris sitter is reflexed][The tetris sitter] doesn't need comfort food, and the insights [the noun] would give won't help her[else]Now [the tetris sitter] is back in the real world, she probably needs something healthier[end if]." instead;
+	say "[if itster is touchable][The tetris sitter] doesn't need comfort food, and the insights [the noun] would give won't help her[else]Now [the tetris sitter] is back in the real world, she probably needs something healthier[end if]." instead;
 
 check giving skansnak to a guardian:
 	if second noun is diners, say "They scoff at what your idea of fine cuisine seems to be." instead;
@@ -1686,8 +1686,11 @@ persuasion rule for asking repents serpent to try doing something:
 	persuasion fails;
 
 persuasion rule for asking Tetris Sitter to try doing something:
-	if Tetris Sitter is reflexive:
+	if itster is touchable:
 		say "The Tetris Sitter ignores you and continues smiling and working on her high score.";
+		persuasion fails;
+	if anodyne is not moot:
+		say "The Tetris Sitter seems on the verge of relating something useful. But she is not quite up to it.";
 		persuasion fails;
 	say "St. Teri seems to want to sit and babble on.";
 	try asking Tetris Sitter about "xyzzy" instead;
@@ -4779,7 +4782,7 @@ this is the towers-hinting rule:
 		all-say "You can enter a bot boat and go safely across Leak Lake." instead;
 	if player is in Mesprise Premises:
 		if crocus is in top opt pot or player has crocus, try objhinting crocus instead;
-		if Tetris Sitter is reflexive, try objhinting Tetris Sitter instead;
+		if itster is touchable, try objhinting Tetris Sitter instead;
 		if player has top opt pot, all-say "You should [b]GIVE[r] the succor crocus to [the tetris sitter] for hints." instead;
 	if player is in Mislit Limits, try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything. Try moving around." instead;
@@ -5669,6 +5672,7 @@ check drinking:
 		unless ALocalCo cola is moot, say "The mug's empty." instead;
 		say "You can sip it as you do your programming." instead;
 	if noun is tea, say "It's food-tea, not drink-tea." instead; [oyster]
+	if noun is Done Any Anodyne, say "You've certainly done more than 'any' to get here. But drinking it would cause you to give up just before your victory! See if you can put [the tetris sitter] in the right mood to forsake it forever." instead;
 	if noun is atmo moat, say "You hear a cholera chorale warning you in the distance, so, you think 'Oh. clear.'" instead; [otters]
 	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if BUB DUDE EGG is reflexive and presto is unsolved]it's done incidentally when you figure another puzzle[else]you already got past there[end if]." instead;
 
@@ -17044,28 +17048,31 @@ this is the bore-raspy-spray rule:
 
 book Mesprise/Emprise Premise(s)
 
-Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges. missed-text of Mesprise Premises is "a dwelling west of Mislit Limits".
+Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Mesprise Premises is "[if anodyne is moot]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges. missed-text of Mesprise Premises is "a dwelling west of Mislit Limits".
 
-the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her bright red [first custom style]ITSTER[r][else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
+chapter tetris sitter
+
+the Tetris Sitter is an auxiliary LLPish person in Mesprise Premises. description is "[if itster is touchable]Absorbed in a game on her bright red [first custom style]ITSTER[r][else if anodyne is not moot]Still more distant than she should be[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if itster is touchable]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]S[sp]x[sp]-".
 
-understand "st/teri" and "st teri" as tetris sitter when tetris sitter is reflexed.
-
-the itster is auxiliary boring scenery in Mesprise Premises. description of itster is "It's red, and boy what a high score [the Tetris Sitter] has.". bore-text of the itster is "The itster is [the Tetris Sitter]'s, but maybe you can remind her there's a lot more to life."
+understand "st/teri" and "st teri" as tetris sitter when itster is moot.
 
 check going east in Mesprise Premises (this is the force give top opt pot rule):
-	if player has top opt pot and top opt pot contains crocus and Tetris Sitter is reflexed:
-		say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for [the tetris sitter], now she's not stuck on her [first custom style]ITSTER[r] game of Tetris. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
-		moot top opt pot;
-		reg-inc;
+	if player has top opt pot and top opt pot contains crocus:
+		if anodyne is moot:
+			say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for [the tetris sitter], now she's not stuck on her [first custom style]ITSTER[r] game of Tetris. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
+			moot top opt pot;
+			reg-inc;
+		else if itster is moot:
+			say "The [sitter] seems to get up and try to prevent you from going. You sensed you were so close to helping her, and of course you didn't have to, but maybe the right word would change things.";
 	continue the action;
 
 Ornate Atoner Renato is an undesc.
 
 check giving to Tetris Sitter:
 	if second noun is crocus, try giving top opt pot to Tetris Sitter instead;
-	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
+	if second noun is Tetris Sitter and itster is touchable:
 		say "She mumbles '[']S trite,' [unless noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
 	unless noun is top opt pot, say "St. Teri thanks you, but [if top opt pot is moot]the top opt pot was probably enough[else]that's not quite what she wants[end if]." instead;
 	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
@@ -17075,6 +17082,18 @@ check giving to Tetris Sitter:
 	moot top opt pot instead;
 
 check going outside in Mesprise Premises: try going east instead;
+
+section itster
+
+the itster is auxiliary boring LLPish scenery in Mesprise Premises. description of itster is "It's red, and boy what a high score [the Tetris Sitter] has.". bore-text of the itster is "The itster is [the Tetris Sitter]'s, but maybe you can remind her there's a lot more to life."
+
+a-text of itster is "RRYRRY". b-text of itster is "RRYRRY". parse-text of itster is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
+
+chapter Done Any Anodyne
+
+the Done Any Anodyne is boring vanishing LLPish scenery. "It's sitting there. The [sitter] isn't really in the mood to drink it, but it's there, and she has nothing better to do at the moment. Maybe you can help her break out of that.". printed name is "Done-Any Anodyne".
+
+a-text of done any anodyne is "YRRYOYR". b-text of done any anodyne is "???Y?YR". parse-text of done any anodyne is "?[sp]?[sp]?[sp]-[sp]y[sp]e[sp]x".
 
 chapter top opt pot
 
@@ -21673,7 +21692,7 @@ check objhinting a quest-item when mrlp is routes (this is the redirect hints in
 	if noun is held, say "[The noun] [if list o toils is examined]is part of the spiers['] potion that will help let people see directions again[else]has a use, as a reagent of some sort, but maybe you haven't examined anything you need[end if]. Since you found it, you don't need to do anything else with it." instead;
 
 to say give-croc:
-		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the premises to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
+		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the premises to the west[else if itster is touchable]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
 
 to decide whether one-imp-down:
 	if imp-score >= 1, yes;
@@ -22502,8 +22521,9 @@ this is the towers-misses rule:
 	if unripe ur pine is in Mislit Limits, say "[2drm of mislit limits]you could've made the unripe ur-pine [b]PUNIER[r].";
 	if top opt pot is not moot, say "[2drm of mislit limits]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west.";
 	if mesprise premises are visited:
-		if tetris sitter is reflexive, say "[2drm of mesprise premises]you could've made the Tetris Sitter [b]TRISTE[r].";
-		if top opt pot is not moot, say "[2drm of mesprise premises]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest.";
+		if itster is not moot, say "[2drm of mesprise premises]you could've made [the sitter] [b]TRISTE[r].";
+		if anodyne is in Mesprise Premises, say "[2drm of mesprise premises]you could've made [the sitter] [b]ANNOYED[r].";
+		if top opt pot is not moot, say "[2drm of mesprise premises]you could've given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest.";
 
 to towers-miss-track (rm - a room):
 	if location of keycar is rm, say "[2drm of rm]the yacker keycar could've been made [b]CREAKY[r]."; [this is possible since the keycar appearing relies on clearing all guardians, not just necessary ones. It cannot appear in Coastlines.]

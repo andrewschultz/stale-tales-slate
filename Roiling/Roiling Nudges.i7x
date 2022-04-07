@@ -1310,7 +1310,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if Mislit Limits is visited]You're beyond the lake now.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
 "pot"	258928554	top opt pot	--	"The best--well, the only--way to change the top opt pot is to put something in it, but you haven't seen anything suitable yet."
 "blub"	195757456	blub bulb	--	"Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new."
-"renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if top opt pot is moot]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if Mesprise Premises is visited]His friend is still unreceptive, though[else]You haven't yet found anyone who might want the top opt pot, anyway[end if]."
+"renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if top opt pot is moot]You got his present to [the sitter][else if anodyne is moot]You've cheered [sitter] up a lot and should probably just give her the gift[else if itster is moot]You've found and made [the sitter] a bit happier, but maybe you can do even more[else if Mesprise Premises is visited][the sitter] is still unreceptive, though[else]You haven't yet found anyone who might want the top opt pot, anyway[end if]."
 "toaster"	592164309	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	start tarts	--	"[eat-pastry]." [pastry rejects]
@@ -1715,11 +1715,16 @@ table of Mesprise Premises nudges [3 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesprise"	724017911	--	--	"[towersloc]."
 "emprise"	627743945	--	--	"[towersloc]."
-"teri"	361232776	--	teri-reflexed rule	"St. Teri is fine as-is. If she needs more changing, it will come from life experience."
+"teri"	361232776	--	triste-yet rule	"You can't really change St. Teri directly. You helped her break free from [the itster][if anodyne is moot] and the [anodyne][else], but there's still [the anodyne] to deal with[end if]."
+"done"	292095283	--	--	"[all-anodyne]."
+"any"	193454578	--	--	"[all-anodyne]."
+"stteri"	560616760	--	triste-yet rule	"[if anodyne is moot][sitter] is just fine now, thanks to you[else]You helped [sitter] directly. Now you need to deal with [the anodyne][end if]."
 
-this is the teri-reflexed rule:
-	if player is in Mesprise Premises and Tetris Sitter is reflexed, the rule succeeds;
+this is the triste-yet rule:
+	if player is in Mesprise Premises and itster is moot, the rule succeeds;
 	the rule fails;
+
+to say all-anodyne: say "No, deal with the entire [anodyne]"
 
 chapter dire and arid den
 

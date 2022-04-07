@@ -1223,7 +1223,8 @@ earnest eastern neaters	earnest eastern neaters	false	611415331	Mislit Limits	"n
 repents serpent	repents serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually slackens, then slinks to where it's just there. But it shortly finds just being present and not really able to annoy anyone is not worth their time. There must be someone else to bother."
 ur pine	nastier stainer retinas	false	513602032	--	"punier"	"punier"	--	--	"The ur-pine shrinks and flails. Behind it is ... worse. Stainer retinas. Wait ... not just any stainer retinas. [b]NASTIER[r] stainer retinas. They must be guarding something!"
 nastier stainer retinas	succor crocus	true	528602068	--	"antsier"	"antsier"	--	post-retinas-antsier rule	"The stainer retinas blink and begin to lose focus. You stare them down. They blink some more. Then they look from side to side. A long pause, perhaps pondering they'd been tougher to make antsier if 'nastier' weren't so similar, then ... they trail off to who knows where.[paragraph break]Behind them is a pure spring. Clear water drips from it. You let a few drops into the top opt pot ... and the blub bulb opens up. Not into a We-ROFL flower, which brings only temporary happiness, but a succor crocus!"
-Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-sitter-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
+itster	done any anodyne	false	560616760	--	"triste"	"triste"	--	post-itster-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can. But I still don't feel up to it.'[paragraph break]And you see why: behind her is a bottle of [anodyne], which 'helps' people feel 'good' about relatively meaningless accomplishments. So good, in fact, they worry about trying something they really want to do, because they might fail, but their rote achievements will always be there to repeat, even if they aren't much fun to retry or recap."
+done any anodyne	done any anodyne	false	485549861	--	"annoyed"	"annoyed"	--	--	"[Tetris Sitter] suddenly blinks again. 'No. Life's not good enough. I don't want to pretend like this stuff is good enough any more. I mean, I have to admit I wasted a bit of time and not cling to this. I'd like to do something real. And I'd like to help you.' She pours the anodyne out and throws the bottle down a trash chute."
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and rousted detours can appear in radically different places, so we want these near the end.]
 bogus-rousted	bogus-rousted	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
@@ -1343,8 +1344,7 @@ this is the post-retinas-antsier rule:
 	moot blub bulb;
 	now succor crocus is in top opt pot;
 
-this is the post-tetris-sitter-triste rule:
-	moot itster;
+this is the post-itster-triste rule:
 	now tetris sitter is proper-named;
 	now printed name of tetris sitter is "St. Teri";
 
@@ -1356,11 +1356,11 @@ this is the pre-curst-palace-spectacular rule:
 
 this is the post-curstpalace-spectacular rule:
 	if used-ray is false and cur-score of towers is max-score of towers - 1:
-		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere! [if xrayvision is true]And congratulations on resisting temptation after eating [the random moot skansnak], too.[else][line break][end if]";
+		ital-say "You get the final bonus point for not using the toaster/pastries['] x-ray vision anywhere! [if xrayvision is true]And congratulations on resisting temptation after eating [the random moot skansnak], too.[else][line break][end if]";
 		increment cur-score of towers;
 
 to say what-about-ed:
-	if Tetris Sitter is reflexed:
+	if itster is moot:
 		say "[The tetris sitter] comes out to see the results of your magicking. 'Did OK, kiddo!' she yells, shaking your hand";
 	else if serpent is reflexive:
 		say "The serpent slinks away behind the den to the west, to avoid the rumbling";
@@ -2331,6 +2331,7 @@ luck node	"One of five names in red on the node by the fissure reads [first cust
 blaster	"[first custom style]ALBERT'S[r]."
 bonker	"The bonker was created by [first custom style]KB RENO[r]."
 stinger	"The stinger's brand is [first custom style]TRI-NEGS[r], for triple the demoralizing grin power, you guess."
+done any anodyne	"The [anodyne] has the signature of its inventor, [first custom style]Dyan Eno[r], in red."
 
 table of otters readables
 to-read	what-read	alt-read
@@ -2500,7 +2501,7 @@ promise imposer	"The promise imposer seems to talk about everything except what 
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]Why, they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if Tetris Sitter is reflexive][The tetris sitter] has nothing to say. Her game is too important[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
+Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too important[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
@@ -2657,7 +2658,7 @@ organised	--
 mardier admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
-Tetris Sitter	"[if top opt pot is moot][The tetris sitter] mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive][The tetris sitter] wants to help, but she can't quite, yet[else][The tetris sitter] ignores you, working on her high score[end if]."
+Tetris Sitter	"[if top opt pot is moot][The tetris sitter] thanks you for aiding her spiritual growth. Just go out and come back in if you need help with that palace[else if anodyne is moot]St. Teri looks almost perfectly ready to help, but she can't quite, yet[else if itster is not moot]St. Teri wants to help, but she can't quite, yet[else][The tetris sitter] ignores you, working on her high score[end if]."
 
 table of otters reflexive blather
 him-asked	him-told
@@ -2924,9 +2925,9 @@ Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tu
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 Tetris Sitter	Elvira	"'[if top opt pot is not moot]She drags us all down[else]I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need[end if]!'"
 Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but St. Teri's observations were a help[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside."
-Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they only help so much.'[else if top opt pot is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
-Tetris Sitter	top opt pot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
-Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if top opt pot is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]"
+Tetris Sitter	crocus	"[if anodyne is touchable]'Flowers? I almost could... no offense, but I'm not quite in the right mood, yet.'[else if itster is not moot]'Flowers? Oh, I don't know. They're nice, but ... they only help so much.'[else if top opt pot is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
+Tetris Sitter	top opt pot	"[if anodyne is touchable]'Nice, yes, but...' You seem to need one more thing to change St. Teri's mood.[else if itster is not moot]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
+Tetris Sitter	Ornate Atoner Renato	"[if itster is not moot]'There's a name. I sort of miss him.'[else if top opt pot is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]"
 
 to say yow-around-gone: say "[if Dr Yow is touchable]around[else]gone"
 
@@ -3419,6 +3420,7 @@ curst palace	false	false	false	false	"[scannotes-curst]."
 repents serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only 'stainer retinas,' you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
+done any anodyne	true	false	false	false	"For a moment you guess you've, err, done enough, and you don't have to get rid of the anodyne for Teri. But you also figure, what's one more logic puzzle after all you've been through?"
 
 to say scannotes-curst:
 	if palace-let < 6:
@@ -3749,8 +3751,9 @@ blaster	"[jet-nq]."
 weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 earnest eastern neaters	"You feel less split from everyone else for a second."
 repents serpent	"The serpent calms down for a split-second[serp-try]."
-Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
 ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
+Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
+done any anodyne	"The [anodyne] rattles."
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 
 to say jet-nq: say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
@@ -3966,7 +3969,6 @@ raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
-Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
 
 table of otters done rejects
 specdone	spectalk
@@ -4440,8 +4442,9 @@ mended mini denim	"[one of]The mended mini denim can't quite be cut through by s
 repents serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it more inert...[plus][or]From soliciting repents to [b]PRESENT[r].[minus][cycling]"
 dreads adders	"[one of]You want to make the dreads adders less ferocious.[plus][or]Making them happy isn't your business, but you can still make them...[plus][or][b]SADDER[r].[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners [b]RINSED[r].[minus][cycling]"
-Tetris Sitter	"[if Tetris Sitter is reflexive][one of][The tetris sitter] seems absorbed in her [first custom style]IT-STER[r].[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become [b]TRISTE[r].[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
+Tetris Sitter	"[if anodyne is touchable]St. Teri is still unwillingly under the influence of [else if itster is not moot][one of][The tetris sitter] seems absorbed in her [first custom style]IT-STER[r].[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become [b]TRISTE[r].[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
 itster	--	Tetris Sitter
+anodyne	--	Tetris Sitter
 sporties ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them [b]PROSIEST[r].[minus][cycling]"
 denier nereid	"[one of]The denier nereid seems to get to close to you. You wish she could stay back.[plus][or]You can't pull her back, but she can be pulled back in general.[plus][or]She can be [b]REINED[r].[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers [b]SUBTLER[r]?[minus][cycling]"
@@ -4550,7 +4553,7 @@ to say ag-if-seen: say "[if agnostic is off-stage]someone somewhere[else]the agn
 
 to say fin-pal-clue: say "You may get a hint what the Curst Palace can become from [the noun]."
 
-to say sitter-ok: say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
+to say sitter-ok: say "[if anodyne is moot]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
 
 table of otters hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
