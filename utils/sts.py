@@ -1,6 +1,16 @@
+# sts.py: this is a can-opener sort of application
+# it gives a hash of any word according to STS
+# it can also reverse lookup any word from any integer, starting with E as the biggest number and working its way down
+# so that it doesn't go through too many possibilities
+#
+
+import mytools as mt
+import sys
 import re
 import math
 from collections import defaultdict
+
+word_hash = defaultdict(list)
 
 sts_hash = {
   "a" : 2187818,
@@ -76,12 +86,30 @@ def word_by_libe(hash_to_see):
                 return
     print("(DICT) No dictionary matches for", hash_to_see)
 
+def get_word_hash():
+    global word_hash
+    with open(mt.words_file) as file:
+        for (line_count, line) in enumerate (file, 1):
+            ll = line.lower().strip()
+            alf = ''.join(sorted(ll))
+            word_hash[alf].append(ll)
+
+def get_anagrams(cur_word):
+    if not len(word_hash):
+        get_word_hash()
+    if cur_word not in word_hash:
+        print(cur_word, "not in", word_hash)
+    else:
+        print(cur_word, ",".join(word_hash[cur_word]))
+
 def pick_reverse_word(hash_to_see, max_letters = 8, cur_word = ""):
     if len(cur_word) > max_letters: return
     global got_one
     if got_one: return
     if hash_to_see == 0:
+        cur_word = ''.join(sorted(cur_word))
         print("GOT ONE!", cur_word, word_hash_match(cur_word))
+        get_anagrams(cur_word)
         got_one = True
         return
     for x in rev_word:
