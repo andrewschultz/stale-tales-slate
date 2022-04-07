@@ -2788,7 +2788,6 @@ after quipping when qbc_litany is the table of Elmo comments:
 		if player does not have gird grid and do-i-chat is false:
 			say "Hm. Maybe Elmo had some information for you that a conversation couldn't bring out. Well, it's all really just anagramming from here on out--you think/hope.";
 		moot Elmo;
-		moot satchel;
 		now player has gird grid;
 		if do-i-chat is true: [this is a cheat bypass]
 			move player to Disowned Downside;
@@ -3706,7 +3705,7 @@ when play begins (this is the basic initialization rule):
 
 definition: a room (called myrm) is ominous:
 	unless map region of myrm is Otters, no;
-	if myrm is Minded Midden and cinders are off-stage, no; [ "bleary barley is touchable" seems most straightforward, but because of how carry out fliptoing is organized to help other rules, having that condition would mean ominous rooms were rearranged before I moot the barley. ]
+	if myrm is Minded Midden and cinders are off-stage, no; [ "bleary barley is touchable" seems most straightforward, but because of how fliptoing's main rule is organized to help other rules, having that condition would mean ominous rooms were rearranged before I moot the barley. ]
 	if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 	if myrm is Lamer Realm or myrm is Perverse Preserve, no;
 	yes;
@@ -5353,9 +5352,6 @@ to say slider-detail:
 	if list-headache is false, continue the action;
 	say ", and you [if headaches is 0]can't put up with the slider's beeps any more[else]can put up with its beepings [headaches in words] more time[plur of headaches][end if]";
 	if headaches is 0 and debug-state is true, say "[line break]Debug note: [b]HR[r] recharges the headaches."
-
-After printing the name of the satchel while taking inventory:
-	say " (somewhere in the purse)";
 
 after printing the name of the stapler while taking inventory:
 	if staple is in the stapler:
@@ -7244,7 +7240,7 @@ check fliptoing when player is in Dusty Study and Report Porter Perrot is off-st
 				if stuff-found < 3:
 					if the-from entry is not part of the diorama:
 						now tried-flip is true;
-						say "[if the-from entry is palm]You don't need a light source, yet[else if the-from entry is giant pin]There's no need to tidy your study up just now[else if the-from entry is satchel]Hmm, maybe there is something in there if you needed to go adventuring, but you don't, yet[else]Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet[end if][one of]. Still, that seems right, so you file that idea away for later[or][stopping].";
+						say "[if the-from entry is palm]You don't need a light source, yet[else if the-from entry is giant pin]There's no need to tidy your study up just now[else if the-from entry is latches]Hmm, maybe there is something in there if you needed to go adventuring, but you don't, yet[else]Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet[end if][one of]. Still, that seems right, so you file that idea away for later[or][stopping].";
 						preef the-from entry;
 						process the Report Porter Perrot knocks rule;
 						do nothing instead;
@@ -7735,7 +7731,7 @@ check switching off lamp:
 
 chapter latches
 
-The latches are a plural-named thing. "Some latches--the sort you lock a door with--are jumbled together here."
+The latches are a plural-named vanishing thing. "Some latches--the sort you lock a door with--are jumbled together here."
 
 check opening the latches:
 	if treatise is off-stage:
@@ -7762,7 +7758,7 @@ description of latches is "They're knotted hopelessly--you won't be able to un-k
 understand "prepared/ red/ paper" as teariest treatise.
 
 to say dear-reader:
-	if treatise is examined and satchel is touchable:
+	if treatise is examined and latches are moot:
 		say "(Stuff about getting the satchel that you don't need to reread.)";
 		continue the action;
 	say "Dear, er, Reader: Apologies for any sucky yucks. I couldn't have sent tens of snug gnus, sought toughs, or any gubbins subbing for you. These latches, shut thus, contain a recoded decoder. Help make your tour a rout. Not that it emits smite. Have a peek, then keep, to help lift the doom mood in Yorpwald. But you'll need to be refined, definer. Just changing things to other things, relived, won't deliver. It's powerful, too. My magician-lawyer Rawley Lawrey warned me creating it would drain my life force. But I feel great![paragraph break]  --Gateman Nat Egam[line break]";
@@ -7772,16 +7768,6 @@ the teariest treatise is a thing. description is "[dear-reader][line break]Even 
 understand "letter" as treatise.
 
 a-text of latches is "RYRRRYR". b-text of latches is "RGPPPGR". parse-text of latches is "[bug-report]".
-
-the satchel is a boring thing. description of satchel is "You doubt it holds anything else in its folds.". "The satchel you managed to conjure lies useless on the [if player is in Farming Framing]ground[else]floor[end if].". bore-text of satchel is "You've gotten the settler from the satchel, and you don't need to do more.".
-
-check inserting into the satchel:
-	ignore the can't insert what's not held rule;
-	say "The purse is much handier." instead;
-
-check taking satchel:
-	ignore the can't take what's already taken rule;
-	say "It may achieve sentimental value one day, but the purse will carry more." instead;
 
 chapter MEET BANS
 
@@ -9108,7 +9094,6 @@ check going inside in Carven Cavern:
 		process the post-specter-scepter rule;
 		say "[line break]";
 	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
-	moot satchel;
 	moot teariest treatise;
 	solve-region Ordeal Reload;
 	the rule succeeds;
@@ -9398,7 +9383,7 @@ prompt	response	enabled
 "Scan everything about the diorama."	dio-elm-2-quip	0
 "Yeah, I see what orange means."	orange-know-quip	0
 "Hmm, I don't see what orange means."	orange-dunno-quip	0
-"Oh, hey. The satchel. [unless satchel is escanned]Maybe I could scan it[else if satchel is bscanned]I scanned it with cheat on and off[else]I could scan it some more[end if]!"	satchel-quip	0
+"Oh, hey. The satchel. Maybe I could scan it for some data!"	satchel-quip	0
 "Hm, still not clear on the green/purple."	still-no-gp-quip	0
 "Tell Elmo you got what the cheat button does, thanks!"	got-it-quip	0
 "[unless y-orange is true]Hm, I even see what orange is for. [end if]Got some reinvestigator interrogatives, hustle-sleuth."	interr-quip	0
@@ -9451,7 +9436,7 @@ dio-all-quip	"You backtrack to scan everything remaining: the [list of hinthelpy
 dio-elm-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
 dio-elm-2-quip	"With everything scanned now, you take a closer look.[paragraph break][dior-scan][paragraph break]You focus on the rare greens and purples. Elmo coughs, as if cuing you to something--how the greens and purples are in the same position between flipped diorama parts."
 dio-2-quip	"You hash the purples and greens out some more.[paragraph break]You focus on the rare greens and purples. Crabgrass and brass crag, letters two and three. Pedestal and steel pad, letters four and seven. You think on what is special about these, in both words."
-satchel-quip	"'Ach, let's...' you say. You [satchel-extra]notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet."
+satchel-quip	"'Ach, let's...' you say. You scan the satchel both ways and notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet."
 still-no-gp-quip	"Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.[paragraph break]Elmo thinks a minute and notes red plus blue is purple, and yellow plus blue is green."
 got-it-quip	"'Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels.'[if y-orange is false] Elmo looks over your settler once more. 'Hmm. What's the orange for? On Yorpwald/wordplay?'[else] You and Elmo note orange is for Y's, and you suspect correct oranges become brown or something.[end if]"
 orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too[y-know]."
@@ -9463,11 +9448,6 @@ section extra quip checks
 to say gridchek:
 	say "[if player does not have gird grid]Elmo hands you an additional note--a Gird Grid--to help you on your way. [end if]";
 	now player has gird grid;
-
-to say satchel-extra:
-	if satchel is bscanned, continue the action;
-	if satchel is not in Largely All Grey Gallery, say "quickly go back to the study for the satchel, ";
-	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
 
 to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, you've got a whole body of data, now[stopping]";
 
@@ -9556,7 +9536,7 @@ backcheck is a truth state that varies.
 check going outside in Farming Framing:
 	if backcheck is true:
 		now backcheck is false;
-		say "You don't really need to go back inside unless you're unsure of how your powers work[if satchel is off-stage]. You haven't figured what to do with the latches, and maybe their 'right' form will give you clues[end if]. Plus, the sitar [if sitar is touchable]has an odd thereness about it[else]became a nice stair to the basement[end if].[paragraph break]Still, go back to the study anyway?";
+		say "You don't really need to go back inside unless you're unsure of how your powers work[if latches are not moot]. You haven't figured what to do with the latches, and maybe their 'right' form will give you clues[end if]. Plus, the sitar [if sitar is touchable]has an odd thereness about it[else]became a nice stair to the basement[end if].[paragraph break]Still, go back to the study anyway?";
 		if the player regex-prompt-consents, continue the action;
 		say "Okay, onward." instead;
 

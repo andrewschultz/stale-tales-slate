@@ -130,6 +130,8 @@ That's not a way to sneak around and avoid any future knock at the door.
 You think you feel the palm shake a bit, but nothing terribly magical happens.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
 
+>banish settler
+
 >lamp
 Your score has just gone up by one point.
 
@@ -381,7 +383,7 @@ You don't need a safe home, right now. You need adventure.
 !that many letters
 #done rejects for satchel
 >satchle
-You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
+Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
 #mistake test for cheat on/off/teach on/off
 >cheat on
 Just type c/t or cheat/teach to toggle. Note: settler is currently in cheat mode.

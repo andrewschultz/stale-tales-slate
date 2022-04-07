@@ -48,7 +48,7 @@ understand "basement [text]" and "[text] basement [text]" and "[text] basement" 
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 
-understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].") when player has latches or player has satchel.
+understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].") when latches are not off-stage.
 
 understand "net" and "net beams" and "beams net" as a mistake ("But the net would still block you.") when player is in Dusty Study and meet bans are in Dusty Study.
 

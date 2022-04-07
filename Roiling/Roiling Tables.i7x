@@ -21,7 +21,7 @@ book Ordeal Reload
 table of Ordeal Reload anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	a rule	post-palm-lamp rule	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]Oh, there's that 'dope' op-ed Report Porter Perrot threw at you, too.[paragraph break]You blink and look around and stare at your diorama. You remember how [gtmn] gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage].[paragraph break]Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[preefies]."
-latches	satchel	true	439479634	--	"satchel"	"satchel"	--	post-latches-satchel rule	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."
+latches	letters settler	true	439479634	--	"satchel"	"satchel"	--	post-latches-satchel rule	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess. A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now."
 giant pin	abstract painting	false	447164205	--	"painting"	"painting"	--	--	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."
 pavement	event map	false	682523494	--	"event map"	"event map" or "eventmap"	--	--	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."
 event map	pavement	false	682523494	--	"pavement"	"pavement"	--	--	"The event map folds back into a thoroughly more dull pavement[read-canflip]."
@@ -55,12 +55,7 @@ to say preefies:
 
 this is the post-latches-satchel rule:
 	if player does not have treatise, now player has treatise;
-	now player has the letters settler;
 	now player has the super purse;
-
-to say new-thing:
-	say ". A weird device falls from the satchel, which wasn't tied tightly at all. You pick it up, along with [if treatise is off-stage]a treatise that was tied in with the latches and [end if]a purse. Super[if treatise is off-stage].[paragraph break]When you stuff the treatise in the purse, it doesn't seem to take up any space in there[else].[paragraph break]You stuff the treatise in the super purse carelessly, and yet, there's still room for more[end if]. The purse looks like a good place for everything except your lamp, so you fold the satchel and put it in the purse, too. The satchel sinks into the folds--but it's surplus, now";
-	moot satchel;
 
 to say read-canflip:
 	say "[one of]. Reading the notice [if notice is examined]again[else]briefly[end if], you see that things won't be this flexible out in the real world[or][stopping]";
@@ -3862,7 +3857,7 @@ painting	"The painting really goes better with the study than the giant pin."
 chimney	"You probably just want to go [b]UP[r] the chimney."
 stair	"The stair helps you get around more easily, so it doesn't need to be changed back."
 ramp	"The ramp is useful now. Best keep it."
-satchel	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
+letters settler	"Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler."
 ISBN bins	"The [bins] are secure. Best not tinker."
 staple	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
@@ -4068,7 +4063,6 @@ sitar	"[one of]You need a way down, but the sitar doesn't allow that.[plus][or]R
 stria	"[one of]Embedded in the ceiling, the stria split it a bit. Maybe they offer a way up?[plus][or]The stria can become a [b]STAIR[r].[minus][cycling]"
 pram	"[one of]The pram gives you a sinking feeling to look at it.[plus][or]You need a way down and out of reach. Something you could even crawl down.[plus][or]The pram can become a ramp.[minus][cycling]"
 ramp	"Just go down or in to walk down the ramp."
-satchel	"The satchel might be useful for carrying things, but your super purse is better. So don't worry about it."
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
 ISBN Bins	"[if isbn bins are reflexed]You figured how to secure [the bins]. Nothing more to do.[else][one of]The [bins] are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a [b]SNIB[r].[minus][cycling][end if]"
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
