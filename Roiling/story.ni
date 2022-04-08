@@ -13163,6 +13163,8 @@ the maze walls are a reflexive plural-named uncluing useless backdrop. drop-regi
 
 n-t-air is a reflexive plural-named privately-named backdrop. drop-region of n-t-air is presto. description is "[bug-report]". n-t-air is in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
+a-text of n-t-air is "RYRR". b-text of n-t-air is "RGR?". parse-text of n-t-air is "W[sp]O[sp]N[sp]T".
+
 a-text of maze walls is "RYRYRRYR". b-text of maze walls is "RYRYRRYR". parse-text of maze walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 description of maze walls is "[if player is in Grey Gyre]Up north[else]This[end if] is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."

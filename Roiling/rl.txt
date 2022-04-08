@@ -99,6 +99,13 @@ The Sport Ports seem to give a huge mess, but actually, they work out okay if yo
 But from here, we have a lot of possibilities canceling out, due to the question marks.
 (SP)(SRT)O(SP)(ST) is what is left. Now only slot 2 can be R, and once we know that, only slot 5 can be T. -RO-T.
 Now PROST is more likely than SROPT, but also, if you noticed STROP gave red text, you'd have things figured out there.
+>>NOWT TOWN
+# logic for nowt town
+?What is the reading in Nowt Town?
+It's the easy way through.
+The RGR? gives you the vowel placement, and slot 1 must be a consonant.
+WO-- is what's left, so there are two possibilities.
+WONT, or WON'T, clinches things. It's not quite an interjection, so you only get partial credit.
 >>PHAT PATH
 # logic for hawt thaw
 ?Is there a word to yell at the hawt thaw?

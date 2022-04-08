@@ -129,7 +129,6 @@ aspire,YRR?R?=praise=spirea
 ascertain,YR?YRRYY?=sectarian=craniates
 ponder,derpon,epdorn,drpeno,nedorp
 #browse bowers
-desire,R???RG=sirdee=reside
 #upscale capsule
 deserve,edevers,ervdees
 discover,rodsvice,revdisco,veridocs,scorediv
@@ -170,7 +169,7 @@ whassup,uswhaps,pahwuss,hawpuss,sawpush,upshaws,pushaws,sshupaw
 #qver of sods gone odes song
 goodness,R?YRRYRR=sodsgone=odessong
 goodness,negssodo,densosgo,segsdoon
-#nowt town
+#qver of nowt town
 wont,RGR?=nowt=town
 #phat path/saps pass
 keys,syke
@@ -178,7 +177,6 @@ keys,syke
 later,RY???=alert=alter=retre=atall
 later,alert
 tough,ought
-trasch,RRGR??=starch=charts
 #qver of hawt thaw
 what,R???=hawt=thaw
 #qver of starch charts
@@ -346,7 +344,6 @@ marginal,armalign
 pearly,???RR?=replay=player
 released,dreleesa,eredeals,lardeese,edsleare
 weariest,ewitears,treesawi,treesiaw,iwestare
-mined,?Y?YR=mende=dmini=denim
 #danger garden
 vainest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave
 naivest,steavin,setinav,tinevas,aivents,investa,svetina,tinsave

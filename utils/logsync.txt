@@ -230,6 +230,7 @@ plebe>bleep
 hump>umph
 volt maze>mazeltov
 ####nowt town
+n-t-air~nowt town>wont
 maze walls~voltmaze>mazeltov
 ####unwary runway
 zo mavelt>mazeltov
