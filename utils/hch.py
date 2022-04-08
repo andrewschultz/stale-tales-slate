@@ -289,15 +289,19 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
                     if show_wrongs and line.startswith("WRONG"):
                         wrong_count += 1
                         print("WRONG #", wrong_count, "needs to be replaced at", x, "line", line_count)
+                        mt.add_open(x, line_count, priority = 4)
                         continue
                     if ll.startswith('#done reject '):
                         print('PEDANTIC WARNING you want done rejectS to test', no_of_for(line), 'at', x, 'line', line_count)
+                        mt.add_open(x, line_count, priority = 4)
                         continue
                     if ll.startswith('#donereject'):
                         print('PEDANTIC WARNING you want done rejectS (with a space) to test', no_of_for(line), 'at', x, 'line', line_count)
+                        mt.add_open(x, line_count, priority = 4)
                         continue
                     if ll.startswith('#' + b + ' of '):
                         print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
+                        mt.add_open(x, line_count, priority = 4)
                         continue
                     if ll.startswith('#re' + b + ' for '):
                         l = re.sub("#re{:s} for ".format(b), "", ll)
@@ -305,24 +309,30 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
                             if not region or region in x:
                                 if err_max == 0 or errs <= err_max: print('(RETEST)', l, "is invalid", b, "in file", x, "at line", line_count, for_pattern)
                                 errs += 1
+                                mt.add_open(x, line_count)
                         elif l not in got_sync_yet.keys():
                             if not region or region in x:
                                 if err_max == 0 or errs <= err_max: print(l, "is retest without test", b, "in file", x, "at line", line_count, for_pattern, "duplicating", got_sync_yet[l])
                                 errs += 1
+                                mt.add_open(x, line_count)
                     if ll.startswith('#' + b + ' for '):
                         l = re.sub("#{:s} for ".format(b), "", ll)
                         if l not in sync_stuff.keys():
                             if not region or region in x:
                                 if err_max == 0 or errs <= err_max: print(l, "is invalid", b, "in file", x, "at line", line_count, for_pattern)
                                 errs += 1
+                                mt.add_open(x, line_count)
                         elif l in got_sync_yet.keys():
                             if not region or region in x:
                                 if err_max == 0 or errs <= err_max: print(l, "is duplicated", b, "in file", x, "at line", line_count, for_pattern, "duplicating", got_sync_yet[l])
                                 errs += 1
+                                mt.add_open(x, line_count)
                         else:
                             got_sync_yet[l] = "{:s} line {:d}".format(x, line_count)
                             # print(l, got_sync_yet[l])
-                    elif err_string and err_string in line: print("Common typo flagged for", pattern, "at line", line_count, line.strip())
+                    elif err_string and err_string in line:
+                        print("Common typo flagged for", pattern, "at line", line_count, line.strip())
+                        mt.add_open(x, line_count, priority = 4)
     last_line = 0
     for q in sorted(list(set(sync_stuff.keys()) | set(got_sync_yet.keys())), key = lambda x: sync_stuff[x] if x in sync_stuff.keys() else -1):
         if q not in got_sync_yet.keys():
@@ -492,10 +502,11 @@ if rbr_lines_to_edit:
                         print("Found original", xb, line_count, "for", r.strip())
                         mt.add_postopen_file_line(x, line_count)
                         rbr_wants[line] = True
-    mt.postopen_files()
     for r in rbr_wants:
         if not rbr_wants[r]:
             print("Not able to find original line for", r.strip())
+
+mt.postopen_files()
 
 if out_to_file:
     print("Wrote to", houtfile)
