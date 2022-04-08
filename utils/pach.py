@@ -2,12 +2,69 @@
 # parse and cheat text possibility checker
 #
 
+import sys
+import itertools
 import re
 from collections import defaultdict
 from math import factorial
 
 parse_poss = defaultdict(int)
 cheat_poss = defaultdict(int)
+
+consonants = 'bcdfghjklmnpqrstvwxyz'
+vowels = 'aeiou'
+ys = 'y'
+
+def match_up(scanned, scan_results, candidate, ambiguous_forced_matches = []):
+    for x in range(0, len(scanned)):
+        if scan_results[x] == 'r':
+            if candidate[x] not in consonants:
+                return False
+            if scanned[x] == candidate[x]:
+                return False
+        elif scan_results[x] == 'p':
+            if candidate[x] not in consonants:
+                return False
+            if scanned[x] != candidate[x]:
+                return False
+        elif scan_results[x] == 'y':
+            if candidate[x] not in vowels:
+                return False
+            if scanned[x] == candidate[x]:
+                return False
+        elif scan_results[x] == 'g':
+            if candidate[x] not in vowels:
+                return False
+            if scanned[x] != candidate[x]:
+                return False
+        elif scan_results[x] == 'o':
+            if candidate[x] not in ys:
+                return False
+            if scanned[x] == candidate[x]:
+                return False
+        elif scan_results[x] == 'b':
+            if candidate[x] not in ys:
+                return False
+            if scanned[x] != candidate[x]:
+                return False
+    return True
+
+def b_text_poss(my_string, my_reading, smart_check = False, note_successes = False):
+    my_string = my_string.lower()
+    my_reading = my_reading.lower()
+    if not smart_check:
+        total = 0
+        a = itertools.permutations(list(my_string.lower()))
+        for my_word in a:
+            if match_up(my_string, my_reading, my_word):
+                total += 1
+                if note_successes:
+                    print(''.join(my_word), "WORKS!")
+        return total
+    return total
+
+print(b_text_poss('tyson', 'rryro'))
+sys.exit()
 
 def object_of(my_string):
     my_string = re.sub("\".*", "", my_string)
