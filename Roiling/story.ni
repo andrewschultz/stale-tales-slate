@@ -276,6 +276,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=25 for giving Tetris Sitter the top opt pot NON-ANAGRAM
 5=30 for unripe ur-pine/serpent/antsier/triste/annoyed in Mislit Limits/Mesprise Premises
 1=31 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+[towers-min-adj must be changed if we fix something beyond Mislit Limits]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather. readable table of otters is table of otters readables. general blather table of otters is table of otters general blather. reflexive blather table of otters is table of otters reflexive blather. misses-rule of otters is otters-misses rule.
 [LLP list:
@@ -570,7 +571,7 @@ the specification of a skansnak is "A skansnak, when heated, lets you see how a 
 this is the note-pastries rule:
 	if noun is brandnoted, continue the action;
 	now noun is brandnoted;
-	say "[one of]You note [the noun] is produced by [passrite], as Ornate Atoner Renato mentioned. It's definitely a skan-snak, as well. Good for if you need help.[or]Another of those [passrite].[or]And yet another [passrite]! Even ify you don't need the clues, it's nice to know you won't starve in the wilderness, here.[or]Wow. A smorgabord of [passrite].[stopping]";
+	say "[one of]You note [the noun] is produced by [passrite], as Ornate Atoner Renato mentioned. It's definitely a skan-snak, as well. Good for if you need help.[or]Another of those [passrite].[or]And yet another [passrite]! Even if you don't need the clues, it's nice to know you won't starve in the wilderness, here.[or]Wow. A smorgabord of [passrite].[stopping]";
 
 the skansnak babble rule is listed last in the after rules.
 
@@ -4781,9 +4782,10 @@ this is the towers-hinting rule:
 		if blaster is reflexive, try objhinting blaster instead;
 		all-say "You can enter a bot boat and go safely across Leak Lake." instead;
 	if player is in Mesprise Premises:
+		if itster is touchable, try objhinting itster instead;
+		if anodyne is touchable, try objhinting anodyne instead;
 		if crocus is in top opt pot or player has crocus, try objhinting crocus instead;
-		if itster is touchable, try objhinting Tetris Sitter instead;
-		if player has top opt pot, all-say "You should [b]GIVE[r] the succor crocus to [the tetris sitter] for hints." instead;
+		if player has top opt pot, all-say "You need to put something in the top opt pot to complete this optional area." instead;
 	if player is in Mislit Limits, try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything. Try moving around." instead;
 
@@ -9335,7 +9337,7 @@ check talking to Gretta:
 check talking to a person:
 	if litany of noun is table of no conversation:
 		if selftalk-warn is false:
-			ital-say "[b]ASK[i] ([b]PERSON[i]) [b]ABOUT[i] ([b]PERSON[i]/[b]THING[i]) is what [this-game] uses for detailed conversation. However, TALKing asks about a default subject and gives a general reply, which may be useful, too. You can do so now, and this warning won't appear again.";
+			ital-say "[b]ASK[i] ([b]PERSON[i]) [b]ABOUT[i] ([b]PERSON[i]/[b]THING[i]) is what [this-game] uses for detailed conversation. However, [b]TALK[r] is a shortcut to getting the NPC's default reply, which may have clues. You'll do this now, and this warning won't appear again.";
 			pad-rec "talking";
 			now selftalk-warn is true;
 		try objasking noun about noun instead;
@@ -15401,8 +15403,10 @@ check xraying:
 	if noun is reflexed or noun is nonreflexive:
 		repeat through hintobjstable of mrlp:
 			if noun is hint-entry entry:
-				if there is a parallel-entry entry, try xraying parallel-entry entry;
-				break;
+				if there is a parallel-entry entry:
+					d "Mapping xraying from [noun] to [parallel-entry entry].";
+					try xraying parallel-entry entry;
+					the rule succeeds;
 		say "Your x-ray vision doesn't seem to work. So you probably don't have to do anything, there. Maybe find something or someone else to x-ray." instead;
 	if noun is palace:
 		if palace-warn is false:
@@ -15425,7 +15429,7 @@ check xraying:
 	else if noun is rayed:
 		say "You remember you could still think [big-hint of noun]." instead;
 	else:
-		say "After a thoughtful gaze, you reckon [the noun] could be [big-hint of noun].";
+		say "After a thoughtful gaze, you reckon [the noun] could [xray-verb of noun] [big-hint of noun].";
 	if xray-bug-sorry is true:
 		now xray-bug-sorry is false;
 		continue the action;
@@ -15441,6 +15445,14 @@ check xraying:
 	else:
 		d "Xray cheat retains x-ray vision.";
 	the rule succeeds;
+
+to say xray-verb of (th - a thing):
+	if th is itster:
+		say "make [the sitter]";
+	else if th is anodyne:
+		say "leave St. Teri";
+	else:
+		say "be"
 
 used-ray is a truth state that varies.
 
@@ -16907,7 +16919,7 @@ check entering bot boat:
 		if number of carried not heated skansnaks > 0:
 			say "You heat up the food you found since you were last here.";
 		now all carried skansnaks are heated;
-	if turbos are reflexive and blaster is reflexive, say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the agnostic mutters to herself.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
+	if turbos are reflexive and blaster is reflexive, say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the agnostic mutters to [him-her]self.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
 	say "BRRRRM! The boat works great. 'I'll make a glider girdle next!' the agnostic shouts, out of view.";
 	if turbos are reflexed and blaster is reflexed:
 		say "You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!";
@@ -16938,23 +16950,33 @@ a-text of blaster is "RRYRRYR". b-text of blaster is "RRGRRGP". parse-text of bl
 
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
-	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
-	if sporties ripostes are not moot, d "Left sporties['] ripostes.";
-	now poss-score of towers is cur-score of towers + 6; [SPECTACULAR (required), punier, antsier, present, triste, give top opt pot]
+	if number of moot guardians is 0:
+		d "All guardians erased!";
+	else:
+		d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
+	d "[whether or not turbos are reflexed] turbos blaster [whether or not blaster is reflexed] [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
+	now poss-score of towers is cur-score of towers + 7; [SPECTACULAR (required), punier, antsier, present, triste, annoyed, give top opt pot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
+	d "[whether or not turbos are reflexed] turbos blaster [whether or not blaster is reflexed] [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 	unless turbos are reflexed and blaster is reflexed:
 		increment poss-score of towers; [dropping the player in Rawest Waters means we haven't gotten the second boat point yet.]
 		min-up;
+		d "adding min/poss points for Rawest Waters. [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 	if used-ray is false:
+		d "used-ray is false.";
 		increment poss-score of towers;
 		if number of carried skansnaks is 0, min-up; [no way to cheat if we have no skansnaks]
+		d "[cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
+	else:
+		d "used-ray is true.";
 	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
+	d "[cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 
 to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
 
 book Lost Lots
 
-Lost Lots is a sideroom. it is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]There's not much in this area, not even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if][note-detour].". roomnud of Lost Lots is table of Lost Lots nudges. missed-text of Lost Lots is "an area behind [the site van] south of [danger garden]".
+Lost Lots is a sideroom. it is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]There's not much in this area, not even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you. You can probably ignore them if you want, but if you're clever, maybe you can deal with them[end if][note-detour].". roomnud of Lost Lots is table of Lost Lots nudges. missed-text of Lost Lots is "an area behind [the site van] south of [danger garden]".
 
 after looking in Lost Lots:
 	if strudel is carried by player or strudel is moot, set the pronoun it to gasfield;
@@ -17054,7 +17076,7 @@ Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Me
 
 chapter tetris sitter
 
-the Tetris Sitter is an auxiliary LLPish person in Mesprise Premises. description is "[if itster is touchable]Absorbed in a game on her bright red [first custom style]ITSTER[r][else if anodyne is not moot]Still more distant than she should be[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if itster is touchable]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
+the Tetris Sitter is an auxiliary person in Mesprise Premises. description is "[if itster is touchable]Absorbed in a game on her bright red [first custom style]ITSTER[r][else if anodyne is not moot]Still more distant than she should be[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if itster is touchable]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games doesn't provide the [i]real[r] happiness of fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help. Like maybe the curst palace, if you need the help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]S[sp]x[sp]-".
 
@@ -17074,11 +17096,11 @@ Ornate Atoner Renato is an undesc.
 
 check giving to Tetris Sitter:
 	if second noun is crocus, try giving top opt pot to Tetris Sitter instead;
-	if second noun is Tetris Sitter and itster is touchable:
-		say "She mumbles '[']S trite,' [unless noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
+	if itster is touchable, say "She mumbles '[']S trite,' [unless noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]. You see red at her mumbling." instead;
 	unless noun is top opt pot, say "St. Teri thanks you, but [if top opt pot is moot]the top opt pot was probably enough[else]that's not quite what she wants[end if]." instead;
+	if anodyne is touchable, say "[sitter] seems interested, but her hands reflexively grasp [the anodyne]. How could you dispose of it?" instead;
 	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
-	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
+	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.[paragraph break]She then mentions that, while she's sure you'll figure what to do with the curst palace, you can come back inside for help if you need it. Her mind is clearer, and she'll have more ideas.";
 	min-and;
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaining optional point is for not using any [passrite]. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	moot top opt pot instead;
@@ -17087,13 +17109,16 @@ check going outside in Mesprise Premises: try going east instead;
 
 section itster
 
-the itster is auxiliary boring LLPish scenery in Mesprise Premises. description of itster is "It's red, and boy what a high score [the Tetris Sitter] has.". bore-text of the itster is "The itster is [the Tetris Sitter]'s, but maybe you can remind her there's a lot more to life."
+the itster is boring vanishing LLPish scenery in Mesprise Premises. description of itster is "It's red, and boy what a high score [the Tetris Sitter] has.". bore-text of the itster is "The itster is [the Tetris Sitter][']s, but maybe you can remind her there's a lot more to life.". bore-check of itster is bore-itster rule.
 
 a-text of itster is "RRYRRY". b-text of itster is "RRYRRY". parse-text of itster is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
+this is the bore-itster rule:
+	if current action is playing, say "You'll want to interrupt the game a bit less directly. Make [the sitter] not want to play it any more." instead;
+
 chapter Done Any Anodyne
 
-the Done Any Anodyne is boring vanishing LLPish scenery. "It's sitting there. The [sitter] isn't really in the mood to drink it, but it's there, and she has nothing better to do at the moment. Maybe you can help her break out of that.". printed name is "Done-Any Anodyne".
+the Done Any Anodyne is boring vanishing LLPish scenery. "It's sitting there. The [sitter] isn't really in the mood to drink it, but it's there, and she has nothing better to do at the moment. Maybe you can help her break out of that. There's red writing on it.". printed name is "Done-Any Anodyne".
 
 a-text of done any anodyne is "YRRYOYR". b-text of done any anodyne is "???Y?YR". parse-text of done any anodyne is "?[sp]?[sp]?[sp]-[sp]y[sp]e[sp]x".
 
@@ -17156,12 +17181,6 @@ carry out planting:
 	say "You can only plant a, well, plant. One that's not too big." instead;
 
 book Mislit Limits
-
-after printing the locale description for Mislit Limits when Mislit Limits is unvisited (this is the adjust min towers score passing waters rule):
-	now poss-score of Towers is 4 + cur-score of towers;
-	now min-score of Towers is 1 + cur-score of towers;
-	if player has strudel and strudel is not reflexed:
-		increment poss-score of towers;
 
 Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are unvisited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if ur pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
 

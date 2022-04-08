@@ -1283,6 +1283,8 @@ to say vain-naiv:
 
 this is the post-agnostic-blocker rule:
 	if atheists are moot and the-hostile is moot:
+		moot lois the hostile;
+		moot hostile is he lot;
 		now agnostic is in Actionless Coastlines;
 		now dinger is in Actionless Coastlines;
 		if player is in Actionless Coastlines:
@@ -1347,6 +1349,9 @@ this is the post-retinas-antsier rule:
 this is the post-itster-triste rule:
 	now tetris sitter is proper-named;
 	now printed name of tetris sitter is "St. Teri";
+	choose row with hint-entry of Tetris Sitter in table of towers hintobjs; [point St Teri to the anodyne]
+	now parallel-entry entry is done any anodyne;
+	now tetris sitter is clue-used;
 
 this is the pre-curst-palace-spectacular rule:
 	if player is not in Mislit Limits:
@@ -1356,7 +1361,7 @@ this is the pre-curst-palace-spectacular rule:
 
 this is the post-curstpalace-spectacular rule:
 	if used-ray is false and cur-score of towers is max-score of towers - 1:
-		ital-say "You get the final bonus point for not using the toaster/pastries['] x-ray vision anywhere! [if xrayvision is true]And congratulations on resisting temptation after eating [the random moot skansnak], too.[else][line break][end if]";
+		ital-say "You get the final bonus point for not using the toaster/pastries['] x-ray vision anywhere![if number of moot skansnaks > 0] And congratulations on resisting temptation after eating [the random moot skansnak], too.[end if]";
 		increment cur-score of towers;
 
 to say what-about-ed:
@@ -3336,6 +3341,7 @@ book presto
 table of presto scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
+n-t-air	true	false	false	false	"Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze.
 n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
 boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!"
 sods gone odes song	true	true	false	false	"My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
@@ -3752,7 +3758,7 @@ weirder red wire	"You think you see how to untangle some of the mess inside the/
 earnest eastern neaters	"You feel less split from everyone else for a second."
 repents serpent	"The serpent calms down for a split-second[serp-try]."
 ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
-Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
+itster	"[The tetris sitter] breaks her glassy smile for a moment."
 done any anodyne	"The [anodyne] rattles."
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 
@@ -3969,6 +3975,7 @@ raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
+Done Any Anodyne	"You helped St. Teri directly. Now you need to deal with the [anodyne]."
 
 table of otters done rejects
 specdone	spectalk
@@ -4442,9 +4449,9 @@ mended mini denim	"[one of]The mended mini denim can't quite be cut through by s
 repents serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it more inert...[plus][or]From soliciting repents to [b]PRESENT[r].[minus][cycling]"
 dreads adders	"[one of]You want to make the dreads adders less ferocious.[plus][or]Making them happy isn't your business, but you can still make them...[plus][or][b]SADDER[r].[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners [b]RINSED[r].[minus][cycling]"
-Tetris Sitter	"[if anodyne is touchable]St. Teri is still unwillingly under the influence of [else if itster is not moot][one of][The tetris sitter] seems absorbed in her [first custom style]IT-STER[r].[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become [b]TRISTE[r].[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
-itster	--	Tetris Sitter
-anodyne	--	Tetris Sitter
+Tetris Sitter	"[if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Once you've got a succor crocus, you can give the top opt pot to St. Teri.[minus][cycling][else]St. Teri will give you hints about how to change the curst palace if you walk outside and back in and ask her about the palace.[end if]"	itster
+itster	"[one of][The tetris sitter] seems absorbed in her [first custom style]IT-STER[r].[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become [b]TRISTE[r].[minus][cycling]"
+anodyne	"[one of]St. Teri is still unwillingly under the influence of [the anodyne]. It provides untimately inadequate relief from less happy feelings.[plus][or]How could you make her feel to break through that? To be really upset the anodyne doesn't work?[plus][or]Make St. Teri [b]ANNOYED[r].[minus][cycling]"
 sporties ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them [b]PROSIEST[r].[minus][cycling]"
 denier nereid	"[one of]The denier nereid seems to get to close to you. You wish she could stay back.[plus][or]You can't pull her back, but she can be pulled back in general.[plus][or]She can be [b]REINED[r].[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers [b]SUBTLER[r]?[minus][cycling]"

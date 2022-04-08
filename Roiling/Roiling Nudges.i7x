@@ -1718,7 +1718,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "teri"	361232776	--	triste-yet rule	"You can't really change St. Teri directly. You helped her break free from [the itster][if anodyne is moot] and the [anodyne][else], but there's still [the anodyne] to deal with[end if]."
 "done"	292095283	--	--	"[all-anodyne]."
 "any"	193454578	--	--	"[all-anodyne]."
-"stteri"	560616760	--	triste-yet rule	"[if anodyne is moot][sitter] is just fine now, thanks to you[else]You helped [sitter] directly. Now you need to deal with [the anodyne][end if]."
+"stteri"	560616760	--	triste-yet rule	"[sitter] is just fine now, thanks to you."
 
 this is the triste-yet rule:
 	if player is in Mesprise Premises and itster is moot, the rule succeeds;
