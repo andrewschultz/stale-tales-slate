@@ -3833,6 +3833,18 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Dirge Ridge and leo is washed up:
 			now noun is wzup;
 			continue the action;
+		if zo mavelt is touchable:
+			now noun is zo mavelt;
+			continue the action;
+		if tom avlez is touchable:
+			now noun is tom avlez;
+			continue the action;
+		if lev tzoma is touchable:
+			now noun is lev tzoma;
+			continue the action;
+		if n-t-air is touchable:
+			now noun is n-t-air;
+			continue the action;
 	else if mrlp is oyster:
 		if player is in Fighter Freight:
 			now noun is pale plea;
@@ -7730,7 +7742,7 @@ The palm is a thing in Dusty Study. description is "It has spent a lot of time s
 
 check taking the palm: say "It's kind of useless and bulky at the moment." instead;
 
-a-text of palm is "RYRR". b-text of palm is "RGRR". parse-text of palm is "[bug-report]".
+a-text of palm is "RYRR". b-text of palm is "RGRR". parse-text of palm is "[bug-report]". palm is any-spoilable.
 
 The lamp is a lit thing. description is "It's red-framed, with a slightly off-center (to the left) light that flickers from yellowish to greenish--which seems slightly more illuminating--and back[if settler is not touchable]. Odd colors. You haven't seen anything like them[else]. Hmm. Where've you just seen colors like that, now[end if]."
 
@@ -8991,7 +9003,7 @@ the ISBN bins are plural-named LLPish reflexive boring scenery in Largely All Gr
 
 understand "bin" and "ISBN bin" as ISBN bins.
 
-a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of isbn bins is "SNIB". ISBN bins are parse-spoilable.
+a-text of ISBN bins is "RRYR". b-text of ISBN bins is "RRYR". parse-text of isbn bins is "SNIB". ISBN bins are any-spoilable.
 
 the snib is useless boring scenery. description of the snib is "The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once.". bore-text is "The snib is secure enough. No need to tinker with it.".
 
@@ -9606,7 +9618,7 @@ check entering closets:
 
 the pram is a thing in Highest Heights. "A pram lies here, one of those stupid gifts you never got to use."
 
-a-text of pram is "RYRR". b-text of pram is "RYRR". parse-text of pram is "x[sp]A[sp]x[sp]x". pram is parse-spoilable.
+a-text of pram is "RYRR". b-text of pram is "RYRR". parse-text of pram is "x[sp]A[sp]x[sp]x". pram is any-spoilable.
 
 check taking the pram: say "It'd be hard to carry any reasonable distance." instead;
 
@@ -10506,7 +10518,7 @@ understand "sign/board" and "adsorbing sign/board" as signboard.
 
 understand "pats/pat" and "pats/pat stap" as the resto store when player is in Same Mesa.
 
-a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of adsorbing signboard is "?[sp]?[sp]x[sp]T". adsorbing signboard is parse-spoilable.
+a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of adsorbing signboard is "?[sp]?[sp]x[sp]T". adsorbing signboard is any-spoilable.
 
 does the player mean entering the Uhh Tut Hut:
 	if lairage regalia is reflexed, it is very likely;
@@ -10614,7 +10626,7 @@ check taking MORF FORM: say "It'd crush you. You need another way to bring it do
 
 check going when MORF FORM is touchable: say "That [MORF FORM] is lingering threateningly. Maybe you should deal with it now." instead;
 
-a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of morf form is "x[sp]x[sp]O[sp]x". MORF FORM is parse-spoilable.
+a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of morf form is "x[sp]x[sp]O[sp]x". MORF FORM is any-spoilable.
 
 chapter THE BEAN
 
@@ -11060,7 +11072,7 @@ does the player mean doing something with LEAD when mrlp is troves: it is very l
 
 description of Pa Egg Pea is "[randbla]".
 
-a-text of Pa Egg Pea is "RYRY". b-text of Pa Egg Pea is "??R?". parse-text of pa egg pea is "?[sp]?[sp]P[sp]?". pa egg pea peg a page is parse-spoilable.
+a-text of Pa Egg Pea is "RYRY". b-text of Pa Egg Pea is "??R?". parse-text of pa egg pea is "?[sp]?[sp]P[sp]?". pa egg pea peg a page is any-spoilable.
 
 understand "book" as Pa Egg Pea.
 
@@ -11098,7 +11110,7 @@ chapter eh at heat
 
 Eh At Heat is boring reflexive scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could actually do so.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil.". printed name of Eh At Heat is "[i]Eh, At Heat[r]".
 
-a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of eh at heat is "x[sp]A[sp]x[sp]E". heat is parse-spoilable. eh at heat is parse-spoilable.
+a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of eh at heat is "x[sp]A[sp]x[sp]E". eh at heat is any-spoilable.
 
 this is the bore-heat rule:
 	if current action is entering, say "[one of]You know you will get thrown out again, but maybe if you try to enter again, you will hear something that will help you.[or]You try to enter but lose your will at the last minute. Still, you hear' 'Tea! Hat? Eh!' It makes you see red.[stopping]".
@@ -11107,7 +11119,7 @@ chapter Race Acre
 
 Race Acre is boring vanishing proper-named scenery. description is "You look over at Race Acre (and what's an acre doing in a big city?) but you're too worn out from hate to follow whoever stole your super purse. You need a different emotion.". bore-text of Race Acre is "Ho-hum. You should be motivated to follow that thief to Race Acre, but you can't.".
 
-a-text of Race Acre is "RYRY". b-text of Race Acre is "R??G". parse-text of Race Acre is "C[sp]?[sp]?[sp]E". Race Acre is parse-spoilable.
+a-text of Race Acre is "RYRY". b-text of Race Acre is "R??G". parse-text of Race Acre is "C[sp]?[sp]?[sp]E". Race Acre is any-spoilable.
 
 chapter fretful truffle
 
@@ -11200,7 +11212,7 @@ check scaning stop post:
 		say "Nothing happens until you move the settler away from the post and towards the sob ever verbose.";
 		try scaning sob ever verbose instead;
 
-a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "?[sp]x[sp]?[sp]?". stop post is parse-spoilable.
+a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "?[sp]x[sp]?[sp]?". stop post is any-spoilable.
 
 book Boarded Roadbed
 
@@ -11282,7 +11294,7 @@ chapter A Sty, Tasty, Say
 
 A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
 
-a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "S[sp]T[sp]?[sp]?". a sty tasty say is parse-spoilable.
+a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "S[sp]T[sp]?[sp]?". a sty tasty say is any-spoilable.
 
 book Drain Nadir
 
@@ -11366,7 +11378,7 @@ chapter LEAD
 
 LEAD is a vanishing thing in Boredom Bedroom. "A copy of [LEAD][one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "[i]LEAD, All: a Deed[r]". [bold-ok]
 
-a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of lead is "?[sp]?[sp]?[sp]L". LEAD is parse-spoilable.
+a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of lead is "?[sp]?[sp]?[sp]L". LEAD is any-spoilable.
 
 understand "copy" and "book" as LEAD when player is in Boredom Bedroom.
 
@@ -11567,7 +11579,7 @@ this is the bore-salt rule:
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
-a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]?[sp]x[sp]?". salt is parse-spoilable.
+a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]?[sp]x[sp]?". salt is any-spoilable.
 
 chapter Creationism Reactionism
 
@@ -11812,7 +11824,7 @@ The lamb is a vanishing LLPish female animal in Grey Gyre. "A poor lost lamb see
 check taking lamb:
 	say "It's not a bit lamb, but it wouldn't fit in your super purse." instead;
 
-a-text of lamb is "RRYR". b-text of lamb is "RRYR". parse-text of lamb is "x[sp]x[sp]A[sp]x". lamb is parse-spoilable.
+a-text of lamb is "RRYR". b-text of lamb is "RRYR". parse-text of lamb is "x[sp]x[sp]A[sp]x". lamb is any-spoilable.
 
 description is "Cute and adorable and so terrified at being away from home she's petrified with fear. Maybe you could scare her home."
 
@@ -11870,7 +11882,7 @@ this is the bore-hump rule:
 
 check going west in Grey Gyre: if hump is in Grey Gyre, say "You try to be all 'I leap a pile' but can't get over the hump. Hmph." instead;
 
-a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "U[sp]x[sp]x[sp]x". hump is parse-spoilable.
+a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "U[sp]x[sp]x[sp]x". hump is any-spoilable.
 
 chapter plebe
 
@@ -12065,7 +12077,7 @@ section dart
 
 the dart is a reflexive thing. description is "[if dart is in popgun]Locked and loaded[else if dart is not in cistern]It's long and narrow, made more for stunning than killing, for propulsion than throwing[else]The dart is in the cretins['] cistern, just out of reach[end if]."
 
-a-text of dart is "RRYR". b-text of dart is "PRYP". parse-text of dart is "DRAT". dart is parse-spoilable.
+a-text of dart is "RRYR". b-text of dart is "PRYP". parse-text of dart is "DRAT". dart is any-spoilable.
 
 the cretins cistern contains the dart.
 
@@ -12084,7 +12096,7 @@ chapter tsar star
 
 a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is mired in some tars here. You might be able to take it, if you are in the right emotional state: not too confident, not too despondent."
 
-a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "R[sp]A[sp]x[sp]x". tsar star is parse-spoilable.
+a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "R[sp]A[sp]x[sp]x". tsar star is any-spoilable.
 
 description of tsar star is "It's not some paper gold star from Mrs. Crabtree's third grade class. It's actual dull metal. Shows you are a tsar of some sort of arts.". bore-text of tsar star is "Straightforward taking won't work, and neither will other manipulation. You wonder what sort of magic might get the tsar star out.". bore-check of tsar star is bore-tsar-star rule.
 
@@ -12097,7 +12109,7 @@ section tars (clue tsar star)
 
 the tars are cluey scenery in Char Arch. "Ucky and grimy. You may need to do or say something special to pull the tsar star out."
 
-a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tars is "RATS". tars are parse-spoilable.
+a-text of tars is "RYRR". b-text of tars is "RGRP". parse-text of tars is "RATS". tars are any-spoilable.
 
 check scaning tars:
 	say "Nothing, until you aim at the tsar star.";
@@ -12234,7 +12246,7 @@ a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is
 
 [this is cheaty text for logsync.py. So don't delete it!
 
-a-text of hoop1 is "RYYR". b-text of hoop1 is "RGGR". parse-text of hoop1 is "POOH".
+a-text of hoop1 is "RYYR". b-text of hoop1 is "RGGR". parse-text of hoop1 is "POOH". hoop1 is any-spoilable.
 
 a-text of hoop2 is "RRYYYO". b-text of hoop2 is "RRYGYO". parse-text of hoop2 is "x[sp]x[sp]-[sp]O[sp]-[sp]Y".
 
@@ -12429,7 +12441,7 @@ after printing the locale description for Saps Pass when Saps Pass is unvisited:
 
 chapter hogs
 
-a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]O[sp]x[sp]x". hogs are parse-spoilable.
+a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]O[sp]x[sp]x". hogs are any-spoilable.
 
 check taking hogs:
 	say "You and [l-n-r] can take [']em. But not literally." instead;
@@ -12438,7 +12450,7 @@ chapter hawt thaw
 
 the clump of hawt thaw is LLPish vanishing boring scenery in Saps Pass. description of hawt thaw is "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit.". bore-text is "From what you know of hawt thaw, it may not be entirely safe. It sort of appears and disappears with little rhyme or reason."
 
-a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "W[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
+a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "W[sp]?[sp]?[sp]?". hawt thaw is any-spoilable.
 
 chapter mutism summit
 
@@ -12603,7 +12615,7 @@ the pile of coal is a thing in Hacks Shack. description is "Black and disgusting
 
 check taking coal: say "You don't need an armful of THAT." instead;
 
-a-text of coal is "RYRY". b-text of coal is "PGRY". parse-text of coal is "COLA". coal is parse-spoilable.
+a-text of coal is "RYRY". b-text of coal is "PGRY". parse-text of coal is "COLA". coal is any-spoilable.
 
 the ALocalCo Cola is a singular-named proper-named boring thing. description of ALocalCo cola is "In place of nutritional information on this bottle, you read: [paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P.". bore-text of ALocalCo cola is "You can just drink it, or [b]POUR[r] it somewhere, when the time is right.". bore-check of ALocalCo Cola is bore-alocalco-cola rule.
 
@@ -12700,7 +12712,7 @@ a giant dead flea is a thing in Hacks Shack. "A giant dead flea is here, probabl
 check taking flea:
 	say "Eww. Gross. Germy. Taking dead plants? Okay. Dead pests? Not so okay." instead;
 
-a-text of flea is "RYYR". b-text of flea is "RYYR". parse-text of flea is "LEAF". flea is parse-spoilable.
+a-text of flea is "RYYR". b-text of flea is "RYYR". parse-text of flea is "LEAF". flea is any-spoilable.
 
 description of giant dead flea is "It's not been dead too long, fortunately. It's already turning some combination of dark oranges, reds and browns. Which is nicer than how animals usually biodegrade."
 
@@ -13170,7 +13182,7 @@ the maze walls are a reflexive plural-named uncluing useless backdrop. drop-regi
 
 n-t-air is a reflexive plural-named privately-named backdrop. drop-region of n-t-air is presto. description is "[bug-report]". n-t-air is in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
-a-text of n-t-air is "RYRR". b-text of n-t-air is "RGR?". parse-text of n-t-air is "W[sp]O[sp]N[sp]T". n-t-air is parse-spoilable.
+a-text of n-t-air is "RYRR". b-text of n-t-air is "RGR?". parse-text of n-t-air is "W[sp]O[sp]N[sp]T". n-t-air is any-spoilable.
 
 a-text of maze walls is "RYRYRRYR". b-text of maze walls is "RYRYRRYR". parse-text of maze walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -13348,7 +13360,7 @@ the gins sign is reflexive scenery in Posh Hops Shop. "It advertises various gin
 
 check taking gins sign:	say "That'd load you down as you tried to get out." instead;
 
-a-text of gins sign is "RYRR". b-text of gins sign is "?G?R". parse-text of gins sign is "x[sp]I[sp]x[sp]G". sign is parse-spoilable.
+a-text of gins sign is "RYRR". b-text of gins sign is "?G?R". parse-text of gins sign is "x[sp]I[sp]x[sp]G". sign is any-spoilable.
 
 m-bk is useless privately-named boring scenery in Posh Hops Shop. description of m-bk is "[bug-report]". printed name of m-bk is "Posh Hops Shop". bore-text is "You can only really try looking in the Posh Hops Shop."
 
@@ -13383,7 +13395,7 @@ a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "
 
 The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
 
-a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "S[sp]x[sp]I[sp]x". tips pits are parse-spoilable.
+a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "S[sp]x[sp]I[sp]x". tips pits are any-spoilable.
 
 check scaning jukebox:
 	if perma amper is touchable:
@@ -13784,7 +13796,7 @@ chapter clam
 
 the clam is a vanishing animal in Olde Lode. initial appearance of clam is "A clam snaps here, unwilling to let you pass.". description is "Full of chargin['] Chagrin! As if being boxed in by the baser braes wasn't bad enough! You'll have to do something other--but maybe simpler--than call [']m Mac."
 
-a-text of clam is "RYRR". b-text of clam is "PYRP". parse-text of clam is "CALM". clam is parse-spoilable.
+a-text of clam is "RYRR". b-text of clam is "PYRP". parse-text of clam is "CALM". clam is any-spoilable.
 
 check taking clam: say "It would put the clamps on your hand." instead;
 
@@ -13812,7 +13824,7 @@ chapter urn
 
 the urn is a vanishing thing. "An urn lies here, drawing you in unnaturally, with the lure of riches. No wonder the clam was so aggressive. It feels a bit evil, even.". description of urn is "It's--well, beautiful, like you could take it and forget all about this quest."
 
-a-text of urn is "RYR". b-text of urn is "RYP". parse-text of urn is "RUN". urn is parse-spoilable.
+a-text of urn is "RYR". b-text of urn is "RYP". parse-text of urn is "RUN". urn is any-spoilable.
 
 check taking urn:
 	say "As you take the urn and peek inside, the cursed wealth inside possesses your mind. You spend the rest of your free time gazing at it, until Elvira's goons catch you. A-ha! Proof you were a greedbag! Your loot is confiscated--for the public good, of course. A small fraction of it is donated to endow a scholarship to the agnostic who writes the best essay about why you should never have been trusted in the first place.";
@@ -13878,8 +13890,7 @@ chapter frat raft
 
 the frat raft is scenery in Disease Seaside. description is "It's a frat raft, by the looks of it. All sorts of Greek symbols and crude jokes are written on it. You probably have to do something pretty hokey to get it fueled up, or whatever.[paragraph break]It's made of oaks-as-OK which soak and carry interlocking--and completely locked--oars."
 
-a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat raft is "?[sp]?[sp]R[sp]T". frat raft is parse-spoilable.
-frat raft is parse-spoilable.
+a-text of frat raft is "RYRR". b-text of frat raft is "??RP". parse-text of frat raft is "?[sp]?[sp]R[sp]T". frat raft is any-spoilable.
 
 the frat raft is an enterable reflexive supporter. the frat raft is fixed in place.
 
@@ -13891,7 +13902,7 @@ section oars
 
 the interlocking oars are part of the frat raft. the interlocking oars are reflexive. description is "The oars are some red metal, more like containers than something that could get you through the water. They don't seem mobile[if raft is reflexed]--they seem a bit bulkier than before you, um, gave a gas refill[end if].".
 
-a-text of oars is "RYYR". b-text of oars is "RYYR". parse-text of oars is "SOAR". oars is parse-spoilable.
+a-text of oars is "RYYR". b-text of oars is "RYYR". parse-text of oars is "SOAR". oars is any-spoilable.
 
 check taking oars: say "The oars won't budge from the raft." instead;
 
@@ -13945,7 +13956,7 @@ chapter pale plea
 
 the pale plea is vanishing boring scenery in Fighter Freight. description of pale plea is "[one of]'A... [']elp!'[or]'Pal! Pal! Ee!'[in random order]". bore-text of pale plea is "You can't do much besides [b]LISTEN[r] to the plea.".
 
-a-text of pale plea is "RYYR". b-text of pale plea is "RYYR". parse-text of pale plea is "LEAP". pale plea is parse-spoilable.
+a-text of pale plea is "RYYR". b-text of pale plea is "RYYR". parse-text of pale plea is "LEAP". pale plea is any-spoilable.
 
 scray-scan is a truth state that varies.
 
@@ -14270,7 +14281,7 @@ section cans
 
 the cans are vanishing flippable LLPish scenery in Hardest Trashed Dearths. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there. They're quite red and, if you look carefully, you can probably see the name of the company who produced them, in a more garish red."
 
-a-text of cans is "RRYR". b-text of cans is "RRYR". parse-text of cans is "x[sp]x[sp]A[sp]x". cans are parse-spoilable.
+a-text of cans is "RRYR". b-text of cans is "RRYR". parse-text of cans is "x[sp]x[sp]A[sp]x". cans are any-spoilable.
 
 check taking the cans:
 	say "There are too many. Even one or two would be too icky and mess up your super purse. You don't even have a garbage sticker, but maybe another tool would work." instead;
@@ -14283,7 +14294,7 @@ section eeks
 
 the eeks are plural-named boring vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.". bore-check of eeks is bore-eeks rule.
 
-a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "SEEK". eeks are parse-spoilable.
+a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "SEEK". eeks are any-spoilable.
 
 this is the bore-eeks rule:
 	if current action is seeking or current action is listening, now boring-exception is true;
@@ -14382,7 +14393,7 @@ After printing the name of the wrap while taking inventory:
 
 some Paw R Wrap is a singular-named flippable thing. indefinite article of Paw R Wrap is "some". understand "bubble/bubbles" and "bubble wrap" as Paw R Wrap.
 
-a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of paw r wrap is "?[sp]?[sp]x[sp]?". Paw R Wrap is parse-spoilable.
+a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of paw r wrap is "?[sp]?[sp]x[sp]?". Paw R Wrap is any-spoilable.
 
 description of Paw R Wrap is "Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.". printed name of Paw R Wrap is "Paw-R-Wrap".
 
@@ -14464,7 +14475,7 @@ section dent
 
 the dent is part of the raw red drawer. the dent is LLPish and vanishing. description is "It'd probably take the right sort of futzing to get rid of."
 
-a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "TEND". dent is parse-spoilable.
+a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "TEND". dent is any-spoilable.
 
 section tending
 
@@ -14588,7 +14599,7 @@ chapter skis
 
 the skis are a plural-named flippable thing in Lapsin Plains. the skis are fixed in place. "Skis criss-cross over the pans, blocking you from entry."
 
-a-text of skis is "RYRR". b-text of skis is "RYRP". parse-text of skis is "KISS". skis are parse-spoilable.
+a-text of skis is "RYRR". b-text of skis is "RYRP". parse-text of skis is "KISS". skis are any-spoilable.
 
 to say ski-la:
 	if skis are moot:
@@ -14618,7 +14629,7 @@ the knob is vanishing scenery in Lapsin Plains. the knob is flippable and vanish
 
 understand "doorknob" as knob.
 
-a-text of knob is "RYRR". b-text of knob is "RYRR". parse-text of knob is "x[sp]O[sp]x[sp]x". knob is parse-spoilable.
+a-text of knob is "RYRR". b-text of knob is "RYRR". parse-text of knob is "x[sp]O[sp]x[sp]x". knob is any-spoilable.
 
 does the player mean bonking the knob: it is very likely.
 
@@ -14658,7 +14669,7 @@ to say pan-block:
 	else:
 		say "skis"
 
-a-text of span pans is "RRYR". b-text of span pans is "?R?R". parse-text of span pans is "?[sp]x[sp]?[sp]P". span pans are parse-spoilable.
+a-text of span pans is "RRYR". b-text of span pans is "?R?R". parse-text of span pans is "?[sp]x[sp]?[sp]P". span pans are any-spoilable.
 
 understand "pan" and "snap pan" as span pans when player is in Lapsin Plains and span pans are in Lapsin Plains.
 
@@ -14705,7 +14716,7 @@ the prod is a thing. description is "It's a corroded decor-rod--nah, just a prod
 
 does the player mean dropping the prod: it is very likely.
 
-a-text of prod is "RRYR". b-text of prod is "RPGR". parse-text of prod is "DROP". prod is parse-spoilable.
+a-text of prod is "RRYR". b-text of prod is "RPGR". parse-text of prod is "DROP". prod is any-spoilable.
 
 check opening prod:
 	say "You flash back to the door saying NOPE. You can't figure a way to open the prod, but maybe brute force will work, instead." instead;
@@ -14745,7 +14756,7 @@ check taking tubs: say "Way too bulky. But actually not as heavy as you thought.
 
 description of tubs is "They seem glued together. Maybe there is a way to break them open to see if there's anything inside."
 
-a-text of tubs is "RYRR". b-text of tubs is "RGRR". parse-text of tubs is "x[sp]U[sp]x[sp]x". tubs is parse-spoilable.
+a-text of tubs is "RYRR". b-text of tubs is "RGRR". parse-text of tubs is "x[sp]U[sp]x[sp]x". tubs is any-spoilable.
 
 section busting
 
@@ -15016,7 +15027,7 @@ rule for supplying a missing noun when burying:
 
 the ruby is a vanishing thing. description of ruby is "[one of]See ruby, rub eyes. [or][stopping]You feel heat run from you as you see the words [first custom style]HAUNTER[r] on it. It's somehow a slightly different red from the ruby, but still distinctive and familiar."
 
-a-text of ruby is "RYRO". b-text of ruby is "RGRB". parse-text of ruby is "BURY". ruby is parse-spoilable.
+a-text of ruby is "RYRO". b-text of ruby is "RGRB". parse-text of ruby is "BURY". ruby is any-spoilable.
 
 carry out burying:
 	if ruby is moot, say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
@@ -15194,7 +15205,7 @@ this is the bore-pins rule:
 	if current action is dropping, say "Only twenty-four combinations. Two work. The pin(s) will drop." instead;
 	if current action is taking, say "They'd poke you nastily. Give you nips and all." instead;
 
-a-text of pins is "RRYR". b-text of pins is "RRYR". parse-text of pins is "x[sp]x[sp]I[sp]x". pins are parse-spoilable.
+a-text of pins is "RRYR". b-text of pins is "RRYR". parse-text of pins is "x[sp]x[sp]I[sp]x". pins are any-spoilable.
 
 section sniping
 
@@ -15870,7 +15881,7 @@ section picaro pod 2
 
 Daryl is a picaro. description is "Daryl appears to be in tremendous physical shape.". pod-num of Daryl is 2. pod-ord of Daryl is 1.
 
-a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". parse-text of daryl is "LARDY". daryl is parse-spoilable.
+a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". parse-text of daryl is "LARDY". daryl is any-spoilable.
 
 Dewey is a picaro. description is "Dewey is solidly build, almost less just a man than a big tree.". pod-num of Dewey is 2. pod-ord of Dewey is 2.
 
@@ -16075,7 +16086,7 @@ this is the bore-yurt rule:
 
 understand "yurt" as try us yurts.
 
-a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]?[sp]x[sp]?[sp]Y". try us yurts are parse-spoilable.
+a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]?[sp]x[sp]?[sp]Y". try us yurts are any-spoilable.
 
 section Owers' Bin Brownies
 
@@ -16652,7 +16663,7 @@ to decide what number is yow-has-said:
 to say what-can-doc-say:
 	say "[if yow-has-said is 2]. [he-she-c] looks repressed, as if [he-she] has so many ways to say things but needs someone to bring it out of him[else if yow-has-said is 1]. [he-she-c] looks slightly agitated, as if [he-she]'s only said half of what [he-she] wants to say[end if]"
 
-a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow is "x[sp]O[sp]x[sp]x[sp]Y". Dr Yow is parse-spoilable.
+a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow is "x[sp]O[sp]x[sp]x[sp]Y". Dr Yow is any-spoilable.
 
 [a-text of Dr Yow2 is "RYRRO". b-text of Dr Yow2 is "RYRRO". parse-text of Dr Yow2 is "x[sp]O[sp]x[sp]x[sp]Y". Dr Yow is parse-spoilable.]
 
@@ -17245,7 +17256,7 @@ check scaning curst palace (this is the nab a few letters rule) :
 	if max-pal-seen < palace-let, now max-pal-seen is palace-let;
 
 [logsync.py force next]
-a-text of curst palace is "[cpset of pal-a]". b-text of curst palace is "[cpset of pal-b]". parse-text of curst palace is "[cpset of pal-clues]".
+a-text of curst palace is "[cpset of pal-a]". b-text of curst palace is "[cpset of pal-b]". parse-text of curst palace is "[cpset of pal-clues]". curst palace is any-spoilable.
 
 pal-clues is text that varies. pal-clues is "xx-xt-x-x-x".
 
@@ -18255,7 +18266,7 @@ chapter atmo-moat
 
 the atmo moat is vanishing scenery in Disowned Downside. understand "atmo/moat" and "atmo moat" as atmo moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red.". printed name of atmo moat is "atmo-moat".
 
-a-text of atmo moat is "YRYR". b-text of atmo moat is "??YR". parse-text of atmo moat is "?[sp]?[sp]O[sp]M". atmo moat is parse-spoilable.
+a-text of atmo moat is "YRYR". b-text of atmo moat is "??YR". parse-text of atmo moat is "?[sp]?[sp]O[sp]M". atmo moat is any-spoilable.
 
 Include (-
 	has transparent animate
@@ -18866,7 +18877,7 @@ chapter eels
 
 the eels are a plural-named reflexive person. the eels are in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here between the weir and atoll[end if]."
 
-a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "ELSE". eels are parse-spoilable.
+a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "ELSE". eels are any-spoilable.
 
 chapter vow here
 
@@ -19018,13 +19029,13 @@ to say might-read-satyr: say "[if satyr is read-yet]. You might be able to [b]RE
 
 understand "tsyra" as stray satyr when satyr is read-yet.
 
-a-text of stray satyr is "YRRRO". b-text of stray satyr is "YR?R?". parse-text of stray satyr is "A[sp]x[sp]?[sp]x[sp]?". stray satyr is parse-spoilable.
+a-text of stray satyr is "YRRRO". b-text of stray satyr is "YR?R?". parse-text of stray satyr is "A[sp]x[sp]?[sp]x[sp]?". stray satyr is any-spoilable.
 
 chapter owls
 
 the owls are plural-named terse vanishing animals in Lamer Realm. description of owls is "Their big owly eyes follow you.". "[one of]You hear hooting and a flapping of wings. You've probably triggered some sort of trap. You look up to see owls swooping. You can duck the first blow, and you maybe have time to look at your settler, but they're too speedy en masse[or]All those animals are nice, but the owls about to dive-bomb you here mean you'll need to think fast. I think[stopping]."
 
-a-text of owls is "RRYR". b-text of owls is "RRYR". parse-text of owls is "x[sp]x[sp]O[sp]x". owls are parse-spoilable.
+a-text of owls is "RRYR". b-text of owls is "RRYR". parse-text of owls is "x[sp]x[sp]O[sp]x". owls are any-spoilable.
 
 check going south in Lamer Realm: if owls are in Lamer Realm, say "[if power-back is false]You're not ready to deal with the owls yet[else]You'll deal with the owls later[end if].";
 
@@ -19064,7 +19075,7 @@ chapter shrewin whiners
 
 the shrewin whiners are plural-named flippable two-of-threers in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners here block the way south, displaying [list of touchable block-concepts] [if one-whine-down]almost [end if]without stopping. The chatter is all over the place, yet controlled enough to distract you[if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
 
-a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
+a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG". whiners are any-spoilable.
 
 section callosity
 
@@ -20235,7 +20246,7 @@ check giving a final-puz thing to when mrlp is others:
 	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter, say "[second noun] is probably interested in something much more obviously valuable." instead;
 	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
 
-a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "ICON". coin is parse-spoilable.
+a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "ICON". coin is any-spoilable.
 
 section icon
 
@@ -20245,7 +20256,7 @@ section coins
 
 the coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
 
-a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?". coins are parse-spoilable.
+a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?". coins are any-spoilable.
 
 section singed design
 
@@ -20523,7 +20534,7 @@ a melon is a reflexive singular-named fruit in Clangier Clearing.
 
 description of melon is "[unless player carries the melon]Surely there must be a better one. It can't be the only one on display[else]It's nice and big and healthy looking[end if]."
 
-a-text of melon is "RYR??". b-text of melon is "?????". parse-text of melon is "x[sp]-[sp]l[sp]-[sp]x[sp]x".
+a-text of melon is "RYR??". b-text of melon is "?????". parse-text of melon is "x[sp]-[sp]l[sp]-[sp]x[sp]x". melon is any-spoilable.
 
 chapter nectarine
 

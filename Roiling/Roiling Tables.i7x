@@ -394,6 +394,7 @@ this is the bee-less-active rule:
 		say "You're able to focus on L'Clear Cellar and how to get into it, now[if cellar is prefigured]. Maybe you could focus perfectly if you wanted, or you could just [b]RECALL[r] now[end if].";
 		now b-text of evil bee is "RYPYYRG";
 		now parse-text of evil bee is "BELIEVE";
+		now evil bee is parse-spoilable;
 	now noun is realized;
 
 this is the pre-cellar-recall rule:
@@ -3341,7 +3342,7 @@ book presto
 table of presto scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
-n-t-air	true	false	false	false	"Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze.
+n-t-air	true	false	false	false	"Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze."
 n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
 boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!"
 sods gone odes song	true	true	false	false	"My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
