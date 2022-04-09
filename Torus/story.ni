@@ -111,13 +111,17 @@ to decide which number is cur-on-index of (dr - a dubroom):
 	increase x by on-base;
 	decide on x;
 
+say-whatever is a truth state that varies.
+
 to say heptround:
 	choose row (heptcount + 1) in table of center statuses;
 	say "[cylinder-desc entry]. ";
 	if location of player is not solved:
 		say "[clue-text of location of player]";
 		if number of visited dubrooms is 7 and heptcount is 0:
-			say ". [one of]You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change, so you need to do something new, here[or][paragraph break][stopping]";
+			if say-whatever is false:
+				say "You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change from. But there must be things to change [i]to[r].";
+				now say-whatever is true;
 	else:
 		say "[done-text of location of player]"
 
@@ -257,6 +261,7 @@ check going inside:
 	wfak;
 	say "Yes, after you dispatched Red Bull Burdell, you heard rumors. Travelers would occasionally come by from the Strainer Terrains but could not show anyone the way back. They were in no urgent danger. It just seemed like they would be a perfect ally or sibling country or whatever. You wondered how to get there, then forgot about it. But you are here now.";
 	wfak;
+	now the right hand status line is "[score]/[number of rooms]+";
 	move player to Scene Scene instead;
 
 book rooms
@@ -276,13 +281,13 @@ Prep Area is a dubroom. it is a1 of Ehs Ehs. word-to-include is "reappear". gues
 
 Grain Grain is a dubroom. it is a1 of Prep Area. it is a2 of Ehs Ehs. printed name is "Grain, Grain". word-to-include is "arraigning". guess-right-text is "The grain turns into a court of law, but since you have no guilt, you are free to go.". clue-text is "You feel on trial. Well, not quite, but you feel a need for acquittal for ... something". done-text is "It's a bit scorched here, the only indication this court of law was once farmland". sts-hash of Grain Grain is 234011677. uniq-hash of grain grain is 139585. guessdir of Grain Grain is northeast. cycle-index of grain grain is 3.
 
-Meta Meat is a dubroom. it is a1 of Grain Grain. it is a2 of Prep Area. it is a3 of Ehs Ehs. "This is the east [torus-area]. [heptround].". word-to-include is "teammate". guess-right-text is "Someone comes along and bangs at the barrier inside. You hear a small cracking.". clue-text is "This area seems meaty, although you don't know why, or what kind of meaty.". done-text is "'Met? Uh, meat,' you think to yourself, about the teammate you discovered here". sts-hash of Meta Meat is 297179098. uniq-hash of meta meat is 528401. guessdir of Meta Meat is east. cycle-index of meta meat is 4.
+Meta Meat is a dubroom. it is a1 of Grain Grain. it is a2 of Prep Area. it is a3 of Ehs Ehs. "This is the east [torus-area]. [heptround].". word-to-include is "teammate". guess-right-text is "Someone comes along and bangs at the barrier inside. You hear a small cracking.". clue-text is "This area seems meaty, although you don't know why, or what kind of meaty". done-text is "'Met? Uh, meat,' you think to yourself, about the teammate you discovered here". sts-hash of Meta Meat is 297179098. uniq-hash of meta meat is 528401. guessdir of Meta Meat is east. cycle-index of meta meat is 4.
 
 Tines Inset is a dubroom. it is a1 of Meta Meat. it is a2 of Grain Grain. it is a3 of Prep Area. it is b3 of Ehs Ehs. word-to-include is "intestines". guess-right-text is "You find the guts to turn the place into something more gross, but manageable.". clue-text is "You feel disjointed from the whole body of rooms here". done-text is "You are just glad you don't have to deal with digestive juices or anything here". sts-hash of Tines Inset is 441090447. uniq-hash of tines inset is 794896. guessdir of Tines Inset is southeast. cycle-index of tines inset is 5.
 
 Pechan Pechan is a dubroom. it is a1 of Tines Inset. it is a2 of Meta Meat. it is a3 of Grain Grain. it is b3 of Prep Area. it is b2 of Ehs Ehs. word-to-include is "happenchance". guess-right-text is "You suddenly find a lucky way to look at this area of the torus. Or was it lucky? After all, you made a lot of educated guesses, and eventually, one had to hit.". clue-text is "Oh, a pechan is an odd word for stomach. You may need luck to solve the secret of this room. Some skill, maybe, but enough skill so your luck matters". done-text is "You feel fortunate you were able to turn this into something". sts-hash of Pechan Pechan is 336655278. uniq-hash of pechan is 41109. guessdir of Pechan Pechan is south. cycle-index of pechan pechan is 6.
 
-Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. printed name is "Latte, Latte". "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know.". done-text is "You're glad the coffee shops are gone and that the tattletale has gotten bored of tattling to you--for the moment, at least". sts-hash of Latte Latte is 390027802. uniq-hash of latte is 526353. guessdir of Latte Latte is southwest. cycle-index of latte latte is 7.
+Latte Latte is a dubroom. it is a1 of Pechan Pechan. it is a2 of Tines Inset. it is a3 of Meta Meat. it is b3 of Grain Grain. it is b2 of Prep Area. it is b1 of Ehs Ehs. printed name is "Latte, Latte". "This is the southwest [torus-area]. All sorts of coffee shops here! What is going on? You know it's ridiculous, but you can't bring yourself to say so. [heptround].". word-to-include is "tattletale". guess-right-text is "Someone comes along and mentions how ridiculous it is to have that many coffee shops so close to each other. Suddenly, everyone believes it! Some coffee shops decide to become something with a little more variety.". clue-text is "Coffee certainly makes folks chatty, you know". done-text is "You're glad the coffee shops are gone and that the tattletale has gotten bored of tattling to you--for the moment, at least". sts-hash of Latte Latte is 390027802. uniq-hash of latte is 526353. guessdir of Latte Latte is southwest. cycle-index of latte latte is 7.
 
 to decide which number is fiss:
 	decide on number of flippables in scene scene;
@@ -297,7 +302,7 @@ to say list-opt:
 	else:
 		say "have a few distractions here you may or may not wish to take care of before changing the scene";
 
-Scene Scene is an internal dubroom. "You recognize this, err, scene as the mythical [strainer terrains]. It's fun. You've earned it. But how to effect that? You [list-opt].". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years[if score is not maximum score]. There's still stuff to do here if you want, you suspect[end if].". done-text is "You shouldn't see this description. Oops". sts-hash of Scene Scene is 439799277. uniq-hash of scene scene is 270356.
+Scene Scene is an internal dubroom. "You recognize this, err, scene as the mythical [strainer terrains]. It's fun. You've earned it. But how to effect that? You [list-opt].". word-to-include is "senescence". guess-right-text is "Yup. That'll do it.". clue-text is "Here you should spend your remaining years[if score is not maximum score]. There's still stuff to do here if you want, you suspect[end if]". done-text is "You shouldn't see this description. Oops". sts-hash of Scene Scene is 439799277. uniq-hash of scene scene is 270356.
 
 stats-x is a truth state that varies.
 
@@ -440,6 +445,7 @@ carry out deededing:
 	try looking;
 	now deededed is true;
 	now maximum score is number of dubrooms + number of flippables;
+	now the right hand status line is "[score]/[maximum score]";
 	the rule succeeds;
 
 chapter oning
@@ -548,7 +554,7 @@ carry out abouting:
 	if big-details is false:
 		say "[b]CREDITS[r] will give thanks to people who helped in [this-game]. This includes cover art, testing and those who keep the community active and those who give general resources.";
 	else:
-		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro]. It's much smaller, and it is [b]POLITE[r] on the Zarfian Cruelty scale, but it does sweep up some things I wanted to, and I wanted a good-bye from the other games beyond 'I hope I fixed all the bugs and added all the features I could!' I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus, for a circular map--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be tough.[paragraph break]The post-Spring Thing version of this game should come with a postmortem.";
+		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro]. It's much smaller, and it is [b]POLITE[r] on the Zarfian Cruelty scale, but it does sweep up some things I wanted to, and I wanted a good-bye from the other games beyond 'I hope I fixed all the bugs and added all the features I could!' I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus, for a circular map--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be long for their own sake.[paragraph break]Saying more would spoil things for Spring Thing, but the post-comp version of this game should come with a postmortem.";
 		say "[line break]I also wanted to fit in a non-anagram puzzle based on something I'd always wondered about.";
 		say "[line break]Source code for [this-game] is at https://github.com/andrewschultz/stale-tales-slate/tree/main/Tours.";
 	now big-details is whether or not big-details is false;
@@ -568,7 +574,7 @@ carry out creditsing:
 	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now. I'm worried I'll miss a few names, but there were bg, David Welbourn, Jacqueline, MoyTW, pinkunz, and Roger, among others.";
 	say "Thanks to individuals for some late testing. I appreciate it. Their names*: Dee Cooke, Olaf Nowacki, A Numb Scan Down.";
 	say "Thanks to J. J. Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments. I bet if you like [this-game], you'll like some of the games featured there, too.";
-	say "* [i]Thanks to one of them for an additional anagram puzzle[r].";
+	say "* [i]Thanks to one of them for an additional anagram puzzle. If you need a hint, they've written XYZZY-nominated stuff before[r].";
 	say "[line break]General thanks:";
 	say "[line break]Thanks to Amanda Walker for starting the blurb thread on intfiction.org which helped me with ideas in general.";
 	say "Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
@@ -633,7 +639,7 @@ check requesting the score:
 		say "You've gotten inside the torus. You still have to figure how to sit back and get on with your life[if deededed is false], though you can listen to the voice to try for one last pile of things to set straight[else if number of unflipped flippables is 0], especially now you've straightened out the challenges you were [b]DEEDED[r][else if number of flipped flippables is 0], and you can do so even without tackling what you were [b]DEEDED[r][else], though you've still got some stuff you were [b]DEEDED[r] to clean up, if you want[end if].";
 		say "You have figured [number of flipped flippables] of [number of flippables] things here in [scene scene].";
 		the rule succeeds;
-	say "You've figured [score] of [maximum score] areas of the Torus. [if number of unvisited rooms is 1 and score < 7][one of]Why, yes, there is a way to the center[or][stopping][else if number of unvisited rooms > 1]You may wish to explore the whole torus to see what you might be able to do[end if].";
+	say "You've figured [score] of [maximum score] areas of the Torus. [if number of unvisited rooms is 1 and score < 7][one of]Why, yes, there is a way to the center[or][stopping][else if number of unvisited rooms > 1]You may wish to explore the whole torus to see what you might be able to do[else if hams are off-stage]You can just go ahead and figure how to end your journey, but there are bonus puzzles if you [b]LISTEN[r] and do as the voice says[end if].";
 	the rule succeeds;
 
 section going outside
