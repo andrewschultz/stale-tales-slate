@@ -382,6 +382,8 @@ when play begins:
 	move torus backdrop to all perimeter dubrooms;
 	move cylinder backdrop to all perimeter dubrooms;
 	now maximum score is number of rooms;
+	sort the table of times around in random order;
+	sort the table of times around in clue-group order;
 
 when play begins:
 	now sts-sequence is 3;
@@ -399,7 +401,7 @@ when play begins:
 
 volume clue-visiting
 
-times-around is a number that varies.
+clue-row is a number that varies. clue-row is 1.
 
 after printing the locale description (this is the clue on complete tour rule):
 	if in-heptagon-puzzle is true, continue the action;
@@ -411,12 +413,11 @@ after printing the locale description (this is the clue on complete tour rule):
 		if ever-heptagon-puzzle is true and solved-heptagon is false:
 			say "Hmm. Nothing new to do. You should really try going [b]ON[r] again.";
 			continue the action;
-		increment times-around;
-		if times-around > number of rows in table of times around:
-			decrement times-around;
-		choose row times-around in table of times around;
+		choose row clue-row in table of times around;
 		say "[clue-text entry][line break]";
 		now cheat-voice is true;
+		if clue-row > number of rows in table of times around:
+			decrement clue-row;
 	continue the action;
 
 volume game progress verb
