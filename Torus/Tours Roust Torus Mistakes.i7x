@@ -16,6 +16,10 @@ to say end-game:
 to say extra-she:
 	if word number 1 in the player's command is "she", say "[half-solved]"
 
+book general
+
+understand "testes" as a mistake ("Really, now! This isn't that sort of game.") when tsetse fly is not off-stage.
+
 book Ehs Ehs
 
 understand "he" and "hes" and "she" as a mistake ("[no-pron][if ehs ehs is not solved]. Maybe a different sort of word[extra-she][else][besides][end if].") when player is in Ehs Ehs.

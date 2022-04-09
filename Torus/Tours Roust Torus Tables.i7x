@@ -134,6 +134,7 @@ Latte Latte	"(tattle|tale)"	"You probably don't want to encourage a tattletale i
 
 table of one time warnings
 my-topic	warned-yet	should-i-print
+"voice"	false	voice-note rule
 "door"	false	door-appears rule
 "non"	false	on-puzzle rule
 
@@ -146,6 +147,10 @@ this is the on-puzzle rule:
 	if score is not 7, the rule fails;
 	ital-say "you [if ever-heptagon-puzzle is true]did the right thing with [b]ON[i]. No need to read further into the 'Noon' message[else]have the right idea, simplifying 'Noon,' but no need for a foreign language[end if].";
 	reject the player's command;
+	the rule succeeds;
+
+this is the voice-note rule:
+	ital-say "if there's a voice in the room description, you just need to [b]LISTEN[i].";
 	the rule succeeds;
 
 volume presentness hash tables
