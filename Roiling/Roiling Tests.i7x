@@ -70,7 +70,7 @@ test towersminh with "ts/towers/seed 1/enter turrets/z/gone/lardy/bleak/yonder/s
 
 test towersmini with "ts/towers/seed 1/enter turrets/z/gone/lardy/bleak/yonder/sadder/get all/n/put tarts in toaster/xray butlers/purloin brownies/put brownies in toaster/xray nereid/subtler/rinsed/e/restful/saltier/e/w/n/sewed/weariest/n/hastiest/released/e/holiest/w/w/married/n/s/e/s/s/e/broken/resting/e/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/rowdy/gt coastlines/give gizmo to agnostic/robust/stabler/enter boat/misses/spectacular".
 
-test towersmax with "ts/towers/seed 1/enter turrets/z/yonder/pf/droney/pf/gone/lardy/bleak/achier/snared/cricked/talcier/yonder/spectacular/pf/sadder/get all/n/rusty/subtler/reined/rinsed/creaky/n/coiled/semipro/pastier/n/angstier/w/rustled/released/married/n/s/e/hastiest/weariest/s/nerdiest/saltier/sewed/mined/d/dandier/e/marginal/holiest/n/s/s/naivest/w/grandiose/e/s/aimless/rousted/prosiest/n/broken/resting/e/fussier/pf/unlocked/pf/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/pf/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/pearly/attentive/rowdy/gt coastlines/robust/rewired/enter boat/punier/antsier/present/in/spectacular/triste/give pot to sitter/out/misses/spectacular".
+test towersmax with "ts/towers/seed 1/enter turrets/z/yonder/pf/droney/pf/gone/lardy/bleak/achier/snared/cricked/talcier/yonder/spectacular/pf/sadder/get all/n/rusty/subtler/reined/rinsed/creaky/n/coiled/semipro/pastier/n/angstier/w/rustled/e/released/married/n/s/e/hastiest/weariest/s/nerdiest/saltier/sewed/mined/d/dandier/e/marginal/holiest/n/s/s/restful/naivest/w/grandiose/e/s/w/aimless/rousted/prosiest/n/broken/resting/e/fussier/pf/unlocked/pf/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/pf/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/pearly/attentive/rowdy/gt coastlines/give gizmo to agnostic/stabler/robust/rewired/enter boat/punier/antsier/present/in/spectacular/give pot to sitter/triste/give pot to sitter/annoyed/give pot to sitter/out/misses/spectacular".
 
 chapter otters
 
@@ -261,7 +261,7 @@ carry out sccing:
 			say "[Z] needs b-text.";
 		unless a-text of Z is "" or b-text of Z is "":
 			say "[Z]: [a-text of Z] [b-text of Z]. [Z] is [if Z is auxiliary]auxiliary[else]flippable[end if]. ";
-			say "[Z] is [if Z is unspoilable]unspoilable[else if z is any-spoilable]any-spoilable[else if Z is cheat-spoilable]cheat-spoilable[else]parse-spoilable[end if].";
+			say "[Z] is [if Z is unspoilable]unspoilable[else if z is any-spoilable]any-spoilable[else if Z is parse-spoilable]parse-spoilable[else]unknown: BUG[end if].";
 	if unscan > 0:
 		say "[unscan] things left to ID: [myl].";
 	else:
