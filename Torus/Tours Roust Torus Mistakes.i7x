@@ -18,7 +18,7 @@ to say extra-she:
 
 book general
 
-understand "testes" as a mistake ("Really, now! This isn't that sort of game.") when tsetse fly is not off-stage.
+understand "testes" as a mistake ("Really! This isn't that sort of game.") when tsetse fly is not off-stage.
 
 book Ehs Ehs
 
@@ -38,9 +38,7 @@ book Meta Meat
 
 understand "tame" as a mistake ("There's nothing strictly to tame here. If there were, maybe you could use some help[besides].") when player is in Meta Meat.
 
-understand "team" as a mistake ("[if Meta Meat is solved]But you already got a teammate[besides][else]You sort of need a pal, and you sort of need a bit more[end if].") when player is in Meta Meat.
-
-understand "mate" as a mistake ("[if Meta Meat is solved]But you already got a teammate[besides][else]You sort of need a pal, and you sort of need a bit more[end if].") when player is in Meta Meat.
+understand "team" and "mate" as a mistake ("You sort of need a pal, and you sort of need a bit more.") when player is in Meta Meat and Meta Meat is unsolved.
 
 book Pechan Pechan
 

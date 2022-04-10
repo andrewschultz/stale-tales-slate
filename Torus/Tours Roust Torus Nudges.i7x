@@ -6,16 +6,17 @@ Version 1/220314 of Tours Roust Torus Nudges by Andrew Schultz begins here.
 
 volume nudge tables
 
-book general hashes
+book general nudges
+
+chapter general
 
 table of nudge hashes
 cmd-val (text)	cmd-hash (number)	cmd-loc	cmd-rule	nudge-text
 "tours"	464166171	--	--	"[whole-torus]."
 "rout"	367892205	--	--	"[whole-torus]."
-"eh"	165088408	Ehs Ehs	--	"[plural]."
 "tine"	344816481	Tines Inset	--	"[plural]."
-"prep"	593567378	Prep Area	--	"[asym-area]."
-"area"	376061830	Prep Area	--	"[asym-area]."
+"prep"	376061830	Prep Area	--	"[asym-area]."
+"area"	217505548	Prep Area	--	"[asym-area]."
 "cene"	343525311	Scene Scene	--	"[plural]."
 "tsetse"	654380186	--	tsetse-there rule	"[tsetse-ok]."
 "set"	327190093	--	tsetse-there rule	"[tsetse-ok]."
