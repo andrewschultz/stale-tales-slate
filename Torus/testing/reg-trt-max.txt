@@ -7,6 +7,8 @@
 
 * trt-thru
 
+>au 2
+
 #nudge for tsetse
 >tsetes
 The tsetse fly can't really be changed.

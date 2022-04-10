@@ -24,6 +24,17 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 
 * trt-thru
 
+>au 2
+
+@nud
+#ttc-table-of-pre-brushoffs-ehs-ehs-(eh|ehs)
+>eh
+No, you can't lackadaisically go along with what's there. You need to invent, or reinvent, something new, some different way of emoting.
+\\
+#ttc-table-of-one-time-warnings-voice
+>x voice
+NOTE: if there's a voice in the room description, you just need to LISTEN.
+
 @nud
 #nudge for tours
 >tousr
@@ -135,6 +146,13 @@ Act on the whole area, here.
 >arae
 Act on the whole area, here.
 
+@nud
+#ttc-table-of-pre-brushoffs-prep-area-(prep|area)
+>prep me
+You're not sure what you are prepping--a thing or an action. But once you do, things will become clearer.
+>scan area
+You're not sure what you are prepping--a thing or an action. But once you do, things will become clearer.
+
 @min-b
 >tattletale
 by one point
@@ -186,6 +204,11 @@ Getting mad won't help.
 You don't need to battle the weather as well.
 !Besides
 
+@nud
+#ttc-table-of-pre-brushoffs-grain-grain-grain
+>grain gain rain
+Grain is grain, to you. There's not much to be done with it as-is.
+
 @min-b
 >happenchance
 by one point
@@ -221,6 +244,13 @@ There's nothing strictly to tame here. If there were, maybe you could use some h
 You sort of need a pal, and you sort of need a bit more.
 !Besides
 
+@nud
+#ttc-table-of-pre-brushoffs-meta-meat-(meta|meat)
+>meta strat
+The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?
+>meat up
+The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?
+
 @min-b
 >intestines
 by one point
@@ -229,6 +259,13 @@ Intestines
 >teammate
 by one point
 Teammate
+
+@nud
+#ttc-table-of-post-brushoffs-meta-meat-(team|mate)
+>mate ahoy
+Your teammate will be there when you need them.
+>go team go
+Your teammate will be there when you need them.
 
 @mis
 #mistake retest for tame
@@ -264,6 +301,13 @@ You mentally show off your anagramming skills in languages other than English. P
 >tien
 You're missing an (s) to make things plural, here.
 
+@nud
+#ttc-table-of-pre-brushoffs-tines-inset-(tines|inset)
+>spin tines
+The tines aren't budging. Not in their present form. But what could they become?
+>inset insults
+The tines aren't budging. Not in their present form. But what could they become?
+
 @min-b
 >teammate
 by one point
@@ -296,6 +340,11 @@ You mentally show off your anagramming skills in languages other than English. N
 >happen chance
 You are very, very, very close indeed. Everything is in the right order.
 
+@nud
+#ttc-table-of-pre-brushoffs-pechan-pechan-pechan
+>what is a pechan
+If there's a stomach here, you don't want to burst it.
+
 @min-b
 >arraigning
 by one point
@@ -316,6 +365,11 @@ Happenchance
 You don't need permission to be let at anything.
 !Besides
 
+@nud
+#ttc-table-of-pre-brushoffs-latte-latte-latte
+>latte et al
+Oh, man. You don't want to even think about caffeinated beverages. Even ones with milk in. These days you don't even go in for caffeinated pop. Perhaps the latte can become something less consumable?
+
 @min-b
 >reappear
 by one point
@@ -327,11 +381,28 @@ Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
+@nud
+#ttc-table-of-post-brushoffs-latte-latte-(tattle|tale)
+>tattle it
+You probably don't want to encourage a tattletale in any way.
+#
+>hear a tale
+You probably don't want to encourage a tattletale in any way.
+
 @mis
 #mistake retest for let at
 >let at
 You don't need permission to be let at anything.
 Besides
+
+@nud
+#ttc-table-of-one-time-warnings-door
+>x door
+NOTE: the door is just part of the torus. There's nothing special about it. You'll just walk through it when the time comes. Anything you try to do with the door goes to the torus.
+\\
+#ttc-table-of-one-time-warnings-non
+>non
+NOTE: you have the right idea, simplifying "Noon," but no need for a foreign language.
 
 @alt
 >on
@@ -443,6 +514,11 @@ Scene Scene
 #nudge for cene
 >ceen
 You're missing an (s) to make things plural, here.
+
+@nud
+#ttc-table-of-pre-brushoffs-scene-scene-scene
+>make a scene
+You know what to do here. You may not be as sharp as you were younger, but you see the pattern. You may not see how to go through with it right away, but you see it.
 
 @mis
 #mistake test for senescense
