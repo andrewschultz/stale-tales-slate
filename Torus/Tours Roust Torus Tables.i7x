@@ -126,6 +126,7 @@ Grain Grain	"grain"	"Grain is grain, to you. There's not much to be done with it
 Tines Inset	"(tines|inset)"	"The tines aren't budging. Not in their present form. But what could they become?"
 Pechan Pechan	"pechan"	"If there's a stomach here, you don't want to burst it."
 Latte Latte	"latte"	"Oh, man. You don't want to even think about caffeinated beverages. Even ones with milk in. These days you don't even go in for caffeinated pop. Perhaps the latte can become something less consumable?"
+Scene Scene	"scene"	"You know what to do here. You may not be as sharp as you were younger, but you see the pattern. You may not see how to go through with it right away, but you see it."
 
 table of post-brushoffs
 my-room	my-topic	my-brushoff

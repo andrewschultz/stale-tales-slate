@@ -49,7 +49,7 @@ in-heptagon-puzzle is a truth state that varies.
 ever-heptagon-puzzle is a truth state that varies.
 
 every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false (this is the clue ON rule):
-	say "A voice booms 'Noon? No! No!' It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
+	say "[one of]A voice[or]That voice once again[stopping] booms 'Noon? No! No!' It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
 
 solved-heptagon is a truth state that varies.
 
@@ -120,7 +120,7 @@ to say heptround:
 		say "[clue-text of location of player]";
 		if number of visited dubrooms is 7 and heptcount is 0:
 			if say-whatever is false:
-				say "You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change from. But there must be things to change [i]to[r].";
+				say ". You keep feeling jumbled when you think of all the room names. Whatever you need to do, there are no [i]things[r] to change from. But there must be things to change [i]to[r]";
 				now say-whatever is true;
 	else:
 		say "[done-text of location of player]"
@@ -275,7 +275,7 @@ to say torus-fake-dir of (rm - a room):
 
 to say torus-area: say "area of the torus"
 
-Ehs Ehs is a dubroom. printed name is "Ehs, Ehs". word-to-include is "sheesh". guess-right-text is "You effectively dismiss the ehs with something more powerful. Or less powerless.". clue-text is "The EHs you hear make you wish you could speak something back at them. Nothing profane, but forceful enough. But there's more than one to counter". done-text is "It's quiet here. You don't have to vent any more". sts-hash of Ehs Ehs is 261362374. uniq-hash of Ehs Ehs is 262288. guessdir of Ehs Ehs is west. cycle-index of ehs ehs is 1.
+Ehs Ehs is a dubroom. printed name is "Ehs, Ehs". word-to-include is "sheesh". guess-right-text is "You effectively dismiss the ehs with something more powerful. Or less powerless.". clue-text is "The EHs you hear make you wish you could speak something back at them. Nothing profane, but forceful enough. But there's more than one to counter[if score is 0 and number of visited dubrooms is 7]. This feels like the simplest place to get to work. You might not even be creating anything. Maybe just blow off a little frustration[end if]". done-text is "It's quiet here. You don't have to vent any more". sts-hash of Ehs Ehs is 261362374. uniq-hash of Ehs Ehs is 262288. guessdir of Ehs Ehs is west. cycle-index of ehs ehs is 1.
 
 Prep Area is a dubroom. it is a1 of Ehs Ehs. word-to-include is "reappear". guess-right-text is "You back out a bit, then reappear.". clue-text is "You feel like you are being watched. You want to duck out and in, but not in the standard directions". done-text is "After some scouting, you know good hiding areas where you or an ally can reappear if need be". sts-hash of Prep Area is 296783689. uniq-hash of prep area is 163857. guessdir of Prep Area is northwest. cycle-index of prep area is 2.
 
@@ -756,7 +756,7 @@ after reading a command:
 			now caps-warn is true;
 	now cmd-lo is the player's command in lower case;
 	repeat through table of one time warnings:
-		if warned-yet entry is true, continue the action;
+		if warned-yet entry is true, next;
 		if the player's command matches the regular expression "\b[my-topic entry]\b":
 			process the should-i-print entry;
 			if the rule succeeded, now warned-yet entry is true;
@@ -802,6 +802,7 @@ after reading a command:
 		if ever-voice is true and score is 1:
 			say "[line break]You sense the tsetse fly has left. You won't need it any more. For such a small fly, it did a lot.";
 		process the notify score changes rule;
+		process the clue ON rule;
 		reject the player's command;
 	if at-on-puzzle:
 		if word number 1 in cmd-lo is "n" or word number 1 in cmd-lo is "o":
