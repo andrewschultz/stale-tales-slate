@@ -7,17 +7,46 @@
 
 * trt-thru
 
-#mistake test for he/hes
+#nudge for tours
+>tousr
+You don't need to act on the whole torus, here.
+
+#nudge for rout
+>rotu
+You don't need to act on the whole torus, here.
+
+>a
+>a
+>a
+>a
+>a
+>a
+>a
+>listen
+
+#mistake test for testes
+>testes
+Really! This isn't that sort of game.
+
+#nudge for tsetse
+>tsetes
+The tsetse fly can't really be changed.
+
+#nudge for set
+>ste
+The tsetse fly can't really be changed.
+
+#mistake test for he/hes/she
 >he
 You don't need to deal with pronouns. Maybe a different sort of word.
 !halfway
 !Besides
+
 >hes
 You don't need to deal with pronouns. Maybe a different sort of word.
 !Besides
 !halfway
 
-#mistake test for she
 >she
 You don't need to deal with pronouns. Maybe a different sort of word. In a weird way, you feel you're halfway there, though.
 !Besides
@@ -26,7 +55,7 @@ You don't need to deal with pronouns. Maybe a different sort of word. In a weird
 by one point
 Sheesh
 
-#mistake retest for he/hes
+#mistake retest for he/hes/she
 >he
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
 >hes
@@ -63,6 +92,18 @@ Tours Roust Torus is about light-hearted jokes, and there's nothing light-hearte
 No daredevil gunman appears to help you out.
 !Besides
 
+#mistake test for reap pear
+>reap pear
+You are very, very, very close indeed. Everything is in the right order.
+
+#nudge for prep
+>prpe
+Act on the whole area, here.
+
+#nudge for area
+>arae
+Act on the whole area, here.
+
 >reappear
 by one point
 Reappear
@@ -75,10 +116,10 @@ You don't need to consort with thieves. Besides, you already did what you needed
 >reap
 Perhaps there is something to reap once you figure what to do here. Besides, you already did what you needed, here.
 
-#mistake test for perp
+#mistake retest for perp
 >perp
-very many verbs to use
-#PREP AREA is now nothing
+Tours Roust Torus doesn't have a deep bench of standard verbs, though in each room, you need to find something special to do or say or think. For a general list of verbs, type VERBS.
+#PREP AREA is now nothing, so we get the standard response, but it's worth testing
 
 #mistake retest for pear
 >pear
@@ -95,6 +136,11 @@ No daredevil gunman appears to help you out. Besides, you already did what you n
 Getting mad won't help.
 !Besides
 
+#mistake test for raging rain
+>raging rain
+You don't need to battle the weather as well.
+!Besides
+
 >arraigning
 by one point
 Arraigning
@@ -103,11 +149,31 @@ Arraigning
 >ragin
 Getting mad won't help. Besides, you already did what you needed, here.
 
+#mistake retest for raging rain
+>raging rain
+You don't need to battle the weather as well.
+Besides
+
 >a
+
+#mistake test for tame
+>tame
+There's nothing strictly to tame here. If there were, maybe you could use some help.
+!Besides
+
+#mistake test for mate/team
+>team
+You sort of need a pal, and you sort of need a bit more.
+!Besides
 
 >teammate
 by one point
 Teammate
+
+#mistake retest for tame
+>tame
+There's nothing strictly to tame here. If there were, maybe you could use some help.
+Besides
 
 >a
 
@@ -125,6 +191,10 @@ You're too old for the nightlife. Or bad spelling.
 >tiens
 You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
 !Besides
+
+#nudge for tine
+>tien
+You're missing an (s) to make things plural, here.
 
 >intestines
 by one point
@@ -144,22 +214,38 @@ You mentally show off your anagramming skills in languages other than English. N
 
 >a
 
+#mistake test for happen chance
+>happen chance
+You are very, very, very close indeed. Everything is in the right order.
+
 >happenchance
 by one point
 Happenchance
 
 >a
 
+#mistake test for let at
+>let at
+You don't need permission to be let at anything.
+!Besides
+
 >tattletale
 by one point
 Tattletale
 
-A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
+A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+#mistake retest for let at
+>let at
+You don't need permission to be let at anything.
+Besides
 
 >on
 
-You've started going on.
-seems as good a place to start as any others. It seems to brighten up as you make your decision.
+Yes, you decide it's time to start going ON.
+seems as good a place to start as any others. The ground beneath you
+seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
+[NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
 Tattletale
 
@@ -169,14 +255,28 @@ Tattletale
 >aaa
 >aa
 >aaa
-The way to the center unlocks! You can go INSIDE now.
+All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
 Scene Scene
 
+#nudge for cene
+>ceen
+You're missing an (s) to make things plural, here.
+
 #mistake test for senescense
 >senescense
 Almost, but I'm going to play spelling cop, here.
+
+#mistake test for trainer
+>trainer
+You're on your own here. If almost three games aren't enough to whip you in shape, I don't know what is.
+
+#mistake test for retrain/retrains
+>retrain
+It's too late for that now, but you should be able to push through as needed.
+>retrains
+It's too late for that now, but you should be able to push through as needed.
 
 >senescence
 by one point

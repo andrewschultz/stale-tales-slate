@@ -1,3 +1,9 @@
+#
+# rbr-trt-thru.txt
+# branch file for Tours Roust Torus tests
+#
+#
+
 files=reg-trt-max.txt,reg-trt-min-a.txt,reg-trt-min-b.txt,reg-trt-nudmis.txt,reg-trt-hints.txt,reg-trt-alt.txt
 
 ~	max	t0
@@ -18,19 +24,49 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 
 * trt-thru
 
+@nud
+#nudge for tours
+>tousr
+You don't need to act on the whole torus, here.
+\\
+#nudge for rout
+>rotu
+You don't need to act on the whole torus, here.
+
 @mis
-#mistake test for he/hes
+>a
+>a
+>a
+>a
+>a
+>a
+>a
+>listen
+\\
+#mistake test for testes
+>testes
+Really! This isn't that sort of game.
+
+#nudge for tsetse
+>tsetes
+The tsetse fly can't really be changed.
+\\
+#nudge for set
+>ste
+The tsetse fly can't really be changed.
+
+@mis
+#mistake test for he/hes/she
 >he
 You don't need to deal with pronouns. Maybe a different sort of word.
 !halfway
 !Besides
+\\
 >hes
 You don't need to deal with pronouns. Maybe a different sort of word.
 !Besides
 !halfway
-
-@mis
-#mistake test for she
+\\
 >she
 You don't need to deal with pronouns. Maybe a different sort of word. In a weird way, you feel you're halfway there, though.
 !Besides
@@ -40,7 +76,7 @@ by one point
 Sheesh
 
 @mis
-#mistake retest for he/hes
+#mistake retest for he/hes/she
 >he
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
 >hes
@@ -85,6 +121,19 @@ Tours Roust Torus is about light-hearted jokes, and there's nothing light-hearte
 >earp
 No daredevil gunman appears to help you out.
 !Besides
+\\
+#mistake test for reap pear
+>reap pear
+You are very, very, very close indeed. Everything is in the right order.
+
+@nud
+#nudge for prep
+>prpe
+Act on the whole area, here.
+\\
+#nudge for area
+>arae
+Act on the whole area, here.
 
 @min-b
 >tattletale
@@ -106,10 +155,10 @@ You don't need to consort with thieves. Besides, you already did what you needed
 Perhaps there is something to reap once you figure what to do here. Besides, you already did what you needed, here.
 
 @mis
-#mistake test for perp
+#mistake retest for perp
 >perp
-very many verbs to use
-#PREP AREA is now nothing
+Tours Roust Torus doesn't have a deep bench of standard verbs, though in each room, you need to find something special to do or say or think. For a general list of verbs, type VERBS.
+#PREP AREA is now nothing, so we get the standard response, but it's worth testing
 
 @mis
 #mistake retest for pear
@@ -131,6 +180,11 @@ No daredevil gunman appears to help you out. Besides, you already did what you n
 >ragin
 Getting mad won't help.
 !Besides
+\\
+#mistake test for raging rain
+>raging rain
+You don't need to battle the weather as well.
+!Besides
 
 @min-b
 >happenchance
@@ -145,11 +199,27 @@ Arraigning
 #mistake retest for ragin
 >ragin
 Getting mad won't help. Besides, you already did what you needed, here.
+\\
+#mistake retest for raging rain
+>raging rain
+You don't need to battle the weather as well.
+Besides
 
 @min-b
 >b
 @!
 >a
+
+@mis
+#mistake test for tame
+>tame
+There's nothing strictly to tame here. If there were, maybe you could use some help.
+!Besides
+\\
+#mistake test for mate/team
+>team
+You sort of need a pal, and you sort of need a bit more.
+!Besides
 
 @min-b
 >intestines
@@ -159,6 +229,12 @@ Intestines
 >teammate
 by one point
 Teammate
+
+@mis
+#mistake retest for tame
+>tame
+There's nothing strictly to tame here. If there were, maybe you could use some help.
+Besides
 
 @min-b
 >b
@@ -183,6 +259,11 @@ You're too old for the nightlife. Or bad spelling.
 You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
 !Besides
 
+@nud
+#nudge for tine
+>tien
+You're missing an (s) to make things plural, here.
+
 @min-b
 >teammate
 by one point
@@ -196,13 +277,11 @@ Intestines
 #mistake retest for stein
 >stein
 You have nothing to drink, so you do not need a drink container. Besides, you already did what you needed, here.
-
-@mis
+\\
 #mistake retest for nites
 >nites
 You're too old for the nightlife. Or bad spelling. Besides, you already did what you needed, here.
-
-@mis
+\\
 #mistake retest for tiens
 >tiens
 You mentally show off your anagramming skills in languages other than English. Not that you need to do anything more here.
@@ -211,6 +290,11 @@ You mentally show off your anagramming skills in languages other than English. N
 >b
 @!
 >a
+
+@mis
+#mistake test for happen chance
+>happen chance
+You are very, very, very close indeed. Everything is in the right order.
 
 @min-b
 >arraigning
@@ -226,6 +310,12 @@ Happenchance
 @!
 >a
 
+@mis
+#mistake test for let at
+>let at
+You don't need permission to be let at anything.
+!Besides
+
 @min-b
 >reappear
 by one point
@@ -235,17 +325,23 @@ Reappear
 by one point
 Tattletale
 
-A voice booms "Noon? No! No!" Perhaps there's a simple way to try to repel it.
+A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+@mis
+#mistake retest for let at
+>let at
+You don't need permission to be let at anything.
+Besides
 
 @alt
 >on
-You've started going on.
+Yes, you decide it's time to start going ON. Tattletale seems as good a place to start as any others. The ground beneath you in Tattletale seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 >on
 You're already in the process of going on.
 >a
-You can't go nearby. You have to make a bit of a jump.
+Odd. You can't move that slowly. Moving one section over isn't really moving ON, I guess. So going A or B is out.
 >b
-You can't go nearby. You have to make a bit of a jump.
+Odd. You can't move that slowly. Moving one section over isn't really moving ON, I guess. So going A or B is out.
 >aa
 >aa
 >aa
@@ -255,7 +351,7 @@ You can't go nearby. You have to make a bit of a jump.
 The interior of the Torus shudders, but nothing conclusive happens. Perhaps you took an easy way to touch all the rooms.
 \\
 >on
-You've started going on again.
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >aaa
 >aaa
 >aaa
@@ -265,7 +361,7 @@ You've started going on again.
 The interior of the Torus shudders, but nothing conclusive happens. Perhaps you again took an easy way to touch all the rooms.
 \\
 >on
-You've started going on again.
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >bb
 >bb
 >bb
@@ -275,7 +371,7 @@ You've started going on again.
 The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
 \\
 >on
-You've started going on again.
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >bbb
 >bbb
 >bbb
@@ -286,7 +382,7 @@ The interior of the Torus shudders, but nothing conclusive happens. Perhaps you 
 \\
 # test reversal from b
 >on
-You've started going on again.
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >bb
 >aa
 You can't reverse direction on the torus like that.
@@ -297,7 +393,7 @@ You can't reverse direction on the torus like that.
 \\
 # test reversal from a
 >on
-You've started going on again.
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >aa
 >bb
 You can't reverse direction on the torus like that.
@@ -307,22 +403,24 @@ You can't reverse direction on the torus like that.
 >aa
 # test alternate path through
 >on
-You've started going on again.
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >bbb
 >bb
 >bbb
 >bbb
 >bb
 >bbb
-The way to the center unlocks! You can go INSIDE now.
+All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 >undo
 >bb
 
 >on
 
 @!alt
-You've started going on.
-seems as good a place to start as any others. It seems to brighten up as you make your decision.
+Yes, you decide it's time to start going ON.
+seems as good a place to start as any others. The ground beneath you
+seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
+[NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
 @!alt,min-b
 Tattletale
@@ -336,15 +434,30 @@ Reappear
 >aaa
 >aa
 >aaa
-The way to the center unlocks! You can go INSIDE now.
+All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
 Scene Scene
+
+@nud
+#nudge for cene
+>ceen
+You're missing an (s) to make things plural, here.
 
 @mis
 #mistake test for senescense
 >senescense
 Almost, but I'm going to play spelling cop, here.
+\\
+#mistake test for trainer
+>trainer
+You're on your own here. If almost three games aren't enough to whip you in shape, I don't know what is.
+\\
+#mistake test for retrain/retrains
+>retrain
+It's too late for that now, but you should be able to push through as needed.
+>retrains
+It's too late for that now, but you should be able to push through as needed.
 
 >senescence
 by one point
