@@ -537,7 +537,7 @@ You speed across the deeps of the Rawest Waters as if on nine-seg engines and to
 Mislit Limits
 
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 56.
+Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >thisalt
 --If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
@@ -545,18 +545,18 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 56.
+Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 56.
+Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
 
 >present
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 56.
+Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
 
 >in
 
@@ -565,24 +565,27 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
 !by one point
 
+>give pot to sitter
+She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to change her outlook. You see red at her mumbling.
+
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 56.
+Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
+
+>give pot to sitter
+St. Teri seems interested, but her hands reflexively grasp the Done-Any Anodyne. How could you dispose of it?
 
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 56.
-
->give pot to sitter
-WRONG
+Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 >give pot to sitter
 #notana
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 56.
+Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
 
@@ -592,7 +595,7 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 
 Your score has just gone up by one point
 
-NOTE: You get a bonus point for not using the toaster/pastries' x-ray vision anywhere!
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 Strip of Profits
 

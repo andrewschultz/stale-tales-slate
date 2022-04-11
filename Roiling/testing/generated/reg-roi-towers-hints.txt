@@ -765,7 +765,7 @@ Mislit Limits
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 56.
+Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 #towers anagrams for ur pine
 >xr unripe
@@ -779,7 +779,7 @@ After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 56.
+Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
 #towers anagrams for nastier stainer retinas
 >xr retinas
@@ -790,7 +790,7 @@ After a thoughtful gaze, you reckon the nastier stainer retinas could be ANTSIER
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 56.
+Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
 
 #towers anagrams for repents serpent
 >xr serpent
@@ -802,34 +802,37 @@ After a thoughtful gaze, you reckon the repents serpent could be PRESENT.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 56.
+Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
 
 >in
 
-#towers anagrams for tetris sitter
+#towers anagrams for itster
 >xr tetris
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the Tetris Sitter could be TRISTE.
+After a thoughtful gaze, you reckon the itster could make the Tetris Sitter TRISTE.
 
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 56.
+Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
+
+#towers anagrams for done any anodyne
+>xr sitter
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+After a thoughtful gaze, you reckon the Done-Any Anodyne could leave St. Teri ANNOYED.
 
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 56.
-
->give pot to sitter
-WRONG
+Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 >give pot to sitter
 #notana
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 56.
+Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
 
@@ -839,7 +842,7 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 
 Your score has just gone up by one point
 
-NOTE: You get a bonus point for not using the toaster/pastries' x-ray vision anywhere!
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 Strip of Profits
 

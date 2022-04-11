@@ -225,10 +225,7 @@ You speed across the deeps of the Rawest Waters as if on nine-seg engines and to
 Mislit Limits
 
 >score
-Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 31.
-
->give pot to sitter
-WRONG
+Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 32.
 
 >misses
 

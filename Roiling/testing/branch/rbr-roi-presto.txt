@@ -704,6 +704,10 @@ Nowt Town
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+\\
+#scannotes for n-t-air
+>scan n-t-air
+Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze.
 
 @sli
 #slider test for wont

@@ -3537,7 +3537,7 @@ Mislit Limits
 }}CURMIN=SCORE
 }}CURMIN++
 }}CURMAX=SCORE
-}}CURMAX+=6
+}}CURMAX+=7
 
 @!minh,mini
 }}CURMAX++
@@ -3717,10 +3717,10 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ne
 #nudge for emprise
 >empries
 It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
-#spechelp for tetris sitter
+#spechelp for itster
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Tetris Sitter. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a decent omen.
 #scannotes for tetris sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
@@ -3746,7 +3746,12 @@ Your word, stupendous as it is, has no effect. Yet. You may just need to go back
 >xr tetris #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the Tetris Sitter could be TRISTE.
+After a thoughtful gaze, you reckon the itster could make the Tetris Sitter TRISTE.
+
+@max
+>give pot to sitter
+#OK-APOSTROPHE
+She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to change her outlook. You see red at her mumbling.
 
 @!minh,mini
 >triste
@@ -3759,19 +3764,15 @@ Your score has just gone up by one point
 @nud
 #nudge for teri
 >teir
-St. Teri is fine as-is. If she needs more changing, it will come from life experience.
+You can't really change St. Teri directly. You helped her break free from the itster, but there's still the Done-Any Anodyne to deal with.
 \\
 #nudge for done
 >doen
-No, deal with the entire Any-Done Anodyne.
+No, deal with the entire Done-Any Anodyne.
 \\
 #nudge for any
 >ayn
-No, deal with the entire Any-Done Anodyne.
-\\
-#nudge for stteri
->stteir
-You helped St. Teri directly. Now you need to deal with the Any-Done Anodyne.
+No, deal with the entire Done-Any Anodyne.
 #scannotes for done any anodyne
 >scan anodyne
 For a moment you guess you've, err, done enough, and you don't have to get rid of the anodyne for Teri. But you also figure, what's one more logic puzzle after all you've been through?
@@ -3781,18 +3782,27 @@ For a moment you guess you've, err, done enough, and you don't have to get rid o
 The Done-Any Anodyne rattles.
 \\
 #readables for done any anodyne
->done any anodyne
+>read anodyne
 The Done-Any Anodyne has the signature of its inventor, Dyan Eno, in red.
+#done rejects for done any anodyne
+>tretis
+You helped St. Teri directly. Now you need to deal with the Done-Any Anodyne.
 
 @spoi
 #towers anagrams for done any anodyne
->xr article
-After a thoughtful gaze, you reckon the Done-Any Anodyne could be ANNOYED.
+>xr sitter
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+After a thoughtful gaze, you reckon the Done-Any Anodyne could leave St. Teri ANNOYED.
 
 @sli
 #slider test for annoyed
 >naonedy
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@max
+>give pot to sitter
+St. Teri seems interested, but her hands reflexively grasp the Done-Any Anodyne. How could you dispose of it?
 
 @!minh,mini
 >annoyed
@@ -3803,13 +3813,9 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#renudge for stteri
+#nudge for stteri
 >stteir
 St. Teri is just fine now, thanks to you.
-
-
->give pot to sitter
-WRONG
 
 @!minh,mini
 >give pot to sitter
@@ -3909,7 +3915,7 @@ Your score has just gone up by one point
 }}SCORE++
 @!
 }}SCORE+=2
-NOTE: You get a bonus point for not using the toaster/pastries' x-ray vision anywhere!
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 Strip of Profits
 
