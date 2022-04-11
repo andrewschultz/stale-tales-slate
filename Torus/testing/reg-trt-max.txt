@@ -8,18 +8,14 @@
 * trt-thru
 
 >au 2
-
-#nudge for tsetse
->tsetes
-The tsetse fly can't really be changed.
-
-#nudge for set
->ste
-The tsetse fly can't really be changed.
+>z
 
 >sheesh
 by one point
 Sheesh
+
+#ttc-table-of-progress-1
+The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too.
 
 >a
 
@@ -27,11 +23,17 @@ Sheesh
 by one point
 Reappear
 
+#ttc-table-of-progress-2
+The cylinder continues to straighten up. It's barely wobbling now.
+
 >a
 
 >arraigning
 by one point
 Arraigning
+
+#ttc-table-of-progress-3
+The cylinder -- well, it's almost still, but you can't make anything out there, yet.
 
 >a
 
@@ -39,17 +41,26 @@ Arraigning
 by one point
 Teammate
 
+#ttc-table-of-progress-4
+The cylinder stops wavering. You're pretty sure you can see a door in it.
+
 >a
 
 >intestines
 by one point
 Intestines
 
+#ttc-table-of-progress-5
+The cylinder clears up some more. Yes, that's definitely a door. And you can see a handle on it. You think!.
+
 >a
 
 >happenchance
 by one point
 Happenchance
+
+#ttc-table-of-progress-6
+Well now! A rainbow-like path appears to lead you to the center cylinder from here, as well as everywhere else you visited. But you don't trust it yet. You sense there's just a bit more to do here.
 
 >a
 
@@ -58,6 +69,9 @@ by one point
 Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+#ttc-table-of-progress-7
+The path to the center of the torus grows firmer. You try to rush inward, but something invisible bounces you back. Perhaps there's one more thing to do. Strange. You seem to have figured out every area of the torus.
 
 >on
 
@@ -79,7 +93,32 @@ All manner of whirring seems to flow around you. The cylinder in the center of t
 >in
 Scene Scene
 
+>in
+You already are.
+
+>deeded
+You're not sure what to do, but there's a lot to do!
+!You already took on an additional challenge.
+
+>deeded
+You already took on an additional challenge.
+!You're not sure what to do, but there's a lot to do!
+
+>shammash
+by one point
+>insciences
+by one point
+>mesosome
+by one point
+>mimetite
+by one point
+>prepress
+by one point
+
 >senescence
 by one point
+
+#ttc-table-of-progress-8
+That's all. You've found a new home, one where you don't have to do anything, but you'd like to. You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more. And yet the lessons you applied ruling Yorpwald will work here in the Strainer Terrains, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later.
 
 *** Feats! Fates-Feast! Taffetases! ***

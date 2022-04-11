@@ -8,18 +8,124 @@
 * trt-thru
 
 >au 2
+>z
 
-#nudge for tsetse
->tsetes
-The tsetse fly can't really be changed.
+#ttc-table-of-cylinder-descriptions-1
+>x cylinder
+Man! It's blurry. You're really seeing double. Or is it actually wobbling?
 
-#nudge for set
->ste
-The tsetse fly can't really be changed.
+#ttc-table-of-unavoidable-inside-rejects-1
+>in
+A snarky voice admonishes you. "Ah-ah!" Just as you're about to scream "Aahh," it drops a "Ha-ha!" on you.
+Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?
+
+#ttc-table-of-unavoidable-inside-rejects-2
+>in
+That snarky "Ah-ah" then "Ha-ha" again! You'll need to do something special to get in, and maybe you'll find what, later.
+>undo
+>sheesh
+by one point
+>in
+That snarky "Ah-ah" then "Ha-ha" again! You'll need to do something special to get in, in addition to what you've changed so far.
+>undo
+>undo
+>in
+
+>l
+#ttc-table-of-center-statuses-1
+Looking inward, you see a cylinder at the center of the torus. It's very poorly defined, though.
+
+#+ttc-table-of-center-statuses-1
+>in
+There's nothing to go inside to, yet. Well, nothing enough. And no way to get there. Maybe figuring what to do elsewhere will help.
+
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-1
+>a
+You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-2
+>a
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-2
+>a
+/(NATANT ant|CONCISIONS!)
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-3
+>a
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-3
+>a
+/(NATANT ant|CONCISIONS!)
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-4
+>a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-5
+>a
+You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-5
+>a
+You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
+>a
 
 >sheesh
 by one point
 Sheesh
+
+#ttc-table-of-cylinder-descriptions-2
+>x cylinder
+Oh dear! The cylinder's not as wide as you thought, now it's started wobbling a bit. But you can't see any serious detail.
+
+#ttc-table-of-center-statuses-2
+>l
+The cylinder in the center seems less blurry and wobbly than when you started
+#+ttc-table-of-center-statuses-2
+>in
+There's something to maybe go inside but no way to get there.
 
 >a
 
@@ -27,11 +133,33 @@ Sheesh
 by one point
 Reappear
 
+#ttc-table-of-cylinder-descriptions-3
+>x cylinder
+The cylinder's not wobbling as badly as it did, but you don't see any way in.
+
+#ttc-table-of-center-statuses-3
+>l
+The cylinder at the center of the torus has almost completely stopped wobbling
+#+ttc-table-of-center-statuses-3
+>in
+The cylinder in the center of the torus probably has something in it, but you have no way to get there or get in.
+
 >a
 
 >arraigning
 by one point
 Arraigning
+
+#ttc-table-of-cylinder-descriptions-4
+>x cylinder
+The cylinder's almost stopped wavering, but you still can't see anything more.
+
+#ttc-table-of-center-statuses-4
+>l
+The cylinder at the center of the torus looks much more real now, but there's no entry
+#+ttc-table-of-center-statuses-4
+>in
+You still don't have a passage to the cylinder or a way in.
 
 >a
 
@@ -39,17 +167,50 @@ Arraigning
 by one point
 Teammate
 
+#ttc-table-of-cylinder-descriptions-5
+>x cylinder
+Now that the cylinder's stopped wavering so much, you think you see the outline of a door.
+
+#ttc-table-of-center-statuses-5
+>l
+The cylinder now has a fuzzy outline of a door in it.
+#+ttc-table-of-center-statuses-5
+>in
+Even if you could make it to the cylinder, the door wouldn't seem to open.
+
 >a
 
 >intestines
 by one point
 Intestines
 
+#ttc-table-of-cylinder-descriptions-6
+>x cylinder
+The door on the cylinder seems to have a handle. You're not sure.
+
+#ttc-table-of-center-statuses-6
+>l
+The door to the cylinder at the center of the torus is better defined now
+#+ttc-table-of-center-statuses-6
+>in
+You must be close to being able to get near the cylinder.
+
 >a
 
 >happenchance
 by one point
 Happenchance
+
+#ttc-table-of-cylinder-descriptions-7
+>x cylinder
+You can see almost half a path--the sort you'd fall through--leading to the cylinder at the center.
+
+#ttc-table-of-center-statuses-7
+>l
+The cylinder at the center of the torus now seems to have doors with handles. But there is no way to approach it
+#+ttc-table-of-center-statuses-7
+>in
+Maybe if the walkway were a bit more solid.
 
 >a
 
@@ -58,6 +219,17 @@ by one point
 Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+#ttc-table-of-cylinder-descriptions-8
+>x cylinder
+The cylinder looks very solid. You have a path there. And it seems to have a door outline. The door seems to swing in and out randomly, so you can enter it. There must be something interesting INSIDE.
+
+#ttc-table-of-center-statuses-8
+>l
+You can see a door swinging in and out, which would allow you into the cylinder at the center of the torus. There doesn't seem to be much to do here, so maybe you'll just want to go IN, or figure a way to
+#+ttc-table-of-center-statuses-8
+>in
+The "Noon, No, no" routine pushes you back with surprising force.
 
 >on
 
@@ -78,6 +250,25 @@ All manner of whirring seems to flow around you. The cylinder in the center of t
 
 >in
 Scene Scene
+
+#+ttc-table-of-center-statuses-8
+The path to the cylinder is solid. The door blows open as you get there. You walk in and tumble down a slope. Around you, voices boom "RESTRAIN! RESTRAIN!" They are closing in! This is the end! But then they scatter. You pass out.
+When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying "RESTRAIN!" out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.
+
+>deeded
+You're not sure what to do, but there's a lot to do!
+!You already took on an additional challenge.
+
+>shammash
+by one point
+>insciences
+by one point
+>mesosome
+by one point
+>mimetite
+by one point
+>prepress
+by one point
 
 >senescence
 by one point

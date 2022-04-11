@@ -25,6 +25,39 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 * trt-thru
 
 >au 2
+>z
+
+@hin
+#ttc-table-of-cylinder-descriptions-1
+>x cylinder
+Man! It's blurry. You're really seeing double. Or is it actually wobbling?
+
+@hints
+#ttc-table-of-unavoidable-inside-rejects-1
+>in
+A snarky voice admonishes you. "Ah-ah!" Just as you're about to scream "Aahh," it drops a "Ha-ha!" on you.
+Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?
+\\
+#ttc-table-of-unavoidable-inside-rejects-2
+>in
+That snarky "Ah-ah" then "Ha-ha" again! You'll need to do something special to get in, and maybe you'll find what, later.
+>undo
+>sheesh
+by one point
+>in
+That snarky "Ah-ah" then "Ha-ha" again! You'll need to do something special to get in, in addition to what you've changed so far.
+>undo
+>undo
+>in
+
+@hints
+>l
+#ttc-table-of-center-statuses-1
+Looking inward, you see a cylinder at the center of the torus. It's very poorly defined, though.
+\\
+#+ttc-table-of-center-statuses-1
+>in
+There's nothing to go inside to, yet. Well, nothing enough. And no way to get there. Maybe figuring what to do elsewhere will help.
 
 @nud
 #ttc-table-of-pre-brushoffs-ehs-ehs-(eh|ehs)
@@ -44,6 +77,80 @@ You don't need to act on the whole torus, here.
 >rotu
 You don't need to act on the whole torus, here.
 
+@hints
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-1
+>a
+You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-2
+>a
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-2
+>a
+/(NATANT ant|CONCISIONS!)
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-3
+>a
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-3
+>a
+/(NATANT ant|CONCISIONS!)
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-4
+>a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-5
+>a
+You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-5
+>a
+You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
+>a
+
 @mis
 >a
 >a
@@ -57,7 +164,7 @@ You don't need to act on the whole torus, here.
 #mistake test for testes
 >testes
 Really! This isn't that sort of game.
-
+\\
 #nudge for tsetse
 >tsetes
 The tsetse fly can't really be changed.
@@ -82,9 +189,46 @@ You don't need to deal with pronouns. Maybe a different sort of word.
 You don't need to deal with pronouns. Maybe a different sort of word. In a weird way, you feel you're halfway there, though.
 !Besides
 
+@alt
+>a
+>reappear
+by one point
+>b
+#ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+>sheesh
+by one point
+Your immediate reaction is to feel a bit silly figuring this area just now, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but "Sheesh?"
+!BUG
+>undo
+>undo
+>undo
+>undo
+
 >sheesh
 by one point
 Sheesh
+
+@alt
+#+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+!BUG
+
+@max
+#ttc-table-of-progress-1
+The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too.
+
+@hin
+#ttc-table-of-cylinder-descriptions-2
+>x cylinder
+Oh dear! The cylinder's not as wide as you thought, now it's started wobbling a bit. But you can't see any serious detail.
+
+@hints
+#ttc-table-of-center-statuses-2
+>l
+The cylinder in the center seems less blurry and wobbly than when you started
+#+ttc-table-of-center-statuses-2
+>in
+There's something to maybe go inside but no way to get there.
 
 @mis
 #mistake retest for he/hes/she
@@ -153,6 +297,22 @@ You're not sure what you are prepping--a thing or an action. But once you do, th
 >scan area
 You're not sure what you are prepping--a thing or an action. But once you do, things will become clearer.
 
+@alt
+>aa
+>teammate
+#ttc-table-of-room-combos-prep-area-meta-meat
+You meet (hah) up with a teammate! It's good to have one on this forbidding torus. After some talk, they admit they're out of ideas. But maybe when you come back at the right time, you'll have something to think up. You can only hope.
+!Now that you have a teammate and a reason to reappear
+>bb
+#ttc-table-of-room-combos-prep-area-meta-meat
+>reappear
+Now that you have a teammate and a reason to reappear, you have a plan to brainstorm separately and then together. You figure a lot of things that make the Torus a lot more alive. It glows significantly.
+!You get some practice in reappearing. Maybe soon you will have someone to reappear for.
+>undo
+>undo
+>undo
+>undo
+
 @min-b
 >tattletale
 by one point
@@ -161,6 +321,27 @@ Tattletale
 >reappear
 by one point
 Reappear
+
+@alt
+#ttc-table-of-room-combos-prep-area-meta-meat
+You get some practice in reappearing. Maybe soon you will have someone to reappear for.
+
+@max
+#ttc-table-of-progress-2
+The cylinder continues to straighten up. It's barely wobbling now.
+
+@hin
+#ttc-table-of-cylinder-descriptions-3
+>x cylinder
+The cylinder's not wobbling as badly as it did, but you don't see any way in.
+
+@hints
+#ttc-table-of-center-statuses-3
+>l
+The cylinder at the center of the torus has almost completely stopped wobbling
+#+ttc-table-of-center-statuses-3
+>in
+The cylinder in the center of the torus probably has something in it, but you have no way to get there or get in.
 
 @mis
 #mistake retest for rapparee
@@ -209,6 +390,22 @@ You don't need to battle the weather as well.
 >grain gain rain
 Grain is grain, to you. There's not much to be done with it as-is.
 
+@alt
+#ttc-table-of-room-combos-grain-grain-latte-latte
+>bbb
+>tattletale
+by one point
+You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
+!You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
+>aaa
+>arraigning
+by one point
+Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
+>undo
+>undo
+>undo
+>undo
+
 @min-b
 >happenchance
 by one point
@@ -217,6 +414,30 @@ Happenchance
 >arraigning
 by one point
 Arraigning
+
+@alt
+#+ttc-table-of-room-combos-grain-grain-latte-latte
+!You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
+You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
+!Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
+
+
+@max
+#ttc-table-of-progress-3
+The cylinder -- well, it's almost still, but you can't make anything out there, yet.
+
+@hin
+#ttc-table-of-cylinder-descriptions-4
+>x cylinder
+The cylinder's almost stopped wavering, but you still can't see anything more.
+
+@hints
+#ttc-table-of-center-statuses-4
+>l
+The cylinder at the center of the torus looks much more real now, but there's no entry
+#+ttc-table-of-center-statuses-4
+>in
+You still don't have a passage to the cylinder or a way in.
 
 @mis
 #mistake retest for ragin
@@ -259,6 +480,23 @@ Intestines
 >teammate
 by one point
 Teammate
+
+@max
+#ttc-table-of-progress-4
+The cylinder stops wavering. You're pretty sure you can see a door in it.
+
+@hin
+#ttc-table-of-cylinder-descriptions-5
+>x cylinder
+Now that the cylinder's stopped wavering so much, you think you see the outline of a door.
+
+@hints
+#ttc-table-of-center-statuses-5
+>l
+The cylinder now has a fuzzy outline of a door in it.
+#+ttc-table-of-center-statuses-5
+>in
+Even if you could make it to the cylinder, the door wouldn't seem to open.
 
 @nud
 #ttc-table-of-post-brushoffs-meta-meat-(team|mate)
@@ -308,6 +546,22 @@ The tines aren't budging. Not in their present form. But what could they become?
 >inset insults
 The tines aren't budging. Not in their present form. But what could they become?
 
+@alt
+#ttc-table-of-room-combos-tines-inset-pechan-pechan
+>a
+>happenchance
+by one point
+>b
+>intestines
+by one point
+The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
+!Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
+!You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
+>undo
+>undo
+>undo
+>undo
+
 @min-b
 >teammate
 by one point
@@ -316,6 +570,29 @@ Teammate
 >intestines
 by one point
 Intestines
+
+@alt
+#ttc-table-of-room-combos-tines-inset-pechan-pechan
+!The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
+Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
+!You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
+
+@max
+#ttc-table-of-progress-5
+The cylinder clears up some more. Yes, that's definitely a door. And you can see a handle on it. You think!.
+
+@hin
+#ttc-table-of-cylinder-descriptions-6
+>x cylinder
+The door on the cylinder seems to have a handle. You're not sure.
+
+@hints
+#ttc-table-of-center-statuses-6
+>l
+The door to the cylinder at the center of the torus is better defined now
+#+ttc-table-of-center-statuses-6
+>in
+You must be close to being able to get near the cylinder.
 
 @mis
 #mistake retest for stein
@@ -354,6 +631,29 @@ Arraigning
 by one point
 Happenchance
 
+@alt
+#ttc-table-of-room-combos-tines-inset-pechan-pechan
+The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
+!Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
+!You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
+
+@max
+#ttc-table-of-progress-6
+Well now! A rainbow-like path appears to lead you to the center cylinder from here, as well as everywhere else you visited. But you don't trust it yet. You sense there's just a bit more to do here.
+
+@hin
+#ttc-table-of-cylinder-descriptions-7
+>x cylinder
+You can see almost half a path--the sort you'd fall through--leading to the cylinder at the center.
+
+@hints
+#ttc-table-of-center-statuses-7
+>l
+The cylinder at the center of the torus now seems to have doors with handles. But there is no way to approach it
+#+ttc-table-of-center-statuses-7
+>in
+Maybe if the walkway were a bit more solid.
+
 @min-b
 >b
 @!
@@ -380,6 +680,29 @@ by one point
 Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+@alt
+#+ttc-table-of-room-combos-grain-grain-latte-latte
+!You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
+!You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
+Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
+
+@max
+#ttc-table-of-progress-7
+The path to the center of the torus grows firmer. You try to rush inward, but something invisible bounces you back. Perhaps there's one more thing to do. Strange. You seem to have figured out every area of the torus.
+
+@hin
+#ttc-table-of-cylinder-descriptions-8
+>x cylinder
+The cylinder looks very solid. You have a path there. And it seems to have a door outline. The door seems to swing in and out randomly, so you can enter it. There must be something interesting INSIDE.
+
+@hints
+#ttc-table-of-center-statuses-8
+>l
+You can see a door swinging in and out, which would allow you into the cylinder at the center of the torus. There doesn't seem to be much to do here, so maybe you'll just want to go IN, or figure a way to
+#+ttc-table-of-center-statuses-8
+>in
+The "Noon, No, no" routine pushes you back with surprising force.
 
 @nud
 #ttc-table-of-post-brushoffs-latte-latte-(tattle|tale)
@@ -510,6 +833,15 @@ All manner of whirring seems to flow around you. The cylinder in the center of t
 >in
 Scene Scene
 
+@hints
+#+ttc-table-of-center-statuses-8
+The path to the cylinder is solid. The door blows open as you get there. You walk in and tumble down a slope. Around you, voices boom "RESTRAIN! RESTRAIN!" They are closing in! This is the end! But then they scatter. You pass out.
+When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying "RESTRAIN!" out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.
+
+@max
+>in
+You already are.
+
 @nud
 #nudge for cene
 >ceen
@@ -535,7 +867,48 @@ It's too late for that now, but you should be able to push through as needed.
 >retrains
 It's too late for that now, but you should be able to push through as needed.
 
+@!min-a,min-b
+>deeded
+You're not sure what to do, but there's a lot to do!
+!You already took on an additional challenge.
+
+@max
+>deeded
+You already took on an additional challenge.
+!You're not sure what to do, but there's a lot to do!
+
+@!min-a,min-b
+>shammash
+by one point
+>insciences
+by one point
+>mesosome
+by one point
+>mimetite
+by one point
+>prepress
+by one point
+
+@min-b
+>deeded
+You're not sure what to do, but there's a lot to do!
+\\
+>shammash
+by one point
+
 >senescence
 by one point
+
+@min-a
+#should be ttc-table-of-progress-8 but the script can't handle that yet as it goes to max
+That's all. You've found a new home, one where you don't have to do anything, but you'd like to. That stuff that wasn't DEEDED, well, you can take care of it later.
+
+@min-b
+#should be ttc-table-of-progress-8 but the script can't handle that yet as it goes to max
+You made a good start at changing things right here, right now, but there's no rush
+
+@max
+#ttc-table-of-progress-8
+That's all. You've found a new home, one where you don't have to do anything, but you'd like to. You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more. And yet the lessons you applied ruling Yorpwald will work here in the Strainer Terrains, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later.
 
 *** Feats! Fates-Feast! Taffetases! ***

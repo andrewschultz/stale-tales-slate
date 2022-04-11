@@ -8,6 +8,7 @@
 * trt-thru
 
 >au 2
+>z
 
 #ttc-table-of-pre-brushoffs-ehs-ehs-(eh|ehs)
 >eh
@@ -342,6 +343,21 @@ You're on your own here. If almost three games aren't enough to whip you in shap
 It's too late for that now, but you should be able to push through as needed.
 >retrains
 It's too late for that now, but you should be able to push through as needed.
+
+>deeded
+You're not sure what to do, but there's a lot to do!
+!You already took on an additional challenge.
+
+>shammash
+by one point
+>insciences
+by one point
+>mesosome
+by one point
+>mimetite
+by one point
+>prepress
+by one point
 
 >senescence
 by one point
