@@ -26,7 +26,7 @@ volume room combos
 
 table of room combos
 room1	room2	both	first	second
-Ehs Ehs	Ehs Ehs	"[if score > 1]You feel a bit silly figuring this area at first, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but, sheesh?[else]You [room-visit-eh]. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.[end if]"	"(BUG)"	"(BUG)"
+Ehs Ehs	Ehs Ehs	"[if score > 1]Your immediate reaction is to feel a bit silly figuring this area just now, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but 'Sheesh?'[else]You [room-visit-eh]. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.[end if]"	"(BUG)"	"(BUG)"
 Prep Area	Meta Meat	"Now that you have a teammate and a reason to reappear, you have a plan to brainstorm separately and then together. You figure a lot of things that make the Torus a lot more alive. It glows significantly."	"You get some practice in reappearing. Maybe soon you will have someone to reappear for."	"You meet (hah) up with a teammate! It's good to have one on this forbidding torus. After some talk, they admit they're out of ideas. But maybe when you come back at the right time, you'll have something to think up. You can only hope."
 Grain Grain	Latte Latte	"Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice."	"You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people."	"You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account."
 Tines Inset	Pechan Pechan	"The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function."	"Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start."	"You've made your own luck in this stomach-y room. But a stomach by itself can't do much."
@@ -43,6 +43,11 @@ to say rest-of-tor:
 
 volume the cylinder
 
+table of unavoidable inside rejects
+texty
+"A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?"
+"That snarky 'Ah-ah' then 'Ha-ha' again! You'll need to do something special to get in[if score is number of perimeter rooms] beyond changing things on the outside[else if score > 0], in addition to what you've changed so far[else], and maybe you'll find what, later[end if]."
+
 table of cylinder descriptions
 texty
 "Man! It's blurry. You're really seeing double. Or is it actually wobbling?"
@@ -52,7 +57,7 @@ texty
 "Now that the cylinder's stopped wavering so much, you think you see the outline of a door."
 "The door on the cylinder seems to have a handle. You're not sure."
 "You can see almost half a path--the sort you'd fall through--leading to the cylinder at the center."
-"The cylinder looks very solid. You have a path there. And it seems to have a door outline. The door seems to swing in and out randomly, so you can enter it. But you can't see what's inside until you get nearer [b]INSIDE[r]."
+"The cylinder looks very solid. You have a path there. And it seems to have a door outline. The door seems to swing in and out randomly, so you can enter it. There must be something interesting [b]INSIDE[r]."
 
 table of center statuses
 cylinder-desc	cylinder-block
@@ -63,7 +68,7 @@ cylinder-desc	cylinder-block
 "The cylinder now has a fuzzy outline of a door in it."	"Even if you could make it to the cylinder, the door wouldn't seem to open."
 "The door to the cylinder at the center of the torus is better defined now"	"You must be close to being able to get near the cylinder."
 "The cylinder at the center of the torus now seems to have doors with handles. But there is no way to approach it"	"Maybe if the walkway were a bit more solid."
-"You can see a door swinging in and out, which would allow you into the cylinder at the center of the torus. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r], or figure a way to"	"You walk to the center of the torus. The door nearby opens readily. You enter and fall down a slope..."
+"You can see a door swinging in and out, which would allow you into the cylinder at the center of the torus. There doesn't seem to be much to do here, so maybe you'll just want to go [b]IN[r], or figure a way to"	--	[no final entry because the cylinder-block column is only for rejecting entry]
 
 volume point progress table
 

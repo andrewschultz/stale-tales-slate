@@ -10,6 +10,10 @@ release along with a website.
 
 release along with cover art.
 
+the story headline is "One more anagramming adventure to new lands!"
+
+the story description is "The third and final entry in the Stale Tales Slate."
+
 section includes
 
 include Tours Roust Torus Tests by Andrew Schultz.
@@ -242,20 +246,27 @@ check going a not rotational direction:
 		the rule succeeds;
 	say "Directions other than inside (once you find what's in the center of the torus), outside and the rotational directions (A, AA, AAA, B, BB, BBB) are meaningless here." instead;
 
+inside-reject-row is a number that varies. inside-reject-row is 1.
+
 check going inside:
 	if location of player is scene scene, say "You already are." instead;
 	if heptcount < 7:
-		say "[one of]A snarky voice admonishes you. 'Ah-ah!' Just as you're about to scream 'Aahh,' it drops a 'Ha-ha!' on you.[paragraph break]Hmm, a bit demoralizing, but why would someone actually try to dissuade you from going to the center of the torus if nothing were there?[or]That snarky 'Ah-ah' then 'Ha-ha' again! You'll need to do something special to get in[if score is number of perimeter rooms] beyond changing things on the outside[else if score > 0], in addition to what you've changed so far[else], and maybe you'll find what, later[end if].[stopping]";
-		if number of unvisited perimeter rooms > 0:
-			say "[line break]Perhaps you should try and see everywhere on the torus." instead;
+		if inside-reject-row <= number of rows in table of unavoidable inside rejects:
+			choose row inside-reject-row in table of unavoidable inside rejects;
+			say "[texty entry][line break]";
+			increment inside-reject-row;
+			if number of unvisited perimeter rooms > 0:
+				say "[line break]Perhaps you should try and see everywhere on the torus." instead;
+			the rule succeeds;
 		choose row (heptcount + 1) in table of center statuses;
 		say "[cylinder-block entry][paragraph break]";
-		say "It makes sense you can't just walk in, though. You still haven't figured what to do [if location of player is unsolved]here[else]over at [random unsolved visited room][end if].";
-	if solved-heptagon is false:
-		say "[if ever-heptagon-puzzle is false]The 'Noon, No, On' routine pushes you back with surprising force[else if in-heptagon-puzzle is true]You're in the middle of some sort of sideways dance right now. Maybe after you do it right, you can go inside[else]You're still blocked from entering the center of the torus. Perhaps you need to try going [b]ON[r] again[end if]." instead;
+		say "It makes sense you can't just walk in, though. You still haven't figured what to do[if score is 0 and number of visited dubrooms is 1], and you haven't even really looked around[else if score is 0] anywhere[else if location of player is unsolved] here[else] over at [random unsolved visited room][end if].";
+		the rule succeeds;
+	if solved-heptagon is false and heptcount is 7:
+		say "[if ever-heptagon-puzzle is false]The 'Noon, No, no' routine pushes you back with surprising force[else if in-heptagon-puzzle is true]You're in the middle of some sort of sideways dance right now. Maybe after you do it right, you can go inside[else]You're still blocked from entering the center of the torus. Perhaps you need to try going [b]ON[r] again[end if]." instead;
 	say "The path to the cylinder is solid. The door blows open as you get there. You walk in and tumble down a slope. Around you, voices boom 'RESTRAIN! RESTRAIN!' They are closing in! This is the end! But then they scatter. You pass out.";
 	wfak;
-	say "When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying 'RESTRAIN!' out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.";
+	say "When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying 'RESTRAIN!' out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.[line break]";
 	wfak;
 	say "The Strainer Terrains!";
 	wfak;
@@ -311,7 +322,7 @@ instead of exiting:
 
 section strainer terrains
 
-the strainer terrains are a backdrop in Scene Scene. "There's so much to look at in [the strainer terrains]! But you feel you need to get settled first."
+the Strainer Terrains are a backdrop in Scene Scene. "There's so much to look at in [the strainer terrains]! But you feel you need to get settled first."
 
 instead of doing something with strainer terrains:
 	if current action is examining, continue the action;
