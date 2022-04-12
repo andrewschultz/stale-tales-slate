@@ -2488,7 +2488,7 @@ to say convoforce:
 	else if see-rifle:
 		say "Elmo doesn't seem to want to fire the gun. He doesn't even want to use it. Maybe you can help him get rid of it";
 	else if Elmo is touchable:
-		say "No need to poke around when you have someone willing to help you--especially since it means less time for him to escape afterwards.[paragraph break]You can [b]RECAP[r] to see your options";
+		say "Dialogue is more important right now than action. Elmo is here to help you at great personal risk, and if you poked around, it'd mean less time for him to escape.[paragraph break]You can [b]RECAP[r] to see your options";
 	else if Elvira is touchable:
 		say "'Good fail of dialog!' Elvira can negotiate awkward silence better than you can.[paragraph break]You can [b]RECAP[r] to see your options";
 	else if Gretta is touchable:
@@ -5642,7 +5642,7 @@ check attacking: [this takes responses for general types. The table file has spe
 		if noun is target entry, say "[nohit entry][line break]" instead;
 	if player has lance, say "[if noun is not ant]Wrong enemy for the lance[else]You need something more succinct[end if]." instead;
 	if noun is a picaro, say "Even Rodney alone could dispatch you. After, of course, a quick battle cry of 'Y'r DONE!'" instead;
-	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
+	if noun is a guardian, say "You need to see into [the noun]'s nature and change it, instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
 
 chapter cutting
@@ -8598,7 +8598,8 @@ to decide whether know-parse-spare:
 
 to say verb-list:
 	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN[r] are used occasionally, and [b]IN[r] or [b]OUT[r] may work.";
-	say "[b]X[r] or [r][b]EXAMINE[r] may provide clues about something, and if it has writing on it, [b]READ[r] will show the writing, which is often a hint.";
+	say "[2da][b]X[r] or [r][b]EXAMINE[r] may provide clues about something, and if it has writing on it, [b]READ[r] will show the writing, which is often a hint.";
+	say "[2da][b]LISTEN[r] and [b]SMELL[r] may also provide clues, usually when [this-game] indicates you can hear something. [b]ATTACK[r] may, as well, though that's more based on if I had a stupid joke ready.";
 	say "[2da][b]TALK[r] to an NPC gives general information, while [b]ASK X ABOUT Y[r] gives detailed information.";
 	say "[2da][b]OPTIONS[r] or [b]OPTS[r] or [b]POST OPTS[r] gives you a list of game options that can simplify play or add detail.";
 	say "[2da][b]PAD[r] to see a list of topics. Then [b]PAD VERBS[r], for example.";

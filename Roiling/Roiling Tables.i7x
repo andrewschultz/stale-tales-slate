@@ -173,7 +173,7 @@ Store T	solid idols	false	589976491	--	"otters"	"otters"	--	--	"The store divide
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzyingly, making a source course. You can [b]ENTER[r] to see where it leads."
 Store V	Tastee Estate	false	594031293	--	"troves"	"troves"	--	--	"You look more closely at Store V. Wouldn't it be nice if there were riches? As you do, up pops the perfect sort of Yorpwaldian place to house troves: a Tastee Estate!"
 Store W	truster turrets	false	594801246	--	"towers"	"towers"	--	--	"Store W shakes and seems to sprout up and grow narrower, into a pair of truster turrets. It doesn't seem to matter which one you enter. You hope."
-Store Y	balancer barnacle	false	609225725	--	"oyster"	"oyster"	--	--	"Blam! The store flattens a bit, rounds out, and becomes an oyster. There appears to be no way in. But then something behind it schlurps the oyster! A balancer barnacle! You can probably just [b]ENTER[r] safely. Yorpwaldian Balancer barnacles only feast on other seafood."
+Store Y	balancer barnacle	false	609225725	--	"oyster"	"oyster"	--	--	"Blam! The store flattens a bit, rounds out, and becomes an oyster. There appears to be no way in. But then something behind it schlurps the oyster! A balancer barnacle! You can probably just [b]ENTER[r] safely. Yorpwaldian balancer barnacles only feast on other seafood."
 
 this is the post-storeh-hoster rule:
 	it-him-her throes hoster;
@@ -2154,7 +2154,7 @@ table of ordeal reload attacks
 target	nohit
 plaster	"There's too much of it, and it's too hardened."
 act ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
-Elmo	"[if see-rifle]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
+Elmo	"Elmo kind of has the upper hand here."
 
 table of stores attacks
 target	nohit
@@ -2171,14 +2171,14 @@ Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in you
 table of troves attacks
 target	nohit
 Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering."
-tears taser	"It could fight back much more powerfully."
+tears taser	"It would fight back much more powerfully."
 
 table of presto attacks
 target	nohit
 Leo	"[dont-hit of Leo]"
 Rand	"[dont-hit of Rand]"
 lamb	"Meanie. There's a better way to help it flee home."
-walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
+walls	"Brute force is ineffective. So, too, are all the swears often used with said brute force. You need to wipe out the whole volt maze, not just these walls."
 hogs	"If you were as strong as [l-n-r], maybe. But you're not. Maybe you can out-think them."
 
 to say dont-hit of (fi - a person):
@@ -2191,31 +2191,33 @@ urn	"Your irrational anger turns to irrational greed when you get close enough t
 sabot boats	"O, bats!"
 frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
 HUNTER HUNT AREA	"As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing."
-carps	"That sounds so--brutal. And nonspecific."
-pikes	"That sounds so--brutal. And nonspecific."
+carps	"[anger-brutal]."
+pikes	"[anger-brutal]."
 trout	"[this-game]'s kind of topsy turvy, but not like THAT."
 paw r wrap	"Alas, the Paw-R-Wrap is nor Wap-R-Wrap."
 knob	"Yes, but how?"
 skis	"You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer."
 span pans	"Well, you need to do something to the pans."
-yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
+yapper	"Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!"
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
 dialer	"That would only sabotage communications here. You need to sabotage the supplier."
 
+to say anger-brutal: say "Brutality's the idea here, but you need a more specific verb"
+
 table of towers attacks
 target	nohit
+bluster butlers	"They're probably trained to hand out ur-belts."
 yurts	"Don't get [']urty! (Sorry not sorry.)"
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
 diverse deviser	"[if gizmo is not off-stage]You already broke [the deviser][else]No, it must be useful for something[end if]!"
 mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
 sweatier wait seer	"You find it tough to get close to the sweatiness. 'Ew...I...tears,' you say, your eyes going red."
-bluster butlers	"They're probably trained to hand out ur-belts."
 promise imposer	"That might be RIP-some."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
 log gaol	"[which-sharp]----but there is probably nothing beyond in the Wildest Wilteds anyway."
-Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
-lone duck	"The poor thing at least doesn't have a clonk due. You can see red at this, if you want."
+Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow' and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
+lone duck	"Such a lost, gentle animal certainly doesn't have a clonk due. You see red for even thinking of such an act."
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 Tetris Sitter	"Rest it! (Feel free to see red at this.)"
 
@@ -2227,34 +2229,35 @@ ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelli
 players	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
 Mr Lee	"Be nice. He's on your side."
 eels	"Be nice. They're on your side."
-hornets	"[nice-to-animals]."
-snipe	"[nice-to-animals]."
-snail	"[nice-to-animals]."
-racoon	"[nice-to-animals]."
-parrot	"No. He's here to help."
-imp	"It jumps out of reach, streakily, satyrlike."
+hornets	"[nice-to-animals]!"
+snipe	"[nice-to-animals]!"
+snail	"[nice-to-animals]!"
+racoon	"[nice-to-animals]!"
+parrot	"No. The parrot's here to help."
+imp	"The imp jumps out of reach, streakily, satyrlike."
 whiners	"That idea is banefully unflyable."
-leopard	"Even if he weren't a hardened criminal, you'd lose. I mean, a leopard."
+leopard	"Messing with a leopard is a bad idea[if leopard is reflexed], especially one you made friends with[else], even if there weren't that orange jumpsuit[end if]."
 ocelots	"They're bigger than average. And the leopard would back them up."
 satyr	"He's bigger than average. And the leopard would back him up."
 badger	"It's bigger than average. And the leopard would back it up."
-raptor	"Not even."
+owls	"You are outnumbered. You need a bit of magic here."
+raptor	"You'll need a bit of magic, not force, to tame the raptor."
 sea cube	"Bounce no cube."
 Elmer	"[att-elm]"
 Merle	"[att-elm]"
 
-to say nice-to-animals: say "You didn't rescue them to kill them like this";
+to say nice-to-animals: say "You didn't rescue [the noun] just to do that";
 
-to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look and say 'Venomous? Us? Move on.'"
+to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look and say 'Venomous? Us? Move on.'[no line break]"
 
 table of others attacks
 target	nohit
-Curtis	"Aw, c'mon. Curtis is sort of bossy, but he's not that bad."
-Len Craig	"Len Craig is pretty fair and balanced."
+Curtis	"Aw, c'mon. Maybe Curtis is sort of bossy, but he's not that bad."
+Len Craig	"Len Craig's prices are relatively fair. He's on your side. There's no reason to attack him."
 Red Rat Art Erd	"[not-even-trader]."
 Dr Tera Darter	"[not-even-trader]."
 
-to say not-even-trader: say "If anyone deserves it, [he-she] does. But [he-she] still doesn't. [he-she-c]'s already had enough physical abuse."
+to say not-even-trader: say "If anyone deserves it, [he-she] does. But even [he-she] still doesn't. [he-she-c]'s already had enough physical abuse, anyway"
 
 volume readables
 
