@@ -85,7 +85,7 @@ joke death
 #mistake test for dialect
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
-#done rejects for nude dune
+#ttc-table-of-otters-done-rejects-nude-dune
 >blarey
 You've dealt with the barley. You can move around a lot more, now.
 #ttc-table-of-otters-nudges-ly
@@ -448,7 +448,7 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 
 >sparely
 by one point
-#done rejects for parleys splayer players
+#ttc-table-of-otters-done-rejects-parleys-splayer-players
 >sparely
 You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
 #ttc-table-of-disowned-downside-nudges-amcks
@@ -565,7 +565,7 @@ by one point
 >score
 Score in a scenario: 9 out of 35 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 35.
 
-#done rejects for eels
+#ttc-table-of-otters-done-rejects-eels
 >eesl
 The eels have done enough.
 #+ttc-table-of-loop-pool-nudges-allot
@@ -1151,7 +1151,7 @@ by one point
 >score
 Score in a scenario: 29 out of 35 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 35.
 
-#done rejects for asyllabic lilac bays
+#ttc-table-of-otters-done-rejects-asyllabic-lilac-bays
 >basicalyl
 The asyllabic lilac bays are quite nice as-is after your brilliant plant-whispering.
 
@@ -1330,7 +1330,7 @@ Score in a scenario: 31 out of 35 total points in the current region, Otters. Th
 #+ttc-table-of-reclusion-inclosure-nudges-idea
 >idae
 You already pushed them aside.
-#done rejects for parrot
+#ttc-table-of-otters-done-rejects-parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
 #+ttc-table-of-reclusion-inclosure-nudges-ideas
@@ -1403,7 +1403,7 @@ Ed Plye, apparently, made the whistle.
 #mistake test for aliver
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
-#done rejects for medals
+#ttc-table-of-otters-done-rejects-medals
 >ickqlyu
 You already got a boost from the medals.
 
@@ -1415,7 +1415,7 @@ Your score has just gone up by one point
 #+ttc-table-of-otters-nudges-weltish
 >iswelth
 You already figured how to play the whistle.
-#done rejects for whistle
+#ttc-table-of-otters-done-rejects-whistle
 >deepyl
 The whistle's already in tune.
 #ttc-table-of-rancho-archon-anchor-nudges-crone

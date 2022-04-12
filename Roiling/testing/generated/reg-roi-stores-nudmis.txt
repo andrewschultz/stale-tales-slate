@@ -207,7 +207,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 
-#done rejects for store b
+#ttc-table-of-stores-done-rejects-store-b
 >sorbte
 You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
 
@@ -228,7 +228,7 @@ by one point
 #ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if they lost another.
-#done rejects for tokers
+#ttc-table-of-stores-done-rejects-tokers
 >tokesr
 They are who they are. You should maybe try to get their friend back.
 >undo
@@ -243,7 +243,7 @@ Score in a scenario: 2 out of 11 total points in the current region, Stores. Low
 #mistake retest for stoner
 >stoner
 Being a stoner isn't treason. Use his real name.
-#done rejects for nestor
+#ttc-table-of-stores-done-rejects-nestor
 >nestro
 You rescued him, and that's enough.
 
@@ -260,7 +260,7 @@ Score in a scenario: 3 out of 11 total points in the current region, Stores. Low
 #+ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if someone had to replace Nestor again.
-#redone rejects for tokers
+#rettc-table-of-stores-done-rejects-tokers
 >tokesr
 They are who they are.
 !You should maybe try to get their friend back.
@@ -398,7 +398,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
-#done rejects for course source
+#ttc-table-of-stores-done-rejects-course-source
 >routse
 You should just enter the course source. No need or way to seal it back up.
 #ttc-table-of-strip-of-profits-nudges-route
@@ -422,7 +422,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
-#done rejects for tastee estate
+#ttc-table-of-stores-done-rejects-tastee-estate
 >trovse
 You should just enter the Tastee Estate. No need or way to seal it back up.
 #ttc-table-of-strip-of-profits-nudges-tastee
@@ -448,7 +448,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 11.
 
-#done rejects for truster turrets
+#ttc-table-of-stores-done-rejects-truster-turrets
 >towesr
 You should just enter the truster turrets. No need or way to seal them back up.
 #ttc-table-of-strip-of-profits-nudges-turret
@@ -474,7 +474,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
 
-#done rejects for balancer barnacle
+#ttc-table-of-stores-done-rejects-balancer-barnacle
 >oystre
 You should just enter the balancer barnacle. No need or way to seal it back up.
 
@@ -491,7 +491,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
-#done rejects for throes hoster
+#ttc-table-of-stores-done-rejects-throes-hoster
 >othesr
 You should just enter the Throes Hoster. No need or way to seal it back up.
 
@@ -510,7 +510,7 @@ Score in a scenario: 10 out of 11 total points in the current region, Stores. Th
 #ttc-table-of-strip-of-profits-nudges-odorant
 >odoratn
 But you already changed Store P.
-#done rejects for odorant tornado
+#ttc-table-of-stores-done-rejects-odorant-tornado
 >presot
 You should just enter the odorant tornado. No need or way to seal it back up.
 
@@ -526,7 +526,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
 
-#done rejects for solid idols
+#ttc-table-of-stores-done-rejects-solid-idols
 >ottesr
 You should just enter the solid idols. No need or way to seal them back up.
 #ttc-table-of-strip-of-profits-nudges-otter

@@ -267,10 +267,10 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 #rettc-table-of-char-arch-nudges-cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
-#done rejects for tsar star
+#ttc-table-of-presto-done-rejects-tsar-star
 >tsra
 No need for additional arts.
-#done rejects for dart
+#ttc-table-of-presto-done-rejects-dart
 >drta
 The dart's just fine as-is.
 
@@ -383,7 +383,7 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 #rettc-table-of-marines-seminar-nudges-port
 >potr
 You already observed all the ports. No need to try to single one out.
-#done rejects for sport ports
+#ttc-table-of-presto-done-rejects-sport-ports
 >prots
 You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
 
@@ -582,7 +582,7 @@ by one point
 >score
 Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-#done rejects for leo
+#ttc-table-of-presto-done-rejects-leo
 >loe
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 #ttc-table-of-presto-nudges-leonard
@@ -629,7 +629,7 @@ Score in a scenario: 14 out of 41 total points in the current region, Presto. Lo
 #mistake retest for evil
 >evil
 There's no sense in making the vile veil worse than it is.
-#done rejects for rand
+#ttc-table-of-presto-done-rejects-rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 #rettc-table-of-dirge-ridge-nudges-leonard
@@ -671,7 +671,7 @@ You wouldn't want that, now they're your friends.
 #mistake retest for asswhup/whupass
 >asswhup
 They're on your side. They will fight when they need to.
-#done rejects for wzup
+#ttc-table-of-presto-done-rejects-wzup
 >asshuwp
 /You don't need to greet (Rand and Leo|Leo and Rand) again.
 #rettc-table-of-dirge-ridge-nudges-leonard
@@ -702,7 +702,7 @@ SHOOT something with the gun instead.
 #mistake test for shoot [text] with [text]
 >shoot zozimus with zozimus
 Just say what you want to shoot.
-#done rejects for boing go bin
+#ttc-table-of-presto-done-rejects-boing-go-bin
 >binog
 You can't force another revelation, but you don't need to.
 #rettc-table-of-marines-seminar-nudges-popgun
@@ -890,21 +890,21 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 #first, test each done-reject individually
 >later
 by one point
-#done rejects for alert
+#ttc-table-of-presto-done-rejects-alert
 >aletr
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >undo
 >so long
 by one point
-#done rejects for log ons
+#ttc-table-of-presto-done-rejects-log-ons
 >sloong
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >undo
 >tough
 by one point
-#done rejects for ought
+#ttc-table-of-presto-done-rejects-ought
 >ughot
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
@@ -971,7 +971,7 @@ Score in a scenario: 23 out of 41 total points in the current region, Presto. Lo
 
 >rom sticks
 by one point
-#done rejects for rom sticks
+#ttc-table-of-presto-done-rejects-rom-sticks
 # this needs to be tested BEFORE we assemble the computer and the e-robot automatically disappears them
 >trimsocsk
 Man, it would be too easy to mess the rom sticks up. Better not tinker like that.
@@ -1206,10 +1206,10 @@ What you want needs to help programming more than water or French champagne or d
 >futno
 Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
-#done rejects for leaf
+#ttc-table-of-presto-done-rejects-leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
-#done rejects for screen
+#ttc-table-of-presto-done-rejects-screen
 >screne
 The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
 #ttc-table-of-presto-spechelp-escaroles
@@ -1223,7 +1223,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#done rejects for casserole
+#ttc-table-of-presto-done-rejects-casserole
 >casseroel
 The casserole is mixed up enough.
 
@@ -1279,7 +1279,7 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 #mistake test for bat
 >bat
 You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
-#done rejects for keyboard
+#ttc-table-of-presto-done-rejects-keyboard
 >keyboadr
 You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
 #ttc-table-of-hacks'-shack-nudges-tbakey
@@ -1332,7 +1332,7 @@ Your score has just gone up by one point
 >put lock on keyboard
 fits in perfectly
 
-#done rejects for caps lock
+#ttc-table-of-presto-done-rejects-caps-lock
 >capslokc
 YOU HAVE WHAT YOU NEED.
 #ttc-table-of-hacks'-shack-nudges-caps
@@ -1347,10 +1347,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#done rejects for futon
+#ttc-table-of-presto-done-rejects-futon
 >futno
 The futon could be a little less lumpy, sure, but that's beyond your magic powers.
-#done rejects for be troo e robot
+#ttc-table-of-presto-done-rejects-be-troo-e-robot
 >toober
 No need to reboot twice.
 #ttc-table-of-presto-scannotes-peels-speel
@@ -1370,7 +1370,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#done rejects for peels speel
+#ttc-table-of-presto-done-rejects-peels-speel
 >epsle
 You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
 #ttc-table-of-presto-spechelp-im-le-cop-polemic
@@ -1394,7 +1394,7 @@ Score in a scenario: 34 out of 41 total points in the current region, Presto. Lo
 >loca
 What you have helps programming more than water or French champagne or dancing in the rain.
 
-#done rejects for alocalco cola
+#ttc-table-of-presto-done-rejects-alocalco-cola
 >aloc
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
 #ttc-table-of-hacks'-shack-nudges-soda
@@ -1419,10 +1419,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#done rejects for mug
+#ttc-table-of-presto-done-rejects-mug
 >mgu
 The mug is no longer manipulable.
-#done rejects for im le cop polemic
+#ttc-table-of-presto-done-rejects-im-le-cop-polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
 #ttc-table-of-presto-spechelp-trim-socks
@@ -1501,7 +1501,7 @@ You already did enough with the TAB key.
 #rettc-table-of-hacks'-shack-nudges-yke
 >yek
 You already did enough with the TAB key.
-#done rejects for tba key
+#ttc-table-of-presto-done-rejects-tba-key
 >bta
 No, the TAB key is what it should be.
 
@@ -1537,7 +1537,7 @@ The cola has already been reprocessed enough. You'll drink it when the time come
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
-#redone rejects for mug
+#rettc-table-of-presto-done-rejects-mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
 #ttc-table-of-presto-nudges-lcao
@@ -1550,7 +1550,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
-#done rejects for bub dude egg
+#ttc-table-of-presto-done-rejects-bub-dude-egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
 #rettc-table-of-hacks'-shack-nudges-algorithms

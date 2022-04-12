@@ -161,7 +161,7 @@ joke death
 #mistake test for dialect
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
-#done rejects for nude dune
+#ttc-table-of-otters-done-rejects-nude-dune
 >blarey
 You've dealt with the barley. You can move around a lot more, now.
 #ttc-table-of-otters-nudges-ly
@@ -884,7 +884,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 ##balance undos
 >sparely
 by one point
-#done rejects for parleys splayer players
+#ttc-table-of-otters-done-rejects-parleys-splayer-players
 >sparely
 You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
 #ttc-table-of-disowned-downside-nudges-amcks
@@ -1190,7 +1190,7 @@ DEBUG INFO: damsel medals hinting.
 {$SCOS}
 
 @nud
-#done rejects for eels
+#ttc-table-of-otters-done-rejects-eels
 >eesl
 The eels have done enough.
 #+ttc-table-of-loop-pool-nudges-allot
@@ -2329,7 +2329,7 @@ by one point
 {$SCOS}
 
 @nud
-#done rejects for asyllabic lilac bays
+#ttc-table-of-otters-done-rejects-asyllabic-lilac-bays
 >basicalyl
 The asyllabic lilac bays are quite nice as-is after your brilliant plant-whispering.
 
@@ -2591,7 +2591,7 @@ DEBUG INFO: min-up codepath
 #+ttc-table-of-reclusion-inclosure-nudges-idea
 >idae
 You already pushed them aside.
-#done rejects for parrot
+#ttc-table-of-otters-done-rejects-parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
 #+ttc-table-of-reclusion-inclosure-nudges-ideas
@@ -2746,7 +2746,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for aliver
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
-#done rejects for medals
+#ttc-table-of-otters-done-rejects-medals
 >ickqlyu
 You already got a boost from the medals.
 
@@ -2767,7 +2767,7 @@ Just PLAY THE WHISTLE to defeat her.
 #+ttc-table-of-otters-nudges-weltish
 >iswelth
 You already figured how to play the whistle.
-#done rejects for whistle
+#ttc-table-of-otters-done-rejects-whistle
 >deepyl
 The whistle's already in tune.
 #ttc-table-of-rancho-archon-anchor-nudges-crone

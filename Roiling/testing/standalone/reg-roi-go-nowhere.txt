@@ -9,7 +9,7 @@
 
 >seed 1
 
-#ttc-table-of-ordeal-reload-nowheres-dusty-study
+#no table entry for dusty-study: nowhere-ing is too complex, so it's in check going nowhere in Dusty Study
 >e
 You're just in the mood for quiet time, now, just looking around
 >painting
@@ -23,7 +23,7 @@ You're just in the mood for quiet time, now, just looking around
 Ouch! You smack into the MEET-BANS.
 
 >gonear carven cavern
-#ttc-table-of-ordeal-reload-nowheres-carven-cavern
+#check going nowhere in Carven Cavern rule pretty much tells you the only way is in, so go that way ... it's not a flat reject
 >e
 You need to make an exit, first.
 >stapler
@@ -55,7 +55,7 @@ You can go back IN to the study, though you don't need to, or you could try to g
 You can go back IN to the study, though you don't need to, or you could try going DOWN the ramp.
 
 >ts
-#ttc-table-of-ordeal-reload-nowheres-strip-of-profits
+#"check going nowhere in main hub room" covered in common file
 >n
 As you try to flee the Strip of Profits, a voice booms "Run off for fun? Urff, no!"
 Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
@@ -79,14 +79,14 @@ You fear a "BE RASH? EH, BARS!" from the Rehabs Basher. And anyway, the trumped-
 But there must be a generic way to leave!
 
 >gonear same mesa
-#ttc-table-of-routes-nowheres-same-mesa
+#going nowhere in same mesa is too complicated to stuff in a table without it getting ugly, so it's in a check rule
 >e
 You try going east and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the west, after several minutes.
 >n
 You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa, from the south, after several minutes.
 
 >inside
-#ttc-table-of-routes-nowheres-cleric-circle
+#going nowhere in cleric circle points you back outside directly
 >n
 "Directions are not important here, seeker. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to." So you do.
 You go back outside.
@@ -205,82 +205,82 @@ The treasure room has no secret passages, so you can only go back east.
 Nowt Town holds no secrets. You can only go west or south.
 
 >w
-#ttc-table-of-presto-nowheres-r10
+#generic reject for touching a wall in r10
 >s
 You walk into a wall, which goes ZVT. "Lame-o," you think, seeing red. Maybe that ZVT was a VZT.
 >w
-#ttc-table-of-presto-nowheres-r00
+#generic reject for touching a wall in r00
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#ttc-table-of-presto-nowheres-r01
+#generic reject for touching a wall in r01
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#ttc-table-of-presto-nowheres-r02
+#generic reject for touching a wall in r02
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#ttc-table-of-presto-nowheres-r03
+#generic reject for touching a wall in r03
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
 >e
-#ttc-table-of-presto-nowheres-r12
+#generic reject for touching a wall in r12
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
-#ttc-table-of-presto-nowheres-r11
+#generic reject for touching a wall in r11
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#ttc-table-of-presto-nowheres-r21
+#generic reject for touching a wall in r21
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#ttc-table-of-presto-nowheres-r31
+#generic reject for touching a wall in r31
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
 >w
 >n
 >e
-#ttc-table-of-presto-nowheres-r22
+#generic reject for touching a wall in r22
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#ttc-table-of-presto-nowheres-r32
+#generic reject for touching a wall in r32
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#ttc-table-of-presto-nowheres-r42
+#generic reject for touching a wall in r42
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
-#ttc-table-of-presto-nowheres-r41
+#generic reject for touching a wall in r41
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
-#ttc-table-of-presto-nowheres-r40
+#generic reject for touching a wall in r40
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#ttc-table-of-presto-nowheres-r30
+#generic reject for touching a wall in r30
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
 >n
 >n
 >n
-#ttc-table-of-presto-nowheres-r43
+#generic reject for touching a wall in r43
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#ttc-table-of-presto-nowheres-r44
+#generic reject for touching a wall in r44
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#ttc-table-of-presto-nowheres-r34
+#generic reject for touching a wall in r34
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
@@ -288,23 +288,23 @@ You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see r
 >s
 >w
 >n
-#ttc-table-of-presto-nowheres-r33
+#generic reject for touching a wall in r33
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#ttc-table-of-presto-nowheres-r23
+#generic reject for touching a wall in r23
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#ttc-table-of-presto-nowheres-r13
+#generic reject for touching a wall in r13
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#ttc-table-of-presto-nowheres-r14
+#generic reject for touching a wall in r14
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#ttc-table-of-presto-nowheres-r04
+#generic reject for touching a wall in r04
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e

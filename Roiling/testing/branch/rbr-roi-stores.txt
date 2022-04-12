@@ -284,7 +284,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#done rejects for store b
+#ttc-table-of-stores-done-rejects-store-b
 >sorbte
 You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
 
@@ -307,7 +307,7 @@ by one point
 #ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if they lost another.
-#done rejects for tokers
+#ttc-table-of-stores-done-rejects-tokers
 >tokesr
 They are who they are. You should maybe try to get their friend back.
 >undo
@@ -326,7 +326,7 @@ Your score has just gone up by one point
 #mistake retest for stoner
 >stoner
 Being a stoner isn't treason. Use his real name.
-#done rejects for nestor
+#ttc-table-of-stores-done-rejects-nestor
 >nestro
 You rescued him, and that's enough.
 
@@ -359,7 +359,7 @@ Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know.
 #+ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if someone had to replace Nestor again.
-#redone rejects for tokers
+#rettc-table-of-stores-done-rejects-tokers
 >tokesr
 They are who they are.
 !You should maybe try to get their friend back.
@@ -529,7 +529,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#done rejects for course source
+#ttc-table-of-stores-done-rejects-course-source
 >routse
 You should just enter the course source. No need or way to seal it back up.
 #ttc-table-of-strip-of-profits-nudges-route
@@ -578,7 +578,7 @@ The patcher shatters in a shower of fourth-wall quantum physics as you switch it
 >undo
 
 @nud
-#done rejects for tastee estate
+#ttc-table-of-stores-done-rejects-tastee-estate
 >trovse
 You should just enter the Tastee Estate. No need or way to seal it back up.
 #ttc-table-of-strip-of-profits-nudges-tastee
@@ -618,7 +618,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#done rejects for truster turrets
+#ttc-table-of-stores-done-rejects-truster-turrets
 >towesr
 You should just enter the truster turrets. No need or way to seal them back up.
 #ttc-table-of-strip-of-profits-nudges-turret
@@ -676,7 +676,7 @@ Seawater scents from the balancer barnacle.
 {$SCOS}
 
 @nud
-#done rejects for balancer barnacle
+#ttc-table-of-stores-done-rejects-balancer-barnacle
 >oystre
 You should just enter the balancer barnacle. No need or way to seal it back up.
 
@@ -703,7 +703,7 @@ Your score has just gone up by one point
 A mix of surprisingly nice smells from the Throes Hoster where Store H was.
 
 @nud
-#done rejects for throes hoster
+#ttc-table-of-stores-done-rejects-throes-hoster
 >othesr
 You should just enter the Throes Hoster. No need or way to seal it back up.
 
@@ -754,7 +754,7 @@ The smell from the odorant tornado makes you almost want to lash out verbally, e
 #ttc-table-of-strip-of-profits-nudges-odorant
 >odoratn
 But you already changed Store P.
-#done rejects for odorant tornado
+#ttc-table-of-stores-done-rejects-odorant-tornado
 >presot
 You should just enter the odorant tornado. No need or way to seal it back up.
 
@@ -784,7 +784,7 @@ Your score has just gone up by one point
 The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.
 
 @nud
-#done rejects for solid idols
+#ttc-table-of-stores-done-rejects-solid-idols
 >ottesr
 You should just enter the solid idols. No need or way to seal them back up.
 #ttc-table-of-strip-of-profits-nudges-otter

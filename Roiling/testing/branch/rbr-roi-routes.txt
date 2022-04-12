@@ -655,7 +655,7 @@ The spoon points you out of the Idle Deli.
 #mistake retest for tap pat/tap
 >tap
 You have Pat's attention, already, and you don't really need it now that you got the stupor sprout.
-#done rejects for stupor sprout
+#ttc-table-of-routes-done-rejects-stupor-sprout
 >despiet
 That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 >despite
@@ -804,7 +804,7 @@ The spoon points you out of Oscar's.
 #mistake retest for orcas
 >orcas
 Besides, you got the pipe soot
-#done rejects for pipe soot
+#ttc-table-of-routes-done-rejects-pipe-soot
 #not a nudj for pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
@@ -827,13 +827,13 @@ You did well enough to focus on the proper names instead.
 #rettc-table-of-adobe-abode-nudges-sos
 >oss
 You already figured how to get into Oscar's. There's nothing else to do.
-#done rejects for lairage regalia
+#ttc-table-of-routes-done-rejects-lairage-regalia
 >acrsso
 You twist your mind a bit, but no, there's probably only one way to enter.
-#done rejects for adsorbing signboard
+#ttc-table-of-routes-done-rejects-adsorbing-signboard
 >pats
 No, you don't see any other way around the signboard to enter. You don't need one, either.
-#done rejects for scripture picturers
+#ttc-table-of-routes-done-rejects-scripture-picturers
 >inseid
 The picturers were pretty strict about what they suggested. Not much else you can do with them.
 
@@ -906,7 +906,7 @@ You can't change Ian Gast permanently. You just have to work around him.
 #mistake retest for staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit
-#done rejects for gast
+#ttc-table-of-routes-done-rejects-gast
 >againts
 You already leaned on the anti-sag sit-a-nag right. You look around it and wonder if the side art could stop Ian Gast's tirades.
 #ttc-table-of-same-mesa-nudges-ides
@@ -959,10 +959,10 @@ It's the whole side art you needed to deal with.
 You already did your best with the tirades and side art.
 
 @nud
-#done rejects for side art
+#ttc-table-of-routes-done-rejects-side-art
 >astried
 You got on the anti-sag sit-a-nag right. Time to start ducking.
-#redone rejects for gast
+#rettc-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
@@ -972,7 +972,7 @@ The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 
 @nud
-#redone rejects for gast
+#rettc-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
@@ -1033,7 +1033,7 @@ Ian Gast is banging on about Rude 'N Nuder, now.
 #mistake retest for below
 >below
 You already tried this preposition. There must be others.
-#done rejects for rude n nuder
+#ttc-table-of-routes-done-rejects-rude-n-nuder
 >belwo
 You don't want the WOE BOW BELL to come back.
 
@@ -1077,14 +1077,14 @@ Your score has just gone up by one point
 The spoon points to the Cleric Circle now you have all the items.
 
 @nud
-#done rejects for anti sag sit a nag
+#ttc-table-of-routes-done-rejects-anti-sag-sit-a-nag
 >sitagna
 The anti-sag sit-a-nag isn't important with Ian Gast gone.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
 #mistake retest for satired
 >satired
 Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
-#done rejects for u nerd endur redun
+#ttc-table-of-routes-done-rejects-u-nerd-endur-redun
 >undre
 You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that.
 #rettc-table-of-same-mesa-nudges-boko
@@ -1198,7 +1198,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for under-generic
 >under
 You already went UNDER. You need something new. Something slightly different.
-#done rejects for the bean
+#ttc-table-of-routes-done-rejects-the-bean
 >ofmr
 The MORF-FORM has, uh, morphed enough. Deal with THE BEAN.
 #ttc-table-of-same-mesa-nudges-bean
@@ -1297,7 +1297,7 @@ Your score has just gone up by one point
 You angle your spoon a bit, and you realize you, or something, should be AROUND.
 
 @nud
-#done rejects for un road
+#ttc-table-of-routes-done-rejects-un-road
 >urdano
 You thought you saw an un-road for a second, but ... not quite.
 #ttc-table-of-routes-scannotes-odd-run-on-aura
@@ -1312,7 +1312,7 @@ The whole odd run on aura.
 #ttc-table-of-harms-marsh-nudges-odd
 >odd
 The whole odd run on aura.
-#done rejects for odd run on aura
+#ttc-table-of-routes-done-rejects-odd-run-on-aura
 #??this wasn't flagged by nuch/hch
 >untli
 The underground is already lit. Un-unlit.
@@ -1599,7 +1599,7 @@ The raptest patters are gone, and you can fully focus on the hurt hog.
 >undo
 
 @nud
-#done rejects for bent ewe
+#ttc-table-of-routes-done-rejects-bent-ewe
 >betwene
 The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay.
 

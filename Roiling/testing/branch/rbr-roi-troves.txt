@@ -189,7 +189,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#done rejects for pa egg pea
+#ttc-table-of-troves-done-rejects-pa-egg-pea
 >gaep
 You probably did what you could. Or not-did.
 
@@ -252,7 +252,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake retest for real hot
 >real hot
 You already got hot. Now you need to summon a different emotion.
-#done rejects for heat
+#ttc-table-of-troves-done-rejects-heat
 >haet
 Don't need to overheat, or overhate.
 #ttc-table-of-troves-spechelp-race-acre
@@ -472,7 +472,7 @@ by one point
 {$SCOS}
 
 @nud
-#done rejects for a sty tasty say
+#ttc-table-of-troves-done-rejects-a-sty-tasty-say
 >stya
 You can't over-stay your staying power, or something.
 
@@ -631,10 +631,10 @@ You already managed to REASON your way around the SNORE SO ARENA.
 #rettc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
-#done rejects for evil bee
+#ttc-table-of-troves-done-rejects-evil-bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
-#done rejects for snore so arena
+#ttc-table-of-troves-done-rejects-snore-so-arena
 >reasno
 Drowning something without reason further in reason is unreasonable.
 #ttc-table-of-troves-spechelp-l-clear-cellar
@@ -1202,7 +1202,7 @@ There will be time for ritzy, overpriced alcohol once you have made it to the to
 #mistake retest for once
 >once
 Yes! You only need a chance! Once! To get inside! You're enthused enough, but you need to strategize.
-#done rejects for praise spirea
+#ttc-table-of-troves-done-rejects-praise-spirea
 >aspier
 You're wanting praise too much, now.
 #ttc-table-of-troves-spechelp-rivets
@@ -1245,7 +1245,7 @@ Yes! You only need a chance! Once! To get inside! You're more than enthused enou
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
 @nud
-#done rejects for rivets
+#ttc-table-of-troves-done-rejects-rivets
 >striev
 You're striving too hard, now.
 #ttc-table-of-econ-cone-nudges-ectarian
@@ -1274,7 +1274,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 {$SCOS}
 
 @nud
-#done rejects for sectarian craniates
+#ttc-table-of-troves-done-rejects-sectarian-craniates
 >craniatse
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
 #rettc-table-of-econ-cone-nudges-ectarian

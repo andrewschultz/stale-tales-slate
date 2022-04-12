@@ -216,14 +216,14 @@ The pesty types resist change. Not that they wouldn't mind a bit of drinking tal
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
 >inset
 by one point
-#done rejects for tines
+#ttc-table-of-oyster-done-rejects-tines
 >tinse
 You destroyed the stein, and that's enough.
 >undo
 >undo
 >spit
 by one point
-#done rejects for tips pits
+#ttc-table-of-oyster-done-rejects-tips-pits
 >spti
 You can't and don't want to do anything else to the tips pits.
 #+ttc-table-of-posh-hops-shop-nudges-pti
@@ -234,14 +234,14 @@ You already dealt with the tips pits.
 >undo
 >scrape
 by one point
-#done rejects for capers recaps
+#ttc-table-of-oyster-done-rejects-capers-recaps
 >scapre
 Casper has suffered enough indignities. You should annoy someone else.
 >undo
 >undo
 >sing
 by one point
-#done rejects for gins sign
+#ttc-table-of-oyster-done-rejects-gins-sign
 >igsn
 There's no other way to disobey the sign.
 >undo
@@ -702,7 +702,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 #altpath
-#done rejects for frat raft
+#ttc-table-of-oyster-done-rejects-frat-raft
 >ratf
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
@@ -1019,7 +1019,7 @@ I award you zero points for that anagramming try, and may God have mercy on your
 #+ttc-table-of-anger-range-nudges-darnel
 >darnle
 You already got mad at all the snarled darnels. You need to move on.
-#done rejects for snarled darnels
+#ttc-table-of-oyster-done-rejects-snarled-darnels
 >snarled darnels
 It's okay to get mad, but staying mad? No.
 
@@ -1288,7 +1288,7 @@ The bubble wrap is already covering something.
 #+ttc-table-of-lean-lane-nudges-reward
 >rewadr
 There's nothing else in the drawer and no way to get in by yourself.
-#done rejects for trout
+#ttc-table-of-oyster-done-rejects-trout
 >trotu
 Retutor? Torture. Rot. True!
 #ttc-table-of-oyster-spechelp-wrap
@@ -1394,7 +1394,7 @@ No vilence, err, violence, please.
 The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
 
 @nud
-#done rejects for wipes
+#ttc-table-of-oyster-done-rejects-wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 #ttc-table-of-lapsin'-plains-nudges-acters
@@ -1507,7 +1507,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#done rejects for bogus-plains
+#ttc-table-of-oyster-done-rejects-bogus-plains
 >splani
 You start up a grand lecture again, but you feel something spinal and think "I...plans." Time to move on.
 #+ttc-table-of-lapsin'-plains-nudges-plain
@@ -1611,7 +1611,7 @@ Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
 #mistake retest for caret
 >caret
 You needed to shift letters and not sixes, here.
-#done rejects for crate
+#ttc-table-of-oyster-done-rejects-crate
 >craet
 Besides identifying it as a rect, you can't do much else with the crate.
 #+ttc-table-of-lapsin'-plains-nudges-fragments
@@ -1775,7 +1775,7 @@ You need to dig to some purpose, though maybe somewhere else--and not just dig.
 >dig zozimus
 You need to dig to some purpose, though maybe somewhere else--and not just dig.
 #?? try other places
-#done rejects for rigged digger
+#ttc-table-of-oyster-done-rejects-rigged-digger
 >drpo
 You managed to get a digger from a prod, and that's good enough.
 
@@ -1897,10 +1897,10 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#done rejects for heaps
+#ttc-table-of-oyster-done-rejects-heaps
 >heasp
 You figure the heaps are at a point where you can't change them for the better.
-#done rejects for lance
+#ttc-table-of-oyster-done-rejects-lance
 >lanec
 It's clean enough. You can't, like, make it sharper or anything.
 
@@ -2051,7 +2051,7 @@ You already dealt with both arches--no need to deal with one.
 #+ttc-table-of-sclerous-closures-nudges-acher
 >achre
 You already dealt with both arches--no need to deal with one.
-#done rejects for achers chaser arches
+#ttc-table-of-oyster-done-rejects-achers-chaser-arches
 >srecha
 Further searching proves fruitless.
 #ttc-table-of-oyster-spechelp-gleaner
@@ -2094,7 +2094,7 @@ You may wish to re-examine the gleaner now it's changed.
 #mistake retest for reangle
 >reangle
 You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
-#done rejects for gleaner
+#ttc-table-of-oyster-done-rejects-gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it except examine it.
 
@@ -2205,7 +2205,7 @@ Your score has just gone up by one point
 #ttc-table-of-rascal-craals-nudges-hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
-#done rejects for thin hint
+#ttc-table-of-oyster-done-rejects-thin-hint
 >yurb
 It was enough to bury the ruby.
 
@@ -2270,7 +2270,7 @@ by one point
 {$SCOS}
 
 @nud
-#done rejects for use saga sausage
+#ttc-table-of-oyster-done-rejects-use-saga-sausage
 >assuega
 Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh) the walleyes who buried the ruby.
 
@@ -2350,7 +2350,7 @@ Your score has just gone up by one point
 >out
 
 @nud
-#done rejects for pol art portal
+#ttc-table-of-oyster-done-rejects-pol-art-portal
 >patrlo
 You discovered the portal. No need to look further.
 >in
@@ -2371,7 +2371,7 @@ Den Loft
 You see a map of all the paths in the Horned Hedron.
 
 @nud
-#redone rejects for gleaner
+#rettc-table-of-oyster-done-rejects-gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it.
 
@@ -2669,7 +2669,7 @@ DEBUG INFO: min-up codepath
 {$SCOMAX}
 
 @nud
-#done rejects for lever
+#ttc-table-of-oyster-done-rejects-lever
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
 #ttc-table-of-oyster-spechelp-bogus-derail

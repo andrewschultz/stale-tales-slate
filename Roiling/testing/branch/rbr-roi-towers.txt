@@ -1435,7 +1435,7 @@ DEBUG: guardian hint choice is alarming grailman from alarming grailman.
 >undo
 
 @nud
-#done rejects for old ice
+#ttc-table-of-towers-done-rejects-old-ice
 >oldiec
 Twist the ice too much, it might not look right.
 #ttc-table-of-towers-spechelp-pirates
@@ -1729,7 +1729,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#done rejects for strudel
+#ttc-table-of-towers-done-rejects-strudel
 >strudle
 You'd have to drop the strudel on the ground and get it germy to try that again. Eww.
 #ttc-table-of-towers-spechelp-mardier-admirer
@@ -3094,7 +3094,7 @@ You already broke the diverse deviser!
 {$SCOS}
 
 @nud
-#done rejects for diverse deviser
+#ttc-table-of-towers-done-rejects-diverse-deviser
 >revised
 You already repaired the diverse deviser and got what you needed.
 #ttc-table-of-towers-nudges-gizmo
@@ -3327,7 +3327,7 @@ The raves saver/replay player has already been parleyed into something shinier.
 #rettc-table-of-towers-nudges-save
 >Saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
-#done rejects for raves saver
+#ttc-table-of-towers-done-rejects-raves-saver
 >pearyl
 The raves saver is as glitzed-up as it'll get.
 #rettc-table-of-towers-nudges-save
@@ -3454,7 +3454,7 @@ ALBERT'S.
 ##balance undo
 >robust
 by one point
-#done rejects for turbos
+#ttc-table-of-towers-done-rejects-turbos
 >turbso
 The turbos are working. Best not tinker.
 #rettc-table-of-actionless-coastlines-nudges-bot
@@ -3465,7 +3465,7 @@ You fixed the turbos, so maybe you can tackle the blaster.
 >undo
 >stabler
 by one point
-#done rejects for blaster
+#ttc-table-of-towers-done-rejects-blaster
 >blastre
 The blaster is working. Best not tinker.
 #rettc-table-of-actionless-coastlines-nudges-bot
@@ -3873,9 +3873,10 @@ The Done-Any Anodyne rattles.
 #ttc-table-of-towers-readables-done-any-anodyne
 >read anodyne
 The Done-Any Anodyne has the signature of its inventor, Dyan Eno, in red.
-#done rejects for done any anodyne
+#ttc-table-of-towers-done-rejects-done-any-anodyne
 >tretis
 You helped St. Teri directly. Now you need to deal with the Done-Any Anodyne.
+#this is a weird case. It's not the anodyne that's being rejected as much as the itster, which has now vanished and createe the Done-Any Anodyne upon fliptoing
 
 @spoi
 #towers anagrams for done any anodyne

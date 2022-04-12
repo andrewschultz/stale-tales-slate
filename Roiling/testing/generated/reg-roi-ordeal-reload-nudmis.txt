@@ -206,7 +206,7 @@ You fiddle with the cheat button. The eighth entry turns purple with cheats on, 
 #mistake test for palm
 >palm
 Maybe you could, but you will need the light. You won't need the landscaping.
-#done rejects for lamp
+#ttc-table-of-ordeal-reload-done-rejects-lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
 #mistake retest for odor
@@ -321,7 +321,7 @@ Score in a scenario: 6 out of 15 total points in the current region, Ordeal Relo
 #+ttc-table-of-dusty-study-nudges-ceiling
 >ceilign
 You already built the chimney. If the ceiling caved, you'd be buried.
-#done rejects for chimney
+#ttc-table-of-ordeal-reload-done-rejects-chimney
 >chimnye
 You probably just want to go UP the chimney.
 
@@ -369,7 +369,7 @@ Score in a scenario: 7 out of 15 total points in the current region, Ordeal Relo
 #ttc-table-of-dusty-study-nudges-abstract
 >abstratc
 That is probably overthinking the painting's abstract-ness. It's really just good for examining.
-#done rejects for painting
+#ttc-table-of-ordeal-reload-done-rejects-painting
 >paintign
 The painting really goes better with the study than the giant pin.
 #mistake retest for chalets
@@ -381,7 +381,7 @@ You don't need a safe home, right now. You need adventure.
 >chalets
 You don't need a safe home, right now. You need adventure.
 !that many letters
-#done rejects for letters settler
+#ttc-table-of-ordeal-reload-done-rejects-letters-settler
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
 #mistake test for cheat on/off/teach on/off
@@ -440,7 +440,7 @@ Score in a scenario: 8 out of 15 total points in the current region, Ordeal Relo
 #mistake retest for astir
 >astir
 You don't need a moving stair.
-#done rejects for stair
+#ttc-table-of-ordeal-reload-done-rejects-stair
 >stari
 The stair helps you get around more easily, so it doesn't need to be changed back.
 
@@ -475,7 +475,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
-#done rejects for ramp
+#ttc-table-of-ordeal-reload-done-rejects-ramp
 >rapm
 The ramp is useful now. Best keep it.
 
@@ -575,7 +575,7 @@ Score in a scenario: 10 out of 15 total points in the current region, Ordeal Rel
 #+ttc-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 You already fixed the bins.
-#done rejects for ISBN bins
+#ttc-table-of-ordeal-reload-done-rejects-ISBN-bins
 >snbi
 The ISBN bins are secure. Best not tinker.
 #mistake retest for bsin/bs in
@@ -735,7 +735,7 @@ Score in a scenario: 12 out of 15 total points in the current region, Ordeal Rel
 #+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and staple probably hold the key to leaving.
-#done rejects for staple
+#ttc-table-of-ordeal-reload-done-rejects-staple
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
@@ -762,7 +762,7 @@ The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you 
 #ttc-table-of-carven-cavern-nudges-curtain
 >curtani
 The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
-#done rejects for stapler
+#ttc-table-of-ordeal-reload-done-rejects-stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
 #mistake retest for trainer

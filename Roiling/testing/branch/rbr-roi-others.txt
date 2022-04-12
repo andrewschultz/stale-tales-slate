@@ -385,7 +385,7 @@ You'll eventually want to get that So-Great Storage down the road.
 #ttc-table-of-rustic-citrus-nudges-ditties
 >dittise
 The ditties are Curtis's. They're really quite good and don't need changing. You're pretty sure you couldn't improve them, anyway.
-#done rejects for compass
+#ttc-table-of-others-done-rejects-compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
 #rettc-table-of-rustic-citrus-nudges-greenish
@@ -966,7 +966,7 @@ DEBUG INFO: green stain hinting.
 {$SCOS}
 
 @nud
-#done rejects for icon
+#ttc-table-of-others-done-rejects-icon
 >inco
 The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more.
 #mistake retest for sonic
@@ -1298,7 +1298,7 @@ A low buzzing from your sonic icons--odd. What could they do, or buy?
 >scion
 Money, or something like it, should not be the guide of you.
 \\
-#done rejects for s-i
+#ttc-table-of-others-done-rejects-s-i
 >icons
 The sonic icons seem right. No use meddling.
 #ttc-table-of-others-scannotes-concisions
@@ -1646,28 +1646,28 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#done rejects for olives
+#ttc-table-of-others-done-rejects-olives
 >olives
 The olives are just find as they are. They're even pitted! No need to change them. I mean, what if they became SO EVIL?
 #rettc-table-of-clangier-clearing-nudges-price
 >priec
 No, you already helped correct the prices precis.
-#done rejects for melon
+#ttc-table-of-others-done-rejects-melon
 >melno
 The melon is fine as-is. It's better than the one that was on display, for sure.
-#done rejects for peach
+#ttc-table-of-others-done-rejects-peach
 >peahc
 You got enough of a discount. Really.
-#done rejects for lemons
+#ttc-table-of-others-done-rejects-lemons
 >lemosn
 You sour on changing the lemons further.
 #ttc-table-of-others-nudges-kumquat
 >kumquta
 The kumquat is in good enough shape. Just return it to Curtis.
-#done rejects for mango
+#ttc-table-of-others-done-rejects-mango
 >manog
 Snag mo' mangos? No mas, G.
-#done rejects for kumquat
+#ttc-table-of-others-done-rejects-kumquat
 >cripse
 You corrected the prices precis enough.
 
@@ -1676,10 +1676,10 @@ You corrected the prices precis enough.
 
 @nud
 #doing this in front of the prices precis should give the same result.
-#redone rejects for kumquat
+#rettc-table-of-others-done-rejects-kumquat
 >cripse
 You corrected the prices precis enough.
-#done rejects for papayas
+#ttc-table-of-others-done-rejects-papayas
 >papaysa
 You've already established yourself as a prompt payer.
 >n
@@ -2037,7 +2037,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling.
 @nud
 >prep
 by one point
-#done rejects for fleeing feeling
+#ttc-table-of-others-done-rejects-fleeing-feeling
 >pepr
 You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. There's got to be another way or two to prep, though.
 >undo
@@ -2082,7 +2082,7 @@ No need to over-study or over-think. Through the gates!
 @nud
 >review
 by one point
-#done rejects for viewer
+#ttc-table-of-others-done-rejects-viewer
 >reveiw
 You've done enough reviewing, and now you need to try something else.
 >undo
@@ -2100,7 +2100,7 @@ by one point
 {$SCONOFIND}
 
 @nud
-#done rejects for searcher
+#ttc-table-of-others-done-rejects-searcher
 >reserach
 You've done enough researching, and now you need to try something else.
 
@@ -2129,10 +2129,10 @@ You have {SCORE} of {MAX} total points for the post-Elvira Others region, and yo
 --you only needed two ways to work the passport. The other was to PREP after you are called a perp.
 
 @nud
-#redone rejects for searcher
+#rettc-table-of-others-done-rejects-searcher
 >searchre
 You've done enough researching, and now you can just go north.
-#redone rejects for viewer
+#rettc-table-of-others-done-rejects-viewer
 >viewre
 You've done enough reviewing, and now you can just go north.
 #ttc-table-of-others-nudges-repp
