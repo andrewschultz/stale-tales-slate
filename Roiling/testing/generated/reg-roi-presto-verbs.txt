@@ -318,10 +318,10 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
-#verbcase swear-presto-if-hacks-shack-is-visited
+#verbcase swear-presto-if-hacks'-shack-is-visited
 >damn
 While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is mostly over.
-#verbcase listen-presto-if-player-is-in-hacks-shack
+#verbcase listen-presto-if-player-is-in-hacks'-shack
 >listen
 Classic techno music from the Baleets: "Be Stale."
 
@@ -353,7 +353,7 @@ Score in a scenario: 26 out of 41 total points in the current region, Presto. Lo
 >smell casserole
 That casserole smells ... well, sturdy. Not for the sophisticated.
 >s
-#verbcase sleep-presto-if-hacks-shack-is-visited-and-peels-speel-is-reflexive
+#verbcase sleep-presto-if-hacks'-shack-is-visited-and-peels-speel-is-reflexive
 >sleep
 Only the shack seems to be a safe place to sleep, here.
 >n
@@ -391,7 +391,7 @@ You can now do computery things unimpeded! Hooray!
 
 >put disk in drive a
 
-#verbcase sleep-presto-if-player-is-in-hacks-shack-if-peels-speel-is-off-stage
+#verbcase sleep-presto-if-player-is-in-hacks'-shack-if-peels-speel-is-off-stage
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
@@ -426,8 +426,8 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#verbcase sleep-presto-if-player-is-in-hacks-shack
-#verbcase sleep-presto-if-player-is-in-hacks-shack-if-peels-speel-is-in-hacks-shack
+#verbcase sleep-presto-if-player-is-in-hacks'-shack
+#verbcase sleep-presto-if-player-is-in-hacks'-shack-if-peels-speel-is-in-hacks'-shack
 
 >sleep
 Your score has just gone up by one point
@@ -485,7 +485,7 @@ You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. T
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
 >gt phat path
-#verbcase goto-presto-if-player-is-in-hacks-shack
+#verbcase goto-presto-if-player-is-in-hacks'-shack
 You can't budge until you fix this program, here.
 
 >debug
@@ -497,7 +497,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 >misses
 !presto
 
-#reverbcase goto-presto-if-player-is-in-hacks-shack
+#reverbcase goto-presto-if-player-is-in-hacks'-shack
 >gt phat path
 Just do something simple with that USB
 

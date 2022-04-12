@@ -124,46 +124,46 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for real hot
 >real hot
 But what emotion would provide heat?
-#nudge for hurt
+#ttc-table-of-loather-rathole-nudges-hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
-#nudge for hurts
+#ttc-table-of-loather-rathole-nudges-hurts
 >hurst
 No way you could change even one hurt thru on your own. You just need to get by.
-#nudge for rathole
+#ttc-table-of-loather-rathole-nudges-rathole
 >reahlot
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for poverty
+#ttc-table-of-troves-nudges-poverty
 >pevtryo
 There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details.
-#nudge for troev
+#ttc-table-of-troves-nudges-troev
 >tevro
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for storev
+#ttc-table-of-troves-nudges-storev
 >tevros
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for spoil
+#ttc-table-of-troves-nudges-spoil
 >spilo
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
-#nudge for spoiloplis
+#ttc-table-of-troves-nudges-spoiloplis
 >spilospilo
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
-#nudge for potholes
+#ttc-table-of-loather-rathole-nudges-potholes
 >potholes
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
-#nudge for pothole
+#ttc-table-of-loather-rathole-nudges-pothole
 >pothole
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
-#nudge for pagepage
+#ttc-table-of-troves-nudges-pagepage
 >pegagepa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
-#nudge for peg
+#ttc-table-of-troves-nudges-peg
 >gep
 You pause, then note the author's middle initial, which seems annoyingly important.
-#nudge for egg
+#ttc-table-of-troves-nudges-egg
 >geg
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
-#nudge for pea
+#ttc-table-of-troves-nudges-pea
 >epa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
@@ -200,7 +200,7 @@ The tears taser makes an odd noise, as if it is recalibrating.
 #ttc-table-of-troves-scannotes-tears-taser
 >scan taser
 The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
-#nudge for tear
+#ttc-table-of-loather-rathole-nudges-tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
 #ttc-table-of-troves-readables-tears-taser
@@ -291,45 +291,45 @@ In particular, you feel the need to OBSERVE right now.
 You can't see what you would do with a bunch of pots.
 
 @nud
-#nudge for bustle
+#ttc-table-of-bustle-sublet-nudges-bustle
 >subelt
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for truffle
+#ttc-table-of-troves-nudges-truffle
 >tuffler
 You can't change the truffle. It can help you change things, though. Or how you see things.
-#nudge for boor
+#ttc-table-of-bustle-sublet-nudges-boor
 >broo
 You can't change a whole suburb. Better to change yourself.
-#nudge for grub
+#ttc-table-of-bustle-sublet-nudges-grub
 >gurb
 You can't change a whole suburb. Better to change yourself.
-#nudge for messhole
+#ttc-table-of-bustle-sublet-nudges-messhole
 >messhoel
 A messhole is a messhole. You need to concentrate on thinking your way out.
-#nudge for asidewalk
+#ttc-table-of-bustle-sublet-nudges-asidewalk
 >asidewalk
 The sidewalk's condition can't be changed. For better or worse.
-#nudge for sidewalk
+#ttc-table-of-bustle-sublet-nudges-sidewalk
 >sidewakl
 The sidewalk's condition can't be changed. For better or worse.
-#nudge for laid
+#ttc-table-of-bustle-sublet-nudges-laid
 >lida
 The sidewalk's condition can't be changed. For better or worse.
-#nudge for askew
+#ttc-table-of-bustle-sublet-nudges-askew
 >weska
 The sidewalk's condition can't be changed. For better or worse.
-#nudge for reastier
+#ttc-table-of-bustle-sublet-nudges-reastier
 >reastire
 The reastier arteris cannot be changed. They cannot even change you positively if you follow them.
-#nudge for artery
+#ttc-table-of-bustle-sublet-nudges-artery
 >arteyr
 The reastier arteris cannot be changed. They cannot even change you positively if you follow them.
 
 @nud
-#nudge for sob
+#ttc-table-of-bustle-sublet-nudges-sob
 >sbo
 No, you'll want to zone out the whole verbose distraction.
-#nudge for veer
+#ttc-table-of-bustle-sublet-nudges-veer
 >vere
 No, you'll want to zone out the whole verbose distraction.
 
@@ -398,7 +398,7 @@ DEBUG INFO: stop post hinting.
 >stpo
 The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
-#nudge for observe
+#ttc-table-of-bustle-sublet-nudges-observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
 #ttc-table-of-troves-scannotes-stop-post
@@ -512,7 +512,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#nudge for stop
+#ttc-table-of-boarded-roadbed-nudges-stop
 >stpo
 The stop post is in the past. No need to p.s. tweaking it.
 #ttc-table-of-troves-spechelp-evil-bee
@@ -523,19 +523,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's
 >reasno
 The SNORE SO ARENA flashes weirdly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
-#nudge for roadbed
+#ttc-table-of-boarded-roadbed-nudges-roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for live
+#ttc-table-of-boarded-roadbed-nudges-live
 >liev
 The bee's description isn't important. It's how you see the bee that matters.
-#nudge for bee
+#ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's an evil bee!
-#nudge for snore
+#ttc-table-of-boarded-roadbed-nudges-snore
 >snoer
 Hmm. Nothing at all. It must be a snore.
-#nudge for arena
+#ttc-table-of-boarded-roadbed-nudges-arena
 >arena
 Nothing happens. You may need to look at the full SNORE SO ARENA.
 
@@ -582,7 +582,7 @@ Your score has just gone up by one point
 DEBUG INFO: L'Clear Cellar hinting.
 
 @nud
-#renudge for bee
+#rettc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a vile bee!
 #ttc-table-of-troves-scannotes-l-clear-cellar
@@ -622,13 +622,13 @@ Nothing now that you reasoned your way around the arena's distractions.
 The bee or arena's nationality is not relevant, and besides, it was a snore.
 
 @nud
-#renudge for snore
+#rettc-table-of-boarded-roadbed-nudges-snore
 >snoer
 You already managed to REASON with a snore. Nothing else to do.
-#renudge for arena
+#rettc-table-of-boarded-roadbed-nudges-arena
 >arena
 You already managed to REASON your way around the SNORE SO ARENA.
-#renudge for bee
+#rettc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
 #done rejects for evil bee
@@ -665,10 +665,10 @@ In particular, you feel the need to DESPAIR right now.
 @nud
 >reclla
 That's not something you can say, do or see here.
-#nudge for nadir
+#ttc-table-of-drain-nadir-nudges-nadir
 >nadri
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for spider
+#ttc-table-of-drain-nadir-nudges-spider
 >spidre
 The diapers, the Ires Pad--the spider only fits in as *a* spider.
 #mistake test for aspired
@@ -683,10 +683,10 @@ You would like to be, but you can't just want others to. Change comes from withi
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
-#nudge for ires
+#ttc-table-of-drain-nadir-nudges-ires
 >irse
 It's an IRES PAD, not just ires.
-#nudge for pad
+#ttc-table-of-drain-nadir-nudges-pad
 >pda
 It's an IRES PAD, not just a pad.
 
@@ -748,7 +748,7 @@ Your score has just gone up by one point
 Ew--mild mildew. A mustier semi-rut.
 
 @nud
-#nudge for glare
+#ttc-table-of-drain-nadir-nudges-glare
 >glaer
 You stare into space some more but get distracted.
 
@@ -756,18 +756,18 @@ You stare into space some more but get distracted.
 #mistake test for snog
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
-#nudge for diapers
+#ttc-table-of-drain-nadir-nudges-diapers
 >despari
 You already twisted yourself into and out of knots from despair. Time to move on!
 
 @nud
-#nudge for song
+#ttc-table-of-drain-nadir-nudges-song
 >sogn
 It's the full song name--I'd Cede.
-#nudge for eddie
+#ttc-table-of-drain-nadir-nudges-eddie
 >eddei
 It's the full song name--I'd Cede.
-#nudge for cede
+#ttc-table-of-drain-nadir-nudges-cede
 >ceed
 It's the full song name--I'd Cede.
 
@@ -824,13 +824,13 @@ The dead air inspires no rad idea.
 You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker.
 
 @nud
-#nudge for shmoe
+#ttc-table-of-boredom-bedroom-nudges-shmoe
 >shmeo
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
-#nudge for home
+#ttc-table-of-boredom-bedroom-nudges-home
 >hoem
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
-#nudge for bedroom
+#ttc-table-of-boredom-bedroom-nudges-bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #mistake test for broomed
@@ -864,7 +864,7 @@ Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the match
 #### test altpath nudge for MASTER before BOLSTER
 >master
 by one point
-#nudge for amrest
+#ttc-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. Time to move on, though you could poke at the lobster.
 >undo
@@ -878,7 +878,7 @@ That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEA
 That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEAL is only six letters. There is a better way to forsake the false pleasure of the pleaser leapers!
 
 @nud
-#nudge for leaper
+#ttc-table-of-boredom-bedroom-nudges-leaper
 >leapre
 You'll probably want to deal with all the pleaser leapers at once.
 #ttc-table-of-troves-readables-pleaser-leapers
@@ -934,7 +934,7 @@ DEBUG INFO: LEAD, All: a Deed hinting.
 {$SCOS}
 
 @nud
-#nudge for bloters
+#ttc-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The lobster nourished you physically. Time to move on, though you could poke at the ME ARTS.
 #ttc-table-of-troves-spechelp-me-arts
@@ -962,10 +962,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#renudge for amrest
+#rettc-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
-#renudge for bloters
+#rettc-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 #ttc-table-of-troves-spechelp-lead
@@ -1010,10 +1010,10 @@ In a public place? Worse, in an upscale public place? How shocking!
 {$SCOS}
 
 @nud
-#nudge for divorce
+#ttc-table-of-browse-bowers-nudges-divorce
 >divorec
 If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
-#nudge for magazine
+#ttc-table-of-browse-bowers-nudges-magazine
 >magazien
 It's not just any magazine. It's DIVORCES!
 #ttc-table-of-troves-spechelp-divorces
@@ -1047,28 +1047,28 @@ A Roiling Original is pretty old school, but it has enough obstacles.
 #mistake test for eiders
 >eiders
 But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
-#nudge for eder
+#ttc-table-of-browse-bowers-nudges-eder
 >edre
 It's Si Reed's full name.
-#nudge for bower
+#ttc-table-of-browse-bowers-nudges-bower
 >obwer
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for bowers
+#ttc-table-of-browse-bowers-nudges-bowers
 >obwers
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for rotunda
+#ttc-table-of-browse-bowers-nudges-rotunda
 >ratundo
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
-#nudge for dour
+#ttc-table-of-browse-bowers-nudges-dour
 >duro
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
-#nudge for tan
+#ttc-table-of-browse-bowers-nudges-tan
 >nta
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
-#nudge for mire
+#ttc-table-of-browse-bowers-nudges-mire
 >mier
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
-#nudge for mires
+#ttc-table-of-browse-bowers-nudges-mires
 >mirse
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
 
@@ -1123,28 +1123,28 @@ The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I r
 #mistake test for once
 >once
 Yes! You only need a chance! Once! To get inside! But you're nowhere near enthused enough.
-#nudge for cone
+#ttc-table-of-econ-cone-nudges-cone
 >coen
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
-#nudge for ave
+#ttc-table-of-econ-cone-nudges-ave
 >aev
 No sense changing the Save Aves. You must change yourself.
-#nudge for aves
+#ttc-table-of-econ-cone-nudges-aves
 >avse
 No sense changing the Save Aves. You must change yourself.
-#nudge for recent
+#ttc-table-of-econ-cone-nudges-recent
 >recetn
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
-#nudge for skyline
+#ttc-table-of-econ-cone-nudges-skyline
 >skylien
 You don't want to mess with the skyline. You want to get in the godlings' lodgings!
-#nudge for godling
+#ttc-table-of-econ-cone-nudges-godling
 >godlign
 The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
-#nudge for godlings
+#ttc-table-of-econ-cone-nudges-godlings
 >godlinsg
 The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
-#nudge for statue
+#ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
 
@@ -1240,7 +1240,7 @@ DEBUG INFO: END PRONER POD hinting.
 #mistake retest for once
 >once
 Yes! You only need a chance! Once! To get inside! You're more than enthused enough, but you need to strategize.
-#renudge for statue
+#rettc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
@@ -1248,7 +1248,7 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #done rejects for rivets
 >striev
 You're striving too hard, now.
-#nudge for ectarian
+#ttc-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates.
 #ttc-table-of-troves-readables-sectarian-craniates
@@ -1277,16 +1277,16 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #done rejects for sectarian craniates
 >craniatse
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
-#renudge for ectarian
+#rettc-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates. But you knew that, since you already "appreciated" it.
-#nudge for edn
+#ttc-table-of-econ-cone-nudges-edn
 >end
 You must deal with the full END PRONER POD.
-#nudge for proner
+#ttc-table-of-econ-cone-nudges-proner
 >pronre
 You must deal with the full END PRONER POD.
-#nudge for pod
+#ttc-table-of-econ-cone-nudges-pod
 >pdo
 You must deal with the full END PRONER POD.
 #ttc-table-of-troves-readables-end-proner-pod
@@ -1299,10 +1299,10 @@ It is, apparently, produced by N-E-PROD corporation.
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
-#nudge for card
+#ttc-table-of-econ-cone-nudges-card
 >cadr
 The card's writing is more important.
-#nudge for cad
+#ttc-table-of-econ-cone-nudges-cad
 >cda
 The card's writing is more important.
 #ttc-table-of-troves-spechelp-end-proner-pod
@@ -1346,7 +1346,7 @@ White noise, it is on. Whee.
 #mistake test for fren
 >fren
 No dog walks along dragging Sebastian in their mouth.
-#nudge for upscale
+#ttc-table-of-upscale-capsule-nudges-upscale
 >upscael
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
@@ -1393,34 +1393,34 @@ You don't need Terry Wogan announcing your progress like it's Eurovision.
 #mistake test for gwano
 >gwano
 Enough with the (redacted) spelling.
-#nudge for shaker
+#ttc-table-of-upscale-capsule-nudges-shaker
 >shakre
 It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
-#nudge for fern
+#ttc-table-of-upscale-capsule-nudges-fern
 >fenr
 The fern is mentally, if not physically, unmalleable.
-#nudge for wagon
+#ttc-table-of-upscale-capsule-nudges-wagon
 >wagno
 You really don't need to rearrange the wonga wagon.
-#nudge for cark
+#ttc-table-of-upscale-capsule-nudges-cark
 >cakr
 The cark rack is built to be sturdy. No need to change it.
-#nudge for sked
+#ttc-table-of-upscale-capsule-nudges-sked
 >skde
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
-#nudge for likeness
+#ttc-table-of-upscale-capsule-nudges-likeness
 >likeness
 It's whoever's in the likeness that matters--Sister Tressi and Marble Blamer Balmer, here.
-#nudge for phasor
+#ttc-table-of-upscale-capsule-nudges-phasor
 >phasro
 You need all that light for late-night work sessions.
-#nudge for pharo
+#ttc-table-of-upscale-capsule-nudges-pharo
 >phaor
 You need all that light for late-night work sessions.
-#nudge for vote
+#ttc-table-of-upscale-capsule-nudges-vote
 >ovet
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
-#nudge for vetos
+#ttc-table-of-upscale-capsule-nudges-vetos
 >ovets
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
 
@@ -1459,7 +1459,7 @@ Your score has just gone up by one point
 /You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
 
 @nud
-#nudge for salt
+#ttc-table-of-upscale-capsule-nudges-salt
 >lats
 You've lasted long enough. There are new things to look at, now.
 
@@ -1486,7 +1486,7 @@ A stern looking fellow who is big on personal responsibility and as ubiquitous a
 #ttc-table-of-troves-readables-blamer-mr-beal
 >read mr beal
 The likeness was drawn up by E. R. Lamb, whose signature is in red.
-#nudge for beal
+#ttc-table-of-upscale-capsule-nudges-beal
 >bela
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
 #mistake test for able
@@ -1515,7 +1515,7 @@ Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous sett
 #ttc-table-of-troves-scannotes-trance-nectar
 >scan trance nectar
 Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
-#nudge for siter
+#ttc-table-of-upscale-capsule-nudges-siter
 >sitre
 All the siters.
 #ttc-table-of-troves-scannotes-creationism-reactionism
@@ -1607,10 +1607,10 @@ DEBUG INFO: Trance Nectar hinting.
 {$SCOMAX}
 
 @nud
-#nudge for marble
+#ttc-table-of-upscale-capsule-nudges-marble
 >marbel
 You already stopped thinking too much about Marble Blamer Balmer. If you try too hard to keep ignoring Marble Blamer Balmer, you'll start thinking about Marble Blamer Balmer, again.
-#nudge for siters
+#ttc-table-of-upscale-capsule-nudges-siters
 >sitesr
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
 

@@ -422,7 +422,7 @@ The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedio
 >rehasb
 The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead.
 \\
-#ttc-table-of-cruelest-lectures-nudges-storse
+#ttc-table-of-stores-nudges-storse
 >stores
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #ttc-table-of-cruelest-lectures-nudges-seating

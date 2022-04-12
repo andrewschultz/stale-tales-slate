@@ -66,48 +66,48 @@ You smile at the slime. It can't be that hard to figure what to do. You even see
 >miles
 You don't want miles and miles of slime.
 
-#nudge for arugula
+#ttc-table-of-others-nudges-arugula
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
 
-#nudge for greenish
+#ttc-table-of-rustic-citrus-nudges-greenish
 >sheerign
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. Perhaps if you had a sense of direction, you could figure how to leave.
-#nudge for storeh
+#ttc-table-of-others-nudges-storeh
 >streho
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#nudge for other
+#ttc-table-of-others-nudges-other
 >oreth
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for rustic
+#ttc-table-of-rustic-citrus-nudges-rustic
 >rucsit
 You can't change this clearing or Curtis, but you don't need to.
-#nudge for plum
+#ttc-table-of-rustic-citrus-nudges-plum
 >pulm
 Well, you don't technically need plurals for this, but you're on the right track
-#nudge for pear
+#ttc-table-of-rustic-citrus-nudges-pear
 >prea
 Well, you don't technically need plurals for this, but you're on the right track
-#nudge for pager
+#ttc-table-of-rustic-citrus-nudges-pager
 >agper
 Well, you don't technically need plurals for this, but you're on the right track
-#nudge for circuit
+#ttc-table-of-rustic-citrus-nudges-circuit
 >circuti
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
-#nudge for circuits
+#ttc-table-of-rustic-citrus-nudges-circuits
 >circuist
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
-#nudge for rtu
+#ttc-table-of-rustic-citrus-nudges-rtu
 >rtu
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
-#nudge for ruts
+#ttc-table-of-rustic-citrus-nudges-ruts
 >urst
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 #mistake test for rust
 >rust
 You're trying to make things MORE organic, not less.
-#nudge for lime
+#ttc-table-of-rustic-citrus-nudges-lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
 #ttc-table-of-others-spechelp-lumps
@@ -153,10 +153,10 @@ Your score has just gone up by one point.
 >score
 You have 4 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
-#nudge for moss
+#ttc-table-of-rustic-citrus-nudges-moss
 >msso
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for cap
+#ttc-table-of-rustic-citrus-nudges-cap
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
@@ -168,16 +168,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's
 >compass
 Your score has just gone up by one point.
 
-#nudge for ditties
+#ttc-table-of-rustic-citrus-nudges-ditties
 >dittise
 The ditties are Curtis's. They're really quite good and don't need changing. You're pretty sure you couldn't improve them, anyway.
 #done rejects for compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
-#renudge for greenish
+#rettc-table-of-rustic-citrus-nudges-greenish
 >sheering
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. So you can only exit to the north.
-#nudge for needle
+#ttc-table-of-others-nudges-needle
 >needel
 The needle is working fine. No need to meddle.
 
@@ -203,7 +203,7 @@ DR. NIMATA.
 The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
 
-#renudge for ruts
+#rettc-table-of-rustic-citrus-nudges-ruts
 >rust
 You found enough in the ruts circuits. No need to bring them back.
 #ttc-table-of-others-spechelp-harmonicas
@@ -211,50 +211,50 @@ You found enough in the ruts circuits. No need to bring them back.
 The harmonicas whistle, as if something happened.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
 
-#nudge for harmonica
+#ttc-table-of-rustic-citrus-nudges-harmonica
 >harmonica
 The harmonicas seem stuck together, so you probably have to deal with both of them.
 
-#nudge for megaton
+#ttc-table-of-rustic-citrus-nudges-megaton
 >megaton
 No, the whole thing. You see several...similar...items here right now.
-#nudge for pera
+#ttc-table-of-rustic-citrus-nudges-pera
 >pear
 No, the whole thing. You see several...similar...items here right now.
-#nudge for mopeage
+#ttc-table-of-rustic-citrus-nudges-mopeage
 >mopeage
 No, the whole thing. You see several...similar...items here right now.
-#nudge for rant
+#ttc-table-of-rustic-citrus-nudges-rant
 >rant
 No, the whole thing. You see several...similar...items here right now.
-#nudge for magenta
+#ttc-table-of-rustic-citrus-nudges-magenta
 >magenta
 No, the whole thing. You see several...similar...items here right now.
-#nudge for roep
+#ttc-table-of-rustic-citrus-nudges-roep
 >rope
 No, the whole thing. You see several...similar...items here right now.
-#nudge for rampage
+#ttc-table-of-rustic-citrus-nudges-rampage
 >rampage
 No, the whole thing. You see several...similar...items here right now.
-#nudge for note
+#ttc-table-of-rustic-citrus-nudges-note
 >note
 No, the whole thing. You see several...similar...items here right now.
-#nudge for dam
+#ttc-table-of-rustic-citrus-nudges-dam
 >amd
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for train
+#ttc-table-of-rustic-citrus-nudges-train
 >intra
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for peanut
+#ttc-table-of-rustic-citrus-nudges-peanut
 >peatun
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for cola
+#ttc-table-of-rustic-citrus-nudges-cola
 >calo
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for blurbs
+#ttc-table-of-rustic-citrus-nudges-blurbs
 >bulbrs
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for eerie
+#ttc-table-of-rustic-citrus-nudges-eerie
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
 
@@ -280,10 +280,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. Th
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
-#nudge for omen
+#ttc-table-of-rustic-citrus-nudges-omen
 >omne
 Not just omen, or prism. It's an omen prism.
-#nudge for prism
+#ttc-table-of-rustic-citrus-nudges-prism
 >prims
 Not just omen, or prism. It's an omen prism.
 
@@ -334,56 +334,56 @@ Your score has just gone up by one point.
 >score
 You have 12 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
 
-#nudge for tekno
+#ttc-table-of-others-nudges-tekno
 >tenok
 There's enough credit on the token. Don't get greedy.
 
 >n
 Swell Wells
 
-#nudge for wells
+#ttc-table-of-swell-wells-nudges-wells
 >swlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for well
+#ttc-table-of-swell-wells-nudges-well
 >wlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for mound
+#ttc-table-of-swell-wells-nudges-mound
 >moudn
 The mound is just for descending. You don't need to change it.
-#nudge for stucco
+#ttc-table-of-swell-wells-nudges-stucco
 >stucoc
 Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing).
-#nudge for elp
+#ttc-table-of-swell-wells-nudges-elp
 >epl
 The whole 'Elp PSA.
-#nudge for pas
+#ttc-table-of-swell-wells-nudges-pas
 >psa
 The whole 'Elp PSA.
-#nudge for riot
+#ttc-table-of-swell-wells-nudges-riot
 >orti
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for cpa
+#ttc-table-of-swell-wells-nudges-cpa
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for miser
+#ttc-table-of-swell-wells-nudges-miser
 >mersi
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for ruble
+#ttc-table-of-swell-wells-nudges-ruble
 >ublre
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for sorer
+#ttc-table-of-swell-wells-nudges-sorer
 >srreo
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for bogey
+#ttc-table-of-swell-wells-nudges-bogey
 >begyo
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for green
+#ttc-table-of-swell-wells-nudges-green
 >grene
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for stain
+#ttc-table-of-swell-wells-nudges-stain
 >sinta
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for tangerine
+#ttc-table-of-swell-wells-nudges-tangerine
 >tangerien
 The green stain could make just one fruit, but why not think bigger? It could become many.
 #ttc-table-of-others-readables-stucco
@@ -454,7 +454,7 @@ The singed design on the coin should make you not just want to deign but DO.
 >deigns
 The singed design on the coin should make you not just want to deign but DO.
 
-#nudge for singed
+#ttc-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the coin. So you should figure what to do, there.
 #ttc-table-of-others-spechelp-coin
@@ -475,7 +475,7 @@ by one point
 by one point
 >s
 Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
-#renudge for singed
+#rettc-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the coins. So you should figure what to do, there.
 >undo
@@ -495,7 +495,7 @@ Even the reds and yellows seem to be blinking here. It's as though the coins nee
 >read singed design
 The singed design on the coins reads, when you look close, property of NISCO.
 >undo
-#nudge for icon
+#ttc-table-of-others-nudges-icon
 >icno
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 >undo
@@ -568,94 +568,94 @@ A thin voice howls "I fled!"
 #mistake retest for fart
 >fart
 This raft isn't as receptive as the one in Anger Range.
-#nudge for liepen
+#ttc-table-of-filed-field-nudges-liepen
 >liepne
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for lieapp
+#ttc-table-of-filed-field-nudges-lieapp
 >lieapp
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for penapp
+#ttc-table-of-filed-field-nudges-penapp
 >penapp
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for lie
+#ttc-table-of-filed-field-nudges-lie
 >lei
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for pen
+#ttc-table-of-filed-field-nudges-pen
 >pne
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for app
+#ttc-table-of-filed-field-nudges-app
 >app
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for piep
+#ttc-table-of-filed-field-nudges-piep
 >piep
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for panel
+#ttc-table-of-filed-field-nudges-panel
 >panle
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for eog
+#ttc-table-of-filed-field-nudges-eog
 >eog
 There's no way to chop the foliage down, but you don't need to.
-#nudge for fail
+#ttc-table-of-filed-field-nudges-fail
 >ifla
 There's no way to chop the foliage down, but you don't need to.
-#nudge for rapt
+#ttc-table-of-filed-field-nudges-rapt
 >rapt
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for figure
+#ttc-table-of-filed-field-nudges-figure
 >fugire
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for utensil
+#ttc-table-of-filed-field-nudges-utensil
 >utsenil
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
-#nudge for spono
+#ttc-table-of-filed-field-nudges-spono
 >spono
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
-#nudge for jagged
+#ttc-table-of-filed-field-nudges-jagged
 >jaggde
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
-#nudge for fidle
+#ttc-table-of-filed-field-nudges-fidle
 >edlif
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for pryerbar
+#ttc-table-of-filed-field-nudges-pryerbar
 >pryerbar
 No, it's both pryer bars
-#nudge for pryer
+#ttc-table-of-filed-field-nudges-pryer
 >pryer
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for bars
+#ttc-table-of-filed-field-nudges-bars
 >bars
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for drupelet
+#ttc-table-of-filed-field-nudges-drupelet
 >drupelet
 No, it's the whole pryer bars.
-#nudge for drupelets
+#ttc-table-of-filed-field-nudges-drupelets
 >drupelets
 No, it's the whole pryer bars
-#nudge for briar
+#ttc-table-of-filed-field-nudges-briar
 >brira
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for briars
+#ttc-table-of-filed-field-nudges-briars
 >barris
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for screen
+#ttc-table-of-filed-field-nudges-screen
 >crenes
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for buried
+#ttc-table-of-filed-field-nudges-buried
 >budrie
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for raft
+#ttc-table-of-filed-field-nudges-raft
 >rfat
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for barber
+#ttc-table-of-filed-field-nudges-barber
 >barbre
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for sickle
+#ttc-table-of-filed-field-nudges-sickle
 >sickel
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for barriers
+#ttc-table-of-filed-field-nudges-barriers
 >barriesr
 The barriers' westness is important.
-#nudge for foliage
+#ttc-table-of-filed-field-nudges-foliage
 >foliaeg
 Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
 #ttc-table-of-others-readables-mean-trowel
@@ -728,7 +728,7 @@ You have 23 of 45 total points for the post-Elvira Others region, though you onl
 >s
 Nice going.
 
-#nudge for bluer
+#ttc-table-of-others-nudges-bluer
 >ubler
 That doesn't really describe the Tekno-Token
 
@@ -811,11 +811,11 @@ You don't need to summon someone who deals in spices, or (dated political joke) 
 >cigar
 That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
 
-#nudge for yell
+#ttc-table-of-clangier-clearing-nudges-yell
 >ylle
 The selly yells just add atmosphere. They can't be changed.
 
-#nudge for yells
+#ttc-table-of-clangier-clearing-nudges-yells
 >yelsl
 The selly yells just add atmosphere. They can't be changed.
 
@@ -832,11 +832,11 @@ The I-Solve Voiles rustle slightly.
 #ttc-table-of-others-scannotes-i-solve-voiles
 >scan i solve voiles
 You make sure it's not just the I-Solve Voiles fluttering about that give such an ambiguous reading. No, it is not.
-#nudge for voile
+#ttc-table-of-clangier-clearing-nudges-voile
 >voiel
 No, it's what's behind the voiles.
 >abstract melon to ll
-#nudge for lemon
+#ttc-table-of-clangier-clearing-nudges-lemon
 >elmon
 You can't focus on just one of the lemons, but you don't need to.
 >abstract melon to clearing
@@ -844,31 +844,31 @@ You can't focus on just one of the lemons, but you don't need to.
 >elmon
 Hm, there must be a better melon than that, but how to ask Len, now.
 >abstract lemons to clearing
-#nudge for price
+#ttc-table-of-clangier-clearing-nudges-price
 >priec
 Hm, no, the pattern of prices
-#nudge for clearing
+#ttc-table-of-clangier-clearing-nudges-clearing
 >clegnira
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for len
+#ttc-table-of-clangier-clearing-nudges-len
 >eln
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
-#nudge for craig
+#ttc-table-of-clangier-clearing-nudges-craig
 >criga
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
-#nudge for nameless
+#ttc-table-of-clangier-clearing-nudges-nameless
 >nameelss
 You can't do anything other than listen to the nameless salesmen, and you don't need to move them out of the way.
-#nudge for superstore
+#ttc-table-of-clangier-clearing-nudges-superstore
 >superstoer
 It's an eyesore, but unlike the Curst Palace, people are still in it--so destroying it would mean big problems. Best to concentrate on the open-air market.
-#nudge for overpriced
+#ttc-table-of-clangier-clearing-nudges-overpriced
 >overpriced
 That's over-thinking it. It's just a peach.
-#nudge for auction
+#ttc-table-of-clangier-clearing-nudges-auction
 >uctiona
 You're probably over-thinking it--just pay attention to what it says, instead.
-#nudge for banner
+#ttc-table-of-clangier-clearing-nudges-banner
 >abnner
 You're probably over-thinking it--just pay attention to what it says, instead.
 #ttc-table-of-others-spechelp-quince
@@ -980,7 +980,7 @@ You have 38 of 45 total points for the post-Elvira Others region, though you onl
 #done rejects for olives
 >olives
 The olives are just find as they are. They're even pitted! No need to change them. I mean, what if they became SO EVIL?
-#renudge for price
+#rettc-table-of-clangier-clearing-nudges-price
 >priec
 No, you already helped correct the prices precis.
 #done rejects for melon
@@ -992,7 +992,7 @@ You got enough of a discount. Really.
 #done rejects for lemons
 >lemosn
 You sour on changing the lemons further.
-#nudge for kumquat
+#ttc-table-of-others-nudges-kumquat
 >kumquta
 The kumquat is in good enough shape. Just return it to Curtis.
 #done rejects for mango
@@ -1012,7 +1012,7 @@ You corrected the prices precis enough.
 >papaysa
 You've already established yourself as a prompt payer.
 >n
-#nudge for halt
+#ttc-table-of-gates-stage-nudges-halt
 >ltha
 The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
 >undo
@@ -1022,10 +1022,10 @@ The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lo
 >d
 Scape Space
 
-#nudge for storage
+#ttc-table-of-others-nudges-storage
 >strogea
 You might break what is in the storage.
-#nudge for great
+#ttc-table-of-others-nudges-great
 >grtea
 You might break what is in the storage. Then it would be neither great nor so great.
 
@@ -1041,35 +1041,35 @@ Art Erd has nowhere to run, and you don't know if you want him taking that So-Gr
 >retard
 You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
 
-#nudge for space
+#ttc-table-of-scape-space-nudges-space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for drawing
+#ttc-table-of-scape-space-nudges-drawing
 >drawign
 The drawing can't be changed. It's stuck to the wall as a warning.
-#nudge for droll
+#ttc-table-of-others-nudges-droll
 >dllor
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
-#nudge for dollar
+#ttc-table-of-others-nudges-dollar
 >dllora
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
-#renudge for singed
+#+ttc-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the icons. So you should figure what to do, there.
-#nudge for designs
+#ttc-table-of-others-nudges-designs
 >desigsn
 The design doesn't need changing. It's what the design's on.
 #ttc-table-of-others-readables-orange
 >read orange
 It's stamped with the word ENGARO in red.
 
-#nudge for red
+#ttc-table-of-scape-space-nudges-red
 >red
 first-name basis
-#nudge for art
+#ttc-table-of-scape-space-nudges-art
 >rat
 first-name basis
-#nudge for drol
+#ttc-table-of-others-nudges-drol
 >drol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 >gs
@@ -1083,19 +1083,19 @@ Lola says nothing back.
 #mistake test for a lol
 >a lol
 You laugh at how silly Dr. Lola Ollard looks on the fake currency.
-#nudge for lola
+#ttc-table-of-others-nudges-lola
 >alol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
-#nudge for tera
+#ttc-table-of-scape-space-nudges-tera
 >tera
 first-name basis
-#nudge for trader
+#ttc-table-of-scape-space-nudges-trader
 >drtear
 Dr. Tera is tarred real good. That's the point of tarring. But she might trade that So-Great Storage.
 >gs
 male
 
-#nudge for lots
+#ttc-table-of-others-nudges-lots
 >ltso
 Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear.
 
@@ -1110,7 +1110,7 @@ You only need the one slot.
 >reeves
 You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
 
-#renudge for lots
+#rettc-table-of-others-nudges-lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
 
@@ -1118,7 +1118,7 @@ After all that work getting it to appear, you don't want to make the lost slot v
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
 !Your score has just gone up by one point.
 
-#nudge for banna
+#ttc-table-of-scape-space-nudges-banna
 >naban
 It's a banna'. The puzzle here is criminally corny, but it's not criminal like Red Rat Art Erd.
 >gs
@@ -1151,14 +1151,14 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr
 >scan dr severe
 Dr. Severe rolls his eyes. "My arguments certainly merit analysis, but there is no quick way to grokking them."
 Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities.
-#nudge for brrhub
+#ttc-table-of-scape-space-nudges-brrhub
 >brrhbu
 It's a burr hub, not the burr hub. A small but important distinction.
 
-#nudge for pace
+#ttc-table-of-scape-space-nudges-pace
 >paec
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for severe
+#ttc-table-of-scape-space-nudges-severe
 >seveer
 You need to change Dr. Severe, title and all.
 
@@ -1180,14 +1180,14 @@ Your score has just gone up by one point.
 You have 42 of 45 total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
-#nudge for guava
+#ttc-table-of-others-nudges-guava
 >guaav
 The guava doesn't need to be changed. Curtis will be happy with it.
 
-#nudge for popstar
+#ttc-table-of-others-nudges-popstar
 >popstra
 You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
-#nudge for passport
+#ttc-table-of-others-nudges-passport
 >passpotr
 The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the
 
@@ -1206,35 +1206,35 @@ You don't need to be part of Yorpwald's Funniest* Home Videos right now.
 #mistake test for poring
 >poring
 You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.
-#nudge for gates
+#ttc-table-of-gates-stage-nudges-gates
 >gesta
 The gate needs to be unlocked some other way.
-#nudge for gate
+#ttc-table-of-gates-stage-nudges-gate
 >geta
 The gate needs to be unlocked some other way.
-#nudge for sagest
+#ttc-table-of-gates-stage-nudges-sagest
 >sagets
 The gate needs to be unlocked some other way.
-#nudge for roping
+#ttc-table-of-gates-stage-nudges-roping
 >rpigon
 You don't need to grapple with the roping, and you don't need the roping to grapple with you.
-#renudge for halt
+#rettc-table-of-gates-stage-nudges-halt
 >ltha
 The halt lath is ineffective, now you have the passport.
-#nudge for arean
+#ttc-table-of-gates-stage-nudges-arean
 >arean
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
-#nudge for nera
+#ttc-table-of-gates-stage-nudges-nera
 >nera
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
-#nudge for valence
+#ttc-table-of-gates-stage-nudges-valence
 >valenec
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
 
 >n
 PERP
 
-#nudge for feeling
+#ttc-table-of-others-nudges-feeling
 >feelign
 You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP.
 #ttc-table-of-others-spechelp-viewer
@@ -1292,7 +1292,7 @@ You've done enough researching, and now you can just go north.
 #redone rejects for viewer
 >viewre
 You've done enough reviewing, and now you can just go north.
-#nudge for repp
+#ttc-table-of-others-nudges-repp
 >repp
 You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. Just go north through the gates.
 

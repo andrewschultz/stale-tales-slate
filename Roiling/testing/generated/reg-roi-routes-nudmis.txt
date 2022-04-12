@@ -77,66 +77,66 @@ The anti-sag sit-a-nag is plenty solid and will stay that way, independent of yo
 >gas
 The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 
-#nudge for poison
+#ttc-table-of-same-mesa-nudges-poison
 >posoni
 The poison stripe is too incorporeal to do bend to your will.
-#nudge for stripe
+#ttc-table-of-same-mesa-nudges-stripe
 >estirp
 The poison stripe is too incorporeal to do bend to your will.
-#nudge for poisonstripe
+#ttc-table-of-same-mesa-nudges-poisonstripe
 >posoniestirp
 The poison stripe is too incorporeal to do bend to your will.
-#nudge for die
+#ttc-table-of-same-mesa-nudges-die
 >edi
 Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined
-#nudge for sin
+#ttc-table-of-same-mesa-nudges-sin
 >ins
 Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined
-#nudge for lairage
+#ttc-table-of-same-mesa-nudges-lairage
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, but maybe noting what's on it will help you get in.
-#nudge for pat
+#ttc-table-of-same-mesa-nudges-pat
 >tpa
 That's not how to get into Pat'S, you reflect.
-#nudge for orcas
+#ttc-table-of-same-mesa-nudges-orcas
 >acros
 Hm, it's Oscar'S.
 >ascors
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
-#nudge for ings
+#ttc-table-of-same-mesa-nudges-ings
 >sgin
 It's what's on the board you need to fix.
-#nudge for board
+#ttc-table-of-same-mesa-nudges-board
 >bodar
 It's what's on the board you need to fix.
-#nudge for adsorbing
+#ttc-table-of-same-mesa-nudges-adsorbing
 >signboadr
 It's what's on the board you need to fix.
-#nudge for worst
+#ttc-table-of-same-mesa-nudges-worst
 >strow
 If you change the ad from the worst, maybe you won't make it better. Maybe you'll make something else even worse. So, focus on the whole.
-#nudge for scripture
+#ttc-table-of-same-mesa-nudges-scripture
 >scripture
 It's more likely that scripture can change you, or help you see something a bit simpler to say
-#nudge for cripture
+#ttc-table-of-same-mesa-nudges-cripture
 >cripture
 It's more likely that scripture can change you, or help you see something a bit simpler to say
-#nudge for picture
+#ttc-table-of-same-mesa-nudges-picture
 >picture
 It's more likely that scripture can change you, or help you see something a bit simpler to say
-#nudge for pictures
+#ttc-table-of-same-mesa-nudges-pictures
 >pictures
 It's more likely that scripture can change you, or help you see something a bit simpler to say
-#nudge for mesa
+#ttc-table-of-same-mesa-nudges-mesa
 >esma
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for rouet
+#ttc-table-of-routes-nudges-rouet
 >utreo
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for storeu
+#ttc-table-of-routes-nudges-storeu
 >utreos
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for satin
+#ttc-table-of-same-mesa-nudges-satin
 >atsin
 The church's name is not as important as its mission.
 #ttc-table-of-routes-scannotes-anti-sag-sit-a-nag
@@ -219,7 +219,7 @@ Score in a scenario: 1 out of 22 total points in the current region, Routes. Low
 #mistake test for noops
 >noops
 The snoop spoon isn't as complicated as assembly language.
-#nudge for spoon
+#ttc-table-of-routes-nudges-spoon
 >ospon
 Instead of bending the spoon, use it to help your magic powers if need be.
 #mistake test for man let/let man
@@ -227,78 +227,78 @@ Instead of bending the spoon, use it to help your magic powers if need be.
 Your heart is in the right place, but telling the mantle to cool it won't do much good.
 >let man
 Your heart is in the right place, but telling the mantle to cool it won't do much good.
-#nudge for circle
+#ttc-table-of-same-mesa-nudges-circle
 >circel
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >x pews
 Mum Ray's Summary!
-#nudge for mum
+#ttc-table-of-routes-nudges-mum
 >mmu
 That document is the stone truth! It doesn't need revisionism or embellishment.
-#nudge for rays
+#ttc-table-of-routes-nudges-rays
 >rysa
 That document is the stone truth! It doesn't need revisionism or embellishment.
-#nudge for summary
+#ttc-table-of-routes-nudges-summary
 >mmurays
 That document is the stone truth! It doesn't need revisionism or embellishment.
-#nudge for ray
+#ttc-table-of-routes-nudges-ray
 >ayr
 That document is the stone truth! It doesn't need revisionism or embellishment.
-#nudge for ummary
+#ttc-table-of-routes-nudges-ummary
 >ummary
 That document is the stone truth! It doesn't need revisionism or embellishment.
-#nudge for chant
+#ttc-table-of-cleric-circle-nudges-chant
 >nchat
 The chant doesn't change. Chants are good at that.
-#nudge for chants
+#ttc-table-of-cleric-circle-nudges-chants
 >nchats
 The chant doesn't change. Chants are good at that.
-#nudge for litany
+#ttc-table-of-cleric-circle-nudges-litany
 >linyta
 The chant doesn't change. Chants are good at that.
-#nudge for reagent
+#ttc-table-of-routes-nudges-reagent
 >regenta
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
-#nudge for cleric
+#ttc-table-of-cleric-circle-nudges-cleric
 >cicler
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for list
+#ttc-table-of-cleric-circle-nudges-list
 >ilst
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
-#nudge for toils
+#ttc-table-of-cleric-circle-nudges-toils
 >ostil
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
-#nudge for kyries
+#ttc-table-of-cleric-circle-nudges-kyries
 >kyrise
 You can't change the music, but you don't need to.
-#nudge for kyrie
+#ttc-table-of-cleric-circle-nudges-kyrie
 >kyrei
 You can't change the music, but you don't need to.
-#nudge for grano
+#ttc-table-of-cleric-circle-nudges-grano
 >grano
 You can't change the music, but you don't need to.
-#nudge for granos
+#ttc-table-of-cleric-circle-nudges-granos
 >granos
 You can't change the music, but you don't need to.
-#nudge for poisno
+#ttc-table-of-cleric-circle-nudges-poisno
 >poisno
 The oopsin' priest can't be changed that easily. You'll have to search around for better ways to poke at things
-#nudge for striep
+#ttc-table-of-cleric-circle-nudges-striep
 >striep
 The oopsin' priest can't be changed that easily. You'll have to search around for better ways to poke at things
-#renudge for reagent
+#rettc-table-of-cleric-circle-nudges-reagent
 >regenta
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
-#nudge for rebroth
+#ttc-table-of-cleric-circle-nudges-rebroth
 >rebroth
 It's not Brother Horbert who needs changing but the Same Mesa.
-#nudge for pews
+#ttc-table-of-cleric-circle-nudges-pews
 >pwes
 No vandalizing church property.
-#nudge for pew
+#ttc-table-of-cleric-circle-nudges-pew
 >pwe
 No vandalizing church property.
-#nudge for lament
+#ttc-table-of-cleric-circle-nudges-lament
 >letman
 You can't change stuff like that by brute force. But you don't need to.
 
@@ -309,34 +309,34 @@ Precise recipes
 #mistake test for opposite
 >opposite
 Hm. The list doesn't seem to be what you need to stand opposite from. If it were, maybe Brother Horbert could and would have.
-#nudge for boko
+#ttc-table-of-routes-nudges-boko
 >boko
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
-#nudge for runedbook
+#ttc-table-of-routes-nudges-runedbook
 >obokduren
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
-#nudge for pipesoot
+#ttc-table-of-routes-nudges-pipesoot
 >pipesoto
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
-#nudge for stupor
+#ttc-table-of-routes-nudges-stupor
 >suptro
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 
 >out
 
-#renudge for die
+#rettc-table-of-cleric-circle-nudges-die
 >edi
 The words themselves do nothing. You found the way in.
-#renudge for sin
+#rettc-table-of-cleric-circle-nudges-sin
 >ins
 The words themselves do nothing. You found the way in.
-#nudge for uhh
+#ttc-table-of-same-mesa-nudges-uhh
 >uhh
 Perhaps it's better and simpler to focus on the proper names instead.
-#nudge for tut
+#ttc-table-of-same-mesa-nudges-tut
 >ttu
 Perhaps it's better and simpler to focus on the proper names instead.
-#nudge for resto
+#ttc-table-of-same-mesa-nudges-resto
 >resot
 Perhaps it's better and simpler to focus on the proper names instead.
 
@@ -365,26 +365,26 @@ Concerned parents won't be able to help you here.
 #mistake test for lied
 >lied
 There has been no false advertising.
-#nudge for idle
+#ttc-table-of-idle-deli-nudges-idle
 >elid
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for seed
+#ttc-table-of-idle-deli-nudges-seed
 >edes
 The whole seed pit.
-#nudge for pit
+#ttc-table-of-idle-deli-nudges-pit
 >ipt
 The whole seed pit.
-#nudge for putcries
+#ttc-table-of-idle-deli-nudges-putcries
 >picturse
 The pictures aren't here, and they're not what you need to deal with, anyway.
-#nudge for pta
+#ttc-table-of-idle-deli-nudges-pta
 >tpa
 You don't need to do anything with Pat, but maybe you can get by him to that seed pit.
-#nudge for carvings
+#ttc-table-of-idle-deli-nudges-carvings
 >cravinsg
 It's not the carvings that need changing.
 !You got
-#nudge for carving
+#ttc-table-of-idle-deli-nudges-carving
 >cravign
 It's not the carvings that need changing.
 !You got
@@ -442,39 +442,39 @@ Actually, Pat's advice may not be apt.
 >proust
 Alas, the stupor sprout has nothing in common with madeleine.
 
-#renudge for carvings
+#rettc-table-of-idle-deli-nudges-carvings
 >cravinsg
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
-#renudge for carving
+#rettc-table-of-idle-deli-nudges-carving
 >cravign
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 
-#renudge for stupor
+#rettc-table-of-idle-deli-nudges-stupor
 >surpot
 Brother Horbert will work his magic with that.
-#nudge for reagents
+#ttc-table-of-routes-nudges-reagents
 >reagenst
 Brother Horbert will do his magic on the reagents at the right time.
-##nudge for reagent
+#ttc-table-of-routes-nudges-reagent
 >reagetn
 Brother Horbert will do his magic on the reagents at the right time.
-#renudge for pta
+#rettc-table-of-idle-deli-nudges-pta
 >tpa
 You don't need to do anything with Pat, especially now you got the stupor sprout.
 
 >out
 
-#renudge for resto
+#rettc-table-of-idle-deli-nudges-resto
 >resot
 You did well enough to focus on the proper names instead.
 #ttc-table-of-routes-spechelp-lairage-regalia
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
-#nudge for sos
+#ttc-table-of-same-mesa-nudges-sos
 >sso
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
-#nudge for arc
+#ttc-table-of-same-mesa-nudges-arc
 >acr
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
 #mistake test for car
@@ -497,22 +497,22 @@ Adobe Abode
 #mistake retest for orcas
 >orcas
 But the whales would be beached. Besides, it's the pipe soot you want
-#nudge for trashy
+#ttc-table-of-adobe-abode-nudges-trashy
 >trasyh
 It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats. Maybe it's the pipe soot you want.
-#nudge for ashtray
+#ttc-table-of-adobe-abode-nudges-ashtray
 >atrasyh
 It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats. Maybe it's the pipe soot you want.
-#nudge for adobe
+#ttc-table-of-adobe-abode-nudges-adobe
 >edoba
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for pipe
+#ttc-table-of-routes-nudges-pipe
 >eppi
 Brother Horbert will work his magic with that.
-#nudge for soot
+#ttc-table-of-routes-nudges-soot
 >toos
 Brother Horbert will work his magic with that.
-#nudge for oscar
+#ttc-table-of-adobe-abode-nudges-oscar
 >ocras
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
@@ -547,13 +547,13 @@ Brother Horbert will work his magic with that.
 #mistake retest for poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And the pipe soot is icky enough as-is.
-#renudge for uhh
+#rettc-table-of-adobe-abode-nudges-uhh
 >uhh
 You did well enough to focus on the proper names instead.
-#renudge for tut
+#rettc-table-of-adobe-abode-nudges-tut
 >ttu
 You did well enough to focus on the proper names instead.
-#renudge for sos
+#rettc-table-of-adobe-abode-nudges-sos
 >oss
 You already figured how to get into Oscar's. There's nothing else to do.
 #done rejects for lairage regalia
@@ -566,13 +566,13 @@ No, you don't see any other way around the signboard to enter. You don't need on
 >inseid
 The picturers were pretty strict about what they suggested. Not much else you can do with them.
 
-#renudge for orcas
+#rettc-table-of-adobe-abode-nudges-orcas
 >ocras
 No, you found the way in, with the extra s.
-#renudge for lairage
+#rettc-table-of-adobe-abode-nudges-lairage
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to, now you've visited Oscar.
-#nudge for bench
+#ttc-table-of-same-mesa-nudges-bench
 >enchb
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
@@ -582,11 +582,11 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the sit a nag. That's a decent omen. ??
 
-#nudge for anti
+#ttc-table-of-same-mesa-nudges-anti
 >anit
 The whole anti-sag sit-a-nag.
 
-#nudge for sag
+#ttc-table-of-same-mesa-nudges-sag
 >sga
 The whole anti-sag sit-a-nag.
 
@@ -605,7 +605,7 @@ A Roiling Original is not violent enough for tags with gats.
 >stag
 Ian Gast already came alone and does not deserve to be changed into an animal.
 
-#nudge for gast
+#ttc-table-of-same-mesa-nudges-gast
 >gsta
 You can't change Ian Gast permanently. You just have to work around him.
 #mistake retest for staider
@@ -614,17 +614,17 @@ Ian Gast fails to calm down. Perhaps you just need to position yourself correctl
 #done rejects for gast
 >againts
 You already leaned on the anti-sag sit-a-nag right. You look around it and wonder if the side art could stop Ian Gast's tirades.
-#nudge for ides
+#ttc-table-of-same-mesa-nudges-ides
 >idse
 It's the whole side art you need to deal with.
-#nudge for tra
+#ttc-table-of-same-mesa-nudges-tra
 >tar
 It's the whole side art you need to deal with.
 
 #mistake retest for under
 >under
 You can't hide from Ian Gast like that, right now.
-#nudge for tirade
+#ttc-table-of-same-mesa-nudges-tirade
 >tiraed
 There's more than one tirade
 
@@ -662,7 +662,7 @@ You got on the anti-sag sit-a-nag right. Time to start ducking.
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
-#renudge for tirade
+#rettc-table-of-same-mesa-nudges-tirade
 >atired
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 
@@ -675,15 +675,15 @@ The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
 
-#nudge for woe
+#ttc-table-of-same-mesa-nudges-woe
 >weo
 It seems best to deal with the whole WOE BOW BELL.
 
-#nudge for bow
+#ttc-table-of-same-mesa-nudges-bow
 >bwo
 It seems best to deal with the whole WOE BOW BELL.
 
-#nudge for bell
+#ttc-table-of-same-mesa-nudges-bell
 >bell
 It seems best to deal with the whole WOE BOW BELL.
 
@@ -708,7 +708,7 @@ You already tried this preposition. There must be others.
 >belwo
 You don't want the WOE BOW BELL to come back.
 
-#nudge for giatn
+#ttc-table-of-same-mesa-nudges-giatn
 >igtan
 Ian Gast is too old and set in his ways. You may just need to listen to him from one more angle.
 >gs
@@ -723,7 +723,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That'
 #ttc-table-of-routes-scannotes-rude-n-nuder
 >scan rude n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
-#nudge for rude
+#ttc-table-of-same-mesa-nudges-rude
 >urde
 That's not quite the book's whole title.
 
@@ -741,13 +741,13 @@ Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
 #done rejects for u nerd endur redun
 >undre
 You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that.
-#renudge for boko
+#rettc-table-of-same-mesa-nudges-boko
 >obok
 Brother Horbert will work his magic with that.
-#renudge for runedbook
+#rettc-table-of-same-mesa-nudges-runedbook
 >obokduren
 Brother Horbert will work his magic with that.
-#renudge for pipesoot
+#rettc-table-of-same-mesa-nudges-pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
 
@@ -758,7 +758,7 @@ Brother Horbert will work his magic with that.
 Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
 
-#nudge for towards
+#ttc-table-of-same-mesa-nudges-towards
 >towarsd
 You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
 
@@ -769,10 +769,10 @@ You search around for the worst ad some more, but you can't find it, or anything
 #mistake test for along
 >along
 You aren't far enough along to, err, look along
-#nudge for bev
+#ttc-table-of-same-mesa-nudges-bev
 >bve
 The whole beverage name must be where it's at.
-#nudge for ova
+#ttc-table-of-same-mesa-nudges-ova
 >oav
 The whole beverage name must be where it's at.
 #ttc-table-of-routes-scannotes-a-bev-o-be-ova
@@ -781,7 +781,7 @@ That's a lot of questions for such a small bottle, but it can't be too hard.
 #ttc-table-of-routes-readables-a-bev-o-be-ova
 >read be ova
 The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
-#nudge for along
+#ttc-table-of-routes-nudges-along
 >alogn
 You suspect you have a little way to go before finding clues of No-Lag Logan.
 
@@ -808,7 +808,7 @@ You already went UNDER. You need something new. Something slightly different.
 #done rejects for the bean
 >ofmr
 The MORF-FORM has, uh, morphed enough. Deal with THE BEAN.
-#nudge for bean
+#ttc-table-of-same-mesa-nudges-bean
 >bena
 THE BEAN has too much gravitas to be just a bean.
 #ttc-table-of-routes-spechelp-the-bean
@@ -827,10 +827,10 @@ Your score has just gone up by one point
 
 Harms Marsh
 
-#nudge for null
+#ttc-table-of-harms-marsh-nudges-null
 >null
 The whole NULL-IT UNIT.
-#nudge for unit
+#ttc-table-of-harms-marsh-nudges-unit
 >unti
 The whole NULL-IT UNIT.
 # above the proper name has unit lower-cased, but we want to tell the anagram
@@ -840,22 +840,22 @@ Helicopters can't make it underground.
 #mistake retest for along
 >along
 There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
-#nudge for marsh
+#ttc-table-of-harms-marsh-nudges-marsh
 >marhs
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for harm
+#ttc-table-of-harms-marsh-nudges-harm
 >hamr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for darknses
+#ttc-table-of-harms-marsh-nudges-darknses
 >darknses
 The darkness has always been there and always will be. You need to find a way to say it was dark.
-#nudge for dakr
+#ttc-table-of-harms-marsh-nudges-dakr
 >dakr
 The darkness has always been there and always will be. You need to find a way to say it was dark
-#nudge for sheol
+#ttc-table-of-harms-marsh-nudges-sheol
 >shelo
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
-#nudge for hole
+#ttc-table-of-harms-marsh-nudges-hole
 >hoel
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 
@@ -884,13 +884,13 @@ You thought you saw an un-road for a second, but ... not quite.
 #ttc-table-of-routes-scannotes-odd-run-on-aura
 >scan odd run on aura
 With only one ambiguous setting, the light should soon go on for you to figure where and how to go.
-#nudge for aura
+#ttc-table-of-harms-marsh-nudges-aura
 >auar
 The whole odd run on aura.
-#nudge for run
+#ttc-table-of-harms-marsh-nudges-run
 >rnu
 The whole odd run on aura.
-#nudge for odd
+#ttc-table-of-harms-marsh-nudges-odd
 >odd
 The whole odd run on aura.
 #done rejects for odd run on aura
@@ -898,7 +898,7 @@ The whole odd run on aura.
 >untli
 The underground is already lit. Un-unlit.
 
-#nudge for pyrites
+#ttc-table-of-harms-marsh-nudges-pyrites
 >pyrites
 not something you
 #ttc-table-of-routes-spechelp-odd-run-on-aura
@@ -909,10 +909,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura.
 >around
 Your score has just gone up by one point
 
-#renudge for pyrites
+#rettc-table-of-harms-marsh-nudges-pyrites
 >pyrites
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
-#nudge for pyrite
+#ttc-table-of-harms-marsh-nudges-pyrite
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 
@@ -930,19 +930,19 @@ Your score has just gone up by one point
 
 Ripe Pier
 
-#nudge for pier
+#ttc-table-of-ripe-pier-nudges-pier
 >pire
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for mist
+#ttc-table-of-ripe-pier-nudges-mist
 >mits
 You'll have to deal with the whole data-dim mists.
-#nudge for mists
+#ttc-table-of-ripe-pier-nudges-mists
 >mitss
 You'll have to deal with the whole data-dim mists.
-#nudge for data
+#ttc-table-of-ripe-pier-nudges-data
 >atad
 You'll have to deal with the whole data-dim mists.
-#nudge for dim
+#ttc-table-of-ripe-pier-nudges-dim
 >mid
 You'll have to deal with the whole data-dim mists.
 #ttc-table-of-routes-readables-admits-mist-ad
@@ -971,13 +971,13 @@ Your score has just gone up by one point
 
 Cripple Clipper
 
-#nudge for mess
+#ttc-table-of-cripple-clipper-nudges-mess
 >mess
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
-#nudge for spume
+#ttc-table-of-cripple-clipper-nudges-spume
 >spuem
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
-#nudge for spumes
+#ttc-table-of-cripple-clipper-nudges-spumes
 >spumse
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 #mistake test for abroad/aboard
@@ -988,16 +988,16 @@ Now you have the bad oar and you're aboard, you know you need to go abroad, but-
 #mistake test for feer
 >feer
 Fearing or pretending fake fear won't help, here.
-#nudge for clipper
+#ttc-table-of-cripple-clipper-nudges-clipper
 >clippre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for reef
+#ttc-table-of-cripple-clipper-nudges-reef
 >refe
 The reef is not changed. Perhaps you can deal with what's on it.
-#nudge for sketchin
+#ttc-table-of-cripple-clipper-nudges-sketchin
 >sketchni
 No need to alter them. Worth looking at, though.
-#nudge for sketchins
+#ttc-table-of-cripple-clipper-nudges-sketchins
 >sketchisn
 No need to alter them. Worth looking at, though.
 #ttc-table-of-routes-spechelp-thickness-sketchins
@@ -1035,16 +1035,16 @@ No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start p
 #mistake test for spatter
 >spatter
 No violence!
-#nudge for canyon
+#ttc-table-of-sonancy-canyons-nudges-canyon
 >canyno
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for canyons
+#ttc-table-of-sonancy-canyons-nudges-canyons
 >canyosn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for patter
+#ttc-table-of-sonancy-canyons-nudges-patter
 >pattre
 It's more the content of the patters that you could deal with, if you wanted.
-#nudge for patters
+#ttc-table-of-sonancy-canyons-nudges-patters
 >pattesr
 It's more the content of the patters that you could deal with, if you wanted.
 #ttc-table-of-routes-spechelp-bent-ewe
@@ -1054,10 +1054,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's
 #re#ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
-#nudge for spheric
+#ttc-table-of-sonancy-canyons-nudges-spheric
 >spherci
 The ciphers cannot be dispelled.
-#nudge for cipher
+#ttc-table-of-sonancy-canyons-nudges-cipher
 >ciphre
 The ciphers cannot be dispelled.
 

@@ -123,10 +123,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 ##balance undos
 >remap
 by one point
-#nudge for remap
+#ttc-table-of-posh-hops-shop-nudges-remap
 >rempa
 You already got a temporary escape from the bad music. You can't really do any more, there.
-#nudge for unset
+#ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
 >undo
@@ -199,19 +199,19 @@ The bar fails to change into an ethnic restaurant.
 #mistake test for spyte
 >spyte
 The pesty types probably spell it that way, but I'm not letting YOU do so.
-#nudge for pti
+#ttc-table-of-posh-hops-shop-nudges-pti
 >pti
 You can't pick out which pit to do something to. Maybe there's an action to apply to all of them.
-#nudge for vets
+#ttc-table-of-posh-hops-shop-nudges-vets
 >vest
 Focus on the trolls, not their clothes.
-#nudge for vet
+#ttc-table-of-posh-hops-shop-nudges-vet
 >vte
 Focus on the trolls, not their clothes.
-#nudge for pesty
+#ttc-table-of-posh-hops-shop-nudges-pesty
 >pesyt
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
-#nudge for type
+#ttc-table-of-posh-hops-shop-nudges-type
 >tyep
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
 >inset
@@ -226,7 +226,7 @@ by one point
 #done rejects for tips pits
 >spti
 You can't and don't want to do anything else to the tips pits.
-#renudge for pti
+#+ttc-table-of-posh-hops-shop-nudges-pti
 >pti
 You already dealt with the tips pits.
 >undo
@@ -313,38 +313,38 @@ The pills can't be that fidgety. The particular brand must be a clue, too.
 Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
 
 @nud
-#nudge for storey
+#ttc-table-of-oyster-nudges-storey
 >storye
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for posh
+#ttc-table-of-posh-hops-shop-nudges-posh
 >pohs
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for tine
+#ttc-table-of-posh-hops-shop-nudges-tine
 >tien
 Just one tine doesn't seem up to much.
-#nudge for troll
+#ttc-table-of-posh-hops-shop-nudges-troll
 >troll
 Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take 'em all, somehow.
-#nudge for recap
+#ttc-table-of-posh-hops-shop-nudges-recap
 >recpa
 Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You need to deal with them all.
-#nudge for tune
+#ttc-table-of-posh-hops-shop-nudges-tune
 >tuen
 Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of 'em all.
-#nudge for jar
+#ttc-table-of-oyster-nudges-jar
 >jra
 You suspect it's what's in the jar that's important.
-#nudge for spill
+#ttc-table-of-oyster-nudges-spill
 >splil
 You seem to be fumbling what to do with the pills.
-#nudge for jukebox
+#ttc-table-of-posh-hops-shop-nudges-jukebox
 >jukebxo
 You can't work on the jukebox as a whole, but maybe you could meddle with its two main parts: the tunes and perma-amper
 #ttc-table-of-oyster-spechelp-perma-amper
 >rempa
 You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
-#renudge for unset
+#+ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 The tunes grow slightly less annoying, for a moment.
 #not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
@@ -354,13 +354,13 @@ by one point
 >unset
 !(tunes)
 You already dealt with the tunes and perma-amper.
-#renudge for unset
+#+ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
-#renudge for remap
+#+ttc-table-of-posh-hops-shop-nudges-remap
 >rempa
 You already got a temporary escape from the bad music. You can't really do any more, there.
-#renudge for jukebox
+#+ttc-table-of-posh-hops-shop-nudges-jukebox
 >jukebxo
 The jukebox is already temporarily out of commission.
 >undo
@@ -477,13 +477,13 @@ A weapon won't do much good here. You need action!
 #mistake test for el doodle
 >el doodle
 That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.
-#nudge for lode
+#ttc-table-of-olde-lode-nudges-lode
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for braes
+#ttc-table-of-olde-lode-nudges-braes
 >brase
 The baser braes can't be changed. There is enough to do in the Olde Lode.
-#nudge for brae
+#ttc-table-of-olde-lode-nudges-brae
 >brea
 The baser braes can't be changed. There is enough to do in the Olde Lode.
 #ttc-table-of-oyster-spechelp-clam
@@ -526,7 +526,7 @@ DEBUG INFO: urn hinting.
 {$SCOS}
 
 @nud
-#nudge for calm
+#ttc-table-of-olde-lode-nudges-calm
 >clma
 Odd! Now, you feel a need to panic and flee after calming the clam.
 #ttc-table-of-oyster-spechelp-urn
@@ -613,19 +613,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oar
 Perhaps if you were louder and more confident, the sabot boats would hear you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. That's a decent omen.
 \\
-#nudge for seaside
+#ttc-table-of-disease-seaside-nudges-seaside
 >seasied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for streamlet
+#ttc-table-of-disease-seaside-nudges-streamlet
 >streamlte
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
-#nudge for streamlets
+#ttc-table-of-disease-seaside-nudges-streamlets
 >streamlest
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
 #mistake test for a cone
 >a cone
 That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.
-#nudge for canoe
+#ttc-table-of-disease-seaside-nudges-canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
 #mistake test for ocean
@@ -638,43 +638,43 @@ The canoe is all red and has a fish carved into it. The fish seems to be trying 
 >ocean
 As you seek to change the canoe, you hear a rush of water and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
 >undo
-#nudge for soak
+#ttc-table-of-disease-seaside-nudges-soak
 >soka
 No, best concentrate on what the raft is.
-#nudge for oak
+#ttc-table-of-disease-seaside-nudges-oak
 >oka
 No, best concentrate on what the raft is.
-#nudge for fish
+#ttc-table-of-disease-seaside-nudges-fish
 >fihs
 T'fish won't shift nowt.
-#nudge for herring
+#ttc-table-of-disease-seaside-nudges-herring
 >herrign
 Nothing doing. It is, after all, a RED herring. Ba dum bum.
-#nudge for sculpture
+#ttc-table-of-disease-seaside-nudges-sculpture
 >sculptuer
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
-#nudge for cult
+#ttc-table-of-disease-seaside-nudges-cult
 >cutl
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
-#nudge for super
+#ttc-table-of-disease-seaside-nudges-super
 >supre
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
-#nudge for river
+#ttc-table-of-disease-seaside-nudges-river
 >rivre
 That would cause serious injury to people and property, even if it could work.
-#nudge for rivera
+#ttc-table-of-disease-seaside-nudges-rivera
 >rivear
 That would cause serious injury to people and property, even if it could work.
-#nudge for saccade
+#ttc-table-of-disease-seaside-nudges-saccade
 >saccaed
 That would cause serious injury to people and property, even if it could work.
-#nudge for oar
+#ttc-table-of-disease-seaside-nudges-oar
 >ora
 If you looked at just one oar, the raft would do no better than go in circles.
-#nudge for boat
+#ttc-table-of-disease-seaside-nudges-boat
 >bota
 No one boat seems better than the others. Maybe you should widen your focus to all the boats.
-#nudge for interlocking
+#ttc-table-of-disease-seaside-nudges-interlocking
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
 #ttc-table-of-oyster-scannotes-frat-raft
@@ -767,19 +767,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for refight
 >refight
 That's not very good English, and you haven't gotten in a fight yet. Soon, though.
-#nudge for freight
+#ttc-table-of-fighter-freight-nudges-freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for bota
+#ttc-table-of-fighter-freight-nudges-bota
 >boat
 Destroying the boat would be a bad idea. You need to escape it.
-#nudge for boats
+#ttc-table-of-fighter-freight-nudges-boats
 >basto
 Destroying the boat would be a bad idea. You need to escape it.
-#nudge for crays
+#ttc-table-of-fighter-freight-nudges-crays
 >crasy
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
-#nudge for cray
+#ttc-table-of-fighter-freight-nudges-cray
 >crya
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 #ttc-table-of-oyster-spechelp-pale-plea
@@ -859,13 +859,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
-#nudge for anger
+#ttc-table-of-anger-range-nudges-anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for pike
+#ttc-table-of-anger-range-nudges-pike
 >piek
 You need to deal with all the bullies at once, somehow, not just one at a time.
-#nudge for carp
+#ttc-table-of-anger-range-nudges-carp
 >capr
 You need to deal with all the bullies at once, somehow, not just one at a time.
 #ttc-table-of-oyster-spechelp-carps
@@ -961,12 +961,12 @@ You feel mad the letters settler isn't giving you information RIGHT NOW. Then yo
 #ttc-table-of-oyster-readables-HUNTER-HUNT-AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
-#nudge for scrawl
+#ttc-table-of-anger-range-nudges-scrawl
 >scralw
 It's a HUNTER HUNT AREA, which seems more important.
 
 @nud
-#nudge for darnel
+#ttc-table-of-anger-range-nudges-darnel
 >darnle
 If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
 #ttc-table-of-oyster-scannotes-snarled-darnels
@@ -1016,7 +1016,7 @@ Anger Range won't be helped further by an advice column or columnist.
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
 @nud
-#renudge for darnel
+#+ttc-table-of-anger-range-nudges-darnel
 >darnle
 You already got mad at all the snarled darnels. You need to move on.
 #done rejects for snarled darnels
@@ -1050,25 +1050,25 @@ You squint. NASC is the name of the company that produced these cans, written in
 >eesk
 You guess the eeks must be there--no, there!
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a decent omen.
-#nudge for hardest
+#ttc-table-of-hardest-trashed-dearths-nudges-hardest
 >hardets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for hardet
+#ttc-table-of-hardest-trashed-dearths-nudges-hardet
 >hardte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for spark
+#ttc-table-of-hardest-trashed-dearths-nudges-spark
 >spakr
 You don't need or want to destabilize the spark parks.
-#nudge for park
+#ttc-table-of-hardest-trashed-dearths-nudges-park
 >pakr
 You don't need or want to destabilize the spark parks.
-#nudge for can
+#ttc-table-of-hardest-trashed-dearths-nudges-can
 >cna
 Getting rid of one can would still leave a mess. Maybe you can deal with them all.
-#nudge for cans
+#ttc-table-of-hardest-trashed-dearths-nudges-cans
 >casn
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
-#nudge for eek
+#ttc-table-of-hardest-trashed-dearths-nudges-eek
 >eke
 You try to eke out an eek, but you only have one data point, and that's not enough.
 
@@ -1178,10 +1178,10 @@ ETA's one move later now that you went fishing for this anagram.
 #mistake test for neal
 >neal
 It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.
-#nudge for lean
+#ttc-table-of-lean-lane-nudges-lean
 >elna
 You would upset countless people named Lena or Neal.
-#nudge for reward
+#ttc-table-of-lean-lane-nudges-reward
 >rewadr
 Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
 #ttc-table-of-oyster-spechelp-dent
@@ -1194,7 +1194,7 @@ You anticipate Aunt Tuna telling you to stop playing with your food, already.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
 
 @nud
-#nudge for tuna
+#ttc-table-of-lean-lane-nudges-tuna
 >tuan
 She is a bit fussy, but she is more than okay as she is.
 
@@ -1239,7 +1239,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#nudge for dent
+#ttc-table-of-lean-lane-nudges-dent
 >detn
 You already fixed the dent. It's gone.
 
@@ -1285,7 +1285,7 @@ Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find 
 #mistake test for wrap [text]
 >wrap zozimus
 The bubble wrap is already covering something.
-#renudge for reward
+#+ttc-table-of-lean-lane-nudges-reward
 >rewadr
 There's nothing else in the drawer and no way to get in by yourself.
 #done rejects for trout
@@ -1295,18 +1295,18 @@ Retutor? Torture. Rot. True!
 >wrpa
 That's not quite the way to pop the Paw-R-Wrap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That's a decent omen.
-#nudge for bubble
+#ttc-table-of-oyster-nudges-bubble
 >bubbel
 It's just wrap, really.
-#nudge for bubblewrap
+#ttc-table-of-oyster-nudges-bubblewrap
 >bubblewrpa
 It's just wrap, really.
 
 @nud
-#nudge for wipe
+#ttc-table-of-lean-lane-nudges-wipe
 >wiep
 It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
-#nudge for pearl
+#ttc-table-of-oyster-nudges-pearl
 >pealr
 The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
 #ttc-table-of-oyster-spechelp-wipes
@@ -1329,7 +1329,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#renudge for wipe
+#+ttc-table-of-lean-lane-nudges-wipe
 >wiep
 You will need to use them all at once, and on something else
 
@@ -1397,48 +1397,48 @@ The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
 #done rejects for wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
-#nudge for acters
+#ttc-table-of-lapsin'-plains-nudges-acters
 >actesr
 Hmm, no, it's only one crate at a time.
-#nudge for debris
+#ttc-table-of-lapsin'-plains-nudges-debris
 >debrsi
 You can't learn much from the debris. You're pretty sure it's from a crate.
-#nudge for fragments
+#ttc-table-of-lapsin'-plains-nudges-fragments
 >fragmenst
 They're fragments of a crate--this may or may not help.
-#nudge for fragment
+#ttc-table-of-lapsin'-plains-nudges-fragment
 >fragmetn
 They're fragments of a crate--this may or may not help.
-#nudge for shut
+#ttc-table-of-lapsin'-plains-nudges-shut
 >shtu
 The huts are too secure, but maybe you can go by the pans.
-#nudge for hut
+#ttc-table-of-lapsin'-plains-nudges-hut
 >htu
 The huts are too secure, but maybe you can go by the pans.
-#nudge for plain
+#ttc-table-of-lapsin'-plains-nudges-plain
 >plani
 "I...plan," you think, then in a fit of confidence, "I...PLANS!"
-#nudge for polyp
+#ttc-table-of-lapsin'-plains-nudges-polyp
 >polpy
 You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further.
-#nudge for polyps
+#ttc-table-of-lapsin'-plains-nudges-polyps
 >polysp
 You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further.
-#nudge for inthere
+#ttc-table-of-lapsin'-plains-nudges-inthere
 >intheer
 The words on the pans don't change. They are just a generic taunt.
-#nudge for pna
+#ttc-table-of-lapsin'-plains-nudges-pna
 >pan
 There are two pans.
-#nudge for isk
+#ttc-table-of-lapsin'-plains-nudges-isk
 >iks
 But you need to remove both skis.
 \\
-#nudge for open
+#ttc-table-of-lapsin'-plains-nudges-open
 >opne
 The words on the pans don't change. They are just a generic taunt.
 \\
-#nudge for doorknob
+#ttc-table-of-lapsin'-plains-nudges-doorknob
 >doorknbo
 It's just a knob. Which thankfully cuts down the possibilities.
 \\
@@ -1510,7 +1510,7 @@ DEBUG INFO: min-up codepath
 #done rejects for bogus-plains
 >splani
 You start up a grand lecture again, but you feel something spinal and think "I...plans." Time to move on.
-#renudge for plain
+#+ttc-table-of-lapsin'-plains-nudges-plain
 >plani
 You had your say.
 
@@ -1539,7 +1539,7 @@ You can SNAP to clear the span pans once everything else is out of the way.
 #mistake retest for thus
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
-#renudge for acters
+#+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
 
@@ -1586,7 +1586,7 @@ You would, but you would probably get hit with the crate. You need to anticipate
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#renudge for acters
+#+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
 #re#ttc-table-of-oyster-spechelp-crate
@@ -1605,7 +1605,7 @@ DEBUG INFO: skis hinting.
 {$SCOS}
 
 @nud
-#renudge for acters
+#+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
 #mistake retest for caret
@@ -1614,10 +1614,10 @@ You needed to shift letters and not sixes, here.
 #done rejects for crate
 >craet
 Besides identifying it as a rect, you can't do much else with the crate.
-#renudge for fragments
+#+ttc-table-of-lapsin'-plains-nudges-fragments
 >fragmenst
 Not worth messing with the fragments any more.
-#renudge for fragment
+#+ttc-table-of-lapsin'-plains-nudges-fragment
 >fragmetn
 Not worth messing with the fragments any more.
 
@@ -1699,16 +1699,16 @@ You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not ev
 #mistake test for utah
 >utah
 The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
-#nudge for hutlet
+#ttc-table-of-shuttle-hutlets-nudges-hutlet
 >hutlte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for hutlets
+#ttc-table-of-shuttle-hutlets-nudges-hutlets
 >hutlest
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for shadier
+#ttc-table-of-shuttle-hutlets-nudges-shadier
 >airshde
 The Shadier Airshed is immovable and unchangeable.
-#nudge for ubt
+#ttc-table-of-shuttle-hutlets-nudges-ubt
 >utb
 Clear ALL the tubs!
 
@@ -1762,7 +1762,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#nudge for digger
+#ttc-table-of-oyster-nudges-digger
 >diggre
 It's already been, err, rigged, enough.
 \\
@@ -1813,14 +1813,14 @@ DEBUG INFO: min-up codepath
 >lanec
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
-#nudge for waste
+#ttc-table-of-shuttle-hutlets-nudges-waste
 >waset
 The heaps are still technically waste, but you cleaned them up enough.
 #ttc-table-of-oyster-spechelp-heaps
 >heasp
 The heaps still look ugly as ever.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a decent omen.
-#nudge for heap
+#ttc-table-of-shuttle-hutlets-nudges-heap
 >hepa
 Change ALL the heaps!
 
@@ -1845,7 +1845,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#renudge for heap
+#+ttc-table-of-shuttle-hutlets-nudges-heap
 >hepa
 You don't need or want to futz with one heap to make things super-extra-perfect.
 
@@ -1907,7 +1907,7 @@ It's clean enough. You can't, like, make it sharper or anything.
 >out
 
 @nud
-#renudge for shut
+#+ttc-table-of-lapsin'-plains-nudges-shut
 >shtu
 You found the hut you needed to.
 
@@ -1958,22 +1958,22 @@ Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm do
 #ttc-table-of-oyster-scannotes-paw-r-wrap
 >scan paw r wrap
 Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay.
-#nudge for closure
+#ttc-table-of-sclerous-closures-nudges-closure
 >closuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for closures
+#ttc-table-of-sclerous-closures-nudges-closures
 >closurse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for hedron
+#ttc-table-of-sclerous-closures-nudges-hedron
 >hedrno
 You'll probably need to destroy the hedron from within.
-#nudge for arch
+#ttc-table-of-sclerous-closures-nudges-arch
 >arhc
 There's not just one arch, there's two. And they've made more than one person ache.
-#nudge for acher
+#ttc-table-of-sclerous-closures-nudges-acher
 >achre
 There's not just one arch, there's two. And they've made more than one person ache.
-#nudge for sardine
+#ttc-table-of-sclerous-closures-nudges-sardine
 >sardien
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
 #ttc-table-of-oyster-spechelp-achers-chaser-arches
@@ -2045,10 +2045,10 @@ You hope to have peered deeper for a vision, but it's too small. All you can mak
 >w
 
 @nud
-#renudge for arch
+#+ttc-table-of-sclerous-closures-nudges-arch
 >arhc
 You already dealt with both arches--no need to deal with one.
-#renudge for acher
+#+ttc-table-of-sclerous-closures-nudges-acher
 >achre
 You already dealt with both arches--no need to deal with one.
 #done rejects for achers chaser arches
@@ -2142,22 +2142,22 @@ The ol' trap is too wily, and stuck in the north wall, for that. You may want to
 #mistake test for tarp
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
-#nudge for hedrno
+#ttc-table-of-horned-hedron-nudges-hedrno
 >hedron
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for theses
+#ttc-table-of-horned-hedron-nudges-theses
 >thesse
 The hedron's spirit will remain intact even if you meddle there. You must go into its heart.
-#nudge for these
+#ttc-table-of-horned-hedron-nudges-these
 >thees
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
-#nudge for tarp
+#ttc-table-of-horned-hedron-nudges-tarp
 >tapr
 You think of changing the trap--maybe even a tarp! But what if the tarp enfolded you and became a trap that way? Scary! No, thinking of it as an ol' trap would make it less intimidating.
-#nudge for walleye
+#ttc-table-of-horned-hedron-nudges-walleye
 >walleey
 Just tacking one walleye won't change the crowd. They're past redemption, anyway.
-#nudge for walleyes
+#ttc-table-of-horned-hedron-nudges-walleyes
 >walleyse
 The walleyes are a bad crowd, past redemption.
 
@@ -2173,10 +2173,10 @@ DEBUG INFO: ruby hinting.
 This situation only stinks in general, not literally.
 
 @nud
-#nudge for craals
+#ttc-table-of-rascal-craals-nudges-craals
 >craasl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for craal
+#ttc-table-of-rascal-craals-nudges-craal
 >crala
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #ttc-table-of-oyster-spechelp-ruby
@@ -2202,7 +2202,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#nudge for hint
+#ttc-table-of-rascal-craals-nudges-hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
 #done rejects for thin hint
@@ -2250,7 +2250,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >assuaeg
 You're a bit tongue-tied, but that seems close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage. That's a decent omen.
-#nudge for howler
+#ttc-table-of-oyster-nudges-howler
 >howlre
 A howler or haunter is not specific enough. This is a big ol' SAUSAGE, here.
 #ttc-table-of-oyster-scannotes-use-saga-sausage
@@ -2321,10 +2321,10 @@ Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's a decent omen.
 >s
 >e
-#nudge for hoser
+#ttc-table-of-anger-range-nudges-hoser
 >hosre
 You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better.
-#nudge for hero
+#ttc-table-of-anger-range-nudges-hero
 >heor
 You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better.
 >undo
@@ -2358,7 +2358,7 @@ End Den
 #mistake test for ned
 >ned
 That was my pen name in Shuffling Around.
-#nudge for end
+#ttc-table-of-end-den-nudges-end
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >x gleaner
@@ -2388,34 +2388,34 @@ DEBUG INFO: papery yapper hinting.
 Tenfold Teflon'd Den Loft
 
 @nud
-#nudge for tenfold
+#ttc-table-of-den-loft-nudges-tenfold
 >tenfodl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for loft
+#ttc-table-of-den-loft-nudges-loft
 >lotf
 You should never need to riff on part of a location name, so that's one less thing to worry about, I hope.
-#nudge for den
+#ttc-table-of-den-loft-nudges-den
 >dne
 You should never need to riff on part of a location name.
-#nudge for jumble
+#ttc-table-of-den-loft-nudges-jumble
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess. Well, once the yapper's out of the way.
-#nudge for stupid
+#ttc-table-of-den-loft-nudges-stupid
 >stupdi
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
-#nudge for papre
+#ttc-table-of-den-loft-nudges-papre
 >paper
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
-#nudge for necklace
+#ttc-table-of-den-loft-nudges-necklace
 >necklaec
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
-#nudge for intercom
+#ttc-table-of-den-loft-nudges-intercom
 >intercmo
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
-#nudge for not
+#ttc-table-of-den-loft-nudges-not
 >nto
 Changing the intercom to a ton-crime intercom would be the opposite of what you want to do.
-#nudge for crime
+#ttc-table-of-den-loft-nudges-crime
 >criem
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 \\
@@ -2489,7 +2489,7 @@ That would only sabotage communications here. You need to sabotage the supplier.
 You need use the dialer meaningfully first.
 
 @nud
-#renudge for jumble
+#+ttc-table-of-den-loft-nudges-jumble
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess.
 !yapper
@@ -2586,7 +2586,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 #mistake test for atn
 >atn
 You've already got the ant's attention. You'll need to take care of it, now.
-#nudge for plam
+#ttc-table-of-plasm-lamps-nudges-plam
 >plma
 Maybe riff on ALL the lamps. But only for fun.
 
@@ -2612,7 +2612,7 @@ by one point
 {$SCOS}
 
 @nud
-#renudge for plam
+#+ttc-table-of-plasm-lamps-nudges-plam
 >plma
 You did enough.
 
@@ -2765,7 +2765,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >redila
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
-#nudge for spin
+#ttc-table-of-den-loft-nudges-spin
 >spni
 You don't need to bring the pins back.
 

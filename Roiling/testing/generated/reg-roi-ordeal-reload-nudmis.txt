@@ -9,7 +9,7 @@
 
 >posf
 
-#nudge for ordeal
+#ttc-table-of-ordeal-reload-nudges-ordeal
 >ordela
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #mistake test for walkthrough/walkthru
@@ -37,7 +37,7 @@ Hug? Ugh. Guh.
 #mistake test for consult [text]
 >consult zozimus
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
-#nudge for study
+#ttc-table-of-dusty-study-nudges-study
 >stuyd
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 #mistake test for nip
@@ -49,22 +49,22 @@ You'd stink as a host, trying that.
 #mistake test for rood
 >rood
 No need to surprise a guest like that. Just open the door.
-#nudge for manse
+#ttc-table-of-ordeal-reload-nudges-manse
 >manes
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for chair
+#ttc-table-of-dusty-study-nudges-chair
 >chari
 The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing.
-#nudge for rich
+#ttc-table-of-dusty-study-nudges-rich
 >rihc
 The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
-#nudge for niche
+#ttc-table-of-dusty-study-nudges-niche
 >niceh
 It's not any old niche. It's your niche. And by your niche, I mean you see it as "my niche."
 >get notepad
 Good choice taking the notepad. It'll help you tame lots that's meta, mate.
 Taking the pedanto-notepad uncovered some sad ads on the chair.
-#nudge for sad
+#ttc-table-of-dusty-study-nudges-sad
 >sda
 The ads have probably gone through enough word-twisting.
 #mistake test for [text] stable [text]/stable [text]/[text] stable
@@ -83,7 +83,7 @@ No, it's a thing you can change the tables to. You didn't have to deal with adje
 >x chair
 >x shelf
 
-#nudge for rove
+#ttc-table-of-dusty-study-nudges-rove
 >roev
 That's not a way to sneak around and avoid the knock at the door.
 
@@ -114,15 +114,15 @@ You need a light source.
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
 
-#nudge for dark
+#ttc-table-of-dusty-study-nudges-dark
 >dakr
 You punch your fist as you realize DARK has no anagrams...right into the palm.
 >dakr
 Oh no, not again. Concentrate on the palm.
-#nudge for darkness
+#ttc-table-of-dusty-study-nudges-darkness
 >darkness
 Oh no, not again. Concentrate on the palm.
-#renudge for rove
+#+ttc-table-of-dusty-study-nudges-rove
 >roev
 That's not a way to sneak around and avoid any future knock at the door.
 #ttc-table-of-ordeal-reload-spechelp-palm
@@ -145,7 +145,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's 
 #mistake test for chalets
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
-#nudge for latch
+#ttc-table-of-dusty-study-nudges-latch
 >lathc
 Not one latch. All of them.
 
@@ -153,41 +153,41 @@ Not one latch. All of them.
 Your score has just gone up by one point.
 >t
 
-#nudge for notice
+#ttc-table-of-dusty-study-nudges-notice
 >notiec
 You can flip everything on the diorama except the notice.
-#nudge for diorama
+#ttc-table-of-dusty-study-nudges-diorama
 >dioraam
 Gateman Nat Egam assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
 >x dope
 The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin' inquest, MoneyCo and Economy, Shatter-Threats, I Trash His Art, and By Li'l Billy.
-#nudge for gape
+#ttc-table-of-dusty-study-nudges-gape
 >gaep
 You feel like you physically want to crumple up the page, but you just stare blankly at it.
-#nudge for nitro
+#ttc-table-of-dusty-study-nudges-nitro
 >nitor
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
-#nudge for questin
+#ttc-table-of-dusty-study-nudges-questin
 >questni
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
-#nudge for moneyco
+#ttc-table-of-dusty-study-nudges-moneyco
 >moneyoc
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
-#nudge for shatter
+#ttc-table-of-dusty-study-nudges-shatter
 >shattre
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
-#nudge for itrash
+#ttc-table-of-dusty-study-nudges-itrash
 >itrahs
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
-#nudge for herarts
+#ttc-table-of-dusty-study-nudges-herarts
 >gs
 >herarst
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 >gs
-#nudge for billy
+#ttc-table-of-dusty-study-nudges-billy
 >bilyl
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
-#nudge for oped
+#ttc-table-of-dusty-study-nudges-oped
 >opde
 You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald.
 
@@ -255,10 +255,10 @@ You can just change the ten beams by saying BASEMENT.
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
 >bestname
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
-#nudge for beams
+#ttc-table-of-dusty-study-nudges-beams
 >beasm
 Not even one of the beams rattles. You count them up again--there are ten.
-#nudge for ten
+#ttc-table-of-dusty-study-nudges-ten
 >tne
 You change neither the number nor the makeup of the ten beams.
 
@@ -271,7 +271,7 @@ Score in a scenario: 4 out of 15 total points in the current region, Ordeal Relo
 #mistake retest for basement [text]/[text] basement [text]/[text] basement
 >basement zozimus
 You can just go DOWN to enter the basement.
-#nudge for tenbeams
+#ttc-table-of-dusty-study-nudges-tenbeams
 >basemetn
 You probably just want to go DOWN to the basement.
 >d
@@ -287,10 +287,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a 
 >stabel
 The tables seem to shift a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tables. That's a decent omen.
-#nudge for table
+#ttc-table-of-dusty-study-nudges-table
 >tabel
 A bleat: "tableS!"
-#nudge for subpoena
+#ttc-table-of-dusty-study-nudges-subpoena
 >subpoean
 Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
 
@@ -300,7 +300,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
 
-#nudge for stable
+#ttc-table-of-dusty-study-nudges-stable
 >stabel
 You probably just want to go IN to the stable.
 
@@ -308,7 +308,7 @@ You probably just want to go IN to the stable.
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a decent omen.
-#nudge for ceiling
+#ttc-table-of-dusty-study-nudges-ceiling
 >ceilign
 You wouldn't want to collapse the whole ceiling, but maybe the words MY NICHE could be changed.
 
@@ -318,20 +318,20 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
 
-#renudge for ceiling
+#+ttc-table-of-dusty-study-nudges-ceiling
 >ceilign
 You already built the chimney. If the ceiling caved, you'd be buried.
 #done rejects for chimney
 >chimnye
 You probably just want to go UP the chimney.
 
-#nudge for isolani
+#ttc-table-of-dusty-study-nudges-isolani
 >isolain
 You don't need to rearrange the isolani liaison. It's all that protects you from the outside world.
-#nudge for pin
+#ttc-table-of-dusty-study-nudges-pin
 >pni
 It's one big giant pin.
-#nudge for giant
+#ttc-table-of-dusty-study-nudges-giant
 >giatn
 It's one big giant pin.
 #ttc-table-of-ordeal-reload-spechelp-giant-pin
@@ -341,22 +341,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That'
 #ttc-table-of-ordeal-reload-readables-giant-pin
 >read giant pin
 GNAT. I NIP is nonsensically written in red on the giant pin.
-#nudge for bowling
+#ttc-table-of-dusty-study-nudges-bowling
 >bowlign
 It's more that it's a giant pin and not, like, a safety pin.
-#nudge for bowlingpin
+#ttc-table-of-dusty-study-nudges-bowlingpin
 >bowlingpni
 It's more that it's a giant pin and not, like, a safety pin.
-#nudge for bookshelf
+#ttc-table-of-dusty-study-nudges-bookshelf
 >bookshefl
 The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway.
-#nudge for books
+#ttc-table-of-dusty-study-nudges-books
 >boosk
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
-#nudge for book
+#ttc-table-of-dusty-study-nudges-book
 >boko
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
-#nudge for shelf
+#ttc-table-of-dusty-study-nudges-shelf
 >shefl
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
@@ -366,7 +366,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
-#nudge for abstract
+#ttc-table-of-dusty-study-nudges-abstract
 >abstratc
 That is probably overthinking the painting's abstract-ness. It's really just good for examining.
 #done rejects for painting
@@ -424,10 +424,10 @@ Oh, right. You bought it from Trisa Israt.
 #mistake test for astir
 >astir
 You need to change that to something else, then it'll be astir.
-#nudge for framing
+#ttc-table-of-farming-framing-nudges-framing
 >framign
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for ridging
+#ttc-table-of-farming-framing-nudges-ridging
 >ridgign
 If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you.
 
@@ -448,16 +448,16 @@ The stair helps you get around more easily, so it doesn't need to be changed bac
 >u
 Highest Heights
 
-#nudge for highest
+#ttc-table-of-highest-heights-nudges-highest
 >highets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for height
+#ttc-table-of-highest-heights-nudges-height
 >heigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for closets
+#ttc-table-of-ordeal-reload-nudges-closets
 >closest
 The closets are there to warp space a bit. You don't need to mess with them.
-#nudge for closet
+#ttc-table-of-ordeal-reload-nudges-closet
 >closte
 The closets are there to warp space a bit. You don't need to mess with them.
 
@@ -538,19 +538,19 @@ The steel pad intertwines into a marginally artistic pedestal.
 >d
 Largely All-Grey Gallery
 
-#nudge for gallery
+#ttc-table-of-largely-all-grey-gallery-nudges-gallery
 >galleyr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for all
+#ttc-table-of-largely-all-grey-gallery-nudges-all
 >all
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
-#nudge for grey
+#ttc-table-of-largely-all-grey-gallery-nudges-grey
 >grye
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
-#nudge for evac
+#ttc-table-of-largely-all-grey-gallery-nudges-evac
 >evca
 The evac-cave is your way out. It'd be a bad idea to change it.
-#nudge for bni
+#ttc-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 No, all the bins.
 #mistake retest for sitar
@@ -572,7 +572,7 @@ in Manor! You've found all the secrets here. You can just exit the gallery now, 
 >score
 Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-#renudge for bni
+#+ttc-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 You already fixed the bins.
 #done rejects for ISBN bins
@@ -609,25 +609,25 @@ You can't change Elmo into an animal. Your powers don't work that way. But maybe
 >z
 >z
 >z
-#nudge for high
+#ttc-table-of-largely-all-grey-gallery-nudges-high
 >hihg
 The high sign is a clue. Bad idea to change it.
-#nudge for highsign
+#ttc-table-of-largely-all-grey-gallery-nudges-highsign
 >highsing
 The high sign is a clue. Bad idea to change it.
-#nudge for sign
+#ttc-table-of-largely-all-grey-gallery-nudges-sign
 >sgin
 The high sign is a clue. Bad idea to change it.
-#nudge for arifle
+#ttc-table-of-largely-all-grey-gallery-nudges-arifle
 >arifel
 Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE.
-#nudge for hostage
+#ttc-table-of-largely-all-grey-gallery-nudges-hostage
 >hostaeg
 It's not you that needs changing but the rifle.
-#nudge for elmo
+#ttc-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
 Changing Elmo won't work. It's his rifle.
-#nudge for ugn
+#ttc-table-of-largely-all-grey-gallery-nudges-ugn
 >ung
 It's not a gun but a rifle.
 #mistake test for gnu
@@ -640,10 +640,10 @@ by one point
 >score
 Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-#renudge for elmo
+#+ttc-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
 Changing Elmo won't work. It's his rifle that needed changing.
-#nudge for flier
+#ttc-table-of-largely-all-grey-gallery-nudges-flier
 >flire
 Better to pump Elmo for information.
 #mistake retest for mole
@@ -684,16 +684,16 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 
 Carven Cavern
 
-#nudge for cavern
+#ttc-table-of-carven-cavern-nudges-cavern
 >cavenr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for terrain
+#ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and palest pastel plates probably hold the key to leaving.
-#nudge for plate
+#ttc-table-of-carven-cavern-nudges-plate
 >plaet
 You have no idea which plate to focus on, so maybe you should focus on the plates.
-#nudge for tapler
+#ttc-table-of-carven-cavern-nudges-tapler
 >taplre
 What you need is singular, but you sense it's all the plaster that matters.
 #mistake test for craven
@@ -732,7 +732,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-#renudge for terrain
+#+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and staple probably hold the key to leaving.
 #done rejects for staple
@@ -750,16 +750,16 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-#renudge for terrain
+#+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The stapler and staple probably hold the key to leaving.
-#nudge for act
+#ttc-table-of-carven-cavern-nudges-act
 >atc
 The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
-#nudge for ruin
+#ttc-table-of-carven-cavern-nudges-ruin
 >runi
 The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
-#nudge for curtain
+#ttc-table-of-carven-cavern-nudges-curtain
 >curtani
 The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
 #done rejects for stapler
