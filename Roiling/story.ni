@@ -11081,7 +11081,7 @@ does the player mean doing something with LEAD when mrlp is troves: it is very l
 
 description of Pa Egg Pea is "[randbla]".
 
-a-text of Pa Egg Pea is "RYRY". b-text of Pa Egg Pea is "??R?". parse-text of pa egg pea is "?[sp]?[sp]P[sp]?". pa egg pea peg a page is any-spoilable.
+a-text of Pa Egg Pea is "RYRY". b-text of Pa Egg Pea is "??R?". parse-text of pa egg pea is "?[sp]?[sp]P[sp]?". pa egg pea is any-spoilable.
 
 understand "book" as Pa Egg Pea.
 
@@ -12506,7 +12506,7 @@ the alert letters are a plural-named reflexive thing. the alert letters are part
 
 understand "alter letters" and "alter/letters" as alert letters.
 
-a-text of alert is "RYRYR". b-text of alert is "RY???". parse-text of alert is "x[sp]A[sp]?[sp]?[sp]?". alert alter retreat all is parse-spoilable.
+a-text of alert is "RYRYR". b-text of alert is "RY???". parse-text of alert is "x[sp]A[sp]?[sp]?[sp]?". alert is parse-spoilable.
 
 section ought
 
@@ -17238,7 +17238,7 @@ the unripe ur pine is boring vanishing LLPish scenery in Mislit Limits. understa
 this is the bore-ur-pine rule:
 	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
 
-a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". parse-text of unripe ur pine is "x[sp]-[sp]N[sp]I[sp]-[sp]x". unripe urpine is parse-spoilable.
+a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". parse-text of unripe ur pine is "x[sp]-[sp]N[sp]I[sp]-[sp]x". unripe ur pine is parse-spoilable.
 
 chapter Nastier Stainer Retinas
 
@@ -19279,7 +19279,7 @@ section aside-llp
 
 the aside-llp is privately-named proper-named vanishing LLPish scenery in Reclusion Inclosure. "[bug-report]". printed name is "between [e-n-m]"
 
-a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "-[sp]S[sp]-[sp]D[sp]-". ideas aides is parse-spoilable.
+a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "-[sp]S[sp]-[sp]D[sp]-". aside-llp is parse-spoilable.
 
 understand "aidesllp" as aside-llp when debug-state is true and aside-llp is touchable.
 
@@ -20345,7 +20345,7 @@ the s-c are privately-named plural-named things. description of s-c is "The coin
 
 understand "coin" and "sonic coin" as s-c when player has s-c.
 
-a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text of s-c is "I[sp]x[sp]O[sp]x[sp]x". sonic coins is parse-spoilable.
+a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text of s-c is "I[sp]x[sp]O[sp]x[sp]x". s-c is parse-spoilable.
 
 section sonic icons
 
