@@ -139,7 +139,7 @@ Trying to change the current region you're in all at once would be risky, or use
 #nudge for satin
 >atsin
 The church's name is not as important as its mission.
-#scannotes for anti sag sit a nag
+#ttc-table-of-routes-scannotes-anti-sag-sit-a-nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
 #spechelp for anti sag sit a nag
@@ -150,10 +150,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-n
 >astried
 There's something in the side art, but you're not sure if you need to figure it out just right now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
-#scannotes for lairage regalia
+#ttc-table-of-routes-scannotes-lairage-regalia
 >scan lairage regalia
 OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic.
-#scannotes for adsorbing signboard
+#ttc-table-of-routes-scannotes-adsorbing-signboard
 >scan adsorbing signboard
 While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk.
 
@@ -164,7 +164,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's
 #ttc-table-of-routes-readables-worst-ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
-#scannotes for worst ad
+#ttc-table-of-routes-scannotes-worst-ad
 >scan worst ad
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
@@ -720,7 +720,7 @@ Nia Gast is too old and set in her ways. You may just need to listen to her from
 >undre
 The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
-#scannotes for rude n nuder
+#ttc-table-of-routes-scannotes-rude-n-nuder
 >scan rude n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
 #nudge for rude
@@ -775,7 +775,7 @@ The whole beverage name must be where it's at.
 #nudge for ova
 >oav
 The whole beverage name must be where it's at.
-#scannotes for a bev o be ova
+#ttc-table-of-routes-scannotes-a-bev-o-be-ova
 >scan be ova
 That's a lot of questions for such a small bottle, but it can't be too hard.
 #ttc-table-of-routes-readables-a-bev-o-be-ova
@@ -791,7 +791,7 @@ Your score has just gone up by one point.
 >score
 Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
-#scannotes for morf form
+#ttc-table-of-routes-scannotes-morf-form
 >scan morf form
 Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?
 #spechelp for morf form
@@ -862,7 +862,7 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 >score
 Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
-#scannotes for null it unit
+#ttc-table-of-routes-scannotes-null-it-unit
 >scan null it unit
 The NULL-IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
 #spechelp for null it unit
@@ -881,7 +881,7 @@ Your score has just gone up by one point
 #done rejects for un road
 >urdano
 You thought you saw an un-road for a second, but ... not quite.
-#scannotes for odd run on aura
+#ttc-table-of-routes-scannotes-odd-run-on-aura
 >scan odd run on aura
 With only one ambiguous setting, the light should soon go on for you to figure where and how to go.
 #nudge for aura
@@ -921,7 +921,7 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 >alogn
 You think of how to find a way to No-Lag Logan's boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. That's a decent omen.
-#scannotes for noon gag
+#ttc-table-of-routes-scannotes-noon-gag
 >scan noon gag
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
 
@@ -953,10 +953,10 @@ You'll have to deal with the whole data-dim mists.
 >amidts
 Hmm, you almost see a way past the data-dim mists.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
-#scannotes for admits mist ad
+#ttc-table-of-routes-scannotes-admits-mist-ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
-#scannotes for data dim mists
+#ttc-table-of-routes-scannotes-data-dim-mists
 >scan data dim mists
 Well! The data isn't dim from the settler. There's a lot to work with, here.
 
@@ -1004,7 +1004,7 @@ No need to alter them. Worth looking at, though.
 >athwatr
 Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
-#scannotes for thickness sketchins
+#ttc-table-of-routes-scannotes-thickness-sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all.
 

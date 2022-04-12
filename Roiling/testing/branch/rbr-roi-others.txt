@@ -444,7 +444,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#scannotes for sated stead
+#ttc-table-of-others-scannotes-sated-stead
 >scan sated stead
 Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad.
 #spechelp for sated stead
@@ -901,7 +901,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 >deigsn
 The design is sort of glommed onto the coins. So you should figure what to do, there.
 >undo
-#scannotes for coins
+#ttc-table-of-others-scannotes-coins
 >scan coins
 The settler flashes back, with all five entries changing. This is odd. Maybe it would be better to scan just one coin?
 #it's important to say yes/no here so the balance undo tracker understands this is just replying to a question and not making a move
@@ -927,7 +927,7 @@ The coins jingle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a decent omen.
 >sonic
 by one point
-#scannotes for s-c
+#ttc-table-of-others-scannotes-s-c
 >scan sonic coins
 You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
 >undo
@@ -998,7 +998,7 @@ DEBUG INFO: icons hinting.
 >n
 
 @nud
-#rettc-table-of-others-readables-singed-design
+#+ttc-table-of-others-readables-singed-design
 >read singed design
 The singed design on the icons reads, when you look close, property of NISCO.
 
@@ -1184,7 +1184,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. Tha
 >pineappel
 The pipe panel lie pen app rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
-#scannotes for pipe panel lie pen app
+#ttc-table-of-others-scannotes-pipe-panel-lie-pen-app
 >scan pipe panel lie pen app
 Hmm. There are a lot of P's. Maybe that helps.
 #spechelp for barriers west
@@ -1301,7 +1301,7 @@ Money, or something like it, should not be the guide of you.
 #done rejects for s-i
 >icons
 The sonic icons seem right. No use meddling.
-#scannotes for concisions
+#ttc-table-of-others-scannotes-concisions
 >scan sonic icons
 Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do.
 
@@ -1444,7 +1444,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for i solve voiles
 >evliso
 The I-Solve Voiles rustle slightly.
-#scannotes for i solve voiles
+#ttc-table-of-others-scannotes-i-solve-voiles
 >scan i solve voiles
 You make sure it's not just the I-Solve Voiles fluttering about that give such an ambiguous reading. No, it is not.
 #nudge for voile
@@ -1496,7 +1496,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a
 >papaysa
 Everyone promises quick payment, but what are you promising to pay quickly for? Hmm...
 DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
-#scannotes for auction caution
+#ttc-table-of-others-scannotes-auction-caution
 >scan auction caution
 Hm, that certainly cuts things down a ton, or it should, once you read that sign--caution has four vowels, but the settler indicates three.
 >x auction caution
@@ -1564,7 +1564,7 @@ You get all red faced asking people how to trade for a mango, and asking, and as
 #mistake test for an omg
 >an omg
 Lashing out that way leaves you feeling you must be close to the right way to get a mango.
-#scannotes for ammo gang
+#ttc-table-of-others-scannotes-ammo-gang
 >scan ammo gang
 The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
 #spechelp for ammo gang
@@ -1596,7 +1596,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a
 >melno
 Hm, there must be a better melon than that, but how to ask Len, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
-#scannotes for melon
+#ttc-table-of-others-scannotes-melon
 >scan melon
 Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
 #spechelp for nectarine
@@ -1607,7 +1607,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That'
 >cripse
 Something glints off the prices precis.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
-#scannotes for prices precis
+#ttc-table-of-others-scannotes-prices-precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
 
@@ -1846,7 +1846,7 @@ It's a banna'. The puzzle here is criminally corny, but it's not criminal like D
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the brr-hub. That's a decent omen.
-#scannotes for a brr hub
+#ttc-table-of-others-scannotes-a-brr-hub
 >scan a brr hub
 Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so.
 #spechelp for orange
@@ -1857,14 +1857,14 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. T
 >nabaan
 The (a) banna' flutters about for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
-#scannotes for a banna
+#ttc-table-of-others-scannotes-a-banna
 >scan a banna
 The message on the/a banna' must be interfering with the/a banna' itself.
 #spechelp for Reserved Deserver Dr Severe
 >reservde
 You seem to see a mirror image of Dr. Severe for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
-#scannotes for reserved deserver Dr Severe
+#ttc-table-of-others-scannotes-reserved-deserver-Dr-Severe
 >scan dr severe
 Dr. Severe rolls his eyes. "My arguments certainly merit analysis, but there is no quick way to grokking them."
 Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities.

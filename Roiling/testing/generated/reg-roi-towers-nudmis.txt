@@ -251,7 +251,7 @@ Score in a scenario: 6 out of 57 total points in the current region, Towers. Low
 #renudge for picaros
 >picarso
 There's only one picaro left, and his name is Rodney.
-#scannotes for yo rend or deny rodney
+#ttc-table-of-towers-scannotes-yo-rend-or-deny-rodney
 >scan rodney
 --hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
 Perhaps Rodney's over-florid title will wind up being a weakness.
@@ -383,7 +383,7 @@ The Shout-So Hut is built to resist words. You aren't getting through, or past, 
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. That's a decent omen.
-#scannotes for dreads adders
+#ttc-table-of-towers-scannotes-dreads-adders
 >scan dreads adders
 Your settler registers RY?RYR.
 Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
@@ -392,7 +392,7 @@ Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros 
 You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
 
 #testing skip-aheads for scaning palace
-#scannotes for curst palace
+#ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 4 lights
 You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
@@ -433,7 +433,7 @@ You sense that the dreads adders were one of the easier things to deal with, her
 >n
 Scope Copse
 
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 5 lights
 Ooh! Another light, now.
@@ -477,16 +477,16 @@ There's more than one yurt there.
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Try Us Yurts. That's a decent omen.
-#scannotes for bluster butlers
+#ttc-table-of-towers-scannotes-bluster-butlers
 >scan bluster butlers
 Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out.
-#scannotes for snider diners
+#ttc-table-of-towers-scannotes-snider-diners
 >scan snider diners
 The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. "What's this? Such distracting noise!" They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work.
-#scannotes for try us yurts
+#ttc-table-of-towers-scannotes-try-us-yurts
 >scan try us yurts
 Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
-#scannotes for denier nereid
+#ttc-table-of-towers-scannotes-denier-nereid
 >scan denier nereid
 You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
 #mistake test for ursty/ur sty
@@ -506,7 +506,7 @@ You don't have x-ray vision right now.
 >x ray
 You don't have x-ray vision right now.
 
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 5 lights
 You don't see any new information about the curst palace this time.
@@ -606,10 +606,10 @@ Changing just one pirate would not, you sense, do much. It might even ostracize 
 The old ice seems to glimmer a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
 
-#scannotes for docile old ice
+#ttc-table-of-towers-scannotes-docile-old-ice
 >scan docile old ice
 Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 6 lights
 Ooh! Another light, now.
@@ -636,7 +636,7 @@ Twist the ice too much, it might not look right.
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the traipse pirates. That's a decent omen.
-#scannotes for traipse pirates
+#ttc-table-of-towers-scannotes-traipse-pirates
 >scan traipse pirates
 Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though.
 
@@ -662,12 +662,12 @@ The iceman cometh, and your life passeth.
 joke death
 >undo
 
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 7 lights
 Ooh! Another light, now.
 Your settler registers RRYR?YR****.
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 >t
 >scan palace
 Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
@@ -696,10 +696,10 @@ There's more than one ingrate blocking you.
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the angriest ingrates. That's a decent omen.
-#scannotes for angriest ingrates
+#ttc-table-of-towers-scannotes-angriest-ingrates
 >scan angriest ingrates
 Hmm, there are some matches, and maybe one of the two variable settings will work itself out.
-#scannotes for mardier admirer
+#ttc-table-of-towers-scannotes-mardier-admirer
 >scan mardier admirer
 Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants.
 #mistake test for granites/granite
@@ -873,7 +873,7 @@ Changing only one atheist would only help you so long. The rest would shortly re
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the asset-hit atheists. That's a decent omen.
-#scannotes for asset hit atheists
+#ttc-table-of-towers-scannotes-asset-hit-atheists
 >scan asset hit atheists
 Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
 
@@ -881,7 +881,7 @@ Those question marks could be annoying, but with two t's and two s's, that restr
 >waitsere
 The wait-seer looks bored and distracted for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sweatier wait-seer. That's a decent omen.
-#scannotes for sweatier wait seer
+#ttc-table-of-towers-scannotes-sweatier-wait-seer
 >scan sweatier wait seer
 The letters blink from red/yellow to purple/green and back.
 
@@ -914,7 +914,7 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 #palace 7 lights
 >scan palace
 !Ooh! Another light, now.
@@ -926,7 +926,7 @@ Your settler registers RRYR?YR****.
 The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
 
-#scannotes for resident trendies
+#ttc-table-of-towers-scannotes-resident-trendies
 >scan resident trendies
 The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
 #spechelp for resident trendies
@@ -956,7 +956,7 @@ out of the way.
 >undo
 >undo
 
-#scannotes for realist tailers
+#ttc-table-of-towers-scannotes-realist-tailers
 >scan realist tailers
 The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools.
 #nudge for tailer
@@ -1022,7 +1022,7 @@ You feel no energy from the dagger. Perhaps it needs to be repaired mechanically
 >denmi
 The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini-denim. That's a decent omen.
-#scannotes for mended mini denim
+#ttc-table-of-towers-scannotes-mended-mini-denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
 #nudge for mended
@@ -1049,15 +1049,15 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 >d
 Dire and Arid Den
 
-#scannotes for bogus-dandier
+#ttc-table-of-towers-scannotes-bogus-dandier
 >scan
 Your settler registers ?YR?Y?R.
 You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
-#scannotes for drained dreadin
+#ttc-table-of-towers-scannotes-drained-dreadin
 >scan drained dreadin
 Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.
 Your settler registers PYRRY?R.
-#scannotes for nerd aid diner ad
+#ttc-table-of-towers-scannotes-nerd-aid-diner-ad
 >scan nerd aid diner ad
 The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.
 #spechelp for bogus-dandier
@@ -1114,7 +1114,7 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 >alarmign
 The grailman seems almost average for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailman. That's a decent omen.
-#scannotes for alarming grailman
+#ttc-table-of-towers-scannotes-alarming-grailman
 >scan alarming grailman
 The one letter blinks between green and yellow.
 
@@ -1126,7 +1126,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lot. That's a decent omen.
-#scannotes for he lot
+#ttc-table-of-towers-scannotes-he-lot
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
 >gs
@@ -1134,7 +1134,7 @@ Well, this is tricky. Their sort of double name affords a couple interpretations
 >loisthe
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Lois the Hostile. That's a decent omen.
-#scannotes for lois the hostile
+#ttc-table-of-towers-scannotes-lois-the-hostile
 >scan lois the hostile
 Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
 >gs
@@ -1164,7 +1164,7 @@ You focus and see that the brand is TRU-SELF. Which would make you see red on ge
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
-#scannotes for fluster self rut
+#ttc-table-of-towers-scannotes-fluster-self-rut
 >scan fluster self rut
 You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
 #mistake test for fluters
@@ -1180,7 +1180,7 @@ Score in a scenario: 31 out of 57 total points in the current region, Towers. Lo
 #nudge for native
 >natiev
 You'll need to deal with more than one native to make your way south.
-#scannotes for natives site van
+#ttc-table-of-towers-scannotes-natives-site-van
 >scan site van
 You get the feeling the natives can be swayed more than one way, here.
 
@@ -1235,7 +1235,7 @@ Nothing seems to happen. Then you remember organized can be spelled with an s an
 >organisde
 The drains sizzle slightly but go back to menacing quiet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego drains. That's a decent omen.
-#scannotes for organised ego drains
+#ttc-table-of-towers-scannotes-organised-ego-drains
 >scan organised ego drains
 With nine letters, it was never going to be easy. (Fourth wall note: this is the hardest ambiguous reading in the game. That's why it's optional.) Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
 
@@ -1254,7 +1254,7 @@ Lost Lots
 >w
 Dourest Detours
 
-#scannotes for seismal samiels
+#ttc-table-of-towers-scannotes-seismal-samiels
 >scan samiels
 You're almost worried it will be too easy to figure things out, now. Too hard, too easy, too normal ... everything leaves you in the dumps.
 #nudge for samiel
@@ -1264,7 +1264,7 @@ There is more than one samiel to deal with, here.
 >samiesl
 The seismal samiels change intensity for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
-#scannotes for bogus-rousted
+#ttc-table-of-towers-scannotes-bogus-rousted
 >scan
 You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
 #nudge for detour
@@ -1314,7 +1314,7 @@ You may find it easier to deal with all the ripostes at once.
 >prosiets
 The ripostes seem less cutting for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sporties' ripostes. That's a decent omen.
-#scannotes for sporties ripostes
+#ttc-table-of-towers-scannotes-sporties-ripostes
 >scan sporties' ripostes
 You might have to read through a lot of possibilities even if you can quickly figure what the third letter is.
 
@@ -1350,7 +1350,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. 
 >read bonker
 The bonker was created by KB RENO.
 
-#scannotes for reb nok bonker
+#ttc-table-of-towers-scannotes-reb-nok-bonker
 >scan bonker
 Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse.
 
@@ -1389,7 +1389,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 
 Obscurest Subsector
 
-#scannotes for fries us fissure
+#ttc-table-of-towers-scannotes-fries-us-fissure
 >scan fries us fissure
 The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier.
 
@@ -1442,18 +1442,18 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 #nudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--he can't break out of his shell
-#scannotes for dr yow
+#ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions.
 
 >rowdy
 by one point
-#rescannotes for dr yow
+#+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 >wordy
 by one point
-#rescannotes for dr yow
+#+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again.
 #renudge for wordy
@@ -1474,7 +1474,7 @@ Score in a scenario: 39 out of 57 total points in the current region, Towers. Lo
 >wordy
 You recharge Dr. Yow's wordiness.
 !by one point
-#rescannotes for dr yow
+#+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 #renudge for wordy
@@ -1600,7 +1600,7 @@ You thought you heard a brief hum from the diverse deviser for a moment there.
 #ttc-table-of-towers-readables-diverse-deviser
 >read deviser
 I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
-#scannotes for diverse deviser
+#ttc-table-of-towers-scannotes-diverse-deviser
 >scan deviser
 You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Turn that frown upside-down! Gosh, those ambiguous clues might be even more interesting and useful than the usual!"
 
@@ -1709,7 +1709,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 #renudge for lake
 >laek
 You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 #palace 8 lights
 >scan palace
 Your settler registers RRYR?YRY***.
@@ -1734,7 +1734,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don'
 >grainde
 Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
 DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. That's a decent omen.
-#scannotes for reading a dinger
+#ttc-table-of-towers-scannotes-reading-a-dinger
 >scan reading a dinger
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
 
@@ -1775,7 +1775,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a 
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.
 >gs
-#scannotes for raves saver
+#ttc-table-of-towers-scannotes-raves-saver
 >scan raves saver
 Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about.
 
@@ -1820,10 +1820,10 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 >give gizmo to agnostic
 
 >gonear rawest waters
-#scannotes for earnest eastern neaters
+#ttc-table-of-towers-scannotes-earnest-eastern-neaters
 >scan earnest eastern neaters
 That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 #palace 10 lights
 >scan palace
 Your settler registers RRYR?YRYRY*.
@@ -1934,7 +1934,7 @@ You already dealt with both turbos.
 >rewirde
 You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire. That's a decent omen.
-#scannotes for weirder red wire
+#ttc-table-of-towers-scannotes-weirder-red-wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you see any extra red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
 #mistake test for were rid
@@ -1989,7 +1989,7 @@ The serpent calms down for a split-second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repents serpent. That's a decent omen.
 >presetn
 The serpent calms down for a split-second, again.
-#scannotes for repents serpent
+#ttc-table-of-towers-scannotes-repents-serpent
 >scan repents serpent
 That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
 #renudge for lake
@@ -2004,7 +2004,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
-#scannotes for nastier stainer retinas
+#ttc-table-of-towers-scannotes-nastier-stainer-retinas
 >scan retinas
 Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
 
@@ -2068,7 +2068,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ne
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a decent omen.
-#scannotes for tetris sitter
+#ttc-table-of-towers-scannotes-tetris-sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
 #mistake test for titres/titers
@@ -2093,7 +2093,7 @@ No, deal with the entire Done-Any Anodyne.
 #nudge for any
 >ayn
 No, deal with the entire Done-Any Anodyne.
-#scannotes for done any anodyne
+#ttc-table-of-towers-scannotes-done-any-anodyne
 >scan anodyne
 For a moment you guess you've, err, done enough, and you don't have to get rid of the anodyne for Teri. But you also figure, what's one more logic puzzle after all you've been through?
 
@@ -2190,7 +2190,7 @@ That might help you figure what to do with the curst palace, but it can't be imp
 That might help you figure what to do with the curst palace, but it can't be important by itself.
 >curst palaec
 Hmm...only faint rumbling from the curst palace. Big words have all sorts of possibilities.
-#rescannotes for curst palace
+#+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 11 lights
 The entire settler lights up, finally!

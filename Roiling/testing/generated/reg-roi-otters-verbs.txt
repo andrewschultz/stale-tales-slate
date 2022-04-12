@@ -230,6 +230,10 @@ Score in a scenario: 16 out of 35 total points in the current region, Otters. Lo
 >n
 Lamer Realm
 
+#ttc-table-of-otters-attacks-owls
+>attack owls
+You are outnumbered. You need a bit of magic here.
+
 >slow
 Your score has just gone up by one point
 

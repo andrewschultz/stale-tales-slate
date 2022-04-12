@@ -353,10 +353,10 @@ The number's got more numerals than letters.
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
-#scannotes for boing go bin
+#ttc-table-of-presto-scannotes-boing-go-bin
 >scan boing go bin
 Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!
-#scannotes for sport ports
+#ttc-table-of-presto-scannotes-sport-ports
 >scan sport ports
 Maybe you can find where the vowel is. That could help.
 
@@ -412,11 +412,11 @@ Nowt Town
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 
-#scannotes for n-t-air
+#ttc-table-of-presto-scannotes-n-t-air
 >scan n-t-air
 Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze.
 
-#scannotes for maze walls
+#ttc-table-of-presto-scannotes-maze-walls
 >scan maze walls
 Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe.
 #nudge for mazeroom
@@ -596,7 +596,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decen
 >nessgood
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
-#scannotes for sods gone odes song
+#ttc-table-of-presto-scannotes-sods-gone-odes-song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
 #mistake retest for evil
@@ -844,7 +844,7 @@ Vandalism! For shame!
 >whta
 The hawt thaw crackles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
-#scannotes for hawt thaw
+#ttc-table-of-presto-scannotes-hawt-thaw
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
 
@@ -880,7 +880,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the log ons letters.
 >touhg
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. That's a decent omen.
-#scannotes for alert
+#ttc-table-of-presto-scannotes-alert
 >scan alert
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
 #mistake test for artel
@@ -931,7 +931,7 @@ Score in a scenario: 21 out of 41 total points in the current region, Presto. Lo
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
-#scannotes for starch charts
+#ttc-table-of-presto-scannotes-starch-charts
 >scan starch charts
 Starch is calorically and consonantally (if that's a word) heavy. This must help.
 #nudge for summit
@@ -949,7 +949,7 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
-#scannotes for n e recs censer
+#ttc-table-of-presto-scannotes-n-e-recs-censer
 >scan n e recs censer
 This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
 #nudge for recs
@@ -1114,16 +1114,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs P
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
-#scannotes for clack ops locs pack
+#ttc-table-of-presto-scannotes-clack-ops-locs-pack
 >scan clack ops locs pack
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
-#scannotes for im le cop polemic
+#ttc-table-of-presto-scannotes-im-le-cop-polemic
 >scan i'm le cop polemic
 Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues.
-#scannotes for drive e
+#ttc-table-of-presto-scannotes-drive-e
 >scan drive e
 Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it.
-#scannotes for drive a
+#ttc-table-of-presto-scannotes-drive-a
 >scan drive a
 It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be what's causing the whole jumble.
 >x drive a
@@ -1316,7 +1316,7 @@ The Be-Troo E-Robot isn't interested in monologues.
 #ttc-table-of-presto-readables-be-troo-e-robot
 >read robot
 OBERTO, in red. That's its name.
-#scannotes for be troo e robot
+#ttc-table-of-presto-scannotes-be-troo-e-robot
 >scan robot
 You wonder if you need a step back to take a new look at the ambiguous clues.
 
@@ -1353,7 +1353,7 @@ The futon could be a little less lumpy, sure, but that's beyond your magic power
 #done rejects for be troo e robot
 >toober
 No need to reboot twice.
-#scannotes for peels speel
+#ttc-table-of-presto-scannotes-peels-speel
 >scan peels speel
 Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue...
 #ttc-table-of-presto-readables-peels-speel
@@ -1510,14 +1510,14 @@ No, the TAB key is what it should be.
 Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
 
-#scannotes for bub dude egg
+#ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
 #pre-bub-dude-egg rule retry
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
 !by one point
-#rescannotes for bub dude egg
+#+ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad.
 #nudge for bub
@@ -1560,7 +1560,7 @@ The catechism would be more likely to scramble YOU up. It's way more complex tha
 >misses
 !presto
 
-#scannotes for usb
+#ttc-table-of-presto-scannotes-usb
 >scan usb
 Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good.
 

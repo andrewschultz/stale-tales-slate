@@ -290,16 +290,16 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#scannotes for tables
+#ttc-table-of-ordeal-reload-scannotes-tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#scannotes for niche
+#ttc-table-of-ordeal-reload-scannotes-niche
 >scan niche
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#scannotes for beams
+#ttc-table-of-ordeal-reload-scannotes-beams
 >scan beams
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#scannotes for meet bans
+#ttc-table-of-ordeal-reload-scannotes-meet-bans
 >scan meet bans
 You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
 #mistake test for palm
@@ -624,7 +624,7 @@ The closets are there to warp space a bit. You don't need to mess with them.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#scannotes for pram
+#ttc-table-of-ordeal-reload-scannotes-pram
 >scan pram
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
 #spechelp for pram
@@ -1002,7 +1002,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel pl
 #ttc-table-of-ordeal-reload-readables-pastel-plates
 >read pastel plates
 EPSTAL is written as an author's signature.
-#scannotes for palest pastel plates
+#ttc-table-of-ordeal-reload-scannotes-palest-pastel-plates
 >scan plates
 Hmm, maybe the question mark isn't as vague as you're worried it is.
 #mistake test for petals
@@ -1082,7 +1082,7 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 {$SCOS}
 
 @nud
-#scannotes for respect specter
+#ttc-table-of-ordeal-reload-scannotes-respect-specter
 >t
 >scan respect specter
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."

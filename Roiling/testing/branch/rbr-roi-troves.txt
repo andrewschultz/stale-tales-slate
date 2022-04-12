@@ -175,7 +175,7 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 >gaep
 You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
-#scannotes for pa egg pea
+#ttc-table-of-troves-scannotes-pa-egg-pea
 >scan pa egg pea
 Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out.
 
@@ -197,7 +197,7 @@ You probably did what you could. Or not-did.
 #spechelp for tears taser
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
-#scannotes for tears taser
+#ttc-table-of-troves-scannotes-tears-taser
 >scan taser
 The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
 #nudge for tear
@@ -225,7 +225,7 @@ DEBUG INFO: min-up codepath
 >haet
 You feel slightly less cold but mad at yourself for not doing better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
-#scannotes for eh at heat
+#ttc-table-of-troves-scannotes-eh-at-heat
 >scan heat
 Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
 
@@ -259,7 +259,7 @@ Don't need to overheat, or overhate.
 >caer
 For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
-#scannotes for race acre
+#ttc-table-of-troves-scannotes-race-acre
 >scan race acre
 Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT.
 #mistake test for a rec
@@ -341,7 +341,7 @@ The mussier misuser looks around a bit, worried someone might be out-thinking th
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
-#scannotes for sob ever verbose
+#ttc-table-of-troves-scannotes-sob-ever-verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 The question marks ... hmm. Oh, you get it now.
@@ -401,7 +401,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That'
 #nudge for observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
-#scannotes for stop post
+#ttc-table-of-troves-scannotes-stop-post
 >scan stop post
 !Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
@@ -412,7 +412,7 @@ Well, that's a bit confusing. You'd think a four-letter word wouldn't have too m
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#scannotes for mussier misuser
+#ttc-table-of-troves-scannotes-mussier-misuser
 >scan misuser
 Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the mussier misuser isn't, either, really.
 
@@ -448,7 +448,7 @@ Boarded Roadbed
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#scannotes for a sty tasty say
+#ttc-table-of-troves-scannotes-a-sty-tasty-say
 >scan sty
 Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >t
@@ -585,7 +585,7 @@ DEBUG INFO: L'Clear Cellar hinting.
 #renudge for bee
 >bee
 But it's not just any bee. It's a vile bee!
-#scannotes for l clear cellar
+#ttc-table-of-troves-scannotes-l-clear-cellar
 >scan l clear cellar
 That question mark is perhaps, um, clear if you think about it.
 
@@ -722,7 +722,7 @@ A faint rye-be-beery odor.
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
-#scannotes for large regal lager
+#ttc-table-of-troves-scannotes-large-regal-lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
 #mistake test for alger
@@ -856,7 +856,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >bolstre
 That's not quite the way to deserve that lobster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
-#scannotes for bortles lobster
+#ttc-table-of-troves-scannotes-bortles-lobster
 >scan bortles lobster
 Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
 
@@ -884,7 +884,7 @@ You'll probably want to deal with all the pleaser leapers at once.
 #ttc-table-of-troves-readables-pleaser-leapers
 >read leapers
 SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
-#scannotes for pleaser leapers
+#ttc-table-of-troves-scannotes-pleaser-leapers
 >scan pleaser leapers
 You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
 #spechelp for pleaser leapers
@@ -941,7 +941,7 @@ The lobster nourished you physically. Time to move on, though you could poke at 
 >mastre
 That's not quite the way to focus on the ME ARTS.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
-#scannotes for me arts
+#ttc-table-of-troves-scannotes-me-arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
 #mistake test for maters/tamers
@@ -972,7 +972,7 @@ The ME ARTS nourished you spiritually. The lobster nourished you physically. Tim
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
 DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
-#scannotes for lead
+#ttc-table-of-troves-scannotes-lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
 #ttc-table-of-troves-readables-lead
@@ -1153,7 +1153,7 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
-#scannotes for praise spirea
+#ttc-table-of-troves-scannotes-praise-spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
 #mistake test for persia
@@ -1214,7 +1214,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 >read rivets
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
-#scannotes for rivets
+#ttc-table-of-troves-scannotes-rivets
 >scan rivets
 Hmm, along with the information for scanning Trevis, you might really have something here.
 
@@ -1254,7 +1254,7 @@ Plural craniates.
 #ttc-table-of-troves-readables-sectarian-craniates
 >read sectarian craniates
 /You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
-#scannotes for sectarian craniates
+#ttc-table-of-troves-scannotes-sectarian-craniates
 >scan sectarian craniates
 Wow. You have even more to think about, now! It's certainly a thoughtful piece of art, whatever it is. You are sure the reading provides you with a good deal of concrete and subjective thoughts to analyze.
 #spechelp for sectarian craniates
@@ -1429,7 +1429,7 @@ The votes vetos stove is just symbolic. The real voter suppression happens in th
 >lats
 You don't quite draw inspiration from the salt, but there can't be that many alts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
-#scannotes for salt
+#ttc-table-of-troves-scannotes-salt
 >scan salt
 Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
 
@@ -1473,7 +1473,7 @@ A stern looking fellow who is big on personal responsibility and as ubiquitous a
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
-#scannotes for marble blamer balmer
+#ttc-table-of-troves-scannotes-marble-blamer-balmer
 >scan marble blamer balmer
 Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, you do what you can
 #spechelp for marble blamer balmer
@@ -1499,7 +1499,7 @@ Neither you nor Marble Blamer Mr. Beal turns into hay.
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
-#scannotes for marble blamer mr beal
+#ttc-table-of-troves-scannotes-marble-blamer-mr-beal
 >scan marble blamer mr beal
 Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
 >mbb 1
@@ -1509,16 +1509,16 @@ Wow! Three names. You don't know if, say, Balmer would be easier but, well, you 
 >resits
 Sister Tressi seems a bit more upset than usual.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
-#scannotes for sister tressi siters
+#ttc-table-of-troves-scannotes-sister-tressi-siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't 100% as you'd expect, maybe you'd better learn to think your way around it.
-#scannotes for trance nectar
+#ttc-table-of-troves-scannotes-trance-nectar
 >scan trance nectar
 Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
 #nudge for siter
 >sitre
 All the siters.
-#scannotes for creationism reactionism
+#ttc-table-of-troves-scannotes-creationism-reactionism
 >scan creationism reactionism
 Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic.
 #spechelp for creationism reactionism

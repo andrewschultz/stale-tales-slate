@@ -98,7 +98,7 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
-#scannotes for bleary barley
+#ttc-table-of-otters-scannotes-bleary-barley
 >scan bleary barley
 That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess.
 
@@ -203,7 +203,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's 
 #ttc-table-of-otters-readables-cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
-#scannotes for cinders
+#ttc-table-of-otters-scannotes-cinders
 >scan cinders
 Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely.
 
@@ -738,18 +738,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #here is where we test all the possible mack ideas with ambiguous cheat-scans
 ##balance undos
 >allrand
-#scannotes for t-tearily-irately
+#ttc-table-of-otters-scannotes-t-tearily-irately
 >scan ttearily
 Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways.
-#scannotes for t-formally
+#ttc-table-of-otters-scannotes-t-formally
 >undo
 >scan tformally
 Two question marks in nine letters--well, seven--might be a little sticky. The parleys splayer players said two things.
-#scannotes for t-silently
+#ttc-table-of-otters-scannotes-t-silently
 >undo
 >scan tsilently
 Wow! Three things to consider here. This might be tricky.
-#scannotes for t-steamily
+#ttc-table-of-otters-scannotes-t-steamily
 >undo
 >scan tsteamily
 Well, you have a feeling you know what that question mark should be.
@@ -851,7 +851,7 @@ by one point
 DEBUG INFO: parleys splayer players hinting.
 
 @nud
-#scannotes for parleys splayer players
+#ttc-table-of-otters-scannotes-parleys-splayer-players
 >scan parleys splayer players
 The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data.
 \\
@@ -859,7 +859,7 @@ The players certainly do dance around a lot with their talk, so it's no surprise
 >sarpley
 The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
 \\
-#scannotes for yer all a yell'r
+#ttc-table-of-otters-scannotes-yer-all-a-yell'r
 >scan yer all
 Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very.
 \\
@@ -988,7 +988,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for cut ya all cult laya
 >actualyl
 The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
-#scannotes for cut ya all cult laya
+#ttc-table-of-otters-scannotes-cut-ya-all-cult-laya
 >scan laya
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
 
@@ -1225,7 +1225,7 @@ min-up
 >undo
 
 @nud
-#scannotes for sullenness us
+#ttc-table-of-otters-scannotes-sullenness-us
 >scan sullenness us
 The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier.
 #ttc-table-of-otters-readables-sullenness-us
@@ -1380,7 +1380,7 @@ DEBUG INFO: min-up codepath
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
-#scannotes for atmo moat
+#ttc-table-of-otters-scannotes-atmo-moat
 >scan atmo moat
 You feel sheepish having used the settler, but it's been a long journey.
 
@@ -1586,6 +1586,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @spoi
 As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
 
+@verbs
+#ttc-table-of-otters-attacks-owls
+>attack owls
+You are outnumbered. You need a bit of magic here.
+
 >slow
 Your score has just gone up by one point
 }}SCORE++
@@ -1741,7 +1746,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#scannotes for stray satyr
+#ttc-table-of-otters-scannotes-stray-satyr
 >scan stray satyr
 The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
 #ttc-table-of-otters-readables-stray-satyr
@@ -2491,7 +2496,7 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 You might be able to disrupt both of them, not just one.
 
 @nud
-#scannotes for aside-llp
+#ttc-table-of-otters-scannotes-aside-llp
 >scan elmer
 Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
 >scan merle
@@ -2647,7 +2652,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
-#scannotes for medals
+#ttc-table-of-otters-scannotes-medals
 >scan medals
 The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
 >x medals

@@ -9,7 +9,7 @@
 
 >seed 1
 
-#nowhere dusty study
+#ttc-table-of-ordeal-reload-nowheres-dusty-study
 >e
 You're just in the mood for quiet time, now, just looking around
 >painting
@@ -23,7 +23,7 @@ You're just in the mood for quiet time, now, just looking around
 Ouch! You smack into the MEET-BANS.
 
 >gonear carven cavern
-#nowhere carven cavern
+#ttc-table-of-ordeal-reload-nowheres-carven-cavern
 >e
 You need to make an exit, first.
 >stapler
@@ -32,12 +32,12 @@ You need to make an exit, first.
 The only way to make progress is inward, through that curtain.
 
 >gonear gallery
-#nowhere largely all grey gallery
+#ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
 >w
 You can probably go back up, or you can go in if you're ready to face what's beyond.
 
 >gonear farming framing
-#nowhere farming framing
+#ttc-table-of-ordeal-reload-nowheres-farming-framing
 >n
 No time for mooching around your means manse. You probably need to take a secret passage in, or down.
 >stair
@@ -47,7 +47,7 @@ No time for mooching around your means manse. You probably need to take that sec
 >undo
 
 >gonear highest heights
-#nowhere highest heights
+#ttc-table-of-ordeal-reload-nowheres-highest-heights
 >n
 You can go back IN to the study, though you don't need to, or you could try to get the pram out of the way.
 >ramp
@@ -55,7 +55,7 @@ You can go back IN to the study, though you don't need to, or you could try to g
 You can go back IN to the study, though you don't need to, or you could try going DOWN the ramp.
 
 >ts
-#nowhere strip of profits
+#ttc-table-of-ordeal-reload-nowheres-strip-of-profits
 >n
 As you try to flee the Strip of Profits, a voice booms "Run off for fun? Urff, no!"
 Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
@@ -73,20 +73,20 @@ Defeated, you turn back to the center--and when you look around, you notice the 
 The hubs bush forces you back to the center of the Strip of Profits. Guess you'll need to explore the stores, or what you made of them.
 
 >gonear cruelest lectures
-#nowhere cruelest lectures
+#ttc-table-of-stores-nowheres-cruelest-lectures
 >n
 You fear a "BE RASH? EH, BARS!" from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.
 But there must be a generic way to leave!
 
 >gonear same mesa
-#nowhere same mesa
+#ttc-table-of-routes-nowheres-same-mesa
 >e
 You try going east and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the west, after several minutes.
 >n
 You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa, from the south, after several minutes.
 
 >inside
-#nowhere cleric circle
+#ttc-table-of-routes-nowheres-cleric-circle
 >n
 "Directions are not important here, seeker. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to." So you do.
 You go back outside.
@@ -97,43 +97,43 @@ Cleric Circle
 You go back outside.
 
 >past
-#nowhere idle deli
+#ttc-table-of-routes-nowheres-idle-deli
 >n
 Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
 
 >out
 >across
-#nowhere adobe abode
+#ttc-table-of-routes-nowheres-adobe-abode
 >e
 This do be a one-room place. You can really only go outside.
 
 >gonear harms marsh
-#nowhere harms marsh
+#ttc-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
 >until
 >n
 Far into a rift? No. You can't rely on directions, here.
 
-#nowhere ripe pier
+#ttc-table-of-routes-nowheres-ripe-pier
 >gonear ripe pier
 >w
 You've lost all sense of direction here, but you need to figure how to get on that boat.
 
 >gonear cripple clipper
-#nowhere cripple clipper
+#ttc-table-of-routes-nowheres-cripple-clipper
 >d
 Locked ol' deck. No bowel on below.
 >s
 Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.
 
-#nowhere sonancy canyons
+#ttc-table-of-routes-nowheres-sonancy-canyons
 >gonear sonancy canyons
 >n
 You might run into the spheric ciphers. You still don't have your sense of direction back.
 
 >gonear loather rathole
-#nowhere loather rathole
+#ttc-table-of-troves-nowheres-loather-rathole
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find temporary warmth now you were kicked out from Eh, At Heat.
 Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
@@ -143,12 +143,12 @@ Consciously going into any hurt-thru might leave you vulnerable. You need to fin
 !Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
 
 >gonear bustle sublet
-#nowhere bustle sublet
+#ttc-table-of-troves-nowheres-bustle-sublet
 >e
 The reastier arteries lead nowhere good. You still have a lot to look for.
 
 >gonear boarded roadbed
-#nowhere boarded roadbed
+#ttc-table-of-troves-nowheres-boarded-roadbed
 >e
 A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think.
 >believe
@@ -156,7 +156,7 @@ A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar m
 There's a chance you might wind up in ruts: Rustin' Ruin St.!
 
 >gonear drain nadir
-#nowhere drain nadir
+#ttc-table-of-troves-nowheres-drain-nadir
 >e
 No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
 >despair
@@ -164,22 +164,22 @@ No. You're so low, you might just walk off to SAD PIER and end it all, maybe aft
 No. You're so low, you can picture yourself slipping on a rind or dinar. "I... darn." You need to build yourself up here, somehow.
 
 >gonear boredom bedroom
-#nowhere boredom bedroom
+#ttc-table-of-troves-nowheres-boredom-bedroom
 >e
 Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better.
 
 >gonear browse bowers
-#nowhere browse bowers
+#ttc-table-of-troves-nowheres-browse-bowers
 >e
 You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more.
 
 >gonear econ cone
-#nowhere econ cone
+#ttc-table-of-troves-nowheres-econ-cone
 >e
 The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!
 
 >gonear upscale capsule
-#nowhere upscale capsule
+#ttc-table-of-troves-nowheres-upscale-capsule
 >e
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
 >deserve
@@ -193,140 +193,140 @@ You couldn't just run out on your company and your responsibilities like that! Y
 >n
 You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze.
 >umph
-#nowhere austerer treasure
+#ttc-table-of-presto-nowheres-austerer-treasure
 >n
 The treasure room has no secret passages, so you can only go back east.
 >phooey
 >e
 
 >n
-#nowhere nowt town
+#ttc-table-of-presto-nowheres-nowt-town
 >n
 Nowt Town holds no secrets. You can only go west or south.
 
 >w
-#nowhere r10
+#ttc-table-of-presto-nowheres-r10
 >s
 You walk into a wall, which goes ZVT. "Lame-o," you think, seeing red. Maybe that ZVT was a VZT.
 >w
-#nowhere r00
+#ttc-table-of-presto-nowheres-r00
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#nowhere r01
+#ttc-table-of-presto-nowheres-r01
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#nowhere r02
+#ttc-table-of-presto-nowheres-r02
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#nowhere r03
+#ttc-table-of-presto-nowheres-r03
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
 >e
-#nowhere r12
+#ttc-table-of-presto-nowheres-r12
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
-#nowhere r11
+#ttc-table-of-presto-nowheres-r11
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#nowhere r21
+#ttc-table-of-presto-nowheres-r21
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#nowhere r31
+#ttc-table-of-presto-nowheres-r31
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
 >w
 >n
 >e
-#nowhere r22
+#ttc-table-of-presto-nowheres-r22
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#nowhere r32
+#ttc-table-of-presto-nowheres-r32
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
-#nowhere r42
+#ttc-table-of-presto-nowheres-r42
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
-#nowhere r41
+#ttc-table-of-presto-nowheres-r41
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
-#nowhere r40
+#ttc-table-of-presto-nowheres-r40
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#nowhere r30
+#ttc-table-of-presto-nowheres-r30
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
 >n
 >n
 >n
-#nowhere r43
+#ttc-table-of-presto-nowheres-r43
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >n
-#nowhere r44
+#ttc-table-of-presto-nowheres-r44
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >w
-#nowhere r34
->n
-You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
->e
->s
->s
->w
->n
-#nowhere r33
->n
-You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
->w
-#nowhere r23
->s
-You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
->w
-#nowhere r13
->w
-You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
->n
-#nowhere r14
->n
-You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
->w
-#nowhere r04
+#ttc-table-of-presto-nowheres-r34
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >e
 >s
+>s
+>w
+>n
+#ttc-table-of-presto-nowheres-r33
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#ttc-table-of-presto-nowheres-r23
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#ttc-table-of-presto-nowheres-r13
+>w
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>n
+#ttc-table-of-presto-nowheres-r14
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#ttc-table-of-presto-nowheres-r04
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>e
+>s
 >e
 >n
-#nowhere unwary runway
+#ttc-table-of-presto-nowheres-unwary-runway
 >w
 The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?
 
 >gonear char arch
-#nowhere char arch
+#ttc-table-of-presto-nowheres-char-arch
 >e
 East or west would be an alpinist tailspin ("CHARGE! Eh, crag.") Try north or south, instead.
 
 >gonear dirge ridge
-#nowhere dirge ridge
+#ttc-table-of-presto-nowheres-dirge-ridge
 >e
 The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches.
 
 >gonear marines seminar remains
-#nowhere marines seminar remains
+#ttc-table-of-presto-nowheres-marines-seminar-remains
 >e
 While you're impressed with people who can navigate sport ports, you couldn't do much more than show respect for them, if you need a distraction from your main quest.
 >prost
@@ -334,7 +334,7 @@ While you're impressed with people who can navigate sport ports, you couldn't do
 While you're impressed with people who can navigate sport ports, you already saluted them. No need to do more.
 
 >gonear saps' pass
-#nowhere saps pass
+#ttc-table-of-presto-nowheres-saps-pass
 >sw
 There's no way around the hogs. You need to get rid of them.
 >syke
@@ -342,14 +342,14 @@ There's no way around the hogs. You need to get rid of them.
 It's best to stay on the Phat Path.
 
 >gonear posh hops shop
-#nowhere posh hops shop
+#ttc-table-of-oyster-nowheres-posh-hops-shop
 >e
 You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them
 >outside
 So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image.
 
 >gonear olde lode
-#nowhere olde lode
+#ttc-table-of-oyster-nowheres-olde-lode
 >e
 Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex.
 >calm
@@ -357,28 +357,28 @@ Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't
 Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex.
 
 >gonear disease seaside
-#nowhere disease seaside
+#ttc-table-of-oyster-nowheres-disease-seaside
 >e
 The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.
 You need to cross to the north for more action.
 
 >gonear fighter freight
-#nowhere fighter freight
+#ttc-table-of-oyster-nowheres-fighter-freight
 >e
 Directions aren't what matters here. You just need some sort of action to get off the boat.
 
 >gonear hardest trashed dearths
-#nowhere hardest trashed dearths
+#ttc-table-of-oyster-nowheres-hardest-trashed-dearths
 >e
 Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow.
 
 >gonear lean lane
-#nowhere lean lane
+#ttc-table-of-oyster-nowheres-lean-lane
 >e
 Though you are a guest, probably best not to go poking around. You can go back west.
 
 >gonear lapsin plains
-#nowhere lapsin plains
+#ttc-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or, once the span pans are neutralized, inside.
 >trace
@@ -390,7 +390,7 @@ With the sloppy polyps on most all sides, you can only go back south or, once th
 With the sloppy polyps on most all sides, you can only go back south or inside.
 
 >gonear sclerous closures
-#nowhere sclerous closures
+#ttc-table-of-oyster-nowheres-sclerous-closures
 >w
 You can only go north to the Horned Hedron, once the sardine is gone, or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 >purloin wrap
@@ -400,32 +400,32 @@ You can only go north to the Horned Hedron or east back to Anger Range. The Hand
 
 >gonear ol trap
 # hedron is scenery in closures so that creates a conflict
-#nowhere horned hedron
+#ttc-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, though an area west is in disrepair. You can also go IN to the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
 
 >gonear rascal craals
-#nowhere rascal craals
+#ttc-table-of-oyster-nowheres-rascal-craals
 >w
 The round bay boundary blocks you from going any way but back east.
 
 >gonear end den
-#nowhere end den
+#ttc-table-of-oyster-nowheres-end-den
 >e
 You're disoriented here, but you can go back OUT to get to the Horned Hedron.
 
 >gonear tenfold teflond den loft
-#nowhere tenfold teflond den loft
+#ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
 >e
 While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
 
 >gonear plasm lamps
-#nowhere plasm lamps
+#ttc-table-of-oyster-nowheres-plasm-lamps
 >e
 It's you against the ant! There's no running, but it can't be too hard to defeat.
 
 >gonear loftier trefoil
-#nowhere loftier trefoil
+#ttc-table-of-towers-nowheres-loftier-trefoil
 >e
 One look from Rodney, and you stay put
 >gone
@@ -435,7 +435,7 @@ One look from Rodney, and you stay put
 Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
 
 >gonear topside deposit
-#nowhere topside deposit
+#ttc-table-of-towers-nowheres-topside-deposit
 >e
 The Wildest Wilteds are too dangerous any way but north, and the dreads adders are in the way right now.
 
@@ -446,11 +446,11 @@ The Wildest Wilteds are too dangerous any way but north, and the dreads adders a
 The Wildest Wilteds are too dangerous any way but back north.
 
 >gonear outer route
-#nowhere outer route
+#ttc-table-of-towers-nowheres-outer-route
 >w
 You get lost in sway ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 
-#nowhere dourest detours
+#ttc-table-of-towers-nowheres-dourest-detours
 >n
 Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
 >rousted
@@ -460,14 +460,14 @@ Outer Route
 The sway-ways are not reliable. You probably just want to go back east.
 
 >gonear actionless coastlines
-#nowhere actionless coastlines
+#ttc-table-of-towers-nowheres-actionless-coastlines
 >n
 You can't get across Leak Lake without some sort of craft.
 >sw
 You don't need to explore the natatorium or Hatchery.
 
 >gonear fringe finger
-#nowhere fringe finger
+#ttc-table-of-towers-nowheres-fringe-finger
 >d
 The logged dogleg prevents you from jumping to your doom below to the unorg'd ground.
 >w
@@ -480,17 +480,17 @@ The logged dogleg prevents you from jumping to your doom below to the unorg'd gr
 The logged dogleg has no diagonal entries.
 
 >gonear lost lots
-#nowhere lost lots
+#ttc-table-of-towers-nowheres-lost-lots
 >e
 Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?
 
 >gonear obscurest subsector
-#nowhere obscurest subsector
+#ttc-table-of-towers-nowheres-obscurest-subsector
 >e
 A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now.
 
 >gonear shaven havens
-#nowhere shaven havens
+#ttc-table-of-towers-nowheres-shaven-havens
 >e
 You wander off, but you hear hikers shreik "Shrike! Shrike!"
 Any direction but back south might drive you too far from the palace.
@@ -499,14 +499,14 @@ Any direction but back south might drive you too far from the palace.
 Any direction but back south might drive you too far from the palace.
 
 >gonear rawest waters
-#nowhere rawest waters
+#ttc-table-of-towers-nowheres-rawest-waters
 >e
 Spirited riptides! You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
 >n
 Spirited riptides! That'd only make the Earnest Eastern Neaters further away.
 
 >gonear mislit limits
-#nowhere mislit limits
+#ttc-table-of-towers-nowheres-mislit-limits
 >n
 The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
 >sw
@@ -520,22 +520,22 @@ The scaly clays are too treacherous. You need to find the word to restore the cu
 
 >pow 2
 >gonear clarthead cathedral
-#nowhere clarthead cathedral
+#ttc-table-of-otters-nowheres-clarthead-cathedral
 >e
 The coma camo may be detectable, but you can't change it.
 
 >gonear shiner shrine
-#nowhere shiner shrine
+#ttc-table-of-otters-nowheres-shiner-shrine
 >e
 The coma camo may be detectable, but you can't change it.
 
 >gonear loop pool
-#nowhere loop pool
+#ttc-table-of-otters-nowheres-loop-pool
 >e
 The pool is wide and long. You can only go back south.
 
 >gonear lamer realm
-#nowhere lamer realm
+#ttc-table-of-otters-nowheres-lamer-realm
 >slow
 >n
 You can only go back south. Yup, lame.
@@ -546,31 +546,31 @@ You can only go back south. Yup, lame.
 You can only go back south. The Blest Belts are private to animals and those who helped them.
 
 >gonear bran barn
-#nowhere bran barn
+#ttc-table-of-otters-nowheres-bran-barn
 >e
 You don't need to explore Mr. Lee's property. Your only way out is back north.
 
 >gonear perverse preserve
 >parrot
-#nowhere perverse preserve
+#ttc-table-of-otters-nowheres-perverse-preserve
 >w
 You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS-RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot!
 >w
 The CRITTERS-RESTRICT field isn't worth risking.
 
 >gonear reclusion inclosure
-#nowhere reclusion inclosure
+#ttc-table-of-otters-nowheres-reclusion-inclosure
 >n
 The coevals' alcoves north and south may seem less intimidating, but you really should be focused on what's to the west.
 
 >gonear rancho archon anchor
-#nowhere rancho archon anchor
+#ttc-table-of-otters-nowheres-rancho-archon-anchor
 >7
 >n
 Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east.
 
 >gonear rustic citrus
-#nowhere rustic citrus
+#ttc-table-of-others-nowheres-rustic-citrus
 >e
 With greenish sheering all around, one direction seems as good as any other. Maybe you need to help Curtis a bit more.
 >purloin moss cap
@@ -584,17 +584,17 @@ With greenish sheering all around, one direction seems as good as any other. May
 You can only go north back to the Swell Wells and beyond.
 
 >gonear scape space
-#nowhere scape space
+#ttc-table-of-others-nowheres-scape-space
 >e
 One look at the warding drawing disabuses you of any notion of going anywhere except back up.
 
 >gonear clangier clearing
-#nowhere clangier clearing
+#ttc-table-of-others-nowheres-clangier-clearing
 >e
 You don't need anything in the superstore. You might get lost, anyway.
 
 >gonear filed field
-#nowhere filed field
+#ttc-table-of-others-nowheres-filed-field
 >w
 The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful.
 >n
@@ -607,6 +607,6 @@ With all the foilage foliage and the pipe panel lie pen app too, the only way to
 With all the foilage foliage and even without the pipe panel lie pen app, the only way to say I fled is to go back east.
 
 >gonear gates stage
-#nowhere gates stage
+#ttc-table-of-others-nowheres-gates-stage
 >e
 You don't want to know how effective the gropin' roping is. The gates are more interesting, anyway.

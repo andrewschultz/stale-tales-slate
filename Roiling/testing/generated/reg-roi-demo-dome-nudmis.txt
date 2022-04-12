@@ -33,74 +33,74 @@ There's nothing too tricky to do in the Demo Dome. You can THINK or request the 
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !The spy dial is already laid out.
 
-#nudge for peek
+#ttc-table-of-peek-keep-nudges-peek
 >pkee
 You don't need to flip anything here, really. Certainly not a room.
 
 >blather
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 
-#nudge for greta
+#ttc-table-of-peek-keep-nudges-greta
 >gerta
 It was tested to make sure even you couldn't magic it open.
 
-#nudge for sgni
+#ttc-table-of-peek-keep-nudges-sgni
 >igns
 No need to mess with the helpful sign.
 
-#nudge for saying
+#ttc-table-of-peek-keep-nudges-saying
 >siyang
 No need to mess with the helpful sign.
 
-#nudge for unfold
+#ttc-table-of-peek-keep-nudges-unfold
 >unfold
 No need to mess with the helpful sign.
 
-#nudge for memoir
+#ttc-table-of-peek-keep-nudges-memoir
 >memoir
 No need to mess with the helpful sign.
 
-#nudge for display
+#ttc-table-of-peek-keep-nudges-display
 >dipslay
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
 
-#nudge for spy
+#ttc-table-of-peek-keep-nudges-spy
 >spy
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
 
-#nudge for dial
+#ttc-table-of-peek-keep-nudges-dial
 >dial
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
 
-#nudge for design
+#ttc-table-of-peek-keep-nudges-design
 >edgins
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for deign
+#ttc-table-of-peek-keep-nudges-deign
 >edgin
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for talks
+#ttc-table-of-peek-keep-nudges-talks
 >talsk
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for talk
+#ttc-table-of-peek-keep-nudges-talk
 >takl
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for spce
+#ttc-table-of-peek-keep-nudges-spce
 >spec
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for speca
+#ttc-table-of-peek-keep-nudges-speca
 >spaec
 # note this is defined in the general table, so we get the non-default response.
 Meta-commands don't have any easter eggs, sadly.
@@ -121,82 +121,82 @@ Not surreal enough for you?
 >laid
 The spy dial is already laid out.
 
-#nudge for shall
+#ttc-table-of-peek-keep-nudges-shall
 >shlal
 You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
 
-#nudge for demo
+#ttc-table-of-demo-dome-nudges-demo
 >edom
 Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
 
-#renudge for display
+#+ttc-table-of-peek-keep-nudges-display
 >dipslay
 You won't figure the code. There isn't one. Muahaha.
 
-#renudge for spy
+#+ttc-table-of-peek-keep-nudges-spy
 >spy
 You won't figure the code. There isn't one. Muahaha.
 
-#renudge for dial
+#+ttc-table-of-peek-keep-nudges-dial
 >dial
 You won't figure the code. There isn't one. Muahaha.
 
-#renudge for design
+#+ttc-table-of-peek-keep-nudges-design
 >edgins
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for deign
+#+ttc-table-of-peek-keep-nudges-deign
 >edgin
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for talks
+#+ttc-table-of-peek-keep-nudges-talks
 >talsk
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for talk
+#+ttc-table-of-peek-keep-nudges-talk
 >takl
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for spce
+#+ttc-table-of-peek-keep-nudges-spce
 >spec
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for speca
+#+ttc-table-of-peek-keep-nudges-speca
 >space
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for tripods
+#ttc-table-of-peek-keep-nudges-tripods
 >triposd
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for tripdo
+#ttc-table-of-peek-keep-nudges-tripdo
 >tripod
 This is a museum! Messing with the exhibits would be very bad form.
 
 >n
 Hows Show
 
-#nudge for hows
+#ttc-table-of-hows-show-nudges-hows
 >hosw
 You don't need to flip anything here, really. Certainly not a room.
 
-#nudge for chest
+#ttc-table-of-hows-show-nudges-chest
 >chets
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for raised
+#ttc-table-of-hows-show-nudges-raised
 >raisde
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for aider
+#ttc-table-of-hows-show-nudges-aider
 >aidre
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for coder
+#ttc-table-of-hows-show-nudges-coder
 >codre
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for tech
+#ttc-table-of-hows-show-nudges-tech
 >tehc
 This is a museum! Messing with the exhibits would be very bad form.
 
@@ -208,23 +208,23 @@ Ned's Dens
 >send
 Maybe in another game, you could do that, if you walked around right. But not this one.
 
-##nudge for neds
+#ttc-table-of-ned's-dens-nudges-neds
 >sedn
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one! There are so many awesome ones!
 
-#nudge for icch
+#ttc-table-of-ned's-dens-nudges-icch
 >icch
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 
-#nudge for ernol
+#ttc-table-of-ned's-dens-nudges-ernol
 >ernol
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 
-#nudge for chicloner
+#ttc-table-of-ned's-dens-nudges-chicloner
 >chronicle
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 
-#nudge for neds
+#+ttc-table-of-ned's-dens-nudges-neds
 >edns
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
 
@@ -232,23 +232,23 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 >in
 Intel Inlet
 
-#nudge for intel
+#ttc-table-of-intel-inlet-nudges-intel
 >eltin
 You don't need to flip anything here, really. Certainly not a room.
 
-#nudge for calendar
+#ttc-table-of-intel-inlet-nudges-calendar
 >careladn
 These are documents of historical records! Revisionism is so Elvira.
 
-#nudge for thesis
+#ttc-table-of-intel-inlet-nudges-thesis
 >thessi
 These are documents of historical records! Revisionism is so Elvira.
 
-#nudge for passe
+#ttc-table-of-intel-inlet-nudges-passe
 >pases
 I have full creative control over the Passe Apses, and I'm not giving it up.
 
-#nudge for apse
+#ttc-table-of-intel-inlet-nudges-apse
 >apes
 I have full creative control over the Passe Apses, and I'm not giving it up.
 
@@ -259,7 +259,7 @@ I have full creative control over the Passe Apses, and I'm not giving it up.
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
-#nudge for novella
+#ttc-table-of-evoc-cove-nudges-novella
 >novelal
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 
@@ -269,15 +269,15 @@ Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 >lol
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 
-#nudge for neva
+#ttc-table-of-evoc-cove-nudges-neva
 >neav
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 
-#nudge for lol
+#ttc-table-of-evoc-cove-nudges-lol
 >llo
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 
-#nudge for evoc
+#ttc-table-of-evoc-cove-nudges-evoc
 >evco
 You don't need to flip anything here, really. Certainly not a room.
 
@@ -290,71 +290,71 @@ Sparse Spares
 >spears
 There's nothing you need a weapon to fight against.
 
-#nudge for trifle
+#ttc-table-of-sparse-spares-nudges-trifle
 >tifler
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for placer
+#ttc-table-of-sparse-spares-nudges-placer
 >palcer
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for scalper
+#ttc-table-of-sparse-spares-nudges-scalper
 >palcers
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for rudest
+#ttc-table-of-sparse-spares-nudges-rudest
 >rudest
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for dustpan
+#ttc-table-of-sparse-spares-nudges-dustpan
 >dupstan
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for ladder
+#ttc-table-of-sparse-spares-nudges-ladder
 >lardde
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for scalpit
+#ttc-table-of-sparse-spares-nudges-scalpit
 >sclipat
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for btol
+#ttc-table-of-sparse-spares-nudges-btol
 >blto
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for case
+#ttc-table-of-sparse-spares-nudges-case
 >scea
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for boltcase
+#ttc-table-of-sparse-spares-nudges-boltcase
 >boltcaes
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for best
+#ttc-table-of-sparse-spares-nudges-best
 >bets
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for calo
+#ttc-table-of-sparse-spares-nudges-calo
 >calo
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for sparse
+#ttc-table-of-sparse-spares-nudges-sparse
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
-#nudge for spare
+#ttc-table-of-sparse-spares-nudges-spare
 
 #mistake test for clasp
 >clasp
 If there were a puzzle for stealing stuff, that'd work. But there isn't.
 
-#nudge for clasp
+#ttc-table-of-sparse-spares-nudges-clasp
 >alcsp
 This is a museum! Messing with the exhibits would be very bad form.
 
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 
-#nudge for bulk
+#ttc-table-of-sparse-spares-nudges-bulk
 >ublk
 Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 

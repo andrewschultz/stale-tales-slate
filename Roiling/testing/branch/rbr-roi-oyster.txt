@@ -291,24 +291,24 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a 
 The trolls laugh at you a bit, but nervously.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
 \\
-#scannotes for gins sign
+#ttc-table-of-oyster-scannotes-gins-sign
 >scan gins sign
 Hmm. Whatever the variable colors are, you think you can do something with the fixed ones.
-#scannotes for capers recaps
+#ttc-table-of-oyster-scannotes-capers-recaps
 >scan capers recaps
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
 Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
-#scannotes for casper spacer
+#ttc-table-of-oyster-scannotes-casper-spacer
 >scan casper spacer
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
 !Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
-#scannotes for perma amper
+#ttc-table-of-oyster-scannotes-perma-amper
 >scan perma amper
 It's a perma-amper, so that might account for the twitchy light.
-#scannotes for lil ps pills
+#ttc-table-of-oyster-scannotes-lil-ps-pills
 >scan li'l p's pills
 The pills can't be that fidgety. The particular brand must be a clue, too.
-#scannotes for lolstr trolls
+#ttc-table-of-oyster-scannotes-lolstr-trolls
 >scan lolstr trolls
 Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
 
@@ -677,7 +677,7 @@ No one boat seems better than the others. Maybe you should widen your focus to a
 #nudge for interlocking
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
-#scannotes for frat raft
+#ttc-table-of-oyster-scannotes-frat-raft
 >scan frat raft
 You're pretty sure you can get this one quickly. I mean, you've been given one of the letters.
 
@@ -688,7 +688,7 @@ You're pretty sure you can get this one quickly. I mean, you've been given one o
 The oars have no gas, or whatever they might run on
 
 @nud
-#scannotes for sabot boats
+#ttc-table-of-oyster-scannotes-sabot-boats
 >scan sabot boats
 It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!
 
@@ -953,7 +953,7 @@ You need a slightly more organized way to reveal what's under the ground, and yo
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 
 @nud
-#scannotes for HUNTER HUNT AREA
+#ttc-table-of-oyster-scannotes-HUNTER-HUNT-AREA
 >scan hunter hunt area
 You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying "You know, sometimes, that's more helpful than straight-up clues."
 
@@ -969,7 +969,7 @@ It's a HUNTER HUNT AREA, which seems more important.
 #nudge for darnel
 >darnle
 If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
-#scannotes for snarled darnels
+#ttc-table-of-oyster-scannotes-snarled-darnels
 >scan snarled darnels
 So very tangled! No vowels showed up for certain, which makes it tougher ... or does it?
 #spechelp for snarled darnels
@@ -1472,7 +1472,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That'
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 \\
-#scannotes for bogus-plains
+#ttc-table-of-oyster-scannotes-bogus-plains
 >scan
 !Your settler appears to register this all across the plains.
 #here we want to scan only the crates.
@@ -1660,7 +1660,7 @@ You already did what you needed with the knob, Step by Step.
 
 @nud
 #note the pans must be taken care of last
-#scannotes for span pans
+#ttc-table-of-oyster-scannotes-span-pans
 >scan span pans
 There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here.
 
@@ -1955,7 +1955,7 @@ Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU.
 Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.
 
 @nud
-#scannotes for paw r wrap
+#ttc-table-of-oyster-scannotes-paw-r-wrap
 >scan paw r wrap
 Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay.
 #nudge for closure
@@ -1980,7 +1980,7 @@ The sardine gives you a weird look, as if you need to stop mumbling. You're not 
 >searhc
 Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
-#scannotes for achers chaser arches
+#ttc-table-of-oyster-scannotes-achers-chaser-arches
 >scan achers chaser arches
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
 
@@ -2061,7 +2061,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner.
 #ttc-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
-#scannotes for general gleaner
+#ttc-table-of-oyster-scannotes-general-gleaner
 >scan general gleaner
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 #mistake test for reangle
@@ -2253,7 +2253,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage
 #nudge for howler
 >howlre
 A howler or haunter is not specific enough. This is a big ol' SAUSAGE, here.
-#scannotes for use saga sausage
+#ttc-table-of-oyster-scannotes-use-saga-sausage
 >scan use saga sausage
 The Use-Saga Sausage's moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it.
 
@@ -2425,7 +2425,7 @@ The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe w
 DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. That's a decent omen.
 >derali
 The yapper might alert its cronies if you try anything. Even something not quite right, like that
-#scannotes for papery yapper
+#ttc-table-of-oyster-scannotes-papery-yapper
 >scan papery yapper
 Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully.
 #mistake test for redial
@@ -2500,7 +2500,7 @@ Someone named LAMPERT carved their name in red in the templar ramplet.
 >trampel
 There has to be a way to storm down the templar ramplet. But not that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
-#scannotes for templar ramplet
+#ttc-table-of-oyster-scannotes-templar-ramplet
 >scan templar ramplet
 With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
 
@@ -2569,10 +2569,10 @@ You don't need to name the ant. It's not a pet.
 There's a simpler way to attack the ant.
 
 @nud
-#scannotes for bogus-psalm
+#ttc-table-of-oyster-scannotes-bogus-psalm
 >scan
 Perhaps finding where the vowel is would be a good start.
-#scannotes for natant ant
+#ttc-table-of-oyster-scannotes-natant-ant
 >scan natant ant
 You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic.
 #spechelp for natant ant

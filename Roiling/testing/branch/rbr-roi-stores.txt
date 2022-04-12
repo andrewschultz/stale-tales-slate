@@ -491,7 +491,7 @@ The speaker parkees aren't what, or who, you need to change, here. It'll still b
 >parkese
 The speaker parkees aren't what, or who, you need to change, here. It'll still be TEDIOUS.
 \\
-#scannotes for suit ode douse it
+#ttc-table-of-stores-scannotes-suit-ode-douse-it
 >scan suit ode
 Well, that's a lot of question marks, but if you're sharp, maybe you can figure it out from this or find other clues.
 
@@ -593,7 +593,7 @@ The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store W. That's a decent omen.
-#readables for store w
+#ttc-table-of-stores-readables-store-w
 >read store w
 WESTOR is the name of the company that built this. There's more, about what method they used
 >read store w
@@ -685,7 +685,7 @@ You should just enter the balancer barnacle. No need or way to seal it back up.
 >othesr
 Store H looks totally different for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a decent omen.
-#readables for store h
+#ttc-table-of-stores-readables-store-h
 >read store h
 "All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth"
 
@@ -712,7 +712,7 @@ You should just enter the Throes Hoster. No need or way to seal it back up.
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store P. That's a decent omen.
-#scannotes for tropes poster
+#ttc-table-of-stores-scannotes-tropes-poster
 >scan tropes poster
 I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
 
