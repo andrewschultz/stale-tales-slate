@@ -44,7 +44,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 Strip of Profits
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
-#nudge for storer
+#ttc-table-of-strip-of-profits-nudges-storer
 >storre
 The resort and Store R led to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now.
 !You wouldn't be safe there.
@@ -96,95 +96,95 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#nudge for store
+#ttc-table-of-strip-of-profits-nudges-store
 >stoer
 You'll want to focus on a specific store.
-#nudge for storea
+#ttc-table-of-strip-of-profits-nudges-storea
 >storae
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
-#nudge for storec
+#ttc-table-of-strip-of-profits-nudges-storec
 >storce
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
-#nudge for stored
+#ttc-table-of-strip-of-profits-nudges-stored
 >storde
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
-#nudge for storee
+#ttc-table-of-strip-of-profits-nudges-storee
 >storee
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
-#nudge for storeg
+#ttc-table-of-strip-of-profits-nudges-storeg
 >stoger
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
-#nudge for stores
+#ttc-table-of-strip-of-profits-nudges-stores
 >storse
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
-#nudge for storef
+#ttc-table-of-strip-of-profits-nudges-storef
 >storfe
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
-#nudge for storei
+#ttc-table-of-strip-of-profits-nudges-storei
 >storie
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
-#nudge for storem
+#ttc-table-of-strip-of-profits-nudges-storem
 >storme
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
-#nudge for storej
+#ttc-table-of-strip-of-profits-nudges-storej
 >storje
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
-#nudge for storex
+#ttc-table-of-strip-of-profits-nudges-storex
 >storxe
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
-#nudge for storez
+#ttc-table-of-strip-of-profits-nudges-storez
 >storze
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
-#nudge for storel
+#ttc-table-of-strip-of-profits-nudges-storel
 >storle
 You search for a magic word but feel, er, lost.
-#nudge for storeo
+#ttc-table-of-strip-of-profits-nudges-storeo
 >storoe
 Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
-#nudge for storeq
+#ttc-table-of-strip-of-profits-nudges-storeq
 >storqe
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
-#renudge for storer
+#+ttc-table-of-strip-of-profits-nudges-storer
 >storre
 The resort and Store R led to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now. You wouldn't be safe there.
-#nudge for strip
+#ttc-table-of-strip-of-profits-nudges-strip
 >strpi
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for profits
+#ttc-table-of-strip-of-profits-nudges-profits
 >profist
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for profit
+#ttc-table-of-strip-of-profits-nudges-profit
 >profti
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for montage
+#ttc-table-of-strip-of-profits-nudges-montage
 >montaeg
 It's probably counterproductive to change--it's more an information booth.
 >x montage
 Also, the montage was created by Tom Egan. Of course. Can't say he was not game.
 >x montage
 !Also, the montage was created by Tom Egan. Of course. Can't say he was not game.
-#nudge for engraving
+#ttc-table-of-strip-of-profits-nudges-engraving
 >engravign
 The engraving is meant to be read. You can modify it with other actions.
-#nudge for engravings
+#ttc-table-of-strip-of-profits-nudges-engravings
 >engravinsg
 You can only change the enrgavings by working through the other stores.
-#nudge for patcher
+#ttc-table-of-strip-of-profits-nudges-patcher
 >purloin patcher
 >patchre
 The patcher doesn't need to be changed. It does the changing if you point it.
 >undo
 >undo
-#nudge for someone
+#ttc-table-of-strip-of-profits-nudges-someone
 >someoen
 Nothing happens. The engravings on the montage stay as they are. You probably need to worry about the stores and/or what they become, instead.
-#nudge for nouned
+#ttc-table-of-strip-of-profits-nudges-nouned
 >nounde
 Nothing happens. The engravings on the montage stay as they are. You probably need to worry about the stores and/or what they become, instead.
-#nudge for window
+#ttc-table-of-strip-of-profits-nudges-window
 >windwo
 Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
-#nudge for windows
+#ttc-table-of-strip-of-profits-nudges-windows
 >windosw
 Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
 #mistake test for ergots
@@ -262,15 +262,15 @@ You see red at the possibility people might mess with your mind in whatever's be
 #mistake test for troyes
 >troyes
 Store Y does not lead to France.
-#nudge for shell
+#ttc-table-of-strip-of-profits-nudges-shell
 >shell
 The shells don't move. Perhaps they are just a clue of what Store Y can become.
-#nudge for shells
+#ttc-table-of-strip-of-profits-nudges-shells
 >shelsl
 The shells don't move. Perhaps they are just a clue of what Store Y can become.
 
 @nud
-#spechelp for store b
+#ttc-table-of-stores-spechelp-store-b
 >sorbte
 The smell from Store B becomes fruitier and more delicious.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a decent omen.
@@ -298,13 +298,13 @@ It's going to get evil enough even without a high-ranking COBRA officer.
 You don't need people oohing and ahing at your skill.
 
 @nud
-#spechelp for store n
+#ttc-table-of-stores-spechelp-store-n
 >nestro
 "Dude, you like must be close!" you hear from Store N.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store N. That's a decent omen.
 >tokers
 by one point
-#nudge for toker
+#ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if they lost another.
 #done rejects for tokers
@@ -331,7 +331,7 @@ Being a stoner isn't treason. Use his real name.
 You rescued him, and that's enough.
 
 @nud
-#spechelp for store k
+#ttc-table-of-stores-spechelp-store-k
 >tokesr
 An odd sweet smell from Store K, for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a decent omen.
@@ -356,21 +356,21 @@ Nestor periodically mumbles about his lost buddies.
 Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
 
 @nud
-#renudge for toker
+#+ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if someone had to replace Nestor again.
 #redone rejects for tokers
 >tokesr
 They are who they are.
 !You should maybe try to get their friend back.
-#nudge for mangiest
+#ttc-table-of-strip-of-profits-nudges-mangiest
 >mangiets
 You can't do anything with the mangiest steaming other than enter it for a side adventure.
 >s
-#nudge for husb
+#ttc-table-of-strip-of-profits-nudges-husb
 >hubs
 The hubs bush is too sturdy. You can't escape the Strip of Profits.
-#nudge for bhu
+#ttc-table-of-strip-of-profits-nudges-bhu
 >buh
 The hubs bush is too sturdy. You can't escape the Strip of Profits.
 
@@ -410,28 +410,28 @@ Yes, it's tedious enough to make you see red.
 It'd get you in trouble around here.
 
 @nud
-#nudge for blabber
+#ttc-table-of-cruelest-lectures-nudges-blabber
 >blabbre
 The blabber babbler is unchangeable, but perhaps indirectly moving him will work.
 \\
-#nudge for rehab
+#ttc-table-of-cruelest-lectures-nudges-rehab
 >rehba
 The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead.
 \\
-#nudge for rehabs
+#ttc-table-of-cruelest-lectures-nudges-rehabs
 >rehasb
 The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead.
 \\
-#nudge for storse
+#ttc-table-of-cruelest-lectures-nudges-storse
 >stores
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for seating
+#ttc-table-of-cruelest-lectures-nudges-seating
 >seatign
 That might cause a bit too much commotion. Maybe you can pay attention to a common thread that will dispose of the blabber babbler and the Rehabs Basher.
-#nudge for mangiets
+#ttc-table-of-cruelest-lectures-nudges-mangiets
 >mangiest
 You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and blabber babbler. Tedious.
-#spechelp for suit ode douse it
+#ttc-table-of-stores-spechelp-suit-ode-douse-it
 >outsied
 That tune in the background, Suit Ode: Douse It, takes an odd turn. But it doesn't quite shut down.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Suit Ode: Douse It. That's a decent omen.
@@ -461,33 +461,33 @@ Before you can do anything with or to the Rehabs Basher, she thrusts pamphlets l
 >gs
 >push rehabs basher
 Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp: SPLAT at you
-#nudge for example
+#ttc-table-of-cruelest-lectures-nudges-example
 >exampel
 The blabber babbler is unchangeable, but perhaps indirectly moving him will work.
-#nudge for ian
+#ttc-table-of-cruelest-lectures-nudges-ian
 >ina
 Ian is unchangeable, but maybe he is movable.
-#nudge for guardian
+#ttc-table-of-cruelest-lectures-nudges-guardian
 >guardina
 Ian is unchangeable, but maybe he is movable.
-#nudge for pamphlets
+#ttc-table-of-cruelest-lectures-nudges-pamphlets
 >pamphlest
 You're probably overthinking it. The I-Used-To examples are just plain TEDIOUS.
-#nudge for pamphlet
+#ttc-table-of-cruelest-lectures-nudges-pamphlet
 >pamphlte
 You're probably overthinking it. The I-Used-To examples are just plain TEDIOUS.
-#nudge for lectures
+#ttc-table-of-cruelest-lectures-nudges-lectures
 >lecturse
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#nudge for lecture
+#ttc-table-of-cruelest-lectures-nudges-lecture
 >lectuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 \\
-#nudge for parkee
+#ttc-table-of-cruelest-lectures-nudges-parkee
 >pareek
 The speaker parkees aren't what, or who, you need to change, here. It'll still be TEDIOUS.
 \\
-#nudge for parkees
+#ttc-table-of-cruelest-lectures-nudges-parkees
 >parkese
 The speaker parkees aren't what, or who, you need to change, here. It'll still be TEDIOUS.
 \\
@@ -511,7 +511,7 @@ Your score has just gone up by one point
 There's no time for food! Especially fatty, non-brain food!
 
 @nud
-#spechelp for store u
+#ttc-table-of-stores-spechelp-store-u
 >routse
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a decent omen.
@@ -532,18 +532,18 @@ Your score has just gone up by one point
 #done rejects for course source
 >routse
 You should just enter the course source. No need or way to seal it back up.
-#nudge for route
+#ttc-table-of-strip-of-profits-nudges-route
 >rouet
 You don't need to do anything with an individual route. Just go in.
-#nudge for course
+#ttc-table-of-strip-of-profits-nudges-course
 >coures
 You don't need to do anything with an individual route. Just go in.
-#nudge for courses
+#ttc-table-of-strip-of-profits-nudges-courses
 >coursse
 You don't need to do anything with an individual route. Just go in.
 
 @nud
-#spechelp for store v
+#ttc-table-of-stores-spechelp-store-v
 >trovse
 A single paper currency flutters off from Store V, lost forever.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a decent omen.
@@ -581,15 +581,15 @@ The patcher shatters in a shower of fourth-wall quantum physics as you switch it
 #done rejects for tastee estate
 >trovse
 You should just enter the Tastee Estate. No need or way to seal it back up.
-#nudge for tastee
+#ttc-table-of-strip-of-profits-nudges-tastee
 >tastee
 The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
-#nudge for tasty
+#ttc-table-of-strip-of-profits-nudges-tasty
 >tasyt
 The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
 
 @nud
-#spechelp for store w
+#ttc-table-of-stores-spechelp-store-w
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store W. That's a decent omen.
@@ -621,19 +621,19 @@ Your score has just gone up by one point
 #done rejects for truster turrets
 >towesr
 You should just enter the truster turrets. No need or way to seal them back up.
-#nudge for turret
+#ttc-table-of-strip-of-profits-nudges-turret
 >turrte
 You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER.
-#nudge for turrets
+#ttc-table-of-strip-of-profits-nudges-turrets
 >turrest
 You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER.
-#nudge for ivy
+#ttc-table-of-strip-of-profits-nudges-ivy
 >iyv
 You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER.
-#nudge for ivory
+#ttc-table-of-strip-of-profits-nudges-ivory
 >ivoyr
 You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER.
-#spechelp for store y
+#ttc-table-of-stores-spechelp-store-y
 >oystre
 You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a decent omen.
@@ -681,7 +681,7 @@ Seawater scents from the balancer barnacle.
 You should just enter the balancer barnacle. No need or way to seal it back up.
 
 @nud
-#spechelp for store h
+#ttc-table-of-stores-spechelp-store-h
 >othesr
 Store H looks totally different for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a decent omen.
@@ -708,7 +708,7 @@ A mix of surprisingly nice smells from the Throes Hoster where Store H was.
 You should just enter the Throes Hoster. No need or way to seal it back up.
 
 @nud
-#spechelp for store p
+#ttc-table-of-stores-spechelp-store-p
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store P. That's a decent omen.
@@ -751,7 +751,7 @@ A roar of angry undefinable words swirls from the odorant tornado.
 The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good.
 
 @nud
-#nudge for odorant
+#ttc-table-of-strip-of-profits-nudges-odorant
 >odoratn
 But you already changed Store P.
 #done rejects for odorant tornado
@@ -759,7 +759,7 @@ But you already changed Store P.
 You should just enter the odorant tornado. No need or way to seal it back up.
 
 @nud
-#spechelp for store t
+#ttc-table-of-stores-spechelp-store-t
 >ottesr
 You hear various unrecognizable animal noises.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store T. That's a decent omen.
@@ -787,13 +787,13 @@ The energy beam from the patcher bounces off the solid idols and almost zaps you
 #done rejects for solid idols
 >ottesr
 You should just enter the solid idols. No need or way to seal them back up.
-#nudge for otter
+#ttc-table-of-strip-of-profits-nudges-otter
 >ottre
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
-#nudge for idol
+#ttc-table-of-strip-of-profits-nudges-idol
 >idlo
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
-#nudge for solid
+#ttc-table-of-strip-of-profits-nudges-solid
 >soldi
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
 

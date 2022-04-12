@@ -208,11 +208,11 @@ The church's name is not as important as its mission.
 #ttc-table-of-routes-scannotes-anti-sag-sit-a-nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
-#spechelp for anti sag sit a nag
+#ttc-table-of-routes-spechelp-anti-sag-sit-a-nag
 >agastni
 You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
-#spechelp for side art
+#ttc-table-of-routes-spechelp-side-art
 >astried
 There's something in the side art, but you're not sure if you need to figure it out just right now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
@@ -224,7 +224,7 @@ OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading
 While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk.
 
 @nud
-#spechelp for worst ad
+#ttc-table-of-routes-spechelp-worst-ad
 >towarsd
 The ad seems slightly nearer, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
@@ -249,7 +249,7 @@ DEBUG INFO: scripture picturers hinting.
 {$SCOS}
 
 @nud
-#spechelp for scripture picturers
+#ttc-table-of-routes-spechelp-scripture-picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not precisely like that. Your thoughts are close, but jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
@@ -501,7 +501,7 @@ Perhaps it's better and simpler to focus on the proper names instead.
 Perhaps it's better and simpler to focus on the proper names instead.
 
 @nud
-#spechelp for adsorbing signboard
+#ttc-table-of-routes-spechelp-adsorbing-signboard
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signboard. That's a decent omen.
@@ -626,7 +626,7 @@ Pat doesn't need consolation for his lost business.
 Pat's is a local small business, not nameless, faceless real estate.
 
 @nud
-#spechelp for seed pit
+#ttc-table-of-routes-spechelp-seed-pit
 >despiet
 The seed pit seems to bubble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
@@ -701,7 +701,7 @@ You angle your spoon a bit, and you realize you, or something, should be ACROSS.
 #renudge for resto
 >resot
 You did well enough to focus on the proper names instead.
-#spechelp for lairage regalia
+#ttc-table-of-routes-spechelp-lairage-regalia
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
@@ -773,7 +773,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, well, dingy enough.
-#spechelp for pipe soot
+#ttc-table-of-routes-spechelp-pipe-soot
 >opposiet
 The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
@@ -849,7 +849,7 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
 @nud
-#respechelp for anti sag sit a nag
+#re#ttc-table-of-routes-spechelp-anti-sag-sit-a-nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -925,7 +925,7 @@ You can't hide from Ian Gast like that, right now.
 There's more than one tirade
 
 @nud
-#respechelp for side art
+#re#ttc-table-of-routes-spechelp-side-art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -982,7 +982,7 @@ The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for woe bow bell
+#ttc-table-of-routes-spechelp-woe-bow-bell
 >belwo
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
@@ -1052,7 +1052,7 @@ Nia Gast is too old and set in her ways. You may just need to listen to her from
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for rude n nuder
+#ttc-table-of-routes-spechelp-rude-n-nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
@@ -1162,7 +1162,7 @@ You angle your spoon a bit, and you realize you, or something, should be FROM.
 #ttc-table-of-routes-scannotes-morf-form
 >scan morf form
 Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?
-#spechelp for morf form
+#ttc-table-of-routes-spechelp-morf-form
 >frmo
 The MORF-FORM rocks in the air, as if it's about to fall.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That's a decent omen.
@@ -1204,7 +1204,7 @@ The MORF-FORM has, uh, morphed enough. Deal with THE BEAN.
 #nudge for bean
 >bena
 THE BEAN has too much gravitas to be just a bean.
-#spechelp for the bean
+#ttc-table-of-routes-spechelp-the-bean
 >beneaht
 THE BEAN rolls back and forth a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from THE BEAN. That's a decent omen.
@@ -1273,7 +1273,7 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 #ttc-table-of-routes-scannotes-null-it-unit
 >scan null it unit
 The NULL-IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
-#spechelp for null it unit
+#ttc-table-of-routes-spechelp-null-it-unit
 >litun
 You feel it's quite near the right time for the NULL-IT unit to shut down, for the darkness to lift. And you must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. That's a decent omen.
@@ -1321,7 +1321,7 @@ The underground is already lit. Un-unlit.
 #nudge for pyrites
 >pyrites
 not something you
-#spechelp for odd run on aura
+#ttc-table-of-routes-spechelp-odd-run-on-aura
 >aroudn
 You thought you saw an un-road for a second, but ... not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura. That's a decent omen.
@@ -1347,7 +1347,7 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 
 @nud
-#spechelp for noon gag
+#ttc-table-of-routes-spechelp-noon-gag
 #remember "all" bugs the Inform compiler
 >alogn
 You think of how to find a way to No-Lag Logan's boat.
@@ -1400,7 +1400,7 @@ You'll have to deal with the whole data-dim mists.
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
 @nud
-#spechelp for data dim mists
+#ttc-table-of-routes-spechelp-data-dim-mists
 >amidts
 Hmm, you almost see a way past the data-dim mists.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
@@ -1470,7 +1470,7 @@ No need to alter them. Worth looking at, though.
 #nudge for sketchins
 >sketchisn
 No need to alter them. Worth looking at, though.
-#spechelp for thickness sketchins
+#ttc-table-of-routes-spechelp-thickness-sketchins
 >athwatr
 Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
@@ -1506,7 +1506,7 @@ Squealing. It could be calmer
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for hurt hog
+#ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
@@ -1542,11 +1542,11 @@ It's more the content of the patters that you could deal with, if you wanted.
 #nudge for patters
 >pattesr
 It's more the content of the patters that you could deal with, if you wanted.
-#spechelp for bent ewe
+#ttc-table-of-routes-spechelp-bent-ewe
 >betwene
 The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
-#respechelp for hurt hog
+#re#ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 #nudge for spheric
@@ -1618,7 +1618,7 @@ by one point
 >undo
 
 @nud
-#spechelp for raptest patters
+#ttc-table-of-routes-spechelp-raptest-patters
 >withotu
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters. That's a decent omen.
@@ -1662,7 +1662,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake retest for spatter
 >spatter
 !No violence!
-#spechelp for yob den
+#ttc-table-of-routes-spechelp-yob-den
 >beyodn
 Some different noises from the yob den.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's a decent omen.

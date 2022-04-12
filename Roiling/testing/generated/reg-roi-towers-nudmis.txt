@@ -87,122 +87,122 @@ Now that would be too embarrassing. Maybe you could embarrass him a little, thou
 >undo
 
 >allrand
-#spechelp for geno
+#ttc-table-of-towers-spechelp-geno
 >geon
 Geno looks around, as if he's about to bolt.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Geno. That's a decent omen.
 >undo
-#spechelp for edwin
+#ttc-table-of-towers-spechelp-edwin
 >edwni
 Edwin hiccups.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Edwin. That's a decent omen.
 >undo
-#spechelp for blake
+#ttc-table-of-towers-spechelp-blake
 >blaek
 Blake looks a bit unhappier.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Blake. That's a decent omen.
 >undo
-#spechelp for ernest
+#ttc-table-of-towers-spechelp-ernest
 >ernets
 Ernest seizes up.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ernest. That's a decent omen.
 >undo
-#spechelp for andres
+#ttc-table-of-towers-spechelp-andres
 >andrse
 Andres looks a bit more tied up at the moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Andres. That's a decent omen.
 >undo
-#spechelp for cedrick
+#ttc-table-of-towers-spechelp-cedrick
 >cedrikc
 Cedrick cringes slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Cedrick. That's a decent omen.
 >undo
-#spechelp for shane
+#ttc-table-of-towers-spechelp-shane
 >ashne
 Some color drains from Shane's face.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Shane. That's a decent omen.
 >undo
-#spechelp for eldon
+#ttc-table-of-towers-spechelp-eldon
 >eldno
 Eldon looks slightly wrinkled for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eldon. That's a decent omen.
 >undo
-#spechelp for bredo
+#ttc-table-of-towers-spechelp-bredo
 >breod
 Bredo yawns.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Bredo. That's a decent omen.
 >undo
-#spechelp for marcel
+#ttc-table-of-towers-spechelp-marcel
 >marcle
 Marcel breathes slower for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marcel. That's a decent omen.
 >undo
-#spechelp for andrew
+#ttc-table-of-towers-spechelp-andrew
 >andrwe
 Andrew suddenly looks as if he's been told he did something wrong.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Andrew. That's a decent omen.
 >undo
-#spechelp for demitri
+#ttc-table-of-towers-spechelp-demitri
 >demitir
 Demitri shivers a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Demitri. That's a decent omen.
 >undo
-#spechelp for tyson
+#ttc-table-of-towers-spechelp-tyson
 >tysno
 Tyson looks slightly less emotional.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Tyson. That's a decent omen.
 >undo
-#spechelp for goldy
+#ttc-table-of-towers-spechelp-goldy
 >golyd
 Goldy starts to fold his hands in prayer but thinks better of it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Goldy. That's a decent omen.
 >undo
-#spechelp for daryl
+#ttc-table-of-towers-spechelp-daryl
 >darly
 Daryl pinches his sides and shakes his head.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Daryl. That's a decent omen.
 >undo
-#spechelp for marlon
+#ttc-table-of-towers-spechelp-marlon
 >marlno
 Marlon looks a little less weird for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marlon. That's a decent omen.
 >undo
-#spechelp for archie
+#ttc-table-of-towers-spechelp-archie
 >archei
 Archie looks a bit pained.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Archie. That's a decent omen.
 >undo
-#spechelp for leander
+#ttc-table-of-towers-spechelp-leander
 >leanerd
 Leander makes an a-ha gesture--no, only for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Leander. That's a decent omen.
 >undo
-#spechelp for wade
+#ttc-table-of-towers-spechelp-wade
 >waed
 Wade's eyes get bigger for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Wade. That's a decent omen.
 >undo
-#spechelp for royce
+#ttc-table-of-towers-spechelp-royce
 >royec
 Royce looks a bit less aggressive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Royce. That's a decent omen.
 >undo
-#spechelp for dewey
+#ttc-table-of-towers-spechelp-dewey
 >dewye
 Dewey seems momentarily less muscular.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Dewey. That's a decent omen.
 >undo
-#spechelp for reggie
+#ttc-table-of-towers-spechelp-reggie
 >reggei
 Reggie sniffs the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reggie. That's a decent omen.
 >undo
-#spechelp for barney
+#ttc-table-of-towers-spechelp-barney
 >barnye
 Barney looks around a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Barney. That's a decent omen.
 >undo
-#spechelp for preston
+#ttc-table-of-towers-spechelp-preston
 >prestno
 Preston almost slips for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a decent omen.
@@ -210,7 +210,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a de
 Your score has just gone up by one point
 >undo
 >undo
-#spechelp for terrance
+#ttc-table-of-towers-spechelp-terrance
 >terranec
 Terrance looks around as if he wants to run off.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a decent omen.
@@ -227,7 +227,7 @@ Score in a scenario: 2 out of 57 total points in the current region, Towers. Low
 >score
 Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
 
-#spechelp for rodney
+#ttc-table-of-towers-spechelp-rodney
 >rodnye
 Rodney looks around, as if he is sick of this place.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Yo-Rend-Or-Deny Rodney. That's a decent omen.
@@ -280,7 +280,7 @@ Score in a scenario: 8 out of 57 total points in the current region, Towers. Low
 
 # this is out of order, because the main code path unlocks (ahem) UNLOCKED quite early
 >gonear obscurest subsector
-#spechelp for luck node
+#ttc-table-of-towers-spechelp-luck-node
 >unleckdo
 You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That's a decent omen.
@@ -307,7 +307,7 @@ It already is a place. It needs to be more than that, to wipe off the stigma of 
 #mistake test for crust
 >crust
 It probably needs less crust, not more. The whole curst palace.
-#spechelp for curst palace
+#ttc-table-of-towers-spechelp-curst-palace
 >curst palaec
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight.
@@ -379,7 +379,7 @@ The Shout-So Hut is built to resist words. You aren't getting through, or past, 
 >souht
 The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
 
-#spechelp for dreads adders
+#ttc-table-of-towers-spechelp-dreads-adders
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. That's a decent omen.
@@ -473,7 +473,7 @@ There's more than one diner blocking you.
 #nudge for yurt
 >yutr
 There's more than one yurt there.
-#spechelp for try us yurts
+#ttc-table-of-towers-spechelp-try-us-yurts
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Try Us Yurts. That's a decent omen.
@@ -530,7 +530,7 @@ The pastry is for eating, not for changing.
 #nudge for bin
 >bni
 The pastry is for eating, not for changing.
-#spechelp for bluster butlers
+#ttc-table-of-towers-spechelp-bluster-butlers
 >butlesr
 The bluster butlers cough slightly and look around furtively.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers. That's a decent omen.
@@ -541,11 +541,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
 
-#spechelp for snider diners
+#ttc-table-of-towers-spechelp-snider-diners
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the snider diners. That's a decent omen.
-#spechelp for denier nereid
+#ttc-table-of-towers-spechelp-denier-nereid
 >dieren
 The denier nereid seems to be pulled away towards Leak Lake for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the denier nereid. That's a decent omen.
@@ -570,7 +570,7 @@ has more information,
 /(KC AYER|RAY ECK)
 has a refresher,
 
-#spechelp for keycar
+#ttc-table-of-towers-spechelp-keycar
 >creayk
 The keycar sputters momentarily.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. That's a decent omen.
@@ -601,7 +601,7 @@ No, all the old ice.
 #nudge for pirate
 >piraet
 Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s.
-#spechelp for docile old ice
+#ttc-table-of-towers-spechelp-docile-old-ice
 >old iec
 The old ice seems to glimmer a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
@@ -620,7 +620,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
 
-#spechelp for promise imposer
+#ttc-table-of-towers-spechelp-promise-imposer
 >semprio
 The promise imposer seems a little less intimidating.
 
@@ -632,7 +632,7 @@ Score in a scenario: 16 out of 57 total points in the current region, Towers. Lo
 #done rejects for old ice
 >oldiec
 Twist the ice too much, it might not look right.
-#spechelp for pirates
+#ttc-table-of-towers-spechelp-pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the traipse pirates. That's a decent omen.
@@ -692,7 +692,7 @@ No, just a mardier admirer, really.
 >ingraet
 There's more than one ingrate blocking you.
 
-#spechelp for ingrates
+#ttc-table-of-towers-spechelp-ingrates
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the angriest ingrates. That's a decent omen.
@@ -739,7 +739,7 @@ Work on the whole sled rut.
 >rtu
 Work on the whole sled rut.
 
-#spechelp for strudel
+#ttc-table-of-towers-spechelp-strudel
 >strudle
 You almost expect the strudel to hop up into your arms, but the moment passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the strudel. That's a decent omen.
@@ -776,7 +776,7 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for deal
 >dela
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#spechelp for reeds ale
+#ttc-table-of-towers-spechelp-reeds-ale
 >reedsael
 Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That's a decent omen.
@@ -806,7 +806,7 @@ Score in a scenario: 20 out of 57 total points in the current region, Towers. Lo
 #done rejects for strudel
 >strudle
 You'd have to drop the strudel on the ground and get it germy to try that again. Eww.
-#spechelp for mardier admirer
+#ttc-table-of-towers-spechelp-mardier-admirer
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mardier admirer. That's a decent omen.
@@ -869,7 +869,7 @@ That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 >atheits
 Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways.
 
-#spechelp for asset hit atheists
+#ttc-table-of-towers-spechelp-asset-hit-atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the asset-hit atheists. That's a decent omen.
@@ -877,7 +877,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the asset-hit atheis
 >scan asset hit atheists
 Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
 
-#spechelp for sweatier wait seer
+#ttc-table-of-towers-spechelp-sweatier-wait-seer
 >waitsere
 The wait-seer looks bored and distracted for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sweatier wait-seer. That's a decent omen.
@@ -921,7 +921,7 @@ Score in a scenario: 23 out of 57 total points in the current region, Towers. Lo
 You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
 Your settler registers RRYR?YR****.
 
-#spechelp for realist tailers
+#ttc-table-of-towers-spechelp-realist-tailers
 >stailer
 The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
@@ -929,7 +929,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers.
 #ttc-table-of-towers-scannotes-resident-trendies
 >scan resident trendies
 The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
-#spechelp for resident trendies
+#ttc-table-of-towers-spechelp-resident-trendies
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
@@ -979,7 +979,7 @@ While you can't change the Treading Gradient, perhaps you can deal with the weed
 #nudge for weed
 >wede
 Gumming up one weed wouldn't get the others.
-#spechelp for weeds
+#ttc-table-of-towers-spechelp-weeds
 >weesd
 The weeds almost seem to shrug.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weeds. That's a decent omen.
@@ -1018,7 +1018,7 @@ The raves saver has limited functionality, alas.
 >daggre
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
 
-#spechelp for mended mini denim
+#ttc-table-of-towers-spechelp-mended-mini-denim
 >denmi
 The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini-denim. That's a decent omen.
@@ -1060,7 +1060,7 @@ Your settler registers PYRRY?R.
 #ttc-table-of-towers-scannotes-nerd-aid-diner-ad
 >scan nerd aid diner ad
 The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.
-#spechelp for bogus-dandier
+#ttc-table-of-towers-spechelp-bogus-dandier
 >adderin
 You feel slightly less depressed you tried something. You can't be too far off.
 #nudge for nerd
@@ -1073,7 +1073,7 @@ Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
 >bottlse
 They're not just bottles! They're bottles of NERD-AID!
 
-#rescanning bogus-dandier
+#+ttc-table-of-towers-scannotes-bogus-dandier
 >scan
 Your settler registers ?YR?Y?R.
 # might as well test this appearing only once
@@ -1110,7 +1110,7 @@ His full name, Liam Garn.
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself.
 >undo
 >undo
-#spechelp for alarming grailman
+#ttc-table-of-towers-spechelp-alarming-grailman
 >alarmign
 The grailman seems almost average for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailman. That's a decent omen.
@@ -1122,7 +1122,7 @@ The one letter blinks between green and yellow.
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 !Nice, but you don't need clues any more.
-#spechelp for hostile is he lot
+#ttc-table-of-towers-spechelp-hostile-is-he-lot
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lot. That's a decent omen.
@@ -1130,7 +1130,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lo
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
 >gs
-#spechelp for lois the hostile
+#ttc-table-of-towers-spechelp-lois-the-hostile
 >loisthe
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Lois the Hostile. That's a decent omen.
@@ -1160,7 +1160,7 @@ Score in a scenario: 30 out of 57 total points in the current region, Towers. Lo
 #ttc-table-of-towers-readables-fluster-self-rut
 >read fluster self rut
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles.
-#spechelp for fluster self rut
+#ttc-table-of-towers-spechelp-fluster-self-rut
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
@@ -1184,7 +1184,7 @@ You'll need to deal with more than one native to make your way south.
 >scan site van
 You get the feeling the natives can be swayed more than one way, here.
 
-#spechelp for natives site van
+#ttc-table-of-towers-spechelp-natives-site-van
 >nativse
 The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the natives' site van. That's a decent omen.
@@ -1231,7 +1231,7 @@ Until you see the ego-drains themselves as organised, you probably won't see how
 >organizde
 Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
 
-#spechelp for organised ego drains
+#ttc-table-of-towers-spechelp-organised-ego-drains
 >organisde
 The drains sizzle slightly but go back to menacing quiet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego drains. That's a decent omen.
@@ -1260,7 +1260,7 @@ You're almost worried it will be too easy to figure things out, now. Too hard, t
 #nudge for samiel
 >samile
 There is more than one samiel to deal with, here.
-#spechelp for seismal samiels
+#ttc-table-of-towers-spechelp-seismal-samiels
 >samiesl
 The seismal samiels change intensity for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
@@ -1270,7 +1270,7 @@ You're momentarily bummed you have two letters to decipher, but it's a small pic
 #nudge for detour
 >detoru
 This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
-#spechelp for bogus-rousted
+#ttc-table-of-towers-spechelp-bogus-rousted
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -1310,7 +1310,7 @@ No organic chemistry, please.
 #nudge for riposte
 >riposet
 You may find it easier to deal with all the ripostes at once.
-#spechelp for sporties ripostes
+#ttc-table-of-towers-spechelp-sporties-ripostes
 >prosiets
 The ripostes seem less cutting for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sporties' ripostes. That's a decent omen.
@@ -1342,7 +1342,7 @@ You can't change the gadflies. There are too many.
 
 >n
 
-#spechelp for bonker
+#ttc-table-of-towers-spechelp-bonker
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. That's a decent omen.
@@ -1360,7 +1360,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 37 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
-#spechelp for stinger
+#ttc-table-of-towers-spechelp-stinger
 >restign
 The stinger fizzles a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the grin-set stinger. That's a decent omen.
@@ -1481,7 +1481,7 @@ Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
 
-#spechelp for fissure
+#ttc-table-of-towers-spechelp-fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, and you wonder who or what could tinker with it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
@@ -1492,7 +1492,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 >push repeat
 >gt subsector
 
-#respechelp for fissure
+#re#ttc-table-of-towers-spechelp-fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
@@ -1594,7 +1594,7 @@ The diverse deviser is complicated enough. You probably just need to figure what
 >repari
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
-#spechelp for diverse deviser
+#ttc-table-of-towers-spechelp-diverse-deviser
 >revisde
 You thought you heard a brief hum from the diverse deviser for a moment there.
 #ttc-table-of-towers-readables-diverse-deviser
@@ -1730,7 +1730,7 @@ You notice it was co-authored. Di Regan and Ned Riga. The names elevated, emboss
 #+ttc-table-of-towers-readables-thearchy-hatchery
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don't need clues any more.
-#spechelp for dinger
+#ttc-table-of-towers-spechelp-dinger
 >grainde
 Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
 DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. That's a decent omen.
@@ -1757,7 +1757,7 @@ The pastry is for eating, not for changing.
 #nudge for loaf
 >lofa
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
-#spechelp for raves saver
+#ttc-table-of-towers-spechelp-raves-saver
 >pearyl
 The "replay player" letters brighten for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. That's a decent omen.
@@ -1765,12 +1765,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. Tha
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
 
-#spechelp for atblock
+#ttc-table-of-towers-spechelp-atblock
 >attentiev
 Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a decent omen.
 >gs
-#respechelp for atblock
+#re#ttc-table-of-towers-spechelp-atblock
 >attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.
@@ -1903,18 +1903,18 @@ You fixed the blaster, so maybe you can tackle the turbos.
 >undo
 >undo
 >gonear rawest
-#spechelp for earnest eastern neaters
+#ttc-table-of-towers-spechelp-earnest-eastern-neaters
 >eastenr
 You feel less split from everyone else for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
 >undo
 >undo
 
-#spechelp for turbos
+#ttc-table-of-towers-spechelp-turbos
 >turbso
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the turbos. That's a decent omen.
-#spechelp for blaster
+#ttc-table-of-towers-spechelp-blaster
 >blastre
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the blaster. That's a decent omen.
@@ -1930,7 +1930,7 @@ by one point
 #renudge for turbo
 >turob
 You already dealt with both turbos.
-#spechelp for weirder red wire
+#ttc-table-of-towers-spechelp-weirder-red-wire
 >rewirde
 You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire. That's a decent omen.
@@ -1979,11 +1979,11 @@ The serpent remains kinda chaotic evil looking, and not just because it can't un
 #mistake test for respent
 >respent
 You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.
-#spechelp for ur pine
+#ttc-table-of-towers-spechelp-ur-pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. That's a decent omen.
-#spechelp for repents serpent
+#ttc-table-of-towers-spechelp-repents-serpent
 >presetn
 The serpent calms down for a split-second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repents serpent. That's a decent omen.
@@ -2064,7 +2064,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ne
 #nudge for emprise
 >empries
 It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
-#spechelp for itster
+#ttc-table-of-towers-spechelp-itster
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a decent omen.
@@ -2097,7 +2097,7 @@ No, deal with the entire Done-Any Anodyne.
 >scan anodyne
 For a moment you guess you've, err, done enough, and you don't have to get rid of the anodyne for Teri. But you also figure, what's one more logic puzzle after all you've been through?
 
-#spechelp for done any anodyne
+#ttc-table-of-towers-spechelp-done-any-anodyne
 >annyedo
 The Done-Any Anodyne rattles.
 

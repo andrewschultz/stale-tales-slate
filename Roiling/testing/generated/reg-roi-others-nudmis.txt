@@ -110,19 +110,19 @@ You're trying to make things MORE organic, not less.
 #nudge for lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
-#spechelp for lumps
+#ttc-table-of-others-spechelp-lumps
 >lumsp
 The lumps seem almost ready to burst.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lumps. That's a decent omen.
-#spechelp for pagers
+#ttc-table-of-others-spechelp-pagers
 >pagesr
 The pagers light up slightly. Maybe give it another go.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pagers. That's a decent omen.
-#spechelp for slime
+#ttc-table-of-others-spechelp-slime
 >sliem
 The slime shifts about slightly, but not enough--yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a decent omen.
-#spechelp for spear
+#ttc-table-of-others-spechelp-spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
@@ -160,7 +160,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
-#spechelp for moss cap
+#ttc-table-of-others-spechelp-moss-cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's a decent omen.
@@ -192,13 +192,13 @@ You don't need that, and neither does Curtis.
 #ttc-table-of-others-scannotes-sated-stead
 >scan sated stead
 Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad.
-#spechelp for sated stead
+#ttc-table-of-others-spechelp-sated-stead
 >estad
 The sated stead bubbles slightly.
 
 >read mad train
 DR. NIMATA.
-#spechelp for mad train
+#ttc-table-of-others-spechelp-mad-train
 >madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
@@ -206,7 +206,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That'
 #renudge for ruts
 >rust
 You found enough in the ruts circuits. No need to bring them back.
-#spechelp for harmonicas
+#ttc-table-of-others-spechelp-harmonicas
 >maraschion
 The harmonicas whistle, as if something happened.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
@@ -261,22 +261,22 @@ Nothing happens. Perhaps it's the whole item that's important.
 #ttc-table-of-others-readables-eerie-blurbs
 >read eerie blurbs
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
-#spechelp for eerie blurbs
+#ttc-table-of-others-spechelp-eerie-blurbs
 >eerieblursb
 The blurbs turn a few shades of purple before settling again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. That's a decent omen.
-#spechelp for peanut cola
+#ttc-table-of-others-spechelp-peanut-cola
 >peanutcoal
 The peanut cola smells slightly fruity for a minute.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
 #ttc-table-of-others-readables-peanut-cola
 >read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
-#spechelp for magenta rope
+#ttc-table-of-others-spechelp-magenta-rope
 >magentaroep
 The magenta rope and other items you uncovered briefly seem as one.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. That's a decent omen.
-#spechelp for omen prism
+#ttc-table-of-others-spechelp-omen-prism
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
@@ -396,27 +396,27 @@ It says Pal! ESP! in red. Not very good advice, but maybe it will help in its ow
 #ttc-table-of-others-readables-riot-cap
 >read riot cap
 /It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
-#spechelp for PSA Elp
+#ttc-table-of-others-spechelp-PSA-Elp
 >applse
 You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the PSA 'Elp. That's a decent omen.
-#spechelp for riot cap
+#ttc-table-of-others-spechelp-riot-cap
 >apricto
 Nothing happens. Your magic skills feel like the pits for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the riot cap. That's a decent omen.
-#spechelp for miser ruble
+#ttc-table-of-others-spechelp-miser-ruble
 >mulberrise
 The miser ruble turns a bit purpler.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
-#spechelp for sorer bogey
+#ttc-table-of-others-spechelp-sorer-bogey
 >gooseberyr
 The bogey's tone changes slightly for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
-#spechelp for stucco
+#ttc-table-of-others-spechelp-stucco
 >stucocno
 The stucco looks almost hairy for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stucco. That's a decent omen.
-#spechelp for green stain
+#ttc-table-of-others-spechelp-green-stain
 >tangerinse
 Parts of the green stain turn orange-ish but is too small to be oranges.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. That's a decent omen.
@@ -457,7 +457,7 @@ The singed design on the coin should make you not just want to deign but DO.
 #nudge for singed
 >deigsn
 The design is sort of glommed onto the coin. So you should figure what to do, there.
-#spechelp for coin
+#ttc-table-of-others-spechelp-coin
 >coni
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
@@ -499,7 +499,7 @@ The singed design on the coins reads, when you look close, property of NISCO.
 >icno
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 >undo
-#spechelp for coins
+#ttc-table-of-others-spechelp-coins
 >cisno
 The coins jingle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a decent omen.
@@ -509,7 +509,7 @@ by one point
 >scan sonic coins
 You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
 >undo
-#spechelp for s-c
+#ttc-table-of-others-spechelp-s-c
 >sonci
 The sonic coins hum almost questioningly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sonic coins. That's a decent omen.
@@ -662,38 +662,38 @@ Alas, the foliage also blocks your magical powers and not just your explorations
 >read mean trowel
 It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt.
 
-#spechelp for barren cries
+#ttc-table-of-others-spechelp-barren-cries
 >barren crise
 The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barren cries. That's a decent omen.
-#spechelp for barber sickle
+#ttc-table-of-others-spechelp-barber-sickle
 >barber sickel
 The barber sickle darkens a bit. You must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barber sickle. That's a decent omen.
-#spechelp for mean trowel
+#ttc-table-of-others-spechelp-mean-trowel
 >meantrowle
 You had the seed of an idea there, you thought.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mean trowel. That's a decent omen.
-#spechelp for pryer bars
+#ttc-table-of-others-spechelp-pryer-bars
 >pryer basr
 The pryer bars briefly turn very red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pryer bars. That's a decent omen.
-#spechelp for rapt figure
+#ttc-table-of-others-spechelp-rapt-figure
 >rapt figuer
 The rapt figure frowns as if it's eaten something sour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. That's a decent omen.
-#spechelp for pipe panel lie pen app
+#ttc-table-of-others-spechelp-pipe-panel-lie-pen-app
 >pineappel
 The pipe panel lie pen app rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
 #ttc-table-of-others-scannotes-pipe-panel-lie-pen-app
 >scan pipe panel lie pen app
 Hmm. There are a lot of P's. Maybe that helps.
-#spechelp for barriers west
+#ttc-table-of-others-spechelp-barriers-west
 >strawberrise
 You feel the barriers west pulling towards you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. That's a decent omen.
-#spechelp for buried raft
+#ttc-table-of-others-spechelp-buried-raft
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
@@ -737,7 +737,7 @@ That doesn't really describe the Tekno-Token
 Money, or something like it, should not be the guide of you.
 
 >icons
-#spechelp for icons
+#ttc-table-of-others-spechelp-icons
 >icosn
 The icons rattle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the icons. That's a decent omen.
@@ -826,7 +826,7 @@ Yes, there are probably disproportionately many people with a first name of Lyle
 >lyles
 Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.
 
-#spechelp for i solve voiles
+#ttc-table-of-others-spechelp-i-solve-voiles
 >evliso
 The I-Solve Voiles rustle slightly.
 #ttc-table-of-others-scannotes-i-solve-voiles
@@ -871,11 +871,11 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 #nudge for banner
 >abnner
 You're probably over-thinking it--just pay attention to what it says, instead.
-#spechelp for quince
+#ttc-table-of-others-spechelp-quince
 >quinec
 That certainly sounds foreign--but it doesn't seem to sway Len.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
-#spechelp for auction caution
+#ttc-table-of-others-spechelp-auction-caution
 >papaysa
 Everyone promises quick payment, but what are you promising to pay quickly for? Hmm...
 DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
@@ -889,7 +889,7 @@ Hm, that certainly cuts things down a ton. Just one possibility.
 >scan auction caution
 Hm, that certainly cuts things down a ton. Just three possibilities.
 >t
-#spechelp for peach
+#ttc-table-of-others-spechelp-peach
 >peahc
 The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
@@ -926,7 +926,7 @@ Lashing out that way leaves you feeling you must be close to the right way to ge
 #ttc-table-of-others-scannotes-ammo-gang
 >scan ammo gang
 The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
-#spechelp for ammo gang
+#ttc-table-of-others-spechelp-ammo-gang
 >amogn
 You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
@@ -935,22 +935,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. Th
 >among
 Your score has just gone up by one point.
 
-#spechelp for lemons
+#ttc-table-of-others-spechelp-lemons
 >lemosn
 Len frowns at the lemons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a decent omen.
-#spechelp for melon
+#ttc-table-of-others-spechelp-melon
 >melno
 Hm, there must be a better melon than that, but how to ask Len, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
 #ttc-table-of-others-scannotes-melon
 >scan melon
 Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
-#spechelp for nectarine
+#ttc-table-of-others-spechelp-nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That's a decent omen.
-#spechelp for prices precis
+#ttc-table-of-others-spechelp-prices-precis
 >cripse
 Something glints off the prices precis.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
@@ -1125,25 +1125,25 @@ It's a banna'. The puzzle here is criminally corny, but it's not criminal like R
 >naban
 It's a banna'. The puzzle here is criminally corny, but it's not criminal like Dr. Tera Darter.
 >gs
-#spechelp for a brr hub
+#ttc-table-of-others-spechelp-a-brr-hub
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the brr-hub. That's a decent omen.
 #ttc-table-of-others-scannotes-a-brr-hub
 >scan a brr hub
 Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so.
-#spechelp for orange
+#ttc-table-of-others-spechelp-orange
 >oraneg
 The orange seems a bit closer for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. That's a decent omen.
-#spechelp for a banna
+#ttc-table-of-others-spechelp-a-banna
 >nabaan
 The (a) banna' flutters about for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
 #ttc-table-of-others-scannotes-a-banna
 >scan a banna
 The message on the/a banna' must be interfering with the/a banna' itself.
-#spechelp for Reserved Deserver Dr Severe
+#ttc-table-of-others-spechelp-Reserved-Deserver-Dr-Severe
 >reservde
 You seem to see a mirror image of Dr. Severe for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
@@ -1237,17 +1237,17 @@ PERP
 #nudge for feeling
 >feelign
 You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP.
-#spechelp for viewer
+#ttc-table-of-others-spechelp-viewer
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
 
-#spechelp for searcher
+#ttc-table-of-others-spechelp-searcher
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
 
-#spechelp for fleeing feeling
+#ttc-table-of-others-spechelp-fleeing-feeling
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.

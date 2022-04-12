@@ -17,11 +17,11 @@
 >enter tornado
 Grey Gyre
 
-#spechelp for maze walls
+#ttc-table-of-presto-spechelp-maze-walls
 >veltamoz
 The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the volt maze. That's a decent omen.
-#spechelp for lamb
+#ttc-table-of-presto-spechelp-lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lamb. That's a decent omen.
@@ -65,7 +65,7 @@ It's the maze you need to change, not the zany meter.
 >metre
 It's the maze you need to change, not the zany meter.
 
-#spechelp for hump
+#ttc-table-of-presto-spechelp-hump
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hump. That's a decent omen.
@@ -93,11 +93,11 @@ But nothing really smells in here. Perhaps you need something more straightforwa
 #nudge for austerer
 >austerre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#spechelp for ye hoop
+#ttc-table-of-presto-spechelp-ye-hoop
 >phooye
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
-#respechelp for ye hoop
+#re#ttc-table-of-presto-spechelp-ye-hoop
 >poho
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
@@ -217,7 +217,7 @@ You try, but fail, to make something out of nothing.
 >x cistern
 You take a peek in--to see a dart in there.
 
-#spechelp for dart
+#ttc-table-of-presto-spechelp-dart
 >drta
 The dart seems a bit closer, but...dang! Not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a decent omen.
@@ -225,7 +225,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a d
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
-#spechelp for tsar star
+#ttc-table-of-presto-spechelp-tsar-star
 >rast
 The tsar star seems to wiggle a bit, but not enough to pull it out.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That's a decent omen.
@@ -276,7 +276,7 @@ The dart's just fine as-is.
 
 >n
 
-#spechelp for plebe
+#ttc-table-of-presto-spechelp-plebe
 >blepe
 The plebe looks confused, as if you garbled what you said.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
@@ -297,7 +297,7 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 
 >n
 >w
-#respechelp for maze walls
+#re#ttc-table-of-presto-spechelp-maze-walls
 >mazeltvo
 The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.
@@ -349,7 +349,7 @@ The number's got more numerals than letters.
 >numbre
 The number's got more numerals than letters.
 
-#spechelp for boing
+#ttc-table-of-presto-spechelp-boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
@@ -362,7 +362,7 @@ Maybe you can find where the vowel is. That could help.
 
 >get popgun
 
-#spechelp for sport ports
+#ttc-table-of-presto-spechelp-sport-ports
 >prots
 The sport ports seem even shinier for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. That's a decent omen.
@@ -407,7 +407,7 @@ Score in a scenario: 9 out of 41 total points in the current region, Presto. Low
 
 >n
 Nowt Town
-#spechelp for n-t-air
+#ttc-table-of-presto-spechelp-n-t-air
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -560,7 +560,7 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for liev
 >live
 The vile veil is impassive. It--kind of protects you, actually.
-#spechelp for leo
+#ttc-table-of-presto-spechelp-leo
 >oel
 There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Leo. That's a decent omen.
@@ -588,11 +588,11 @@ Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've for
 #nudge for leonard
 >leonadr
 You don't need to face double the strength.
-#spechelp for rand
+#ttc-table-of-presto-spechelp-rand
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decent omen.
-#spechelp for odes song
+#ttc-table-of-presto-spechelp-odes-song
 >nessgood
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
@@ -639,7 +639,7 @@ You need to concentrate on them being washups. Combining them would mean they co
 #nudge for whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
-#spechelp for wzup
+#ttc-table-of-presto-spechelp-wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Rand and Leo|Leo and Rand). That's a decent omen.
@@ -720,7 +720,7 @@ You got the boing-go bin working.
 
 >load gun with dart
 
-#spechelp for ether
+#ttc-table-of-presto-spechelp-ether
 >theer
 The ether pulsates, but you still can't see through it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a decent omen.
@@ -797,11 +797,11 @@ The three hogs are pretty indistinguishable, but they're still, well, more than 
 >kye
 You aren't sure which key would work, so you need a plan to get them all.
 
-#spechelp for hogs
+#ttc-table-of-presto-spechelp-hogs
 >gohs
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a decent omen.
-#spechelp for keys
+#ttc-table-of-presto-spechelp-keys
 >syek
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a decent omen.
@@ -840,7 +840,7 @@ Vandalism! For shame!
 #mistake test for slog on
 >slog on
 /You need (Rand and Leo|Leo and Rand) to go away, for now, before you can slog on.
-#spechelp for hawt thaw
+#ttc-table-of-presto-spechelp-hawt-thaw
 >whta
 The hawt thaw crackles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
@@ -868,15 +868,15 @@ Concentrate on the words of the harpings phrasing.
 >n
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. But it won't let you by until (Rand and Leo|Leo and Rand) are gone.
-#spechelp for alert letters
+#ttc-table-of-presto-spechelp-alert-letters
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alert letters. That's a decent omen.
-#spechelp for log ons letters
+#ttc-table-of-presto-spechelp-log-ons-letters
 >sologn
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the log ons letters. That's a decent omen.
-#spechelp for ought letters
+#ttc-table-of-presto-spechelp-ought-letters
 >touhg
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. That's a decent omen.
@@ -927,7 +927,7 @@ Score in a scenario: 21 out of 41 total points in the current region, Presto. Lo
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
-#spechelp for starch charts
+#ttc-table-of-presto-spechelp-starch-charts
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
@@ -958,7 +958,7 @@ It's the censer that's important, not the brand name.
 #nudge for rec
 >rce
 It's the censer that's important, not the brand name.
-#spechelp for n e recs censer
+#ttc-table-of-presto-spechelp-n-e-recs-censer
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
@@ -1101,11 +1101,11 @@ They're not just socks, or trim. They're trim socks.
 #nudge for trimsock
 >trimsokc
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
-#spechelp for disk
+#ttc-table-of-presto-spechelp-disk
 >skdi
 The disk seems to want to expand, but not quite into that. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a decent omen.
-#spechelp for clack ops locs pack
+#ttc-table-of-presto-spechelp-clack-ops-locs-pack
 >capslokc
 NO, REARRANGE AND TRY AGAIN, you think.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
@@ -1142,7 +1142,7 @@ You need to deal with the full Clack Ops Locs Pack.
 #nudge for pack
 >pakc
 You need to deal with the full Clack Ops Locs Pack.
-#spechelp for flea
+#ttc-table-of-presto-spechelp-flea
 >lefa
 The flea makes a crinkly noise but still seems quite dead.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea. That's a decent omen.
@@ -1173,7 +1173,7 @@ Kids don't need to listen to the words you've used so far! They wouldn't help wi
 #mistake test for repo
 >repo
 Nobody else seems to own the oper rope or the skid.
-#spechelp for skid
+#ttc-table-of-presto-spechelp-skid
 >diks
 No, skid <=> disk is about it. There's no tricky third way.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the skid. That's a decent omen.
@@ -1187,11 +1187,11 @@ You don't need to do anything tricky with the skid's rope.
 #nudge for fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
-#spechelp for coal
+#ttc-table-of-presto-spechelp-coal
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
-#spechelp for gum
+#ttc-table-of-presto-spechelp-gum
 >gmu
 Ugg... umm... you stare at the gum. Not many ways to stretch it, really.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a decent omen.
@@ -1202,7 +1202,7 @@ Alcohol doesn't work as well as caffeine in this situation.
 >loca
 What you want needs to help programming more than water or French champagne or dancing in the rain.
 
-#spechelp for fount
+#ttc-table-of-presto-spechelp-fount
 >futno
 Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
@@ -1212,7 +1212,7 @@ You can't bring the flea back to life--or do anything else to the leaf.
 #done rejects for screen
 >screne
 The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
-#spechelp for escaroles
+#ttc-table-of-presto-spechelp-escaroles
 >casseroel
 The escaroles seem slightly meatier.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That's a decent omen.
@@ -1265,7 +1265,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#spechelp for drab yoke
+#ttc-table-of-presto-spechelp-drab-yoke
 >keyboadr
 It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That's a decent omen.
@@ -1300,7 +1300,7 @@ You can now do computery things unimpeded! Hooray!
 >compuert
 You need to fix the program in the computer.
 
-#spechelp for be troo e robot
+#ttc-table-of-presto-spechelp-be-troo-e-robot
 >reboto
 The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command like that must work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
@@ -1359,7 +1359,7 @@ Oh man. Even small puzzles are getting to you. Ones you should be able to knock 
 #ttc-table-of-presto-readables-peels-speel
 >read peels speel
 Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
-#spechelp for peels speel
+#ttc-table-of-presto-spechelp-peels-speel
 >epsel
 Whatever you thought seemed a bit of a tired mess.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
@@ -1373,7 +1373,7 @@ Score in a scenario: 32 out of 41 total points in the current region, Presto. Lo
 #done rejects for peels speel
 >epsle
 You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
-#spechelp for im le cop polemic
+#ttc-table-of-presto-spechelp-im-le-cop-polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polemic. That's a decent omen.
@@ -1425,7 +1425,7 @@ The mug is no longer manipulable.
 #done rejects for im le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
-#spechelp for trim socks
+#ttc-table-of-presto-spechelp-trim-socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
@@ -1437,16 +1437,16 @@ It says DRIVE A/A DRIVE: VARIED
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
 >read drive e
 It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
-#spechelp for tba key
+#ttc-table-of-presto-spechelp-tba-key
 >abt
 The TBA key rattles within the keyboard a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
 
-#spechelp for drive a
+#ttc-table-of-presto-spechelp-drive-a
 >drivea
 Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a decent omen.
-#spechelp for drive e
+#ttc-table-of-presto-spechelp-drive-e
 >drivee
 Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a decent omen.
@@ -1505,7 +1505,7 @@ You already did enough with the TAB key.
 >bta
 No, the TAB key is what it should be.
 
-#spechelp for bub dude egg
+#ttc-table-of-presto-spechelp-bub-dude-egg
 >debgu
 Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
@@ -1564,7 +1564,7 @@ The catechism would be more likely to scramble YOU up. It's way more complex tha
 >scan usb
 Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good.
 
-#spechelp for usb
+#ttc-table-of-presto-spechelp-usb
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a decent omen.

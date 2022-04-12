@@ -125,7 +125,7 @@ Oh no, not again. Concentrate on the palm.
 #renudge for rove
 >roev
 That's not a way to sneak around and avoid any future knock at the door.
-#spechelp for palm
+#ttc-table-of-ordeal-reload-spechelp-palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
@@ -138,7 +138,7 @@ Your score has just gone up by one point.
 >score
 Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
-#spechelp for latches
+#ttc-table-of-ordeal-reload-spechelp-latches
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's a decent omen.
@@ -221,7 +221,7 @@ Yep. It's probably part of Elvira's reject-and-retreat, insinuating something wi
 >pedo
 Don't dwell on it. It's lies.
 
-#spechelp for meet bans
+#ttc-table-of-ordeal-reload-spechelp-meet-bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS. That's a decent omen.
@@ -276,14 +276,14 @@ You can just go DOWN to enter the basement.
 You probably just want to go DOWN to the basement.
 >d
 Largely All-Grey Gallery
-#spechelp for stria
+#ttc-table-of-ordeal-reload-spechelp-stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a decent omen.
 >undo
 >undo
 
-#spechelp for tables
+#ttc-table-of-ordeal-reload-spechelp-tables
 >stabel
 The tables seem to shift a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tables. That's a decent omen.
@@ -304,7 +304,7 @@ Score in a scenario: 5 out of 15 total points in the current region, Ordeal Relo
 >stabel
 You probably just want to go IN to the stable.
 
-#spechelp for niche
+#ttc-table-of-ordeal-reload-spechelp-niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a decent omen.
@@ -334,7 +334,7 @@ It's one big giant pin.
 #nudge for giant
 >giatn
 It's one big giant pin.
-#spechelp for giant pin
+#ttc-table-of-ordeal-reload-spechelp-giant-pin
 >paintign
 The pin wobbles.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That's a decent omen.
@@ -414,7 +414,7 @@ The settler is pretty powerful, but it can't build bridges.
 >in
 Farming Framing
 
-#spechelp for sitar
+#ttc-table-of-ordeal-reload-spechelp-sitar
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sitar. That's a decent omen.
@@ -464,7 +464,7 @@ The closets are there to warp space a bit. You don't need to mess with them.
 #ttc-table-of-ordeal-reload-scannotes-pram
 >scan pram
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#spechelp for pram
+#ttc-table-of-ordeal-reload-spechelp-pram
 >rapm
 The pram creaks back and forth slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a decent omen.
@@ -481,25 +481,25 @@ The ramp is useful now. Best keep it.
 
 >gt study
 Dusty Study
-#spechelp for pavement
+#ttc-table-of-ordeal-reload-spechelp-pavement
 >event mpa
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pavement. That's a decent omen.
 >event map
 The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald.
-#spechelp for platform
+#ttc-table-of-ordeal-reload-spechelp-platform
 >farm plto
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the platform. That's a decent omen.
 >farm plot
 The platform becomes a farm plot.
-#spechelp for pedestal
+#ttc-table-of-ordeal-reload-spechelp-pedestal
 >steel pda
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pedestal. That's a decent omen.
 >steel pad
 The pedestal becomes a steel pad.
-#spechelp for crabgrass
+#ttc-table-of-ordeal-reload-spechelp-crabgrass
 >brass crga
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the crabgrass. That's a decent omen.
@@ -509,26 +509,26 @@ Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it
 >brass crag
 The crabgrass dries out and becomes a brass crag.
 
-#spechelp for event map
+#ttc-table-of-ordeal-reload-spechelp-event-map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the event map. That's a decent omen.
 >pavement
 The event map folds back into a thoroughly more dull pavement. Reading the notice briefly, you see that things won't be this flexible out in the real world.
-#spechelp for brass crag
+#ttc-table-of-ordeal-reload-spechelp-brass-crag
 >crabgrssa
 You know what to change the brass crag back to: the crabgrass. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the brass crag. That's a decent omen.
 >crabgrass
 The brass crag becomes slightly less lifeless crabgrass, again.
 !Reading the notice briefly, you see that things won't be this flexible out in the real world.
-#spechelp for farm plot
+#ttc-table-of-ordeal-reload-spechelp-farm-plot
 >platfomr
 You know what to change the farm plot back to: the platform. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the farm plot. That's a decent omen.
 >platform
 The farm plot switches back to a platform.
-#spechelp for steel pad
+#ttc-table-of-ordeal-reload-spechelp-steel-pad
 >pedestla
 You know what to change the steel pad back to: the pedestal. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the steel pad. That's a decent omen.
@@ -556,7 +556,7 @@ No, all the bins.
 #mistake retest for sitar
 >sitar
 Surely a stair is more handy right now.
-#spechelp for ISBN bins
+#ttc-table-of-ordeal-reload-spechelp-ISBN-bins
 >snbi
 The ISBN bins creak slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ISBN bins. That's a decent omen.
@@ -588,7 +588,7 @@ Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you 
 
 >in
 
-#spechelp for rifle
+#ttc-table-of-ordeal-reload-spechelp-rifle
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a decent omen.
@@ -702,7 +702,7 @@ Ok, the Carven Cavern IS pretty craven as anagrams go, but you need to find a wa
 #mistake test for trainer
 >trainer
 You're on your own. Perhaps you'd be better off scanning the plaster and twiddling the plates to get on with things.
-#spechelp for plates
+#ttc-table-of-ordeal-reload-spechelp-plates
 >stapel
 The plates shine slightly and rattle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel plates. That's a decent omen.
@@ -739,7 +739,7 @@ Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter a
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
-#spechelp for plaster
+#ttc-table-of-ordeal-reload-spechelp-plaster
 >staplre
 The plaster crackles and shines slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter. That's a decent omen.

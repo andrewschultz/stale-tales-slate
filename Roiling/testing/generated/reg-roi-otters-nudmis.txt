@@ -52,7 +52,7 @@ Trying to change the current region you're in all at once would be risky, or use
 #nudge for bare
 >baer
 No, you need a couple more letters. Ones that make a word weak enough to control.
-#spechelp for bleary barley
+#ttc-table-of-otters-spechelp-bleary-barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
@@ -113,7 +113,7 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 #nudge for reedy
 >reeyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
-#spechelp for cinders
+#ttc-table-of-otters-spechelp-cinders
 >cindesr
 The cinders glow and even warm up for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
@@ -140,7 +140,7 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
-#spechelp for ed riley
+#ttc-table-of-otters-spechelp-ed-riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a decent omen.
@@ -430,7 +430,7 @@ Well, you have a feeling you know what that question mark should be.
 >scan parleys splayer players
 The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data.
 
-#spechelp for parleys splayer players
+#ttc-table-of-otters-spechelp-parleys-splayer-players
 >sarpley
 The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
 
@@ -438,7 +438,7 @@ The parleys splayer players slip for a moment but quickly resume their incessant
 >scan yer all
 Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very.
 
-#spechelp for yer all a yell'r
+#ttc-table-of-otters-spechelp-yer-all-a-yell'r
 >erlaly
 Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
 
@@ -498,7 +498,7 @@ Enough people are trying to manipulate Gretta. Listen to what she has to say, in
 #ttc-table-of-otters-readables-cut-ya-all-cult-laya
 >read laya
 /One of the two designers' names is (Clay Laut|Lucy Lata)\.
-#spechelp for cut ya all cult laya
+#ttc-table-of-otters-spechelp-cut-ya-all-cult-laya
 >actualyl
 The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
 #ttc-table-of-otters-scannotes-cut-ya-all-cult-laya
@@ -541,14 +541,14 @@ The sea cube is unmoved. You may need to concentrate on the whole thing.
 #nudge for cube
 >cueb
 The sea cube is unmoved. You may need to concentrate on the whole thing.
-#spechelp for sea cube
+#ttc-table-of-otters-spechelp-sea-cube
 >sea cueb
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: while some words are rather long, you probably see how to guess a letter or two even when you've got your powers back.
 >seacueb
 The sea cube shakes a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
-#spechelp for eels
+#ttc-table-of-otters-spechelp-eels
 >eesl
 The eels swim a bit faster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a decent omen.
@@ -612,11 +612,11 @@ Bran Barn
 #nudge for barn
 >banr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#spechelp for ghoul hat
+#ttc-table-of-otters-spechelp-ghoul-hat
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That's a decent omen.
-#spechelp for gore ogre
+#ttc-table-of-otters-spechelp-gore-ogre
 >erog
 The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That's a decent omen.
@@ -637,7 +637,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 12 out of 35 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 35.
 
-#spechelp for vow here
+#ttc-table-of-otters-spechelp-vow-here
 >howevre
 The vow here quiets down for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
@@ -660,7 +660,7 @@ DEBUG INFO: min-up codepath
 Score in a scenario: 13 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 >n
 
-#spechelp for atmo moat
+#ttc-table-of-otters-spechelp-atmo-moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
@@ -729,17 +729,17 @@ No, you need a couple more letters. Even with your powers back, you still need t
 >enragde
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#spechelp for legendary
+#ttc-table-of-otters-spechelp-legendary
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 
-#spechelp for motleyer
+#ttc-table-of-otters-spechelp-motleyer
 >remoteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 
-#spechelp for butlery
+#ttc-table-of-otters-spechelp-butlery
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
@@ -770,7 +770,7 @@ Lamer Realm
 #nudge for low
 >lwo
 You probably want the owls not to swoop low. And you'll want to take care of them all.
-#spechelp for owls
+#ttc-table-of-otters-spechelp-owls
 >owsl
 Hmm. The owls still swarm and swirl too fast.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a decent omen.
@@ -802,22 +802,22 @@ You're not here to mess with fashion. Plus, the shades were last game.
 #nudge for clipons
 >cliposn
 The ocelots would still be awkward even if they lost the clip-ons.
-#spechelp for ocelots
+#ttc-table-of-otters-spechelp-ocelots
 >ocelost
 The ocelots squint at you through their clip-ons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
 
-#spechelp for leopard
+#ttc-table-of-otters-spechelp-leopard
 >leopadr
 The leopard almost seems to un-cuff its hands.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
 
-#spechelp for badger
+#ttc-table-of-otters-spechelp-badger
 >badgre
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
 
-#spechelp for satyr
+#ttc-table-of-otters-spechelp-satyr
 >satry
 The satyr puts a hand on its chin as if pondering deeper things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
@@ -964,17 +964,17 @@ No, you need a couple more letters. Even with your powers back, you still need t
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
 
-#spechelp for tallyhoing
+#ttc-table-of-otters-spechelp-tallyhoing
 >loathingyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 
-#spechelp for callosity
+#ttc-table-of-otters-spechelp-callosity
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 
-#spechelp for jollity
+#ttc-table-of-otters-spechelp-jollity
 >joltiyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
@@ -1003,7 +1003,7 @@ Score in a scenario: 23 out of 35 total points in the current region, Otters. Lo
 >s
 Perverse Preserve
 
-#spechelp for raptor
+#ttc-table-of-otters-spechelp-raptor
 >raptro
 The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
@@ -1033,7 +1033,7 @@ You strain your eyes to see that Ed Plye, apparently, made the whistle.
 #nudge for weltish
 >witlesh
 You can't do anything to the whistle until you have it.
-#spechelp for weltish whistle
+#ttc-table-of-otters-spechelp-weltish-whistle
 >epelyd
 Probably best to have the whistle before changing it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
@@ -1058,24 +1058,24 @@ The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn
 #nudge for throne
 >throen
 There's more than one throne, but it doesn't matter, really, for what you need to do.
-#spechelp for thrones
+#ttc-table-of-otters-spechelp-thrones
 >thronse
 The thrones seem to buzz a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
 
-#spechelp for nails
+#ttc-table-of-otters-spechelp-nails
 >naisl
 One of the nails seems to bend a bit.
 >naisl
 Another one of the nails seems to bend a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nails. That's a decent omen.
 
-#spechelp for pines
+#ttc-table-of-otters-spechelp-pines
 >pinse
 The pines rustle as if an animal climbed through them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
 
-#spechelp for corona
+#ttc-table-of-otters-spechelp-corona
 >coroan
 The corona scurries about for a bit before settling down again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a decent omen.
@@ -1142,7 +1142,7 @@ Microbes aren't the problem in Yorpwald.
 >n
 >n
 
-#spechelp for asyllabic lilac bays
+#ttc-table-of-otters-spechelp-asyllabic-lilac-bays
 >basicalyl
 You almost hear music as the lilac bays rustle.
 
@@ -1267,7 +1267,7 @@ You might be able to disrupt both of them, not just one.
 Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
 >scan merle
 !Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
-#spechelp for aside-llp
+#ttc-table-of-otters-spechelp-aside-llp
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Elmer and Merle|Merle and Elmer). That's a decent omen.
@@ -1291,7 +1291,7 @@ Score in a scenario: 30 out of 35 total points in the current region, Otters. Lo
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 >read holy nest
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
-#spechelp for holy nest
+#ttc-table-of-otters-spechelp-holy-nest
 >honestyl
 The holy nest flutters silently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That's a decent omen.
@@ -1351,7 +1351,7 @@ You don't need to riff on any location names to win the game, unless there's not
 >score
 Score in a scenario: 32 out of 35 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
-#spechelp for medals
+#ttc-table-of-otters-spechelp-medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
@@ -1393,7 +1393,7 @@ The hydra's toast. Elvira is not. Deal with her.
 #renudge for weltish
 >whistel
 You don't see anything happen. Then you note red writing on the whistle which might tell more about it.
-#respechelp for weltish whistle
+#re#ttc-table-of-otters-spechelp-weltish-whistle
 >deepyl
 The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.

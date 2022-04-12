@@ -171,7 +171,7 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 {$SCOS}
 
 @nud
-#spechelp for pa egg pea
+#ttc-table-of-troves-spechelp-pa-egg-pea
 >gaep
 You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
@@ -194,7 +194,7 @@ DEBUG INFO: min-up codepath
 You probably did what you could. Or not-did.
 
 @nud
-#spechelp for tears taser
+#ttc-table-of-troves-spechelp-tears-taser
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
 #ttc-table-of-troves-scannotes-tears-taser
@@ -221,7 +221,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#spechelp for eh at heat
+#ttc-table-of-troves-spechelp-eh-at-heat
 >haet
 You feel slightly less cold but mad at yourself for not doing better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
@@ -255,7 +255,7 @@ You already got hot. Now you need to summon a different emotion.
 #done rejects for heat
 >haet
 Don't need to overheat, or overhate.
-#spechelp for race acre
+#ttc-table-of-troves-spechelp-race-acre
 >caer
 For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
@@ -334,10 +334,10 @@ No, you'll want to zone out the whole verbose distraction.
 No, you'll want to zone out the whole verbose distraction.
 
 @nud
-#spechelp for mussier misuser
+#ttc-table-of-troves-spechelp-mussier-misuser
 >sumirse
 The mussier misuser looks around a bit, worried someone might be out-thinking them.
-#spechelp for sob ever verbose
+#ttc-table-of-troves-spechelp-sob-ever-verbose
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
@@ -394,7 +394,7 @@ DEBUG INFO: stop post hinting.
 {$SCOS}
 
 @nud
-#spechelp for stop post
+#ttc-table-of-troves-spechelp-stop-post
 >stpo
 The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
@@ -455,7 +455,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >scan sty
 !Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >t
-#spechelp for a sty tasty say
+#ttc-table-of-troves-spechelp-a-sty-tasty-say
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
@@ -515,11 +515,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #nudge for stop
 >stpo
 The stop post is in the past. No need to p.s. tweaking it.
-#spechelp for evil bee
+#ttc-table-of-troves-spechelp-evil-bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's a decent omen.
-#spechelp for snore so arena
+#ttc-table-of-troves-spechelp-snore-so-arena
 >reasno
 The SNORE SO ARENA flashes weirdly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
@@ -637,7 +637,7 @@ The bee's already taken enough of your in-my-heartitude.
 #done rejects for snore so arena
 >reasno
 Drowning something without reason further in reason is unreasonable.
-#spechelp for l clear cellar
+#ttc-table-of-troves-spechelp-l-clear-cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That's a decent omen.
@@ -679,7 +679,7 @@ Now is not the time to fret solely on past dreams. Fret on the hopeless present 
 You would like to be, but you can't just want others to. Change comes from within.
 
 @nud
-#spechelp for diapers
+#ttc-table-of-troves-spechelp-diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
@@ -718,7 +718,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 A faint rye-be-beery odor.
 
 @nud
-#spechelp for large regal lager
+#ttc-table-of-troves-spechelp-large-regal-lager
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
@@ -772,7 +772,7 @@ It's the full song name--I'd Cede.
 It's the full song name--I'd Cede.
 
 @nud
-#spechelp for id cede
+#ttc-table-of-troves-spechelp-id-cede
 >decied
 You try to groove to I'd Cede, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a decent omen.
@@ -852,7 +852,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for lobster
+#ttc-table-of-troves-spechelp-lobster
 >bolstre
 That's not quite the way to deserve that lobster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
@@ -887,7 +887,7 @@ SAP-LEER is the "ironic" name of the company that produced this monstrosity. The
 #ttc-table-of-troves-scannotes-pleaser-leapers
 >scan pleaser leapers
 You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
-#spechelp for pleaser leapers
+#ttc-table-of-troves-spechelp-pleaser-leapers
 >pleaser leapers
 The leapers almost seem to dance around for a bit.
 
@@ -937,7 +937,7 @@ DEBUG INFO: LEAD, All: a Deed hinting.
 #nudge for bloters
 >bloters
 The lobster nourished you physically. Time to move on, though you could poke at the ME ARTS.
-#spechelp for me arts
+#ttc-table-of-troves-spechelp-me-arts
 >mastre
 That's not quite the way to focus on the ME ARTS.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
@@ -968,7 +968,7 @@ The ME ARTS nourished you spiritually. The lobster nourished you physically. Tim
 #renudge for bloters
 >bloters
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
-#spechelp for lead
+#ttc-table-of-troves-spechelp-lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
 DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
@@ -1016,7 +1016,7 @@ If it was just one divorce, you could blow it off. Or there would not be enough 
 #nudge for magazine
 >magazien
 It's not just any magazine. It's DIVORCES!
-#spechelp for divorces
+#ttc-table-of-troves-spechelp-divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
 DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
@@ -1073,7 +1073,7 @@ The Miser Emirs' Mires are, well, mired. You need to focus on something else, or
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
 
 @nud
-#spechelp for si reed
+#ttc-table-of-troves-spechelp-si-reed
 >desier
 Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
 DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
@@ -1149,7 +1149,7 @@ The godlings' lodgings are a testament to the immovable power of the rich. They 
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
 
 @nud
-#spechelp for praise spirea
+#ttc-table-of-troves-spechelp-praise-spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
@@ -1205,7 +1205,7 @@ Yes! You only need a chance! Once! To get inside! You're enthused enough, but yo
 #done rejects for praise spirea
 >aspier
 You're wanting praise too much, now.
-#spechelp for rivets
+#ttc-table-of-troves-spechelp-rivets
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
@@ -1257,7 +1257,7 @@ Plural craniates.
 #ttc-table-of-troves-scannotes-sectarian-craniates
 >scan sectarian craniates
 Wow. You have even more to think about, now! It's certainly a thoughtful piece of art, whatever it is. You are sure the reading provides you with a good deal of concrete and subjective thoughts to analyze.
-#spechelp for sectarian craniates
+#ttc-table-of-troves-spechelp-sectarian-craniates
 >sectarian craniates
 Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet.
 
@@ -1305,7 +1305,7 @@ The card's writing is more important.
 #nudge for cad
 >cda
 The card's writing is more important.
-#spechelp for end proner pod
+#ttc-table-of-troves-spechelp-end-proner-pod
 >erpdon
 The END PRONER POD seems to pulse slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the END PRONER POD. That's a decent omen.
@@ -1351,7 +1351,7 @@ No dog walks along dragging Sebastian in their mouth.
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 @nud
-#spechelp for red vees
+#ttc-table-of-troves-spechelp-red-vees
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
@@ -1425,7 +1425,7 @@ The votes vetos stove is just symbolic. The real voter suppression happens in th
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
 
 @nud
-#spechelp for salt
+#ttc-table-of-troves-spechelp-salt
 >lats
 You don't quite draw inspiration from the salt, but there can't be that many alts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
@@ -1476,7 +1476,7 @@ The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #ttc-table-of-troves-scannotes-marble-blamer-balmer
 >scan marble blamer balmer
 Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, you do what you can
-#spechelp for marble blamer balmer
+#ttc-table-of-troves-spechelp-marble-blamer-balmer
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer. That's a decent omen.
@@ -1495,7 +1495,7 @@ Fortuntaely, Marble Blamer Mr. Beal doesn't become physically able.
 #mistake test for bale
 >bale
 Neither you nor Marble Blamer Mr. Beal turns into hay.
-#spechelp for marble blamer mr beal
+#ttc-table-of-troves-spechelp-marble-blamer-mr-beal
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
@@ -1505,7 +1505,7 @@ Wow! Three names. You don't know if, say, Balmer would be easier but, well, you 
 >mbb 1
 
 @nud
-#spechelp for sister tressi siters
+#ttc-table-of-troves-spechelp-sister-tressi-siters
 >resits
 Sister Tressi seems a bit more upset than usual.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
@@ -1521,7 +1521,7 @@ All the siters.
 #ttc-table-of-troves-scannotes-creationism-reactionism
 >scan creationism reactionism
 Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic.
-#spechelp for creationism reactionism
+#ttc-table-of-troves-spechelp-creationism-reactionism
 >reactionims
 You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, figuring Creationism, Reactionism is the toughest optional puzzle in the game.
 
@@ -1615,7 +1615,7 @@ You already stopped thinking too much about Marble Blamer Balmer. If you try too
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
 
 @nud
-#spechelp for trance nectar
+#ttc-table-of-troves-spechelp-trance-nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. That's a decent omen.
