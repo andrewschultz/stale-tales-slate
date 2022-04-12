@@ -57,9 +57,6 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >gt tiles
 Gotta keep going forward.
 
->score
-You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
-
 >xx rock
 Your vision blurs a bit, and instead you see cork.
 >xx swing

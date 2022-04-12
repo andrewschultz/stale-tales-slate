@@ -26,9 +26,6 @@ Your score has just gone up by one point.
 
 Leis Isle
 
->score
-You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
-
 >lies
 by one point
 >score

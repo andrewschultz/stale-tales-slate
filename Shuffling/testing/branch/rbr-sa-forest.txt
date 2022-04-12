@@ -51,7 +51,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
 @nud
-#spechelp for store f
+#ttc-table-of-stores-spechelp-store-f
 >fretso
 That seemed right but didn't seem quite natural.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
@@ -63,7 +63,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Your score has just gone up by one point.
 
 @nud
-#done rejects for scented descent
+#ttc-table-of-stores-done-rejects-scented-descent
 >fretso
 The scented descent to the forest doesn't need to be changed.
 
@@ -73,7 +73,7 @@ The scented descent to the forest doesn't need to be changed.
 >rs sw
 >in
 ##############################################################west 1st
-#nudge for whiff
+#ttc-table-of-forest-nudges-whiff
 >whfif
 No, that's not the essence of the whiff of stew.
 >undo
@@ -89,7 +89,7 @@ You think you're on to something, but you still feel stuck.
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for west
+#ttc-table-of-forest-nudges-west
 >twes
 Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
@@ -101,11 +101,11 @@ You think you're on to something, but you still feel stuck.
 by one point
 ##############################################################south 2nd, west 1st
 Rest of Forest
-#nudge for rest
+#ttc-table-of-rest-of-forest-nudges-rest
 >rets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 >undo
-#nudge for rambling
+#ttc-table-of-forest-nudges-rambling
 >ramblign
 No, that's not the essence of the rambling shout.
 >undo
@@ -113,7 +113,7 @@ No, that's not the essence of the rambling shout.
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for south
+#ttc-table-of-forest-nudges-south
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
 >undo
@@ -139,7 +139,7 @@ Self-ID Fields
 >rs ne
 >in
 ##############################################################east 1st
-#nudge for aroma
+#ttc-table-of-forest-nudges-aroma
 >aroam
 No, that's not the essence of the aroma of teas.
 >undo
@@ -147,7 +147,7 @@ No, that's not the essence of the aroma of teas.
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
-#nudge for eat
+#ttc-table-of-forest-nudges-eat
 >eta
 The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
@@ -167,7 +167,7 @@ This game is nonviolent--well, except for a few puns.
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
-#nudge for north
+#ttc-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -187,7 +187,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for east
+#ttc-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
 >undo
@@ -365,16 +365,16 @@ DEBUG INFO: Cert-text: -----.
 
 @nud
 #these are universal to SF/RF
-#nudge for forest
+#ttc-table-of-forest-nudges-forest
 >forets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-#nudge for conifer
+#ttc-table-of-forest-nudges-conifer
 >conifre
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
-#nudge for conifers
+#ttc-table-of-forest-nudges-conifers
 >conifesr
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
-#nudge for leaves
+#ttc-table-of-forest-nudges-leaves
 >leavse
 You have no time to play with leaves.
 
@@ -463,43 +463,43 @@ It is too late to help the line of no life by showing love.
 #renudge for forest
 >forets
 You don't want to change a region drastically while you're in it
-#nudge for selfid
+#ttc-table-of-self-id-fields-nudges-selfid
 >selfdi
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for self
+#ttc-table-of-self-id-fields-nudges-self
 >sefl
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for field
+#ttc-table-of-self-id-fields-nudges-field
 >ifdle
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for selves
+#ttc-table-of-self-id-fields-nudges-selves
 >selvse
 The selves vessel is much too sturdy to manipulate.
-#nudge for vesel
+#ttc-table-of-self-id-fields-nudges-vesel
 >vesle
 The selves vessel is much too sturdy to manipulate.
-#nudge for line
+#ttc-table-of-self-id-fields-nudges-line
 >inle
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
-#nudge for life
+#ttc-table-of-self-id-fields-nudges-life
 >ilef
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
-#nudge for lineof
+#ttc-table-of-self-id-fields-nudges-lineof
 >linefo
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
-#nudge for undead
+#ttc-table-of-self-id-fields-nudges-undead
 >undeda
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
-#nudge for undeads
+#ttc-table-of-self-id-fields-nudges-undeads
 >undeasd
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
-#nudge for crosse
+#ttc-table-of-self-id-fields-nudges-crosse
 >croses
 Whatever you could do to Corses Crosse, it might do worse to you.
-#nudge for cross
+#ttc-table-of-self-id-fields-nudges-cross
 >crsos
 Whatever you could do to Corses Crosse, it might do worse to you.
-#nudge for crose
+#ttc-table-of-self-id-fields-nudges-crose
 >croes
 Whatever you could do to Corses Crosse, it might do worse to you.
 #mistake test for scorse
@@ -581,61 +581,61 @@ DEBUG INFO: Rect-text: S-----N.
 DEBUG INFO: Cert-text: -------.
 
 @nud
-#nudge for triangles
+#ttc-table-of-gnarliest-triangles-nudges-triangles
 >trianglse
 The triangles need no alterings.
-#nudge for triangle
+#ttc-table-of-gnarliest-triangles-nudges-triangle
 >triangel
 No triangle needs altering.
-#nudge for shell
+#ttc-table-of-gnarliest-triangles-nudges-shell
 >shlel
 It doesn't rattle, but the dashes seem to.
-#nudge for bucket
+#ttc-table-of-gnarliest-triangles-nudges-bucket
 >buckte
 It doesn't rattle, but the ones seem to.
-#nudge for bubble
+#ttc-table-of-gnarliest-triangles-nudges-bubble
 >bubbel
 It doesn't rattle, but the noughts seem to.
-#nudge for elegy
+#ttc-table-of-gnarliest-triangles-nudges-elegy
 >eleyg
 The elegy doesn't need to be twisted any more.
-#nudge for tacks
+#ttc-table-of-gnarliest-triangles-nudges-tacks
 >tacsk
 No need to try to turn the stack into a heap. Ho ho ho.
-#nudge for tack
+#ttc-table-of-gnarliest-triangles-nudges-tack
 >takc
 No need to try to turn the stack into a heap. Ho ho ho.
-#nudge for notes
+#ttc-table-of-gnarliest-triangles-nudges-notes
 >notse
 The notes stone is just for reading.
-#nudge for note
+#ttc-table-of-gnarliest-triangles-nudges-note
 >noet
 The notes stone is just for reading.
-#nudge for stick
+#ttc-table-of-gnarliest-triangles-nudges-stick
 >stikc
 Don't vandalize the art, man.
-#nudge for figure
+#ttc-table-of-gnarliest-triangles-nudges-figure
 >figuer
 Don't vandalize the art, man.
-#nudge for figures
+#ttc-table-of-gnarliest-triangles-nudges-figures
 >figurse
 Don't vandalize the art, man.
-#nudge for zeros
+#ttc-table-of-gnarliest-triangles-nudges-zeros
 >zerso
 They're noughts, not zeros.
-#nudge for zeroes
+#ttc-table-of-gnarliest-triangles-nudges-zeroes
 >zerose
 They're noughts, not zeroes.
-#nudge for eon
+#ttc-table-of-gnarliest-triangles-nudges-eon
 >eno
 They're ones, not a one.
-#nudge for naught
+#ttc-table-of-gnarliest-triangles-nudges-naught
 >naugth
 The naughts, err, noughts seem zero-y enough to contain an o.
-#nudge for naughts
+#ttc-table-of-gnarliest-triangles-nudges-naughts
 >naughst
 The naughts, err, noughts seem zero-y enough to contain an o.
-#nudge for nought
+#ttc-table-of-gnarliest-triangles-nudges-nought
 >nougth
 There's more than one nought.
 #mistake test for integral/integrals
@@ -688,7 +688,7 @@ No, you can't afford to wait that long.
 No, you can't afford to wait that long.
 
 @nud
-#spechelp for ones
+#ttc-table-of-forest-spechelp-ones
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the ones. Keep at it.
@@ -718,7 +718,7 @@ You don't need an alert sign to know running into the walls any direction but we
 {$SCOS}
 
 @nud
-#done rejects for nose
+#ttc-table-of-forest-done-rejects-nose
 >noes
 Don't get that nose bent out of shape.
 
@@ -731,13 +731,13 @@ Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the
 You need something more tangible than that. Something that could make a gunshot, perhaps
 
 @nud
-#spechelp for noughts
+#ttc-table-of-forest-spechelp-noughts
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 
 @nud
-#spechelp for dashes
+#ttc-table-of-forest-spechelp-dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dashes. Keep at it.
@@ -753,7 +753,7 @@ DEBUG: noughts being objhinted.
 {$SCOS}
 
 @nud
-#done rejects for shades
+#ttc-table-of-forest-done-rejects-shades
 >shadse
 Anything you do to bend the shades might break them.
 
@@ -768,10 +768,10 @@ DEBUG: bearded men being objhinted.
 {$SCOS}
 
 @nud
-#nudge for muzzle
+#ttc-table-of-forest-nudges-muzzle
 >muzzel
 You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
-#done rejects for shotgun
+#ttc-table-of-forest-done-rejects-shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
@@ -802,34 +802,34 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 It's too steep down every way except back east.
 
 @nud
-#nudge for shelf
+#ttc-table-of-flesh-shelf-nudges-shelf
 >shefl
 The shelf is frozen that way. Ba dum bum.
-#nudge for skin
+#ttc-table-of-flesh-shelf-nudges-skin
 >skni
 The skin sink is frozen that way. Ba dum bum.
-#nudge for ink
+#ttc-table-of-flesh-shelf-nudges-ink
 >ikn
 The skin sink is frozen that way. Ba dum bum.
-#nudge for cities
+#ttc-table-of-flesh-shelf-nudges-cities
 >citise
 Taking care of the main menace may change the iciest cities
-#nudge for city
+#ttc-table-of-flesh-shelf-nudges-city
 >ciyt
 Taking care of the main menace may change the iciest cities
-#nudge for sandwich
+#ttc-table-of-forest-nudges-sandwich
 >sandwihc
 It would be easier to just pick it apart physically, without anything fancy.
-#nudge for canister
+#ttc-table-of-flesh-shelf-nudges-canister
 >canistre
 The canister is too solid.
-#nudge for grinder
+#ttc-table-of-flesh-shelf-nudges-grinder
 >grindre
 The grinder is too solid.
-#nudge for grin
+#ttc-table-of-flesh-shelf-nudges-grin
 >grni
 The ring does not bend.
-#nudge for hams
+#ttc-table-of-flesh-shelf-nudges-hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
 
@@ -858,16 +858,16 @@ ers .
 If there are any lawyers here, they've already been debarred.
 
 @nud
-#nudge for bleads
+#ttc-table-of-flesh-shelf-nudges-bleads
 >bleasd
 The blades, buried in the grinder, remain lifeless.
-#nudge for meat
+#ttc-table-of-forest-nudges-meat
 >meta
 You'll need to be more specific about the meat to poke at.
-#nudge for meats
+#ttc-table-of-forest-nudges-meats
 >meast
 You'll need to be more specific about the meat to poke at.
-#nudge for liver
+#ttc-table-of-forest-nudges-liver
 >livre
 The one liver seems inactive by itself.
 
@@ -910,7 +910,7 @@ spasm
 You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
 
 @nud
-#spechelp for spam
+#ttc-table-of-forest-spechelp-spam
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the Spam. Keep at it.
@@ -923,7 +923,7 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#done rejects for maps
+#ttc-table-of-forest-done-rejects-maps
 >masp
 The maps are probably right, you hope. No need to change them.
 
@@ -932,7 +932,7 @@ The maps are probably right, you hope. No need to change them.
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
 \\
-#spechelp for bread
+#ttc-table-of-forest-spechelp-bread
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bread. Keep at it.
@@ -948,7 +948,7 @@ You have everything you need to enter Corses Crosse, now. You can worry about th
 {$SCOS}
 
 @nud
-#done rejects for beard
+#ttc-table-of-forest-done-rejects-beard
 >beadr
 For a beard, it's actually pretty cool.
 
@@ -969,7 +969,7 @@ You should be able to walk NORTH from Self-ID Fields now with your disguise.
 >e
 
 @nud
-#spechelp for slit
+#ttc-table-of-forest-spechelp-slit
 >ilst
 The slit waxes and wanes a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the slit. Keep at it.
@@ -1019,26 +1019,26 @@ DEBUG INFO: Cert-text: ----E-.
 {$SCOS}
 
 @nud
-#nudge for emptiness
+#ttc-table-of-emptiness-sepiments-nudges-emptiness
 >emptinsse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
-#nudge for sepiment
+#ttc-table-of-emptiness-sepiments-nudges-sepiment
 >sepimetn
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
-#nudge for scoffin
+#ttc-table-of-emptiness-sepiments-nudges-scoffin
 >scoffni
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 \\
-#nudge for coffin
+#ttc-table-of-emptiness-sepiments-nudges-coffin
 >coffni
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 \\
-#nudge for coffer
+#ttc-table-of-emptiness-sepiments-nudges-coffer
 >coffre
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
-#nudge for coffers
+#ttc-table-of-emptiness-sepiments-nudges-coffers
 >coffesr
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 
@@ -1057,7 +1057,7 @@ James Spader is pretty cool, but he can't help with supernatural stuff. Okay, ma
 You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
 
 @nud
-#spechelp for banshee
+#ttc-table-of-forest-spechelp-banshee
 >hasbene
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
@@ -1067,7 +1067,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 The banshee seems to howl about becoming a has-been.
 
 @nud
-#spechelp for liches
+#ttc-table-of-forest-spechelp-liches
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the liches. Keep at it.
@@ -1112,7 +1112,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
-#done rejects for chisel
+#ttc-table-of-forest-done-rejects-chisel
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
@@ -1141,10 +1141,10 @@ Your thoughts go to the other liver.
 Cr-r-r-r-k.
 
 @nud
-#nudge for ville
+#ttc-table-of-forest-nudges-ville
 >vilel
 It's just a liver. No need to parse the brand name.
-#nudge for river
+#ttc-table-of-forest-nudges-river
 >rivre
 It's just a liver. No need to parse the brand name.
 
@@ -1223,7 +1223,7 @@ You've already done enough with the meats.
 You smirk at the grinder you trashed.
 
 @nud
-#spechelp for livers
+#ttc-table-of-forest-spechelp-livers
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
@@ -1296,12 +1296,12 @@ Your vision blurs a bit, and instead drapes seem to flutter in front of the red 
 >undo
 
 @nud
-#spechelp for spread
+#ttc-table-of-forest-spechelp-spread
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spread. Keep at it.
 >undo
-#nudge for cloth
+#ttc-table-of-emptiness-sepiments-nudges-cloth
 >cloht
 No, the material of the spread isn't important, here.
 
@@ -1340,7 +1340,7 @@ red asp!
 #mistake test for spared
 >spared
 That is too passive, to ask to be spared.
-#spechelp for red asp
+#ttc-table-of-forest-spechelp-red-asp
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the red asp. Keep at it.
@@ -1358,7 +1358,7 @@ Your score has just gone up by one point.
 #renudge for cloth
 >cloht
 No, the material of the drapes isn't important, here.
-#done rejects for drapes
+#ttc-table-of-forest-done-rejects-drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
 
@@ -1388,27 +1388,27 @@ You see yourself reading the Notes Stone poem and carrying something stick-like.
 >undo
 
 @nud
-#nudge for doorway
+#ttc-table-of-emptiness-sepiments-nudges-doorway
 >doorwya
 The dimness is unchangeable from out here. You'll have to find a way in.
 \\
-#nudge for mis
+#ttc-table-of-emptiness-sepiments-nudges-mis
 >msi
 The dimness is unchangeable from out here. You'll have to find a way in.
 \\
-#nudge for miss
+#ttc-table-of-emptiness-sepiments-nudges-miss
 >mssi
 The dimness is unchangeable from out here. You'll have to find a way in.
 \\
-#nudge for dimness
+#ttc-table-of-emptiness-sepiments-nudges-dimness
 >dimnsse
 The dimness is unchangeable from out here. You'll have to find a way in.
 \\
-#nudge for send
+#ttc-table-of-emptiness-sepiments-nudges-send
 >sedn
 The dimness is unchangeable from out here. You'll have to find a way in.
 \\
-#nudge for nde
+#ttc-table-of-emptiness-sepiments-nudges-nde
 >ned
 The dimness is unchangeable from out here. You'll have to find a way in.
 
@@ -1419,7 +1419,7 @@ You don't know what's
 You see yourself molding the sliver into something more compact and glowing and then loading your shotgun.
 
 @nud
-#spechelp for sliver
+#ttc-table-of-forest-spechelp-sliver
 >silvre
 The sliver seems to bend, but it snaps back.
 !As if it's impatient
@@ -1436,7 +1436,7 @@ You see yourself loading your shotgun.
 DEBUG: shotgun being objhinted.
 
 @nud
-#nudge for cylinder
+#ttc-table-of-forest-nudges-cylinder
 >cylindre
 It's the shape it should be. You don't need to make a key, or a charm.
 
@@ -1447,7 +1447,7 @@ It's the shape it should be. You don't need to make a key, or a charm.
 {$SFIXMAX}
 
 @nud
-#done rejects for silver
+#ttc-table-of-forest-done-rejects-silver
 >silvre
 Hard to beat silver. It's what it should be.
 
@@ -1506,25 +1506,25 @@ If there were any treasure here, it'd probably do something terrible to you once
 This place is too stark to offer clues--well, maybe it'd offer WRONG clues.
 
 @nud
-#nudge for slough
+#ttc-table-of-ghouls-slough-nudges-slough
 >slouhg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for lough
+#ttc-table-of-ghouls-slough-nudges-lough
 >louhg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for cruel
+#ttc-table-of-ghouls-slough-nudges-cruel
 >crule
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
-#nudge for ones
+#ttc-table-of-ghouls-slough-nudges-ones
 >onse
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
-#nudge for enclosure
+#ttc-table-of-ghouls-slough-nudges-enclosure
 >enclosuer
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
-#nudge for marsh
+#ttc-table-of-ghouls-slough-nudges-marsh
 >marhs
 The marsh and lake are symptoms of--whatever evil is beyond here.
-#nudge for lake
+#ttc-table-of-ghouls-slough-nudges-lake
 >laek
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
@@ -1557,39 +1557,39 @@ DEBUG: maps being objhinted.
 Frost Forts
 
 @nud
-#nudge for frost
+#ttc-table-of-frost-forts-nudges-frost
 >frots
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for snow
+#ttc-table-of-frost-forts-nudges-snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
-#nudge for capital
+#ttc-table-of-frost-forts-nudges-capital
 >capitla
 You need to deal with all the capitals. And they're specific letters.
-#nudge for capitals
+#ttc-table-of-frost-forts-nudges-capitals
 >capitasl
 They aren't just any capitals. They're specific letters.
-#nudge for icecap
+#ttc-table-of-frost-forts-nudges-icecap
 >icecpa
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
-#nudge for iced
+#ttc-table-of-frost-forts-nudges-iced
 >icde
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
-#nudge for ice
+#ttc-table-of-frost-forts-nudges-ice
 >iec
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
-#nudge for sleet
+#ttc-table-of-frost-forts-nudges-sleet
 >slete
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
-#nudge for bumps
+#ttc-table-of-frost-forts-nudges-bumps
 >bumsp
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
-#nudge for bmup
+#ttc-table-of-frost-forts-nudges-bmup
 >bmup
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
 @nud
-#spechelp for vowels
+#ttc-table-of-forest-spechelp-vowels
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the vowels. Keep at it.
@@ -1650,10 +1650,10 @@ The werewolves will catch you easily.
 {$SFIXMAX}
 
 @nud
-#nudge for werewolves
+#ttc-table-of-frost-forts-nudges-werewolves
 >werewolvse
 They won't be changed with magic. Thankfully, you've got something more direct.
-#nudge for lupine
+#ttc-table-of-frost-forts-nudges-lupine
 >lupien
 They are the lupine lineup from your notes, but for your purpose, they're wolves.
 #renudge for snow
@@ -1668,7 +1668,7 @@ The scenery here's mostly frozen that way. Ha ha ha.
 >icde
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.
-#done rejects for wolves
+#ttc-table-of-forest-done-rejects-wolves
 >wolvse
 You can't change them back. But maybe you can get rid of them. You do have a weapon.
 

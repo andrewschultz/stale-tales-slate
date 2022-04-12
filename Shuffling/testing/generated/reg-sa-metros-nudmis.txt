@@ -12,7 +12,7 @@
 >poss
 >opt in
 
-#spechelp for store m
+#ttc-table-of-stores-spechelp-store-m
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
@@ -20,7 +20,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >metros
 Your score has just gone up by one point
 
-#done rejects for trade tread
+#ttc-table-of-stores-done-rejects-trade-tread
 >metrso
 The trade tread doesn't need to be changed. What's behind it, does.
 
@@ -44,33 +44,34 @@ Reverse psychology won't work on the ingress, here.
 >resigns
 Reverse psychology won't work on the ingress, here.
 
-#nudge for theol
+#ttc-table-of-undesired-underside-nudges-theol
 >hotle
 You can't change the hotel, but you could have a look around.
 
+#ttc-table-of-undesired-underside-nudges-etch
 #nudge for etch
 >ethc
 The tech-etch is pretty securely, um, etched on.
 #mistake test for bates
 >bates
 You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
-#nudge for titling
+#ttc-table-of-undesired-underside-nudges-titling
 >titlign
 No, the tilting titling is unstable enough.
-#nudge for friend
+#ttc-table-of-undesired-underside-nudges-friend
 >friedn
 You don't have the skill to hack the friend finder.
-#nudge for signer
+#ttc-table-of-undesired-underside-nudges-signer
 >signre
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
-#nudge for signers
+#ttc-table-of-undesired-underside-nudges-signers
 >signesr
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 
-#nudge for cramped
+#ttc-table-of-undesired-underside-nudges-cramped
 >crampde
 You can't do much with or to the camp, here or north.
-#nudge for camp
+#ttc-table-of-undesired-underside-nudges-camp
 >capm
 You can't do much with or to the camp, here or north.
 
@@ -83,39 +84,39 @@ The senors you want to see are behind the door.
 >senor
 The senors you want to see are behind the door.
 
-#nudge for undesired
+#ttc-table-of-undesired-underside-nudges-undesired
 >undesirde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
-#nudge for metros
+#ttc-table-of-metros-nudges-metros
 >mersto
 You don't want to change a region drastically while you're in it.
 
-#nudge for metro
+#ttc-table-of-metros-nudges-metro
 >merto
 You don't want to change a region drastically while you're in it.
 
-#nudge for metallic
+#ttc-table-of-undesired-underside-nudges-metallic
 >metallci
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 
-#nudge for optical
+#ttc-table-of-undesired-underside-nudges-optical
 >opticla
 Changing the beam is way out of your league.
 
-#nudge for beam
+#ttc-table-of-undesired-underside-nudges-beam
 >bema
 Changing the beam is way out of your league.
 
-#nudge for special
+#ttc-table-of-undesired-underside-nudges-special
 >specila
 That's not the way to get to the special place. You need special ID
 
-#nudge for building
+#ttc-table-of-undesired-underside-nudges-building
 >buildign
 You can't change the hotel,
 
-#spechelp for drainage
+#ttc-table-of-metros-spechelp-drainage
 >gardenai
 The drainage bubbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the drainage. Keep at it.
@@ -123,7 +124,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >w
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
-#nudge for reading
+#ttc-table-of-undesired-underside-nudges-reading
 >readign
 It's *A* reading you need to worry about.
 
@@ -153,15 +154,15 @@ by one point
 >score
 You currently have 1 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
-#done rejects for gardenia
+#ttc-table-of-metros-done-rejects-gardenia
 >gardenai
 The flowers are fine as-is.
 
-#nudge for sensor
+#ttc-table-of-undesired-underside-nudges-sensor
 >sensro
 You don't have the skill to hack the friend finder.
 
-#nudge for door
+#ttc-table-of-undesired-underside-nudges-door
 >doro
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 
@@ -181,24 +182,24 @@ The noisome Moonies pretend to be all about nature, but as for actually understa
 >stent
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
-#nudge for roarings
+#ttc-table-of-roarings-garrison-nudges-roarings
 >roarinsg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for roaring
+#ttc-table-of-roarings-garrison-nudges-roaring
 >roarign
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for reedings
+#ttc-table-of-roarings-garrison-nudges-reedings
 >reedinsg
 He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be .
-#nudge for reeding
+#ttc-table-of-roarings-garrison-nudges-reeding
 >reedign
 He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be .
 
-#nudge for cordoned
+#ttc-table-of-roarings-garrison-nudges-cordoned
 >cordonde
 You should probably just go north to look at the condo instead.
 
-#nudge for condo
+#ttc-table-of-roarings-garrison-nudges-condo
 >conod
 You should probably just go north to look at the condo instead.
 
@@ -207,27 +208,27 @@ You should probably just go north to look at the condo instead.
 >w
 Bile Libe
 
-#nudge for bile
+#ttc-table-of-bile-libe-nudges-bile
 >ible
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
-#nudge for librayr
+#ttc-table-of-bile-libe-nudges-librayr
 >librayr
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
-#nudge for motto
+#ttc-table-of-bile-libe-nudges-motto
 >motot
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
 
-#nudge for plaque
+#ttc-table-of-bile-libe-nudges-plaque
 >plaqeu
 It's more, it's A MOTTO.
 
-#nudge for potaot
+#ttc-table-of-bile-libe-nudges-potaot
 >potaot
 The author twisted words enough. Perhaps you could concentrate on the motto.
 
-#spechelp for motto
+#ttc-table-of-metros-spechelp-motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the motto. Keep at it.
@@ -238,7 +239,7 @@ Your score has just gone up by one point.
 >score
 You currently have 2 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
-#done rejects for tomato
+#ttc-table-of-metros-done-rejects-tomato
 >tomaot
 It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
 
@@ -248,35 +249,35 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 >w
 The Ol' Hotel
 
-#nudge for thelo
+#ttc-table-of-the-ol-hotel-nudges-thelo
 >helot
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
-#nudge for thing
+#ttc-table-of-the-ol-hotel-nudges-thing
 >thign
 The night thing is twisted beyond redemption.
 
-#nudge for potato
+#ttc-table-of-the-ol-hotel-nudges-potato
 >potaot
 The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it.
 
-#nudge for lucre
+#ttc-table-of-the-ol-hotel-nudges-lucre
 >lucer
 You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
 
-#nudge for bottel
+#ttc-table-of-the-ol-hotel-nudges-bottel
 >bottel
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 
-#nudge for ketchup
+#ttc-table-of-the-ol-hotel-nudges-ketchup
 >ketchpu
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 
-#nudge for catsup
+#ttc-table-of-the-ol-hotel-nudges-catsup
 >catsup
 You think of how to make the ketchup slightly classier. It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 
-#nudge for mattress
+#ttc-table-of-the-ol-hotel-nudges-mattress
 >mattrses
 Nothing to change the mattress to, even if you could move the night thing off.
 
@@ -287,7 +288,7 @@ by one point
 >score
 You currently have 3 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
-#nudge for bump
+#ttc-table-of-the-ol-hotel-nudges-bump
 >bupm
 Just search the bump instead.
 
@@ -302,7 +303,7 @@ Nothing to change the mattress to, and you already looted it
 
 >x mattress
 
-#nudge for emitter
+#ttc-table-of-the-ol-hotel-nudges-emitter
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
 
@@ -315,68 +316,68 @@ You can't change the hotel, and you got rid of the night thing, anyway.
 >n
 Roarings Garrison
 
-#nudge for library
+#ttc-table-of-roarings-garrison-nudges-library
 >librayr
 The library could use renovation, but that's out of the scope of your quest, now.
 
-#nudge for redtents
+#ttc-table-of-roarings-garrison-nudges-redtents
 >redtenst
 Not nice. It's the only home the deadbeats have.
 
-#nudge for harps
+#ttc-table-of-roarings-garrison-nudges-harps
 >harsp
 The harps are kind of annoying, but they've got nothing on the beats.
-#nudge for harp
+#ttc-table-of-roarings-garrison-nudges-harp
 >hapr
 The harps are kind of annoying, but they've got nothing on the beats.
 
-#nudge for lost
+#ttc-table-of-metros-nudges-lost
 >ltso
 It's not just that it's lost, it's CORN.
 !Perhaps you can
 
-#nudge for corn
+#ttc-table-of-metros-nudges-corn
 >conr
 It's not just that it's corn, it's LOST too.
 !Perhaps you can
 
-#nudge for tent
+#ttc-table-of-roarings-garrison-nudges-tent
 >tetn
 As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 
-#nudge for tents
+#ttc-table-of-roarings-garrison-nudges-tents
 >tenst
 As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 
-#nudge for deadbeat
+#ttc-table-of-roarings-garrison-nudges-deadbeat
 >deadbeta
 The deadbeat may mumble about change, but changing oneself? Not so fast.
 
-#nudge for dead
+#ttc-table-of-roarings-garrison-nudges-dead
 >deda
 The deadbeat may mumble about change, but changing oneself? Not so fast.
 
-#nudge for beat
+#ttc-table-of-roarings-garrison-nudges-beat
 >beta
 The deadbeat may mumble about change, but changing oneself? Not so fast.
 
-#nudge for buttosn
+#ttc-table-of-metros-nudges-buttosn
 >buttosn
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
-#nudge for yellow
+#ttc-table-of-metros-nudges-yellow
 >yellwo
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
-#nudge for kernels
+#ttc-table-of-metros-nudges-kernels
 >kernesl
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
-#nudge for kernel
+#ttc-table-of-metros-nudges-kernel
 >kernle
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
-#spechelp for lost corn
+#ttc-table-of-metros-spechelp-lost-corn
 >controsl
 You thought you heard electronic beeping from the corn.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
@@ -384,16 +385,16 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >n
 Obtains/Boastin' Bastion
 
-#nudge for boastin
+#ttc-table-of-obtains-boastin-bastion-nudges-boastin
 >boastni
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for obtain
+#ttc-table-of-obtains-boastin-bastion-nudges-obtain
 >obtani
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for poses
+#ttc-table-of-obtains-boastin-bastion-nudges-poses
 >essop
 You can't change who they are. They probably can't, either. It's sad.
-#nudge for pose
+#ttc-table-of-obtains-boastin-bastion-nudges-pose
 >poes
 You can't change who they are. They probably can't, either. It's sad.
 #mistake test for opes
@@ -409,11 +410,11 @@ The poses posse doesn't need or want a handout.
 >spose
 Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.
 
-#nudge for rental
+#ttc-table-of-obtains-boastin-bastion-nudges-rental
 >rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 
-#spechelp for antlers
+#ttc-table-of-metros-spechelp-antlers
 >rentlas
 You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the antlers. Keep at it.
@@ -427,23 +428,23 @@ You currently have 4 out of 18 total points for the Metros region. You have foun
 >rentla
 No point bringing those tacky antlers back, or thinking about them any more
 
-#nudge for candelabra
+#ttc-table-of-obtains-boastin-bastion-nudges-candelabra
 >candelabar
 Interior decorating is not your strength.
 
-#nudge for carpets
+#ttc-table-of-obtains-boastin-bastion-nudges-carpets
 >carpest
 Interior decorating is not your strength.
 
-#nudge for carpet
+#ttc-table-of-obtains-boastin-bastion-nudges-carpet
 >carpte
 Interior decorating is not your strength.
 
-#nudge for caek
+#ttc-table-of-obtains-boastin-bastion-nudges-caek
 >caek
 It isn't just any cake. It's dry cake.
 
-#nudge for dry
+#ttc-table-of-obtains-boastin-bastion-nudges-dry
 >dyr
 It isn't just any cake. It's dry cake.
 
@@ -480,15 +481,15 @@ Your score has just gone up by one point.
 >score
 You currently have 6 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#done rejects for controls
+#ttc-table-of-metros-done-rejects-controls
 >controsl
 The controls stay as they are.
 
-#nudge for control
+#ttc-table-of-metros-nudges-control
 >contrlo
 You've already changed the lost corn into the controls, and you don't need to do more.
 
-#spechelp for dry cake
+#ttc-table-of-metros-spechelp-dry-cake
 >keycadr
 You feel like you can almost identify what the cake can become.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
@@ -498,19 +499,19 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 7 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#done rejects for keycard
+#ttc-table-of-metros-done-rejects-keycard
 >keycadr
 The keycard remains stiff. Looks like it's as it should be.
 
-#nudge for leavse
+#ttc-table-of-metros-nudges-leavse
 >leavse
 It's the whole clover you need to change.
 
-#nudge for fuzzy
+#ttc-table-of-metros-nudges-fuzzy
 >fuzyz
 The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover.
 
-#spechelp for clover
+#ttc-table-of-metros-spechelp-clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
@@ -524,22 +525,22 @@ You currently have 8 out of 18 total points for the Metros region. You have foun
 >smitten
 No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they could stick really well on the right surface.
 
-#done rejects for velcro
+#ttc-table-of-metros-done-rejects-velcro
 >velcor
 The Velcro remains tangled.
-#nudge for string
+#ttc-table-of-metros-nudges-string
 >strign
 No need to mess with the string joining the Velcro mittens.
-#nudge for glove
+#ttc-table-of-metros-nudges-glove
 >gloev
 The mittens are as comfortable as they're going to be.
-#nudge for gloves
+#ttc-table-of-metros-nudges-gloves
 >glovse
 The mittens are as comfortable as they're going to be.
-#nudge for mitten
+#ttc-table-of-metros-nudges-mitten
 >mittne
 The mittens are as comfortable as they're going to be.
-#nudge for mittens
+#ttc-table-of-metros-nudges-mittens
 >mittesn
 The mittens are as comfortable as they're going to be.
 
@@ -563,58 +564,58 @@ The faeries have very magic and very demoralizing anti-vandalism spells.
 #mistake retest for bates
 >bates
 You don't need to deal with a knife-wielding psycho on top of all this.
-#nudge for florae
+#ttc-table-of-fo-real-florae-nudges-florae
 >florea
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for real
+#ttc-table-of-fo-real-florae-nudges-real
 >rela
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for fare
+#ttc-table-of-fo-real-florae-nudges-fare
 >faer
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for heath
+#ttc-table-of-fo-real-florae-nudges-heath
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
-#nudge for begonia
+#ttc-table-of-fo-real-florae-nudges-begonia
 >begonai
 Probably best not to do stuff to even one begonia while the faeries have them.
-#nudge for fairies
+#ttc-table-of-fo-real-florae-nudges-fairies
 >fairise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them. With a little extra for your misspelling.
-#nudge for fairy
+#ttc-table-of-fo-real-florae-nudges-fairy
 >faiyr
 If you mangled one of them, the rest of the fairies would mangle you back worse.
-#nudge for faery
+#ttc-table-of-fo-real-florae-nudges-faery
 >faeyr
 If you mangled one of them, the rest of the fairies would mangle you back worse.
-#nudge for stems
+#ttc-table-of-fo-real-florae-nudges-stems
 >stesm
 Deal with the whole flower, not just the stems.
-#nudge for trounce
+#ttc-table-of-fo-real-florae-nudges-trounce
 >trounec
 You don't need to do anything to the counter, and it's probably protected by a spell, anyway.
-#nudge for faeries
+#ttc-table-of-fo-real-florae-nudges-faeries
 >faerise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
 !With a little extra for your misspelling
-#nudge for tonr
+#ttc-table-of-fo-real-florae-nudges-tonr
 >tron
 The torn cue is just there to direct you to the brocade.
-#nudge for cue
+#ttc-table-of-fo-real-florae-nudges-cue
 >ceu
 The torn cue is just there to direct you to the brocade.
 
 >give gardenia to faeries
 
 #balance undos
-#spechelp for begonias
+#ttc-table-of-metros-spechelp-begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the begonias. Keep at it.
 >noise bag
 by one point
 #altpath
-#done rejects for noise bag
+#ttc-table-of-metros-done-rejects-noise-bag
 >noisebga
 The noise bag rumbles ominously. Best not change it into something worse.
 >undo
@@ -627,7 +628,7 @@ The noise bag rumbles ominously. Best not change it into something worse.
 >heaht
 They are multiple heaths--so you should try to change just one.
 
-#spechelp for heaths
+#ttc-table-of-metros-spechelp-heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the heaths. Keep at it.
@@ -635,7 +636,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >sheath
 Your score has just gone up by one point.
 
-#done rejects for sheath
+#ttc-table-of-metros-done-rejects-sheath
 >sheaht
 The sheath remains still.
 
@@ -649,11 +650,11 @@ You currently have 9 out of 18 total points for the Metros region. You have foun
 
 >w
 
-#nudge for word
+#ttc-table-of-metros-nudges-word
 >odrw
 You'd need to do something to all the words.
 
-#spechelp for words
+#ttc-table-of-metros-spechelp-words
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the words. Keep at it.
@@ -663,13 +664,13 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 10 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#done rejects for sword
+#ttc-table-of-metros-done-rejects-sword
 >swodr
 Meddling with the sword right now, you're worried it might poke you.
 
 >e
 
-#spechelp for brocade
+#ttc-table-of-metros-spechelp-brocade
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the brocade. Keep at it.
@@ -679,20 +680,20 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 11 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#done rejects for barcode
+#ttc-table-of-metros-done-rejects-barcode
 >barcoed
 The barcode does not shift.
 
-#nudge for ganst
+#ttc-table-of-metros-nudges-ganst
 >ganst
 You don't get rid of angst with just a word.
-#nudge for gnat
+#ttc-table-of-metros-nudges-gnat
 >gnat
 There are multiple gnats, but that's not how to use them. Just SWITCH the termite emitter.
 
 >s
 
-#nudge for beats
+#ttc-table-of-metros-nudges-beats
 >ebtas
 The beats shift up for a second.
 
@@ -720,7 +721,7 @@ The lit-up tulip is useful for providing light for all-night sessions of playing
 >uptil
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 
-#nudge for utensil
+#ttc-table-of-esoteric-coteries-nudges-utensil
 >utensli
 The lit-up tulip will stay lit. No need to futz with its brand name.
 
@@ -750,11 +751,11 @@ You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
 
 Esoteric Coteries
 
-#nudge for esoteric
+#ttc-table-of-esoteric-coteries-nudges-esoteric
 >esoterci
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
 
-#nudge for coterie
+#ttc-table-of-esoteric-coteries-nudges-coterie
 >coterei
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
 
@@ -767,46 +768,46 @@ Esoteric Coteries
 You can also see a lit-up tulip here.
 The signers' ingress slides shut.
 
-#nudge for anticool
+#ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 #renudge for beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
-#nudge for tulip
+#ttc-table-of-metros-nudges-tulip
 >uptli
 The nerds would gang up on you and take it back, if anything worked directly on the tulip, which it won't. The nerds might be able to help you with part of your quest, though.
-#nudge for nerd
+#ttc-table-of-esoteric-coteries-nudges-nerd
 >nedr
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
-#nudge for nerds
+#ttc-table-of-esoteric-coteries-nudges-nerds
 >nersd
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
-#nudge for dorks
+#ttc-table-of-esoteric-coteries-nudges-dorks
 >dorsk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-#nudge for geeks
+#ttc-table-of-esoteric-coteries-nudges-geeks
 >geesk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-#nudge for dork
+#ttc-table-of-esoteric-coteries-nudges-dork
 >dokr
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-#nudge for geek
+#ttc-table-of-esoteric-coteries-nudges-geek
 >geke
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-#nudge for asknerds
+#ttc-table-of-esoteric-coteries-nudges-asknerds
 >asknersd
 The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
-#nudge for asknerd
+#ttc-table-of-esoteric-coteries-nudges-asknerd
 >asknedr
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
-#nudge for memo
+#ttc-table-of-esoteric-coteries-nudges-memo
 >meom
 Oh no. You'd change it for the worse. And the nerds would be mad.
-#nudge for tote
+#ttc-table-of-esoteric-coteries-nudges-tote
 >toet
 Oh no. You'd change it for the worse. And the nerds would be mad.
-#nudge for tome
+#ttc-table-of-esoteric-coteries-nudges-tome
 >toem
 Oh no. You'd change it for the worse. And the nerds would be mad.
 
@@ -843,7 +844,7 @@ You got to the Esoteric Coteries. You don't need any tricks like that.
 >s
 Elm Train Terminal
 
-#nudge for cafe
+#ttc-table-of-elm-train-terminal-nudges-cafe
 >caef
 The cafe face can't transform into anything.
 #mistake test for gip
@@ -890,7 +891,7 @@ The number of liars the rails would create would be shocking.
 >lira
 But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
 
-#nudge for tramline
+#ttc-table-of-elm-train-terminal-nudges-tramline
 >tramline
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
@@ -898,55 +899,55 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >ulipt
 The tulip is handy as-is. It gives light. You can't ask for much more.
 
-#nudge for lairs
+#ttc-table-of-elm-train-terminal-nudges-lairs
 >laisr
 You need to fix the rails electronically.
 
-#nudge for lair
+#ttc-table-of-elm-train-terminal-nudges-lair
 >lari
 You need to fix the rails electronically.
 
-#nudge for track
+#ttc-table-of-elm-train-terminal-nudges-track
 >trakc
 You need to fix the rails electronically.
 
-#nudge for tracks
+#ttc-table-of-elm-train-terminal-nudges-tracks
 >tracsk
 You need to fix the rails electronically.
 
-#nudge for psa
+#ttc-table-of-elm-train-terminal-nudges-psa
 >aps
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
 
-#nudge for pass
+#ttc-table-of-elm-train-terminal-nudges-pass
 >apss
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
 
-#nudge for art
+#ttc-table-of-elm-train-terminal-nudges-art
 >art
 There aren't many ways to look at THIS art, and none are constructive, you sense.
 
-#nudge for faded
+#ttc-table-of-elm-train-terminal-nudges-faded
 >fadde
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 
-#nudge for fad
+#ttc-table-of-elm-train-terminal-nudges-fad
 >adf
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 
-#nudge for deda
+#ttc-table-of-elm-train-terminal-nudges-deda
 >edad
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 
-#nudge for fadedad
+#ttc-table-of-elm-train-terminal-nudges-fadedad
 >fadedda
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 
-#nudge for none
+#ttc-table-of-elm-train-terminal-nudges-none
 >noen
 It's not just that it's neon, it's that it's a pig.
 
-#nudge for pgi
+#ttc-table-of-elm-train-terminal-nudges-pgi
 >pgi
 It's not just that it's a pig, it's that it's neon.
 
@@ -954,7 +955,7 @@ It's not just that it's a pig, it's that it's neon.
 >read neon pig
 Apparently the neon pig is a creation of one INPENGO.
 
-#spechelp for neon pig
+#ttc-table-of-metros-spechelp-neon-pig
 >openign
 The neon pig blinks as if in last-ditch defiance.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
@@ -970,16 +971,16 @@ You notice that it's underwritten (in red) by ORTON LSC, whoever they are.
 #mistake retest for tar
 >tar
 That'd be neat, make the wall sticky so you could climb and deal with that opening you made...but you might get stuck to it, too. Need something clingy but less gooey.
-#nudge for nope
+#ttc-table-of-elm-train-terminal-nudges-nope
 >noep
 You already transformed the neon pig to the gin-nope opening. Might be better to see if anything fits there.
-#done rejects for gin nope opening
+#ttc-table-of-metros-done-rejects-gin-nope-opening
 >openign
 You don't need to close up the opening. Maybe put something there.
-#nudge for gin
+#ttc-table-of-elm-train-terminal-nudges-gin
 >gni
 You already transformed the neon pig to the gin-nope opening. Might be better to see if anything fits there.
-#nudge for recess
+#ttc-table-of-elm-train-terminal-nudges-recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you may need to put something in the opening.
 
@@ -1017,10 +1018,10 @@ You've already made nothing out of something, and instead of reversing that, you
 
 Bassy Abyss
 
-#nudge for aligns
+#ttc-table-of-bassy-abyss-nudges-aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beats.
-#nudge for align
+#ttc-table-of-bassy-abyss-nudges-align
 >aling
 No use messing with the aligns signal when you need to focus on the beats.
 #mistake test for reins
@@ -1037,13 +1038,13 @@ You don't need the siren's volume or the beats' volume to have risen. Oh, no.
 >bates
 You don't need to deal with a knife-wielding psycho along with the beats.
 
-#nudge for bassy
+#ttc-table-of-bassy-abyss-nudges-bassy
 >bassy
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-#nudge for beta
+#ttc-table-of-metros-nudges-beta
 >ebta
 This racket isn't just one beat.
-#spechelp for siren
+#ttc-table-of-metros-spechelp-siren
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the siren. Keep at it.
@@ -1057,14 +1058,14 @@ You currently have 16 out of 18 total points for the Metros region. You have fou
 >rinse
 Time for that after you get your hands dirty and slay the final enemy, here.
 
-#nudge for resin
+#ttc-table-of-bassy-abyss-nudges-resin
 >resni
 The dust is dust now.
-#done rejects for resin
+#ttc-table-of-metros-done-rejects-resin
 >resni
 The dust is dust now.
 
-#spechelp for beats
+#ttc-table-of-metros-spechelp-beats
 >betsa
 The beats shift up for a second.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the beats. Keep at it.
@@ -1074,7 +1075,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#done rejects for beast
+#ttc-table-of-metros-done-rejects-beast
 >betsa
 You've changed the beats to something tangible, physically beatable.
 #renudge for aligns
@@ -1083,7 +1084,7 @@ No use messing with the aligns signal when you need to focus on the beast.
 
 >take sword
 
-#nudge for hilt
+#ttc-table-of-metros-nudges-hilt
 >ilth
 The hilt serves a purpose, and besides, there's not much to change it to.
 
@@ -1118,10 +1119,10 @@ I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store
 >baste beast
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
 
-#nudge for noise
+#ttc-table-of-metros-nudges-noise
 >noies
 Even if you could do anything, that'd rip the noise bag open.
-#nudge for bag
+#ttc-table-of-metros-nudges-bag
 >bga
 Even if you could do anything, that'd rip the noise bag open.
 

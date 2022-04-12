@@ -14,7 +14,7 @@
 >opt in
 >poss
 
-#spechelp for store r
+#ttc-table-of-stores-spechelp-store-r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
@@ -23,7 +23,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #notmax
 Your score has just gone up by one point
 
-#done rejects for ogled lodge
+#ttc-table-of-stores-done-rejects-ogled-lodge
 >resotr
 You already made passage to the ogled lodge. It's good enough. Why change it?
 
@@ -37,26 +37,26 @@ Light isn't the problem here. It's not having anywhere to go.
 >slite
 That's bad spelling, and it won't shrink your problems.
 
-#nudge for astral
+#ttc-table-of-astral-altars-nudges-astral
 >astrla
 While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
-#nudge for altar
+#ttc-table-of-astral-altars-nudges-altar
 >altra
 While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
-#nudge for resort
+#ttc-table-of-resort-nudges-resort
 >resotr
 You don't want to change a region drastically while you're in it.
-#nudge for islet
+#ttc-table-of-leis-isle-nudges-islet
 >tilse
 The tiles rattle as if to shift but settle down.
-#nudge for tile
+#ttc-table-of-astral-altars-nudges-tile
 >tiel
 You need to deal with all the tiles.
-#nudge for flare
+#ttc-table-of-astral-altars-nudges-flare
 >s
 >flaer
 The feral flare crackles menacingly. You doubt you can change it for the better.
-#spechelp for tiles
+#ttc-table-of-resort-spechelp-tiles
 >islte
 The tiles rattle as if to shift but settle down.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
@@ -87,27 +87,27 @@ But then, since the leis were fake, you shouldn't be surprised the woodland is, 
 >undo
 >undo
 
-#nudge for woodland
+#ttc-table-of-leis-isle-nudges-woodland
 >wooldand
 The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway.
 
-#nudge for and
+#ttc-table-of-leis-isle-nudges-and
 >adn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 
-#nudge for sands
+#ttc-table-of-leis-isle-nudges-sands
 >sansd
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
-#spechelp for l2
+#ttc-table-of-resort-spechelp-l2
 >lesi
 You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
 
-#nudge for lie
+#ttc-table-of-leis-isle-nudges-lie
 >eil
 Perhaps you can deal with the leis, or maybe you can use something else to escape the isle.
 
-#nudge for sand
+#ttc-table-of-leis-isle-nudges-sand
 >sadn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 
@@ -115,15 +115,15 @@ The sand and sands and sands are just--well, sand. They won't help you get off t
 >tilse
 That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave.
 
-#nudge for eter
+#ttc-table-of-leis-isle-nudges-eter
 >eter
 The tree sits there, but the swing rocks a bit.
 
-#nudge for oflat
+#ttc-table-of-leis-isle-nudges-oflat
 >aftol
 You notice writing on the rock and swing similar to what you just said. Or tried to say. Also, no need to make anything lo-fat here.
 
-#spechelp for rock
+#ttc-table-of-resort-spechelp-rock
 >crko
 Hmm, a rock, but only so much you can do with it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the rock. Keep at it.
@@ -134,10 +134,10 @@ by one point
 You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
 #note that there is no renudge for leis because before L2 is moot, we go to the table of spechelp. But for lei, we are always in the table of nudges.
-#nudge for leis
+#ttc-table-of-leis-isle-nudges-leis
 >isel
 You already noticed the leis. Use something on the isle to escape it.
-#renudge for lie
+#ttc-table-of-leis-isle-nudges-lie
 >iel
 You already noticed the leis. Use something on the isle to escape it.
 
@@ -153,7 +153,7 @@ Your score has just gone up by one point.
 >score
 You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
-#done rejects for cork
+#ttc-table-of-resort-done-rejects-cork
 >crko
 Your head swims then sinks as you realize the cork can't become much else.
 
@@ -161,7 +161,7 @@ Your head swims then sinks as you realize the cork can't become much else.
 >aftol
 You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
 
-#spechelp for swing
+#ttc-table-of-resort-spechelp-swing
 >winsg
 The swing goes slightly airborne.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
@@ -171,7 +171,7 @@ Your score has just gone up by one point.
 >score
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
-#done rejects for wings
+#ttc-table-of-resort-done-rejects-wings
 >winsg
 The wings should be able to propel you enough.
 
@@ -198,47 +198,47 @@ You don't need a musical score for this adventure.
 >diver
 But you just got by a lot of water. No need to go back in.
 
-#nudge for blow
+#ttc-table-of-rived-drive-nudges-blow
 >blwo
 You don't need to make any blow bowl more chaotic.
 
-#nudge for drive
+#ttc-table-of-rived-drive-nudges-drive
 >driev
 There is too much lying around here to mess with the Rived Drive's name.
 
-#nudge for tool
+#ttc-table-of-rived-drive-nudges-tool
 >loto
 Hm, no, the whole tool shed.
 
-#nudge for shed
+#ttc-table-of-rived-drive-nudges-shed
 >shde
 Hm, no, the whole tool shed.
 
-#nudge for ashed
+#ttc-table-of-rived-drive-nudges-ashed
 >asdeh
 A shed may provide shade, but you need a way up.
 
-#nudge for window
+#ttc-table-of-rived-drive-nudges-window
 >windwo
 They remain still. Maybe the toolshed itself.
 
-#nudge for windows
+#ttc-table-of-rived-drive-nudges-windows
 >windwos
 They remain still. Maybe the toolshed itself.
 
-#nudge for ulock
+#ttc-table-of-rived-drive-nudges-ulock
 >ulokc
 Nope. That lock's secure.
 
-#nudge for lock
+#ttc-table-of-rived-drive-nudges-lock
 >lokc
 Nope. That lock's secure.
 
-#nudge for pole
+#ttc-table-of-rived-drive-nudges-pole
 >pelo
 Only changing one pole would still leave a vertical barrier.
 
-#spechelp for poles
+#ttc-table-of-resort-spechelp-poles
 >polse
 The poles start to bend at an angle--or maybe that's the light.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
@@ -253,7 +253,7 @@ by one point
 >score
 You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
-#done rejects for slope
+#ttc-table-of-resort-done-rejects-slope
 >pelso
 You wouldn't want to make the slope crumble away.
 
@@ -269,7 +269,7 @@ Almost. But you don't need to create holes.
 >poser
 You wonder if YOU are the poser, for not being able to figure what to do.
 
-#spechelp for tool shed
+#ttc-table-of-resort-spechelp-tool-shed
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
@@ -283,11 +283,11 @@ Your score has just gone up by two points.
 >score
 You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
-#done rejects for toeholds
+#ttc-table-of-resort-done-rejects-toeholds
 >toeholsd
 The toeholds could be handy for getting up and out of here.
 
-#spechelp for spore
+#ttc-table-of-resort-spechelp-spore
 >respo
 You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spore. Keep at it.
@@ -310,15 +310,15 @@ You mutter a small epithet at where Red Bull Burdell could be. No, he's not arou
 >pores
 No, you had it.
 
-#done rejects for ropes
+#ttc-table-of-resort-done-rejects-ropes
 >respo
 The ropes are useful for climbing, which you need to do to get east.
 
-#nudge for rope
+#ttc-table-of-rived-drive-nudges-rope
 >repo
 Those are already useful.
 
-#spechelp for sprig
+#ttc-table-of-resort-spechelp-sprig
 >grisp
 The sprig seems to grow less fragile for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
@@ -337,11 +337,11 @@ You currently have 9 out of 15 total points for the Resort region. Your minimum 
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
-#done rejects for grips
+#ttc-table-of-resort-done-rejects-grips
 >grisp
 You can't get ahold of anything that would be more useful than the grips.
 
-#nudge for grip
+#ttc-table-of-rived-drive-nudges-grip
 >pirg
 Those are already useful.
 
@@ -349,34 +349,34 @@ Those are already useful.
 
 Potshot Hotspot
 
-#nudge for frust
+#ttc-table-of-potshot-hotspot-nudges-frust
 >fruts
 The frust turfs are unchangeable.
-#nudge for turf
+#ttc-table-of-potshot-hotspot-nudges-turf
 >tufr
 The frust turfs are unchangeable.
-#nudge for hotsopt
+#ttc-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Placating the people here is your best bet for making this place less of a hotspot.
-#nudge for rioters
+#ttc-table-of-potshot-hotspot-nudges-rioters
 >riotesr
 Perhaps it's best to keep it simple and cut down the riot.
-#nudge for rioter
+#ttc-table-of-potshot-hotspot-nudges-rioter
 >riotre
 Perhaps it's best to keep it simple and cut down the riot.
-#nudge for people
+#ttc-table-of-potshot-hotspot-nudges-people
 >peopel
 Perhaps it's best to keep it simple and cut down the riot.
-#nudge for horde
+#ttc-table-of-potshot-hotspot-nudges-horde
 >hored
 Perhaps it's best to keep it simple and cut down the riot.
-#nudge for uprisers
+#ttc-table-of-potshot-hotspot-nudges-uprisers
 >uprisesr
 Perhaps it's best to keep it simple and cut down the riot.
-#nudge for clay
+#ttc-table-of-potshot-hotspot-nudges-clay
 >clya
 No, the clay is a clue to what the protest really wants to do.
-#spechelp for riot
+#ttc-table-of-resort-spechelp-riot
 >troi
 The riot's still a crowd, and a big one, too.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
@@ -391,7 +391,7 @@ Your score has just gone up by one point.
 >score
 You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
-#done rejects for protest
+#ttc-table-of-resort-done-rejects-protest
 >troi
 You can deal with three people. But you'll have to change their motivations.
 
@@ -399,7 +399,7 @@ You can deal with three people. But you'll have to change their motivations.
 >clya
 No, the clay is a clue to what the trio really wants to do.
 
-#nudge for protesters
+#ttc-table-of-potshot-hotspot-nudges-protesters
 >ersprotest
 They're just a simple protest.
 
@@ -413,7 +413,7 @@ They're not bad people. But even bad people don't deserve to vanish like that! M
 >undo
 >undo
 
-#spechelp for protest
+#ttc-table-of-resort-spechelp-protest
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
@@ -436,23 +436,23 @@ Your score has just gone up by one point.
 >score
 You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
-#nudge for potter
+#ttc-table-of-potshot-hotspot-nudges-potter
 >pottre
 Picking one person out of a crowd never works.
 
-#done rejects for potters
+#ttc-table-of-resort-done-rejects-potters
 >pottesr
 You've changed the potters enough. Now you need to give them something interesting to do besides protest.
 
-#nudge for three
+#ttc-table-of-potshot-hotspot-nudges-three
 >ethre
 The trio remains unmoved. Perhaps you can get the potters something to work with?
 
-#nudge for chainlinks
+#ttc-table-of-potshot-hotspot-nudges-chainlinks
 >chainliskn
 You're overthinking it. Or you hope you are. It's both a chain, and links.
 
-#spechelp for chain links
+#ttc-table-of-resort-spechelp-chain-links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
@@ -505,51 +505,51 @@ You don't know him that well. No riffing on his initials!
 #renudge for hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
-#nudge for red
+#ttc-table-of-potshot-hotspot-nudges-red
 >rde
 Burdell's laugh echoes. "You think you can change ME?!"
 
-#nudge for bull
+#ttc-table-of-potshot-hotspot-nudges-bull
 >bllu
 Burdell's laugh echoes. "You think you can change ME?!"
 
-#nudge for burdell
+#ttc-table-of-potshot-hotspot-nudges-burdell
 >burdlle
 Burdell's laugh echoes. "You think you can change ME?!"
 
-#nudge for boot
+#ttc-table-of-potshot-hotspot-nudges-boot
 >boto
 The boot is already a little--modified. You can see its toe. Maybe that is a weakness.
 
-#nudge for toe
+#ttc-table-of-potshot-hotspot-nudges-toe
 >teo
 But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?
 
-#nudge for scar
+#ttc-table-of-potshot-hotspot-nudges-scar
 >scar
 No time for cosmetic changes.
 
-#nudge for crass
+#ttc-table-of-potshot-hotspot-nudges-crass
 >crssa
 No time for cosmetic changes.
 
-#nudge for cutlery
+#ttc-table-of-potshot-hotspot-nudges-cutlery
 >cutleyr
 Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?
 
-#nudge for tshirt
+#ttc-table-of-potshot-hotspot-nudges-tshirt
 >tshirt
 You slur out a few consonants--maybe you should work with something closer, lower down.
 
-#nudge for rage
+#ttc-table-of-potshot-hotspot-nudges-rage
 >raeg
 No, the rage gear is too strong.
 
-#nudge for shirt
+#ttc-table-of-potshot-hotspot-nudges-shirt
 >shtir
 You slur out a few consonants--maybe you should work with something closer, lower down.
 
-#nudge for tugtoe
+#ttc-table-of-potshot-hotspot-nudges-tugtoe
 >getotu
 Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 
@@ -593,32 +593,32 @@ On the other hand, if you're volunteering to test my other games, I could always
 >hotspto
 You don't want to make this place a hotspot again.
 
-#nudge for setter
+#ttc-table-of-potshot-hotspot-nudges-setter
 >settre
 It's Setter Street now. Seems like an appropriate tribute to a hero like you.
-#nudge for manor
+#ttc-table-of-potshot-hotspot-nudges-manor
 >romna
 You don't need to change the manors. You just need to be able to get there.
-#nudge for ransom
+#ttc-table-of-potshot-hotspot-nudges-ransom
 >ransmo
 You don't need to change the manors. You just need to be able to get there.
 
 >e
 Means Manse
 
-#nudge for manse
+#ttc-table-of-means-manse-nudges-manse
 >mesna
 You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits.
-#nudge for extis
+#ttc-table-of-means-manse-nudges-extis
 >extis
 That's not quite the right sort of nothing.
-#nudge for marble
+#ttc-table-of-means-manse-nudges-marble
 >marbel
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
-#nudge for spire
+#ttc-table-of-means-manse-nudges-spire
 >spier
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
-#nudge for toaster
+#ttc-table-of-means-manse-nudges-toaster
 >toastre
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 

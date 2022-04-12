@@ -38,7 +38,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >monty hints
 
 @nud
-#spechelp for store i
+#ttc-table-of-stores-spechelp-store-i
 >sortei
 you think, as you see red. Rise to what?
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
@@ -52,7 +52,7 @@ by one point
 >poss
 
 @nud
-#done rejects for posted depots
+#ttc-table-of-stores-done-rejects-posted-depots
 >sortei
 The posted depots doen't need to be changed. What's behind them, does.
 
@@ -84,37 +84,37 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 You can probably TURN the dial to a number, e.g. 99.
 
 @nud
-#nudge for part
+#ttc-table-of-trap-part-nudges-part
 >patr
 You need to manipulate something in the room to stop the spinning.
-#nudge for sortie
+#ttc-table-of-trap-part-nudges-sortie
 >tosrie
 You don't want to change a region drastically while you're in it.
-#nudge for centrifuge
+#ttc-table-of-trap-part-nudges-centrifuge
 >centrifueg
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
-#nudge for frenetic
+#ttc-table-of-trap-part-nudges-frenetic
 >frenetic
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
-#nudge for exitsnw
+#ttc-table-of-trap-part-nudges-exitsnw
 >xeitsnw
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
-#nudge for exitssw
+#ttc-table-of-trap-part-nudges-exitssw
 >xeitssw
 The room seems to spin faster, as if you are totally on the wrong track.
-#nudge for exitsse
+#ttc-table-of-trap-part-nudges-exitsse
 >xeitsse
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
-#nudge for exits
+#ttc-table-of-trap-part-nudges-exits
 >extis
 You can't do much to the exits when you don't even know which way they are.
-#nudge for dial
+#ttc-table-of-trap-part-nudges-dial
 >dila
 Messing up the dial would leave you trapped here.
-#nudge for sextien
+#ttc-table-of-trap-part-nudges-sextien
 >esxtien
 The spinning seems to slow a bit.
-#nudge for mud
+#ttc-table-of-sortie-nudges-mud
 >mdu
 The mud is just there. You can't change it.
 
@@ -189,23 +189,23 @@ That's not the magic way out. Sorry!
 >read great grate
 The grate seems to be made by HECK TIN. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.
 \\
-#nudge for graffiti
+#ttc-table-of-the-nick-nudges-graffiti
 >graffiit
 The graffiti's etched in solidly. But it seems like a decent clue, if you just want to read it.
 \\
-#nudge for greta
+#ttc-table-of-the-nick-nudges-greta
 >greta
 The grate remains impassive.
 \\
-#nudge for nick
+#ttc-table-of-the-nick-nudges-nick
 >nikc
 Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C.
 \\
-#nudge for sixteen
+#ttc-table-of-sortie-nudges-sixteen
 >ixsteen
 You don't need to re-stop the centrifuge.
 \\
-#spechelp for t-n
+#ttc-table-of-sortie-spechelp-t-n
 >kitchne
 The nick blurs a little but snaps back to normal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -357,19 +357,19 @@ I think you have the wrong food group. Besides, it wouldn't be nice to wipe the 
 I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
 
 @nud
-#nudge for rendin
+#ttc-table-of-kitchen-nudges-rendin
 >rendni
 You don't need to change the red inn. It will support your cooking efforts.
 #mistake retest for thicken
 >thicken
 This would be the place, but you're not hungry for anything TOO fatty right now
-#nudge for ditties
+#ttc-table-of-kitchen-nudges-ditties
 >dittise
 Don't let the songs distract you from your mission.
-#nudge for grief
+#ttc-table-of-kitchen-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
-#nudge for spear
+#ttc-table-of-kitchen-nudges-spear
 >spera
 The spearman is what's important.
 
@@ -390,7 +390,7 @@ Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
 Trap Part
 A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
 \\
-#nudge for aroundden
+#ttc-table-of-trap-part-nudges-aroundden
 >aroundden
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
@@ -398,14 +398,14 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >dila
 The dial did its part for you.
 \\
-#nudge for kitchen
+#ttc-table-of-sortie-nudges-kitchen
 >ketchin
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 \\
 >n
 
 @nud
-#nudge for kitchne
+#ttc-table-of-kitchen-nudges-kitchne
 >ketchin
 Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
 
@@ -419,23 +419,23 @@ While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it
 /DEBUG: (skate|bottle of CATHOUSE perfume|cheesy spearman|cult tee|tall trio) being objhinted.
 
 @nud
-#nudge for lamina
+#ttc-table-of-kitchen-nudges-lamina
 >lamian
 It actually looks pretty nice on the fridge.
 \\
-#nudge for pan
+#ttc-table-of-kitchen-nudges-pan
 >pna
 It's not a cake, and it's not quite a pan--it's a cake pan.
 \\
-#nudge for cake
+#ttc-table-of-kitchen-nudges-cake
 >caek
 It's not a cake, and it's not quite a pan--it's a cake pan.
 \\
-#nudge for fridge
+#ttc-table-of-kitchen-nudges-fridge
 >frideg
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
 \\
-#spechelp for grist
+#ttc-table-of-sortie-spechelp-grist
 >grtis
 The grist looks a bit less bland.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the grist. Keep at it.
@@ -453,7 +453,7 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#done rejects for grits
+#ttc-table-of-sortie-done-rejects-grits
 >grist
 Best not to get too crazy with food preparation.
 #renudge for grief
@@ -461,7 +461,7 @@ Best not to get too crazy with food preparation.
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something else inside it.
 
 @nud
-#spechelp for cake pan
+#ttc-table-of-sortie-spechelp-cake-pan
 >pancaek
 It's a cake pan, backwards and forwards.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
@@ -478,12 +478,12 @@ Your score has just gone up by one point.
 #renudge for grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better.
-#done rejects for pancake
+#ttc-table-of-sortie-done-rejects-pancake
 >pancaek
 Best not to get too crazy with food preparation.
 
 @nud
-#spechelp for tall trio
+#ttc-table-of-sortie-spechelp-tall-trio
 >tortilal
 The tall trio seem to look interested for a minute.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
@@ -506,33 +506,32 @@ Your score has just gone up by one point.
 @!
 {$SFIXMAX}
 
-
 @nud
-#done rejects for tortilla
+#ttc-table-of-sortie-done-rejects-tortilla
 >tortilal
 Best not to get too crazy with food preparation.
 
 ################hotsauce before & after
 
 @nud
-#nudge for perfume
+#ttc-table-of-kitchen-nudges-perfume
 >perfuem
 It's the full name brand that really catches your eye.
 \\
-#nudge for bottle
+#ttc-table-of-kitchen-nudges-bottle
 >bottel
 It's the full name brand that really catches your eye.
 \\
-#nudge for act
+#ttc-table-of-kitchen-nudges-act
 >atc
 It's the full name brand that really catches your eye.
 \\
-#nudge for houes
+#ttc-table-of-kitchen-nudges-houes
 >houes
 It's the full name brand that really catches your eye.
 
 @nud
-#spechelp for cathouse
+#ttc-table-of-sortie-spechelp-cathouse
 >hotsauec
 The bottle of CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
@@ -561,19 +560,19 @@ Your score has just gone up by one point.
 by one point
 
 @nud
-#done rejects for hotsauce
+#ttc-table-of-sortie-done-rejects-hotsauce
 >hotsauec
 Best not to get too crazy with food preparation.
 \\
-#nudge for cause
+#ttc-table-of-kitchen-nudges-cause
 >caues
 No need to do more with the hot sauce.
 \\
-#nudge for packet
+#ttc-table-of-kitchen-nudges-packet
 >packte
 Fiddling with sauce packets is so awful! Until it's easy. And it should be, here. Just PUT the sauce on any food.
 \\
-#nudge for cheesy
+#ttc-table-of-kitchen-nudges-cheesy
 >cheeys
 It's more that he's a spearman--but maybe his cheesiness is a clue.
 \\
@@ -590,7 +589,7 @@ The spearman's name, in red, is MR. SANE PA.
 >read spearman
 /You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 \\
-#spechelp for spearman
+#ttc-table-of-sortie-spechelp-spearman
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
@@ -609,12 +608,12 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
-#done rejects for parmesan
+#ttc-table-of-sortie-done-rejects-parmesan
 >parmesna
 Best not to get too crazy with food preparation.
 
 @nud
-#spechelp for skate
+#ttc-table-of-sortie-spechelp-skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the skate. Keep at it.
@@ -654,31 +653,31 @@ This is wordplay, not poetry. The steak is what it needs to be.
 !But the skate
 
 @nud
-#done rejects for steak
+#ttc-table-of-sortie-done-rejects-steak
 >steka
 Best not to get too crazy with food preparation.
 \\
-#nudge for cutup
+#ttc-table-of-kitchen-nudges-cutup
 >cutpu
 The steak's just right as is.
 \\
-#nudge for cutupsteak
+#ttc-table-of-kitchen-nudges-cutupsteak
 >cutupsteka
 The steak's just right as is.
 
 ######################lettuce
 
 @nud
-#spechelp for cult tee
+#ttc-table-of-sortie-spechelp-cult-tee
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
 \\
-#nudge for cult
+#ttc-table-of-kitchen-nudges-cult
 >cutl
 The whole t-shirt.
 \\
-#nudge for tee
+#ttc-table-of-kitchen-nudges-tee
 >eet
 The whole t-shirt.
 
@@ -696,7 +695,7 @@ You just need to combine ingredients you've already made and PUT them on each ot
 {$SFIXMAX}
 
 @nud
-#done rejects for lettuce
+#ttc-table-of-sortie-done-rejects-lettuce
 >lettuec
 Best not to get too crazy with food preparation.
 
@@ -729,7 +728,7 @@ DEBUG: taco being objhinted.
 #renudge for rendin
 >rendni
 You don't need to change the red inn. It supported your cooking efforts.
-#spechelp for taco
+#ttc-table-of-sortie-spechelp-taco
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the taco. Keep at it.
@@ -785,7 +784,7 @@ The mud is stuck that way. You don't need to change it.
 You don't need to know your classics, here.
 
 @nud
-#done rejects for coat
+#ttc-table-of-sortie-done-rejects-coat
 >cota
 No need for fashion tweaks.
 
@@ -804,11 +803,11 @@ Mum, dud mud blocks your way west. You can only go south to Trap Part or east to
 Room
 
 @nud
-#nudge for were
+#ttc-table-of-sortie-nudges-were
 >weer
 The cask is changeable, but not like that. WERE-EWER just clues it can be changed.
 \\
-#spechelp for cask
+#ttc-table-of-sortie-spechelp-cask
 >cska
 Nothing happens. Maybe you are trying to do too much to change the cask.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cask. Keep at it.
@@ -854,25 +853,25 @@ DEBUG INFO: Cert-text: -A-K.
 After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though.
 
 @nud
-#spechelp for sack
+#ttc-table-of-sortie-spechelp-sack
 >cska
 You doubt the sack/cask has a triple purpose.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sack. Keep at it.
 \\
-#nudge for burlap
+#ttc-table-of-sortie-nudges-burlap
 >burlpa
 The sack itself seems pliable, but its individual fibers aren't.
 \\
-#nudge for pair
+#ttc-table-of-sortie-nudges-pair
 >pari
 Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd.
 \\
-#nudge for wart
+#ttc-table-of-sortie-nudges-wart
 >wrat
 Why zap just one wart? Go for all of them!
 
 @nud
-#spechelp for warts
+#ttc-table-of-sortie-spechelp-warts
 >strwa
 The warts itch slightly.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the warts. Keep at it.
@@ -911,13 +910,14 @@ As the sack changes, the straw falls out.
 >undo
 
 @nud
-#done rejects for straw
+#ttc-table-of-sortie-done-rejects-straw
 >strwa
 The straw remains motionless.
 \\
-#nudge for shoe
+#ttc-table-of-sortie-nudges-shoe
 >heos
 There's more than one hose here.
+
 
 @nud
 #mistake test for shoe
@@ -926,7 +926,7 @@ You need more than one shoe.
 >undo
 
 @nud
-#spechelp for hoses
+#ttc-table-of-sortie-spechelp-hoses
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
@@ -986,15 +986,15 @@ One, there's more than one shoe. Two, this isn't that sort of game. Innuendo onl
 {$SFIXMAX}
 
 @nud
-#nudge for sheo
+#ttc-table-of-sortie-nudges-sheo
 >heos
 But you're wearing the shoes. That might cause problems.
 \\
-#nudge for shoes
+#ttc-table-of-sortie-nudges-shoes
 >hesso
 But you're wearing the shoes. That might cause problems.
 \\
-#spechelp for r2
+#ttc-table-of-sortie-spechelp-r2
 >romo
 You almost feel something picking you up for a second. You must have been close.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -1078,23 +1078,23 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.
 
 @nud
-#nudge for mire
+#ttc-table-of-moor-nudges-mire
 >meir
 You can't change the rime-mire. You probably don't need to go wandering off, anyway. There's enough to do here.
 \\
-#nudge for woefulpat
+#ttc-table-of-moor-nudges-woefulpat
 >woefulpta
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 \\
-#nudge for woeful
+#ttc-table-of-moor-nudges-woeful
 >woeflu
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 \\
-#nudge for afwul
+#ttc-table-of-moor-nudges-afwul
 >afwlu
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 \\
-#nudge for peto
+#ttc-table-of-moor-nudges-peto
 >peot
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 
@@ -1126,27 +1126,27 @@ He holds up his hand for silence. He is too busy reciting his poem. You probably
 >z
 
 @nud
-#nudge for expo
+#ttc-table-of-sortie-nudges-expo
 >exop
 Thinking of the flier leads you back to the anapest.
 \\
-#nudge for expoflier
+#ttc-table-of-sortie-nudges-expoflier
 >expoflire
 Thinking of the flier leads you back to the anapest.
 \\
-#nudge for flire
+#ttc-table-of-sortie-nudges-flire
 >flire
 Thinking of the flier leads you back to the anapest.
 \\
-#nudge for anapests
+#ttc-table-of-moor-nudges-anapests
 >anapesst
 Well, there are many, but the poem is in anapest.
 \\
-#nudge for peom
+#ttc-table-of-moor-nudges-peom
 >epmo
 Pat won't react kindly to modifications of his poem.
 \\
-#nudge for poerty
+#ttc-table-of-moor-nudges-poerty
 >poetyr
 Pat won't react kindly to modifications of his poem.
 
@@ -1165,7 +1165,7 @@ Pat won't react kindly to modifications of his poem.
 Shooting things up is not the answer
 
 @nud
-#spechelp for anapest
+#ttc-table-of-sortie-spechelp-anapest
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the anapest. Keep at it.
@@ -1226,7 +1226,7 @@ Instead of trading, use GIVE X TO Y.
 Instead of trading, use GIVE X TO Y.
 
 @nud
-#done rejects for peasant
+#ttc-table-of-sortie-done-rejects-peasant
 >peasatn
 The peasant doesn't need to change himself. Just his possessions. Maybe you can trade.
 
@@ -1250,35 +1250,35 @@ You see yourself filling up the wall in Stiller Trellis then making it disappear
 You're glad you've got the hay, but you're not excited, and you can't fake it.
 
 @nud
-#nudge for pome
+#ttc-table-of-moor-nudges-pome
 >epmo
 The peasant's poem is about as good as it can be, for what it is. It's better than Pat's.
 \\
-#nudge for poetyr
+#ttc-table-of-moor-nudges-poetyr
 >poetyr
 The peasant's poem is about as good as it can be, for what it is. It's better than Pat's.
 \\
-#nudge for hay
+#ttc-table-of-sortie-nudges-hay
 >hya
 Hay is not terribly magical. It's more for trading or building.
 \\
-#nudge for graffiit
+#ttc-table-of-sortie-nudges-graffiit
 >graffiit
 Hm, there has to be a clue in it.
 \\
-#nudge for redgraffiti
+#ttc-table-of-sortie-nudges-redgraffiti
 >redgraffiit
 Hm, there has to be a clue in it.
 \\
-#nudge for roda
+#ttc-table-of-moor-nudges-roda
 >roda
 No, the full roadblock.
 \\
-#nudge for block
+#ttc-table-of-moor-nudges-block
 >blokc
 No, the full roadblock.
 \\
-#spechelp for m2
+#ttc-table-of-sortie-spechelp-m2
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -1290,7 +1290,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Nothing more to do here, other than pass between the moor and other rooms you may need to visit.
 
 @nud
-#nudge for room
+#ttc-table-of-sortie-nudges-room
 >oorm
 The room sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 \\
@@ -1331,15 +1331,15 @@ There's no room between the nick and kitchen. You already found a better way out
 >e
 
 @nud
-#nudge for trellis
+#ttc-table-of-stiller-trellis-nudges-trellis
 >trellsi
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
-#nudge for wall
+#ttc-table-of-stiller-trellis-nudges-wall
 >wlla
 The scraped wall doesn't respond or come any closer to being a hallway.
 \\
-#nudge for scraped
+#ttc-table-of-stiller-trellis-nudges-scraped
 >scrapde
 The scraped wall doesn't respond or come any closer to being a hallway.
 \\
@@ -1388,7 +1388,7 @@ Mum, dud mud blocks your way north. You can only go west or south.
 {$SFIXMAX}
 
 @nud
-#spechelp for scraped wall
+#ttc-table-of-sortie-spechelp-scraped-wall
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
@@ -1418,7 +1418,7 @@ Mum, dud mud blocks your way north. You can only go west or south or, since you 
 {$SFIXMAX}
 
 @nud
-#done rejects for hallway
+#ttc-table-of-sortie-done-rejects-hallway
 >hallwya
 You already have a passage east. Don't close it.
 
@@ -1456,60 +1456,60 @@ You must serve by going forth on your mission of warlikeness and love.
 Violence or vandalism in such a holy place? For shame.
 
 @nud
-#nudge for cedars
+#ttc-table-of-sacred-cedars-nudges-cedars
 >cedasr
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
-#nudge for cedar
+#ttc-table-of-sacred-cedars-nudges-cedar
 >cedra
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
-#nudge for drawing
+#ttc-table-of-sacred-cedars-nudges-drawing
 >drawign
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for drawings
+#ttc-table-of-sacred-cedars-nudges-drawings
 >drawinsg
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for verse
+#ttc-table-of-sacred-cedars-nudges-verse
 >veres
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for spout
+#ttc-table-of-sacred-cedars-nudges-spout
 >spotu
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for pout
+#ttc-table-of-sacred-cedars-nudges-pout
 >potu
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for minerva
+#ttc-table-of-sacred-cedars-nudges-minerva
 >minerav
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for chalice
+#ttc-table-of-sacred-cedars-nudges-chalice
 >chaliec
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for candle
+#ttc-table-of-sacred-cedars-nudges-candle
 >candel
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for lance
+#ttc-table-of-sacred-cedars-nudges-lance
 >lanec
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for idols
+#ttc-table-of-sacred-cedars-nudges-idols
 >idosl
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 \\
-#nudge for cliche
+#ttc-table-of-sacred-cedars-nudges-cliche
 >cliceh
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
 @mis
-#nudge for lois
+#ttc-table-of-sortie-nudges-lois
 >losi
 Changing Lois is highly unlikely, and you should possess the oils before doing anything with them.
 
@@ -1564,7 +1564,7 @@ oils -> silo
 The cask is already full of oils.
 
 @nud
-#nudge for oil
+#ttc-table-of-sortie-nudges-oil
 >lio
 Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do.
 
@@ -1588,19 +1588,19 @@ Oh, hey, teleporting's easier with experience.
 Moor
 
 @nud
-#nudge for folded
+#ttc-table-of-sortie-nudges-folded
 >foldde
 !It's a plane, now, for sure.
 \\
-#nudge for paper
+#ttc-table-of-sortie-nudges-paper
 >papre
 !It's a plane, now, for sure.
 \\
-#nudge for papers
+#ttc-table-of-sortie-nudges-papers
 >papesr
 !It's a plane, now, for sure.
 \\
-#spechelp for smilies
+#ttc-table-of-sortie-spechelp-smilies
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
@@ -1659,7 +1659,7 @@ You can't create something abstract from something concrete. Or plutonium. Or wh
 {$SFIXMAX}
 
 @nud
-#done rejects for missile
+#ttc-table-of-sortie-done-rejects-missile
 >missiel
 The missile emits an almost giggly sound but doesn't actually change.
 
@@ -1689,7 +1689,7 @@ It's a plane, now, for sure.
 >papesr
 It's a plane, now, for sure.
 \\
-#spechelp for poem
+#ttc-table-of-sortie-spechelp-poem
 >panle
 The plane can probably become something else, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
@@ -1728,10 +1728,10 @@ Your score has just gone up by one point.
 You mope, but you imagine no poem.
 
 @nud
-#done rejects for panel
+#ttc-table-of-sortie-done-rejects-panel
 >panle
 The panel bleeps a "stop that" sort of warning.
-#spechelp for oils
+#ttc-table-of-sortie-spechelp-oils
 >soli
 The oils could change the moor into something more fertile, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
@@ -1761,7 +1761,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
-#done rejects for soil
+#ttc-table-of-sortie-done-rejects-soil
 >soli
 The soil is right as-is, but maybe something can go on it.
 \\
@@ -1769,7 +1769,7 @@ The soil is right as-is, but maybe something can go on it.
 >weer
 There's no other way to change the cask than to and from the sack. WERE-EWER just clued
 \\
-#spechelp for roadblock
+#ttc-table-of-sortie-spechelp-roadblock
 >black doro
 The roadblock changes all the colors of the rainbow, but none seem appropriate.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
@@ -1812,27 +1812,27 @@ Hm, no, keep religion out of it--you have what you need.
 {$SFIXMAX}
 
 @nud
-#done rejects for black door
+#ttc-table-of-sortie-done-rejects-black-door
 >black doro
 The black door is good as it is.
 \\
-#nudge for blakc
+#ttc-table-of-moor-nudges-blakc
 >blakc
 The black door is good as it is.
 \\
-#nudge for droo
+#ttc-table-of-moor-nudges-droo
 >droo
 The black door is good as it is.
 \\
-#nudge for warhead
+#ttc-table-of-moor-nudges-warhead
 >warheda
 You don't want to change the missile's message, which seems rather nice.
 \\
-#nudge for wires
+#ttc-table-of-moor-nudges-wires
 >wirse
 Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up.
 \\
-#nudge for wire
+#ttc-table-of-moor-nudges-wire
 >wier
 Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up.
 
@@ -1879,15 +1879,15 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 Crashing Archings
 
 @nud
-#nudge for arching
+#ttc-table-of-stiller-trellis-nudges-arching
 >archign
 Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back.
 \\
-#nudge for crashing
+#ttc-table-of-stiller-trellis-nudges-crashing
 >crashign
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 \\
-#nudge for rubble
+#ttc-table-of-stiller-trellis-nudges-rubble
 >rubbel
 The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need.
 \\
@@ -1942,7 +1942,7 @@ You see yourself assembling the silo further.
 Lois may not hear you out here--she has left you to your own devices, but you must be close.
 >moor
 ###skip test checking
-#done rejects for silo
+#ttc-table-of-sortie-done-rejects-silo
 >siol
 That silo was pretty big. You probably have little more to do with the oils.
 
@@ -1972,48 +1972,48 @@ You start fruitlessly double- and triple- thinking whether you should change the
 You are noisily uncooperative for a minute. With what, I don't know. But you are.
 
 @nud
-#nudge for buttons
+#ttc-table-of-moor-nudges-buttons
 >buttosn
 It's the buttons' purposes that need changing.
 \\
-##nudge for button
+#ttc-table-of-moor-nudges-button
 >buttno
 It's the buttons' purposes that need changing.
 \\
-#nudge for hoot
+#ttc-table-of-moor-nudges-hoot
 >hoto
 No, the hoots button is plural.
 \\
-#nudge for tree
+#ttc-table-of-moor-nudges-tree
 >tere
 No, the trees button is plural.
 \\
-#nudge for leftbutton
+#ttc-table-of-moor-nudges-leftbutton
 >leftbuttno
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 \\
-#nudge for rightbutton
+#ttc-table-of-moor-nudges-rightbutton
 >rightbuttno
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 \\
-#nudge for letf
+#ttc-table-of-moor-nudges-letf
 >letf
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 \\
-#nudge for rigth
+#ttc-table-of-moor-nudges-rigth
 >rigth
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 \\
-#nudge for shootbutton
+#ttc-table-of-moor-nudges-shootbutton
 >shotobutton
 No, you're overthinking it. Just the text.
 \\
-#nudge for treesbutton
+#ttc-table-of-moor-nudges-treesbutton
 >tresebutton
 No, you're overthinking it. Just the text.
 
 @nud
-#spechelp for trees button
+#ttc-table-of-sortie-spechelp-trees-button
 >teres
 Hmm, that doesn't work, but you bet you can bull your way through things.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
@@ -2083,7 +2083,7 @@ Your score has just gone up by one point.
 Already good.
 
 @nud
-#spechelp for hoots button
+#ttc-table-of-sortie-spechelp-hoots-button
 >shoto
 You suppress a few minor swears as you realize that can't be right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
@@ -2123,16 +2123,16 @@ You start fruitlessly double- and triple- thinking whether you should change bac
 Close...what you need to do will sooth, in a bit.
 
 @nud
-#nudge for button
+#renudge for button
 >buttno
 It's the buttons' purposes that needed changing.
 \\
-#done rejects for steer button
+#ttc-table-of-sortie-done-rejects-steer-button
 >stree
 No, the steer button HAS to be right.
 
 @nud
-#done rejects for shoot button
+#ttc-table-of-sortie-done-rejects-shoot-button
 >shtoo
 No, the shoot button HAS to be right.
 

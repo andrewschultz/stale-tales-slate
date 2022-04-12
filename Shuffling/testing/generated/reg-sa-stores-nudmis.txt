@@ -15,250 +15,254 @@
 >ts
 Trips Strip
 
-#nudge for trips
+#ttc-table-of-stores-spechelp-acne-bit-cabinet
+>bactein
+The cabinet wobbles a bit.
+
+#ttc-table-of-stores-nudges-trips
 >trisp
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for masll
+#ttc-table-of-stores-nudges-masll
 >masll
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
-#nudge for mall
+#ttc-table-of-stores-nudges-mall
 >mlla
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
-#nudge for lots
+#ttc-table-of-stores-nudges-lots
 >ltso
 You can manipulate each individual store.
-#nudge for lot
+#ttc-table-of-stores-nudges-lot
 >lto
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotb
+#ttc-table-of-stores-nudges-lotb
 >lobt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lota
+#ttc-table-of-stores-nudges-lota
 >loat
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotc
+#ttc-table-of-stores-nudges-lotc
 >loct
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotd
+#ttc-table-of-stores-nudges-lotd
 >lodt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lote
+#ttc-table-of-stores-nudges-lote
 >loet
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotf
+#ttc-table-of-stores-nudges-lotf
 >loft
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotg
+#ttc-table-of-stores-nudges-lotg
 >logt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for loth
+#ttc-table-of-stores-nudges-loth
 >loht
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for loti
+#ttc-table-of-stores-nudges-loti
 >loit
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotj
+#ttc-table-of-stores-nudges-lotj
 >lojt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotk
+#ttc-table-of-stores-nudges-lotk
 >lokt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotl
+#ttc-table-of-stores-nudges-lotl
 >lolt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotm
+#ttc-table-of-stores-nudges-lotm
 >lomt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotn
+#ttc-table-of-stores-nudges-lotn
 >lont
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for loto
+#ttc-table-of-stores-nudges-loto
 >loot
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotp
+#ttc-table-of-stores-nudges-lotp
 >lopt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotq
+#ttc-table-of-stores-nudges-lotq
 >loqt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotr
+#ttc-table-of-stores-nudges-lotr
 >lort
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lott
+#ttc-table-of-stores-nudges-lott
 >lott
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotu
+#ttc-table-of-stores-nudges-lotu
 >lout
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotv
+#ttc-table-of-stores-nudges-lotv
 >lovt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotw
+#ttc-table-of-stores-nudges-lotw
 >lowt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotx
+#ttc-table-of-stores-nudges-lotx
 >loxt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for loty
+#ttc-table-of-stores-nudges-loty
 >loyt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for lotz
+#ttc-table-of-stores-nudges-lotz
 >lozt
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malla
+#ttc-table-of-stores-nudges-malla
 >malal
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallb
+#ttc-table-of-stores-nudges-mallb
 >malbl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallc
+#ttc-table-of-stores-nudges-mallc
 >malcl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malld
+#ttc-table-of-stores-nudges-malld
 >maldl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malle
+#ttc-table-of-stores-nudges-malle
 >malel
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallf
+#ttc-table-of-stores-nudges-mallf
 >malfl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallg
+#ttc-table-of-stores-nudges-mallg
 >malgl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallh
+#ttc-table-of-stores-nudges-mallh
 >malhl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malli
+#ttc-table-of-stores-nudges-malli
 >malil
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallj
+#ttc-table-of-stores-nudges-mallj
 >maljl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallk
+#ttc-table-of-stores-nudges-mallk
 >malkl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malll
+#ttc-table-of-stores-nudges-malll
 >malll
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallm
+#ttc-table-of-stores-nudges-mallm
 >malml
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malln
+#ttc-table-of-stores-nudges-malln
 >malnl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallo
+#ttc-table-of-stores-nudges-mallo
 >malol
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallp
+#ttc-table-of-stores-nudges-mallp
 >malpl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallq
+#ttc-table-of-stores-nudges-mallq
 >malql
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallr
+#ttc-table-of-stores-nudges-mallr
 >malrl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for malls
+#ttc-table-of-stores-nudges-malls
 >malsl
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
-#nudge for mallt
+#ttc-table-of-stores-nudges-mallt
 >maltl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallv
+#ttc-table-of-stores-nudges-mallv
 >malvl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallu
+#ttc-table-of-stores-nudges-mallu
 >malul
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallw
+#ttc-table-of-stores-nudges-mallw
 >malwl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallx
+#ttc-table-of-stores-nudges-mallx
 >malxl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mally
+#ttc-table-of-stores-nudges-mally
 >malyl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for mallz
+#ttc-table-of-stores-nudges-mallz
 >malzl
 You need to manipulate each store as a store, not a mall or a lot.
-#nudge for storea
+#ttc-table-of-stores-nudges-storea
 >storae
 Store A seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for storec
+#ttc-table-of-stores-nudges-storec
 >storce
 Store C seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for stored
+#ttc-table-of-stores-nudges-stored
 >storde
 Store D seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for storee
+#ttc-table-of-stores-nudges-storee
 >storee
 Store E seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for storeg
+#ttc-table-of-stores-nudges-storeg
 >storge
 Store G seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for storeh
+#ttc-table-of-stores-nudges-storeh
 >storhe
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store H might change. But not this adventure.
-#nudge for storej
+#ttc-table-of-stores-nudges-storej
 >storje
 Store J remains impassive and dark, but it seemed like a bit of a long shot.
-#nudge for storek
+#ttc-table-of-stores-nudges-storek
 >storke
 Store K remains impassive and dark, but it seemed like a bit of a long shot.
-#nudge for storel
+#ttc-table-of-stores-nudges-storel
 >storle
 You search for a magic word but feel, er, lost.
-#nudge for storen
+#ttc-table-of-stores-nudges-storen
 >storne
 Store N seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for storeo
+#ttc-table-of-stores-nudges-storeo
 >storoe
 Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
-#nudge for storep
+#ttc-table-of-stores-nudges-storep
 >storpe
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store P might change. But not this adventure.
-#nudge for storeq
+#ttc-table-of-stores-nudges-storeq
 >storqe
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
-#nudge for stores
+#ttc-table-of-stores-nudges-stores
 >storse
 Store S seems like a good candidate to change and reveal something, but nothing happens.
-#nudge for storet
+#ttc-table-of-stores-nudges-storet
 >storte
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store T might change. But not this adventure.
-#nudge for storeu
+#ttc-table-of-stores-nudges-storeu
 >storue
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store U might change. But not this adventure.
-#nudge for storev
+#ttc-table-of-stores-nudges-storev
 >storve
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store V might change. But not this adventure.
-#nudge for storew
+#ttc-table-of-stores-nudges-storew
 >storwe
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store W might change. But not this adventure.
-#nudge for storex
+#ttc-table-of-stores-nudges-storex
 >storxe
 Store X remains impassive and dark, but it seemed like a bit of a long shot.
-#nudge for storey
+#ttc-table-of-stores-nudges-storey
 >storye
 Nothing happens. Maybe if Yorpwald were in even more danger the future, Store Y might change. But not this adventure.
-#nudge for storez
+#ttc-table-of-stores-nudges-storez
 >storze
 Store Z remains impassive and dark, but it seemed like a bit of a long shot.
-#nudge for tepid
+#ttc-table-of-stores-nudges-tepid
 >tepdi
 The depiction is there as a hint, not as a puzzle.
-#nudge for tepidicon
+#ttc-table-of-stores-nudges-tepidicon
 >tepidicno
 The depiction is there as a hint, not as a puzzle.
-#nudge for icon
+#ttc-table-of-stores-nudges-icon
 >icno
 The depiction is there as a hint, not as a puzzle.
-#nudge for badge
+#ttc-table-of-stores-nudges-badge
 >badeg
 The badge just has general information. It's not useful on its own.
-#nudge for flier
+#ttc-table-of-stores-nudges-flier
 >flire
 The flier's just there to tell you if you're done or not.
 
@@ -266,13 +270,13 @@ The flier's just there to tell you if you're done or not.
 >get a man
 Tan Mage Nat Egam cannot help you now.
 
-#nudge for roadsign
+#ttc-table-of-stores-nudges-roadsign
 >roadsing
 Hmm...you get the feeling the store itself holds more adventure.
-#nudge for road
+#ttc-table-of-stores-nudges-road
 >roda
 Hmm...you get the feeling the store itself holds more adventure.
-#nudge for sign
+#ttc-table-of-stores-nudges-sign
 >sgni
 Hmm...you get the feeling the store itself holds more adventure.
 #readables for roadsign
@@ -284,7 +288,7 @@ Hmm...you get the feeling the store itself holds more adventure.
 >forest
 by one point
 
-#nudge for scented
+#ttc-table-of-stores-nudges-scented
 >scentde
 No way. It's your way down to ENTER the forest.
 #readables for store i
@@ -293,17 +297,21 @@ Red writing:
 RISE TO RITES, O! OR TIES.
 RISE TO TIES OR RITES, O!
 
+#ttc-table-of-stores-spechelp-store-i
+>sortei
+Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
+
 >sortie
 by one point
 
-#spechelp for store b
+#ttc-table-of-stores-spechelp-store-b
 >strebo
 You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store B. Keep at it.
-#nudge for depot
+#ttc-table-of-stores-nudges-depot
 >depto
 You can't do anything to the depots besides ENTER them.
-#nudge for depots
+#ttc-table-of-stores-nudges-depots
 >depost
 You can't do anything to the depots besides ENTER them.
 #mistake test for despot
@@ -314,20 +322,28 @@ Red Bull Burdell appears this time! It doesn't take long for him to defeat you, 
 So 'dept.
 >undo
 
-#nudge for subway
+#ttc-table-of-stores-nudges-subway
 >subwya
 No, it's a map of something behind Store M, it looks like.
-#nudge for subwaymap
+#ttc-table-of-stores-nudges-subwaymap
 >subwaympa
 No, it's a map of something behind Store M, it looks like.
+
+#ttc-table-of-stores-spechelp-store-m
+>metrso
+Store M shudders slightly. You wonder what sort of rapid transit is behind it.
+
+#ttc-table-of-stores-spechelp-store-r
+>resotr
+Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 
 >metros
 by one point
 
-#nudge for trade
+#ttc-table-of-stores-nudges-trade
 >traed
 No, you can just FOLLOW or ENTER the trade tread.
-#nudge for trades
+#ttc-table-of-stores-nudges-trades
 >tradse
 No, you can just FOLLOW or ENTER the trade tread.
 #mistake test for dater
@@ -386,14 +402,14 @@ Store Y -> OYSTER in A Roiling Original
 >n
 hubs bush
 
-#nudge for hubs
+#ttc-table-of-stores-nudges-hubs
 >husb
 The hubs bush is too sturdy. You can't escape the Trips Strip.
-#nudge for buh
+#ttc-table-of-stores-nudges-buh
 >bhu
 The hubs bush is too sturdy. You can't escape the Trips Strip.
 
-#nudge for marquee
+#ttc-table-of-stores-nudges-marquee
 >marqeue
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
 
@@ -413,6 +429,6 @@ WARNING
 >resort
 by one point
 
-#nudge for lodge
+#ttc-table-of-stores-nudges-lodge
 >lodeg
 The lodge is as good as it can be. Better ENTER it.

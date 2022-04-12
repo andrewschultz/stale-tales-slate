@@ -46,13 +46,13 @@ You're not in the area where the magic happens, yet. The cardinal directions, in
 !Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
 
 @nud
-#nudge for ordeal
+#ttc-table-of-ordeal-loader-nudges-ordeal
 >ordela
 You don't want to change a region drastically while you're in it.
-#nudge for oafs
+#ttc-table-of-busiest-subsite-nudges-oafs
 >oasf
 The Oafs' Sofa is there, and there's nothing you can do about it.
-#nudge for oaf
+#ttc-table-of-busiest-subsite-nudges-oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
 #mistake test for magnet
@@ -123,37 +123,37 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
 @nud
-#nudge for busiest
+#ttc-table-of-busiest-subsite-nudges-busiest
 >busiets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-#nudge for noentry
+#ttc-table-of-busiest-subsite-nudges-noentry
 >noentyr
 You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
-#nudge for slim
+#ttc-table-of-busiest-subsite-nudges-slim
 >slmi
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-#nudge for neat
+#ttc-table-of-busiest-subsite-nudges-neat
 >neta
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-#nudge for name
+#ttc-table-of-busiest-subsite-nudges-name
 >naem
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-#nudge for list
+#ttc-table-of-busiest-subsite-nudges-list
 >lits
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-#nudge for elevator
+#ttc-table-of-busiest-subsite-nudges-elevator
 >elevatro
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
-#nudge for terraces
+#ttc-table-of-busiest-subsite-nudges-terraces
 >terracse
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
-#nudge for terrace
+#ttc-table-of-busiest-subsite-nudges-terrace
 >terraec
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
-#nudge for caveat
+#ttc-table-of-busiest-subsite-nudges-caveat
 >acevta
 Vandalizing the vacate caveat is probably more trouble than it's worth.
-#nudge for banner
+#ttc-table-of-busiest-subsite-nudges-banner
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
@@ -181,7 +181,7 @@ Stuff you figured, but you couldn't use it right away:
 nametag -> gateman
 
 @nud
-#nudge for rested
+#ttc-table-of-rested-desert-nudges-rested
 >restde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. You'll find a hint device for that soon enough.
 #mistake test for deters
@@ -189,15 +189,15 @@ You won't need to do anything to the whole room unless you are trapped in a room
 No! You're trying to make progress here.
 
 @nud
-#nudge for breeze
+#ttc-table-of-rested-desert-nudges-breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
-#nudge for smlel
+#ttc-table-of-rested-desert-nudges-smlel
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 
 @nud
-#spechelp for odor
+#ttc-table-of-ordeal-loader-spechelp-odor
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
@@ -237,19 +237,19 @@ The size of the desert, um, deters you. You're steer'd back to the door.
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
 @nud
-#done rejects for OR DO door
+#ttc-table-of-ordeal-loader-done-rejects-or-do-door
 >doro
 The door is probably the way out. Best not change it into something else.
 \\
-#nudge for musical
+#ttc-table-of-rested-desert-nudges-musical
 >musicla
 It's a pretty complex chord.
 \\
-#nudge for chord
+#ttc-table-of-rested-desert-nudges-chord
 >chodr
 It's a pretty complex chord.
 \\
-#spechelp for bulge
+#ttc-table-of-ordeal-loader-spechelp-bulge
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
@@ -301,15 +301,15 @@ Thickest Thickets
 >undo
 
 @nud
-#done rejects for bugle
+#ttc-table-of-ordeal-loader-done-rejects-bugle
 >bugel
 The bugle emits a sad "don't change me back" noise.
-#nudge for horn
+#ttc-table-of-rested-desert-nudges-horn
 >honr
 No, the bugle is a bugle, not just a horn. It's been changed enough.
 
 @nud
-#spechelp for bolt
+#ttc-table-of-ordeal-loader-spechelp-bolt
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
@@ -347,11 +347,11 @@ You probably don't want medieval-style advice. You don't need it. HINT should wo
 DEBUG: toga being objhinted.
 
 @nud
-#nudge for thickets
+#ttc-table-of-thickest-thickets-nudges-thickets
 >thicktes
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 \\
-#nudge for thicket
+#ttc-table-of-thickest-thickets-nudges-thicket
 >thickte
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
 
@@ -378,12 +378,12 @@ While ents are definitely organic, they wouldn't feel quite natural here. Someth
 While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
 
 @nud
-#nudge for net
+#ttc-table-of-thickest-thickets-nudges-net
 >nte
 There's something you can do with all the nets, if you think about it.
 
 @nud
-#spechelp for sent nets
+#ttc-table-of-ordeal-loader-spechelp-sent-nets
 >etns
 The sent nets rustle slightly.
 
@@ -394,7 +394,7 @@ by one point
 }}SCORE++
 
 @nud
-#done rejects for nest
+#ttc-table-of-ordeal-loader-done-rejects-nest
 >ntse
 The nest just looks right here, now that you summoned it.
 
@@ -406,17 +406,17 @@ That's a bit too magical for here and now. The nest is nice enough.
 That's a bit too magical for here and now. The nest is nice enough.
 
 @nud
-#nudge for shrub
+#ttc-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The shrub and brush waver, then point towards the toga.
 
 @nud
-#spechelp for reed
+#ttc-table-of-ordeal-loader-spechelp-reed
 >eder
 The reed blows in an unseen breeze.
 
 @nud
-#spechelp for toga
+#ttc-table-of-ordeal-loader-spechelp-toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
@@ -458,11 +458,11 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#done rejects for deer
+#ttc-table-of-ordeal-loader-done-rejects-deer
 >rdee
 The deer is very peaceful. You dere-n't disturb it.
 \\
-#done rejects for goat
+#ttc-table-of-ordeal-loader-done-rejects-goat
 >gota
 The goat is happy as-is. No need to go tag a ...
 \\
@@ -509,7 +509,7 @@ No, those TMIs on the broad board are useful.
 There's enough information here.
 
 @nud
-#nudge for notices
+#ttc-table-of-notices-section-nudges-notices
 >noticse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. There's a hint device here that'll help, then.
 
@@ -528,7 +528,7 @@ Goodness, no.
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
 
 @nud
-#spechelp for static
+#ttc-table-of-ordeal-loader-spechelp-static
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
@@ -570,41 +570,42 @@ DEBUG INFO: Cert-text: -T----.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 
+
 @nud
-#spechelp for attics
+#ttc-table-of-ordeal-loader-spechelp-attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
 \\
-#nudge for doll
+#ttc-table-of-notices-section-nudges-doll
 >dlol
 The attics shake slightly.
 \\
-#nudge for house
+#ttc-table-of-notices-section-nudges-house
 >houes
 The attics shake slightly.
 \\
-#nudge for gateway
+#ttc-table-of-notices-section-nudges-gateway
 >gatewya
 Nothing changes. Maybe you just need to walk through it, if and when you're prepared.
 \\
-#nudge for borda
+#ttc-table-of-notices-section-nudges-borda
 >borad
 The broad board is just there to read.
 \\
-#nudge for tmis
+#ttc-table-of-notices-section-nudges-tmis
 >tims
 The TMIs are there to help you.
 \\
-#nudge for tmi
+#ttc-table-of-notices-section-nudges-tmi
 >tim
 The TMIs are there to help you.
 \\
-#nudge for newland
+#ttc-table-of-notices-section-nudges-newland
 >newladn
 You will have to change the new land one item at a time.
 \\
-#spechelp for nametag
+#ttc-table-of-ordeal-loader-spechelp-nametag
 >gatemna
 The nametag peels infinitesimally.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
@@ -656,25 +657,25 @@ cabinet -> Bactine
 "Don't try anything too nutty!" booms Nat Egam.
 
 @nud
-#done rejects for gateman
+#ttc-table-of-ordeal-loader-done-rejects-gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
-#nudge for warpy
+#ttc-table-of-notices-section-nudges-warpy
 >waryp
 You can't change Old Warpy. You have to just trust it.
-#nudge for old
+#ttc-table-of-notices-section-nudges-old
 >odl
 You can't change Old Warpy. You have to just trust it.
-#nudge for oldman
+#ttc-table-of-notices-section-nudges-oldman
 >oldmna
 He's too old to change. At least, in his present form.
-#nudge for dollhouse
+#ttc-table-of-notices-section-nudges-dollhouse
 >dollhoues
 Thinking that doesn't do much, but the attics seem to glow a bit.
-#nudge for attic
+#ttc-table-of-notices-section-nudges-attic
 >attci
 You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
-#nudge for warmup
+#ttc-table-of-notices-section-nudges-warmup
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
 
@@ -740,7 +741,7 @@ You've got enough practical help. You don't need anything supernatural.
 The cabinet deserves a better fate than THAT.
 
 @nud
-#spechelp for acne bit cabinet
+#ttc-table-of-ordeal-loader-spechelp-acne-bit-cabinet
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
