@@ -18,12 +18,18 @@ Rustic Citrus
 #verbcase swear-others-if-player-is-in-rustic-citrus
 >bother
 Instead, you mumble ... "I, curst!"
+
 #verbcase listen-others-if-noun-is-pagers
 >listen pagers
 Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though.
+
 #verbcase smell-others-if-noun-is-slime
 >smell slime
 The slime actually smells...nice, like dishwashing detergent.
+
+#ttc-table-of-others-attacks-curtis
+>attack curtis
+Aw, c'mon. Maybe Curtis is sort of bossy, but he's not that bad.
 
 >t
 >z
@@ -249,6 +255,10 @@ Clangier Clearing
 >listen ammo gang
 A small voice is saying, "Go, man!" You see red as it begins to nag mo'. Where? How?
 
+#ttc-table-of-others-attacks-len-craig
+>attack len craig
+Len Craig's prices are relatively fair. He's on your side. There's no reason to attack him.
+
 >olives
 Your score has just gone up by one point.
 >score
@@ -299,6 +309,15 @@ You have 38 of 45 total points for the post-Elvira Others region, though you onl
 
 >d
 Scape Space
+
+#ttc-table-of-others-attacks-red-rat-art-erd
+>attack red rat art erd
+If anyone deserves it, he does. But even he still doesn't. He's already had enough physical abuse, anyway.
+>gs
+#ttc-table-of-others-attacks-dr-tera-darter
+>attack dr tera darter
+If anyone deserves it, he does. But even he still doesn't. He's already had enough physical abuse, anyway.
+>gs
 
 >give dollar
 !Your score has just gone up by one point.

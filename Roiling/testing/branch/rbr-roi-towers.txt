@@ -875,6 +875,16 @@ Hmm. You bet you could get past if the dreads adders were SADDER.
 You already remember the word SADDER--which seems right, just a matter of getting other things right first. Maybe they already are.
 >ptf 2
 
+@verbs
+# not a specific test case in a table, but we want to make sure it works generally
+>attack adders
+You need to see into the dreads adders's nature and change it, instead.
+>purloin ragged dagger
+>attack adders
+You need to see into the dreads adders's nature and change it, instead--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance.
+>undo
+>undo
+
 >sadder
 Your score has just gone up by one point
 }}SCORE++
@@ -1007,6 +1017,12 @@ Hmm. You bet you could get past if the denier nereid were REINED.
 >xr diners #00e
 Hmm. You bet you could get past if the snider diners were RINSED.
 
+@verbs
+#ttc-table-of-towers-attacks-yurts
+>attack yurts
+#APOSTROPHE-OK
+Don't get 'urty! (Sorry not sorry.)
+
 @!minh,mini
 >rusty
 Your score has just gone up by one point
@@ -1079,6 +1095,11 @@ DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 by one point
 DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 >undo
+
+@verbs
+#ttc-table-of-towers-attacks-bluster-butlers
+>attack bluster-butlers
+They're probably trained to hand out ur-belts.
 
 >subtler
 Your score has just gone up by one point
@@ -1395,6 +1416,11 @@ DEBUG: guardian hint choice is sweatier wait-seer from sweatier wait-seer.
 #spechelp for promise imposer
 >semprio
 The promise imposer seems a little less intimidating.
+
+@verbs
+#ttc-table-of-towers-attacks-promise-imposer
+>attack promise-imposer
+That might be RIP-some.
 
 @!minh,mini
 >semipro
@@ -1732,6 +1758,10 @@ Shaven Havens
 #verbcase listen-towers-if-player-is-in-shaven-havens
 >listen
 You think you hear NEVAHs, but that's got to be just internal melodrama.
+\\
+#ttc-table-of-towers-attacks-lone-duck
+>attack lone duck
+Such a lost, gentle animal certainly doesn't have a clonk due. You see red for even thinking of such an act.
 
 @nud
 #mistake test for unlocked
@@ -1842,6 +1872,11 @@ Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
 #towers anagrams for sweatier wait seer
 >xr sweatier #11n
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
+
+@verbs
+#ttc-table-of-towers-attacks-sweatier-wait-seer
+>attack sweatier-wait-seer
+You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
 @!minh,mini
 >hastiest
@@ -2052,6 +2087,11 @@ You're more interested in doing the opposite--seeing what's behind.
 #renudge for gradient
 >gradietn
 The gradient itself can't be changed, but you can change the last thing that's here: the denim
+
+@verbs
+#ttc-table-of-towers-attacks-mended-mini-denim
+>attack mended-mini-denim
+WRONG. It's been mended nicely, for sure.
 
 @!minh,mini
 >mined
@@ -2578,6 +2618,10 @@ Hmm. You bet you could get past if the REB-NOK bonker were BROKEN.
 #verbcase listen-towers-if-noun-is-bonker
 >listen bonker
 A menacing silence spews from the bonker. Or maybe it's just your imagination.
+\\
+#ttc-table-of-towers-attacks-bonker
+>attack bonker
+As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape.
 
 >broken
 Your score has just gone up by one point
@@ -2659,6 +2703,19 @@ After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
 #towers anagrams for luck node
 >xr luck node #fussier/unlocked
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
+
+@verbs
+#ttc-table-of-towers-attacks-prison-ropins
+>attack prison-ropins
+WRONG--but force doesn't seem the right way in, anyway.
+\\
+#ttc-table-of-towers-attacks-log-gaol
+>attack log-gaol
+WRONG----but there is probably nothing beyond in the Wildest Wilteds anyway.
+\\
+#ttc-table-of-towers-attacks-dr-yow
+>attack dr yow
+You can't reach in, and it's a bad idea anyway.
 
 @mis
 #mistake test for fires
@@ -2892,6 +2949,11 @@ Dr. Yow is yacking away noisily and enthusiastically.
 >undo
 >undo
 
+@verbs
+#+ttc-table-of-towers-attacks-dr-yow
+>attack dr yow
+You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you.
+
 >score
 {$SCOS}
 
@@ -3006,10 +3068,24 @@ You don't need duplicates of anything here. Besides, the diverse deviser looks c
 >gt shoals
 Unfortunately, since the shoals aslosh can be seen from or in more than one place, I can't go there.
 
+@verbs
+#ttc-table-of-towers-attacks-campiest-campsite
+>attack campiest campsite
+A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything.
+\\
+#ttc-table-of-towers-attacks-diverse-deviser
+>attack diverse deviser
+No, it must be useful for something!
+
 >put dagger in deviser
 #notana
 by one point
 }}SCORE++
+
+@verbs
+#+ttc-table-of-towers-attacks-diverse-deviser
+>attack diverse deviser
+You already broke the diverse deviser!
 
 >score
 {$SCOS}
@@ -3687,6 +3763,11 @@ You blink
 >y
 After a thoughtful gaze, you reckon the repents serpent could be PRESENT.
 
+@verbs
+#ttc-table-of-towers-attacks-serpent
+>attack serpent
+Snaky yanks would backfire on you. Maybe you can calm the snake, though.
+
 @!minh,mini
 >present
 Your score has just gone up by one point
@@ -3752,6 +3833,11 @@ After a thoughtful gaze, you reckon the itster could make the Tetris Sitter TRIS
 >give pot to sitter
 #OK-APOSTROPHE
 She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to change her outlook. You see red at her mumbling.
+
+@verbs
+#ttc-table-of-towers-attacks-tetris-sitter
+>attack tetris-sitter
+Rest it! (Feel free to see red at this.)
 
 @!minh,mini
 >triste

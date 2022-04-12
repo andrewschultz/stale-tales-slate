@@ -125,6 +125,10 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 
 >w
 
+#ttc-table-of-presto-attacks-walls
+>attack walls
+Brute force is ineffective. So, too, are all the swears often used with said brute force. You need to wipe out the whole volt maze, not just these walls.
+
 #balance undo
 >s
 >s
@@ -144,6 +148,10 @@ following.)
 >undo
 >undo
 >undo
+
+#ttc-table-of-presto-attacks-lamb
+>attack lamb
+Meanie. There's a better way to help it flee home.
 
 #pre-solve-maze rule retry
 >mazeltov
@@ -170,11 +178,19 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 >s
 Dirge Ridge
 
+#ttc-table-of-presto-attacks-leo
+>attack leo
+WRONG
+
 >ole
 by one point
 
 >score
 Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+#ttc-table-of-presto-attacks-rand
+>attack rand
+WRONG
 
 #verbcase listen-presto-if-noun-is-odes-song
 >listen odes song
@@ -255,9 +271,14 @@ Saps' Pass
 
 #verbcase swear-presto-if-hogs-are-touchable
 >damn
-The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears.
+The hogs snicker at HOW you said that swear. But yet ... but yet, they seemed slightly irritated at that second-rate profanity!
 >bother
 The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off.
+
+#ttc-table-of-presto-attacks-hogs
+>attack hogs
+If you were as strong as
+, maybe. But you're not. Maybe you can out-think them.
 
 >syke
 Your score has just gone up by one point

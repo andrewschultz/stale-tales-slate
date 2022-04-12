@@ -64,12 +64,22 @@ DEBUG INFO: Eh, At Heat hinting.
 #verbcase sleep-troves-default
 >sleep
 Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now.
+\\
 #verbcase goto-troves-default
 >gt upscale
 You must work to make your dreams of going there become reality.
+\\
 #verbcase swear-troves-default
 >bother
 Such words, thought or spoken, may help some get ahead in life. But they are a bit suboptimal for you here.
+\\
+#ttc-table-of-troves-attacks-pa-egg-pea
+>attack pa egg pea
+It deserves to be ripped to shreds, but that'd just be littering.
+\\
+#ttc-table-of-troves-attacks-tears-taser
+>attack tears taser
+It would fight back much more powerfully.
 
 >l
 Loather Rathole

@@ -33,6 +33,10 @@ The jukebox notches technos (though a mere six remixes) with an anti-bore iron b
 >score
 Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 43.
 
+#ttc-table-of-oyster-attacks-lolstr-trolls
+>attack lolstr trolls
+"I'd beat..." you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down.
+
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
@@ -91,6 +95,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
+#ttc-table-of-oyster-attacks-urn
+>attack urn
+Your irrational anger turns to irrational greed when you get close enough to smack it.
+
 >run
 Your score has just gone up by one point
 
@@ -99,9 +107,18 @@ Disease Seaside
 #verbcase smell-oyster-if-player-is-in-disease-seaside
 >smell
 Say, spare sea spray.
+
 #verbcase listen-oyster-if-player-is-in-disease-seaside
 >listen
 You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises.
+
+#ttc-table-of-oyster-attacks-sabot-boats
+>attack sabot boats
+O, bats!
+
+#ttc-table-of-oyster-attacks-frat-raft
+>attack frat raft
+Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!
 
 >score
 Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
@@ -140,6 +157,14 @@ Whimpering slightly.
 >score
 Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
+#ttc-table-of-oyster-attacks-carps
+>attack carps
+Brutality's the idea here, but you need a more specific verb.
+
+#ttc-table-of-oyster-attacks-pikes
+>attack pikes
+Brutality's the idea here, but you need a more specific verb.
+
 >scrap
 Your score has just gone up by one
 
@@ -152,6 +177,10 @@ by one point
 
 >score
 Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
+
+#ttc-table-of-oyster-attacks-hunter-hunt-area
+>attack hunter hunt area
+As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing.
 
 >e
 Hardest Trashed Dearths
@@ -189,6 +218,10 @@ Antiseptic spice taint.
 >listen tuna
 Aunt Tuna is humming something tuneless as she goes about her business.
 
+#ttc-table-of-oyster-attacks-trout
+>attack trout
+A Roiling Original's kind of topsy turvy, but not like THAT.
+
 >score
 Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
 
@@ -217,6 +250,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 43.
 
+#ttc-table-of-oyster-attacks-paw-r-wrap
+>attack paw r wrap
+Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
+
 >swipe
 Your score has just gone up by one point
 
@@ -239,6 +276,18 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+
+#ttc-table-of-oyster-attacks-knob
+>attack knob
+Yes, but how?
+
+#ttc-table-of-oyster-attacks-skis
+>attack skis
+You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer.
+
+#ttc-table-of-oyster-attacks-span-pans
+>attack span pans
+Well, you need to do something to the pans.
 
 >react
 Your score has just gone up by one point
@@ -425,11 +474,19 @@ Mindless babble about mutually favorable transactions. Perhaps you can find one 
 >listen dialer
 You hear a hum from the dialer.
 
+#ttc-table-of-oyster-attacks-yapper
+>attack yapper
+Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
+
 >prepay
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+
+#ttc-table-of-oyster-attacks-dialer
+>attack dialer
+That would only sabotage communications here. You need to sabotage the supplier.
 
 >trample
 
@@ -447,6 +504,10 @@ by one point
 
 >score
 Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+
+#ttc-table-of-oyster-attacks-ant
+>attack ant
+You poke at the ant, which keeps it at bay. You need something more simple, violent and direct.
 
 >tan
 #notana 'nudge for ant'

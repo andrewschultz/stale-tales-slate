@@ -884,12 +884,23 @@ It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 >listen elmo
 Awkward silence, what with Elmo holding that rifle.
 
+@verbs
+#ttc-table-of-ordeal-reload-attacks-elmo
+>attack elmo
+Elmo kind of has the upper hand here.
+
 >flier
 by one point
 
 }}SCORE++
 >score
 {$SCOS}
+
+@verbs
+#+ttc-table-of-ordeal-reload-attacks-elmo
+>attack elmo
+Dialogue is more important right now than action. Elmo is here to help you at great personal risk, and if you poked around, it'd mean less time for him to escape.
+You can RECAP to see your options.
 
 @nud
 #renudge for elmo
@@ -959,6 +970,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for scepter
 >eestrcp
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@verbs
+#ttc-table-of-ordeal-reload-attacks-plaster
+>attack plaster
+There's too much of it, and it's too hardened.
 
 @nud
 #nudge for cavern
@@ -1031,6 +1047,11 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@verbs
+#ttc-table-of-ordeal-reload-attacks-act-ruin-curtain
+>attack act ruin curtain
+It's still too thick, even though some of the plaster is peeled away.
 
 @nud
 #renudge for terrain

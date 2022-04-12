@@ -140,11 +140,20 @@ Score in a scenario: 10 out of 15 total points in the current region, Ordeal Rel
 >listen elmo
 Awkward silence, what with Elmo holding that rifle.
 
+#ttc-table-of-ordeal-reload-attacks-elmo
+>attack elmo
+Elmo kind of has the upper hand here.
+
 >flier
 by one point
 
 >score
 Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+#+ttc-table-of-ordeal-reload-attacks-elmo
+>attack elmo
+Dialogue is more important right now than action. Elmo is here to help you at great personal risk, and if you poked around, it'd mean less time for him to escape.
+You can RECAP to see your options.
 
 >1
 >1
@@ -184,6 +193,10 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
 
+#ttc-table-of-ordeal-reload-attacks-plaster
+>attack plaster
+There's too much of it, and it's too hardened.
+
 >staple
 Your score has just gone up by one point
 
@@ -195,6 +208,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+#ttc-table-of-ordeal-reload-attacks-act-ruin-curtain
+>attack act ruin curtain
+It's still too thick, even though some of the plaster is peeled away.
 
 >put staple in stapler
 

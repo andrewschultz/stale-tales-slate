@@ -697,6 +697,11 @@ Your score has just gone up by two points
 }}CURMAX++
 }}SCORE-=2
 
+@verbs
+#ttc-table-of-presto-attacks-walls
+>attack walls
+Brute force is ineffective. So, too, are all the swears often used with said brute force. You need to wipe out the whole volt maze, not just these walls.
+
 @nud
 >n
 Nowt Town
@@ -864,6 +869,11 @@ following.)
 >undo
 >undo
 
+@verbs
+#ttc-table-of-presto-attacks-lamb
+>attack lamb
+Meanie. There's a better way to help it flee home.
+
 @!min
 #pre-solve-maze rule retry
 >mazeltov
@@ -952,6 +962,11 @@ No chance.
 >whupass
 No chance.
 
+@verbs
+#ttc-table-of-presto-attacks-leo
+>attack leo
+WRONG
+
 @spoi
 You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
@@ -967,6 +982,11 @@ You gulp the crust and can't help thinking DARN. But you are too polite and/or r
 
 >score
 {$SCOS}
+
+@verbs
+#ttc-table-of-presto-attacks-rand
+>attack rand
+WRONG
 
 @nud
 #done rejects for leo
@@ -1359,9 +1379,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a d
 @verbs
 #verbcase swear-presto-if-hogs-are-touchable
 >damn
-The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears.
+The hogs snicker at HOW you said that swear. But yet ... but yet, they seemed slightly irritated at that second-rate profanity!
 >bother
 The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off.
+
+@verbs
+#ttc-table-of-presto-attacks-hogs
+>attack hogs
+If you were as strong as
+, maybe. But you're not. Maybe you can out-think them.
 
 @max
 >gosh

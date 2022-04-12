@@ -133,6 +133,11 @@ You already got a temporary escape from the bad music. You can't really do any m
 >undo
 >undo
 
+@verbs
+#ttc-table-of-oyster-attacks-lolstr-trolls
+>attack lolstr trolls
+"I'd beat..." you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down.
+
 @max
 ##balance undos
 #pre-trolls-stroll rule
@@ -534,6 +539,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a de
 >nru
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#ttc-table-of-oyster-attacks-urn
+>attack urn
+Your irrational anger turns to irrational greed when you get close enough to smack it.
+
 >run
 Your score has just gone up by one point
 
@@ -553,9 +563,18 @@ DEBUG INFO: interlocking oars hinting.
 #verbcase smell-oyster-if-player-is-in-disease-seaside
 >smell
 Say, spare sea spray.
+\\
 #verbcase listen-oyster-if-player-is-in-disease-seaside
 >listen
 You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises.
+\\
+#ttc-table-of-oyster-attacks-sabot-boats
+>attack sabot boats
+O, bats!
+\\
+#ttc-table-of-oyster-attacks-frat-raft
+>attack frat raft
+Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!
 
 >score
 }}SCORE++
@@ -876,6 +895,15 @@ Silly Internet slang isn't active enough, here.
 >renga
 Now is not the time for poetry.
 
+@verbs
+#ttc-table-of-oyster-attacks-carps
+>attack carps
+Brutality's the idea here, but you need a more specific verb.
+\\
+#ttc-table-of-oyster-attacks-pikes
+>attack pikes
+Brutality's the idea here, but you need a more specific verb.
+
 @max
 >scrap carps
 by one point
@@ -995,6 +1023,11 @@ You already got mad at all the snarled darnels. You need to move on.
 >snarled darnels
 It's okay to get mad, but staying mad? No.
 
+@verbs
+#ttc-table-of-oyster-attacks-hunter-hunt-area
+>attack hunter hunt area
+As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing.
+
 >e
 Hardest Trashed Dearths
 
@@ -1110,6 +1143,10 @@ Antiseptic spice taint.
 #verbcase listen-oyster-if-noun-is-aunt-tuna
 >listen tuna
 Aunt Tuna is humming something tuneless as she goes about her business.
+\\
+#ttc-table-of-oyster-attacks-trout
+>attack trout
+A Roiling Original's kind of topsy turvy, but not like THAT.
 
 >score
 {$SCOS}
@@ -1231,6 +1268,11 @@ You helped Tortu and got a paler pearl. That's all you need to do here. There ma
 
 >score
 {$SCOS}
+
+@verbs
+#ttc-table-of-oyster-attacks-paw-r-wrap
+>attack paw r wrap
+Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 
 @max
 #pre-warp-wrap rule
@@ -1516,6 +1558,19 @@ DEBUG INFO: crate hinting.
 
 >score
 {$SCOS}
+
+@verbs
+#ttc-table-of-oyster-attacks-knob
+>attack knob
+Yes, but how?
+\\
+#ttc-table-of-oyster-attacks-skis
+>attack skis
+You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer.
+\\
+#ttc-table-of-oyster-attacks-span-pans
+>attack span pans
+Well, you need to do something to the pans.
 
 @max
 #pre-kiss-skis rule retry
@@ -2403,6 +2458,11 @@ Mindless babble about mutually favorable transactions. Perhaps you can find one 
 >listen dialer
 You hear a hum from the dialer.
 
+@verbs
+#ttc-table-of-oyster-attacks-yapper
+>attack yapper
+Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
+
 @max
 >prepay yapper
 Your score has just gone up by one
@@ -2417,6 +2477,11 @@ DEBUG INFO: dialer hinting.
 
 >score
 {$SCOS}
+
+@verbs
+#ttc-table-of-oyster-attacks-dialer
+>attack dialer
+That would only sabotage communications here. You need to sabotage the supplier.
 
 @mis
 #mistake retest for redial
@@ -2550,6 +2615,11 @@ by one point
 #renudge for plam
 >plma
 You did enough.
+
+@verbs
+#ttc-table-of-oyster-attacks-ant
+>attack ant
+You poke at the ant, which keeps it at bay. You need something more simple, violent and direct.
 
 @max
 >tan ant

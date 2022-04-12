@@ -53,8 +53,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
->abstract patcher to strip of profits
-
 >towers
 Your score has just gone up by one point
 

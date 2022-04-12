@@ -82,6 +82,14 @@ Score in a scenario: 6 out of 11 total points in the current region, Stores. Low
 
 >abstract patcher to strip of profits
 
+#ttc-table-of-stores-attacks-chapter-patcher
+>attack chapter patcher
+If you don't want to use it, just ignore it.
+
+#ttc-table-of-stores-attacks-megaton-magneto-montage
+>attack megaton magneto montage
+Pointless expressions of rage? You're ... not game.
+
 >towers
 Your score has just gone up by one point
 
