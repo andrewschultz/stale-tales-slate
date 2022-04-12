@@ -556,6 +556,8 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 
+Actionless Coastlines
+
 #slider test for grained
 >rgiaedn
 Your settler begins to make noises: a low hum, but nothing really piercing.

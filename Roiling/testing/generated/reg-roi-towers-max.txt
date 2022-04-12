@@ -467,6 +467,8 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 
+Actionless Coastlines
+
 >grained
 Your score has just gone up by one point
 

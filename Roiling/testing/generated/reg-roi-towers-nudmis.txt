@@ -1720,6 +1720,8 @@ You don't see any new information about the curst palace this time.
 !In fact, you have less information than when you were closer.
 >e
 
+Actionless Coastlines
+
 #scahnotes for curst palace
 #palace 9 lights
 >scan palace
@@ -1740,6 +1742,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. T
 #ttc-table-of-towers-scannotes-reading-a-dinger
 >scan reading a dinger
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
+
+#mistake test for sectional/sectionals
+>sectionals
+You're not competing with anyone, and you certainly wouldn't want to have to navigate the traffic of a boat race as you crossed Leak Lake.
 
 >grained
 Your score has just gone up by one point
@@ -1821,6 +1827,13 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 >give gizmo to agnostic
+
+#ttc-table-of-actionless-coastlines-nudges-instance
+>VERB ttc table of actionless coastlines nudges instance
+You should probably act on what the instances are saying. You don't need to change anything back here any more.
+#ttc-table-of-actionless-coastlines-nudges-instances
+>VERB ttc table of actionless coastlines nudges instances
+You should probably act on what the instances are saying. You don't need to change anything back here any more.
 
 >gonear rawest waters
 #ttc-table-of-towers-scannotes-earnest-eastern-neaters

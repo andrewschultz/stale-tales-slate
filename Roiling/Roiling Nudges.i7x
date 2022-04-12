@@ -1653,10 +1653,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "turbo"	386311110	turbos	--	"You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos."
 "wire"	366057531	weirder red wire	--	"Each wire is [wires-ok]."
 "wires"	462331497	weirder red wire	--	"The wires are [wires-ok]."
+"instance"	531191358	canniest instance	--	"[act-on-instance]."
+"instances"	627465324	canniest instance	--	"[act-on-instance]."
 
 to say wires-ok: say "okay. They're just all organized [b]WEIRDER[r]"
 
 to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
+
+to say act-on-instance: say "You should probably act on what the instances are saying. You don't need to change anything back here any more"
 
 chapter rawest waters
 

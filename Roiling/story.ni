@@ -5090,7 +5090,14 @@ after reading a command:
 	if player is in Carven Cavern and Respect Specter is touchable:
 		if the player's command includes "spectre", say "The Respect Specter winces slightly and opens its mouth as if to say 'Er...'[paragraph break]";
 
+instance-plur is a truth state that varies.
+
 to towers-plurcheck:
+	if instance is touchable:
+		if the player's command includes "instances":
+			replace the word "instances" in the player's command with "instance";
+			ital-say "listening to the most insistent incident.";
+			now instance-plur is true;
 	if butlers are plurcheck:
 		if the player's command includes "butler":
 			now butlers are plurtry;
@@ -6101,7 +6108,7 @@ listen-list of presto is { odes song }.
 
 listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer }.
 
-listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese }.
+listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese, ancients' canniest instance }.
 
 listen-list of otters is { ed riley, yer all a yell'r, parleys splayer players, vow here, whiners, sly imp, asyllabic lilac bays }.
 
@@ -6234,6 +6241,7 @@ this is the listen-towers rule:
 	if noun is geese, say "Honk, honk." instead;
 	if noun is sporties ripostes, say "The sporties['] ripostes [one of]discuss [first custom style]RIPE SOTS[r][or]plan a trip to [first custom style]TIP ROSE'S[r][or] boom '[first custom style]I SPOTS [']ER'[r][or]reference [first custom style]spites, or sore tips[r][in random order], and you see red at the reference." instead; [bold-ok]
 	if player is in Treading Gradient, say "You'd expect a great din, but you don't hear one, thankfully." instead;
+	if noun is ancients' canniest instance, say "The instance is to use a bot boat, repaired halfway or fully, to enter it and get across Leak Lake." instead;
 	if noun is natives site van:
 		say "The babble from the natives['] site van doesn't stop.";
 		try objasking natives site van about natives site van instead;
@@ -16155,7 +16163,7 @@ A diverse deviser is a reflexive thing in Outer Route. "A diverse deviser [if de
 
 understand "machine" as deviser when player is in Outer Route.
 
-understand "revised" and "revised deviser" as diverse deviser when diverse deviser is reflexed.
+understand "revised" and "revised deviser" and "rapier/repair" and "rapier repair" as diverse deviser when diverse deviser is reflexed.
 
 a-text of diverse deviser is "RYRYRYR". b-text of diverse deviser is "R?P???R". parse-text of diverse deviser is "x[sp]?[sp]V[sp]?[sp]?[sp]?[sp]x". diverse deviser is parse-spoilable.
 
@@ -16422,7 +16430,9 @@ understand the command "tape/retape/record" as something new.
 
 understand "tape" and "retape" and "record" as retapeing.
 
-carry out retapeing: try pushing retape button instead;
+carry out retapeing:
+	if retape button is not touchable, say "You don't have a device that you can make [b]RETAPE[r]." instead;
+	try pushing retape button instead;
 
 section repeating
 
@@ -16432,7 +16442,9 @@ understand the command "repeat" as something new.
 
 understand "repeat" as repeating.
 
-carry out repeating: try pushing repeat button instead;
+carry out repeating:
+	if repeat button is not touchable, say "You don't have a device that you can make [b]REPEAT[r]." instead;
+	try pushing repeat button instead;
 
 chapter éclairs
 
@@ -16514,7 +16526,13 @@ after printing the locale description for Shaven Havens when duck-goto-note is f
 
 chapter lone duck
 
-The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[else]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is touchable], and it's ignoring the agnostic[end if]."
+The lone duck is an animal in Shaven Havens. "[duck-desc]."
+
+to say duck-desc:
+	if duck is returned:
+		say "Dr. Yow's lone duck, no longer alone, is by Dr. Yow's side";
+		continue the action;
+	say "[if lone duck is friendly]That[else]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is touchable], and it's ignoring the agnostic[end if]"
 
 a-text of lone duck is "YRRYRRYR". b-text of lone duck is "YRRYRRYR". parse-text of lone duck is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -16743,7 +16761,11 @@ to say wordy-hinty: say "[unless Dr Yow has been wordy][one of]. You doubt [he-s
 
 book Actionless Coastlines
 
-Actionless Coastlines is north of Artist Traits Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are in Actionless Coastlines]. You can go back south, however[else if the-hostile are in Actionless Coastlines]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor.". roomnud of Actionless Coastlines is table of Actionless Coastlines nudges.
+Actionless Coastlines is north of Artist Traits Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. If you had some sort of craft, maybe you could[if atheists are in Actionless Coastlines]. You can go back south, however[else if the-hostile are in Actionless Coastlines]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor.". roomnud of Actionless Coastlines is table of Actionless Coastlines nudges.
+
+understand "incessant/instances" and "incessant instances" as Actionless Coastlines when coasting agnostic carries gizmo.
+
+printed name of Actionless Coastlines is "[if bot boat is off-stage]Actionless Coastlines[else]Incessant Instances[end if]"
 
 check going northeast in Actionless Coastlines: try going north instead; [crossing leak lake]
 
@@ -16848,13 +16870,16 @@ to say heat-remain:
 check giving gizmo to agnostic:
 	if Dr Yow is moot:
 		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in Topside Deposit[end if]--the toaster would've caused an electric shock in the water anyway. And you won't be needing the raves saver, either. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
+		wfak;
+		say "Once a bot boat is built, you begin hearing incessant instances. (Instances being the lesser-known definition of the word--strong suggestions.) Many seem to be useless, but they all seem to say the same thing, especially one in particular: the [canniest].";
 		now agnostic has gizmo;
 		moot toaster;
 		moot raves saver;
 		now bot boat is in Actionless Coastlines;
+		now agnostic is following;
+		move canniest ancients' instance to Actionless Coastlines;
 		now blaster is part of bot boat;
 		now turbos are part of bot boat instead;
-		now agnostic is following;
 	else:
 		say "'Wow! That'd be neat if I had something to build.'" instead;
 
@@ -16888,6 +16913,12 @@ check taking dinger:
 a-text of reading a dinger is "RRYYRYR". b-text of reading a dinger is "RR?YR?R". parse-text of reading a dinger is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 chapter scenery
+
+section canniest ancients' instance
+
+the canniest ancients' instance is boring scenery. bore-text of instance is "You can really only listen to it.". "You don't know where it's coming from, but the advice is a bit obvious."
+
+understand "instances" as instance.
 
 section Maturation Natatorium
 

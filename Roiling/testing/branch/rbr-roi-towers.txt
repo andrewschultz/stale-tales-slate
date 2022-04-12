@@ -3195,6 +3195,8 @@ You don't see any new information about the curst palace this time.
 !In fact, you have less information than when you were closer.
 >e
 
+Actionless Coastlines
+
 @spoi
 #towers anagrams for dinger
 >xr dinger
@@ -3231,6 +3233,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #verbcase smell-towers-if-leak-lake-is-touchable
 >smell
 The overwhelming smell of kale is not offensive, but you'd like to get by Leak Lake, all the same.
+
+@mis
+#mistake test for sectional/sectionals
+>sectionals
+You're not competing with anyone, and you certainly wouldn't want to have to navigate the traffic of a boat race as you crossed Leak Lake.
 
 >grained
 Your score has just gone up by one point
@@ -3385,6 +3392,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
+
+@nud
+#ttc-table-of-actionless-coastlines-nudges-instance
+>VERB ttc table of actionless coastlines nudges instance
+You should probably act on what the instances are saying. You don't need to change anything back here any more.
+#ttc-table-of-actionless-coastlines-nudges-instances
+>VERB ttc table of actionless coastlines nudges instances
+You should probably act on what the instances are saying. You don't need to change anything back here any more.
 
 @nud
 ##balance undos

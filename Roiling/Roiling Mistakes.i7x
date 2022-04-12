@@ -34,7 +34,7 @@ chapter specific anagrams of universal commands or items
 
 understand "pace" and "paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
 
-understand "reaves" as a mistake ("You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.")
+understand "reaves" as a mistake ("You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.") when autosave-known is true.
 
 book Ordeal Reload
 
@@ -867,6 +867,8 @@ chapter Actionless Coastlines
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
 understand "eoliths" as a mistake ("Whoah, [this-game]'s pretty retro, but nothing that ancient. Besides, you want a better way for [hostile-guardian] to be.") when lois is touchable or he lot is touchable.
+
+understand "sectional" and "sectionals" as a mistake ("You're not competing with anyone, and you certainly wouldn't want to have to navigate the traffic of a boat race as you crossed Leak Lake.") when player is in Actionless Coastlines.
 
 understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when weirder red wire is touchable.
 
