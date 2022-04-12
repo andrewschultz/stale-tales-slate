@@ -532,7 +532,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "poverty"	701582538	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	--	degen-true rule	"[not-the-reg]."
-"tear"	318427748	tears taser	--	"No, something as powerful as a tears taser will cause more than one tear to be shed."
 
 to say no-spoil: say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"
 
@@ -547,6 +546,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hurts"	427095893	--	--	"[no-hurt]."
 "pothole"	552183378	--	--	"[p-hole]."
 "potholes"	648457344	--	--	"[p-hole]."
+"tear"	318427748	tears taser	--	"No, something as powerful as a tears taser will cause more than one tear to be shed."
 
 to say no-hurt: say "No way you could change even one hurt thru on your own. You just need to get by"
 
@@ -1324,9 +1324,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "solve"	459411311	solve a loaves	--	"[eat-pastry]."
 "loaves"	461599129	solve a loaves	--	"[eat-pastry]."
 "loaf"	156869130	solve a loaves	--	"[not-singular-hp]."
-"adder"	257375908	dreads adders	--	"You need to take care of all the adders." [guardian rejects]
-"butler"	493578481	bluster butlers	--	"You need to deal with all the butlers. Not just one."
-"diner"	348059355	diners	--	"[plutry of diners]There's more than one diner blocking you."
+"diner"	348059355	diners	--	"[plutry of diners]There's more than one diner blocking you." [plural guardian rejects. Note ADDERS/BUTLERS/NATIVES/INGRATES can only appear in one room and are thus sent there.]
 "pirate"	444886553	pirates	--	"[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s."
 "wait"	258225455	wait seer	--	"[wait-see]."
 "seer"	437209987	wait seer	--	"[wait-see]."
@@ -1367,6 +1365,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gizmo"	338989896	gizmo	--	"[giz-tex]."
 "zomg"	293997050	gizmo	--	"[giz-tex]."
 "occurs"	399067323	succor crocus	--	"Changing the blub bulb to a succor crocus was good enough. Why risk more?"
+"shoals"	360184465	shoals	--	"[shoaly]."
+"shoal"	263910499	shoals	--	"[shoaly]."
+"atheist"	514763074	atheists	--	"Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways."
+
+to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
 
 to say wi-wi: say "[if Mislit Limits is not visited and waters are not visited]The Wildest Wilteds can't be changed on their own. They must be trekked through[else]You're beyond the Wildest Wilteds now[end if]"
 
@@ -1442,6 +1445,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "frontier"	616331560	--	--	"[ftf]."
 "htu"	245498124	--	--	"[no-hut]."
 "south"	416124667	--	--	"[no-hut]."
+"adder"	257375908	dreads adders	--	"You need to take care of all the adders."
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 
@@ -1454,6 +1458,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "copse"	398904196	--	--	"[cop-sco]."
 "spec"	324551619	--	--	"[cop-sco]."
 "yurt"	415898880	yurts	--	"There's more than one yurt there."
+"butler"	493578481	bluster butlers	--	"You need to deal with all the butlers. Not just one."
 
 to say cop-sco: say "The copse and the Spec-O-Scope are both fine as-is[if yurts are touchable], though maybe you can do something about the yurts[end if]"
 
@@ -1561,11 +1566,6 @@ table of Salted Deltas nudges [2 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "salted"	404220839	--	--	"[towersloc]."
 "delta"	307946873	--	--	"[towersloc]."
-"shoals"	360184465	shoals	--	"[shoaly]."
-"shoal"	263910499	shoals	--	"[shoaly]."
-"atheist"	514763074	atheists	--	"Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways."
-
-to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
 
 chapter danger garden
 
@@ -2080,6 +2080,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, [b]PERP[r], [b]PERP[r], [b]PERP[r]."
 "guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it." [since the guava and kumquat come from a way-outside puzzle, they must be kept here and can't be taken from in the table of anagrams proper]
 "kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape. Just return it to Curtis."
+"arugula"	386324594	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 
 to say coin-icon:
 	if player has coin:
@@ -2107,7 +2108,6 @@ table of Rustic Citrus nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rustic"	453812025	--	--	"You can't change this clearing or Curtis, but you don't need to."
 "greenish"	620992342	--	--	"The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. [if compass is off-stage]Perhaps if you had a sense of direction, you could figure how to leave[else]So you can only exit to the north[end if]."
-"arugula"	386324594	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 "pear"	296783689	spear	--	"[plur-fruit]."
 "plum"	304460758	lumps	--	"[plur-fruit]."
 "pager"	329383391	pagers	--	"[plur-fruit]."
