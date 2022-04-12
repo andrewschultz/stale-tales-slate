@@ -392,7 +392,7 @@ You take a peek in--to see a dart in there.
 >drta
 The dart seems a bit closer, but...dang! Not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a decent omen.
-#readables for drab yoke
+#ttc-table-of-presto-readables-drab-yoke
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
@@ -493,7 +493,7 @@ You gulp the crust and can't help thinking BLEEP. But you are too polite and/or 
 >blepe
 The plebe looks confused, as if you garbled what you said.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
-#readables for volt maze
+#ttc-table-of-presto-readables-volt-maze
 >read volt maze
 #OK-APOSTROPHE
 The writing says EZ-Ol'-Av' (TM) Volt Maze.
@@ -629,7 +629,7 @@ You gulp the crust and can't help thinking BINGO. But you are too polite and/or 
 >prots
 The sport ports seem even shinier for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. That's a decent omen.
-#readables for sport ports
+#ttc-table-of-presto-readables-sport-ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 #nudge for port
@@ -1864,7 +1864,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a d
 >capslokc
 NO, REARRANGE AND TRY AGAIN, you think.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
-#readables for clack ops locs pack
+#ttc-table-of-presto-readables-clack-ops-locs-pack
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
 >read clack ops locs pack
@@ -2215,7 +2215,7 @@ You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this v
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#readables for be troo e robot
+#ttc-table-of-presto-readables-be-troo-e-robot
 >read robot
 OBERTO, in red. That's its name.
 #scannotes for be troo e robot
@@ -2310,7 +2310,7 @@ No need to reboot twice.
 #scannotes for peels speel
 >scan peels speel
 Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue...
-#readables for peels speel
+#ttc-table-of-presto-readables-peels-speel
 >read peels speel
 Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 #spechelp for peels speel
@@ -2438,10 +2438,10 @@ After compiling, you often need to make small tweaks, but not like that.
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
-#readables for drive a
+#ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: VARIED
-#readables for drive e
+#ttc-table-of-presto-readables-drive-e
 >read drive e
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
 >read drive e
@@ -2514,7 +2514,7 @@ Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter.
 #mistake retest for redive
 >redive
 Deriving was tricky enough.
-#rereadables for drive a
+#ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 #renudge for tbakey

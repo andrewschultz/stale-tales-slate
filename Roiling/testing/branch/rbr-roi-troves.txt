@@ -193,7 +193,7 @@ The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes
 #nudge for tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
-#readables for tears taser
+#ttc-table-of-troves-readables-tears-taser
 >read tears taser
 RATES is written on the tears taser, in red.
 
@@ -335,7 +335,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 The question marks ... hmm. Oh, you get it now.
-#readables for stop post
+#ttc-table-of-troves-readables-stop-post
 >read stop post
 POP'S TOTS is written in red on the stop post.
 #redirects to sob ever verbose
@@ -449,7 +449,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
-#readables for a sty tasty say
+#ttc-table-of-troves-readables-a-sty-tasty-say
 >read sty
 YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
 
@@ -718,7 +718,7 @@ There's only one unstable color for three names in the Large Regal Lager, so tha
 #mistake test for alger
 >alger
 What would an Alger hero DO to such foul spirits as the lager, though?
-#readables for large regal lager
+#ttc-table-of-troves-readables-large-regal-lager
 >read lager
 The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago, in red. I'll spare the details, because the story would kill almost as many brain cells as actually drinking the stuff.
 >read lager
@@ -871,7 +871,7 @@ That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEA
 #nudge for leaper
 >leapre
 You'll probably want to deal with all the pleaser leapers at once.
-#readables for pleaser leapers
+#ttc-table-of-troves-readables-pleaser-leapers
 >read leapers
 SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
 #scannotes for pleaser leapers
@@ -965,7 +965,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. T
 #scannotes for lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
-#readables for lead
+#ttc-table-of-troves-readables-lead
 >read lead
 You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: "What a yutz! He needs to learn to, like...!" They always acted as if it was so simple.
 However, there must be some simple way to focus and move on.
@@ -1010,7 +1010,7 @@ It's not just any magazine. It's DIVORCES!
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
 DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
-#readables for divorces
+#ttc-table-of-troves-readables-divorces
 >read divorces
 All sorts of articles that make you see red. This one's about
 /(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
@@ -1067,7 +1067,7 @@ The Miser Emirs' Mires are, well, mired. You need to focus on something else, or
 >desier
 Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
 DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
-#readables for See Dir
+#ttc-table-of-troves-readables-See-Dir
 >read see dir
 Nothing catches your eye except an article on RIDEES, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out.
 
@@ -1199,7 +1199,7 @@ You're wanting praise too much, now.
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
-#readables for rivets
+#ttc-table-of-troves-readables-rivets
 >read rivets
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 >read rivets
@@ -1241,7 +1241,7 @@ You're striving too hard, now.
 #nudge for ectarian
 >ectarina
 Plural craniates.
-#readables for sectarian craniates
+#ttc-table-of-troves-readables-sectarian-craniates
 >read sectarian craniates
 /You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
 #scannotes for sectarian craniates
@@ -1279,12 +1279,12 @@ You must deal with the full END PRONER POD.
 #nudge for pod
 >pdo
 You must deal with the full END PRONER POD.
-#readables for end proner pod
+#ttc-table-of-troves-readables-end-proner-pod
 >read end proner pod
 It is, apparently, produced by N-E-PROD corporation.
 >x end proner pod
 ###skip test checking
-#readables for r cad card
+#ttc-table-of-troves-readables-r-cad-card
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
@@ -1345,7 +1345,7 @@ You don't need to riff on any location names to win the game, unless there's not
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
-#readables for red vees
+#ttc-table-of-troves-readables-red-vees
 >read red vees
 /Etched into the vees in red are the names of this motivational device's inventors\. One is (Ed Evers|Erv Dees)\.
 >read red vees
@@ -1442,7 +1442,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#readables for creationism reactionism
+#ttc-table-of-troves-readables-creationism-reactionism
 >read creationism
 /You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
 >read creationism
@@ -1459,7 +1459,7 @@ You've lasted long enough. There are new things to look at, now.
 You see red slightly as Marble Blamer Balmer fails to look away.
 >x blamer balmer
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Mr. Beal. You can READ who created this marble.
-#readables for blamer balmer
+#ttc-table-of-troves-readables-blamer-balmer
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
@@ -1473,7 +1473,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer
 >mbb 2
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
-#readables for blamer mr beal
+#ttc-table-of-troves-readables-blamer-mr-beal
 >read mr beal
 The likeness was drawn up by E. R. Lamb, whose signature is in red.
 #nudge for beal

@@ -202,7 +202,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a 
 >spera
 The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
-#readables for mad train
+#ttc-table-of-others-readables-mad-train
 
 @mis
 #mistake test for parse
@@ -510,7 +510,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
 \\
-#readables for eerie blurbs
+#ttc-table-of-others-readables-eerie-blurbs
 >read eerie blurbs
 #OK-APOSTROPHE
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
@@ -522,7 +522,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. Th
 >peanutcoal
 The peanut cola smells slightly fruity for a minute.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
-#readables for peanut cola
+#ttc-table-of-others-readables-peanut-cola
 >read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
 #spechelp for magenta rope
@@ -541,7 +541,7 @@ Not just omen, or prism. It's an omen prism.
 Not just omen, or prism. It's an omen prism.
 
 @nud
-#readables for omen prism
+#ttc-table-of-others-readables-omen-prism
 >read omen prism
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
@@ -747,14 +747,14 @@ Nothing happens. Perhaps it's the whole item that's important.
 #nudge for tangerine
 >tangerien
 The green stain could make just one fruit, but why not think bigger? It could become many.
-#readables for stucco
+#ttc-table-of-others-readables-stucco
 >read stucco
 /One of two advertisements is for (ScoutCon|SunCotCo), whatever that is, in red.
-#readables for psa elp
+#ttc-table-of-others-readables-psa-elp
 >read psa elp
 It says Pal! ESP! in red. Not very good advice, but maybe it will help in its own odd way.
 \\
-#readables for riot cap
+#ttc-table-of-others-readables-riot-cap
 >read riot cap
 /It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
 #spechelp for PSA Elp
@@ -907,7 +907,7 @@ The settler flashes back, with all five entries changing. This is odd. Maybe it 
 >no
 Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
 >undo
-#readables for singed design
+#ttc-table-of-others-readables-singed-design
 >read singed design
 The singed design on the coins reads, when you look close, property of NISCO.
 >undo
@@ -992,7 +992,7 @@ DEBUG INFO: icons hinting.
 >n
 
 @nud
-#rereadables for singed design
+#rettc-table-of-others-readables-singed-design
 >read singed design
 The singed design on the icons reads, when you look close, property of NISCO.
 
@@ -1150,7 +1150,7 @@ The barriers' westness is important.
 #nudge for foliage
 >foliaeg
 Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
-#readables for mean trowel
+#ttc-table-of-others-readables-mean-trowel
 >read mean trowel
 It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt.
 \\
@@ -1189,7 +1189,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. T
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
-#readables for pipe panel lie pen app
+#ttc-table-of-others-readables-pipe-panel-lie-pen-app
 >read lie pen app
 There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
@@ -1741,7 +1741,7 @@ The design is sort of glommed onto the icons. So you should figure what to do, t
 #nudge for designs
 >desigsn
 The design doesn't need changing. It's what the design's on.
-#readables for orange
+#ttc-table-of-others-readables-orange
 >read orange
 It's stamped with the word ENGARO in red.
 

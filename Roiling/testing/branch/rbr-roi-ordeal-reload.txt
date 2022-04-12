@@ -476,7 +476,7 @@ It's one big giant pin.
 >paintign
 The pin wobbles.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That's a decent omen.
-#readables for giant pin
+#ttc-table-of-ordeal-reload-readables-giant-pin
 >read giant pin
 GNAT. I NIP is nonsensically written in red on the giant pin.
 #nudge for bowling
@@ -569,7 +569,7 @@ Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned t
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sitar. That's a decent omen.
-#readables for sitar
+#ttc-table-of-ordeal-reload-readables-sitar
 >read sitar
 Oh, right. You bought it from Trisa Israt.
 #mistake test for astir
@@ -836,7 +836,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a decent omen.
-#readables for rifle
+#ttc-table-of-ordeal-reload-readables-rifle
 >read rifle
 It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
 #mistake test for filer
@@ -983,7 +983,7 @@ You're on your own. Perhaps you'd be better off scanning the plaster and twiddli
 >stapel
 The plates shine slightly and rattle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel plates. That's a decent omen.
-#readables for pastel plates
+#ttc-table-of-ordeal-reload-readables-pastel-plates
 >read pastel plates
 EPSTAL is written as an author's signature.
 #scannotes for palest pastel plates

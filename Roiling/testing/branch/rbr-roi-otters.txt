@@ -200,7 +200,7 @@ No, you need a couple more letters, but not the usual ones. Ones that make a wor
 >cindesr
 The cinders glow and even warm up for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
-#readables for cinders
+#ttc-table-of-otters-readables-cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
 #scannotes for cinders
@@ -569,7 +569,7 @@ No need to change the maples. They are the least dreary part of the Downside.
 #nudge for maple
 >mapel
 No need to change the maples. They are the least dreary part of the Downside.
-#readables for sample maples
+#ttc-table-of-otters-readables-sample-maples
 >read sample maples
 On one, you read: "Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage."
 #nudge for gretta
@@ -968,7 +968,7 @@ Gretta's gone. The first thing to do is to go north or south to regain your powe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#readables for cut ya all cult laya
+#ttc-table-of-otters-readables-cut-ya-all-cult-laya
 >read laya
 #OK-APOSTROPHE
 /One of the two designers' names is (Clay Laut|Lucy Lata)\.
@@ -1205,7 +1205,7 @@ min-up
 #scannotes for sullenness us
 >scan sullenness us
 The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier.
-#readables for sullenness us
+#ttc-table-of-otters-readables-sullenness-us
 >read sullenness us
 You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN.
 
@@ -1498,7 +1498,7 @@ by one point
 >undo
 
 @nud
-#readables for coma camo
+#ttc-table-of-otters-readables-coma-camo
 >read coma camo
 You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger Pit/Inert Gap."
 
@@ -1709,7 +1709,7 @@ Your score has just gone up by one point
 #scannotes for stray satyr
 >scan stray satyr
 The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
-#readables for stray satyr
+#ttc-table-of-otters-readables-stray-satyr
 >read stray satyr
 You see TSYRA branded in red under the stray satyr's shoulder.
 
@@ -1904,7 +1904,7 @@ They find another place where rioters roister.
 >undo
 
 @nud
-#rereadables for coma camo
+#+ttc-table-of-otters-readables-coma-camo
 >read coma camo
 You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom."
 
@@ -1990,7 +1990,7 @@ Well--not shorten, but break it down...you see red from the effort.
 The parrot can be changed back into a raptor, but not into anything new.
 
 @nud
-#readables for whistle
+#ttc-table-of-otters-readables-whistle
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
 #nudge for weltish
@@ -2438,7 +2438,7 @@ DEBUG INFO: min-up codepath
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#readables for holy nest
+#ttc-table-of-otters-readables-holy-nest
 >read holy nest
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 >read holy nest

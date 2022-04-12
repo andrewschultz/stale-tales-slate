@@ -70,7 +70,7 @@ Deal with Rodney, not any part of his chosen sub-names.
 Deal with Rodney, not any part of his chosen sub-names.
 
 @nud
-#readables for recital article
+#ttc-table-of-towers-readables-recital-article
 >read article
 This version was written by some lovely chap named ALTERIC.
 
@@ -1278,7 +1278,7 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#readables for keycar
+#ttc-table-of-towers-readables-keycar
 >read keycar
 /(KC AYER|RAY ECK)
 has more information,
@@ -1613,7 +1613,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the strudel. That's 
 You take it from the rut with no problem. Maybe you could've done it fancier, but eh, well.
 >strudle
 You almost expect the strudel to hop up, but the moment passes.
-#readables for strudel
+#ttc-table-of-towers-readables-strudel
 >read strudel
 DR. ELTUS recommends this strudel!
 
@@ -2177,7 +2177,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailma
 The one letter blinks between green and yellow.
 
 @nud
-#readables for thearchy hatchery
+#ttc-table-of-towers-readables-thearchy-hatchery
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 !Nice, but you don't need clues any more.
@@ -2257,7 +2257,7 @@ Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#readables for fluster self rut
+#ttc-table-of-towers-readables-fluster-self-rut
 >read fluster self rut
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles.
 #spechelp for fluster self rut
@@ -2560,7 +2560,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. That's a decent omen.
-#readables for bonker
+#ttc-table-of-towers-readables-bonker
 >read bonker
 The bonker was created by KB RENO.
 
@@ -2599,7 +2599,7 @@ Hmm. You bet you could get past if the grin-set stinger were RESTING.
 >restign
 The stinger fizzles a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the grin-set stinger. That's a decent omen.
-#readables for stinger
+#ttc-table-of-towers-readables-stinger
 >read stinger
 The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess.
 
@@ -2834,12 +2834,12 @@ Dr. Yow is silent once again.
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
 >undo
-#readables for prison ropins
+#ttc-table-of-towers-readables-prison-ropins
 >read prison
 /Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK|Violators have a CLONK DUE). There're four other bits to read\.
 >read prison
 /Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK|Violators have a CLONK DUE). There're four other bits to read\.
-#readables for luck node
+#ttc-table-of-towers-readables-luck-node
 >read luck node
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
 >read luck node
@@ -2969,7 +2969,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for diverse deviser
 >revisde
 You thought you heard a brief hum from the diverse deviser for a moment there.
-#readables for diverse deviser
+#ttc-table-of-towers-readables-diverse-deviser
 >read deviser
 I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
 #scannotes for diverse deviser
@@ -3129,10 +3129,10 @@ Your settler registers RRYR?YRYR**.
 #mistake test for coatings
 >coatings
 No, Scot Agin doesn't need to change like THAT.
-#readables for dinger
+#ttc-table-of-towers-readables-dinger
 >read dinger
 You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red.
-#rereadables for thearchy hatchery
+#+ttc-table-of-towers-readables-thearchy-hatchery
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don't need clues any more.
 #spechelp for dinger
@@ -3412,7 +3412,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the turbos. That's a
 >blastre
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the blaster. That's a decent omen.
-#readables for blaster
+#ttc-table-of-towers-readables-blaster
 >read blaster
 ALBERT'S.
 
@@ -3781,7 +3781,7 @@ For a moment you guess you've, err, done enough, and you don't have to get rid o
 >annyedo
 The Done-Any Anodyne rattles.
 \\
-#readables for done any anodyne
+#ttc-table-of-towers-readables-done-any-anodyne
 >read anodyne
 The Done-Any Anodyne has the signature of its inventor, Dyan Eno, in red.
 #done rejects for done any anodyne

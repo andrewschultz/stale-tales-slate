@@ -104,17 +104,17 @@ There's no other way to disobey the sign.
 >undo
 >undo
 
-#readables for stein
+#ttc-table-of-oyster-readables-stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
-#readables for jukebox
+#ttc-table-of-oyster-readables-jukebox
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo.
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Reset, set.
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo, set, reset? Hm.
-#readables for tips pits
+#ttc-table-of-oyster-readables-tips-pits
 >read tips pits
 IT'S P is written in red on the bottom.
 #spechelp for capers recaps
@@ -559,7 +559,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA
 >scan hunter hunt area
 You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying "You know, sometimes, that's more helpful than straight-up clues."
 
-#readables for HUNTER HUNT AREA
+#ttc-table-of-oyster-readables-HUNTER-HUNT-AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
 #nudge for scrawl
@@ -606,7 +606,7 @@ It's okay to get mad, but staying mad? No.
 >e
 Hardest Trashed Dearths
 
-#readables for cans
+#ttc-table-of-oyster-readables-cans
 >read cans
 You squint. NASC is the name of the company that produced these cans, written in red.
 #spechelp for eeks
@@ -974,7 +974,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
-#readables for span pans
+#ttc-table-of-oyster-readables-span-pans
 >read span pans
 Red writing indicates the pans were made by Nan's Apps.
 
@@ -1232,7 +1232,7 @@ Further searching proves fruitless.
 >gleanre
 The gleaner remains too small to read.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
-#readables for gleaner
+#ttc-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
 #scannotes for general gleaner
@@ -1485,7 +1485,7 @@ You need use the dialer meaningfully first.
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess.
 !yapper
-#readables for templar ramplet
+#ttc-table-of-oyster-readables-templar-ramplet
 >read ramplet
 Someone named LAMPERT carved their name in red in the templar ramplet.
 #spechelp for templar ramplet
@@ -1567,7 +1567,7 @@ You riff on your previous celebrations, but it doesn't feel as cool.
 >dilrae
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
-#readables for dialer
+#ttc-table-of-oyster-readables-dialer
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 

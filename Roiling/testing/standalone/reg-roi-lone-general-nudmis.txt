@@ -10,15 +10,15 @@
 
 * go weird places
 
-#nudge for terry
+#ttc-table-of-general-nudges-terry
 >ryter
 !You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 
-#nudge for lalw
+#ttc-table-of-general-nudges-lalw
 >llaw
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
 
-#nudge for walls
+#ttc-table-of-general-nudges-walls
 >llaws
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
 
@@ -26,21 +26,21 @@ You don't need to, and can't, do anything drastic to the walls when inside. That
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
 
-#nudge for elvira
+#ttc-table-of-general-nudges-elvira
 >alvire
 Changing Elvira is impossible, and you certainly don't want to summon her.
 
 # must be done before using the TS command
 
-#nudge for paces
+#ttc-table-of-general-nudges-paces
 >epcas
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for pedanto
+#ttc-table-of-general-nudges-pedanto
 >pedanto
 You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
 
-#renudge for pedanto
+#+ttc-table-of-general-nudges-pedanto
 >pedanto
 !But to do that
 
@@ -50,323 +50,323 @@ You don't need to change the pedanto-notepad, except maybe by filling it up with
 
 >ts
 
-#nudge for yorpwald
+#ttc-table-of-general-nudges-yorpwald
 >yalpdrow
 You can't just unjumble Yorpwald with just one word. You need to deal with individual things.
 
-#nudge for settler
+#ttc-table-of-general-nudges-settler
 >ettlers
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for which
+#ttc-table-of-general-nudges-which
 >whihc
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for whichs
+#ttc-table-of-general-nudges-whichs
 >whicsh
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for mark
+#ttc-table-of-general-nudges-mark
 >kram
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for recoded
+#ttc-table-of-general-nudges-recoded
 >recodde
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for backside
+#ttc-table-of-general-nudges-backside
 >backside
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for decla
+#ttc-table-of-general-nudges-decla
 >decal
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for buntot
+#ttc-table-of-general-nudges-buntot
 >button
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for receptor
+#ttc-table-of-general-nudges-receptor
 >receptor
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for receptors
+#ttc-table-of-general-nudges-receptors
 >receptors
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for output
+#ttc-table-of-general-nudges-output
 >outptu
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for displya
+#ttc-table-of-general-nudges-displya
 >displya
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for equals
+#ttc-table-of-general-nudges-equals
 >quales
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for logo
+#ttc-table-of-general-nudges-logo
 >gool
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#nudge for souht
+#ttc-table-of-general-nudges-souht
 >suoth
 This game almost never requires you to mess with cardinal directions.
 
-#nudge for ewts
+#ttc-table-of-general-nudges-ewts
 >ewst
 This game almost never requires you to mess with cardinal directions.
 
-#nudge for norht
+#ttc-table-of-general-nudges-norht
 >ronth
 This game almost never requires you to mess with cardinal directions.
 
-#nudge for eats
+#ttc-table-of-general-nudges-eats
 >esta
 This game almost never requires you to mess with cardinal directions.
 
-#nudge for down
+#ttc-table-of-general-nudges-down
 >donw
 This game doesn't usually require you to mess with directions you can go.
 
-#nudge for southwets
+#ttc-table-of-general-nudges-southwets
 >southwets
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#nudge for northwest
+#ttc-table-of-general-nudges-northwest
 >northwets
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#nudge for northeast
+#ttc-table-of-general-nudges-northeast
 >northeats
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#nudge for southeast
+#ttc-table-of-general-nudges-southeast
 >southeats
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#nudge for gadget
+#ttc-table-of-general-nudges-gadget
 >gagdet
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
 
-#nudge for xyyzz
+#ttc-table-of-general-nudges-xyyzz
 >xyyzz
 A hollow voice booms, "Lo! Of..."
 
-#nudge for plugh
+#ttc-table-of-general-nudges-plugh
 >pluhg
 A hollow voice booms, "Lo! Of..."
 
-#nudge for plover
+#ttc-table-of-general-nudges-plover
 >plovre
 A hollow voice booms, "Lo! Of..."
 
-#nudge for iths
+#ttc-table-of-general-nudges-iths
 >iths
 I'm not fooled. Shame on you!
 
-#nudge for kcuf
+#ttc-table-of-general-nudges-kcuf
 >kcuf
 I'm not fooled. Shame on you!
 
-#nudge for mand
+#ttc-table-of-general-nudges-mand
 >mand
 I'm not fooled. Shame on you!
 
-#nudge for lelh
+#ttc-table-of-general-nudges-lelh
 >lleh
 I'm not fooled. Shame on you!
 
-#nudge for parc
+#ttc-table-of-general-nudges-parc
 >parc
 I'm not fooled. Shame on you!
 
-#nudge for heck
+#ttc-table-of-general-nudges-heck
 >hcek
 I'm not fooled. Shame on you!
 
-#nudge for teach
+#ttc-table-of-general-nudges-teach
 >echat
 Aw, man, a third option for the settler wouldn't be fair. Trust me, it's powerful enough as-is.
 
-#nudge for igns
+#ttc-table-of-general-nudges-igns
 >ings
 You don't need to mess around with the sign on the settler, or any sign, except maybe one place, which you'll know when you see it.
 
-#nudge for slider
+#ttc-table-of-general-nudges-slider
 >idlers
 You can just switch the slider if you want to manipulate it.
 
-#nudge for purse
+#ttc-table-of-general-nudges-purse
 >pruse
 The purse is just fine as it is.
 
-#nudge for sacep
+#ttc-table-of-general-nudges-sacep
 >aspec
 You don't want to mess with the space-capes. They work.
 
 >purloin treatise
 
-#nudge for treatise
+#ttc-table-of-general-nudges-treatise
 >treaties
 The treatise is there as help to discover the satchel. It has only sentimental value, now.
 
 >abstract treatise to ll
 
-#renudge for treatise
+#+ttc-table-of-general-nudges-treatise
 >treaties
 The treatise was there as help to discover the satchel. It has only sentimental value, now.
 
 >purloin gird grid
-#nudge for gird
+#ttc-table-of-general-nudges-gird
 >drig
 The grid already contains pretty much everything Elmo was able to find out.
 
-#nudge for writing
+#ttc-table-of-general-nudges-writing
 >writign
 Red writing is a just clue of what to change.
 
-#nudge for redwriting
+#ttc-table-of-general-nudges-redwriting
 >redwritign
 Red writing is a just clue of what to change.
 
-#nudge for edr
+#ttc-table-of-general-nudges-edr
 >erd
 Red writing is a just clue of what to change.
 
-#nudge for warning
+#ttc-table-of-general-nudges-warning
 >warning
 You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
 
-#nudge for curses
+#ttc-table-of-general-nudges-curses
 >cusser
 I'm not fooled. Shame on you!
 
-#nudge for bother
+#ttc-table-of-general-nudges-bother
 >obther
 I'm not fooled. Shame on you!
 
-#nudge for bastard
+#ttc-table-of-general-nudges-bastard
 >astarbd
 I'm not fooled. Shame on you!
 
 >abstract elmo to ll
 
-#nudge for parse
+#ttc-table-of-general-nudges-parse
 >pesar
 There's no in-between for the PARSE and SPARE commands for the settler.
 
-#nudge for verb
+#ttc-table-of-general-nudges-verb
 >ervb
 There's no secret verb or verbs to find trying that.
 
-#nudge for verbs
+#ttc-table-of-general-nudges-verbs
 >ervbs
 There's no secret verb or verbs to find trying that.
 
-#nudge for think
+#ttc-table-of-general-nudges-think
 >knith
 Whenever you just try to too hard to think, things always get jumbled.
 
-#nudge for score
+#ttc-table-of-general-nudges-score
 >cores
 There's no way to scramble your score. And scoring another point won't help you solve things, anyway.
 
-#nudge for poss
+#ttc-table-of-general-nudges-poss
 >opss
 You can't jumble the possible scores any other way.
 
-#nudge for listen
+#ttc-table-of-general-nudges-listen
 >istlen
 Trying to change how you listen gives no intels.
 
-#nudge for about
+#ttc-table-of-general-nudges-about
 >abotu
 The "about" section has no easter eggs.
 
-#nudge for credit
+#ttc-table-of-general-nudges-credit
 >credti
 The "credits" section has no easter eggs.
 
-#nudge for credits
+#ttc-table-of-general-nudges-credits
 >credtis
 The "credits" section has no easter eggs.
 
-#nudge for history
+#ttc-table-of-general-nudges-history
 >histoyr
 The "history" section has no easter eggs.
 
-#nudge for hush
+#ttc-table-of-general-nudges-hush
 >huhs
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for spaceson
+#ttc-table-of-general-nudges-spaceson
 >spacenos
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for spaceon
+#ttc-table-of-general-nudges-spaceon
 >spacoen
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for spaces
+#ttc-table-of-general-nudges-spaces
 >spaces
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for son
+#ttc-table-of-general-nudges-son
 >sno
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for hitn
+#ttc-table-of-general-nudges-hitn
 >hitn
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for hints
+#ttc-table-of-general-nudges-hints
 >hitns
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for access
+#ttc-table-of-general-nudges-access
 >accses
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for exits
+#ttc-table-of-general-nudges-exits
 >extis
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for exit
+#ttc-table-of-general-nudges-exit
 >exti
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for opts
+#ttc-table-of-general-nudges-opts
 >opst
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for options
+#ttc-table-of-general-nudges-options
 >optiosn
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for version
+#ttc-table-of-general-nudges-version
 >versino
 Meta-commands don't have any easter eggs, sadly.
 
-#nudge for something
+#ttc-table-of-general-nudges-something
 >semithong
 SOMETHING never anagrams to anything, so you'll want to tinker with whatever that SOMETHING is on or near or supporting.
 
 >ts
-#renudge for terry
+#+ttc-table-of-general-nudges-terry
 >ryter
 You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 
-#nudge for ground
+#ttc-table-of-general-nudges-ground
 >groudn
 Changing the ground beneath your feet is too dangerous a proposition.
 
-#nudge for jump
+#ttc-table-of-general-nudges-jump
 >jupm
 You consider the costs and benefits of collapsing in an impressively uncoordinated heap, then decide against doing so.
 
-#nudge for point
+#ttc-table-of-general-nudges-point
 >poitn
 There's no secret cheat between NO TIP and OPT IN.
 
@@ -374,7 +374,7 @@ There's no secret cheat between NO TIP and OPT IN.
 
 >averse
 
-#nudge for resave
+#ttc-table-of-general-nudges-resave
 >resaev
 Alas, there is nothing between RESAVE and AVERSE to load a special game state.
 

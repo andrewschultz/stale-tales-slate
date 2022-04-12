@@ -224,7 +224,7 @@ While signboard is nine letters, the text on it suggests a four-letter solution.
 >towarsd
 The ad seems slightly nearer, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
-#readables for worst ad
+#ttc-table-of-routes-readables-worst-ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
 #scannotes for worst ad
@@ -622,7 +622,7 @@ Pat's is a local small business, not nameless, faceless real estate.
 >despiet
 The seed pit seems to bubble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
-#readables for cravings carvings
+#ttc-table-of-routes-readables-cravings-carvings
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
 
@@ -771,7 +771,7 @@ The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
 
 @nud
-#readables for trashy ashtray
+#ttc-table-of-routes-readables-trashy-ashtray
 >read ashtray
 #OK-APOSTROPHE
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side if you want\.
@@ -1124,7 +1124,7 @@ The whole beverage name must be where it's at.
 #scannotes for a bev o be ova
 >scan be ova
 That's a lot of questions for such a small bottle, but it can't be too hard.
-#readables for a bev o be ova
+#ttc-table-of-routes-readables-a-bev-o-be-ova
 >read be ova
 The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
 #nudge for along
@@ -1377,7 +1377,7 @@ You'll have to deal with the whole data-dim mists.
 #nudge for dim
 >mid
 You'll have to deal with the whole data-dim mists.
-#readables for admits mist ad
+#ttc-table-of-routes-readables-admits-mist-ad
 >read mist ad
 #OK-APOSTROPHE
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
