@@ -559,14 +559,15 @@ static	"You [if attics are moot]don't think you can change it to anything but th
 attics	"Hm, you can't think of anything to do with the attics but change them back."
 acne bit cabinet	"The cabinet wobbles a bit."
 
+[note: the cabinet moves between regions, so it appears twice.]
 table of stores spechelp
 xtrhelp	helptxt
 Store B	"You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet."
-Store F	"That seemed right but didn't seem quite natural."
+Store F	"That seemed right but not quite natural."
 Store I	"Store I shakes a bit. 'RISE TO...' you think, as you see red. Rise to what?" [bold-ok]
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
-acne bit cabinet [cabinet moves between regions]	"The cabinet wobbles a bit."
+acne bit cabinet	"The cabinet wobbles a bit."
 
 table of forest spechelp
 xtrhelp	helptxt
@@ -796,7 +797,7 @@ brush	--	shrub
 sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not ruining anything, and they don't trap you from getting out. Still, you may see what you can do with them.[plus][or]The sent nets don't really belong in a nature area, but something spelled similarly does.[plus][or]The sent nets can become a [b]NEST[r].[minus][cycling]"
 nest	"You changed the nets to the nest, and that's enough."
 goat	"The goat's done its job."
-goat	"The deer's done its job."
+deer	"The deer's done its job."
 magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a [b]GATE MAN[r]. With or without the space.[minus][cycling][end if]" [bold-ok]
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
 Recent Center	"The Recent Center tracks the most recent thing you managed to [b]CERTIFY[r] or [b]RECTIFY[r]."
