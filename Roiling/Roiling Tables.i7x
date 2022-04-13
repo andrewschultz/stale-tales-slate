@@ -788,7 +788,6 @@ this is the post-polemic-compile rule:
 	if lamb is in Grey Gyre, poss-d;
 	if sport ports are reflexive, poss-d;
 	if starch charts are in Saps Pass, poss-d;
-	now im le cop polemic is realized;
 
 this is the pre-peels-speel-sleep rule:
 	if futon is not touchable:

@@ -880,9 +880,8 @@ too awesome
 \\
 >ask gateman about tip
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
-\\
->yes
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
+\\
 >ask gateman about tinfoil info-lit
 "Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
 \\

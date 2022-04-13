@@ -226,7 +226,7 @@ The boing-go bin works fine now.
 
 #ttc-table-of-presto-hint-done-notes-dart
 >hint dart
-You're done with the dart, except for firing it at the right time.
+Maybe the dart can fit in the popgun.
 
 >score
 Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.

@@ -1230,7 +1230,7 @@ The boing-go bin works fine now.
 \\
 #ttc-table-of-presto-hint-done-notes-dart
 >hint dart
-You're done with the dart, except for firing it at the right time.
+Maybe the dart can fit in the popgun.
 
 >score
 {$SCOS}

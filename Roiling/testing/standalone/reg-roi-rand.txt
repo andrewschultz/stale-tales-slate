@@ -10,34 +10,44 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
+
 * before-otters
 
 >au 2
 >showtab
 
+#ttc-table-of-megachatter-table-of-singing-rejects
 >sing
 (table of singing rejects)
 
+#ttc-table-of-megachatter-table-of-random-books
 >x bookshelf
 One book you won't remember next move is (table of random books)
 >x bookshelf
 Another book you won't read. (table of random books)
 
+#ttc-table-of-megachatter-table-of-nonviolence-messages
 >attack it
 (table of nonviolence messages)
 
+#ttc-table-of-megachatter-table-of-cussing-rejects
 >shit
 (table of cussing rejects)
+
+#ttc-table-of-megachatter-table-of-empty-command-rejects
 >
 (table of empty command rejects)
 
+#ttc-table-of-megachatter-table-of-yessage
 >yes
 (table of yessage)
+#ttc-table-of-megachatter-table-of-noage
 >no
 (table of noage)
 
 >x chair
 >get notepad
+#ttc-table-of-megachatter-table-of-ad-slogans
 >x ads
 (table of ad slogans)
 >x ads
@@ -48,6 +58,8 @@ Another book you won't read. (table of random books)
 >1
 >4
 >4
+
+#ttc-table-of-megachatter-table-of-laughhouses
 >4
 "Eh, punt the pun," you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at (table of laughhouses)
 >5
@@ -55,27 +67,36 @@ Another book you won't read. (table of random books)
 >lamp
 
 >x trash
+#ttc-table-of-megachatter-table-of-lame-computer-games
 >g
 (table of lame computer games)
+#ttc-table-of-megachatter-table-of-bad-rappers
 >g
 (table of bad rappers)
+#ttc-table-of-megachatter-table-of-lousy-hit-songs
 >g
 (table of lousy hit songs)
+#ttc-table-of-megachatter-table-of-oldies-singers
 >g
 (table of oldies singers)
 >g
+#ttc-table-of-megachatter-table-of-comedians
 >g
 (table of comedians)
+#ttc-table-of-megachatter-table-of-lame-movies
 >g
 (table of lame movies)
+#ttc-table-of-megachatter-table-of-lame-tv-shows
 >g
 (table of lame tv shows)
 >g
 No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
 
+#ttc-table-of-megachatter-table-of-mob-chants
 >listen
 (table of mob chants)Shouty youths. Long-ass slogans.
 
+#+ttc-table-of-megachatter-table-of-mob-chants
 >listen
 (table of mob chants)Bam-o! A mob!
 
@@ -103,10 +124,14 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 [4] Complain about social forces in general
 [5] Let Elmo complain about his lack of success with women
 
+#ttc-table-of-megachatter-table-of-sports-chatter
 >1
 (table of sports chatter)
 
 >1
+
+#ttc-table-of-megachatter-table-of-lame-talk-shows
+#ttc-table-of-megachatter-table-of-biopics
 >1
 You recall Walt Koh's and Kath Low's howl-task host-walk, among other "informational" shows...(table of lame talk shows)
 
@@ -115,6 +140,7 @@ And the rubbish biopics, good
 
 >1
 >1
+#ttc-table-of-megachatter-table-of-elmo-emo
 >1
 You listen about (table of elmo emo)
 
@@ -122,17 +148,20 @@ You listen about (table of elmo emo)
 
 >staple
 >stapler
->staple wall
+>staple apertured
 >in
 
 >ts
 
+#ttc-table-of-megachatter-table-of-help-companies
 >hint
-
 You're not sure whom to call. There are so many choices! (table of help companies)
 
 #########################stores
 
+#ttc-table-of-megachatter-table-of-sicko-movies
+#ttc-table-of-megachatter-table-of-store-c-competitors
+#ttc-table-of-megachatter-table-of-store-c-ads
 >x store c
 !/\(table of (sicko movies|store c competitors|store c ads)\)
 >x store c
@@ -157,12 +186,16 @@ table of store c ads
 >tokers
 >nestor
 
+#ttc-table-of-megachatter-table-of-tokers-nonsense
+#ttc-table-of-megachatter-table-of-wait-responses
 >z
 (table of wait responses)
 (table of tokers nonsense)
 
 >in
 
+#ttc-table-of-megachatter-table-of-idiotic-babbler-points
+#ttc-table-of-megachatter-table-of-overdone-movies
 >z
 /\(table of (idiotic babbler points|overdone movies)\)
 >z
@@ -174,6 +207,7 @@ table of store c ads
 >z
 /\(table of (idiotic babbler points|overdone movies)\)
 
+#ttc-table-of-megachatter-table-of-undo-allows
 >undo
 (table of undo allows)
 
@@ -186,6 +220,7 @@ Maybe you'll find somewhere more hospitable later. But otherwise, you'll get a b
 >sleep
 Sleeping outside is dangerous. You'd need somewhere protected. But otherwise, you'll get a bunch of silly random responses you may or may not find entertaining.
 
+#ttc-table-of-megachatter-table-of-sleep-rejects
 >sleep
 (table of sleep rejects)
 
@@ -195,10 +230,15 @@ Sleeping outside is dangerous. You'd need somewhere protected. But otherwise, yo
 
 >inside
 >z
+
+#ttc-table-of-megachatter-table-of-horbert-musings
 >z
 Brother Horbert mumbles something to himself... (table of horbert musings)
 >z
 Brother Horbert mumbles something to himself... (table of horbert musings)
+
+#ttc-table-of-megachatter-table-of-moralizers
+#ttc-table-of-megachatter-table-of-mantle-laments
 >x mantle
 (table of moralizers)
 (table of mantle laments)
@@ -206,9 +246,11 @@ Brother Horbert mumbles something to himself... (table of horbert musings)
 (table of moralizers)
 (table of mantle laments)
 
+#ttc-table-of-megachatter-table-of-horbert-farewells
 >out
 (table of horbert farewells)
 
+#ttc-table-of-megachatter-table-of-missing-deli-foods
 >past
 >talk to pat
 ASK (PERSON) ABOUT
@@ -222,20 +264,25 @@ ASK (PERSON) ABOUT
 >troves
 >enter troves
 
+#ttc-table-of-megachatter-table-of-self-help-bestsellers
+#ttc-table-of-megachatter-table-of-gritty-dialogue
 >x pa
 Pa, Egg, Pea, of course, recently topped (table of self-help bestsellers)
 Gritty sounds come, then go, from the streets: (table of gritty dialogue)
 
+#ttc-table-of-megachatter-table-of-iffy-advice
 >x pa
 (table of iffy advice)
 
 You pore over a random "thought-improving" passage of Peg A. Page:
 
 >hate
->care
 
+#ttc-table-of-megachatter-table-of-posse-bosses
+>care
 Someone seedy owns this area, (table of posse bosses)maybe
 
+#+ttc-table-of-megachatter-table-of-posse-bosses
 >l
 Someone seedy owns this area, (table of posse bosses)maybe
 
@@ -250,6 +297,7 @@ Someone seedy owns this area, (table of posse bosses)maybe
 >despair
 >decide
 
+#ttc-table-of-megachatter-table-of-prestigious-bums
 >x lead
 It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of (table of prestigious bums)
 >x lead
@@ -260,13 +308,17 @@ It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, n
 
 >deal
 
+#ttc-table-of-megachatter-table-of-real-estate-ads
+#ttc-table-of-megachatter-table-of-posh-dialogue
 >x see dir
 (table of real estate ads)
 (table of posh dialogue)
 
+#ttc-table-of-megachatter-table-of-divorces-articles
 >x divorces
 One is (table of DIVORCES articles)
 
+#+ttc-table-of-megachatter-table-of-divorces-articles
 >x divorces
 Another "worldly" article is (table of DIVORCES articles)
 
@@ -279,11 +331,13 @@ Another "worldly" article is (table of DIVORCES articles)
 
 >last
 
+#ttc-table-of-megachatter-table-of-sked-items
 >x desk
 You browse some steno-notes on your Desk-Sked: (table of sked items)
 >x desk
 You browse some steno-notes on your Desk-Sked: (table of sked items)
 
+#ttc-table-of-megachatter-table-of-non-skeds
 >x rack
 Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the (table of non-skeds)
 , an inferior product for promoting productivity.
@@ -293,11 +347,13 @@ Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can
 
 >ramble
 
+#ttc-table-of-megachatter-table-of-songs-you-could-write
 >recant
 Your condensed rise to the top of this business business makes you efficient at doing enough nothing. Well, nothing profitable. You write wistful songs that someone has to like, surely: (table of songs you could write)
 
 ##################################presto
 
+#ttc-table-of-megachatter-table-of-undo-rejects
 >presto
 >enter tornado
 >eat crust
@@ -310,19 +366,21 @@ A booming voice yells "(table of undo rejects)
 >s
 >ole
 >darn
-# yeah, Leo-Rand is duplicated below, but I tweaked this so the verification script worked
+
+#ttc-table-of-megachatter-table-of-leo-rand-chitchat
+#ttc-table-of-megachatter-table-of-leo-rand-idols
 >z
-/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
+/\((table of Leo-Rand chitchat|table of Leo-Rand idols)\)
 >z
-/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
+/\((table of Leo-Rand chitchat|table of Leo-Rand idols)\)
 >z
-/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
+/\((table of Leo-Rand chitchat|table of Leo-Rand idols)\)
 >z
-/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
+/\((table of Leo-Rand chitchat|table of Leo-Rand idols)\)
 >z
-/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
+/\((table of Leo-Rand chitchat|table of Leo-Rand idols)\)
 >z
-/\(table of (Leo-Rand chitchat|Leo-Rand idols)\)
+/\((table of Leo-Rand chitchat|table of Leo-Rand idols)\)
 >whassup
 
 >n
@@ -345,6 +403,10 @@ A booming voice yells "(table of undo rejects)
 >e
 >n
 >n
+
+#ttc-table-of-megachatter-table-of-catechism-pages
+#ttc-table-of-megachatter-table-of-research-topics
+#ttc-table-of-megachatter-table-of-smartypants
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
 /\(table of (catechism pages|research topics|smartypants)\)
@@ -362,6 +424,8 @@ The title is Algorithms, Logarithms, and it's by Olga Smirth.
 /\(table of (catechism pages|research topics|smartypants)\)
 
 >futon
+
+#ttc-table-of-megachatter-table-of-bedding-brands
 >x futon
 (table of bedding brands)
 >x futon
@@ -375,11 +439,16 @@ The title is Algorithms, Logarithms, and it's by Olga Smirth.
 
 >oyster
 >enter oyster
+
+#ttc-table-of-megachatter-table-of-bar-dialogue
+#ttc-table-of-megachatter-table-of-competing-bars
 >talk to casper
 !ASK (PERSON) ABOUT
 GO HUNT A HANGOUT
 /\(table of (bar dialogue|competing bars)\)
 !(table of Casper mumbles)
+
+#ttc-table-of-megachatter-table-of-casper-mumbles
 >talk to casper
 !GO HUNT A HANGOUT
 /\(table of (bar dialogue|competing bars)\)
@@ -401,6 +470,7 @@ GO HUNT A HANGOUT
 >calm
 >run
 
+#ttc-table-of-megachatter-table-of-death-messages
 >ocean
 [NOTE: this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.]
 (table of death messages)
@@ -409,6 +479,8 @@ GO HUNT A HANGOUT
 >boast
 >leap
 
+#ttc-table-of-megachatter-table-of-fish-fries
+#ttc-table-of-megachatter-table-of-unpopular-girls
 >z
 /\(table of (fish fries|unpopular girls)\)
 >z
@@ -426,6 +498,8 @@ GO HUNT A HANGOUT
 >e
 >seek
 
+#ttc-table-of-megachatter-table-of-tuna-gossip
+#ttc-table-of-megachatter-table-of-aunt-tuna-chatter
 >z
 /\(table of (tuna gossip|aunt tuna chatter)\)
 >z
@@ -449,6 +523,8 @@ GO HUNT A HANGOUT
 
 >warp
 >n
+
+#ttc-table-of-megachatter-table-of-theses
 >x theses
 (table of theses)
 >x theses
@@ -461,6 +537,8 @@ GO HUNT A HANGOUT
 >seed 1
 >towers
 >enter towers
+
+#ttc-table-of-megachatter-table-of-rodney-bluster
 >z
 (table of rodney bluster)
 >z
@@ -473,6 +551,7 @@ GO HUNT A HANGOUT
 >yonder
 
 >purloin gizmo
+#ttc-table-of-megachatter-table-of-gizmo-parts
 >x gizmo
 the (table of gizmo parts)
 or (table of gizmo parts)
@@ -539,6 +618,8 @@ or (table of gizmo parts)
 >w
 >atom
 >w
+
+#ttc-table-of-megachatter-table-of-ideas-aides-squabbles
 >z
 !(table of ideas aides squabbles)
 >z
@@ -560,10 +641,15 @@ or (table of gizmo parts)
 >quickly
 >w
 >7
+#ttc-table-of-megachatter-table-of-elvira-taunts
 >e
 Elvira mocks you, but makes no attack: (table of Elvira taunts)
 
 >w
+
+#ttc-table-of-megachatter-table-of-elvira-battle-cries
+#ttc-table-of-megachatter-table-of-elvira-machines
+#ttc-table-of-megachatter-table-of-animal-friends
 >play whistle
 As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. "(table of Elvira battle cries)
 Elvira cries "New aid? Naw, die!" then "To arms! A storm!" at...all the lethal: (table of Elvira machines)
@@ -595,6 +681,8 @@ But animals from the fabled Odd Pack Paddock construe trounces and rifest strife
 >listen
 !Selly yells
 >among
+
+#ttc-table-of-megachatter-table-of-selly-yells
 >listen
 Selly yells, important to those yelling them but not you:
 (table of selly yells)
@@ -608,9 +696,13 @@ Selly yells:
 >purloin passport
 >research
 >review
+
+#ttc-table-of-megachatter-table-of-political-slogans
 >n
 (table of political slogans)
 >undo
+
 >gonear sparse spares
+#ttc-table-of-megachatter-table-of-three-way-anagrams
 >x satires
 You see rough notes on (table of three way anagrams)

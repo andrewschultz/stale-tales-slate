@@ -38,6 +38,7 @@
 >au 1
 >showtab
 
+#ttc-table-of-megachatter-table-of-job-searcher-names
 >x name list
 The list is slim, but it's long. Several names: (table of job searcher names)
 A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond.
@@ -67,7 +68,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >n
 >w
 
->x slit
+#ttc-table-of-megachatter-table-of-evil-locations
 (table of evil locations)
 
 >w
@@ -104,6 +105,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >shoes
 >moor
 
+#ttc-table-of-megachatter-table-of-poem-codas
 >z
 (table of poem codas)You cringe as Pat ends a verse with
 
@@ -119,9 +121,11 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 
 >gardenia
 
+#ttc-table-of-megachatter-table-of-garrison-chants
 >n
 (table of garrison chants)Emosion (sic) from the noisome Moonies:
 
+#ttc-table-of-megachatter-table-of-garrison-chants
 >z
 (table of garrison chants)Mo' noise from the noisome Moonies:
 
@@ -132,6 +136,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >w
 >throw tomato
 
+#ttc-table-of-megachatter-table-of-bastion-dialogue
 >x mattress
 >e
 >n
@@ -158,6 +163,8 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >w
 >s
 >s
+
+#ttc-table-of-megachatter-table-of-psas
 >x psas
 (table of psas)You watch for the next Pa's PSA (and yeah, they're kind of paternalistic and probably can't help you one bit):
 
@@ -169,6 +176,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >n
 >put card on sensor
 
+#ttc-table-of-megachatter-table-of-nerd-natter
 >e
 (table of nerd natter)
 /(Brainy brayin'|Wits fly swiftly|BLANK)\.
@@ -198,6 +206,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >grips
 >slope
 
+#ttc-table-of-megachatter-table-of-riot-slogans
 >e
 (table of riot slogans)Voices babble.
 
@@ -208,6 +217,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 
 >potters
 
+#ttc-table-of-megachatter-table-of-red-bull-taunts>x slit
 >z
 (table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.
 His boot, with his toe sticking out, swings within an inch of your chin.
