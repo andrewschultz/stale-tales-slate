@@ -35,6 +35,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >opt in
 >poss
 
+>au 2
+
 @mis
 #mistake test for laredo
 >laredo
@@ -344,7 +346,7 @@ There's enough earth around here, and this game's not in German.
 You probably don't want medieval-style advice. You don't need it. HINT should work better.
 
 @hin
-DEBUG: toga being objhinted.
+/DEBUG: (reed|toga) being objhinted\.
 
 @nud
 #ttc-table-of-thickest-thickets-nudges-thickets
@@ -439,6 +441,11 @@ by one point
 --you could've changed the toga into a GOAT
 !--you could've changed the reed into a DEER
 >undo
+>undo
+
+@hin
+>deer
+You can just go IN, now.
 >undo
 
 >goat

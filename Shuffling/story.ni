@@ -475,6 +475,8 @@ book procedural AIP
 
 to decide whether the action is procedural: [aip]
 	if examining, yes;
+	if objasking generically, yes;
+	if searching, yes;
 	if fliptoing, yes;
 	if kicking, yes;
 	if attacking, yes;
@@ -7720,7 +7722,7 @@ chapter words
 
 some words are a scenery in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
 
-description of words is "They're not visible[if words are in bag], but you can feel them pulsing against the bag[else], but they certainly sound angry. Sharp. Pointed. Lethal.[end if]."
+description of words is "They're not visible[if words are in bag], but you can feel them pulsing against the bag[else], but they certainly sound angry. Sharp. Pointed. Lethal[end if]."
 
 check opening noise bag:
 	if player is in Bile Libe:
@@ -7768,7 +7770,7 @@ chapter motto-tomato
 
 section motto
 
-A motto is a thing in Bile Libe. "[b]A MOTTO[r] (it says it is, in big bold letters) is somehow stuck to the lease easel. On initial inspection, it doesn't seem like a very good motto, but it still is."
+A motto is a thing in Bile Libe. "[b]A MOTTO[r] (it says it is, in big bold letters) is somehow stuck to the lease easel. On initial inspection, it doesn't seem like a very good motto, but it qualifies, technically."
 
 rgtext of a motto is "[rcn][rc][rc][rc][gc][gc]". lgth of a motto is 6. gpos of a motto is 4. rpos of a motto is 3. cert-text of a motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of a motto is "T[d1][d1][d1][d1][ast]O".
 
@@ -8150,8 +8152,9 @@ the smartest mattress is a boring fixed in place container in The Ol Hotel. bore
 does the player mean entering the mattress: it is likely.
 
 this is the bore-mattress rule:
+	if night thing is moot and current action is searching, continue the action;
 	if night thing is not moot:
-		if current action is examining or current action is searching or current action is reading, say "Not with the night thing on it." instead;
+		if current action is examining or current action is searching or current action is reading, say "You can't see enough of the mattress with the night thing covering it." instead;
 
 rule for printing a locale paragraph about the smartest mattress:
 	if night thing is not touchable, say "The mattress still conforms to the shape of the night thing that sat on it[if emitter is off-stage]--but it also has a bump in one corner[end if].";
@@ -9659,6 +9662,7 @@ check objasking generically (This is the check for only one sensible object conv
 		abide by the a-warn rule;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of NPCish persons is 1:
+		d "Asking [random NPCish person] about [the noun].";
 		try objasking a random NPCish person about the noun instead;
 	if debug-state is true, say "[list of NPCish people].";
 	say "Ambiguous--more than two people here." instead;
@@ -9701,7 +9705,7 @@ Check asking generically (This is the check for only one sensible converser rule
 
 to say lazy-adv: say "'Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me.' It shouldn't be too hard to humor him.".
 
-check objasking it about (This is the check for object information rule):
+check objasking it about (This is the check for object information rule): [ note: there is no item1 -- item2 parallel asking, so if something is missing we need NPC/item1/"text" to be duplicated by NPC/item2/"text"]
 	if noun is gateman:
 		if second noun is gadget or second noun is part of the gadget:
 			if scanned-g is false, say "[lazy-adv]" instead;
@@ -9805,6 +9809,7 @@ gateman	phail phial	"[about-lube]"
 gateman	prep paper	"'No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start.'"
 gateman	Red Bull Burdell	"[one of]'Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called 'Leveling up.' Maximizing stuff called hit points and magic points. Things went awry before we were wary.' You sense there's more, if you can bear it.[or]'Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned...' His eyes grow mistened. 'Ten dimes say it's end times. We've waited for an upturn to turn up...'[or]'The time for talk is over.'[stopping][one of][line break][rbb][or][stopping]" [desireable is that way to make a corny anagram, so keep it]
 gateman	tip	"[tip-dialogue]"
+gateman	pit	"[tip-dialogue]"
 gateman	tin foil info lit	"'Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent.'"
 gateman	Bud Helm	"'Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now.'"
 gateman	Raw Rori	"'Pure strength. That won't get the job done here.'"
@@ -9876,7 +9881,7 @@ to say tip-dialogue:
 		pad-rec-lump "certify";
 		pad-rec "rectify";
 	else:
-		say "'There's no wrong setting, really.'"
+		say "'There's no wrong setting, really.'[no line break]"
 
 to say pad-sec:
 	pad-rec-q "secure";

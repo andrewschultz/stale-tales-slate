@@ -3312,6 +3312,7 @@ blurb
 "'Grossly-sly orgs! SRSLY, GO!'"
 "'Groupthink poking thru!'"
 "'Guards? Drag us? Urg, sad.'"
+"'Gung-ho? Uggh, no!'"
 "'Guns? Ick, sucking.'"
 "'Gus Tom Must Go!'"
 "'HackLabs backlash? Slack! Bah!'"

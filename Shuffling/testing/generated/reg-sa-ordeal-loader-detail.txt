@@ -11,6 +11,8 @@
 >opt in
 >poss
 
+>au 2
+
 >in
 Rested Desert
 

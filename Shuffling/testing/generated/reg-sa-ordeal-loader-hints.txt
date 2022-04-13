@@ -11,6 +11,8 @@
 >opt in
 >poss
 
+>au 2
+
 >monty hints
 You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go.
 !Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
@@ -62,7 +64,7 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 >open door
 Thickest Thickets
 
-DEBUG: toga being objhinted.
+/DEBUG: (reed|toga) being objhinted\.
 
 >n
 You hit a snag, and the toga nags you. Or seems to.
@@ -78,6 +80,10 @@ The door from Rested Desert was one-way. You can't even see it now.
 
 >nest
 by one point
+
+>deer
+You can just go IN, now.
+>undo
 
 >goat
 Your score has just gone up by one point.

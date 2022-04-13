@@ -406,9 +406,9 @@ The gnash hangs would, err, shnag you.
 
 >gt slough
 It's time to deal with things, not run.
+>au 0
 >gt trips strip
 You may mean to RETRY instead. Do so?
->n
 
 >wolves
 Your score has just gone up by one point.
