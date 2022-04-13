@@ -48,6 +48,10 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
+#ttc-table-of-troves-hint-done-notes-pa-egg-pea
+>hint pa egg pea
+Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point.
+
 >stare
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
@@ -110,6 +114,10 @@ by one point
 >score
 Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 30.
 
+#ttc-table-of-troves-hint-done-notes-a-sty-tasty-say
+>hint tasty
+You figured how to get the LLP for ignoring A Sty: Tasty, Say.
+
 >believe
 In particular, you feel the need to RECALL right now.
 >undo
@@ -149,10 +157,6 @@ DEBUG INFO: I'd Cede hinting.
 
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
-
-#verbcase smell-troves-if-noun-is-large-regal-lager
->smell lager
-A faint rye-be-beery odor.
 
 >glare
 Your score has just gone up by one point

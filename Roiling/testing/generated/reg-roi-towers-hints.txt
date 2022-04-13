@@ -163,7 +163,7 @@ Score in a scenario: 6 out of 57 total points in the current region, Towers. Low
 >xr article
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 FOR TESTING: WE NEED A Y OR N.
-> y
+>y
 After a thoughtful gaze, you reckon the recital article could be TALCIER.
 
 >talcier
@@ -405,6 +405,8 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
+
+Treading Gradient
 
 DEBUG INFO: weeds hinting.
 
@@ -740,10 +742,31 @@ After a thoughtful gaze, you reckon the turbos could be ROBUST.
 >xr blaster
 After a thoughtful gaze, you reckon the blaster could be STABLER.
 
->robust
-by one point
 >stabler
 by one point
+#ttc-table-of-towers-hint-done-notes-blaster
+>hint blaster
+You fixed the blaster. Now maybe try the turbos.
+>undo
+>undo
+
+>robust
+by one point
+
+#ttc-table-of-towers-hint-done-notes-turbos
+>hint turbos
+You fixed the turbos. Now maybe try the blaster.
+
+>stabler
+by one point
+
+#+ttc-table-of-towers-hint-done-notes-turbos
+>hint turbos
+You fixed the turbos. The blaster, too. You can just ENTER BOAT.
+
+#+ttc-table-of-towers-hint-done-notes-blaster
+>hint blaster
+You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 
 >gonear waters
 #towers anagrams for earnest eastern neaters

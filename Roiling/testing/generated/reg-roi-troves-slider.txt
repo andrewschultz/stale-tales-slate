@@ -153,10 +153,6 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 >lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#verbcase smell-troves-if-noun-is-large-regal-lager
->smell lager
-A faint rye-be-beery odor.
-
 >glare
 Your score has just gone up by one point
 >score

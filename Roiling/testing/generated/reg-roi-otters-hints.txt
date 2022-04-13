@@ -146,6 +146,10 @@ by one point
 
 DEBUG INFO: damsel medals hinting.
 
+#ttc-table-of-otters-hint-done-notes-eels
+>hint eels
+The eels will assist you when the time comes.
+
 >score
 Score in a scenario: 9 out of 35 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 35.
 
@@ -468,8 +472,6 @@ Score in a scenario: 34 out of 35 total points in the current region, Otters. Th
 by one point
 DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
 Elmo and Gretta are waiting for you back at the Means Manse
-
->y
 
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 

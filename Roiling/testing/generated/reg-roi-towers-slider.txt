@@ -325,6 +325,8 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
+Treading Gradient
+
 #slider test for nerdiest
 >eneidrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -611,6 +613,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >robust
 by one point
+
 >stabler
 by one point
 

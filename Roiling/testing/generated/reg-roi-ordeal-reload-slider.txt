@@ -31,7 +31,6 @@ Score in a scenario: 1 out of 15 total points in the current region, Ordeal Relo
 
 >satchel
 Your score has just gone up by one point.
->t
 
 >slon
 #note that satchel and lamp can't have slider tests.
@@ -233,7 +232,7 @@ Score in a scenario: 13 out of 15 total points in the current region, Ordeal Rel
 
 >put staple in stapler
 
->staple curtain
+>staple aperture
 
 >score
 Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.

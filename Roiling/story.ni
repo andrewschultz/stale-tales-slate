@@ -6521,7 +6521,7 @@ this is the swear-presto rule:
 	if cur-score of presto is 0, say "That's too strong for here. But you have the right idea." instead;
 	if Hacks Shack is visited, say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
 	if plebe is touchable, say "The plebe perks [his-her] ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
-	if hogs are touchable, say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
+	if hogs are touchable, say "The hogs snicker at HOW you said that swear. But yet ... but yet, they seemed slightly irritated at that second-rate profanity!" instead;
 	if location of player is in-the-maze, say "Unnecessary mazes do have that effect on people." instead;
 	say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
 
@@ -8822,6 +8822,7 @@ be troo e robot	presto	"You can have [the e robot] [b]REBOOT[r] [now-once of whe
 peels speel	presto	"You can [b]SLEEP[r] [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your coding task."
 Im Le Cop Polemic	presto	"You can [b]COMPILE[r] [now-once of whether or not compile-yet] you've started coding."
 BUB DUDE EGG	presto	"You weren't ready to [b]DEBUG[r] yet."
+keyboard	presto	"You can change the drab yoke to a [b]KEYBOARD[r] [now-once of whether or not player is in hacks shack] you're in the Hacks['] Shack."
 LOLstr trolls	oyster	"You can [b]STROLL[r] past the LOLstr trolls [now-once of whether or not silly-acts is 3] you're not worth stopping." [oyster]
 frat raft	oyster	"You can [if player is not on frat raft]get on the frat raft and [end if][b]FART[r]."
 trout	oyster	"You should be able to [b]TUTOR[r] the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
@@ -11370,7 +11371,7 @@ to decide which number is bedroom-solve:
 
 chapter LEAD
 
-LEAD is a vanishing thing in Boredom Bedroom. "A copy of [LEAD][one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "[i]LEAD, All: a Deed[r]". [bold-ok]
+LEAD is a vanishing thing in Boredom Bedroom. "A copy of [LEAD][one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff[if bedroom-solve is 0], but it's too much for you right now[else], and you're up to grokking it, you think[end if].". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "[i]LEAD, All: a Deed[r]". [bold-ok]
 
 a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of lead is "?[sp]?[sp]?[sp]L". LEAD is any-spoilable.
 
@@ -12279,7 +12280,7 @@ a-text of n e recs censer is "RRRYYR". b-text of n e recs censer is "RR???R". pa
 
 check taking N E Recs censer: say "It's too heavy and bulky. You see no need to lug it around. Perhaps whatever it could change into will be more manageable." instead;
 
-the computer screen is a thing. description is "It's an N-E-Recs brand, but really, there's no difference between the SEEN-CR, SEER-CN, CN-SEER and CR-SEEN that all fight over market share.[paragraph break]Technical details? [if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if BUB DUDE EGG is part of the computer screen]Ugh. It's got [BUB DUDE EGG] on the screen. You've compiled, but there's one more thing to do[else]A bunch of nonsense code that might not even work[end if]." [bold-ok]
+the computer screen is a thing. description is "It's an N-E-Recs brand, just like the censer it sprang from, but really, there's no difference between the SEEN-CR, SEER-CN, CN-SEER and CR-SEEN that all fight over market share.[paragraph break]Technical details? [if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if BUB DUDE EGG is part of the computer screen]Ugh. It's got [BUB DUDE EGG] on the screen. You've compiled, but there's one more thing to do[else]A bunch of nonsense code that might not even work[end if]." [bold-ok]
 
 Include (-
 	has transparent talkable
@@ -12522,7 +12523,7 @@ Hacks Shack is an innie room in Presto. Hacks Shack is north of Saps Pass. "[if 
 
 shack-looked-yet is a truth state that varies.
 
-after looking in Hacks Shack (this is the angrier earring to censer check rule):
+after looking in Hacks Shack (this is the implicitly change angrier earring and keyboard rule):
 	if shack-looked-yet is false:
 		say "Yes. It is nice and quiet here. No need for interjections. Back to ... well, other ways to do things.";
 		if player has angrier earring, say "[line break]But the quiet is shattered for a moment! ";
@@ -12530,7 +12531,12 @@ after looking in Hacks Shack (this is the angrier earring to censer check rule):
 		say "The angrier earring shakes violently--rangier rearing, I garner. Then it flies out of your hands and sticks into a recess in a wall you hadn't noticed. A secret compartment opens up, and out tumbles ... a censer! And not just any censer, an N-E-Recs Censer, flecked with black and green![paragraph break]'Err ... gain?' you ask, bemused. A censer seems bulky and impractical. But perhaps it can become something else.";
 		moot angrier earring;
 		move N E Recs censer to Hacks Shack;
+	if keyboard is prefigured:
+		say "You know, you're safe from SHATTER-THREATS here. You should turn that drab yoke into a [b]KEYBOARD[r], now.";
 	continue the action;
+
+check putting keyboard on labs slab:
+	say "You suddenly realize how nicely the keyboard would fit in on the labs slab. Yes, just right there. You adjust it back and forth a bit for fun.";
 
 to say my-auth: say "[author of random touchable badbook]";
 
@@ -12542,7 +12548,7 @@ to say a-the:
 
 for writing a paragraph about a thing (called gbg) in Hacks Shack:
 	if gbg is slab or gbg is futon or gbg is fount:
-		say "The shack is prominently furnished with a [if fount is touchable]quaint fount too small to be a fountain[else]futon[end if] and a labs slab, which [one of]still [or][stopping]holds [a list of things on labs slab][if number of badbooks in Hacks Shack is 1]. And oh dear, a copy of [my-auth]'s [my-bad], too[end if].";
+		say "The shack is furnished with a [if fount is touchable]fount too quaint and small to be a proper fountain[else]futon[end if]. There's also a labs slab, which [one of]still [or][stopping]holds [a list of things on labs slab][if number of badbooks in Hacks Shack is 1]. And oh dear, a copy of [my-auth]'s [my-bad], too[end if].";
 		now all touchable badbooks are mentioned;
 		now labs slab is mentioned;
 		now futon is mentioned;
@@ -12776,14 +12782,14 @@ check putting a thing on labs slab (this is the check what to put on labs slab r
 		if noun is rom sticks, try inserting noun into drive instead;
 		if noun is not computer screen and noun is not keyboard, say "That's not something that you can hook up to the computer." instead;
 
-after putting a thing on the labs slab:
+after putting a thing on the labs slab (this is the prep the labs slab rule): [ note: 2 are on the slab to start, namely Drive A and the schematic catechism. 3 and 4 are the screen and keyboard, likely in that order. ]
 	if number of things on labs slab is 3, say "Only one more piece of hardware is needed, and the computer will work." instead;
 	if number of things on labs slab is 4, say "You can now do computery things unimpeded! Hooray!" instead;
 	say "Too [if number of things on labs slab > 3]much[else]little[end if] is on the labs slab. This is a bug in the player-notification code but not a game-breaker." instead;
 
 check taking labs slab: say "The labs slab is there so you don't have to take stuff. Plus it's too heavy." instead;
 
-description of labs slab is "It's far from a plain old table, but you can call it that if you want. It's quite ergonomic and sturdy and not just because none of the twenty-two other things you (yes, you) could zap it to make any sense."
+description of labs slab is "A labs slab is specifically designed to do smart-person stuff and boost intellectual experiments! You could call it a table if you want, but that's an extra keystroke.[paragraph break]It's quite ergonomic and sturdy and not just because none of the twenty-two other things you (yes, you) could zap it to make any sense."
 
 to decide which number is drive-score:
 	decide on boolval of (whether or not Drive A is reflexed) + boolval of (whether or not Drive E is reflexed);
@@ -13063,7 +13069,7 @@ carry out showing it to:
 
 chapter Compile
 
-the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. Whoever wrote it relies on pedants['] pentads, the sort that , but he's still probably leaving some obvious computer action out,[or]The polemic doesn't shed any light on main problems the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
+the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. Whoever wrote it relies on pedants['] pentads, and while it's full of important facts, you aren't sure you'd actually want to meet the writer. It looks like they left out some stuff they found obvious and intuitive, and they're too good to actually mention it themselves[or]The polemic doesn't shed any light on main problems the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
 
 report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy." instead;
 
@@ -13174,7 +13180,7 @@ big-let is a privately-named backdrop. drop-region of big-let is presto. big-let
 
 the maze walls are a reflexive plural-named uncluing useless backdrop. drop-region of maze walls is presto. the walls are in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
-n-t-air is a reflexive plural-named privately-named backdrop. drop-region of n-t-air is presto. description is "[bug-report]". n-t-air is in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+n-t-air is a reflexive plural-named privately-named backdrop. drop-region of n-t-air is presto. description is "[bug-report]". n-t-air is in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44. printed name is "Nowt Town".
 
 a-text of n-t-air is "RYRR". b-text of n-t-air is "RGR?". parse-text of n-t-air is "UNIQUE". n-t-air is any-spoilable.
 
@@ -15564,7 +15570,7 @@ to draw-towers-map:
 		if myg is stinger: [ a special case ... this is the bonker's original gualoc/guadir but whether we can go east depends on if the stinger is blocking ]
 			draw-line Obscurest Subsector and west;
 			next;
-		if debug-state is true, say "[gualoc of myg] [guadir of myg] [current foreground-color].";
+		d "[myg] line-drawing: [gualoc of myg] [guadir of myg] has color [current foreground-color].";
 		draw-line (gualoc of myg) and (guadir of myg);
 
 to draw-line (lcc - a room) and (bd - a direction):
@@ -16107,7 +16113,7 @@ check examining Spec O Scope:
 	if the player regex-prompt-consents:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 		now Spec O Scope is examined;
-		consider the specoscope draw rule;
+		process the specoscope draw rule;
 		the rule succeeds;
 
 description of Spec O Scope is "You look into the Spec-O-Scope and see:[paragraph break][fixed letter spacing]
@@ -16856,7 +16862,7 @@ check giving gizmo to agnostic:
 	if Dr Yow is moot:
 		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in Topside Deposit[end if]--the toaster would've caused an electric shock in the water anyway. And you won't be needing the raves saver, either. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
 		wfak;
-		say "Once a bot boat is built, you begin hearing incessant instances. (Instances being the lesser-known definition of the word--strong suggestions.) Many seem to be useless, but they all seem to say the same thing, especially one in particular: the [canniest].";
+		say "[line break]Once a bot boat is built, you begin hearing incessant instances. (Instances being the lesser-known definition of the word--strong suggestions.) Many seem to be useless, but they all seem to say the same thing, especially one in particular: the [canniest].";
 		now agnostic has gizmo;
 		moot toaster;
 		moot raves saver;
@@ -21582,7 +21588,7 @@ this is the hint certain object groups rule:
 	if noun is realized, all-say "Nothing more for you to do with [the noun]." instead;
 	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
 	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
-	if noun is shunloc, all-say "You don't need to go back where that is." instead;
+	if noun is shunloc, all-say "You don't need to go back where [the noun] [is-are of the noun]." instead;
 	if noun is a badbook, all-say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is a fruit and player has noun, all-say "[frootz]" instead;
 	if noun is not a backdrop and noun is not scenery:

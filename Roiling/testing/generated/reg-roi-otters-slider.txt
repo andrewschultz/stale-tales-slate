@@ -572,8 +572,6 @@ by one point
 DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
 Elmo and Gretta are waiting for you back at the Means Manse
 
->y
-
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
 >score

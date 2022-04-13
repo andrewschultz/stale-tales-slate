@@ -129,10 +129,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
 
-#verbcase smell-troves-if-noun-is-large-regal-lager
->smell lager
-A faint rye-be-beery odor.
-
 >glare
 Your score has just gone up by one point
 >score

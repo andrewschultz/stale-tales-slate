@@ -174,7 +174,7 @@ The ditties are Curtis's. They're really quite good and don't need changing. You
 #ttc-table-of-others-done-rejects-compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
-#rettc-table-of-rustic-citrus-nudges-greenish
+#+ttc-table-of-rustic-citrus-nudges-greenish
 >sheering
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. So you can only exit to the north.
 #ttc-table-of-others-nudges-needle
@@ -203,7 +203,7 @@ DR. NIMATA.
 The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
 
-#rettc-table-of-rustic-citrus-nudges-ruts
+#+ttc-table-of-rustic-citrus-nudges-ruts
 >rust
 You found enough in the ruts circuits. No need to bring them back.
 #ttc-table-of-others-spechelp-harmonicas
@@ -475,7 +475,7 @@ by one point
 by one point
 >s
 Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
-#rettc-table-of-others-nudges-singed
+#+ttc-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the coins. So you should figure what to do, there.
 >undo
@@ -980,7 +980,7 @@ You have 38 of 45 total points for the post-Elvira Others region, though you onl
 #ttc-table-of-others-done-rejects-olives
 >olives
 The olives are just find as they are. They're even pitted! No need to change them. I mean, what if they became SO EVIL?
-#rettc-table-of-clangier-clearing-nudges-price
+#+ttc-table-of-clangier-clearing-nudges-price
 >priec
 No, you already helped correct the prices precis.
 #ttc-table-of-others-done-rejects-melon
@@ -1005,7 +1005,7 @@ You corrected the prices precis enough.
 >w
 
 #doing this in front of the prices precis should give the same result.
-#rettc-table-of-others-done-rejects-kumquat
+#+ttc-table-of-others-done-rejects-kumquat
 >cripse
 You corrected the prices precis enough.
 #ttc-table-of-others-done-rejects-papayas
@@ -1110,7 +1110,7 @@ You only need the one slot.
 >reeves
 You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
 
-#rettc-table-of-others-nudges-lots
+#+ttc-table-of-others-nudges-lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
 
@@ -1218,7 +1218,7 @@ The gate needs to be unlocked some other way.
 #ttc-table-of-gates-stage-nudges-roping
 >rpigon
 You don't need to grapple with the roping, and you don't need the roping to grapple with you.
-#rettc-table-of-gates-stage-nudges-halt
+#+ttc-table-of-gates-stage-nudges-halt
 >ltha
 The halt lath is ineffective, now you have the passport.
 #ttc-table-of-gates-stage-nudges-arean
@@ -1286,10 +1286,10 @@ by one point
 
 You have 44 of 45 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
-#rettc-table-of-others-done-rejects-searcher
+#+ttc-table-of-others-done-rejects-searcher
 >searchre
 You've done enough researching, and now you can just go north.
-#rettc-table-of-others-done-rejects-viewer
+#+ttc-table-of-others-done-rejects-viewer
 >viewre
 You've done enough reviewing, and now you can just go north.
 #ttc-table-of-others-nudges-repp

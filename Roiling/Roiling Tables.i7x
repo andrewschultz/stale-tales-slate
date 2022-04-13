@@ -345,7 +345,7 @@ large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-l
 Id Cede	Id Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	post-decide rule	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-bedroom]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [further-bedroom]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next [bortles] will take a smaller percent of income than your underlings['] food of theirs!"
-pleaser leapers	pleaser leapers	false	574677603	--	"relapse"	"relapse"	--	--	"You lose yourself in the pleaser leapers for a while before snapping out of it. You wonder what you ever saw in them, though of course, you sort of know. 'Danseur dauners, ASUNDER!' you cry, melodramatically, as you realize what a hollow pleasure they are. And yet, at the same time, it was a worthwhile part of your emotional journey. You can't just pitch them out a window, though. They go in the trash, buried deep. Physically and metaphorically. You will look for the approval of real people in the future. Nothing could go wrong that way.[paragraph break]Still, all the same, you feel obliged to respect the initiative of SAP-LEER for profiting so handsomely off them." [bold-ok]
+pleaser leapers	pleaser leapers	false	574677603	--	"relapse"	"relapse"	--	--	"You lose yourself in the pleaser leapers for a while before snapping out of it. You wonder what you ever saw in them, though of course, you sort of know. 'Danseur dauners, ASUNDER!' you cry, melodramatically, as you realize what a hollow pleasure they are. And yet, at the same time, it was a worthwhile part of your emotional journey. You can't just pitch them out a window, though. They go in the trash, buried deep. Physically and metaphorically. You will look for the approval of real people in the future. Nothing could go wrong that way.[paragraph break]Still, all the same, you feel obliged to respect the initiative of SAP-LEER for profiting so handsomely off their product." [bold-ok]
 LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..." [bold-ok]
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	post-desire rule	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	--	--	"On perusing [b]DIVORCES[r] with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. [b]DIVORCES[r] is not for you! You pitch it and re-focus.[paragraph break]Si Reed sees you gazing at [b]DIVORCES[r], picks it up, throws it away, and says 'So what's the deal? You motivated to move ahead in life, or not?' Why, yes. Yes you are."
@@ -423,7 +423,7 @@ this is the post-decide rule:
 this is the post-master-or-bolster rule:
 	if ME ARTS is in Boredom Bedroom, now ME ARTS is LLPish;
 	if lobster is in Boredom Bedroom, now lobster is LLPish;
-	say "[if bedroom-solve is 2]You feel your arch-greed recharged. [end if]You're [one of][or]even [stopping]more up to grokking [b]LEAD[r], now.";
+	say "[if bedroom-solve is 2]You feel your arch-greed recharged. [end if]You're [one of][or]even [stopping]more up to grokking [lead], now.";
 
 to say further-bedroom: say "[if bedroom-solve is 2]further [end if]"
 
@@ -512,7 +512,7 @@ this is the post-strive-or-aspire rule:
 		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at [the end proner pod]. You haven't fully balanced fear of winding up there with focusing on your goals.";
 		set the pronoun it to END PRONER POD;
 	else:
-		say "Your concentration is broken by a scuffle! When you turn around, you notice the person who originally gave you the Peg A. Page book. They have been escorted out by security. And not just escorted. Pushed into a structure you did not notice before. It is an [end proner pod]. You hear the end of the argument: apparently, they made their ambition too obvious.[paragraph break]You shudder to think what will happen to them. And yet ... this could be an opportunity for you. You almost believe you deserve to move further up in the world, but you need to think just a bit more, and perhaps you need to do more than just want, want, want ... or you need to seem to, at least.";
+		say "Your concentration is broken by a scuffle! When you turn around, you notice the person who originally gave you the Peg A. Page book. They have been escorted out of their godlings['] lodgings by security. And not just escorted. Pushed into a structure. It is an [end proner pod]. You hear the end of the argument: wanting raw power was okay, but making it too obvious was not.[paragraph break]You shudder at the scream from [the end proner pod]. You will not end up like that! But you can't just wish. You need to do more than just want, want, want ... or you need to seem to, at least.[paragraph break]It's up to you whether to deal with the [if rivets are reflexive][the praise spirea][else][the rivets][end if] before dealing, as you must, with [the end proner pod] to keep pushing ahead.";
 		now END PRONER POD is in Econ Cone;
 		set the pronoun it to END PRONER POD;
 		if praise spirea is reflexive, now praise spirea is llpish;
@@ -926,6 +926,7 @@ this is the post-calm-clam rule:
 this is the pre-sabot-boats-boast rule:
 	if frat raft is reflexed:
 		say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...";
+		decrement the score;
 		decrement cur-score of mrlp; [ otherwise you get 2 points for leaving the shore instead of 1 ]
 	now frat raft is unfigured;
 
@@ -1433,7 +1434,7 @@ tallyhoing	tallyhoing	false	593419698	--	"loathingly"	"loathingly"	--	post-whine
 callosity	callosity	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
 jollity	jollity	false	501402896	--	"joltily"	"joltily"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	pre-ghoul-hat-although rule	post-ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
-Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre blinks and almost looks intelligent! It calls out for someone ... 'George ... or ...'[paragraph break]Mr. Lee claps his hands. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He offers you a walk in his infidel infield. You feel a slight shock halfway through--[if power-back is false]your mordant powers are now merely dormant![else]similar to what the eels gav. You shake exaggeratedly and nod your head in thanks.[end if][paragraph break]'That is all I can give you. I hope it is enough.' You agree. You will help make his seed site the seediest--once you do the whole country-saving thing. It's the least you can do.[paragraph break][revelv]But they are overtaken ... by a vow here."
+Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre blinks and almost looks intelligent! It calls out for someone ... 'George ... or ...'[paragraph break]But perhaps ... perhaps the Gore Ogre is just frustrated by how pretentious a word like 'Ergo' can sound without knowing why. The Gore Ogre storms off, defeated by powers beyond its ken![paragraph break]Mr. Lee claps his hands. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He offers you a walk in his infidel infield. You feel a slight shock halfway through--[if power-back is false]your mordant powers are now merely dormant![else]similar to what the eels gav. You shake exaggeratedly and nod your head in thanks.[end if][paragraph break]'That is all I can give you. I hope it is enough.' You agree. You will help make his seed site the seediest--once you do the whole country-saving thing. It's the least you can do.[paragraph break][revelv]But they are overtaken ... by a vow here."
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if].[paragraph break][revelv]And yet, voices remain, asking, or stating, 'Sullenness? Us?' Or maybe 'Sullenness! Us!'"
@@ -2203,12 +2204,12 @@ bluster butlers	"They're probably trained to hand out ur-belts."
 yurts	"Don't get [']urty! (Sorry not sorry.)"
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
 diverse deviser	"[if gizmo is not off-stage]You already broke [the deviser][else]No, it must be useful for something[end if]!"
-mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
+mended mini denim	"[if player has gizmo]The [gizmo] can do a lot, but it can't cut through the denim. Maybe it's meant for much bigger things[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. That denim's been mended nicely, for sure."
 sweatier wait seer	"You find it tough to get close to the sweatiness. 'Ew...I...tears,' you say, your eyes going red."
 promise imposer	"That might be RIP-some."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
-prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
-log gaol	"[which-sharp]----but there is probably nothing beyond in the Wildest Wilteds anyway."
+prison ropins	"[which-sharp]. Besides, force doesn't seem to be the right way in."
+log gaol	"[which-sharp]. Besides, it'd be too easy to lost in the Wildest Wilteds beyond."
 Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow' and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
 lone duck	"Such a lost, gentle animal certainly doesn't have a clonk due. You see red for even thinking of such an act."
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
@@ -2220,8 +2221,8 @@ table of otters attacks
 target	nohit
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red."
 players	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
-Mr Lee	"Be nice. He's on your side."
-eels	"Be nice. They're on your side."
+Mr Lee	"Be nice. He's on your side[if gore ogre is not moot]. Or he will be, once you gain his trust[end if]."
+eels	"Be nice. They're on your side[if eels are reflexive]. Or they will be, once you gain their trust[end if]."
 hornets	"[nice-to-animals]!"
 snipe	"[nice-to-animals]!"
 snail	"[nice-to-animals]!"
@@ -2229,7 +2230,7 @@ racoon	"[nice-to-animals]!"
 parrot	"No. The parrot's here to help."
 imp	"The imp jumps out of reach, streakily, satyrlike."
 whiners	"That idea is banefully unflyable."
-leopard	"Messing with a leopard is a bad idea[if leopard is reflexed], especially one you made friends with[else], even if there weren't that orange jumpsuit[end if]."
+leopard	"Messing with a leopard is a bad idea, especially [if leopard is reflexed]one you made friends with[else]one with orange jumpsuit-ish markings[end if]."
 ocelots	"They're bigger than average. And the leopard would back them up."
 satyr	"He's bigger than average. And the leopard would back him up."
 badger	"It's bigger than average. And the leopard would back it up."
@@ -3014,18 +3015,8 @@ volume hint-done-notes tables
 
 table of troves hint-done-notes
 hint-entry	advice-entry
-Pa Egg Pea	"Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point."
-stop post	"Now you've spotted the post, it is only good for another clue if you examine it."
-evil bee	"You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]."
-SNORE SO ARENA	"[by-bee]."
-diapers	"You figured what to do with the diapers."
-praise	"[by-rivets]."
-rivets	"[by-rivets]."
-ME ARTS	"The [b]ME ARTS[r] inspired you enough, [if lobster is moot]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]."
-
-to say by-bee: say "You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]"
-
-to say by-rivets: say "You've been inspired enough by the statue[if praise spirea is reflexed and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
+Pa Egg Pea	"[pa egg pea] can't help you any more. Well, it never did, except to get a last lousy point."
+A Sty Tasty Say	"You figured how to get the LLP for ignoring [tasty]."
 
 table of routes hint-done-notes
 hint-entry	advice-entry
@@ -3033,7 +3024,6 @@ scripture picturers	"The scripture picturers helped you get in, but they're just
 sit a nag	"You got [Gast] to the [sit a nag]. Now you need to deal with [Gast]."
 side art	"You positioned yourself well to put up with [Gast]'s tirades. Time to try a new direction."
 seed pit	"You got what you needed from the seed pit."
-hurt hog	"The hurt hog has been healed. You can do no more for it."
 
 table of presto hint-done-notes
 hint-entry	advice-entry
@@ -3044,32 +3034,28 @@ log ons letters	"[other-let]."
 alert letters	"[other-let]."
 ought letters	"[other-let]."
 Im Le Cop polemic	"You got things compiling. No more worries there."
-TBA key	"[if TBA key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
+TBA key	"The tab key will be useful without any further wizardry."
 
 to say other-let: say "Try either of the other letters. With variety, [l-n-r] will take the hint"
 
 table of oyster hint-done-notes
 hint-entry	advice-entry
-frat raft	"Now you're on the frat raft, you need to find a way to use the oars."
+frat raft	"Now you've charged up the frat raft, you need to find a way to use the oars."
 snarled darnels	"You had your say about the snarled darnels."
 knob	"The knob's been dealt with."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
-gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if Plasm Lamps is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
+gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else]The gleaner will help you navigate the Horned Hedron without any need for special commands[else if tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
 lever	"The lever was designed not to give extra points for pulling it too much."
 
 table of towers hint-done-notes
 hint-entry	advice-entry
 turbos	"You fixed the turbos. [if blaster is reflexed]The blaster, too. You can just [b]ENTER BOAT[r][else]Now maybe try the blaster[end if]."
-blaster	"You fixed the blaster. [if blaster is reflexed]The turbos, too. You can just [b]ENTER BOAT[r][else]Now maybe try the turbos[end if]."
-Tetris Sitter	"Now St. Teri's sick of Tetris, [if top opt pot is moot]and you gave her a gift, she can help. [b]ASK[r] her about the palace, and when you get outside, there'll be a new clue item[else]maybe you can give her a priceless gift of sorts instead[end if]."
+blaster	"You fixed the blaster. [if turbos are reflexed]The turbos, too. You can just [b]ENTER BOAT[r][else]Now maybe try the turbos[end if]."
 
 table of otters hint-done-notes
 hint-entry	advice-entry
-bleary barley	"You've cut it down enough. Who needs that much barley anyway?"
-medals	"The medals are in good enough shape. They will help you speed up when you need to."
-Elmer	"You can't take on [e-n-m] by yourself--you need some allies."
-Merle	"You can't take on [e-n-m] by yourself--you need some allies."
+eels	"The eels will assist you when the time comes."
 
 volume nowhere tables
 
@@ -4570,7 +4556,7 @@ yer all a yell'r	"[one of]The simplistic song's solution should not be too bad.[
 Cut Ya All Cult Laya	"[one of]A meaningless word will cut [the laya] down. It's one people use to win an argument.[plus][or][b]ACTUALLY[r].[minus][cycling]"
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-otters-east-ly].[minus][cycling]"	--	"[rand-otters-east-ly]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-otters-east-ly].[minus][cycling]"	--	"[rand-otters-east-ly]"
-Mr Lee	"[if ghoul hat is not moot]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in Bran Barn]Try to get rid of the Gore Ogre.[else]You've helped Mr. Lee all you can."
+Mr Lee	"[if ghoul hat is not moot]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in Bran Barn]Try to get rid of the Gore Ogre.[else]Mr. Lee will assist you when the time comes.[end if]"
 ghoul hat	"[one of]Mr. Lee's '[b]HOLA, THUG[r]' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or][b]ALTHOUGH[r].[minus][cycling]"	--	"you can say [b]ALTHOUGH[r]" [bold-ok]
 Gore Ogre	"[if ghoul hat is not moot]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjunction that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or][b]ERGO[r].[minus][cycling]"	--	"you can say [b]ERGO[r]"
 Vow Here	"[one of]You don't need to deal with the vow here, but since it appears in an area where you've used conjunctions, you need one more.[plus][or]Listening to the vow here may help a bit.[plus][or]You can say [b]HOWEVER[r].[minus][cycling]"	--	"you can say [b]HOWEVER[r]"

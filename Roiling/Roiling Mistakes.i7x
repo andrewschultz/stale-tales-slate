@@ -714,7 +714,7 @@ chapter Tenfold Teflon'd Den Loft
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when pins are touchable.
 
-understand "redial" as a mistake ("[if papery yapper is touchable]You can't even dial with the yapper around[else]You need use the dialer meaningfully first[end if].") when player is in Tenfold Teflond Den Loft and bogus-redial is off-stage.
+understand "redial" as a mistake ("[if papery yapper is touchable]You can't even dial with the yapper around[else]You need use the dialer meaningfully first[end if].[preefsay of bogus-redial]") when player is in Tenfold Teflond Den Loft and bogus-redial is off-stage.
 
 understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflond Den Loft and pins are in Tenfold Teflond Den Loft.
 
@@ -895,6 +895,8 @@ understand "respent" as a mistake ("You're not sure if the serpent's ever been s
 understand "restain" as a mistake ("The retinas haven't stained you yet. You don't want to be stained, much less re-stained. You see red at the thought.") when nastier stainer retinas are touchable.
 
 understand "retain" and "retains" as a mistake ("Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.") when nastier stainer retinas are touchable.
+
+understand "spenter" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it spent-er, whether or not that's really a word. Still, that's got to be somehere in the ballpark of how to get rid of it.") when serpent is touchable.
 
 understand "stearin" as a mistake ("The retinas are probably full of all kinds of indescribable weird organic compounds. But there may be a practical way to describe them better.") when nastier stainer retinas are touchable.
 

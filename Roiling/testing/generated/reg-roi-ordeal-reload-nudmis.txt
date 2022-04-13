@@ -151,6 +151,8 @@ Not one latch. All of them.
 
 >satchel
 Your score has just gone up by one point.
+
+# turn cheats on
 >t
 
 #ttc-table-of-dusty-study-nudges-notice
@@ -605,7 +607,7 @@ You start to educate Elmo about the penalties for murder, but he gestures at you
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
 >x elmo
->Z
+>z
 >z
 >z
 >z
@@ -753,15 +755,12 @@ Score in a scenario: 13 out of 15 total points in the current region, Ordeal Rel
 #+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The stapler and staple probably hold the key to leaving.
-#ttc-table-of-carven-cavern-nudges-act
->atc
-The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
-#ttc-table-of-carven-cavern-nudges-ruin
->runi
-The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
-#ttc-table-of-carven-cavern-nudges-curtain
->curtani
-The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
+#ttc-table-of-carven-cavern-nudges-aperture
+>apertuer
+Nothing happens. You probably don't need to anagram the apertured departure, which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works.
+#ttc-table-of-carven-cavern-nudges-apertured
+>apertuerd
+Nothing happens. You probably don't need to anagram the apertured departure, which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works.
 #ttc-table-of-ordeal-reload-done-rejects-stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
@@ -771,10 +770,14 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 
 >put staple in stapler
 
->staple curtain
+>staple aperture
 
 >score
 Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+#+ttc-table-of-carven-cavern-nudges-aperture
+>apertuer
+Nothing happens. You probably did what you needed.
 
 #ttc-table-of-ordeal-reload-scannotes-respect-specter
 >t

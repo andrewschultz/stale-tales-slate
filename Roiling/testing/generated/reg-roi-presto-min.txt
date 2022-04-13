@@ -117,6 +117,7 @@ Your score has just gone up by one point
 Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >load gun with dart
+You put the dart into the PG-on-up popgun.
 
 >there
 Your score has just gone up by one point
@@ -143,6 +144,7 @@ Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
 Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+
 >tough
 Your score has just gone up by one point
 Hut! Go!

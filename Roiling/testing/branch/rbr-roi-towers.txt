@@ -615,7 +615,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 >rodnye
 Rodney looks around, as if he is sick of this place.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Yo-Rend-Or-Deny Rodney. That's a decent omen.
-#rettc-table-of-loftier-trefoil-nudges-picaros
+#+ttc-table-of-loftier-trefoil-nudges-picaros
 >picarso
 You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name
 
@@ -643,7 +643,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#rettc-table-of-loftier-trefoil-nudges-picaros
+#+ttc-table-of-loftier-trefoil-nudges-picaros
 >picarso
 There's only one picaro left, and his name is Rodney.
 #ttc-table-of-towers-scannotes-yo-rend-or-deny-rodney
@@ -673,7 +673,7 @@ Your score has just gone up by one point
 >xr article
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 FOR TESTING: WE NEED A Y OR N.
-> y
+>y
 After a thoughtful gaze, you reckon the recital article could be TALCIER.
 
 @!minh,mini
@@ -1064,7 +1064,7 @@ Hmm. You bet you could get past if the denier nereid were REINED.
 You don't see any new information about the curst palace this time.
 Your settler registers RRYR?******.
 Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
-#rettc-table-of-scope-copse-nudges-copse
+#+ttc-table-of-scope-copse-nudges-copse
 >cepos
 The copse and the Spec-O-Scope are both fine as-is.
 #mistake test for worse
@@ -1098,7 +1098,7 @@ DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 
 @verbs
 #ttc-table-of-towers-attacks-bluster-butlers
->attack bluster-butlers
+>attack bluster butlers
 They're probably trained to hand out ur-belts.
 
 >subtler
@@ -1419,7 +1419,7 @@ The promise imposer seems a little less intimidating.
 
 @verbs
 #ttc-table-of-towers-attacks-promise-imposer
->attack promise-imposer
+>attack promise imposer
 That might be RIP-some.
 
 @!minh,mini
@@ -1875,7 +1875,7 @@ Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 
 @verbs
 #ttc-table-of-towers-attacks-sweatier-wait-seer
->attack sweatier-wait-seer
+>attack sweatier wait seer
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
 @!minh,mini
@@ -1892,6 +1892,13 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >s
+\\
+Treading Gradient
+
+@verbs
+#ttc-table-of-towers-attacks-mended-mini-denim
+>attack mended mini denim
+You've got nothing sharp enough. That denim's been mended nicely, for sure.
 
 @nud
 #+ttc-table-of-towers-scannotes-curst-palace
@@ -2006,7 +2013,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#rettc-table-of-treading-gradient-nudges-gradient
+#+ttc-table-of-treading-gradient-nudges-gradient
 >gradietn
 While you can't change the Treading Gradient, perhaps you can deal with the weeds.
 #ttc-table-of-treading-gradient-nudges-weed
@@ -2084,14 +2091,14 @@ You look at the denim and it's probably the denim you want to deal with, not its
 #mistake test for i mend
 >i mend
 You're more interested in doing the opposite--seeing what's behind.
-#rettc-table-of-treading-gradient-nudges-gradient
+#+ttc-table-of-treading-gradient-nudges-gradient
 >gradietn
 The gradient itself can't be changed, but you can change the last thing that's here: the denim
 
 @verbs
-#ttc-table-of-towers-attacks-mended-mini-denim
->attack mended-mini-denim
-WRONG. It's been mended nicely, for sure.
+#+ttc-table-of-towers-attacks-mended-mini-denim
+>attack mended mini denim
+Your ragged dagger doesn't quite cut it. That denim's been mended nicely, for sure.
 
 @!minh,mini
 >mined
@@ -2101,7 +2108,7 @@ WRONG. It's been mended nicely, for sure.
 {$SCOS}
 
 @nud
-#rettc-table-of-treading-gradient-nudges-gradient
+#+ttc-table-of-treading-gradient-nudges-gradient
 >gradietn
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself
 
@@ -2203,7 +2210,7 @@ His full name, Liam Garn.
 @nud
 >gt gradient
 ###skip test checking
-#rettc-table-of-treading-gradient-nudges-gradient
+#+ttc-table-of-treading-gradient-nudges-gradient
 >gradinet
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself.
 >undo
@@ -2709,12 +2716,12 @@ After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
 
 @verbs
 #ttc-table-of-towers-attacks-prison-ropins
->attack prison-ropins
-WRONG--but force doesn't seem the right way in, anyway.
+>attack prison ropins
+The dagger is not very sharp. Besides, force doesn't seem to be the right way in.
 \\
 #ttc-table-of-towers-attacks-log-gaol
->attack log-gaol
-WRONG----but there is probably nothing beyond in the Wildest Wilteds anyway.
+>attack log gaol
+The dagger is not very sharp. Besides, it'd be too easy to lost in the Wildest Wilteds beyond.
 \\
 #ttc-table-of-towers-attacks-dr-yow
 >attack dr yow
@@ -2820,7 +2827,7 @@ by one point
 #+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again.
-#rettc-table-of-obscurest-subsector-nudges-wordy
+#+ttc-table-of-obscurest-subsector-nudges-wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions.
 >undo
@@ -2857,7 +2864,7 @@ You recharge Dr. Yow's wordiness.
 #+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
-#rettc-table-of-danger-garden-nudges-wordy
+#+ttc-table-of-obscurest-subsector-nudges-wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
 
@@ -2970,19 +2977,19 @@ You don't need to fiddle with the lock now.
 #mistake retest for goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
-#rettc-table-of-danger-garden-nudges-ropins
+#+ttc-table-of-obscurest-subsector-nudges-ropins
 >ropisn
 No need to mess with the ropins any more.
-#rettc-table-of-danger-garden-nudges-loggaol
+#+ttc-table-of-obscurest-subsector-nudges-loggaol
 >loggalo
 Nah, you're pretty sure you're overthinking things now. You opened the prison.
-#rettc-table-of-danger-garden-nudges-gol
+#+ttc-table-of-obscurest-subsector-nudges-gol
 >glo
 You opened the gaol, and there's not much else to do with it.
-#rettc-table-of-obscurest-subsector-nudges-locked
+#+ttc-table-of-obscurest-subsector-nudges-locked
 >lockde
 Nothing needs to be locked here, certainly not the gaol which you unlocked.
-#rettc-table-of-towers-nudges-duck
+#+ttc-table-of-towers-nudges-duck
 >dukc
 It's not just any duck. But it's served its purpose.
 
@@ -3058,7 +3065,7 @@ The diverse deviser machine fizzles along. The chirping of birds from the campie
 }}SCORE++
 
 @nud
-#rettc-table-of-outer-route-nudges-repair
+#+ttc-table-of-outer-route-nudges-repair
 >repari
 The diverse deviser is complicated enough. You probably just need to figure what to put in it.
 
@@ -3106,7 +3113,7 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 #mistake retest for pairer
 >pairer
 The diverse deviser is in no shape to do any more work.
-#rettc-table-of-outer-route-nudges-repair
+#+ttc-table-of-outer-route-nudges-repair
 >repira
 The diverse deviser is complicated enough. You already got something from it, and it's too broken to fix.
 
@@ -3141,7 +3148,7 @@ Scot looks at you curiously. You probably don't need to change his name or intel
 >l
 ###skip test checking, delete
 >gs
-#rettc-table-of-towers-nudges-coasting
+#+ttc-table-of-towers-nudges-coasting
 >coatgins
 Staci Ong looks at you curiously. You probably don't need to change her name or intelligence.
 #ttc-table-of-towers-nudges-staci
@@ -3184,7 +3191,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 #ttc-table-of-salted-deltas-nudges-delta
 >delat
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-#rettc-table-of-towers-nudges-lake
+#+ttc-table-of-towers-nudges-lake
 >laek
 You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
 #+ttc-table-of-towers-scannotes-curst-palace
@@ -3267,7 +3274,7 @@ Neither the singular nor the plural version of a pastry can change it. They're f
 >pearyl
 The "replay player" letters brighten for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. That's a decent omen.
-#rettc-table-of-towers-nudges-save
+#+ttc-table-of-towers-nudges-save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
 
@@ -3331,13 +3338,13 @@ Your score has just gone up by one point
 The raves saver/replay player has already been parleyed into something shinier.
 
 @nud
-#rettc-table-of-towers-nudges-save
->Saev
+#+ttc-table-of-towers-nudges-save
+>saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
 #ttc-table-of-towers-done-rejects-raves-saver
 >pearyl
 The raves saver is as glitzed-up as it'll get.
-#rettc-table-of-towers-nudges-save
+#+ttc-table-of-towers-nudges-save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
 #ttc-table-of-obscurest-subsector-nudges-tentative
@@ -3395,10 +3402,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #ttc-table-of-actionless-coastlines-nudges-instance
->VERB ttc table of actionless coastlines nudges instance
+>instanec
 You should probably act on what the instances are saying. You don't need to change anything back here any more.
 #ttc-table-of-actionless-coastlines-nudges-instances
->VERB ttc table of actionless coastlines nudges instances
+>instanecs
 You should probably act on what the instances are saying. You don't need to change anything back here any more.
 
 @nud
@@ -3416,7 +3423,7 @@ Your settler registers RRYR?YRYRY*.
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. The Earnest Eastern Neaters still seem to want to help you, though.
 >undo
-#rettc-table-of-rawest-waters-nudges-lake
+#+ttc-table-of-towers-nudges-lake
 >laek
 Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
 >undo
@@ -3472,7 +3479,7 @@ by one point
 #ttc-table-of-towers-done-rejects-turbos
 >turbso
 The turbos are working. Best not tinker.
-#rettc-table-of-actionless-coastlines-nudges-bot
+#+ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 You fixed the turbos, so maybe you can tackle the blaster.
 >undo
@@ -3483,7 +3490,7 @@ by one point
 #ttc-table-of-towers-done-rejects-blaster
 >blastre
 The blaster is working. Best not tinker.
-#rettc-table-of-actionless-coastlines-nudges-bot
+#+ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 You fixed the blaster, so maybe you can tackle the turbos.
 >undo
@@ -3545,11 +3552,36 @@ Rawest Waters would probably be even less fun the second time around.
 >undo
 >undo
 
+@hints
+>stabler
+by one point
+#ttc-table-of-towers-hint-done-notes-blaster
+>hint blaster
+You fixed the blaster. Now maybe try the turbos.
+>undo
+>undo
+
 @!max
 >robust
 by one point
+
+@hints
+#ttc-table-of-towers-hint-done-notes-turbos
+>hint turbos
+You fixed the turbos. Now maybe try the blaster.
+
+@!max
 >stabler
 by one point
+
+@hints
+#+ttc-table-of-towers-hint-done-notes-turbos
+>hint turbos
+You fixed the turbos. The blaster, too. You can just ENTER BOAT.
+\\
+#+ttc-table-of-towers-hint-done-notes-blaster
+>hint blaster
+You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 
 @spoi
 >gonear waters
@@ -3598,7 +3630,7 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#rettc-table-of-actionless-coastlines-nudges-turbo
+#+ttc-table-of-actionless-coastlines-nudges-turbo
 >turob
 You already dealt with both turbos.
 #ttc-table-of-towers-spechelp-weirder-red-wire
@@ -3611,7 +3643,7 @@ Hm, looks like the red wire doesn't make you see any extra red. You were never a
 #mistake test for were rid
 >were rid
 No, you can't just yank the red wire out.
-#rettc-table-of-actionless-coastlines-nudges-bot
+#+ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 You fixed what you can of the boat.
 
@@ -3676,29 +3708,40 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for spenter
+>spenter
+You're not sure if the serpent's ever been spent, so you can't quite make it spent-er, whether or not that's really a word. Still, that's got to be somehere in the ballpark of how to get rid of it.
+\\
 #mistake test for purine
 >purine
 You can change the ur-pine without getting too far into organic chemistry.
+\\
 #mistake test for repents
 >repents
 The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.
+\\
 #mistake test for respent
 >respent
 You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.
+\\
 #ttc-table-of-towers-spechelp-ur-pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. That's a decent omen.
+\\
 #ttc-table-of-towers-spechelp-repents-serpent
 >presetn
 The serpent calms down for a split-second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repents serpent. That's a decent omen.
+\\
 >presetn
 The serpent calms down for a split-second, again.
+\\
 #ttc-table-of-towers-scannotes-repents-serpent
 >scan repents serpent
 That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
-#rettc-table-of-towers-nudges-lake
+\\
+#+ttc-table-of-towers-nudges-lake
 >laek
 You're beyond the lake now.
 
@@ -3854,7 +3897,7 @@ She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to 
 
 @verbs
 #ttc-table-of-towers-attacks-tetris-sitter
->attack tetris-sitter
+>attack tetris sitter
 Rest it! (Feel free to see red at this.)
 
 @!minh,mini

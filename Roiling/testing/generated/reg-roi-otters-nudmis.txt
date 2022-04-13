@@ -836,7 +836,7 @@ You can't change what the leopard is, but you need to release it from its captiv
 #mistake test for preload/pre-load/pre load
 >preload
 The leopard is plenty powerful as-is, but you need to get it on your side.
->pre-load
+>pre load
 The leopard is plenty powerful as-is, but you need to get it on your side.
 >pre load
 The leopard is plenty powerful as-is, but you need to get it on your side.
@@ -869,7 +869,7 @@ Score in a scenario: 20 out of 35 total points in the current region, Otters. Lo
 #mistake retest for preload/pre-load/pre load
 >preload
 The leopard is plenty powerful as-is, and it's already on your side.
->pre-load
+>pre load
 The leopard is plenty powerful as-is, and it's already on your side.
 >pre load
 The leopard is plenty powerful as-is, and it's already on your side.
@@ -1503,8 +1503,6 @@ Score in a scenario: 34 out of 35 total points in the current region, Otters. Th
 by one point
 DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
 Elmo and Gretta are waiting for you back at the Means Manse
-
->y
 
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 

@@ -317,7 +317,7 @@ Nothing happens. You may need to look at the full SNORE SO ARENA.
 >believe
 Your score has just gone up by one point
 
-#rettc-table-of-boarded-roadbed-nudges-bee
+#+ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a vile bee!
 #ttc-table-of-troves-scannotes-l-clear-cellar
@@ -334,13 +334,13 @@ Score in a scenario: 10 out of 30 total points in the current region, Troves. Lo
 >norse
 The bee or arena's nationality is not relevant, and besides, it was a snore.
 
-#rettc-table-of-boarded-roadbed-nudges-snore
+#+ttc-table-of-boarded-roadbed-nudges-snore
 >snoer
 You already managed to REASON with a snore. Nothing else to do.
-#rettc-table-of-boarded-roadbed-nudges-arena
+#+ttc-table-of-boarded-roadbed-nudges-arena
 >arena
 You already managed to REASON your way around the SNORE SO ARENA.
-#rettc-table-of-boarded-roadbed-nudges-bee
+#+ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
 #ttc-table-of-troves-done-rejects-evil-bee
@@ -393,10 +393,6 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
-
-#verbcase smell-troves-if-noun-is-large-regal-lager
->smell lager
-A faint rye-be-beery odor.
 
 #ttc-table-of-troves-spechelp-large-regal-lager
 >glaer
@@ -537,10 +533,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 17 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
 
-#rettc-table-of-boredom-bedroom-nudges-amrest
+#+ttc-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
-#rettc-table-of-boredom-bedroom-nudges-bloters
+#+ttc-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 #ttc-table-of-troves-spechelp-lead
@@ -710,7 +706,7 @@ Score in a scenario: 22 out of 30 total points in the current region, Troves. Lo
 #mistake retest for once
 >once
 Yes! You only need a chance! Once! To get inside! You're more than enthused enough, but you need to strategize.
-#rettc-table-of-econ-cone-nudges-statue
+#+ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
@@ -737,7 +733,7 @@ Score in a scenario: 23 out of 30 total points in the current region, Troves. Lo
 #ttc-table-of-troves-done-rejects-sectarian-craniates
 >craniatse
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
-#rettc-table-of-econ-cone-nudges-ectarian
+#+ttc-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates. But you knew that, since you already "appreciated" it.
 #ttc-table-of-econ-cone-nudges-edn

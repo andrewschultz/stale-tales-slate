@@ -457,6 +457,11 @@ But you already took the tsar star from the tars! Plus, you'd get all sticky.
 Your score has just gone up by one point
 }}SCORE++
 
+@hints
+#ttc-table-of-presto-hint-done-notes-dart
+>hint dart
+It'd be nice to find a weapon for the dart.
+
 @verbs
 >bother
 Well, maybe one more mild swear would work somewhere around here.
@@ -652,7 +657,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#+ttc-table-of-marines-seminar-nudges-port
+#+ttc-table-of-marines-seminar-remains-nudges-port
 >potr
 You already observed all the ports. No need to try to single one out.
 #ttc-table-of-presto-done-rejects-sport-ports
@@ -741,7 +746,7 @@ You'll need to be glib with something like g-lib later. If you get through this 
 #ttc-table-of-r10-nudges-bigm
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
-#+ttc-table-of-marines-seminar-nudges-mazeroom
+#+ttc-table-of-presto-nudges-mazeroom
 >mazeromo
 You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
 #ttc-table-of-presto-nudges-floor
@@ -1081,7 +1086,7 @@ There's no sense in making the vile veil worse than it is.
 #ttc-table-of-presto-done-rejects-rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
-#+ttc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-presto-nudges-leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
 
@@ -1150,7 +1155,7 @@ They're on your side. They will fight when they need to.
 #ttc-table-of-presto-done-rejects-wzup
 >asshuwp
 /You don't need to greet (Rand and Leo|Leo and Rand) again.
-#+ttc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-presto-nudges-leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
@@ -1218,6 +1223,15 @@ Your score has just gone up by one point
 @hin
 You can just put the dart in the popgun.
 
+@hints
+#ttc-table-of-presto-hint-done-notes-boing-go-bin
+>hint boing go bin
+The boing-go bin works fine now.
+\\
+#ttc-table-of-presto-hint-done-notes-dart
+>hint dart
+You're done with the dart, except for firing it at the right time.
+
 >score
 {$SCOS}
 
@@ -1236,20 +1250,31 @@ Just say what you want to shoot.
 #ttc-table-of-presto-done-rejects-boing-go-bin
 >binog
 You can't force another revelation, but you don't need to.
-#+ttc-table-of-marines-seminar-nudges-popgun
+#+ttc-table-of-presto-nudges-popgun
 >popgnu
 The popgun is just fine.
-#+ttc-table-of-marines-seminar-nudges-spoilt
+#+ttc-table-of-presto-nudges-spoilt
 >spoitl
 The popgun is just fine.
-#+ttc-table-of-marines-seminar-nudges-serial
+#+ttc-table-of-presto-nudges-serial
 >serila
 You got the boing-go bin working.
-#+ttc-table-of-marines-seminar-nudges-number
+#+ttc-table-of-presto-nudges-number
 >numbre
 You got the boing-go bin working.
 
+@verbs
+>put dart in popgun
+You put the dart into the PG-on-up popgun.
+>undo
+
 >load gun with dart
+You put the dart into the PG-on-up popgun.
+
+@hints
+#ttc-table-of-presto-hint-done-notes-dart
+>hint dart
+You're done with the dart, except for firing it at the right time.
 
 @spoi
 You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -1341,7 +1366,7 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 
 @nud
 >s
-#+ttc-table-of-grey-gyre-nudges-ether
+#+ttc-table-of-presto-nudges-ether
 >ethre
 The ether is gone. You can just go back north.
 >n
@@ -1493,8 +1518,26 @@ DEBUG INFO: min-up codepath
 >score
 {$SCOS}
 
+@hints
+##balance undos
+>so long
+by one point
+#ttc-table-of-presto-hint-done-notes-log-ons-letters
+>hint log ons letters
+/Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
+>undo
+>undo
+\\
+#ttc-table-of-presto-hint-done-notes-ought-letters
+>tough
+by one point
+>hint ought letters
+/Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
+>undo
+>undo
+
 @nud
-#+ttc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-presto-nudges-leonard
 >leonadr
 /(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
 #ttc-table-of-saps'-pass-nudges-harpings
@@ -1626,6 +1669,12 @@ But we ain't bored yet, boss!
 }}SCORE++
 >score
 {$SCOS}
+
+@hints
+#ttc-table-of-presto-hint-done-notes-alert-letters
+>hint alert letters
+/Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
+
 >tough
 Your score has just gone up by one point
 Hut! Go!
@@ -1752,7 +1801,7 @@ You'll know what to do with the sticks when you're ready to program
 
 @nud
 >s
-#+ttc-table-of-hacks'-shack-nudges-yrnet
+#+ttc-table-of-saps'-pass-nudges-yrnet
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
 >n
@@ -1793,7 +1842,7 @@ The locs aren't that gangsta, and neither are you. And that's a good thing.
 >slap cock
 The locs aren't that gangsta, and neither are you. And that's a good thing.
 >s
-#+ttc-table-of-hacks'-shack-nudges-summit
+#+ttc-table-of-saps'-pass-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
 >n
@@ -2383,6 +2432,11 @@ by one point
 @spoi
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
+@hints
+#ttc-table-of-presto-hint-done-notes-im-le-cop-polemic
+>hint im le cop polemic
+You got things compiling. No more worries there.
+
 @max
 ##balance undos
 >abstract cola to phat path
@@ -2528,6 +2582,11 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOMAX}
+
+@hints
+#ttc-table-of-presto-hint-done-notes-tba-key
+>hint tab key
+The tab key will be useful without any further wizardry.
 
 @nud
 #+ttc-table-of-hacks'-shack-nudges-drive

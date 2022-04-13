@@ -359,7 +359,7 @@ Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know.
 #+ttc-table-of-strip-of-profits-nudges-toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if someone had to replace Nestor again.
-#rettc-table-of-stores-done-rejects-tokers
+#+ttc-table-of-stores-done-rejects-tokers
 >tokesr
 They are who they are.
 !You should maybe try to get their friend back.

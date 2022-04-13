@@ -188,6 +188,11 @@ DEBUG INFO: min-up codepath
 >score
 {$SCOS}
 
+@hints
+#ttc-table-of-troves-hint-done-notes-pa-egg-pea
+>hint pa egg pea
+Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point.
+
 @nud
 #ttc-table-of-troves-done-rejects-pa-egg-pea
 >gaep
@@ -471,6 +476,11 @@ by one point
 >score
 {$SCOS}
 
+@hints
+#ttc-table-of-troves-hint-done-notes-a-sty-tasty-say
+>hint tasty
+You figured how to get the LLP for ignoring A Sty: Tasty, Say.
+
 @nud
 #ttc-table-of-troves-done-rejects-a-sty-tasty-say
 >stya
@@ -582,7 +592,7 @@ Your score has just gone up by one point
 DEBUG INFO: L'Clear Cellar hinting.
 
 @nud
-#rettc-table-of-boarded-roadbed-nudges-bee
+#+ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a vile bee!
 #ttc-table-of-troves-scannotes-l-clear-cellar
@@ -622,13 +632,13 @@ Nothing now that you reasoned your way around the arena's distractions.
 The bee or arena's nationality is not relevant, and besides, it was a snore.
 
 @nud
-#rettc-table-of-boarded-roadbed-nudges-snore
+#+ttc-table-of-boarded-roadbed-nudges-snore
 >snoer
 You already managed to REASON with a snore. Nothing else to do.
-#rettc-table-of-boarded-roadbed-nudges-arena
+#+ttc-table-of-boarded-roadbed-nudges-arena
 >arena
 You already managed to REASON your way around the SNORE SO ARENA.
-#rettc-table-of-boarded-roadbed-nudges-bee
+#+ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
 #ttc-table-of-troves-done-rejects-evil-bee
@@ -713,6 +723,7 @@ DEBUG INFO: I'd Cede hinting.
 >lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
 #verbcase smell-troves-if-noun-is-large-regal-lager
 >smell lager
 A faint rye-be-beery odor.
@@ -962,10 +973,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#rettc-table-of-boredom-bedroom-nudges-amrest
+#+ttc-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
-#rettc-table-of-boredom-bedroom-nudges-bloters
+#+ttc-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 #ttc-table-of-troves-spechelp-lead
@@ -1240,7 +1251,7 @@ DEBUG INFO: END PRONER POD hinting.
 #mistake retest for once
 >once
 Yes! You only need a chance! Once! To get inside! You're more than enthused enough, but you need to strategize.
-#rettc-table-of-econ-cone-nudges-statue
+#+ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
@@ -1277,7 +1288,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-troves-done-rejects-sectarian-craniates
 >craniatse
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
-#rettc-table-of-econ-cone-nudges-ectarian
+#+ttc-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates. But you knew that, since you already "appreciated" it.
 #ttc-table-of-econ-cone-nudges-edn

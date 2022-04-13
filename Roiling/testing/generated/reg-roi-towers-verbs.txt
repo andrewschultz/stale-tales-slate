@@ -97,7 +97,7 @@ Your score has just gone up by one point
 Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
 
 #ttc-table-of-towers-attacks-bluster-butlers
->attack bluster-butlers
+>attack bluster butlers
 They're probably trained to hand out ur-belts.
 
 >subtler
@@ -132,7 +132,7 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
 
 #ttc-table-of-towers-attacks-promise-imposer
->attack promise-imposer
+>attack promise imposer
 That might be RIP-some.
 
 >semipro
@@ -217,7 +217,7 @@ The wait-seer is so serene, you almost can't waste ire on being blocked. Almost.
 The atheists are really spelling out their logical arguments against any sort of God. In light of this, the wait-seer doesn't seem to be the least tired. Maybe you could learn more details talking to the atheists.
 
 #ttc-table-of-towers-attacks-sweatier-wait-seer
->attack sweatier-wait-seer
+>attack sweatier wait seer
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
 >hastiest
@@ -229,6 +229,12 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
+
+Treading Gradient
+
+#ttc-table-of-towers-attacks-mended-mini-denim
+>attack mended mini denim
+You've got nothing sharp enough. That denim's been mended nicely, for sure.
 
 >nerdiest
 Your score has just gone up by one point
@@ -245,9 +251,9 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
 
-#ttc-table-of-towers-attacks-mended-mini-denim
->attack mended-mini-denim
-WRONG. It's been mended nicely, for sure.
+#+ttc-table-of-towers-attacks-mended-mini-denim
+>attack mended mini denim
+Your ragged dagger doesn't quite cut it. That denim's been mended nicely, for sure.
 
 >mined
 >score
@@ -395,12 +401,12 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 Obscurest Subsector
 
 #ttc-table-of-towers-attacks-prison-ropins
->attack prison-ropins
-WRONG--but force doesn't seem the right way in, anyway.
+>attack prison ropins
+The dagger is not very sharp. Besides, force doesn't seem to be the right way in.
 
 #ttc-table-of-towers-attacks-log-gaol
->attack log-gaol
-WRONG----but there is probably nothing beyond in the Wildest Wilteds anyway.
+>attack log gaol
+The dagger is not very sharp. Besides, it'd be too easy to lost in the Wildest Wilteds beyond.
 
 #ttc-table-of-towers-attacks-dr-yow
 >attack dr yow
@@ -562,6 +568,7 @@ Rawest Waters would probably be even less fun the second time around.
 
 >robust
 by one point
+
 >stabler
 by one point
 
@@ -609,7 +616,7 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 >in
 
 #ttc-table-of-towers-attacks-tetris-sitter
->attack tetris-sitter
+>attack tetris sitter
 Rest it! (Feel free to see red at this.)
 
 >triste

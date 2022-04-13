@@ -556,6 +556,11 @@ DEBUG INFO: frat raft hinting.
 #not a mistake
 >fart
 DEBUG INFO: interlocking oars hinting.
+\\
+#ttc-table-of-oyster-hint-done-notes-frat-raft
+>hint frat raft
+Now you're on the frat raft, you need to find a way to use the oars.
+\\
 >undo
 >undo
 
@@ -1002,6 +1007,11 @@ by one point
 \\
 >score
 {$SCOS}
+
+@hints
+#ttc-table-of-oyster-hint-done-notes-snarled-darnels
+>hint snarled darnels
+You had your say about the snarled darnels.
 
 @max
 >misses
@@ -1650,6 +1660,11 @@ by one point
 Your score has just gone up by one point
 }}SCORE++
 
+@hints
+#ttc-table-of-oyster-hint-done-notes-knob
+>hint knob
+The knob's been dealt with.
+
 >score
 {$SCOS}
 
@@ -1844,6 +1859,11 @@ DEBUG INFO: min-up codepath
 >score
 {$SCOS}
 
+@hints
+#ttc-table-of-oyster-hint-done-notes-heaps
+>hint heaps
+I can't give any artistic advice. They're--good enough, I guess. Better than before.
+
 @nud
 #+ttc-table-of-shuttle-hutlets-nudges-heap
 >hepa
@@ -1895,6 +1915,11 @@ DEBUG INFO: min-up codepath
 \\
 >score
 {$SCOS}
+
+@hints
+#ttc-table-of-oyster-hint-done-notes-lance
+>hint lance
+I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be.
 
 @nud
 #ttc-table-of-oyster-done-rejects-heaps
@@ -2081,6 +2106,16 @@ by one point
 >enlarge
 Your score has just gone up by one point
 }}SCORE++
+
+@hints
+#ttc-table-of-oyster-hint-done-notes-gleaner
+>hint gleaner
+You just need to examine the gleaner to figure what to do with it.
+\\
+>x gleaner
+###skip test checking
+>hint gleaner
+The gleaner will help you navigate the Horned Hedron without any need for special commands.
 
 @max
 You may wish to re-examine the gleaner now it's changed.
@@ -2371,7 +2406,7 @@ Den Loft
 You see a map of all the paths in the Horned Hedron.
 
 @nud
-#rettc-table-of-oyster-done-rejects-gleaner
+#+ttc-table-of-oyster-done-rejects-gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it.
 
@@ -2450,6 +2485,11 @@ You can use the dialer to DERAIL once the papery yapper is gone.
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
 
+@hints
+#ttc-table-of-oyster-hint-done-notes-lever
+>hint lever
+The lever was designed not to give extra points for pulling it too much.
+
 @verbs
 #verbcase listen-oyster-if-noun-is-papery-yapper
 >listen yapper
@@ -2462,6 +2502,11 @@ You hear a hum from the dialer.
 #ttc-table-of-oyster-attacks-yapper
 >attack yapper
 Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
+
+@hints
+#ttc-table-of-oyster-hint-done-notes-gleaner
+>hint gleaner
+The gleaner's not particularly valuable to you any more. But maybe it could be to someone else.
 
 @max
 >prepay yapper

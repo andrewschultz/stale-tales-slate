@@ -74,6 +74,10 @@ Score in a scenario: 4 out of 41 total points in the current region, Presto. Low
 >drat
 Your score has just gone up by one point
 
+#ttc-table-of-presto-hint-done-notes-dart
+>hint dart
+It'd be nice to find a weapon for the dart.
+
 Before taking a bite, you wonder if you've visited everywhere you can yet.
 
 You're all done here for now. The yak can be helped later. You will want to figure a way past the ether to the north.
@@ -216,10 +220,23 @@ Your score has just gone up by one point
 
 You can just put the dart in the popgun.
 
+#ttc-table-of-presto-hint-done-notes-boing-go-bin
+>hint boing go bin
+The boing-go bin works fine now.
+
+#ttc-table-of-presto-hint-done-notes-dart
+>hint dart
+You're done with the dart, except for firing it at the right time.
+
 >score
 Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >load gun with dart
+You put the dart into the PG-on-up popgun.
+
+#ttc-table-of-presto-hint-done-notes-dart
+>hint dart
+You're done with the dart, except for firing it at the right time.
 
 You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 DEBUG INFO: ether hinting.
@@ -270,11 +287,32 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
+>so long
+by one point
+#ttc-table-of-presto-hint-done-notes-log-ons-letters
+>hint log ons letters
+/Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
+>undo
+>undo
+
+#ttc-table-of-presto-hint-done-notes-ought-letters
+>tough
+by one point
+>hint ought letters
+/Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
+>undo
+>undo
+
 >later
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
 Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+#ttc-table-of-presto-hint-done-notes-alert-letters
+>hint alert letters
+/Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
+
 >tough
 Your score has just gone up by one point
 Hut! Go!
@@ -385,6 +423,10 @@ by one point
 
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
+#ttc-table-of-presto-hint-done-notes-im-le-cop-polemic
+>hint im le cop polemic
+You got things compiling. No more worries there.
+
 >score
 Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
@@ -428,6 +470,10 @@ by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+#ttc-table-of-presto-hint-done-notes-tba-key
+>hint tab key
+The tab key will be useful without any further wizardry.
 
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.

@@ -206,6 +206,7 @@ Score in a scenario: 23 out of 57 total points in the current region, Towers. Lo
 
 >robust
 by one point
+
 >stabler
 by one point
 

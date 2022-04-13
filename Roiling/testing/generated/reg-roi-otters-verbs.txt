@@ -47,7 +47,7 @@ Score in a scenario: 2 out of 35 total points in the current region, Otters. Low
 The deli rye smells good, but Ed won't share.
 
 #ttc-table-of-otters-attacks-ed-riley
->attack ed-riley
+>attack ed riley
 "I could DRIL YEE!" Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red.
 
 >reedily
@@ -127,7 +127,7 @@ Loop Pool
 Salt Water. Wet, astral.
 
 #ttc-table-of-otters-attacks-sea-cube
->attack sea-cube
+>attack sea cube
 Bounce no cube.
 
 >because
@@ -138,10 +138,15 @@ Score in a scenario: 8 out of 35 total points in the current region, Otters. Low
 
 #ttc-table-of-otters-attacks-eels
 >attack eels
-Be nice. They're on your side.
+Be nice. They're on your side. Or they will be, once you gain their trust.
 
 >else
 by one point
+
+#ttc-table-of-otters-attacks-eels
+>attack eels
+Be nice. They're on your side.
+!Or they will be, once you gain their trust.
 
 >score
 Score in a scenario: 9 out of 35 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 35.
@@ -165,7 +170,7 @@ You hear morose mooers you can't see.
 
 #ttc-table-of-otters-attacks-mr-lee
 >attack mr lee
-Be nice. He's on your side. Or he can be.
+Be nice. He's on your side. Or he will be, once you gain his trust.
 
 >although
 by one point
@@ -186,7 +191,7 @@ You see red as you hear some nonsense repeated: "Eeh, row V!"
 #+ttc-table-of-otters-attacks-mr-lee
 >attack mr lee
 Be nice. He's on your side.
-!Or he can be.
+!Or he will be, once you gain his trust.
 
 >however
 by one point
@@ -213,7 +218,7 @@ The imp's really messing with your mind. You think you hear it whizzing about or
 
 #ttc-table-of-otters-attacks-imp
 >attack imp
-It jumps out of reach, streakily, satyrlike.
+The imp jumps out of reach, streakily, satyrlike.
 
 >enragedly
 Your score has just gone up by one point
@@ -239,6 +244,22 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 17 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
+
+#ttc-table-of-otters-attacks-leopard
+>attack leopard
+Messing with a leopard is a bad idea, especially one with orange jumpsuit-ish markings.
+
+#ttc-table-of-otters-attacks-ocelots
+>attack ocelots
+They're bigger than average. And the leopard would back them up.
+
+#ttc-table-of-otters-attacks-satyr
+>attack satyr
+He's bigger than average. And the leopard would back him up.
+
+#ttc-table-of-otters-attacks-badger
+>attack badger
+It's bigger than average. And the leopard would back it up.
 
 >coolest
 Your score has just gone up by one point
@@ -269,7 +290,7 @@ Score in a scenario: 21 out of 35 total points in the current region, Otters. Lo
 
 #ttc-table-of-otters-attacks-leopard
 >attack leopard
-Even if he weren't a hardened criminal, you'd lose. I mean, a leopard.
+Messing with a leopard is a bad idea, especially one you made friends with.
 
 #ttc-table-of-otters-attacks-ocelots
 >attack ocelots
@@ -480,8 +501,6 @@ Score in a scenario: 34 out of 35 total points in the current region, Otters. Th
 by one point
 DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
 Elmo and Gretta are waiting for you back at the Means Manse
-
->y
 
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 

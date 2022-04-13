@@ -94,6 +94,11 @@ DEBUG INFO: frat raft hinting.
 #not a mistake
 >fart
 DEBUG INFO: interlocking oars hinting.
+
+#ttc-table-of-oyster-hint-done-notes-frat-raft
+>hint frat raft
+Now you're on the frat raft, you need to find a way to use the oars.
+
 >undo
 >undo
 
@@ -131,6 +136,10 @@ by one point
 
 >score
 Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
+
+#ttc-table-of-oyster-hint-done-notes-snarled-darnels
+>hint snarled darnels
+You had your say about the snarled darnels.
 
 >e
 Hardest Trashed Dearths
@@ -231,6 +240,10 @@ Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lo
 >bonk
 Your score has just gone up by one point
 
+#ttc-table-of-oyster-hint-done-notes-knob
+>hint knob
+The knob's been dealt with.
+
 >score
 Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
@@ -274,6 +287,10 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
 
+#ttc-table-of-oyster-hint-done-notes-heaps
+>hint heaps
+I can't give any artistic advice. They're--good enough, I guess. Better than before.
+
 >clean
 #notana 'nudge for lance'
 Your score has just gone up by one point
@@ -281,6 +298,10 @@ DEBUG INFO: min-up codepath
 
 >score
 Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+
+#ttc-table-of-oyster-hint-done-notes-lance
+>hint lance
+I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be.
 
 >out
 
@@ -309,6 +330,14 @@ Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lo
 
 >enlarge
 Your score has just gone up by one point
+
+#ttc-table-of-oyster-hint-done-notes-gleaner
+>hint gleaner
+You just need to examine the gleaner to figure what to do with it.
+
+>x gleaner
+>hint gleaner
+The gleaner will help you navigate the Horned Hedron without any need for special commands.
 
 !You may wish to re-examine the gleaner now it's changed.
 
@@ -386,6 +415,14 @@ You see a map of all the paths in the Horned Hedron.
 DEBUG INFO: papery yapper hinting.
 
 Tenfold Teflon'd Den Loft
+
+#ttc-table-of-oyster-hint-done-notes-lever
+>hint lever
+The lever was designed not to give extra points for pulling it too much.
+
+#ttc-table-of-oyster-hint-done-notes-gleaner
+>hint gleaner
+The gleaner's not particularly valuable to you any more. But maybe it could be to someone else.
 
 >prepay
 Your score has just gone up by one point

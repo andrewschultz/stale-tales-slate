@@ -60,7 +60,6 @@ Score in a scenario: 1 out of 15 total points in the current region, Ordeal Relo
 
 >satchel
 Your score has just gone up by one point.
->t
 
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study
 >listen
@@ -209,16 +208,20 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-#ttc-table-of-ordeal-reload-attacks-act-ruin-curtain
->attack act ruin curtain
+#ttc-table-of-ordeal-reload-attacks-apertured-departure
+>attack apertured departure
 It's still too thick, even though some of the plaster is peeled away.
 
 >put staple in stapler
 
->staple curtain
+>staple aperture
 
 >score
 Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+#+ttc-table-of-ordeal-reload-attacks-apertured-departure
+>attack apertured departure
+You can just enter it.
 
 >scepter
 The Respect Specter coughs.

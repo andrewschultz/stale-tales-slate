@@ -1419,7 +1419,7 @@ Den Loft
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
 
-#rettc-table-of-oyster-done-rejects-gleaner
+#+ttc-table-of-oyster-done-rejects-gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it.
 

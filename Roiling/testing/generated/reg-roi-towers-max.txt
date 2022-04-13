@@ -292,6 +292,8 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
+Treading Gradient
+
 >nerdiest
 Your score has just gone up by one point
 >score

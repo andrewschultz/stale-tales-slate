@@ -413,7 +413,7 @@ The oopsin' priest can't be changed that easily. You'll have to search around fo
 #ttc-table-of-cleric-circle-nudges-striep
 >striep
 The oopsin' priest can't be changed that easily. You'll have to search around for better ways to poke at things
-#rettc-table-of-cleric-circle-nudges-reagent
+#+ttc-table-of-routes-nudges-reagent
 >regenta
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 #ttc-table-of-cleric-circle-nudges-rebroth
@@ -452,6 +452,11 @@ Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sn
 
 >out
 
+@hints
+#ttc-table-of-routes-hint-done-notes-scripture-picturers
+>hint scripture picturers
+The scripture picturers helped you get in, but they're just there to help other people now. Maybe.
+
 @max
 ##balance undos
 >against
@@ -484,10 +489,10 @@ You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more
 You angle your spoon a bit, and you realize you, or something, should be PAST.
 
 @nud
-#rettc-table-of-cleric-circle-nudges-die
+#+ttc-table-of-same-mesa-nudges-die
 >edi
 The words themselves do nothing. You found the way in.
-#rettc-table-of-cleric-circle-nudges-sin
+#+ttc-table-of-same-mesa-nudges-sin
 >ins
 The words themselves do nothing. You found the way in.
 #ttc-table-of-same-mesa-nudges-uhh
@@ -651,6 +656,11 @@ Your score has just gone up by one point
 @spoi
 The spoon points you out of the Idle Deli.
 
+@hints
+#ttc-table-of-routes-hint-done-notes-seed-pit
+>hint seed pit
+You got what you needed from the seed pit.
+
 @nud
 #mistake retest for tap pat/tap
 >tap
@@ -671,15 +681,15 @@ Actually, Pat's advice may not be apt.
 Alas, the stupor sprout has nothing in common with madeleine.
 
 @nud
-#rettc-table-of-idle-deli-nudges-carvings
+#+ttc-table-of-idle-deli-nudges-carvings
 >cravinsg
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
-#rettc-table-of-idle-deli-nudges-carving
+#+ttc-table-of-idle-deli-nudges-carving
 >cravign
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 
 @nud
-#rettc-table-of-idle-deli-nudges-stupor
+#+ttc-table-of-routes-nudges-stupor
 >surpot
 Brother Horbert will work his magic with that.
 #ttc-table-of-routes-nudges-reagents
@@ -688,7 +698,7 @@ Brother Horbert will do his magic on the reagents at the right time.
 #ttc-table-of-routes-nudges-reagent
 >reagetn
 Brother Horbert will do his magic on the reagents at the right time.
-#rettc-table-of-idle-deli-nudges-pta
+#+ttc-table-of-idle-deli-nudges-pta
 >tpa
 You don't need to do anything with Pat, especially now you got the stupor sprout.
 
@@ -698,7 +708,7 @@ You don't need to do anything with Pat, especially now you got the stupor sprout
 You angle your spoon a bit, and you realize you, or something, should be ACROSS.
 
 @nud
-#rettc-table-of-idle-deli-nudges-resto
+#+ttc-table-of-same-mesa-nudges-resto
 >resot
 You did well enough to focus on the proper names instead.
 #ttc-table-of-routes-spechelp-lairage-regalia
@@ -818,13 +828,13 @@ You angle your spoon a bit, and you realize you, or something, should be AGAINST
 #mistake retest for poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And the pipe soot is icky enough as-is.
-#rettc-table-of-adobe-abode-nudges-uhh
+#+ttc-table-of-same-mesa-nudges-uhh
 >uhh
 You did well enough to focus on the proper names instead.
-#rettc-table-of-adobe-abode-nudges-tut
+#+ttc-table-of-same-mesa-nudges-tut
 >ttu
 You did well enough to focus on the proper names instead.
-#rettc-table-of-adobe-abode-nudges-sos
+#+ttc-table-of-same-mesa-nudges-sos
 >oss
 You already figured how to get into Oscar's. There's nothing else to do.
 #ttc-table-of-routes-done-rejects-lairage-regalia
@@ -838,10 +848,10 @@ No, you don't see any other way around the signboard to enter. You don't need on
 The picturers were pretty strict about what they suggested. Not much else you can do with them.
 
 @nud
-#rettc-table-of-adobe-abode-nudges-orcas
+#+ttc-table-of-same-mesa-nudges-orcas
 >ocras
 No, you found the way in, with the extra s.
-#rettc-table-of-adobe-abode-nudges-lairage
+#+ttc-table-of-same-mesa-nudges-lairage
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to, now you've visited Oscar.
 #ttc-table-of-same-mesa-nudges-bench
@@ -870,6 +880,11 @@ Your score has just gone up by one point
 
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
+
+@hints
+#ttc-table-of-routes-hint-done-notes-sit-a-nag
+>hint sit a nag
+You got Ian Gast to the anti-sag sit-a-nag. Now you need to deal with Ian Gast.
 
 @verbs
 #verbcase goto-routes-if-gast-is-in-same-mesa 3
@@ -950,6 +965,11 @@ Your score has just gone up by one point
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be BELOW.
 
+@hints
+#ttc-table-of-routes-hint-done-notes-side-art
+>hint side art
+You positioned yourself well to put up with Ian Gast's tirades. Time to try a new direction.
+
 @mis
 #mistake retest for ides/rat/tar
 >ides
@@ -962,17 +982,17 @@ You already did your best with the tirades and side art.
 #ttc-table-of-routes-done-rejects-side-art
 >astried
 You got on the anti-sag sit-a-nag right. Time to start ducking.
-#rettc-table-of-routes-done-rejects-gast
+#+ttc-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
 @nud
-#rettc-table-of-same-mesa-nudges-tirade
+#+ttc-table-of-same-mesa-nudges-tirade
 >atired
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 
 @nud
-#rettc-table-of-routes-done-rejects-gast
+#+ttc-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
@@ -1087,13 +1107,13 @@ Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
 #ttc-table-of-routes-done-rejects-u-nerd-endur-redun
 >undre
 You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that.
-#rettc-table-of-same-mesa-nudges-boko
+#+ttc-table-of-routes-nudges-boko
 >obok
 Brother Horbert will work his magic with that.
-#rettc-table-of-same-mesa-nudges-runedbook
+#+ttc-table-of-routes-nudges-runedbook
 >obokduren
 Brother Horbert will work his magic with that.
-#rettc-table-of-same-mesa-nudges-pipesoot
+#+ttc-table-of-routes-nudges-pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
 
@@ -1339,7 +1359,7 @@ Your score has just gone up by one point
 You angle your spoon a bit, and you realize you, or something, should be ALONG.
 
 @nud
-#rettc-table-of-harms-marsh-nudges-pyrites
+#+ttc-table-of-harms-marsh-nudges-pyrites
 >pyrites
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 #ttc-table-of-harms-marsh-nudges-pyrite
