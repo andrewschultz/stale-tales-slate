@@ -40,7 +40,7 @@ tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"T
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from [the bins]. They're still covered with long numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
 Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtain appears behind, a stapler falls out. You take it[if plates are touchable] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"The psalter crumbles, with a stapler falling to the floor. You take the stapler[if plates are touchable] as the formerly stuck plates fall[end if]. Behind, you see an apertured departure, but it's not open enough to, well, depart. Yet."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
 this is the post-palm-lamp rule:
@@ -143,7 +143,7 @@ to say scep-scan-track:
 		say "I respect your need to do more and talk less. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own, and it'll be more rewarding that way";
 
 this is the post-psalter-stapler rule:
-	if act ruin curtain is not in Carven Cavern, now act ruin curtain is in Carven Cavern;
+	if apertured departure is not in Carven Cavern, now apertured departure is in Carven Cavern;
 
 this is the post-rifle-flier rule:
 	pad-rec-q "rove over";
@@ -2153,7 +2153,7 @@ volume attack tables
 table of ordeal reload attacks
 target	nohit
 plaster	"There's too much of it, and it's too hardened."
-act ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
+apertured departure	"[if stapler is moot]You can just enter it[else]It's still too thick, even though some of the plaster is peeled away[end if]."
 Elmo	"Elmo kind of has the upper hand here."
 
 table of stores attacks
@@ -4062,9 +4062,6 @@ brass crag	"[dio-part]."
 painting	"The painting clues all the ways out of the Dusty Study, but you don't need to do anything more to it."
 niche	"[one of]'My niche' above the diorama leads upwards.[plus][or]What is a household accoutrement that leads up? If you use the settler, you may know what the last letter is.[plus][or]'My niche' can be a chimney.[minus][cycling]"
 closest closets	"The closets [if closets are touchable]are[else]were[end if] just for transporting around the Means Manse quicker, to or from the Dusty Study."
-vertical stripe	--	act ruin curtain
-horizontal stripes	--	act ruin curtain
-small holes	--	act ruin curtain
 palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plus][or]It wouldn't be bright to stumble into the palm...[plus][or]...but changing the palm would be.[plus][or]If you wait around, you get some hints of what to do with the palm. Note the purposefully bad spelling.[plus][or]One four-letter shuffling of [b]PALM[r] is indicated. Hopefully.[plus][or]You can change the palm to a [b]LAMP[r] by just saying so.[minus][cycling]"
 lamp	"The lamp will last as long as you need it to."
 meet bans	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a [b]BASEMENT[r].[minus][cycling]"
@@ -4086,10 +4083,12 @@ plaster psalter	"[one of]Plaster generally covers up holes. You need to bust thr
 palest pastel plates	"[one of]The plates are embedded, but they have a metal rim. Well, sort of.[plus][or]The plates are also square, with metal half-square rings.[plus][or]They become a [b]STAPLE[r].[minus][cycling]"
 staple	"[one of]What does a staple go in?[plus][or][if plaster is touchable]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 stapler	"[one of]What goes in a stapler?[plus][or][if plates is touchable]Something the plates can change into.[else]The staple.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
-act ruin curtain	"[one of]What does the act-ruin curtain--with its design--remind you of?[plus][or]The act-ruin curtain is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is touchable or plates are touchable]You've got some work to do before you can do any stapling[else]You've got what you need to staple the curtain and peel it back[end if].[plus][or][b]STAPLE CURTAIN[r][if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
+apertured departure	"[if stapler is moot]You can enter [the departure] to continue your adventure.[else][ap-dep][end if]"
 Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you to do something to the rifle."
 high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a [b]FLIER[r].[minus][cycling]"
 sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find them amusing."
+
+to say ap-dep: say "[one of]What does the apertured departure--with its design--remind you of?[plus][or]The [departure] is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is touchable or plates are touchable]You've got some work to do before you can do any stapling[else]You've got what you need to staple [the departure] and activate it[end if].[plus][or][b]STAPLE DEPARTURE[r][if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
 
 to say dio-part: say "Not a puzzle per se but helps you understand what to do with [if settler is off-stage]an analytical object you may uncover[else]the settler[end if]"
 

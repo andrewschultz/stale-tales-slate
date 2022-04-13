@@ -163,7 +163,7 @@ Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal 
 5/13=ramp (ramp/chimney = another way down)
 6/14=snib
 7/15=scepter]
-[non-anagram = staple curtain]
+[non-anagram = staple apertured departure]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
@@ -4285,7 +4285,7 @@ this is the ordeal-reload-hinting rule:
 	if player is in Carven Cavern:
 		if plates are in Carven Cavern, try objhinting plates instead;
 		if plaster is in Carven Cavern, try objhinting plaster instead;
-		if act ruin curtain is touchable, try objhinting act ruin curtain instead;
+		if apertured departure is touchable, try objhinting apertured departure instead;
 		if player has latches, try objhinting latches instead;
 	if player has settler and settler is not examined, say "You should probably examine the settler." instead;
 	if Elmo is touchable, say "Elmo has some hints about the settler, but you can ignore him and still solve the game with maximum points. The small talk in particular can be ignored, unless you enjoy anagrams." instead;
@@ -5537,9 +5537,9 @@ check going nowhere in Dusty Study:
 	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are touchable]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is touchable]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
 check going nowhere in Carven Cavern (this is the cavern check rule):
-	if act ruin curtain is not in Carven Cavern, say "You need to make an exit, first." instead;
-	say "The only way to make progress is inward, through that [if act ruin curtain is moot]ex-[end if]curtain.";
-	if act ruin curtain is moot:
+	if apertured departure is not in Carven Cavern, say "You need to create a viable exit." instead;
+	say "The only way to make progress is inward, through [the departure].";
+	if stapler is moot:
 		say "[line break]Go through?";
 		if the player regex-prompt-consents, try going inside instead;
 		say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
@@ -8235,10 +8235,9 @@ check examining logo:
 			ital-say "you may want to get an interpreter like Gargoyle and Zoom to see the 1-kb PNG of this in all its glory.";
 	the rule succeeds;
 
-check scaning (this is the scan settler and act ruin curtain parts rule):
+check scaning (this is the scan non-anagrammable important stuff rule):
 	if noun is part of the settler, say "Impossible. It's part of the settler." instead;
-	if noun is small holes, say "They register nothing. Perhaps there's some sort of key-thing that fits in them." instead;
-	if noun is act ruin curtain or noun is part of act ruin curtain, say "The act-ruin curtain registers nothing. Perhaps you need to find a way to unlock the small holes in the act-ruin curtain[if staple is off-stage]. You don't have anything that makes holes, yet[else]. Hmm, you have something that could make a small hole[end if]." instead;
+	if noun is apertured departure, say "The [departure] registers nothing. Anagramming isn't the way to go here[if staple is off-stage]. You don't have anything that makes holes, yet[end if]." instead;
 
 section whichs shwich
 
@@ -9102,30 +9101,29 @@ check going inside in Largely All Grey Gallery:
 
 book Carven Cavern
 
-Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in to, well, wherever [b]IN[r] leads[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]An act-ruin curtain may be covering up a passage[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way.". roomnud of carven cavern is table of carven cavern nudges.
+Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if stapler is moot]The apertured departure is open now to wherever [b]IN[r] leads[else if departure is touchable]An apertured departure might lead somewhere if it were open further[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way.". roomnud of carven cavern is table of carven cavern nudges.
 
 after looking in Carven Cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in Carven Cavern, set the pronoun them to palest pastel plates;
 	if plaster psalter is in Carven Cavern, set the pronoun it to plaster psalter;
-	if act ruin curtain is in Carven Cavern, set the pronoun it to act ruin curtain;
+	if apertured departure is in Carven Cavern, set the pronoun it to apertured departure;
 	continue the action;
 
 check exiting in Carven Cavern:
-	if act ruin curtain is moot:
-		say "Exiting the cavern, entering the passage, the same thing.";
+	if stapler is moot:
+		say "Exiting the cavern, entering [the departure], the same thing.";
 		try going inside instead;
-	say "It's much safer to go in, not out, here." instead;
+	say "Even if you can't see way to enter [the departure], it's got to be much safer to go in, not out, here." instead;
 
 check going inside in Carven Cavern:
 	if plaster is in Carven Cavern, say "There's nowhere to go in, yet." instead;
-	if act ruin curtain is in Carven Cavern:
-		now curtain-know is true;
-		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be an ACT-RUIN CURTAIN, and a bit of mental gymnastics suggests you can't do much directly to it. You'll have to disable it somehow without touching it." instead;
+	if stapler is not moot:
+		say "The [departure] isn't wide enough yet." instead;
 	if respect specter is touchable:
 		say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness.[wfak]";
 		process the post-specter-scepter rule;
 		say "[line break]";
-	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
+	say "You walk through [the departure]--and you've certainly departed! You wander through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	moot teariest treatise;
 	solve-region Ordeal Reload;
 	the rule succeeds;
@@ -9236,7 +9234,6 @@ check opening stapler:
 	if player has staple:
 		say "I'm going to assume you mean opening the stapler to put the staple in.";
 		try inserting staple into stapler instead;
-	if act ruin curtain is moot, say "You've probably done enough with your stapler, here." instead;
 	say "You don't have anything to put in the stapler." instead;
 
 check inserting into stapler: if noun is not staple, say "Only one thing goes in a stapler." instead;
@@ -9245,30 +9242,20 @@ after inserting staple into stapler:
 	say "The staple fits in with minimal fuss.";
 	the rule succeeds;
 
-chapter act-ruin curtain
+chapter apertured departure
 
-curtain-know is a truth state that varies.
+the apertured departure is boring scenery. description of the apertured departure is "The apertured departure is currently [if stapler is not moot]not [end if]wide enough to enter[if stapler is moot]. It's lined, like a sheet of notebook paper (one red vertical line, many blue horizontal, holes on the side,) and you probably can't pry it open with your bare hands[end if].". bore-text is "[if stapler is moot]You've opened [the apertured] fully. Nothing special to do[else]The [apertured] needs a specific action here to pull it aside. Perhaps special materials are required[end if].". bore-check is bore-departure rule.
 
-the act ruin curtain is boring scenery. description of the act ruin curtain is "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands.". bore-text is "The curtain needs a specific action here to pull it aside. Perhaps special materials are required.". bore-check is bore-curtain rule.
+understand "aperture" as apertured departure.
 
-printed name of act ruin curtain is "ACT-RUIN CURTAIN".
-
-this is the bore-curtain rule:
+this is the bore-departure rule:
 	if current action is touching, try going inside instead;
 	if current action is opening or current action is pulling or current action is taking, say "[could-staple]." instead;
 	if current action is stapleing, now boring-exception is true;
 
-to say curt-kno: now curtain-know is true;
-
-to say could-staple: say "You need the right tool to do so. You probably need one that could get a grip on some fabric or whatever[if player carries stapler]. Maybe you could use the stapler to [b]STAPLE[r] the curtain[stapload][end if]";
+to say could-staple: say "[if stapler is moot]You can just enter [the departure][else if player carries stapler]Maybe you could use the stapler to [b]STAPLE[r] [the departure][stapload][else]There must be something to do to [the departure][end if]";
 
 to say stapload: say ", [if staple is in stapler]especially since[else]once[end if] it's loaded";
-
-the vertical stripe is a boring thing. it is part of the act ruin curtain. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
-
-the horizontal stripes is a plural-named boring thing. it is part of the act ruin curtain. description of horizontal stripes is "Bluish, and there are about thirty."
-
-the small holes is a plural-named boring thing. it is part of the act ruin curtain. description of the small holes is "They look like some sort of weird lock or something.". understand "hole" as small holes.
 
 chapter pastel plates
 
@@ -9294,9 +9281,9 @@ understand the command "staple [something]" as something new.
 
 understand "staple [something]" as stapleing.
 
-does the player mean stapleing the act ruin curtain: it is very likely.
+does the player mean stapleing the apertured departure: it is very likely.
 
-rule for supplying a missing noun when stapleing: if act ruin curtain is touchable, now noun is act ruin curtain.
+rule for supplying a missing noun when stapleing: if apertured departure is touchable, now noun is apertured departure.
 
 carry out stapleing:
 	if player does not have stapler, say "You need something to staple with." instead;
@@ -9305,12 +9292,10 @@ carry out stapleing:
 		say "(Putting the staple in the stapler first)";
 		try inserting staple into stapler;
 		if staple is not in stapler, say "[reject]" instead;
-	if noun is holes, try stapleing act ruin curtain instead;
 	if noun is treatise, say "It's only one piece of paper. It doesn't need stapling." instead;
 	If noun is the player, say "I can't imagine where you want to staple yourself, and I don't want to know." instead;
-	if noun is not act ruin curtain, say "That doesn't need stapling." instead;
-	say "You staple the act-ruin curtain. The staple is the right strength to cut in all the layers, grab them at once, and peel them back. The act-ruin curtain snaps back, slamming like a door and melting into the wall--and taking the stapler with it. You can't repaper, but [if latches are touchable]with those latches, you may[else]you won't[end if] need to prepare to go [b]in[r] to further adventure!";
-	moot act ruin curtain;
+	if noun is not apertured departure, say "That doesn't need stapling." instead;
+	say "You staple [the departure]. The staple is the right strength to cut in all the layers, grab them at once, and peel them back. As it does so, the center of [the departure] opens up until it's wide enough to enter. However, it also pulls the by-now-useless stapler in with it. You can't repaper, but [if latches are touchable]with those latches, you may[else]you won't[end if] need to prepare to go [b]in[r] to further adventure!";
 	moot staple;
 	moot stapler;
 	reg-inc;
@@ -13159,7 +13144,7 @@ definition: a direction (called dir) is viable:
 	if player is in Sclerous Closures and sardine is in Sclerous Closures and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
 	if player is in Horned Hedron and dir is inside and walleyes are moot and ol trap is reflexed, yes;
 	if player is in Largely All Grey Gallery and dir is inside, yes;
-	if player is in Carven Cavern and dir is inside and act ruin curtain is moot, yes;
+	if player is in Carven Cavern and dir is inside and stapler is moot, yes;
 	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
 	decide no;
 

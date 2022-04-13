@@ -167,11 +167,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "terrain"	517651905	--	--	"Hm... 'retrain terrain' is a bit circular, as anagrams go. The [if stapler is touchable]stapler[else]plaster psalter[end if] and [if plates are touchable]palest pastel plates[else]staple[end if] probably hold the key to leaving."
 "plate"	368383743	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
-"act"	124303421	act ruin curtain	--	"[curtain-block]."
-"ruin"	304329964	act ruin curtain	--	"[curtain-block]."
-"curtain"	428633385	act ruin curtain	--	"[curtain-block]."
+"apertured"	739158515	--	--	"[apertured-note]."
+"aperture"	718129426	--	--	"[apertured-note]."
 
-to say curtain-block: say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
+to say apertured-note: say "Nothing happens. You probably [if stapler is moot]did what you needed[else]don't need to anagram [the departure], which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works[end if]"
 
 book stores nudges
 
