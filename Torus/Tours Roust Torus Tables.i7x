@@ -190,13 +190,6 @@ Letter (indexed text)	Code
 "y"	16777216
 "z"	33554432
 
-to decide what number is the hash of (t - a value of kind K):
-	let s be the filtered name of t;
-	let hash be 0;
-	repeat with c running from 1 to the number of characters in s:
-		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
-	decide on hash;
-
 to decide which number is the rough-hash of (t - a value of kind K):
 	let s be indexed text;
 	now s is the filtered name of t;
