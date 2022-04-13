@@ -16988,23 +16988,16 @@ to towers-min-adj: [this is when you leave the mainland]
 		d "All guardians erased!";
 	else:
 		d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
-	d "[whether or not turbos are reflexed] turbos blaster [whether or not blaster is reflexed] [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 	now poss-score of towers is cur-score of towers + 7; [SPECTACULAR (required), punier, antsier, present, triste, annoyed, give top opt pot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
-	d "[whether or not turbos are reflexed] turbos blaster [whether or not blaster is reflexed] [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 	unless turbos are reflexed and blaster is reflexed:
 		increment poss-score of towers; [dropping the player in Rawest Waters means we haven't gotten the second boat point yet.]
 		min-up;
 		d "adding min/poss points for Rawest Waters. [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 	if used-ray is false:
-		d "used-ray is false.";
 		increment poss-score of towers;
 		if number of carried skansnaks is 0, min-up; [no way to cheat if we have no skansnaks]
-		d "[cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
-	else:
-		d "used-ray is true.";
 	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
-	d "[cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 
 to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
 
@@ -21691,11 +21684,8 @@ carry out objhinting (this is the pick object to hint rule) :
 				if hint-entry entry is noun, all-say "[advice-entry entry]" instead;
 		choose row with hint-entry of noun in hintobjstable of mrlp;
 		if there is a parallel-entry entry:
-			if parallel-entry entry is moot, say "You don't need to worry about that any more."; [?? hint mound / hint bogey / gooseberry / hint mound / hint bogey]
-			try objhinting parallel-entry entry instead;
-		if player has Pa Egg Pea and eisihint is false:
-			now eisihint is true;
-[			all-say "You try and imagine what [i]Pa, Egg, Pea[r] might say if it were actually about helping everyday people. Here's what you come up with.[line break]";]
+			if parallel-entry entry is not moot, try objhinting parallel-entry entry instead;
+			if there is no advice-entry entry, say "You don't need to worry about [the noun] any more."; [?? hint mound / hint bogey / gooseberry / hint mound / hint bogey]
 		choose row with hint-entry of noun in hintobjstable of mrlp;
 		now last-thing-hinted is noun; [for the special case HINT LEOPARD.HINT where SATYR might be the first in the random table. Less jarring this way.]
 		if noun is cheatitemed:
@@ -21718,8 +21708,6 @@ definition: a thing (called disc-tar) is cinder-dissolve:
 	if disc-tar is medals:
 		if medals-shiny < 2, no;
 	yes;
-
-eisihint is a truth state that varies.
 
 section what is realized
 
