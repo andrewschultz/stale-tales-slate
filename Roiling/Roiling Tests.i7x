@@ -28,9 +28,9 @@ test oops-plus with "test ordealdreloadmin-oops/test stores-oops/test towers-oop
 
 chapter ordeal reload
 
-test ordealreloadmin with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/d/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple curtain/in".
+test ordrelmin with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/d/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple departure/in".
 
-test ordealreloadmax with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/stable/chimney/painting/in/stair/out/u/ramp/d/snib/in/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple curtain/scepter/scepter/scan specter/t/scan specter/scepter/t/scan specter/scan specter/scan specter/scan specter/scan specter/scan specter/scan specter/x spectre/scepter/x 1/x 2/x 3/x 4/x 5/x 6/in".
+test ordrelmax with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/stable/chimney/painting/in/stair/out/u/ramp/d/snib/in/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple aperture/scepter/scepter/scan specter/t/scan specter/scepter/t/scan specter/scan specter/scan specter/scan specter/scan specter/scan specter/scan specter/x spectre/scepter/x 1/x 2/x 3/x 4/x 5/x 6/in".
 
 chapter stores
 
@@ -40,11 +40,11 @@ test storesmax with "poss/ts/t/sorbet/nestor/tokers/enter steaming/outside/route
 
 chapter troves
 
-test trovesmin1 with "mbb 1/ts/t/troves/enter tastee/l/hate/care/observe/spot/believe/recall/despair/smell lager/decide/bolster/deal/desire/aspire/ponder/deserve/last/ramble/misses/recant".
+test trovesmin1 with "mbb 1/ts/t/troves/enter tastee/l/hate/care/observe/spot/believe/recall/despair/decide/bolster/deal/desire/aspire/ponder/deserve/last/ramble/misses/recant".
 
-test trovesmin2 with "mbb 1/ts/t/troves/enter tastee/l/hate/care/observe/spot/reason/recall/despair/smell lager/decide/master/deal/desire/strive/ponder/deserve/last/resist/misses/recant".
+test trovesmin2 with "mbb 1/ts/t/troves/enter tastee/l/hate/care/observe/spot/reason/recall/despair/decide/master/deal/desire/strive/ponder/deserve/last/resist/misses/recant".
 
-test trovesmax with "mbb 1/ts/t/troves/enter tastee/l/gape/stare/hate/care/spot/pf/observe/surmise/spot/recall/pf/believe/reason/recall/despair/smell lager/glare/decide/relapse/deal/pf/bolster/master/deal/discover/desire/aspire/strive/ascertain/ponder/deserve/last/romanticise/ramble/resist/recant".
+test trovesmax with "mbb 1/ts/t/troves/enter tastee/l/gape/stare/hate/care/spot/observe/surmise/spot/stay/recall/believe/reason/recall/despair/glare/decide/relapse/deal/bolster/master/deal/discover/desire/aspire/strive/ascertain/ponder/deserve/last/romanticise/ramble/resist/recant".
 
 chapter routes
 
@@ -64,7 +64,9 @@ chapter oyster
 
 test oystermin with "ts/oyster/enter barnacle balancer/get pills/spill pills/calm/run/boast/leap/scrap/e/seek/eat/tutor/w/n/trace/react/kiss/bonk/snap/in/bust/drop/out/s/w/warp/search/enlarge/n/w/bury/e/s/e/unearth/assuage/ask haunter about ruby/w/n/w/e/patrol/x gleaner/in/prepay/derail/spin/redial".
 
-test oystermax with "ts/oyster/enter barnacle balancer/unset/remap/sing/scrape/stroll/calm/run/soar/fart/pf/enter raft/boast/leap/tutor/scrap/unearth/pf/misses/slander/misses/e/scan/seek/eat/tend/tutor/warp/swipe/w/n/warp/splain/react/pf/kiss/pf/snap/pf/trace/kiss/bonk/react/kiss/bonk/snap/in/bust/drop/sweat/shape/clean/out/s/banish ruby/unearth/purloin ruby/unearth/w/search/pf/warp/search/x gleaner/e/x gleaner/w/enlarge/n/w/bury/e/s/e/unearth/assuage/ask haunter about ruby/w/n/w/e/patrol/x gleaner/in/derail/pf/revel/prepay/psalm/tan/revel/derail/redial/pf/spin/redial".
+test oystermax with "ts/oyster/enter barnacle balancer/unset/remap/sing/scrape/stroll/calm/run/soar/fart/enter raft/boast/leap/tutor/scrap/unearth/misses/slander/misses/e/scan/seek/eat/tend/tutor/warp/swipe/w/n/warp/splain/react/kiss/snap/trace/kiss/bonk/react/kiss/bonk/snap/in/bust/drop/sweat/shape/clean/out/s/banish ruby/unearth/purloin ruby/unearth/w/search/warp/search/x gleaner/e/x gleaner/w/enlarge/n/w/bury/e/s/e/unearth/assuage/ask haunter about ruby/w/n/w/e/patrol/x gleaner/in/derail/revel/prepay/trample/psalm/tan/revel/derail/redial/spin/redial".
+
+test oyster1 with "ts/oyster/enter barnacle balancer/unset/remap/sing/scrape/stroll/calm/run/boast/leap/tutor/scrap/e/seek/eat/w/n/trace/react/kiss/bonk/snap/in/bust/drop" [ cut-down, max-avoiding version of oystermax gets you to where you can shortly UNEARTH ]
 
 chapter towers
 
@@ -72,13 +74,25 @@ test towersminh with "ts/towers/seed 1/enter turrets/z/gone/lardy/bleak/yonder/s
 
 test towersmini with "ts/towers/seed 1/enter turrets/z/gone/lardy/bleak/yonder/sadder/get all/n/put tarts in toaster/xray butlers/purloin brownies/put brownies in toaster/xray nereid/subtler/rinsed/e/restful/saltier/e/w/n/sewed/weariest/n/hastiest/released/e/holiest/w/w/married/n/s/e/s/s/e/broken/resting/e/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/rowdy/gt coastlines/give gizmo to agnostic/robust/stabler/enter boat/misses/spectacular".
 
-test towersmax with "ts/towers/seed 1/enter turrets/z/yonder/pf/droney/pf/gone/lardy/bleak/achier/snared/cricked/talcier/yonder/spectacular/pf/sadder/get all/n/rusty/subtler/reined/rinsed/creaky/n/coiled/semipro/pastier/n/angstier/w/rustled/e/released/married/n/s/e/hastiest/weariest/s/nerdiest/saltier/sewed/mined/d/dandier/e/marginal/holiest/n/s/s/restful/naivest/w/grandiose/e/s/w/aimless/rousted/prosiest/n/broken/resting/e/fussier/pf/unlocked/pf/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/pf/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/pearly/attentive/rowdy/gt coastlines/give gizmo to agnostic/stabler/robust/rewired/enter boat/punier/antsier/present/in/spectacular/give pot to sitter/triste/give pot to sitter/annoyed/give pot to sitter/out/misses/spectacular".
+test towersmax with "ts/towers/seed 1/enter turrets/z/yonder/droney/gone/lardy/bleak/achier/snared/cricked/talcier/yonder/spectacular/sadder/get all/n/rusty/subtler/reined/rinsed/creaky/n/coiled/semipro/pastier/n/angstier/w/rustled/e/released/married/n/s/e/hastiest/weariest/s/nerdiest/saltier/sewed/mined/d/dandier/e/marginal/holiest/n/s/s/restful/naivest/w/grandiose/e/s/w/aimless/rousted/prosiest/n/broken/resting/e/fussier/unlocked/wordy/push retape/gt duck/push repeat/gt subsector/unlocked/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/pearly/attentive/rowdy/gt coastlines/give gizmo to agnostic/stabler/robust/rewired/enter boat/punier/antsier/present/in/spectacular/give pot to sitter/triste/give pot to sitter/annoyed/give pot to sitter/out/misses/spectacular".
+
+[towers is big enough that for pre-regtest runs I want to make sure that my fix, indeed, works locally. So I have these tests divided up. ]
+
+test towers1 with "ts/towers/seed 1/enter turrets/z/yonder/droney/gone/lardy/bleak/achier/snared/cricked/talcier/yonder/spectacular/sadder/get all/n/rusty/subtler/reined/rinsed/creaky/x scope/n". [ to the Scope Copse ]
+
+test towers2 with "test towers1/n/coiled/semipro/pastier/n/angstier/w/rustled/e/released/married/n/s/e/hastiest/weariest/s/nerdiest/saltier/sewed/mined/d/dandier/e/marginal/holiest/n". [ to the coastlines with the Agnostic appearing ]
+
+test towers3 with "test towers2/s/s/restful/naivest/w/grandiose/e/s/w/aimless/rousted/prosiest/n/broken/resting/e/fussier/unlocked/wordy/push retape/gt duck/push repeat/gt subsector/unlocked". [ rescue Dr Yow ]
+
+test towers4 with "test towers3/gt copse/w/revised/put dagger in deviser/gt coastlines/grained/ask agnostic about doctor yow/pearly/attentive/rowdy/gt coastlines/give gizmo to agnostic". [ a bot boat is now prepared ]
+
+test towers5 with "stabler/robust/rewired/enter boat". [ at the Mislit Limits. Not much of an extension, but each game-state is an important checkpoint ]
 
 chapter otters
 
 test ottersmin with "seed 1/ts/a5/t/otters/opt in/enter solid idols/barely/l/discern ed riley/discern/reedily/w/bossily/angrily/blearily/au 0/1/3/no/n/because/else/s/atom/e/n/enragedly/remotely/n/slow/coolest/paroled/artsy/l/s/s/s/loathingly/joltily/s/parrot/snail/hornets/racoon/l/n/n/w/w/raptor/quickly/w/7/e/deeply/w/misses/au 2/play whistle/y".
 
-test ottersmax with "seed 1/ts/a5/t/otters/opt in/enter solid idols/barely/l/rescind/reedily/w/atom/s/although/pf/ergo/n/n/because/pf/else/s/bossily/angrily/blearily/au 0/1/3/no/actually/atom/pf/quickly/pf/n/else/pf/because/else/unless/misses/s/s/ergo/although/pf/ergo/however/n/atom/e/n/enragedly/remotely/n/slow/coolest/paroled/artsy/quickly/l/garbed/s/s/s/loathingly/joltily/s/parrot/snail/hornets/racoon/l/snipe/n/n/basically/w/raptor/pf/deeply/pf/deeply/pf/w/honestly/aside/honestly/quickly/raptor/e/quickly/w/quickly/w/7/e/deeply/w/misses/au 2/play whistle/y".
+test ottersmax with "seed 1/ts/a5/t/otters/opt in/enter solid idols/barely/l/rescind/reedily/w/atom/s/although/ergo/n/n/because/else/s/bossily/angrily/blearily/au 0/1/3/no/actually/atom/quickly/n/else/because/else/unless/misses/s/s/ergo/although/ergo/however/n/atom/e/n/enragedly/remotely/n/slow/coolest/paroled/artsy/quickly/l/garbed/s/s/s/loathingly/joltily/s/parrot/snail/hornets/racoon/l/snipe/n/n/basically/w/raptor/deeply/deeply/w/honestly/aside/honestly/quickly/raptor/e/quickly/w/quickly/w/7/e/deeply/w/misses/au 2/play whistle/y".
 
 chapter others
 
