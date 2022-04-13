@@ -91,7 +91,7 @@ Your score has just gone up by one point
 
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
-DEBUG INFO: n-t-air hinting.
+DEBUG INFO: Nowt Town hinting.
 !DEBUG INFO: volt maze.
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
@@ -101,6 +101,10 @@ DEBUG INFO: volt maze hinting.
 
 >score
 Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+#ttc-table-of-presto-hint-done-notes-tsar-star
+>hint tsar star
+Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly.
 
 >e
 Marines Seminar Remains
@@ -183,6 +187,10 @@ Your score has just gone up by one point
 You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
 
 /You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
+
+#+ttc-table-of-presto-hint-done-notes-tsar-star
+>hint tsar star
+The tsar star has done its duty.
 
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
@@ -291,6 +299,7 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 
 >screen
 by one point
+Only one more piece of hardware is needed, and the computer will work.
 
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
 
@@ -335,16 +344,10 @@ Score in a scenario: 27 out of 41 total points in the current region, Presto. Lo
 
 >keyboard
 Your score has just gone up by one point
+You can now do computery things unimpeded! Hooray!
 
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->put keyboard on slab
-Only one more piece of hardware is needed, and the computer will work.
-
->put screen on slab
-!It already is
-You can now do computery things unimpeded! Hooray!
 
 >disk
 

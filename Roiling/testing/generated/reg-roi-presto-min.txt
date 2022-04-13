@@ -156,6 +156,7 @@ Hacks' Shack
 
 >screen
 by one point
+Only one more piece of hardware is needed, and the computer will work.
 
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
@@ -190,16 +191,10 @@ Score in a scenario: 18 out of 41 total points in the current region, Presto. Lo
 
 >keyboard
 Your score has just gone up by one point
+You can now do computery things unimpeded! Hooray!
 
 >score
 Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
-
->put keyboard on slab
-Only one more piece of hardware is needed, and the computer will work.
-
->put screen on slab
-!It already is
-You can now do computery things unimpeded! Hooray!
 
 >disk
 

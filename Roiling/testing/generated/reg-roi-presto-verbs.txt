@@ -180,7 +180,7 @@ Dirge Ridge
 
 #ttc-table-of-presto-attacks-leo
 >attack leo
-WRONG
+Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
 >ole
 by one point
@@ -190,7 +190,7 @@ Score in a scenario: 12 out of 41 total points in the current region, Presto. Lo
 
 #ttc-table-of-presto-attacks-rand
 >attack rand
-WRONG
+Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
 #verbcase listen-presto-if-noun-is-odes-song
 >listen odes song
@@ -327,6 +327,7 @@ Classic techno music from the Baleets: "Be Stale."
 
 >screen
 by one point
+Only one more piece of hardware is needed, and the computer will work.
 
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
@@ -376,16 +377,10 @@ Score in a scenario: 27 out of 41 total points in the current region, Presto. Lo
 
 >keyboard
 Your score has just gone up by one point
+You can now do computery things unimpeded! Hooray!
 
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->put keyboard on slab
-Only one more piece of hardware is needed, and the computer will work.
-
->put screen on slab
-!It already is
-You can now do computery things unimpeded! Hooray!
 
 >disk
 

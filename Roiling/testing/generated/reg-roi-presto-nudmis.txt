@@ -264,7 +264,7 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 
 >x cistern
 !You take a peek in--to see a dart in there.
-#rettc-table-of-char-arch-nudges-cistern
+#+ttc-table-of-char-arch-nudges-cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
 #ttc-table-of-presto-done-rejects-tsar-star
@@ -380,7 +380,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
 
-#rettc-table-of-marines-seminar-nudges-port
+#+ttc-table-of-marines-seminar-nudges-port
 >potr
 You already observed all the ports. No need to try to single one out.
 #ttc-table-of-presto-done-rejects-sport-ports
@@ -413,8 +413,8 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 
 #ttc-table-of-presto-scannotes-n-t-air
->scan n-t-air
-Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze.
+>scan
+Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze. You know, for style points.
 
 #ttc-table-of-presto-scannotes-maze-walls
 >scan maze walls
@@ -432,7 +432,7 @@ You'll need to be glib with something like g-lib later. If you get through this 
 #ttc-table-of-r10-nudges-bigm
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
-#rettc-table-of-marines-seminar-nudges-mazeroom
+#+ttc-table-of-marines-seminar-nudges-mazeroom
 >mazeromo
 You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
 #ttc-table-of-presto-nudges-floor
@@ -632,7 +632,7 @@ There's no sense in making the vile veil worse than it is.
 #ttc-table-of-presto-done-rejects-rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
-#rettc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-dirge-ridge-nudges-leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
 
@@ -674,7 +674,7 @@ They're on your side. They will fight when they need to.
 #ttc-table-of-presto-done-rejects-wzup
 >asshuwp
 /You don't need to greet (Rand and Leo|Leo and Rand) again.
-#rettc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-dirge-ridge-nudges-leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
@@ -705,16 +705,16 @@ Just say what you want to shoot.
 #ttc-table-of-presto-done-rejects-boing-go-bin
 >binog
 You can't force another revelation, but you don't need to.
-#rettc-table-of-marines-seminar-nudges-popgun
+#+ttc-table-of-marines-seminar-nudges-popgun
 >popgnu
 The popgun is just fine.
-#rettc-table-of-marines-seminar-nudges-spoilt
+#+ttc-table-of-marines-seminar-nudges-spoilt
 >spoitl
 The popgun is just fine.
-#rettc-table-of-marines-seminar-nudges-serial
+#+ttc-table-of-marines-seminar-nudges-serial
 >serila
 You got the boing-go bin working.
-#rettc-table-of-marines-seminar-nudges-number
+#+ttc-table-of-marines-seminar-nudges-number
 >numbre
 You got the boing-go bin working.
 
@@ -770,7 +770,7 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 
 >s
-#rettc-table-of-grey-gyre-nudges-ether
+#+ttc-table-of-grey-gyre-nudges-ether
 >ethre
 The ether is gone. You can just go back north.
 >n
@@ -809,13 +809,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a d
 #mistake retest for rats
 >rats
 Boy! You miss that tsar star.
-#rettc-table-of-saps'-pass-nudges-mount
+#+ttc-table-of-saps'-pass-nudges-mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
-#rettc-table-of-saps'-pass-nudges-deil
+#+ttc-table-of-saps'-pass-nudges-deil
 >deli
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
-#rettc-table-of-saps'-pass-nudges-deils
+#+ttc-table-of-saps'-pass-nudges-deils
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
@@ -855,7 +855,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
-#rettc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-dirge-ridge-nudges-leonard
 >leonadr
 /(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
 #ttc-table-of-saps'-pass-nudges-harpings
@@ -923,7 +923,7 @@ Dat was a good dust-up
 >score
 Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
-#rettc-table-of-saps'-pass-nudges-yrnet
+#+ttc-table-of-saps'-pass-nudges-yrnet
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
@@ -965,6 +965,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer.
 
 >screen
 by one point
+Only one more piece of hardware is needed, and the computer will work.
 
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
@@ -993,7 +994,7 @@ You'll know what to do with the sticks when you're ready to program
 >undo
 
 >s
-#rettc-table-of-hacks'-shack-nudges-yrnet
+#+ttc-table-of-hacks'-shack-nudges-yrnet
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
 >n
@@ -1015,7 +1016,7 @@ The locs aren't that gangsta, and neither are you. And that's a good thing.
 >slap cock
 The locs aren't that gangsta, and neither are you. And that's a good thing.
 >s
-#rettc-table-of-hacks'-shack-nudges-summit
+#+ttc-table-of-hacks'-shack-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
 >n
@@ -1272,6 +1273,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That'
 
 >keyboard
 Your score has just gone up by one point
+You can now do computery things unimpeded! Hooray!
 
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
@@ -1289,14 +1291,7 @@ Nothing happens. It's probably just the TBA you need to work with, which certain
 >yek
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
 
->put keyboard on slab
-Only one more piece of hardware is needed, and the computer will work.
-
->put screen on slab
-!It already is
-You can now do computery things unimpeded! Hooray!
-
-#rettc-table-of-hacks'-shack-nudges-computer
+#+ttc-table-of-hacks'-shack-nudges-computer
 >compuert
 You need to fix the program in the computer.
 
@@ -1460,7 +1455,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
 
-#rettc-table-of-hacks'-shack-nudges-drive
+#+ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Drive E, though.
 
@@ -1486,7 +1481,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
-#rettc-table-of-hacks'-shack-nudges-drive
+#+ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
 #mistake retest for redive
@@ -1495,10 +1490,10 @@ Deriving was tricky enough.
 #ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
-#rettc-table-of-hacks'-shack-nudges-tbakey
+#+ttc-table-of-hacks'-shack-nudges-tbakey
 >tbakye
 You already did enough with the TAB key.
-#rettc-table-of-hacks'-shack-nudges-yke
+#+ttc-table-of-hacks'-shack-nudges-yke
 >yek
 You already did enough with the TAB key.
 #ttc-table-of-presto-done-rejects-tba-key
@@ -1537,7 +1532,7 @@ The cola has already been reprocessed enough. You'll drink it when the time come
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
-#rettc-table-of-presto-done-rejects-mug
+#+ttc-table-of-presto-done-rejects-mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
 #ttc-table-of-presto-nudges-lcao
@@ -1553,7 +1548,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 #ttc-table-of-presto-done-rejects-bub-dude-egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
-#rettc-table-of-hacks'-shack-nudges-algorithms
+#+ttc-table-of-hacks'-shack-nudges-algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
 

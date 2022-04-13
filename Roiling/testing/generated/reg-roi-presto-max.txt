@@ -325,6 +325,7 @@ Hacks' Shack
 
 >screen
 by one point
+Only one more piece of hardware is needed, and the computer will work.
 
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
@@ -337,26 +338,13 @@ You take it. You don't need to, but it'd be nice to have handy.
 >compile
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
+You add the information to your pedanto-notepad under FLIPS.
 >undo
 >n
 >compile
 !by one point
 Good idea, but tough to program without something to type on.
->purloin keyboard
->compile
-!by one point
-Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
-##nobalance
->n
-#preefcheck im le cop polemic
->pf
-You can COMPILE once you've started coding.
->undo
->undo
->undo
->undo
->undo
->undo
+You add the information to your pedanto-notepad under FLIPS.
 >undo
 
 >skid
@@ -415,47 +403,38 @@ Score in a scenario: 27 out of 41 total points in the current region, Presto. Lo
 
 >keyboard
 Your score has just gone up by one point
+You can now do computery things unimpeded! Hooray!
 
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#compile, but don't put keyboard on slab (auto-no)
->compile
-!by one point
-Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
->no
-!Done. You can try to COMPILE again, now.
-Ok, but by "may want" I meant "really probably need to."
->undo
-
 >put keyboard on slab
-Only one more piece of hardware is needed, and the computer will work.
-
->compile
-Good idea, but first, you may want to put the screen on the slab. Do so now?
->no
-!Done. You can try to COMPILE again, now.
-Ok, but by "may want" I meant "really probably need to."
+It already is!
 
 >put screen on slab
-!It already is
-You can now do computery things unimpeded! Hooray!
+It already is!
 
 >compile
 !by one point
 A DISK, I'D ASK pops up. You realize that you can change the skid back, due to the lossless compression algorithm.
+You add the information to your pedanto-notepad under FLIPS.
+>undo
 
 >disk
 
 >compile
 !by one point
 A DISK, I'D ASK pops up. You realize that the disk would fit fine.
+You add the information to your pedanto-notepad under FLIPS.
+>undo
 
 >put disk in drive a
 
 >compile
 !by one point
 You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
+You add the information to your pedanto-notepad under FLIPS.
+>undo
 
 #balance undo
 #pre-peels-speel-sleep rule
@@ -486,9 +465,12 @@ Your score has just gone up by one point
 >compile
 !by one point
 You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+You add the information to your pedanto-notepad under FLIPS.
 >compile
 !by one point
 You need to get rid of that uppercase to successfully compile your code.
+>undo
+>undo
 
 >put lock on keyboard
 fits in perfectly
@@ -509,9 +491,13 @@ Score in a scenario: 31 out of 41 total points in the current region, Presto. Lo
 >compile
 !by one point
 You get a NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.
+You add the information to your pedanto-notepad under FLIPS.
 >compile
 !by one point
 That stupid NEED IF-DEFINE and that peels speel, still.
+!You add the information to your pedanto-notepad under FLIPS.
+>undo
+>undo
 
 >sleep
 Your score has just gone up by one point
@@ -532,6 +518,7 @@ The process of debugging is going to take a while. You will need some sort of en
 #preefcheck bub dude egg
 >pf
 You weren't ready to DEBUG yet.
+>undo
 >undo
 >undo
 >undo

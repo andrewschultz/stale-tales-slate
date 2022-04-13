@@ -473,7 +473,7 @@ You're all done here for now. The yak can be helped later. You will want to figu
 @nud
 >x cistern
 !You take a peek in--to see a dart in there.
-#rettc-table-of-char-arch-nudges-cistern
+#+ttc-table-of-char-arch-nudges-cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
 #ttc-table-of-presto-done-rejects-tsar-star
@@ -516,7 +516,7 @@ Your score has just gone up by one point
 @spoi
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
-DEBUG INFO: n-t-air hinting.
+DEBUG INFO: Nowt Town hinting.
 !DEBUG INFO: volt maze.
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
@@ -542,6 +542,11 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 >undo
 >undo
 >undo
+
+@hints
+#ttc-table-of-presto-hint-done-notes-tsar-star
+>hint tsar star
+Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly.
 
 >e
 Marines Seminar Remains
@@ -647,7 +652,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#rettc-table-of-marines-seminar-nudges-port
+#+ttc-table-of-marines-seminar-nudges-port
 >potr
 You already observed all the ports. No need to try to single one out.
 #ttc-table-of-presto-done-rejects-sport-ports
@@ -711,8 +716,8 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 \\
 #ttc-table-of-presto-scannotes-n-t-air
->scan n-t-air
-Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze.
+>scan
+Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze. You know, for style points.
 
 @sli
 #slider test for wont
@@ -736,7 +741,7 @@ You'll need to be glib with something like g-lib later. If you get through this 
 #ttc-table-of-r10-nudges-bigm
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
-#rettc-table-of-marines-seminar-nudges-mazeroom
+#+ttc-table-of-marines-seminar-nudges-mazeroom
 >mazeromo
 You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
 #ttc-table-of-presto-nudges-floor
@@ -965,7 +970,7 @@ No chance.
 @verbs
 #ttc-table-of-presto-attacks-leo
 >attack leo
-WRONG
+Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
 @spoi
 You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -986,7 +991,7 @@ You gulp the crust and can't help thinking DARN. But you are too polite and/or r
 @verbs
 #ttc-table-of-presto-attacks-rand
 >attack rand
-WRONG
+Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
 @nud
 #ttc-table-of-presto-done-rejects-leo
@@ -1076,7 +1081,7 @@ There's no sense in making the vile veil worse than it is.
 #ttc-table-of-presto-done-rejects-rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
-#rettc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-dirge-ridge-nudges-leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
 
@@ -1127,6 +1132,11 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 #OK-APOSTROPHE
 /You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
 
+@hints
+#+ttc-table-of-presto-hint-done-notes-tsar-star
+>hint tsar star
+The tsar star has done its duty.
+
 >score
 {$SCOS}
 
@@ -1140,7 +1150,7 @@ They're on your side. They will fight when they need to.
 #ttc-table-of-presto-done-rejects-wzup
 >asshuwp
 /You don't need to greet (Rand and Leo|Leo and Rand) again.
-#rettc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-dirge-ridge-nudges-leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
@@ -1226,16 +1236,16 @@ Just say what you want to shoot.
 #ttc-table-of-presto-done-rejects-boing-go-bin
 >binog
 You can't force another revelation, but you don't need to.
-#rettc-table-of-marines-seminar-nudges-popgun
+#+ttc-table-of-marines-seminar-nudges-popgun
 >popgnu
 The popgun is just fine.
-#rettc-table-of-marines-seminar-nudges-spoilt
+#+ttc-table-of-marines-seminar-nudges-spoilt
 >spoitl
 The popgun is just fine.
-#rettc-table-of-marines-seminar-nudges-serial
+#+ttc-table-of-marines-seminar-nudges-serial
 >serila
 You got the boing-go bin working.
-#rettc-table-of-marines-seminar-nudges-number
+#+ttc-table-of-marines-seminar-nudges-number
 >numbre
 You got the boing-go bin working.
 
@@ -1331,7 +1341,7 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 
 @nud
 >s
-#rettc-table-of-grey-gyre-nudges-ether
+#+ttc-table-of-grey-gyre-nudges-ether
 >ethre
 The ether is gone. You can just go back north.
 >n
@@ -1408,13 +1418,13 @@ SYKE was another way around the hogs to get the keys.
 #mistake retest for rats
 >rats
 Boy! You miss that tsar star.
-#rettc-table-of-saps'-pass-nudges-mount
+#+ttc-table-of-saps'-pass-nudges-mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
-#rettc-table-of-saps'-pass-nudges-deil
+#+ttc-table-of-saps'-pass-nudges-deil
 >deli
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
-#rettc-table-of-saps'-pass-nudges-deils
+#+ttc-table-of-saps'-pass-nudges-deils
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
@@ -1484,7 +1494,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#rettc-table-of-dirge-ridge-nudges-leonard
+#+ttc-table-of-dirge-ridge-nudges-leonard
 >leonadr
 /(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
 #ttc-table-of-saps'-pass-nudges-harpings
@@ -1638,7 +1648,7 @@ You're all done here in the Phat Path. Go north to the shack.
 Maybe if
 
 @nud
-#rettc-table-of-saps'-pass-nudges-yrnet
+#+ttc-table-of-saps'-pass-nudges-yrnet
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
@@ -1707,6 +1717,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >screen
 by one point
 }}SCORE++
+Only one more piece of hardware is needed, and the computer will work.
 
 @spoi
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
@@ -1741,13 +1752,12 @@ You'll know what to do with the sticks when you're ready to program
 
 @nud
 >s
-#rettc-table-of-hacks'-shack-nudges-yrnet
+#+ttc-table-of-hacks'-shack-nudges-yrnet
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
 >n
 
 @max
-##balance undos
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
 !Taken.
@@ -1756,26 +1766,13 @@ You take it. You don't need to, but it'd be nice to have handy.
 >compile
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
+You add the information to your pedanto-notepad under FLIPS.
 >undo
 >n
 >compile
 !by one point
 Good idea, but tough to program without something to type on.
->purloin keyboard
->compile
-!by one point
-Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
-##nobalance
->n
-#preefcheck im le cop polemic
->pf
-You can COMPILE once you've started coding.
->undo
->undo
->undo
->undo
->undo
->undo
+You add the information to your pedanto-notepad under FLIPS.
 >undo
 
 @nud
@@ -1796,7 +1793,7 @@ The locs aren't that gangsta, and neither are you. And that's a good thing.
 >slap cock
 The locs aren't that gangsta, and neither are you. And that's a good thing.
 >s
-#rettc-table-of-hacks'-shack-nudges-summit
+#+ttc-table-of-hacks'-shack-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
 >n
@@ -2152,6 +2149,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >keyboard
 Your score has just gone up by one point
 }}SCORE++
+You can now do computery things unimpeded! Hooray!
 
 >score
 {$SCOS}
@@ -2160,16 +2158,6 @@ Your score has just gone up by one point
 #slider test for tab
 >abt
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
-#compile, but don't put keyboard on slab (auto-no)
->compile
-!by one point
-Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
->no
-!Done. You can try to COMPILE again, now.
-Ok, but by "may want" I meant "really probably need to."
->undo
 
 @nud
 #mistake test for bat
@@ -2185,22 +2173,15 @@ Nothing happens. It's probably just the TBA you need to work with, which certain
 >yek
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
 
->put keyboard on slab
-Only one more piece of hardware is needed, and the computer will work.
-
 @max
->compile
-Good idea, but first, you may want to put the screen on the slab. Do so now?
->no
-!Done. You can try to COMPILE again, now.
-Ok, but by "may want" I meant "really probably need to."
-
+>put keyboard on slab
+It already is!
+\\
 >put screen on slab
-!It already is
-You can now do computery things unimpeded! Hooray!
+It already is!
 
 @nud
-#rettc-table-of-hacks'-shack-nudges-computer
+#+ttc-table-of-hacks'-shack-nudges-computer
 >compuert
 You need to fix the program in the computer.
 
@@ -2219,6 +2200,8 @@ The Be-Troo E-Robot isn't interested in monologues.
 >compile
 !by one point
 A DISK, I'D ASK pops up. You realize that you can change the skid back, due to the lossless compression algorithm.
+You add the information to your pedanto-notepad under FLIPS.
+>undo
 
 >disk
 
@@ -2226,6 +2209,8 @@ A DISK, I'D ASK pops up. You realize that you can change the skid back, due to t
 >compile
 !by one point
 A DISK, I'D ASK pops up. You realize that the disk would fit fine.
+You add the information to your pedanto-notepad under FLIPS.
+>undo
 
 >put disk in drive a
 
@@ -2234,6 +2219,8 @@ A DISK, I'D ASK pops up. You realize that the disk would fit fine.
 !by one point
 #OK-APOSTROPHE
 You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
+You add the information to your pedanto-notepad under FLIPS.
+>undo
 
 @sli
 #slider test for reboot
@@ -2290,9 +2277,12 @@ Your score has just gone up by one point
 >compile
 !by one point
 You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+You add the information to your pedanto-notepad under FLIPS.
 >compile
 !by one point
 You need to get rid of that uppercase to successfully compile your code.
+>undo
+>undo
 
 >put lock on keyboard
 fits in perfectly
@@ -2348,9 +2338,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. Tha
 >compile
 !by one point
 You get a NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.
+You add the information to your pedanto-notepad under FLIPS.
 >compile
 !by one point
 That stupid NEED IF-DEFINE and that peels speel, still.
+!You add the information to your pedanto-notepad under FLIPS.
+>undo
+>undo
 
 @sli
 #slider test for sleep
@@ -2390,6 +2384,7 @@ by one point
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
 @max
+##balance undos
 >abstract cola to phat path
 >purloin coal
 >abstract mug to phat path
@@ -2400,6 +2395,7 @@ The process of debugging is going to take a while. You will need some sort of en
 #preefcheck bub dude egg
 >pf
 You weren't ready to DEBUG yet.
+>undo
 >undo
 >undo
 >undo
@@ -2500,7 +2496,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#rettc-table-of-hacks'-shack-nudges-drive
+#+ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Drive E, though.
 
@@ -2534,7 +2530,7 @@ DEBUG INFO: min-up codepath
 {$SCOMAX}
 
 @nud
-#rettc-table-of-hacks'-shack-nudges-drive
+#+ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
 #mistake retest for redive
@@ -2543,10 +2539,10 @@ Deriving was tricky enough.
 #ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
-#rettc-table-of-hacks'-shack-nudges-tbakey
+#+ttc-table-of-hacks'-shack-nudges-tbakey
 >tbakye
 You already did enough with the TAB key.
-#rettc-table-of-hacks'-shack-nudges-yke
+#+ttc-table-of-hacks'-shack-nudges-yke
 >yek
 You already did enough with the TAB key.
 #ttc-table-of-presto-done-rejects-tba-key
@@ -2594,7 +2590,7 @@ You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. T
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
 @nud
-#rettc-table-of-presto-done-rejects-mug
+#+ttc-table-of-presto-done-rejects-mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
 #ttc-table-of-presto-nudges-lcao
@@ -2623,7 +2619,7 @@ DEBUG INFO: USB hinting.
 #ttc-table-of-presto-done-rejects-bub-dude-egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
-#rettc-table-of-hacks'-shack-nudges-algorithms
+#+ttc-table-of-hacks'-shack-nudges-algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
 

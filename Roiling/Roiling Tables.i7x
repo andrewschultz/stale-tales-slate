@@ -740,10 +740,8 @@ this is the post-reboot rule:
 	move peels speel to Hacks Shack;
 
 this is the post-censer-screen rule:
-	if Hacks Shack is visited and player is not in Hacks Shack:
-		say "That screen would go great with Drive A in the shack. So you go back there.";
-		go-back Hacks Shack;
-		now player has screen;
+	say "You realize you might trip over the screen if you leave on the floor. Fortunately, the labs slab is just the place to hoist [the screen] so it's useful! And you do.";
+	try putting the screen on the labs slab;
 
 this is the pre-yak-keyboard rule:
 	if yak-around:
@@ -754,32 +752,22 @@ this is the pre-yak-keyboard rule:
 
 this is the post-yak-keyboard rule:
 	moot leaf;
+	if labs slab is touchable, try putting keyboard on labs slab;
 
 this is the pre-polemic-compile rule:
 	if player is not in Hacks Shack:
-		say "There is no computer around. You probably want to go back to the Hacks['] Shack for this.";
+		say "There is no computer around. You probably want to go back to the [shack] for this.";
 		preef Im Le Cop polemic instead;
-	if keyboard is not touchable:
-		say "Good idea, but tough to program without something to type on.";
+	if keyboard is not touchable or computer screen is not touchable:
+		say "Good idea, but tough to program without something to [if computer screen is touchable]type on[else if keyboard is touchable]read code from[else]type on or read code from[end if].";
 		preef Im Le Cop polemic instead;
-	if computer screen is not touchable:
-		say "Good idea, but tough to program without something to read code off.";
-		preef Im Le Cop polemic instead;
-	if keyboard is not on slab:
-		say "Good idea, but first, you probably want to put the keyboard on the slab. Do so now?";
-		if the player regex-prompt-consents:
-			now keyboard is on slab;
+	if keyboard is not on slab or computer screen is not on slab:
+		say "Good idea, but first, you probably want to put [list of slabbable things] on the slab. Do so now?";
+		if the player dir-consents:
+			now all slabbable things are on slab;
 			say "Done. You can try to [b]COMPILE[r] again, now.";
 		else:
-			say "Ok, but by 'may want' I meant 'really probably need to.'";
-		preef Im Le Cop polemic instead;
-	if computer screen is not on slab:
-		say "Good idea, but first, you may want to put the screen on the slab. Do so now?";
-		if the player regex-prompt-consents:
-			now computer screen is on slab;
-			say "Done. You can try to [b]COMPILE[r] again, now.";
-		else:
-			say "Ok, but by 'may want' I meant 'really probably need to.'";
+			say "Okay, but by 'may want' I meant 'really probably need to.'";
 		preef Im Le Cop polemic instead;
 	if disk is not in Drive A:
 		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]."; [bold-ok]
@@ -836,6 +824,11 @@ to say sub-bus:
 	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your [b]USB[r] turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Esoteric Coteries way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
 
 section presto auxiliary
+
+definition: a thing (called th) is slabbable:
+	unless th is touchable, no;
+	if th is keyboard or th is computer screen, yes;
+	no;
 
 to say why-2-3:
 	if player does not have popgun:
@@ -3045,9 +3038,8 @@ hurt hog	"The hurt hog has been healed. You can do no more for it."
 table of presto hint-done-notes
 hint-entry	advice-entry
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if Marines Seminar Remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]."
-tsar star	"[if Marines Seminar Remains is visited]The tsar star has done its duty[else]Wearing the tsar star may help you get the authority to get by someone else who knows about decorations[end if]."
+tsar star	"[if Marines Seminar Remains is visited]The tsar star has done its duty[else]Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly[end if]."
 boing go bin	"The boing-go bin works fine now."
-maze walls	"The walls hold no great secrets beyond a clue to volt maze's essence itself."
 log ons letters	"[other-let]."
 alert letters	"[other-let]."
 ought letters	"[other-let]."
@@ -3345,7 +3337,7 @@ book presto
 table of presto scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
-n-t-air	true	false	false	false	"Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze."
+n-t-air	true	false	false	false	"Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze. You know, for style points."
 n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
 boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!"
 sods gone odes song	true	true	false	false	"My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
@@ -4245,7 +4237,7 @@ Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges 
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or][b]DARN[r]![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in Hacks Shack]The sign provides a clue how to get rid of [l-n-r] so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]" [bold-ok]
 wzup	"[wash-up]"	--	"WHASSUP"
 sods gone odes song	"[one of]The odes song is optional, but you can deal with it.[plus][or]A non-profane interjection expressing exasperation works here.[plus][or]The solution to the odes song is usually prefaced my 'my.'[plus][or][b]GOODNESS[r].[minus][cycling]"
-popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing-go bin, used to hold ammo, is broken.[end if]"
+popgun	"[if ether is moot]The popgun has done its job.[else if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed and player has dart]You can just put the dart in the popgun.[else if boing is reflexed]You need to find something to put in the popgun.[else]The popgun is broken. More precisely, its boing-go bin, used to hold ammo, is broken.[end if]"
 boing go bin	"[one of]So, the boing-go bin doesn't go [b]BOING[r].[plus][or]A eureka moment could change the boing-go bin's brokenness.[plus][or]Or, if you notice the popgun's serial number...[plus][or]...and convert the numbers to letters...[plus][or][b]BINGO[r].[minus][cycling]"	--	"BINGO"
 sport ports	"[one of]The sport ports can give you a bonus point if you look at them right.[plus][or]This is a foreign language way to say 'cheers' to people who can navigate them.[plus][or][b]PROST[r].[minus][cycling]"	--	"PROST"
 harpings phrasing	"[one of]The sign gives you three ways to tell [l-n-r] they've done their job[if rebuked is true], and they've been persistently loyal, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to [l-n-r], but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch [l-n-r]?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]" [bold-ok]
