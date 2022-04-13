@@ -21,12 +21,14 @@
 Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
 !by one point
 #preefcheck rodney
+#ttc-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER once he's lost enough followers.
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 !by one point
 #preefcheck rodney retry
+#+ttc-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
@@ -147,7 +149,7 @@ Score in a scenario: 8 out of 57 total points in the current region, Towers. Low
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
-#preefcheck curst palace
+#ttc-table-of-towers-prefigurings-curst-palace
 >pf
 You can make the Curst Palace SPECTACULAR once you're near it.
 
@@ -414,14 +416,14 @@ Obscurest Subsector
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
-#preefcheck fries us fissure
+#ttc-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
 #pre-unlocked rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
-#preefcheck luck node
+#ttc-table-of-towers-prefigurings-luck-node
 >pf
 The luck node needs to be UNLOCKED, but what you had before didn't work.
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
@@ -449,6 +451,7 @@ by one point
 >score
 Score in a scenario: 40 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
+#ttc-table-of-towers-prefigurings-luck-node
 >pf
 !UNLOCKED
 !Fries-Us Fissure

@@ -1497,7 +1497,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 >push repeat
 >gt subsector
 
-#re#ttc-table-of-towers-spechelp-fissure
+#+ttc-table-of-towers-spechelp-fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
@@ -1781,7 +1781,7 @@ The saver is hopelessly no-frills. It'll never be anything better. But you might
 Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a decent omen.
 >gs
-#re#ttc-table-of-towers-spechelp-atblock
+#+ttc-table-of-towers-spechelp-atblock
 >attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.

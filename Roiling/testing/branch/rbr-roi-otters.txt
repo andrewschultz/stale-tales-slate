@@ -523,7 +523,7 @@ Your powers aren't back yet, but if they were, that'd definitely tip the players
 >although
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
 !by one point
-#preefcheck ghoul hat
+#ttc-table-of-otters-prefigurings-ghoul-hat
 >pf
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >ergo
@@ -535,7 +535,7 @@ That feels right, but it also feels like you're getting way ahead of yourself, t
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
 !by one point
-#preefcheck sea cube
+#ttc-table-of-otters-prefigurings-sea-cube
 >pf
 You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
 #pre-eels-else rule
@@ -909,6 +909,7 @@ You needed to deal with all the players to knock them back a peg.
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
 #brackets ok
 ![You add the information to your pedanto-notepad under FLIPS.]
+#ttc-table-of-otters-prefigurings-eels
 >pf
 You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
 >undo
@@ -919,6 +920,7 @@ You can tell the eels in the sea cube BECAUSE once you have material evidence yo
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
 #brackets ok
 ![You add the information to your pedanto-notepad under FLIPS.]
+#+ttc-table-of-otters-prefigurings-ghoul-hat
 >pf
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >undo
@@ -1015,7 +1017,7 @@ The maples are harmless.
 >atom
 That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.
 !by one point
-#preefcheck atmo moat
+#ttc-table-of-otters-prefigurings-atmo-moat
 >pf
 You can collapse the atmo moat to an ATOM once you have the power.
 
@@ -1023,7 +1025,7 @@ You can collapse the atmo moat to an ATOM once you have the power.
 #pre-medals-quickly rule
 >quickly
 You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
-#preefcheck medals
+#ttc-table-of-otters-prefigurings-medals
 >pf
 The medals can help you go QUICKLY once they are restored enough.
 
@@ -1148,7 +1150,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a d
 >else
 You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
 !by one point
-#preefcheck eels
+#+ttc-table-of-otters-prefigurings-eels
 >pf
 You can tell the eels ELSE once you've made progress with the sea cube.
 
@@ -1330,7 +1332,13 @@ by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
-{--max}#preefcheck gore ogre\\>pf\\You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
+
+@max
+#ttc-table-of-otters-prefigurings-gore-ogre
+>pf
+You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
+
+@!min
 >score
 {$SCOS}
 
@@ -2378,19 +2386,19 @@ Gretta's gone. Fulfill your destiny to the west.
 >raptor
 !by one point
 "Awk! I'd just kill you in that form. Try that around some bad guys."
-#preefcheck parrot
+#ttc-table-of-otters-prefigurings-parrot
 >pf
 You can change the parrot back to a RAPTOR to defeat a formidable foe.
 #pre-whistle-deeply rule
 >deeply
 !by one point
-#preefcheck whistle
+#ttc-table-of-otters-prefigurings-whistle
 >pf
 You can play the whistle DEEPLY once the parrot has given it to you.
 #pre-whistle-deeply rule retry
 >deeply
 The parrot still has the whistle. You can't play the whistle until it's yours.
-#preefcheck whistle
+#+ttc-table-of-otters-prefigurings-whistle
 >pf
 You can play the whistle DEEPLY once the parrot has given it to you.
 
@@ -2758,7 +2766,7 @@ Elvira summons her monsters to attack as you learn to play the whistle. "Sorries
 #+ttc-table-of-otters-nudges-weltish
 >whistel
 You don't see anything happen. Then you note red writing on the whistle which might tell more about it.
-#re#ttc-table-of-otters-spechelp-weltish-whistle
+#+ttc-table-of-otters-spechelp-weltish-whistle
 >deepyl
 The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.

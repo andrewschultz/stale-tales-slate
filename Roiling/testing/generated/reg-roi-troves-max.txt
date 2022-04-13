@@ -58,7 +58,7 @@ Score in a scenario: 4 out of 30 total points in the current region, Troves. Low
 >spot
 !by one point
 That should work, but you--your eyes are wandering now. You're not taking it all in. Around the post, the sob ever verbose echoes aid distracts you. You must deal with it first!
-#preefcheck stop post
+#ttc-table-of-troves-prefigurings-stop-post
 >pf
 You should SPOT once you're able to focus better.
 
@@ -102,8 +102,8 @@ Score in a scenario: 10 out of 30 total points in the current region, Troves. Lo
 >recall
 Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.
 !by one point
+#ttc-table-of-troves-prefigurings-l-clear-cellar
 >pf
-#preefcheck l clear cellar
 You can RECALL the cellar once you're a little less distracted.
 
 >believe
@@ -151,7 +151,7 @@ Score in a scenario: 15 out of 30 total points in the current region, Troves. Lo
 >deal
 That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.
 !by one point
-#preefcheck LEAD
+#ttc-table-of-troves-prefigurings-lead
 >pf
 You can DEAL once you've gotten an emotional boost.
 
@@ -229,7 +229,7 @@ Score in a scenario: 26 out of 30 total points in the current region, Troves. Lo
 >recant
 !by one point
 It ... you know you should drink the Trance Nectar, for the good of society and the economy, but something nags at you. You've come to loathe the Trance Nectar, and yet you can't quite break free of it. With
-#preefcheck trance nectar
+#ttc-table-of-troves-prefigurings-trance-nectar
 >pf
 You can RECANT once you feel less watched.
 #here we test RAMBLE on the alternate blamer

@@ -32,6 +32,9 @@ Score in a scenario: 1 out of 15 total points in the current region, Ordeal Relo
 >satchel
 Your score has just gone up by one point.
 
+# turn cheats on
+>t
+
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to what must be a basement, even if it's called something different.
 Your score has just gone up by two points
@@ -166,6 +169,7 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 >no
 "Thank you for respecting my presence and purpose here."
 !by one point
+#ttc-table-of-ordeal-reload-prefigurings-respect-specter
 >pf
 You can get a SCEPTER from the respect specter at any time.
 >scepter

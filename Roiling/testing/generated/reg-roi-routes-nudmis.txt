@@ -190,22 +190,6 @@ It's the whole side art you need to deal with.
 >tar
 It's the whole side art you need to deal with.
 
-#pre-side-art-astride rule
->astride
-You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
-!by one point
-#preefcheck side art
->pf
-You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
-#pre-sitanag-against rule
->against
-!by one point
-You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
-You add the information to your pedanto-notepad under FLIPS.
-#preefcheck sit a nag
->pf
-You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
-
 >inside
 Your score has just gone up by one point
 
@@ -576,12 +560,6 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 >enchb
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
-#re#ttc-table-of-routes-spechelp-anti-sag-sit-a-nag
->againts
-You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
-!DEBUG ONLY: You feel a slight psychic push-pull coming from
-#the sit a nag. That's a decent omen. ??
-
 #ttc-table-of-same-mesa-nudges-anti
 >anit
 The whole anti-sag sit-a-nag.
@@ -627,12 +605,6 @@ You can't hide from Ian Gast like that, right now.
 #ttc-table-of-same-mesa-nudges-tirade
 >tiraed
 There's more than one tirade
-
-#re#ttc-table-of-routes-spechelp-side-art
->astried
-You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
-!DEBUG ONLY: You feel a slight psychic push-pull coming from
-#the side art. That's a decent omen. ??
 
 #nudges for ides
 >ides
@@ -1022,7 +994,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
-#preefcheck hurt hog
+#ttc-table-of-routes-prefigurings-hurt-hog
 >pf
 You can go THROUGH once you've managed to deal with the bent ewe.
 
@@ -1051,7 +1023,7 @@ It's more the content of the patters that you could deal with, if you wanted.
 >betwene
 The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
-#re#ttc-table-of-routes-spechelp-hurt-hog
+#+ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 #ttc-table-of-sonancy-canyons-nudges-spheric

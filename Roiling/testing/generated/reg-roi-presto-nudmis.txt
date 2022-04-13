@@ -97,7 +97,7 @@ You don't need to riff on any location names to win the game, unless there's not
 >phooye
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
-#re#ttc-table-of-presto-spechelp-ye-hoop
+#+ttc-table-of-presto-spechelp-ye-hoop
 >poho
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
@@ -297,7 +297,7 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 
 >n
 >w
-#re#ttc-table-of-presto-spechelp-maze-walls
+#+ttc-table-of-presto-spechelp-maze-walls
 >mazeltvo
 The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.

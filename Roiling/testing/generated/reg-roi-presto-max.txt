@@ -21,7 +21,7 @@ Grey Gyre
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
-#preefcheck plebe
+#ttc-table-of-presto-prefigurings-plebe
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.
 
@@ -55,7 +55,7 @@ Char Arch
 >keyboard
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
-#preefcheck bored yak
+#ttc-table-of-presto-prefigurings-drab-yoke
 >pf
 You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
@@ -129,7 +129,7 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 #pre-ether-there rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
-#preefcheck ether
+#ttc-table-of-presto-prefigurings-ether
 >pf
 You can shout THERE once you have the force to win the fight in the ether.
 
@@ -341,6 +341,10 @@ You take it. You don't need to, but it'd be nice to have handy.
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
 You add the information to your pedanto-notepad under FLIPS.
+#ttc-table-of-presto-prefigurings-im-le-cop-polemic
+>pf
+You can COMPILE once you've started coding.
+>undo
 >undo
 >n
 >compile
@@ -364,7 +368,7 @@ Score in a scenario: 25 out of 41 total points in the current region, Presto. Lo
 #pre-reboot rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
-#preefcheck be troo e robot
+#ttc-table-of-presto-prefigurings-be-troo-e-robot
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
@@ -481,7 +485,7 @@ fits in perfectly
 >sleep
 You haven't yet made anywhere comfortable to sleep.
 You add the information to your pedanto-notepad under FLIPS.
-#preefcheck peels speel
+#ttc-table-of-presto-prefigurings-peels-speel
 >pf
 You can SLEEP once you've gotten a good start on your coding task.
 
@@ -517,7 +521,7 @@ by one point
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
-#preefcheck bub dude egg
+#ttc-table-of-presto-prefigurings-bub-dude-egg
 >pf
 You weren't ready to DEBUG yet.
 >undo

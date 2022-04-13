@@ -66,7 +66,7 @@ It smells a bit stinky here, but more pressingly, it just FEELS stinky
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
-#preefcheck plebe
+#ttc-table-of-presto-prefigurings-plebe
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.
 
@@ -193,7 +193,7 @@ You don't need to riff on any location names to win the game, unless there's not
 >phooye
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
-#re#ttc-table-of-presto-spechelp-ye-hoop
+#+ttc-table-of-presto-spechelp-ye-hoop
 >poho
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
@@ -409,7 +409,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >keyboard
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
-#preefcheck bored yak
+#ttc-table-of-presto-prefigurings-drab-yoke
 >pf
 You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
@@ -537,7 +537,7 @@ DEBUG INFO: volt maze hinting.
 ##balance undos
 >n
 >w
-#re#ttc-table-of-presto-spechelp-maze-walls
+#+ttc-table-of-presto-spechelp-maze-walls
 >mazeltvo
 The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.
@@ -918,7 +918,7 @@ You gulp the crust and can't help thinking BINGO. But you are too polite and/or 
 #pre-ether-there rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
-#preefcheck ether
+#ttc-table-of-presto-prefigurings-ether
 >pf
 You can shout THERE once you have the force to win the fight in the ether.
 
@@ -1816,6 +1816,10 @@ You take it. You don't need to, but it'd be nice to have handy.
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
 You add the information to your pedanto-notepad under FLIPS.
+#ttc-table-of-presto-prefigurings-im-le-cop-polemic
+>pf
+You can COMPILE once you've started coding.
+>undo
 >undo
 >n
 >compile
@@ -2083,7 +2087,7 @@ What you want needs to help programming more than water or French champagne or d
 #pre-reboot rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
-#preefcheck be troo e robot
+#ttc-table-of-presto-prefigurings-be-troo-e-robot
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
@@ -2355,7 +2359,7 @@ It'd sort of stink if a caps lock button broke in real life, so, no.
 >sleep
 You haven't yet made anywhere comfortable to sleep.
 You add the information to your pedanto-notepad under FLIPS.
-#preefcheck peels speel
+#ttc-table-of-presto-prefigurings-peels-speel
 >pf
 You can SLEEP once you've gotten a good start on your coding task.
 
@@ -2446,7 +2450,7 @@ You got things compiling. No more worries there.
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
-#preefcheck bub dude egg
+#ttc-table-of-presto-prefigurings-bub-dude-egg
 >pf
 You weren't ready to DEBUG yet.
 >undo

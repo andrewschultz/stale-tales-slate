@@ -941,7 +941,7 @@ Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lo
 #+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
-#re#ttc-table-of-oyster-spechelp-crate
+#+ttc-table-of-oyster-spechelp-crate
 >craet
 The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
@@ -1119,27 +1119,15 @@ Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lo
 >hepa
 You don't need or want to futz with one heap to make things super-extra-perfect.
 
-#re#ttc-table-of-oyster-spechelp-lance
+#+ttc-table-of-oyster-spechelp-lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
 >abstract wipes to lean lane
-#re#ttc-table-of-oyster-spechelp-lance
+#+ttc-table-of-oyster-spechelp-lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
-#pre-clean-lance rule
->clean
-Good idea, but you have nothing that could clean the lance effectively.
-#preefcheck lance
->pf
-You'll want to CLEAN the lance once you have something to wash it with.
->clean
-Good idea, but you have nothing that could clean the lance effectively.
->undo
->undo
->undo
->undo
 >undo
 >undo
 

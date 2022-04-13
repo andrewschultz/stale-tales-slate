@@ -3986,6 +3986,106 @@ viewer	"You've done enough reviewing[win-north]."
 
 to say win-north: say ", and now you [if gate-level is 2]can just go north[else]need to try something else[end if]"
 
+volume tables of prefiguring
+
+to say now-once-medals: say "[if player has medals]now[else]once[end if] you have material evidence you're trustworthy"
+
+node-preef is a truth state that varies.
+
+duck-preef is a truth state that varies.
+
+to say now-once of (ts - a truth state): say "[if ts is true]now[else]once[end if]"
+
+to say now-gast-gone: say "[now-once of whether or not Gast is moot] things are a bit more settled"
+
+to say now-if-dealt of (th - a thing): say "[if th is reflexed or th is moot]now[else]once[end if]"
+
+to say now-if-scored of (num - a number): say "[if num > 0]now[else]once[end if]"
+
+to say now-once-gore-ogre:
+	if player does not have medals:
+		say "[now-once-medals]";
+	else:
+		say "[now-if-dealt of ghoul hat] you've helped Mr. Lee deal with the ghoul hat";
+
+to say now-once-eels-else:
+	if player does not have medals:
+		say "[now-once-medals]";
+	else:
+		say "[now-if-dealt of sea cube] you've made progress with the sea cube"
+
+to decide whether compile-yet:
+	if caps lock is not part of the keyboard, no;
+	if peels speel is reflexive, no;
+	if disk is not in drive a, no;
+	if e robot is reflexive, no;
+	yes;
+
+table of ordeal reload prefigurings
+preflip	pretodo
+respect specter	"You can get a [b]SCEPTER[r] from the respect specter at any time."
+
+table of routes prefigurings
+preflip	pretodo
+sit a nag	"You can lean [b]AGAINST[r] the [sit a nag] [now-once of whether or not list o toils is examined] you feel less fear and more purpose."
+side art	"You can sit [b]ASTRIDE[r] the [sit a nag] [now-if-dealt of sit a nag] you have a reason to."
+lairage regalia	"You can go [b]ACROSS[r] the lairage regalia to Oscar's SOS Arc [now-gast-gone]."
+adsorbing signboard	"You can go [b]PAST[r] the adsorbing signboard to Pat's Stap [now-gast-gone]."
+worst ad	"You can go [b]TOWARDS[r] the worst ad [now-gast-gone]."
+hurt hog	"You can go [b]THROUGH[r] [now-if-dealt of bent ewe] you've managed to deal with the bent ewe."
+
+table of troves prefigurings
+preflip	pretodo
+stop post	"You should [b]SPOT[r] [now-if-dealt of sob ever verbose] you're able to focus better."
+l clear cellar	"You can [b]RECALL[r] the cellar [now-if-scored of bee-score] you're a little less distracted."
+LEAD	"You can [b]DEAL[r] [now-if-scored of bedroom-solve] you've gotten an emotional boost."
+trance nectar	"You can [b]RECANT[r] [now-if-scored of mbb-sis-points] you feel less watched."
+
+table of presto prefigurings
+preflip	pretodo
+plebe	"You can shout [b]BLEEP[r] at the plebe [now-once of whether or not the player wears the tsar star] you look more authoritative."
+ether	"You can shout [b]THERE[r] [now-once of whether or not leo is eager and boing go bin is reflexed] you have the force to win the fight in the ether."
+drab yoke	"You can change the drab yoke to a [b]KEYBOARD[r] [now-once of whether or not yak is moot] it's free of the bored yak[if yak is moot and player is not in hacks shack], but go back to the [shack] first."
+be troo e robot	"You can have [the e robot] [b]REBOOT[r] [now-once of whether or not number of things on labs slab is 4] your computing parts are in place."
+peels speel	"You can [b]SLEEP[r] [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your coding task."
+Im Le Cop Polemic	"You can [b]COMPILE[r] [now-once of whether or not compile-yet] you've started coding."
+BUB DUDE EGG	"You weren't ready to [b]DEBUG[r] yet."
+
+table of oyster prefigurings
+preflip	pretodo
+LOLstr trolls	"You can [b]STROLL[r] past the LOLstr trolls [now-once of whether or not silly-acts is 3] you're not worth stopping."
+frat raft	"You can [if player is not on frat raft]get on the frat raft and [end if][b]FART[r]."
+trout	"You should be able to [b]TUTOR[r] the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
+hunter hunt area	"You can [b]UNEARTH[r] the [b]HAUNTER[r] (from under the [b]HUNTER HUNT AREA[r]) with the right equipment."
+Achers Chaser Arches	"[b]SEARCH[r] the arches."
+crate	"You can [b]REACT[r] to the crate better [now-if-dealt of bogus-trace] you have more data."
+skis	"You can [b]KISS[r] the skis [now-if-dealt of bogus-trace] you are less distracted."
+span pans	"You can [b]SNAP[r] to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
+ruby	"You need to figure how and where to [b]BURY[r] the ruby."
+ol trap	"You can [b]PATROL[r] to disable the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
+bogus-derail	"You can use the dialer to [b]DERAIL[r] [now-if-dealt of papery yapper] the papery yapper is gone."
+bogus-redial	"You can [b]REDIAL[r] the dialer [if pins are off-stage]once you've dialed successfully[else[now-if-dealt of pins] the pins are not in your way[end if]."
+lance	"You'll want to [b]CLEAN[r] the lance [now-once of whether or not player has wipes] you have something to wash it with."
+templar ramplet	"You can [b]TRAMPLE[r] the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
+
+table of towers prefigurings
+preflip	pretodo
+rodney	"Rodney can be [if roddro is false]sent [b]YONDER[r][else if rodyon is false]made [b]DRONEY[r][else]sent [b]YONDER[r] or made [b]DRONEY[r][end if] [now-once of whether or not moot-picaros >= 3] he's lost enough followers."
+luck node	"[if node-preef is true]The luck node[else]Something[end if] needs to be [b]UNLOCKED[r], [if duck-preef is true]with the lone duck[else]but what you had before didn't work[end if]."
+fries us fissure	"The Fries-Us Fissure can be made [b]FUSSIER[r] to some effect [now-once of whether or not duck is midstage] there's something it can fuss at."
+curst palace	"You can make the Curst Palace [b]SPECTACULAR[r] [now-once of whether or not player is in mislit limits] you're near it."
+
+table of otters prefigurings
+preflip	pretodo
+sea cube	"You can tell the eels in the sea cube [b]BECAUSE[r] [now-once-medals]."
+ghoul hat	"You can say [b]ALTHOUGH[r] to Mr. Lee and his ghoul hat [now-once-medals]."
+eels	"You can tell the eels [b]ELSE[r] [now-once-eels-else]."
+gore ogre	"You can say [b]ERGO[r] to deal with the Gore Ogre [now-once-gore-ogre]."
+atmo moat	"You can collapse the atmo moat to an [b]ATOM[r] [now-once of power-back] you have the power."
+medals	"The medals can help you go [b]QUICKLY[r] [now-once of whether or not medals-worthy] they are restored enough."
+parrot	"You can change the parrot back to a [b]RAPTOR[r] to defeat a formidable foe."
+whistle	"You can play the whistle [b]DEEPLY[r] [now-once of whether or not player has whistle] the parrot has given it to you."
+
 volume tables of hintobjs
 
 [parts of the settler first]

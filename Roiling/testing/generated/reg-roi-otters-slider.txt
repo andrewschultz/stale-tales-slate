@@ -287,6 +287,7 @@ Bran Barn
 >although
 by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 11 out of 35 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 35.
 

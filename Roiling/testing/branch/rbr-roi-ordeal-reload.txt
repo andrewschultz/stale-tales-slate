@@ -230,7 +230,7 @@ Not one latch. All of them.
 Your score has just gone up by one point.
 }}SCORE++
 
-@nud
+@nud,max
 # turn cheats on
 >t
 
@@ -1129,6 +1129,7 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 ###skip test checking (this avoids getting a point ... for now)
 "Thank you for respecting my presence and purpose here."
 !by one point
+#ttc-table-of-ordeal-reload-prefigurings-respect-specter
 >pf
 You can get a SCEPTER from the respect specter at any time.
 >scepter

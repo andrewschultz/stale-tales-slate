@@ -17,6 +17,22 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
+#pre-side-art-astride rule
+>astride
+You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
+!by one point
+#ttc-table-of-routes-prefigurings-side-art
+>pf
+You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
+#pre-sitanag-against rule
+>against
+!by one point
+You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
+You add the information to your pedanto-notepad under FLIPS.
+#ttc-table-of-routes-prefigurings-sit-a-nag
+>pf
+You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
+
 >in
 Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time
 
@@ -50,11 +66,11 @@ by one point
 >towards
 !by one point
 >pf
-#preefcheck worst ad
+#ttc-table-of-routes-prefigurings-worst-ad
 You can go TOWARDS the worst ad once things are a bit more settled.
-#preefcheck lairage regalia
+#ttc-table-of-routes-prefigurings-lairage-regalia
 You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
-#preefcheck adsorbing signboard
+#ttc-table-of-routes-prefigurings-adsorbing-signboard
 You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
 >undo
 >undo
@@ -125,11 +141,23 @@ Your score has just gone up by one point
 
 >out
 
+#+ttc-table-of-routes-prefigurings-anti-sag-sit-a-nag
+>againts
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from
+#the sit a nag. That's a decent omen. ??
+
 >against
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+#+ttc-table-of-routes-spechelp-side-art
+>astried
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from
+#the side art. That's a decent omen. ??
 
 >astride
 Your score has just gone up by one point

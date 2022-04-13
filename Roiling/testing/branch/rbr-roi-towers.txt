@@ -80,12 +80,14 @@ This version was written by some lovely chap named ALTERIC.
 Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
 !by one point
 #preefcheck rodney
+#ttc-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER once he's lost enough followers.
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 !by one point
 #preefcheck rodney retry
+#+ttc-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
@@ -719,7 +721,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That'
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
-#preefcheck curst palace
+#ttc-table-of-towers-prefigurings-curst-palace
 >pf
 You can make the Curst Palace SPECTACULAR once you're near it.
 
@@ -2780,14 +2782,14 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
-#preefcheck fries us fissure
+#ttc-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
 #pre-unlocked rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
-#preefcheck luck node
+#ttc-table-of-towers-prefigurings-luck-node
 >pf
 The luck node needs to be UNLOCKED, but what you had before didn't work.
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
@@ -2896,7 +2898,7 @@ Dr. Yow is silent once again.
 (The duck follows, with quick-nag quacking, though you're walking pretty fast.)
 
 @nud
-#re#ttc-table-of-towers-spechelp-fissure
+#+ttc-table-of-towers-spechelp-fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
@@ -2994,6 +2996,7 @@ Nothing needs to be locked here, certainly not the gaol which you unlocked.
 It's not just any duck. But it's served its purpose.
 
 @max
+#ttc-table-of-towers-prefigurings-luck-node
 >pf
 !UNLOCKED
 !Fries-Us Fissure
@@ -3289,7 +3292,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a decent omen.
 >gs
-#re#ttc-table-of-towers-spechelp-atblock
+#+ttc-table-of-towers-spechelp-atblock
 >attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.

@@ -42,7 +42,7 @@ Score in a scenario: 0 out of 43 total points in the current region, Oyster. Low
 >stroll
 The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
-#preefcheck lolstr trolls
+#ttc-table-of-oyster-prefigurings-lolstr-trolls
 >pf
 You can STROLL past the LOLstr trolls once you're not worth stopping.
 >sing
@@ -138,7 +138,7 @@ The oars have no gas, or whatever they might run on
 #pre-raft-fart rule
 >fart
 Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
-#preefcheck frat raft
+#ttc-table-of-oyster-prefigurings-frat-raft
 >pf
 You can get on the frat raft and FART.
 >enter raft
@@ -150,6 +150,7 @@ by one point
 >boast
 You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
 !by one point
+#+ttc-table-of-oyster-prefigurings-frat-raft
 >pf
 !FART
 >undo
@@ -177,7 +178,7 @@ Score in a scenario: 8 out of 43 total points in the current region, Oyster. Low
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
 !by one point
-#preefcheck trout
+#ttc-table-of-oyster-prefigurings-trout
 >pf
 You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
 
@@ -204,7 +205,7 @@ Your score has just gone up by one
 >unearth
 !by one point
 Nothing to unearth a haunter with.
-#preefcheck hunter hunt area
+#ttc-table-of-oyster-prefigurings-hunter-hunt-area
 >pf
 You can UNEARTH the HAUNTER (from under the HUNTER HUNT AREA) with the right equipment.
 
@@ -316,19 +317,19 @@ Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lo
 #pre-crate-react rule
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
-#preefcheck crate
+#ttc-table-of-oyster-prefigurings-crate
 >pf
 You can REACT to the crate better once you have more data.
 #pre-kiss-skis rule
 >kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
-#preefcheck skis
+#ttc-table-of-oyster-prefigurings-skis
 >pf
 You can KISS the skis once you are less distracted.
 #pre-snap-span-pans rule
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
-#preefcheck span pans
+#ttc-table-of-oyster-prefigurings-span-pans
 >pf
 You can SNAP to clear the span pans once everything else is out of the way.
 
@@ -423,6 +424,20 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
 
+#pre-clean-lance rule
+>clean
+Good idea, but you have nothing that could clean the lance effectively.
+added
+#ttc-table-of-oyster-prefigurings-lance
+>pf
+You'll want to CLEAN the lance once you have something to wash it with.
+>clean
+Good idea, but you have nothing that could clean the lance effectively.
+!added
+>undo
+>undo
+>undo
+
 >clean lance
 by one point
 >undo
@@ -460,7 +475,7 @@ Sclerous Closures
 #pre-search-arches rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
-#preefcheck achers chaser arches
+#ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
 SEARCH the arches.
 
@@ -511,7 +526,7 @@ Horned Hedron
 >patrol
 Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
 #detour to test burying ruby without digger
-#preefcheck ol trap
+#ttc-table-of-oyster-prefigurings-ol-trap
 >pf
 You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 >w
@@ -519,7 +534,7 @@ You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 #pre-bury-ruby rule
 >bury
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
-#preefcheck ruby
+#ttc-table-of-oyster-prefigurings-ruby
 >pf
 You need to figure how and where to BURY the ruby.
 >undo
@@ -600,10 +615,12 @@ Tenfold Teflon'd Den Loft
 >derail
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
 !by one point
-#preefcheck dialer
+#ttc-table-of-oyster-prefigurings-bogus-derail
 >pf
 You can use the dialer to DERAIL once the papery yapper is gone.
 #negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
+#ttc-table-of-oyster-prefigurings-bogus-redial
+You can use the dialer to REDIAL once you've dialed successfully.
 >revel
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
@@ -626,7 +643,7 @@ You'd think your lance would make you worthy of climbing the templar ramplet, bu
 >banish lance
 >trample
 You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
-#preefcheck templar ramplet
+#ttc-table-of-oyster-prefigurings-templar-ramplet
 >pf
 You can TRAMPLE the templar ramplet now you have a shiny worthy weapon.
 >undo
@@ -687,7 +704,7 @@ Score in a scenario: 41 out of 43 total points in the current region, Oyster. Th
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
-#preefcheck bogus-redial
+#ttc-table-of-oyster-prefigurings-bogus-redial
 >pf
 You can REDIAL the dialer once the pins are not in your way.
 
