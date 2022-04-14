@@ -94,9 +94,9 @@ understand "craven" as a mistake ("Ok, the Carven Cavern [b]IS[r] pretty craven 
 
 understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.[check-sign-imminent]") when elmo is in location of player and elmo has rifle.
 
-understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.[check-sign-imminent]") when elmo is in location of player and elmo has rifle.
+understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.[paragraph break][check-sign-imminent]") when elmo is in location of player and elmo has rifle.
 
-understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.[check-sign-imminent]") when Elmo is in location of player.
+understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.[paragraph break][check-sign-imminent]") when Elmo is in location of player.
 
 understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates-staple-touch.
 

@@ -520,7 +520,7 @@ routes	"prepositions"
 troves	"passive verbs"
 towers	"adjectives"
 oyster	"active verbs"
-others	"not nouns any more--a different part of speech in each location"
+others	"anagrammable fruits"
 
 every turn when Strip of Profits is visited (this is the region-hint on no score rule):
 	if mrlp is Ordeal Reload and Report Porter Perrot is moot:
@@ -1798,9 +1798,9 @@ volume dialogues, telling and asking about, etc
 this is the general-ask rule:
 	if noun is evil bee, reason-clue instead;
 	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
+	if noun is not a person, try talking to noun instead;
 	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
 	if noun is washed up, washup-clue instead;
-	if noun is not a person, try talking to noun instead;
 	if noun is rehabs basher and pamphlets are off-stage:
 		say "[basher-pamph]";
 		the rule succeeds;
@@ -1869,6 +1869,7 @@ this is the map out sensible talk tries rule:
 	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
 	if noun is span pans, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
 	if noun is mussier misuser, say "The [misuser] can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do." instead;
+	if noun is popstar passport, say "You [if gate-level is 2]got what you needed from [the passport][else]have other ways to consult [the passport][end if]." instead;
 	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
 
 section specific subjects that are not people or objects
@@ -1907,21 +1908,21 @@ check objasking it about (This is the check for object information rule):
 		repeat through reflexive blather table of mrlp:
 			if noun is him-asked entry and there is a him-told entry, say "[him-told entry][line break]" instead;
 	repeat through subject blather table of mrlp:
-		if second noun is the person-subj entry:
-			if noun is the him-who entry, say "[him-say entry][line break]" instead;
+		if second noun is the ask-obj entry:
+			if noun is the speaker entry, say "[what-to-say entry][line break]" instead;
 	if second noun is the player:
 		say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
 	if the chum of the noun is not yourself:
 		repeat through subject blather table of mrlp:
-			if second noun is the person-subj entry:
-				if the chum of the noun is the him-who entry, say "[him-say entry][line break]" instead;
+			if second noun is the ask-obj entry:
+				if the chum of the noun is the speaker entry, say "[what-to-say entry][line break]" instead;
 	if the noun is not to-gen-blather:
-		if the second noun is a person-subj listed in the table of object-blather:
+		if the second noun is a ask-obj listed in the table of object-blather:
 			if there is a right-region entry:
 				if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
-			if noun is not serpent, say "[him-say entry][line break]" instead;
+			if noun is not serpent, say "[what-to-say entry][line break]" instead;
 		repeat through table of default-sub-blather:
-			if noun is him-who entry, say "[him-say entry][line break]" instead;
+			if noun is speaker entry, say "[what-to-say entry][line break]" instead;
 	repeat through general blather table of mrlp:
 		if noun is default-talker entry:
 			say "[gen-blah entry][line break]";
@@ -1948,13 +1949,13 @@ check asking about (This is the check for specific topics rule):
 				now Rand-first is true;
 				say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
 			say "He's in a fighting mood, not a talking mood, right now." instead;
-	if the topic understood is a topic listed in the table of popular-blather:
+	if the topic understood is a topic listed in the table of NPC and topic pairs:
+		if noun is a person and noun is superchatty:
+			if speaker entry is the noun, say "[what-to-say entry][line break]" instead;
+	if the topic understood is a topic listed in the table of topic catchalls:
 		if there is a right-region entry:
 			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
-		say "[him-say entry][line break]" instead;
-	if the topic understood is a topic listed in the table of general-blather:
-		if noun is a person and noun is superchatty:
-			if him-who entry is the noun, say "[him-say entry][line break]" instead;
+		say "[what-to-say entry][line break]" instead;
 	repeat through general blather table of mrlp:
 		if the noun is default-talker entry:
 			say "[gen-blah entry][line break]";
@@ -1963,6 +1964,7 @@ check asking about (This is the check for specific topics rule):
 				say "Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
 				pad-rec "talking";
 			do nothing instead;
+	say "7.";
 	if noun is not a person, say "You can only ask people about things." instead;
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
@@ -2046,8 +2048,8 @@ check objasking a picaro about curst palace: say "[noun] only knows he's suppose
 
 to say pick-keep: say "[if moot-picaros > 0]keep picking[else]pick[end if] off Rodney's gang [if moot-picaros < 3]one by one[else] though you probably don't need to[end if]";
 
-table of default-sub-blather	[dsb] [ask x about Report Porter Perrot] [xxtalk3]
-him-who	him-say
+table of default-sub-blather	[dsb] [any one person's default response to an in-game object] [xxtalk3]
+speaker	what-to-say
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
 aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
 nestor	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
@@ -2067,8 +2069,8 @@ ag-guar is a person that varies. [ag-guar is usually nothing.]
 
 to say around-gone: say "[if Dr Yow is touchable]around[else]gone"
 
-table of general-blather	[ask x about any old unusual subject] [xxtalk5]
-him-who	topic	him-say
+table of NPC and topic pairs	[ask x about any old unusual subject] [xxtalk5]
+speaker	topic	what-to-say
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Report Porter Perrot	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
@@ -2081,19 +2083,19 @@ walleyes	"horned/hedron" or "horned hedron"	"'Nice place, eh? Especially for not
 yapper	"horned/hedron" or "horned hedron"	"'That's where we are.'"
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
-person-subj	right-region	him-say
+ask-obj	right-region	what-to-say
 Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
 settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
 pedanto notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get close[end if]!'"
 sausage	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
 
-table of popular-blather	[ask anyone about specific topic. Yeah, this fizzled.] [xxtalk7]
-topic	right-region	him-say
+table of topic catchalls	[ask anyone about specific topic. Yeah, this fizzled.] [xxtalk7]
+topic	right-region	what-to-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
-"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
+"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Nat Egam, the gateman, is from [shuf]."
 "old warpy" or "old/warpy"	--	"Nobody comes close to understanding Old Warpy. It gets you where you want to go."
-"horned/hedron" or "horned hedron"	--	"[if noun is walleyes]'Nice place, eh? Especially for not being very nice at all!'[else if horned hedron is visited]'Now you've gotten into the Horned Hedron, you don't need any more information.'[else]The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own.[end if]"
+"horned/hedron" or "horned hedron"	oyster	"[if noun is walleyes]'Nice place, eh? Especially for not being very nice at all!'[else if horned hedron is visited]'Now you've gotten into the Horned Hedron, you don't need any more information.'[else]The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own.[end if]"
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the promise imposer is moot if this is not true]
@@ -2527,11 +2529,12 @@ before doing something when Report Porter Perrot is touchable:
 before doing something when Elmo is touchable:
 	if current action is scaning Elmo or current action is examining Elmo, say "[if see-rifle]You worry about making any quick movements, even though he doesn't look...enthusiastic about this situation, almost gazing at his rifle with disgust. Maybe you could get rid of the rifle[else]Talk with him, instead[end if]." instead;
 	if see-rifle:
-		if current action is swearing obscenely or current action is swearing mildly, say "No need for that. Shouldn't be too hard to figure what to do with the rifle." instead;
+		if current action is swearing obscenely or current action is swearing mildly, say "You're not in that big of a mess. Elmo doesn't want to shoot you. That rifle can be neutralized." instead;
 		if current action is ss0ing or current action is ssing, say "You can't afford sudden or elaborate movements, but well, there's that rifle." instead;
 		if current action is singing, say "That's not what the high sign is for." instead;
 		if current action is waiting, continue the action;
 		if current action is going, say "Back inside the Means Manse won't help, and Elmo won't let you by." instead;
+[		if action is blathery, say "Elmo will be more talkative once you disarm him." instead;]
 		if action is procedural, continue the action;
 		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell", say "You aren't brave enough to say 'Disarm, mad sir!'" instead;
 		say "You can't do much with Elmo around." instead;
@@ -3686,7 +3689,7 @@ goshy is a truth state that varies.
 
 definition: a person (called myp) is nonspecific:
 	repeat with myrg running through regions:
-		if myp is a him-who listed in subject blather table of myrg, no;
+		if myp is a speaker listed in subject blather table of myrg, no;
 	if litany of myp is Table of No Conversation and myp is not terse, no;
 	yes;
 
@@ -9016,7 +9019,7 @@ check going inside in Largely All Grey Gallery:
 		if settler-x-nag is false:
 			now settler-x-nag is true;
 			say "You look at your settler and realize you didn't really [b]EXAMINE[r] it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas." instead;
-	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and see red, then feel all yellow as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]He's got a rifle. You choke, 'O heck.' You notice the name on his uniform is Elmo, which gives you some hope.";
+	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and see red, then feel all yellow as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]Seeing the rifle, you choke, 'O heck.' You notice the name on your captor's uniform is Elmo, which gives you some hope.";
 	moot lamp;
 	now Elmo is in Largely All Grey Gallery instead;
 
@@ -9285,7 +9288,7 @@ check talking to:
 
 check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule) : if rifle is not moot, say "'Hostages['] hot gases!' Elmo booms, waving his rifle." instead;
 
-to say hi-sign: if high-sign is true, say ", even flashing a high sign.";
+to say hi-sign: if high-sign is true, say ", even flashing a high sign";
 
 the high sign is boring scenery. description of the high sign is "Elmo appears to be flashing the numbers 3, 4, 2, 5 and 1 in order with his fingers. Then a pause, then he tries it again[one of]. Hm, nothing here five letters except that rifle[or][cycling].". bore-text is "Not much to do but look."
 

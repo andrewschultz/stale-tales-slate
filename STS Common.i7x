@@ -430,7 +430,8 @@ bugsquash is a truth state that varies.
 to abort-if-bugfind:
 	say "Attempting to cut off testing bugsquash = [bugsquash].";
 	if bugsquash is true:
-		say "[word number 1 in the player's command] = first letter, [noun] = noun.";
+		say "[word number 1 in the player's command] = word in player's command, [noun] = noun, [second noun] = second noun, [current action] = current action.";
+		say "Turn off bailing behavior with [b]SQ[r].";
 		if word number 1 in the player's command is not "showme":
 			say "Cutting off testing now.";
 			end the story finally;

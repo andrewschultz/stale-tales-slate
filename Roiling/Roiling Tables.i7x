@@ -2368,7 +2368,7 @@ table of ordeal reload general blather
 default-talker	gen-blah
 Respect Specter	"'My past is not important. I can help you now, though, if you [b]SCAN[r] me.'"
 Report Porter Perrot	"[bug-report]"
-Mole Elmo	"[bug-report]"
+Mole Elmo	"Words are the way out of this, but not talking to Elmo."
 Respect Specter	"'Unfortunately, I don't have time for small talk. The terms of my coming back here were to give helpful advice only if you SCANned me. I need to, um, respect that.'"
 
 table of stores general blather
@@ -2503,7 +2503,7 @@ promise imposer	"The promise imposer seems to talk about everything except what 
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]Why, they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too important[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
+Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too absorbing[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
@@ -2532,7 +2532,7 @@ Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks a
 atmo moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
 Mr Lee	"[if gore ogre is moot]'You have gained my trust and your powers. Go on!'[else if ghoul hat is moot]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
 Gore Ogre	"'EORG EORG EORG!!!'"
-Gretta	"[if player is female]The [players] block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The [players] manage to small-talk you down[end if]. Perhaps you need to get rid of them."
+Gretta	"[if player is female]The [players] block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The [players] manage to small-talk you down[end if]. Gretta probably wouldn't tell you anything important with them around, anyway."
 players	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
 Elmer	"[mon-men]"
@@ -2574,9 +2574,7 @@ volume reflexive blather tables
 
 table of ordeal reload reflexive blather
 him-asked	him-told
-Report Porter Perrot	"Perrot's views would be biased."
-Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
-Respect Specter	"'I'll give you help if you [b]SCAN[r] me. But as an undead, I can't talk much beyond what's allowed.'"
+Respect Specter	"'I'll give you help if you [b]SCAN[r] me. But my bodily life and afterlife situation are irrelevant.'"
 
 table of stores reflexive blather
 him-asked	him-told
@@ -2675,6 +2673,7 @@ gore ogre	--
 le mer	--
 eels	--
 snail	--
+snipe	--
 hornets	--
 racoon	--
 ocelots	"[if ocelots are reflexive]They seem too shy to talk[else]They point to themselves and give a thumbs up[end if]."
@@ -2691,7 +2690,6 @@ Len Craig	"'I'm a businessman. A trader. All kinds of goods to swap. Let's haggl
 ammo gang	"They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around."
 Art Erd	"'Traded a dead rat...' he mumbles."
 Dr Tera	"'Traded a dead rat...' she mumbles."
-passport	--
 
 section others auxiliary
 
@@ -2700,11 +2698,13 @@ check asking Curtis about: if second noun is a fruit, say "'[if second noun is m
 volume specific subject dialogue tables
 
 table of ordeal reload subject blather
-him-who	person-subj	him-say
-Elmo	settler	"This shouldn't be available."
+speaker	ask-obj	what-to-say
+Elmo	Elmo	"'I've got this rifle! And I don't want to use it!'"
+Elmo	Elvira	"Elmo waves his rifle at you."
+Elmo	settler	"You consider pointing your settler back at Elmo, but you realize it isn't an effective weapon. Maybe you should see what you can do about the rifle."
 
 table of stores subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 Rehabs Basher	blabber babbler	"The [Basher] nods enthusiastically."
 Rehabs Basher	Elvira	"'She didn't get to her position of power by using DRUGS.'"
 nestor	Elvira	"'So bogusly repressive!'"
@@ -2718,7 +2718,7 @@ blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which i
 blabber babbler	blabber babbler	"You probably don't have to ask to hear the blabber babbler's personal anecdotes."
 
 table of routes subject blather [ask x about thing they know about]
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'"
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if stupor sprout is off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
@@ -2749,11 +2749,11 @@ to say bh-mw:
 	say "Brother Horbert means well, but he's too unfocused to DO anything by himself"
 
 table of troves subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 Si Reed	Elvira	"Si Reed nods pointedly."
 
 table of presto subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]."
 plebe	Leo	"[if leo is touchable]You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force[else]Leo would be more intimidating if he were nearby[end if]."
 plebe	Rand	"[if rand is touchable]You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force[else]Rand would be more intimidating if he were nearby[end if]."
@@ -2803,7 +2803,7 @@ to say maze-before: say "[maze-you-met]"
 to say maze-you-met: say "Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have"
 
 table of oyster subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 LOLstr trolls	OH NERD HERD NO	"'The horned hedron's even more fun than here. Maybe we can get a job there some day.'"
 LOLstr trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"
 LOLstr trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
@@ -2880,7 +2880,7 @@ to say fish-these-days:
 	say "Aunt Tuna probably has a lecture prepared about fish these days. One that won't help you go hunt a hangout";
 
 table of towers subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'"
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
 denier nereid	Elvira	"The denier nereid mentions Elvira is one person not worth denying."
@@ -2951,7 +2951,7 @@ before objasking agnostic about bot boat:
 book otters
 
 table of otters subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'"
 players	Elvira	"'She is too good even for us. She deserves to have time by herself in the Edictal Citadel to the west.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
@@ -2988,7 +2988,7 @@ to say at-elvira:
 	say " at the name. You quickly give assurance where you stand"
 
 table of others subject blather
-him-who	person-subj	him-say
+speaker	ask-obj	what-to-say
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
@@ -4064,7 +4064,7 @@ span pans	"You can [b]SNAP[r] to clear the span pans [if knob is moot and skis a
 ruby	"You need to figure how and where to [b]BURY[r] the ruby."
 ol trap	"You can [b]PATROL[r] to disable the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
 bogus-derail	"You can use the dialer to [b]DERAIL[r] [now-if-dealt of papery yapper] the papery yapper is gone."
-bogus-redial	"You can [b]REDIAL[r] the dialer [if pins are off-stage]once you've dialed successfully[else[now-if-dealt of pins] the pins are not in your way[end if]."
+bogus-redial	"You can [b]REDIAL[r] the dialer [if pins are off-stage]once you've dialed successfully[else][now-if-dealt of pins] the pins are not in your way[end if]."
 lance	"You'll want to [b]CLEAN[r] the lance [now-once of whether or not player has wipes] you have something to wash it with."
 templar ramplet	"You can [b]TRAMPLE[r] the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
 

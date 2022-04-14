@@ -6,27 +6,31 @@ volume testing - not for release
 
 book basic tests
 
-[these are largely superseded by what I test with Zarf's scripts.]
+[these are largely superseded by what I test with Zarf's scripts. However, they contain paths to reach critical junctures that are most likely to require manual testing.]
 
 chapter combos
 
 [* this tests combinations of big tests e.g. going through each area]
 
-test win-quick with "test ordealdreloadmin/test stores/test routes/test troves/switch patcher/test otters"
+test win-quick with "test ordrelminn/test stores/test routes/test troves/switch patcher/test otters"
 
 test win-q-patchstore with "ts/y/zap store u/zap store w/zap store y/zap store v/zap store p/zap store t/test otters"
 
 test win-q-patchport with "ts/y/routes/towers/oyster/troves/presto/otters/zap routes/zap towers/zap oyster/zap troves/zap spot/zap otters/test otters"
 
-test win-all with "test ordealdreloadmin/test stores/test routes/test troves/test presto/test oyster/test towers/test otters"
+test win-all with "test ordrelmin/test stores/test routes/test troves/test presto/test oyster/test towers/test otters"
 
-test win-plus with "test ordealdreloadmin/test stores/test routes/test troves/test presto/test oyster/test towers/a5/test otters/y/test others"
+test win-plus with "test ordrelmin/test stores/test routes/test troves/test presto/test oyster/test towers/a5/test otters/y/test others"
 
 test win-dial with "cap 2/test win-plus"
 
-test oops-plus with "test ordealdreloadmin-oops/test stores-oops/test towers-oops/test routes-oops/test oyster-oops/test troves-oops/test presto-oops/test otters-oops/y/test others-oops"
-
 chapter ordeal reload
+
+test perrot with "x bookshelf/think/open door/1"
+
+test elmo with "test perrot/5/lamp/satchel/x settler/basement/in"
+
+test specter with "test elmo/3/y"
 
 test ordrelmin with "think/x chair/x shelf/open door/1/5/sleep/lamp/satchel/t/basement/d/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/2/staple/stapler/put staple in stapler/staple departure/in".
 
@@ -143,15 +147,15 @@ does the player mean grilling the player: it is very unlikely.
 carry out grilling:
 	if noun is not a person, say "Try grilling a person, instead." instead;
 	repeat through subject blather table of mrlp:
-		if him-who entry is noun, say "[him-who entry] / [person-subj entry] = [him-say entry][line break]";
+		if speaker entry is noun, say "[speaker entry] / [ask-obj entry] = [what-to-say entry][line break]";
 	repeat through general blather table of mrlp:
 		if default-talker entry is noun, say "[default-talker entry] / = [gen-blah entry][line break]";
 	repeat through reflexive blather table of mrlp:
 		if him-asked entry is noun, say "[him-asked entry] / = [him-told entry][line break]";
 	repeat through table of default-sub-blather: [ these 2 are very rare and come last ]
-		if him-who entry is noun, say "[him-who entry] -> [him-say entry][line break]";
-	repeat through table of general-blather:
-		if him-who entry is noun, say "[him-who entry] -> [him-say entry][line break]";
+		if speaker entry is noun, say "[speaker entry] -> [what-to-say entry][line break]";
+	repeat through table of NPC and topic pairs:
+		if speaker entry is noun, say "[speaker entry] -> [what-to-say entry][line break]";
 
 section spam
 
@@ -166,12 +170,12 @@ carry out spaming:
 	say "You are asking about a topic.";
 	repeat with PEO running through people:
 		now foundyet is false;
-		repeat through table of general-blather:
-			if PEO is him-who entry and topic understood matches topic entry:
-				say "[PEO] x this subject: [him-say entry][line break]";
+		repeat through table of NPC and topic pairs:
+			if PEO is speaker entry and topic understood matches topic entry:
+				say "[PEO] x this subject: [what-to-say entry][line break]";
 				now foundyet is true;
 			if foundyet is false:
-				repeat through table of general-blather:
+				repeat through table of NPC and topic pairs:
 					if default-talker entry is PEO:
 						say "[PEO] x this subject: [gen-blah entry][line break]";
 						now foundyet is true;
@@ -195,8 +199,8 @@ carry out spamobjing:
 		say "Asking [PEO].";
 		now foundyet is false;
 		repeat through subject blather table of mrlp:
-			if him-who entry is PEO and person-subj entry is noun:
-				say "[PEO]-[noun]: [him-say entry][line break]";
+			if speaker entry is PEO and ask-obj entry is noun:
+				say "[PEO]-[noun]: [what-to-say entry][line break]";
 				now foundyet is true;
 			if foundyet is false and noun is PEO:
 				repeat through reflexive blather table of mrlp:
@@ -205,8 +209,8 @@ carry out spamobjing:
 						now foundyet is true;
 			if foundyet is false:
 				repeat through table of default-sub-blather:
-					if him-who entry is PEO:
-						say "[PEO]-[noun]: [him-say entry][line break]";
+					if speaker entry is PEO:
+						say "[PEO]-[noun]: [what-to-say entry][line break]";
 						now foundyet is true;
 		try asking PEO about the topic understood;
 	the rule succeeds;
@@ -1260,16 +1264,16 @@ a person can be blah, elvonly, unelvy or elvy. a person is usually blah.
 carry out elving:
 	let elvies be true;
 	repeat through subject blather table of mrlp:
-		if person-subj entry is Elvira:
-			if him-who entry is unelvy:
-				now him-who entry is elvy;
-			if him-who entry is blah:
-				now him-who entry is elvonly;
+		if ask-obj entry is Elvira:
+			if speaker entry is unelvy:
+				now speaker entry is elvy;
+			if speaker entry is blah:
+				now speaker entry is elvonly;
 		else:
-			if him-who entry is blah:
-				now him-who entry is unelvy;
-			else if him-who entry is elvonly:
-				now him-who entry is elvy;
+			if speaker entry is blah:
+				now speaker entry is unelvy;
+			else if speaker entry is elvonly:
+				now speaker entry is elvy;
 	repeat with PE running through unelvy people:
 		say "[PE] has nothing to say about Elvira.";
 		now elvies is true;
