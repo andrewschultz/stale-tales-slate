@@ -859,7 +859,7 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
 @max
-#+ttc-table-of-routes-prefigurings-anti-sag-sit-a-nag
+#+ttc-table-of-routes-prefigurings-sit-a-nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -940,7 +940,7 @@ You can't hide from Ian Gast like that, right now.
 There's more than one tirade
 
 @max
-#+ttc-table-of-routes-spechelp-side-art
+#ttc-table-of-routes-prefigurings-side-art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -1531,7 +1531,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
 
-@nud
+@max
 #pre-hurt-hog-through rule
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.

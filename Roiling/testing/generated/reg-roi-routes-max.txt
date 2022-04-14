@@ -141,7 +141,7 @@ Your score has just gone up by one point
 
 >out
 
-#+ttc-table-of-routes-prefigurings-anti-sag-sit-a-nag
+#+ttc-table-of-routes-prefigurings-sit-a-nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -153,7 +153,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-#+ttc-table-of-routes-spechelp-side-art
+#ttc-table-of-routes-prefigurings-side-art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -220,6 +220,14 @@ Cripple Clipper
 Your score has just gone up by one point
 
 Sonancy Canyons
+
+#pre-hurt-hog-through rule
+>through
+That could work later, but the hog and ewe don't trust you to go by yet.
+!by one point
+#ttc-table-of-routes-prefigurings-hurt-hog
+>pf
+You can go THROUGH once you've managed to deal with the bent ewe.
 
 >between
 Your score has just gone up by one point

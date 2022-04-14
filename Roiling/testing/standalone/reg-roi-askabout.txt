@@ -1,8 +1,21 @@
 ## reg-roi-askabout.txt
-## asking about for Roiling Original:
 ##
+## ASK X ABOUT Y for A Roiling Original
+## not to be confused with dialog, found in reg-roi-dialog.txt
 ##
-
+## stuff to search for: t argeted (remove space)
+## * only-(region), * region
+##
+## template for adding new stuff (uncomment, of course):
+#
+#>ask q about elvira
+#WRONG
+#>ask q about q
+#WRONG
+#>ask q about xyzzy
+#WRONG
+#>ask q about curst palace
+#WRONG
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -80,13 +93,23 @@ You don't want to go off on any tangents, here.
 >3
 Carven Cavern
 
+#ttc-table-of-ordeal-reload-reflexive-blather-respect-specter
+>ask q about elvira
+WRONG
+>ask q about q
+"I'll give you help if you SCAN me. But my bodily life and afterlife situation are irrelevant."
+>ask q about xyzzy
+WRONG
+>ask q about curst palace
+WRONG
+
 >staple
 Your score has just gone up by one point
 
 >stapler
 Your score has just gone up by one point
 
->staple curtain
+>staple departure
 >in
 Strip of Profits
 
@@ -115,8 +138,10 @@ Your score has just gone up by one point
 >tokers
 Your score has just gone up by one point
 
+#ttc-table-of-stores-reflexive-blather-tokers
 >ask tokers about tokers
 "Missing our friend, man!"
+
 >ask tokers about nestor
 They weep at hearing the name of a lost friend.
 >ask tokers about elvira
@@ -132,6 +157,8 @@ The yawners aren't very answery, and you probably don't need a THC chat. They li
 Your score has just gone up by one point
 >ask nestor about tokers
 Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
+
+#ttc-table-of-stores-reflexive-blather-nestor
 >ask nestor about nestor
 "Friendship, all you need, dude!" Nestor smiles at the tokers.
 >ask nestor about elvira
@@ -142,8 +169,16 @@ Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about store n
 "Man, it was actually kind of sort of like fun in there. Until it wasn't."
 
+>ask tokers about nestor
+WRONG
+
+#+ttc-table-of-stores-reflexive-blather-tokers
+>ask tokers about tokers
+WRONG
+
 >enter mangiest steaming
 
+#ttc-table-of-stores-reflexive-blather-rehabs-basher
 >ask basher about basher
 Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp: SPLAT at you. "It will help you in ways you don't know. And even I don't know." Do you take them?
 "Good choice. Say, if they're good enough, do you think I could become an even better blabber babbler than ... him?"
@@ -160,6 +195,7 @@ He nods at you and the blabber babbler. It's remarkably effective psychological 
 If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff.
 >ask babbler about elvira
 You probably missed the pro-Elvira introduction, which is all for the better.
+#ttc-table-of-stores-reflexive-blather-blabber-babbler
 >ask babbler about babbler
 You probably don't have to ask to hear the blabber babbler's personal anecdotes.
 >ask babbler about xyzzy
@@ -172,6 +208,7 @@ If he actually heard you, he'd yell a stunning rebuke to whatever he could prete
 >inside
 Your score has just gone up by one point
 
+#ttc-table-of-routes-reflexive-blather-brother-horbert
 >ask horbert about horbert
 He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall.
 >ask horbert about gast
@@ -208,6 +245,7 @@ Your score has just gone up by one point
 
 ## rev ali is a person ?? defined for routes only, off-stage, chum of Elvira
 
+#ttc-table-of-routes-reflexive-blather-pat
 >ask pat about pat
 "No dine. Done in. No
 Don't have your guts to explore the seed pit, either."
@@ -233,6 +271,7 @@ Adobe Abode
 >opposite
 Your score has just gone up by one point
 
+#ttc-table-of-routes-reflexive-blather-oscar
 >ask oscar about oscar
 "I'm just this guy, in this house, with that ashtray some self-appointed do-gooder cleaned out. Well, I can make more." Nope, he doesn't seem to have much to say.
 >ask oscar about horbert
@@ -259,6 +298,8 @@ Your score has just gone up by one point
 There's not much dispute over the ownership. And Ian Gast isn't trying to shoo you away. Maybe you should listen to him in general.
 >ask gast about horbert
 Ian Gast is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
+
+#ttc-table-of-routes-reflexive-blather-gast
 >ask gast about gast
 Ian Gast is already talking about himself, his complaints, and so forth.
 >ask gast about elvira
@@ -304,6 +345,16 @@ Boredom Bedroom
 
 Browse Bowers
 
+#ttc-table-of-troves-reflexive-blather-si-reed
+>ask si reed about si reed
+WRONG
+>ask si reed about elvira
+WRONG
+>ask si reed about xyzzy
+WRONG
+>ask si reed about divorces
+WRONG
+
 >desire
 Your score has just gone up by one point
 
@@ -314,6 +365,8 @@ Your score has just gone up by one point
 
 >ask statue about elvira
 Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that.
+
+#ttc-table-of-troves-reflexive-blather-trevis-vister
 >ask statue about statue
 Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that.
 >ask statue about xyzzy
@@ -340,6 +393,8 @@ Taking away a max point.
 >gonear unwary runway
 >ask zo mavelt about elvira
 "I'm safe from her in this maze. I think?"
+
+#ttc-table-of-presto-reflexive-blather-zo-mavelt
 >ask zo mavelt about zo mavelt
 "If you scan me and go north, I'll go away, and someone else might appear."
 >ask zo mavelt about xyzzy
@@ -358,6 +413,8 @@ Taking away a max point.
 >gonear unwary runway
 >ask tom avlez about elvira
 "I'm safe from her in this maze. I think?"
+
+#ttc-table-of-presto-reflexive-blather-tom-avlez
 >ask tom avlez about tom avlez
 "If you scan me and go north, I'll go away, and someone else might appear."
 >ask tom avlez about xyzzy
@@ -377,6 +434,8 @@ Taking away a max point.
 >gonear unwary runway
 >ask tzoma lev about elvira
 "I'm safe from her in this maze. I think?"
+
+#ttc-table-of-presto-reflexive-blather-lev-tzoma
 >ask tzoma lev about tzoma lev
 "If you scan me and go north, I'll go away, and someone else might appear."
 >ask tzoma lev about xyzzy
@@ -422,6 +481,8 @@ Your score has just gone up by one point
 
 >ask rand about elvira
 "I guess she's good but I'm not smart enough to know why."
+
+#ttc-table-of-presto-reflexive-blather-rand
 >ask rand about rand
 Rand gives a whole new dimension to small talk. But not for long, thankfully.
 >ask rand about xyzzy
@@ -429,6 +490,8 @@ Rand gives a whole new dimension to small talk. But not for long, thankfully.
 
 >ask leo about elvira
 "I guess she's good but I'm not smart enough to know why."
+
+#ttc-table-of-presto-reflexive-blather-leo
 >ask leo about leo
 Leo gives a whole new dimension to small talk. But not for long, thankfully.
 >ask leo about xyzzy
@@ -450,6 +513,8 @@ He flashes a thumbs-up at his friend.
 
 >ask plebe about elvira
 The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority.
+
+#ttc-table-of-presto-reflexive-blather-plebe
 >ask plebe about plebe
 You figure you should grill him about how worthless he thinks he is, but you lack the right word or words.
 >ask plebe about xyzzy
@@ -495,6 +560,8 @@ They snicker at the thought of you being clever or strong enough to get the keys
 The hogs smirk and flex a bit, to show they're bigger and stronger.
 >ask hogs about elvira
 They snicker and nod.
+
+#ttc-table-of-presto-reflexive-blather-hogs
 >ask hogs about hogs
 The whole "Who do you think you are" won't go well with these hogs. They're here to guard you from what's beyond, and that wall is helping.
 >ask hogs about xyzzy
@@ -513,6 +580,7 @@ Posh Hops Shop
 
 >ask casper about elvira
 Before you can pull a bar seat abreast... "Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad." He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says "Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back."
+#ttc-table-of-oyster-reflexive-blather-casper
 >ask casper about casper
 Once he starts talking about himself, he won't stop. All sorts of random stuff:
 >ask casper about xyzzy
@@ -525,6 +593,7 @@ Casper mutters to nobody in particular.
 Casper wants you to acknowledge he's writing it, but he's not going to hand out spoilers.
 >ask casper about elvira
 "She certainly knows how to seek out power. She showed that anagram chump what's what. He's no man of action."
+
 >ask trolls about casper
 "A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books."
 >ask trolls about capers
@@ -543,6 +612,8 @@ Casper wants you to acknowledge he's writing it, but he's not going to hand out 
 "Hasn't bugged us yet. What, you scared of it? Aww."
 >ask trolls about elvira
 "An inspiration and an example to keep our job fun!"
+
+#ttc-table-of-oyster-reflexive-blather-trolls
 >ask trolls about trolls
 They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh.
 >ask trolls about xyzzy
@@ -556,6 +627,7 @@ Talking wouldn't distract them from keeping you in the Posh Hops Shop. They'd ju
 "They rather keep us in and make us spend more than kick us out."
 >ask pesty types about elvira
 You endure annoying pro- and anti-Elvira half-drunken banter for a bit.
+#ttc-table-of-oyster-reflexive-blather-pesty-types
 >ask pesty types about pesty types
 The pesty types would probably think YOU were drunk if you told them why you were here or asked questions.
 >ask pesty types about xyzzy
@@ -572,6 +644,16 @@ Your score has just gone up by one point
 >stroll
 Olde Lode
 
+#ttc-table-of-oyster-reflexive-blather-clam
+>ask clam about elvira
+WRONG
+>ask clam about clam
+WRONG
+>ask clam about xyzzy
+WRONG
+>ask clam about curst palace
+WRONG
+
 >calm
 Your score has just gone up by one point
 
@@ -579,6 +661,17 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 Disease Seaside
+
+#ttc-table-of-oyster-reflexive-blather-sabot-boats
+>ask boats about elvira
+WRONG
+>ask boats about boats
+WRONG
+>ask boats about xyzzy
+WRONG
+>ask boats about curst palace
+WRONG
+
 >boast
 Your score has just gone up by one point
 Fighter Freight
@@ -598,6 +691,8 @@ They probably like books more violent than Casper Spacer's. If they read at all.
 They are probably too coo-ool for ghost stories.
 >ask carps about pikes
 You could maybe set them against each other, but really, you're the strongest...life form here.
+
+#ttc-table-of-oyster-reflexive-blather-carps
 >ask pikes about carps
 You could maybe set them against each other, but really, you're the strongest...life form here.
 >ask carps about elvira
@@ -609,6 +704,8 @@ They snot nots. Tons. Brusque, queer BS. You need to take action, instead.
 
 >ask pikes about elvira
 "All the cool kids look up to her."
+
+#ttc-table-of-oyster-reflexive-blather-pikes
 >ask pikes about pikes
 Asking these punks who they think they are won't stop them.
 >ask pikes about xyzzy
@@ -639,6 +736,8 @@ He feels like he can handle them and their taunts now.
 "I don't like his books. Too violent. But Aunt Tuna thinks I read the dirty bits, anyway."
 >ask trout about elvira
 "I heard those carps and pikes liked her."
+
+#ttc-table-of-oyster-reflexive-blather-trout
 >ask trout about trout
 "Well, I try my best and stuff."
 >ask trout about xyzzy
@@ -672,6 +771,8 @@ Aunt Tuna probably has a lecture prepared about fish these days. One that won't 
 "Those books of his! I cannot approve."
 >ask tuna about elvira
 "A horrible person! No, I have never met her. But Yorpwald is the worse for her arrival."
+
+#ttc-table-of-oyster-reflexive-blather-aunt-tuna
 >ask tuna about tuna
 She's talking about herself every move, pretty much.
 >ask tuna about xyzzy
@@ -709,6 +810,8 @@ Arches
 "I'd be scared of it, if it existed. And if I was the one stole its jewel. We all would. Well, weak-os are, anyway."
 >ask sardine about elvira
 "I wouldn't have this job if it weren't for her."
+
+#ttc-table-of-oyster-reflexive-blather-sardine
 >ask sardine about sardine
 The sardine spends time babbling about his sensitive hearing, saying you couldn't possibly understand. But you sort of do.
 >ask sardine about xyzzy
@@ -737,6 +840,8 @@ Hedron
 "Nice books, love the violence, but too many big words."
 >ask walleyes about elvira
 "Helps fund our little social club here."
+
+#ttc-table-of-oyster-reflexive-blather-walleyes
 >ask walleyes about walleyes
 Now's not the time to upbraid baddies for being bad. Sneak past them instead.
 >ask walleyes about xyzzy
@@ -760,13 +865,15 @@ by one point
 >assuage
 by one point
 
->ask haunter about elvira
+>ask sausage about elvira
 "Horrible! Broil her!"
->ask haunter about haunter
+
+#ttc-table-of-oyster-reflexive-blather-sausage
+>ask sausage about sausage
 It makes ghostly noises and talks about how it wants its jewel back.
->ask haunter about xyzzy
+>ask sausage about xyzzy
 It does that whoo-whoo thing. WHERE IS MY JEWEL. You think you know which jewel.
->ask haunter about ruby
+>ask sausage about ruby
 It acts all ghostly and asks you to take it where the ruby might be.
 
 >w
@@ -797,6 +904,8 @@ Your score has just gone up by one point
 "Pft, foot soldiers, working for mere salary."
 >ask yapper about elvira
 "She's called on the dialer a few times."
+
+#ttc-table-of-oyster-reflexive-blather-yapper
 >ask yapper about yapper
 "I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what." He winks.
 >ask yapper about xyzzy
@@ -846,6 +955,16 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Topside Deposit
 
+#ttc-table-of-towers-reflexive-blather-dreads-adders
+>ask adders about elvira
+WRONG
+>ask adders about adders
+WRONG
+>ask adders about xyzzy
+WRONG
+>ask adders about curst palace
+WRONG
+
 >sadder
 
 >n
@@ -853,6 +972,8 @@ Scope Copse
 
 >ask butlers about elvira
 "Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?"
+
+#ttc-table-of-towers-reflexive-blather-bluster-butlers
 >ask butlers about butlers
 "If we let you by, we'd have to answer to our mentor, Les Burt!" You see red at the name.
 >ask butlers about xyzzy
@@ -862,6 +983,7 @@ Scope Copse
 
 >ask nereid about elvira
 The denier nereid mentions Elvira is one person not worth denying.
+#ttc-table-of-towers-reflexive-blather-denier-nereid
 >ask nereid about nereid
 She discourages you from anything too adventurous. She sees you getting mad and says "END IRE," which makes you a bit madder. You see red.
 >ask nereid about xyzzy
@@ -871,6 +993,8 @@ She discourages you from anything too adventurous. She sees you getting mad and 
 
 >ask snider diners about elvira
 The diners extol her taste in food. Any drip knows she's no wet blanket.
+
+#ttc-table-of-towers-reflexive-blather-snider-diners
 >ask snider diners about snider diners
 "Can't talk with our mouths full," they exclaim, dryly. You'd like to rain on their parade, even a little. You seem to have interrupted their talk, and maybe LISTENing would help.
 >ask snider diners about xyzzy
@@ -882,12 +1006,26 @@ The diners extol her taste in food. Any drip knows she's no wet blanket.
 Your score has just gone up by one point
 >reined
 Your score has just gone up by one point
+>rinsed
+Your score has just gone up by one point
+
+#ttc-table-of-towers-reflexive-blather-keycar
+>ask keycar about elvira
+WRONG
+>ask keycar about keycar
+WRONG
+>ask snider diners about xyzzy
+WRONG
+>ask snider diners about curst palace
+WRONG
 
 >n
 Baldest Blasted Saltbed
 
 >ask pirates about elvira
 The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts.
+
+#ttc-table-of-towers-reflexive-blather-pirates
 >ask pirates about pirates
 /(Harsh arrhs|Yarrh, Harry)
 >ask pirates about xyzzy
@@ -898,6 +1036,7 @@ The pirates explain colorfully how Elvira's rule has been good for piracy. Not t
 >pastier
 Your score has just gone up by one point
 
+#ttc-table-of-towers-reflexive-blather-promise-imposer
 >ask imposer about elvira
 "She has promised so much to Yorpwald! We must promise back to her."
 >ask imposer about imposer
@@ -913,12 +1052,10 @@ Your score has just gone up by one point
 >n
 Anemic Cinema
 
-> ask lars about elvira
-"If it weren't for her I wouldn't have this job. Which kind of stinks, but..."
-
-
 >ask lars about elvira
 "If it weren't for her I wouldn't have this job. Which kind of stinks, but..."
+
+#ttc-table-of-towers-reflexive-blather-lars-eede
 >ask lars about lars
 He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
 >ask lars about xyzzy
@@ -932,6 +1069,8 @@ He seems to want to talk, really, and at the same time, he doesn't. He keeps mum
 
 >ask elsa about elvira
 "If it weren't for her I wouldn't have this job. Which kind of stinks, but..."
+
+#ttc-table-of-towers-reflexive-blather-elsa-erde
 >ask elsa about elsa
 She seems to want to talk, really, and at the same time, she doesn't. She keeps mumbling a sales pitch under her breath, and maybe if you listen a bit, you can remember it.
 >ask elsa about xyzzy
@@ -943,6 +1082,7 @@ She seems to want to talk, really, and at the same time, she doesn't. She keeps 
 
 >ask ingrates about elvira
 "She's been terrible for Yorpwald! But anyone else would be even worse. That's life!"
+#ttc-table-of-towers-reflexive-blather-ingrates
 >ask ingrates about ingrates
 They swat imaginary red ire-gnats as they brush you off.
 >ask ingrates about xyzzy
@@ -952,6 +1092,7 @@ You're shocked by the angriest interruption imaginable.
 
 >ask admirer about elvira
 "You both have your faults and your good sides. You might have more faults than her."
+#ttc-table-of-towers-reflexive-blather-mardier-admirer
 >ask admirer about admirer
 "But enough about me! What about you?" You need a way to make them less interested in you.
 >ask admirer about xyzzy
@@ -974,6 +1115,8 @@ Treading Gradient
 
 >ask sweatier about elvira
 The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end.
+
+#ttc-table-of-towers-reflexive-blather-sweatier-wait-seer
 >ask sweatier about sweatier
 /"(Sit! We are\.\.\.|Trees! Aw, I\.\.\.|Trees! I, aw\.\.\.)"
 the wait-seer says before going silent again. You see red.
@@ -986,6 +1129,7 @@ the wait-seer says before going silent again. You see red.
 >ask sweatier about curst palace
 The wait-seer points to the palace and shrugs, as if to say, why?
 
+#ttc-table-of-towers-reflexive-blather-realist-tailers
 >ask tailers about elvira
 "Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!"
 >ask tailers about tailers
@@ -999,6 +1143,8 @@ You see red at the realist tailers' lists of what may tire Sal.
 
 >ask trendies about elvira
 "We've got lots of good reasons to like her, but if she's defeated, we'll have lots of good reasons why we should've never trusted her."
+
+#ttc-table-of-towers-reflexive-blather-resident-trendies
 >ask trendies about trendies
 They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by.
 >ask trendies about xyzzy
@@ -1015,8 +1161,20 @@ You've also found some folks who aren't very useful except for general chat: Res
 
 >s
 
+#ttc-table-of-towers-reflexive-blather-organised
+>ask drains about elvira
+WRONG
+>ask drains about q
+WRONG
+>ask drains about xyzzy
+WRONG
+>ask drains about curst palace
+#WRONG
+
 >ask rut about elvira
 You hear nothing and imagine Elvira laughing at you.
+
+#ttc-table-of-towers-reflexive-blather-fluster-self-rut
 >ask rut about rut
 You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work.
 >ask rut about xyzzy
@@ -1031,6 +1189,8 @@ by one point
 
 >ask grailman about elvira
 "Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure."
+
+#ttc-table-of-towers-reflexive-blather-grailman
 >ask grailman about grailman
 "You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!"
 >ask grailman about xyzzy
@@ -1046,6 +1206,8 @@ Artist Traits Strait
 
 >ask lot about elvira
 "Any one of us could do even better than her...Yorpwald is missing out..."
+
+#ttc-table-of-towers-reflexive-blather-hostile-is-he-lot
 >ask lot about lot
 They complain about something irrelevant to what you asked, which makes you see red:
 Hostile!
@@ -1060,6 +1222,8 @@ Hostile!
 >e
 >ask lois the hostile about elvira
 "I could do even better than her...Yorpwald is missing out..."
+
+#ttc-table-of-towers-reflexive-blather-lois-the-hostile
 >ask lois the hostile about lois the hostile
 She complains about something irrelevant to what you asked, which makes you see red:
 Hostile!
@@ -1077,8 +1241,9 @@ Hostile!
 by one point
 
 >n
-Actionless Coastline
+Actionless Coastlines
 
+#ttc-table-of-towers-reflexive-blather-atheists
 >ask atheists about elvira
 The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked.
 >ask atheists about atheists
@@ -1102,6 +1267,8 @@ by one point
 
 >ask agnostic about elvira
 "I don't get why other people say she's so cool. They say I'm too lazy to."
+
+#ttc-table-of-oyster-reflexive-blather-agnostic
 >ask agnostic about agnostic
 "Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!"
 "IDK, kid."
@@ -1119,6 +1286,8 @@ Scot puts his hand to his face, then mumbles "Sorry, eleven letters is too much.
 
 >ask natives about elvira
 The natives mention she says everyone deserves their own place, unless they're lame, which the natives aren't.
+
+#ttc-table-of-towers-reflexive-blather-natives-site-van
 >ask natives about natives
 You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However
 which makes you see red
@@ -1128,6 +1297,7 @@ which makes you see red
 >ask natives about curst palace
 "Why go there when you could live in the Wildest Wilteds?"
 
+#ttc-table-of-towers-reflexive-blather-bonker
 >ask bonker about elvira
 "She has increased bonker production by 1000%!"
 >ask bonker about bonker
@@ -1136,8 +1306,18 @@ You try to chat but feel like a, er, knob.
 You try to chat but feel like a, er, knob.
 >ask bonker about curst palace
 "It must be guarded by a thousand like me!"
-
+You try to chat but feel like a, er, knob.
 >broken
+
+>ask stinger about elvira
+#ttc-table-of-towers-reflexive-blather-stinger
+>ask stinger about stinger
+WRONG
+>ask stinger about xyzzy
+WRONG
+>ask stinger about curst palace
+WRONG
+
 >resting
 >e
 
@@ -1161,6 +1341,8 @@ Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse
 "It would be fun to tutor someone!"
 >ask dr yow about elvira
 Elvira probably had Dr. Yow put here, so you decide against asking.
+
+#ttc-table-of-towers-reflexive-blather-dr-yow
 >ask dr yow about dr yow
 Dr. Yow is too modest--and focused on his science--to bang on about previous achievements or imprisonment.
 >ask dr yow about xyzzy
@@ -1231,6 +1413,7 @@ by one point
 
 >ask serpent about elvira
 The serpent just hisses.
+#ttc-table-of-towers-reflexive-blather-repents-serpent
 >ask serpent about serpent
 The serpent just hisses.
 >ask serpent about xyzzy
@@ -1240,13 +1423,27 @@ The serpent just hisses.
 
 >present
 
+#ttc-table-of-towers-reflexive-blather-unripe-ur-pine
+>ask pine about elvira
+WRONG
+>ask pine about pine
+WRONG
+>ask pine about xyzzy
+WRONG
+>ask pine about curst palace
+WRONG
+
 >punier
 >antsier
 
 >w
 
->ask sitter about x
-The Tetris Sitter has nothing to say. Her game is too important.
+#ttc-table-of-towers-reflexive-blather-tetris-sitter
+> ask sitter about xyzzy
+WRONG
+
+>ask sitter about sitter
+The Tetris Sitter has nothing to say. Her game is too absorbing.
 
 >ask sitter about elvira
 "She drags us all down!"
@@ -1256,6 +1453,8 @@ The Tetris Sitter has nothing to say. Her game is too important.
 
 >triste
 by one point
+
+>ask sitter about sitter
 
 >ask sitter about x
 St. Teri looks at your top opt pot wistfully.
@@ -1301,6 +1500,8 @@ Your score has just gone up by one point
 
 >ask ed riley about elvira
 "She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be."
+
+#ttc-table-of-otters-reflexive-blather-ed-riley
 >ask ed riley about ed riley
 "I'd ... LEERY!" Ed booms, puffing himself up a bit.
 >ask ed riley about xyzzy
@@ -1316,10 +1517,19 @@ Disowned Downside
 
 >ask players about elvira
 "She is too good even for us. She deserves to have time by herself in the Edictal Citadel to the west."
+
+#ttc-table-of-otters-reflexive-blather-players
 >ask players about players
 Their opinion would be slightly biased. You can probably learn more about them by observing them.
 >ask players about xyzzy
 "Talking's stalking," they yell at you before continuing to hit on Gretta.
+
+>ask gretta about elvira
+She's heard enough rambling conversation on others' terms, here.
+
+#ttc-table-of-otters-reflexive-blather-gretta
+>ask gretta about gretta
+WRONG
 
 >sparely
 Your score has just gone up by one point.
@@ -1329,6 +1539,12 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >ask gretta about elvira
+She's heard enough rambling conversation on others' terms, here.
+
+#ttc-table-of-otters-reflexive-blather-gretta
+>ask gretta about gretta
+WRONG
+
 She's heard enough rambling conversation on others' terms, here.
 
 >1
@@ -1343,12 +1559,17 @@ Your score has just gone up by one point
 
 >ask le mer about elvira
 "She must be defeated. You can lead the troops to do so."
+
+#ttc-table-of-otters-reflexive-blather-le-mer
 >ask le mer about le mer
 It's kind of single-minded, but it's impressive the moat talks at all. "The eels still distrust you, though I feel you may not need the eels' energy."
 >ask le mer about xyzzy
 Again, ethereal babbling. "The eels still distrust you, though I feel you may not need the eels' energy."
+
 >ask eels about elvira
 "The eels crackle and light up menacingly at the sound of her name."
+
+#ttc-table-of-otters-reflexive-blather-eels
 >ask eels about eels
 "Eels..." / "Fib-beliefs?" Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.
 >ask eels about xyzzy
@@ -1361,6 +1582,8 @@ Your score has just gone up by one point
 >s
 >ask mr lee about elvira
 "She must be defeated. If you are not with her, show me a sign."
+
+#ttc-table-of-otters-reflexive-blather-mr-lee
 >ask mr lee about mr lee
 You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless, though you wonder if you need a double-charge after talking to the eels.
 >although
@@ -1372,6 +1595,24 @@ You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks
 >ask mr lee about xyzzy
 "You have gained my trust and your powers. Go on!"
 
+#ttc-table-of-otters-reflexive-blather-gore-ogre
+>ask gore ogre about elvira
+WRONG
+>ask gore ogre about gore ogre
+WRONG
+>ask gore ogre about xyzzy
+WRONG
+>ask gore ogre about curst palace
+WRONG
+
+>although
+Your score has just gone up by one point
+>ergo
+Your score has just gone up by one point
+#ttc-table-of-otters-reflexive-blather-mr-lee
+>ask mr lee about mr lee
+WRONG
+
 >n
 
 >e
@@ -1379,6 +1620,8 @@ You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks
 
 >ask sly imp about elvira
 "Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here."
+
+#ttc-table-of-otters-reflexive-blather-sly-imp
 >ask sly imp about sly imp
 It nods its head as if to say it's all right and it knew you'd ask.
 >ask sly imp about xyzzy
@@ -1397,24 +1640,33 @@ Your score has just gone up by one point
 
 >ask ocelots about elvira
 They shudder at the name. You quickly give assurance where you stand.
+
+#ttc-table-of-otters-reflexive-blather-ocelots
 >ask ocelots about ocelots
 They seem too shy to talk.
 >ask ocelots about xyzzy
 Flimsy I'm-flys.
+
 >ask satyr about elvira
 He shudders at the name. You quickly give assurance where you stand.
+
+#ttc-table-of-otters-reflexive-blather-satyr
 >ask satyr about satyr
 Any attempt at conversation would be banefully unflyable.
 >ask satyr about xyzzy
 Any attempt at conversation would be banefully unflyable.
+
 >ask leopard about elvira
 It shudders at the name. You quickly give assurance where you stand.
 >ask leopard about leopard
-Any attempt at conversation would be banefully unflyable.
+#ttc-table-of-otters-reflexive-blather-leopard
 >ask leopard about xyzzy
 Any attempt at conversation would be banefully unflyable.
+
 >ask badger about elvira
 It shudders at the name. You quickly give assurance where you stand.
+
+#ttc-table-of-otters-reflexive-blather-badger
 >ask badger about badger
 It covers its exposed parts and turns away.
 >ask badger about xyzzy
@@ -1436,6 +1688,8 @@ Clarthead Cathedral
 
 >ask whiners about elvira
 They bang on about how Elvira would be furious if they let someone see the animals to the south.
+
+#ttc-table-of-otters-reflexive-blather-whiners
 >ask whiners about whiners
 Rational conversation won't make the whiners budge. You probably need to make them quieter.
 >ask whiners about xyzzy
@@ -1462,24 +1716,35 @@ Your score has just gone up by one point
 
 >ask snail about elvira
 It shudders.
+
+#ttc-table-of-otters-reflexive-blather-snail
 >ask snail about snail
 Schlurrrp.
 >ask snail about xyzzy
 Schlurrrp.
+
 >ask snipe about elvira
 It shudders.
+
+#ttc-table-of-otters-reflexive-blather-snipe
 >ask snipe about snipe
 The snipe rustles back and forth a bit.
 >ask snipe about xyzzy
 The snipe rustles back and forth a bit.
+
 >ask hornets about elvira
 The buzzing seems almost angry.
+
+#ttc-table-of-otters-reflexive-blather-hornets
 >ask hornets about hornets
 The hornets just buzz.
 >ask hornets about xyzzy
 The hornets just buzz.
+
 >ask racoon about elvira
 It shudders.
+
+#ttc-table-of-otters-reflexive-blather-racoon
 >ask racoon about racoon
 The racoon skitters around.
 >ask racoon about xyzzy
@@ -1498,12 +1763,16 @@ Nobody in the game can tell you anything new about yourself. Well, anything new 
 "Almost as interesting as me."
 >ask elmer about elvira
 "She is up to something interesting to the west, you'll have to admit. And you'll have to trust us."
+
+#ttc-table-of-otters-reflexive-blather-elmer
 >ask elmer about elmer
 "Slightly more interesting than my friend."
 >ask elmer about xyzzy
 "We're Elvira's monster mentors. Making REAL animals. You don't need Eden." They
 >ask merle about elvira
 "She is up to something interesting to the west, you'll have to admit. And you'll have to trust us."
+
+#ttc-table-of-otters-reflexive-blather-merle
 >ask merle about merle
 "Slightly more interesting than my friend."
 >ask merle about xyzzy
@@ -1524,6 +1793,7 @@ WTF FTW
 >1
 >7
 
+#ttc-table-of-otters-reflexive-blather-elvira
 >ask elvira about elvira
 She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!
 >ask elvira about xyzzy
@@ -1563,6 +1833,7 @@ Curtis breathes deeply and gives a look of contempt and shakes his head. Curtis 
 "A bit of a salesman, but he has some goods. Just--we're not on great terms, so maybe you can..."
 >ask curtis about elvira
 "She was terrible for business and innovation. Things are picking up again now, though."
+#ttc-table-of-others-reflexive-blather-curtis
 >ask curtis about curtis
 "The more fruits, the better, for my biotech business. Unfortunately, those disgusting yorpberries Elvira made folks plant elsewhere aren't good for much."
 >ask curtis about xyzzy
@@ -1639,12 +1910,23 @@ Len inspects the token and assures you it's valid.
 Len snorts and shakes his head. "What a weasel."
 >ask len about elvira
 "Less said, the better."
+#ttc-table-of-others-reflexive-blather-len-craig
 >ask len about len
 "I'm a businessman. A trader. All kinds of goods to swap. Let's haggle."
 >ask len about xyzzy
 Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general.
 >ask len about xyzzy
 Len's eyes glaze over a bit. Nothing personal, just business
+
+>ask gang about gang
+#ttc-table-of-others-reflexive-blather-ammo-gang
+They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around.
+>ask gang about len craig
+WRONG
+>ask gang about elvira
+WRONG
+>ask gang about xyzzy
+WRONG
 
 >w
 >s
@@ -1653,9 +1935,13 @@ a droll dollar
 
 >n
 >gs
+
 >d
+
 >ask tera about elvira
 "She wasn't as bad as she was smeared to be!"
+
+#ttc-table-of-others-reflexive-blather-dr-tera
 >ask tera about tera
 "Traded a dead rat..." she mumbles.
 >ask tera about xyzzy
@@ -1672,6 +1958,7 @@ She mumbles "er, drat" and then something about how money is very, very nice.
 
 >d
 
+#ttc-table-of-others-reflexive-blather-art-erd
 >ask art about elvira
 "She wasn't as bad as she was smeared to be!"
 >ask art about art
@@ -1714,7 +2001,7 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* targeted_testing_comment_uncomment_as_needed
+* targeted_testing_comment_uncomment_as_needed_check_regver_py_after
 
 #uncomment this is doing partial tests
 >ts
@@ -1723,9 +2010,9 @@ You Did Great
 #>{include} _only-stores
 #>{include} _only-routes
 #>{include} _only-troves
->{include} _only-presto
+#>{include} _only-presto
 #>{include} _only-oyster
-#>{include} _only-towers
+>{include} _only-towers
 #>{include} _only-otters
 #>{include} _only-others
 

@@ -990,14 +990,6 @@ Sonancy Canyons
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
 
-#pre-hurt-hog-through rule
->through
-That could work later, but the hog and ewe don't trust you to go by yet.
-!by one point
-#ttc-table-of-routes-prefigurings-hurt-hog
->pf
-You can go THROUGH once you've managed to deal with the bent ewe.
-
 #mistake test for thru
 >thru
 Well, sort of, but not so colloquial.

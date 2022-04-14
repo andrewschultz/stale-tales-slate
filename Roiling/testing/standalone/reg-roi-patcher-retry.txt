@@ -17,7 +17,7 @@
 >staple
 >stapler
 >put staple in stapler
->staple curtain
+>staple departure
 >in
 
 * cheat-routes

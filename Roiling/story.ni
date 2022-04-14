@@ -1819,7 +1819,7 @@ check objasking generically (This is the check for only one sensible object conv
 	if the number of persons enclosed by the location is one:
 		repeat with X running through touchable scenery: [talk to non-talkable scenery]
 			repeat through general blather table of mrlp:
-				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
+				if X is the askee entry, say "[dialogue-text entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of persons enclosed by the location is two:
 		repeat with candidate running through touchable people:
@@ -1849,7 +1849,7 @@ Check asking generically (This is the check for only one sensible converser rule
 	if the number of persons enclosed by the location is one:
 		repeat with X running through touchable scenery:
 			repeat through general blather table of mrlp:
-				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
+				if X is the askee entry, say "[dialogue-text entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of persons enclosed by the location is two:
 		repeat with candidate running through touchable people:
@@ -1882,7 +1882,7 @@ to reason-clue:
 	say "It has [first custom style]NO EARS[r]! Yet it buzzes its name...[first custom style]Sorena A. Norse[r]. The noise makes you see red but lets up when you deduce the bee is a senora.";
 
 check objasking it about (This is the check for object information rule):
-	d "noun=[noun] 2nd noun = [second noun] location = [location of second noun].";
+	d "noun=[noun] 2nd noun = [second noun] located in [location of second noun] in [map region of location of second noun].";
 	abide by the general-ask rule;
 	if noun is sausage and second noun is ruby:
 		if sausage is reflexive, say "You need to get the sausage to trust you, first." instead;
@@ -1906,26 +1906,26 @@ check objasking it about (This is the check for object information rule):
 			say "He's in a fighting mood, not a talking mood, right now." instead;
 	if the noun is the second noun:
 		repeat through reflexive blather table of mrlp:
-			if noun is him-asked entry and there is a him-told entry, say "[him-told entry][line break]" instead;
+			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
 	repeat through subject blather table of mrlp:
-		if second noun is the ask-obj entry:
-			if noun is the speaker entry, say "[what-to-say entry][line break]" instead;
+		if second noun is the game-thing entry:
+			if noun is the askee entry, say "[dialogue-text entry][line break]" instead;
 	if second noun is the player:
 		say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
 	if the chum of the noun is not yourself:
 		repeat through subject blather table of mrlp:
-			if second noun is the ask-obj entry:
-				if the chum of the noun is the speaker entry, say "[what-to-say entry][line break]" instead;
+			if second noun is the game-thing entry:
+				if the chum of the noun is the askee entry, say "[dialogue-text entry][line break]" instead;
 	if the noun is not to-gen-blather:
-		if the second noun is a ask-obj listed in the table of object-blather:
+		if the second noun is a game-thing listed in the table of object-blather:
 			if there is a right-region entry:
 				if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
-			if noun is not serpent, say "[what-to-say entry][line break]" instead;
+			if noun is not serpent, say "[dialogue-text entry][line break]" instead;
 		repeat through table of default-sub-blather:
-			if noun is speaker entry, say "[what-to-say entry][line break]" instead;
+			if noun is askee entry, say "[dialogue-text entry][line break]" instead;
 	repeat through general blather table of mrlp:
-		if noun is default-talker entry:
-			say "[gen-blah entry][line break]";
+		if noun is askee entry:
+			say "[dialogue-text entry][line break]";
 			if noun is terse and noun is not terse-warned:
 				now noun is terse-warned;
 				say "[line break]Hm, that wasn't very revealing. It doesn't look like talking with [the noun] can help you much. You note this in your notepad.";
@@ -1951,14 +1951,14 @@ check asking about (This is the check for specific topics rule):
 			say "He's in a fighting mood, not a talking mood, right now." instead;
 	if the topic understood is a topic listed in the table of NPC and topic pairs:
 		if noun is a person and noun is superchatty:
-			if speaker entry is the noun, say "[what-to-say entry][line break]" instead;
+			if askee entry is the noun, say "[dialogue-text entry][line break]" instead;
 	if the topic understood is a topic listed in the table of topic catchalls:
 		if there is a right-region entry:
 			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
-		say "[what-to-say entry][line break]" instead;
+		say "[dialogue-text entry][line break]" instead;
 	repeat through general blather table of mrlp:
-		if the noun is default-talker entry:
-			say "[gen-blah entry][line break]";
+		if the noun is askee entry:
+			say "[dialogue-text entry][line break]";
 			if noun is terse and noun is not terse-warned:
 				now noun is terse-warned;
 				say "Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
@@ -2049,7 +2049,7 @@ check objasking a picaro about curst palace: say "[noun] only knows he's suppose
 to say pick-keep: say "[if moot-picaros > 0]keep picking[else]pick[end if] off Rodney's gang [if moot-picaros < 3]one by one[else] though you probably don't need to[end if]";
 
 table of default-sub-blather	[dsb] [any one person's default response to an in-game object] [xxtalk3]
-speaker	what-to-say
+askee	dialogue-text
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
 aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
 nestor	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
@@ -2070,7 +2070,7 @@ ag-guar is a person that varies. [ag-guar is usually nothing.]
 to say around-gone: say "[if Dr Yow is touchable]around[else]gone"
 
 table of NPC and topic pairs	[ask x about any old unusual subject] [xxtalk5]
-speaker	topic	what-to-say
+askee	topic	dialogue-text
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Report Porter Perrot	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
@@ -2083,7 +2083,7 @@ walleyes	"horned/hedron" or "horned hedron"	"'Nice place, eh? Especially for not
 yapper	"horned/hedron" or "horned hedron"	"'That's where we are.'"
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
-ask-obj	right-region	what-to-say
+game-thing	right-region	dialogue-text
 Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
 settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
 pedanto notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
@@ -2091,7 +2091,7 @@ curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else
 sausage	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
 
 table of topic catchalls	[ask anyone about specific topic. Yeah, this fizzled.] [xxtalk7]
-topic	right-region	what-to-say
+topic	right-region	dialogue-text
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Nat Egam, the gateman, is from [shuf]."
 "old warpy" or "old/warpy"	--	"Nobody comes close to understanding Old Warpy. It gets you where you want to go."
@@ -3689,7 +3689,7 @@ goshy is a truth state that varies.
 
 definition: a person (called myp) is nonspecific:
 	repeat with myrg running through regions:
-		if myp is a speaker listed in subject blather table of myrg, no;
+		if myp is a askee listed in subject blather table of myrg, no;
 	if litany of myp is Table of No Conversation and myp is not terse, no;
 	yes;
 
@@ -9282,7 +9282,7 @@ check talking to a person:
 check talking to:
 	if noun is not terse:
 		repeat through general blather table of mrlp:
-			if noun is default-talker entry and there is a gen-blah entry, say "[gen-blah entry][line break]" instead;
+			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
 	if noun is yourself, say "You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints." instead;
 	if noun is not brr hub, say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
 

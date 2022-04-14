@@ -110,7 +110,7 @@ carry out blaaing:
 		now this-guy is false;
 		repeat through general blather table of mrlp:
 			if pe is default-talker entry:
-				say "[pe]: [gen-blah entry][line break]";
+				say "[pe]: [dialogue-text entry][line break]";
 				now this-guy is true;
 		if this-guy is false:
 			say "[pe] has nothing to say!";

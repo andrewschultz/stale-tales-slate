@@ -147,15 +147,15 @@ does the player mean grilling the player: it is very unlikely.
 carry out grilling:
 	if noun is not a person, say "Try grilling a person, instead." instead;
 	repeat through subject blather table of mrlp:
-		if speaker entry is noun, say "[speaker entry] / [ask-obj entry] = [what-to-say entry][line break]";
+		if askee entry is noun, say "[askee entry] / [game-thing entry] = [dialogue-text entry][line break]";
 	repeat through general blather table of mrlp:
-		if default-talker entry is noun, say "[default-talker entry] / = [gen-blah entry][line break]";
+		if default-talker entry is noun, say "[default-talker entry] / = [dialogue-text entry][line break]";
 	repeat through reflexive blather table of mrlp:
 		if him-asked entry is noun, say "[him-asked entry] / = [him-told entry][line break]";
 	repeat through table of default-sub-blather: [ these 2 are very rare and come last ]
-		if speaker entry is noun, say "[speaker entry] -> [what-to-say entry][line break]";
+		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
 	repeat through table of NPC and topic pairs:
-		if speaker entry is noun, say "[speaker entry] -> [what-to-say entry][line break]";
+		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
 
 section spam
 
@@ -171,13 +171,13 @@ carry out spaming:
 	repeat with PEO running through people:
 		now foundyet is false;
 		repeat through table of NPC and topic pairs:
-			if PEO is speaker entry and topic understood matches topic entry:
-				say "[PEO] x this subject: [what-to-say entry][line break]";
+			if PEO is askee entry and topic understood matches topic entry:
+				say "[PEO] x this subject: [dialogue-text entry][line break]";
 				now foundyet is true;
 			if foundyet is false:
 				repeat through table of NPC and topic pairs:
 					if default-talker entry is PEO:
-						say "[PEO] x this subject: [gen-blah entry][line break]";
+						say "[PEO] x this subject: [dialogue-text entry][line break]";
 						now foundyet is true;
 	the rule succeeds;
 
@@ -199,8 +199,8 @@ carry out spamobjing:
 		say "Asking [PEO].";
 		now foundyet is false;
 		repeat through subject blather table of mrlp:
-			if speaker entry is PEO and ask-obj entry is noun:
-				say "[PEO]-[noun]: [what-to-say entry][line break]";
+			if askee entry is PEO and game-thing entry is noun:
+				say "[PEO]-[noun]: [dialogue-text entry][line break]";
 				now foundyet is true;
 			if foundyet is false and noun is PEO:
 				repeat through reflexive blather table of mrlp:
@@ -209,8 +209,8 @@ carry out spamobjing:
 						now foundyet is true;
 			if foundyet is false:
 				repeat through table of default-sub-blather:
-					if speaker entry is PEO:
-						say "[PEO]-[noun]: [what-to-say entry][line break]";
+					if askee entry is PEO:
+						say "[PEO]-[noun]: [dialogue-text entry][line break]";
 						now foundyet is true;
 		try asking PEO about the topic understood;
 	the rule succeeds;
@@ -1265,15 +1265,15 @@ carry out elving:
 	let elvies be true;
 	repeat through subject blather table of mrlp:
 		if ask-obj entry is Elvira:
-			if speaker entry is unelvy:
-				now speaker entry is elvy;
-			if speaker entry is blah:
-				now speaker entry is elvonly;
+			if askee entry is unelvy:
+				now askee entry is elvy;
+			if askee entry is blah:
+				now askee entry is elvonly;
 		else:
-			if speaker entry is blah:
-				now speaker entry is unelvy;
-			else if speaker entry is elvonly:
-				now speaker entry is elvy;
+			if askee entry is blah:
+				now askee entry is unelvy;
+			else if askee entry is elvonly:
+				now askee entry is elvy;
 	repeat with PE running through unelvy people:
 		say "[PE] has nothing to say about Elvira.";
 		now elvies is true;

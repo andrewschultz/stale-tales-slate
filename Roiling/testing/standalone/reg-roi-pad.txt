@@ -64,7 +64,7 @@ rove over
 
 >staple
 >stapler
->staple curtain
+>staple departure
 >in
 
 ################################trips strip

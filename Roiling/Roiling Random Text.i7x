@@ -39952,7 +39952,7 @@ blurb
 "'March out, our match? Macho rut! Humor, cat!'"
 "'Must go? Mo['] guts!'" []
 "'My foe, mo['] fey!'"
-"'My life?  Me, I fly!'"
+"'My life? Me, I fly!'"
 "'Nearly meet? Later, enemy! Elementary!'"
 "'Need a while? Denial! Whee!'"
 "'Nerve? NEVER!'"

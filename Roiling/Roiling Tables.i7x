@@ -2365,21 +2365,21 @@ volume general blather tables
 [this appears across tables]
 
 table of ordeal reload general blather
-default-talker	gen-blah
+askee	dialogue-text
 Respect Specter	"'My past is not important. I can help you now, though, if you [b]SCAN[r] me.'"
 Report Porter Perrot	"[bug-report]"
 Mole Elmo	"Words are the way out of this, but not talking to Elmo."
 Respect Specter	"'Unfortunately, I don't have time for small talk. The terms of my coming back here were to give helpful advice only if you SCANned me. I need to, um, respect that.'"
 
 table of stores general blather
-default-talker	gen-blah
+askee	dialogue-text
 Rehabs Basher	"[he-she-c] nods at you and the blabber babbler. It's remarkably effective psychological warfare, to repress you and all."
 blabber babbler	"If [he-she] actually heard you, [he-she][']d yell a stunning rebuke to whatever [he-she] could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this [b]TEDIOUS[r] stuff."
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 
 table of routes general blather
-default-talker	gen-blah
+askee	dialogue-text
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
@@ -2390,13 +2390,13 @@ to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is fo
 to say pat-on-pit: say "[if stupor sprout is off-stage]Can't even explore the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
 
 table of troves general blather
-default-talker	gen-blah
+askee	dialogue-text
 evil bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
 Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. 'Be an [first custom style]ID SEER[r] like me!' You see red at this stupid exhortation."
 
 table of presto general blather [delete this]
-default-talker	gen-blah
+askee	dialogue-text
 lamb	"It's a baaaaad conversationalist."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
 Lev Tzoma	"[left-here].'"
@@ -2424,7 +2424,7 @@ after going north in Char Arch when Leo is eager:
 book oyster
 
 table of oyster general blather [delete this]
-default-talker	gen-blah
+askee	dialogue-text
 pesty types	"The pesty types would probably think YOU were drunk if you told them why you were here or asked questions." [begin OYSTER]
 trolls	"Talking wouldn't distract them from [if silly-acts is 3]eventually beating you up[else]keeping you in the Posh Hops Shop[end if]. They'd just win the argument. They're trolls, after all."
 clam	"It snaps back at you. Physically, not verbally. Words--okay, conversation--won't help it relax, so you clam up."
@@ -2449,7 +2449,7 @@ to say ohai-casper:
 		now casper-mumble is true;
 
 table of towers general blather
-default-talker	gen-blah
+askee	dialogue-text
 Spec O Scope	"Try looking in it instead."
 dreads adders	"They can't speak. They seem happy enough just blocking you."
 Andres	"[war-duh]"
@@ -2525,7 +2525,7 @@ to say 3-random:
 to say new-mislit-clue: now flip-final-clue is true;
 
 table of otters general blather
-default-talker	gen-blah
+askee	dialogue-text
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is not moot]You must convince me to unlock the sea cube[tho-need].[else if eels are not moot]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
@@ -2560,7 +2560,7 @@ to say tho-eels: if power-back is true, say ", though you wonder if you need a d
 to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if Merle is reflexive][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[else]ignore you--you seem easy to push around[end if]."
 
 table of others general blather
-default-talker	gen-blah
+askee	dialogue-text
 Curtis	"'Ehh?' says Curtis. 'I don't have time for small talk. More fruit, more fruit.'" [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general[or]Len's eyes glaze over a bit. Nothing personal, just business[stopping]."
 Ammo Gang	"The No Ammo Gang seems vaguely interested, but you didn't insert yourself enough as part of the conversation."
@@ -2573,18 +2573,18 @@ passport	"Try using its features instead."
 volume reflexive blather tables
 
 table of ordeal reload reflexive blather
-him-asked	him-told
+askee	dialogue-text
 Respect Specter	"'I'll give you help if you [b]SCAN[r] me. But my bodily life and afterlife situation are irrelevant.'"
 
 table of stores reflexive blather
-him-asked	him-told
+askee	dialogue-text
 nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is touchable]'Missing our friend, man!'[else]You get the impression there's not much to ask.[end if]" [bold-ok]
 blabber babbler	--
 Rehabs Basher	"'I'm nothing without [bab-name]'s help.' This continues for a minute, after which you sort of wish the Rehabs Basher WOULD be, or say, nothing. How [i]tedious[r]." [bold-ok]
 
 table of routes reflexive blather
-him-asked	him-told
+askee	dialogue-text
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
@@ -2595,12 +2595,12 @@ to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is fo
 to say pat-on-pit: say "[if stupor sprout is off-stage]Can't even explore the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
 
 table of troves reflexive blather
-him-asked	him-told
+askee	dialogue-text
 Trevis Vister	"Oh, if it were the real version, you'd regret asking him about himself."
 Si Reed	--
 
 table of presto reflexive blather
-him-asked	him-told
+askee	dialogue-text
 plebe	"You figure you should grill him about how worthless he thinks he is, but you lack the right word or words."
 Rand	"Rand gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"Leo gives a whole new dimension to small talk. But not for long, thankfully."
@@ -2610,7 +2610,7 @@ Tom Avlez	"'If you scan me and go north, I'll go away, and someone else might ap
 Lev Tzoma	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 
 table of oyster reflexive blather
-him-asked	him-told
+askee	dialogue-text
 trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh."
 pesty types	--
 Casper	"[mumble-swap]Once he starts talking about himself, he won't stop. All sorts of random stuff: '[randbla]'[mumble-swap]"
@@ -2631,7 +2631,7 @@ casper-rand-mumble is a truth state that varies.
 to say mumble-swap: now casper-rand-mumble is whether or not casper-rand-mumble is false;
 
 table of towers reflexive blather
-him-asked	him-told
+askee	dialogue-text
 dreads adders	"The adders sit around and look intimidating."
 repents serpent	"[serp-say]."
 realist tailers	--
@@ -2661,7 +2661,7 @@ atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse lan
 Tetris Sitter	"[if top opt pot is moot][The tetris sitter] thanks you for aiding her spiritual growth. Just go out and come back in if you need help with that palace[else if anodyne is moot]St. Teri looks almost perfectly ready to help, but she can't quite, yet[else if itster is not moot]St. Teri wants to help, but she can't quite, yet[else][The tetris sitter] ignores you, working on her high score[end if]."
 
 table of otters reflexive blather
-him-asked	him-told
+askee	dialogue-text
 Ed Riley	"'I'd ... LEERY!' Ed booms, puffing himself up a bit."
 whiners	--
 players	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
@@ -2684,7 +2684,7 @@ sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 
 table of others reflexive blather
-him-asked	him-told
+askee	dialogue-text
 Curtis	"'The more fruits, the better, for my biotech business. Unfortunately, those disgusting yorpberries Elvira made folks plant elsewhere aren't good for much.'"
 Len Craig	"'I'm a businessman. A trader. All kinds of goods to swap. Let's haggle.'"
 ammo gang	"They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around."
@@ -2698,13 +2698,13 @@ check asking Curtis about: if second noun is a fruit, say "'[if second noun is m
 volume specific subject dialogue tables
 
 table of ordeal reload subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 Elmo	Elmo	"'I've got this rifle! And I don't want to use it!'"
 Elmo	Elvira	"Elmo waves his rifle at you."
 Elmo	settler	"You consider pointing your settler back at Elmo, but you realize it isn't an effective weapon. Maybe you should see what you can do about the rifle."
 
 table of stores subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 Rehabs Basher	blabber babbler	"The [Basher] nods enthusiastically."
 Rehabs Basher	Elvira	"'She didn't get to her position of power by using DRUGS.'"
 nestor	Elvira	"'So bogusly repressive!'"
@@ -2718,7 +2718,7 @@ blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which i
 blabber babbler	blabber babbler	"You probably don't have to ask to hear the blabber babbler's personal anecdotes."
 
 table of routes subject blather [ask x about thing they know about]
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'"
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if stupor sprout is off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
@@ -2749,11 +2749,11 @@ to say bh-mw:
 	say "Brother Horbert means well, but he's too unfocused to DO anything by himself"
 
 table of troves subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 Si Reed	Elvira	"Si Reed nods pointedly."
 
 table of presto subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]."
 plebe	Leo	"[if leo is touchable]You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force[else]Leo would be more intimidating if he were nearby[end if]."
 plebe	Rand	"[if rand is touchable]You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force[else]Rand would be more intimidating if he were nearby[end if]."
@@ -2803,7 +2803,7 @@ to say maze-before: say "[maze-you-met]"
 to say maze-you-met: say "Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have"
 
 table of oyster subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 LOLstr trolls	OH NERD HERD NO	"'The horned hedron's even more fun than here. Maybe we can get a job there some day.'"
 LOLstr trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"
 LOLstr trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
@@ -2880,7 +2880,7 @@ to say fish-these-days:
 	say "Aunt Tuna probably has a lecture prepared about fish these days. One that won't help you go hunt a hangout";
 
 table of towers subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'"
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
 denier nereid	Elvira	"The denier nereid mentions Elvira is one person not worth denying."
@@ -2951,7 +2951,7 @@ before objasking agnostic about bot boat:
 book otters
 
 table of otters subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'"
 players	Elvira	"'She is too good even for us. She deserves to have time by herself in the Edictal Citadel to the west.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
@@ -2988,7 +2988,7 @@ to say at-elvira:
 	say " at the name. You quickly give assurance where you stand"
 
 table of others subject blather
-speaker	ask-obj	what-to-say
+askee	game-thing	dialogue-text
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
