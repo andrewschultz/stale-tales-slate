@@ -1897,19 +1897,19 @@ volume demo dome tables
 
 [xxdmt]
 
-table of testing notes
+table of demo dome tester street notes
 thistext [x tester street] [tdm0]
-"Early parts relate the brave heroes who slogged through the first version of the game, replete with missing directions to new areas and puzzles that ... well, they technically fit the area. This includes people who tested both Shuffling and Roiling. Their early recommended tweaks helped so much."
+"Early parts relate the brave heroes who slogged through the first version of the game, replete with missing directions to new areas and puzzles that ... well, they technically fit the area. This includes people who tested both [shuf] and [aro]. Their early recommended tweaks helped so much."
 "I remember I wanted the hints to work, so I asked testers to run a tricky command. It seems like awkward coding now--a line that hinted what to do next got written to a file every move so nothing was spoiled--but it helped."
 "Some testers stepped in post-Spring Thing 2013 to help me with changes I thought seemed basically necessary."
-"I remember feeling guilty about asking someone to run through the three areas in different orders to test the SECURE/RECUSE option in Shuffling. It seemed even more tangled in Roiling."
+"I remember feeling guilty about asking someone to run through the three areas in different orders to test the SECURE/RECUSE option in [shuf]. It seemed even more tangled in [aro]."
 "Knowing how hard it was to ask people to test cases where you do a, b, c in all six possible orders, I tried to make Inform 'test x with y' commands."
 "Some people who wrote reviews were kind enough to isolate bugs I couldn't otherwise catch. Their observations also made it in and gave me 'why don't I...' moments. I also was able to trade testing with a few people, which was very helpful. I recommend it. Working on their games sometimes reminded me I should try to add feature X for my own games. Or, sometimes, I borrowed their idea with a twist to make mine easier."
 "It gets harder to ask for help the longer a game goes on from its original release. However, stuff like randomizing completion order made it into my more automated files."
 "Testers for other games often gave me ideas of how to streamline part of the Stale Tales Slate. Sometimes a detail that bothered me here would have a similar one pop up elsewhere. I thought, why not fix it?"
 "Eventually, migration to GitHub, where I could write out issues and commit code, and Zarf's regtest scripts allowed me to run tests it was exhausting for human testers to run. I ran them repeatedly. I hunted down annoying bugs I wouldn't otherwise have the time to. Most testing became automated."
 "Sometimes I needed full computer processing power on my virtual Linux box, so that forced me not to browse on the Internet. Or I ran a test when I went out to do chores or whatever. It felt neat, doing two things at once, or getting something done while I slept. It was good to save time when Roiling took a minute to build, and I just wanted to nail that one last elusive bug."
-"Many of the original testers of Shuffling have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better."
+"Many of the original testers of [shuf] have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better."
 
 table of calparts
 thistext [x calendar] [tdm1]
@@ -2906,7 +2906,6 @@ ingrates	Elvira	"'She's been terrible for Yorpwald! But anyone else would be eve
 ingrates	curst palace	"'Nobody can bring it back to its former glory! Not that it was great anyway.'"
 mardier admirer	Elvira	"'You both have your faults and your good sides. You might have more faults than her.'"
 mardier admirer	curst palace	"'Well, I bet you could make it there. You're clever enough, but what would you do once you got there?'"
-imposer	Elvira	"'She is straightening things out here in Yorpwald. You just have to have faith it will take a while. She has to straighten out our enemies before she can straighten things out for us.'"
 grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
 grailman	curst palace	"'You can get there without getting by me, I bet!'"
 realist tailers	Elvira	"'Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!'"

@@ -493,6 +493,7 @@ Si Reed nods pointedly.
 >ask si reed about xyzzy
 Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. "Be an ID SEER like me!" You see red at this stupid exhortation.
 
+#ttc-table-of-troves-subject-blather-si-reed-divorces
 >ask si reed about divorces
 "It's good to catch up people with lesser motivation. Make them feel rich. But it has no CORE VIDS to promote growth and wealth mindsets." You see red at such a mention.
 
@@ -638,6 +639,7 @@ Taking away a max point.
 >n
 >s
 
+#ttc-table-of-presto-subject-blather-yak-elvira
 >ask yak about elvira
 The yak looks even more bored and disgusted than before, for a moment.
 
@@ -720,9 +722,11 @@ He flashes a thumbs-up at his friend.
 >n
 >n
 
-#ttc-table-of-presto-general-blather-lamb
+#ttc-table-of-presto-subject-blather-lamb-elvira
 >ask lamb about elvira
 The lamb looks even more paralyzed by fear. If only there were a way to get the lamb scared right, so it could run back home!
+
+#ttc-table-of-presto-general-blather-lamb
 >ask lamb about lamb
 It's a baaaaad conversationalist.
 >ask lamb about xyzzy
@@ -942,9 +946,11 @@ Your score has just gone up by one point
 >stroll
 Olde Lode
 
-#ttc-table-of-oyster-reflexive-blather-clam
+#ttc-table-of-oyster-subject-blather-clam-elvira
 >ask clam about elvira
 The clam starts snapping more rapidly. Whether in favor of her or against, you can't tell, but the extra tension's not welcome.
+
+#ttc-table-of-oyster-reflexive-blather-clam
 >ask clam about clam
 Asking the clam about its feelings is a start.
 
@@ -973,8 +979,10 @@ You get the feeling that what you talk about isn't as important as how you do so
 Your score has just gone up by one point
 Fighter Freight
 
+#ttc-table-of-oyster-subject-blather-scary-crays-elvira
 >ask crays about elvira
 They nod reverentially before sneaking towards you a bit more.
+
 >ask crays about crays
 They chuckle a bit. You're not going to be able to talk your way out of this.
 
@@ -1218,7 +1226,7 @@ Hedron
 >ask walleyes about casper
 "Nice books, love the violence, but too many big words."
 
-#ttc-table-of-oyster-subject-blather-walleyes-horned-hedron
+#ttc-table-of-oyster-subject-blather-walleyes-oh-nerd-herd-no
 >ask walleyes about oh nerd herd no
 "Nice place, eh? Especially for not being very nice at all!"
 
@@ -1538,9 +1546,11 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Topside Deposit
 
-#ttc-table-of-towers-reflexive-blather-dreads-adders
+#ttc-table-of-towers-subject-blather-adders-elvira
 >ask adders about elvira
 The dreads adders hiss a bit. Whether it's to defend her against enemies or express displeasure, you're not sure, but you probably want to calm the dreads adders down.
+
+#ttc-table-of-towers-reflexive-blather-dreads-adders
 >ask adders about adders
 The adders slither around and look intimidating.
 
@@ -1577,6 +1587,7 @@ The Spec-O-Scope can't talk. All it can do is show a map when examined.
 >ask butlers about xyzzy
 "If we let you by, we'd have to answer to our mentor, Les Burt!" You see red at the name.
 
+#ttc-table-of-towers-subject-blather-butlers-curst-palace
 >ask butlers about curst palace
 They sniff. They're too good for it! Why, even you might be too good for it!
 
@@ -1592,6 +1603,7 @@ She discourages you from anything too adventurous. She sees you getting mad and 
 >ask nereid about xyzzy
 She discourages you from anything too adventurous. She sees you getting mad and says "END IRE," which makes you a bit madder. You see red.
 
+#ttc-table-of-towers-subject-blather-denier-nereid-curst-palace
 >ask nereid about curst palace
 The nereid suggests that you set your sights lower.
 
@@ -1606,6 +1618,8 @@ The diners extol her taste in food. Any drip knows she's no wet blanket.
 #ttc-table-of-towers-general-blather-snider-diners
 >ask snider diners about xyzzy
 /(is DERN|Dr. Enis|NERD IS)
+
+#ttc-table-of-towers-subject-blather-diners-curst-palace
 >ask snider diners about curst palace
 "Not the sort of place to eat exquisite food! Maybe it was, but it isn't."
 
@@ -1637,13 +1651,15 @@ The pirates explain colorfully how Elvira's rule has been good for piracy. Not t
 #ttc-table-of-towers-general-blather-pirates
 >ask pirates about xyzzy
 /(Harsh arrhs|Yarrh, Harry)
+
+#ttc-table-of-towers-subject-blather-pirates-curst-palace
 >ask pirates about curst palace
 "Currrrst!" they laugh.
 
 >pastier
 Your score has just gone up by one point
 
-#ttc-table-of-towers-subject-blather-imposer-elvira
+#ttc-table-of-towers-subject-blather-promise-imposer-elvira
 >ask imposer about elvira
 "She is straightening things out here in Yorpwald. You just have to have faith it will take a while. She has to straighten out our enemies before she can straighten things out for us."
 
@@ -1654,6 +1670,8 @@ The promise imposer seems to talk about everything except what you want to. It m
 #ttc-table-of-towers-general-blather-promise-imposer
 >ask imposer about xyzzy
 The promise imposer seems to talk about everything except what you want to. It makes you see red. Maybe that evasiveness can be a hint.
+
+#ttc-table-of-towers-subject-blather-promise-imposer-curst-palace
 >ask imposer about curst palace
 "I guess if you want to get there, you will, whether or not I help or hinder you. That's a promise!"
 
@@ -1674,6 +1692,8 @@ He seems to want to talk, really, and at the same time, he doesn't. He keeps mum
 #ttc-table-of-towers-general-blather-lars-eede
 >ask lars about xyzzy
 He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+
+#ttc-table-of-towers-subject-blather-lars-eede-curst-palace
 >ask lars about curst palace
 Lars Eede shakes his head. "It's not too far away, but it's still dilapidated."
 
@@ -1692,6 +1712,8 @@ She seems to want to talk, really, and at the same time, she doesn't. She keeps 
 #ttc-table-of-towers-general-blather-elsa-erde
 >ask elsa about xyzzy
 She seems to want to talk, really, and at the same time, she doesn't. She keeps mumbling a sales pitch under her breath, and maybe if you listen a bit, you can remember it.
+
+#ttc-table-of-towers-subject-blather-elsa-erde-curst-palace
 >ask elsa about curst palace
 Elsa Erde shakes his head. "It's not too far away, but it's still dilapidated."
 
@@ -1709,6 +1731,7 @@ They swat imaginary red ire-gnats as they brush you off.
 >ask ingrates about xyzzy
 You're shocked by the angriest interruption imaginable.
 
+#ttc-table-of-towers-subject-blather-ingrates-curst-palace
 >ask ingrates about curst palace
 "Nobody can bring it back to its former glory! Not that it was great anyway."
 
@@ -1765,6 +1788,8 @@ The wait-seer points to the palace and shrugs, as if to say, why?
 
 #ttc-table-of-towers-subject-blather-realist-tailers-elvira
 #ttc-table-of-towers-subject-blather-tailers-elvira
+
+#ttc-table-of-towers-subject-blather-realist-tailers-curst-palace
 >ask tailers about elvira
 "Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!"
 
@@ -1792,6 +1817,7 @@ They sniff. They're too cool to hang around you, but they're also too cool to co
 >ask trendies about xyzzy
 They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by.
 
+#ttc-table-of-towers-subject-blather-resident-trendies-curst-palace
 >ask trendies about curst palace
 "We can do better than go there. Gosh, even you can!"
 
@@ -1875,6 +1901,7 @@ Hostile!
 They complain about something irrelevant to what you asked, which makes you see red:
 Hostile!
 
+#ttc-table-of-towers-subject-blather-hostile-is-he-lot-curst-palace
 >ask lot about curst palace
 "Once it was unbearably showy! Now it is unbearable. Either way, we are right to scorn it and stop anyone who'd want to fix it!"
 
@@ -1895,6 +1922,8 @@ Hostile!
 >ask lois the hostile about xyzzy
 She complains about something irrelevant to what you asked, which makes you see red:
 Hostile!
+
+#ttc-table-of-towers-subject-blather-lois-the-hostile-curst-palace
 >ask lois the hostile about curst palace
 "Once it was unbearably showy! Now it is unbearable. Either way, we are right to scorn it and stop anyone who'd want to fix it!"
 
@@ -1922,6 +1951,7 @@ they muse languidly over some philosophical point. You feel dumb not being able 
 They start logic-bashing, when one of the junior atheists tries to make a point.
 The atheist turns red, wondering if they had a right to speak up.
 
+#ttc-table-of-towers-subject-blather-atheists-curst-palace
 >ask atheists about curst palace
 "A false idol for sure! Why bother restoring it?"
 
@@ -2024,9 +2054,11 @@ The grin set in the stinger distracts you from what you meant to say. You feel a
 >push retape
 >go to duck
 
-#ttc-table-of-towers-general-blather-duck
+#ttc-table-of-towers-subject-blather-lone-duck-elvira
 >ask duck about elvira
 An unusually worried quack. It seems like it wants to hear a voice--but not yours.
+
+#ttc-table-of-towers-general-blather-lone-duck
 >ask duck about duck
 Quack, quack. It seems like it wants to hear a voice--but not yours.
 >ask duck about xyzzy
@@ -2839,19 +2871,24 @@ Len proceeds to tell you how he was known as Icy Len til he started doing things
 >ask len about xyzzy
 Len's eyes glaze over a bit. Nothing personal, just business.
 
+#ttc-table-of-others-subject-blather-len-craig-ammo
 >ask len about ammo gang
 "I'm glad to let them hang around. Well, not quite around."
 
 #ttc-table-of-others-subject-blather-ammo-gang-mango
+
 >ask gang about mango
 "Yes, we sell them. Come join our conversation the right way." You turn red, briefly, thinking it can't be too hard to figure how to get a mango.
 
 >ask gang about gang
 #ttc-table-of-others-reflexive-blather-ammo-gang
 They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around.
+
+#ttc-table-of-others-subject-blather-ammo-gang-len-craig
 >ask gang about len craig
 "We're glad he lets us hang around. Well, not quite around."
 
+#ttc-table-of-others-subject-blather-ammo-gang-elvira
 >ask gang about elvira
 "Mm. No, no! Gaga!"
 

@@ -294,14 +294,28 @@ Hows Show
 @max
 ##############################hows show: tester street
 \\
+#ttc-table-of-demo-dome-tester-street-notes-1
 >x tester street
 Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
+#ttc-table-of-demo-dome-tester-street-notes-2
 >g
 More on testing.
 \\
+#ttc-table-of-demo-dome-tester-street-notes-3
+#ttc-table-of-demo-dome-tester-street-notes-4
+#ttc-table-of-demo-dome-tester-street-notes-5
+#ttc-table-of-demo-dome-tester-street-notes-6
+#ttc-table-of-demo-dome-tester-street-notes-7
+#ttc-table-of-demo-dome-tester-street-notes-8
+#ttc-table-of-demo-dome-tester-street-notes-9
+#ttc-table-of-demo-dome-tester-street-notes-10
 >xab tester street
 More on testing.
 \\
+#ttc-table-of-demo-dome-tester-street-notes-11
+>x tester street
+Many of the original testers of Shuffling Around have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better.
+[NOTE: you've read all the way through.]
 >score
 /You saw (the coder decor|the raised aiders) here in Hows Show, but you didn't examine (it|them).
 \\
