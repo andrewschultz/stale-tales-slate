@@ -1732,6 +1732,15 @@ by one point
 >n
 Hacks' Shack
 
+@mis
+#mistake test for a elf
+>a elf
+You don't need any D&D character to magick things the rest of the way here.
+\\
+#mistake test for alef
+>alef
+You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.
+
 @spoi
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
 

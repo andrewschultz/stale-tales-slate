@@ -161,7 +161,8 @@ carry out tsing:
 	moot teariest treatise;
 	moot respect specter; [ all for testing purposes ]
 	now Ordeal Reload is solved;
-	say "I gave you the purse, settler, and notepad.";
+	now autosave-known is true;
+	say "Moving player to [profits] and giving you the purse, settler, and notepad. Also setting autosave-known to true.";
 	the rule succeeds;
 
 chapter chating

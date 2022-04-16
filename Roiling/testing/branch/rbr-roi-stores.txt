@@ -38,12 +38,18 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >poss
 
-@nud
+@mis
 #mistake test for throes
 >rove over
 Strip of Profits
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
+\\
+#mistake test for reaves
+>reaves
+You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
+
+@mis
 #ttc-table-of-strip-of-profits-nudges-storer
 >storre
 The resort and Store R led to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now.

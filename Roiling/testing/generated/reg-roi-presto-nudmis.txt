@@ -951,6 +951,14 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
+#mistake test for a elf
+>a elf
+You don't need any D&D character to magick things the rest of the way here.
+
+#mistake test for alef
+>alef
+You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.
+
 #ttc-table-of-presto-scannotes-n-e-recs-censer
 >scan n e recs censer
 This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.

@@ -518,7 +518,11 @@ to decide whether skid-disk-touch:
 	if skid is touchable or disk is touchable, yes;
 	no;
 
+understand "a elf" as a mistake ("You don't need any D&D character to magick things the rest of the way here.") when flea is touchable or leaf is touchable.
+
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is touchable or cola-around.
+
+understand "alef" as a mistake ("You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.") when flea is touchable or leaf is touchable.
 
 understand "bat" as a mistake ("You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.") when tba key is touchable.
 
