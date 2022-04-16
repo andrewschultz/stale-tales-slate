@@ -149,9 +149,9 @@ carry out grilling:
 	repeat through subject blather table of mrlp:
 		if askee entry is noun, say "[askee entry] / [game-thing entry] = [dialogue-text entry][line break]";
 	repeat through general blather table of mrlp:
-		if default-talker entry is noun, say "[default-talker entry] / = [dialogue-text entry][line break]";
+		if askee entry is noun, say "[askee entry] / = [dialogue-text entry][line break]";
 	repeat through reflexive blather table of mrlp:
-		if him-asked entry is noun, say "[him-asked entry] / = [him-told entry][line break]";
+		if askee entry is noun, say "[askee entry] / = [dialogue-text entry][line break]";
 	repeat through table of default-sub-blather: [ these 2 are very rare and come last ]
 		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
 	repeat through table of NPC and topic pairs:
@@ -176,7 +176,7 @@ carry out spaming:
 				now foundyet is true;
 			if foundyet is false:
 				repeat through table of NPC and topic pairs:
-					if default-talker entry is PEO:
+					if askee entry is PEO:
 						say "[PEO] x this subject: [dialogue-text entry][line break]";
 						now foundyet is true;
 	the rule succeeds;
@@ -204,8 +204,8 @@ carry out spamobjing:
 				now foundyet is true;
 			if foundyet is false and noun is PEO:
 				repeat through reflexive blather table of mrlp:
-					if him-asked entry is noun:
-						say "[PEO]-itself: [him-told entry][line break]";
+					if askee entry is noun:
+						say "[PEO]-itself: [dialogue-text entry][line break]";
 						now foundyet is true;
 			if foundyet is false:
 				repeat through table of default-sub-blather:
@@ -1264,7 +1264,7 @@ a person can be blah, elvonly, unelvy or elvy. a person is usually blah.
 carry out elving:
 	let elvies be true;
 	repeat through subject blather table of mrlp:
-		if ask-obj entry is Elvira:
+		if game-thing entry is Elvira:
 			if askee entry is unelvy:
 				now askee entry is elvy;
 			if askee entry is blah:

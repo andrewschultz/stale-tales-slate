@@ -109,7 +109,7 @@ carry out blaaing:
 	repeat with pe running through people:
 		now this-guy is false;
 		repeat through general blather table of mrlp:
-			if pe is default-talker entry:
+			if pe is askee entry:
 				say "[pe]: [dialogue-text entry][line break]";
 				now this-guy is true;
 		if this-guy is false:

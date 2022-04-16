@@ -39502,7 +39502,7 @@ blurb
 "standing stronger than [']Fraid Farid" [x]
 "staying violent unlike Fair Rafi" [x]
 "sticking to a regimen unlike Fried Fredi" [x]
-"weirdos, rowdies. Ow! [']s dire."
+"weirdos, rowdies. Ow! [']s dire"
 "windbags['] swing-bad big wands"
 
 book otters

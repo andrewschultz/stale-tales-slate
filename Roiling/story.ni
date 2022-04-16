@@ -393,6 +393,7 @@ to decide whether the action is procedural: [aip]
 	if asking about, yes;
 	if objasking generically, yes;
 	if asking generically, yes;
+	if talking to, yes;
 	if xraying, yes; [cheat verbs]
 	if discerning, yes;
 	if guruing, yes;
@@ -1799,8 +1800,7 @@ this is the general-ask rule:
 	if noun is evil bee, reason-clue instead;
 	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
 	if noun is not a person, try talking to noun instead;
-	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
-	if noun is washed up, washup-clue instead;
+	if noun is a person and noun is washed up, washup-clue instead;
 	if noun is rehabs basher and pamphlets are off-stage:
 		say "[basher-pamph]";
 		the rule succeeds;
@@ -1865,12 +1865,30 @@ check talking to (this is the hint looking not talking rule):
 		now qbc_litany is litany of noun;
 		do nothing instead;
 
-this is the map out sensible talk tries rule:
-	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
-	if noun is span pans, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
-	if noun is mussier misuser, say "The [misuser] can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do." instead;
-	if noun is popstar passport, say "You [if gate-level is 2]got what you needed from [the passport][else]have other ways to consult [the passport][end if]." instead;
-	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
+this is the map out sensible talk tries rule: [?? move this to "try talking to instead"]
+	if the noun provides the property litany or the noun provides the property greeting, continue the action;
+	repeat through table of inanimate talkables:
+		if noun is askee entry, say "[talk-reject entry][line break]" instead;
+	say "You may be better off examining non-living things, not talking to them." instead;
+
+table of inanimate talkables
+askee	talk-reject
+mussier misuser	"The [misuser] can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do." [troves]
+spider	"Spoiloplis is definitely not a [i]Charlotte's Web[r] kind of town."
+Trevis Vister	"Trevis Vister has strong opinions on everything and all kinds of success plans, but most of them revolve around having inherited wealth already."
+span pans	"The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]."
+flea	"It's dead. Perhaps it can be reincarnated as something else."
+computer screen	"Honestly, throwing words at a computer screen and expecting something clever in response is about the most unconstructive thing I can imagine." [presto]
+sabot boats	"You get the feeling that what you talk about isn't as important as how you do so. You might really need to yell to get the boats['] attention." [oyster]
+intercom	"It will respond once you [if bogus-derail is moot]re[end if]use the dialer correctly."
+dialer	"Talking at the dialer does not reveal any [if bogus-derail is moot]further [end if]secrets of how to operate it."
+spec o scope	"The [o scope] can't talk. All it can do is show a map when examined."
+yacker keycar	"The yacker keycar babbles randomly. It's not actually going to help or hinder you, but it might be rewarding to dispatch."
+organised ego drains	"The silence after talking to the ego drains leaves you feeling less confident than ever that you will restore the Curst Palace."
+unripe ur pine	"The [ur pine] towers over you, silent. Maybe something is hidden behind its bulk, something you won't find by talking."
+cinders	"You need the right actions to gain information from the cinders." [otters]
+moat	"The moat bubbles angrily. Dialogue won't work, but maybe the right word will."
+popstar passport	"You [if gate-level is 2]got what you needed from [the passport][else]have other ways to consult [the passport][end if]." [others]
 
 section specific subjects that are not people or objects
 
@@ -1879,10 +1897,13 @@ Rand-first is a truth state that varies.
 to washup-clue: say "[one of]'Us? Whaps?'[no line break][or]'Pah, wuss,'[or]'Haw, puss,'[or]'You'd place last in a saw push,'[or]'I like dat TV show the Upshaws,'[or]'Don't push aws on me,'[or]'Ssh! Up...aw,'[cycling] [noun] says, red-faced. He's not in the mood for deep discussion. But maybe a nice word would help.";
 
 to reason-clue:
+	if snore so arena is reflexed:
+		say "You cut down [the evil bee]'s buzzing when you managed to [b]REASON[r]. You [if evil bee is reflexive]could tackle the bee's essence if you want[else]also tackled the bee's essence. You can move on from it now[end if].";
+		continue the action;
 	say "It has [first custom style]NO EARS[r]! Yet it buzzes its name...[first custom style]Sorena A. Norse[r]. The noise makes you see red but lets up when you deduce the bee is a senora.";
 
 check objasking it about (This is the check for object information rule):
-	d "noun=[noun] 2nd noun = [second noun] located in [location of second noun] in [map region of location of second noun].";
+	d "noun=[noun] 2nd noun = [second noun] located [if second noun is a backdrop]in lots of places[else if second noun is not off-stage]in [location of second noun][else]off-stage[end if].";
 	abide by the general-ask rule;
 	if noun is sausage and second noun is ruby:
 		if sausage is reflexive, say "You need to get the sausage to trust you, first." instead;
@@ -1986,7 +2007,7 @@ pat-whine is a truth state that varies.
 check objasking agnostic about (this is the agnostic can spoil rule):
 	if second noun is lois the hostile and agnostic is male, say "'Wow! It woulda been too much to have anyone more snooping around.'" instead;
 	if second noun is hostile is he lot and agnostic is female, say "'Wow! It woulda been too much to have anyone more snooping around." instead;
-	if second noun is moot, say "[if second noun is not atheists and second noun is not the-hostile and second noun is not lois the hostile]Out of the way[else][agnostic-first] doesn't want to be reminded, probably[end if]." instead;
+	if second noun is moot, say "[if second noun is not atheists and second noun is not the-hostile and second noun is not lois the hostile]You bet [agnostic] would've figured what to do with [the second noun][else][agnostic-first] doesn't want to be reminded, probably[end if]." instead;
 	unless second noun is guardian or second noun is curst palace:
 		continue the action;
 	if ag-cheat is false:
@@ -2051,16 +2072,15 @@ to say pick-keep: say "[if moot-picaros > 0]keep picking[else]pick[end if] off R
 table of default-sub-blather	[dsb] [any one person's default response to an in-game object] [xxtalk3]
 askee	dialogue-text
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
-aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
 nestor	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
 Trevis Vister	"Trevis Vister would love to be prayed to, and he probably thinks he deserves it."
-Len Craig	"'No small talk. Just the language of business. Let's haggle.'"
 Curtis	"Curtis is curt. 'Yeah, great job saving Yorpwald and all, what about here?'"
 lamb	"It's a baaaaad conversationalist."
 Leo	"[lrduh]"
 Rand	"[lrduh]"
-yak	"You yack, it's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning."
-[Logan	"'No mo' rig mooring.'"]
+yak	"You yack. It's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing."
+aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
+Len Craig	"'No small talk. Just the language of business. Let's haggle.'"
 
 casper-mumble is a truth state that varies.
 
@@ -4253,7 +4273,7 @@ tc-last is a number that varies. tc-last is usually 3.
 
 every turn when player is in Dusty Study and stuff-found < 3:
 	if turn count > tc-last + 2:
-		say "You may want to examine something [if stuff-found > 0]else [end if]to tell you about Yorpwald, like the [if bookshelf is unexamined]bookshelf[else if ads are unexamined]ads[else]pedanto-notepad[end if].";
+		ital-say "you may want to examine something [if stuff-found > 0]else [end if]to tell you about Yorpwald, like [if bookshelf is unexamined]the bookshelf[else if player does not have latches]a rich chair[else if notice is unexamined]the diorama and its instructions[else if ads are unexamined]the sad ads[end if].";
 		now tc-last is turn count;
 
 this is the ordeal-reload-hinting rule:
@@ -7469,7 +7489,7 @@ rule for printing the name of a dark room: say "No light-glint, oh!"
 
 chapter a rich chair
 
-a rich chair is boring scenery in Dusty Study. description of a rich chair is "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if].". bore-text is "[if Report Porter Perrot is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if].". bore-check is the bore-chair rule.
+a rich chair is boring scenery in Dusty Study. description of a rich chair is "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now. Maybe you should search it[end if].". bore-text is "[if Report Porter Perrot is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if].". bore-check is the bore-chair rule.
 
 this is the bore-chair rule:
 	if current action is searching:
@@ -7870,6 +7890,7 @@ to decide which number is stuff-found:
 	let mytemp be 0;
 	if Report Porter Perrot is moot, decide on 3;
 	if thinko is true, increase mytemp by 2;
+	if latches are not off-stage, increment mytemp;
 	if sad ads are examined, increment mytemp;
 	if player has pedanto notepad, increment mytemp;
 	if notice is examined, increment mytemp;
@@ -8611,7 +8632,7 @@ to say verb-list:
 	say "[2da][b]N[r], [b]S[r], [b]E[r] and [b]W[r] are the basic directions, though [b]UP[r] and [b]DOWN[r] are used occasionally, and [b]IN[r] or [b]OUT[r] may work.";
 	say "[2da][b]X[r] or [r][b]EXAMINE[r] may provide clues about something, and if it has writing on it, [b]READ[r] will show the writing, which is often a hint.";
 	say "[2da][b]LISTEN[r] and [b]SMELL[r] may also provide clues, usually when [this-game] indicates you can hear something. [b]ATTACK[r] may, as well, though that's more based on if I had a stupid joke ready.";
-	say "[2da][b]TALK[r] to an NPC gives general information, while [b]ASK X ABOUT Y[r] gives detailed information.";
+	say "[2da][b]ASK X ABOUT Y[r] may get detailed information from an NPC. If you [b]TALK[r] to an NPC, it's the equivalent of asking them about themselves. [b]A[r] is shorthand for [b]ASK ABOUT[r] if only one NPC is available.";
 	say "[2da][b]OPTIONS[r] or [b]OPTS[r] or [b]POST OPTS[r] gives you a list of game options that can simplify play or add detail.";
 	say "[2da][b]PAD[r] to see a list of topics. Then [b]PAD VERBS[r], for example.";
 	say "[2da][b]HINT[r] or [b]HELP[r] on an object shows progressive clues for what to do with it.";
@@ -8647,6 +8668,7 @@ to verbsplain (t - text):
 
 definition: a person (called per) is terse-ok:
 	unless per is terse-warned, no;
+	if per is moot, no;
 	if mrlp is towers and per is a guardian, yes;
 	if mrlp is map region of location of per, yes;
 	no;
@@ -9272,7 +9294,7 @@ check talking to Gretta:
 check talking to a person:
 	if litany of noun is table of no conversation:
 		if selftalk-warn is false:
-			ital-say "[b]ASK[i] ([b]PERSON[i]) [b]ABOUT[i] ([b]PERSON[i]/[b]THING[i]) is what [this-game] uses for detailed conversation. However, [b]TALK[r] is a shortcut to getting the NPC's default reply, which may have clues. You'll do this now, and this warning won't appear again.";
+			ital-say "[b]ASK[i] ([b]PERSON[i]) [b]ABOUT[i] ([b]PERSON[i]/[b]THING[i]) or [b]A[i] ([b]THING[i]) is what [this-game] uses for detailed conversation. However, [b]TALK[i] is a shortcut to asking an NPC about themselves, which often has clues.";
 			pad-rec "talking";
 			now selftalk-warn is true;
 		try objasking noun about noun instead;
@@ -11239,6 +11261,10 @@ a-text of diapers is "RYRRYYR". b-text of diapers is "PYRPYYR". parse-text of di
 a spider is scenery in Drain Nadir. "You're don't know whether to crush it or even think 'I spared a spider.'"
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]R". spider is parse-spoilable.
+
+Include (-
+	has transparent talkable
+-) when defining spider.
 
 chapter lager
 
@@ -13806,6 +13832,7 @@ The sabot boats are vanishing plural-named boring scenery in Disease Seaside. bo
 a-text of sabot boats is "RYYRR". b-text of sabot boats is "???R?". parse-text of sabot boats is "?[sp]?[sp]?[sp]x[sp]?". sabot boats are parse-spoilable.
 
 this is the bore-boats rule:
+	if action is blathery, continue the action;
 	if current action is sobating, now boring-exception is true;
 
 description of sabot boats is "They're sabot boats, not shippish, and there are too many to swim through without getting hit[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the sabot boats[end if]."
@@ -15070,7 +15097,7 @@ check scaning jumble: try scaning dialer instead;
 
 chapter dialer
 
-the dialer is boring scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if bogus-derail is touchable][b]DIALER[r][else][b]DERAIL[r][end if]. [if pins are reflexive and pins are touchable]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print.". bore-text of dialer is "There's probably something unusual to do with the dialer. It looks versatile."
+the dialer is boring scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if bogus-derail is touchable][b]DIALER[r][else][b]DERAIL[r][end if]. [if pins are reflexive and pins are touchable]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print.". bore-text of dialer is "There's probably something unusual to do with the dialer. It looks versatile.". bore-check of dialer is bore-talk-thru rule.
 
 to say shift-dialer:
 	if bogus-derail is moot, say " again"
@@ -16020,7 +16047,7 @@ understand "brownie" and "owers/bin/ower brownie" and "ower brownies" as Owers B
 
 chapter spec-o-scope
 
-the Spec O Scope is scenery in Scope Copse. understand "speco/specoscope" and "copse scope" as Spec O Scope. understand "map/telescope" as Spec O Scope when Spec O Scope is touchable and Spec O Scope is examined.
+the Spec O Scope is scenery in Scope Copse. understand "speco/specoscope" and "copse scope" as Spec O Scope. understand "map/telescope" as Spec O Scope when Spec O Scope is touchable and Spec O Scope is examined. printed name of Spec O Scope is "Spec-O-Scope".
 
 Include (-
 	has transparent talkable
@@ -16178,9 +16205,15 @@ this is the bore-creches rule:
 
 section organised ego drains LLP
 
-the organised ego drains are plural-named LLPish vanishing boring scenery in Leveraged Everglade. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[first custom style][one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random][r]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that [first custom style]SAD REGION[r][or]that you could get there some other way, [first custom style]DIG, REASON[r][or]that you're lucky you got no [first custom style]EAR DOSING[r][or]capped with a motto, [first custom style]DOERS GAIN[r][in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.". [bold-ok]
+the organised ego drains are plural-named LLPish vanishing boring scenery in Leveraged Everglade. description of ego drains is "Staring at them makes you feel small and insignificant, and what's more, they seem incredibly factual and precise. You could probably get away with not removing them, but Yorpwald would be nicer if you did.[paragraph break]'[first custom style][one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random][r]!' you seem to hear as you look at them more closely, through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that [first custom style]SAD REGION[r][or]that you could get there some other way, [first custom style]DIG, REASON[r][or]that you're lucky you got no [first custom style]EAR DOSING[r][or]capped with a motto, [first custom style]DOERS GAIN[r][in random order]. So few words, so much seeing red.". bore-text is "The ego drains are there, just waiting to mess with your mind. They aren't stopping you from doing anything, but you may be able to deal with them for your own edification and self-assurance.". bore-check of ego drains is the bore-talk-thru rule. [bold-ok]
 
 a-text of organised ego drains is "RRYRRYYRY". b-text of organised ego drains is "R?YRR?YRY". parse-text of organised ego drains is "x[sp]?[sp]-[sp]x[sp]x[sp]?[sp]-[sp]x[sp]-".
+
+this is the bore-talk-thru rule:
+	say "[the current action]. [whether or not action is blathery].";
+	if action is blathery:
+		now boring-exception is true;
+		continue the action;
 
 book Anemic Cinema
 
@@ -16705,7 +16738,7 @@ before asking agnostic about when dinger is in Actionless Coastlines:
 	ag-fid instead;
 
 to ag-fid:
-	say "[agnostic-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart.'[paragraph break]You need to pull [agnostic-first] away from that book. Maybe make it less attractive.";
+	say "[agnostic-first] says 'Sorry, I get too distracted talking about random stuff. I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I need to be confident in my smarts, and at the same time, I better not think I'm too smart.'[paragraph break]You need to pull [agnostic-first] away from that book. Maybe make it less attractive.";
 
 every turn when player is in Actionless Coastlines and dinger is in Actionless Coastlines:
 	say "[agnostic] continues perusing [dinger], not looking particularly thrilled."
@@ -16774,7 +16807,7 @@ check objasking Dr Yow about gizmo when player has gizmo: if Dr Yow is not in pr
 
 check giving gizmo to Dr Yow: say "'A bit too applied for me.'" instead;
 
-check objasking agnostic about gizmo: try giving gizmo to agnostic instead;
+check objasking agnostic about gizmo: if player has gizmo, try giving gizmo to agnostic instead;
 
 to say heat-remain:
 	if number of skansnaks carried by the player > 0:
