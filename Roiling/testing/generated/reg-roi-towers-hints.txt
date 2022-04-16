@@ -707,6 +707,10 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 After a thoughtful gaze, you reckon Staci Ong could be ATTENTIVE.
 >gs
 
+#ttc-table-of-settler-shake-descriptions-atblock
+>ss
+an aura of tentativeness about Scot
+
 >pearly
 Your score has just gone up by one point
 >score
@@ -744,7 +748,7 @@ After a thoughtful gaze, you reckon the blaster could be STABLER.
 
 >stabler
 by one point
-#ttc-table-of-towers-hint-done-notes-blaster
+#ttc-table-of-towers-hint-request-rejects-blaster
 >hint blaster
 You fixed the blaster. Now maybe try the turbos.
 >undo
@@ -753,18 +757,18 @@ You fixed the blaster. Now maybe try the turbos.
 >robust
 by one point
 
-#ttc-table-of-towers-hint-done-notes-turbos
+#ttc-table-of-towers-hint-request-rejects-turbos
 >hint turbos
 You fixed the turbos. Now maybe try the blaster.
 
 >stabler
 by one point
 
-#+ttc-table-of-towers-hint-done-notes-turbos
+#+ttc-table-of-towers-hint-request-rejects-turbos
 >hint turbos
 You fixed the turbos. The blaster, too. You can just ENTER BOAT.
 
-#+ttc-table-of-towers-hint-done-notes-blaster
+#+ttc-table-of-towers-hint-request-rejects-blaster
 >hint blaster
 You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 

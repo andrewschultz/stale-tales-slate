@@ -223,6 +223,10 @@ You had your chance for a minor swear or two. And you took it. Yay, you.
 >listen
 small talk, and they open up to you a bit.
 
+#ttc-table-of-settler-shake-descriptions-wzup
+>ss
+A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+
 #not a mistake
 >whassup
 Your score has just gone up by one point

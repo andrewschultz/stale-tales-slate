@@ -154,6 +154,13 @@ Swell Wells
 Try going down from the Swell Wells.
 >undo
 
+#ttc-table-of-settler-shake-descriptions-sorer-bogey
+>ss
+something pulsing in rhythm with the whines from the wells below
+>listen
+>ss
+something pulsing in rhythm with the whines from the sorer bogey
+
 >apricot
 Your score has just gone up by one point.
 
@@ -373,6 +380,10 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 >z
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
 
+#ttc-table-of-settler-shake-descriptions-a-banna
+>ss
+the/a banna'
+
 >banana
 Your score has just gone up by one point.
 >score
@@ -401,6 +412,10 @@ Gates Stage
 
 >n
 PERP
+
+#ttc-table-of-settler-shake-descriptions-fleeing-feeling
+>ss
+the word "PERP" forming outside the Valence Enclave
 
 >research
 by one point

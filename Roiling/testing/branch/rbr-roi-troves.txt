@@ -189,7 +189,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @hints
-#ttc-table-of-troves-hint-done-notes-pa-egg-pea
+#ttc-table-of-troves-hint-request-rejects-pa-egg-pea
 >hint pa egg pea
 Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point.
 
@@ -477,7 +477,7 @@ by one point
 {$SCOS}
 
 @hints
-#ttc-table-of-troves-hint-done-notes-a-sty-tasty-say
+#ttc-table-of-troves-hint-request-rejects-a-sty-tasty-say
 >hint tasty
 You figured how to get the LLP for ignoring A Sty: Tasty, Say.
 
@@ -652,6 +652,11 @@ Drowning something without reason further in reason is unreasonable.
 It's...hmm...you remember all the clues, but what order to place them in, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That's a decent omen.
 
+@hints
+#ttc-table-of-settler-shake-descriptions-l-clear-cellar
+>ss
+You switch the settler, then shake it. Your vision swirls for a minute. Only the outline of L'Clear Cellar. You check: nope, not there is visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+
 >recall
 by one point
 
@@ -745,6 +750,11 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 >read lager
 Your eyes gloss over all but the red name, ERGAL AGLER.
 
+@hints
+#ttc-table-of-settler-shake-descriptions-lager
+>ss
+A few things: the Ires Pad (a bit blurry), the box of diapers and the can of Large Regal Lager (very blurry) are visible. You turn the settler off.
+
 @!mina,minb
 >glare
 Your score has just gone up by one point
@@ -752,6 +762,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@hints
+#ttc-table-of-settler-shake-descriptions-id-cede
+>ss
+musical notes pulsing with the beat of I'd Cede
 
 @verbs
 #verbcase smell-troves-if-player-is-in-drain-nadir

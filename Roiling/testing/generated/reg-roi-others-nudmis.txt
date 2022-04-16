@@ -410,7 +410,7 @@ The miser ruble turns a bit purpler.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
 #ttc-table-of-others-spechelp-sorer-bogey
 >gooseberyr
-The bogey's tone changes slightly for a second.
+The sorer bogey's tone changes slightly for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
 #ttc-table-of-others-spechelp-stucco
 >stucocno

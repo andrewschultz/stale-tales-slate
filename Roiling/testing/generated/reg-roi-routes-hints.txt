@@ -50,7 +50,7 @@ Precise recipes
 
 >out
 
-#ttc-table-of-routes-hint-done-notes-scripture-picturers
+#ttc-table-of-routes-hint-request-rejects-scripture-picturers
 >hint scripture picturers
 The scripture picturers helped you get in, but they're just there to help other people now. Maybe.
 
@@ -68,7 +68,7 @@ Your score has just gone up by one point
 
 The spoon points you out of the Idle Deli.
 
-#ttc-table-of-routes-hint-done-notes-seed-pit
+#ttc-table-of-routes-hint-request-rejects-seed-pit
 >hint seed pit
 You got what you needed from the seed pit.
 
@@ -106,7 +106,7 @@ Your score has just gone up by one point
 
 You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
 
-#ttc-table-of-routes-hint-done-notes-sit-a-nag
+#ttc-table-of-routes-hint-request-rejects-sit-a-nag
 >hint sit a nag
 You got Ian Gast to the anti-sag sit-a-nag. Now you need to deal with Ian Gast.
 
@@ -118,7 +118,7 @@ Your score has just gone up by one point
 
 You angle your spoon a bit, and you realize you, or something, should be BELOW.
 
-#ttc-table-of-routes-hint-done-notes-side-art
+#ttc-table-of-routes-hint-request-rejects-side-art
 >hint side art
 You positioned yourself well to put up with Ian Gast's tirades. Time to try a new direction.
 
@@ -172,6 +172,10 @@ You angle your spoon a bit, and you realize you, or something, should be UNTIL.
 
 >score
 Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+#ttc-table-of-settler-shake-descriptions-darkness
+>ss
+A few things: the NULL-IT unit, a weird outline in the darkness (a bit blurry) and the damsel medals are visible. You turn the settler off.
 
 #pre-unlit-until rule
 >until

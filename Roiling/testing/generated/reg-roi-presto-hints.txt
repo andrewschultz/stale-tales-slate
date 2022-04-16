@@ -74,7 +74,7 @@ Score in a scenario: 4 out of 41 total points in the current region, Presto. Low
 >drat
 Your score has just gone up by one point
 
-#ttc-table-of-presto-hint-done-notes-dart
+#ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 It'd be nice to find a weapon for the dart.
 
@@ -106,7 +106,7 @@ DEBUG INFO: volt maze hinting.
 >score
 Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-#ttc-table-of-presto-hint-done-notes-tsar-star
+#ttc-table-of-presto-hint-request-rejects-tsar-star
 >hint tsar star
 Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly.
 
@@ -184,6 +184,10 @@ You gulp the crust and can't help thinking WHASSUP. But you are too polite and/o
 >score
 Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
+#ttc-table-of-settler-shake-descriptions-wzup
+>ss
+A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+
 #not a mistake
 >whassup
 Your score has just gone up by one point
@@ -192,7 +196,7 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 
 /You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
 
-#+ttc-table-of-presto-hint-done-notes-tsar-star
+#+ttc-table-of-presto-hint-request-rejects-tsar-star
 >hint tsar star
 The tsar star has done its duty.
 
@@ -220,11 +224,11 @@ Your score has just gone up by one point
 
 You can just put the dart in the popgun.
 
-#ttc-table-of-presto-hint-done-notes-boing-go-bin
+#ttc-table-of-presto-hint-request-rejects-boing-go-bin
 >hint boing go bin
 The boing-go bin works fine now.
 
-#ttc-table-of-presto-hint-done-notes-dart
+#ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 Maybe the dart can fit in the popgun.
 
@@ -234,7 +238,7 @@ Score in a scenario: 16 out of 41 total points in the current region, Presto. Lo
 >load gun with dart
 You put the dart into the PG-on-up popgun.
 
-#ttc-table-of-presto-hint-done-notes-dart
+#ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 You're done with the dart, except for firing it at the right time.
 
@@ -289,13 +293,13 @@ Score in a scenario: 19 out of 41 total points in the current region, Presto. Lo
 
 >so long
 by one point
-#ttc-table-of-presto-hint-done-notes-log-ons-letters
+#ttc-table-of-presto-hint-request-rejects-log-ons-letters
 >hint log ons letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
 >undo
 >undo
 
-#ttc-table-of-presto-hint-done-notes-ought-letters
+#ttc-table-of-presto-hint-request-rejects-ought-letters
 >tough
 by one point
 >hint ought letters
@@ -309,7 +313,7 @@ But we ain't bored yet, boss!
 >score
 Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
-#ttc-table-of-presto-hint-done-notes-alert-letters
+#ttc-table-of-presto-hint-request-rejects-alert-letters
 >hint alert letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
 
@@ -423,7 +427,7 @@ by one point
 
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
-#ttc-table-of-presto-hint-done-notes-im-le-cop-polemic
+#ttc-table-of-presto-hint-request-rejects-im-le-cop-polemic
 >hint im le cop polemic
 You got things compiling. No more worries there.
 
@@ -471,7 +475,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
-#ttc-table-of-presto-hint-done-notes-tba-key
+#ttc-table-of-presto-hint-request-rejects-tba-key
 >hint tab key
 The tab key will be useful without any further wizardry.
 

@@ -146,7 +146,7 @@ by one point
 
 DEBUG INFO: damsel medals hinting.
 
-#ttc-table-of-otters-hint-done-notes-eels
+#ttc-table-of-otters-hint-request-rejects-eels
 >hint eels
 The eels will assist you when the time comes.
 
@@ -412,6 +412,10 @@ Reclusion Inclosure
 As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
 
 DEBUG INFO: parrot hinting.
+
+#ttc-table-of-settler-shake-descriptions-aside-llp
+>ss
+rays of tension between Merle and Elmer (very blurry) are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
 
 >aside
 Your score has just gone up by one point

@@ -671,6 +671,14 @@ Swell Wells
 Try going down from the Swell Wells.
 >undo
 
+@hints
+#ttc-table-of-settler-shake-descriptions-sorer-bogey
+>ss
+something pulsing in rhythm with the whines from the wells below
+>listen
+>ss
+something pulsing in rhythm with the whines from the sorer bogey
+
 @spoi
 >gx elp psa
 You have a vision of a fruit: APPLES. The aftertaste of arugula finally dissipates.
@@ -777,7 +785,7 @@ The miser ruble turns a bit purpler.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
 #ttc-table-of-others-spechelp-sorer-bogey
 >gooseberyr
-The bogey's tone changes slightly for a second.
+The sorer bogey's tone changes slightly for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
 #ttc-table-of-others-spechelp-stucco
 >stucocno
@@ -828,6 +836,18 @@ Your score has just gone up by one point.
 {$SCOS}
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
+
+@hin
+>coconuts
+by one point
+>s
+#ttc-table-of-settler-shake-descriptions-coins
+>ss
+Only Curtis's coins are visible. You turn the settler off.
+>icons
+#ttc-table-of-settler-shake-descriptions-icons
+>ss
+Only the icons you made are visible. You turn the settler off.
 
 >s
 Curtis hands you a coin
@@ -1907,6 +1927,11 @@ You haven't visited the Gates Stage north of the Swell Wells, yet. That's where 
 >listen brr hub
 A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process.
 
+@hints
+#ttc-table-of-settler-shake-descriptions-a-banna
+>ss
+the/a banna'
+
 @!min
 >banana
 Your score has just gone up by one point.
@@ -2033,6 +2058,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.
+
+@hints
+#ttc-table-of-settler-shake-descriptions-fleeing-feeling
+>ss
+the word "PERP" forming outside the Valence Enclave
 
 @nud
 >prep

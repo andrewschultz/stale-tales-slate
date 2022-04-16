@@ -48,7 +48,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
-#ttc-table-of-troves-hint-done-notes-pa-egg-pea
+#ttc-table-of-troves-hint-request-rejects-pa-egg-pea
 >hint pa egg pea
 Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point.
 
@@ -114,7 +114,7 @@ by one point
 >score
 Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 30.
 
-#ttc-table-of-troves-hint-done-notes-a-sty-tasty-say
+#ttc-table-of-troves-hint-request-rejects-a-sty-tasty-say
 >hint tasty
 You figured how to get the LLP for ignoring A Sty: Tasty, Say.
 
@@ -135,6 +135,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+
+#ttc-table-of-settler-shake-descriptions-l-clear-cellar
+>ss
+You switch the settler, then shake it. Your vision swirls for a minute. Only the outline of L'Clear Cellar. You check: nope, not there is visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
 
 >recall
 by one point
@@ -158,10 +162,18 @@ DEBUG INFO: I'd Cede hinting.
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
 
+#ttc-table-of-settler-shake-descriptions-lager
+>ss
+A few things: the Ires Pad (a bit blurry), the box of diapers and the can of Large Regal Lager (very blurry) are visible. You turn the settler off.
+
 >glare
 Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
+
+#ttc-table-of-settler-shake-descriptions-id-cede
+>ss
+musical notes pulsing with the beat of I'd Cede
 
 >decide
 Your score has just gone up by one point

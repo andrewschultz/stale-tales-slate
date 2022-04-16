@@ -445,7 +445,7 @@ understand "rondale" as a mistake ("Strength and NFL level speed is pretty aweso
 
 understand "whassup" as a mistake ("You probably want to [b]TALK[r] to people instead. Well, most of the time.") when wzup is not in location of player.
 
-understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in Dirge Ridge and Leo is washed up.
+understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when wzup is touchable.
 
 chapter Austerer Treasure
 

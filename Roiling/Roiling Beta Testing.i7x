@@ -309,6 +309,8 @@ carry out otwining:
 		now adjsolve is 2;
 		now nounsolve is 2;
 	else:
+		if power-back is false, say "Getting powers back...[paragraph break]";
+		now power-back is true;
 		now player has whistle;
 		now player wears medals;
 		moot hydra;

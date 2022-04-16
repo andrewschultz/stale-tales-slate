@@ -1102,6 +1102,11 @@ There are no clothing stores around, nor is there anything physical to lead you 
 >threads
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
+@hints
+#ttc-table-of-settler-shake-descriptions-eeks
+>ss
+A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible. You turn the settler off.
+
 @max
 >scan cans
 by one point

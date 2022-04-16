@@ -149,6 +149,10 @@ DEBUG INFO: eeks hinting.
 >score
 Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
 
+#ttc-table-of-settler-shake-descriptions-eeks
+>ss
+A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible. You turn the settler off.
+
 >scan
 #notana 'nudge for cans'
 Your score has just gone up by one point

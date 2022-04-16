@@ -518,6 +518,7 @@ EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), code
 @max
 #######################################Intel Inlet: CareLand Calendar
 \\
+#ttc-table-of-demo-dome-careland-calendar-parts-1
 >x calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 Part one: Protean
@@ -527,9 +528,22 @@ UNNOTED exhibits: novella (Evoc-Cove) and shiest thesis (Intel Inlet).
 PERUSED exhibits: CareLand Calendar (Intel Inlet).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 \\
+#ttc-table-of-demo-dome-careland-calendar-parts-2
+#ttc-table-of-demo-dome-careland-calendar-parts-3
+#ttc-table-of-demo-dome-careland-calendar-parts-4
+#ttc-table-of-demo-dome-careland-calendar-parts-5
+#ttc-table-of-demo-dome-careland-calendar-parts-6
+#ttc-table-of-demo-dome-careland-calendar-parts-7
+#ttc-table-of-demo-dome-careland-calendar-parts-8
+#ttc-table-of-demo-dome-careland-calendar-parts-9
+#ttc-table-of-demo-dome-careland-calendar-parts-10
+#ttc-table-of-demo-dome-careland-calendar-parts-11
+#ttc-table-of-demo-dome-careland-calendar-parts-12
+#ttc-table-of-demo-dome-careland-calendar-parts-13
 >xab calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 \\
+#ttc-table-of-demo-dome-careland-calendar-parts-14
 >x calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 [NOTE: you've read all the way through.]

@@ -364,8 +364,6 @@ a room can be stairy. a room is usually not stairy.
 
 a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
 
-a thing can be ghostly. a thing is usually not ghostly.
-
 a person can be superchatty, subject-talking or terse. a person is usually subject-talking. [terse = they ignore general defaults like asking about Elvira, subject-talking = ignore silly details.]
 
 a person can be terse-warned. a person is usually not terse-warned.
@@ -6301,10 +6299,14 @@ this is the listen-otters rule:
 	if player is in Perverse Preserve, say "You hear no metronomes you could turn into monotremes." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead; [bold-ok]
 
+bogey-listen is a truth state that varies.
+
 this is the listen-others rule:
 	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead;
 	if noun is Rustic Citrus, say "Curtis [if cur-score of others < 4]mumbles various business ideas to himself[else]continues to sing and hum the tidiest dietist ditties[end if]." instead;
-	if noun is sorer bogey, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
+	if noun is sorer bogey:
+		now bogey-listen is true;
+		say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
 	if noun is barren cries, say "The barren cries are sour and bitter and tiny." instead;
 	if noun is ammo gang, say "One of the selly yells stands out from the others. A small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?" instead;
 	if noun is selly yells, say "[selyel]" instead;
@@ -6730,7 +6732,7 @@ rule for supplying a missing noun when ss0ing:
 ss0ing is an action applying to one thing.
 
 carry out ss0ing:
-	if noun is not settler, say "That doesn't really work." instead;
+	if noun is not settler, say "That doesn't really work. Just [b]SS[r] will scan everything." instead;
 	try ssing instead;
 
 carry out ssing:
@@ -8363,7 +8365,7 @@ to show-bluables:
 		say "A few things:";
 	else:
 		say "Many things:";
-	say " [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. [one of]It's a bit of a headache to stare too long, so you switch the settler off. Your view quickly returns to normal[or]You turn the settler off[stopping].[line break]";
+	say " [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. [one of]It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal[or]You turn the settler off[stopping].[line break]";
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
@@ -8380,8 +8382,8 @@ to say bluable-list:
 		increment inc;
 		if inc is QQ2 and QQ2 > 1:
 			say " and ";
-		if bloo is an altview listed in table of altviews:
-			choose row with altview of bloo in table of altviews;
+		if bloo is an altview listed in table of settler shake descriptions:
+			choose row with altview of bloo in table of settler shake descriptions;
 			if there is an alttext entry:
 				say "[alttext entry]";
 			else:
@@ -8418,19 +8420,17 @@ definition: a thing (called mbbl) is blurry:
 	if mbbl is a guardian, no;
 	decide no;
 
-table of altviews
+table of settler shake descriptions
 altview	alttext
 darkness	"a weird outline in the darkness" [routes]
 L Clear Cellar	"the outline of L'Clear Cellar. You check: nope, not there" [troves]
 lager	"the can of Large Regal Lager"
-praise	"the praise floating in the air"
-rivets	"the rivets spelling [b]PRAISE[r]"
+Id Cede	"musical notes pulsing with the beat of [cede]"
 wzup	"a pair of hands patting [l-n-r] on the back" [presto]
 eeks	"some cartoony representation of [b]EEKS[r]" [oyster]
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
-agnostic	"[agnostic-first]"
-aside-llp	"rays of energy between [e-n-m]" [otters]
-sorer bogey	"an outline of the sorer bogey" [others]
+aside-llp	"rays of tension between [e-n-m]" [otters]
+sorer bogey	"something pulsing in rhythm with the whines from the [if bogey-listen is true]wells below[else]sorer bogey[end if]" [others]
 a banna	"the/a banna[']"
 fleeing feeling	"the word '[b]PERP[r]' forming outside the Valence Enclave"
 coins	"Curtis's coins"
@@ -8446,7 +8446,6 @@ definition: a thing (called candi) is bluable:
 	[say "[candi] [if candi is ghostly]invis[end if] [if candi is uncluing]uncluing[end if] [if candi is touchable] visible[end if].";]
 	if candi is unscannable, no;
 	if candi is reflexed, no;
-	if candi is ghostly, no;
 	if candi is uncluing, no;
 	if candi is clue-used, no;
 	if player is in Econ Cone:
@@ -8464,7 +8463,6 @@ definition: a thing (called candi) is bluable:
 	decide no;
 
 definition: a thing (called candi) is outlinable:
-	if candi is not ghostly, no;
 	if candi is uncluing, no;
 	if candi is touchable, yes;
 	decide no;
@@ -11299,7 +11297,7 @@ check taking lager: say "No, touching or holding a can almost always leads to dr
 
 chapter I'd Cede
 
-Id Cede is reflexive boring scenery. description of Id Cede is "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. printed name of Id Cede is "I'd Cede".
+Id Cede is reflexive boring scenery. description of Id Cede is "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. printed name of Id Cede is "[i]I'd Cede[r]".
 
 a-text of Id Cede is "RYRYRY". b-text of Id Cede is "RYPYPG". parse-text of Id Cede is "UNIQUE". Id Cede is parse-spoilable.
 
@@ -12171,7 +12169,7 @@ initial appearance of Rand is "[bug-report]".
 
 chapter whassuping
 
-the wzup is privately-named proper-named reflexive boring scenery in Dirge Ridge. printed name of wzup is "between [l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
+the wzup is privately-named proper-named reflexive boring scenery. printed name of wzup is "between [l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "W[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -20099,7 +20097,7 @@ a-text of miser ruble is "RYRRYRRYYR". b-text of miser ruble is "PYRRYPRYYR". pa
 
 chapter gooseberry
 
-the sorer bogey is ghostly vanishing scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
+the sorer bogey is vanishing scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
 
 check taking sorer bogey: say "Don't be a silly goose." instead;
 

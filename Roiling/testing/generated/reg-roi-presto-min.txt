@@ -94,6 +94,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
 
+#ttc-table-of-settler-shake-descriptions-wzup
+>ss
+A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+
 #not a mistake
 >whassup
 Your score has just gone up by one point
