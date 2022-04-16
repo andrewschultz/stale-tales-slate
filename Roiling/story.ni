@@ -5254,6 +5254,14 @@ lastcmd	storedest	portdest	old-rel [old release is last one where this command w
 
 book errors
 
+Rule for supplying a missing noun:
+	if noun is nothing:
+		if mrlp is oyster and cur-score of oyster > 0:
+			say "Either that verb needs a subject, or you may need to be in the right place to use it. Note all point-scoring verbs in Oyster can be used on their own.";
+		else:
+			say "While many verbs in [this-game] take implicit nouns, that verb requires a noun.";
+		reject the player's command;
+
 Rule for printing a parser error when the latest parser error is the nothing to do error:
 	say "Nothing is small or mobile or valuable enough to take here." instead;
 
@@ -14165,7 +14173,7 @@ check going when location of sausage is location of player:
 every turn (this is the track sausage rule):
 	if sausage is moot or sausage has not been in Anger Range, continue the action;
 	if location of sausage is adjacent to location of player:
-		say "The sausage follows you.";
+		say "The [sausage] follows you, wailing and moaning.";
 		move sausage to location of player;
 		if location of player is Horned Hedron and walleyes are in Horned Hedron:
 			say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as [the sausage] hovers over you protectively.";
@@ -21202,7 +21210,7 @@ The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of e
 
 chapter CareLand Calendar
 
-The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.". notes-table of CareLand Calendar is table of calparts.
+The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.". notes-table of CareLand Calendar is table of demo dome careland calendar parts.
 
 calendar-part is a number that varies.
 
@@ -22460,7 +22468,7 @@ this is the presto-misses rule:
 
 this is the oyster-misses rule:
 	check-oyster-spill posh hops shop;
-	if number of entries in shop-hint-items > 2, say "[2drm of posh hops shop][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
+	if number of entries in shop-hint-items > 2, say "[2drm of posh hops shop][if silly-acts is 0]The full list of[else]Unchosen[end if] ways to annoy the trolls: [remaining-actions of 0].";
 	check-oyster-spill olde lode;
 	check-oyster-spill disease seaside;
 	check-oyster-spill anger range;
