@@ -513,7 +513,7 @@ to any-guardian-hint: [note: we are assured there is > 1 guardian. This is a gen
 
 chapter rules on stub
 
-table of region-spoilers
+table of region spoilers
 hint-reg	spoil-expl
 otters	"adverbs (weakest, [if power-back is false]due to lost powers[else](but powers back now[end if])"
 presto	"interjections"
@@ -534,7 +534,7 @@ every turn when Strip of Profits is visited (this is the region-hint on no score
 				say "It seems you're stuck a bit here. Would you like a hint as to what this region is about?";
 				if the player dir-consents:
 					now mrlp is spoiled;
-					choose row with hint-reg of mrlp in table of region-spoilers;
+					choose row with hint-reg of mrlp in table of region spoilers;
 					say "This region focuses on [spoil-expl entry].";
 					now block-north is true;
 				else:
@@ -3590,7 +3590,7 @@ carry out requesting the score:
 	the rule succeeds;
 
 to show-rank:
-	say "This would give you a rank of ";
+	say "This would give you the rank of ";
 	if mrlp is others or roved is true or otters is solved:
 		say "Procured Producer.";
 		continue the action;
@@ -4952,15 +4952,11 @@ definition: a thing (called X) is pre-animal:
 	decide no.
 
 to say right-adj of (anim - an animal):
-	choose row with ani of anim in the table of animal-stuff;
-	say "[adj-say entry in upper case]";
-
-table of animal-stuff
-ani	adj-say
-ocelots	"coolest"
-leopard	"paroled"
-badger	"garbed"
-satyr	"artsy"
+	repeat through table of otters anagrams:
+		if anim is the-from entry:
+			say "[right-word entry in upper case]";
+			continue the action;
+	say "BUG";
 
 book demo-dome-hinting
 
@@ -7188,6 +7184,7 @@ retried is a truth state that varies. retried is usually false.
 
 carry out retrying:
 	if location of player is Strip of Profits:
+		d "retry failed since we're in Strip of Profits."; [ for testing purposes ]
 		if retried is true, say "This is the place you go after retrying--as you probably know. So nothing happens." instead;
 		say "Nothing happens. Perhaps this is where you'd be sent back to [if Same Mesa is visited or Loather Rathole is visited or Grey Gyre is visited or Posh Hops Shop is visited or Loftier Trefoil is visited]after going somewhere like you've been[else]once you're able to look around[end if]." instead;
 	if mrlp is demo dome, say "There's nothing to keep track of, here. Just explore around." instead;
@@ -8796,7 +8793,7 @@ to say prefigured-things:
 			say "[line break]You remember you need to think [pft] at some time.";
 
 to say other-areas:
-	repeat through table of region-spoilers:
+	repeat through table of region spoilers:
 		if last-loc of hint-reg entry is visited:
 			if hint-reg entry is not others and hint-reg entry is not Ordeal Reload and hint-reg entry is not stores:
 				say "[spoil-expl entry]";
@@ -15473,7 +15470,7 @@ to draw-my-loc: [this draws a black square in your current location]
 	let myx be 0;
 	let myy be 0;
 	draw-towers-map;
-	repeat through table of towers-locs:
+	repeat through table of towers x y locations:
 		if location of player is my-loc entry:
 			change current foreground-color to (R 0 G 0 B 0);
 			now myx is tow-x-start + (tow-delta * my-x entry) - 2;
@@ -15496,7 +15493,7 @@ to draw-towers-map:
 	let sqsz be (square-from-center * 2) + 1;
 	let myx be 0;
 	let myy be 0;
-	repeat through table of towers-locs:
+	repeat through table of towers x y locations:
 		if my-loc entry is accessible:
 			if my-loc entry is unvisited:
 				change current foreground-color to (R 42 G 126 B 126);
@@ -15525,7 +15522,7 @@ to draw-towers-map:
 		draw-line (gualoc of myg) and (guadir of myg);
 
 to draw-line (lcc - a room) and (bd - a direction):
-	choose row with my-loc of lcc in table of towers-locs;
+	choose row with my-loc of lcc in table of towers x y locations;
 	let x-start be tow-x-start + (tow-delta * my-x entry);
 	let y-start be tow-y-start + (tow-delta * my-y entry);
 	let x-end be tow-x-start + (tow-delta * my-x entry);
@@ -15545,7 +15542,7 @@ to draw-line (lcc - a room) and (bd - a direction):
 	linedraw (current foreground-color) in current graphics window from x-start by y-start to x-end by y-end with 1;
 [To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1 - a number) to (x2 - a number) by/x (y2 - a number) with (wgt - a number):]
 
-table of towers-locs [arranged n to s then w to e. Dourest Detours/Arid Den are not included, as that would draw something in an odd position.]
+table of towers x y locations [arranged n to s then w to e. Dourest Detours/Arid Den are not included, as that would draw something in an odd position.]
 my-loc	my-x	my-y
 Shaven Havens	1	0
 Fringe Finger	0	1
@@ -15630,8 +15627,8 @@ after printing the locale description when mrlp is towers (this is the castle ne
 			now adude is not clueneedy;
 			now any-reveal is true;
 			say "[clue-text of adude][paragraph break]";
-	if rm is unvisited and rm is a towloc listed in the table of towercomments:
-		choose row with towloc of rm in table of towercomments;
+	if rm is unvisited and rm is a towloc listed in the table of tower progress comments:
+		choose row with towloc of rm in table of tower progress comments;
 		if there is a towquo entry:
 			say "[towquo entry][paragraph break]";
 			if there is a towdist entry:
@@ -15666,7 +15663,7 @@ observ
 "Since your head's barely above water, you can't see a shore any more. But you know it must be there."
 "The palace--well, you can see why it was spectacular, once."
 
-table of towercomments
+table of tower progress comments
 towloc	towdist	towquo
 Loftier Trefoil	0	"The palace--well, you couldn't even see it outside. Maybe someone will help you, once you've sorted this mess out."
 Outer Route	--	"The palace has receded a bit, but--well--that machine's got to be good for something."
@@ -21164,7 +21161,7 @@ to decide whether nuf-hows-examined:
 
 section tester street
 
-Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type [b]CREDITS[r] for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of testing notes.
+Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type [b]CREDITS[r] for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of demo dome tester street notes.
 
 section techs chest
 
@@ -22061,7 +22058,7 @@ to lj-cue:
 
 megsort is a truth state that varies.
 
-table of regabr
+table of endgame region abbreviations
 this-reg	this-top (topic)	this-pre-rule	this-text
 Meta Team	"la/lg"
 --	"lc"	--	"There's nothing extra, or extra licentious, behind Store C."
@@ -22095,7 +22092,7 @@ this is the is-others-passed rule:
 	say "I can't show you the random text lists for Store H, yet. You haven't solved it." instead;
 
 this is the showing regional lists rule:
-	repeat through table of regabr:
+	repeat through table of endgame region abbreviations:
 		if the player's command matches this-top entry:
 			if there is a this-pre-rule entry, abide by the this-pre-rule entry;
 			if there is a this-text entry:
