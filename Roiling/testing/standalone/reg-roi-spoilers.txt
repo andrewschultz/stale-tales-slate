@@ -7,6 +7,12 @@
 
 * spoil-all
 
+>au 0
+
+#ttc-table-of-ranks-1
+>score
+This would give you the rank of Farce Facer.
+
 >z
 >z
 >z
@@ -24,6 +30,31 @@
 [NOTE: you may want to examine something else to tell you about Yorpwald, like the diorama and its instructions.]
 
 >ts
+
+
+#ttc-table-of-region-skip-commands-between
+>between
+The region for this final command (Routes) may've changed since you last played, which is probably release 3 or earlier. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+Enjoy the new content!
+
+#ttc-table-of-region-skip-commands-through
+>through
+The region for this final command (Routes) may've changed since you last played, which is probably release 3 or earlier. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+Enjoy the new content!
+
+#ttc-table-of-region-skip-commands-beyond
+>beyond
+You declare cleared Routes and watch Store U dissolve.
+>score
+This would give you the rank of Results Tussler.
+>undo
+>undo
+
+#ttc-table-of-ranks-2
+>score
+This would give you the rank of Riled Idler.
+
+# ok, let's test all the region skip commands
 
 >routes
 >in
@@ -44,28 +75,58 @@
 >n
 >n
 
-#ttc-table-of-region-spoilers-routes
 >n
 It seems you're stuck a bit here. Would you like a hint as to what this region is about?
 Okay. I'll ask again in a few moves, if you haven't figured anything yet.
 
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+
 >au 2
-
->n
->n
->n
->n
->n
->n
->n
->n
->n
-#ttc-table-of-region-spoilers-others
-
+#ttc-table-of-region-spoilers-routes
 >n
 This region focuses on prepositions.
+>au 0
+
+>gonear hurt hog
+>between
+by one point
+>through
+by one point
+>beyond
+
+Strip of Profits
 
 >retry
+DEBUG INFO: retry failed since we're in Strip of Profits.
+
+#ttc-table-of-region-skip-commands-decide
+>decide
+The region for this final command (Troves) may've changed since you last played, which is probably release 1. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+Enjoy the new content!
+#ttc-table-of-region-skip-commands-resign
+>resign
+The region for this final command (Troves) may've changed since you last played, which is probably release 3 or earlier. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+Enjoy the new content!
+#ttc-table-of-region-skip-commands-recant
+>recant
+You declare cleared Troves and watch Store V dissolve.
+>score
+This would give you the rank of Fierier Reifier.
+>undo
+>undo
+
+#ttc-table-of-ranks-3
+>score
+This would give you the rank of Results Tussler.
+
 >troves
 >enter estate
 
@@ -83,11 +144,54 @@ This region focuses on prepositions.
 >n
 >n
 >n
+
+>au 2
 #ttc-table-of-region-spoilers-troves
 >n
 This region focuses on passive verbs.
+>au 0
+
+>gonear upscale capsule
+
+>deserve
+by one point
+>last
+by one point
+>ramble
+by one point
+>recant
+by one point
+
+Strip of Profits
 
 >retry
+DEBUG INFO: retry failed since we're in Strip of Profits.
+
+#ttc-table-of-region-skip-commands-debug
+>debug
+The region for this final command (Presto) may've changed since you last played, which is probably release 1. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+Enjoy the new content!
+
+#ttc-table-of-region-skip-commands-bus
+>bus
+You declare cleared Presto and watch Store P dissolve.
+>score
+This would give you the rank of Rifeness Finesser.
+>undo
+>undo
+
+#ttc-table-of-region-skip-commands-sub
+>sub
+You declare cleared Presto and watch Store P dissolve.
+>score
+This would give you the rank of Rifeness Finesser.
+>undo
+>undo
+
+#ttc-table-of-ranks-4
+>score
+This would give you the rank of Fierier Reifier.
+
 >presto
 >enter tornado
 
@@ -105,11 +209,37 @@ This region focuses on passive verbs.
 >n
 >n
 >n
+
+>au 2
 #ttc-table-of-region-spoilers-presto
 >n
 This region focuses on interjections.
+>au 0
+
+>gonear shack
+>purloin usb
+>sub
+by one point
+
+Strip of Profits
+
+#ttc-table-of-region-skip-commands-destroy
+>destroy
+The region for this final command (Oyster) may've changed since you last played, which is probably release 1. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+#ttc-table-of-region-skip-commands-redial
+>redial
+You declare cleared Oyster and watch Store Y dissolve.
+>score
+>undo
+>undo
 
 >retry
+DEBUG INFO: retry failed since we're in Strip of Profits.
+
+#ttc-table-of-ranks-5
+>score
+This would give you the rank of Rifeness Finesser.
+
 >oyster
 >enter balancer
 
@@ -127,11 +257,40 @@ This region focuses on interjections.
 >n
 >n
 >n
+
+>au 2
 #ttc-table-of-region-spoilers-oyster
 >n
 This region focuses on active verbs.
+>au 0
+
+>gonear papery yapper
+>prepay
+by one point
+>derail
+by one point
+>spin pins
+by one point
+>redial
+by one point
+
+Strip of Profits
+
+#ttc-table-of-region-skip-commands-spectacular
+>spectacular
+You declare cleared Towers and watch Store W dissolve.
+>score
+This would give you the rank of Truculenter Unclutterer.
+>undo
+>undo
 
 >retry
+DEBUG INFO: retry failed since we're in Strip of Profits.
+
+#ttc-table-of-ranks-6
+>score
+This would give you the rank of Lengthier Lightener.
+
 >towers
 >enter turrets
 
@@ -149,11 +308,31 @@ This region focuses on active verbs.
 >n
 >n
 >n
+
+>au 2
 #ttc-table-of-region-spoilers-towers
 >n
 This region focuses on adjectives.
+>au 0
+
+>gonear mislit limits
+>spectacular
+by one point
+
+Strip of Profits
+
+#ttc-table-of-region-skip-commands-quickly
+>quickly
+That was the command to win the original release, but there's another command to see the region beyond Elvira. If you want to restart, go back to the Dusty Study and ROVE OVER, that will work.
+#
 
 >retry
+DEBUG INFO: retry failed since we're in Strip of Profits.
+
+#ttc-table-of-ranks-7
+>score
+This would give you the rank of Truculenter Unclutterer.
+
 >a5
 >otters
 >enter idols
@@ -172,31 +351,78 @@ This region focuses on adjectives.
 >n
 >n
 >n
+
+>au 2
 #ttc-table-of-region-spoilers-otters
 >n
 This region focuses on adverbs (weakest, due to lost powers).
 
-* others-try
+#ttc-table-of-ranks-8
+>otw
+
+>score
+This would give you the rank of Unresting Insurgent.
+
+>deeply
+by one point
+>quickly
+by one point
+>w
+>7
+>play whistle
+
+>{include} _others_score_check
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
 
 >au 2
-
->rove over
->others
->in
-
->n
->n
->n
->n
->n
->n
->n
->n
->n
->n
->n
->n
->n
->n
+#ttc-table-of-region-spoilers-others
 >n
 This region focuses on anagrammable fruits.
+
+* warp command testing
+
+>au 2
+>z
+>demo dome mode
+
+>score
+There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
+
+>undo
+>undo
+
+>rove over
+
+>{include} _others_score_check
+
+* _others_score_check
+
+Strip of Profits
+
+>score
+You need to figure how to change and get through store H.
+
+>others
+
+>score
+Enter the Throes Hoster for the final region.
+
+>in
+
+>score
+!rank of
+

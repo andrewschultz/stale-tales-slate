@@ -3580,12 +3580,14 @@ carry out requesting the score:
 		if number of visited rooms in QQ > 0:
 			if mrlp is not QQ and QQ is not solved:
 				say "You have scored [cur-score of QQ] out of [max-score of QQ] total points for the (unsolved[if QQ is stores] hub[end if]) [QQ] region[lomax of QQ].";
-	if there is a solved region:
+	if there is a rank-increasing region:
 		let temp be 0;
 		say "[line break]Won now:";
 		repeat with rgn running through markable regions:
 			increment temp;
 			if mrlp is not rgn, say " [rgn] ([cur-score of rgn]/[max-score of rgn])[if temp < number of markable regions],[else].[end if]";
+		if number of redoing-ignored regions > 0:
+			say "Redoing-ignored: [list of redoing-ignored regions].";
 	else:
 		say "[line break]You haven't solved any regions yet.";
 	show-rank;
@@ -3606,9 +3608,15 @@ to show-rank:
 	choose row Q in table of ranks;
 	say "[rank-name entry].";
 
+definition: a region (called reg) is redoing-ignored:
+	if reg is bypassed, yes;
+	if reg is shortcircuited, yes;
+	no;
+
 definition: a region (called reg) is rank-increasing:
 	if reg is bypassed, yes;
 	if reg is solved, yes;
+	if reg is shortcircuited, yes;
 	no;
 
 [rejected: rode doer, Decried Decider]
@@ -5077,18 +5085,18 @@ after reading a command:
 			say "Don't worry about the ruby any more[if sausage is moot], or [the sausage][else]. It's someone else's worry. Or someTHING's[end if].";
 			reject the player's command;
 	if the player is in Strip of Profits:
-		repeat through table of skipcmds:
+		repeat through table of region skip commands:
 			if word number 1 in the player's command is "[lastcmd entry]":
 				if storedest entry is touchable or portdest entry is touchable:
 					if storedest entry is store t:
-						say "Sorry. I can't let you do that. But if you want to go back to the Dusty Study and [b]ROVE OVER[r], that will work.";
+						say "That was the command to win the original release, but there's another command to see the region beyond Elvira. If you want to restart, go back to the Dusty Study and [b]ROVE OVER[r], that will work.";
 						reject the player's command;
 					if old-rel entry > 0:
-						say "The [go-region of portdest entry] region for this final command may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Go ahead?";
-						if the player regex-prompt-consents:
-							do nothing;
+						say "The region for this final command ([go-region of portdest entry]) may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Thus, significantly new stuff may've been added since then. Go ahead anyway?";
+						if the player dir-consents:
+							say "Okay.";
 						else:
-							say "It'll be fun. And worth it. I hope!";
+							say "Enjoy the new content!";
 							reject the player's command;
 					say "You declare cleared [go-region of portdest entry] and watch [if portdest entry is touchable][portdest entry][else][storedest entry][end if] dissolve.";
 					if storedest entry is touchable, reg-inc;
@@ -5237,19 +5245,20 @@ rule for supplying a missing second noun while unlocking:
 
 section commands to skip previously solved areas
 
-table of skipcmds
+table of region skip commands
 lastcmd	storedest	portdest	old-rel [old release is last one where this command worked. If 0, it currently works]
 "through"	store u	course source	3
 "between"	store u	course source	3
 "beyond"	store u	course source	0
+"decide"	store v	Tastee Estate	1
+"resign"	store v	Tastee Estate	3
+"recant"	store v	Tastee Estate	0
+"debug"	store p	odorant tornado	1
 "bus"	store p	odorant tornado	0
 "sub"	store p	odorant tornado	0
-"debug"	store p	odorant tornado	1
-"redial"	store y	balancer barnacle	0
 "destroy"	store y	balancer barnacle	1
+"redial"	store y	balancer barnacle	0
 "spectacular"	store w	truster turrets	0
-"decide"	store v	Tastee Estate	3
-"resign"	store v	Tastee Estate	3
 "quickly"	store t	solid idols	-1
 
 book errors
