@@ -1233,6 +1233,10 @@ You tilt the gleaner around to try to see it from a different point of view. If 
 >enlarge
 Your score has just gone up by one point
 
+>x gleaner
+>hint gleaner
+The gleaner will help you navigate the Horned Hedron without any need for special commands.
+
 !You may wish to re-examine the gleaner now it's changed.
 
 >score

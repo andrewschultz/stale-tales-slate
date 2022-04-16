@@ -95,9 +95,9 @@ DEBUG INFO: frat raft hinting.
 >fart
 DEBUG INFO: interlocking oars hinting.
 
-#ttc-table-of-oyster-hint-done-notes-frat-raft
+#ttc-table-of-oyster-hint-request-rejects-frat-raft
 >hint frat raft
-Now you're on the frat raft, you need to find a way to use the oars.
+Now you've charged up the frat raft, you need to find a way to use the oars.
 
 >undo
 >undo
@@ -137,7 +137,7 @@ by one point
 >score
 Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
 
-#ttc-table-of-oyster-hint-done-notes-snarled-darnels
+#ttc-table-of-oyster-hint-request-rejects-snarled-darnels
 >hint snarled darnels
 You had your say about the snarled darnels.
 
@@ -187,7 +187,12 @@ Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lo
 >tutor
 Your score has just gone up by one point
 
-You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points, but a generic HINT will not reveal them.
+#ttc-table-of-oyster-location-hint-checkoffs-lean-lane
+You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points here, but a generic HINT will not reveal them.
+
+>hint
+You helped Tortu and got a paler pearl. That's all you need to do here.
+!There may be bonus points here
 
 >score
 Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 43.
@@ -240,15 +245,14 @@ Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lo
 >bonk
 Your score has just gone up by one point
 
-#ttc-table-of-oyster-hint-done-notes-knob
->hint knob
-The knob's been dealt with.
-
 >score
 Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
 >snap
 Your score has just gone up by one point
+
+#ttc-table-of-oyster-location-hint-checkoffs-lapsin-plains
+With the way inside open, you no longer have anything you need to do here.
 
 >score
 Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
@@ -270,6 +274,9 @@ Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lo
 >drop
 Your score has just gone up by one point
 
+#ttc-table-of-oyster-location-hint-checkoffs-shuttle-hutlets
+You've found what you needed here.
+
 >score
 Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
 
@@ -287,7 +294,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
 
-#ttc-table-of-oyster-hint-done-notes-heaps
+#ttc-table-of-oyster-hint-request-rejects-heaps
 >hint heaps
 I can't give any artistic advice. They're--good enough, I guess. Better than before.
 
@@ -299,7 +306,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
-#ttc-table-of-oyster-hint-done-notes-lance
+#ttc-table-of-oyster-hint-request-rejects-lance
 >hint lance
 I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be.
 
@@ -331,9 +338,13 @@ Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lo
 >enlarge
 Your score has just gone up by one point
 
-#ttc-table-of-oyster-hint-done-notes-gleaner
+#ttc-table-of-oyster-hint-request-rejects-gleaner
 >hint gleaner
 You just need to examine the gleaner to figure what to do with it.
+
+#ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
+>hint
+You've gotten passage north and found something important, so you're done here.
 
 >x gleaner
 >hint gleaner
@@ -404,11 +415,19 @@ DEBUG INFO: ol' trap hinting.
 >patrol
 Your score has just gone up by one point
 
+#ttc-table-of-oyster-location-hint-checkoffs-horned-hedron
+You've found a way further in, and that's all you need here
+
 >score
 Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
+
+>gt anger range
+#ttc-table-of-oyster-location-hint-checkoffs-anger-range
+You've gotten all you need from the Use-Saga Sausage. Hero's Shore has nothing left to offer you.
+>undo
 
 >in
 
@@ -416,13 +435,9 @@ DEBUG INFO: papery yapper hinting.
 
 Tenfold Teflon'd Den Loft
 
-#ttc-table-of-oyster-hint-done-notes-lever
->hint lever
-The lever was designed not to give extra points for pulling it too much.
-
-#ttc-table-of-oyster-hint-done-notes-gleaner
+#ttc-table-of-oyster-hint-request-rejects-gleaner
 >hint gleaner
-The gleaner's not particularly valuable to you any more. But maybe it could be to someone else.
+The gleaner's no longer valuable to your quest. But it still has bartering value.
 
 >prepay
 Your score has just gone up by one point
@@ -462,6 +477,10 @@ DEBUG INFO: min-up codepath
 
 >score
 Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+
+#ttc-table-of-oyster-hint-request-rejects-lever
+>hint lever
+The lever was designed not to give extra points for pulling it too much.
 
 >derail
 Your score has just gone up by one point

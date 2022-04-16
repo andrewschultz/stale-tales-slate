@@ -557,9 +557,9 @@ DEBUG INFO: frat raft hinting.
 >fart
 DEBUG INFO: interlocking oars hinting.
 \\
-#ttc-table-of-oyster-hint-done-notes-frat-raft
+#ttc-table-of-oyster-hint-request-rejects-frat-raft
 >hint frat raft
-Now you're on the frat raft, you need to find a way to use the oars.
+Now you've charged up the frat raft, you need to find a way to use the oars.
 \\
 >undo
 >undo
@@ -1010,7 +1010,7 @@ by one point
 {$SCOS}
 
 @hints
-#ttc-table-of-oyster-hint-done-notes-snarled-darnels
+#ttc-table-of-oyster-hint-request-rejects-snarled-darnels
 >hint snarled darnels
 You had your say about the snarled darnels.
 
@@ -1275,7 +1275,13 @@ Your score has just gone up by one point
 }}CURMIN++
 
 @hin
-You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points, but a generic HINT will not reveal them.
+#ttc-table-of-oyster-location-hint-checkoffs-lean-lane
+You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points here, but a generic HINT will not reveal them.
+
+@hin
+>hint
+You helped Tortu and got a paler pearl. That's all you need to do here.
+!There may be bonus points here
 
 >score
 {$SCOS}
@@ -1660,11 +1666,6 @@ by one point
 Your score has just gone up by one point
 }}SCORE++
 
-@hints
-#ttc-table-of-oyster-hint-done-notes-knob
->hint knob
-The knob's been dealt with.
-
 >score
 {$SCOS}
 
@@ -1682,6 +1683,10 @@ There are two entries that are ambiguous, but--maybe knowing they're span pans m
 >snap
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+#ttc-table-of-oyster-location-hint-checkoffs-lapsin-plains
+With the way inside open, you no longer have anything you need to do here.
 
 >score
 {$SCOS}
@@ -1773,6 +1778,10 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+#ttc-table-of-oyster-location-hint-checkoffs-shuttle-hutlets
+You've found what you needed here.
+
 >score
 {$SCOS}
 
@@ -1860,7 +1869,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @hints
-#ttc-table-of-oyster-hint-done-notes-heaps
+#ttc-table-of-oyster-hint-request-rejects-heaps
 >hint heaps
 I can't give any artistic advice. They're--good enough, I guess. Better than before.
 
@@ -1919,7 +1928,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @hints
-#ttc-table-of-oyster-hint-done-notes-lance
+#ttc-table-of-oyster-hint-request-rejects-lance
 >hint lance
 I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be.
 
@@ -2110,10 +2119,14 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hints
-#ttc-table-of-oyster-hint-done-notes-gleaner
+#ttc-table-of-oyster-hint-request-rejects-gleaner
 >hint gleaner
 You just need to examine the gleaner to figure what to do with it.
 \\
+#ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
+>hint
+You've gotten passage north and found something important, so you're done here.
+
 >x gleaner
 ###skip test checking
 >hint gleaner
@@ -2378,6 +2391,10 @@ The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn throug
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+#ttc-table-of-oyster-location-hint-checkoffs-horned-hedron
+You've found a way further in, and that's all you need here
+
 >score
 {$SCOS}
 
@@ -2416,6 +2433,12 @@ It's already been made bigger. Not much more you can do with it.
 #verbcase goto-oyster-if-noun-is-end-den-and-gleaner-is-realized
 >gt end den
 No need to go back there.
+
+@hin
+>gt anger range
+#ttc-table-of-oyster-location-hint-checkoffs-anger-range
+You've gotten all you need from the Use-Saga Sausage. Hero's Shore has nothing left to offer you.
+>undo
 
 >in
 
@@ -2489,11 +2512,6 @@ You can use the dialer to REDIAL once you've dialed successfully.
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
 
-@hints
-#ttc-table-of-oyster-hint-done-notes-lever
->hint lever
-The lever was designed not to give extra points for pulling it too much.
-
 @verbs
 #verbcase listen-oyster-if-noun-is-papery-yapper
 >listen yapper
@@ -2507,15 +2525,15 @@ You hear a hum from the dialer.
 >attack yapper
 Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
 
-@hints
-#ttc-table-of-oyster-hint-done-notes-gleaner
->hint gleaner
-The gleaner's not particularly valuable to you any more. But maybe it could be to someone else.
-
 @max
 >prepay yapper
 Your score has just gone up by one
 >undo
+
+@hints
+#ttc-table-of-oyster-hint-request-rejects-gleaner
+>hint gleaner
+The gleaner's no longer valuable to your quest. But it still has bartering value.
 
 >prepay
 Your score has just gone up by one point
@@ -2716,6 +2734,11 @@ DEBUG INFO: min-up codepath
 \\
 >score
 {$SCOMAX}
+
+@hin
+#ttc-table-of-oyster-hint-request-rejects-lever
+>hint lever
+The lever was designed not to give extra points for pulling it too much.
 
 @nud
 #ttc-table-of-oyster-done-rejects-lever

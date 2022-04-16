@@ -3035,23 +3035,23 @@ Len Craig	Ammo	"'I'm glad to let them hang around. Well, not quite around.'"
 to say icy-len:
 	say "'Nicely? Len? Icy!' [he-she] mutters. 'Cut Len's cluster...'"
 
-volume hint-done-notes tables
+volume hint request rejects tables
 
 [ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"]
 
-table of troves hint-done-notes
+table of troves hint request rejects
 hint-entry	advice-entry
 Pa Egg Pea	"[pa egg pea] can't help you any more. Well, it never did, except to get a last lousy point."
 A Sty Tasty Say	"You figured how to get the LLP for ignoring [tasty]."
 
-table of routes hint-done-notes
+table of routes hint request rejects
 hint-entry	advice-entry
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe."
 sit a nag	"You got [Gast] to the [sit a nag]. Now you need to deal with [Gast]."
 side art	"You positioned yourself well to put up with [Gast]'s tirades. Time to try a new direction."
 seed pit	"You got what you needed from the seed pit."
 
-table of presto hint-done-notes
+table of presto hint request rejects
 hint-entry	advice-entry
 dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if Marines Seminar Remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]."
 tsar star	"[if Marines Seminar Remains is visited]The tsar star has done its duty[else]Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly[end if]."
@@ -3064,22 +3064,21 @@ TBA key	"The tab key will be useful without any further wizardry."
 
 to say other-let: say "Try either of the other letters. With variety, [l-n-r] will take the hint"
 
-table of oyster hint-done-notes
+table of oyster hint request rejects
 hint-entry	advice-entry
 frat raft	"Now you've charged up the frat raft, you need to find a way to use the oars."
 snarled darnels	"You had your say about the snarled darnels."
-knob	"The knob's been dealt with."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
-gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else]The gleaner will help you navigate the Horned Hedron without any need for special commands[else if tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
+gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if tenfold is visited]The gleaner's no longer valuable to your quest. But it still has bartering value[else if gleaner-viewed is true]The gleaner will help you navigate the Horned Hedron without any need for special commands[end if]."
 lever	"The lever was designed not to give extra points for pulling it too much."
 
-table of towers hint-done-notes
+table of towers hint request rejects
 hint-entry	advice-entry
 turbos	"You fixed the turbos. [if blaster is reflexed]The blaster, too. You can just [b]ENTER BOAT[r][else]Now maybe try the blaster[end if]."
 blaster	"You fixed the blaster. [if turbos are reflexed]The turbos, too. You can just [b]ENTER BOAT[r][else]Now maybe try the turbos[end if]."
 
-table of otters hint-done-notes
+table of otters hint request rejects
 hint-entry	advice-entry
 eels	"The eels will assist you when the time comes."
 
