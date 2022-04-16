@@ -1,0 +1,202 @@
+# reg-roi-region-spoilers.txt
+# checks running through everything
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* spoil-all
+
+>z
+>z
+>z
+>z
+>z
+>z
+[NOTE: you may want to examine something to tell you about Yorpwald, like the bookshelf.]
+>x bookshelf
+>z
+>z
+[NOTE: you may want to examine something else to tell you about Yorpwald, like a rich chair.]
+>x chair
+>search chair
+>z
+[NOTE: you may want to examine something else to tell you about Yorpwald, like the diorama and its instructions.]
+
+>ts
+
+>routes
+>in
+
+>au 0
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+
+#ttc-table-of-region-spoilers-routes
+>n
+It seems you're stuck a bit here. Would you like a hint as to what this region is about?
+Okay. I'll ask again in a few moves, if you haven't figured anything yet.
+
+>au 2
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+#ttc-table-of-region-spoilers-others
+
+>n
+This region focuses on prepositions.
+
+>retry
+>troves
+>enter estate
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+#ttc-table-of-region-spoilers-troves
+>n
+This region focuses on passive verbs.
+
+>retry
+>presto
+>enter tornado
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+#ttc-table-of-region-spoilers-presto
+>n
+This region focuses on interjections.
+
+>retry
+>oyster
+>enter balancer
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+#ttc-table-of-region-spoilers-oyster
+>n
+This region focuses on active verbs.
+
+>retry
+>towers
+>enter turrets
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+#ttc-table-of-region-spoilers-towers
+>n
+This region focuses on adjectives.
+
+>retry
+>a5
+>otters
+>enter idols
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+#ttc-table-of-region-spoilers-otters
+>n
+This region focuses on adverbs (weakest, due to lost powers).
+
+* others-try
+
+>au 2
+
+>rove over
+>others
+>in
+
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+>n
+This region focuses on anagrammable fruits.

@@ -104,7 +104,7 @@ understand the command "debug" as something new.
 
 chapter region specs
 
-a region has a number called turns-spent. a region has a number called last-hint-turns. last-hint-turns of a region is usually 10.
+a region has a number called turns-spent. turns-spent of a region is usually -6. a region has a number called last-hint-turns. last-hint-turns of a region is usually 0. [15 moves til first spoiler nag, then 10 after each.]
 
 a region can be unspoiled or spoiled. a region is usually unspoiled.
 
@@ -514,7 +514,7 @@ chapter rules on stub
 
 table of region-spoilers
 hint-reg	spoil-expl
-otters	"adverbs[if power-back is false](weakest, due to lost powers)[else](but powers back now)[end if]"
+otters	"adverbs (weakest, [if power-back is false]due to lost powers[else](but powers back now[end if])"
 presto	"interjections"
 routes	"prepositions"
 troves	"passive verbs"
@@ -531,13 +531,13 @@ every turn when Strip of Profits is visited (this is the region-hint on no score
 		if turns-spent of mrlp > last-hint-turns of mrlp:
 			if the remainder after dividing turns-spent of mrlp by 10 is 0:
 				say "It seems you're stuck a bit here. Would you like a hint as to what this region is about?";
-				if the player yes-consents:
+				if the player dir-consents:
 					now mrlp is spoiled;
 					choose row with hint-reg of mrlp in table of region-spoilers;
 					say "This region focuses on [spoil-expl entry].";
 					now block-north is true;
 				else:
-					say "Ok--I'll ask again in a few moves.";
+					say "Okay. I'll ask again in a few moves, if you haven't figured anything yet.";
 					now last-hint-turns of mrlp is turns-spent of mrlp;
 [				reject the player's command;]
 
