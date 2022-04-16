@@ -1133,6 +1133,11 @@ Include (-
 {-testing-command:test}
 	*                                           -> TestScript
 	* special                                   -> TestScript;
+{-testing-command:trac}
+	*                                           -> TraceOn
+	* number                                    -> TraceLevel
+	* 'on'                                      -> TraceOn
+	* 'off'                                     -> TraceOff;
 {-testing-command:tree}
 	*                                           -> XTree
 	* scope=testcommandnoun                     -> XTree;
@@ -14483,7 +14488,13 @@ understand "trace [thing]" as traceing.
 
 does the player mean traceing the crate: it is very likely.
 
+to trac-trace-nag: d "[b]TRAC[r] is used to trace, since [b]TRACE[r] is verb you [if bogus-trace is moot]figured[else]must figure out[end if] [if mrlp is not oyster]elsewhere[else if player is not in lapsin plains]somewhere near[end if].";
+
+rule for supplying a missing noun when traceing:
+	trac-trace-nag;
+
 carry out traceing:
+	trac-trace-nag;
 	if noun is not crate, say "[reject]" instead;
 	if bogus-trace is moot, say "You already did that. If you retrace, you might get lost at a terrace." instead;
 	try fliptoing bogus-trace instead;
