@@ -1433,7 +1433,7 @@ book otters
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly re-tally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, you're able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect or need, say, a beryl."
-cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
+cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	pre-rescind-cinders rule	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, acting less impressively and more permissively. He slinks away in embarrassment."
 motleyer	motleyer	false	758646860	--	"remotely"	"remotely"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 butlery	butlery	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
@@ -1507,6 +1507,11 @@ this is the post-barley-barely rule:
 	move cinders to Minded Midden;
 	move Edictal Citadel backdrop to all ominous rooms;
 	process the tag backdrops for hinting rule;
+
+this is the pre-rescind-cinders rule:
+	repeat through table of region initial scoring commentary:
+		if region-scored entry is not otters and points-gotten entry is not 2, next;
+		increment points-gotten entry;
 
 this is the post-rescind-cinders rule:
 	now rescind-cinders is true;

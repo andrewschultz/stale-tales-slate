@@ -638,8 +638,8 @@ yes-no-warn is a truth state that varies.
 
 check saying no:
 	if block-north is true, do nothing instead;
-	repeat through table of yesnoes:
-		if the-person entry is touchable and there is a nosaying entry, say "[nosaying entry]" instead;
+	repeat through table of NPC yes and no responses:
+		if the-person entry is touchable and there is a no-response entry, say "[no-response entry][line break]" instead;
 	if mrlp is troves, say "Negative thinking isn't the way to the top, here!" instead;
 	say "[randbla]";
 	rhet-q;
@@ -647,8 +647,8 @@ check saying no:
 
 check saying yes:
 	if block-north is true, do nothing instead;
-	repeat through table of yesnoes:
-		if the-person entry is touchable and there is a yessaying entry, say "[yessaying entry]" instead;
+	repeat through table of NPC yes and no responses:
+		if the-person entry is touchable and there is a yes-response entry, say "[yes-response entry][line break]" instead;
 	if mrlp is troves, say "It's not enough to have positive thinking! YOU MUST HAVE PRODUCTIVE POSITIVE THOUGHTS!" instead;
 	say "[randbla]";
 	rhet-q;
@@ -661,10 +661,10 @@ to rhet-q:
 	else:
 		say "[line break]";
 
-table of yesnoes
-the-person	yessaying	nosaying
+table of NPC yes and no responses
+the-person	yes-response	no-response
 Elvira	"Don't give in like that!"	"Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS."
-Report Porter Perrot	"Agreeing with Report Porter Perrot probably wouldn't get him to leave."	"You can't out-argue Report Porter Perrot or change his mind."
+Report Porter Perrot	"Agreeing with Report Porter Perrot probably wouldn't get [him-her] to leave."	"You can't out-argue Report Porter Perrot or change [his-her] mind."
 Gast	"Passively agreeing with [him-her] might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with [Gast] might make [him-her] too mad. You need to find the right way to ride out the conversation."
 players	"They're so totally wrong, even a sarcastic yes would be just bad."	"Their arguments are too well-constructed for such a simple reject."
 Ed Riley	"He doesn't look terribly agreeable."	"Too direct. He'd just reject you to show you he's no YIELDER."
@@ -3438,7 +3438,7 @@ to score-notify:
 		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this is a hack]
 	repeat through table of region initial scoring commentary:
 		if mrlp is region-scored entry and tru-sco >= points-gotten entry:
-			if no-tip is false and roved is false and doneyet entry is false:
+			if no-tip is false and roved is false and done-yet entry is false:
 				say "[line break][game-comment entry][paragraph break]";
 				if tip-warn is false:
 					ital-say "you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].";
@@ -3456,7 +3456,7 @@ Ordeal Reload	2	false	"Yay! You're still changing things to other things, just l
 stores	1	--	"Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later."
 routes	1	--	"Well, that was different from the standard directions. But there can't be too many other ways to go."
 troves	1	--	"Neat. You made progress just thinking. Or not-thinking. It could be either."
-troves	2	--	"Thinking has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading Pa, Egg, Pea right will help you further, let you look into your mind more dispassionately[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
+troves	2	--	"Thinking has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading Pa, Egg, Pea right will help you further, let you look into your mind more dispassionately[else if tears taser is moot]Staring and gaping will get you only so far, though. Real thought must be ahead[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
 presto	1	--	"It feels cathartic, using a non-dirty exclamation to get going."
 presto	2	--	"Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words..."
 oyster	1	--	"You've started to get some action in."
@@ -3473,7 +3473,7 @@ to say adverbed:
 	else if player is in Shiner Shrine:
 		say "the sly imp";
 	else if player is in Minded Midden:
-		say "Ed Riley"
+		say "Ed Riley";
 	else:
 		say "the players"
 
@@ -3710,7 +3710,7 @@ when play begins (this is the basic initialization rule):
 		if there is no readyet entry, now readyet entry is false;
 		if there is no introtoo entry, now introtoo entry is false;
 	repeat through table of region initial scoring commentary:
-		now doneyet entry is false;
+		now done-yet entry is false;
 	repeat with Q running through regions:
 		now poss-score of Q is max-score of Q;
 	move Edictal Citadel backdrop to all ominous rooms;
