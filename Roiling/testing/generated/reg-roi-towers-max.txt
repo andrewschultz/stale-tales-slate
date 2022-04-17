@@ -326,6 +326,15 @@ Score in a scenario: 26 out of 57 total points in the current region, Towers. Lo
 >score
 Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 57.
 
+>gs
+>e
+#ttc-table-of-guardian-specific-taunts-lois-the-hostile-grailman
+>marginal
+Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
+>undo
+>undo
+>undo
+
 >d
 Dire and Arid Den
 
@@ -339,6 +348,8 @@ Score in a scenario: 28 out of 57 total points in the current region, Towers. Lo
 >e
 
 >marginal
+#ttc-table-of-guardian-specific-taunts-hostile-is-he-lot-grailman
+The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
 #notmax
 Your score has just gone up by one point
 >score

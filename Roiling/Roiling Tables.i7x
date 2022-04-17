@@ -2420,7 +2420,6 @@ bored yak	"The yak, not being very yakety, does not talk back."
 giant dead flea	"It's sort of dead. Not that it was great conversation when it was alive."
 Leo	"[lrduh]"
 Rand	"[lrduh]"
-computer screen	"Honestly, throwing words at a computer screen and expecting something clever in response is about the most unconstructive thing I can imagine."
 
 to say left-here: say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
 
@@ -2606,7 +2605,6 @@ to say pat-on-pit: say "[if stupor sprout is off-stage]Can't even explore the se
 
 table of troves reflexive blather
 askee	dialogue-text
-Trevis Vister	"Oh, if it were the real version, you'd regret asking him about himself."
 Si Reed	"'You may want to be successful like me, but do you really really want it? Gotta do more than just want. For instance, I'm an [first custom style]ID SEER[r], too!' You see red."
 
 table of presto reflexive blather
@@ -2662,7 +2660,6 @@ Elsa Erde	--
 bonker	--
 stinger	--
 ingrates	--
-organised	--
 mardier admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
@@ -2937,7 +2934,6 @@ lois the hostile	Elvira	"'I could do even better than her...Yorpwald is missing 
 lois the hostile	curst palace	"'[hostile-pal]!'"
 hostile is he lot	Elvira	"'Any one of us could do even better than her...Yorpwald is missing out...'"
 hostile is he lot	curst palace	"'[hostile-pal]!'"
-organised	Elvira	"Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before."
 natives site van	Elvira	"The natives mention she says everyone deserves their own place, unless they're lame, which the natives aren't."
 natives site van	curst palace	"'Why go there when you could live in the Wildest Wilteds?'"
 fluster self rut	Elvira	"You hear nothing and imagine Elvira laughing at you."

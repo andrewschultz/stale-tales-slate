@@ -40,7 +40,9 @@ No mercy, my crone!
 [1] Say, Mr., um... summary?
 !/[2]
 
+#ttc-table-of-perrot-comments-summary-quip
 >1
+DEBUG INFO: current quip = summary-quip.
 
 [1] Elvira...necro-crone recon?
 [2] Powers? Me? Spew more!
@@ -48,48 +50,70 @@ No mercy, my crone!
 [4] Ask Report Porter Perrot how business is
 [5] One Beg: begone!
 
+#ttc-table-of-perrot-comments-necro-quip
 >1
+DEBUG INFO: current quip = necro-quip.
 
 [1] Shil-lish. Sit on it, son.
 [5] One Beg: begone!
 
+#ttc-table-of-perrot-comments-sit-quip
 >1
+DEBUG INFO: current quip = sit-quip.
 
 [4] One Beg: begone!
 
+#ttc-table-of-perrot-comments-powers-quip
 >1
+DEBUG INFO: current quip = powers-quip.
 
 [3] One Beg: begone!
 
+#ttc-table-of-perrot-comments-clown-quip
 >1
+DEBUG INFO: current quip = clown-quip.
 
 [2] One Beg: begone!
 
+#ttc-table-of-perrot-comments-gustave-quip
 >1
+DEBUG INFO: current quip = gustave-quip.
 
 "Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe."
 
 [1] Pouter troupe?
 [2] One Beg: begone!
 
+#ttc-table-of-perrot-comments-pouter-quip
 >1
+DEBUG INFO: current quip = pouter-quip.
+
 "Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything."
 
 [1] Lighten the mood with a joke
 [2] One Beg: begone!
 
+#ttc-table-of-perrot-comments-pun-quip
 >1
+DEBUG INFO: current quip = pun-quip.
+
 "Eh, punt the pun," you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale.
 
 [1] Er, ahem, hear me
 [2] One Beg: begone!
 
+#ttc-table-of-perrot-comments-ahem-quip
 >1
+DEBUG INFO: current quip = ahem-quip.
+
 Report Porter Perrot intones tension. Refusal earfuls. "Cad, no can do. Damn, uh, DUH, man." Refusal earfuls.
 
 [1] One Beg: begone!
 
+#ttc-table-of-perrot-comments-leave-quip
 >1
+DEBUG INFO: current quip = leave-quip.
+
 >lamp
 
 >x op-ed
@@ -607,44 +631,60 @@ A very loud roar scares you. You doubt adverbs are up to the task of calming it.
 
 [1] Boy, those players, huh?
 
+#ttc-table-of-gretta-comments-gre-players-quip
 >1
+DEBUG INFO: current quip = gre-players-quip.
 
 [1] What's your history with Elvira?
 [2] I sort of lost my powers. Well, most of them. What can I do now?
 [3] Um, that's all, I guess. Thanks.
 
+#ttc-table-of-gretta-comments-gre-go-quip
 >3
+DEBUG INFO: current quip = gre-go-quip.
 [1] What's your history with Elvira?
 [2] I sort of lost my powers. Well, most of them. What can I do now?
 [3] That's really all, now. Thanks.
 
+#ttc-table-of-gretta-comments-gre-elv-quip
 >1
+DEBUG INFO: current quip = gre-elv-quip.
 
 she's--well, augmenting animals.
 [1] I sort of lost my powers. Well, most of them. What can I do now?
 [2] That's really all, now. Thanks.
 ![3]
 
+#ttc-table-of-gretta-comments-gre-what-quip
 >1
+DEBUG INFO: current quip = gre-what-quip.
 
 [1] What's to the north?
 [2] What's to the south?
 [3] What can I do back east? I got rid of some nuisances, but I got chased after that.
 [4] That's really all, now. Thanks.
 
+#ttc-table-of-gretta-comments-gre-north-quip
 >1
+DEBUG INFO: current quip = gre-north-quip.
 "Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them."
 
 >5
 You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list the options.]
 
+#ttc-table-of-gretta-comments-gre-south-quip
 >1
+DEBUG INFO: current quip = gre-south-quip.
 "Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals."
 
+#ttc-table-of-gretta-comments-gre-east-quip
 >1
+DEBUG INFO: current quip = gre-east-quip.
 "There are animal pens back east."
 
+#ttc-table-of-gretta-comments-gre-animals-quip
 >1
+DEBUG INFO: current quip = gre-animals-quip.
 "The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back."
 
 [1] Wow! You've been a big help. Thanks.
@@ -652,7 +692,9 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 >0
 [The only response right now is 1. Type REPEAT to see it again.]
 
+#+ttc-table-of-gretta-comments-gre-go-quip
 >1
+DEBUG INFO: current quip = gre-go-quip.
 
 >n
 >because

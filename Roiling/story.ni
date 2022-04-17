@@ -1402,7 +1402,7 @@ to item-warp:
 chapter going to
 
 check gotoing:
-	d "Goto progvals: from [location of player] [progval of location of player] to [noun] [progval of noun].";
+	d "Goto sectioning: from [location of player] [progval of location of player] to [noun] [progval of noun].";
 	if noun is location of player, say "You're already here!" instead;
 	if noun is strip and strip is visited and player is not in Cruelest Lectures:
 		say "The command you may be looking for is [b]RETRY[r]. Do that now instead?";
@@ -1423,7 +1423,7 @@ check gotoing:
 	if noureg is not mrlp, say "You can't jump across game regions." instead;
 	abide by goto-check of mrlp;
 	if progval of noun < progval of location of player:
-		repeat through table of progvals:
+		repeat through table of goto sectioning:
 			if there is a rm entry and rm entry is noun, say "[why-not entry][line break]" instead;
 			if there is a regs entry and regs entry is mrlp:
 				if rmprog entry is progval of noun, say "[why-not entry][line break]" instead;
@@ -1467,7 +1467,7 @@ this is the goto-oyster rule:
 	if noun is Rascal Craals and sausage is moot, say "The Rascal Craals are inaccessible now that [the sausage] has torn through them. You don't need or want to hang out there, though." instead;
 	if noun is End Den and gleaner-viewed is true, say "No need to go back there." instead;
 	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
-	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
+	if location of player is Fighter Freight and noun is not Disease Seaside, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 
 this is the goto-towers rule:
 	if noun is Dourest Detours or noun is Arid Den, say "No thanks. Once was enough." instead;
@@ -1476,7 +1476,7 @@ this is the goto-towers rule:
 		move duck to noun;
 		continue the action;
 	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
-	if noun is Rawest Waters, say "Rawest Waters would probably be even less fun the second time around." instead;
+	if noun is Rawest Waters, say "The Rawest Waters of Leak Lake would probably be even less fun the second time around." instead;
 
 this is the goto-otters rule:
 	if player is in Rancho Archon Anchor, elvira-flee-taunt;
@@ -1491,14 +1491,14 @@ carry out gotoing:
 	move player to noun;
 
 when play begins (this is the seed room progress for GO TO rule) :
-	repeat through table of progvals:
+	repeat through table of goto sectioning:
 		if there is a regs entry:
 			repeat with myrm running through rooms in regs entry:
 				if progval of myrm is 0, now progval of myrm is rmprog entry;
 		else:
 			now progval of rm entry is rmprog entry;
 
-table of progvals [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
+table of goto sectioning [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
 rm	rmprog	regs	why-not
 --	1	Ordeal Reload	"Your Means Manse was surrounded, and you escaped. Bad idea to turn back."
 Carven Cavern	2	--	[Ordeal Reload]
@@ -1515,8 +1515,8 @@ Fighter Freight	4	--	"You don't really want to revisit the crays."
 Loftier Trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
 --	2	towers	"You don't want to cross Leak Lake again."
 Rawest Waters	3	--	"Leak Lake wasn't fun the first time."
-Mesprise Premises	4
-Mislit Limits	4	[towers]
+Mesprise Premises	4	--
+Mislit Limits	4	--	[towers]
 
 [note:
 --others does not need this, because you can always visit Curtis
@@ -2080,7 +2080,6 @@ table of default-sub-blather	[dsb] [any one person's default response to an in-g
 askee	dialogue-text
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
 nestor	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
-Trevis Vister	"Trevis Vister would love to be prayed to, and he probably thinks he deserves it."
 Curtis	"Curtis is curt. 'Yeah, great job saving Yorpwald and all, what about here?'"
 lamb	"It's a baaaaad conversationalist."
 Leo	"[lrduh]"
@@ -7950,7 +7949,7 @@ girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend fin
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
 artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
-leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break][porter] pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end PORTER text]
+leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-me-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break][porter] pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end PORTER text]
 
 to say urbfogel: say "Blue Frog Urbfogel, Bugler of Foulberg"
 
@@ -17668,7 +17667,7 @@ after fliptoing a guardian (this is the guardian taunt and track progress rule) 
 			move keycar to location of player;
 		continue the action;
 	if other-g of noun is not dreads adders, moot other-g of noun;
-	repeat through table of gst:
+	repeat through table of guardian specific taunts:
 		if noun is guagone entry and guaname entry is touchable and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
 			continue the action;
@@ -17685,7 +17684,7 @@ after fliptoing a guardian (this is the recalculate minimums no matter what rule
 	continue the action;
 
 to deliver-taunt (g1 - a guardian) and (g2 - a guardian):
-	repeat through table of gst:
+	repeat through table of guardian specific taunts:
 		if g1 is guaname entry and g2 is guagone entry:
 			say "[guatext entry][line break]";
 			now g1 is prevtaunt;
@@ -17694,10 +17693,10 @@ to deliver-taunt (g1 - a guardian) and (g2 - a guardian):
 
 section specific taunt table
 
-table of gst - guardian specific taunts
+table of guardian specific taunts
 guaname	guagone	guatext
-Lois	grailman	"Lois the Hostile sniffs that the grailman probably wasn't even guarding a very holy grail."
-he lot	grailman	"The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very holy grail."
+Lois the Hostile	grailman	"Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail."
+hostile is he lot	grailman	"The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail."
 
 chapter min-score-of-towers
 
@@ -18326,6 +18325,9 @@ to decide which number is optleft of (myp - a person):
 	repeat through myt:
 		increase mytemp by enabled entry;
 	decide on mytemp;
+
+after quipping:
+	d "current quip = [current quip].";
 
 after quipping when qbc_litany is the table of Gretta comments (this is the process Gretta chat rule):
 	if hold-it-up is true:

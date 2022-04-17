@@ -186,8 +186,6 @@ You can RECAP to see your options.
 
 Carven Cavern
 
->gt dusty study
-Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >sleep
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.

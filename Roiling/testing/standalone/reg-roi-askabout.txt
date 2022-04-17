@@ -477,7 +477,7 @@ Spoiloplis is definitely not a Charlotte's Web kind of town.
 >ask spider about spider
 Spoiloplis is definitely not a Charlotte's Web kind of town.
 
-#ttc-table-of-troves-general-blather-spider
+#ttc-table-of-inanimate-talkables-spider
 >ask spider about xyzzy
 Spoiloplis is definitely not a Charlotte's Web kind of town.
 
@@ -518,10 +518,10 @@ Econ-Cone
 >aspire
 Your score has just gone up by one point
 
+#ttc-table-of-inanimate-talkables-trevis-vister
 >ask statue about elvira
 Trevis Vister has strong opinions on everything and all kinds of success plans, but most of them revolve around having inherited wealth already.
 
-#ttc-table-of-troves-reflexive-blather-trevis-vister
 >ask statue about statue
 Trevis Vister has strong opinions on everything and all kinds of success plans, but most of them revolve around having inherited wealth already.
 
@@ -841,7 +841,7 @@ It's dead. Perhaps it can be reincarnated as something else.
 
 >screen
 
-#ttc-table-of-presto-general-blather-computer-screen
+#ttc-table-of-inanimate-talkables-computer-screen
 >ask screen about elvira
 Honestly, throwing words at a computer screen and expecting something clever in response is about the most unconstructive thing I can imagine.
 >ask screen about screen
@@ -1578,7 +1578,7 @@ They can't speak. They seem satisfied enough just blocking and intimidating you.
 >n
 Scope Copse
 
-#ttc-table-of-towers-general-blather-spec-o-scope
+#ttc-table-of-inanimate-talkables-spec-o-scope
 >ask scope about elvira
 The Spec-O-Scope can't talk. All it can do is show a map when examined.
 >ask scope about scope
@@ -1800,9 +1800,6 @@ the wait-seer says before going silent again. You see red.
 The wait-seer points to the palace and shrugs, as if to say, why?
 
 #ttc-table-of-towers-subject-blather-realist-tailers-elvira
-#ttc-table-of-towers-subject-blather-tailers-elvira
-
-#ttc-table-of-towers-subject-blather-realist-tailers-curst-palace
 >ask tailers about elvira
 "Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!"
 
@@ -1815,6 +1812,8 @@ The wait-seer points to the palace and shrugs, as if to say, why?
 The realist tailers hope for more lit eras, which makes you see red.
 >ask tailers about xyzzy
 You see red at the realist tailers' lists of what may tire Sal.
+
+#ttc-table-of-towers-subject-blather-realist-tailers-curst-palace
 >ask tailers about curst palace
 "Lie! Rats!" they moan in unison, making you see red.
 
@@ -1843,15 +1842,13 @@ You've also found some folks who aren't very useful except for general chat: Res
 
 >s
 
-#ttc-table-of-towers-subject-blather-organised-elvira
+#ttc-table-of-inanimate-talkables-organised-ego-drains
 >ask drains about elvira
 The silence after talking to the ego drains leaves you feeling less confident than ever that you will restore the Curst Palace.
 
-#ttc-table-of-towers-reflexive-blather-organised
 >ask drains about drains
 The silence after talking to the ego drains leaves you feeling less confident than ever that you will restore the Curst Palace.
 
-#ttc-table-of-towers-general-blather-organised-ego-drains
 >ask drains about xyzzy
 The silence after talking to the ego drains leaves you feeling less confident than ever that you will restore the Curst Palace.
 

@@ -961,8 +961,6 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 Carven Cavern
 
 @verbs
->gt dusty study
-Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >sleep
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.

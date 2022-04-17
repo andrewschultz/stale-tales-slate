@@ -2138,6 +2138,16 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 >listen
 You'd expect a great din, but you don't hear one, thankfully.
 
+@max
+>gs
+>e
+#ttc-table-of-guardian-specific-taunts-lois-the-hostile-grailman
+>marginal
+Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
+>undo
+>undo
+>undo
+
 @!minh,mini
 >d
 Dire and Arid Den
@@ -2296,6 +2306,8 @@ Oh, the self-righteous backlash you'd get from Lois the Hostile!
 
 @!minh,mini
 >marginal
+{--max}#ttc-table-of-guardian-specific-taunts-hostile-is-he-lot-grailman
+The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
 }}SCORE++
 #notmax
 Your score has just gone up by one point
