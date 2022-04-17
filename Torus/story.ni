@@ -675,6 +675,8 @@ check saying no:
 		the rule succeeds;
 	say "No need for negativity[if player is in scene scene], especially now you've found somewhere nice.[else]. You'll need the opposite to get to the center of the torus![end if]" instead;
 
+sys-eye-yes is a truth state that varies.
+
 check saying yes:
 	if sys-eye-yes is false:
 		say "Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that[if score is 0]. But maybe the SYS-EYE can help you in its own weird way[end if].";

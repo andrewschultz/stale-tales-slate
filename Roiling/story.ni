@@ -152,6 +152,10 @@ a region has a rule called randomization rule.
 
 a region has a rule called misses-rule.
 
+a region can be miss-point-warned. a region is usually not miss-point-warned.
+
+a region has text called warn-left-text.
+
 chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
@@ -2973,68 +2977,38 @@ definition: a region (called reg) is kayoed:
 
 section check-for-solve
 
-this is the check final region action rule:
-	d "FINAL REGION ACTION: checking [noun].";
-	repeat through table of end-flips:
-		if noun is thisflip entry or noun is thatflip entry:
-			if warned-yet entry is false:
-				process the my-prog entry;
-				if the rule succeeded:
-					ital-txt "[pointwarn entry]";
-					now warned-yet entry is true;
-					say " Continue anyway?";
-					if the player yes-consents, the rule succeeds;
-					say "OK, this won't appear again for this section.";
-					make no decision;
-			the rule succeeds;
-	make no decision;
+[this is tricky. I could've had 2 more general rules. There's a chance for bugs either way, whether I say "reject if cur-score < max-score + 1, oh but make it 2 for towers without x-ray and otters without x-ray." The main thing to note is that different regions have different nouns they flip. ]
 
-table of end-flips
-thisflip	thatflip	warned-yet	my-prog	pointwarn
-yob den	yob den	false	routes-left rule	"The raptest patters are still slightly a nuisance, if you want to fix them."
-USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in Grey Gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
-trance nectar	trance nectar	false	troves-left rule	"You tidied your Upscale Capsule up pretty well, but you could do a bit more."
-bogus-redial	bogus-redial	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
-curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that top opt pot you got from Renato."
-Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
+this is the region-done-check rule:
+	if mrlp is miss-point-warned, the rule fails;
+	if cur-score of mrlp is poss-score of mrlp - 1, the rule fails;
+	if bonus-point-available and cur-score of mrlp is poss-score of mrlp - 2, the rule fails;
+	now mrlp is miss-point-warned;
+	say "[warn-left-text of mrlp] Stay back and find everything[if poss-score of mrlp < max-score of mrlp] you can[end if]?";
+	if the player dir-consents, the rule succeeds;
+	say "Okay[one of]. This nag will appear once for each region where you have points you can earn[or][stopping].";
+	continue the action;
 
-to say to-clean-otters: [hells bells this is ugly]
-	if gore ogre is reflexive or eels are reflexive:
-		say "[if eels are reflexive]the Bran Barn[else]the Loop Pool[end if]";
-		if cinders are not moot, say ", as well as ";
-	say "the cinders";
+to decide whether bonus-point-available:
+	if mrlp is others and did-guru is false, yes;
+	if mrlp is towers and used-ray is false, yes;
+	no;
 
-[here, the rules succeed if there's still stuff left to do]
+warn-left-text of ordeal reload is "The respect specter won't be hurt if you don't figure them out, but it might be a confidence booster."
 
-this is the routes-left rule:
-	if patters are in Sonancy Canyons, the rule succeeds;
-	the rule fails;
+warn-left-text of routes is "The raptest patters are still slightly a nuisance, if you want to fix them.".
 
-this is the otters-left rule:
-	if gore ogre is reflexive or eels are reflexive, the rule succeeds;
-	if cinders are not moot, the rule succeeds;
-	the rule fails.
+warn-left-text of troves is "You tidied your Upscale Capsule up pretty well, but you could do a bit more."
 
-this is the towers-left rule:
-	if top opt pot is not moot, the rule succeeds;
-	the rule fails;
+warn-left-text of presto is "That will take care of business, but there's still a bit left to clean up in the shack.";
 
-this is the oyster-left rule:
-	if lever is reflexive, the rule succeeds;
-	if aunt-tuna-cross is false and lance is not moot, the rule succeeds;
-	if bogus-plains is reflexive, the rule succeeds;
-	the rule fails;
+warn-left-text of oyster is "This is the winning action, but you may be able to backtrack to see some other bits."
 
-this is the presto-left rule:
-	if usb is off-stage, the rule fails; [note 2 things flip to USB, the code and the USB, so this gives 'debug' a pass]
-	if trim socks are in Hacks Shack, the rule succeeds;
-	if escaroles are in Hacks Shack, the rule succeeds;
-	the rule fails;
+warn-left-text of towers is "This will knock down the palace, but you still have that top opt pot you got from Renato."
 
-this is the troves-left rule:
-	if Pa Egg Pea is reflexive, the rule succeeds;
-	if divorces is not moot, the rule succeeds;
-	the rule fails;
+warn-left-text of otters is "You could clean things up before facing Elvira."
+
+warn-left-text of others is "You have some more fruits to rustle up. [number of dislodged fruits in words], to be precise.".
 
 chapter zaping (with patcher)
 
@@ -3462,42 +3436,46 @@ to score-notify:
 	let tru-sco be cur-score of mrlp;
 	if mrlp is otters and cinders are moot:
 		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this is a hack]
-	repeat through table of init-points:
-		if mrlp is myrg entry and tru-sco >= pttot entry:
+	repeat through table of region initial scoring commentary:
+		if mrlp is region-scored entry and tru-sco >= points-gotten entry:
 			if no-tip is false and roved is false and doneyet entry is false:
-				say "[line break][blurb entry][paragraph break]";
+				say "[line break][game-comment entry][paragraph break]";
 				if tip-warn is false:
 					ital-say "you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].";
 					now tip-warn is true;
 					pad-rec "opt in/no tip";
-			now doneyet entry is true;
+			now done-yet entry is true;
 			the rule succeeds;
 	if score-after is true, try requesting the score;
 
 score-after is a truth state that varies.
 
-table of init-points
-myrg	pttot	blurb	doneyet
-Ordeal Reload	2	"Yay! You're still changing stuff to stuff. For now. But you're on home turf, now. If you get out in the world, it'll be trickier."	false
-stores	1	"Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later."
-routes	1	"Well, that was different from the standard directions. But there can't be too many other ways to go."
-troves	1	"Neat. You made progress just thinking. Or not-thinking. It could be either."
-troves	2	"Thinking has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading Pa, Egg, Pea right will help you further, let you look into your mind more dispassionately[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
-presto	1	"It feels cathartic, using a non-dirty exclamation to get going."
-presto	2	"Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words..."
-oyster	1	"You've started to get some action in."
-oyster	2	"Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too."
-towers	1	"Well! You kind of cost [noun] a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
-towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice."
-otters	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
-otters	2	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
-others	1	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here."
+table of region initial scoring commentary
+region-scored	points-gotten	done-yet	game-comment
+Ordeal Reload	2	false	"Yay! You're still changing things to other things, just like in [shuf]. For now. But you're on home turf, now. If you get out in the world, maybe it'll be trickier."
+stores	1	--	"Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later."
+routes	1	--	"Well, that was different from the standard directions. But there can't be too many other ways to go."
+troves	1	--	"Neat. You made progress just thinking. Or not-thinking. It could be either."
+troves	2	--	"Thinking has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading Pa, Egg, Pea right will help you further, let you look into your mind more dispassionately[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
+presto	1	--	"It feels cathartic, using a non-dirty exclamation to get going."
+presto	2	--	"Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words..."
+oyster	1	--	"You've started to get some action in."
+oyster	2	--	"Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too."
+towers	1	--	"Well! You kind of cost [noun] a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
+towers	2	--	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice."
+otters	1	--	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
+otters	2	--	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up [adverbed] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
+others	1	--	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here. There'll obviously be quite a variety, but it's great you can start with the easy ones."
 
-to say imp-or-whiners:
+to say adverbed:
 	if player is in Clarthead Cathedral:
-		say "whiners";
+		say "the whiners";
+	else if player is in Shiner Shrine:
+		say "the sly imp";
+	else if player is in Minded Midden:
+		say "Ed Riley"
 	else:
-		say "sly imp";
+		say "the players"
 
 read-intro is a truth state that varies.
 
@@ -3731,7 +3709,7 @@ when play begins (this is the basic initialization rule):
 	repeat through table of pad-stuff:
 		if there is no readyet entry, now readyet entry is false;
 		if there is no introtoo entry, now introtoo entry is false;
-	repeat through table of init-points:
+	repeat through table of region initial scoring commentary:
 		now doneyet entry is false;
 	repeat with Q running through regions:
 		now poss-score of Q is max-score of Q;
@@ -7345,16 +7323,6 @@ check fliptoing (this is the check off preconditions before flipping rule):
 			if there is a pre-rule entry and flip-spill-flag is false:
 				if the hash of the player's command is hashkey entry or hash of word number 1 in the player's command is hashkey entry:
 					abide by the pre-rule entry;
-
-check fliptoing (this is the check region ending flip rule):
-	if noun is a thisflip listed in table of end-flips:
-		choose row with thisflip of noun in table of end-flips;
-		consider the check final region action rule for noun;
-		unless the rule succeeded, do nothing instead;
-	else if noun is a thatflip listed in table of end-flips:
-		choose row with thatflip of noun in table of end-flips;
-		consider the check final region action rule for noun;
-		unless the rule succeeded, do nothing instead;
 
 carry out fliptoing (this is the main fliptoing rule):
 	repeat through regana of mrlp:
@@ -19366,8 +19334,7 @@ carry out playing:
 				say "Elvira looks momentarily worried, then giggles sardonically as nothing happens on your end. Plenty happens on hers. 'Ah, treat a threat.' Maybe you need some help?";
 				get-dead;
 				follow the shutdown rules instead;
-			abide by the check final region action rule for Elvira;
-			if the rule failed, say "OK." instead;
+			abide by the region-done-check rule;
 			say "As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. '[randbla]!' Elvira's voice still lilts as she calls for slayer layers relays. 'Gash, hags! Groupies, uprise! Go!'[paragraph break]'Ahh, get the hag!' you yell. The battle is on!";
 			say "[lee-or-eels][wfak]";
 			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock construe trounces and rifest strife: [twiddle of table of animal friends and 5]. Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE."; [bold-ok]
@@ -19707,9 +19674,10 @@ carry out guruing:
 				say "You have a vision of a fruit: [right-word entry in upper case]. ";
 			now can-guru is false;
 			now noun is prefigured;
-			now did-guru is true;
 			say "The aftertaste of arugula finally dissipates.";
-			if scams is false and in-gx is false, poss-d;
+			if scams is false and in-gx is false:
+				now did-guru is true;
+				poss-d;
 			pad-del "guru";
 			pad-rec "flips";
 			the rule succeeds;
@@ -20190,6 +20158,7 @@ check going north in Gates Stage:
 		now player has fleeing feeling;
 	if gate-level is 0, say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	if gate-level is 1, say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells '[b]PERP[r]!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
+	abide by the region-done-check rule;
 	if player has tekno token:
 		say "You have a thought as you sneak in--give Curtis his Tekno-Token back first. Complete transparent honesty and all that.[paragraph break]";
 		moot tekno token;

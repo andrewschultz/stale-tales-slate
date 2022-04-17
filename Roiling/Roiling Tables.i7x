@@ -38,10 +38,10 @@ my niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney
 meet bans	meet bans	false	608585586	--	"basement"	"basement"	pre-meet-bans-basement rule	--	"[if Largely All Grey Gallery is visited]Having already visited the [gallery] below-ground, you pat yourself on the back for lateral thinking and generally exploring things thoroughly, as you realize the deeper nature of the [MEET BANS][else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to what must be a basement, even if it's called something different."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from [the bins]. They're still covered with long numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
-plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"The psalter crumbles, with a stapler falling to the floor. You take the stapler[if plates are touchable] as the formerly stuck plates fall[end if]. Behind, you see an apertured departure, but it's not open enough to, well, depart. Yet."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
+plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"The psalter crumbles, with a stapler falling to the floor. You take the stapler[if plates are touchable] as the formerly stuck plates fall[end if]. Behind, you see an apertured departure, but it's not open enough to, well, depart. Yet."
+Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
 
 this is the post-palm-lamp rule:
 	now dope op ed is in Dusty Study;
@@ -229,7 +229,7 @@ thickness sketchins	thickness sketchins	false	441136547	Sonancy Canyons	"athwart
 bent ewe	bent ewe	false	681789531	--	"between"	"between"	--	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	--	"without"	"without"	--	--	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
 hurt hog	hurt hog	false	475056505	--	"through"	"through"	pre-hurt-hog-through rule	post-hurt-hog-through rule	"You realize it's time to move on. So you do. It feels a bit ritualistic and all, but the hurt hog and bent ewe, no longer hurt or bent, move on physically as well. You come upon a yob den nearby. Only your wisdom, or abstract anagram-solving skills, can help you determine whether to visit for a while, or not."
-yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	--	--	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, beneath a ramada, of course. They're applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you... just one more thing?'[paragraph break]In private, you help him change a Groans Sarong back to organs, which will spread joy and music and art through Yorpwald. Behind the sarong is a way through Old Warpy. As you enter, you notice No-Lag Logan has joined the crowd waving to you."
+yob den	yob den	false	432873440	Strip of Profits	"beyond"	"beyond"	pre-yob-den-beyond rule	--	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, beneath a ramada, of course. They're applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you... just one more thing?'[paragraph break]In private, you help him change a Groans Sarong back to organs, which will spread joy and music and art through Yorpwald. Behind the sarong is a way through Old Warpy. As you enter, you notice No-Lag Logan has joined the crowd waving to you."
 
 this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
 	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
@@ -320,6 +320,9 @@ this is the post-hurt-hog-through rule:
 	now yob den is in Sonancy Canyons;
 	set the pronoun it to yob den;
 	set the pronoun them to yob den;
+
+this is the pre-yob-den-beyond rule:
+	abide by the region-done-check rule;
 
 section routes auxiliary
 
@@ -486,6 +489,7 @@ this is the pre-nectar-recant rule:
 	if mbb-sis-points is 0:
 		say "It ... you know you should drink [the nectar], for the good of society and the economy, but something nags at you. You've come to loathe [the nectar], and yet you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
 		preef trance nectar instead;
+	abide by the region-done-check rule;
 
 this is the post-nectar-recant rule:
 	let temp be 0;
@@ -564,7 +568,7 @@ trim socks	ROM sticks	true	540067126	--	"rom stick"	"romstick" or "rom stick"	--
 BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Features ... use after...' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if TBA key is reflexive], despite not realizing what the [b]TBA[r] key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, taking the mug with it and revealing a plain old [b]USB[r]. You need a way out!" [bold-ok]
 drive a	drive a	false	388504485	--	"avider"	"avider"	--	post-drive-flip rule	"Drive A coughs and whirrs a bit before humming a bit louder. You see the status on the side change from [b]VARIED[r] to [b]AVIDER[r]. Yay! It should work faster now."
 drive e	drive e	false	514122776	--	"derive"	"derive"	--	post-drive-flip rule	"You inspect Drive E and, with some educated guesswork, figure why it is out of whack. A few common-sense steps later, it's fixed."
-USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
+USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	pre-usb-sub-bus rule	--	"[sub-bus]!"
 
 this is the post-hump-umph rule:
 	if Leo is in Grey Gyre:
@@ -815,6 +819,9 @@ this is the post-bub-dude-egg rule:
 
 this is the post-drive-flip rule:
 	if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
+
+this is the pre-usb-sub-bus rule:
+	abide by the region-done-check rule;
 
 to say sub-bus:
 	now issub is false;
@@ -1148,6 +1155,7 @@ this is the pre-dialer-redial rule:
 		say "Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.";
 		preef bogus-redial;
 		do nothing instead;
+	abide by the region-done-check rule;
 
 this is the post-dialer-redial rule:
 	say "[line break]Luckily, you find an evac-cave that lets you out safely.You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
@@ -1352,6 +1360,7 @@ this is the pre-curst-palace-spectacular rule:
 		say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
 		preef curst palace;
 		do nothing instead;
+	abide by the region-done-check rule;
 
 this is the post-curstpalace-spectacular rule:
 	if used-ray is false and cur-score of towers is max-score of towers - 1:
