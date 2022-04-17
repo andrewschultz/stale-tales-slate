@@ -1530,8 +1530,6 @@ chapter persuasions
 
 [this is basically just to catch tries to order people instead of asking them. It offers some alternate commands.]
 
-a person can be unemotional, fightin, washed up, eager, dismissed, henchy, deadish or nasty. a person is usually unemotional.
-
 [most of this is for Leo/Rand but Elmer/Merle are that way too]
 
 everpers is a truth state that varies.
@@ -1691,10 +1689,6 @@ persuasion rule for asking ant to try doing something:
 	say "It understands only action. Violent action.";
 	persuasion fails;
 
-persuasion rule for asking a nasty person to try doing something:
-	say "You need action, not words. Well, you sort of need [b]A[r] word..";
-	persuasion fails;
-
 [towers]
 
 persuasion rule for asking repents serpent to try doing something:
@@ -1773,7 +1767,7 @@ persuasion rule for asking sly imp to try doing something:
 	say "The imp gives a definite maybe you [one of][or]once again [stopping]believe. If only you could make it less subtle!";
 	persuasion fails;
 
-persuasion rule for asking a henchy person to try doing something:
+persuasion rule for asking an aide to try doing something:
 	say "[noun] makes a huge display of only answering to--HER.";
 	persuasion fails;
 
@@ -1909,6 +1903,13 @@ to reason-clue:
 		continue the action;
 	say "It has [first custom style]NO EARS[r]! Yet it buzzes its name...[first custom style]Sorena A. Norse[r]. The noise makes you see red but lets up when you deduce the bee is a senora.";
 
+this is the bruiser-taunt rule:
+	if noun is a fightin bruiser:
+		if noun is Rand and Rand-first is false:
+			now Rand-first is true;
+			say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
+		say "[noun]'s in a fighting mood, not a talking mood, right now." instead;
+
 check objasking it about (This is the check for object information rule):
 	d "noun=[noun] 2nd noun = [second noun] located [if second noun is a backdrop]in lots of places[else if second noun is not off-stage]in [location of second noun][else]off-stage[end if].";
 	abide by the general-ask rule;
@@ -1926,12 +1927,7 @@ check objasking it about (This is the check for object information rule):
 				try going west;
 				process the track sausage rule;
 			the rule succeeds;
-	if noun is Leo or noun is Rand:
-		if noun is fightin:
-			if noun is Rand and Rand-first is false:
-				now Rand-first is true;
-				say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
-			say "He's in a fighting mood, not a talking mood, right now." instead;
+	abide by the bruiser-taunt rule;
 	if the noun is the second noun:
 		repeat through reflexive blather table of mrlp:
 			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
@@ -1971,12 +1967,7 @@ check asking about (This is the check for specific topics rule):
 	abide by the general-ask rule;
 	if noun is sausage:
 		if the topic understood matches the text "ruby", try objasking sausage about ruby instead;
-	if noun is Leo or noun is Rand:
-		if noun is fightin:
-			if noun is Rand and Rand-first is false:
-				now Rand-first is true;
-				say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
-			say "He's in a fighting mood, not a talking mood, right now." instead;
+	abide by the bruiser-taunt rule;
 	if the topic understood is a topic listed in the table of NPC and topic pairs:
 		if noun is a person and noun is superchatty:
 			if askee entry is the noun, say "[dialogue-text entry][line break]" instead;
@@ -5989,8 +5980,8 @@ chapter giving to
 the block giving rule is not listed in any rulebook.
 
 check giving something to:
-	if second noun is a fightin person, say "Bribery won't end this fight." instead; [presto]
-	if second noun is bruisin:
+	if second noun is a fightin bruiser, say "Bribery won't end this fight." instead; [presto]
+	if second noun is a bruiser:
 		if noun is crust, say "Even he isn't gourmand enough to enjoy that." instead;
 		say "He's not materialistic. He just wants a good dust-up." instead;
 	if second noun is a guardian: [towers]
@@ -11697,7 +11688,7 @@ carry out shooting: [no section notes here since you only have a gun in Presto]
 	if noun is Leo and Rand is off-stage, say "He backpedals out of range, looking a bit scared. Perhaps you can find a better target to shoot, later." instead;
 	if noun is zany meter, say "That would just be destructive. The zany meter is there to help you." instead;
 	if noun is maze walls, say "Too sturdy. There must be a better way for them to tumble down." instead;
-	if noun is Rand or noun is Leo:
+	if noun is a bruiser:
 		if noun is fightin, say "That'd just make him madder." instead;
 		if noun is Leo and Rand is fightin, say "That wouldn't help you beat Rand, and if it did, it'd make Leo madder." instead;
 		say "After saying Whassup to them both? That's be cold. Plus, [if noun is Rand]Leo[else]Rand[end if] would avenge his friend." instead;
@@ -12052,6 +12043,10 @@ every turn when player is in Dirge Ridge (this is the fight rand or leo rule):
 check dropping while in Dirge Ridge:
 	say "You have nothing worthless enough to leave lying around in or by here." instead;
 
+chapter bruiser definitions
+
+a bruiser is a kind of person. a bruiser can be fightin, washed up, eager, or dismissed. a bruiser is usually fightin.
+
 chapter Leo/Rand stubs
 
 lr-acq is a truth state that varies.
@@ -12059,14 +12054,12 @@ lr-acq is a truth state that varies.
 to say lrblab:
 	say "[if lr-acq is true]recount[else]discover";
 
-a person can be bruisin. a person is usually not bruisin.
-
 check scaning a washed up person (this is the clue whassup if washups rule) :
 	if Leo is washed up and Rand is washed up, try scaning wzup instead;
 
 to say r-l of (p - a person): say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
 
-check taking a fightin person: say "You can 'take' [noun] by trickery." instead;
+check taking a fightin bruiser: say "You can 'take' [noun] by trickery." instead;
 
 to say l-r: say "[if a random chance of 1 in 2 succeeds]Leo[else]Rand[end if]"
 
@@ -12080,16 +12073,16 @@ persuasion rule for asking an eager person to try attacking the hogs:
 	say "[noun] counts on his fingers, reasoning that three is more than two and a haff. 'Sorry, boss.'";
 	persuasion fails;
 
-persuasion rule for asking a bruisin person to try doing something:
+persuasion rule for asking a bruiser to try doing something:
 	if noun is not eager:
 		say "[noun] isn't up to that.";
 		persuasion fails;
 	say "Alas, [l-n-r] are men of action.";
 	persuasion fails;
 
-before scaning a fightin person: if Rand is washed up and Leo is washed up, try scaning wzup instead;
+before scaning a bruiser: if Rand is washed up and Leo is washed up, try scaning wzup instead;
 
-for writing a paragraph about a bruisin person:
+for writing a paragraph about a bruiser:
 	if Rand is not touchable:
 		say "Leo is here, looking strong if not fast.";
 		now Leo is mentioned instead;
@@ -12103,7 +12096,7 @@ chapter Leo
 
 check scaning Leo when Rand is in Dirge Ridge and Rand is fightin: say "It's Rand you need to deal with, now." instead;
 
-Leo is a fightin bruisin reflexive person. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to talk to[end if]."
+Leo is a reflexive bruiser. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to talk to[end if]."
 
 a-text of Leo is "YRY". b-text of Leo is "YRY". parse-text of leo is "UNIQUE". leo is any-spoilable.
 
@@ -12111,7 +12104,7 @@ initial appearance of Leo is "[bug-report]".
 
 chapter Rand
 
-Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset. For all their macho talk, he and Leo might just need someone to talk to[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
+Rand is a reflexive bruiser. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset. For all their macho talk, he and Leo might just need someone to talk to[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
 
 a-text of Rand is "RYRR". b-text of Rand is "RGRR". parse-text of Rand is "x[sp]A[sp]x[sp]x". rand is any-spoilable.
 
@@ -12123,7 +12116,7 @@ the wzup is privately-named proper-named reflexive boring scenery. printed name 
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "W[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-check asking about "whassup" when wzup is touchable: if noun is Leo or noun is Rand, try fliptoing wzup instead;
+check asking about "whassup" when wzup is touchable: if noun is a bruiser, try fliptoing wzup instead;
 
 chapter sods gone odes song
 
@@ -13929,7 +13922,7 @@ understand "fish" and "bullies" as pikes when carps-pref is false.
 
 section carps
 
-the carps are plural-named nasty vanishing people in Anger Range. "They are sneering and teasing the poor trout."
+the carps are plural-named vanishing people in Anger Range. "They are sneering and teasing the poor trout."
 
 description of carps is "They are sneering and teasing the poor trout. You're bigger than them, by two feet."
 
@@ -13937,9 +13930,12 @@ a-text of carps is "RRRYR". b-text of carps is "RRPYR". parse-text of carps is "
 
 section pikes
 
-the pikes are plural-named nasty vanishing people in Anger Range. initial appearance of pikes is "[bug-report]"
+the pikes are plural-named vanishing people in Anger Range. initial appearance of pikes is "[bug-report]"
 
-check taking a nasty person: say "That's the wrong way to 'take' [the noun].'" instead;
+check taking a person in anger range:
+	if noun is sausage, say "Yes, you must take [the sausage] somewhere." instead;
+	if noun is trout, say "You could take the trout away, but he needs to stay and fight." instead;
+	if noun is carps or noun is pikes, say "That's the wrong way to 'take' [the noun].'" instead;
 
 the chum of the pikes is the carps.
 
@@ -19232,9 +19228,9 @@ understand "animals/lamina/animal" as laminas.
 
 chapter elmer and merle
 
-to say e-n-m: say "[one of]Elmer and Merle[or]Merle and Elmer[at random]"
+an aide is a kind of person.
 
-an aide is a kind of person. an aide is usually henchy.
+to say e-n-m: say "[one of]Elmer and Merle[or]Merle and Elmer[at random]"
 
 Elmer is an aide in Reclusion Inclosure.
 
