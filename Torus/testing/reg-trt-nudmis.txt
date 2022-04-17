@@ -10,6 +10,13 @@
 >au 2
 >z
 
+#ttc-table-of-one-time-warnings-sys/eye
+>yes
+Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that. But maybe the SYS-EYE can help you in its own weird way.
+
+>yes
+The SYS-EYE does not reveal itself. Perhaps it is just there as bizarre help, in its own way.
+
 #ttc-table-of-pre-brushoffs-ehs-ehs-(eh|ehs)
 >eh
 No, you can't lackadaisically go along with what's there. You need to invent, or reinvent, something new, some different way of emoting.

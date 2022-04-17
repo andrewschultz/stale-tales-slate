@@ -27,6 +27,15 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 >au 2
 >z
 
+@nud
+#ttc-table-of-one-time-warnings-sys/eye
+>yes
+Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that. But maybe the SYS-EYE can help you in its own weird way.
+\\
+>yes
+The SYS-EYE does not reveal itself. Perhaps it is just there as bizarre help, in its own way.
+\\
+
 @hin
 #ttc-table-of-cylinder-descriptions-1
 >x cylinder
@@ -94,16 +103,7 @@ You think you hear a small voice echoing throughout the torus. You sort of want 
 >a
 #ttc-table-of-times-around-2
 >a
-/(Ugh\. Tricky\.|What sort of ant was it|)
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-2
->a
-/(NATANT ant|CONCISIONS!)
+You start feeling bummed you haven't gotten anywhere. A voice in your hea says to think positive. But surely it can't just be easy as saying YES, can it?
 >a
 >a
 >a
@@ -130,7 +130,16 @@ You think you hear a small voice echoing throughout the torus. You sort of want 
 >a
 #ttc-table-of-times-around-4
 >a
-Tan ant, natant. Sonic coins, concisions.
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-4
+>a
+/(NATANT ant|CONCISIONS!)
 >a
 >a
 >a
@@ -139,6 +148,15 @@ Tan ant, natant. Sonic coins, concisions.
 >a
 #ttc-table-of-times-around-5
 >a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-6
+>a
 You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
 >a
@@ -146,7 +164,7 @@ You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives
 >a
 >a
 >a
-#+ttc-table-of-times-around-5
+#+ttc-table-of-times-around-6
 >a
 You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
