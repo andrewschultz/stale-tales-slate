@@ -39,6 +39,13 @@ You thought you preferred
 !BUG
 Report Porter Perrot's kind of leading the conversation, here.
 
+#ttc-table-of-npc-yes-and-no-responses-report-porter-perrot
+>yes
+Agreeing with Report Porter Perrot probably wouldn't get him to leave.
+>no
+You can't out-argue Report Porter Perrot or change his mind.
+
+
 >1
 >5
 
@@ -388,6 +395,12 @@ You don't need to mention you have it.
 
 >against
 Your score has just gone up by one point
+
+#ttc-table-of-npc-yes-and-no-responses-gast
+>yes
+Passively agreeing with [him-her] might just keep things going ad infinitum. You need to find the right way to ride out the conversation.
+>no
+Disagreeing with [Gast] might make [him-her] too mad. You need to find the right way to ride out the conversation.
 
 #ttc-table-of-routes-subject-blather-gast-sit-a-nag
 >ask gast about sit a nag
@@ -2337,6 +2350,12 @@ Your score has just gone up by one point
 >ask ed riley about xyzzy
 "Stay there in the rye, idle! Yielder!" he booms, and then he bangs on about not trying to sing or attack him. Be nice to quiet him down, somehow.
 
+#ttc-table-of-npc-yes-and-no-responses-ed-riley
+>yes
+He doesn't look terribly agreeable.
+>no
+Too direct. He'd just reject you to show you he's no YIELDER.
+
 >reedily
 Your score has just gone up by one point
 
@@ -2348,6 +2367,12 @@ You need the right actions to gain information from the cinders.
 
 >w
 Disowned Downside
+
+#ttc-table-of-npc-yes-and-no-responses-players
+>yes
+They're so totally wrong, even a sarcastic yes would be just bad.
+>no
+Their arguments are too well-constructed for such a simple reject.
 
 #ttc-table-of-otters-subject-blather-players-elvira
 >ask players about elvira
@@ -2706,6 +2731,11 @@ WTF FTW
 >1
 >7
 
+#ttc-table-of-npc-yes-and-no-responses-elvira
+>no
+Don't give in like that!
+>yes
+Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS.
 
 #ttc-table-of-otters-reflexive-blather-elvira
 >ask elvira about elvira

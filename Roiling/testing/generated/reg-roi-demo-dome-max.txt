@@ -247,15 +247,30 @@ Ned's Dens
 >score
 You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
 
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-1
 >x chronicle
 The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
 !Another thought reads:
 
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-2
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-3
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-4
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-5
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-6
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-7
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-8
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-9
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-10
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-11
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-12
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-13
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-14
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
 PERUSED exhibits: Chic Loner Chronicle (Ned's Dens).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
 
+#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-15
 >xab chronicle
 !The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
 Another thought reads:
