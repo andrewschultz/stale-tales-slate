@@ -4223,29 +4223,35 @@ book begin-region hints
 
 section special parser errors
 
-rule for printing a parser error when the latest parser error is the didn't understand error and mrlp is not Ordeal Reload and the number of words in the player's command > 1:
+rule for printing a parser error when the latest parser error is the didn't understand error and the number of words in the player's command > 1:
 	if cur-score of mrlp < 10 and mrlp is not parsewrned:
-		choose row with thisreg of mrlp in table of parsewarns;
+		choose row with thisreg of mrlp in table of region long command messages;
+		if there is a check-this entry:
+			process the check-this entry;
+			unless the rule succeeded, continue the action;
 		say "[specwarn entry][line break]";
 		now mrlp is parsewrned;
 		the rule succeeds;
 	continue the action;
 
+this is the perrot-moot rule:
+	if perrot is moot, the rule succeeds;
+
 to say pars-trub:
 	say "The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something[one of], in which case, one word (or a compound word) usually works[or][stopping].[paragraph break]So here is a one-time general guideline on what to do in this area: ";
 
-table of parsewarns
-thisreg	specwarn
-Ordeal Reload	"You need to change certain things to other things."
-stores	"[pars-trub]you need to change the stores, here, like you changed the [if tables are moot]tables[else if niche is moot]'my niche' writing[else]ten beams[end if], and you just need one word."
-presto	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
-routes	"[pars-trub]one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six."
-troves	"[pars-trub]one word will work here, and you won't need to specify details. A last lousy point is eight letters long, but most are five or six."
-towers	"[pars-trub]one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight."
-oyster	"[pars-trub]one word will work here, though this game should accept fuller sentences. The longest words are seven letters, so while there's a lot to do, no one word is too long."
-otters	"[pars-trub]while some words are rather long, you [if cur-score of otters is 0]will[else]probably[end if] see how to guess a letter or two even [if power-back is false]when[else]now[end if] you've got your powers back."
-others	"[pars-trub]you may need a variety of tricks, here, but one word will usually clinch things, and you will figure the general theme."
-demo dome	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
+table of region long command messages
+thisreg	check-this	specwarn
+Ordeal Reload	perrot-moot rule	"[pars-trub]You need to change certain things to other things."
+stores	--	"[pars-trub]you need to change the stores, here, like you changed the palm, rifle, plates and plaster psalter, and you just need one word."
+presto	--	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
+routes	--	"[pars-trub]one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six."
+troves	--	"[pars-trub]one word will work here, and you won't need to specify details. While some last lousy points are up to eleven letters, most you need to get through are five or six."
+towers	--	"[pars-trub]one final word will work here, to make things as they should be. It is eleven letters long, but everything else is shorter--most are from six to eight letters, though optional ones may be from five to nine."
+oyster	--	"[pars-trub]one word will work here, though this game should accept fuller sentences. The longest words are seven letters, but many are four. There's a lot to do, but no one word should be too long."
+otters	--	"[pars-trub]while some words are rather long, you [if cur-score of otters is 0]will[else]probably[end if] see how to guess a letter or two even [if power-back is false]when[else]now[end if] you've got your powers back."
+others	--	"[pars-trub]you may need a variety of tricks, here. One word is twelve letters long, but some are as short as five. You can even overlook twenty puzzles."
+demo dome	--	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
 
 book ordeal-reload-hinting
 

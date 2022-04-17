@@ -194,6 +194,17 @@ You have 16 of 45 total points for the post-Elvira Others region, though you onl
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
+>coconuts
+by one point
+>s
+#ttc-table-of-settler-shake-descriptions-coins
+>ss
+Only Curtis's coins are visible. You turn the settler off.
+>icons
+#ttc-table-of-settler-shake-descriptions-icons
+>ss
+Only the icons you made are visible. You turn the settler off.
+
 >s
 Curtis hands you a coin
 scru-it

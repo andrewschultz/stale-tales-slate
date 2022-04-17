@@ -1810,7 +1810,7 @@ blurb
 "Game rut? Um, great."
 "Gee, don't get done."
 "...Gets all 'Let's lag!'"
-"Glare! Nix Relaxing"
+"Glare! Nix Relaxing."
 "A glum, um, lag."
 "Gosh, di'n't DO things." [p] []
 "Gotta STEP to get past!"

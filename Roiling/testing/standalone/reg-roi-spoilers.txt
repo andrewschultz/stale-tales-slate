@@ -29,8 +29,24 @@ This would give you the rank of Farce Facer.
 >z
 [NOTE: you may want to examine something else to tell you about Yorpwald, like the diorama and its instructions.]
 
+>think
+>open door
+>1
+>5
+>lamp
+
+#ttc-table-of-region-long-command-messages-ordeal-reload
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
+So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
+
+
 >ts
 
+#ttc-table-of-region-long-command-messages-stores
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: you need to change the stores, here, like you changed the palm, rifle, plates and plaster psalter, and you just need one word.
 
 #ttc-table-of-region-skip-commands-between
 >between
@@ -58,6 +74,11 @@ This would give you the rank of Riled Idler.
 
 >routes
 >in
+
+#ttc-table-of-region-long-command-messages-routes
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six.
 
 >au 0
 >n
@@ -130,6 +151,11 @@ This would give you the rank of Results Tussler.
 >troves
 >enter estate
 
+#ttc-table-of-region-long-command-messages-troves
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: one word will work here, and you won't need to specify details. While some last lousy points are up to eleven letters, most you need to get through are five or six.
+
 >n
 >n
 >n
@@ -167,6 +193,10 @@ Strip of Profits
 >retry
 DEBUG INFO: retry failed since we're in Strip of Profits.
 
+#ttc-table-of-ranks-4
+>score
+This would give you the rank of Fierier Reifier.
+
 #ttc-table-of-region-skip-commands-debug
 >debug
 The region for this final command (Presto) may've changed since you last played, which is probably release 1. Thus, significantly new stuff may've been added since then. Go ahead anyway?
@@ -188,12 +218,13 @@ This would give you the rank of Rifeness Finesser.
 >undo
 >undo
 
-#ttc-table-of-ranks-4
->score
-This would give you the rank of Fierier Reifier.
-
 >presto
 >enter tornado
+
+#ttc-table-of-region-long-command-messages-presto
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five.
 
 >n
 >n
@@ -221,6 +252,13 @@ This region focuses on interjections.
 >sub
 by one point
 
+#ttc-table-of-ranks-5
+>score
+This would give you the rank of Rifeness Finesser.
+
+>retry
+DEBUG INFO: retry failed since we're in Strip of Profits.
+
 Strip of Profits
 
 #ttc-table-of-region-skip-commands-destroy
@@ -233,15 +271,13 @@ You declare cleared Oyster and watch Store Y dissolve.
 >undo
 >undo
 
->retry
-DEBUG INFO: retry failed since we're in Strip of Profits.
-
-#ttc-table-of-ranks-5
->score
-This would give you the rank of Rifeness Finesser.
-
+#ttc-table-of-region-long-command-messages-oyster
 >oyster
 >enter balancer
+
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: one word will work here, though this game should accept fuller sentences. The longest words are seven letters, but many are four. There's a lot to do, but no one word should be too long.
 
 >n
 >n
@@ -276,6 +312,10 @@ by one point
 
 Strip of Profits
 
+#ttc-table-of-ranks-6
+>score
+This would give you the rank of Lengthier Lightener.
+
 #ttc-table-of-region-skip-commands-spectacular
 >spectacular
 You declare cleared Towers and watch Store W dissolve.
@@ -287,12 +327,13 @@ This would give you the rank of Truculenter Unclutterer.
 >retry
 DEBUG INFO: retry failed since we're in Strip of Profits.
 
-#ttc-table-of-ranks-6
->score
-This would give you the rank of Lengthier Lightener.
-
+#ttc-table-of-region-long-command-messages-towers
 >towers
 >enter turrets
+
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: one final word will work here, to make things as they should be. It is eleven letters long, but everything else is shorter--most are from six to eight letters, though optional ones may be from five to nine.
 
 >n
 >n
@@ -337,6 +378,11 @@ This would give you the rank of Truculenter Unclutterer.
 >otters
 >enter idols
 
+#ttc-table-of-region-long-command-messages-otters
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: while some words are rather long, you will see how to guess a letter or two even when you've got your powers back.
+
 >n
 >n
 >n
@@ -373,6 +419,11 @@ by one point
 
 >{include} _others_score_check
 
+#ttc-table-of-region-long-command-messages-others
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+So here is a one-time general guideline on what to do in this area: you may need a variety of tricks, here. One word is twelve letters long, but some are as short as five. You can even overlook twenty puzzles.
+
 >n
 >n
 >n
@@ -399,11 +450,15 @@ This region focuses on anagrammable fruits.
 >z
 >demo dome mode
 
+#ttc-table-of-region-long-command-messages-demo-dome
+>xx yy
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
+So here is a one-time general guideline on what to do in this area: you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all.
+
 >score
 There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
 
->undo
->undo
+>gonear dusty study
 
 >rove over
 
