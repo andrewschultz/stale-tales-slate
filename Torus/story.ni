@@ -673,10 +673,15 @@ check saying no:
 		else:
 			say "[if ever-heptagon-puzzle is true]Thinking [b]ON[r] was enough of a reverse of 'Noon? No! No!'[else]Just the opposite. And I don't mean saying yes.[end if]";
 		the rule succeeds;
-	say "No need for negativity. You want the opposite!";
+	say "No need for negativity[if player is in scene scene], especially now you've found somewhere nice.[else]. You'll need the opposite to get to the center of the torus![end if]" instead;
 
 check saying yes:
-	say "You'll want the opposite of this at some point. Well, the opposite of the opposite. You'll see what I mean."
+	if sys-eye-yes is false:
+		say "Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that[if score is 0]. But maybe the SYS-EYE can help you in its own weird way[end if].";
+		now sys-eye-yes is true;
+	else:
+		say "The SYS-EYE does not reveal itself. Perhaps it [if score is 0]is[else]was[end if] just there as bizarre help, in its own way.";
+	the rule succeeds;
 
 understand "yes yes" and "yesyes" as saying yes.
 

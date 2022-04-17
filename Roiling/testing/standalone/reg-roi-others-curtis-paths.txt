@@ -1,458 +1,215 @@
-## reg-roi-others-curtis.txt
-## testing all possible combinations of what Curtis gives you, when. Others-#### tells the levels when you go back to Curtis.
-##
-y
+# reg-roi-others-curtis-paths.txt
+#
+# this simply tests all possibilities of going back to curtis
+# there are 8 possible
+# back for tekno token or not (1st) * back for coin 1 or not (2nd) * back for coin 2 or not (3rd)
+# since you always have to come back for a droll dollar (4th)
+#
+
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _others-intro
+* 01234
 
->gonear rustic citrus
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_eval_back
+>{include} _1_to_2
+#ttc-table-of-curtis-rewards-1-2
+>s
+"Glad you didn't say scru-it. We're getting somewhere." Curtis hands you a coin for your efforts.
+>n
+>{include} _2_to_3
+>s
+#ttc-table-of-curtis-rewards-2-3
+Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
+>n
+>{include} _3_to_4
+"Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
->maraschino
-Your score has just gone up by one point
+* 01204
 
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_eval_back
+>{include} _1_to_2
+>s
+"Glad you didn't say scru-it. We're getting somewhere." Curtis hands you a coin for your efforts.
+>n
+>{include} _2_to_3
+>{include} _3_to_4
+#ttc-table-of-curtis-rewards-2-4
+Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul. "Do sail!" he exhorts you.
+Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
+
+* 01034
+
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_eval_back
+>{include} _1_to_2
+>{include} _2_to_3
+>s
+#ttc-table-of-curtis-rewards-1-3
+"Wow. So much done at once." Curtis hands you two coins for your efforts.
+>n
+>{include} _3_to_4
+"Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
+
+* 01004
+
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_eval_back
+>{include} _1_to_2
+>{include} _2_to_3
+>{include} _3_to_4
+#ttc-table-of-curtis-rewards-1-4
+"Spurtin' turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with." Curtis, looking very pleased, hands you two coins and some sort of dollar.
+
+* 00234
+
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_to_2
+>s
+#ttc-table-of-curtis-rewards-0-2
+"Wow! You got a lot done on that errand. Here's a Tekno-Token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something."
+A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.
+>n
+>{include} _2_to_3
+>s
+Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
+>n
+>{include} _3_to_4
+"Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
+
+* 00204
+
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_to_2
+>s
+"Wow! You got a lot done on that errand. Here's a Tekno-Token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something."
+A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.
+>n
+>{include} _2_to_3
+>{include} _3_to_4
+Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul.
+Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
+
+* 00034
+
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_to_2
+>{include} _2_to_3
+#ttc-table-of-curtis-rewards-0-3
+>s
+"Surprised you can lug all that back! Here's a Tekno-Token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!"
+A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.
+>n
+>{include} _3_to_4
+#ttc-table-of-curtis-rewards-3-4
+"Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
+
+* 00004
+
+>{include} _intro
+>{include} _0_to_1
+>{include} _1_to_2
+>{include} _2_to_3
+>{include} _3_to_4
+#ttc-table-of-curtis-rewards-0-4
+"Spurtin' turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with." Curtis, looking very pleased, hands you two coins and a droll dollar.
+
+* _intro
+
+# let's get 7 points.
+>rove over
+>others
+>in
 >grapes
-Your score has just gone up by one point
->tamarind
-Your score has just gone up by one point
+by one point
 >pears
-Your score has just gone up by one point
-north is usually up
-
->compass
-moss flattens and clears
-Your score has just gone up by one point
-
+by one point
 >plums
-Your score has just gone up by one point
-
->x drinks
+by one point
 >limes
-Your score has just gone up by one point
-
->pomegranate
-Your score has just gone up by one point
-
-* _others-124
-
+by one point
+>compass
+by one point
+>x circuits ruts
+A lot has fallen into the ruts.
+>dates
+by one point
+>tamarind
+by one point
 >persimmon
+
+*_inventory
+
 >i
 tekno-token
-
->blueberries
->n
->apples
->apricot
->gooseberry
->mulberries
->s
->i
-coin
->n
->w
->blackberries
->raspberry
->cranberries
->pineapple
->grapefruit
->strawberries
->e
->e
->cheap
->w
->s
-Curtis hands you another coin
-that's all you'll get
->i
 coins
-droll dollar
-tekno-token
->n
->d
-
-* _others-24
-
->n
->apples
->apricot
->gooseberry
->mulberries
->d
->go near
->rhubarb
->nab an a
->u
->s
->i
-coin
->persimmon
->n
->w
->blackberries
->raspberry
->cranberries
->pineapple
->grapefruit
->strawberries
->e
->e
->solemn
->mo len
->w
->s
-Curtis hands you another coin
-that's all you'll get
->i
-coins
-droll dollar
-tekno-token
->n
->d
-
-* _others-14
-
->blueberries
->i
-tekno-token
->n
->apples
->apricot
->gooseberry
->mulberries
->d
->go near
->rhubarb
->nab an a
->u
->w
->blackberries
->raspberry
->cranberries
->pineapple
->grapefruit
->e
->s
-Spurtin' turnips!
-here's the rest of my junk
->i
-coins
-tekno-token
-droll dollar
->n
->d
-
-* _others-4
-
->n
->apples
->apricot
->gooseberry
->mulberries
->d
->go near
->rhubarb
->nab an a
->u
->w
->blackberries
->raspberry
->cranberries
->pineapple
->grapefruit
->strawberries
->e
->s
-Wow! Impressive! I'm half curious if you cheated somehow!
->i
-coins
-tekno-token
-droll dollar
->n
->d
-
-* _others-34
-
->n
->apples
->apricot
->gooseberry
->mulberries
->d
->go near
->rhubarb
->nab an a
->u
->w
->blackberries
->raspberry
->e
->s
-Surprised you can lug all that back
->n
->w
->cranberries
->pineapple
->grapefruit
->strawberries
->e
->s
-It's all I have for you.
->n
->d
-
-
-* _others-134
-
->cantaloupe
-Take on a token
-
->n
->apples
->apricot
->gooseberry
->mulberries
->e
->cheap
->cinque
->ancienter
->solemn
->len,mo
-
->among
->papayas
->w
->s
-So much done at once.
-hands you two coins
->i
-coins
->persimmon
-currency I never could quite spend
->i
-droll dollar
->n
->d
-
-* _others-234
-
->n
->apples
-Your score has just gone up by one point
->apricot
-Your score has just gone up by one point
->mulberries
-Your score has just gone up by one point
->gooseberry
-Your score has just gone up by one point
-
->w
->blackberries
-Your score has just gone up by one point
-
->e
->s
-tekno-token AND a coin
->i
-a coin
-a tekno-token
-
->n
->e
->solemn
-Your score has just gone up by one point
->mo len
-Your score has just gone up by one point
->ancienter
-Your score has just gone up by one point
->cinque
-Your score has just gone up by one point
->w
->s
->i
-coins
->sonic
-Your score has just gone up by one point
->undo
->icons
-Your score has just gone up by one point
->undo
->sonic icons
-Your score has just gone up by two points
->i
-sonic icons
->undo
->undo
-
->n
->e
->cheap
-Your score has just gone up by one point
-
->among
-Your score has just gone up by one point
->papayas
-Your score has just gone up by one point
-
->cripes
-Your score has just gone up by one point
-
->w
->s
->i
 a droll dollar
->n
->d
 
-* _others-1234
-
->blueberries
-Take on a token
-
->i
-tekno-token
+* _0_to_1
 
 >n
+Swell Wells
 >apricot
-Your score has just gone up by one point
+by one point
 
+* _1_to_2
+
+>gooseberry
+by one point
+>coconuts
+by one point
 >mulberries
-Your score has just gone up by one point
-
+by one point
 >apples
-Your score has just gone up by one point
+by one point
+
+* _2_to_3
 
 >w
+Filed Field
 >blackberries
-Your score has just gone up by one point
-
->watermelon
-Your score has just gone up by one point
-
->raspberry
-Your score has just gone up by one point
-
+by one point
+>cranberries
+by one point
+>strawberries
+by one point
+>breadfruit
+by one point
 >e
->s
-scru-it. We're getting somewhere
+Swell Wells
 
->i
-a coin
-
->cantaloupe
-Your score has just gone up by one point
-
->persimmon
-Your score has just gone up by one point
-citric critic
-
->i
-coins
-
->n
->e
-
->solemn
-Your score has just gone up by one point
-
->len mo
-Your score has just gone up by one point
-
->cheap
-Your score has just gone up by one point
-
->ancienter
-Your score has just gone up by one point
+* _3_to_4
 
 >w
+Filed Field
+>watermelon
+by one point
+>pineapple
+by one point
+>raspberry
+by one point
+>grapefruit
+by one point
+>e
+Swell Wells
 >s
-I never could quite spend. It looks kind of illegal.
 
+* _1_eval_back
+
+#ttc-table-of-curtis-rewards-0-1
+>s
+!coin
+!coins
+!droll dollar
+"Ok. Neat. Take on a token. There's a clearing some ways away where you can swipe it to trade for things. Haggle. That sort of thing." Curtis hands you a Tekno-Token.
+A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.
 >n
->d
-
-* _others-endgame
-
-#icons here causes line break ???
->icons
-Your score has just gone up by one point
-
->sonic
-Your score has just gone up by one point
-
->give dollar
-# should not say to yourself ??
-#needs line break after you take the storage box ??
-#give dollar
-
->put icons in slot
-
->i
-passport
-
->u
->n
->n
-
->prep
-Your score has just gone up by one point
-
->undo
->research
-Your score has just gone up by one point
->review
-Your score has just gone up by one point
-
->n
-You Did Great
-
-###############################everything below here is a full test
-# search for (asterisk) (underscore)full and replace it with (asterisk) full, or vice versa
-
-* full-4
-
->{include} _others-intro
->{include} _others-4
->{include} _others-endgame
-
-* full-14
-
->{include} _others-intro
->{include} _others-14
->{include} _others-endgame
-
-* full-24
-
->{include} _others-intro
->{include} _others-24
->{include} _others-endgame
-
-* full-124
-
->{include} _others-intro
->{include} _others-124
->{include} _others-endgame
-
-* full-34
-
->{include} _others-intro
->{include} _others-34
->{include} _others-endgame
-
-* full-134
-
->{include} _others-intro
->{include} _others-134
->{include} _others-endgame
-
-* full-234
-
->{include} _others-intro
->{include} _others-234
->{include} _others-endgame
-
-* full-1234
-
->{include} _others-intro
->{include} _others-1234
->{include} _others-endgame

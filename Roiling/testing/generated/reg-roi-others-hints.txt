@@ -201,6 +201,7 @@ by one point
 >ss
 Only Curtis's coins are visible. You turn the settler off.
 >icons
+by one point
 #ttc-table-of-settler-shake-descriptions-icons
 >ss
 Only the icons you made are visible. You turn the settler off.

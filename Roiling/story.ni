@@ -19837,7 +19837,7 @@ to coin-eval:
 		repeat with fru running through carried fruits:
 			moot fru;
 	if curtis-level > temp:
-		repeat through table of coingiving:
+		repeat through table of curtis rewards:
 			if levb4 entry is temp and levaf entry is curtis-level:
 				now curtis-award-level is levaf entry;
 				say "[line break][blabber entry][line break]";
@@ -19897,7 +19897,7 @@ understand "dollar bill" and "bill" as droll dollar.
 
 to say if-clear: say "[if Clangier Clearing is visited]--ah, you're nodding, you've seen it--[else] [end if]"
 
-table of coingiving
+table of curtis rewards
 levb4	levaf	get-token	get-coin	get-coins	get-dollar	blabber
 0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.' Curtis hands you a Tekno-Token."
 0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a Tekno-Token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something.'"

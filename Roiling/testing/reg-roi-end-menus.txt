@@ -21,6 +21,7 @@
 >l 1
 Responses to an empty command:
 
+#ttc-table-of-endgame-region-abbreviations-la/lg
 >la
 Here are all the random text lists for general commands.
 1. Responses to an empty command
@@ -36,42 +37,56 @@ Here are all the random text lists for general commands.
 11. Death notices
 12. Hint guy t-shirt writing
 
+#ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
 >lb
 There was nothing to explore behind Store B.
 
+#ttc-table-of-endgame-region-abbreviations-lc
 >lc
 There's nothing extra, or extra licentious, behind Store C.
 
+#ttc-table-of-endgame-region-abbreviations-ld
 >ld
 I can't show you the list for the final non-puzzle area, yet. You haven't solved it.
 
+#+ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
 >le
+There was nothing to explore behind Store E.
 
+#ttc-table-of-endgame-region-abbreviations-lf/li/lm
 >lf
 Store F was available to explore in Shuffling Around but not A Roiling Original.
 
+#ttc-table-of-endgame-region-abbreviations-lg
 >lg
 Here are all the random text lists for general commands.
 
+#ttc-table-of-endgame-region-abbreviations-lh
 >lh
 I can't show you the random text lists for Store H, yet. You haven't solved it.
-!Here are both the random text lists for Towers.
+!Here are both the random text lists for Others.
 
+#+ttc-table-of-endgame-region-abbreviations-lf/li/lm
 >li
 Store I was available to explore in Shuffling Around but not A Roiling Original.
 
+#+ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
 >lj
 There was nothing to explore behind Store J.
 
+#ttc-table-of-endgame-region-abbreviations-lk
 >lk
 No region was behind Store K, though you could get a small bit of help from it.
 
+#+ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
 >ll
 There was nothing to explore behind Store L.
 
+#+ttc-table-of-endgame-region-abbreviations-lf/li/lm
 >lm
 Store M was available to explore in Shuffling Around but not A Roiling Original.
 
+#ttc-table-of-endgame-region-abbreviations-lo
 >lo
 Here are all the random text lists for Ordeal Reload.
 1. Elmo's romantic complaints
@@ -90,6 +105,7 @@ Here are all the random text lists for Ordeal Reload.
 14. All the ads in the Dope Op-Ed
 15. Mob chants
 
+#ttc-table-of-endgame-region-abbreviations-lp
 >lp
 Here are all the random text lists for Presto.
 1. Leo and Rand's chatter
@@ -99,6 +115,11 @@ Here are all the random text lists for Presto.
 5. Schematic Catechism Ph. D. researchers
 6. Sleep aide brands
 
+#+ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
+>lq
+There was nothing to explore behind Store Q.
+
+#ttc-table-of-endgame-region-abbreviations-ls
 >ls
 Here are all the random text lists for Stores.
 1. Blabber babbler talk (Cruelest Lectures, behind Store N and Store K) (53 anagrams)
@@ -108,6 +129,7 @@ Here are all the random text lists for Stores.
 5. Store C advertisements (parental advisory) (Strip of Profits) (54 anagrams)
 6. The tokers' chat (Strip of Profits after destroying Store K and Store N) (176 anagrams)
 
+#ttc-table-of-endgame-region-abbreviations-lt
 >lt
 Here are all the random text lists for Otters.
 1. Elmer and Merle's chat
@@ -116,6 +138,7 @@ Here are all the random text lists for Otters.
 4. Elvira's taunts
 5. Your animal friends
 
+#ttc-table-of-endgame-region-abbreviations-lu
 >lu
 Here are all the random text lists for Routes.
 1. Moralizers
@@ -124,6 +147,7 @@ Here are all the random text lists for Routes.
 4. Brother Horbert's blessings
 5. Non-foods at Pat's
 
+#ttc-table-of-endgame-region-abbreviations-lv
 >lv
 1. Advice from Pa, Egg, Pea (Loather Rathole or beyond) (102 anagrams)
 2. Gang bosses (Bustle Sublet) (3898 anagrams)
@@ -137,14 +161,17 @@ Here are all the random text lists for Routes.
 10. Gritty Spoiloplis dialogue (Bustle Sublet) (1478 anagrams)
 11. Posh Spoiloplis dialogue (Browse Bowers/Econ Cone) (1480 anagrams)
 
+#ttc-table-of-endgame-region-abbreviations-lw
 >lw
 Here are both the random text lists for Towers.
 1. Rodney's bluster
 2. Parts of the I ZOMG Gizmo
 
+#+ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
 >lx
 There was nothing to explore behind Store X.
 
+#ttc-table-of-endgame-region-abbreviations-ly
 >ly
 Here are all the random text lists for Oyster.
 1. Rough bar action (Posh Hops Shop)
@@ -156,6 +183,7 @@ Here are all the random text lists for Oyster.
 7. Aunt Tuna's complaints (Lean Lane)
 8. Theses Sheets notes (X SHEETS in Sclerous Closures)
 
+#+ttc-table-of-endgame-region-abbreviations-lb/le/lj/ll/lq/lx/lz
 >lz
 There was nothing to explore behind Store Z.
 
@@ -196,7 +224,8 @@ Please give one of the answers above.
 >review
 >n
 
-> lh
+#+ttc-table-of-endgame-region-abbreviations-lh
+>lh
 Here are both the random text lists in Others.
 1. Political slogans at game's end
 2. Selly Yells
