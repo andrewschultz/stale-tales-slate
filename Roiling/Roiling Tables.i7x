@@ -1906,7 +1906,7 @@ volume demo dome tables
 
 [xxdmt]
 
-table of demo dome tester street notes
+table of demo dome exhibit tester street text
 thistext [x tester street] [tdm0]
 "Early parts relate the brave heroes who slogged through the first version of the game, replete with missing directions to new areas and puzzles that ... well, they technically fit the area. This includes people who tested both [shuf] and [aro]. Their early recommended tweaks helped so much."
 "I remember I wanted the hints to work, so I asked testers to run a tricky command. It seems like awkward coding now--a line that hinted what to do next got written to a file every move so nothing was spoiled--but it helped."
@@ -1920,7 +1920,7 @@ thistext [x tester street] [tdm0]
 "Sometimes I needed full computer processing power on my virtual Linux box, so that forced me not to browse on the Internet. Or I ran a test when I went out to do chores or whatever. It felt neat, doing two things at once, or getting something done while I slept. It was good to save time when Roiling took a minute to build, and I just wanted to nail that one last elusive bug."
 "Many of the original testers of [shuf] have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better."
 
-table of demo dome careland calendar parts
+table of demo dome exhibit careland calendar text
 thistext [x careland calendar] [tdm1]
 "Part one: Protean[paragraph break]There's no compelling personal story here. I just had fun trying to make the sort of game I'd have liked when I was younger, the sort Infocom might've done better if the Apple didn't have its limitations.[paragraph break]This part maps how ARO was part of [shuf] at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, the best I found for Andrew Schultz was CRAWLS, ZEN, THUD, until Hanon Ondricek pointed out (in 2014) Dawn Churlzest worked, too."
 "Part two: Wrapt to[paragraph break]I realized that it was probably best to go with nouns-to-nouns. Well, until the last puzzle. This kicked out all but F and I. I didn't know what else to do, or where the finale would be. I eventually decided on R, once I figured a resort would be a good place. It only had the Means Manse, and you just had to EXIST. I think your enemy was Too-Apt Pa Otto, and you had to make him into a POTATO. But that was a bit mean. Then METROS began to take shape, and I liked the underside and hotel, and then other locations fell into place."
@@ -1939,7 +1939,7 @@ thistext [x careland calendar] [tdm1]
 
 [teenager pith part eighteen]
 
-table of passeparts
+table of demo dome exhibit passe apses text
 thistext
 "(ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload."
 "(ORDEAL RELOAD) You see the basement renamed the Largely All-Grey Gallery and the Stable renamed Farming Framing."
@@ -1983,7 +1983,7 @@ thistext
 "Finally, here in the Demo Dome, the owl decal code wall became something the Coder Decor, and the allow-lots-tools wall became raised aiders."
 "There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing."
 
-table of informcode
+table of demo dome exhibit coder decor text
 thistext [x coder decor] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
@@ -1994,7 +1994,7 @@ thistext [x coder decor] [tdm2]
 "You read more various miscellaneous testing commands, like ones that zap all the guardians, see all the fruits or even show what the player would've missed or alternate paths every move."
 "You stare at the various tables of random text. A voice from behind a fourth wall mentions they used to be in lists, and worse, not even alphabetized so that some duplicates could be caught easily."
 
-table of auxiliary tech stuff
+table of demo dome exhibit raised aiders text
 thistext [x raised aiders] [tdm3]
 "#things to do before release:[line break]1. alphabetize tables and check for duplicates[line break]2. make sure anagrams are valid, especially books[line break]3. make sure duplicate anagrams are weeded out or checked[line break]4. check punctuation"
 "#generating silly names with honorific titles cheaply[line break]for ($x in %firstNames) { if ($isLastNameAnagram{alf('$x$ext')}) { print '$ext $x $isLastNameAnagram{alf('$x$ext')}'; # print for instance Mean Roy Maroney"
@@ -2011,7 +2011,7 @@ thistext [x raised aiders] [tdm3]
 "There's code of what appears to be copying critical files to a GitHub directory. [shuf] and Roiling files are sent to sister directories, along with the compiled release binaries and piles of odd utilities."
 "The rest is too archaic, but it includes other things I put on [ghsite] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
 
-table of observations
+table of demo dome exhibit chic loner chronicle text
 thistext [from chic loner chronicle] [tdm4]
 "I found so many ridiculous anagrams just reading a book on the way to work, or working out, and then I'd just feed them into the anagram server. If ten thousand seems like a lot, well, that is over two years, so that is fifteen per day. That is not so bad when you consider one takes a minute, and I can waste a lot of time in any case."
 "One of the best parts of using the anagram server was that I kept seeing cool quotes on the right. These added up to ideas for future games, or even funny jokes, or even more authors to read. It's always a treat when one project gives you spin-off projects."
@@ -2029,9 +2029,9 @@ thistext [from chic loner chronicle] [tdm4]
 "One thing I wish I'd done earlier, that would've given me more shortcuts, was setting up my GitHub account. The simple graph of what you've done today (green vs. grey) is great motivation to do something/anything, and if it isn't much, that's motivation to do more next time."
 "Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate."
 
-table of tripod games [tdm6]
+table of demo dome exhibit disport tripods text [tdm6]
 thistext [x disport tripods] [tdm3]
-"A rather direct mention of andrewschultz.itch.io and githu.com/andrewschultz discusses everything, though a lot more detail is ahead."
+"A rather direct mention of andrewschultz.itch.io and github.com/andrewschultz discusses everything, though a lot more detail is ahead."
 "First, there is a mention of Threediopolis, where you need to find the right path through a 3-d city to certain treasures and acquaintances."
 "After Threediopolis, there is Fourdiopolis, a much larger 3-d city with teleports."
 "There is also a framed invitation to The Problems Compound to watch Alec Smart deal with peers. After that, to Slicker City other places."
@@ -2041,13 +2041,14 @@ thistext [x disport tripods] [tdm3]
 "You see an advertisement for AILIHPHILIA, where everything is a palindrome."
 "You see a large tome called the VERY VILE FAIRY FILE. In some unnamed land, maybe you will be able to neutralize it."
 "You see a large assortment of Pig Latin translations and impressions of the Fight-Ite Fey and Factual Actual Fey becoming the Flame-Lame Fey. Under They Thunder!"
+"Off to the side of Under They Thunder is a scary-silly EctoComp entry, Weary Eerie Way."
 "You see a small five-by-five chessboard that invites you to explore basic endgame checkmates in Fivebyfivia."
 "You see another small five-by-five chessboard that invites you to explore unusal endgame checkmates with minor pieces, bishop and knight. There are apparently many such Fourbyfourias."
 "First of many EctoComp games is A Checkered Haunting, where you walk across a five-by-five city trying to cover all blocks except one without repeating."
 "The land of Uxmulbrufyuz features four other lands, each with only vowel in its name."
 "There is also 69105 More Keys, a tribute to David Welbourn's game."
 
-table of pagelist [from novella] [tdm6]
+table of demo dome exhibit novella text [from novella] [tdm6]
 thistext	page-read-yet	comprehensible
 "Page One: Openage. Peonage."	false	true
 "Page Two: 'Pa, we got top wage!'"

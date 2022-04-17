@@ -707,6 +707,7 @@ by one point
 [6] Strong will? Still wrong. At bay, ya bat.
 [7] Plot is spoilt! Scourge-curse, go! (yeah, yeah, get on with it)
 
+#ttc-table-of-elvira-comments-logical-quip
 >1
 [1] WTF FTW
 [2] LOL, how hollow!
@@ -717,27 +718,35 @@ by one point
 [7] Sinister Insister. Hypno-phony. Reposed? Deposer.
 [8] Plot is spoilt! Scourge-curse, go! (yeah, yeah, get on with it)
 
+#ttc-table-of-elvira-comments-wtf-quip
 >1
 !/\[8\]
 
+#ttc-table-of-elvira-comments-hollow-quip
 >1
 !/\[7\]
 
+#ttc-table-of-elvira-comments-sneer-quip
 >1
 !/\[6\]
 
+#ttc-table-of-elvira-comments-abhor-quip
 >1
 !/\[5\]
 
+#ttc-table-of-elvira-comments-strong-quip
 >1
 !/\[4\]
 
+#ttc-table-of-elvira-comments-bald-quip
 >1
 !/\[3\]
 
+#ttc-table-of-elvira-comments-sinister-quip
 >1
 !/\[2\]
 
+#ttc-table-of-elvira-comments-final-quip
 >1
 !/\[1\]
 

@@ -15634,9 +15634,9 @@ after printing the locale description when mrlp is towers (this is the castle ne
 the castle near/far rule is listed last in the after printing the locale description rulebook.
 
 to say which-cue of (therow - a number) :
-	say "[observ in row therow of table of townarr]";
+	say "[observ in row therow of table of castle approaching narratives]";
 
-table of townarr
+table of castle approaching narratives
 observ
 "[line break]The palace is barely visible now."
 "The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
@@ -21027,7 +21027,7 @@ a talks stalk is boring scenery. "From what you see on the other side of the Gre
 
 section disport tripods
 
-The disport tripods are a plural-named exhibit in Peek Keep. description is "The disport tripods advertise another way to enjoyably pass time after you are done.". bore-text is "There's not much to do with the disport tripods except examine them. Or play one of those wonderful advertised games!". notes-table of disport tripods is table of tripod games.
+The disport tripods are a plural-named exhibit in Peek Keep. description is "The disport tripods advertise another way to enjoyably pass time after you are done.". bore-text is "There's not much to do with the disport tripods except examine them. Or play one of those wonderful advertised games!". notes-table of disport tripods is table of demo dome exhibit disport tripods text.
 
 book Evoc-Cove
 
@@ -21040,7 +21040,7 @@ check going in Evoc Cove: if noun is east or noun is north or noun is south, say
 
 section novella
 
-The novella is an exhibit in Evoc Cove. description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by [b]READ[r] (number)[lowest-unread]. You can also speed-read with [b]RR[r].". bore-check is bore-novella rule. bore-text is "You can really only examine or read the novella, or speed-read it with [b]RR[r].". notes-table of novella is table of pagelist.
+The novella is an exhibit in Evoc Cove. description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by [b]READ[r] (number)[lowest-unread]. You can also speed-read with [b]RR[r].". bore-check is bore-novella rule. bore-text is "You can really only examine or read the novella, or speed-read it with [b]RR[r].". notes-table of novella is table of demo dome exhibit novella text.
 
 this is the bore-novella rule:
 	if current action is taking, say "Don't take the art." instead;
@@ -21069,7 +21069,7 @@ carry out tenpgreading:
 to read-lowest-page:
 	let xyz be 1;
 	let nonsense be false;
-	repeat through table of pagelist:
+	repeat through table of demo dome exhibit novella text:
 		if comprehensible entry is false:
 			[if debug-state is true, say "DEBUG: nonsense page [xyz].";]
 			now nonsense is true;
@@ -21089,7 +21089,7 @@ to read-lowest-page:
 
 to say lowest-unread:
 	let xyz be 1;
-	repeat through table of pagelist:
+	repeat through table of demo dome exhibit novella text:
 		if page-read-yet entry is true or comprehensible entry is false:
 			increment xyz;
 		else:
@@ -21110,7 +21110,7 @@ carry out numreading:
 	if the number understood is 0, say "Introductions? Boring." instead;
 	if the number understood < 0, say "You can't un-read the book, but you can leave it un-read." instead;
 	if the number understood > 100, say "The book is only 100 pages long." instead;
-	choose row number understood in table of pagelist;
+	choose row number understood in table of demo dome exhibit novella text;
 	now page-read-yet entry is true;
 	if number of characters in thistext entry > 2:
 		say "You glance over page [number understood]. The most interesting bit seems to be [thistext entry][line break]";
@@ -21119,13 +21119,13 @@ carry out numreading:
 	now novella is examined;
 	if novella is unnoted:
 		now novella is perused;
-	repeat through table of pagelist:
+	repeat through table of demo dome exhibit novella text:
 		if page-read-yet entry is false and comprehensible entry is true, the rule succeeds;
 	now novella is exhausted;
 	the rule succeeds;
 
 when play begins (this is the seed novella rule) :
-	repeat through table of pagelist:
+	repeat through table of demo dome exhibit novella text:
 		now page-read-yet entry is false;
 		if number of characters in thistext entry > 2:
 			now comprehensible entry is true;
@@ -21147,7 +21147,7 @@ to decide whether nuf-hows-examined:
 
 section tester street
 
-Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type [b]CREDITS[r] for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of demo dome tester street notes.
+Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type [b]CREDITS[r] for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of demo dome exhibit tester street text.
 
 section techs chest
 
@@ -21157,11 +21157,11 @@ check examining techs chest for the first time: ital-say "if you really, really,
 
 section coder decor
 
-the coder decor is an exhibit in Hows Show. description of coder decor is "You read some [one of][or]more [stopping]of the coder decor.". notes-table of coder decor is table of informcode.
+the coder decor is an exhibit in Hows Show. description of coder decor is "You read some [one of][or]more [stopping]of the coder decor.". notes-table of coder decor is table of demo dome exhibit coder decor text.
 
 section raised aiders
 
-the raised aiders are a plural-named exhibit in Hows Show. description of raised aiders is "You read some [one of][or]more [stopping]of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.". notes-table of raised aiders is table of auxiliary tech stuff.
+the raised aiders are a plural-named exhibit in Hows Show. description of raised aiders is "You read some [one of][or]more [stopping]of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.". notes-table of raised aiders is table of demo dome exhibit raised aiders text.
 
 book Intel Inlet
 
@@ -21175,13 +21175,13 @@ The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of e
 
 chapter CareLand Calendar
 
-The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.". notes-table of CareLand Calendar is table of demo dome careland calendar parts.
+The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.". notes-table of CareLand Calendar is table of demo dome exhibit careland calendar text.
 
 calendar-part is a number that varies.
 
 chapter Passe Apses
 
-The Passe Apses are a plural-named exhibit in Intel Inlet. description of Passe Apses is "[one of]The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a[or]You observe another[stopping] page of former content:". notes-table of passe apses is table of passeparts.
+The Passe Apses are a plural-named exhibit in Intel Inlet. description of Passe Apses is "[one of]The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a[or]You observe another[stopping] page of former content:". notes-table of passe apses is table of demo dome exhibit passe apses text.
 
 passe-part is a number that varies.
 
@@ -21193,7 +21193,7 @@ to say clc-pro: set the pronoun it to chic loner chronicle;
 
 chapter Chic Loner Chronicle
 
-The Chic Loner Chronicle is an exhibit in Neds Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads:". bore-text is "The Chic Loner Chronicle is only there for reading or examining.". notes-table of chic loner chronicle is table of observations.
+The Chic Loner Chronicle is an exhibit in Neds Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads:". bore-text is "The Chic Loner Chronicle is only there for reading or examining.". notes-table of chic loner chronicle is table of demo dome exhibit chic loner chronicle text.
 
 book Sparse Spares
 
