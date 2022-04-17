@@ -46,6 +46,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >sorbet
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 

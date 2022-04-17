@@ -108,12 +108,23 @@ Your score has just gone up by one point
 >undo
 
 >gone
+
+#ttc-table-of-region-initial-scoring-commentary-towers-1
+Well! You kind of cost Geno a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run.
+
 >score
 Score in a scenario: 1 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+
 >lardy
+
+#ttc-table-of-region-initial-scoring-commentary-towers-2
+Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice.
+
 >score
 Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+
 >bleak
+
 >score
 Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
 

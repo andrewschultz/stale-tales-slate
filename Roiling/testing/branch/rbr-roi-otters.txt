@@ -118,6 +118,10 @@ At the moment, even your profanities lack power.
 Your score has just gone up by one point
 }}SCORE++
 
+@max
+#ttc-table-of-region-initial-scoring-commentary-otters-1
+You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!
+
 @spoi
 As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
 
@@ -298,6 +302,10 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
+
+@max
+#ttc-table-of-region-initial-scoring-commentary-otters-2
+Barley, reedily. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now.
 
 >score
 {$SCOS}

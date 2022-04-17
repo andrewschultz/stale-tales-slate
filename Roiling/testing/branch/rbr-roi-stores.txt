@@ -286,6 +286,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a de
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+
+@max
+#ttc-table-of-region-initial-scoring-commentary-stores-1
+Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later.
+
+@!min
 >score
 {$SCOS}
 

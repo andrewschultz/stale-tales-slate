@@ -39,6 +39,9 @@ Something blocks you. Perhaps you were a bit too glib about entering and need to
 >inside
 Your score has just gone up by one point
 
+#ttc-table-of-region-initial-scoring-commentary-routes-1
+Well, that was different from the standard directions. But there can't be too many other ways to go.
+
 Cleric Circle
 
 >score

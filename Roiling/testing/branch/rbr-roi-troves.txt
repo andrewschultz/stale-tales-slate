@@ -193,6 +193,10 @@ DEBUG INFO: min-up codepath
 >hint pa egg pea
 Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point.
 
+@max
+#ttc-table-of-region-initial-scoring-commentary-troves-1
+Neat. You made progress just thinking. Or not-thinking. It could be either.
+
 @nud
 #ttc-table-of-troves-done-rejects-pa-egg-pea
 >gaep
@@ -222,6 +226,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
+{--max}#ttc-table-of-region-initial-scoring-commentary-troves-2\\Thinking has gotten you somewhere, you think. Staring and gaping will get you only so far. Real thought must be ahead.
 >score
 {$SCOS}
 

@@ -236,6 +236,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >limes
 Your score has just gone up by one point.
 
+@max
+#ttc-table-of-region-initial-scoring-commentary-others-1
+Hmm. It looks pretty clear what sort of stuff you're trying to make, here. There'll obviously be quite a variety, but it's great you can start with the easy ones.
+
 @hin
 /DEBUG INFO: (spear|pagers|lumps) hinting\.
 

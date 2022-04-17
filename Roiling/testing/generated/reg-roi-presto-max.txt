@@ -35,11 +35,16 @@ You're not messing around! You see the best way to destroy the maze, and you're 
 Your score has just gone up by one point
 Austerer Treasure
 
+#ttc-table-of-region-initial-scoring-commentary-presto-1
+It feels cathartic, using a non-dirty exclamation to get going.
+
 >score
 Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
 
 >phooey
 Your score has just gone up by two points
+#ttc-table-of-region-initial-scoring-commentary-presto-2
+Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words...
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
@@ -154,10 +159,6 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
-#ttc-table-of-settler-shake-descriptions-wzup
->ss
-A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
 
 #not a mistake
 >whassup

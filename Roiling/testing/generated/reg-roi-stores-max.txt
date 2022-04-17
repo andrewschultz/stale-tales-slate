@@ -14,6 +14,10 @@
 
 >sorbet
 Your score has just gone up by one point
+
+#ttc-table-of-region-initial-scoring-commentary-stores-1
+Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later.
+
 >score
 Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 

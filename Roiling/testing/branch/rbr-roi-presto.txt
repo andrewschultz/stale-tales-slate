@@ -160,6 +160,10 @@ You gulp the crust and can't help thinking UMPH. But you are too polite and/or r
 Your score has just gone up by one point
 Austerer Treasure
 
+@max
+#ttc-table-of-region-initial-scoring-commentary-presto-1
+It feels cathartic, using a non-dirty exclamation to get going.
+
 @spoi
 You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
@@ -236,8 +240,10 @@ Your score has just gone up by two points
 }}SCORE+=2
 }}CURMIN++
 {--hin}Before taking a bite, you wonder if you've visited everywhere you can yet.
+{--max}#ttc-table-of-region-initial-scoring-commentary-presto-2\\Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words...
 >score
 {$SCOS}
+
 
 @nud
 #ttc-table-of-presto-nudges-earring
@@ -1125,6 +1131,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >listen
 small talk, and they open up to you a bit.
 
+@hints
 #ttc-table-of-settler-shake-descriptions-wzup
 >ss
 A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.

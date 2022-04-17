@@ -312,6 +312,10 @@ Wait, wait. You've already figured what to do, but it wasn't the right time. You
 Your score has just gone up by one point
 }}SCORE++
 
+@max
+#ttc-table-of-region-initial-scoring-commentary-routes-1
+Well, that was different from the standard directions. But there can't be too many other ways to go.
+
 Cleric Circle
 
 @spoi

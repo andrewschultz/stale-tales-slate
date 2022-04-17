@@ -598,17 +598,36 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 
 >gone
 }}SCORE++
-{--hin}/DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl) hinting\.
+
+@hin
+/DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl) hinting\.
+
+@max
+#ttc-table-of-region-initial-scoring-commentary-towers-1
+Well! You kind of cost Geno a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run.
+
 >score
 {$SCOS}
+
 >lardy
 }}SCORE++
-{--hin}/DEBUG INFO: (Cedrick|Andres|Archie|Blake) hinting\.
+
+@hin
+/DEBUG INFO: (Cedrick|Andres|Archie|Blake) hinting\.
+
+@max
+#ttc-table-of-region-initial-scoring-commentary-towers-2
+Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice.
+
 >score
 {$SCOS}
+
 >bleak
 }}SCORE++
-{--hin}/DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
+
+@hin
+DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
+
 >score
 {$SCOS}
 

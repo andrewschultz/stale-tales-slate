@@ -230,6 +230,10 @@ Not one latch. All of them.
 Your score has just gone up by one point.
 }}SCORE++
 
+@max
+#ttc-table-of-region-initial-scoring-commentary-ordeal-reload-2
+Yay! You're still changing things to other things, just like in Shuffling Around. For now. But you're on home turf, now. If you get out in the world, maybe it'll be trickier.
+
 @nud,max
 # turn cheats on
 >t

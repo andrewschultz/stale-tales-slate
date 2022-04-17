@@ -131,15 +131,23 @@ Boy! Terrance might be less oppressive if he were RECREANT.
 >undo
 
 >gone
+
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl) hinting\.
+
 >score
 Score in a scenario: 1 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+
 >lardy
+
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake) hinting\.
+
 >score
 Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+
 >bleak
-/DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
+
+DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
+
 >score
 Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
 

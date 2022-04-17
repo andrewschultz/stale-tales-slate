@@ -129,12 +129,17 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 >undo
 
 >gone
+
 >score
 Score in a scenario: 1 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+
 >lardy
+
 >score
 Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+
 >bleak
+
 >score
 Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
 
