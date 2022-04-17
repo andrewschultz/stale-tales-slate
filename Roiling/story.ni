@@ -7767,6 +7767,7 @@ to get-cool-stuff:
 	now player has super purse;
 	now player has letters settler;
 	now player has pedanto notepad;
+	now player has inducted deductin;
 	now sad ads are in dusty study;
 
 chapter isolani liaison
@@ -9441,69 +9442,51 @@ last-yays is a number that varies.
 
 chapter Gird Grid
 
-the Gird Grid is a warpable thing. description is "[bug-report]"
+the Gird Grid is a warpable thing. description is "The Gird Grid [one of]is the real thing--endorsed by Dr. Ridrig! It [or][stopping]is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(5) and T(6).[paragraph break]It's tricky enough to look at, you can't just [b]X[r] it to examine. You need to [b]XG[r], along with the part of the grid you want to examine!"
 
 after printing the name of gird grid when gird grid is examined:
 	say " (X 1 through X 6 to read quickly)";
 
-understand "x [number]" as gridxing when player has gird grid.
+section xging
 
-does the player mean gridxing when player is in Strip of Profits and player has gird grid: it is very likely.
+xging is an action applying to one topic.
 
-gridxing is an action applying to one number.
+understand the command "xg" as something new.
 
-check gridxing when roved is true:
-	say "You look back on what you accomplished. Perhaps [if Rustic Citrus is unvisited]a variable challenge awaits[else if cur-score of Rustic Citrus < 14]you need to mix things up all sorts of different ways, here[end if]." instead;
+understand "xg [text]" as xging when player has gird grid.
 
-carry out gridxing:
-	if roved is true, say "You don't need to review what you accomplished in-depth, though it's sort of fun." instead;
-	if number understood < 1 or number understood > 6, say "You must choose 1-6 in the Gird Grid." instead;
-	choose row number understood in table of griddiness;
-	if there is a reg-match entry:
-		if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel pleased with what you fixed." instead;
-	say "[reg-blurb entry][line break]";
-	if there is a reg-match entry and mrlp is reg-match entry:
-		say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a good deal of sense, now you've done a bit here[end if].";
+carry out xging:
+	let got-any be false;
+	repeat through table of gird grid topics:
+		if the topic understood matches the grid-topic entry:
+			say "[reg-blurb entry][line break]";
+			now got-any is true;
+			if there is a reg-match entry:
+				if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel [if reg-match entry is bypassed]relieved you didn't have to deal with that[else]pleased with what you fixed[end if]." instead;
+			if there is a reg-match entry and mrlp is reg-match entry, say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what to do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+			now gird grid is examined;
+			continue the action;
+	say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
 	the rule succeeds;
 
-check examining the Gird Grid:
-	now gird grid is examined;
-	say "The Gird Grid [one of]is the real thing--endorsed by Dr. Ridrig! It [or][stopping]is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(5) and T(6).[paragraph break]Just type in the part you wish to examine, (case insensitive) letter or number[one of] (in the future, you can type X # for the number you want)[or][stopping].";
-	if debug-state is false:
-		let cho be the chosen letter;
-		if cho - 32 is a uc-ascii listed in the table of griddiness: [switch to lower case]
-			now cho is cho - 32;
-		if cho is a uc-ascii listed in the table of griddiness:
-			choose row with uc-ascii of cho in table of griddiness;
-		else if cho is a num-ascii listed in the table of griddiness:
-			choose row with num-ascii of cho in table of griddiness;
-		else:
-			say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
-	else:
-		say "Skipping the number choosing in debug mode, so tests can run.";
-		the rule succeeds;
-	if there is a reg-match entry:
-		if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel [if reg-match entry is bypassed]relieved you didn't have to deal with that[else]pleased with what you fixed[end if]." instead;
-	say "[reg-blurb entry][line break]";
-	if there is a reg-match entry and mrlp is reg-match entry, say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
-	the rule succeeds;
+table of gird grid topics
+grid-topic (topic)	reg-match	reg-blurb
+"1/u"	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
+"2/v"	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
+"3/p"	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
+"4/y"	oyster	"A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
+"5/w"	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
+"6/t"	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
+"0"	--	"You'd guess area zero would be the ordeal reload in your Means Manse."
+"7"	--	"You vaguely dread a seventh[area-but]!"
+"8"	--	"You vaguely dread an eighth area[area-but]!"
+"9"	--	"You vaguely dread a ninth area[area-but]!"
+"f"	--	"You daydream back to solving Store F. Salad days!"
+"i"	--	"You daydream back to solving Store I. Salad days!"
+"m"	--	"You daydream back to solving Store M. Salad days!"
+"r"	--	"You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!"
 
-table of griddiness
-num-ascii	uc-ascii	reg-match	reg-blurb
-49	85	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
-50	86	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
-51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
-52	89	oyster	"A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
-53	87	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
-54	84	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
-48	--	--	"You'd guess area zero would be this, here, now, but you've been doing okay so far."
-55	--	--	"You vaguely dread a seventh area, as if there isn't enough already."
-56	--	--	"You vaguely dread an eighth area, as if there isn't enough already."
-57	--	--	"You vaguely dread a ninth area, as if there isn't enough already."
---	70	--	"You daydream back to solving Store F. Salad days!"
---	73	--	"You daydream back to solving Store I. Salad days!"
---	77	--	"You daydream back to solving Store M. Salad days!"
---	82	--	"You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!"
+to say area-but: say " area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way thereZ"
 
 book Farming Framing
 

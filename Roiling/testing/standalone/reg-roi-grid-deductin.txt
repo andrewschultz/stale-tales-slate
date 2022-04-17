@@ -1,0 +1,170 @@
+# reg-roi-grid-deductin.txt
+# tests the gird grid and inducted deductin'
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* grid-and-deductin
+
+>ts
+
+>x grid
+The Gird Grid is the real thing--endorsed by Dr. Ridrig! It is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(5) and T(6).
+It's tricky enough to look at, you can't just X it to examine. You need to XG, along with the part of the grid you want to examine!
+
+#ttc-table-of-gird-grid-topics-1/u
+>xg 1
+The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin' Priest may be able to help you.
+>xg u
+The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin' Priest may be able to help you.
+
+#ttc-table-of-gird-grid-topics-2/v
+>xg 2
+Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order.
+>xg v
+Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order.
+
+#ttc-table-of-gird-grid-topics-3/p
+>xg 3
+There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks' Shack, you may feel a sense of normality that gets you back to how things were before Elvira.
+>xg p
+There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks' Shack, you may feel a sense of normality that gets you back to how things were before Elvira.
+
+#ttc-table-of-gird-grid-topics-4/y
+>xg 4
+A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
+>xg y
+A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
+
+#ttc-table-of-gird-grid-topics-5/w
+>xg 5
+The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
+>xg w
+The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
+
+#ttc-table-of-gird-grid-topics-6/t
+>xg 6
+Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
+>xg t
+Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
+
+#ttc-table-of-gird-grid-topics-0
+>xg 0
+You'd guess area zero would be the ordeal reload in your Means Manse.
+
+#ttc-table-of-gird-grid-topics-7
+>xg 7
+You vaguely dread a seventh area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way thereZ!
+
+#ttc-table-of-gird-grid-topics-8
+>xg 8
+You vaguely dread an eighth area area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way thereZ!
+
+#ttc-table-of-gird-grid-topics-9
+>xg 9
+You vaguely dread a ninth area area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way thereZ!
+
+#ttc-table-of-gird-grid-topics-f
+>xg f
+You daydream back to solving Store F. Salad days!
+
+#ttc-table-of-gird-grid-topics-i
+>xg i
+You daydream back to solving Store I. Salad days!
+
+#ttc-table-of-gird-grid-topics-m
+>xg m
+You daydream back to solving Store M. Salad days!
+
+#ttc-table-of-gird-grid-topics-r
+>xg r
+You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!
+
+
+#ttc-table-of-x1-reasoning-1
+>x x1
+Example 1 gives the example of APES' APSE and RYY?.
+
+#ttc-table-of-x1-reasoning-2
+>x x1
+The fourth letter of APES/APSE must be E or S, but it also must be a consonant, or the final word would have three consonants and one vowel. So it is S.
+
+#ttc-table-of-x1-reasoning-3
+>x x1
+Knowing slot 4 is S, then slot 1 is P.
+
+#ttc-table-of-x1-reasoning-4
+>x x1
+But then since slot 3 is yellow, it can't be E. That gives us PEAS.
+
+#ttc-table-of-x2-reasoning-1
+>x x2
+Example 2 is MERE MOOR scanning to R?R?. It notes the two words aren't anagrams, but combined, they anagram EMOR EMOR, twice.
+
+#ttc-table-of-x2-reasoning-2
+>x x2
+So the final word is an anagram of EMOR. Figuring the "right" anagram from two different words that don't anagram each other requires a bit of counting. So what is the original word?
+
+#ttc-table-of-x2-reasoning-3
+>x x2
+You may note both slots 2 and 4 must be vowels, so the final word has two vowels and two consonants.
+
+#ttc-table-of-x2-reasoning-4
+>x x2
+Slot 2 is ambiguous as it can be E or O, but slot 4 has to be E. So slot 2 is O.
+
+#ttc-table-of-x2-reasoning-5
+>x x2
+Slot 1 can't be M, so it is R. ROME. Note that this is a proper name, which should not show up except for optional points.
+
+#ttc-table-of-x3-reasoning-1
+>x x3
+Example 3 is of the SACRED CEDARS you visited on your trip to Yorpwald, and if, hypothetically, it scanned six question marks. Which seems completely unhelpful. But it is not!
+
+#ttc-table-of-x3-reasoning-2
+>x x3
+Each ambiguous reading has two possibilities, giving SC/AE/CD/RA/ER/DS.
+
+#ttc-table-of-x3-reasoning-3
+>x x3
+Here is where there is relatively focused guesswork. S, C and D form a loop, as do A, R and E. There are four possibilities total.
+
+#ttc-table-of-x3-reasoning-4
+>x x3
+SACRED, SECARD. CADRES, CEDRAS.
+
+#ttc-table-of-x3-reasoning-5
+>x x3
+Since SACRED is an original word, it can't work, but CADRES does.
+
+#ttc-table-of-x4-reasoning-1
+>x x4
+Example 4 is an ESPRIT STRIPE. The clue is ?R??R?.
+
+#ttc-table-of-x4-reasoning-2
+>x x4
+Believe it or not, nearly everything falls into place quickly here.
+
+#ttc-table-of-x4-reasoning-3
+>x x4
+The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T.
+
+#ttc-table-of-x4-reasoning-4
+>x x4
+Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T).
+
+#ttc-table-of-x4-reasoning-5
+>x x4
+That makes a total of four, and you can guess if you want from sprite, eprist, erpist, and srpite.
+
+#ttc-table-of-x4-reasoning-6
+>x x4
+But you also may be aided by red writing that indicates all letters are wrong. In this case, PRIEST written on the stripe would help you eliminate three options.
+
+#ttc-table-of-x4-reasoning-7
+>x x4
+Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE. One more note, though.
+
+#ttc-table-of-x4-reasoning-8
+>x x4
+At some point, strict logic isn't quite enough. Common sense may eliminate the last few answers, or for longer words, you may need legitimate guesswork.
