@@ -435,6 +435,14 @@ Your score has just gone up by one point
 
 Bustle Sublet
 
+#ttc-table-of-inanimate-talkables-mussier-misuser
+>ask misuser about elvira
+The mussier misuser can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do.
+>ask misuser about misuser
+The mussier misuser can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do.
+>ask misuser about xyzzy
+The mussier misuser can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do.
+
 >observe
 Your score has just gone up by one point
 >spot
@@ -831,7 +839,7 @@ Your score has just gone up by one point
 >gonear shack
 >l
 
-#ttc-table-of-presto-general-blather-giant-dead-flea
+#ttc-table-of-inanimate-talkables-flea
 >ask flea about elvira
 It's dead. Perhaps it can be reincarnated as something else.
 >ask flea about flea
@@ -980,7 +988,7 @@ Your score has just gone up by one point
 
 Disease Seaside
 
-#ttc-table-of-oyster-reflexive-blather-sabot-boats
+#ttc-table-of-inanimate-talkables-sabot-boats
 >ask boats about elvira
 You get the feeling that what you talk about isn't as important as how you do so. You might really need to yell to get the boats' attention.
 >ask boats about boats
@@ -1164,6 +1172,18 @@ She's talking about herself every move, pretty much.
 >w
 >n
 Lapsin' Plains
+
+#ttc-table-of-inanimate-talkables-span-pans
+>ask q about elvira
+The door seems to grumble and curse very quietly. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical.
+
+>splain
+
+>ask q about q
+The door seems to grumble and curse very quietly. Well, you already splained to it.
+
+>ask q about xyzzy
+The door seems to grumble and curse very quietly. Well, you already splained to it.
 
 >trace
 Your score has just gone up by one point
@@ -1366,14 +1386,14 @@ The ant twitches silently but menacingly.
 >prepay
 Your score has just gone up by one point
 
-#ttc-table-of-oyster-general-blather-intercom
+#ttc-table-of-inanimate-talkables-intercom
 >ask intercom about elvira
 It will respond once you use the dialer correctly.
 
 >ask intercom about intercom
 It will respond once you use the dialer correctly.
 
-#ttc-table-of-oyster-general-blather-dialer
+#ttc-table-of-inanimate-talkables-dialer
 >ask dialer about elvira
 Talking at the dialer does not reveal any secrets of how to operate it.
 
@@ -1643,10 +1663,9 @@ Your score has just gone up by one point
 >rinsed
 Your score has just gone up by one point
 
-#ttc-table-of-towers-general-blather-keycar
+#ttc-table-of-inanimate-talkables-yacker-keycar
 >ask keycar about elvira
 The yacker keycar babbles randomly. It's not actually going to help or hinder you, but it might be rewarding to dispatch.
-#ttc-table-of-towers-reflexive-blather-keycar
 >ask keycar about keycar
 The yacker keycar babbles randomly. It's not actually going to help or hinder you, but it might be rewarding to dispatch.
 
@@ -2235,7 +2254,7 @@ The serpent just hisses.
 
 >present
 
-#ttc-table-of-towers-reflexive-blather-unripe-ur-pine
+#ttc-table-of-inanimate-talkables-unripe-ur-pine
 >ask pine about elvira
 The unripe ur-pine towers over you, silent. Maybe something is hidden behind its bulk, something you won't find by talking.
 
@@ -2358,7 +2377,7 @@ Your score has just gone up by one point
 
 >get cinders
 
-#ttc-table-of-otters-general-blather-cinders
+#ttc-table-of-inanimate-talkables-cinders
 >ask cinders about xyzzy
 You need the right actions to gain information from the cinders.
 
@@ -2445,7 +2464,7 @@ The eels crackle and light up menacingly at the sound of her name.
 
 >s
 
-#ttc-table-of-otters-general-blather-atmo-moat
+#ttc-table-of-inanimate-talkables-moat
 >ask moat about xyzzy
 The moat bubbles angrily. Dialogue won't work, but maybe the right word will.
 
@@ -3001,10 +3020,9 @@ Your score has just gone up by one point.
 >u
 >n
 
+#ttc-table-of-inanimate-talkables-popstar-passport
 >ask passport about elvira
 You have other ways to consult the popstar's passport.
-
-#ttc-table-of-others-general-blather-passport
 >ask passport about passport
 You have other ways to consult the popstar's passport.
 >ask passport about xyzzy
@@ -3021,21 +3039,21 @@ You Did Great
 
 #uncomment this is doing partial tests
 
-#>{include} _only-ordeal-reload
+>{include} _only-ordeal-reload
 
 #this is a catch-all
 >ts
 
-#>{include} _only-stores
-#>{include} _only-routes
-#>{include} _only-troves
-#>{include} _only-presto
-#>{include} _only-oyster
+>{include} _only-stores
+>{include} _only-routes
+>{include} _only-troves
+>{include} _only-presto
+>{include} _only-oyster
 >{include} _only-towers
-#>{include} _only-otters
-#>{include} _only-others
+>{include} _only-otters
+>{include} _only-others
 
-* _only-ordeal-reload
+* only-ordeal-reload
 
 >{include} _ordeal-reload
 

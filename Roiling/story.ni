@@ -2098,15 +2098,9 @@ to say around-gone: say "[if Dr Yow is touchable]around[else]gone"
 table of NPC and topic pairs	[ask x about any old unusual subject] [xxtalk5]
 askee	topic	dialogue-text
 nestor	"life"	"'Life is, like, the time of your life!'"
-nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
-Report Porter Perrot	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
+nestor	"father" or "his father"	"You have a whole big land to save. Don't waste time shaming recreational drug users."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
-Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
-LOLstr trolls	"horned/hedron" or "horned hedron"	"'Even more fun than here. So we hear.'"
-aunt tuna	"horned/hedron" or "horned hedron"	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
-sardine	"horned/hedron" or "horned hedron"	"'I work here. Well, I guard the outside.'"
-walleyes	"horned/hedron" or "horned hedron"	"'Nice place, eh? Especially for not being very nice at all!'"
-yapper	"horned/hedron" or "horned hedron"	"'That's where we are.'"
+Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too.'"
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
 game-thing	right-region	dialogue-text

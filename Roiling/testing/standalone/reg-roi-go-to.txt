@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _ordeal-reload-go-to
+* ordeal-reload-go-to
 
 >au 2
 >go to me
@@ -80,7 +80,7 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >staple
 >in
 
-* _stores-go-to
+* stores-go-to
 
 >ts
 
@@ -103,7 +103,7 @@ You'll need to find your way back. Don't worry. There are clues. And a small rew
 >gt lectures
 You kind of destroyed Cruelest Lectures, and you won't get any rewards for going back. It was neat and all but not as fun as watching Reefer Madness.
 
-* _routes-go-to
+* routes-go-to
 
 >au 0
 >ts
@@ -216,7 +216,7 @@ You're not going back across the water. You're closer to the end of your quest.
 >beyond
 Strip of Profits
 
-* _troves-go-to
+* troves-go-to
 
 >au 0
 >ts
@@ -335,7 +335,7 @@ Your score has just gone up by one point
 
 Strip of Profits
 
-* _presto-go-to
+* presto-go-to
 
 >au 0
 >ts
@@ -521,7 +521,7 @@ Tenfold
 >gt plasm lamps
 You got rid of the ant. Nothing more to do there.
 
-* _towers-go-to
+* towers-go-to
 
 >au 0
 >seed 1
@@ -559,7 +559,7 @@ You don't want to cross Leak Lake again.
 >gt trefoil
 That's way in the past.
 
-* _otters-go-to
+* otters-go-to
 
 >au 0
 >seed 1
@@ -617,7 +617,7 @@ You leave her sin shrine with extra quickness before getting a shiner.
 
 Burnt Brunt
 
-* _others-go-to
+* others-go-to
 
 >au 2
 >ts

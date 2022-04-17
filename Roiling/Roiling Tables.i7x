@@ -2417,7 +2417,6 @@ Zo Mavelt	"[left-here].'"
 Tom Avlez	"[left-here].'"
 hogs	"They snort and laugh as if you are beneath speaking to or even wasting harsh words at."
 bored yak	"The yak, not being very yakety, does not talk back."
-giant dead flea	"It's sort of dead. Not that it was great conversation when it was alive."
 Leo	"[lrduh]"
 Rand	"[lrduh]"
 
@@ -2451,8 +2450,6 @@ weaselly walleyes	"They snicker menacingly and whisper loudly that you're probab
 sausage	"It does that whoo-whoo routine. WHERE IS MY JEWEL. You think you know which jewel."
 yapper	"The yapper does not shut up about unbribability but still manages to wink and cough at the same time. It seems you may need to do things the right way."
 ant	"The ant twitches silently but menacingly."
-dialer	"Your voice would be recognized as not evil enough, even if you got through."
-intercom	"Your voice would be recognized as not evil enough, even if you got through."
 
 to say ohai-casper:
 	if casper-mumble is true:
@@ -2514,7 +2511,6 @@ atheists	"They start logic-bashing, when one of the junior atheists tries to mak
 agnostic	"[if dinger is touchable][agnostic] would be too distracted for general conversation even without [dinger].[else if bot boat is touchable][agnostic] gestures to a bot boat. It could help you across Leak Lake![else if player is in obscurest subsector]That would confuse [agnostic]--you need to help Dr. Yow present things just a bit better.[else][agnostic] blinks a bit. 'I'm not really good with the whole general conversation thing. But I'll be glad to tell you technical stuff if we just [b]TALK[r].'[one of][paragraph break][i][bracket]NOTE: [b]TALK TO[r][i] [agnostic] will give the most information to start.[close bracket][r][or][stopping][end if]"
 Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
 Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too absorbing[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
-keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
 
@@ -2537,9 +2533,7 @@ to say new-mislit-clue: now flip-final-clue is true;
 table of otters general blather
 askee	dialogue-text
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."
-cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is not moot]You must convince me to unlock the sea cube[tho-need].[else if eels are not moot]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
-atmo moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
 Mr Lee	"[if gore ogre is moot]'You have gained my trust and your powers. Seek out Elvira, and I will help you when the time comes!'[else if ghoul hat is moot]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
 Gore Ogre	"'EORG EORG EORG!!!'"
 Gretta	"[if player is female]The [players] block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The [players] manage to small-talk you down[end if]. Gretta probably wouldn't tell you anything important with them around, anyway."
@@ -2576,7 +2570,6 @@ Ammo Gang	"The No Ammo Gang seems vaguely interested, but you didn't insert your
 Art Erd	"[he-she-c] mumbles 'er, drat' and then something about how money is very, very nice."
 Dr Tera	"[he-she-c] mumbles 'er, drat' and then something about how money is very, very nice."
 Reserved Deserver Dr Severe	"Shockingly, [deserver] has very little to say."
-passport	"Try using its features instead."
 
 volume reflexive blather tables
 
@@ -2623,7 +2616,6 @@ trolls	"They'd affirm their right to privacy before asking YOU personal question
 pesty types	--
 Casper	"[mumble-swap]Once he starts talking about himself, he won't stop. All sorts of random stuff: '[randbla]'[mumble-swap]"
 clam	"Asking the clam about its feelings is a start."
-sabot boats	"They're too far away for proper conversation. Maybe you can do something bold to show them you're worth having aboard."
 carps	"Asking these punks who they think they are won't stop them."
 pikes	"Asking these punks who they think they are won't stop them."
 trout	"[if trout is in Anger Range]You don't need to ask if he's being picked on,[else]'Well, I try my best and stuff.'[end if]"
@@ -2649,11 +2641,9 @@ snider diners	"'Can't talk with our mouths full,' they exclaim, dryly. You'd lik
 sweatier wait seer	--
 promise imposer	--
 bluster butlers	--
-unripe ur pine	--
 resident trendies	--
 fluster self rut	--
 pirates	--
-keycar	--
 grailman	--
 Lars Eede	--
 Elsa Erde	--

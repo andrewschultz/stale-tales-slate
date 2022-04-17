@@ -216,7 +216,7 @@ Elvira's taunts (Rancho Archon Anchor):
 >demo dome mode
 Please give one of the answers above.
 
-* _end-menus-others
+* end-menus-others
 
 >emy
 >endgame
@@ -239,7 +239,7 @@ Selly Yells (Clangier Clearing):
 >l 73
 Oops! You can't reach that yet.
 
-* _end-menus-demo-dome
+* end-menus-demo-dome
 
 >au 2
 >demo dome
