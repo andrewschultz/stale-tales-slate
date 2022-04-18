@@ -168,6 +168,13 @@ Your score has just gone up by one point
 >oyster
 Your score has just gone up by one point
 
+#ttc-table-of-stores-subject-blather-nestor--
+>nestor
+>ask nestor about store w
+Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants to just hang with his pals, who were in a nearby store.
+>undo
+>undo
+
 >tokers
 Your score has just gone up by one point
 
@@ -218,12 +225,16 @@ Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 "Man, it was actually kind of sort of like fun in there. Until it wasn't."
 
 #ttc-table-of-npc-and-topic-pairs-nestor-life
->VERB ttc table of npc and topic pairs nestor life
+>ask nestor about life
 "Life is, like, the time of your life!"
 
 #ttc-table-of-npc-and-topic-pairs-nestor-father-or-his-father
 >ask nestor about father
 You have a whole big land to save. Don't waste time shaming recreational drug users.
+
+#+ttc-table-of-stores-subject-blather-nestor--
+>ask nestor about store w
+Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants to just hang with his pals, if that's okay.
 
 >ask tokers about nestor
 They thank you for finding him.
@@ -688,13 +699,13 @@ Taking away a max point.
 >ask yak about elvira
 The yak looks even more bored and disgusted than before, for a moment.
 
+#ttc-table-of-presto-subject-blather-yak--
 >ask yak about yak
-You yack. It's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing.
+You yack about your quest. The yak's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing. Maybe if you got rid of the yoke, it might help you, and the yak would be happier, too.
 
 #ttc-table-of-presto-general-blather-bored-yak
 >ask yak about xyzzy
-The yak, not being very yakety, does not talk back.
-
+The yak, not being very yakety, does not give small talk back.
 
 >drat
 >rats
@@ -2861,6 +2872,10 @@ You explain you got past the simply sly imp, and she shrugs. Henchmen these days
 
 >x stand
 
+#ttc-table-of-others-subject-blather-curtis--
+>ask Curtis about compass
+Curtis is curt. "Yeah, great job saving Yorpwald and all, what about my fruit?"
+
 #ttc-table-of-others-subject-blather-curtis-rampage-note
 >ask curtis about rampage note
 "What note? You can't pin that on me."
@@ -2974,6 +2989,10 @@ Len snorts and shakes his head. "What a weasel."
 Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general.
 >ask len about xyzzy
 Len's eyes glaze over a bit. Nothing personal, just business.
+
+#ttc-table-of-others-subject-blather-len-craig--
+>ask len about superstore
+Len Craig's knowledge extends to business transactions. He doesn't have, or make, time for general advice on your quest.
 
 #ttc-table-of-others-subject-blather-len-craig-ammo
 >ask len about ammo gang

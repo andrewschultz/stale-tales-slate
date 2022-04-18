@@ -2408,7 +2408,7 @@ askee	dialogue-text
 evil bee	"The bee just buzzes. That's what bees do."
 Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. 'Be an [first custom style]ID SEER[r] like me!' You see red at this stupid exhortation."
 
-table of presto general blather [delete this]
+table of presto general blather
 askee	dialogue-text
 lamb	"It's a baaaaad conversationalist."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
@@ -2416,7 +2416,7 @@ Lev Tzoma	"[left-here].'"
 Zo Mavelt	"[left-here].'"
 Tom Avlez	"[left-here].'"
 hogs	"They snort and laugh as if you are beneath speaking to or even wasting harsh words at."
-bored yak	"The yak, not being very yakety, does not talk back."
+bored yak	"The yak, not being very yakety, does not give small talk back."
 Leo	"[lrduh]"
 Rand	"[lrduh]"
 
@@ -2711,7 +2711,6 @@ Elmo	settler	"You consider pointing your settler back at Elmo, but you realize i
 respect specter	Elvira	"'While I cannot offer outright opinions on the living, I will mention I was put here to help you defeat her, and this is a role I did not protest.'"
 respect specter	settler	"'Scanning me with it in cheat mode should provide clues.'"
 
-
 table of stores subject blather
 askee	game-thing	dialogue-text
 Rehabs Basher	blabber babbler	"The [Basher] nods enthusiastically."
@@ -2724,6 +2723,7 @@ tokers	Elvira	"'A bummer of authoritarianism, dude! She says her personality is 
 tokers	nestor	"[if nestor is touchable]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
 tokers	mangiest steaming	"[if Cruelest Lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. Going through those fumes might provide experience, of a sort[end if]."
 blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which is all for the better."
+nestor	--	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
 
 table of routes subject blather [ask x about thing they know about]
 askee	game-thing	dialogue-text
@@ -2791,6 +2791,8 @@ hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double t
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
 hogs	Elvira	"They snicker and nod."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger."
+yak	--	"You yack about your quest. The yak's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing. Maybe if you got rid of the yoke, it might help you, and the yak would be happier, too."
+
 
 to say plebe-threat of (per - a person): say "[if per is touchable]You tell the plebe [per] might push [him-her] aside, but no dice. Maybe a brutish word, not brute force[else]The plebe wouldn't go AWOL over to [Dirge Ridge]. You can take care of them and [per] in any order[end if]."
 
@@ -3032,6 +3034,8 @@ Ammo Gang	mango	"'Yes, we sell them. Come join our conversation the right way.' 
 Ammo Gang	Len Craig	"'We're glad he lets us hang around. Well, not quite around.'"
 Ammo Gang	Elvira	"'Mm. No, no! Gaga!'"
 Len Craig	Ammo	"'I'm glad to let them hang around. Well, not quite around.'"
+Curtis	--	"Curtis is curt. '[if fruits-left is 0]You've done all you can for me. Maybe do for yourself[else]Yeah, great job saving Yorpwald and all, what about my fruit[end if]?'"
+Len Craig	--	"Len Craig's knowledge extends to business transactions. He doesn't have, or make, time for general advice on your quest."
 
 to say icy-len:
 	say "'Nicely? Len? Icy!' [he-she] mutters. 'Cut Len's cluster...'"

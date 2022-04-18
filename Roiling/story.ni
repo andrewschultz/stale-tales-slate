@@ -1805,6 +1805,8 @@ this is the general-ask rule:
 	if noun is rehabs basher and pamphlets are off-stage:
 		say "[basher-pamph]";
 		the rule succeeds;
+	if noun is the player, say "You talk to yourself, hoping for a eureka moment. None pops up." instead;
+	if second noun is the player, say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
 
 section generically asking
 
@@ -1911,6 +1913,16 @@ this is the bruiser-taunt rule:
 			say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
 		say "[noun]'s in a fighting mood, not a talking mood, right now." instead;
 
+this is the general topic scouring rule:
+	repeat through general blather table of mrlp:
+		if the noun is askee entry:
+			say "[dialogue-text entry][line break]";
+			if noun is terse and noun is not terse-warned:
+				now noun is terse-warned;
+				say "[line break]Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
+				pad-rec "talking";
+			do nothing instead;
+
 check objasking it about (This is the check for object information rule):
 	d "noun=[noun] 2nd noun = [second noun] located [if second noun is a backdrop]in lots of places[else if second noun is not off-stage]in [location of second noun][else]off-stage[end if].";
 	abide by the general-ask rule;
@@ -1933,29 +1945,15 @@ check objasking it about (This is the check for object information rule):
 		repeat through reflexive blather table of mrlp:
 			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
 	repeat through subject blather table of mrlp:
-		if second noun is the game-thing entry:
-			if noun is the askee entry, say "[dialogue-text entry][line break]" instead;
-	if second noun is the player:
-		say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
-	if the chum of the noun is not yourself:
-		repeat through subject blather table of mrlp:
-			if second noun is the game-thing entry:
-				if the chum of the noun is the askee entry, say "[dialogue-text entry][line break]" instead;
+		if (noun is the askee entry or noun is chum of the askee entry) and (there is no game-thing entry or game-thing entry is the second noun):
+			d "picking default subject text for [noun].";
+			if there is no game-thing entry or second noun is the game-thing entry, say "[dialogue-text entry][line break]" instead;
 	if the noun is not to-gen-blather:
-		if the second noun is a game-thing listed in the table of object-blather:
+		if the second noun is a game-thing listed in the table of universal objasking subject defaults:
 			if there is a right-region entry:
 				if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
 			if noun is not serpent, say "[dialogue-text entry][line break]" instead;
-		repeat through table of default-sub-blather:
-			if noun is askee entry, say "[dialogue-text entry][line break]" instead;
-	repeat through general blather table of mrlp:
-		if noun is askee entry:
-			say "[dialogue-text entry][line break]";
-			if noun is terse and noun is not terse-warned:
-				now noun is terse-warned;
-				say "[line break]Hm, that wasn't very revealing. It doesn't look like talking with [the noun] can help you much. You note this in your notepad.";
-				pad-rec "talking";
-			do nothing instead;
+	abide by the general topic scouring rule;
 	if noun is not a person, say "You can only ask people about things." instead;
 	d "To fix the below bug, put [noun] in [general blather table of mrlp].";
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
@@ -1976,15 +1974,7 @@ check asking about (This is the check for specific topics rule):
 		if there is a right-region entry:
 			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
 		say "[dialogue-text entry][line break]" instead;
-	repeat through general blather table of mrlp:
-		if the noun is askee entry:
-			say "[dialogue-text entry][line break]";
-			if noun is terse and noun is not terse-warned:
-				now noun is terse-warned;
-				say "Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
-				pad-rec "talking";
-			do nothing instead;
-	say "7.";
+	abide by the general topic scouring rule;
 	if noun is not a person, say "You can only ask people about things." instead;
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
@@ -2068,18 +2058,6 @@ check objasking a picaro about curst palace: say "[noun] only knows he's suppose
 
 to say pick-keep: say "[if moot-picaros > 0]keep picking[else]pick[end if] off Rodney's gang [if moot-picaros < 3]one by one[else] though you probably don't need to[end if]";
 
-table of default-sub-blather	[dsb] [any one person's default response to an in-game object] [xxtalk3]
-askee	dialogue-text
-yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
-nestor	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
-Curtis	"Curtis is curt. 'Yeah, great job saving Yorpwald and all, what about here?'"
-lamb	"It's a baaaaad conversationalist."
-Leo	"[lrduh]"
-Rand	"[lrduh]"
-yak	"You yack. It's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing."
-aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
-Len Craig	"'No small talk. Just the language of business. Let's haggle.'"
-
 casper-mumble is a truth state that varies.
 
 ag-cheat is a truth state that varies. ag-cheat is false.
@@ -2094,9 +2072,9 @@ nestor	"father" or "his father"	"You have a whole big land to save. Don't waste 
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too.'"
 
-table of object-blather [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
+table of universal objasking subject defaults [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
 game-thing	right-region	dialogue-text
-Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
+Elvira	--	"'Everyone has a differing opinion about her, that's for sure. But--better not say the wrong thing about her!' [i][bracket]NOTE: this is a default response I need to change.[close bracket][r]"
 settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
 pedanto notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get close[end if]!'"

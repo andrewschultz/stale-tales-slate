@@ -30,7 +30,7 @@ test porter with "x bookshelf/think/open door/1"
 
 test elmo with "test porter/5/lamp/satchel/x settler/basement/in"
 
-test orxdial with "test porter/5/sb chimney/sb beams/sb tables/basement/chimney/stable/u/sb pram/ramp/enter closets/in/sb stair/stair/d".
+test orxdial with "test porter/5/sb niche/sb beams/sb tables/basement/chimney/stable/u/sb pram/ramp/enter closets/in/sb stair/stair/d".
 
 test specter with "test elmo/3/y"
 
@@ -149,13 +149,11 @@ does the player mean grilling the player: it is very unlikely.
 carry out grilling:
 	if noun is not a person, say "Try grilling a person, instead." instead;
 	repeat through subject blather table of mrlp:
-		if askee entry is noun, say "[askee entry] / [game-thing entry] = [dialogue-text entry][line break]";
+		if askee entry is noun, say "[askee entry] / [if there is a game-thing entry][game-thing entry][else](general)[end if] = [dialogue-text entry][line break]";
 	repeat through general blather table of mrlp:
 		if askee entry is noun, say "[askee entry] / = [dialogue-text entry][line break]";
 	repeat through reflexive blather table of mrlp:
 		if askee entry is noun, say "[askee entry] / = [dialogue-text entry][line break]";
-	repeat through table of default-sub-blather: [ these 2 are very rare and come last ]
-		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
 	repeat through table of NPC and topic pairs:
 		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
 
@@ -196,23 +194,16 @@ carry out spamobjing:
 	say "You are asking about a thing.";
 	repeat with PEO running through people:
 		say "[PEO] is a person.";
-	the rule succeeds;
 	repeat with PEO running through people:
 		say "Asking [PEO].";
-		now foundyet is false;
 		repeat through subject blather table of mrlp:
-			if askee entry is PEO and game-thing entry is noun:
-				say "[PEO]-[noun]: [dialogue-text entry][line break]";
-				now foundyet is true;
-			if foundyet is false and noun is PEO:
+			if askee entry is PEO and there is a game-thing entry and game-thing entry is noun:
+				say "Ask [PEO] about [noun]: [dialogue-text entry][line break]";
+				break;
+			if noun is PEO:
 				repeat through reflexive blather table of mrlp:
 					if askee entry is noun:
-						say "[PEO]-itself: [dialogue-text entry][line break]";
-						now foundyet is true;
-			if foundyet is false:
-				repeat through table of default-sub-blather:
-					if askee entry is PEO:
-						say "[PEO]-[noun]: [dialogue-text entry][line break]";
+						say "Ask [PEO] about itself: [dialogue-text entry][line break]";
 						now foundyet is true;
 		try asking PEO about the topic understood;
 	the rule succeeds;
