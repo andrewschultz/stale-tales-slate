@@ -200,6 +200,9 @@ Score in a scenario: 1 out of 22 total points in the current region, Routes. Low
 
 >x list o toils
 
+>x pews
+Mum Ray's Summary!
+
 #mistake test for noops
 >noops
 The snoop spoon isn't as complicated as assembly language.
@@ -214,8 +217,6 @@ Your heart is in the right place, but telling the mantle to cool it won't do muc
 #ttc-table-of-same-mesa-nudges-circle
 >circel
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
->x pews
-Mum Ray's Summary!
 #ttc-table-of-routes-nudges-mum
 >mmu
 That document is the stone truth! It doesn't need revisionism or embellishment.

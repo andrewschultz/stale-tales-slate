@@ -346,6 +346,32 @@ Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure 
 @spoi
 The spoon reflects back outside.
 
+@nud,max
+>x pews
+Mum Ray's Summary!
+
+@max
+#ttc-table-of-mum-ray-summary-pages-1
+>x summary
+"The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness be happy enough, you guess."
+\\
+#ttc-table-of-mum-ray-summary-pages-2
+>x summary
+People listened to Rev. Ali, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there.
+\\
+#ttc-table-of-mum-ray-summary-pages-3
+>x summary
+Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them.
+\\
+#ttc-table-of-mum-ray-summary-pages-4
+>x summary
+Rev. Ali left, but with one final 'character-building' challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be.
+\\
+#ttc-table-of-mum-ray-summary-pages-5
+>x summary
+It was rumored Rev. Ali moved on to a new community to "help." His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow.
+
+
 @nud
 #mistake test for noops
 >noops
@@ -361,8 +387,6 @@ Your heart is in the right place, but telling the mantle to cool it won't do muc
 #ttc-table-of-same-mesa-nudges-circle
 >circel
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
->x pews
-Mum Ray's Summary!
 #ttc-table-of-routes-nudges-mum
 >mmu
 That document is the stone truth! It doesn't need revisionism or embellishment.

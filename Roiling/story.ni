@@ -10661,25 +10661,25 @@ understand "mum ray" and "ray summary" and "ray" and "mum ray summary" as Mum Ra
 
 to say part-of-summary:
 	increment summary-page;
-	choose row summary-page in the table of summary text;
+	choose row summary-page in the table of mum ray summary pages;
 	say "[sum-page entry]";
 
 summary-page is a number that varies. summary-page is usually 0.
 
-table of summary text
+table of mum ray summary pages
 sum-page
 "The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness be happy enough, you guess."
-"People listened to him, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there."
+"People listened to Rev. Ali and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there."
 "Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them."
 "Rev. Ali left, but with one final 'character-building' challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be."
 "It was rumored Rev. Ali moved on to a new community to 'help.' His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow."
 
 after examining summary (this is the notify last summary page rule) :
-	if summary-page is number of rows in table of summary text:
+	if summary-page is number of rows in table of mum ray summary pages:
 		say "Whew. That was the last page.";
 		now summary-page is 1;
 	else if debug-state is false:
-		say "Push P to read the next page (you're at [summary-page] of [number of rows in table of summary text]).";
+		say "Push P to read the next page (you're at [summary-page] of [number of rows in table of mum ray summary pages]).";
 		let cho be the chosen letter;
 		if cho is 80 or cho is 112:
 			try examining the summary;
