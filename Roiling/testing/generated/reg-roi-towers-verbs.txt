@@ -14,6 +14,9 @@
 
 >seed 1
 >enter turrets
+
+Loftier Trefoil
+
 >z
 
 #verbcase listen-towers-if-noun-is-rodney
@@ -131,6 +134,8 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
+Baldest Blasted Saltbed
+
 >coiled
 Your score has just gone up by one point
 >score
@@ -176,9 +181,6 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 >w
 
 Fringe Finger
-
->score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 
 >rustled
 Your score has just gone up by one point

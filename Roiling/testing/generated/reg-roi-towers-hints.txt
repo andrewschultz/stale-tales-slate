@@ -19,6 +19,9 @@
 
 >seed 1
 >enter turrets
+
+Loftier Trefoil
+
 >z
 
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl|Geno) hinting\.
@@ -281,6 +284,8 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
+Baldest Blasted Saltbed
+
 /DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
 
 #towers anagrams for docile old ice
@@ -357,9 +362,6 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 >w
 
 Fringe Finger
-
->score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 
 #towers anagrams for strudel
 >xr strudel

@@ -15603,7 +15603,7 @@ guardians-seen is a number that varies.
 
 before looking when mrlp is towers (this is the reset-guardian-count rule): now guardians-seen is 0.
 
-towerclose is a number that varies.
+progress-to-castle is a number that varies.
 
 after printing the locale description when mrlp is towers (this is the castle near/far rule) :
 	let rm be location of player;
@@ -15613,20 +15613,15 @@ after printing the locale description when mrlp is towers (this is the castle ne
 			now adude is not clueneedy;
 			now any-reveal is true;
 			say "[clue-text of adude][paragraph break]";
-	if rm is unvisited and rm is a towloc listed in the table of tower progress comments:
-		choose row with towloc of rm in table of tower progress comments;
+	if rm is a towloc listed in the table of towers progress comments:
+		choose row with towloc of rm in table of towers progress comments;
 		if there is a towquo entry:
-			say "[towquo entry][paragraph break]";
-			if there is a towdist entry:
-				if towdist entry > towerclose:
-					now towerclose is towdist entry;
-		else if there is a towdist entry:
-			if towdist entry > towerclose:
-				let tempint be towdist entry;
-				say "[which-cue of towdist entry][paragraph break]";
-				now towerclose is towdist entry;
-		else:
-			d "Room not defined but not critical";
+			say "[towquo entry][line break]";
+			blank out the towquo entry;
+		else if there is a towdist entry and progress-to-castle < towdist entry:
+			now progress-to-castle is towdist entry;
+			choose row progress-to-castle in table of castle approaching narratives;
+			say "[observ entry][line break]";
 	if player is in Actionless Coastlines:
 		if agnostic is off-stage:
 			say "You think you hear rustling off to the side, as if someone or something is hiding from the [random touchable guardian].[paragraph break]";
@@ -15639,7 +15634,7 @@ to say which-cue of (therow - a number) :
 
 table of castle approaching narratives
 observ
-"[line break]The palace is barely visible now."
+"The palace is barely visible now."
 "The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
 "You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think."
 "The palace looks a little bigger now--but you may eventually need to cut [if location of player is Anemic Cinema]east[else]north[end if] a bit to get to it. It looks like there're dead ends [if location of player is Anemic Cinema]north and west[else]south and east[end if], and you still aren't sure how to cross Leak Lake."
@@ -15649,16 +15644,17 @@ observ
 "Since your head's barely above water, you can't see a shore any more. But you know it must be there."
 "The palace--well, you can see why it was spectacular, once."
 
-table of tower progress comments
+table of towers progress comments
 towloc	towdist	towquo
-Loftier Trefoil	0	"The palace--well, you couldn't even see it outside. Maybe someone will help you, once you've sorted this mess out."
+Loftier Trefoil	0	"The palace--well, you couldn't even see it before you stepped in here. Maybe someone will help you, once you've sorted this mess out."
+Topside Deposit	1	--
 Outer Route	--	"The palace has receded a bit, but--well--that machine's got to be good for something."
 Scope Copse	2	--
 Baldest Blasted Saltbed	3	--
 Leveraged Everglade	3	--
 Anemic Cinema	4	--
-Treading Gradient	4	--
-Danger Garden	5	--
+Danger Garden	4	--
+Treading Gradient	5	--
 Salted Deltas	6	--
 Artist Traits Strait	6	--
 Shaven Havens	--	"You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form."
@@ -15667,6 +15663,7 @@ Lost Lots	--	"This may've been a step away from the palace, but hooray, stuff to
 Fringe Finger	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 Actionless Coastlines	7	--
 Rawest Waters	8	--
+Mislit Limits	9	--
 
 to say tow-dirs:
 	let golist be a list of directions;

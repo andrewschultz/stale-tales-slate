@@ -14,6 +14,9 @@
 
 >seed 1
 >enter turrets
+
+Loftier Trefoil
+
 >z
 
 >slon
@@ -230,6 +233,8 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
+Baldest Blasted Saltbed
+
 #slider test for coiled
 >oclide
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -279,9 +284,6 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 >w
 
 Fringe Finger
-
->score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 
 #slider test for rustled
 >urtsedl

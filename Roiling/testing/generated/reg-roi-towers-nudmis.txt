@@ -14,6 +14,9 @@
 
 >seed 1
 >enter turrets
+
+Loftier Trefoil
+
 >z
 
 #ttc-table-of-loftier-trefoil-nudges-deny
@@ -588,6 +591,8 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
+Baldest Blasted Saltbed
+
 #ttc-table-of-baldest-blasted-saltbed-nudges-baldest
 >baldets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -721,9 +726,6 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 >w
 
 Fringe Finger
-
->score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 
 #mistake test for rustle/rustle strudel
 >rustle

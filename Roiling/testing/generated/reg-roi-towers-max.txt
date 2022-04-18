@@ -14,6 +14,12 @@
 
 >seed 1
 >enter turrets
+
+Loftier Trefoil
+
+#ttc-table-of-towers-progress-comments-loftier-trefoil
+The palace--well, you couldn't even see it before you stepped in here. Maybe someone will help you, once you've sorted this mess out.
+
 >z
 
 #pre-rodney rule
@@ -153,6 +159,10 @@ Your score has just gone up by one point
 
 Topside Deposit
 
+#ttc-table-of-castle-approaching-narratives-1
+#ttc-table-of-towers-progress-comments-topside-deposit
+The palace is barely visible now.
+
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
 
@@ -174,6 +184,10 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 
 >n
 Scope Copse
+
+#ttc-table-of-towers-progress-comments-scope-copse
+#ttc-table-of-castle-approaching-narratives-2
+The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important.
 
 >rusty
 Your score has just gone up by one point
@@ -198,6 +212,28 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 57.
 
+>e
+#ttc-table-of-castle-approaching-narratives-3
+#ttc-table-of-towers-progress-comments-leveraged-everglade
+You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
+>restful
+by one point
+>e
+#ttc-table-of-castle-approaching-narratives-4
+#ttc-table-of-towers-progress-comments-danger-garden
+The palace looks a little bigger now--but you may eventually need to cut north a bit to get to it. It looks like there're dead ends south and east, and you still aren't sure how to cross Leak Lake.
+>marginal
+by one point
+>n
+#ttc-table-of-castle-approaching-narratives-6
+#ttc-table-of-towers-progress-comments-artist-traits-strait
+Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
+>undo
+>undo
+>undo
+>undo
+>undo
+
 >creaky
 Your score has just gone up by one point
 
@@ -205,6 +241,12 @@ Your score has just gone up by one point
 Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 57.
 
 >n
+
+Baldest Blasted Saltbed
+
+#ttc-table-of-castle-approaching-narratives-3
+#ttc-table-of-towers-progress-comments-baldest-blasted-saltbed
+You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 
 >coiled
 Your score has just gone up by one point
@@ -216,6 +258,13 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 16 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
 
+>e
+
+#ttc-table-of-towers-progress-comments-treading-gradient
+#ttc-table-of-castle-approaching-narratives-5
+You're a good deal closer to the palace than at the Scope Copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass.
+>undo
+
 >pastier
 Your score has just gone up by one point
 >score
@@ -224,6 +273,10 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 >n
 
 Anemic Cinema
+
+#ttc-table-of-castle-approaching-narratives-4
+#ttc-table-of-towers-progress-comments-anemic-cinema
+The palace looks a little bigger now--but you may eventually need to cut east a bit to get to it. It looks like there're dead ends north and west, and you still aren't sure how to cross Leak Lake.
 
 #nowhere else to put this. We basically verify that the trips to Dourest Detours all work.
 >gonear lost lots
@@ -251,8 +304,8 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 
 Fringe Finger
 
->score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
+#ttc-table-of-towers-progress-comments-fringe-finger
+This may've been a step away from the palace, but hooray, stuff to pick up.
 
 >take strudel
 #pre-strudel-rustled rule
@@ -290,10 +343,17 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 
 Shaven Havens
 
+#ttc-table-of-towers-progress-comments-shaven-havens
+You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form.
+
 >s
 >e
 
 Salted Deltas
+
+#ttc-table-of-castle-approaching-narratives-6
+#ttc-table-of-towers-progress-comments-salted-deltas
+Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
 
 >hastiest
 Your score has just gone up by one point
@@ -391,6 +451,9 @@ Score in a scenario: 33 out of 57 total points in the current region, Towers. Lo
 >s
 Lost Lots
 
+#ttc-table-of-towers-progress-comments-lost-lots
+This may've been a step away from the palace, but hooray, stuff to pick up.
+
 >w
 Dourest Detours
 
@@ -483,6 +546,9 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 
 Outer Route
 
+#ttc-table-of-towers-progress-comments-outer-route
+The palace has receded a bit, but--well--that machine's got to be good for something.
+
 >revised
 
 >put dagger in deviser
@@ -495,6 +561,10 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 >gt coastlines
 
 Actionless Coastlines
+
+#ttc-table-of-castle-approaching-narratives-7
+#ttc-table-of-towers-progress-comments-actionless-coastlines
+You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
 
 >grained
 Your score has just gone up by one point
@@ -529,6 +599,9 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 by one point
 >enter boat
 Rawest Waters
+#ttc-table-of-castle-approaching-narratives-8
+#ttc-table-of-towers-progress-comments-rawest-waters
+Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
 #altpath
@@ -564,6 +637,10 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
+
+#ttc-table-of-castle-approaching-narratives-9
+#ttc-table-of-towers-progress-comments-mislit-limits
+The palace--well, you can see why it was spectacular, once.
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.

@@ -50,6 +50,13 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 
 >seed 1
 >enter turrets
+
+Loftier Trefoil
+
+@max
+#ttc-table-of-towers-progress-comments-loftier-trefoil
+The palace--well, you couldn't even see it before you stepped in here. Maybe someone will help you, once you've sorted this mess out.
+
 >z
 
 @hin
@@ -715,6 +722,11 @@ DEBUG INFO: dreads adders hinting.
 
 Topside Deposit
 
+@max
+#ttc-table-of-castle-approaching-narratives-1
+#ttc-table-of-towers-progress-comments-topside-deposit
+The palace is barely visible now.
+
 @verbs
 >gt trefoil
 You had your fun in there.
@@ -930,6 +942,11 @@ You sense that the dreads adders were one of the easier things to deal with, her
 
 >n
 Scope Copse
+
+@max
+#ttc-table-of-towers-progress-comments-scope-copse
+#ttc-table-of-castle-approaching-narratives-2
+The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important.
 
 @verbs
 #verbcase listen-towers-if-noun-is-diners
@@ -1314,6 +1331,29 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@max
+>e
+#ttc-table-of-castle-approaching-narratives-3
+#ttc-table-of-towers-progress-comments-leveraged-everglade
+You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
+>restful
+by one point
+>e
+#ttc-table-of-castle-approaching-narratives-4
+#ttc-table-of-towers-progress-comments-danger-garden
+The palace looks a little bigger now--but you may eventually need to cut north a bit to get to it. It looks like there're dead ends south and east, and you still aren't sure how to cross Leak Lake.
+>marginal
+by one point
+>n
+#ttc-table-of-castle-approaching-narratives-6
+#ttc-table-of-towers-progress-comments-artist-traits-strait
+Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
+>undo
+>undo
+>undo
+>undo
+>undo
+
 @sli
 #slider test for creaky
 >rcaeyk
@@ -1351,6 +1391,13 @@ Your score has just gone up by one point
 
 @!minh,mini
 >n
+\\
+Baldest Blasted Saltbed
+
+@max
+#ttc-table-of-castle-approaching-narratives-3
+#ttc-table-of-towers-progress-comments-baldest-blasted-saltbed
+You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 
 @hin
 /DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
@@ -1450,6 +1497,14 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@max
+>e
+\\
+#ttc-table-of-towers-progress-comments-treading-gradient
+#ttc-table-of-castle-approaching-narratives-5
+You're a good deal closer to the palace than at the Scope Copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass.
+>undo
+
 @hin
 >gf strait
 DEBUG: guardian hint choice is alarming grailman from alarming grailman.
@@ -1478,6 +1533,11 @@ Your score has just gone up by one point
 >n
 \\
 Anemic Cinema
+
+@max
+#ttc-table-of-castle-approaching-narratives-4
+#ttc-table-of-towers-progress-comments-anemic-cinema
+The palace looks a little bigger now--but you may eventually need to cut east a bit to get to it. It looks like there're dead ends north and west, and you still aren't sure how to cross Leak Lake.
 
 @hin
 DEBUG INFO: mardier admirer hinting.
@@ -1621,9 +1681,10 @@ Your score has just gone up by one point
 >w
 \\
 Fringe Finger
-\\
->score
-{$SCOS}
+
+@max
+#ttc-table-of-towers-progress-comments-fringe-finger
+This may've been a step away from the palace, but hooray, stuff to pick up.
 
 @mis
 #mistake test for rustle/rustle strudel
@@ -1775,6 +1836,10 @@ Your score has just gone up by one point
 \\
 Shaven Havens
 
+@max
+#ttc-table-of-towers-progress-comments-shaven-havens
+You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form.
+
 @verbs
 #verbcase listen-towers-if-player-is-in-shaven-havens
 >listen
@@ -1818,6 +1883,11 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 >e
 \\
 Salted Deltas
+
+@max
+#ttc-table-of-castle-approaching-narratives-6
+#ttc-table-of-towers-progress-comments-salted-deltas
+Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
 
 @verbs
 #verbcase listen-towers-if-noun-is-wait-seer
@@ -2476,6 +2546,10 @@ Your score has just gone up by one point
 >s
 Lost Lots
 
+@max
+#ttc-table-of-towers-progress-comments-lost-lots
+This may've been a step away from the palace, but hooray, stuff to pick up.
+
 @!minh,mini
 >w
 Dourest Detours
@@ -2726,6 +2800,10 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 >e
 
 Obscurest Subsector
+
+@roi-towers-max
+#ttc-table-of-towers-progress-comments-obscurest-subsector
+You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up.
 
 @hin
 Dr. Yow can be manipulated, even behind the prison ropins.
@@ -3037,6 +3115,10 @@ It's not just any duck. But it's served its purpose.
 
 Outer Route
 
+@max
+#ttc-table-of-towers-progress-comments-outer-route
+The palace has receded a bit, but--well--that machine's got to be good for something.
+
 @hin
 DEBUG INFO: diverse deviser hinting.
 
@@ -3237,6 +3319,11 @@ You don't see any new information about the curst palace this time.
 >e
 
 Actionless Coastlines
+
+@max
+#ttc-table-of-castle-approaching-narratives-7
+#ttc-table-of-towers-progress-comments-actionless-coastlines
+You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
 
 @spoi
 #towers anagrams for dinger
@@ -3635,6 +3722,9 @@ After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST
 by one point
 >enter boat
 Rawest Waters
+#ttc-table-of-castle-approaching-narratives-8
+#ttc-table-of-towers-progress-comments-rawest-waters
+Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
 #altpath
@@ -3706,6 +3796,11 @@ Mislit Limits
 
 @!minh,mini
 }}CURMAX++
+
+@max
+#ttc-table-of-castle-approaching-narratives-9
+#ttc-table-of-towers-progress-comments-mislit-limits
+The palace--well, you can see why it was spectacular, once.
 
 @spoi
 #towers anagrams for curst palace
