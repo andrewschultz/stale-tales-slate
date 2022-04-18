@@ -26,9 +26,11 @@ test win-dial with "cap 2/test win-plus"
 
 chapter ordeal reload
 
-test perrot with "x bookshelf/think/open door/1"
+test porter with "x bookshelf/think/open door/1"
 
-test elmo with "test perrot/5/lamp/satchel/x settler/basement/in"
+test elmo with "test porter/5/lamp/satchel/x settler/basement/in"
+
+test orxdial with "test porter/5/sb chimney/sb beams/sb tables/basement/chimney/stable/u/sb pram/ramp/enter closets/in/sb stair/stair/d".
 
 test specter with "test elmo/3/y"
 

@@ -1801,7 +1801,7 @@ this is the general-ask rule:
 	if noun is evil bee, reason-clue instead;
 	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
 	if noun is not a person, try talking to noun instead;
-	if noun is a person and noun is washed up, washup-clue instead;
+	if noun is a bruiser and noun is washed up, washup-clue instead;
 	if noun is rehabs basher and pamphlets are off-stage:
 		say "[basher-pamph]";
 		the rule succeeds;
@@ -1904,7 +1904,8 @@ to reason-clue:
 	say "It has [first custom style]NO EARS[r]! Yet it buzzes its name...[first custom style]Sorena A. Norse[r]. The noise makes you see red but lets up when you deduce the bee is a senora.";
 
 this is the bruiser-taunt rule:
-	if noun is a fightin bruiser:
+	if noun is not a bruiser, continue the action;
+	if noun is fightin:
 		if noun is Rand and Rand-first is false:
 			now Rand-first is true;
 			say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
@@ -2106,7 +2107,6 @@ topic	right-region	dialogue-text
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Nat Egam, the gateman, is from [shuf]."
 "old warpy" or "old/warpy"	--	"Nobody comes close to understanding Old Warpy. It gets you where you want to go."
-"horned/hedron" or "horned hedron"	oyster	"[if noun is walleyes]'Nice place, eh? Especially for not being very nice at all!'[else if horned hedron is visited]'Now you've gotten into the Horned Hedron, you don't need any more information.'[else]The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own.[end if]"
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the promise imposer is moot if this is not true]
@@ -5992,8 +5992,8 @@ chapter giving to
 the block giving rule is not listed in any rulebook.
 
 check giving something to:
-	if second noun is a fightin bruiser, say "Bribery won't end this fight." instead; [presto]
 	if second noun is a bruiser:
+		if second noun is fightin, say "Bribery won't end this fight." instead; [presto]
 		if noun is crust, say "Even he isn't gourmand enough to enjoy that." instead;
 		say "He's not materialistic. He just wants a good dust-up." instead;
 	if second noun is a guardian: [towers]
@@ -8724,7 +8724,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "progress"	false	"You note the following: Ordeal Reload = stuff[other-areas]."	"progress"	false
 "curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
-"scenery"	false	"St. Teri told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
+"scenery"	false	"St. Teri told you to look for [the entry palace-clue-index in nextclue]."	"scenery"	false	towers
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
@@ -10669,7 +10669,7 @@ summary-page is a number that varies. summary-page is usually 0.
 table of mum ray summary pages
 sum-page
 "The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness be happy enough, you guess."
-"People listened to Rev. Ali and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there."
+"People listened to Rev. Ali, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there."
 "Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them."
 "Rev. Ali left, but with one final 'character-building' challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be."
 "It was rumored Rev. Ali moved on to a new community to 'help.' His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow."
@@ -13926,6 +13926,11 @@ check going south in Anger Range: say "You don't want to go back over Saccade Ca
 
 chapter random fishy bullies
 
+check taking a person in anger range:
+	if noun is sausage, say "Yes, you must take [the sausage] somewhere." instead;
+	if noun is trout, say "You could take the trout away, but he needs to stay and fight." instead;
+	if noun is carps or noun is pikes, say "That's the wrong way to 'take' [the noun].'" instead;
+
 carps-pref is a truth state that varies.
 
 understand "fish" and "bullies" as carps when carps-pref is true.
@@ -13943,11 +13948,6 @@ a-text of carps is "RRRYR". b-text of carps is "RRPYR". parse-text of carps is "
 section pikes
 
 the pikes are plural-named vanishing people in Anger Range. initial appearance of pikes is "[bug-report]"
-
-check taking a person in anger range:
-	if noun is sausage, say "Yes, you must take [the sausage] somewhere." instead;
-	if noun is trout, say "You could take the trout away, but he needs to stay and fight." instead;
-	if noun is carps or noun is pikes, say "That's the wrong way to 'take' [the noun].'" instead;
 
 the chum of the pikes is the carps.
 
@@ -17053,7 +17053,7 @@ check going east in Mesprise Premises (this is the force give top opt pot rule):
 			moot top opt pot;
 			reg-inc;
 		else if itster is moot:
-			say "The [sitter] seems to get up and try to prevent you from going. You sensed you were so close to helping her, and of course you didn't have to, but maybe the right word would change things.";
+			say "[sitter] seems to get up and try to prevent you from going. You sensed you were so close to helping her, and of course you didn't have to, but maybe the right word would change things.";
 	continue the action;
 
 Ornate Atoner Renato is an undesc.
@@ -17278,16 +17278,16 @@ a-text of Talc Spa Cure is "RRYRRYRYRYR". b-text of Talc Spa Cure is "RRYPRYRYRY
 
 nextclue is a list of thing variable. nextclue is { accurst leap, clear catsup, pest accrual, cactus pearl, pearl cactus, accu plaster, capsule cart, last acre cup, talc spa cure }
 
-clue-index is a number that varies.
+palace-clue-index is a number that varies.
 
 after going to Mislit Limits (this is the add palace clues if talked to teri rule):
 	if flip-final-clue is true:
-		say "You notice something [if clue-index > 0]else [end if]you wouldn't have seen without St. Teri's help.[run paragraph on]";
-		if clue-index > 0, moot entry clue-index in nextclue;
-		increment clue-index;
-		if clue-index > number of entries in nextclue, now clue-index is 1;
-		move entry clue-index in nextclue to Mislit Limits;
-		say " That [entry clue-index in nextclue] must be important. You note it as further scenery in your pedanto-notepad.";
+		say "You notice something [if palace-clue-index > 0]else [end if]you wouldn't have seen without St. Teri's help.[run paragraph on]";
+		if palace-clue-index > 0, moot entry palace-clue-index in nextclue;
+		increment palace-clue-index;
+		if palace-clue-index > number of entries in nextclue, now palace-clue-index is 1;
+		move entry palace-clue-index in nextclue to Mislit Limits;
+		say " That [entry palace-clue-index in nextclue] must be important. You note it as further scenery in your pedanto-notepad.";
 		pad-rec-q "scenery";
 		now flip-final-clue is false;
 	continue the action;
@@ -17298,7 +17298,7 @@ check taking scenery in Mislit Limits:
 	if noun is accurst leap, say "Take a leap of logic instead." instead;
 	say "You can't and don't need to take it, but maybe you can take a clue from it." instead;
 
-table of magnifs
+table of towers final command synonyms
 blurb
 "Breathtaking"
 "Exceptional"

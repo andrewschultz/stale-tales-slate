@@ -333,6 +333,18 @@ Your score has just gone up by one point
 
 ## rev ali is a person ?? defined for routes only, off-stage, chum of Elvira
 
+#ttc-table-of-topic-catchalls-yorpwald
+>ask pat about yorpwald
+That might suck you into a boring discussion about politics. Or, worse, an exciting one.
+
+#ttc-table-of-topic-catchalls-nat-egam-or-nat/egam-or-tan-mage-or-tan/mage
+>ask pat about nat egam
+"Nat Egam, the gateman, is from Shuffling Around.
+
+#ttc-table-of-topic-catchalls-old-warpy-or-old/warpy
+>ask pat about old warpy
+Nobody comes close to understanding Old Warpy. It gets you where you want to go.
+
 #ttc-table-of-routes-reflexive-blather-pat
 >ask pat about pat
 "No dine. Done in. No
@@ -2305,6 +2317,10 @@ The Tetris Sitter ignores you, working on her high score.
 >ask sitter about crocus
 "Flowers? Oh, I don't know. They're nice, but ... they only help so much."
 
+#ttc-table-of-towers-subject-blather-tetris-sitter-curst-palace
+>ask sitter about curst palace
+The Tetris Sitter ignores you. But she must have something to say about something so close. You need to get rid of the distraction.
+
 >triste
 by one point
 
@@ -2316,6 +2332,10 @@ St. Teri still seems in a bit of a torpor. But she seems to want to help.
 
 >ask sitter about x
 St. Teri looks at you but can't help looking at the Done-Any Anodyne.
+
+#+ttc-table-of-towers-subject-blather-tetris-sitter-elvira
+>ask sitter about curst palace
+She seems to want to be enthusiastic, but she slumps back.
 
 >ask sitter about crocus
 "Flowers? I almost could... no offense, but I'm not quite in the right mood, yet."
@@ -2338,9 +2358,15 @@ Don't push-poll her about your generosity.
 >ask sitter about sitter
 St. Teri thanks you for aiding her spiritual growth. In return, just go out and come back in if you need any help with the curst palace. She thinks she can help, even if she doesn't have exact answers.
 
+>ask sitter about curst palace
+"It can be something super special.
+He-he. Eh? If only..." You got no concrete clues, but St. Teri's observations were a help. Maybe you can come back for another, later, if you still have no luck outside.
+/(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed)
+
 >ask sitter about xyzzy
 "Old clues, eh?" She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it
 He-he. Eh? "No closure, counselor," you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head.
+/(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed)
 
 #ttc-table-of-towers-subject-blather-tetris-sitter-curst-palace
 >ask sitter about curst palace
@@ -2353,6 +2379,22 @@ He-he. Eh? "No closure, counselor," you lament, but her general tone and how she
 #ttc-table-of-towers-subject-blather-tetris-sitter-ornate-atoner-renato
 >ask sitter about renato
 "Thank you for passing his wonderful gift on to me."
+
+>out
+You notice something you wouldn't have seen without St. Teri's help.
+must be important. You note it as further scenery in your pedanto-notepad.
+
+>in
+
+>out
+!You notice something
+
+>in
+>ask about curst palace
+super special
+
+>out
+You notice something else you wouldn't have seen without St. Teri's help. That pest accrual must be important. You note it as further scenery in your pedanto-notepad.
 
 >spectacular
 [You add the information to your pedanto-notepad under FLIPS.]

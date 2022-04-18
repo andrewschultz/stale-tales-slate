@@ -162,7 +162,7 @@ carry out tsing:
 	moot respect specter; [ all for testing purposes ]
 	now Ordeal Reload is solved;
 	now autosave-known is true;
-	say "Moving player to [profits] and giving you the purse, settler, and notepad. Also setting autosave-known to true.";
+	say "Moving player to [profits] and giving you the purse, settler, deductin['] and notepad. Also setting autosave-known to true.";
 	the rule succeeds;
 
 chapter chating

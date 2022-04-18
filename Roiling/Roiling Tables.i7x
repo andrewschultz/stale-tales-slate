@@ -2525,8 +2525,8 @@ to say boat-works:
 	say "[if agnostic has gizmo]could make a bot boat here[else]could see if that boat works[end if]";
 
 to say 3-random:
-	sort table of magnifs in random order;
-	say "[blurb in row 1 of table of magnifs]! [blurb in row 2 of table of magnifs]! [blurb in row 3 of table of magnifs]! He-he. Eh";
+	sort table of towers final command synonyms in random order;
+	say "[blurb in row 1 of table of towers final command synonyms]! [blurb in row 2 of table of towers final command synonyms]! [blurb in row 3 of table of towers final command synonyms]! He-he. Eh";
 
 to say new-mislit-clue: now flip-final-clue is true;
 
@@ -2950,7 +2950,7 @@ Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tu
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 lone duck	Elvira	"An unusually worried quack. It seems like it wants to hear a voice--but not yours."
 Tetris Sitter	Elvira	"'[if top opt pot is not moot]She drags us all down[else]I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need[end if]!'"
-Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but St. Teri's observations were a help[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside."
+Tetris Sitter	curst palace	"[if itster is touchable]The Tetris Sitter ignores you. But she must have something to say about something so close. You need to get rid of the distraction.[else if top opt pot is not moot]She seems to want to be enthusiastic, but she slumps back.[else]'It can be something super special. [3-random]? If only...' You got no concrete clues, but St. Teri's observations were a help[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside.[end if]"
 Tetris Sitter	crocus	"[if anodyne is touchable]'Flowers? I almost could... no offense, but I'm not quite in the right mood, yet.'[else if itster is not moot]'Flowers? Oh, I don't know. They're nice, but ... they only help so much.'[else if top opt pot is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
 Tetris Sitter	top opt pot	"[if anodyne is touchable]'Nice, yes, but...' You seem to need one more thing to change St. Teri's mood.[else if itster is not moot]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if itster is not moot]'There's a name. I sort of miss him.'[else if top opt pot is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]"
