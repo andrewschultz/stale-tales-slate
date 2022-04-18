@@ -208,7 +208,7 @@ to say re-read of (th - a thing): say "[if th is not read-yet]re-[end if]read"
 volume when play begins
 
 when play begins:
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if there is no verify entry, now verify entry is true;
 	repeat with Q running through regions:
 		now poss-score of Q is max-score of Q;

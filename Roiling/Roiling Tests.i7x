@@ -1123,7 +1123,7 @@ understand "pall" as palling.
 
 carry out palling:
 	now player has pedanto notepad;
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		now known entry is true;
 	say "Pad is now fully stocked. Have fun.";
 

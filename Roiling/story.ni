@@ -2703,7 +2703,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		d "[list of elmo-av quips].";
 		if sitar is escanned or stria is escanned:
 			if sitar is moot or stria is moot, now stair-quip is Elmo-av;
-		choose row with short of "diorama" in table of pad-stuff;
+		choose row with short of "diorama" in table of notepad entries;
 		if known entry is true, enact dio-quip;
 		if niche is escanned and niche is moot:
 			enact chimney-quip;
@@ -2906,7 +2906,7 @@ to solve-region (sre - a region):
 		check-the-store po;
 	item-warp;
 	let wiped-any-out be false;
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if there is a fixed-region entry:
 			if fixed-region entry is sre:
 				now known entry is false;
@@ -3638,6 +3638,7 @@ understand "posf" as posfing.
 carry out posfing:
 	say "Forcing possible point notification on[if possibles is true], though it already is[end if].";
 	now possibles is true;
+	pad-rec-q "poss";
 	the rule succeeds;
 
 chapter exitsing
@@ -3682,9 +3683,8 @@ when play begins (this is the basic initialization rule):
 	let temp be 0;
 	now the have-died flag is false;
 	protect the have-died flag from undo;
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if there is no readyet entry, now readyet entry is false;
-		if there is no introtoo entry, now introtoo entry is false;
 	repeat through table of region initial scoring commentary:
 		now done-yet entry is false;
 	repeat with Q running through regions:
@@ -6688,6 +6688,8 @@ understand "shake" as ss0ing.
 rule for supplying a missing noun when ss0ing:
 	if player has settler:
 		now noun is settler;
+	say "There's only one thing to [b]SHAKE[r] in [this-game], and you don't have it, yet.";
+	reject the player's command;
 
 ss0ing is an action applying to one thing.
 
@@ -8303,7 +8305,6 @@ to show-bluables:
 		if the player's command does not include "ss":
 			ital-say "in the future, you can shorten this with [b]SS[i].";
 			say "[line break]";
-			pad-rec-q "ss";
 	if QQ is 0:
 		swi-say "You see nothing unusual after shaking the settler.[line break]";
 		continue the action;
@@ -8551,9 +8552,9 @@ to say cur-has:
 	say "Currently you can consult your pad about these general topics:[line break]--";
 	let A be 0;
 	let fixies be 0;
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if known entry is true:
-			if there is a fixed-region entry and mrlp is fixed-region entry and introtoo entry is unrelevant:
+			if there is a fixed-region entry and mrlp is fixed-region entry:
 				increment fixies;
 			else:
 				if remainder after dividing A by 4 is 0:
@@ -8569,9 +8570,9 @@ to say cur-has:
 	if fixies > 0:
 		now A is 0;
 		say "[line break]You can also consult your pad about [if fixies is 1]a topic[else]topics[end if] specific to this region:[line break]--";
-		repeat through table of pad-stuff:
+		repeat through table of notepad entries:
 			if known entry is true and there is a fixed-region entry:
-				if mrlp is fixed-region entry and introtoo entry is unrelevant:
+				if mrlp is fixed-region entry:
 					if remainder after dividing A by 4 is 0:
 						say "[if A > 0].[line break]--";
 					else:
@@ -8630,7 +8631,7 @@ to say opts-list:
 	verbsplain "extra/taxer";
 
 to verbsplain (t - text):
-	choose row with short of t in table of pad-stuff;
+	choose row with short of t in table of notepad entries;
 	if known entry is true:
 		say "[2da][blurb entry][line break]";
 
@@ -8648,8 +8649,8 @@ to say terse-types:
 		say ".[paragraph break]You've also found [if twp is 1 and rtok is singular-named]someone who isn't[else]some folks who aren't[end if] very useful except for general chat: [list of terse-ok people]"
 
 [top]
-table of pad-stuff [??what does thinking do elsewhere]
-topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
+table of notepad entries [??what does thinking do elsewhere]
+topic (topic)	known	blurb	short	verify	fixed-region	readyet
 "verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
 "options" or "opts" or "post opts"	true	"[opts-list]"	"options"	false	--	false
 "parse/spare"	false	"[b]PARSE[r] processes the settler's data for you, but [b]SPARE[r] hides it."	"parse"	false	--	false
@@ -8671,22 +8672,13 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "Elmo"	false	"There are areas behind stores P, U, V, W, Y and, most cryptically, T."	"Elmo"	true
 "old warpy" or "old/warpy"	true	"Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble."	"Old Warpy"	false
 "shatter/threats" or "shatter-threats" or "shatter threats"	false	"It's that new law Elvira got passed, about how you couldn't flip things to their anagrams, because there are too few anagrams--things to change to things--left for you to save Yorpwald again. Well, outside your own house. Of course, if you protested, that would look suspicious.[paragraph break]The title was based on a really convoluted acronym you can't remember."	"SHATTER-THREATS"	false
-"store p" or "p"	false	"E-Viral has managed to seize the Internet communications of almost everywhere except a small pocket of resistance behind Store P. Many people expend words on it but few take action."	"store p"	true	presto	--	true
-"store t" or "t"	false	"Elvira's behind there. Who knows what she's designing. It may be worth checking to note your progress, though."	"store t"	true	otters	--	true
-"store u" or "u"	false	"People have lost all sense of direction there. Rev. Ali has told them they did, and they believe it. An invisible poison stripe forces them to the Same Mesa."	"store u"	true	routes	--	true
-"store v" or "v"	false	"Mayor Irv Lea has made Spoiloplis the richest per capita city in the land. You must infiltrate the world of money and move from 'impossible' to 'I'm possible.'"	"store v"	true	troves	--	true
-"store w" or "w"	false	"A very modern socialite called Liv Rea has pushed for re-zoning Castle Apcur, the Curst Palace, in order to increase property value, which would profit only her. Maybe you can restore the Curst Palace to its former glory."	"store w"	true	towers	--	true
-"store y" or "y"	false	"The subsea abuses behind Store Y are fast and furious. A rabid gang has taken over the town, headed by the ruthless Ira Lev. Plenty of unsafe sea fun."	"store y"	true	oyster	--	true
 "spaces/space/son/nos" or "space on" or "no space"	false	"[if screenread is false]To put spaces in letters settler readings, type [b]SPACEON[r] or [b]SON[r]. [b]NOSPACE[r] or [b]NOS[r] reverses this[else]Spaces are on by default in accessibility mode[end if]."	"spaces"	true
 "parrot"	false	"He wants to come back some time. He wants revenge. As the raptor."	"parrot"	false	otters
 "asking"	false	"You will want to [b]ASK[r] about Elvira a lot."	"asking"	false	otters
-"the settler" or "settler"	false	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."	"the settler"	true
+"the settler" or "settler"	false	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]sy = scan with hints, overriding current setting (sn = without)[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."	"the settler"	true
 "powers"	false	"You need to figure a way to get your powers back. They were drained when you passed by the solid idols."	"powers"	false	otters
 "la"	false	"Shortcut command to recall what you scanned last."	"la"	false
 "sl"	false	"Shortcut command to turn slider on."	"sl"	false
-"sy"	false	"Shortcut command to scan with hints, overriding the equals sign and the current setting."	"sy"	false
-"sn"	false	"Shortcut command to scan without hints, overriding the equals sign and the current setting."	"sn"
-"ss"	false	"Shortcut command to shake the settler and see what all in the general area needs changing[if ever-blur is true]. Blurry stuff is a bit more auxiliary[end if]."	"ss"	true
 "hacking" or "hack"	false	"A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities."	"hacking"	true	presto
 "methods"	true	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."	"methods"	false
 "red"	true	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."	"red"	true
@@ -8707,7 +8699,6 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "scenery"	false	"St. Teri told you to look for [the entry palace-clue-index in nextclue]."	"scenery"	false	towers
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
-"talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
 "wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to miss."	"the Wildest Wilteds"	true	towers
 "guru"	false	"You can [b]GURU[r] something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 "xtra/trax"	false	"[b]XTRA[r] or [b]XTRA TRAX[r] or [b]TRAX[r] gives more detailed advice if you have the right letters in the wrong order."	"xtra/trax"	false
@@ -8789,7 +8780,7 @@ check consulting it about:
 	if location of player is dark, say "Not in the dark." instead;
 	if noun is not pedanto notepad, say "You can only really consult your notepad. [b]ASK[r] something animate, if you want to." instead;
 	if player does not have pedanto notepad, try taking pedanto notepad;
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if known entry is true and topic understood includes topic entry:
 			now readyet entry is true;
 			say "[blurb entry][line break]";
@@ -8836,7 +8827,7 @@ to decide whether need-line-break:
 	yes;
 
 to pad-rec (q - text):
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if there is no short entry:
 			say "Need short entry for [q]: [bug-report]";
 		else if short entry is q:
@@ -8854,7 +8845,7 @@ to say mult-if:
 		say "multiple entries in ";
 
 to pad-rec-lump (q - text):
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if there is no short entry:
 			say "[bug-report] need short entry for [q].";
 		else if short entry is q:
@@ -8864,7 +8855,7 @@ to pad-rec-lump (q - text):
 			the rule succeeds;
 
 to pad-rec-q (q - text): [pad-rec without saying, you add the info]
-	repeat through table of pad-stuff:
+	repeat through table of notepad entries:
 		if there is no short entry:
 			say "[bug-report] need short entry for [q].";
 		else if short entry is q:
@@ -8876,7 +8867,7 @@ to pad-rec-q (q - text): [pad-rec without saying, you add the info]
 	abort-if-bugfind;
 
 to pad-del (q - text):
-	repeat through the table of pad-stuff:
+	repeat through the table of notepad entries:
 		if there is no short entry:
 			say "[bug-report] need short entry for [q].";
 		else if short entry is q:
@@ -8899,7 +8890,7 @@ carry out pfing:
 	if player does not have pedanto notepad:
 		say "You need your notepad to use the [b]PF[r] shortcut.";
 	else:
-		choose row with short of "flips" in table of pad-stuff;
+		choose row with short of "flips" in table of notepad entries;
 		if known entry is false, say "You consult your notepad but haven't figured any flips in advance yet." instead;
 		try consulting pedanto notepad about "flips";
 	the rule succeeds;

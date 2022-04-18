@@ -237,7 +237,7 @@ section sortie auxiliary
 
 to say drop-straw:
 	say ", which [if player carries sack]you drop into the sack before it falls out of your arms[else]is too heavy to carry. You drop it[end if]";
-	choose row with short of "warts" in table of pad-stuff;
+	choose row with short of "warts" in table of notepad entries;
 	if known entry is true:
 		say ". You run a big line through your entry on warts in your dope tan notepad";
 		now known entry is false;
