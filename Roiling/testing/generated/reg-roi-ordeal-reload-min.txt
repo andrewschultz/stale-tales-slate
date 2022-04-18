@@ -51,35 +51,9 @@ by one point
 >score
 Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
-
->1
->1
-
-[1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
-[2] Finish Fishin'.
-
-# note option 2 just hooks around meaningless babble here
->2
+>3
+Elmo checks you for a second. "You sure you know how to use the settler?"
+You nod. "No clues counsel."
 
 Carven Cavern
 

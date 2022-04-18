@@ -22,7 +22,9 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
 #ttc-table-of-routes-prefigurings-side-art
->pf
+#ttc-table-of-notepad-entries-flips
+>pad flips
+[NOTE: you can abbreviate this with PF in the future.]
 You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 #pre-sitanag-against rule
 >against
@@ -66,7 +68,7 @@ Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing s
 
 #ttc-table-of-mum-ray-summary-pages-4
 >x summary
-Rev. Ali left, but with one final 'character-building' challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be.
+Rev. Ali left, but with one final "character-building" challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be.
 
 #ttc-table-of-mum-ray-summary-pages-5
 >x summary
@@ -204,6 +206,10 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
 
 >in
+
+#ttc-table-of-notepad-entries-no-lag-logan
+>pad logan
+No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road.
 
 >out
 

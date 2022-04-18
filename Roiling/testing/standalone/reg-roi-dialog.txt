@@ -253,6 +253,17 @@ DEBUG INFO: current quip = flier-quip.
 [1] Check the scale that can flip to laces and back.
 [2] Check the ELMO nametag that could show him up as a mole.
 [3] Check the PLUG of nutrients that could become a GULP bottle.
+[4] Recall everything you tried with the diorama.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-dio-quip
+>4
+DEBUG INFO: current quip = dio-quip.
+
+[1] Check the scale that can flip to laces and back.
+[2] Check the ELMO nametag that could show him up as a mole.
+[3] Check the PLUG of nutrients that could become a GULP bottle.
 [4] Oh, cool, I know what the reds and yellows are for, now.
 [5] Finish Fishin'.
 

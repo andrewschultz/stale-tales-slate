@@ -2439,7 +2439,7 @@ askee	dialogue-text
 pesty types	"The pesty types would probably think YOU were drunk if you told them why you were here or asked questions." [begin OYSTER]
 trolls	"Talking wouldn't distract them from [if silly-acts is 3]eventually beating you up[else]keeping you in the Posh Hops Shop[end if]. They'd just win the argument. They're trolls, after all."
 clam	"It snaps back at you. Physically, not verbally. Words--okay, conversation--won't help it relax, so you clam up."
-Casper	"'[ohai-casper][randbla][ohai-casper][run paragraph on]' Casper mutters to nobody in particular."
+Casper	"'[mumble-swap][randbla][mumble-swap][run paragraph on]' Casper mutters to nobody in particular."
 scary crays	"They chuckle a bit. You're not going to be able to talk your way out of this."
 trout	"[if trout is reflexive]He needs a pep talk. Guidance. Even if it's not 100% correct[else]He shrugs. The outside world is intimidating to him[end if]."
 carps	"They snot nots. Tons. Brusque, queer BS. You need to take action, instead."
@@ -2450,12 +2450,6 @@ weaselly walleyes	"They snicker menacingly and whisper loudly that you're probab
 sausage	"It does that whoo-whoo routine. WHERE IS MY JEWEL. You think you know which jewel."
 yapper	"The yapper does not shut up about unbribability but still manages to wink and cough at the same time. It seems you may need to do things the right way."
 ant	"The ant twitches silently but menacingly."
-
-to say ohai-casper:
-	if casper-mumble is true:
-		now casper-mumble is false;
-	else:
-		now casper-mumble is true;
 
 table of towers general blather
 askee	dialogue-text
@@ -4054,7 +4048,13 @@ to decide whether compile-yet:
 
 table of ordeal reload prefigurings
 preflip	pretodo
+giant pin	"The giant pin can become a [b]PAINTING[r][once-esc]."
+meet bans	"The ten beams in the MEET-BANS will lead to a [b]BASEMENT[r][once-esc]."
+tables	"The tables will lead to a [b]STABLE[r][once-esc]."
+niche	"The (my) niche will open up a [b]CHIMNEY[r][once-esc]."
 respect specter	"You can get a [b]SCEPTER[r] from the respect specter at any time."
+
+to say once-esc: if perrot is off-stage, say ", once you need to escape"
 
 table of routes prefigurings
 preflip	pretodo

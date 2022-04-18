@@ -154,35 +154,9 @@ Score in a scenario: 11 out of 15 total points in the current region, Ordeal Rel
 Dialogue is more important right now than action. Elmo is here to help you at great personal risk, and if you poked around, it'd mean less time for him to escape.
 You can RECAP to see your options.
 
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
-
->1
->1
-
-[1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
-[2] Finish Fishin'.
-
-# note option 2 just hooks around meaningless babble here
->2
+>3
+Elmo checks you for a second. "You sure you know how to use the settler?"
+You nod. "No clues counsel."
 
 Carven Cavern
 

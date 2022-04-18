@@ -497,6 +497,9 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 
 Obscurest Subsector
 
+#ttc-table-of-towers-progress-comments-obscurest-subsector
+You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up.
+
 #pre-fussier rule
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.

@@ -2801,7 +2801,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 
 Obscurest Subsector
 
-@roi-towers-max
+@max
 #ttc-table-of-towers-progress-comments-obscurest-subsector
 You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up.
 

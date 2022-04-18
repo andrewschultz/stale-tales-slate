@@ -26,6 +26,98 @@ You probably can't spend another night in the Means Manse. You need to get going
 >lamp
 Your score has just gone up by one point.
 
+#Okay, first, let's take care of everything that's here by default. Let's put it in alphabetical order as well.
+#ttc-table-of-notepad-entries-access
+>pad access
+Typing SCR or SCREEN toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently off.
+
+#ttc-table-of-notepad-entries-directions/dirs
+>pad dirs
+A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed.
+
+>
+>pad free turns
+Some actions do not take a turn. For instance, examining, looking or taking inventory, or "out of world" actions like SCORE, will not cost you time if you are in a tight situation.
+
+#ttc-table-of-notepad-entries-go-to
+>pad go to
+You can GT/GO TO/GOTO a location or thing if it's a bit far away but in the region.
+
+#ttc-table-of-notepad-entries-old-warpy
+>pad old warpy
+Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble.
+#ttc-table-of-notepad-entries-options
+>pad options
+--Typing SCR or SCREEN toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently off.
+POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too.
+
+#ttc-table-of-notepad-entries-red
+>pad red
+Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way.
+
+#ttc-table-of-notepad-entries-retry
+>pad retry
+You wrote notes about how you can RETRY thanks to Terry if you get stuck somewhere past a store.
+
+#ttc-table-of-notepad-entries-shuffling-around
+>pad shuffling
+Postmortems? Most sport em. Details: I lasted. I miss my tagged gadget and how it helped me through the Forest (store F,) Sortie (store I,) and Metros (store M) in the Trips Strip. To the resort (store R.) Redness = guised guides (letters all wrong.)
+
+#ttc-table-of-notepad-entries-tagged-gadget
+>pad tagged
+You wrote some notes about the Tagged Gadget from Shuffling Around in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right. You could do with a new thingamabob now. Probably a bunch of different commands to use, though.
+
+#ttc-table-of-notepad-entries-verbs
+>pad verbs
+--N, S, E and W are the basic directions, though UP and DOWN are used occasionally, and IN or OUT may work.
+
+#ttc-table-of-notepad-entries-warp
+>pad warp
+FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.
+
+#Next, let's get entries that are relatively easy to pick off
+>scan diorama
+#ttc-table-of-notepad-entries-diorama
+>pad diorama
+R=red Y=yellow P=purple G=green.
+
+RYRR*RRYR RRYRRYRR
+platform------->farm plot------->platform
+RYRR*RRYR RRYRRYRR
+
+YRYRR*RYR RYRYRYRR
+pavement------->event map------->pavement
+YRYRR*RYR RYRYRYRR
+
+RRYYR*RYR RYRYRRYR
+pedestal------->steel pad------->pedestal
+RRYGR*RGR RYRGRRGR
+
+RRYRR*RRYR RRYRRRYRR
+crabgrass-------->brass crag-------->crabgrass
+RPGRR*RRYR RPGRRRYRR
+
+#ttc-table-of-notepad-entries-long-commands
+>this is a test here
+[NOTE: you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.]
+[You record the information about long commands in your pedanto-notepad.]
+>pad long commands
+Commands over 4 words long aren't necessary. You can say TAKE or GET ALL, eliminate THE, or use half an open compound word without repercussions.
+#ttc-table-of-notepad-entries-poss
+>pad poss
+POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too.
+
+#ttc-table-of-notepad-entries-sl
+>x slider
+[NOTE: You can type SL to toggle the slider in the future.]
+>pad sl
+Shortcut command to turn slider on.
+#ttc-table-of-notepad-entries-spaces
+>scan pin
+[NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
+>pad spaces
+To put spaces in letters settler readings, type SPACEON or SON. NOSPACE or NOS reverses this.
+
 >score
 Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
@@ -102,6 +194,21 @@ Score in a scenario: 10 out of 15 total points in the current region, Ordeal Rel
 
 >x settler
 
+#ttc-table-of-notepad-entries-saying
+>say cheese
+If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.
+You can ASK someone ABOUT something, if you want to talk to them.
+After this, the game will ignore words like say.
+>pad saying
+Instead of SAYing or THINKing, you can just type the word.
+
+#ttc-table-of-notepad-entries-the-settler
+>pad settler
+c/t/cheat/teach pushes teach/cheat button
+la = last scan (best for vision impaired since graphic should appear in top frame)
+ss = switch settler or shake settler to see all transformable objects
+You don't ever need to SCAN X WITH SETTLER, just SCAN X.
+
 >in
 
 >flier
@@ -111,55 +218,30 @@ by one point
 Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
->1
-
->1
->1
-
-[1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
-[2] Finish Fishin'.
-
-# note option 2 just hooks around meaningless babble here
+>4
 >2
+>1
+>1
+>1
+>1
+>3
+[You record the information about clues in your notepad.]
+>3
+[You record the information about Gretta in your notepad.]
+>4
 
-Carven Cavern
+#ttc-table-of-notepad-entries-clues
+>pad clues
+You can LISTEN, ASK people about random stuff, or X/EXAMINE them to figure how to change them.
+#ttc-table-of-notepad-entries-gretta
 
->staple
-Your score has just gone up by one point
+>pad gretta
+If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira.
 
->score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
-
->stapler
-Your score has just gone up by one point
-
->score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
-
->put staple in stapler
-
->staple aperture
-
->score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+>talk to specter
+#ttc-table-of-notepad-entries-talking
+>pad talking
+TALKing is the equivalent of asking someone about themselves.
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -315,5 +397,3 @@ The Wildest Wilteds are not to be traversed lightly. People protecting their ter
 >x 6
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 
->in
-Strip of Profits
