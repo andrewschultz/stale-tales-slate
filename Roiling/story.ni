@@ -1944,15 +1944,17 @@ check objasking it about (This is the check for object information rule):
 	if the noun is the second noun:
 		repeat through reflexive blather table of mrlp:
 			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
-	repeat through subject blather table of mrlp:
-		if (noun is the askee entry or noun is chum of the askee entry) and (there is no game-thing entry or game-thing entry is the second noun):
-			d "picking default subject text for [noun].";
-			if there is no game-thing entry or second noun is the game-thing entry, say "[dialogue-text entry][line break]" instead;
+	repeat through subject blather table of mrlp: [ the rules here work as follows: search for NPC/item combo, search for generic item reject, search for generic NP reject ]
+		if (noun is the askee entry or noun is chum of the askee entry) and (there is a game-thing entry and game-thing entry is the second noun):
+			say "[dialogue-text entry][line break]" instead;
 	if the noun is not to-gen-blather:
-		if the second noun is a game-thing listed in the table of universal objasking subject defaults:
-			if there is a right-region entry:
-				if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
-			if noun is not serpent, say "[dialogue-text entry][line break]" instead;
+		repeat through table of universal objasking subject defaults:
+			if game-thing entry is not second noun, next;
+			if there is a right-region entry and right-region entry is not mrlp, say "This is the wrong region to ask about [the second noun]." instead;
+			say "[dialogue-text entry][line break]" instead;
+	repeat through subject blather table of mrlp:
+		if (noun is the askee entry or noun is chum of the askee entry) and there is no game-thing entry:
+			say "[dialogue-text entry][line break]" instead;
 	abide by the general topic scouring rule;
 	if noun is not a person, say "You can only ask people about things." instead;
 	d "To fix the below bug, put [noun] in [general blather table of mrlp].";
@@ -2075,7 +2077,7 @@ Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. T
 table of universal objasking subject defaults [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
 game-thing	right-region	dialogue-text
 Elvira	--	"'Everyone has a differing opinion about her, that's for sure. But--better not say the wrong thing about her!' [i][bracket]NOTE: this is a default response I need to change.[close bracket][r]"
-settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
+settler	--	"You don't think anyone can help you [if Elmo is moot or mrlp is not Ordeal Reload]more than Elmo did [end if]with the settler."
 pedanto notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get close[end if]!'"
 sausage	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"

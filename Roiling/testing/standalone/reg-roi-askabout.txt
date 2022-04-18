@@ -2872,6 +2872,20 @@ You explain you got past the simply sly imp, and she shrugs. Henchmen these days
 
 >x stand
 
+#ttc-table-of-universal-objasking-subject-defaults-curst-palace
+>ask curtis about palace
+This is the wrong region
+
+#ttc-table-of-universal-objasking-subject-defaults-pedanto-notepad
+>ask curtis about notepad
+The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough.
+
+#ttc-table-of-universal-objasking-subject-defaults-sausage
+>ask curtis about sausage
+This is the wrong region
+
+#ttc-table-of-universal-objasking-subject-defaults-settler
+
 #ttc-table-of-others-subject-blather-curtis--
 >ask Curtis about compass
 Curtis is curt. "Yeah, great job saving Yorpwald and all, what about my fruit?"
