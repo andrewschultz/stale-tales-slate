@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* quick-chat
+* _quick-chat
 
 >au 2
 >chat
@@ -30,7 +30,7 @@ Rancho Archon Anchor
 >7
 No mercy, my crone!
 
-* detail-perrot-chat
+* _detail-perrot-chat
 
 >au 2
 >think
@@ -199,22 +199,44 @@ Her Arts Er Trash
 >x her arts
 No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
 
-* detail-elmo-chat-gp-first
+* _detail-elmo-chat-gp-first
 
 >au 2
 
->gonear largely
->purloin settler
+>think
+>x bookshelf
+>open door
+>1
+>5
+
+>lamp
+>satchel
+
+>basement
+>d
+
 >x settler
 >in
+
 >flier
 
+[1] Ask Elmo about how to use your Settler, because you're not sure yet.
+[2] Show Elmo the sweet Settler you know how to use.
+[3] Finish Fishin'.
+
 >2
+
+[1] Hmm, I don't see what orange means.
+[2] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
+[3] Finish Fishin'.
+
 >1
+
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
 [2] Finish Fishin'.
 >undo
 >undo
+
 >2
 [1] Hmm, I don't see what orange means.
 [2] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
@@ -222,8 +244,24 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 
 >undo
 
+#ttc-table-of-elmo-comments-flier-quip
 >1
+Red: F L R
+Yellow: E I
+DEBUG INFO: current quip = flier-quip.
+
+[1] Check the scale that can flip to laces and back.
+[2] Check the ELMO nametag that could show him up as a mole.
+[3] Check the PLUG of nutrients that could become a GULP bottle.
+[4] Oh, cool, I know what the reds and yellows are for, now.
+[5] Finish Fishin'.
+
 >4
+
+[1] Ask Elmo about the lamp
+[2] Explain you know what the colors besides red and yellow mean, and you're wondering what to DO.
+[3] Finish Fishin'.
+
 >2
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
@@ -236,7 +274,7 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 
 
 >1
-"Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes Red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
+"Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
 
 [1] Ask Elmo about the "Letters Settler" text.
 [2] Tell Elmo you got what the cheat button does, thanks!
@@ -260,8 +298,16 @@ With everything scanned now, you take a closer look.
 [4] Tell Elmo you got what the cheat button does, thanks!
 [5] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-still-no-gp-quip
 >3
+DEBUG INFO: current quip = still-no-gp-quip.
+
 Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.
+
+[1] Ask Elmo about the "Yorpwald-Wordplay" text on the laced decal.
+[2] Yeah, I see what orange means.
+[3] Hmm, I don't see what orange means.
+[4] Finish Fishin'.
 
 >3
 You examine the backside of the settler and note how Yorpwald lines up with Wordplay--those two orange letters stand out a bit. Then you both realize both orange letters go to a Y that's not in the right place.
@@ -271,16 +317,44 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 >1
 "The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald."
 
+>3
+Strip of Profits
+
 * detail-elmo-chat
 
 >au 2
+>think
+>x bookshelf
+>open door
+>1
+>5
 
->gonear largely
->purloin settler
+WRONG remember to add reds and yellows text in on revisiting
+
+>lamp
+>satchel
+
+>sb my niche
+>sb beams
+>sb tables
+>sb giant pin
+>basement
+>chimney
+>stable
+>painting
+>u
+>sb pram
+>ramp
+>d
+>sb stria
+
 >x settler
 >in
+
 >flier
 
+[1] Ask Elmo about how to use your Settler, because you're not sure yet.
+[2] Show Elmo the sweet Settler you know how to use.
 [3] Finish Fishin'.
 
 #########################very easy out
@@ -299,7 +373,9 @@ You crawl through the evac-cave, which exits to writing behind a dune, man. UNNA
 
 #####################now check the quick way past the tutorial
 
+#ttc-table-of-elmo-comments-showset-quip
 >2
+DEBUG INFO: current quip = showset-quip.
 
 [NOTE: if you didn't mean to do this, you can UNDO to get a bit more help from Elmo.]
 [1] Hmm, I don't see what orange means.
@@ -313,7 +389,9 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 [2] Finish Fishin'.
 
 >undo
+#ttc-table-of-elmo-comments-trial-trail-quip
 >2
+DEBUG INFO: trial-trail-quip enabled.
 "The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald."
 
 [1] Ask Elmo about her toy theory
@@ -323,39 +401,154 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 >undo
 >undo
 
+#ttc-table-of-settler-letter-reasoning-e
+#ttc-table-of-settler-letter-reasoning-f
+#ttc-table-of-settler-letter-reasoning-i
+#ttc-table-of-settler-letter-reasoning-l
+#ttc-table-of-settler-letter-reasoning-r
 >1
 
 Red: F L R
 Yellow: E I
 
+DEBUG INFO: current quip = flier-quip.
 [1] Check the scale that can flip to laces and back.
 [2] Check the ELMO nametag that could show him up as a mole.
 [3] Check the PLUG of nutrients that could become a GULP bottle.
-[4] Oh, cool, I know what the reds and yellows are for, now.
-[5] Finish Fishin'.
+[4] Recall the my niche/chimney flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-gulp-quip
+#ttc-table-of-settler-letter-reasoning-g
+#+ttc-table-of-settler-letter-reasoning-l
+#ttc-table-of-settler-letter-reasoning-p
+#ttc-table-of-settler-letter-reasoning-u
 >3
 
 Red: F G L P R
 Yellow: E I U
 
+DEBUG INFO: current quip = gulp-quip.
+[1] Check the scale that can flip to laces and back.
+[2] Check the ELMO nametag that could show him up as a mole.
+[3] Recall the tables/stable flip.
+[4] Recall the my niche/chimney flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Finish Fishin'.
+
+#+ttc-table-of-settler-letter-reasoning-e
+#+ttc-table-of-settler-letter-reasoning-l
+#ttc-table-of-settler-letter-reasoning-o
+#ttc-table-of-settler-letter-reasoning-m
+#ttc-table-of-elmo-comments-elmomole-quip
 >2
+
+DEBUG INFO: current quip = elmomole-quip.
+[1] Check the scale that can flip to laces and back.
+[2] Recall the tables/stable flip.
+[3] Recall the my niche/chimney flip.
+[4] Recall the ten beams/basement flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Finish Fishin'.
 
 Red: F G L M P R
 Yellow: E I O U
 
+#ttc-table-of-settler-letter-reasoning-a
+#ttc-table-of-settler-letter-reasoning-c
+#+ttc-table-of-settler-letter-reasoning-e
+#+ttc-table-of-settler-letter-reasoning-l
+#ttc-table-of-settler-letter-reasoning-s
+#ttc-table-of-elmo-comments-scale-quip
 >1
 
+DEBUG INFO: Went through scale-quip, holdup = false.
 Red: C F G L M P R S
 Yellow: A E I O U
 
+[1] Recall the tables/stable flip.
+[2] Recall the my niche/chimney flip.
+[3] Recall the ten beams/basement flip.
+[4] Recall the pram/ramp flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[7] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-stable-quip
+#ttc-table-of-settler-letter-reasoning-a
+#ttc-table-of-settler-letter-reasoning-b
+#ttc-table-of-settler-letter-reasoning-e
+#ttc-table-of-settler-letter-reasoning-l
+#ttc-table-of-settler-letter-reasoning-s
+#ttc-table-of-settler-letter-reasoning-t
+>1
+DEBUG INFO: current quip = stable-quip.
+[1] Recall the my niche/chimney flip.
+[2] Recall the ten beams/basement flip.
+[3] Recall the pram/ramp flip.
+[4] Recall the giant pin/painting flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[7] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-chimney-quip
+#ttc-table-of-settler-letter-reasoning-c
+#ttc-table-of-settler-letter-reasoning-e
+#ttc-table-of-settler-letter-reasoning-h
+#ttc-table-of-settler-letter-reasoning-i
+#ttc-table-of-settler-letter-reasoning-m
+#ttc-table-of-settler-letter-reasoning-n
+#ttc-table-of-settler-letter-reasoning-y
+>1
+DEBUG INFO: current quip = chimney-quip.
+[1] Recall the ten beams/basement flip.
+[2] Recall the pram/ramp flip.
+[3] Recall the giant pin/painting flip.
+[4] Oh, cool, I know what the reds and yellows are for, now.
+[5] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[6] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-basement-quip
+#ttc-table-of-settler-letter-reasoning-a
+#ttc-table-of-settler-letter-reasoning-b
+#ttc-table-of-settler-letter-reasoning-e
+#ttc-table-of-settler-letter-reasoning-m
+#ttc-table-of-settler-letter-reasoning-n
+#ttc-table-of-settler-letter-reasoning-s
+#ttc-table-of-settler-letter-reasoning-t
+>1
+DEBUG INFO: current quip = basement-quip.
+[1] Recall the pram/ramp flip.
+[2] Recall the giant pin/painting flip.
+[3] Oh, cool, I know what the reds and yellows are for, now.
+[4] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[5] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-ramp-quip
+#ttc-table-of-settler-letter-reasoning-a
+#ttc-table-of-settler-letter-reasoning-m
+#ttc-table-of-settler-letter-reasoning-p
+#ttc-table-of-settler-letter-reasoning-r
+>1
+DEBUG INFO: current quip = pram-quip.
+[1] Recall the giant pin/painting flip.
+[2] Oh, cool, I know what the reds and yellows are for, now.
+[3] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[4] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-painting-quip
+>1
+DEBUG INFO: current quip = painting-quip.
 [1] Oh, cool, I know what the reds and yellows are for, now.
 [2] Geez. I'm still busted. Kinda shaken by...well, the excitement.
 [3] Finish Fishin'.
 
 #### split path here. Options don't matter, but check text.
 
+#ttc-table-of-elmo-comments-got-red-yellow-quip
 >1
+DEBUG INFO: current quip = got-red-yellow-quip.
 "Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything." You try and think of something where it might.
 
 [1] Ask Elmo about the lamp
@@ -364,7 +557,9 @@ Yellow: A E I O U
 
 >undo
 
+#ttc-table-of-elmo-comments-still-busted-quip
 >2
+DEBUG INFO: current quip = still-busted-quip.
 You shake your head. "Duh, I'm humid."
 
 "A, e, i, o, u," Elmo points out. "Vowels."
@@ -375,33 +570,42 @@ You shake your head. "Duh, I'm humid."
 
 ###### split here: 2 leads to main, 1 gives more clues
 
+#ttc-table-of-elmo-comments-gp-quip
 >2
 "Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green. Any other colors? Hm, on the back of the settler, YORPWALD's D is orange, and WORDPLAY's W is, too."
 
+DEBUG INFO: current quip = gp-quip.
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
 [3] Finish Fishin'.
 
 >undo
 
+#ttc-table-of-elmo-comments-lamp-quip
 >1
 
 "Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes Red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
 
+DEBUG INFO: current quip = lamp-quip.
 [1] Ask Elmo about the "Letters Settler" text.
 [2] Tell Elmo you got what the cheat button does, thanks!
 [3] Finish Fishin'.
 
 # again, a jump ahead before we plow the clues
 
+#ttc-table-of-elmo-comments-got-it-quip
 >2
+DEBUG INFO: current quip = got-it-quip.
 "Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels." Elmo looks over your settler once more. "Hmm. What's the orange for? On Yorpwald/wordplay?"
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
 [3] Finish Fishin'.
 
 >undo
+
+#ttc-table-of-elmo-comments-settler-quip
 >1
+DEBUG INFO: current quip = settler-quip.
 "LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though."
 
 [1] Ask Elmo about the "Yorpwald-Wordplay" text on the laced decal.
@@ -409,7 +613,9 @@ You shake your head. "Duh, I'm humid."
 [3] Tell Elmo you got what the cheat button does, thanks!
 [4] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-yorp-quip
 >1
+DEBUG INFO: current quip = yorp-quip.
 "Hm, the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place."
 
 "Gotcha, doc. Good catch."
@@ -417,11 +623,13 @@ You shake your head. "Duh, I'm humid."
 [1] Scan everything about the diorama.
 [2] Yeah, I see what orange means.
 [3] Hmm, I don't see what orange means.
-[4] Oh, hey. The satchel. Maybe I could scan it!
+[4] Oh, hey. The satchel. Maybe I could scan it for some data!
 [5] Tell Elmo you got what the cheat button does, thanks!
 [6] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-dio-elm-2-quip
 >1
+DEBUG INFO: current quip = dio-elm-2-quip.
 With everything scanned now, you take a closer look.
 
 R=red Y=yellow P=purple G=green.
@@ -429,25 +637,29 @@ R=red Y=yellow P=purple G=green.
 [1] Look through all the diorama data.
 [2] Yeah, I see what orange means.
 [3] Hmm, I don't see what orange means.
-[4] Oh, hey. The satchel. Maybe I could scan it!
+[4] Oh, hey. The satchel. Maybe I could scan it for some data!
 [5] Hm, still not clear on the green/purple.
 [6] Tell Elmo you got what the cheat button does, thanks!
 [7] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-dio-2-quip
 >1
+DEBUG INFO: current quip = dio-2-quip.
 You hash the purples and greens out some more.
 
 You focus on the rare greens and purples. Crabgrass and brass crag, letters two and three. Pedestal and steel pad, letters four and seven. You think on what is special about these, in both words.
 
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
-[3] Oh, hey. The satchel. Maybe I could scan it!
+[3] Oh, hey. The satchel. Maybe I could scan it for some data!
 [4] Hm, still not clear on the green/purple.
 [5] Tell Elmo you got what the cheat button does, thanks!
 [6] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-satchel-quip
 >3
-"Ach, let's..." you say. You quickly go back to the study for the satchel, scan the satchel both ways and notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet.
+DEBUG INFO: current quip = satchel-quip.
+"Ach, let's..." you say. You scan the satchel both ways and notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet.
 
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
@@ -455,7 +667,9 @@ You focus on the rare greens and purples. Crabgrass and brass crag, letters two 
 [4] Tell Elmo you got what the cheat button does, thanks!
 [5] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-still-no-gp-quip
 >3
+DEBUG INFO: current quip = still-no-gp-quip.
 
 Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.
 
@@ -474,7 +688,9 @@ Elmo thinks a minute and notes red plus blue is purple, and yellow plus blue is 
 [2] Hmm, I don't see what orange means.
 [3] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-orange-dunno-quip
 >2
+DEBUG INFO: current quip = orange-dunno-quip.
 You examine the backside of the settler and note how Yorpwald lines up with Wordplay--those two orange letters stand out a bit. Then you both realize both orange letters go to a Y that's not in the right place.
 
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
@@ -482,19 +698,24 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 
 >undo
 
-
+#ttc-table-of-elmo-comments-orange-know-quip
 >1
+DEBUG INFO: current quip = orange-know-quip.
 You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too.
 
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
 [2] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-interr-quip
 >1
+DEBUG INFO: current quip = interr-quip.
 [1] Ask Elmo about her toy theory
 [2] Ask Elmo about your trial trail
 [3] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-toy-theory-quip
 >1
+DEBUG INFO: current quip = toy-theory-quip.
 You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (not bad for boring old mathy stuff, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.
 
 Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.
@@ -504,7 +725,9 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [1] Ask Elmo about your trial trail
 [2] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-trial-trail-quip
 >1
+DEBUG INFO: current quip = trial-trail-quip.
 "More trouble, more stores. Six of 'em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes." Elmo hands you a paper. "It's a Gird Grid. More details there. Read it later."
 
 [1] Strip of Profits? Was that the Trips Strip? What's at the...?
@@ -513,7 +736,10 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [4] Ask Elmo about new stores in the Strip of Profits
 [5] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-strip-quip
 >4
+DEBUG INFO: current quip = strip-quip.
+
 "Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues."
 
 [1] Strip of Profits? Was that the Trips Strip? What's at the...?
@@ -521,14 +747,18 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [3] Poss. Clue? Closeups?
 [4] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-trips-quip
 >1
 "No shame," he moans. "Some? Nah." ... he makes the money gesture with his hands but notes you won't get ID'd unless you visit during rush hour.
 
+DEBUG INFO: current quip = trips-quip.
 [1] Strategy-try stage? Get artsy?
 [2] Poss. Clue? Closeups?
 [3] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-artsy-quip
 >1
+DEBUG INFO: current quip = artsy-quip.
 "Where do I look? Is there a bare min--uh, most efficient way through?"
 
 "Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later.
@@ -537,15 +767,18 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [2] Jumbo, um, job. Six of 'em? Some fix!
 [3] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-clues-quip
 >1
+DEBUG INFO: current quip = clues-quip.
 "Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus."
 
 [1] Gretta Garett-Tatger?
 [2] Jumbo, um, job. Six of 'em? Some fix!
 [3] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-gretta-quip
 >1
-
+DEBUG INFO: current quip = gretta-quip.
 "She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target." You both cringe. "No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits." Elmo shows you a picture of her.
 
 [You record the information about Gretta in your notepad.]
@@ -553,7 +786,9 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [1] Jumbo, um, job. Six of 'em? Some fix!
 [2] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-shortcut-quip
 >1
+DEBUG INFO: current quip = shortcut-quip.
 
 "Hm, maybe a covert vector after you solve two...
 
@@ -562,7 +797,9 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
 [2] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-weather-quip
 >1
+DEBUG INFO: current quip = weather-quip.
 That's always a safe one. You say "How 'bout that weather, geez," not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.
 
 [1] Complain about your favorite sports team
@@ -572,29 +809,60 @@ That's always a safe one. You say "How 'bout that weather, geez," not realizing 
 [5] Let Elmo complain about his lack of success with women
 [6] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-sports-quip
 >1
+DEBUG INFO: current quip = sports-quip.
+[1] Complain about the media
+[2] Complain about how more exciting people and stories pushed you to the curb
+[3] Complain about social forces in general
+[4] Let Elmo complain about his lack of success with women
 [5] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-media-quip
 >1
+DEBUG INFO: current quip = media-quip.
 [1] Complain about the media some more
+[2] Complain about how more exciting people and stories pushed you to the curb
+[3] Complain about social forces in general
+[4] Let Elmo complain about his lack of success with women
 [5] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-media-quip-2
 >1
+DEBUG INFO: current quip = media-quip-2.
+[1] Complain about how more exciting people and stories pushed you to the curb
+[2] Complain about social forces in general
+[3] Let Elmo complain about his lack of success with women
 [4] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-curb-quip
 >1
+DEBUG INFO: current quip = curb-quip.
+[1] Complain about social forces in general
+[2] Let Elmo complain about his lack of success with women
 [3] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-social-quip
 >1
+DEBUG INFO: current quip = social-quip.
+[1] Let Elmo complain about his lack of success with women
 [2] Finish Fishin'.
 
+#ttc-table-of-elmo-comments-girls-quip
+>1
+DEBUG INFO: current quip = girls-quip.
+[1] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-bye-elmo-quip
 >1
 [1] Finish Fishin'.
+DEBUG INFO: current quip = bye-Elmo-quip.
+
 
 >1
 Carven Cavern
 
-* detail-gretta-and-elvira-chat
+* _detail-gretta-and-elvira-chat
 
 >au 2
 >seed 1
@@ -798,7 +1066,7 @@ by one point
 
 Strip of Profits
 
-* detail-gretta-chat-special-case
+* _detail-gretta-chat-special-case
 
 >au 2
 >seed 1

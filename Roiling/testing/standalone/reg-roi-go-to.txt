@@ -165,7 +165,7 @@ You don't need to do anything further with Brother Horbert. If you want to go wh
 
 >beneath
 
-#+ttc-table-of-goto-sectioning--1-routes
+#ttc-table-of-goto-sectioning--1-routes
 >gt mesa
 Brother Horbert would be sad to see you return, unsuccessful.
 

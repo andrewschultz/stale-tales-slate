@@ -217,6 +217,14 @@ Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about store n
 "Man, it was actually kind of sort of like fun in there. Until it wasn't."
 
+#ttc-table-of-npc-and-topic-pairs-nestor-life
+>VERB ttc table of npc and topic pairs nestor life
+"Life is, like, the time of your life!"
+
+#ttc-table-of-npc-and-topic-pairs-nestor-father-or-his-father
+>ask nestor about father
+You have a whole big land to save. Don't waste time shaming recreational drug users.
+
 >ask tokers about nestor
 They thank you for finding him.
 
@@ -232,6 +240,10 @@ Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets la
 "Good choice. Say, if they're good enough, do you think I could become an even better blabber babbler than ... him?"
 >ask basher about basher
 "I'm nothing without Max Peel's help." This continues for a minute, after which you sort of wish the Rehabs Basher WOULD be, or say, nothing. How tedious.
+
+#ttc-table-of-npc-and-topic-pairs-rehabs-basher-vitamins/nativism-or-nativism-vitamins
+>ask basher about vitamins
+"Nice an' crunchy. Taste good too."
 
 #ttc-table-of-stores-subject-blather-rehabs-basher-elvira
 >ask basher about elvira
@@ -2135,6 +2147,10 @@ Dr. Yow is too modest--and focused on his science--to bang on about previous ach
 >ask dr yow about curst palace
 Dr. Yow scrunches his head a bit, then shrugs. "Ouch. Eleven letters. Maybe if it was shorter. Unless you mean getting there...you'd need a craft to cross Leak Lake to the northeast."
 
+#ttc-table-of-npc-and-topic-pairs-dr-yow-key
+>ask yow about key
+Dr. Yow shrugs. If he knew where a key was, he'd find it.
+
 >go to agnostic
 
 #ttc-table-of-towers-subject-blather-agnostic-elvira
@@ -3053,7 +3069,7 @@ You Did Great
 >{include} _only-otters
 >{include} _only-others
 
-* only-ordeal-reload
+* _only-ordeal-reload
 
 >{include} _ordeal-reload
 

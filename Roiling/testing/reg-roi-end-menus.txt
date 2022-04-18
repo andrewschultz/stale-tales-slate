@@ -222,11 +222,12 @@ Please give one of the answers above.
 >endgame
 >research
 >review
+>au 0
 >n
 
 #+ttc-table-of-endgame-region-abbreviations-lh
 >lh
-Here are both the random text lists in Others.
+Here are both the random text lists for Others.
 1. Political slogans at game's end
 2. Selly Yells
 

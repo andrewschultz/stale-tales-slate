@@ -2223,27 +2223,27 @@ to say current-known:
 	let yays be 0;
 	let itxt be indexed text;
 	now itxt is "Red:";
-	repeat through table of known-letters:
+	repeat through table of settler letter reasoning:
 		if v-c-y entry is 1:
 			follow the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				now itxt is "[itxt][my-let entry]";
+				now itxt is "[itxt] [my-let entry]";
 	say "[itxt]";
 	now itxt is "Yellow:";
-	repeat through table of known-letters:
+	repeat through table of settler letter reasoning:
 		if v-c-y entry is 2:
 			follow the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				now itxt is "[itxt][my-let entry]";
+				now itxt is "[itxt] [my-let entry]";
 	say "[itxt]";
 	process the got-y rule;
 	if the rule succeeded:
 		increment yays;
-		say "Orange: Y.";
+		say "[line break]Orange: Y.";
 	if yays is last-yays:
-		say "Hmm, nothing new from that...";
+		say "[line break]Hmm, nothing new from that...";
 	now last-yays is yays;
 
 this is the got-a rule:
@@ -2360,34 +2360,34 @@ this is the got-y rule:
 this is the got-z rule:
 	the rule fails.
 
-table of known-letters
+table of settler letter reasoning
 my-let	my-rule	v-c-y [vowel=2 consonant=1 Y=3]
-" A"	got-a rule	2
-" B"	got-b rule	1
-" C"	got-c rule	1
-" D"	got-d rule	1
-" E"	got-e rule	2
-" F"	got-f rule	1
-" G"	got-g rule	1
-" H"	got-h rule	1
-" I"	got-i rule	2
-" J"	got-j rule	1
-" K"	got-k rule	1
-" L"	got-l rule	1
-" M"	got-m rule	1
-" N"	got-n rule	1
-" O"	got-o rule	2
-" P"	got-p rule	1
-" Q"	got-q rule	1
-" R"	got-r rule	1
-" S"	got-s rule	1
-" T"	got-t rule	1
-" U"	got-u rule	2
-" V"	got-v rule	1
-" W"	got-w rule	1
-" X"	got-x rule	1
-" Y"	got-y rule	3
-" Z"	got-z rule	1
+"A"	got-a rule	2
+"B"	got-b rule	1
+"C"	got-c rule	1
+"D"	got-d rule	1
+"E"	got-e rule	2
+"F"	got-f rule	1
+"G"	got-g rule	1
+"H"	got-h rule	1
+"I"	got-i rule	2
+"J"	got-j rule	1
+"K"	got-k rule	1
+"L"	got-l rule	1
+"M"	got-m rule	1
+"N"	got-n rule	1
+"O"	got-o rule	2
+"P"	got-p rule	1
+"Q"	got-q rule	1
+"R"	got-r rule	1
+"S"	got-s rule	1
+"T"	got-t rule	1
+"U"	got-u rule	2
+"V"	got-v rule	1
+"W"	got-w rule	1
+"X"	got-x rule	1
+"Y"	got-y rule	3
+"Z"	got-z rule	1
 
 y-orange is a truth state that varies.
 
@@ -2617,7 +2617,15 @@ definition: a quip (called myq) is doable: [Inform doesn't like "enabled quip"]
 
 a quip can be Elmo-av. a quip is usually not Elmo-av.
 
+definition: a quip (called myq) is on-the-board:
+	repeat through table of elmo comments:
+		if response entry is myq:
+			if enabled entry > 0, yes;
+			no;
+	no;
+
 definition: a quip (called myq) is clue-acc:
+	if myq is on-the-board, no;
 	unless myq is Elmo-av, decide no;
 	if myq is mowered, decide no;
 	decide yes;
@@ -2625,6 +2633,9 @@ definition: a quip (called myq) is clue-acc:
 to another-Elmo-hint:
 	if number of clue-acc quips is 0, continue the action;
 	let myq2 be a random clue-acc quip;
+	if debug-state is true:
+		let X be the list of clue-acc quips;
+		now myq2 is entry 1 of X;
 	enact myq2;
 
 to open-elmos-hints:
@@ -2705,10 +2716,11 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact gulp-quip;
 		enact elmomole-quip;
 		enact got-red-yellow-quip;
-		if meet bans is escanned and meet bans is moot, now basement-quip is Elmo-av;
+		if (meet bans is escanned or beams are escanned) and meet bans is moot, now basement-quip is Elmo-av;
 		if tables are escanned and tables are moot, now stable-quip is Elmo-av;
 		if pram is escanned and pram is moot, now ramp-quip is Elmo-av;
 		if giant pin is escanned and giant pin is moot, now painting-quip is Elmo-av;
+		d "[list of elmo-av quips].";
 		if sitar is escanned or stria is escanned:
 			if sitar is moot or stria is moot, now stair-quip is Elmo-av;
 		choose row with short of "diorama" in table of pad-stuff;
@@ -9360,7 +9372,7 @@ elmomole-quip	"You flip the nametag to [b]MOLE[r] and back, tracking the scanner
 got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything.' You try and think of something where it might."
 still-busted-quip	"You shake your head. 'Duh, I'm humid.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
 showset-quip	"'Hint agent thing! Neat!' You show him what the red and yellow mean, then the green and purple. He asks if there are any other colors, like orange."
-lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes Red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
+lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
 gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green[if y-orange is false]. Any other colors? Hm, on the back of the settler, YORPWALD's D is orange, and WORDPLAY's W is, too[end if].'"
 settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
 yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
