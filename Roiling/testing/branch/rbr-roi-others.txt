@@ -65,6 +65,11 @@ Enter the Throes Hoster for the final region
 >in
 Rustic Citrus
 
+@max
+#ttc-table-of-notepad-entries-guru
+>pad guru
+You can GURU something after eating the augural arugula.
+
 @verbs
 #verbcase swear-others-if-player-is-in-rustic-citrus
 >bother

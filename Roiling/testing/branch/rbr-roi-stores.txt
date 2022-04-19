@@ -65,6 +65,17 @@ The resort and Store R led to the Means Manse last game. It won't go anywhere ne
 >gt study
 You already solved Ordeal Reload.
 
+@max
+>x montage
+CONDEMNED: K, N
+NOT ELVIRA-APPROVED. ENTER AT OWN RISK: P, U, V, W, Y
+ELVIRA SAYS KEEP EXTRA DOUBLE OUT: T
+>x engravings
+NOUNED: UNDONE
+#ttc-table-of-notepad-entries-progress
+>pad progress
+You note the following: Ordeal Reload = stuff
+
 @hin
 >monty hints
 

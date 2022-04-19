@@ -348,6 +348,11 @@ Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure 
 @spoi
 The spoon reflects back outside.
 
+@max
+#ttc-table-of-notepad-entries-reagents
+>pad reagents
+You need three reagents to help Brother Horbert:
+
 @nud,max
 >x pews
 Mum Ray's Summary!

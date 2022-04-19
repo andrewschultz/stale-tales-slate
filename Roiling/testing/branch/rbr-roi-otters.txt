@@ -113,6 +113,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >bother
 At the moment, even your profanities lack power.
 
+@max
+#ttc-table-of-notepad-entries-powers
+>pad powers
+You need to figure a way to get your powers back. They were drained when you passed by the solid idols.
+
 #forceignore
 >barely
 Your score has just gone up by one point

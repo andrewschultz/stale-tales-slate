@@ -84,6 +84,12 @@ It would fight back much more powerfully.
 >l
 Loather Rathole
 
+@max
+[NOTE: the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.]
+\\
+#ttc-table-of-notepad-entries-random-dialogue
+>pad random
+
 @hints
 >ptf 0
 >z

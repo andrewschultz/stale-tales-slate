@@ -358,6 +358,7 @@ WRONG remember to add reds and yellows text in on revisiting
 >ramp
 >d
 >sb stria
+>stair
 
 >x settler
 >in
@@ -376,7 +377,9 @@ You nod. "No clues counsel."
 
 A pause. "Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?"
 
-Elmo hands you an additional note--a Gird Grid--to help you on your way. You leave, feeling less resave-averse, but run as you hear "Get Elmo!" / "Get ol' me? Let me go!" "Sympathy?" / "My hat, spy!" ... "A spy yaps, pays..."
+Elmo hands you an additional note--a Gird Grid--to help you on your way. He also notes it's worth reading red writing and trying to get by enemies in your way, even if they're too big. You'll see clues.
+
+You leave, feeling less resave-averse, but run as you hear "Get Elmo!" / "Get ol' me? Let me go!" "Sympathy?" / "My hat, spy!" ... "A spy yaps, pays..."
 
 You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN in a font that feels rantier. Behind is a Carven Cavern. It looks as good a place as any to visit.
 
@@ -516,9 +519,10 @@ DEBUG INFO: current quip = chimney-quip.
 [1] Recall the ten beams/basement flip.
 [2] Recall the pram/ramp flip.
 [3] Recall the giant pin/painting flip.
-[4] Oh, cool, I know what the reds and yellows are for, now.
-[5] Geez. I'm still busted. Kinda shaken by...well, the excitement.
-[6] Finish Fishin'.
+[4] Recall the stair flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[7] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-basement-quip
 #ttc-table-of-settler-letter-reasoning-a
@@ -532,9 +536,10 @@ DEBUG INFO: current quip = chimney-quip.
 DEBUG INFO: current quip = basement-quip.
 [1] Recall the pram/ramp flip.
 [2] Recall the giant pin/painting flip.
-[3] Oh, cool, I know what the reds and yellows are for, now.
-[4] Geez. I'm still busted. Kinda shaken by...well, the excitement.
-[5] Finish Fishin'.
+[3] Recall the stair flip.
+[4] Oh, cool, I know what the reds and yellows are for, now.
+[5] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[6] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-ramp-quip
 #ttc-table-of-settler-letter-reasoning-a
@@ -544,13 +549,23 @@ DEBUG INFO: current quip = basement-quip.
 >1
 DEBUG INFO: current quip = pram-quip.
 [1] Recall the giant pin/painting flip.
-[2] Oh, cool, I know what the reds and yellows are for, now.
-[3] Geez. I'm still busted. Kinda shaken by...well, the excitement.
-[4] Finish Fishin'.
+[2] Recall the stair flip.
+[3] Oh, cool, I know what the reds and yellows are for, now.
+[4] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[5] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-painting-quip
 >1
 DEBUG INFO: current quip = painting-quip.
+[1] Recall the stair flip.
+[2] Oh, cool, I know what the reds and yellows are for, now.
+[3] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[4] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-stair-quip
+>1
+DEBUG INFO: current quip = stair-quip.
+
 [1] Oh, cool, I know what the reds and yellows are for, now.
 [2] Geez. I'm still busted. Kinda shaken by...well, the excitement.
 [3] Finish Fishin'.

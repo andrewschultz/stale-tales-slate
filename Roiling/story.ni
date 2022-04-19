@@ -2663,6 +2663,8 @@ after quipping when qbc_litany is the table of Elmo comments:
 	if hold-it-up is true:
 		choose row with response of bye-Elmo-quip in the table of Elmo comments;
 		now enabled entry is 1;
+	if current quip is strip-quip:
+		pad-rec-q "asking";
 	if current quip is interr-quip:
 		enact toy-theory-quip;
 		enact the trial-trail-quip;
@@ -2700,9 +2702,12 @@ after quipping when qbc_litany is the table of Elmo comments:
 		if tables are escanned and tables are moot, now stable-quip is Elmo-av;
 		if pram is escanned and pram is moot, now ramp-quip is Elmo-av;
 		if giant pin is escanned and giant pin is moot, now painting-quip is Elmo-av;
-		d "[list of elmo-av quips].";
+		showme sitar;
+		showme stria;
 		if sitar is escanned or stria is escanned:
+			say "1.";
 			if sitar is moot or stria is moot, now stair-quip is Elmo-av;
+		d "Available to Elmo: [list of elmo-av quips].";
 		choose row with short of "diorama" in table of notepad entries;
 		if known entry is true, enact dio-quip;
 		if niche is escanned and niche is moot:
@@ -2736,7 +2741,6 @@ after quipping when qbc_litany is the table of Elmo comments:
 		disable the stable-quip quip;
 		disable the stair-quip quip;
 		disable the dio-quip quip;
-		disable the dio-all-quip quip;
 		disable the got-red-yellow-quip quip;
 		disable the got-it-quip quip;
 	else if current quip is lamp-quip:
@@ -2754,10 +2758,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 	else if current quip is settler-quip:
 		if y-orange is false:
 			enact yorp-quip;
-		if its-all-scanned or nothing-scanned:
-			enact dio-elm-2-quip;
-		else:
-			enact dio-elm-quip;
+		enact dio-elm-2-quip;
 	else if current quip is yorp-quip:
 		if chimney-quip is not mowered:
 			enact orange-know-quip;
@@ -2768,17 +2769,10 @@ after quipping when qbc_litany is the table of Elmo comments:
 		unless still-no-gp-quip is mowered or got-it-quip is mowered:
 			enact still-no-gp-quip;
 			if current quip is dio-elm-2-quip, enact dio-2-quip;
-	else if current quip is dio-elm-quip:
-		enact dio-elm-2-quip;
-		repeat with rb running through ramabits:
-			oscan rb;
-[		unless settler-quip is doable or yorp-quip is doable or niche-quip is doable or tables-quip is doable or basement-quip is doable or dio-quip is doable or dio-2-quip is doable:
-			enact satchel-quip;]
 	else if current quip is still-no-gp-quip or current quip is got-it-quip:
 		disable the got-it-quip quip;
 		disable the still-no-gp-quip quip;
 		disable the satchel-quip quip;
-		disable the dio-elm-quip quip;
 		disable the dio-elm-2-quip quip;
 		disable the dio-2-quip quip;
 		disable the dio-quip quip;
@@ -2797,7 +2791,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		disable the orange-know-quip quip;
 		disable the orange-dunno-quip quip;
 		if still-no-gp-quip is mowered or got-it-quip is mowered or showset-quip is mowered, enact interr-quip;
-	else if current quip is dio-quip or current quip is trips-quip or current quip is dio-all-quip or current quip is dio-2-quip or current quip is satchel-quip or current quip is yorp-quip or current quip is settler-quip or current quip is strip-quip or current quip is weather-quip or current quip is girls-quip or current quip is sports-quip or current quip is curb-quip or current quip is social-quip or current quip is media-quip-2 or current quip is clues-quip or current quip is toy-theory-quip:
+	else if current quip is dio-quip or current quip is trips-quip or current quip is dio-2-quip or current quip is satchel-quip or current quip is yorp-quip or current quip is settler-quip or current quip is strip-quip or current quip is weather-quip or current quip is girls-quip or current quip is sports-quip or current quip is curb-quip or current quip is social-quip or current quip is media-quip-2 or current quip is clues-quip or current quip is toy-theory-quip:
 		do nothing;
 	else if current quip is bye-Elmo-quip:
 		lawnmower table of Elmo comments;
@@ -3977,12 +3971,16 @@ definition: a thing (called scanee) is escanned:
 	if scanee is ncscanned, yes;
 	no.
 
-before scaning (this is the check as scanned if player can have/take settler rule) :
-	if mrlp is dome, say "Old habits die hard! Relax and observe. You don't need to do solve any puzzles here." instead;
+before scaning (this is the general settler reject rule) :
+	if noun is part of the settler, say "The settler's pretty powerful, but it's not four-dimensional, so it can't wrap to scan itself--or parts of itself." instead;
 	if player does not have letters settler:
 		if settler is touchable, silently try taking the letters settler;
 		if player does not have letters settler:
 			say "You have no scanning item[if player is not in Dusty Study], and you should, unless this is a test, so this could be a BUG[else if report-porter-knocks]. You will, but you probably should answer the door first[else if latches are touchable]. Maybe figure what to do with those latches[else if player is in dusty study]. You'll probably find one, but you don't have one, yet[else]. This looks like a BUG, since you should keep the letters settler all game[end if]." instead;
+
+before scaning (this is the check as scanned if player can have/take settler rule) :
+	if mrlp is dome, say "Old habits die hard! Relax and observe. You don't need to do solve any puzzles here." instead;
+	abide by the general settler reject rule;
 	if noun provides the property cscanned:
 		if cheat-on is true:
 			now noun is cscanned;
@@ -4028,7 +4026,6 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 		now first-good-scan is true;
 		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is Ordeal Reload]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
 		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text if you are visually impaired, or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.";
-		pad-rec-q "la";
 		pad-rec-q "spaces";
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
@@ -5308,7 +5305,8 @@ to say where-pull of (itm - a thing):
 	else:
 		say "[the itm]"
 
-to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [where-pull of itm]. That's a decent omen"
+to say pull-from of (itm - a thing):
+	say "You feel a slight psychic push-pull coming from [where-pull of itm]. That's a decent omen"
 
 to say spec-help of (itm - a thing):
 	if rq is active:
@@ -5343,6 +5341,7 @@ to say spec-help of (itm - a thing):
 		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
 		if debug-state is true, say "DEBUG: note this option is turned on by default while testing.";
 		now xtra-trax-warn is true;
+		pad-rec-q "xtra";
 
 doublewarn is a truth state that varies.
 
@@ -6414,11 +6413,14 @@ this is the sleep-routes rule:
 	if player is in Cripple Clipper, say "This is no dreamboat." instead;
 
 this is the sleep-presto rule:
+	if hacks shack is unvisited, continue the action;
+	if peels speel is reflexed, say "You already got the sleep you needed." instead;
+	pad-rec-q "sleep";
 	if player is in Hacks Shack:
 		if peels speel is in Hacks Shack, try fliptoing peels speel instead;
 		if peels speel is off-stage:
 			say "[if futon is off-stage]You may need sleep later, but not now. Besides, you have nowhere to sleep[else]Sleep on the futon? Wouldn't be fun to. Or necessary. Yet[end if]." instead;
-	if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
+	if Hacks Shack is visited, say "Only the shack seems to be a safe place to sleep, here." instead;
 
 this is the sleep-oyster rule:
 	say "You feel too inclined towards action for that." instead;
@@ -6648,8 +6650,9 @@ sb-cur is a truth state that varies.
 
 carry out sbing:
 	if debug-state is false, say "[reject]";
+	abide by the general settler reject rule;
 	d "SBing: [noun].";
-	if noun is a person and noun is washed up: [leo/rand]
+	if noun is a bruiser and noun is washed up: [leo/rand]
 		do nothing;
 	else if noun is reflexed:
 		if noun is not dialer and noun is not sit a nag, say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
@@ -6761,7 +6764,6 @@ understand the command "la" as something new.
 understand "la" as scanlasting.
 
 carry out scanlasting:
-	pad-rec-q "la";
 	if last-scanned-thing is yourself or last-scanned-thing is nothing, say "You haven't successfully scanned anything yet." instead;
 	say "Previous scan: [the last-scanned-thing][if last-scanned-thing is moot], which are now out of play,[end if] scanned [full-monty of last-scanned-thing]." instead;
 
@@ -6782,10 +6784,12 @@ parse-mist is a truth state that varies.
 carry out parseing:
 	if spear is touchable and parse-mist is false:
 		now parse-mist is true;
-		say "You've parsed the spelling of quite a few words so far. Just a bit more, now.";
+		say "You've parsed the spelling of quite a few words so far. Just a bit more, now. Something here is making it hard to use this meta-command.";
 		say "[line break](If you wanted to change how you see the letters settler's output, you can type [b]PARSE[r] again.)" instead;
 	say "Parsing letters settler output is [if parse-now is false]now[else]already[end if] on[but-if-parse].";
 	now parse-now is true;
+	pad-rec-q "parse";
+	now parse-warned is true;
 	the rule succeeds;
 
 to say but-if-parse:
@@ -6809,6 +6813,8 @@ carry out spareing:
 		say "[line break](If you wanted to change how you see the letters settler output, you can type [b]SPARE[r] again.)" instead;
 	say "Parsing letters settler output is [if parse-now is true]now[else]already[end if] off.";
 	now parse-now is false;
+	pad-rec-q "parse";
+	now parse-warned is true;
 	the rule succeeds;
 
 chapter accessing
@@ -7090,6 +7096,7 @@ carry out xtraing:
 	now xtra-trax is whether or not xtra-trax is false;
 	say "Toggling correct-anagram nudges to [if xtra-trax is false]generic[else]detailed[end if].";
 	now xtra-trax-warn is true;
+	pad-rec-q "xtra";
 	the rule succeeds.
 
 chapter extraing
@@ -8046,7 +8053,7 @@ check taking notice: say "It's the lowest-hanging part of the diorama, but you d
 
 check taking diorama: say "It's there for practice. You can just fiddle with its parts." instead;
 
-check scaning diorama: say "You remember now. A diorama was chosen because it couldn't be messed with at some level. But its parts can be." instead;
+check scaning diorama: say "You remember now. A diorama was chosen because it couldn't be messed with at some level. But its parts can be. So you can just scan any part of it." instead;
 
 before taking (this is the dumb take jokes rule) :
 	if ed riley has the noun, say "'I am not an item yielder!' Ed Riley booms." instead;
@@ -8267,8 +8274,15 @@ check switching on the tech etcha: try pushing the tech etcha instead;
 
 check switching off the tech etcha: try pushing the tech etcha instead;
 
+to check-parse-spare:
+	if parse-warned is false:
+		now parse-warned is true;
+		ital-say "you can type [b]PARSE[i] for [aro][i] to place information that can be deduced from a cheat-mode reading you more information at the top of the screen or [b]SPARE[i] to hide it. This is obviously a big spoiler, so [b]PARSE[i] is off by default.";
+		pad-rec-q "parse";
+
 check pushing the tech etcha:
 	say "You push the teach-cheat button, and it's now [if cheat-on is true]off. Hooray for more challenge[else]on. Hooray for more information[end if][one of] when you [b]SCAN[r] in the future--though you can push the button to go back to normal mode[or][stopping][if cheat-on is false and seen-blues is false]. The logo seems to change colors as well[end if].";
+	check-parse-spare;
 	now cheat-on is whether or not cheat-on is false instead;
 
 does the player mean doing something with the equals sign: it is unlikely.
@@ -8448,9 +8462,6 @@ check examining decal: try examining backside instead;
 check taking decal: say "It's really wedged on there. You'd destroy it scraping it off. And besides, maybe it's a hint, too." instead;
 
 description of backside is "[bug-report]";
-
-before scaning (this is the don't scan part of the settler rule) :
-	if noun is part of the settler, say "The settler's pretty powerful, but it's not four-dimensional, so it can't wrap to scan itself--or parts of itself." instead;
 
 chapter idlers' slider
 
@@ -8656,23 +8667,19 @@ to say terse-types:
 table of notepad entries [pad-rec whatever is below]
 short	verify	fixed-region	readyet	known	topic (topic)	blurb
 "access"	false	--	false	true	"access"	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."
-"asking"	false	otters	--	false	"asking"	"You will want to [b]ASK[r] about Elvira a lot."
-"casper"	true	oyster	--	false	"casper"	"Casper talked to you about how this place is full of action, how there's a haunter beneath Anger Range, and it may have lost something. Casper also explained you'll need a way through the Horned Hedron."
+"asking"	false	--	--	false	"asking"	"You will want to [b]ASK[r] others about themselves a lot. Elvira, too, maybe."
 "clues"	true	--	--	false	"clues"	"You can [b]LISTEN[r], [b]ASK[r] people about random stuff, or [b]X[r]/[b]EXAMINE[r] them to figure how to change them."
 "curst palace"	true	towers	--	false	"curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."
 "DIE THOU"	true	oyster	--	false	"die" or "die thou" or "the/ hideout/hangout"	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."
 "diorama"	true	--	--	false	"diorama"	"[dior-scan]"
 "directions/dirs"	false	--	--	true	"directions/dirs"	"[this-game] uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."
-"Elmo"	true	--	--	false	"Elmo"	"There are areas behind stores P, U, V, W, Y and, most cryptically, T."
-"Elvira"	true	--	--	false	"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	"Apparently, appreciating her is what separates us from the animals. According to [porter][if mrlp is otters]. But you need to know more and ask around about her[end if]."
-"extra/taxer"	false	--	--	false	"extra/taxer" or "tax er"	"[b]EXTRA[r] or [b]TAX ER[r]/[b]TAXER[r] toggles more advice for ambiguous/question mark hints. This is close to [b]XTRA[r], but it is likely the player will want to set [b]TAXER[r] and not [b]EXTRA[r] back."
+"Elvira"	true	--	--	false	"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	"Apparently, appreciating her is what separates us from the animals. Well, according to [porter][if mrlp is otters]. But you need to know more and ask around about her[end if]."
 "flips"	false	--	--	false	"flips" or "flip" or "pf"	"[what-can-flip]"
 "free turns"	false	--	--	true	"free turns" or "free/turns"	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like [b]SCORE[r], will not cost you time if you are in a tight situation."
 "go to"	false	--	--	true	"go to" or "go/gt/goto"	"You can [b]GT/[b]GO TO[r]/[b]GOTO[r] a location or thing if it's a bit far away but in the region."
 "Gretta"	true	--	--	false	"gretta"	"If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira."
 "guru"	true	others	--	false	"guru"	"You can [b]GURU[r] something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."
 "hacking"	true	presto	--	false	"hacking" or "hack"	"A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities."
-"la"	false	--	--	false	"la"	"Shortcut command to recall what you scanned last."
 "Leo and Rand"	true	presto	--	false	"Leo/Rand" or "Leo and Rand"	"[l-n-r] may be able to help you with heavy lifting."
 "long commands"	--	--	--	false	"long commands" or "long/command/commands"	"Commands over 4 words long aren't necessary. You can say [b]TAKE[r] or [b]GET ALL[r], eliminate THE, or use half an open compound word without repercussions."
 "methods"	false	--	--	true	"methods"	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."
@@ -8685,7 +8692,7 @@ short	verify	fixed-region	readyet	known	topic (topic)	blurb
 "powers"	false	otters	--	false	"powers"	"You need to figure a way to get your powers back. They were drained when you passed by the solid idols."
 "progress"	false	--	--	false	"progress"	"You note the following: Ordeal Reload = stuff[other-areas]."
 "question mark"	true	--	--	false	"question mark" or "question/mark"	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can [b]HINT[r] it if you're stuck[end if]."
-"random dialogue"	false	--	--	false	"random/ dialogue/dialog/"	"[b]HUSH[r] turns random dialogue off. [b]UHHS[r] turns it on. It is [on-off of talk-quiet]."
+"random dialogue"	false	--	--	false	"random/ dialogue/dialog/" or "hush/uhhs"	"[b]HUSH[r] turns random dialogue off. [b]UHHS[r] turns it on. It is [on-off of talk-quiet]."
 "reagents"	true	routes	--	false	"reagents/reagent"	"You need three reagents to help Brother Horbert: a stupor sprout[if player has stupor sprout] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."
 "red"	true	--	--	true	"red"	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."
 "retry"	true	--	--	true	"retry" or "terry"	"You wrote notes about how you can [b]RETRY[r] thanks to Terry if you get stuck somewhere past a store."
@@ -8700,7 +8707,7 @@ short	verify	fixed-region	readyet	known	topic (topic)	blurb
 "talking"	false	--	--	false	"talking"	"[b]TALK[r]ing is the equivalent of asking someone about themselves[terse-types]."
 "the haunter"	true	oyster	--	false	"haunter"	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."
 "the settler"	true	--	--	false	"the settler" or "settler"	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]sy = scan with hints, overriding current setting (sn = without)[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."
-"the Wildest Wilteds"	true	towers	--	false	"wilteds/wildest" or "wildest wilteds"	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to miss."
+"the Wildest Wilteds"	true	towers	--	false	"wilteds/wildest" or "wildest wilteds"	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to have lost touch with."
 "verbs"	false	--	false	true	"verbs/verb"	"[verb-list]"
 "warp"	true	--	--	true	"warp"	"[i][bracket]FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"
 "xray"	false	towers	--	false	"xray" or "xraying"	"[xray-help]."
@@ -9295,7 +9302,6 @@ prompt	response	enabled
 "Recall the giant pin/painting flip."	painting-quip	0
 "Recall the stair flip."	stair-quip	0
 "Recall everything you tried with the diorama."	dio-quip	0
-"See about all you could try with the diorama."	dio-all-quip	0
 "Look through all the diorama data."	dio-2-quip	0
 "Oh, cool, I know what the reds and yellows are for, now."	got-red-yellow-quip	0
 "Geez. I'm still busted. Kinda shaken by...well, the excitement."	still-busted-quip	0
@@ -9303,7 +9309,6 @@ prompt	response	enabled
 "Explain you know what the colors besides red and yellow mean, and you're wondering what to DO."	gp-quip	0
 "Ask Elmo about the 'Letters Settler' text."	settler-quip	0
 "Ask Elmo about the 'Yorpwald-Wordplay' text on the laced decal."	yorp-quip	0
-"Ask Elmo about what you remember from the diorama."	dio-elm-quip	0
 "Scan everything about the diorama."	dio-elm-2-quip	0
 "Yeah, I see what orange means."	orange-know-quip	0
 "Hmm, I don't see what orange means."	orange-dunno-quip	0
@@ -9333,7 +9338,7 @@ quip	quiptext
 curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
 interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
 toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (not bad for boring old mathy stuff, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'There's evidence you might possibly be behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
-strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues.'"
+strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. About themselves or Elvira. You'll get clues how to deal with them, even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues.'"
 clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
 gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
 trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
@@ -9356,8 +9361,6 @@ ramp-quip	"You recall red, yellow, red, red for the ramp, cheat or no."
 painting-quip	"You recall R Y Y R R Y R R for non-cheat mode, with the center two going purple in cheat mode. Figuring why only those two go purple would be big."
 stair-quip	"You recall R R Y Y R with one tile changing color with cheat mode. But it is probably best to focus on non-cheat mode."
 dio-quip	"You consult the pedanto-notepad, and Elmo looks at your diorama notes.[paragraph break][dior-scan]That's a lot to take in! But you suspect it will help."
-dio-all-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
-dio-elm-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
 dio-elm-2-quip	"With everything scanned now, you take a closer look.[paragraph break][dior-scan][paragraph break]You focus on the rare greens and purples. Elmo coughs, as if cuing you to something--how the greens and purples are in the same position between flipped diorama parts."
 dio-2-quip	"You hash the purples and greens out some more.[paragraph break]You focus on the rare greens and purples. Crabgrass and brass crag, letters two and three. Pedestal and steel pad, letters four and seven. You think on what is special about these, in both words."
 satchel-quip	"'Ach, let's...' you say. You scan the satchel both ways and notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet."
@@ -9370,7 +9373,8 @@ bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You'
 section extra quip checks
 
 to say gridchek:
-	say "[if player does not have gird grid]Elmo hands you an additional note--a Gird Grid--to help you on your way. [end if]";
+	say "Elmo [if player does not have gird grid]hands you an additional note--a Gird Grid--to help you on your way. He also [end if]notes it's worth reading red writing and trying to get by enemies in your way, even if they're too big. You'll see clues.[line break]";
+	pad-rec-q "methods";
 	now player has gird grid;
 
 to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, you've got a whole body of data, now[stopping]";
@@ -9392,6 +9396,8 @@ understand the command "xg" as something new.
 
 understand "xg [text]" as xging when player has gird grid.
 
+grid-x is a number that varies.
+
 carry out xging:
 	let got-any be false;
 	repeat through table of gird grid topics:
@@ -9401,27 +9407,33 @@ carry out xging:
 			if there is a reg-match entry:
 				if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel [if reg-match entry is bypassed]relieved you didn't have to deal with that[else]pleased with what you fixed[end if]." instead;
 			if there is a reg-match entry and mrlp is reg-match entry, say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what to do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+			if x-yet entry is false:
+				now x-yet entry is true;
+				increment grid-x;
+				if grid-x is 6:
+					say "You outline the places to visit in your notepad.";
+					pad-rec-q "progress";
 			now gird grid is examined;
 			continue the action;
 	say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
 	the rule succeeds;
 
 table of gird grid topics
-grid-topic (topic)	reg-match	reg-blurb
-"1/u"	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
-"2/v"	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
-"3/p"	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
-"4/y"	oyster	"A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
-"5/w"	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
-"6/t"	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
-"0"	--	"You'd guess area zero would be the ordeal reload in your Means Manse."
-"7"	--	"You vaguely dread a seventh[area-but]!"
-"8"	--	"You vaguely dread an eighth area[area-but]!"
-"9"	--	"You vaguely dread a ninth area[area-but]!"
-"f"	--	"You daydream back to solving Store F. Salad days!"
-"i"	--	"You daydream back to solving Store I. Salad days!"
-"m"	--	"You daydream back to solving Store M. Salad days!"
-"r"	--	"You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!"
+grid-topic (topic)	x-yet	reg-match	reg-blurb
+"1/u"	false	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
+"2/v"	false	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
+"3/p"	false	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
+"4/y"	false	oyster	"A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
+"5/w"	false	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
+"6/t"	false	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
+"0"	--	--	"You'd guess area zero would be the ordeal reload in your Means Manse."
+"7"	--	--	"You vaguely dread a seventh[area-but]!"
+"8"	--	--	"You vaguely dread an eighth area[area-but]!"
+"9"	--	--	"You vaguely dread a ninth area[area-but]!"
+"f"	--	--	"You daydream back to solving Store F. Salad days!"
+"i"	--	--	"You daydream back to solving Store I. Salad days!"
+"m"	--	--	"You daydream back to solving Store M. Salad days!"
+"r"	--	--	"You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!"
 
 to say area-but: say " area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way thereZ"
 
@@ -10082,7 +10094,8 @@ check scaning engravings:
 	now eng-scan is true instead;
 
 after examining engravings when eng-scan is false:
-	say "You scan the engravings, just in case, but none of the words turn up anything special. There's probably a different hint at stake, here. Also, it's odd an anti-Elvira message would be around. Maybe it's Gretta's clue Elmo mentioned, and maybe it'll make more sense after you've made your way a bit more.";
+	say "You scan the engravings, just in case, but none of the words turn up anything special. There's probably a different hint at stake, here. Also, it's odd an anti-Elvira message would be around. Maybe it's Gretta's clue Elmo mentioned, and maybe it'll make more sense after you've made your way a bit more[one of]. You glance [if magneto montage is examined]back [end if]over at [the montage] and make a rough outline of what you expect your progress to be[or][stopping].";
+	pad-rec-q "progress";
 	now eng-scan is true;
 	continue the action;
 
@@ -21468,9 +21481,6 @@ definition: a thing (called hthing) is deregioned:
 	if hthing is touchable, no;
 	if mrlp is not map region of location of hthing, yes;
 	no.
-
-to say qmsp:
-	now qmspoil is true;
 
 a thing can be thruhinted. a thing is usually not thruhinted. [This is to check if we got through hinting]
 

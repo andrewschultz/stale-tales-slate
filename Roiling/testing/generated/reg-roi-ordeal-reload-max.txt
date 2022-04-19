@@ -9,9 +9,31 @@
 
 >posf
 
+>painting
+There's no need to tidy your study up just now. Still, that seems right, so you file that idea away for later.
+In fact, you realize the notepad on the chair would be a great place to file that idea. It'll help tame lots that's meta, mate.
+Taking the pedanto-notepad uncovered some sad ads on the chair.
+
+>stable
+Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet.
+
+>basement
+Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet.
+
+>chimney
+Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet.
+
+#ttc-table-of-ordeal-reload-prefigurings-giant-pin
+#ttc-table-of-ordeal-reload-prefigurings-meet-bans
+#ttc-table-of-ordeal-reload-prefigurings-niche
+#ttc-table-of-ordeal-reload-prefigurings-tables
+>pf
+The giant pin can become a PAINTING, once you need to escape.
+The ten beams in the MEET-BANS will lead to a BASEMENT, once you need to escape.
+The tables will lead to a STABLE, once you need to escape.
+The (my) niche will open up a CHIMNEY, once you need to escape.
+
 >think
->x chair
->x shelf
 
 >open door
 
@@ -35,7 +57,7 @@ Typing SCR or SCREEN toggles handicapped accessibility mode, which generally hel
 >pad dirs
 A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed.
 
->
+#ttc-table-of-notepad-entries-free-turns
 >pad free turns
 Some actions do not take a turn. For instance, examining, looking or taking inventory, or "out of world" actions like SCORE, will not cost you time if you are in a tight situation.
 
@@ -75,8 +97,13 @@ You wrote some notes about the Tagged Gadget from Shuffling Around in here, abou
 >pad warp
 FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.
 
-#Next, let's get entries that are relatively easy to pick off
->scan diorama
+#Next, let's get entries that are relatively easy to pick off. Perrot already gave us one.
+#ttc-table-of-notepad-entries-elvira
+>pad elvira
+Apparently, appreciating her is what separates us from the animals. According to Report Porter Perrot.
+
+>scan platform
+DEBUG: platform being scanned.
 #ttc-table-of-notepad-entries-diorama
 >pad diorama
 R=red Y=yellow P=purple G=green.
@@ -126,6 +153,10 @@ Your score has just gone up by one point.
 
 #ttc-table-of-region-initial-scoring-commentary-ordeal-reload-2
 Yay! You're still changing things to other things, just like in Shuffling Around. For now. But you're on home turf, now. If you get out in the world, maybe it'll be trickier.
+
+#ttc-table-of-notepad-entries-opt-in/no-tip
+>pad no tip
+OPT IN lets you see initial region hints. NO TIP turns them off.
 
 # turn cheats on
 >t
@@ -238,13 +269,28 @@ You can LISTEN, ASK people about random stuff, or X/EXAMINE them to figure how t
 >pad gretta
 If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira.
 
+#ttc-table-of-notepad-entries-methods
+>pad methods
+You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too.
+
+#ttc-table-of-notepad-entries-shatter-threats
+>pad shatter threats
+It's that new law Elvira got passed, about how you couldn't flip things to their anagrams, because there are too few anagrams--things to change to things--left for you to save Yorpwald again. Well, outside your own house. Of course, if you protested, that would look suspicious.[paragraph break]The title was based on a really convoluted acronym you can't remember.
+
+>scan specter
+#ttc-table-of-notepad-entries-question-mark
+>pad question mark
+The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can HINT it if you're stuck.
+
+#ttc-table-of-notepad-entries-asking
+>VERB ttc table of notepad entries asking
+You will want to ASK others about themselves a lot. Elvira, too, maybe.
+
 >talk to specter
+[NOTE: ASK (PERSON) ABOUT (PERSON/THING) or A (THING) is what A Roiling Original uses for detailed conversation. However, TALK is a shortcut to asking an NPC about themselves, which often has clues.]
 #ttc-table-of-notepad-entries-talking
 >pad talking
 TALKing is the equivalent of asking someone about themselves.
-
-** game: /home/andrew/prt/debug-roiling.ulx
-** interpreter: /home/andrew/prt/glulxe -q
 
 # first basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
 #pre-specter-scepter rule

@@ -21,6 +21,10 @@ Enter the Throes Hoster for the final region
 >in
 Rustic Citrus
 
+#ttc-table-of-notepad-entries-guru
+>pad guru
+You can GURU something after eating the augural arugula.
+
 >t
 >z
 >z

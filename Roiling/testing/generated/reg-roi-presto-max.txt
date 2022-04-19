@@ -330,6 +330,14 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
+>x catechism
+#ttc-table-of-notepad-entries-hacking
+>pad hacking
+A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities.
+#ttc-table-of-notepad-entries-leo-and-rand
+>pad leo
+/(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
+
 >screen
 by one point
 Only one more piece of hardware is needed, and the computer will work.
@@ -498,6 +506,11 @@ You can SLEEP once you've gotten a good start on your coding task.
 Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>sleep
+Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
+>pad sleep
+SLEEP is only advisable in a protected area.
 
 >compile
 !by one point

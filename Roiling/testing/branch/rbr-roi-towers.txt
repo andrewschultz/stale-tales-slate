@@ -726,6 +726,13 @@ Topside Deposit
 #ttc-table-of-castle-approaching-narratives-1
 #ttc-table-of-towers-progress-comments-topside-deposit
 The palace is barely visible now.
+#ttc-table-of-notepad-entries-curst-palace
+>pad curst palace
+You apparently can't scan the curst palace fully with the settler 'til you're all the way there. But maybe you can guess.
+#ttc-table-of-notepad-entries-the-wildest-wilteds
+>pad wildest wilteds
+Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
+
 
 @verbs
 >gt trefoil
@@ -924,6 +931,12 @@ Your score has just gone up by one point
 
 @hin
 You can just go north, though you can hint the tarts in the toaster if you want.
+
+@max
+>put tarts in toaster
+#ttc-table-of-notepad-entries-xray
+>pad xray
+Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
 
 >score
 {$SCOS}
@@ -4119,6 +4132,11 @@ It can be something super special.
 You notice something you wouldn't have seen without St. Teri's help.
 >palclu
 Moving all palace clue items to Mislit Limits:
+
+@max
+#ttc-table-of-notepad-entries-scenery
+>pad scenery
+St. Teri told you to look for
 
 >misses
 

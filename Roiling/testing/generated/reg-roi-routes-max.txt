@@ -51,6 +51,10 @@ Score in a scenario: 1 out of 22 total points in the current region, Routes. Low
 
 >x list o toils
 
+#ttc-table-of-notepad-entries-reagents
+>pad reagents
+You need three reagents to help Brother Horbert:
+
 >x pews
 Mum Ray's Summary!
 

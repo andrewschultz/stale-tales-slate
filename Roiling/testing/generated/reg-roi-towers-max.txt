@@ -162,6 +162,12 @@ Topside Deposit
 #ttc-table-of-castle-approaching-narratives-1
 #ttc-table-of-towers-progress-comments-topside-deposit
 The palace is barely visible now.
+#ttc-table-of-notepad-entries-curst-palace
+>pad curst palace
+You apparently can't scan the curst palace fully with the settler 'til you're all the way there. But maybe you can guess.
+#ttc-table-of-notepad-entries-the-wildest-wilteds
+>pad wildest wilteds
+Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
 
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -176,6 +182,11 @@ You can make the Curst Palace SPECTACULAR once you're near it.
 
 >sadder
 Your score has just gone up by one point
+
+>put tarts in toaster
+#ttc-table-of-notepad-entries-xray
+>pad xray
+Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
 
 >score
 Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -697,6 +708,10 @@ Your score has just gone up by one point
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
+
+#ttc-table-of-notepad-entries-scenery
+>pad scenery
+St. Teri told you to look for
 
 >misses
 

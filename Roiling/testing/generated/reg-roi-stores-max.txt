@@ -12,6 +12,16 @@
 >ts
 >t
 
+>x montage
+CONDEMNED: K, N
+NOT ELVIRA-APPROVED. ENTER AT OWN RISK: P, U, V, W, Y
+ELVIRA SAYS KEEP EXTRA DOUBLE OUT: T
+>x engravings
+NOUNED: UNDONE
+#ttc-table-of-notepad-entries-progress
+>pad progress
+You note the following: Ordeal Reload = stuff
+
 >sorbet
 Your score has just gone up by one point
 

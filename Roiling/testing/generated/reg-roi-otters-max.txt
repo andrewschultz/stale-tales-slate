@@ -18,6 +18,10 @@
 >opt in
 >enter solid idols
 
+#ttc-table-of-notepad-entries-powers
+>pad powers
+You need to figure a way to get your powers back. They were drained when you passed by the solid idols.
+
 #forceignore
 >barely
 Your score has just gone up by one point

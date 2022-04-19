@@ -1743,6 +1743,15 @@ by one point
 >n
 Hacks' Shack
 
+@max
+>x catechism
+#ttc-table-of-notepad-entries-hacking
+>pad hacking
+A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities.
+#ttc-table-of-notepad-entries-leo-and-rand
+>pad leo
+/(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
+
 @mis
 #mistake test for a elf
 >a elf
@@ -2388,6 +2397,13 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@max
+>sleep
+Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
+#ttc-table-of-notepad-entries-sleep
+>pad sleep
+SLEEP is only advisable in a protected area.
 
 @nud
 #ttc-table-of-presto-done-rejects-futon

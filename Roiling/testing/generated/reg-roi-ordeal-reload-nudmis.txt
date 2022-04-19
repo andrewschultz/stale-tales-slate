@@ -80,6 +80,7 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 No, it's a thing you can change the tables to. You didn't have to deal with adjectives in Shuffling Around, but maybe you will here, later. Much later.
 
 >think
+
 >x chair
 >x shelf
 

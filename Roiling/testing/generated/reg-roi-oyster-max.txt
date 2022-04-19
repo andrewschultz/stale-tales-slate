@@ -13,6 +13,15 @@
 Posh Hops Shop
 >posf
 
+>talk to casper
+[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
+#ttc-table-of-notepad-entries-die-thou
+>pad die thou
+If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them.
+#ttc-table-of-notepad-entries-the-haunter
+>pad haunter
+The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it.
+
 #ttc-table-of-region-initial-scoring-commentary-oyster-1
 >spit tips
 by one point
