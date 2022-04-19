@@ -148,11 +148,11 @@ does the player mean grilling the player: it is very unlikely.
 
 carry out grilling:
 	if noun is not a person, say "Try grilling a person, instead." instead;
-	repeat through subject blather table of mrlp:
+	repeat through matched item responses table of mrlp:
 		if askee entry is noun, say "[askee entry] / [if there is a game-thing entry][game-thing entry][else](general)[end if] = [dialogue-text entry][line break]";
-	repeat through general blather table of mrlp:
+	repeat through unmatched topic responses table of mrlp:
 		if askee entry is noun, say "[askee entry] / = [dialogue-text entry][line break]";
-	repeat through reflexive blather table of mrlp:
+	repeat through ask x about x table of mrlp:
 		if askee entry is noun, say "[askee entry] / = [dialogue-text entry][line break]";
 	repeat through table of NPC and topic pairs:
 		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
@@ -196,12 +196,12 @@ carry out spamobjing:
 		say "[PEO] is a person.";
 	repeat with PEO running through people:
 		say "Asking [PEO].";
-		repeat through subject blather table of mrlp:
+		repeat through matched item responses table of mrlp:
 			if askee entry is PEO and there is a game-thing entry and game-thing entry is noun:
 				say "Ask [PEO] about [noun]: [dialogue-text entry][line break]";
 				break;
 			if noun is PEO:
-				repeat through reflexive blather table of mrlp:
+				repeat through ask x about x table of mrlp:
 					if askee entry is noun:
 						say "Ask [PEO] about itself: [dialogue-text entry][line break]";
 						now foundyet is true;
@@ -1256,7 +1256,7 @@ a person can be blah, elvonly, unelvy or elvy. a person is usually blah.
 
 carry out elving:
 	let elvies be true;
-	repeat through subject blather table of mrlp:
+	repeat through matched item responses table of mrlp:
 		if game-thing entry is Elvira:
 			if askee entry is unelvy:
 				now askee entry is elvy;
