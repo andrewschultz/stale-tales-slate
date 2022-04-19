@@ -8274,6 +8274,8 @@ check switching on the tech etcha: try pushing the tech etcha instead;
 
 check switching off the tech etcha: try pushing the tech etcha instead;
 
+parse-warned is a truth state that varies.
+
 to check-parse-spare:
 	if parse-warned is false:
 		now parse-warned is true;

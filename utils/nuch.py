@@ -42,7 +42,7 @@ open_post = False
 clear_files = False
 quiet = False
 
-TEXT_COLUMN = 4
+TEXT_COLUMN = -1
 
 def poss_tweak(a):
     for to_say in say_dict:
@@ -137,7 +137,7 @@ def poke_nudge_files(gm):
     global to_add_global
     ary = gm.split("-")
     tn = ary[1]
-    proj = ary[0]
+    proj = '-'.join(ary[:-1])
     nf = i7.hdr(proj, 'nu')
     count = count2 = count3 = 0
     to_add = 0
@@ -248,7 +248,7 @@ def poke_nudge_files(gm):
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:
         if not quiet:
-            print("Yay, no errors for", gm)
+            print("Yay, no errors for {}: {} succeeded.".format(gm, len(got_nudges[gm])))
         return
     qb = os.path.basename(nudge_files[q])
     out_nudge = re.sub(r'(reg|rbr)-', r"pre\1-", nudge_files[q], 0, re.IGNORECASE)
