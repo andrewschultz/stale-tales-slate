@@ -22,6 +22,7 @@ import re
 from itertools import permutations
 import mytools as mt
 from string import ascii_lowercase
+import pendulum
 
 track_letter_type = True
 show_all_grids = False
@@ -33,9 +34,15 @@ show_red_text = False
 input_different_reds = False
 show_slots = False
 
+max_ana_size = 11
+
+rank_possibilities = True
+
 red_anagrams = defaultdict(list)
 my_match = defaultdict(str)
 found_searched = defaultdict(bool)
+
+scan_possibilities = defaultdict(int)
 
 stuff_to_process = []
 
@@ -50,6 +57,20 @@ def usage():
     print('revised,idserve tacks on more red writing to a solution already in reds.txt.')
     print('t = try different reds (useful for long strings)')
     sys.exit()
+
+def stuff_of(file_name):
+    ret_ary = []
+    with open(file_name) as file:
+        for (line_count, line) in enumerate (file, 1):
+            if line.startswith('#'):
+                continue
+            if line.startswith(';'):
+                break
+            if line.startswith('='):
+                ret_ary.append(line.strip()[1:])
+                continue
+            print("line", line_count, line.strip(), "bad data")
+    return ret_ary
 
 def red_text(a):
     temp = ''
@@ -209,13 +230,20 @@ def poss_string(my_answers):
     full_poss = [ ''.join(sorted(freqs[q])).upper() for q in freqs ]
     return ''.join(["({})".format(x) if len(x) > 1 else x for x in full_poss])
 
-def find_poss(word_array_raw, bail=False):
+def find_poss(word_array_raw, bail=False, proper_name=''):
     word_array = [x.replace(' ', '').replace('-', '') for x in word_array_raw]
     hints = word_array[1].lower()
     original = [x.replace('-', '') for x in word_array_raw][2:]
     original_raw = word_array_raw[2:]
     answer = word_array[0].split("/")[0]
     got_yet = defaultdict(bool)
+    if len(original_raw[0]) > max_ana_size:
+        sys.stderr.write("OK, skipping {}.\n".format(original_raw[0]))
+        return
+    if len(original_raw[0]) >= 10:
+        sys.stderr.write("OK, {} might take a while at {}.\n".format(original_raw[0], pendulum.now()))
+    if not proper_name:
+        proper_name = ' '.join(word_array[2:]).replace(' ', '')
     check_overall = False
     for x in original:
         if alfy(x) != alfy(answer):
@@ -287,6 +315,7 @@ def find_poss(word_array_raw, bail=False):
         sys.exit()
     if got_answer:
         answers.insert(0, answer.upper())
+        scan_possibilities[proper_name] = len(answers)
         if len(answers) == 1:
             print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original_raw, answer))
         else:
@@ -310,8 +339,11 @@ def find_poss(word_array_raw, bail=False):
                     poss_array.append('x')
                 else:
                     poss_array.append('?')
-            my_object = ' '.join(original_raw).replace('-', ' ')
-            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(my_object, my_red, my_object, hints.upper(), my_object, '[sp]'.join(poss_array).lower()))
+            #my_object = ' '.join(original_raw).replace('-', ' ')
+            my_parse_text = '[sp]'.join(poss_array).lower()
+            if '-' not in my_parse_text and 'x' not in my_parse_text:
+                my_parse_text = "UNIQUE"
+            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(proper_name, my_red, proper_name, hints.upper(), proper_name, my_parse_text))
         else:
             print("-r shows generated red/source text, if you want to show that.")
         maxes = max_digits(freqs)
@@ -357,10 +389,15 @@ def cheat_reading(words_array, go_lower = True):
     return my_string
 
 def process_reds():
+    this_qver = ''
+    last_qver = ''
     with open("c:/writing/dict/reds.txt") as file:
         for (line_count, line) in enumerate(file, 1):
+            if line.startswith("#"):
+                if 'qver' in line:
+                    this_qver = re.sub(".*qver( +of)? *", "", line.strip())
+                continue
             if '?' not in line: continue
-            if line.startswith("#"): continue
             do_search = False
             if len(found_searched):
                 for x in found_searched:
@@ -368,9 +405,12 @@ def process_reds():
                         do_search = True
                         found_searched[x] = True
             if not (show_all_grids or do_search): continue
+            if this_qver == last_qver:
+                sys.exit("We probably need a QVER at line {}.".format(line_count))
             ary = re.split("[=,]", line.strip().lower())
-            find_poss(ary)
+            find_poss(ary, proper_name = this_qver)
             got_one_reading = True
+            last_qver = this_qver
 
     y = [x for x in found_searched if found_searched[x]]
     z = [x for x in found_searched if not found_searched[x]]
@@ -414,12 +454,17 @@ while count < len(sys.argv):
             print("    ----", e)
         sys.exit()
     elif arg == 't': track_letter_type = True
+    elif arg in ( 'fs', 'sf' ):
+        file_search = True
+        rank_possibilities = True
     elif arg == 's': show_all_grids = True
     elif arg == 'r': show_red_text = True
     elif arg == 'i': input_different_reds = True
     elif arg in ( 'ns', 'sn' ): show_all_grids = False
     elif arg in ( 'vc', 'cv', 'c', 'v'): check_vc = True
     elif arg == 'ss': show_slots = True
+    elif arg == 'f1':
+        stuff_to_process.extend(stuff_of('posnoq.txt'))
     elif arg[0] == 'x' and arg[1:].isdigit():
         temp = int(arg[1:])
         if temp < 1 or temp > len(examples_array):
@@ -461,6 +506,15 @@ for stp in stuff_to_process:
 
 if file_search:
     process_reds()
+    print(len(scan_possibilities), "total found.")
+    if rank_possibilities:
+        a = set(scan_possibilities.values())
+        for x in sorted(a, reverse = True):
+            print(x, ' / '.join([y for y in scan_possibilities if scan_possibilities[y] == x]))
+        if show_red_text:
+            for x in scan_possibilities:
+                if scan_possibilities[x] <= 6:
+                    print(x, "is parse-spoilable.", scan_possibilities[x])
 
 if warn_about_usage:
     print("You used ? as a parameter. If you want usage, run pos.py without arguments.")
