@@ -8423,7 +8423,7 @@ wzup	"a pair of hands patting [l-n-r] on the back" [presto]
 eeks	"some cartoony representation of [b]EEKS[r]" [oyster]
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
 aside-llp	"rays of tension between [e-n-m]" [otters]
-sorer bogey	"something pulsing in rhythm with the whines from the [if bogey-listen is true]wells below[else]sorer bogey[end if]" [others]
+sorer bogey	"something pulsing in rhythm with the whines from the [if bogey-listen is true]sorer bogey[else]wells below[end if]" [others]
 a banna	"the/a banna[']"
 fleeing feeling	"the word '[b]PERP[r]' forming outside the Valence Enclave"
 coins	"Curtis's coins"
@@ -14261,8 +14261,8 @@ the general gleaner is a reflexive thing. description is "[if gleaner is reflexe
 
 gleaner-viewed is a truth state that varies.
 
-after examining gleaner when gleaner-viewed is false and gleaner is reflexed:
-	if player is in end den and gleaner is reflexed:
+after examining gleaner when gleaner-viewed is false and gleaner is reflexed (this is the gleaner helps you through rule):
+	if player is in end den:
 		say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
 		move player to Tenfold Teflond Den Loft;
 	else if end den is visited and Tenfold Teflond Den Loft is not visited:
@@ -17289,13 +17289,16 @@ nextclue is a list of thing variable. nextclue is { accurst leap, clear catsup, 
 
 palace-clue-index is a number that varies.
 
+current-mislit-scenery is a thing that varies.
+
 after going to Mislit Limits (this is the add palace clues if talked to teri rule):
 	if flip-final-clue is true:
 		say "You notice something [if palace-clue-index > 0]else [end if]you wouldn't have seen without St. Teri's help.[run paragraph on]";
 		if palace-clue-index > 0, moot entry palace-clue-index in nextclue;
 		increment palace-clue-index;
 		if palace-clue-index > number of entries in nextclue, now palace-clue-index is 1;
-		move entry palace-clue-index in nextclue to Mislit Limits;
+		now current-mislit-scenery is entry palace-clue-index in nextclue;
+		move current-mislit-scenery to Mislit Limits;
 		say " That [entry palace-clue-index in nextclue] must be important. You note it as further scenery in your pedanto-notepad.";
 		pad-rec-q "scenery";
 		now flip-final-clue is false;
@@ -19363,7 +19366,7 @@ carry out playing:
 			clean-for-roving;
 			continue the action;
 		else if player is in Reclusion Inclosure:
-			say "You already took care of Merle and Elmer here. Somewhere, though, something or someone worse lurks.";
+			say "You already took care of Merle and Elmer here. Somewhere, though, something or someone worse lurks." instead;
 		else:
 			say "You don't need to call anyone in this area." instead;
 	say "That doesn't seem like a toy or an instrument." instead;
