@@ -2948,11 +2948,14 @@ section check-for-solve
 [this is tricky. I could've had 2 more general rules. There's a chance for bugs either way, whether I say "reject if cur-score < max-score + 1, oh but make it 2 for towers without x-ray and otters without x-ray." The main thing to note is that different regions have different nouns they flip. ]
 
 this is the region-done-check rule:
-	if mrlp is miss-point-warned, the rule fails;
-	if cur-score of mrlp is poss-score of mrlp - 1, the rule fails;
-	if bonus-point-available and cur-score of mrlp is poss-score of mrlp - 2, the rule fails;
+	if mrlp is miss-point-warned:
+		d "skipping already-asked region question.";
+		continue the action;
+	if cur-score of mrlp is poss-score of mrlp - 1, continue the action;
+	if bonus-point-available and cur-score of mrlp is poss-score of mrlp - 2, continue the action;
 	now mrlp is miss-point-warned;
-	say "[warn-left-text of mrlp] Stay back and find everything[if poss-score of mrlp < max-score of mrlp] you can[end if]?";
+	say "[poss-score of mrlp] [max-score of mrlp] ";
+	say "[warn-left-text of mrlp] Stay back and clean up everything[if poss-score of mrlp < max-score of mrlp] you can[end if]?";
 	if the player dir-consents, the rule succeeds;
 	say "Okay[one of]. This nag will appear once for each region where you have points you can earn[or][stopping].";
 	continue the action;
@@ -2964,17 +2967,17 @@ to decide whether bonus-point-available:
 
 warn-left-text of ordeal reload is "The respect specter won't be hurt if you don't figure them out, but it might be a confidence booster."
 
-warn-left-text of routes is "The raptest patters are still slightly a nuisance, if you want to fix them.".
+warn-left-text of routes is "This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle.".
 
-warn-left-text of troves is "You tidied your Upscale Capsule up pretty well, but you could do a bit more."
+warn-left-text of troves is "This will escape Upscale Capsule, but you could do a bit more if you want."
 
-warn-left-text of presto is "That will take care of business, but there's still a bit left to clean up in the shack.";
+warn-left-text of presto is "That will provide transport from [shack], but you could set more straight here if you wanted.";
 
-warn-left-text of oyster is "This is the winning action, but you may be able to backtrack to see some other bits."
+warn-left-text of oyster is "This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here."
 
-warn-left-text of towers is "This will knock down the palace, but you still have that top opt pot you got from Renato."
+warn-left-text of towers is "This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato."
 
-warn-left-text of otters is "You could clean things up before facing Elvira."
+warn-left-text of otters is "This will defeat Elvira, but there are loose ends to tie up, if you like that sort of thing."
 
 warn-left-text of others is "You have some more fruits to rustle up. [number of dislodged fruits in words], to be precise.".
 
