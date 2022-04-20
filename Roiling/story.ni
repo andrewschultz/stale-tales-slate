@@ -3404,20 +3404,23 @@ tip-warn is a truth state that varies.
 
 to score-notify:
 	if suppress-score is false, process the notify score changes rule;
+
+after fliptoing (this is the make initial score comments rule):
 	let tru-sco be cur-score of mrlp;
 	if mrlp is otters and cinders are moot:
 		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this is a hack]
 	repeat through table of region initial scoring commentary:
 		if mrlp is region-scored entry and tru-sco >= points-gotten entry:
-			if no-tip is false and roved is false and done-yet entry is false:
-				say "[line break][game-comment entry][paragraph break]";
+			if no-tip is false and done-yet entry is false:
+				say "[game-comment entry][line break]";
 				if tip-warn is false:
 					ital-say "you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].";
 					now tip-warn is true;
 					pad-rec "opt in/no tip";
-			now done-yet entry is true;
-			the rule succeeds;
+				now done-yet entry is true;
+				continue the action;
 	if score-after is true, try requesting the score;
+	continue the action;
 
 score-after is a truth state that varies.
 
@@ -3427,7 +3430,7 @@ Ordeal Reload	2	false	"Yay! You're still changing things to other things, just l
 stores	1	--	"Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later."
 routes	1	--	"Well, that was different from the standard directions. But there can't be too many other ways to go."
 troves	1	--	"Neat. You made progress just thinking. Or not-thinking. It could be either."
-troves	2	--	"Thinking has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading Pa, Egg, Pea right will help you further, let you look into your mind more dispassionately[else if tears taser is moot]Staring and gaping will get you only so far, though. Real thought must be ahead[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
+troves	2	--	"Going inside your mind has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading [pa egg pea] right will help you further, let you look into your mind more dispassionately[else if tears taser is moot]Staring and gaping will get you only so far, though. Real thought must be ahead[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
 presto	1	--	"It feels cathartic, using a non-dirty exclamation to get going."
 presto	2	--	"Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words..."
 oyster	1	--	"You've started to get some action in."
@@ -3435,7 +3438,7 @@ oyster	2	--	"Bam! More action! You'll still sort of be guessing the verb, but it
 towers	1	--	"Well! You kind of cost [noun] a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
 towers	2	--	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice."
 otters	1	--	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
-otters	2	--	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up [adverbed] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
+otters	2	--	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up [adverbed] here[end if][if rescind-cinders is true]. The cinders are probably the exception to the rule[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
 others	1	--	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here. There'll obviously be quite a variety, but it's great you can start with the easy ones."
 
 to say adverbed:
