@@ -1262,6 +1262,7 @@ to say full-monty of (myobj - a thing):
 		if extra-taxer-warn is false:
 			say ".[paragraph break]You can also disable clues for ambiguous/question mark settler-cheat readings with [b]TAXER[r] or [b]TAX ER[r]. You can recover them with [b]EXTRA[r]";
 			now extra-taxer-warn is true;
+			pad-rec-q "extra/taxer";
 	now settler-space-warned is sw;
 	now questions-not-flagged is qnf;
 
@@ -2569,8 +2570,8 @@ before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you b
 		say "You shake your head and go back to thinking why the settler might flicker yellow/green on the lamp and so forth.[no line break]";
 		now hold-it-up is true instead;
 	if interr-quip is not mowered:
-		say "Hm, maybe Elmo has something useful to say. Skip to that part of the conversation?";
-		if the player regex-prompt-consents:
+		say "Hm, maybe Elmo has something useful to say. Stay for that part of the conversation?";
+		if the player dir-consents:
 			say "Elmo notices your haste and nods. 'Okay, first things first, I think I know where you need to go.'";
 			enact bye-elmo-quip;
 			disable the interr-quip quip;
@@ -2662,7 +2663,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		choose row with response of bye-Elmo-quip in the table of Elmo comments;
 		now enabled entry is 1;
 	if current quip is strip-quip:
-		pad-rec-q "asking";
+		pad-rec "asking";
 	if current quip is interr-quip:
 		enact toy-theory-quip;
 		enact the trial-trail-quip;
@@ -2700,10 +2701,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		if tables are escanned and tables are moot, now stable-quip is Elmo-av;
 		if pram is escanned and pram is moot, now ramp-quip is Elmo-av;
 		if giant pin is escanned and giant pin is moot, now painting-quip is Elmo-av;
-		showme sitar;
-		showme stria;
 		if sitar is escanned or stria is escanned:
-			say "1.";
 			if sitar is moot or stria is moot, now stair-quip is Elmo-av;
 		d "Available to Elmo: [list of elmo-av quips].";
 		choose row with short of "diorama" in table of notepad entries;
@@ -5320,6 +5318,7 @@ to say spec-help of (itm - a thing):
 	if itm is a pickup-line:
 		say "You feel you're on the right track to expose the [pla-ma]s. But that's not quite it.";
 		continue the action;
+	if debug-state is true, xtra-trax-inquire; [ this is for testing purposes. It will pop up early for programmer testing. ]
 	if xtra-trax is true:
 		repeat through spechelp of mrlp:
 			if itm is xtrhelp entry:
@@ -5341,11 +5340,14 @@ to say spec-help of (itm - a thing):
 					break;
 		d "You may want to put in special text here in [spechelp of mrlp] for ([the itm]). Or not.";
 	say "[pull-from of itm].";
+	xtra-trax-inquire;
+
+to xtra-trax-inquire:
 	if xtra-trax-warn is false:
 		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
 		if debug-state is true, say "DEBUG: note this option is turned on by default while testing.";
 		now xtra-trax-warn is true;
-		pad-rec-q "xtra";
+		pad-rec-q "xtra/trax";
 
 doublewarn is a truth state that varies.
 
@@ -7727,6 +7729,7 @@ to get-cool-stuff:
 	now player has pedanto notepad;
 	now player has inducted deductin;
 	now sad ads are in dusty study;
+	now autosave-known is true; [?? pad-rec-q stuff]
 
 chapter isolani liaison
 
@@ -8636,7 +8639,6 @@ to say verb-list:
 	if player has whistle, say "[2da][b]PLAY[r] the whistle.";
 	verbsplain "xray";
 	verbsplain "go to";
-	verbsplain "rove over";
 	verbsplain "retry";
 	if in-beta is true:
 		say "[b]BETA COMMANDS BELOW[r]:[line break]";
@@ -8680,6 +8682,7 @@ short	verify	fixed-region	readyet	known	topic (topic)	blurb
 "diorama"	true	--	--	false	"diorama"	"[dior-scan]"
 "directions/dirs"	false	--	--	true	"directions/dirs"	"[this-game] uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."
 "Elvira"	true	--	--	false	"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	"Apparently, appreciating her is what separates us from the animals. Well, according to [porter][if mrlp is otters]. But you need to know more and ask around about her[end if]."
+"extra/taxer"	false	--	--	false	"extra/taxer" or "extra taxer"	"[b]EXTRA[r] or [b]TAX ER[r]/[b]TAXER[r] toggles more advice for ambiguous/question mark hints. This is close to [b]XTRA[r], but it is likely the player will want to set [b]TAXER[r] and not [b]EXTRA[r] back."
 "flips"	false	--	--	false	"flips" or "flip" or "pf"	"[what-can-flip]"
 "free turns"	false	--	--	true	"free turns" or "free/turns"	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like [b]SCORE[r], will not cost you time if you are in a tight situation."
 "go to"	false	--	--	true	"go to" or "go/gt/goto"	"You can [b]GT/[b]GO TO[r]/[b]GOTO[r] a location or thing if it's a bit far away but in the region."
@@ -8717,7 +8720,7 @@ short	verify	fixed-region	readyet	known	topic (topic)	blurb
 "verbs"	false	--	false	true	"verbs/verb"	"[verb-list]"
 "warp"	true	--	--	true	"warp"	"[i][bracket]FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"
 "xray"	false	towers	--	false	"xray" or "xraying"	"[xray-help]."
-"xtra/trax"	false	--	--	false	"xtra/trax"	"[b]XTRA[r] or [b]XTRA TRAX[r] or [b]TRAX[r] gives more detailed advice if you have the right letters in the wrong order."
+"xtra/trax"	false	--	--	false	"xtra/trax"	"You can use the command [b]XTRA TRAX[r] (or [b]XTRA[r] or [b]TRAX[r]) to toggle tracking the right combination of letters less generically. However, some hints might be a bit too pointed."
 
 to say xray-help:
 	if xrayvision is true:
