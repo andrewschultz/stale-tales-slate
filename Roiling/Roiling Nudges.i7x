@@ -1304,8 +1304,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "wilted"	458686674	--	degen-true rule	"[wi-wi]."
 "curst"	408819179	--	degen-true rule	"It's not just that it's curst, it's a [b]CURST PALACE[r]."
 "palace"	286467128	--	degen-true rule	"It's not just that it's a palace, it's a [b]CURST PALACE[r]."
-"castle"	402197335	--	degen-true rule	"Not just any castle. Castle Apcur."
-"apcur"	293088972	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
+"castle"	402197335	--	degen-true rule	"Not just any castle. [up-arc]."
+"acpru"	293088972	--	degen-true rule	"It's not just the castle name but the full title you need to work with."
 "lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if Mislit Limits is visited]You're beyond the lake now.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
 "pot"	258928554	top opt pot	--	"The best--well, the only--way to change the top opt pot is to put something in it, but you haven't seen anything suitable yet."
 "blub"	195757456	blub bulb	--	"Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new."
@@ -1427,7 +1427,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rend"	303066509	--	--	"[all-rodney]."
 
 to say towersloc:
-	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
+	say "It's not this location you need to change, but [if location of player is loftier trefoil]the Curst Palace[else][up-arc][end if] [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
 to say picaro-note: say "[if here-picaros is 1]There's only one picaro left, and his name is Rodney[else if moot-picaros > 0]You've already thinned the picaros['] ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";

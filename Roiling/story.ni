@@ -8728,7 +8728,7 @@ short	verify	fixed-region	readyet	known	topic (topic)	blurb
 "access"	false	--	false	true	"access"	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."
 "asking"	false	--	--	false	"asking"	"You will want to [b]ASK[r] others about themselves a lot. Elvira, too, maybe."
 "clues"	true	--	--	false	"clues"	"You can [b]LISTEN[r], [b]ASK[r] people about random stuff, or [b]X[r]/[b]EXAMINE[r] them to figure how to change them."
-"curst palace"	true	towers	--	false	"curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."
+"curst palace"	true	towers	--	false	"curst/palace" or "curst palace" or "castle arc up" or "castle arc/up" or "up arc" or "arc up"	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."
 "DIE THOU"	true	oyster	--	false	"die" or "die thou" or "the/ hideout/hangout"	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."
 "diorama"	true	--	--	false	"diorama"	"[dior-scan]"
 "directions/dirs"	false	--	--	true	"directions/dirs"	"[this-game] uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."
@@ -9484,7 +9484,7 @@ grid-topic (topic)	x-yet	reg-match	reg-blurb
 "2/v"	false	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
 "3/p"	false	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
 "4/y"	false	oyster	"A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
-"5/w"	false	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
+"5/w"	false	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. The Curst Palace lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
 "6/t"	false	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
 "0"	--	--	"You'd guess area zero would be the ordeal reload in your Means Manse."
 "7"	--	--	"You vaguely dread a seventh[area-but]!"
@@ -17142,7 +17142,7 @@ understand "st/teri" and "st teri" as tetris sitter when itster is moot.
 check going east in Mesprise Premises (this is the force give top opt pot rule):
 	if player has top opt pot and top opt pot contains crocus:
 		if anodyne is moot:
-			say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for [the tetris sitter], now she's not stuck on her [first custom style]ITSTER[r] game of Tetris. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
+			say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for [the tetris sitter], now she's not stuck on her [first custom style]ITSTER[r] game of Tetris. You give it to her.[paragraph break]'Come back if you need help with [up-arc]!' she says, as she goes to set the crocus out somewhere nice.";
 			moot top opt pot;
 			reg-inc;
 		else if itster is moot:
@@ -17276,13 +17276,15 @@ rule for supplying a missing second noun when showing:
 
 chapter curst palace
 
-The Curst Palace is a reflexive boring backdrop. drop-region of Curst Palace is towers. description of Curst Palace is "The curst palace Castle Apcur towers high enough to see across the lake. But perhaps it could be much nicer...with just one word...". bore-text of Curst Palace is "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.".
+The Curst Palace is a reflexive boring backdrop. drop-region of Curst Palace is towers. description of Curst Palace is "The Curst Palace [up-arc] [if player is in mislit limits]rises impressively. You are close enough to read its name(s) if you wish[else]towers high enough to see across the lake[end if]. Just one word could make it nicer! But which word?". bore-text of Curst Palace is "[if player is in mislit limits]Physical action won't help. You need to re-describe the Curst Palace to restore it[else]The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it[end if].".
+
+understand "castle up arc" and "castle arc up" and "castle up/arc" and "up arc" and "arc up" and "castle" as curst palace.
+
+to say up-arc: say "[one of]Castle Up Arc (or is it Arc Up?)[or][one of]Castle Up Arc[or]Castle Arc Up[in random order][stopping]"
 
 towers-min-flag is a truth state that varies;
 
-understand "castle apcur" and "castle/apcur" as the curst palace.
-
-check examining curst palace when player is not in Mislit Limits: say "The curst palace is too far away to make out details beyond its general decrepitude." instead;
+check examining curst palace when player is not in Mislit Limits: say "The Curst Palace is too far away to make out details beyond its general decrepitude." instead;
 
 max-pal-seen is a number that varies.
 
@@ -17318,11 +17320,11 @@ to say cpset of (myt - text):
 check entering curst palace: say "Less tours, more roust." instead;
 
 check going inside in Mislit Limits:
-	say "(assuming the way west, since Castle Apcur is too high up)[paragraph break]";
+	say "(assuming the way west, since [up-arc] is too high up)[paragraph break]";
 	try going west instead;
 
 check going west in Mislit Limits:
-	if serpent is in Mislit Limits, say "[one of]You can't risk sneaking by the serpent--Castle Apcur is right here, waiting to be changed! Just one (long) word! Though maybe if you could get rid of the serpent, it might help.[or]'Step near a serpent... you muse, then 'TRAP SEEN.'[cycling]" instead;
+	if serpent is in Mislit Limits, say "[one of]You can't risk sneaking by the serpent--[up-arc] is right here, waiting to be changed! Just one (long) word! Though maybe if you could get rid of the serpent, you might have more wrongs to right. Maybe even some help with the task of restoring [up-arc]![or]'Step near a serpent... you muse, then 'TRAP SEEN.'[cycling]" instead;
 
 chapter various curst palace clues
 
