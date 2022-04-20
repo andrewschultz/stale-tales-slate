@@ -399,7 +399,7 @@ You haven't visited the Gates Stage north of the Swell Wells, yet. That's where 
 
 #ttc-table-of-settler-shake-descriptions-a-banna
 >ss
-the/a banna'
+the (a) banna'
 
 >banana
 Your score has just gone up by one point.

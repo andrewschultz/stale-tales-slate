@@ -322,6 +322,11 @@ EXTRA or TAX ER/TAXER toggles more advice for ambiguous/question mark hints. Thi
 >undo
 >undo
 
+>pad xtra
+!XTRA TRAX
+>xtu
+The xtra-trax-warn variable is alreadynow false.
+
 #ttc-table-of-ordeal-reload-spechelp-respect-specter
 >eecsprt
 The respect specter shrugs respectfully. "A deferred success."

@@ -1163,6 +1163,12 @@ EXTRA or TAX ER/TAXER toggles more advice for ambiguous/question mark hints. Thi
 >undo
 >undo
 
+@max
+>pad xtra
+!XTRA TRAX
+>xtu
+The xtra-trax-warn variable is alreadynow false.
+
 @nud,max
 #ttc-table-of-ordeal-reload-spechelp-respect-specter
 >eecsprt

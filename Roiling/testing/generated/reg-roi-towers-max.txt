@@ -213,10 +213,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
 
-#ttc-table-of-castle-approaching-narratives-7
-#ttc-table-of-towers-progress-comments-actionless-coastlines
-You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
-
 >reined
 Your score has just gone up by one point
 
@@ -361,7 +357,7 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 Shaven Havens
 
 #ttc-table-of-towers-progress-comments-shaven-havens
-You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form.
+You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
 
 >s
 >e
@@ -437,6 +433,12 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
+Actionless Coastlines
+
+#ttc-table-of-castle-approaching-narratives-7
+#ttc-table-of-towers-progress-comments-actionless-coastlines
+You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
+
 >s
 >s
 
@@ -579,8 +581,6 @@ by one point
 Score in a scenario: 42 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
 >gt coastlines
-
-Actionless Coastlines
 
 >grained
 Your score has just gone up by one point

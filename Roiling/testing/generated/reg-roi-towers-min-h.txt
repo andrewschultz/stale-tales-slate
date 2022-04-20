@@ -140,7 +140,6 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 >n
 
 Actionless Coastlines
-
 >hastiest
 Your score has just gone up by one point
 >score
@@ -201,8 +200,6 @@ by one point
 Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >gt coastlines
-
-Actionless Coastlines
 
 >grained
 Your score has just gone up by one point

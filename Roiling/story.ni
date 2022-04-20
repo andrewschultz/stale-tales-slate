@@ -5318,7 +5318,6 @@ to say spec-help of (itm - a thing):
 	if itm is a pickup-line:
 		say "You feel you're on the right track to expose the [pla-ma]s. But that's not quite it.";
 		continue the action;
-	if debug-state is true, xtra-trax-inquire; [ this is for testing purposes. It will pop up early for programmer testing. ]
 	if xtra-trax is true:
 		repeat through spechelp of mrlp:
 			if itm is xtrhelp entry:

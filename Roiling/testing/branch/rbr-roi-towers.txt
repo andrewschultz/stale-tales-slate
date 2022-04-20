@@ -1235,8 +1235,6 @@ Your score has just gone up by one point
 >n
 \\
 Actionless Coastlines
-\\
-{--max}#ttc-table-of-castle-approaching-narratives-7\\#ttc-table-of-towers-progress-comments-actionless-coastlines\\You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.\\
 >hastiest
 Your score has just gone up by one point
 }}SCORE++
@@ -1855,7 +1853,7 @@ Shaven Havens
 
 @max
 #ttc-table-of-towers-progress-comments-shaven-havens
-You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form.
+You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
 
 @verbs
 #verbcase listen-towers-if-player-is-in-shaven-havens
@@ -2407,6 +2405,14 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >n
+Actionless Coastlines
+
+@max
+#ttc-table-of-castle-approaching-narratives-7
+#ttc-table-of-towers-progress-comments-actionless-coastlines
+You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
+
+@!minh,mini
 >s
 >s
 
@@ -3335,10 +3341,6 @@ You don't see any new information about the curst palace this time.
 !In fact, you have less information than when you were closer.
 >e
 
-Actionless Coastlines
-
-@max
-
 @spoi
 #towers anagrams for dinger
 >xr dinger
@@ -3966,6 +3968,12 @@ After a thoughtful gaze, you reckon the nastier stainer retinas could be ANTSIER
 >nasteri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
+#ttc-table-of-towers-spechelp-nastier-stainer-retinas
+>nasteri
+The nastier stainer retinas seem to blink a bit and look around uneasily.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the nastier stainer retinas.
+
 @!minh,mini
 >antsier
 by one point
@@ -4095,10 +4103,12 @@ You helped St. Teri directly. Now you need to deal with the Done-Any Anodyne.
 
 @spoi
 #towers anagrams for done any anodyne
->xr sitter
+>xr anodyne #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Done-Any Anodyne could leave St. Teri ANNOYED.
+>xr sitter
+You already remember the word ANNOYED--which seems right, just a matter of getting other things right first. Maybe they already are.
 
 @sli
 #slider test for annoyed
@@ -4134,6 +4144,11 @@ Your score has just gone up by one point
 @max
 >ask teri about palace
 It can be something super special.
+
+@nud
+>ask teri about curst palace
+"It can be something super special.
+He-he. Eh?" You got no concrete clues, but St. Teri's observations were a help. Maybe you can come back for another, later, if you still have no luck outside.
 
 @!minh,mini
 >out
@@ -4227,7 +4242,12 @@ Your score has just gone up by one point
 }}SCORE++
 @!
 }}SCORE+=2
+
+@max
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
+
+@!minh,mini,max
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 @minh,mini
 This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything you can?

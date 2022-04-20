@@ -1732,6 +1732,19 @@ understand the command "xtrak" as something new.
 
 understand "xtrak" as xtraking.
 
+chapter xtuing
+
+xtuing is an action out of world.
+
+understand the command "xtu" as something new.
+
+understand "xtu" as xtuing.
+
+carry out xtuing:
+	say "The xtra-trax-warn variable is [if xtra-trax-warn is false]already[else]now[end if] false.";
+	now xtra-trax-warn is false;
+	the rule succeeds;
+
 Roiling Tests ends here.
 
 ---- DOCUMENTATION ----

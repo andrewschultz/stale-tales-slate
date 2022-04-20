@@ -308,6 +308,8 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
+Actionless Coastlines
+
 >s
 >s
 
@@ -509,8 +511,6 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 
-Actionless Coastlines
-
 #verbcase smell-towers-if-leak-lake-is-touchable
 >smell
 The overwhelming smell of kale is not offensive, but you'd like to get by Leak Lake, all the same.
@@ -655,7 +655,7 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >spectacular
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 Strip of Profits
 

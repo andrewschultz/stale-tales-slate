@@ -504,6 +504,8 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
+Actionless Coastlines
+
 >s
 >s
 
@@ -686,8 +688,6 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 
-Actionless Coastlines
-
 #towers anagrams for dinger
 >xr dinger
 After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
@@ -858,10 +858,12 @@ Your score has just gone up by one point
 Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
 
 #towers anagrams for done any anodyne
->xr sitter
+>xr anodyne
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Done-Any Anodyne could leave St. Teri ANNOYED.
+>xr sitter
+You already remember the word ANNOYED--which seems right, just a matter of getting other things right first. Maybe they already are.
 
 >annoyed
 Your score has just gone up by one point
@@ -881,7 +883,7 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >spectacular
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 Strip of Profits
 

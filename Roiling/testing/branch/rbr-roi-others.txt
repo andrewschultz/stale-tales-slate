@@ -1947,7 +1947,7 @@ A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the p
 @hints
 #ttc-table-of-settler-shake-descriptions-a-banna
 >ss
-the/a banna'
+the (a) banna'
 
 @!min
 >banana

@@ -1164,6 +1164,8 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
+Actionless Coastlines
+
 >s
 >s
 
@@ -1730,8 +1732,6 @@ You don't see any new information about the curst palace this time.
 !In fact, you have less information than when you were closer.
 >e
 
-Actionless Coastlines
-
 #scahnotes for curst palace
 #palace 9 lights
 >scan palace
@@ -2073,6 +2073,11 @@ The retinas are more likely to zap you.
 >repten
 You're probably better of dispelling all the things to repent about at once, not just one.
 
+#ttc-table-of-towers-spechelp-nastier-stainer-retinas
+>nasteri
+The nastier stainer retinas seem to blink a bit and look around uneasily.
+DEBUG INFO: You feel a slight psychic push-pull coming from the nastier stainer retinas.
+
 >antsier
 by one point
 >score
@@ -2162,6 +2167,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
+>ask teri about curst palace
+"It can be something super special.
+He-he. Eh?" You got no concrete clues, but St. Teri's observations were a help. Maybe you can come back for another, later, if you still have no luck outside.
+
 >out
 
 You notice something you wouldn't have seen without St. Teri's help.
@@ -2239,7 +2248,7 @@ The final entry blinks alternately with the fifth--neither is purple at the same
 >spectacular
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
 Strip of Profits
 
