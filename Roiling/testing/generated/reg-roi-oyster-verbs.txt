@@ -31,7 +31,7 @@ The jukebox notches technos (though a mere six remixes) with an anti-bore iron b
 The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
 
 >score
-Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 43.
+Score in a scenario: 0 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-lolstr-trolls
 >attack lolstr trolls
@@ -51,15 +51,15 @@ Your score has just gone up by one point
 >remap
 !Your score has just gone up by one point
 >score
-Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 43.
+Score in a scenario: 1 out of 44 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 44.
 >sing
 by one point
 >score
-Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 2 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 >scrape
 by one point
 >score
-Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 3 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
 #reverbcase listen-oyster-if-player-is-in-posh-hops-shop
 >listen
@@ -87,7 +87,7 @@ SPIT
 INSET
 
 >score
-Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 4 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
 #verbcase listen-oyster-if-noun-is-clam
 >listen
@@ -97,7 +97,7 @@ You hear the clam snapping.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 5 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-urn
 >attack urn
@@ -133,7 +133,7 @@ You don't want to go back near that urn.
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >score
-Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
 #not a mistake
 >boast
@@ -142,7 +142,7 @@ Your score has just gone up by one point
 Fighter Freight
 
 >score
-Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
 #verbcase goto-oyster-if-player-is-in-fighter-freight
 >gt olde lode
@@ -188,7 +188,7 @@ You don't want to go back near that urn, and it'd be hard, being on the other si
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
+Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-carps
 >attack carps
@@ -209,7 +209,7 @@ A cry. "Eh ... a runt..." you turn red on hearing it.
 by one point
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
+Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-hunter-hunt-area
 >attack hunter hunt area
@@ -219,7 +219,7 @@ As you kick at the area, a vision of a red hate urn, replete with frowns and sco
 Hardest Trashed Dearths
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 43.
+Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
 
 >scan
 #notana 'nudge for cans'
@@ -227,7 +227,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
+Score in a scenario: 11 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
 
 #verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
@@ -256,7 +256,7 @@ Aunt Tuna is humming something tuneless as she goes about her business.
 A Roiling Original's kind of topsy turvy, but not like THAT.
 
 >score
-Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
+Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
 
 #verbcase goto-oyster-if-noun-is-hardest-trashed-dearths
 >gt dearths
@@ -267,7 +267,7 @@ Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 43.
+Score in a scenario: 13 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
 
 >tend
 #notana 'nudge for dent'
@@ -275,13 +275,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 43.
+Score in a scenario: 14 out of 44 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 44.
 
 >tutor
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 43.
+Score in a scenario: 15 out of 44 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-paw-r-wrap
 >attack paw r wrap
@@ -291,7 +291,7 @@ Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 43.
+Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 44.
 
 >w
 >n
@@ -302,13 +302,13 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 17 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >trace
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 18 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-knob
 >attack knob
@@ -326,25 +326,25 @@ Well, you need to do something to the pans.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 19 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >kiss
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 20 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >bonk
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 21 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >snap
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >in
 
@@ -354,27 +354,27 @@ Shuttle Hutlets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 23 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >drop
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 43.
+Score in a scenario: 24 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >sweat
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 43.
+Score in a scenario: 25 out of 44 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 44.
 
 >shape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
+Score in a scenario: 26 out of 44 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 44.
 
 >clean
 #notana 'nudge for lance'
@@ -382,7 +382,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 27 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >out
 
@@ -406,13 +406,13 @@ Your score has just gone up by one point
 Silence.
 
 >score
-Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 28 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >search
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 29 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >enlarge
 Your score has just gone up by one point
@@ -420,7 +420,7 @@ Your score has just gone up by one point
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
-Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >n
 Horned Hedron
@@ -440,7 +440,7 @@ This situation only stinks in general, not literally.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 31 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >e
 >s
@@ -452,20 +452,20 @@ Score in a scenario: 31 out of 43 total points in the current region, Oyster. Lo
 by one point
 
 >score
-Score in a scenario: 32 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 32 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >assuage
 by one point
 
 >score
-Score in a scenario: 33 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 33 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >ask haunter about ruby
 #notana
 by one point
 
 >score
-Score in a scenario: 34 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 34 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >w
 
@@ -483,7 +483,7 @@ The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn throug
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 # prime GT END DEN for later
 >in
@@ -493,7 +493,6 @@ End Den
 Horned Hedron
 
 >x gleaner
-You see a map of all the paths in the Horned Hedron.
 
 #verbcase goto-oyster-if-noun-is-end-den-and-gleaner-is-realized
 >gt end den
@@ -514,11 +513,17 @@ You hear a hum from the dialer.
 >attack yapper
 Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
 
+>reangle
+by one point
+
+>score
+Score in a scenario: 36 out of 44 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 44.
+
 >prepay
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
+Score in a scenario: 37 out of 44 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-dialer
 >attack dialer
@@ -529,7 +534,7 @@ That would only sabotage communications here. You need to sabotage the supplier.
 Plasm Lamps
 
 >score
-Score in a scenario: 37 out of 43 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 43.
+Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
 
 #verbcase goto-oyster-if-location-of-player-is-plasm-lamps
 >gt hedron
@@ -539,7 +544,7 @@ Aw, c'mon, the ant should be no problem.
 by one point
 
 >score
-Score in a scenario: 38 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+Score in a scenario: 39 out of 44 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 44.
 
 #ttc-table-of-oyster-attacks-ant
 >attack ant
@@ -550,7 +555,7 @@ You poke at the ant, which keeps it at bay. You need something more simple, viol
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+Score in a scenario: 40 out of 44 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 44.
 
 #verbcase goto-oyster-if-noun-is-plasm-lamps
 >gt plasm lamps
@@ -567,20 +572,20 @@ Your score has just gone up by one point
 The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 
 >score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+Score in a scenario: 41 out of 44 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 44.
 
 >spin
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+Score in a scenario: 42 out of 44 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 44.
 
 >revel
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 43 out of 44 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 44 points.
 
 #not a mistake
 >redial
@@ -589,5 +594,5 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-Oyster (43/43)
+Oyster (44/44)
 

@@ -629,8 +629,7 @@ understand "thread" and "threads" as a mistake ("There are no clothing stores ar
 chapter Lean Lane
 
 to say glean-enl:
-	skip upcoming rulebook break;
-	try examining gleaner;
+	preef bogus-reangle;
 
 understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea at a tee is in location of player
 
@@ -641,8 +640,6 @@ understand "elan" as a mistake ("Lean Lane will never be pretty, and it doesn't 
 understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea at a tee is in location of player.
 
 understand "neal" as a mistake ("It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.") when player is in Lean Lane.
-
-understand "reangle" as a mistake ("You [b]REANGLE[r], which is functionally equivalent to just examining the general gleaner.[glean-enl]") when player has general gleaner.
 
 understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in Lean Lane.
 

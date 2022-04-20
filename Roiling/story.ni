@@ -224,7 +224,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 43. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint request rejects. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. matched item responses table of oyster is table of oyster matched item responses. readable table of oyster is table of oyster readables. unmatched topic responses table of oyster is table of oyster unmatched topic responses. ask x about x table of oyster is table of oyster ask x about x. misses-rule of oyster is oyster-misses rule. preeftable of oyster is table of oyster prefigurings.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 44. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint request rejects. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. matched item responses table of oyster is table of oyster matched item responses. readable table of oyster is table of oyster readables. unmatched topic responses table of oyster is table of oyster unmatched topic responses. ask x about x table of oyster is table of oyster ask x about x. misses-rule of oyster is oyster-misses rule. preeftable of oyster is table of oyster prefigurings.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=SLANDER snarled darnels
@@ -236,9 +236,10 @@ There are actually 31 points overall if you don't use the pills. You can "lose" 
 7/38=sweat (over waste)
 8/39=clean lance
 9/40=trample templar ramplet
-10/41=PSALM in the Plasm Lamps
-11/42=TAN ant (not optional once in Plasm Lamps)
-12/43=REVEL by the lever
+10/41=REANGLE the gleaner
+11/42=PSALM in the Plasm Lamps
+12/43=TAN ant (not optional once in Plasm Lamps)
+13/44=REVEL by the lever
 Special spill rules:
 you get -3 if you use the pills right away in the shop.
 you get -1 if you use the pills on Tortu before EAT.
@@ -4692,7 +4693,7 @@ to decide which thing is oyster-item:
 	if player is in Horned Hedron:
 		if walleyes are in Horned Hedron, decide on walleyes;
 		if ol trap is in Horned Hedron, decide on ol trap;
-	if player has gleaner and gleaner is reflexive, decide on gleaner;
+	if bogus-enlarge is touchable, decide on bogus-enlarge;
 	if player is in Rascal Craals:
 		if player has digger and player has ruby, decide on ruby;
 		if thin hint is touchable, decide on thin hint;
@@ -13663,7 +13664,7 @@ check spilling (this is the specific game state spill reject rule):
 	if player is in Rascal Craals:
 		if ruby is off-stage or digger is off-stage, say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
 	if player is in Horned Hedron and walleyes are in Horned Hedron, say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead; [walleyes can't really be flipped. You need to go through the sausage.]
-	if player is in End Den, say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
+	if player is in End Den, say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and bogus-enlarge is moot]. One might be in your inventory, and you just need to examine it[end if]." instead;
 	let oi be oyster-spill-item;
 	if oi is the player, say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
 	if oi is thruhinted, say "You already got hints of what to do with [the oi]: [an-sol of oi]. So you decide to save the pills for later." instead;
@@ -14257,25 +14258,31 @@ a-text of tea at a tee is "YYR". b-text of tea at a tee is "YYR". parse-text of 
 
 the paler pearl is an undesc. description is "It might be valuable if it weren't cut jaggedly in half. Where could the other half be?"
 
-the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][else]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
+chapter gleaner
+
+the general gleaner is a thing. description is "[if bogus-enlarge is moot]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][else]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
 
 gleaner-viewed is a truth state that varies.
 
-after examining gleaner when gleaner-viewed is false and gleaner is reflexed (this is the gleaner helps you through rule):
+after examining gleaner when gleaner-viewed is false and bogus-enlarge is moot (this is the gleaner helps you through rule):
 	if player is in end den:
 		say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
 		move player to Tenfold Teflond Den Loft;
 	else if end den is visited and Tenfold Teflond Den Loft is not visited:
 		say "You see where you made the wrong turn to the End Den before. You'll get things right the next time.";
-	now gleaner-viewed is true;
+	know-loft;
 	continue the action;
 
 after printing the locale description for den loft:
-	now gleaner-viewed is true;
+	know-loft;
 	continue the action;
 
+to know-loft:
+	d "Now you know about the loft den.";
+	now gleaner-viewed is true;
+
 after printing the name of the general gleaner while taking inventory:
-	say " ([if gleaner is reflexed]enlarged[else]neat but small[end if])";
+	say " ([if bogus-enlarge is moot]enlarged[else]neat but small[end if])";
 	continue the action;
 
 check examining gleaner when player is in Tenfold Teflond Den Loft: say "You found the way in and know the way out. Better deal with the [if yapper is touchable]yapper and [end if]dialer, now." instead;
@@ -14285,10 +14292,27 @@ to say ho-he:
 
 to say are-were-hedron: say "[if player is in end den]are[else]were[end if]"
 
-a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
-
 to say oy-can-win:
 	if aunt-tuna-cross is true and wipes are in lean lane, say ", but it's dimmed, as if the place is off-limits"
+
+section bogus-enlarge
+
+the bogus-enlarge is a privately-named vanishing thing. It is part of the general gleaner. printed name is "general gleaner". description is "[bug-report]".
+
+a-text of bogus-enlarge is "YRRYRRY". b-text of bogus-enlarge is "YRR??RY". parse-text of bogus-enlarge is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
+
+check scaning gleaner:
+	if bogus-enlarge is touchable, try scaning bogus-enlarge instead;
+	if bogus-reangle is touchable, try scaning bogus-reangle instead;
+
+check objhinting gleaner:
+	if bogus-enlarge is touchable, try objhinting bogus-enlarge instead;
+
+section bogus-reangle
+
+the bogus-reangle is a privately-named reflexive LLPish thing. description is "[bug-report]".
+
+a-text of bogus-reangle is "RYYRRRY". b-text of bogus-reangle is "R?YRRRY". parse-text of bogus-reangle is "x[sp]E[sp]A[sp]x[sp]x[sp]x[sp]E".
 
 chapter enlargeing
 
@@ -14299,11 +14323,35 @@ understand the command "enlarge" as something new.
 understand "enlarge [something]" as enlargeing.
 
 carry out enlargeing:
-	if noun is not gleaner, say "That's not part of your powers. Well, not generally[if gleaner is reflexed], and you already did that to the gleaner, anyway[end if]." instead;
-	try fliptoing gleaner instead;
+	if noun is not bogus-enlarge and noun is not gleaner, say "That's not part of your powers. Well, not generally[if bogus-enlarge is moot], and you already did that to the gleaner, anyway[end if]." instead;
+	if bogus-enlarge is moot, say "You don't need to[b]ENLARGE[r] the general gleaner any more." instead;
+	try fliptoing bogus-enlarge instead;
 	the rule succeeds.
 
-does the player mean enlargeing the gleaner: it is very likely.
+does the player mean enlargeing the bogus-enlarge: it is very likely.
+
+chapter reangle
+
+reangleing is an action applying to one thing.
+
+understand the command "reangle" as something new.
+
+understand "reangle" as reangleing.
+understand "reangle [something]" as reangleing.
+
+carry out reangleing:
+	if noun is not gleaner, say "There's only one thing you can reangle in the game, and it's not critical[if bogus-reangle is reflexed], and you've already reangled it[end if]." instead;
+	if bogus-enlarge is touchable:
+		say "You might be able to [b]REANGLE[r] after doing something more necessary with the gleaner.";
+		preef bogus-reangle;
+		the rule succeeds;
+	try fliptoing bogus-reangle instead;
+	the rule succeeds.
+
+does the player mean reangleing the gleaner: it is very likely.
+
+rule for supplying a missing noun when reangleing:
+	if gleaner is touchable, now the noun is the gleaner;
 
 chapter seeking
 
@@ -15304,11 +15352,11 @@ to say big-hint of (rayx - a thing) :
 		continue the action;
 	repeat through table of towers anagrams:
 		if the-from entry is rayx:
-			say "[right-word entry in upper case]";
+			say "[b][right-word entry in upper case][r]";
 			if rayx is duck:
 				say "--well, maybe the duck will help something become unlocked";
 			continue the action;
-	say "NOTHING--sorry, this is a bug, but it won't cost your x-ray vision.";
+	say "NOTHING--sorry, this is a bug/missed case, but it won't cost your x-ray vision.";
 	now xray-bug-sorry is true;
 
 xray-warn is a truth state that varies.
@@ -17155,7 +17203,7 @@ carry out planting:
 
 book Mislit Limits
 
-Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are unvisited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if current-mislit-scenery is not the player]. That [current-mislit-scenery] is also worth a look, or a scan[end if][if ur pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
+Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are unvisited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if current-mislit-scenery is not the player]. That [current-mislit-scenery] is also worth a look, or a scan[end if][if ur pine is in Mislit Limits].[paragraph break]An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
 
 chapter scaly clays
 
@@ -22468,6 +22516,7 @@ this is the oyster-misses rule:
 	if lever is not reflexed, say "[2drm of tenfold]you could've stopped to [b]REVEL[r] before flipping the [b]LEVER[r].";
 	check-oyster-spill plasm lamps;
 	if Plasm Lamps is visited and bogus-psalm are not reflexed, say "[2drm of plasm lamps]you could've tried to [b]PSALM[r] in Plasm Lamps.";
+	if bogus-reangle is reflexive, say "[2da]you could've tried to [b]REANGLE[r] with the general gleaner.";
 
 to check-oyster-spill (rm - a room):
 	if spill-loc is rm, say "[2drm of rm][endgame-spill-instead] in [rm].";

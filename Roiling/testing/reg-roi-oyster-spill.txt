@@ -145,7 +145,7 @@ DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEA
 HOW PILLS WERE USED: SEARCH the arches.
 
 >z
-DEBUG INFO: Spilling general gleaner.
+DEBUG INFO: Spilling bogus-enlarge.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to ENLARGE the gleaner.
 HOW PILLS WERE USED: ENLARGE the gleaner.
 

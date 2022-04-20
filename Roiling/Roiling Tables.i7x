@@ -886,7 +886,8 @@ heaps	heaps	false	345016151	--	"shape"	"shape"	--	--	"You channel your inner art
 ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
 HUNTER HUNT AREA	sausage	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. Your destruction of [the HUNTER HUNT AREA] has brought up ... a weird sausage! You scry a cry as scary: 'My lost ruby!'[paragraph break]After it whines on for a bit, you realize you are not dealing with any old sausage, but a hard-done-by [uss]. It will moan and carry on until satisfied."	"The pills slip into [the HUNTER HUNT AREA], flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? [b]UNEARTH[r]. It's a big weird undead sausage! The sausage cries for its lost ruby! It moans about the horrid things it's seen and endured. It must be a [uss]."
 sausage	sausage	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The [sausage] waits on your next move."	"The [sausage] reaches out to grab the pills, hoping they might ease its pain. But they pass through its fingers. Crushing! The [sausage] shakes its head sadly, but then shrugs. It knows you tried, and it seems to trust you more now."
-gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
+bogus-enlarge	bogus-enlarge	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze.[paragraph break]Maybe if you were really interested, you could see everything, but it's probably not critical. You've got what you want."
+bogus-reangle	bogus-reangle	false	498444888	--	"reangle"	"reangle"	pre-reangle-gleaner rule	--	"You muddle with the gleaner some more. What else can be seen? Yes, in addition to the more obvious way through the Horned Hedron, you find several hiding spaces where baddies might skulk after it is destroyed, so they can avoid jail and rebuild more quickly for when they next wish to try to seize power."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay papery/yapper" or "prepay papery yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
 lever	lever	false	501914680	--	"revel"	"revel"	--	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample"	pre-trample-ramplet rule	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
@@ -1109,8 +1110,15 @@ this is the post-enlarge-gleaner rule:
 	if gleaner is examined:
 		say "[line break]You may wish to re-examine the gleaner now it's changed.";
 		now gleaner is unexamined;
+	now bogus-reangle is part of the gleaner;
+
+this is the pre-reangle-gleaner rule:
+	if gleaner-viewed is false:
+		say "Before re-angling, you decide to try something far less fancy: just examining the gleaner.[paragraph break]";
+		try examining the general gleaner;
 
 this is the post-yapper-prepay rule:
+	if bogus-reangle is not reflexed, poss-d;
 	moot gleaner;
 	now lever is in Tenfold Teflond Den Loft;
 	if wipes are moot:
@@ -2498,7 +2506,7 @@ promise imposer	"The promise imposer seems to talk about everything except what 
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]Why, they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if dinger is touchable][agnostic] would be too distracted for general conversation even without [dinger].[else if bot boat is touchable][agnostic] gestures to a bot boat. It could help you across Leak Lake![else if player is in obscurest subsector]That would confuse [agnostic]--you need to help Dr. Yow present things just a bit better.[else][agnostic] blinks a bit. 'I'm not really good with the whole general conversation thing. But I'll be glad to tell you technical stuff if we just [b]TALK[r].'[one of][paragraph break][i][bracket]NOTE: [b]TALK TO[r][i] [agnostic] will give the most information to start.[close bracket][r][or][stopping][end if]"
 Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too absorbing[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
+Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too absorbing[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]?[paragraph break]'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
 
@@ -3063,7 +3071,6 @@ frat raft	"Now you've charged up the frat raft, you need to find a way to use th
 snarled darnels	"You had your say about the snarled darnels."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
-gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if tenfold is visited]The gleaner's no longer valuable to your quest. But it still has bartering value[else if gleaner-viewed is true]The gleaner will help you navigate the Horned Hedron without any need for special commands[end if]."
 lever	"The lever was designed not to give extra points for pulling it too much."
 
 table of towers hint request rejects
@@ -3375,7 +3382,8 @@ Achers Chaser Arches	true	true	false	false	"You note they're also [b]CHASER[r] a
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
 use saga sausage	true	true	false	false	"The [sausage]'s moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it."
 Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay."
-general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad."
+bogus-enlarge	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad."
+bogus-reangle	true	false	false	false	"Hmm! There's something more to do with the gleaner. You've gotten what you need, though."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
 papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
@@ -3675,7 +3683,8 @@ Achers Chaser Arches	"Hm, you almost thought you found something. But you have m
 ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
 use saga sausage	"You're a bit tongue-tied, but that seems close."
 ol trap	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
-gleaner	"The gleaner remains too small to read."
+bogus-enlarge	"The gleaner remains too small to read."
+bogus-reangle	"All you really [if gleaner-viewed is true]had[else]have[end if] to do with the gleaner [if gleaner-viewed is true]was[else]is[end if] to examine it. There might be more in the gleaner, but trying that gives nothing."
 papery yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
 bogus-derail	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
@@ -3759,6 +3768,7 @@ weirder red wire	"You think you see how to untangle some of the mess inside the/
 earnest eastern neaters	"You feel less split from everyone else for a second."
 repents serpent	"The serpent calms down for a split-second[serp-try]."
 ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
+nastier stainer retinas	"The [retinas] seem to blink a bit and look around uneasily."
 itster	"[The tetris sitter] breaks her glassy smile for a moment."
 done any anodyne	"The [anodyne] rattles."
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
@@ -3965,7 +3975,7 @@ Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
 use saga sausage	"Don't oversell it! Just take [the sausage] to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"It was enough to bury the ruby."
-gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner-viewed is false] except examine it[end if]."
+bogus-reangle	"You've exhausted the possibilities with the gleaner."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 
 table of towers done rejects
@@ -4083,12 +4093,13 @@ LOLstr trolls	"You can [b]STROLL[r] past the LOLstr trolls [now-once of whether 
 frat raft	"You can [if player is not on frat raft]get on the frat raft and [end if][b]FART[r]."
 trout	"You should be able to [b]TUTOR[r] the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
 hunter hunt area	"You can [b]UNEARTH[r] the [b]HAUNTER[r] (from under the [b]HUNTER HUNT AREA[r]) with the right equipment."
-Achers Chaser Arches	"[b]SEARCH[r] the arches."
+Achers Chaser Arches	"You can [b]SEARCH[r] the arches [now-if-dealt of sandier sardine] you've chased the sandier sardine away."
 crate	"You can [b]REACT[r] to the crate better [now-if-dealt of bogus-trace] you have more data."
 skis	"You can [b]KISS[r] the skis [now-if-dealt of bogus-trace] you are less distracted."
 span pans	"You can [b]SNAP[r] to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
 ruby	"You need to figure how and where to [b]BURY[r] the ruby."
 ol trap	"You can [b]PATROL[r] to disable the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
+bogus-reangle	"You can [b]REANGLE[r] the general gleaner [now-if-dealt of bogus-enlarge] you've figured how to see something more basic in it."
 bogus-derail	"You can use the dialer to [b]DERAIL[r] [now-if-dealt of papery yapper] the papery yapper is gone."
 bogus-redial	"You can [b]REDIAL[r] the dialer [if pins are off-stage]once you've dialed successfully[else][now-if-dealt of pins] the pins are not in your way[end if]."
 lance	"You'll want to [b]CLEAN[r] the lance [now-once of whether or not player has wipes] you have something to wash it with."
@@ -4497,7 +4508,8 @@ ol trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or
 pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or][b]ENLARGE[r] the gleaner to make the portal work for you.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The [if sausage is off-stage]haunter, once you find it,[else][sausage][end if] will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea at a tee is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or][b]EAT TEA[r].[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or][b]SEARCH[r].[minus][cycling][end if]"
-gleaner	"[if gleaner is reflexed and gleaner is not examined][b]EXAMINE[r] the general gleaner, now you've enlarged it.[else if gleaner is reflexed]You've done what you needed.[else][one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the [b]GLEANER[r] bigger?[plus][or]The settler gives you where the vowels are.[plus][or][b]ENLARGE[r] the gleaner.[minus][cycling][end if]"	--	"[b]ENLARGE[r] the gleaner"
+bogus-enlarge	"[one of]What could you do to make the [b]GLEANER[r] bigger and more easy to look into?[plus][or]The settler gives you where the vowels are.[plus][or][b]ENLARGE[r] the gleaner.[minus][cycling]"	--	"[b]ENLARGE[r] the gleaner"
+gleaner	"[if gleaner-viewed is false][b]EXAMINE[r] the general gleaner, now you've enlarged it.[else]You've done what you needed with the gleaner. The gleaner is useful narratively later on, and you don't need to act on it implicitly.[gleaner-extra][end if]"	--	--
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or][b]TAN[r] the ant.[minus][cycling]"	--	"[b]TAN[r] the ant"
 bogus-psalm	"[one of]The plasm lamps can inspire you to do something else. Something a templar might do.[plus][or]The action for a bonus point is more commonly known as a noun, but it works as a verb, too.[plus][or][b]PSALM[r].[minus][cycling]"	--	"[b]TAN[r] the natant ant"
 stupid paper necklace	"The paper necklace gives a clue what to do with the yapper."
@@ -4510,6 +4522,12 @@ lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[p
 bogus-derail	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things, but let's tackle the first.[plus][or]What's a destructive anagram of [b]DIALER[r]?[plus][or]You can submit an order to [b]DERAIL[r].[minus][cycling]"	--	"[b]DERAIL[r] with the dialer"
 bogus-redial	"[one of]The dialer is dangerous and destructive. But it's also flexible. You've gotten it to [b]DERAIL[r], but it can do something else.[plus][or]Elvira wasn't happy about your attempts to [b]DERAIL[r], and she said you'd better not do it again. You need to buck her orders.[plus][or][or]The dialer can [b]REDIAL[r] as well.[minus][cycling]"	--	"[b]REDIAL[r] with the dialer"
 dialer	"You've reached a fallthrough case I didn't expect. Sorry about that."
+
+to say gleaner-extra:
+	if bogus-reangle is reflexed:
+		say "[line break]You managed to [b]REANGLE[r] the gleaner.[no line break]";
+	else:
+		say "[one of]There's something else you can do with the gleaner for a bonus point.[plus][or]You can view the gleaner a different way beyond examining.[plus][or][b]REANGLE[r] the gleaner.[minus][cycling][no line break]";
 
 to say dh-true: now trolls-hinted is true;
 

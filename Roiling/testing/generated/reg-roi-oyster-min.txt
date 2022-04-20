@@ -14,7 +14,7 @@ Posh Hops Shop
 >posf
 
 >score
-Score in a scenario: 0 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 43.
+Score in a scenario: 0 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 44.
 
 >get pills
 Taken.
@@ -35,13 +35,13 @@ SCRAPE
 UNSET/REMAP
 
 >score
-Score in a scenario: 1 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: 1 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
 
 >calm
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 2 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: 2 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
 
 >run
 Your score has just gone up by one point
@@ -49,7 +49,7 @@ Your score has just gone up by one point
 Disease Seaside
 
 >score
-Score in a scenario: 3 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: 3 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
 
 #not a mistake
 >boast
@@ -58,7 +58,7 @@ Your score has just gone up by one point
 Fighter Freight
 
 >score
-Score in a scenario: 4 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: 4 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
 
 >leap
 Your score has just gone up by one point
@@ -66,7 +66,7 @@ Your score has just gone up by one point
 Anger Range
 
 >score
-Score in a scenario: 5 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: 5 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
 
 >scrap
 Your score has just gone up by one
@@ -75,7 +75,7 @@ Your score has just gone up by one
 Hardest Trashed Dearths
 
 >score
-Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
 
 >seek
 Your score has just gone up by one point
@@ -85,23 +85,23 @@ Your score has just gone up by one point
 Lean Lane
 
 >score
-Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >eat
 #notana 'nudge for eat'
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >score
-Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >tutor
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 9 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >w
 >n
@@ -111,31 +111,31 @@ Lapsin' Plains
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >react
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 11 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >kiss
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >bonk
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 13 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >snap
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 14 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >in
 
@@ -145,13 +145,13 @@ Shuttle Hutlets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 15 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >drop
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >out
 
@@ -164,13 +164,13 @@ Sclerous Closures
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 17 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >search
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 18 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >enlarge
 Your score has just gone up by one point
@@ -178,7 +178,7 @@ Your score has just gone up by one point
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
-Score in a scenario: 19 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 19 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >n
 Horned Hedron
@@ -190,7 +190,7 @@ Rascal Craals
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 20 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >e
 >s
@@ -202,20 +202,20 @@ Score in a scenario: 20 out of 43 total points in the current region, Oyster. Lo
 by one point
 
 >score
-Score in a scenario: 21 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 21 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >assuage
 by one point
 
 >score
-Score in a scenario: 22 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >ask haunter about ruby
 #notana
 by one point
 
 >score
-Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 23 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >w
 
@@ -229,10 +229,9 @@ Score in a scenario: 23 out of 43 total points in the current region, Oyster. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 24 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >x gleaner
-You see a map of all the paths in the Horned Hedron.
 
 >in
 
@@ -242,19 +241,19 @@ Tenfold Teflon'd Den Loft
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 25 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
 
 >derail
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 26 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
 
 >spin
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+Score in a scenario: 27 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
 
 >au 0
 
@@ -267,5 +266,5 @@ Strip of Profits
 This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything you can?
 
 >score
-Oyster (28/43)
+Oyster (28/44)
 

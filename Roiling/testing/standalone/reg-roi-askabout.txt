@@ -2371,7 +2371,7 @@ St. Teri thanks you for aiding her spiritual growth. In return, just go out and 
 
 >ask sitter about curst palace
 "It can be something super special.
-He-he. Eh? If only..." You got no concrete clues, but St. Teri's observations were a help. Maybe you can come back for another, later, if you still have no luck outside.
+He-he. Eh?" You got no concrete clues, but St. Teri's observations were a help. Maybe you can come back for another, later, if you still have no luck outside.
 /(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed)
 
 >ask sitter about xyzzy

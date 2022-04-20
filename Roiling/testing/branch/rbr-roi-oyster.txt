@@ -14,8 +14,8 @@ files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,re
 ~	hints,hin	t4
 ~	verbs	verbs
 
-}}MAX=43
-}}CURMAX=43
+}}MAX=44
+}}CURMAX=44
 }}SCORE=0
 }}CURMIN=28
 
@@ -2115,7 +2115,7 @@ Silence.
 @max
 #+ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
-You can SEARCH the arches once you've chased the sandier sardine away.
+You can SEARCH the arches now you've chased the sandier sardine away.
 
 >score
 {$SCOS}
@@ -2142,7 +2142,9 @@ You hope to have peered deeper for a vision, but it's too small. All you can mak
 >e
 >x gleaner
 You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of Sclerous Closures, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
->w
+>undo
+>undo
+>undo
 
 @nud
 #+ttc-table-of-sclerous-closures-nudges-arch
@@ -2164,9 +2166,6 @@ The gleaner was made by Al Green, written in red.
 #ttc-table-of-oyster-scannotes-general-gleaner
 >scan general gleaner
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
-#mistake test for reangle
->reangle
-You REANGLE, which is functionally equivalent to just examining the general gleaner.
 
 @sli
 #slider test for enlarge
@@ -2174,35 +2173,46 @@ You REANGLE, which is functionally equivalent to just examining the general glea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
+#mistake test for reangle
+>reangle
+You might be able to REANGLE after doing something more necessary with the gleaner.
+>pf
+You can REANGLE the general gleaner once you've figured how to see something more basic in it.
+
+@max
 >enlarge gleaner
 by one point
+>undo
+>x gleaner
+You hope to have peered deeper for a vision, but it's too small.
+>enlarge
+You may wish to re-examine the gleaner now it's changed.
+>undo
 >undo
 
 >enlarge
 Your score has just gone up by one point
 }}SCORE++
 
-@max
-You may wish to re-examine the gleaner now it's changed.
-@!
 !You may wish to re-examine the gleaner now it's changed.
+
+>score
+{$SCOS}
+
+@hints
+>ss
+the general gleaner (very blurry)
+!the the
 
 @nud
 #ttc-table-of-oyster-done-rejects-gleaner
 >gleanre
-It's already been made bigger. Not much more you can do with it except examine it.
+All you really have to do with the gleaner is to examine it. There might be more in the gleaner, but trying that gives nothing.
 
 @hints
-#ttc-table-of-oyster-hint-request-rejects-gleaner
->hint gleaner
-You just need to examine the gleaner to figure what to do with it.
-\\
 #ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
 >hint
 You've gotten passage north and found something important, so you're done here.
-
->score
-{$SCOS}
 
 >n
 Horned Hedron
@@ -2454,6 +2464,18 @@ You've found a way further in, and that's all you need here
 >score
 {$SCOS}
 
+@max
+>in
+End Den
+>x gleaner
+You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side.
+\\
+Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...
+\\
+Tenfold
+>undo
+>undo
+
 @verbs
 # prime GT END DEN for later
 >in
@@ -2474,50 +2496,23 @@ That was my pen name in Shuffling Around.
 #ttc-table-of-end-den-nudges-end
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
->x gleaner
-You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side.
-Den Loft
->undo
->out
 
 @hin
 >hint gleaner
-You may wish to re-examine the gleaner now it's changed.
-
-@nud
-#mistake retest for reangle
->reangle
-You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
-#brackets ok
-You REANGLE, which is functionally equivalent to just examining the general gleaner.
-
->x gleaner
-You see a map of all the paths in the Horned Hedron.
-
-@nud
-#ttc-table-of-oyster-done-rejects-gleaner
->gleanre
-It's already been made bigger. Not much more you can do with it.
-
-@hin
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
-@nud
-#+ttc-table-of-oyster-done-rejects-gleaner
->gleanre
-It's already been made bigger. Not much more you can do with it.
-
-@verbs
-#verbcase goto-oyster-if-noun-is-end-den-and-gleaner-is-realized
->gt end den
-No need to go back there.
+EXAMINE the general gleaner, now you've enlarged it.
 
 @hin
 >gt anger range
 #ttc-table-of-oyster-location-hint-checkoffs-anger-range
 You've gotten all you need from the Use-Saga Sausage. Hero's Shore has nothing left to offer you.
 >undo
+
+>x gleaner
+
+@verbs
+#verbcase goto-oyster-if-noun-is-end-den-and-gleaner-is-realized
+>gt end den
+No need to go back there.
 
 >in
 
@@ -2615,14 +2610,31 @@ Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to 
 Your score has just gone up by one
 >undo
 
+@!min
+>reangle
+by one point
+}}CURMIN++
+}}SCORE++
+\\
+>score
+{$SCOS}
+
+@nud
+#ttc-table-of-oyster-done-rejects-bogus-reangle
+>gleanre
+You've exhausted the possibilities with the gleaner.
+
 @hints
 #ttc-table-of-oyster-hint-request-rejects-gleaner
 >hint gleaner
-The gleaner's no longer valuable to your quest. But it still has bartering value.
+You've done what you needed with the gleaner. The gleaner is useful narratively later on, and you don't need to act on it implicitly.
 
 >prepay
 Your score has just gone up by one point
 }}SCORE++
+
+@min
+}}CURMAX--
 
 @hin
 DEBUG INFO: dialer hinting.
