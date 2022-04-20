@@ -22,7 +22,7 @@ understand "use [text]" as a mistake ("The verb [b]USE[r] is a bit too nonspecif
 
 understand "knock [text]" as a mistake ("Just [b]KNOCK[r] instead.");
 
-understand "cheat on/off" and "teach on/off" as a mistake ("Just type c/t or cheat/teach to toggle. Note: settler is currently in [unless cheat-on is true]non-[end if]cheat mode.") when player has settler.
+understand "cheat on/off" and "teach on/off" as a mistake ("Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in [unless cheat-on is true]non-[end if]cheat mode.") when player has settler.
 
 understand "hug [text]" and "hug" as a mistake ("Hug? Ugh. Guh.")
 
@@ -518,8 +518,6 @@ to decide whether skid-disk-touch:
 	if skid is touchable or disk is touchable, yes;
 	no;
 
-understand "a elf" as a mistake ("You don't need any D&D character to magick things the rest of the way here.") when flea is touchable or leaf is touchable.
-
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is touchable or cola-around.
 
 understand "alef" as a mistake ("You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.") when flea is touchable or leaf is touchable.
@@ -529,6 +527,8 @@ understand "bat" as a mistake ("You don't want to take a bat to anything, here. 
 understand "clock sap" and "cock slap" and "slap cock" as a mistake ("The locs aren't that gangsta, and neither are you. And that's a good thing.") when locs pack is touchable.
 
 understand "diver" as a mistake ("It's you that'll need to dive into some code.") when player is in Hacks Shack.
+
+understand "elf" as a mistake ("You don't need any D&D character to magick things the rest of the way here.") when flea is touchable or leaf is touchable.
 
 understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is touchable or flea is touchable.
 
@@ -628,6 +628,10 @@ understand "thread" and "threads" as a mistake ("There are no clothing stores ar
 
 chapter Lean Lane
 
+to say glean-enl:
+	skip upcoming rulebook break;
+	try examining gleaner;
+
 understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea at a tee is in location of player
 
 understand "ate" as a mistake ("You're getting ahead of yourself here.") when tea at a tee is in location of player.
@@ -638,7 +642,7 @@ understand "eta" as a mistake ("ETA's one move later now that you went fishing f
 
 understand "neal" as a mistake ("It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.") when player is in Lean Lane.
 
-understand "reangle" as a mistake ("You tilt the gleaner around to try to see it from a different point of view. [if general gleaner is reflexed]You see nothing new--enlarging it seemed to do enough[else]If there are any differences, they're too small for you to see[end if].") when player has general gleaner.
+understand "reangle" as a mistake ("You [b]REANGLE[r], which is functionally equivalent to just examining the general gleaner.[glean-enl]") when player has general gleaner.
 
 understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when player is in Lean Lane.
 
