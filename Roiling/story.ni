@@ -1466,7 +1466,7 @@ this is the goto-oyster rule:
 	if noun is Rascal Craals and sausage is moot, say "The Rascal Craals are inaccessible now that [the sausage] has torn through them. You don't need or want to hang out there, though." instead;
 	if noun is End Den and gleaner-viewed is true, say "No need to go back there." instead;
 	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
-	if location of player is Fighter Freight and noun is not Disease Seaside, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
+	if location of player is Fighter Freight and noun is not Disease Seaside, say "That's too far back. You need to keep making progress. Follow the pale plea!" instead;
 
 this is the goto-towers rule:
 	if noun is Dourest Detours or noun is Arid Den, say "No thanks. Once was enough." instead;
@@ -1475,7 +1475,6 @@ this is the goto-towers rule:
 		move duck to noun;
 		continue the action;
 	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
-	if noun is Rawest Waters, say "The Rawest Waters of Leak Lake would probably be even less fun the second time around." instead;
 
 this is the goto-otters rule:
 	if player is in Rancho Archon Anchor, elvira-flee-taunt;
@@ -1513,7 +1512,7 @@ Fighter Freight	4	--	"You don't really want to revisit the crays."
 --	5	oyster	[oyster]
 Loftier Trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
 --	2	towers	"You don't want to cross Leak Lake again."
-Rawest Waters	3	--	"Leak Lake wasn't fun the first time."
+Rawest Waters	3	--	"The Rawest Waters of Leak Lake would probably be even less fun the second time around."
 Mesprise Premises	4	--
 Mislit Limits	4	--	[towers]
 
