@@ -6631,15 +6631,30 @@ chapter cting
 
 [* c=t=cheat=teach=push tech etcha'/cheat button]
 
-cting is an action applying to nothing.
+cheatoning is an action out of world.
+cheatoffing is an action applying to nothing.
 
 understand the command "c/t/cheat/teach" as something new.
 
-understand "c" and "t" and "cheat" and "teach" as cting.
+understand "c" and "cheat" as cheatoning.
+understand "t" and "teach" as cheatoffing.
 
-carry out cting:
+this is the settler-reject rule:
 	if settler is not touchable, say "[reject]" instead;
-	try pushing tech etcha instead;
+
+carry out cheatoning:
+	abide by the settler-reject rule;
+	say "You [if cheat-on is true]already [end if]set a tech etcha['] mode on.";
+	now cheat-on is true;
+	check-parse-spare;
+	the rule succeeds;
+
+carry out cheatoffing:
+	abide by the settler-reject rule;
+	say "You [if cheat-on is false]already [end if]set a tech etcha['] mode off.";
+	now cheat-on is false;
+	check-parse-spare;
+	the rule succeeds;
 
 chapter sbing
 
@@ -8270,7 +8285,7 @@ section a tech etcha
 
 a tech etcha is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as a tech etcha when player has settler. printed name is "tech etcha[']".
 
-description of tech etcha is "It says [b]A TECH ETCHA[r]['] in the middle, with [if cheat-on is true]a glowing [end if][b]CHEAT[r] below and [unless cheat-on is true]a glowing [end if][b]TEACH[r] below. You could [b]PUSH[r] it to change that, or just type [b]CHEAT[r] or [b]TEACH[r]."
+description of tech etcha is "It says [b]A TECH ETCHA[r]['] in the middle, with [if cheat-on is true]a glowing [end if][b]CHEAT[r] below and [unless cheat-on is true]a glowing [end if][b]TEACH[r] below. You could [b]PUSH[r] it to change that, or just type [b]CHEAT[r] or [b]TEACH[r]. Presumably the [b]TEACH[r] is to help you teach yourself."
 
 after examining tech etcha for the first time: say "You reflect that while 'a tech etcha[']' feels a little forced, well, sometimes a kludge like that is the only way to get any results."
 
