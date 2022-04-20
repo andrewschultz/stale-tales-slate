@@ -5284,6 +5284,48 @@ Rule for printing a parser error when the latest parser error is the I beg your 
 	now pardons is false;
 	follow the alert you don't have to gawk rule;
 
+chapter I6 code for TAKE EAST
+
+Include (-
+
+[ BASIC_ACCESSIBILITY_R mask at;
+	if (act_requester) rfalse;
+	at = FindAction(-1);
+	if (at == 0) rfalse;
+	mask = ActionData-->(at+AD_REQUIREMENTS);
+
+	if ((mask & TOUCH_NOUN_ABIT) && noun && (inp1 ~= 1)) {
+		if (noun ofclass K3_direction) {
+			RulebookFails();
+			reason_the_action_failed = BASIC_ACCESSIBILITY_R;
+			if (actor~=player) rtrue;
+			print "You should not need to act physically on a direction, which is abstract.^^";
+			return true;
+		}
+		if (ObjectIsUntouchable(noun, (actor~=player), FALSE, actor)) {
+			RulebookFails();
+			reason_the_action_failed = BASIC_ACCESSIBILITY_R;
+			rtrue;
+		}
+	}
+
+	if ((mask & TOUCH_SECOND_ABIT) && second && (inp2 ~= 1)) {
+		if (second ofclass K3_direction) {
+			RulebookFails();
+			reason_the_action_failed = BASIC_ACCESSIBILITY_R;
+			if (actor~=player) rtrue;
+			return L__M(##Miscellany, 67);
+		}
+		if (ObjectIsUntouchable(second, (actor~=player), FALSE, actor)) {
+			RulebookFails();
+			reason_the_action_failed = BASIC_ACCESSIBILITY_R;
+			rtrue;
+		}
+	}
+	rfalse;
+];
+-) instead of "Basic Accessibility Rule" in "Actions.i6t".
+
 chapter mapping errors to help
 
 ana-repeats is a number that varies.
