@@ -540,7 +540,7 @@ ye hoop	angrier earring	true	517618773	--	"phooey"	"phooey"	--	--	"[pooh-phooey-
 ye hoop	angrier earring	true	267453412	--	"pooh"	"pooh"	--	--	"[pooh-phooey-actions][get-earring]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	--	post-nowt-town-wont rule	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-mazeltov rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
-ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"[l-n-r] look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' [l-n-r], busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo[']!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
+ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"[l-n-r] look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' [l-n-r], busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo[']!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'OK, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-or-keys rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, [l-n-r] grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	pre-hogs-not-keys rule	post-hogs-or-keys rule	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at [l-n-r] as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
 log ons letters	log ons letters	false	400300169	--	"solong"	"so long" or "solong"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
@@ -750,7 +750,7 @@ this is the pre-yak-keyboard rule:
 	if yak-around:
 		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
 		now try-keyboard is true;
-		preef bored yak;
+		preef drab yoke;
 		do nothing instead;
 
 this is the post-yak-keyboard rule:
@@ -1432,7 +1432,7 @@ book otters
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly re-tally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, you're able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect or need, say, a beryl."
-cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	pre-rescind-cinders rule	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
+cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, acting less impressively and more permissively. He slinks away in embarrassment."
 motleyer	motleyer	false	758646860	--	"remotely"	"remotely"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 butlery	butlery	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
@@ -1507,11 +1507,6 @@ this is the post-barley-barely rule:
 	move Edictal Citadel backdrop to all ominous rooms;
 	process the tag backdrops for hinting rule;
 
-this is the pre-rescind-cinders rule:
-	repeat through table of region initial scoring commentary:
-		if region-scored entry is not otters and points-gotten entry is not 2, next;
-		increment points-gotten entry;
-
 this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
 
@@ -1575,8 +1570,8 @@ this is the post-seacube-because rule:
 this is the pre-eels-else rule:
 	abide by the medal check rules for eels;
 	if sea cube is touchable:
-		preef eels;
 		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
+		preef eels;
 
 this is the post-eels-else rule:
 	de-inhib;
@@ -3970,7 +3965,7 @@ Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
 use saga sausage	"Don't oversell it! Just take [the sausage] to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"It was enough to bury the ruby."
-gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
+gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner-viewed is false] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 
 table of towers done rejects
@@ -4076,7 +4071,7 @@ table of presto prefigurings
 preflip	pretodo
 plebe	"You can shout [b]BLEEP[r] at the plebe [now-once of whether or not the player wears the tsar star] you look more authoritative."
 ether	"You can shout [b]THERE[r] [now-once of whether or not leo is eager and boing go bin is reflexed] you have the force to win the fight in the ether."
-drab yoke	"You can change the drab yoke to a [b]KEYBOARD[r] [now-once of whether or not yak is moot] it's free of the bored yak[if yak is moot and player is not in hacks shack], but go back to the [shack] first."
+drab yoke	"You can change the drab yoke to a [b]KEYBOARD[r] [now-once of whether or not yak is moot] it's free of the bored yak[if yak is moot and player is not in hacks shack], but go back to the [shack] first[end if]."
 be troo e robot	"You can have [the e robot] [b]REBOOT[r] [now-once of whether or not number of things on labs slab is 4] your computing parts are in place."
 peels speel	"You can [b]SLEEP[r] [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your coding task."
 Im Le Cop Polemic	"You can [b]COMPILE[r] [now-once of whether or not compile-yet] you've started coding."

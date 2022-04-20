@@ -739,8 +739,6 @@ when play begins (this is the debug by default when debugging rule) :
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
-[every turn when player is in Dusty Study and Report Porter Perrot is off-stage and debug-state is true:
-	say "Found: [stuff-found].";]
 
 section test extensions - not for release
 
