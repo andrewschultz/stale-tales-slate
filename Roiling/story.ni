@@ -6191,7 +6191,7 @@ this is the listen-presto rule:
 	if noun is Rand or noun is Leo:
 		if Rand is washed up:
 			say "You horn in on [l-n-r]'s small talk, and they open up to you a bit.";
-			try asking a random washed up person about "rannygazoo" instead;
+			try asking a random washed up bruiser about "rannygazoo" instead;
 	if player is in Dirge Ridge:
 		if Rand is washed up, try listening to Rand instead;
 		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with [l-n-r][end if]." instead;
@@ -12052,7 +12052,7 @@ lr-acq is a truth state that varies.
 to say lrblab:
 	say "[if lr-acq is true]recount[else]discover";
 
-check scaning a washed up person (this is the clue whassup if washups rule) :
+check scaning a bruiser (this is the clue whassup if washups rule) :
 	if Leo is washed up and Rand is washed up, try scaning wzup instead;
 
 to say r-l of (p - a person): say "[if p is Leo]Rand[else if p is Rand]Leo[else]BUG[end if]"
@@ -12063,11 +12063,11 @@ to say l-r: say "[if a random chance of 1 in 2 succeeds]Leo[else]Rand[end if]"
 
 to say l-n-r: say "[one of]Leo and Rand[or]Rand and Leo[at random]"
 
-persuasion rule for asking an eager person to try pulling the sled:
+persuasion rule for asking an eager bruiser to try pulling the sled:
 	say "[noun] says 'If somethin['] useful an['] heavy was onnit, sure, boss.'";
 	persuasion fails;
 
-persuasion rule for asking an eager person to try attacking the hogs:
+persuasion rule for asking an eager bruiser to try attacking the hogs:
 	say "[noun] counts on his fingers, reasoning that three is more than two and a haff. 'Sorry, boss.'";
 	persuasion fails;
 
