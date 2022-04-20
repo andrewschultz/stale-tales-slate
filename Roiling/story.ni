@@ -8359,42 +8359,36 @@ to show-bluables:
 		say "A few things:";
 	else:
 		say "Many things:";
-	say " [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. [one of]It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal[or]You turn the settler off[stopping].[line break]";
+	now blue-list is true;
+	say " [the list of bluable things]";
+	now blue-list is true;
+	say " [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. [one of]It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal[or]You turn the settler off[stopping].[line break]";
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
 	if ever-blur was false and ever-blur is true, say "[line break]You'd guess the blurry stuff indicates something isn't necessary to flip, or maybe it's something that can help with another item.";
 	d "[list of bluable things].";
 
+blue-list is a truth state that varies.
+
+after printing the name of a thing (called th) when blue-list is true:
+	if th is part of the diorama:
+		say " (faint)";
+	else if th is llpish-plus:
+		say " (very blurry)";
+		now ever-vblur is true;
+	else if th is blurry:
+		say " (a bit blurry)";
+	continue the action;
+
+for printing the name of a thing (called th) when blue-list is true:
+	if th is an altview listed in table of settler shake descriptions:
+		say "[alttext entry]";
+		the rule succeeds;
+	continue the action;
+
 ever-blur is a truth state that varies.
 ever-vblur is a truth state that varies.
-
-to say bluable-list:
-	let QQ2 be number of bluable things;
-	let inc be 0;
-	repeat with bloo running through bluable things:
-		increment inc;
-		if inc is QQ2 and QQ2 > 1:
-			say " and ";
-		if bloo is an altview listed in table of settler shake descriptions:
-			choose row with altview of bloo in table of settler shake descriptions;
-			if there is an alttext entry:
-				say "[alttext entry]";
-			else:
-				say "!!!!";
-				next;
-		else:
-			say "[the bloo]";
-		if bloo is part of the diorama:
-			say " (faint)";
-		else if bloo is llpish-plus:
-			say " (very blurry)";
-			now ever-vblur is true;
-		else if bloo is blurry:
-			say " (a bit blurry)";
-			now ever-blur is true;
-		if inc + 1 < QQ2:
-			say ", ";
 
 definition: a thing (called lp) is llpish-plus: [this means it's part of a puzzle already solved?]
 	if lp is llpish, yes;
@@ -8422,10 +8416,11 @@ lager	"the can of Large Regal Lager"
 Id Cede	"musical notes pulsing with the beat of [cede]"
 wzup	"a pair of hands patting [l-n-r] on the back" [presto]
 eeks	"some cartoony representation of [b]EEKS[r]" [oyster]
+bogus-reangle	"general gleaner"
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
 aside-llp	"rays of tension between [e-n-m]" [otters]
 sorer bogey	"something pulsing in rhythm with the whines from the [if bogey-listen is true]sorer bogey[else]wells below[end if]" [others]
-a banna	"the/a banna[']"
+a banna	"(a) banna[']"
 fleeing feeling	"the word '[b]PERP[r]' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
