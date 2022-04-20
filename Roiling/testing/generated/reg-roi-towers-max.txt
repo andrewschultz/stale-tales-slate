@@ -184,9 +184,11 @@ You can make the Curst Palace SPECTACULAR once you're near it.
 Your score has just gone up by one point
 
 >put tarts in toaster
+Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
+
 #ttc-table-of-notepad-entries-xray
 >pad xray
-Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
+You can XRAY something you can't describe to see what it can or should be, with that skan-snak you ate. You can wait as long as you want/need.
 
 >score
 Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -210,6 +212,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+
+#ttc-table-of-castle-approaching-narratives-7
+#ttc-table-of-towers-progress-comments-actionless-coastlines
+You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
 
 >reined
 Your score has just gone up by one point
@@ -576,10 +582,6 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 
 Actionless Coastlines
 
-#ttc-table-of-castle-approaching-narratives-7
-#ttc-table-of-towers-progress-comments-actionless-coastlines
-You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
-
 >grained
 Your score has just gone up by one point
 
@@ -655,6 +657,11 @@ Mislit Limits
 #ttc-table-of-castle-approaching-narratives-9
 #ttc-table-of-towers-progress-comments-mislit-limits
 The palace--well, you can see why it was spectacular, once.
+>au 0
+>spectacular
+This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything?
+>undo
+>undo
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
@@ -707,6 +714,9 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
+>ask teri about palace
+It can be something super special.
+
 >out
 
 #ttc-table-of-notepad-entries-scenery
@@ -716,10 +726,9 @@ St. Teri told you to look for
 >misses
 
 >spectacular
-
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 Strip of Profits
 

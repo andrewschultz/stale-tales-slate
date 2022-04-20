@@ -42,14 +42,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 #mistake test for throes
 >rove over
 Strip of Profits
+\\
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
 \\
-#mistake test for reaves
->reaves
-You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
-
-@mis
 #ttc-table-of-strip-of-profits-nudges-storer
 >storre
 The resort and Store R led to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now.
@@ -59,7 +55,7 @@ The resort and Store R led to the Means Manse last game. It won't go anywhere ne
 >undo
 
 >ts
->t
+>c
 
 @verbs
 >gt study
@@ -291,6 +287,12 @@ The shells don't move. Perhaps they are just a clue of what Store Y can become.
 >sorbte
 The smell from Store B becomes fruitier and more delicious.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a decent omen.
+
+@mis
+#(we need ts to set autosave-known to true)
+#mistake retest for reaves
+>reaves
+You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
 
 @!min
 >sorbet

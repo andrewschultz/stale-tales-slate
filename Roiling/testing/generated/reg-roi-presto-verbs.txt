@@ -8,7 +8,7 @@
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -199,11 +199,6 @@ The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitab
 >damn
 No, that's too strong for here. You've been doing quite well with the tame stuff.
 
->goodness
-by one point
->score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
 #verbcase listen-presto-if-player-is-in-dirge-ridge
 >listen
 The odes song is gone, but you still just feel mad about things
@@ -212,7 +207,7 @@ The odes song is gone, but you still just feel mad about things
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 >bother
 You had your chance for a minor swear or two. And you took it. Yay, you.
@@ -227,6 +222,11 @@ small talk, and they open up to you a bit.
 >whassup
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 

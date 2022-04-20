@@ -382,10 +382,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >enlarge
 Your score has just gone up by one point
 
->x gleaner
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
@@ -510,13 +506,6 @@ Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lo
 >erlve
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->revel
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-
->score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
-
 #slider test for derail
 >edarli
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -525,7 +514,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #slider test for spin
 >psni
@@ -535,11 +524,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #slider test for redial
 >eridla
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 #not a mistake
 >redial

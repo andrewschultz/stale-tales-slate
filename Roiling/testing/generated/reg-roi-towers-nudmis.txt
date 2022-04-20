@@ -31,7 +31,7 @@ Deal with Rodney, not any part of his chosen sub-names.
 >read article
 This version was written by some lovely chap named ALTERIC.
 
->t
+>c
 #ttc-table-of-loftier-trefoil-nudges-trefoil
 >trefoli
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -318,7 +318,7 @@ It probably needs less crust, not more. The whole curst palace.
 #ttc-table-of-towers-spechelp-curst-palace
 >curst palaec
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
-So here is a one-time general guideline on what to do in this area: one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight.
+So here is a one-time general guideline on what to do in this area: one final word will work here, to make things as they should be. It is eleven letters long, but everything else is shorter--most are from six to eight letters, though optional ones may be from five to nine.
 !Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
@@ -451,7 +451,7 @@ Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, e
 >scan palace
 Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace
 !Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler.
->t
+>c
 >s
 >scan palace
 You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
@@ -683,7 +683,7 @@ Your settler registers RRYR?YR****.
 Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
 >scan palace
 !Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
->t
+>c
 #ttc-table-of-anemic-cinema-nudges-cinema
 >cineam
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -2162,9 +2162,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
->ask teri about palace
-It can be something super special.
-
 >out
 
 You notice something you wouldn't have seen without St. Teri's help.
@@ -2240,10 +2237,9 @@ The final entry blinks alternately with the fifth--neither is purple at the same
 !The entire settler lights up, finally!
 
 >spectacular
-
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 Strip of Profits
 

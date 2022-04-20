@@ -22,7 +22,7 @@ files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,re
 ~	spoi,spo	t5
 ~	verbs	verbs
 
-ALSO-IGNORE:t
+ALSO-IGNORE:t,c
 
 }}MAX=45
 }}CURMAX=45
@@ -87,7 +87,7 @@ The slime actually smells...nice, like dishwashing detergent.
 >attack curtis
 Aw, c'mon. Maybe Curtis is sort of bossy, but he's not that bad.
 
->t
+>c
 >z
 >z
 
@@ -848,6 +848,7 @@ Your score has just gone up by one point.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
 @hin
+##balance undos
 >coconuts
 by one point
 >s
@@ -859,6 +860,11 @@ by one point
 #ttc-table-of-settler-shake-descriptions-icons
 >ss
 Only the icons you made are visible. You turn the settler off.
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >s
 Curtis hands you a coin
@@ -1537,7 +1543,7 @@ Hm, that certainly cuts things down a ton. Just one possibility.
 >t
 >scan auction caution
 Hm, that certainly cuts things down a ton. Just three possibilities.
->t
+>c
 #ttc-table-of-others-spechelp-peach
 >peahc
 The peach still looks too expensive.
@@ -2179,6 +2185,9 @@ You've done enough reviewing, and now you can just go north.
 #ttc-table-of-others-nudges-repp
 >repp
 You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. Just go north through the gates.
+
+@min
+>au 0
 
 >n
 #notana

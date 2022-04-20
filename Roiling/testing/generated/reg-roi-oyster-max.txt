@@ -14,7 +14,8 @@ Posh Hops Shop
 >posf
 
 >talk to casper
-[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
+[You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.]
+
 #ttc-table-of-notepad-entries-die-thou
 >pad die thou
 If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them.
@@ -437,16 +438,19 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 43 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 43.
 
+>abstract wipes to lean lane
 #pre-clean-lance rule
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
-added
+FLIPS
+
 #ttc-table-of-oyster-prefigurings-lance
 >pf
 You'll want to CLEAN the lance once you have something to wash it with.
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
-!added
+!FLIPS
+>undo
 >undo
 >undo
 >undo
@@ -490,7 +494,7 @@ Sclerous Closures
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
 #ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
-SEARCH the arches.
+You can SEARCH the arches once you've chased the sandier sardine away.
 
 >warp wrap
 by one point
@@ -498,6 +502,10 @@ by one point
 
 >warp
 Your score has just gone up by one point
+
+#+ttc-table-of-oyster-prefigurings-achers-chaser-arches
+>pf
+You can SEARCH the arches once you've chased the sandier sardine away.
 
 >score
 Score in a scenario: 28 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
@@ -526,10 +534,6 @@ by one point
 
 >enlarge
 Your score has just gone up by one point
-
->x gleaner
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
 
 You may wish to re-examine the gleaner now it's changed.
 
@@ -635,9 +639,14 @@ The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't to
 #ttc-table-of-oyster-prefigurings-bogus-derail
 >pf
 You can use the dialer to DERAIL once the papery yapper is gone.
-#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
+
 #ttc-table-of-oyster-prefigurings-bogus-redial
-You can use the dialer to REDIAL once you've dialed successfully.
+>redial
+You can't even dial with the yapper around.
+>pf
+You can REDIAL the dialer once you've dialed successfully
+
+#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
 >revel
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
@@ -704,18 +713,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
->revel
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-
->score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
-
 >derail
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #pre-dialer-redial rule
 >redial
@@ -733,11 +735,21 @@ Your score has just gone up by one
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
+>au 0
 >redial dialer
 by one point
+This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything?
 >undo
+>undo
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
 
 #not a mistake
 >redial

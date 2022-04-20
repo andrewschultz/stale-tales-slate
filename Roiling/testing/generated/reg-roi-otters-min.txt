@@ -12,7 +12,7 @@
 >seed 1
 >ts
 >a5
->t
+>c
 >otters
 
 >opt in
@@ -212,6 +212,7 @@ by one point
 Rancho Archon Anchor
 WTF FTW
 >7
+"No mercy, my crone! Corny, me?"
 
 >e
 
@@ -226,12 +227,11 @@ Score in a scenario: 23 out of 35 total points in the current region, Otters. Lo
 >misses
 !otters
 
->au 2
+>au 0
 >play whistle
-#notana
-by one point
-DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
-Elmo and Gretta are waiting for you back at the Means Manse
+This will defeat Elvira, but there are loose ends to tie up, if you like that sort of thing. Stay back and clean up everything you can?
+>rove over
+You decide, why not ROVE OVER?
 
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 

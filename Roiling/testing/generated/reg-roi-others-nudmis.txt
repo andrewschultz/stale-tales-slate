@@ -15,7 +15,7 @@
 >in
 Rustic Citrus
 
->t
+>c
 >z
 >z
 
@@ -888,7 +888,7 @@ Hm, that certainly cuts things down a ton. Just one possibility.
 >t
 >scan auction caution
 Hm, that certainly cuts things down a ton. Just three possibilities.
->t
+>c
 #ttc-table-of-others-spechelp-peach
 >peahc
 The peach still looks too expensive.

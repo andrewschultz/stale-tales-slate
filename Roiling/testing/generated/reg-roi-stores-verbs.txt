@@ -10,7 +10,7 @@
 >poss
 
 >ts
->t
+>c
 
 >gt study
 You already solved Ordeal Reload.

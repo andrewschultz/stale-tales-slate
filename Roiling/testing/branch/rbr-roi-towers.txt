@@ -25,7 +25,7 @@ files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,r
 }$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Towers. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Towers. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-ALSO-IGNORE:cheat,t
+ALSO-IGNORE:cheat,t,c
 
 ## *FILE
 ## *FORK
@@ -99,7 +99,7 @@ Rodney's voice would certainly seem droney by itself, but he segues into a march
 Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
 @nud
->t
+>c
 #ttc-table-of-loftier-trefoil-nudges-trefoil
 >trefoli
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -633,7 +633,7 @@ Most of these fellows seem short-named and not too complex. I mean, if they got 
 }}SCORE++
 
 @hin
-DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
+/DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
 
 >score
 {$SCOS}
@@ -733,13 +733,14 @@ You apparently can't scan the curst palace fully with the settler 'til you're al
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
 
-
 @verbs
->gt trefoil
-You had your fun in there.
 #verbcase listen-towers-if-player-is-in-topside-deposit
 >listen
 An unconvincing voice from where you came moans "Stop! Die!" You must ignore it and go forward.
+\\
+#ttc-table-of-goto-sectioning-loftier-trefoil-1--
+>gt trefoil
+You had your fun in there.
 
 >score
 {$SCOS}
@@ -787,7 +788,7 @@ It probably needs less crust, not more. The whole curst palace.
 #ttc-table-of-towers-spechelp-curst-palace
 >curst palaec
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
-So here is a one-time general guideline on what to do in this area: one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight.
+So here is a one-time general guideline on what to do in this area: one final word will work here, to make things as they should be. It is eleven letters long, but everything else is shorter--most are from six to eight letters, though optional ones may be from five to nine.
 !Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
@@ -934,9 +935,11 @@ You can just go north, though you can hint the tarts in the toaster if you want.
 
 @max
 >put tarts in toaster
+Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
+\\
 #ttc-table-of-notepad-entries-xray
 >pad xray
-Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
+You can XRAY something you can't describe to see what it can or should be, with that skan-snak you ate. You can wait as long as you want/need.
 
 >score
 {$SCOS}
@@ -980,7 +983,7 @@ Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, e
 >scan palace
 Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace
 !Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler.
->t
+>c
 >s
 >scan palace
 You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
@@ -1233,6 +1236,7 @@ Your score has just gone up by one point
 \\
 Actionless Coastlines
 \\
+{--max}#ttc-table-of-castle-approaching-narratives-7\\#ttc-table-of-towers-progress-comments-actionless-coastlines\\You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.\\
 >hastiest
 Your score has just gone up by one point
 }}SCORE++
@@ -1625,7 +1629,7 @@ Your settler registers RRYR?YR****.
 Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
 >scan palace
 !Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
->t
+>c
 #ttc-table-of-anemic-cinema-nudges-cinema
 >cineam
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -3334,9 +3338,6 @@ You don't see any new information about the curst palace this time.
 Actionless Coastlines
 
 @max
-#ttc-table-of-castle-approaching-narratives-7
-#ttc-table-of-towers-progress-comments-actionless-coastlines
-You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
 
 @spoi
 #towers anagrams for dinger
@@ -3680,9 +3681,9 @@ Trying to cross languages and make this Swears-Wasser does no good.
 Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
-#verbcase goto-towers-if-noun-is-rawest-waters
->gt rawest waters
-Rawest Waters would probably be even less fun the second time around.
+#ttc-table-of-goto-sectioning-rawest-waters-3--
+>gt waters
+The Rawest Waters of Leak Lake would probably be even less fun the second time around.
 >undo
 >undo
 >undo
@@ -3814,6 +3815,11 @@ Mislit Limits
 #ttc-table-of-castle-approaching-narratives-9
 #ttc-table-of-towers-progress-comments-mislit-limits
 The palace--well, you can see why it was spectacular, once.
+>au 0
+>spectacular
+This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything?
+>undo
+>undo
 
 @spoi
 #towers anagrams for curst palace
@@ -3821,10 +3827,14 @@ The palace--well, you can see why it was spectacular, once.
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
 @verbs
+#ttc-table-of-goto-sectioning--2-towers
+>gt deposit
+You don't want to cross Leak Lake again.
+\\
+#ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
->gt coastlines
-You don't want to cross Leak Lake again.
+
 
 >score
 {$SCOS}
@@ -4121,7 +4131,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-@nud
+@max
 >ask teri about palace
 It can be something super special.
 
@@ -4207,15 +4217,20 @@ The final entry blinks alternately with the fifth--neither is purple at the same
 >scan palace
 !The entire settler lights up, finally!
 
->spectacular
+@minh,mini
+>au 0
 
+>spectacular
 Your score has just gone up by one point
 
 @minh,mini
 }}SCORE++
 @!
 }}SCORE+=2
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
+
+@minh,mini
+This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything you can?
 
 Strip of Profits
 

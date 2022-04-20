@@ -60,7 +60,7 @@ Mum Ray's Summary!
 
 #ttc-table-of-mum-ray-summary-pages-1
 >x summary
-"The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness be happy enough, you guess."
+The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness and be happy enough, you guess.
 
 #ttc-table-of-mum-ray-summary-pages-2
 >x summary
@@ -179,6 +179,9 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the sit a nag. That's a decent omen. ??
 
+>pf
+You can lean AGAINST the anti-sag sit-a-nag now you feel less fear and more purpose.
+
 >against
 Your score has just gone up by one point
 
@@ -190,6 +193,8 @@ Score in a scenario: 6 out of 22 total points in the current region, Routes. Low
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the side art. That's a decent omen. ??
+>pf
+You can sit ASTRIDE the anti-sag sit-a-nag now you have a reason to.
 
 >astride
 Your score has just gone up by one point
@@ -213,7 +218,7 @@ DEBUG INFO: General LLPish min-up for worst ad.
 
 #ttc-table-of-notepad-entries-no-lag-logan
 >pad logan
-No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road.
+No-Lag Logan may have left behind a ship that can get you out of here. It is beyond an un-road.
 
 >out
 
@@ -265,11 +270,21 @@ That could work later, but the hog and ewe don't trust you to go by yet.
 >pf
 You can go THROUGH once you've managed to deal with the bent ewe.
 
+#+ttc-table-of-routes-spechelp-hurt-hog
+>throuhg
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+
 >between
 Your score has just gone up by one point
 
 >through
 Your score has just gone up by one point
+
+>au 0
+>beyond
+This will solve Routes. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything?
+>undo
+>undo
 
 >without
 Your score has just gone up by one point

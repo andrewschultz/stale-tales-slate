@@ -8,7 +8,7 @@
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -169,11 +169,6 @@ You gulp the crust and can't help thinking DARN. But you are too polite and/or r
 >score
 Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
->goodness
-by one point
->score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
 >darn
 Your score has just gone up by one point
 
@@ -182,11 +177,11 @@ You gulp the crust and can't help thinking WHASSUP. But you are too polite and/o
 /DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 #ttc-table-of-settler-shake-descriptions-wzup
 >ss
-A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+/A few things: the sods gone odes song \(very blurry\), a pair of hands patting (Leo and Rand|Rand and Leo) on the back and the boing-go bin are visible\.
 
 #not a mistake
 >whassup
@@ -200,6 +195,11 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 >hint tsar star
 The tsar star has done its duty.
 
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 

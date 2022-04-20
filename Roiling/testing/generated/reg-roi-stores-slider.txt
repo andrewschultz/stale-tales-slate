@@ -10,7 +10,7 @@
 >poss
 
 >ts
->t
+>c
 
 >slon
 #slider test for sorbet

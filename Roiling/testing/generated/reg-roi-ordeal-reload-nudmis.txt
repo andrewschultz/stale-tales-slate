@@ -7,6 +7,7 @@
 
 * ordeal-reload-thru
 
+>au 2
 >posf
 
 #ttc-table-of-ordeal-reload-nudges-ordeal
@@ -80,9 +81,9 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 No, it's a thing you can change the tables to. You didn't have to deal with adjectives in Shuffling Around, but maybe you will here, later. Much later.
 
 >think
+You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
 
->x chair
->x shelf
+Whoah! Bangish bashing at the isolani liaison!
 
 #ttc-table-of-dusty-study-nudges-rove
 >roev
@@ -152,9 +153,6 @@ Not one latch. All of them.
 
 >satchel
 Your score has just gone up by one point.
-
-# turn cheats on
->t
 
 #ttc-table-of-dusty-study-nudges-notice
 >notiec
@@ -388,16 +386,17 @@ You don't need a safe home, right now. You need adventure.
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
 #mistake test for cheat on/off/teach on/off
->cheat on
-Just type c/t or cheat/teach to toggle. Note: settler is currently in cheat mode.
->cheat off
-Just type c/t or cheat/teach to toggle. Note: settler is currently in cheat mode.
 >c
->teach on
-Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
->teach off
-Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>cheat on
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
+>cheat off
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
 >t
+>teach on
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
+>teach off
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
+>c
 #mistake test for pace/paces
 >pace
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
@@ -484,6 +483,9 @@ The ramp is useful now. Best keep it.
 
 >gt study
 Dusty Study
+>event mpa
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
+So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
 #ttc-table-of-ordeal-reload-spechelp-pavement
 >event mpa
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
@@ -659,6 +661,10 @@ You nod. "No clues counsel."
 
 Carven Cavern
 
+#ttc-table-of-ordeal-reload-spechelp-respect-specter
+>eecsprt
+The respect specter shrugs respectfully. "A deferred success."
+
 #ttc-table-of-carven-cavern-nudges-cavern
 >cavenr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -756,7 +762,7 @@ Nothing happens. You probably did what you needed.
 >t
 >scan respect specter
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
->t
+>c
 >scan respect specter
 "Six ambiguous readings may seem like a lot, but you can maybe stop to think if any need to be vowels or consonants. You can SCAN again if you want more hints."
 >undo

@@ -8,7 +8,7 @@
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -145,16 +145,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >osgndsoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->goodness
-by one point
->score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
 >darn
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 #slider test for whassup
 >sahwups
@@ -164,6 +159,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >whassup
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 

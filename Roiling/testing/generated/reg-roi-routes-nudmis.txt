@@ -15,7 +15,7 @@
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
 >au 2
->t
+>c
 #mistake test for follow [text]
 >follow zozimus
 A Roiling Original doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
@@ -1016,9 +1016,6 @@ It's more the content of the patters that you could deal with, if you wanted.
 >betwene
 The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
-#+ttc-table-of-routes-spechelp-hurt-hog
->throuhg
-You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 #ttc-table-of-sonancy-canyons-nudges-spheric
 >spherci
 The ciphers cannot be dispelled.

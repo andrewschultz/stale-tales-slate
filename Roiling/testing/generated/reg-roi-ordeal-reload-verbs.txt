@@ -7,6 +7,7 @@
 
 * ordeal-reload-thru
 
+>au 2
 >posf
 
 #verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
@@ -17,9 +18,9 @@ But you just woke up!
 Peace and quiet. No adventure. Yet.
 
 >think
+You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
 
->x chair
->x shelf
+Whoah! Bangish bashing at the isolani liaison!
 
 #verbcase sleep-ordeal-reload-if-report-porter-knocks
 >sleep
@@ -164,6 +165,16 @@ Carven Cavern
 >sleep
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
+
+#ttc-table-of-goto-sectioning--1-ordeal-reload
+>gt study
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+>gt gallery
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+>gt highest
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+>gt framing farming
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
 #ttc-table-of-ordeal-reload-attacks-plaster
 >attack plaster

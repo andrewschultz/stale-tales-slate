@@ -228,9 +228,12 @@ Score in a scenario: 25 out of 57 total points in the current region, Towers. Lo
 
 >misses
 
->spectacular
+>au 0
 
+>spectacular
 Your score has just gone up by one point
+
+This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything you can?
 
 Strip of Profits
 

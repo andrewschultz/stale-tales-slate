@@ -8,7 +8,7 @@
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -272,11 +272,15 @@ Hacks' Shack====
 --you could've made Drive A AVIDER.
 --you could've taken time to DERIVE how to improve Drive E.
 
+>au 0
+
 >sub
 Your score has just gone up by one point
 Diver time
 
 Strip of Profits
+
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything you can?
 
 >score
 

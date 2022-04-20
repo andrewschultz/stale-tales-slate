@@ -15,21 +15,19 @@
 >mbb 1
 
 >ts
->t
+>c
 >troves
 
 >scam
 
 >enter tastee
+Loather Rathole
 
 Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
 
 >monty hints
 >ptf 2
 DEBUG INFO: Eh, At Heat hinting.
-
->l
-Loather Rathole
 
 >ptf 0
 >z
@@ -45,6 +43,7 @@ Score in a scenario: 0 out of 30 total points in the current region, Troves. Low
 >gape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
@@ -164,7 +163,7 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 
 #ttc-table-of-settler-shake-descriptions-lager
 >ss
-A few things: the Ires Pad (a bit blurry), the box of diapers and the can of Large Regal Lager (very blurry) are visible. You turn the settler off.
+A couple things: the can of Large Regal Lager (very blurry) and musical notes pulsing with the beat of I'd Cede are visible.
 
 >glare
 Your score has just gone up by one point
@@ -303,20 +302,20 @@ In particular, you feel the need to RECANT right now.
 In particular, you feel the need to RECANT right now.
 >undo
 
->romanticise
->score
-Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
-
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
 >resist
 Your score has just gone up by one point
 
 DEBUG INFO: Trance Nectar hinting.
 
+>score
+Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+
+>romanticise
 >score
 Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 30 points.
 

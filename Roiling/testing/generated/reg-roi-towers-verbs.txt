@@ -59,11 +59,13 @@ Your score has just gone up by one point
 
 Topside Deposit
 
->gt trefoil
-You had your fun in there.
 #verbcase listen-towers-if-player-is-in-topside-deposit
 >listen
 An unconvincing voice from where you came moans "Stop! Die!" You must ignore it and go forward.
+
+#ttc-table-of-goto-sectioning-loftier-trefoil-1--
+>gt trefoil
+You had your fun in there.
 
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -563,9 +565,9 @@ Trying to cross languages and make this Swears-Wasser does no good.
 Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
-#verbcase goto-towers-if-noun-is-rawest-waters
->gt rawest waters
-Rawest Waters would probably be even less fun the second time around.
+#ttc-table-of-goto-sectioning-rawest-waters-3--
+>gt waters
+The Rawest Waters of Leak Lake would probably be even less fun the second time around.
 >undo
 >undo
 >undo
@@ -590,10 +592,13 @@ You speed across the deeps of the Rawest Waters as if on nine-seg engines and to
 
 Mislit Limits
 
+#ttc-table-of-goto-sectioning--2-towers
+>gt deposit
+You don't want to cross Leak Lake again.
+
+#ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
->gt coastlines
-You don't want to cross Leak Lake again.
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
@@ -648,10 +653,9 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >misses
 
 >spectacular
-
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 Strip of Profits
 

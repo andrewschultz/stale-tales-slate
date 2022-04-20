@@ -8,7 +8,7 @@
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -149,21 +149,21 @@ by one point
 >score
 Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
->goodness
-by one point
->score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
 >darn
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 #not a mistake
 >whassup
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
@@ -331,9 +331,12 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 Hacks' Shack
 
 >x catechism
+The title is Algorithms, Logarithms, and it's by Olga Smirth.
+
 #ttc-table-of-notepad-entries-hacking
 >pad hacking
 A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities.
+
 #ttc-table-of-notepad-entries-leo-and-rand
 >pad leo
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
@@ -472,6 +475,12 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >skid
 The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
 
+>sleep
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
+#ttc-table-of-notepad-entries-sleep
+>pad sleep
+SLEEP is only advisable in a protected area.
+
 >reboot
 Your score has just gone up by one point
 
@@ -506,11 +515,6 @@ You can SLEEP once you've gotten a good start on your coding task.
 Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->sleep
-Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
->pad sleep
-SLEEP is only advisable in a protected area.
 
 >compile
 !by one point
@@ -567,6 +571,14 @@ by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+
+>au 0
+>purloin usb
+>bus
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
+>undo
+>undo
+>undo
 
 >derive
 by one point

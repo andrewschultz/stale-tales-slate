@@ -8,7 +8,7 @@
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -615,16 +615,11 @@ There's no sense in making the vile veil worse than it is and even less sense in
 >rondale
 /Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
 
->goodness
-by one point
->score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
 >darn
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 #mistake retest for evil
 >evil
@@ -662,6 +657,11 @@ You need to find a way to cheer them up.
 >whassup
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
@@ -951,8 +951,8 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
-#mistake test for a elf
->a elf
+#mistake test for elf
+>elf
 You don't need any D&D character to magick things the rest of the way here.
 
 #mistake test for alef

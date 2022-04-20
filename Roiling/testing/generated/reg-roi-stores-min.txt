@@ -10,7 +10,7 @@
 >poss
 
 >ts
->t
+>c
 
 >routes
 Your score has just gone up by one point

@@ -15,18 +15,17 @@
 >mbb 1
 
 >ts
->t
+>c
 >troves
 
 >enter tastee
-
->l
 Loather Rathole
 
 [NOTE: the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.]
 
 #ttc-table-of-notepad-entries-random-dialogue
 >pad random
+HUSH turns random dialogue off. UHHS turns it on. It is off.
 
 >score
 Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
@@ -34,17 +33,18 @@ Score in a scenario: 0 out of 30 total points in the current region, Troves. Low
 >gape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
->score
-Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
 #ttc-table-of-region-initial-scoring-commentary-troves-1
 Neat. You made progress just thinking. Or not-thinking. It could be either.
+
+>score
+Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
 >stare
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 #ttc-table-of-region-initial-scoring-commentary-troves-2
-Thinking has gotten you somewhere, you think. Staring and gaping will get you only so far. Real thought must be ahead.
+Going inside your mind has gotten you somewhere, you think. Staring and gaping will get you only so far, though. Real thought must be ahead.
 >score
 Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
@@ -259,18 +259,24 @@ by one point
 >undo
 >undo
 
->romanticise
->score
-Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
-
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
 >resist
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+
+>au 0
+>recant
+This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything?
+>undo
+>undo
+
+>romanticise
 >score
 Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 30 points.
 

@@ -2885,6 +2885,8 @@ The pedanto-notepad is yours and private. Nobody can help you decipher it--hopef
 This is the wrong region
 
 #ttc-table-of-universal-objasking-subject-defaults-settler
+>ask curtis about settler
+You don't think anyone can help you more than Elmo did with the settler.
 
 #ttc-table-of-others-subject-blather-curtis--
 >ask Curtis about compass

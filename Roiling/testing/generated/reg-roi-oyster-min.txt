@@ -175,10 +175,6 @@ Score in a scenario: 18 out of 43 total points in the current region, Oyster. Lo
 >enlarge
 Your score has just gone up by one point
 
->x gleaner
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
@@ -260,11 +256,15 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 27 out of 43 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
 
+>au 0
+
 #not a mistake
 >redial
 Your score has just gone up by one point
 
 Strip of Profits
+
+This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything you can?
 
 >score
 Oyster (28/43)

@@ -292,9 +292,9 @@ DEBUG INFO: current quip = dio-quip.
 [3] Finish Fishin'.
 
 >1
+DEBUG INFO: current quip = settler-quip.
 "LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though."
 
-DEBUG INFO: Went through settler-quip, holdup = false
 [1] Ask Elmo about the "Yorpwald-Wordplay" text on the laced decal.
 [2] Scan everything about the diorama.
 [3] Tell Elmo you got what the cheat button does, thanks!
@@ -339,8 +339,6 @@ Strip of Profits
 >open door
 >1
 >5
-
-WRONG remember to add reds and yellows text in on revisiting
 
 >lamp
 >satchel
@@ -524,6 +522,8 @@ DEBUG INFO: current quip = chimney-quip.
 [6] Geez. I'm still busted. Kinda shaken by...well, the excitement.
 [7] Finish Fishin'.
 
+>undo
+
 #ttc-table-of-elmo-comments-basement-quip
 #ttc-table-of-settler-letter-reasoning-a
 #ttc-table-of-settler-letter-reasoning-b
@@ -532,48 +532,51 @@ DEBUG INFO: current quip = chimney-quip.
 #ttc-table-of-settler-letter-reasoning-n
 #ttc-table-of-settler-letter-reasoning-s
 #ttc-table-of-settler-letter-reasoning-t
->1
+>2
 DEBUG INFO: current quip = basement-quip.
-[1] Recall the pram/ramp flip.
-[2] Recall the giant pin/painting flip.
-[3] Recall the stair flip.
-[4] Oh, cool, I know what the reds and yellows are for, now.
-[5] Geez. I'm still busted. Kinda shaken by...well, the excitement.
-[6] Finish Fishin'.
+[1] Recall the my niche/chimney flip.
+[2] Recall the pram/ramp flip.
+[3] Recall the giant pin/painting flip.
+[4] Recall the stair flip.
+[5] Oh, cool, I know what the reds and yellows are for, now.
+[6] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[7] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-ramp-quip
 #ttc-table-of-settler-letter-reasoning-a
 #ttc-table-of-settler-letter-reasoning-m
 #ttc-table-of-settler-letter-reasoning-p
 #ttc-table-of-settler-letter-reasoning-r
->1
-DEBUG INFO: current quip = pram-quip.
-[1] Recall the giant pin/painting flip.
+>2
+DEBUG INFO: current quip = ramp-quip.
+[1] Recall the my niche/chimney flip.
+[2] Recall the giant pin/painting flip.
+[3] Recall the stair flip.
+[4] Oh, cool, I know what the reds and yellows are for, now.
+[5] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[6] Finish Fishin'.
+
+#ttc-table-of-elmo-comments-painting-quip
+>2
+DEBUG INFO: current quip = painting-quip.
+[1] Recall the my niche/chimney flip.
 [2] Recall the stair flip.
 [3] Oh, cool, I know what the reds and yellows are for, now.
 [4] Geez. I'm still busted. Kinda shaken by...well, the excitement.
 [5] Finish Fishin'.
 
-#ttc-table-of-elmo-comments-painting-quip
->1
-DEBUG INFO: current quip = painting-quip.
-[1] Recall the stair flip.
+#ttc-table-of-elmo-comments-stair-quip
+>2
+DEBUG INFO: current quip = stair-quip.
+[1] Recall the my niche/chimney flip.
 [2] Oh, cool, I know what the reds and yellows are for, now.
 [3] Geez. I'm still busted. Kinda shaken by...well, the excitement.
 [4] Finish Fishin'.
 
-#ttc-table-of-elmo-comments-stair-quip
->1
-DEBUG INFO: current quip = stair-quip.
-
-[1] Oh, cool, I know what the reds and yellows are for, now.
-[2] Geez. I'm still busted. Kinda shaken by...well, the excitement.
-[3] Finish Fishin'.
-
 #### split path here. Options don't matter, but check text.
 
 #ttc-table-of-elmo-comments-got-red-yellow-quip
->1
+>2
 DEBUG INFO: current quip = got-red-yellow-quip.
 "Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything." You try and think of something where it might.
 
@@ -584,7 +587,7 @@ DEBUG INFO: current quip = got-red-yellow-quip.
 >undo
 
 #ttc-table-of-elmo-comments-still-busted-quip
->2
+>3
 DEBUG INFO: current quip = still-busted-quip.
 You shake your head. "Duh, I'm humid."
 
@@ -610,7 +613,7 @@ DEBUG INFO: current quip = gp-quip.
 #ttc-table-of-elmo-comments-lamp-quip
 >1
 
-"Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes Red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
+"Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
 
 DEBUG INFO: current quip = lamp-quip.
 [1] Ask Elmo about the "Letters Settler" text.
@@ -765,8 +768,7 @@ DEBUG INFO: current quip = trial-trail-quip.
 #ttc-table-of-elmo-comments-strip-quip
 >4
 DEBUG INFO: current quip = strip-quip.
-
-"Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues."
+"Yeah, lots to explore. But I bet observing and talking to people will help. About themselves or Elvira. You'll get clues how to deal with them, even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues."
 
 [1] Strip of Profits? Was that the Trips Strip? What's at the...?
 [2] Strategy-try stage? Get artsy?
@@ -880,11 +882,6 @@ DEBUG INFO: current quip = girls-quip.
 [1] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-bye-elmo-quip
->1
-[1] Finish Fishin'.
-DEBUG INFO: current quip = bye-Elmo-quip.
-
-
 >1
 Carven Cavern
 

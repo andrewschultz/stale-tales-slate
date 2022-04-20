@@ -77,6 +77,10 @@ by one point
 
 Olde Lode
 
+#ttc-table-of-goto-sectioning-posh-hops-shop-1--
+>gt shop
+The LOLstr trolls would not welcome you back.
+
 >thisalt
 --You could have also REMAPped the perma-amper to break the jukebox.
 SPIT
@@ -120,6 +124,14 @@ O, bats!
 >attack frat raft
 Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!
 
+#ttc-table-of-goto-sectioning-olde-lode-2--
+>gt lode
+You don't want to go back near that urn.
+
+#+ttc-table-of-goto-sectioning-posh-hops-shop-1--
+>gt shop
+The LOLstr trolls would not welcome you back, and it'd take too long to get there.
+
 >score
 Score in a scenario: 6 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
@@ -133,14 +145,20 @@ Fighter Freight
 Score in a scenario: 7 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
 
 #verbcase goto-oyster-if-player-is-in-fighter-freight
->gt disease seaside
-If only it was that easy. Well, I hope it's not too hard to figure the right action.
+>gt olde lode
+That's too far back. You need to keep making progress. Follow the pale plea!
+
 #verbcase smell-oyster-if-player-is-in-fighter-freight
 >smell
 You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
+
 #verbcase listen-oyster-if-noun-is-pale-plea
 >listen
 /("A\.\.\. 'elp!"|"Pal! Pal! Ee!")
+
+#ttc-table-of-goto-sectioning-disease-seaside-3--
+>gt seaside
+No sense crossing back. There's more on the other side of the shore.
 
 >leap
 Your score has just gone up by one point
@@ -150,9 +168,24 @@ Anger Range
 #verbcase listen-oyster-if-noun-is-carps-or-noun-is-pikes
 >listen
 You can't help but listen to the carps' and pikes' immature, nasty jibes.
+
 #verbcase listen-oyster-if-noun-is-trout
 >listen trout
 Whimpering slightly.
+
+#ttc-table-of-goto-sectioning-fighter-freight-4--
+>gt freight
+You don't really want to revisit the crays.
+
+#ttc-table-of-goto-sectioning-disease-seaside-3--
+>gt seaside
+No sense crossing back. There's more on this side of the shore.
+
+#+ttc-table-of-goto-sectioning-olde-lode-2--
+>gt lode
+You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
+>gt shop
+The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >score
 Score in a scenario: 8 out of 43 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 43.
@@ -384,10 +417,6 @@ Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lo
 >enlarge
 Your score has just gone up by one point
 
->x gleaner
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
@@ -458,7 +487,10 @@ Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lo
 
 # prime GT END DEN for later
 >in
+End Den
+
 >out
+Horned Hedron
 
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
@@ -527,13 +559,6 @@ You got rid of the ant. Nothing more to do there.
 >smell
 Old heat. Loathed hot lead.
 
->revel
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-
->score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
-
 >derail
 Your score has just gone up by one point
 
@@ -542,10 +567,17 @@ Your score has just gone up by one point
 The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 >spin
 Your score has just gone up by one point
+
+>score
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
 
 >score
 Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.

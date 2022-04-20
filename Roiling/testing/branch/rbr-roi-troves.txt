@@ -27,7 +27,7 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. There are no secrets left to find here, so the score to win is {CURMAX} points.
 }$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves.
 
-ALSO-IGNORE:mbb *,t
+ALSO-IGNORE:mbb *,t,c
 
 ## *FILE
 
@@ -44,13 +44,14 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 >mbb 1
 
 >ts
->t
+>c
 >troves
 
 @spoi
 >scam
 
 >enter tastee
+Loather Rathole
 
 @spoi
 Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
@@ -81,14 +82,12 @@ It deserves to be ripped to shreds, but that'd just be littering.
 >attack tears taser
 It would fight back much more powerfully.
 
->l
-Loather Rathole
-
 @max
 [NOTE: the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.]
 \\
 #ttc-table-of-notepad-entries-random-dialogue
 >pad random
+HUSH turns random dialogue off. UHHS turns it on. It is off.
 
 @hints
 >ptf 0
@@ -191,6 +190,8 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
+{--max}\\#ttc-table-of-region-initial-scoring-commentary-troves-1\\Neat. You made progress just thinking. Or not-thinking. It could be either.
+\\
 >score
 {$SCOS}
 
@@ -198,10 +199,6 @@ DEBUG INFO: min-up codepath
 #ttc-table-of-troves-hint-request-rejects-pa-egg-pea
 >hint pa egg pea
 Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point.
-
-@max
-#ttc-table-of-region-initial-scoring-commentary-troves-1
-Neat. You made progress just thinking. Or not-thinking. It could be either.
 
 @nud
 #ttc-table-of-troves-done-rejects-pa-egg-pea
@@ -232,7 +229,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
-{--max}#ttc-table-of-region-initial-scoring-commentary-troves-2\\Thinking has gotten you somewhere, you think. Staring and gaping will get you only so far. Real thought must be ahead.
+{--max}#ttc-table-of-region-initial-scoring-commentary-troves-2\\Going inside your mind has gotten you somewhere, you think. Staring and gaping will get you only so far, though. Real thought must be ahead.
 >score
 {$SCOS}
 
@@ -470,7 +467,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >t
 >scan sty
 !Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
+>c
 #ttc-table-of-troves-spechelp-a-sty-tasty-say
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
@@ -764,7 +761,7 @@ Your eyes gloss over all but the red name, ERGAL AGLER.
 @hints
 #ttc-table-of-settler-shake-descriptions-lager
 >ss
-A few things: the Ires Pad (a bit blurry), the box of diapers and the can of Large Regal Lager (very blurry) are visible. You turn the settler off.
+A couple things: the can of Large Regal Lager (very blurry) and musical notes pulsing with the beat of I'd Cede are visible.
 
 @!mina,minb
 >glare
@@ -1610,13 +1607,6 @@ In particular, you feel the need to RECANT right now.
 In particular, you feel the need to RECANT right now.
 >undo
 
-@!mina,minb
->romanticise
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
-
 @!minb
 >ramble
 Your score has just gone up by one point
@@ -1640,6 +1630,20 @@ DEBUG INFO: Trance Nectar hinting.
 {$SCOS}
 
 @!mina,minb
+>score
+{$SCOS}
+
+@max
+>au 0
+>recant
+This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything?
+>undo
+>undo
+
+@!mina,minb
+>romanticise
+}}SCORE++
+}}CURMIN++
 >score
 {$SCOMAX}
 
@@ -1713,9 +1717,15 @@ Browse Bowers====
 --you could've tried to RAMBLE to ignore Marble Blamer Balmer.
 --you could've tried to ROMANTICISE around Creationism, Reactionism
 
+@mina,minb
+>au 0
+
 >recant
 Your score has just gone up by one point
 }}SCORE++
+
+@mina,minb
+This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything you can?
 
 Strip of Profits
 

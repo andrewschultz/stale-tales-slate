@@ -28,7 +28,7 @@ You already got a temporary escape from the bad music. You can't really do any m
 >undo
 >undo
 
->t
+>c
 >insert settler
 Almost, but with the stein, there.
 >insert stein
@@ -1228,26 +1228,19 @@ The gleaner was made by Al Green, written in red.
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 #mistake test for reangle
 >reangle
-You tilt the gleaner around to try to see it from a different point of view. If there are any differences, they're too small for you to see.
+You REANGLE, which is functionally equivalent to just examining the general gleaner.
 
 >enlarge
 Your score has just gone up by one point
 
->x gleaner
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
 !You may wish to re-examine the gleaner now it's changed.
 
->score
-Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
-
-#mistake retest for reangle
->reangle
-You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
 #ttc-table-of-oyster-done-rejects-gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it except examine it.
+
+>score
+Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
 >n
 Horned Hedron
@@ -1408,8 +1401,17 @@ Den Loft
 >undo
 >out
 
+#mistake retest for reangle
+>reangle
+You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
+You REANGLE, which is functionally equivalent to just examining the general gleaner.
+
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
+
+#ttc-table-of-oyster-done-rejects-gleaner
+>gleanre
+It's already been made bigger. Not much more you can do with it.
 
 #+ttc-table-of-oyster-done-rejects-gleaner
 >gleanre
@@ -1462,6 +1464,7 @@ Oh no! Where is the orange/y? It'd be easier if that was one of the stable color
 #mistake test for redial
 >redial
 You can't even dial with the yapper around.
+>undo
 
 >prepay
 Your score has just gone up by one point
@@ -1472,6 +1475,7 @@ Score in a scenario: 36 out of 43 total points in the current region, Oyster. Lo
 #mistake retest for redial
 >redial
 You need use the dialer meaningfully first.
+>undo
 
 #+ttc-table-of-den-loft-nudges-jumble
 >jumbel
@@ -1545,17 +1549,6 @@ Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lo
 You look at the lever, wishing it would be a little more fun to pull.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
 
->revel
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-
->score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
-
-#ttc-table-of-oyster-done-rejects-lever
->levre
-You riff on your previous celebrations, but it doesn't feel as cool.
-#ttc-table-of-oyster-spechelp-bogus-derail
 >dilrae
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
@@ -1567,7 +1560,7 @@ A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIR
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #ttc-table-of-oyster-spechelp-pins
 >spni
@@ -1591,7 +1584,7 @@ Maybe in a bit, but the pins are in the way at the moment. They can't be too har
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 #ttc-table-of-oyster-spechelp-bogus-redial
 >redila
@@ -1600,6 +1593,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer.
 #ttc-table-of-den-loft-nudges-spin
 >spni
 You don't need to bring the pins back.
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+
+#ttc-table-of-oyster-done-rejects-lever
+>levre
+You riff on your previous celebrations, but it doesn't feel as cool.
+#ttc-table-of-oyster-spechelp-bogus-derail
 
 #not a mistake
 >redial

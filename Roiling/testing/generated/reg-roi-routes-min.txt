@@ -123,12 +123,6 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
->beyond
-by one point
->undo
-
->score
 
 Score in a scenario: 19 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
 
@@ -143,8 +137,12 @@ Routes
 --you could've tried to go TOWARDS the worst ad.
 --you could've done WITHOUT the content of the raptest patters.
 
+>au 0
+
 >beyond
 Your score has just gone up by one point
+
+This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything you can?
 
 Strip of Profits
 

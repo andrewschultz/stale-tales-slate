@@ -18,7 +18,7 @@
 >in
 Rustic Citrus
 
->t
+>c
 >z
 >z
 
@@ -205,6 +205,11 @@ by one point
 #ttc-table-of-settler-shake-descriptions-icons
 >ss
 Only the icons you made are visible. You turn the settler off.
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >s
 Curtis hands you a coin

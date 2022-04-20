@@ -23,7 +23,7 @@ files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,re
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
 }$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster.
 
-ALSO-IGNORE:t
+ALSO-IGNORE:t,c
 
 ## *FILE
 
@@ -48,7 +48,9 @@ Taken.
 
 @max
 >talk to casper
-[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
+#brackets ok
+[You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.]
+\\
 #ttc-table-of-notepad-entries-die-thou
 >pad die thou
 If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them.
@@ -186,7 +188,7 @@ by one point
 >undo
 
 @nud
->t
+>c
 >insert settler
 Almost, but with the stein, there.
 >insert stein
@@ -446,6 +448,11 @@ Olde Lode
 @hin
 DEBUG INFO: clam hinting.
 
+@verbs
+#ttc-table-of-goto-sectioning-posh-hops-shop-1--
+>gt shop
+The LOLstr trolls would not welcome you back.
+
 >thisalt
 @min
 are the other actions that would've annoyed Posh Hops Shop pesty types instead of SPILLing the pills.
@@ -594,6 +601,14 @@ O, bats!
 #ttc-table-of-oyster-attacks-frat-raft
 >attack frat raft
 Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!
+\\
+#ttc-table-of-goto-sectioning-olde-lode-2--
+>gt lode
+You don't want to go back near that urn.
+\\
+#+ttc-table-of-goto-sectioning-posh-hops-shop-1--
+>gt shop
+The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >score
 }}SCORE++
@@ -818,14 +833,20 @@ The pale plea already sort of is. You need a stronger action than that.
 
 @verbs
 #verbcase goto-oyster-if-player-is-in-fighter-freight
->gt disease seaside
-If only it was that easy. Well, I hope it's not too hard to figure the right action.
+>gt olde lode
+That's too far back. You need to keep making progress. Follow the pale plea!
+\\
 #verbcase smell-oyster-if-player-is-in-fighter-freight
 >smell
 You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
+\\
 #verbcase listen-oyster-if-noun-is-pale-plea
 >listen
 /("A\.\.\. 'elp!"|"Pal! Pal! Ee!")
+\\
+#ttc-table-of-goto-sectioning-disease-seaside-3--
+>gt seaside
+No sense crossing back. There's more on the other side of the shore.
 
 >leap
 Your score has just gone up by one point
@@ -841,9 +862,24 @@ Anger Range
 >listen
 #OK-APOSTROPHE
 You can't help but listen to the carps' and pikes' immature, nasty jibes.
+\\
 #verbcase listen-oyster-if-noun-is-trout
 >listen trout
 Whimpering slightly.
+\\
+#ttc-table-of-goto-sectioning-fighter-freight-4--
+>gt freight
+You don't really want to revisit the crays.
+\\
+#ttc-table-of-goto-sectioning-disease-seaside-3--
+>gt seaside
+No sense crossing back. There's more on this side of the shore.
+\\
+#+ttc-table-of-goto-sectioning-olde-lode-2--
+>gt lode
+You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
+>gt shop
+The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >score
 {$SCOS}
@@ -1119,7 +1155,7 @@ There are no clothing stores around, nor is there anything physical to lead you 
 @hints
 #ttc-table-of-settler-shake-descriptions-eeks
 >ss
-A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible. You turn the settler off.
+A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible.
 
 @max
 >scan cans
@@ -1916,16 +1952,20 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 >undo
 
 @max
+##balance undos
+>abstract wipes to lean lane
 #pre-clean-lance rule
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
-added
+FLIPS
+\\
 #ttc-table-of-oyster-prefigurings-lance
 >pf
 You'll want to CLEAN the lance once you have something to wash it with.
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
-!added
+!FLIPS
+>undo
 >undo
 >undo
 >undo
@@ -2053,7 +2093,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
 #ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
-SEARCH the arches.
+You can SEARCH the arches once you've chased the sandier sardine away.
 
 @max
 >warp wrap
@@ -2071,6 +2111,11 @@ DEBUG INFO: Achers' Chaser Arches hinting.
 #reverbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence.
+
+@max
+#+ttc-table-of-oyster-prefigurings-achers-chaser-arches
+>pf
+You can SEARCH the arches once you've chased the sandier sardine away.
 
 >score
 {$SCOS}
@@ -2121,7 +2166,7 @@ The gleaner was made by Al Green, written in red.
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 #mistake test for reangle
 >reangle
-You tilt the gleaner around to try to see it from a different point of view. If there are any differences, they're too small for you to see.
+You REANGLE, which is functionally equivalent to just examining the general gleaner.
 
 @sli
 #slider test for enlarge
@@ -2137,6 +2182,16 @@ by one point
 Your score has just gone up by one point
 }}SCORE++
 
+@max
+You may wish to re-examine the gleaner now it's changed.
+@!
+!You may wish to re-examine the gleaner now it's changed.
+
+@nud
+#ttc-table-of-oyster-done-rejects-gleaner
+>gleanre
+It's already been made bigger. Not much more you can do with it except examine it.
+
 @hints
 #ttc-table-of-oyster-hint-request-rejects-gleaner
 >hint gleaner
@@ -2146,26 +2201,8 @@ You just need to examine the gleaner to figure what to do with it.
 >hint
 You've gotten passage north and found something important, so you're done here.
 
->x gleaner
-###skip test checking
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
-@max
-You may wish to re-examine the gleaner now it's changed.
-@!
-!You may wish to re-examine the gleaner now it's changed.
-
 >score
 {$SCOS}
-
-@nud
-#mistake retest for reangle
->reangle
-You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
-#ttc-table-of-oyster-done-rejects-gleaner
->gleanre
-It's already been made bigger. Not much more you can do with it except examine it.
 
 >n
 Horned Hedron
@@ -2420,7 +2457,10 @@ You've found a way further in, and that's all you need here
 @verbs
 # prime GT END DEN for later
 >in
+End Den
+\\
 >out
+Horned Hedron
 
 @nud
 #ttc-table-of-oyster-done-rejects-pol-art-portal
@@ -2440,8 +2480,28 @@ Den Loft
 >undo
 >out
 
+@hin
+>hint gleaner
+You may wish to re-examine the gleaner now it's changed.
+
+@nud
+#mistake retest for reangle
+>reangle
+You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
+#brackets ok
+You REANGLE, which is functionally equivalent to just examining the general gleaner.
+
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
+
+@nud
+#ttc-table-of-oyster-done-rejects-gleaner
+>gleanre
+It's already been made bigger. Not much more you can do with it.
+
+@hin
+>hint gleaner
+The gleaner will help you navigate the Horned Hedron without any need for special commands.
 
 @nud
 #+ttc-table-of-oyster-done-rejects-gleaner
@@ -2510,6 +2570,7 @@ Oh no! Where is the orange/y? It'd be easier if that was one of the stable color
 #mistake test for redial
 >redial
 You can't even dial with the yapper around.
+>undo
 
 @sli
 #slider test for prepay
@@ -2524,9 +2585,14 @@ The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't to
 #ttc-table-of-oyster-prefigurings-bogus-derail
 >pf
 You can use the dialer to DERAIL once the papery yapper is gone.
-#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
+\\
 #ttc-table-of-oyster-prefigurings-bogus-redial
-You can use the dialer to REDIAL once you've dialed successfully.
+>redial
+You can't even dial with the yapper around.
+>pf
+You can REDIAL the dialer once you've dialed successfully
+\\
+#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
 >revel
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
@@ -2573,6 +2639,7 @@ That would only sabotage communications here. You need to sabotage the supplier.
 #mistake retest for redial
 >redial
 You need use the dialer meaningfully first.
+>undo
 
 @nud
 #+ttc-table-of-den-loft-nudges-jumble
@@ -2744,26 +2811,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You look at the lever, wishing it would be a little more fun to pull.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
 
-@!min
->revel
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOMAX}
-
-@hin
-#ttc-table-of-oyster-hint-request-rejects-lever
->hint lever
-The lever was designed not to give extra points for pulling it too much.
-
 @nud
-#ttc-table-of-oyster-done-rejects-lever
->levre
-You riff on your previous celebrations, but it doesn't feel as cool.
-#ttc-table-of-oyster-spechelp-bogus-derail
 >dilrae
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
@@ -2789,10 +2837,7 @@ DEBUG INFO: pins hinting.
 The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 
 >score
-@min
 {$SCOS}
-@!
-{$SCOMAX}
 
 @max
 #pre-dialer-redial rule
@@ -2841,10 +2886,7 @@ Your score has just gone up by one point
 DEBUG INFO: repaired dialer hinting.
 
 >score
-@min
 {$SCOS}
-@!
-{$SCOMAX}
 
 @sli
 #slider test for redial
@@ -2861,9 +2903,36 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer.
 You don't need to bring the pins back.
 
 @max
+>au 0
 >redial dialer
 by one point
+This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything?
 >undo
+>undo
+
+@!min
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOMAX}
+
+@hin
+#ttc-table-of-oyster-hint-request-rejects-lever
+>hint lever
+The lever was designed not to give extra points for pulling it too much.
+
+@nud
+#ttc-table-of-oyster-done-rejects-lever
+>levre
+You riff on your previous celebrations, but it doesn't feel as cool.
+#ttc-table-of-oyster-spechelp-bogus-derail
+
+@min
+>au 0
 
 #not a mistake
 >redial
@@ -2871,6 +2940,9 @@ Your score has just gone up by one point
 }}SCORE++
 
 Strip of Profits
+
+@min
+This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything you can?
 
 @nud
 #mistake retest for fart

@@ -35,7 +35,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 * presto_walkthrough
 
 >ts
->t
+>c
 >posf
 
 >au 2
@@ -1055,14 +1055,6 @@ The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitab
 >damn
 No, that's too strong for here. You've been doing quite well with the tame stuff.
 
-@!min
->goodness
-by one point
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
-
 @verbs
 #verbcase listen-presto-if-player-is-in-dirge-ridge
 >listen
@@ -1134,7 +1126,7 @@ small talk, and they open up to you a bit.
 @hints
 #ttc-table-of-settler-shake-descriptions-wzup
 >ss
-A couple things: the sods gone odes song (very blurry) and a pair of hands patting Leo and Rand on the back are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+/A few things: the sods gone odes song \(very blurry\), a pair of hands patting (Leo and Rand|Rand and Leo) on the back and the boing-go bin are visible\.
 
 #not a mistake
 >whassup
@@ -1153,6 +1145,14 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 >hint tsar star
 The tsar star has done its duty.
 
+>score
+{$SCOS}
+
+@!min
+>goodness
+by one point
+}}SCORE++
+}}CURMIN++
 >score
 {$SCOS}
 
@@ -1745,16 +1745,19 @@ Hacks' Shack
 
 @max
 >x catechism
+The title is Algorithms, Logarithms, and it's by Olga Smirth.
+\\
 #ttc-table-of-notepad-entries-hacking
 >pad hacking
 A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities.
+\\
 #ttc-table-of-notepad-entries-leo-and-rand
 >pad leo
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
 
 @mis
-#mistake test for a elf
->a elf
+#mistake test for elf
+>elf
 You don't need any D&D character to magick things the rest of the way here.
 \\
 #mistake test for alef
@@ -2341,6 +2344,13 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >skid
 The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
 
+@max
+>sleep
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
+#ttc-table-of-notepad-entries-sleep
+>pad sleep
+SLEEP is only advisable in a protected area.
+
 >reboot
 Your score has just gone up by one point
 }}SCORE++
@@ -2397,13 +2407,6 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-
-@max
->sleep
-Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
-#ttc-table-of-notepad-entries-sleep
->pad sleep
-SLEEP is only advisable in a protected area.
 
 @nud
 #ttc-table-of-presto-done-rejects-futon
@@ -2594,6 +2597,15 @@ DEBUG INFO: min-up codepath
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Drive E, though.
 
+@max
+>au 0
+>purloin usb
+>bus
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
+>undo
+>undo
+>undo
+
 @!min
 >derive
 by one point
@@ -2776,12 +2788,18 @@ DOUBLE PROBLEM FOR: sub.
 >gt phat path
 Just do something simple with that USB
 
+@min
+>au 0
+
 >sub
 Your score has just gone up by one point
 }}SCORE++
 Diver time
 
 Strip of Profits
+
+@min
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything you can?
 
 @max
 >missalt

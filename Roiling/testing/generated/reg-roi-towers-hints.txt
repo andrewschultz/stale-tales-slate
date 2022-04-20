@@ -149,7 +149,7 @@ Score in a scenario: 2 out of 57 total points in the current region, Towers. Low
 
 >bleak
 
-DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
+/DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
 
 >score
 Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
@@ -879,10 +879,9 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >misses
 
 >spectacular
-
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 Strip of Profits
 

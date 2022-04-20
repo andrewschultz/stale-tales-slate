@@ -706,10 +706,9 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >misses
 
 >spectacular
-
 Your score has just gone up by one point
 
-[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
+[NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 Strip of Profits
 

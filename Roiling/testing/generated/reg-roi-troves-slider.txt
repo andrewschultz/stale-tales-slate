@@ -15,12 +15,10 @@
 >mbb 1
 
 >ts
->t
+>c
 >troves
 
 >enter tastee
-
->l
 Loather Rathole
 
 >slon
@@ -40,6 +38,7 @@ Score in a scenario: 0 out of 30 total points in the current region, Troves. Low
 >gape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
@@ -303,18 +302,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >imonairstec
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->romanticise
->score
-Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
-
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
 >resist
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+
+>romanticise
 >score
 Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 30 points.
 

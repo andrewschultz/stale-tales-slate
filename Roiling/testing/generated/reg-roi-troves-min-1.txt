@@ -15,12 +15,10 @@
 >mbb 1
 
 >ts
->t
+>c
 >troves
 
 >enter tastee
-
->l
 Loather Rathole
 
 >score
@@ -183,8 +181,12 @@ Browse Bowers====
 !--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
 --you could've tried to ROMANTICISE around Creationism, Reactionism
 
+>au 0
+
 >recant
 Your score has just gone up by one point
+
+This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything you can?
 
 Strip of Profits
 

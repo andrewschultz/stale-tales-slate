@@ -151,7 +151,7 @@ Score in a scenario: 10 out of 43 total points in the current region, Oyster. Lo
 
 #ttc-table-of-settler-shake-descriptions-eeks
 >ss
-A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible. You turn the settler off.
+A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible.
 
 >scan
 #notana 'nudge for cans'
@@ -342,6 +342,8 @@ Score in a scenario: 29 out of 43 total points in the current region, Oyster. Lo
 >enlarge
 Your score has just gone up by one point
 
+!You may wish to re-examine the gleaner now it's changed.
+
 #ttc-table-of-oyster-hint-request-rejects-gleaner
 >hint gleaner
 You just need to examine the gleaner to figure what to do with it.
@@ -349,12 +351,6 @@ You just need to examine the gleaner to figure what to do with it.
 #ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
 >hint
 You've gotten passage north and found something important, so you're done here.
-
->x gleaner
->hint gleaner
-The gleaner will help you navigate the Horned Hedron without any need for special commands.
-
-!You may wish to re-examine the gleaner now it's changed.
 
 >score
 Score in a scenario: 30 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
@@ -425,8 +421,14 @@ You've found a way further in, and that's all you need here
 >score
 Score in a scenario: 35 out of 43 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 43.
 
+>hint gleaner
+You may wish to re-examine the gleaner now it's changed.
+
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
+
+>hint gleaner
+The gleaner will help you navigate the Horned Hedron without any need for special commands.
 
 >gt anger range
 #ttc-table-of-oyster-location-hint-checkoffs-anger-range
@@ -475,24 +477,13 @@ DEBUG INFO: dialer hinting.
 >score
 Score in a scenario: 39 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
->revel
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-
->score
-Score in a scenario: 40 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
-
-#ttc-table-of-oyster-hint-request-rejects-lever
->hint lever
-The lever was designed not to give extra points for pulling it too much.
-
 >derail
 Your score has just gone up by one point
 
 DEBUG INFO: pins hinting.
 
 >score
-Score in a scenario: 41 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+Score in a scenario: 40 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
 
 >spin
 Your score has just gone up by one point
@@ -500,7 +491,18 @@ Your score has just gone up by one point
 DEBUG INFO: repaired dialer hinting.
 
 >score
+Score in a scenario: 41 out of 43 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 43.
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
 Score in a scenario: 42 out of 43 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 43 points.
+
+#ttc-table-of-oyster-hint-request-rejects-lever
+>hint lever
+The lever was designed not to give extra points for pulling it too much.
 
 #not a mistake
 >redial

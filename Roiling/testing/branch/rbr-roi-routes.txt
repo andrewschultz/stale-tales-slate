@@ -23,7 +23,7 @@ files=reg-roi-routes-max.txt,reg-roi-routes-min.txt,reg-roi-routes-nudmis.txt,re
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
 }$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes.
 
-ALSO-IGNORE:t
+ALSO-IGNORE:t,c
 
 ## *FILE
 
@@ -80,7 +80,7 @@ A shameful attempt at vandalism.
 
 @nud
 >au 2
->t
+>c
 #mistake test for follow [text]
 >follow zozimus
 A Roiling Original doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
@@ -360,7 +360,7 @@ Mum Ray's Summary!
 @max
 #ttc-table-of-mum-ray-summary-pages-1
 >x summary
-"The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness be happy enough, you guess."
+The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness and be happy enough, you guess.
 \\
 #ttc-table-of-mum-ray-summary-pages-2
 >x summary
@@ -899,6 +899,9 @@ The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the sit a nag. That's a decent omen. ??
+\\
+>pf
+You can lean AGAINST the anti-sag sit-a-nag now you feel less fear and more purpose.
 
 @nud
 #ttc-table-of-same-mesa-nudges-anti
@@ -980,6 +983,8 @@ There's more than one tirade
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the side art. That's a decent omen. ??
+>pf
+You can sit ASTRIDE the anti-sag sit-a-nag now you have a reason to.
 
 @nud
 #nudges for ides
@@ -1176,7 +1181,7 @@ The spoon reflects back outside.
 @max
 #ttc-table-of-notepad-entries-no-lag-logan
 >pad logan
-No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road.
+No-Lag Logan may have left behind a ship that can get you out of here. It is beyond an un-road.
 
 >out
 
@@ -1326,6 +1331,11 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 >hoel
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 
+@verbs
+#ttc-table-of-goto-sectioning--1-routes
+>gt mesa
+Brother Horbert would be sad to see you return, unsuccessful.
+
 >score
 {$SCOS}
 
@@ -1346,7 +1356,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @hints
 #ttc-table-of-settler-shake-descriptions-darkness
 >ss
-A few things: the NULL-IT unit, a weird outline in the darkness (a bit blurry) and the damsel medals are visible. You turn the settler off.
+A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blurry) are visible.
 
 @nud
 #mistake test for around
@@ -1439,9 +1449,18 @@ Ripe Pier
 #verbcase listen-routes-if-player-is-in-ripe-pier
 >listen
 Someone calling out "'Tis mad!" You see red.
+\\
 #verbcase smell-routes-if-noun-is-data-dim-mists
 >smell
 Ugh! The mists smell, as kids in Yorpwald say for slang purposes, staim'd. You see red at how useless and impractical such ridiculous slang is. Which, of course, makes it actually useful here.
+\\
+#ttc-table-of-goto-sectioning-harms-marsh-2--
+>gt marsh
+You already muddled your way out of Harms Marsh. You may be lost now, but walking back would be worse.
+\\
+#+ttc-table-of-goto-sectioning--1-routes
+>gt mesa
+Brother Horbert would be sad to see you return, unsuccessful.
 
 @nud
 #ttc-table-of-ripe-pier-nudges-pier
@@ -1501,9 +1520,22 @@ Cripple Clipper
 #verbcase sleep-routes-if-player-is-in-cripple-clipper
 >sleep
 This is no dreamboat.
+\\
 #verbcase swear-routes-if-player-is-in-cripple-clipper
 >bother
 Siphon no pish on-ship.
+\\
+#ttc-table-of-goto-sectioning-ripe-pier-3--
+>gt pier
+You have no idea how to turn the Cripple Clipper around, and you don't want to.
+\\
+#ttc-table-of-goto-sectioning-harms-marsh-2--
+>gt marsh
+You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
+\\
+#+ttc-table-of-goto-sectioning--1-routes
+>gt mesa
+You're not going back across the water. You're closer to the end of your quest.
 
 @nud
 #ttc-table-of-cripple-clipper-nudges-mess
@@ -1561,9 +1593,18 @@ Sonancy Canyons
 #verbcase listen-routes-if-noun-is-raptest-patters
 >listen
 An over-cheery voice: "Thou wit!"
+\\
 #verbcase listen-routes-if-noun-is-hurt-hog
 >listen hog
 Squealing. It could be calmer
+\\
+#ttc-table-of-goto-sectioning-cripple-clipper-4--
+>gt cripple clipper
+The Sonancy Canyons lead to your destiny.
+\\
+#+ttc-table-of-goto-sectioning-ripe-pier-3--
+>gt pier
+It's time to go forward, not backwards.
 
 @sli
 #slider test for through
@@ -1611,15 +1652,17 @@ It's more the content of the patters that you could deal with, if you wanted.
 >betwene
 The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
-#+ttc-table-of-routes-spechelp-hurt-hog
->throuhg
-You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 #ttc-table-of-sonancy-canyons-nudges-spheric
 >spherci
 The ciphers cannot be dispelled.
 #ttc-table-of-sonancy-canyons-nudges-cipher
 >ciphre
 The ciphers cannot be dispelled.
+
+@max
+#+ttc-table-of-routes-spechelp-hurt-hog
+>throuhg
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 
 @sli
 #slider test for without
@@ -1675,11 +1718,11 @@ Your score has just gone up by one point
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be BEYOND.
 
-@min
->score
-{$SCOS}
+@max
+>au 0
 >beyond
-by one point
+This will solve Routes. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything?
+>undo
 >undo
 
 @nud
@@ -1703,8 +1746,7 @@ The raptest patters are gone, and you can fully focus on the final step.
 
 @min
 {$SCOS}
-
-@!min
+@!
 {$SCOMAX}
 
 @min
@@ -1738,9 +1780,15 @@ Routes
 --you could've tried to go TOWARDS the worst ad.
 --you could've done WITHOUT the content of the raptest patters.
 
+@min
+>au 0
+
 >beyond
 }}SCORE++
 Your score has just gone up by one point
+
+@min
+This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything you can?
 
 Strip of Profits
 

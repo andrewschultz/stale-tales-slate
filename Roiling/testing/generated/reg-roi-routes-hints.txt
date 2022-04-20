@@ -175,7 +175,7 @@ Score in a scenario: 13 out of 22 total points in the current region, Routes. Lo
 
 #ttc-table-of-settler-shake-descriptions-darkness
 >ss
-A few things: the NULL-IT unit, a weird outline in the darkness (a bit blurry) and the damsel medals are visible. You turn the settler off.
+A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blurry) are visible.
 
 #pre-unlit-until rule
 >until

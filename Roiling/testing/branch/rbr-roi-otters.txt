@@ -44,7 +44,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >seed 1
 >ts
 >a5
->t
+>c
 >otters
 
 @hin
@@ -267,13 +267,8 @@ DEBUG INFO: Taking away a max point.
 REEDILY
 }}CURMAX--
 @!
->rescind
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
+>get cinders
+They crackle with energy and possibilities as you take them. Perhaps there is more than one thing you can do with them.
 
 @verbs
 #verbcase smell-otters-if-the-deli-rye-is-touchable-or-noun-is-deli-rye
@@ -283,6 +278,15 @@ The deli rye smells good, but Ed won't share.
 #ttc-table-of-otters-attacks-ed-riley
 >attack ed riley
 "I could DRIL YEE!" Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red.
+
+@max
+>rescind
+by one point
+#ttc-table-of-region-initial-scoring-commentary-otters-2
+>reedily
+Barley, reedily. The cinders are probably the exception to the rule. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now.
+>undo
+>undo
 
 >reedily
 Your score has just gone up by one point
@@ -309,7 +313,7 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 >undo
 
 @max
-#ttc-table-of-region-initial-scoring-commentary-otters-2
+#+ttc-table-of-region-initial-scoring-commentary-otters-2
 Barley, reedily. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now.
 
 >score
@@ -1006,14 +1010,6 @@ The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment
 #ttc-table-of-otters-scannotes-cut-ya-all-cult-laya
 >scan laya
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
-
-@!min
->actually
-by one point
-}}CURMIN++
-}}SCORE++
->score
-{$SCOS}
 
 @verbs
 #reverbcase smell-otters-if-player-is-in-disowned-downside
@@ -2415,6 +2411,14 @@ The parrot still has the whistle. You can't play the whistle until it's yours.
 >pf
 You can play the whistle DEEPLY once the parrot has given it to you.
 
+@!min
+>actually
+by one point
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
+
 >w
 Reclusion Inclosure
 
@@ -2427,7 +2431,7 @@ DEBUG INFO: parrot hinting.
 @hints
 #ttc-table-of-settler-shake-descriptions-aside-llp
 >ss
-rays of tension between Merle and Elmer (very blurry) are visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+/Many things: the cinders \(very blurry\), the damsel medals, the parrot, the weltish whistle and rays of tension between (Elmer and Merle|Merle and Elmer) \(very blurry\) are visible\.
 
 @nud
 #ttc-table-of-reclusion-inclosure-nudges-inclosure
@@ -2629,6 +2633,37 @@ DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
 >score
+{$SCOS}
+
+@max
+##balance undos
+>raptor
+by one point
+>deeply
+by one point
+>quickly
+by one point
+>w
+Rancho Archon Anchor
+>7
+"No mercy, my crone! Corny, me?"
+>play whistle
+This will defeat Elvira, but there are loose ends to tie up, if you like that sort of thing. Stay back and clean up everything?
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+@!min
+# the cinders are moved to the end to test the above case: do we have a chance to get all the points?
+>rescind
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+}}SCORE++
+}}CURMIN++
+>score
 {$SCOMAX}
 
 @nud
@@ -2729,6 +2764,7 @@ by one point
 Rancho Archon Anchor
 WTF FTW
 >7
+"No mercy, my crone! Corny, me?"
 
 @verbs
 #verbcase listen-otters-if-player-is-in-rancho-archon-anchor
@@ -2906,12 +2942,19 @@ You have enough to think about without one more of Elvira's machines.
 >misses
 !otters
 
+@min
+>au 0
+>play whistle
+This will defeat Elvira, but there are loose ends to tie up, if you like that sort of thing. Stay back and clean up everything you can?
+>rove over
+You decide, why not ROVE OVER?
+
+@!min
 >au 2
 >play whistle
 #notana
 by one point
 }}SCORE++
-DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
 Elmo and Gretta are waiting for you back at the Means Manse
 
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.

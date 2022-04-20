@@ -15,10 +15,11 @@
 >mbb 1
 
 >ts
->t
+>c
 >troves
 
 >enter tastee
+Loather Rathole
 
 #verbcase sleep-troves-default
 >sleep
@@ -40,9 +41,6 @@ It deserves to be ripped to shreds, but that'd just be littering.
 >attack tears taser
 It would fight back much more powerfully.
 
->l
-Loather Rathole
-
 #verbcase listen-troves-if-can-hear-gritty
 >listen
 Actually, you can't help but hear gritty dialogue
@@ -62,6 +60,7 @@ Score in a scenario: 0 out of 30 total points in the current region, Troves. Low
 >gape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
@@ -318,18 +317,18 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
->romanticise
->score
-Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
-
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
 >resist
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+
+>romanticise
 >score
 Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 30 points.
 
