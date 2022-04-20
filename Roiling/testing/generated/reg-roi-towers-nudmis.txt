@@ -2076,7 +2076,7 @@ You're probably better of dispelling all the things to repent about at once, not
 #ttc-table-of-towers-spechelp-nastier-stainer-retinas
 >nasteri
 The nastier stainer retinas seem to blink a bit and look around uneasily.
-DEBUG INFO: You feel a slight psychic push-pull coming from the nastier stainer retinas.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the nastier stainer retinas.
 
 >antsier
 by one point

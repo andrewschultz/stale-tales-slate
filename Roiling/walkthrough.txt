@@ -817,7 +817,7 @@ The two paler pearls fit to become a general gleaner...which is too small to rea
 > ENLARGE
 > X GLEANER
 
-This will help later.
+This will help later. There's a "better" way to examine the gleaner that gives a bonus point.
 
 > N
 
@@ -1106,7 +1106,7 @@ or
 > G
 > G
 
-Okay. So the YrNet Entry detached the drab yoke from the yak.
+Okay. So the YrNet Entry detached the drab yoke from the yak. There is more than one way to solve this.
 
 > KEYBOARD
 
@@ -1122,9 +1122,10 @@ The TBA key is optional. But obviously, it will save time if you change it to wh
 Now for a monitor. The N-E-Recs Censer...
 
 > SCREEN
-> PUT SCREEN ON TABLE
 
-The Be-Troo E-Robot has one job. It's simple, but you can't do it.
+The game automatically puts the screen on the table, since you've done enough brain work.
+
+Now the Be-Troo E-Robot has one job. It's simple, but you can't do it by yourself.
 
 > REBOOT
 
@@ -2005,11 +2006,11 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 1 (deprecated) : you DESTROY Oyster D at the end and can pull the lever if you want. No yapper.
   * release 2: you can now do something with the sign in the initial area, and there's a new verb for you to get out, which relies on people there and not the bar name. Also, you need to get 3 of 5 verbs. The sign in the shore is gone, but the raft is visible and has a two-part solution with oars. You no longer need to ARRIVE--there's a better verb since there are boats. The portal moved from the plains to the hideout. You no longer need to SHAPE the heaps--the tubs, instead. The papery yapper is not present to bribe. The pills are now available to skip a puzzle. There is a side area to put an item to frame the walleyes less implausibly. There is also a side quest that starts in the Fishbowl and ends just before the final location, which is named differently. It involves wipes, waste, a lance, an ant and, optionally, the heaps, re-purposed. You also get killed a lot less by the haunter. The game just gives warnings now.
   * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
-  * release 4: you now don't use the lever at all. You replace the pins. You can SPIN them. The rude door was replaced by span-pans, which you need to SNAP at to get past. The side quest also has a tricky LLP. Many locations are renamed. Also, the haunter is now a use-saga sausage.
+  * release 4: you now don't use the lever at all. You replace the pins. You can SPIN them. The rude door was replaced by span-pans, which you need to SNAP at to get past. The side quest also has a tricky LLP. Many locations are renamed. Also, the haunter is now a use-saga sausage. You can do something more with the gleaner.
 6 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where it makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also three other LLPs to get a proper gift. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP and another LLP in the Loftier Trefoil. Also, the rapier repair now needs repair before you destroy it, as it's a diverse deviser
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also three other LLPs to get a proper gift and another LLP once you get her attention. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP and another LLP in the Loftier Trefoil. Also, the rapier repair now needs repair before you destroy it, as it's a diverse deviser
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
@@ -2084,7 +2085,7 @@ Store U has a minimum of 120 and a maximum of 134. The last lousy points give yo
 
 Store P has a minimum of 131 and a maximum of 198. You can gain or lose a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 4 letters in the maze. How you deal with Ye Hoop also means a shift of two letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack. But then the necessary things to change are often simple.
 
-Store Y has a minimum of 130 and a maximum of 209. Many solutions are short words. The five-command side quest makes a big swing between minimum and maximum. Spilling the pills right away knocks 14 off the minimum as well, as you avoid puzzles of length 4/4/5/6, at least. Without the pills, there's three letters of wiggle room for alternate puzzles in the Posh Hops Shop, and crossing the river via the boats and not the raft gets a letter. Several LLPa raise the maximum above Store P.
+Store Y has a minimum of 130 and a maximum of 216. You may guess this is the store with the smallest words, and you'd be right. The five-command side quest makes a big swing between minimum and maximum. Spilling the pills right away knocks 14 off the minimum as well, as you avoid puzzles of length 4/4/5/6, at least. Without the pills, there's three letters of wiggle room for alternate puzzles in the Posh Hops Shop, and crossing the river via the boats and not the raft gets a letter. A raft of LLPs raise the maximum above Store P.
 
 Store W has a minimum of 164-168 and a maximum of 363-367, subjected to some randomness. Both the "H" and "I" paths through the guardians have 36 letters total in the anagrams you need to use. The proof is a bit tricky, but you'll note that guardians with 6 letters guard squares 1N and 1E of Scope Copse. Guardians with 7 letters guard squares 2 away from Scope Copse, and guardians with 8 letters guard squares 3 away. You must pass one guardian with 8 letters, clearly, but trying to avoid passing two (except for the hostile/atheists) means you have to pass six. The basic idea below is that, if you only defeated one eight-letter guardian, you would need to defeat four guardians to link up the six rooms in the southwest diagonal, but that's impossible, since each guardian would only open up one new room as you went through.
 
@@ -2210,7 +2211,7 @@ The Coasting Agnostic can also be made NGGRAGVIR in the Subsector.
 
 You can even fix the boat a bit more in Actionless Coastlines. The weirder red wire can be ERJVERQ.
 
-Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer Retinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR. Finally, the anodyne can become NAABLRQ. Give (now) St. Teri the top opt pot for a non-anagram point.
+Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer Retinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR. Finally, the anodyne can be used to make St. Teri NAABLRQ. Give (now) St. Teri the top opt pot for a non-anagram point.
 
 You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N CNFGEL LBH PNA FGVYY TRG GUVF CBVAG.
 
@@ -2232,6 +2233,8 @@ Side quest:
 * GENZCYR (ooh, another cool ROT13) the templar ramplet (you need the restored lance to do this.)
 * CFNYZ by the Plasm Lamps.
 * GNA ant. (Once in Plasm Lamps, this isn't optional. It's the only way to get out.)
+
+Also, before disposing of the papery yapper, you can ERNATYR.
 
 Finally, ERIRY by the lever in the Den Loft.
 

@@ -242,6 +242,7 @@ swipe,ispew,wipes
 #qver of general gleaner
 enlarge,YRR??RY=general=gleaner
 enlarge,algreen
+reangle,R?YRRRY=general=gleaner
 #achers arches
 #qver of achers chaser arches
 search,RY?RRR=chaser=achers=arches

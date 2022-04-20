@@ -68,7 +68,12 @@ def inverse_hunt(my_answer):
     all_perm = multiset_permutations(my_l)
     poss_perm = []
     print("Possible red-letter words for {}:".format(my_answer.upper()))
+    already_done = defaultdict(bool)
     for x in all_perm:
+        my_string = ''.join(x)
+        if my_string in already_done:
+            continue
+        already_done[my_string] = True
         if not any_matches(my_l, x):
             poss_perm.append(x)
     poss_perm = sorted(poss_perm)

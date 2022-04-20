@@ -761,6 +761,15 @@ SEARCH.
 ?What do I need to do to the general gleaner?
 The gleaner gives YRR??RY to start. That means slot 4 is a or e, and slot 5 is n or r. That at least letsus know if a consonant or vowel is in each question slot.
 Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L. From there, poking around should give ENLARGE.
+?Is there something else I can and should do?
+There's an optional point. Look at it better than just examining.
+The gleaner gives a different reading: R?YRRRY. This is a different word and a more obscure one. It's a way to examine.
+The vowels fall pretty quickly. Slot 2 must be a vowel and one of E or L. So it is E. Slot 3 must be a vowel but not E. So we get -EA---E.
+Alternatively, if you remember "glean" and "angle" from the blue lube in Shuffling Around, you may be able to figure this out, too.
+However, we can also use logical elimination. L in slot 1 gives LEANGRE and LEARGNE.
+The best other bets are putting R and N in slot 6, leaving us with two possibilities each. Nothing works.
+We have (NR)EA(RN)(LG)(GL)E left.
+REANGLE is what works.
 >>PSALM LAMPS
 # logic for natant ant
 ?Why does the ant give a question mark when I scan it?

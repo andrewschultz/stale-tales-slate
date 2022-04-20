@@ -339,7 +339,8 @@ waste>sweat
 lance>clean
 ####achers' arches
 achers chaser arches>search
-general gleaner>enlarge
+bogus-enlarge~general gleaner>enlarge
+bogus-reangle~general gleaner>reangle
 ####horned hedron
 ol trap>patrol
 ####rascal craals

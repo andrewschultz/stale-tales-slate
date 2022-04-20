@@ -1465,6 +1465,13 @@ Did you find a pearl yet?
 Once you get two, they make a general gleaner.
 It's not big enough to see into clearly.
 <b>ENLARGE</b> it.
+?Wait! I can do something else with the general gleaner! What do I need to do?
+Nothing you need to do, but you can try for an extra point.
+There's a new way to look at the general gleaner.
+You can REANGLE.
+?I missed this. Is this an optional room? Is this a joke question?
+No, it's not a joke question.
+Yes, the End Den is optional if you managed to ENLARGE.
 >>PLASM LAMPS
 ?I didn't see this! Is it a fake room or clue?
 No, it's a small side quest.

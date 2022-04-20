@@ -2488,14 +2488,21 @@ Horned Hedron
 #ttc-table-of-oyster-done-rejects-pol-art-portal
 >patrlo
 You discovered the portal. No need to look further.
+\\
+##balance undos
 >in
 End Den
 #mistake test for ned
+\\
 >ned
 That was my pen name in Shuffling Around.
 #ttc-table-of-end-den-nudges-end
+\\
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+>undo
+>undo
+>undo
 
 @hin
 >hint gleaner

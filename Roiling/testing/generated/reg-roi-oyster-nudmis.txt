@@ -1384,14 +1384,20 @@ Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lo
 #ttc-table-of-oyster-done-rejects-pol-art-portal
 >patrlo
 You discovered the portal. No need to look further.
+
 >in
 End Den
 #mistake test for ned
+
 >ned
 That was my pen name in Shuffling Around.
 #ttc-table-of-end-den-nudges-end
+
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+>undo
+>undo
+>undo
 
 >x gleaner
 
