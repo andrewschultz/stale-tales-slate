@@ -4190,7 +4190,7 @@ this is the perrot-moot rule:
 	if perrot is moot, the rule succeeds;
 
 to say pars-trub:
-	say "The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something[one of], in which case, one word (or a compound word) usually works[or][stopping].[paragraph break]So here is a one-time general guideline on what to do in this area: ";
+	say "The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something[one of], in which case, one word (or a compound word) usually works[if player is in dusty study], though some of the diorama's contrived examples have spaces[end if][or][stopping].[paragraph break]So here is a one-time general guideline on what to do in this area: ";
 
 table of region long command messages
 thisreg	check-this	specwarn
@@ -10677,7 +10677,7 @@ summary-page is a number that varies. summary-page is usually 0.
 
 table of mum ray summary pages
 sum-page
-"The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness be happy enough, you guess."
+"The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness and be happy enough, you guess."
 "People listened to Rev. Ali, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there."
 "Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them."
 "Rev. Ali left, but with one final 'character-building' challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be."
@@ -10751,7 +10751,7 @@ check going outside in Adobe Abode:
 
 chapter oscar
 
-Oscar is a person in Adobe Abode. description is "He gives a weary hi. 'Haywire.'". "[one of]Someone who must be [or][stopping]Oscar mopes around here, probably not willing to talk about more than himself."
+Oscar is a person in Adobe Abode. description is "He gives a weary hi. 'Haywire.'". "[one of]Someone who must be Oscar, this being Oscar's and all,[or]Oscar[stopping] mopes around here, probably not willing to talk about more than himself."
 
 chapter ashtray
 
@@ -10906,7 +10906,7 @@ a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". pars
 
 book Cripple Clipper
 
-Cripple Clipper is a room in Routes. "Hooray...or ahoy? This isn't quite the HMS SMH. You feel a case of sail-ails, not being able to get going.[paragraph break]There's a free reef in the distance, but you didn't get enough instructions how to get there. You can pretty clearly see mess-up spumes all around.[paragraph break]Your only hope for guidance is the thickness sketchins['], presumably from Logan. A bit nonsensical, but maybe they'll give a clue where or how to adventure next. They're all you've got.". roomnud of cripple clipper is table of cripple clipper nudges.
+Cripple Clipper is a room in Routes. "Hooray...or ahoy? This isn't quite the HMS SMH. You feel a case of sail-ails, not being able to get going.[paragraph break]There's a free reef in the distance, but you didn't get enough instructions how to get there. You can pretty clearly see mess-up spumes all around.[paragraph break]The thickness sketchins, presumably from Logan, are all you have to go on. A bit nonsensical, but maybe they'll give a clue where or how to adventure next. They're all you've got.". roomnud of cripple clipper is table of cripple clipper nudges.
 
 the bad oar is a thing. description is "It looks weird, but hey, it got you aboard the Cripple Clipper.". "The bad oar that helped you aboard the Cripple Clipper lies here, but you probably need to figure how to work things in general here."
 
@@ -12960,7 +12960,7 @@ check pulling oper rope: try pulling skid instead;
 
 chapter speel
 
-the peels speel is boring reflexive scenery. it is privately-named. description of speel is "It's full of all sorts of weird jargon of figurative banana peels you could slip on. The jargon's a bit beyond you at the moment, but maybe if your mind were fully sharp, you'd know what to do. Some stuff sticks out in red.". bore-text is "It's just plain computer text."
+the peels speel is boring reflexive scenery. description of speel is "It's full of all sorts of weird jargon of figurative banana peels you could slip on. The jargon's a bit beyond you at the moment, but maybe if your mind were fully sharp, you'd know what to do. Some stuff sticks out in red.". bore-text is "It's just plain computer text."
 
 a-text of peels speel is "RRYYR". b-text of peels speel is "?RG?R". parse-text of peels speel is "?[sp]x[sp]E[sp]?[sp]P". speel is parse-spoilable.
 
@@ -15666,8 +15666,8 @@ Danger Garden	4	--
 Treading Gradient	5	--
 Salted Deltas	6	--
 Artist Traits Strait	6	--
-Shaven Havens	--	"You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form."
-Obscurest Subsector	--	"You're going side-to-side to see the curst palace, but hooray to seeing some other person. Even if he is locked up."
+Shaven Havens	--	"You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form."
+Obscurest Subsector	--	"You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up."
 Lost Lots	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 Fringe Finger	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 Actionless Coastlines	7	--
@@ -17155,7 +17155,7 @@ carry out planting:
 
 book Mislit Limits
 
-Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are unvisited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if ur pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
+Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are unvisited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if current-mislit-scenery is not the player]. That [current-mislit-scenery] is also worth a look, or a scan[end if][if ur pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
 
 chapter scaly clays
 
@@ -18049,7 +18049,7 @@ chapter cinders
 the cinders are a vanishing LLPish plural-named thing. "Cinders lie here, probably cold enough to take.";
 
 report taking cinders:
-	say "They crackle with energy as you take them. Perhaps you can do something with them.";
+	say "They crackle with energy and possibilities as you take them. Perhaps there is more than one thing you can do with them.";
 	the rule succeeds;
 
 Include (-
