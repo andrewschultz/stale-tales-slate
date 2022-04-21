@@ -871,7 +871,7 @@ Whimpering slightly.
 >gt freight
 You don't really want to revisit the crays.
 \\
-#ttc-table-of-goto-sectioning-disease-seaside-3--
+#+ttc-table-of-goto-sectioning-disease-seaside-3--
 >gt seaside
 No sense crossing back. There's more on this side of the shore.
 \\
@@ -2156,14 +2156,14 @@ You already dealt with both arches--no need to deal with one.
 #ttc-table-of-oyster-done-rejects-achers-chaser-arches
 >srecha
 Further searching proves fruitless.
-#ttc-table-of-oyster-spechelp-gleaner
+#ttc-table-of-oyster-spechelp-bogus-enlarge
 >gleanre
 The gleaner remains too small to read.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
 #ttc-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
-#ttc-table-of-oyster-scannotes-general-gleaner
+#ttc-table-of-oyster-scannotes-bogus-enlarge
 >scan general gleaner
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 
@@ -2173,9 +2173,9 @@ You step back, mentally. Having a big-picture view may mean the ambiguous readin
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
-#mistake test for reangle
 >reangle
 You might be able to REANGLE after doing something more necessary with the gleaner.
+#ttc-table-of-oyster-prefigurings-bogus-reangle
 >pf
 You can REANGLE the general gleaner once you've figured how to see something more basic in it.
 
@@ -2200,12 +2200,13 @@ Your score has just gone up by one point
 {$SCOS}
 
 @hints
+#ttc-table-of-settler-shake-descriptions-bogus-reangle
 >ss
 the general gleaner (very blurry)
 !the the
 
 @nud
-#ttc-table-of-oyster-done-rejects-gleaner
+#ttc-table-of-oyster-spechelp-bogus-reangle
 >gleanre
 All you really have to do with the gleaner is to examine it. There might be more in the gleaner, but trying that gives nothing.
 
@@ -2213,6 +2214,11 @@ All you really have to do with the gleaner is to examine it. There might be more
 #ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
 >hint
 You've gotten passage north and found something important, so you're done here.
+
+@nud
+#ttc-table-of-oyster-scannotes-bogus-reangle
+>scan gleaner
+Hmm! There's something more to do with the gleaner. You've gotten what you need, though.
 
 >n
 Horned Hedron
@@ -2632,7 +2638,7 @@ by one point
 You've exhausted the possibilities with the gleaner.
 
 @hints
-#ttc-table-of-oyster-hint-request-rejects-gleaner
+#this isn't in the hint rejects, because so much can happen with the gleaner once you managed to ENLARGE. It was formerly a rejection for the gleaner.
 >hint gleaner
 You've done what you needed with the gleaner. The gleaner is useful narratively later on, and you don't need to act on it implicitly.
 
@@ -2863,7 +2869,7 @@ The dialer is quiet. Your orders to DERAIL must've put it out of commission. May
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
-#ttc-table-of-oyster-prefigurings-bogus-redial
+#+ttc-table-of-oyster-prefigurings-bogus-redial
 >pf
 You can REDIAL the dialer once the pins are not in your way.
 

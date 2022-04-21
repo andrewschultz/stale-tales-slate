@@ -347,6 +347,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
+#ttc-table-of-settler-shake-descriptions-bogus-reangle
 >ss
 the general gleaner (very blurry)
 !the the
@@ -443,7 +444,7 @@ by one point
 >score
 Score in a scenario: 36 out of 44 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 44.
 
-#ttc-table-of-oyster-hint-request-rejects-gleaner
+#this isn't in the hint rejects, because so much can happen with the gleaner once you managed to ENLARGE. It was formerly a rejection for the gleaner.
 >hint gleaner
 You've done what you needed with the gleaner. The gleaner is useful narratively later on, and you don't need to act on it implicitly.
 

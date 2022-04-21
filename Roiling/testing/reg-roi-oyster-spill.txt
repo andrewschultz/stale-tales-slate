@@ -13,62 +13,90 @@
 Taken.
 
 >scam
+
+#ttc-table-of-oyster-anagrams-stroll
 >l
 DEBUG INFO: Spilling LOLstr trolls.
 Olde Lode
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to STROLL past the trolls.
 HOW PILLS WERE USED: STROLL past the trolls.
+!NO PILL USE MESSAGE FOR
 
+#ttc-table-of-oyster-anagrams-calm
 >z
 DEBUG INFO: Spilling clam.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to CALM the clam.
 HOW PILLS WERE USED: CALM the clam.
+!NO PILL USE MESSAGE FOR
 
+#ttc-table-of-oyster-anagrams-run
 >z
 DEBUG INFO: Spilling urn.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to RUN from the urn.
 HOW PILLS WERE USED: RUN from the urn.
+!NO PILL USE MESSAGE FOR
 
 >scam
 >get on raft
->fart
 >scam
+
+#ttc-table-of-oyster-anagrams-fart
+>z
+DEBUG INFO: Spilling frat raft.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to FART when on the frat raft.
+HOW PILLS WERE USED: FART when on the frat raft.
+!NO PILL USE MESSAGE FOR
+
+Pills fall out of the jar and emit some sort of stinky hazy gas, which the frat raft seems to consume quickly. It feels a bit more inflated now.
+
+#ttc-table-of-oyster-anagrams-soar
 >z
 DEBUG INFO: Spilling interlocking oars.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SOAR by the oars.
 HOW PILLS WERE USED: SOAR by the oars.
+!NO PILL USE MESSAGE FO
+
 >undo
 >undo
 >undo
 >undo
 >undo
 
+#ttc-table-of-oyster-anagrams-boast
 >z
 DEBUG INFO: Spilling sabot boats.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BOAST at the sabot boats.
 HOW PILLS WERE USED: BOAST at the sabot boats.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-leap
 >z
 DEBUG INFO: Spilling pale plea.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to LEAP by the plea.
 HOW PILLS WERE USED: LEAP by the plea.
+!NO PILL USE MESSAGE FO
 
 >z
+#ttc-table-of-oyster-anagrams-spike
+#ttc-table-of-oyster-anagrams-scrap
 /DEBUG INFO: Spilling (pikes|carps).
 /DEBUG: MISSES will show Instead of spilling the pills, you could've tried to (SPIKE the pikes|SCRAP \(with\) the carps).
 /HOW PILLS WERE USED: (SPIKE the pikes|SCRAP \(with\) the carps).
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-unearth
 >z
 DEBUG INFO: Current oyster hint/spill item = HUNTER HUNT AREA/HUNTER HUNT AREA.
-
 A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument.
 
+#ttc-table-of-oyster-anagrams-seek
 >e
 DEBUG INFO: Spilling eeks.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEEK the eeks.
 
 Lean Lane
 
+#ttc-table-of-oyster-anagrams-eat
 >z
 DEBUG INFO: Spilling Tea-at-a-Tee.
 MISSES will show Instead of spilling the pills, you could've tried to TUTOR Tortu the trout, then EAT the Tea-at-a-Tee.
@@ -79,75 +107,93 @@ Anger Range
 >eat
 by one point
 >scam 2
+#ttc-table-of-oyster-anagrams-tutor
 DEBUG INFO: Spilling trout.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TUTOR the trout.
 HOW PILLS WERE USED: TUTOR the trout.
+!NO PILL USE MESSAGE FO
 
 >w
 
+#ttc-table-of-oyster-anagrams-trace
 >n
 Lapsin' Plains
 DEBUG INFO: Spilling wherever the crate is coming from.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TRACE the crate.
 
+#ttc-table-of-oyster-anagrams-react
 >z
 DEBUG INFO: Spilling crate.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to REACT to the crate.
 HOW PILLS WERE USED: REACT to the crate.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-kiss
 >z
 DEBUG INFO: Spilling skis.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to KISS the skis.
 HOW PILLS WERE USED: KISS the skis.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-bonk
 >z
 DEBUG INFO: Spilling knob.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BONK the knob.
 HOW PILLS WERE USED: BONK the knob.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-snap
 >z
 DEBUG INFO: Spilling span pans.
-
-DEBUG INFO: Trying to flip span pans.
-
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SNAP at the span pans.
-
 HOW PILLS WERE USED: SNAP at the span pans.
+!NO PILL USE MESSAGE FO
 
 >z
 You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long.
 
+#ttc-table-of-oyster-anagrams-bust
 >in
 Shuttle Hutlets
 DEBUG INFO: Spilling tubs.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BUST the tubs.
 HOW PILLS WERE USED: BUST the tubs.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-drop
 >z
 DEBUG INFO: Spilling prod.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to DROP the prod.
 HOW PILLS WERE USED: DROP the prod.
+!NO PILL USE MESSAGE FO
 
 >z
 You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long.
 
 >out
 >s
+
+#ttc-table-of-oyster-anagrams-warp
 >w
 Sclerous Closures
 DEBUG INFO: Spilling Paw-R-Wrap.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to WARP the Paw-R-Wrap.
 HOW PILLS WERE USED: WARP the Paw-R-Wrap.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-search
 >z
 DEBUG INFO: Spilling Achers' Chaser Arches.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEARCH the arches.
 HOW PILLS WERE USED: SEARCH the arches.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-enlarge
 >z
-DEBUG INFO: Spilling bogus-enlarge.
+DEBUG INFO: Spilling general gleaner.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to ENLARGE the gleaner.
 HOW PILLS WERE USED: ENLARGE the gleaner.
+!NO PILL USE MESSAGE FO
 
 >z
 You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long.
@@ -155,22 +201,29 @@ You spill out a pill, cautiously, but nothing happens. Maybe you're done here. Y
 >n
 You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes.
 
+#ttc-table-of-oyster-anagrams-bury
 >w
 DEBUG INFO: Spilling ruby.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BURY the ruby.
 HOW PILLS WERE USED: BURY the ruby.
+!NO PILL USE MESSAGE FO
 
 >e
 >s
+
+#+ttc-table-of-oyster-anagrams-unearth
 >e
 DEBUG INFO: Spilling HUNTER HUNT AREA.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to UNEARTH the haunter from the HUNTER HUNT AREA.
 HOW PILLS WERE USED: UNEARTH the haunter from the HUNTER HUNT AREA.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-assuage
 >z
 DEBUG INFO: Spilling Use-Saga Sausage.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to ASSUAGE the Use-Saga Sausage.
 HOW PILLS WERE USED: ASSUAGE the Use-Saga Sausage.
+!NO PILL USE MESSAGE FO
 
 >z
 The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it. Perhaps you can get the haunter to follow you just by walking around.
@@ -179,10 +232,12 @@ The haunter-sausage points at the pills and wags its finger at you. It is beyond
 >n
 >w
 
+#ttc-table-of-oyster-anagrams-patrol
 >z
 DEBUG INFO: Spilling ol' trap.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to PATROL the ol' trap.
 HOW PILLS WERE USED: PATROL the ol' trap.
+!NO PILL USE MESSAGE FO
 
 >in
 End Den
@@ -192,29 +247,39 @@ DEBUG INFO: Current oyster hint/spill item = yourself/yourself.
 
 Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map. One might be in your inventory, and you just need to examine it.
 
+#ttc-table-of-oyster-anagrams-prepay
 >x gleaner
 DEBUG INFO: Spilling papery yapper.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to PREPAY the papery yapper.
 HOW PILLS WERE USED: PREPAY the papery yapper.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-derail
 >z
 DEBUG INFO: Spilling dialer.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to DERAIL with the dialer.
 HOW PILLS WERE USED: DERAIL with the dialer.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-spin
 >z
 DEBUG INFO: Spilling pins.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SPIN the pins.
 HOW PILLS WERE USED: SPIN the pins.
+!NO PILL USE MESSAGE FO
 
 >gonear plasm lamps
+
+#ttc-table-of-oyster-anagrams-tan
 >z
 DEBUG INFO: Spilling natant ant.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TAN the ant.
 HOW PILLS WERE USED: TAN the ant.
+!NO PILL USE MESSAGE FO
 
+#ttc-table-of-oyster-anagrams-redial
 >z
 DEBUG INFO: Spilling repaired dialer.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to REDIAL with the dialer.
 HOW PILLS WERE USED: REDIAL with the dialer.
-
+!NO PILL USE MESSAGE FO

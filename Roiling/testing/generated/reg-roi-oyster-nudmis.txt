@@ -1216,14 +1216,14 @@ You already dealt with both arches--no need to deal with one.
 #ttc-table-of-oyster-done-rejects-achers-chaser-arches
 >srecha
 Further searching proves fruitless.
-#ttc-table-of-oyster-spechelp-gleaner
+#ttc-table-of-oyster-spechelp-bogus-enlarge
 >gleanre
 The gleaner remains too small to read.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
 #ttc-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
-#ttc-table-of-oyster-scannotes-general-gleaner
+#ttc-table-of-oyster-scannotes-bogus-enlarge
 >scan general gleaner
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 
@@ -1235,9 +1235,13 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
-#ttc-table-of-oyster-done-rejects-gleaner
+#ttc-table-of-oyster-spechelp-bogus-reangle
 >gleanre
 All you really have to do with the gleaner is to examine it. There might be more in the gleaner, but trying that gives nothing.
+
+#ttc-table-of-oyster-scannotes-bogus-reangle
+>scan gleaner
+Hmm! There's something more to do with the gleaner. You've gotten what you need, though.
 
 >n
 Horned Hedron

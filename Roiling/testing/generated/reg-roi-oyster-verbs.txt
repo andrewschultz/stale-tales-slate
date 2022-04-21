@@ -177,7 +177,7 @@ Whimpering slightly.
 >gt freight
 You don't really want to revisit the crays.
 
-#ttc-table-of-goto-sectioning-disease-seaside-3--
+#+ttc-table-of-goto-sectioning-disease-seaside-3--
 >gt seaside
 No sense crossing back. There's more on this side of the shore.
 
