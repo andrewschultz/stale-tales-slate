@@ -4498,8 +4498,7 @@ this is the presto-hinting rule:
 			try objhinting caps lock instead;
 		if fount is touchable, try objhinting fount instead;
 		if futon is touchable and peels speel is reflexive:
-			if spoilit is true, all-say "Yeech. You're full. You need to [b]SLEEP[r]." instead;
-			try objhinting futon instead;
+			try objhinting peels speel instead;
 		if Im Le Cop polemic is reflexive, try objhinting Im Le Cop polemic instead;
 		if coal is touchable, try objhinting coal instead;
 		if gum is touchable, try objhinting gum instead;
@@ -4820,6 +4819,7 @@ to decide which thing is otters-cur-item: [this does not include LLPs. I don't w
 	if player is in Disowned Downside:
 		if parleys splayer players are touchable:
 			if parleys splayer players are reflexive, decide on parleys splayer players;
+			if yer all a yell'r is touchable, decide on yer all a yell'r;
 			if last-thing-hinted is touchable and last-thing-hinted is a pickup-line:
 				if spoilit is false and pickup-hint-warn is false:
 					say "NOTE: ARO will take the most recent pickup line and continue to hint that one until you figure it out. Unfortunately, it can't specifically hint pickup lines easily from the parser, due to the ways the [pla-ma] express them.";
@@ -21667,8 +21667,8 @@ this is the spoil-hints rule:
 			if there is no spoil-entry entry:
 				say "Before you eat the crust, you mutter a naughty word. You may need to use [b]HINT[r] to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";
 				ital-say "this is a bug. If you have a transcript/game state, I'd love to know.";
-				do nothing instead;
-			if noun is thruhinted and scams is false, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
+				do nothing instead; [note: in PRESTO, the spoil-entries are not always bolded, because sometimes they're a word and sometimes they're an action or noun with supporting verbs. This is not the case for ROUTES or TROVES. ]
+			if noun is thruhinted and scams is false, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack][end if][spoil-entry entry]." instead;
 			if noun is prefigured, say "The crust looks so disgusting, you [if player is in Hacks Shack]instead think [spoil-entry entry][else]once again think [spoil-entry entry][end if]." instead;
 			if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
 			say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!";

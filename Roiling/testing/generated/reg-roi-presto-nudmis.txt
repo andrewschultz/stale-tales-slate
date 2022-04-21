@@ -1497,7 +1497,7 @@ Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter.
 #mistake retest for redive
 >redive
 Deriving was tricky enough.
-#ttc-table-of-presto-readables-drive-a
+#+ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 #+ttc-table-of-hacks'-shack-nudges-tbakey

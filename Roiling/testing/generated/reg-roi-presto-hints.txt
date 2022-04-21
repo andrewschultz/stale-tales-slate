@@ -22,12 +22,14 @@ Grey Gyre
 >monty hints
 You haven't gotten any points yet, so you probably want to find what sort of word is used here.
 
+#ttc-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >umph
 Your score has just gone up by one point
 Austerer Treasure
 
+#ttc-table-of-presto-anagrams-pooh
 You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: Ye Hoop hinting.
@@ -56,6 +58,7 @@ DEBUG INFO: plebe hinting.
 >s
 Char Arch
 
+#ttc-table-of-presto-anagrams-rats
 You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: tsar star hinting.
@@ -64,6 +67,7 @@ DEBUG INFO: tsar star hinting.
 >rats
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-drat
 You gulp the crust and can't help thinking DRAT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: dart hinting.
@@ -87,16 +91,19 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 
 >n
 
+#ttc-table-of-presto-anagrams-bleep
 You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 #not a mistake
 >bleep
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-mazeltov
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
 DEBUG INFO: Nowt Town hinting.
 !DEBUG INFO: volt maze.
+#ttc-table-of-presto-anagrams-wont
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
 
@@ -113,6 +120,7 @@ Wearing the tsar star may help you get the authority to get by someone else who 
 >e
 Marines Seminar Remains
 
+#ttc-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: boing-go bin hinting.
@@ -120,6 +128,7 @@ DEBUG INFO: boing-go bin hinting.
 >get popgun
 
 DEBUG INFO: boing-go bin hinting.
+#+ttc-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >prost
@@ -139,6 +148,7 @@ Score in a scenario: 10 out of 41 total points in the current region, Presto. Lo
 >blam
 Your score has just gone up by one point
 
+#+ttc-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
@@ -157,6 +167,7 @@ The ether turns your stomach too much to eat the crust. It's dangerous. You need
 >s
 Dirge Ridge
 
+#ttc-table-of-presto-anagrams-ole
 You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: Leo hinting.
@@ -164,6 +175,7 @@ DEBUG INFO: Leo hinting.
 >ole
 by one point
 
+#ttc-table-of-presto-anagrams-darn
 You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
@@ -172,6 +184,7 @@ Score in a scenario: 12 out of 41 total points in the current region, Presto. Lo
 >darn
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-whassup
 You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 /DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
@@ -228,7 +241,7 @@ You can just put the dart in the popgun.
 >hint boing go bin
 The boing-go bin works fine now.
 
-#ttc-table-of-presto-hint-request-rejects-dart
+#+ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 Maybe the dart can fit in the popgun.
 
@@ -238,10 +251,11 @@ Score in a scenario: 16 out of 41 total points in the current region, Presto. Lo
 >load gun with dart
 You put the dart into the PG-on-up popgun.
 
-#ttc-table-of-presto-hint-request-rejects-dart
+#+ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 You're done with the dart, except for firing it at the right time.
 
+#ttc-table-of-presto-anagrams-there
 You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 DEBUG INFO: ether hinting.
 
@@ -268,6 +282,8 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 >n
 Saps' Pass
 
+#ttc-table-of-presto-anagrams-gosh
+#ttc-table-of-presto-anagrams-syke
 /You gulp the crust and can't help thinking (GOSH|SYKE)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 ##bingo *2 = no line break ??
@@ -280,6 +296,9 @@ Your score has just gone up by one point
 
 Phat Path
 
+#ttc-table-of-presto-anagrams-tough
+#ttc-table-of-presto-anagrams-solong
+#ttc-table-of-presto-anagrams-later
 /You gulp the crust and can't help thinking (TOUGH|SO LONG|LATER)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: harpings phrasing hinting.

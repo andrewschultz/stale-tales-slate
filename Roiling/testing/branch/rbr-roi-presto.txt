@@ -153,6 +153,7 @@ You don't need to levitate the hump. You need a way to jump over it.
 You don't need to levitate the hump. You need a way to jump over it.
 
 @spoi
+#ttc-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >umph
@@ -165,6 +166,7 @@ Austerer Treasure
 It feels cathartic, using a non-dirty exclamation to get going.
 
 @spoi
+#ttc-table-of-presto-anagrams-pooh
 You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -313,6 +315,7 @@ GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's 
 Char Arch
 
 @spoi
+#ttc-table-of-presto-anagrams-rats
 You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -446,6 +449,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-drat
 You gulp the crust and can't help thinking DRAT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -497,6 +501,7 @@ The dart's just fine as-is.
 >n
 
 @spoi
+#ttc-table-of-presto-anagrams-bleep
 You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @nud
@@ -525,10 +530,12 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-mazeltov
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
 DEBUG INFO: Nowt Town hinting.
 !DEBUG INFO: volt maze.
+#ttc-table-of-presto-anagrams-wont
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
 
@@ -563,6 +570,7 @@ Wearing the tsar star may help you get the authority to get by someone else who 
 Marines Seminar Remains
 
 @spoi
+#ttc-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -638,6 +646,7 @@ Your score has just gone up by one point
 
 @spoi
 DEBUG INFO: boing-go bin hinting.
+#+ttc-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @nud
@@ -914,6 +923,7 @@ You don't want to, and can't, go back to or through the volt maze you solved.
 You don't want to, and can't, go back to or through the volt maze you solved.
 
 @spoi
+#+ttc-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @!min
@@ -984,6 +994,7 @@ No chance.
 Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
 @spoi
+#ttc-table-of-presto-anagrams-ole
 You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -994,6 +1005,7 @@ DEBUG INFO: Leo hinting.
 by one point
 
 @spoi
+#ttc-table-of-presto-anagrams-darn
 You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
@@ -1065,6 +1077,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-whassup
 You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -1239,7 +1252,7 @@ You can just put the dart in the popgun.
 >hint boing go bin
 The boing-go bin works fine now.
 \\
-#ttc-table-of-presto-hint-request-rejects-dart
+#+ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 Maybe the dart can fit in the popgun.
 
@@ -1283,11 +1296,12 @@ You put the dart into the PG-on-up popgun.
 You put the dart into the PG-on-up popgun.
 
 @hints
-#ttc-table-of-presto-hint-request-rejects-dart
+#+ttc-table-of-presto-hint-request-rejects-dart
 >hint dart
 You're done with the dart, except for firing it at the right time.
 
 @spoi
+#ttc-table-of-presto-anagrams-there
 You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 DEBUG INFO: ether hinting.
 
@@ -1344,6 +1358,8 @@ The ether is gone. You can just go north.
 Saps' Pass
 
 @spoi
+#ttc-table-of-presto-anagrams-gosh
+#ttc-table-of-presto-anagrams-syke
 /You gulp the crust and can't help thinking (GOSH|SYKE)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 ##bingo *2 = no line break ??
@@ -1474,6 +1490,9 @@ Your score has just gone up by one point
 Phat Path
 
 @spoi
+#ttc-table-of-presto-anagrams-tough
+#ttc-table-of-presto-anagrams-solong
+#ttc-table-of-presto-anagrams-later
 /You gulp the crust and can't help thinking (TOUGH|SO LONG|LATER)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
@@ -1765,6 +1784,7 @@ You don't need any D&D character to magick things the rest of the way here.
 You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.
 
 @spoi
+#ttc-table-of-presto-anagrams-screen
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
 
 @verbs
@@ -1801,6 +1821,7 @@ by one point
 Only one more piece of hardware is needed, and the computer will work.
 
 @spoi
+#ttc-table-of-presto-anagrams-skid
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
 
 >score
@@ -2057,6 +2078,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-leaf
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a LEAF.
 
 >score
@@ -2217,6 +2239,10 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+#ttc-table-of-presto-anagrams-keyboard
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a KEYBOARD.
+
 >score
 {$SCOS}
 
@@ -2235,6 +2261,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 You can now do computery things unimpeded! Hooray!
+
+@spoi
+#ttc-table-of-presto-anagrams-disk
+You would rather change the skid back to the disk, then put the disk in the disk drive.
 
 >score
 {$SCOS}
@@ -2351,11 +2381,16 @@ You may need sleep later, but not now. Besides, you have nowhere to sleep.
 >pad sleep
 SLEEP is only advisable in a protected area.
 
+@spoi
+#ttc-table-of-presto-anagrams-reboot
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to REBOOT with the E-Robot.
+
 >reboot
 Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-capslock
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
 
 >score
@@ -2380,6 +2415,7 @@ You need to get rid of that uppercase to successfully compile your code.
 fits in perfectly
 
 @spoi
+#ttc-table-of-presto-anagrams-futon
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a FUTON.
 
 @nud
@@ -2407,6 +2443,9 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@spoi
+#ttc-table-of-presto-anagrams-sleep
 
 @nud
 #ttc-table-of-presto-done-rejects-futon
@@ -2451,6 +2490,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+#ttc-table-of-presto-anagrams-compile
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to learn to COMPILE from the I'm Le Cop polemic.
+
 >score
 {$SCOS}
 
@@ -2473,6 +2516,7 @@ by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-cola
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
 @hints
@@ -2509,6 +2553,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-presto-anagrams-mug
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a MUG.
 
 >score
@@ -2647,7 +2692,7 @@ Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter.
 #mistake retest for redive
 >redive
 Deriving was tricky enough.
-#ttc-table-of-presto-readables-drive-a
+#+ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 #+ttc-table-of-hacks'-shack-nudges-tbakey
@@ -2708,6 +2753,10 @@ You'd get cola all over you if you tried anything with the mug.
 >lcoa
 The mug is already somehow generating infinite cola. Don't want to mess with that.
 
+@spoi
+#ttc-table-of-presto-anagrams-debug
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to DEBUG the code you compiled.
+
 @verbs
 >gt phat path
 #verbcase goto-presto-if-player-is-in-hacks'-shack
@@ -2719,6 +2768,10 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: USB hinting.
+
+@spoi
+#ttc-table-of-presto-anagrams-sub
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a BUS or USB.
 
 >score
 @min
