@@ -17280,7 +17280,7 @@ The Curst Palace is a reflexive boring backdrop. drop-region of Curst Palace is 
 
 understand "castle up arc" and "castle arc up" and "castle up/arc" and "up arc" and "arc up" and "castle" as curst palace.
 
-to say up-arc: say "[one of]Castle Up Arc (or is it Arc Up?)[or][one of]Castle Up Arc[or]Castle Arc Up[in random order][stopping]"
+to say up-arc: say "[one of]Castle Up Arc (or is it Arc Up?)[no line break][or][one of]Castle Up Arc[or]Castle Arc Up[in random order][stopping]"
 
 towers-min-flag is a truth state that varies;
 

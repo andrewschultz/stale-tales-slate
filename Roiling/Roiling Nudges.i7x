@@ -1427,7 +1427,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rend"	303066509	--	--	"[all-rodney]."
 
 to say towersloc:
-	say "It's not this location you need to change, but [if location of player is loftier trefoil]the Curst Palace[else][up-arc][end if] [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
+	say "Yes, this location needs changing, but that won't happen until [if location of player is not loftier trefoil][up-arc], [end if]the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if][if location of player is not loftier trefoil],[end if] is changed";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
 to say picaro-note: say "[if here-picaros is 1]There's only one picaro left, and his name is Rodney[else if moot-picaros > 0]You've already thinned the picaros['] ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
@@ -1674,7 +1674,7 @@ chapter mislit limits
 
 table of Mislit Limits nudges [4 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"mislit"	407258668	--	--	"[towersloc]."
+"mislit"	407258668	--	--	"The Curst Palace is right here! You should focus on it instead."
 "clays"	293640460	--	--	"[clay-pal]."
 "caly"	197366494	--	--	"[clay-pal]."
 "enip"	323172422	unripe ur pine	--	"It's officially an ur-pine, not a pine."

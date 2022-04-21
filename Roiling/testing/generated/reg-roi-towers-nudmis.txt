@@ -34,7 +34,7 @@ This version was written by some lovely chap named ALTERIC.
 >c
 #ttc-table-of-loftier-trefoil-nudges-trefoil
 >trefoli
-It's not this location you need to change, but the Curst Palace across Leak Lake.
+Yes, this location needs changing, but that won't happen until the Curst Palace across Leak Lake is changed.
 #ttc-table-of-loftier-trefoil-nudges-picaro
 >picaor
 One at a time, by name. Each has his own weakness.
@@ -325,7 +325,7 @@ Hmm...that's good practice, and a good guess, but even if it were right, you don
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Curst Palace. That's a decent omen.
 #ttc-table-of-topside-deposit-nudges-deposit
 >deposti
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-topside-deposit-nudges-fire
 >fier
 The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
@@ -595,7 +595,7 @@ Baldest Blasted Saltbed
 
 #ttc-table-of-baldest-blasted-saltbed-nudges-baldest
 >baldets
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-baldest-blasted-saltbed-nudges-twes
 >twse
 You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future.
@@ -686,7 +686,7 @@ Even if the reds and yellows were all in place, there'd still be a lot of possib
 >c
 #ttc-table-of-anemic-cinema-nudges-cinema
 >cineam
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-anemic-cinema-nudges-theater
 >theatre
 You don't need to go looking for screens to stare at right now. You have a world to save.
@@ -738,7 +738,7 @@ Wrong type of word, and you're missing a d.
 You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.
 #ttc-table-of-fringe-finger-nudges-finger
 >fingre
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-fringe-finger-nudges-sled
 >slde
 Work on the whole sled rut.
@@ -838,10 +838,10 @@ Shaven Havens
 There's nothing here to unlock. Maybe someone's imprisoned somewhere. And besides, the duck doesn't seem cooperative, yet. Still, that's an idea.
 #ttc-table-of-shaven-havens-nudges-shaven
 >shavne
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-shaven-havens-nudges-haven
 >havne
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-towers-nudges-lone
 >loen
 It's not just any lone animal. It's a LONE DUCK.
@@ -1217,10 +1217,10 @@ Score in a scenario: 32 out of 57 total points in the current region, Towers. Lo
 
 #ttc-table-of-leveraged-everglade-nudges-leveraged
 >leveragde
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-leveraged-everglade-nudges-leverage
 >leveraeg
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-leveraged-everglade-nudges-screech
 >screehc
 You can't change the screech creches. Well, not until you defeat Elvira.
@@ -1338,10 +1338,10 @@ Score in a scenario: 36 out of 57 total points in the current region, Towers. Lo
 
 #ttc-table-of-lost-lots-nudges-lost
 >ltso
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-lost-lots-nudges-lot
 >lto
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-lost-lots-nudges-gasfield
 >gasfiedl
 You can't change the gadflies. There are too many.
@@ -1394,7 +1394,7 @@ The garden does not get any bigger.
 The geese are fine as they are. They're just there for scenery, and stuff.
 #ttc-table-of-danger-garden-nudges-gander
 >gandre
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 
 >e
 
@@ -1426,7 +1426,7 @@ Even if the goal could become a person, they'd be kind of wooden.
 
 #ttc-table-of-obscurest-subsector-nudges-obscurest
 >obscurets
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 >lockde
 Nothing needs to be locked here, certainly not the gaol which already is.
 #ttc-table-of-obscurest-subsector-nudges-gol
@@ -1589,7 +1589,7 @@ Outer Route
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 #ttc-table-of-outer-route-nudges-roeut
 >roetu
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-outer-route-nudges-sway
 >swya
 You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful
@@ -1660,10 +1660,10 @@ The diverse deviser is complicated enough. You already got something from it, an
 Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
 #ttc-table-of-actionless-coastlines-nudges-actionless
 >actionless
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-actionless-coastlines-nudges-coastline
 >coastlien
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-towers-nudges-maturation
 >maturatino
 The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway
@@ -1697,7 +1697,7 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 >s
 #ttc-table-of-artist-traits-strait-nudges-strati
 >strait
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-artist-traits-strait-nudges-trait
 >trati
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
@@ -1717,10 +1717,10 @@ You're not sure why the Salted Deltas could be slated, or how. You're not here f
 The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway.
 #ttc-table-of-salted-deltas-nudges-salted
 >saltde
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-salted-deltas-nudges-delta
 >delat
-/It's not this location you need to change, but Castle (Up Arc|Arc Up), the Curst Palace across Leak Lake\.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #+ttc-table-of-towers-nudges-lake
 >laek
 You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
@@ -1986,7 +1986,7 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 
 #ttc-table-of-mislit-limits-nudges-mislit
 >mislti
-It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
+The Curst Palace is right here! You should focus on it instead.
 #ttc-table-of-mislit-limits-nudges-clays
 >clasy
 Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead.
@@ -2103,10 +2103,10 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 
 #ttc-table-of-mesprise-premises-nudges-mesprise
 >mespries
-It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace nearby, is changed.
 #ttc-table-of-mesprise-premises-nudges-emprise
 >empries
-It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
+/Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace nearby, is changed.
 #ttc-table-of-towers-spechelp-itster
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
