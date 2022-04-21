@@ -8609,7 +8609,7 @@ carry out vaguing:
 	say "[cur-has]";
 	the rule succeeds.
 
-description of pedanto notepad is "Other people have computers, but your notepad is yours[one of]. It's made by Da Ponte, who now have a monopoly. But you just like it. The color, the feel[or][stopping]. [cur-has][no line break]"
+description of pedanto notepad is "Other people have computers, but your notepad is yours[one of]. It's made by Da Ponte, who now have a monopoly. But you just like it. The color, the feel[or][stopping]. [cur-has][run paragraph on]"
 
 check examining pedanto notepad for the first time:
 	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].[paragraph break](To use the notepad, you can type [b]PAD[r] (subject) or [b]CONSULT PAD ABOUT[r] (subject). If you forget what you've written about, you can type [b]PAD[r] or [b]CONSULT PAD[r].)";
@@ -8623,41 +8623,45 @@ to decide whether (qq - a truth state) is unrelevant:
 	if mrlp is Ordeal Reload or mrlp is stores, decide no;
 	decide yes;
 
-to say cur-has:
-	say "Currently you can consult your pad about these general topics:[line break]--";
+to consult-region-free (consult-type - a number):
 	let A be 0;
+	say "[line break]--";
+	repeat through table of notepad entries:
+		if type entry is not consult-type, next;
+		if known entry is false, next;
+		if there is a fixed-region entry and consult-type is not 3, next;
+		if there is no fixed-region entry and consult-type is 3, next;
+		if remainder after dividing A by 4 is 0:
+			if A > 0:
+				say ".";
+				say "--";
+		else:
+			say ", ";
+		increment A;
+		say "[if readyet entry is false][i][end if][short entry]";
+		if short entry is "flips" and pf-warn is true:
+			say "/pf";
+		say "[r]";
+	say ".";
+
+to say cur-has:
+	say "Currently you can consult your pad about these general topics:";
+	let A be 0;
+	consult-region-free 1;
+	say "[line break]";
+	say "Currently you can consult your pad about these options, meta-verbs and specific game syntax:";
+	consult-region-free 2;
 	let fixies be 0;
 	repeat through table of notepad entries:
-		if known entry is true:
-			if there is a fixed-region entry and mrlp is fixed-region entry:
-				increment fixies;
-			else:
-				if remainder after dividing A by 4 is 0:
-					say "[if A > 0].[line break]--[end if]";
-				else:
-					say ", ";
-				increment A;
-				say "[if readyet entry is false][i][end if][short entry]";
-				if short entry is "flips" and pf-warn is true:
-					say "/pf";
-				say "[r]";
-	say ".[line break]Unconsulted subjects are in [i]italics[r].";
-	if fixies > 0:
-		now A is 0;
-		say "[line break]You can also consult your pad about [if fixies is 1]a topic[else]topics[end if] specific to this region:[line break]--";
-		repeat through table of notepad entries:
-			if known entry is true and there is a fixed-region entry:
-				if mrlp is fixed-region entry:
-					if remainder after dividing A by 4 is 0:
-						say "[if A > 0].[line break]--";
-					else:
-						say ", ";
-					increment A;
-					say "[if readyet entry is false][i][end if][short entry][r]";
-		if remainder after dividing A by 4 is not 0:
-			say "[line break]";
-	else:
+		if there is a fixed-region entry and mrlp is fixed-region entry, increment fixies;
+	if fixies is 0:
 		say "There are no topics specific to this region right now.";
+		say "[line break]Unconsulted subjects are in [i]italics[r].";
+		continue the action;
+	say "[line break]";
+	say "Currently you can consult your pad about [if fixies is 1]this region-specific topic[else]these region-specific topics[end if]:";
+	consult-region-free 3;
+	say "[line break]Unconsulted subjects are in [i]italics[r].";
 
 the pen is part of the pedanto notepad.
 
@@ -8724,54 +8728,54 @@ to say terse-types:
 
 [top]
 table of notepad entries [pad-rec whatever is below]
-short	verify	fixed-region	readyet	known	topic (topic)	blurb
-"access"	false	--	false	true	"access"	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."
-"asking"	false	--	--	false	"asking"	"You will want to [b]ASK[r] others about themselves a lot. Elvira, too, maybe."
-"clues"	true	--	--	false	"clues"	"You can [b]LISTEN[r], [b]ASK[r] people about random stuff, or [b]X[r]/[b]EXAMINE[r] them to figure how to change them."
-"curst palace"	true	towers	--	false	"curst/palace" or "curst palace" or "castle arc up" or "castle arc/up" or "up arc" or "arc up"	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."
-"DIE THOU"	true	oyster	--	false	"die" or "die thou" or "the/ hideout/hangout"	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."
-"diorama"	true	--	--	false	"diorama"	"[dior-scan]"
-"directions/dirs"	false	--	--	true	"directions/dirs"	"[this-game] uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."
-"Elvira"	true	--	--	false	"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	"Apparently, appreciating her is what separates us from the animals. Well, according to [porter][if mrlp is otters]. But you need to know more and ask around about her[end if]."
-"extra/taxer"	false	--	--	false	"extra/taxer" or "extra taxer"	"[b]EXTRA[r] or [b]TAX ER[r]/[b]TAXER[r] toggles more advice for ambiguous/question mark hints. This is close to [b]XTRA[r], but it is likely the player will want to set [b]TAXER[r] and not [b]EXTRA[r] back."
-"flips"	false	--	--	false	"flips" or "flip" or "pf"	"[what-can-flip]"
-"free turns"	false	--	--	true	"free turns" or "free/turns"	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like [b]SCORE[r], will not cost you time if you are in a tight situation."
-"go to"	false	--	--	true	"go to" or "go/gt/goto"	"You can [b]GT/[b]GO TO[r]/[b]GOTO[r] a location or thing if it's a bit far away but in the region."
-"Gretta"	true	--	--	false	"gretta"	"If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira."
-"guru"	true	others	--	false	"guru"	"You can [b]GURU[r] something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."
-"hacking"	true	presto	--	false	"hacking" or "hack"	"A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities."
-"Leo and Rand"	true	presto	--	false	"Leo/Rand" or "Leo and Rand"	"[l-n-r] may be able to help you with heavy lifting."
-"long commands"	--	--	--	false	"long commands" or "long/command/commands"	"Commands over 4 words long aren't necessary. You can say [b]TAKE[r] or [b]GET ALL[r], eliminate THE, or use half an open compound word without repercussions."
-"methods"	false	--	--	true	"methods"	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."
-"No-Lag Logan"	true	routes	--	false	"no lag" or "logan" or "no lag logan"	"No-Lag Logan may have left behind a ship that can get you out of here. It is beyond an un-road."
-"Old Warpy"	false	--	--	true	"old warpy" or "old/warpy"	"Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble."
-"opt in/no tip"	false	--	--	false	"opt in" or "opt/notip/optin/tip" or "no tip"	"[b]OPT IN[r] lets you see initial region hints. [b]NO TIP[r] turns them off."
-"options"	false	--	false	true	"options" or "opts" or "post opts"	"[opts-list]"
-"parse"	false	--	false	false	"parse/spare"	"[b]PARSE[r] processes the settler's data for you, but [b]SPARE[r] hides it."
-"poss"	false	--	--	false	"poss"	"[b]POSS[r] toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too."
-"powers"	false	otters	--	false	"powers"	"You need to figure a way to get your powers back. They were drained when you passed by the solid idols."
-"progress"	false	--	--	false	"progress"	"You note the following: Ordeal Reload = stuff[other-areas]."
-"question mark"	true	--	--	false	"question mark" or "question/mark"	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can [b]HINT[r] it if you're stuck[end if]."
-"random dialogue"	false	--	--	false	"random/ dialogue/dialog/" or "hush/uhhs"	"[b]HUSH[r] turns random dialogue off. [b]UHHS[r] turns it on. It is [on-off of talk-quiet]."
-"reagents"	true	routes	--	false	"reagents/reagent"	"You need three reagents to help Brother Horbert: a stupor sprout[if player has stupor sprout] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."
-"red"	true	--	--	true	"red"	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."
-"retry"	true	--	--	true	"retry" or "terry"	"You wrote notes about how you can [b]RETRY[r] thanks to Terry if you get stuck somewhere past a store."
-"saying"	false	--	--	false	"say/saying/think/thinking"	"Instead of [b]SAY[r]ing or [b]THINK[r]ing, you can just type the word."
-"scenery"	false	towers	--	false	"scenery"	"St. Teri told you to look for [the entry palace-clue-index in nextclue]."
-"SHATTER-THREATS"	false	--	--	false	"shatter/threats" or "shatter-threats" or "shatter threats"	"It's that new law Elvira got passed, about how you couldn't flip things to their anagrams, because there are too few anagrams--things to change to things--left for you to save Yorpwald again. Well, outside your own house. Of course, if you protested, that would look suspicious.[paragraph break]The title was based on a really convoluted acronym you can't remember."
-"Shuffling Around"	true	--	--	true	"shuffling/ around" or "shuffling around"	"Postmortems? Most sport em. Details: I lasted. I miss my tagged gadget and how it helped me through the Forest (store F,) Sortie (store I,) and Metros (store M) in the Trips Strip. To the resort (store R.) Redness = guised guides (letters all wrong.)"
-"sl"	false	--	--	false	"sl"	"Shortcut command to turn slider on."
-"sleep"	false	--	--	false	"sleep/sleeping"	"[b]SLEEP[r] is only advisable in a protected area."
-"spaces"	true	--	--	false	"spaces/space/son/nos" or "space on" or "no space"	"[if screenread is false]To put spaces in letters settler readings, type [b]SPACEON[r] or [b]SON[r]. [b]NOSPACE[r] or [b]NOS[r] reverses this[else]Spaces are on by default in accessibility mode[end if]."
-"tagged gadget"	true	--	--	true	"tagged/gadget" or "tagged gadget"	"You wrote some notes about the Tagged Gadget from [shuf] in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."
-"talking"	false	--	--	false	"talking"	"[b]TALK[r]ing is the equivalent of asking someone about themselves[terse-types]."
-"the haunter"	true	oyster	--	false	"haunter"	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."
-"the settler"	true	--	--	false	"the settler" or "settler"	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]sy = scan with hints, overriding current setting (sn = without)[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."
-"the Wildest Wilteds"	true	towers	--	false	"wilteds/wildest" or "wildest wilteds"	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to have lost touch with."
-"verbs"	false	--	false	true	"verbs/verb"	"[verb-list]"
-"warp"	true	--	--	true	"warp"	"[i][bracket]FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"
-"xray"	false	towers	--	false	"xray" or "xraying"	"[xray-help]."
-"xtra/trax"	false	--	--	false	"xtra/trax"	"You can use the command [b]XTRA TRAX[r] (or [b]XTRA[r] or [b]TRAX[r]) to toggle tracking the right combination of letters less generically. However, some hints might be a bit too pointed."
+short	verify	fixed-region	type	readyet	known	topic (topic)	blurb
+"access"	false	--	2	false	true	"access"	"Typing [b]SCR[r] or [b]SCREEN[r] toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."
+"asking"	false	--	2	--	false	"asking"	"You will want to [b]ASK[r] others about themselves a lot. Elvira, too, maybe."
+"clues"	true	--	1	--	false	"clues"	"You can [b]LISTEN[r], [b]ASK[r] people about random stuff, or [b]X[r]/[b]EXAMINE[r] them to figure how to change them."
+"curst palace"	true	towers	3	--	false	"curst/palace" or "curst palace" or "castle arc up" or "castle arc/up" or "up arc" or "arc up"	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."
+"DIE THOU"	true	oyster	3	--	false	"die" or "die thou" or "the/ hideout/hangout"	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."
+"diorama"	true	--	1	--	false	"diorama"	"[dior-scan]"
+"directions/dirs"	false	--	1	--	true	"directions/dirs"	"[this-game] uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."
+"Elvira"	true	--	1	--	false	"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	"Apparently, appreciating her is what separates us from the animals. Well, according to [porter][if mrlp is otters]. But you need to know more and ask around about her[end if]."
+"extra/taxer"	false	--	2	--	false	"extra/taxer" or "extra taxer"	"[b]EXTRA[r] or [b]TAX ER[r]/[b]TAXER[r] toggles more advice for ambiguous/question mark hints. This is close to [b]XTRA[r], but it is likely the player will want to set [b]TAXER[r] and not [b]EXTRA[r] back."
+"flips"	false	--	1	--	false	"flips" or "flip" or "pf"	"[what-can-flip]"
+"free turns"	false	--	1	--	true	"free turns" or "free/turns"	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like [b]SCORE[r], will not cost you time if you are in a tight situation."
+"go to"	false	--	2	--	true	"go to" or "go/gt/goto"	"You can [b]GT/[b]GO TO[r]/[b]GOTO[r] a location or thing if it's a bit far away but in the region."
+"Gretta"	true	--	1	--	false	"gretta"	"If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira."
+"guru"	true	others	3	--	false	"guru"	"You can [b]GURU[r] something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."
+"hacking"	true	presto	3	--	false	"hacking" or "hack"	"A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities."
+"Leo and Rand"	true	presto	3	--	false	"Leo/Rand" or "Leo and Rand"	"[l-n-r] may be able to help you with heavy lifting."
+"long commands"	--	--	2	--	false	"long commands" or "long/command/commands"	"Commands over 4 words long aren't necessary. You can say [b]TAKE[r] or [b]GET ALL[r], eliminate THE, or use half an open compound word without repercussions."
+"methods"	false	--	1	--	true	"methods"	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."
+"No-Lag Logan"	true	routes	3	--	false	"no lag" or "logan" or "no lag logan"	"No-Lag Logan may have left behind a ship that can get you out of here. It is beyond an un-road."
+"Old Warpy"	false	--	1	--	true	"old warpy" or "old/warpy"	"Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble."
+"opt in/no tip"	false	--	2	--	false	"opt in" or "opt/notip/optin/tip" or "no tip"	"[b]OPT IN[r] lets you see initial region hints. [b]NO TIP[r] turns them off."
+"options"	false	--	2	false	true	"options" or "opts" or "post opts"	"[opts-list]"
+"parse"	false	--	2	false	false	"parse/spare"	"[b]PARSE[r] processes the settler's data for you, but [b]SPARE[r] hides it."
+"poss"	false	--	2	--	false	"poss"	"[b]POSS[r] toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too."
+"powers"	false	otters	3	--	false	"powers"	"You need to figure a way to get your powers back. They were drained when you passed by the solid idols."
+"progress"	false	--	1	--	false	"progress"	"You note the following: Ordeal Reload = stuff[other-areas]."
+"question mark"	true	--	1	--	false	"question mark" or "question/mark"	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can [b]HINT[r] it if you're stuck[end if]."
+"random dialogue"	false	--	1	--	false	"random/ dialogue/dialog/" or "hush/uhhs"	"[b]HUSH[r] turns random dialogue off. [b]UHHS[r] turns it on. It is [on-off of talk-quiet]."
+"reagents"	true	routes	3	--	false	"reagents/reagent"	"You need three reagents to help Brother Horbert: a stupor sprout[if player has stupor sprout] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."
+"red"	true	--	1	--	true	"red"	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."
+"retry"	true	--	2	--	true	"retry" or "terry"	"You wrote notes about how you can [b]RETRY[r] thanks to Terry if you get stuck somewhere past a store."
+"saying"	false	--	2	--	false	"say/saying/think/thinking"	"Instead of [b]SAY[r]ing or [b]THINK[r]ing, you can just type the word."
+"scenery"	false	towers	1	--	false	"scenery"	"St. Teri told you to look for [the entry palace-clue-index in nextclue]."
+"SHATTER-THREATS"	false	--	1	--	false	"shatter/threats" or "shatter-threats" or "shatter threats"	"It's that new law Elvira got passed, about how you couldn't flip things to their anagrams, because there are too few anagrams--things to change to things--left for you to save Yorpwald again. Well, outside your own house. Of course, if you protested, that would look suspicious.[paragraph break]The title was based on a really convoluted acronym you can't remember."
+"Shuffling Around"	true	--	1	--	true	"shuffling/ around" or "shuffling around"	"Postmortems? Most sport em. Details: I lasted. I miss my tagged gadget and how it helped me through the Forest (store F,) Sortie (store I,) and Metros (store M) in the Trips Strip. To the resort (store R.) Redness = guised guides (letters all wrong.)"
+"sl"	false	--	2	--	false	"sl"	"Shortcut command to turn slider on."
+"sleep"	false	--	1	--	false	"sleep/sleeping"	"[b]SLEEP[r] is only advisable in a protected area."
+"spaces"	true	--	2	--	false	"spaces/space/son/nos" or "space on" or "no space"	"[if screenread is false]To put spaces in letters settler readings, type [b]SPACEON[r] or [b]SON[r]. [b]NOSPACE[r] or [b]NOS[r] reverses this[else]Spaces are on by default in accessibility mode[end if]."
+"tagged gadget"	true	--	1	--	true	"tagged/gadget" or "tagged gadget"	"You wrote some notes about the Tagged Gadget from [shuf] in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."
+"talking"	false	--	2	--	false	"talking"	"[b]TALK[r]ing is the equivalent of asking someone about themselves[terse-types]."
+"the haunter"	true	oyster	1	--	false	"haunter"	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."
+"the settler"	true	--	1	--	false	"the settler" or "settler"	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]sy = scan with hints, overriding current setting (sn = without)[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."
+"the Wildest Wilteds"	true	towers	1	--	false	"wilteds/wildest" or "wildest wilteds"	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to have lost touch with."
+"verbs"	false	--	2	false	true	"verbs/verb"	"[verb-list]"
+"warp"	true	--	1	--	true	"warp"	"[i][bracket]FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"
+"xray"	false	towers	2	--	false	"xray" or "xraying"	"[xray-help]."
+"xtra/trax"	false	--	2	--	false	"xtra/trax"	"You can use the command [b]XTRA TRAX[r] (or [b]XTRA[r] or [b]TRAX[r]) to toggle tracking the right combination of letters less generically. However, some hints might be a bit too pointed."
 
 to say xray-help:
 	if xrayvision is true:
@@ -8850,6 +8854,7 @@ check consulting it about:
 	if noun is not pedanto notepad, say "You can only really consult your notepad. [b]ASK[r] something animate, if you want to." instead;
 	if player does not have pedanto notepad, try taking pedanto notepad;
 	repeat through table of notepad entries:
+		if there is a fixed-region entry and type entry is not 3, d "Fix [short entry] in table of notepad entries.";
 		if known entry is true and topic understood includes topic entry:
 			now readyet entry is true;
 			say "[blurb entry][line break]";
