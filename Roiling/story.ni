@@ -6765,7 +6765,7 @@ carry out ss0ing:
 
 carry out ssing:
 	if settler is not touchable, say "[reject]" instead;
-	try switching on the settler instead;
+	show-bluables instead;
 
 chapter sying
 
@@ -8318,11 +8318,11 @@ section whichs shwich
 the whichs shwich is a boring thing. it is part of the settler. description of the whichs shwich is "You can [b]SWITCH[r] the whichs switch with [b]SS[r] to see everything that can be worked on.". bore-text is "The shwich only lets you do one thing, but it's pretty powerful. The only unusual command that goes with it is [b]SS[r].". bore-check is the bore-shwich rule.
 
 this is the bore-shwich rule:
-	if current action is switching on, show-bluables instead;
+	if current action is switching on or current action is switching off, now boring-exception is true;
 
-check  switching on the settler: try switching on the whichs shwich instead;
+check switching on the settler: try ssing instead;
 
-check switching off the settler: try switching on the whichs shwich instead;
+check switching off the settler: try ssing instead;
 
 section a tech etcha
 
@@ -8378,9 +8378,6 @@ ever-switched is a truth state that varies.
 does the player mean switching on the whichs shwich: it is very likely.
 
 to show-bluables:
-	if whichs shwich is not touchable:
-		say "[reject]";
-		continue the action;
 	let QQ be number of bluable things;
 	let QQQ be nothing;
 	if QQ is 1, now QQQ is a random bluable thing;
@@ -8421,13 +8418,16 @@ after printing the name of a thing (called th) when blue-list is true:
 		now ever-vblur is true;
 	else if th is blurry:
 		say " (a bit blurry)";
+
+before printing the name of a thing (called th) when blue-list is true:
+	if th is an altview listed in table of settler shake descriptions, do nothing instead;
 	continue the action;
 
 for printing the name of a thing (called th) when blue-list is true:
 	if th is an altview listed in table of settler shake descriptions:
-		say "[alttext entry]";
-		the rule succeeds;
-	continue the action;
+		say "[alttext entry]" instead;
+	else:
+		say "[printed name of th]";
 
 ever-blur is a truth state that varies.
 ever-vblur is a truth state that varies.
@@ -8438,6 +8438,8 @@ definition: a thing (called lp) is llpish-plus: [this means it's part of a puzzl
 	if lp is me arts and lobster is moot, decide yes;
 	if lp is praise spirea and rivets are reflexed, yes;
 	if lp is rivets and praise spirea is reflexed, yes;
+	if lp is sister tressi or lp is marble blamer balmer or lp is marble blamer mr beal:
+		if mbb-sis-points is 1, yes;
 	if lp is ghoul hat or lp is gore ogre: [otters]
 		if eels are reflexed, decide yes;
 	if lp is eels or lp is sea cube:
@@ -8453,16 +8455,15 @@ definition: a thing (called mbbl) is blurry:
 table of settler shake descriptions
 altview	alttext
 darkness	"a weird outline in the darkness" [routes]
-L Clear Cellar	"the outline of L'Clear Cellar. You check: nope, not there" [troves]
-lager	"the can of Large Regal Lager"
-Id Cede	"musical notes pulsing with the beat of [cede]"
+L Clear Cellar	"the outline of where L'Clear Cellar might be but isn't" [troves]
+Id Cede	"musical notes pulsing with the beat of [i]I'd Cede[r]"
 wzup	"a pair of hands patting [l-n-r] on the back" [presto]
 eeks	"some cartoony representation of [b]EEKS[r]" [oyster]
-bogus-reangle	"general gleaner"
+bogus-reangle	"the general gleaner"
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
 aside-llp	"rays of tension between [e-n-m]" [otters]
 sorer bogey	"something pulsing in rhythm with the whines from the [if bogey-listen is true]sorer bogey[else]wells below[end if]" [others]
-a banna	"(a) banna[']"
+a banna	"the/(a) banna[']"
 fleeing feeling	"the word '[b]PERP[r]' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
