@@ -4355,7 +4355,7 @@ section random fruit hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-rustic-hard-items is a list of things variable. rustic-hard-items is { sated stead, eerie blurbs, harmonicas, mad train, magenta rope, omen prism, peanut cola }
+rustic-hard-items is a list of things variable. rustic-hard-items is { sated stead, eerie blurbs, harmonicas, id mantra mad train, magenta rope, omen prism, peanut cola }
 
 wells-hintables is a list of things variable. wells-hintables is { green stain, miser ruble, PSA Elp, riot cap, sorer bogey, stucco }.
 
@@ -19992,7 +19992,7 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, a mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
+the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, an id-mantra mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
 after examining ruts circuits (this is the reveal ruts circuits rule) :
 	move sated stead to Rustic Citrus;
@@ -20029,9 +20029,9 @@ the maraschino cherry is a fruit.
 
 chapter tamarind
 
-A mad train is a generic-rut-pre. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.".
+An id mantra mad train is a generic-rut-pre. description is "It just chugs along in circles, exuding selfishness and such. It thinks it's too good to be a fruit. You could read the name of its creator if you want.". printed name is "id-mantra mad train".
 
-a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]A[sp]x[sp]A[sp]R[sp]I[sp]x[sp]x".
+a-text of id mantra mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]A[sp]x[sp]A[sp]R[sp]I[sp]x[sp]x".
 
 check taking mad train: say "You'd strain to find a use for trains here." instead;
 

@@ -766,9 +766,10 @@ There's an optional point. Look at it better than just examining.
 The gleaner gives a different reading: R?YRRRY. This is a different word and a more obscure one. It's a way to examine.
 The vowels fall pretty quickly. Slot 2 must be a vowel and one of E or L. So it is E. Slot 3 must be a vowel but not E. So we get -EA---E.
 Alternatively, if you remember "glean" and "angle" from the blue lube in Shuffling Around, you may be able to figure this out, too.
+Also, Al Green is still the creator.
 However, we can also use logical elimination. L in slot 1 gives LEANGRE and LEARGNE.
 The best other bets are putting R and N in slot 6, leaving us with two possibilities each. Nothing works.
-We have (NR)EA(RN)(LG)(GL)E left.
+We have (NR)EA(RN)(LG)(GL)E left, but Al Green in red is still the creator! So that cuts things down more.
 REANGLE is what works.
 >>PSALM LAMPS
 # logic for natant ant
@@ -888,6 +889,13 @@ DT AT ET AE ST are the readings, leaving D in slot 1 and S in slot 5, since they
 That leaves only two possibilities for D (AT) (ET) (AE) S.
 DTEAS is nonsense, so...
 DATES.
+# logic for id mantra mad train
+?How can I slow down the id-mantra mad train?
+The four question marks are not too bad. Slot 6 must be a vowel, and since it can't be A, it is I.
+But this helps with the question marks. There are no other yellow/green readings, and only two question marks may be vowels. They are both A!
+Now you can listen to the train or reaqd who made it. But you can also use more logic. In particular, T in slot 7 or 8 gives odd combinations of consonants, so it can fit in slot 1 if you parse through all the possibilities.
+Similarly D in slot 7 is odd, as is M, so that leaves N in slot 7.
+But then R is in slot 5 and TADARINM is not a word, so TAMARIND it is.
 # logic for coins
 ?Why are the coins giving me such confusing clues?
 The (plain) coins near the end are, unavoidably, confusing. That's because they can, like the USB, get a description and become a thing which has no letters in common.

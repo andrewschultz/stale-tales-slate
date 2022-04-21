@@ -557,6 +557,7 @@ lumps>plums
 slime>limes
 moss cap>compass
 sated stead>dates
+id mantra mad train>tamarind
 magenta rope>pomegranate
 megaton pear>pomegranate
 rampage note>pomegranate

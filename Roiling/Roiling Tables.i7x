@@ -2366,13 +2366,13 @@ whistle	"[if player does not have whistle]You strain your eyes to see that [end 
 
 table of others readables
 to-read	what-read	alt-read
+id mantra mad train	"The name of the train's creator is in red: [first custom style]DR. NIMATA[r]."
 eerie blurbs	"One reads [first custom style][one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order][r], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
 peanut cola	"The brand name is [first custom style]A PLACE UNTO[r]. It feels forced enough to make you see red."
 riot cap	"It's red and [one of]made of [first custom style]I-TARP-CO[r] material[or]designed and shaped by [first custom style]CAPTOR-I[r], whoever they are[in random order]."	--
 PSA Elp	"It says [first custom style]Pal! ESP![r] in red. Not very good advice, but maybe it will help in its own odd way."
 stucco	"One of two advertisements is for [first custom style][one of]ScoutCon[or]SunCotCo[in random order][r], whatever that is, in red."
-mad train	"[first custom style]DR. NIMATA[r]."
 mean trowel	"It's designed by [first custom style]Newt L'Amore[r], along with [first custom style]Mr. Owen Late[r], to help you avoid a [first custom style]Moaner Welt[r]."
 pipe panel lie pen app	"There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea."
 orange	"It's stamped with the word [first custom style]ENGARO[r] in red."
@@ -3481,6 +3481,7 @@ book others
 table of others scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 sated stead	true	true	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
+id mantra mad train	true	true	false	false	"The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention."
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice."
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
