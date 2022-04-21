@@ -46,6 +46,8 @@ Score in a scenario: 2 out of 35 total points in the current region, Otters. Low
 >w
 Disowned Downside
 
+>undo
+
 >bossily
 Your score has just gone up by one point.
 >score

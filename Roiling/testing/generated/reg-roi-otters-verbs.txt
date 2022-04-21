@@ -83,6 +83,8 @@ Ick, man. Mackin'. You really don't want to pay attention to the details, but yo
 >undo
 >undo
 
+>undo
+
 >bossily
 Your score has just gone up by one point.
 >score
@@ -135,7 +137,7 @@ Be nice. They're on your side. Or they will be, once you gain their trust.
 >else
 by one point
 
-#ttc-table-of-otters-attacks-eels
+#+ttc-table-of-otters-attacks-eels
 >attack eels
 Be nice. They're on your side.
 !Or they will be, once you gain their trust.
@@ -281,19 +283,19 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 19 out of 35 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 35.
 
-#ttc-table-of-otters-attacks-leopard
+#+ttc-table-of-otters-attacks-leopard
 >attack leopard
 Messing with a leopard is a bad idea, especially one you made friends with.
 
-#ttc-table-of-otters-attacks-ocelots
+#+ttc-table-of-otters-attacks-ocelots
 >attack ocelots
 They're bigger than average. And the leopard would back them up.
 
-#ttc-table-of-otters-attacks-satyr
+#+ttc-table-of-otters-attacks-satyr
 >attack satyr
 He's bigger than average. And the leopard would back him up.
 
-#ttc-table-of-otters-attacks-badger
+#+ttc-table-of-otters-attacks-badger
 >attack badger
 It's bigger than average. And the leopard would back it up.
 

@@ -463,6 +463,8 @@ You needed to deal with all the players to knock them back a peg.
 >undo
 >undo
 
+>undo
+
 >bossily
 Your score has just gone up by one point.
 >score

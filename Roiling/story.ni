@@ -18635,7 +18635,7 @@ to assign-random-pickup-priority:
 		let this-pickup be a random unprioritized pickup-line;
 		now pickup-prio of this-pickup is B;
 
-a pickup-line is a kind of undesc. a pickup-line is usually privately-named. a pickup-line is usually reflexive. a pickup-line is usually unscannable. a pickup-line has a number called pod-num. a pickup-line has a number called pod-ord. a pickup-line has text called player-move. a pickup-line has text called pickup-description. a pickup-line has a number called hint-prog.
+a pickup-line is a kind of undesc. a pickup-line is usually privately-named. a pickup-line is usually reflexive. a pickup-line is usually unscannable. a pickup-line has a number called pod-num. a pickup-line has a number called pod-ord. a pickup-line has text called player-move. a pickup-line has text called pickup-description. a pickup-line has a number called hint-prog. pickup-description of a pickup-line is usually "MISSING CASE".
 
 definition: a pickup-line (called pl) is playable:
 	unless pl is touchable, no;
@@ -18698,7 +18698,7 @@ t-shoddily is a pickup-line. pod-num is 3. pod-ord is 6. a-text of t-shoddily is
 
 t-silently is a pickup-line. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "S[sp]?[sp]?[sp]-[sp]x[sp]x[sp]?[sp]Y". player-move is "The [players] perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". pickup-description is "having a snit-yell".
 
-t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]U[sp]x[sp]x[sp]E[sp]x[sp]x[sp]Y". player-move is "The [players] incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". pickup-description is "not stopping suddenly.". t-suddenly is parse-spoilable.
+t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]U[sp]x[sp]x[sp]E[sp]x[sp]x[sp]Y". player-move is "The [players] incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". pickup-description is "not stopping suddenly". t-suddenly is parse-spoilable.
 
 section 8 letters non-repeating - pod 4
 
@@ -18706,7 +18706,7 @@ t-modestly is a pickup-line. pod-num is 4. pod-ord is 1. a-text of t-modestly is
 
 t-steamily is a pickup-line. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]I[sp]x[sp]Y". player-move is "The [players] claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". pickup-description is "mis-discussing Misty Ale". t-steamily is parse-spoilable.
 
-t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]Y". player-move is "One [pla-ma] idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
+t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]Y". player-move is "One [pla-ma] idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.". pickup-description is "talking all tidy-plus".
 
 section 9 letters - pod 5
 
@@ -21630,7 +21630,10 @@ this is the hint certain object groups rule:
 	if noun is a pickup-line:
 		increment hint-prog of noun;
 		if hint-prog of noun is 3, now hint-prog of noun is 1;
-		say "[if hint-prog of noun is 1]You may be able to disrupt how the [pla-ma]s [pickup-description of noun].[plus][else]You can make the [pla-ma] talk more [pickup-spoil of noun].[minus][end if]";
+		if spoilit is false:
+			say "[if hint-prog of noun is 1]You may be able to disrupt the [pla-ma]s from [pickup-description of noun]. [plus][else]You can make the [pla-ma]s talk more [pickup-spoil of noun].[minus][end if]";
+		else:
+			say "You can make the [pla-ma]s talk more [pickup-spoil of noun].";
 		the rule succeeds;
 
 to say frootz:
@@ -21639,7 +21642,7 @@ to say frootz:
 to say pickup-spoil of (pl - a pickup-line):
 	repeat through table of otters anagrams:
 		if the-to entry is pl:
-			say "[right-word entry in upper case]";
+			say "[b][right-word entry in upper case][r]";
 			continue the action;
 	say "[b]BUG[r] [pl] not hint-implemented. This should not happen"
 
@@ -21695,9 +21698,9 @@ this is the spoil-hints rule:
 			now noun is cheatitemed;
 			say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [b][spoil-entry entry][r] right now." instead;
 		if player has cinders:
-			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [spoil-entry entry]." instead;
+			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [b][spoil-entry entry][r]." instead;
 			say "As you gaze into the cinders, they blow away, leaving you feeling ";
-			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
+			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][b][spoil-entry entry][r].";
 			if conditional-llp-present, say "[line break]You also feel there's something more to do here, if you want, but isn't critical.";
 			if noun is cinder-dissolve:
 				if scams is false:

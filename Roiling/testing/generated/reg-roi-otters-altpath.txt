@@ -40,6 +40,8 @@ Score in a scenario: 2 out of 35 total points in the current region, Otters. Low
 >w
 Disowned Downside
 
+>undo
+
 >bossily
 Your score has just gone up by one point.
 >score
@@ -64,11 +66,9 @@ Score in a scenario: 5 out of 35 total points in the current region, Otters. Low
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
->scam
 >s
-As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
 >although
-As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
+by one point
 >ergo
 by one point
 >misses
@@ -87,7 +87,6 @@ You also feel there's something more to do here, if you want, but isn't critical
 >because
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
->undo
 >undo
 >undo
 >undo

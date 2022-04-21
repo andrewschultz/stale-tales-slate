@@ -24,7 +24,9 @@
 >opt in
 >enter solid idols
 
+#ttc-table-of-otters-anagrams-barely
 As you gaze into the cinders, they blow away, leaving you feeling the barley can appear BARELY.
+#note: this is not actually a valid test case!
 
 DEBUG INFO: bleary barley hinting.
 
@@ -32,6 +34,7 @@ DEBUG INFO: bleary barley hinting.
 >barely
 Your score has just gone up by one point
 
+#ttc-table-of-otters-anagrams-reedily
 As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
 
 DEBUG INFO: Ed Riley hinting.
@@ -68,6 +71,54 @@ As you gaze into the cinders, they blow away, leaving you feeling the players ca
 
 !DEBUG INFO: Gretta
 DEBUG INFO: parleys splayer players hinting.
+
+#ttc-table-of-otters-anagrams-sparely
+As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
+
+>sparely
+by one point
+
+#ttc-table-of-otters-anagrams-really
+
+>really
+by one point
+
+#ttc-table-of-otters-anagrams-bossily
+#ttc-table-of-otters-anagrams-cattily
+#ttc-table-of-otters-anagrams-seedily
+#ttc-table-of-otters-anagrams-irately
+#ttc-table-of-otters-anagrams-tersely
+#ttc-table-of-otters-anagrams-angrily
+#ttc-table-of-otters-anagrams-nastily
+#ttc-table-of-otters-anagrams-shadily
+#ttc-table-of-otters-anagrams-snidely
+#ttc-table-of-otters-anagrams-starkly
+#ttc-table-of-otters-anagrams-blearily
+#ttc-table-of-otters-anagrams-coitally
+#ttc-table-of-otters-anagrams-formally
+#ttc-table-of-otters-anagrams-ribaldly
+#ttc-table-of-otters-anagrams-shabbily
+#ttc-table-of-otters-anagrams-shoddily
+#ttc-table-of-otters-anagrams-silently
+#ttc-table-of-otters-anagrams-suddenly
+#ttc-table-of-otters-anagrams-modestly
+#ttc-table-of-otters-anagrams-steamily
+#ttc-table-of-otters-anagrams-stupidly
+#ttc-table-of-otters-anagrams-martially
+#ttc-table-of-otters-anagrams-sincerely
+#ttc-table-of-otters-anagrams-sobbingly
+#ttc-table-of-otters-anagrams-tediously
+#ttc-table-of-otters-anagrams-wearingly
+#ttc-table-of-otters-anagrams-desperately
+#ttc-table-of-otters-anagrams-drawlingly
+#ttc-table-of-otters-anagrams-emotionally
+#ttc-table-of-otters-anagrams-reactively
+#ttc-table-of-otters-anagrams-despairingly
+#ttc-table-of-otters-anagrams-indiscreetly
+
+/You can make the macks talk more (BOSSILY|CATTILY|SEEDILY|IRATELY|TERSELY|ANGRILY|NASTILY|SHADILY|SNIDELY|STARKLY|BLEARILY|COITALLY|FORMALLY|RIBALDLY|SHABBILY|SHODDILY|SILENTLY|SUDDENLY|MODESTLY|STEAMILY|STUPIDLY|MARTIALLY|SINCERELY|SOBBINGLY|TEDIOUSLY|WEARINGLY|DESPERATELY|DRAWLINGLY|EMOTIONALLY|REACTIVELY|DESPAIRINGLY|INDISCREETLY)\.
+
+>undo
 
 >bossily
 Your score has just gone up by one point.
@@ -115,9 +166,19 @@ DEBUG INFO: damsel medals hinting.
 >undo
 >undo
 
+#ttc-table-of-otters-anagrams-although
+>s
+As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+#ttc-table-of-otters-anagrams-ergo
+>although
+As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
+>undo
+>undo
+
 >n
 Loop Pool
 
+#ttc-table-of-otters-anagrams-because
 As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
 
 DEBUG INFO: sea cube hinting.
@@ -126,6 +187,7 @@ DEBUG INFO: sea cube hinting.
 >because
 by one point
 
+#ttc-table-of-otters-anagrams-else
 As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
 
 DEBUG INFO: eels hinting.
@@ -154,6 +216,7 @@ Score in a scenario: 8 out of 35 total points in the current region, Otters. Low
 
 >s
 
+#ttc-table-of-otters-anagrams-atom
 As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
 
 DEBUG INFO: atmo-moat hinting.
@@ -162,6 +225,7 @@ DEBUG INFO: atmo-moat hinting.
 
 Bran Barn
 
+#ttc-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 
@@ -207,6 +271,9 @@ Shiner Shrine
 
 DEBUG INFO: simply sly imp hinting.
 
+#ttc-table-of-otters-anagrams-enragedly
+#ttc-table-of-otters-anagrams-brutely
+#ttc-table-of-otters-anagrams-remotely
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
 >enragedly
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (BRUTELY|REMOTELY)\.
@@ -239,11 +306,16 @@ Score in a scenario: 14 out of 35 total points in the current region, Otters. Lo
 >n
 Lamer Realm
 
+#ttc-table-of-otters-anagrams-slow
 As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
 
 >slow
 Your score has just gone up by one point
 
+#ttc-table-of-otters-anagrams-coolest
+#ttc-table-of-otters-anagrams-artsy
+#ttc-table-of-otters-anagrams-garbed
+#ttc-table-of-otters-anagrams-paroled
 /As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
 
 /DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
@@ -302,6 +374,9 @@ Clarthead Cathedral
 DEBUG INFO: shrewin' whiners hinting.
 The whiners have a lot of energy and exercise it many different ways. (+)
 
+#ttc-table-of-otters-anagrams-joltily
+#ttc-table-of-otters-anagrams-loathingly
+#ttc-table-of-otters-anagrams-stoically
 /As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|JOLTILY).
 >loathingly
 by one point
@@ -330,6 +405,7 @@ Score in a scenario: 21 out of 35 total points in the current region, Otters. Lo
 >s
 Perverse Preserve
 
+#ttc-table-of-otters-anagrams-parrot
 As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
 
 DEBUG INFO: raptor hinting.
@@ -337,6 +413,10 @@ DEBUG INFO: raptor hinting.
 >parrot
 Your score has just gone up by one point
 
+#ttc-table-of-otters-anagrams-hornets
+#ttc-table-of-otters-anagrams-snipe
+#ttc-table-of-otters-anagrams-snail
+#ttc-table-of-otters-anagrams-racoon
 /As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
 
 /DEBUG INFO: (pines|thrones|corona|nails) hinting\.
@@ -367,6 +447,7 @@ Score in a scenario: 24 out of 35 total points in the current region, Otters. Lo
 >racoon
 Your score has just gone up by one point
 
+#+ttc-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
 You also feel there's something more to do here, if you want, but isn't critical.
 
@@ -406,6 +487,7 @@ Score in a scenario: 28 out of 35 total points in the current region, Otters. Lo
 >w
 Reclusion Inclosure
 
+#ttc-table-of-otters-anagrams-raptor
 As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
 
 DEBUG INFO: parrot hinting.
@@ -436,6 +518,7 @@ Score in a scenario: 31 out of 35 total points in the current region, Otters. Th
 >raptor
 Your score has just gone up by one point
 
+#ttc-table-of-otters-anagrams-deeply
 As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.
 
 DEBUG INFO: weltish whistle hinting.

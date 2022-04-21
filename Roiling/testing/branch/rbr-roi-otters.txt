@@ -54,7 +54,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >enter solid idols
 
 @spoi
+#ttc-table-of-otters-anagrams-barely
 As you gaze into the cinders, they blow away, leaving you feeling the barley can appear BARELY.
+#note: this is not actually a valid test case!
 
 @hin
 DEBUG INFO: bleary barley hinting.
@@ -128,6 +130,7 @@ Your score has just gone up by one point
 You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!
 
 @spoi
+#ttc-table-of-otters-anagrams-reedily
 As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
 
 @hin
@@ -944,6 +947,55 @@ You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidenc
 >undo
 >undo
 
+@spoi
+#ttc-table-of-otters-anagrams-sparely
+As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
+\\
+>sparely
+by one point
+\\
+#ttc-table-of-otters-anagrams-really
+\\
+>really
+by one point
+\\
+#ttc-table-of-otters-anagrams-bossily
+#ttc-table-of-otters-anagrams-cattily
+#ttc-table-of-otters-anagrams-seedily
+#ttc-table-of-otters-anagrams-irately
+#ttc-table-of-otters-anagrams-tersely
+#ttc-table-of-otters-anagrams-angrily
+#ttc-table-of-otters-anagrams-nastily
+#ttc-table-of-otters-anagrams-shadily
+#ttc-table-of-otters-anagrams-snidely
+#ttc-table-of-otters-anagrams-starkly
+#ttc-table-of-otters-anagrams-blearily
+#ttc-table-of-otters-anagrams-coitally
+#ttc-table-of-otters-anagrams-formally
+#ttc-table-of-otters-anagrams-ribaldly
+#ttc-table-of-otters-anagrams-shabbily
+#ttc-table-of-otters-anagrams-shoddily
+#ttc-table-of-otters-anagrams-silently
+#ttc-table-of-otters-anagrams-suddenly
+#ttc-table-of-otters-anagrams-modestly
+#ttc-table-of-otters-anagrams-steamily
+#ttc-table-of-otters-anagrams-stupidly
+#ttc-table-of-otters-anagrams-martially
+#ttc-table-of-otters-anagrams-sincerely
+#ttc-table-of-otters-anagrams-sobbingly
+#ttc-table-of-otters-anagrams-tediously
+#ttc-table-of-otters-anagrams-wearingly
+#ttc-table-of-otters-anagrams-desperately
+#ttc-table-of-otters-anagrams-drawlingly
+#ttc-table-of-otters-anagrams-emotionally
+#ttc-table-of-otters-anagrams-reactively
+#ttc-table-of-otters-anagrams-despairingly
+#ttc-table-of-otters-anagrams-indiscreetly
+\\
+/You can make the macks talk more (BOSSILY|CATTILY|SEEDILY|IRATELY|TERSELY|ANGRILY|NASTILY|SHADILY|SNIDELY|STARKLY|BLEARILY|COITALLY|FORMALLY|RIBALDLY|SHABBILY|SHODDILY|SILENTLY|SUDDENLY|MODESTLY|STEAMILY|STUPIDLY|MARTIALLY|SINCERELY|SOBBINGLY|TEDIOUSLY|WEARINGLY|DESPERATELY|DRAWLINGLY|EMOTIONALLY|REACTIVELY|DESPAIRINGLY|INDISCREETLY)\.
+
+>undo
+
 >bossily
 Your score has just gone up by one point.
 }}SCORE++
@@ -1050,6 +1102,16 @@ DEBUG INFO: damsel medals hinting.
 >undo
 >undo
 
+@spoi
+#ttc-table-of-otters-anagrams-although
+>s
+As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+#ttc-table-of-otters-anagrams-ergo
+>although
+As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
+>undo
+>undo
+
 @sli
 >s
 #slider test for although
@@ -1067,11 +1129,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @alt
 ##balance undos
->scam
 >s
-As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
 >although
-As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
+by one point
 >ergo
 by one point
 >misses
@@ -1097,12 +1157,12 @@ You also feel there's something more to do here, if you want, but isn't critical
 >undo
 >undo
 >undo
->undo
 
 >n
 Loop Pool
 
 @spoi
+#ttc-table-of-otters-anagrams-because
 As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
 
 @verbs
@@ -1177,6 +1237,7 @@ by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-otters-anagrams-else
 As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
 
 @hin
@@ -1203,7 +1264,7 @@ DEBUG INFO: damsel medals hinting.
 The eels will assist you when the time comes.
 
 @verbs
-#ttc-table-of-otters-attacks-eels
+#+ttc-table-of-otters-attacks-eels
 >attack eels
 Be nice. They're on your side.
 !Or they will be, once you gain their trust.
@@ -1267,6 +1328,7 @@ by one point
 >s
 
 @spoi
+#ttc-table-of-otters-anagrams-atom
 As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
 
 @hin
@@ -1297,6 +1359,7 @@ It's what the medals say that makes them special.
 Bran Barn
 
 @spoi
+#ttc-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 
@@ -1440,6 +1503,9 @@ DEBUG INFO: simply sly imp hinting.
 
 @spoi
 ##balance undos
+#ttc-table-of-otters-anagrams-enragedly
+#ttc-table-of-otters-anagrams-brutely
+#ttc-table-of-otters-anagrams-remotely
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
 >enragedly
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (BRUTELY|REMOTELY)\.
@@ -1612,6 +1678,7 @@ Actually, you'd like the owls NOT to reach lows like you are. Or not to get ther
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @spoi
+#ttc-table-of-otters-anagrams-slow
 As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
 
 @verbs
@@ -1624,6 +1691,10 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-otters-anagrams-coolest
+#ttc-table-of-otters-anagrams-artsy
+#ttc-table-of-otters-anagrams-garbed
+#ttc-table-of-otters-anagrams-paroled
 /As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
 
 @hin
@@ -1877,19 +1948,19 @@ The badger no longer feels second-rate, so it needs no more help.
 The badger no longer feels second-rate, so it needs no more help.
 
 @verbs
-#ttc-table-of-otters-attacks-leopard
+#+ttc-table-of-otters-attacks-leopard
 >attack leopard
 Messing with a leopard is a bad idea, especially one you made friends with.
 \\
-#ttc-table-of-otters-attacks-ocelots
+#+ttc-table-of-otters-attacks-ocelots
 >attack ocelots
 They're bigger than average. And the leopard would back them up.
 \\
-#ttc-table-of-otters-attacks-satyr
+#+ttc-table-of-otters-attacks-satyr
 >attack satyr
 He's bigger than average. And the leopard would back him up.
 \\
-#ttc-table-of-otters-attacks-badger
+#+ttc-table-of-otters-attacks-badger
 >attack badger
 It's bigger than average. And the leopard would back it up.
 
@@ -1904,6 +1975,9 @@ DEBUG INFO: shrewin' whiners hinting.
 The whiners have a lot of energy and exercise it many different ways. (+)
 
 @spoi
+#ttc-table-of-otters-anagrams-joltily
+#ttc-table-of-otters-anagrams-loathingly
+#ttc-table-of-otters-anagrams-stoically
 /As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|JOLTILY).
 >loathingly
 by one point
@@ -2056,6 +2130,7 @@ The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
 
 @spoi
+#ttc-table-of-otters-anagrams-parrot
 As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
 
 @hin
@@ -2071,6 +2146,10 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-otters-anagrams-hornets
+#ttc-table-of-otters-anagrams-snipe
+#ttc-table-of-otters-anagrams-snail
+#ttc-table-of-otters-anagrams-racoon
 /As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
 
 @hin
@@ -2264,6 +2343,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#+ttc-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
 You also feel there's something more to do here, if you want, but isn't critical.
 
@@ -2423,6 +2503,7 @@ by one point
 Reclusion Inclosure
 
 @spoi
+#ttc-table-of-otters-anagrams-raptor
 As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
 
 @hin
@@ -2707,6 +2788,7 @@ You don't need to riff on any location names to win the game, unless there's not
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 @spoi
+#ttc-table-of-otters-anagrams-deeply
 As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.
 
 @hin

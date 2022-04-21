@@ -198,6 +198,8 @@ You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidenc
 >undo
 >undo
 
+>undo
+
 >bossily
 Your score has just gone up by one point.
 >score
