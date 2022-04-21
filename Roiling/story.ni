@@ -6158,7 +6158,7 @@ listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrat
 
 listen-list of otters is { ed riley, yer all a yell'r, parleys splayer players, vow here, whiners, sly imp, asyllabic lilac bays }.
 
-listen-list of others is { pagers, sorer bogey, barren cries, ammo gang, selly yells, brr hub, s-i, s-c }.
+listen-list of others is { id mantra mad train, pagers, sorer bogey, barren cries, ammo gang, selly yells, brr hub, s-i, s-c }.
 
 listen-list of demo dome is { }.
 
@@ -6309,6 +6309,7 @@ bogey-listen is a truth state that varies.
 
 this is the listen-others rule:
 	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead;
+	if noun is id mantra mad train, say "A constant droning of '[first custom style]AND I'M ART[r]!' makes you see red." instead;
 	if noun is Rustic Citrus, say "Curtis [if cur-score of others < 4]mumbles various business ideas to himself[else]continues to sing and hum the tidiest dietist ditties[end if]." instead;
 	if noun is sorer bogey:
 		now bogey-listen is true;
@@ -19684,6 +19685,10 @@ for printing a locale paragraph about a generic-rut-pre (called pr) in Rustic Ci
 		say "The circuits ruts also turned up [a list of touchable generic-rut-pres].";
 		now all generic-rut-pres are mentioned;
 
+for printing the name of id mantra mad train when printing the locale description:
+	say "an id-mantra mad train (chuffing around, almost forming self-promoting words)";
+	the rule succeeds;
+
 chapter augural arugula
 
 some augural arugula is a singular-named edible thing. description of arugula is "It's not enough for a luau. Arg.". indefinite article of arugula is "some".
@@ -20031,7 +20036,7 @@ chapter tamarind
 
 An id mantra mad train is a generic-rut-pre. description is "It just chugs along in circles, exuding selfishness and such. It thinks it's too good to be a fruit. You could read the name of its creator if you want.". printed name is "id-mantra mad train".
 
-a-text of id mantra mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]A[sp]x[sp]A[sp]R[sp]I[sp]x[sp]x".
+a-text of id mantra mad train is "RYRYRYRR". b-text of id mantra mad train is "R????YRR". parse-text of id mantra mad train is "x[sp]A[sp]x[sp]A[sp]x[sp]I[sp]x[sp]x".
 
 check taking mad train: say "You'd strain to find a use for trains here." instead;
 
