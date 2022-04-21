@@ -596,7 +596,7 @@ Mislit Limits
 >gt deposit
 You don't want to cross Leak Lake again.
 
-#ttc-table-of-goto-sectioning-loftier-trefoil-1--
+#+ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
 

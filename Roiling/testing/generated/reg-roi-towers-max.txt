@@ -257,7 +257,7 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 Baldest Blasted Saltbed
 
-#ttc-table-of-castle-approaching-narratives-3
+#+ttc-table-of-castle-approaching-narratives-3
 #ttc-table-of-towers-progress-comments-baldest-blasted-saltbed
 You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 
@@ -287,7 +287,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 Anemic Cinema
 
-#ttc-table-of-castle-approaching-narratives-4
+#+ttc-table-of-castle-approaching-narratives-4
 #ttc-table-of-towers-progress-comments-anemic-cinema
 The palace looks a little bigger now--but you may eventually need to cut east a bit to get to it. It looks like there're dead ends north and west, and you still aren't sure how to cross Leak Lake.
 
@@ -364,7 +364,7 @@ You're going side-to-side to see the Curst Palace without getting closer, but ho
 
 Salted Deltas
 
-#ttc-table-of-castle-approaching-narratives-6
+#+ttc-table-of-castle-approaching-narratives-6
 #ttc-table-of-towers-progress-comments-salted-deltas
 Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
 
@@ -558,7 +558,7 @@ by one point
 >score
 Score in a scenario: 40 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
-#ttc-table-of-towers-prefigurings-luck-node
+#+ttc-table-of-towers-prefigurings-luck-node
 >pf
 !UNLOCKED
 !Fries-Us Fissure

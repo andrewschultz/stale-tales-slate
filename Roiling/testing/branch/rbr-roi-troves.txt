@@ -54,6 +54,7 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 Loather Rathole
 
 @spoi
+#ttc-table-of-troves-anagrams-hate
 Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
 
 @hin
@@ -248,6 +249,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-troves-anagrams-care
 In particular, you feel the need to CARE right now.
 
 @hin
@@ -293,6 +295,7 @@ DEBUG INFO: sob ever verbose hinting.
 Bustle Sublet
 
 @spoi
+#ttc-table-of-troves-anagrams-observe
 In particular, you feel the need to OBSERVE right now.
 
 >score
@@ -398,6 +401,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-troves-anagrams-spot
 In particular, you feel the need to SPOT right now.
 
 @hin
@@ -442,6 +446,8 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-troves-anagrams-reason
+#ttc-table-of-troves-anagrams-believe
 /In particular, you feel the need to (REASON|BELIEVE) right now\.
 
 @mina,minb
@@ -575,6 +581,7 @@ Your score has just gone up by one point
 }}CURMIN--
 
 @spoi
+#ttc-table-of-troves-anagrams-recall
 >believe
 In particular, you feel the need to RECALL right now.
 >undo
@@ -674,6 +681,7 @@ DEBUG INFO: box of diapers hinting.
 Drain Nadir
 
 @spoi
+#ttc-table-of-troves-anagrams-despair
 In particular, you feel the need to DESPAIR right now.
 
 @mina,minb
@@ -722,6 +730,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @spoi
+#ttc-table-of-troves-anagrams-decide
 In particular, you feel the need to DECIDE right now.
 
 @hin
@@ -841,6 +850,8 @@ Your score has just gone up by one point
 /DEBUG INFO: (BORTLES Lobster|ME ARTS) hinting.
 
 @spoi
+#ttc-table-of-troves-anagrams-bolster
+#ttc-table-of-troves-anagrams-master
 /In particular, you feel the need to (BOLSTER|MASTER) right now\.
 
 Boredom Bedroom
@@ -948,6 +959,7 @@ That seems right! But you don't have the courage yet! Perhaps you need to start 
 You can DEAL once you've gotten an emotional boost.
 
 @spoi
+#ttc-table-of-troves-anagrams-deal
 >bolster
 In particular, you feel the need to DEAL right now.
 >undo
@@ -1030,6 +1042,7 @@ DEBUG INFO: Si Reed hinting.
 }}CURMAX-=2
 
 @spoi
+#ttc-table-of-troves-anagrams-desire
 In particular, you feel the need to DESIRE right now.
 
 @verbs
@@ -1120,6 +1133,9 @@ Nothing catches your eye except an article on RIDEES, captioned in red. Whether 
 >ederis
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@spoi
+In particular, you feel the need to DESIRE right now.
+
 >desire
 Your score has just gone up by one point
 
@@ -1131,6 +1147,8 @@ Your score has just gone up by one point
 Econ-Cone
 
 @spoi
+#ttc-table-of-troves-anagrams-aspire
+#ttc-table-of-troves-anagrams-strive
 /In particular, you feel the need to (STRIVE|ASPIRE) right now\.
 
 @hin
@@ -1261,6 +1279,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
+#ttc-table-of-troves-anagrams-ponder
 In particular, you feel the need to PONDER right now.
 
 @hin
@@ -1358,6 +1377,7 @@ DEBUG INFO: red vees hinting.
 Upscale Capsule
 
 @spoi
+#ttc-table-of-troves-anagrams-deserve
 In particular, you feel the need to DESERVE right now.
 
 @mina,minb
@@ -1404,6 +1424,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @spoi
+#ttc-table-of-troves-anagrams-last
 In particular, you feel the need to LAST right now.
 
 @hin
@@ -1476,6 +1497,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @spoi
+#ttc-table-of-troves-anagrams-ramble
+#ttc-table-of-troves-anagrams-resist
 /In particular, you feel the need to (RAMBLE|RESIST) right now\.
 
 @hin
@@ -1600,6 +1623,7 @@ by one point
 >undo
 
 @spoi
+#ttc-table-of-troves-anagrams-recant
 >ramble
 In particular, you feel the need to RECANT right now.
 >undo

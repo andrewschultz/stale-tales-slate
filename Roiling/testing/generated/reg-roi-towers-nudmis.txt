@@ -283,6 +283,10 @@ Your score has just gone up by one point
 
 Topside Deposit
 
+#ttc-table-of-towers-readables-curst-palace
+>read curst palace
+You can't read the Curst Palace's name, even though Ornate Atoner Renato told it to you.
+
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
 
@@ -1983,6 +1987,10 @@ Mislit Limits
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
+
+#+ttc-table-of-towers-readables-curst-palace
+>read curst palace
+Both Castle Up Arc and Castle Arc Up are in red.
 
 #ttc-table-of-mislit-limits-nudges-mislit
 >mislti

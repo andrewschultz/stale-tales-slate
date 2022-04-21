@@ -188,7 +188,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-#ttc-table-of-routes-prefigurings-side-art
+#+ttc-table-of-routes-prefigurings-side-art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from

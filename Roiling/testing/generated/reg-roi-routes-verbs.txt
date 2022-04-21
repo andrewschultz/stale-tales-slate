@@ -221,7 +221,7 @@ Siphon no pish on-ship.
 >gt pier
 You have no idea how to turn the Cripple Clipper around, and you don't want to.
 
-#ttc-table-of-goto-sectioning-harms-marsh-2--
+#+ttc-table-of-goto-sectioning-harms-marsh-2--
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
 

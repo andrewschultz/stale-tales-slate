@@ -440,7 +440,7 @@ Brother Horbert will work his magic with that.
 #ttc-table-of-routes-nudges-reagents
 >reagenst
 Brother Horbert will do his magic on the reagents at the right time.
-#ttc-table-of-routes-nudges-reagent
+#+ttc-table-of-routes-nudges-reagent
 >reagetn
 Brother Horbert will do his magic on the reagents at the right time.
 #+ttc-table-of-idle-deli-nudges-pta

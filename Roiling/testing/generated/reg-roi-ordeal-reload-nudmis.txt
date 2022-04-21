@@ -662,8 +662,6 @@ You nod. "No clues counsel."
 Carven Cavern
 
 #ttc-table-of-ordeal-reload-spechelp-respect-specter
->eecsprt
-The respect specter shrugs respectfully. "A deferred success."
 
 #ttc-table-of-carven-cavern-nudges-cavern
 >cavenr

@@ -81,6 +81,12 @@ Deal with Rodney, not any part of his chosen sub-names.
 >read article
 This version was written by some lovely chap named ALTERIC.
 
+@spoi
+#ttc-table-of-towers-anagrams-yonder
+>xr rodney
+Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
+>undo
+
 @max
 #pre-rodney rule
 >yonder
@@ -239,103 +245,103 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 >xr rodney #trefoil boss
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
-#towers anagrams for geno
+#ttc-table-of-towers-anagrams-gone
 >xr geno #picaro-1
 Boy! Geno might be less oppressive if he were GONE.
 >undo
-#towers anagrams for shane
+#ttc-table-of-towers-anagrams-ashen
 >xr shane #picaro-2
 Boy! Shane might be less oppressive if he were ASHEN.
 >undo
-#towers anagrams for tyson
+#ttc-table-of-towers-anagrams-stony
 >xr tyson #picaro-3
 Boy! Tyson might be less oppressive if he were STONY.
 >undo
-#towers anagrams for wade
+#ttc-table-of-towers-anagrams-awed
 >xr wade #picaro-4
 Boy! Wade might be less oppressive if he were AWED.
 >undo
-#towers anagrams for edwin
+#ttc-table-of-towers-anagrams-wined
 >xr edwin #picaro-5
 Boy! Edwin might be less oppressive if he were WINED.
 >undo
-#towers anagrams for eldon
+#ttc-table-of-towers-anagrams-olden
 >xr eldon #picaro-6
 Boy! Eldon might be less oppressive if he were OLDEN.
 >undo
-#towers anagrams for goldy
+#ttc-table-of-towers-anagrams-godly
 >xr goldy #picaro-7
 Boy! Goldy might be less oppressive if he were GODLY.
 >undo
-#towers anagrams for royce
+#ttc-table-of-towers-anagrams-coyer
 >xr royce #picaro-8
 Boy! Royce might be less oppressive if he were COYER.
 >undo
-#towers anagrams for blake
+#ttc-table-of-towers-anagrams-bleak
 >xr blake #picaro-9
 Boy! Blake might be less oppressive if he were BLEAK.
 >undo
-#towers anagrams for bredo
+#ttc-table-of-towers-anagrams-bored
 >xr bredo #picaro-10
 Boy! Bredo might be less oppressive if he were BORED.
 >undo
-#towers anagrams for daryl
+#ttc-table-of-towers-anagrams-lardy
 >xr daryl #picaro-11
 Boy! Daryl might be less oppressive if he were LARDY.
 >undo
-#towers anagrams for dewey
+#ttc-table-of-towers-anagrams-weedy
 >xr dewey #picaro-12
 Boy! Dewey might be less oppressive if he were WEEDY.
 >undo
-#towers anagrams for ernest
+#ttc-table-of-towers-anagrams-tenser
 >xr ernest #picaro-13
 Boy! Ernest might be less oppressive if he were TENSER.
 >undo
-#towers anagrams for marcel
+#ttc-table-of-towers-anagrams-calmer
 >xr marcel #picaro-14
 Boy! Marcel might be less oppressive if he were CALMER.
 >undo
-#towers anagrams for marlon
+#ttc-table-of-towers-anagrams-normal
 >xr marlon #picaro-15
 Boy! Marlon might be less oppressive if he were NORMAL.
 >undo
-#towers anagrams for reggie
+#ttc-table-of-towers-anagrams-eggier
 >xr reggie #picaro-16
 Boy! Reggie might be less oppressive if he were EGGIER.
 >undo
-#towers anagrams for andres
+#ttc-table-of-towers-anagrams-snared
 >xr andres #picaro-17
 Boy! Andres might be less oppressive if he were SNARED.
 >undo
-#towers anagrams for andrew
+#ttc-table-of-towers-anagrams-warned
 >xr andrew #picaro-18
 Boy! Andrew might be less oppressive if he were WARNED.
 >undo
-#towers anagrams for archie
+#ttc-table-of-towers-anagrams-achier
 >xr archie #picaro-19
 Boy! Archie might be less oppressive if he were ACHIER.
 >undo
-#towers anagrams for barney
+#ttc-table-of-towers-anagrams-nearby
 >xr barney #picaro-20
 Boy! Barney might be less oppressive if he were NEARBY.
 >undo
-#towers anagrams for cedrick
+#ttc-table-of-towers-anagrams-cricked
 >xr cedrick #picaro-21
 Boy! Cedrick might be less oppressive if he were CRICKED.
 >undo
-#towers anagrams for demitri
+#ttc-table-of-towers-anagrams-timider
 >xr demitri #picaro-22
 Boy! Demitri might be less oppressive if he were TIMIDER.
 >undo
-#towers anagrams for leander
+#ttc-table-of-towers-anagrams-learned
 >xr leander #picaro-23
 Boy! Leander might be less oppressive if he were LEARNED.
 >undo
-#towers anagrams for preston
+#ttc-table-of-towers-anagrams-pronest
 >xr preston #picaro-24
 Boy! Preston might be less oppressive if he were PRONEST.
 >undo
-#towers anagrams for terrance
+#ttc-table-of-towers-anagrams-recreant
 >xr terrance #picaro-25
 Boy! Terrance might be less oppressive if he were RECREANT.
 >undo
@@ -697,7 +703,7 @@ Your score has just gone up by one point
 >undo
 
 @spoi
-#towers anagrams for recital article
+#ttc-table-of-towers-anagrams-talcier
 >xr article
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 FOR TESTING: WE NEED A Y OR N.
@@ -741,6 +747,11 @@ An unconvincing voice from where you came moans "Stop! Die!" You must ignore it 
 #ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 You had your fun in there.
+
+@nud
+#ttc-table-of-towers-readables-curst-palace
+>read curst palace
+You can't read the Curst Palace's name, even though Ornate Atoner Renato told it to you.
 
 >score
 {$SCOS}
@@ -902,7 +913,7 @@ Ooh! A couple more lights, now.
 @spoi
 >xr me
 Even if you could, you might expose yourself to harmful rays and stuff.
-#towers anagrams for dreads adders
+#ttc-table-of-towers-anagrams-sadder
 >xr adders #initial guardian
 Hmm. You bet you could get past if the dreads adders were SADDER.
 
@@ -1056,18 +1067,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 
 @spoi
-#towers anagrams for bluster butlers
+#ttc-table-of-towers-anagrams-subtler
 >xr butlers #00w
 Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 #towers anagrams for try us yurts
+#ttc-table-of-towers-anagrams-rusty
 >xr yurts #pastry LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
-#towers anagrams for denier nereid
+#ttc-table-of-towers-anagrams-reined
 >xr nereid #00n
 Hmm. You bet you could get past if the denier nereid were REINED.
-#towers anagrams for snider diners
+#ttc-table-of-towers-anagrams-rinsed
 >xr diners #00e
 Hmm. You bet you could get past if the snider diners were RINSED.
 
@@ -1389,7 +1401,7 @@ The keycar sputters momentarily.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. That's a decent omen.
 
 @spoi
-#towers anagrams for keycar
+#ttc-table-of-towers-anagrams-creaky
 >xr keycar #(clearing a room)
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -1410,7 +1422,7 @@ Your score has just gone up by one point
 Baldest Blasted Saltbed
 
 @max
-#ttc-table-of-castle-approaching-narratives-3
+#+ttc-table-of-castle-approaching-narratives-3
 #ttc-table-of-towers-progress-comments-baldest-blasted-saltbed
 You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 
@@ -1418,7 +1430,7 @@ You still can't make out any details of the palace, but it's certainly there, ac
 /DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
 
 @spoi
-#towers anagrams for docile old ice
+#ttc-table-of-towers-anagrams-coiled
 >xr old ice
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -1471,10 +1483,10 @@ Your settler registers RRYR?Y*****.
 
 @spoi
 #towers anagrams for pirates
->xr pirates #01n
+#ttc-table-of-towers-anagrams-pastier
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
-#towers anagrams for promise imposer
+#ttc-table-of-towers-anagrams-semipro
 >xr imposer #01e
 Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 >undo
@@ -1550,7 +1562,7 @@ Your score has just gone up by one point
 Anemic Cinema
 
 @max
-#ttc-table-of-castle-approaching-narratives-4
+#+ttc-table-of-castle-approaching-narratives-4
 #ttc-table-of-towers-progress-comments-anemic-cinema
 The palace looks a little bigger now--but you may eventually need to cut east a bit to get to it. It looks like there're dead ends north and west, and you still aren't sure how to cross Leak Lake.
 
@@ -1572,17 +1584,17 @@ The mardier admirer's babbling is more than a bit embarrassing. It loops effortl
 Lars Eede mutters and moans how
 
 @spoi
-#towers anagrams for reeds ale
+#ttc-table-of-towers-anagrams-released
 >xr lars eede #11e
 Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
 >gs
 >xr elsa erde
 Hmm. You bet you could get past if Elsa Erde were RELEASED or RESEALED.
 >gs
-#towers anagrams for mardier admirer
+#ttc-table-of-towers-anagrams-married
 >xr admirer #02n
 Hmm. You bet you could get past if the mardier admirer were MARRIED.
-#towers anagrams for ingrates
+#ttc-table-of-towers-anagrams-angstier
 >xr ingrates #02w
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -1741,7 +1753,7 @@ You almost expect the strudel to hop up, but the moment passes.
 DR. ELTUS recommends this strudel!
 
 @spoi
-#towers anagrams for strudel
+#ttc-table-of-towers-anagrams-rustled
 >xr strudel #pastry LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -1900,7 +1912,7 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 Salted Deltas
 
 @max
-#ttc-table-of-castle-approaching-narratives-6
+#+ttc-table-of-castle-approaching-narratives-6
 #ttc-table-of-towers-progress-comments-salted-deltas
 Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
 
@@ -1972,10 +1984,10 @@ Your settler registers RRYR?YRY***.
 Ooh! Another light, now.
 
 @spoi
-#towers anagrams for asset hit atheists
+#ttc-table-of-towers-anagrams-hastiest
 >xr atheists #12e
 Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
-#towers anagrams for sweatier wait seer
+#ttc-table-of-towers-anagrams-weariest
 >xr sweatier #11n
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 
@@ -2028,7 +2040,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 DEBUG INFO: weeds hinting.
 
 @spoi
-#towers anagrams for resident trendies
+#ttc-table-of-towers-anagrams-nerdiest
 >xr trendies #02e
 Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 
@@ -2065,10 +2077,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Creative, but ineffective, positive colloquialism.
 
 @spoi
-#towers anagrams for weeds
+#ttc-table-of-towers-anagrams-sewed
 >xr weeds #get replay player
 After a thoughtful gaze, you reckon the weeds could be SEWED.
-#towers anagrams for mended mini denim
+#ttc-table-of-towers-anagrams-mined
 >xr denim #tarts LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -2085,7 +2097,7 @@ out of the way.
 >undo
 
 @spoi
-#towers anagrams for realist tailers
+#ttc-table-of-towers-anagrams-saltier
 >xr realist tailers
 Hmm. You bet you could get past if the realist tailers were SALTIER.
 
@@ -2143,7 +2155,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @spoi
-#towers anagrams for raves saver
+#ttc-table-of-towers-anagrams-pearly
 >xr player #replay player LLP
 You blink
 >y
@@ -2278,7 +2290,7 @@ You feel slightly less depressed you tried something. You can't be too far off.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
 
 @spoi
-#towers anagrams for bogus-dandier
+#ttc-table-of-towers-anagrams-dandier
 >xr dreadin
 After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
 
@@ -2300,11 +2312,11 @@ Treading Gradient
 >e
 
 @spoi
-#towers anagrams for the hostile is he lot
+#ttc-table-of-towers-anagrams-holiest
 >xr hostile #21n
 Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 >gs
-#towers anagrams for lois the hostile
+#+ttc-table-of-towers-anagrams-holiest
 >xr hostile
 Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
 >gs
@@ -2371,7 +2383,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @spoi
-#towers anagrams for alarming grailman
+#ttc-table-of-towers-anagrams-marginal
 >xr grailman #20n
 Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 
@@ -2420,7 +2432,7 @@ You can see the other side of Leak Lake from here. It's still too far to swim, b
 DEBUG INFO: REB-NOK bonker hinting.
 
 @spoi
-#towers anagrams for fluster self rut
+#ttc-table-of-towers-anagrams-restful
 >xr fluster #10e
 Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 
@@ -2473,7 +2485,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the natives' site va
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @spoi
-#towers anagrams for natives site van
+#ttc-table-of-towers-anagrams-naivest
 >xr natives #20s
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -2547,7 +2559,7 @@ With nine letters, it was never going to be easy. (Fourth wall note: this is the
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @spoi
-#towers anagrams for organised ego drains
+#ttc-table-of-towers-anagrams-grandiose
 >xr organised
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -2580,7 +2592,7 @@ Dourest Detours
 
 @spoi
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
-#towers anagrams for bogus-rousted
+#ttc-table-of-towers-anagrams-rousted
 >xr
 Your x-ray vision seems to enlighten ... well, all around you.
 !You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -2619,7 +2631,7 @@ You feel slightly more awake, but not quite enough. Yet. The detours do seem a l
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 
 @spoi
-#towers anagrams for seismal samiels
+#ttc-table-of-towers-anagrams-aimless
 >xr samiels
 Do so anyway?
 >y
@@ -2687,7 +2699,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sporties' ripost
 You might have to read through a lot of possibilities even if you can quickly figure what the third letter is.
 
 @spoi
-#towers anagrams for sporties ripostes
+#ttc-table-of-towers-anagrams-prosiest
 >xr sporties
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -2747,7 +2759,7 @@ The bonker was created by KB RENO.
 Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse.
 
 @spoi
-#towers anagrams for bonker
+#ttc-table-of-towers-anagrams-broken
 >xr bonker #20e
 Hmm. You bet you could get past if the REB-NOK bonker were BROKEN.
 
@@ -2768,7 +2780,7 @@ Your score has just gone up by one point
 DEBUG INFO: grin-set stinger hinting.
 
 @spoi
-#towers anagrams for stinger
+#ttc-table-of-towers-anagrams-resting
 >xr stinger #20e
 Hmm. You bet you could get past if the grin-set stinger were RESTING.
 
@@ -2841,10 +2853,10 @@ Nothing needs to be locked here, certainly not the gaol which already is.
 The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier.
 
 @spoi
-#towers anagrams for fissure
+#ttc-table-of-towers-anagrams-fussier
 >xr fissure #fussier/unlocked
 After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
-#towers anagrams for luck node
+#ttc-table-of-towers-anagrams-unlocked
 >xr luck node #fussier/unlocked
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
 
@@ -3128,7 +3140,7 @@ Nothing needs to be locked here, certainly not the gaol which you unlocked.
 It's not just any duck. But it's served its purpose.
 
 @max
-#ttc-table-of-towers-prefigurings-luck-node
+#+ttc-table-of-towers-prefigurings-luck-node
 >pf
 !UNLOCKED
 !Fries-Us Fissure
@@ -3188,7 +3200,7 @@ I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a
 You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Turn that frown upside-down! Gosh, those ambiguous clues might be even more interesting and useful than the usual!"
 
 @spoi
-#towers anagrams for diverse deviser
+#ttc-table-of-towers-anagrams-revised
 >xr deviser
 After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 
@@ -3342,7 +3354,7 @@ You don't see any new information about the curst palace this time.
 >e
 
 @spoi
-#towers anagrams for dinger
+#ttc-table-of-towers-anagrams-grained
 >xr dinger
 After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 
@@ -3441,7 +3453,7 @@ Man! Four of the six entries (and you'd expect five) are blinky. That doesn't se
 The raves saver/replay player can be parleyed into something shinier.
 
 @hin
-#towers anagrams for atblock
+#ttc-table-of-towers-anagrams-attentive
 >xr agnostic
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -3514,15 +3526,16 @@ DEBUG INFO: I ZOMG Gizmo hinting.
 /DEBUG INFO: (turbos|blaster) hinting\.
 
 @spoi
+#ttc-table-of-towers-anagrams-rewired
 >xr weirder #LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 #towers anagrams for weirder red wire
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
-#towers anagrams for turbos
+#ttc-table-of-towers-anagrams-robust
 >xr turbos #2-of-3 over lake
 After a thoughtful gaze, you reckon the turbos could be ROBUST.
-#towers anagrams for blaster
+#ttc-table-of-towers-anagrams-stabler
 >xr blaster #2-of-3 over lake
 After a thoughtful gaze, you reckon the blaster could be STABLER.
 
@@ -3727,7 +3740,7 @@ You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 
 @spoi
 >gonear waters
-#towers anagrams for earnest eastern neaters
+#ttc-table-of-towers-anagrams-nearest
 >xr eastern #2-of-3 over lake
 After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.
 >undo
@@ -3824,7 +3837,7 @@ This will restore the Curst Palace, but you can also figure what to do with that
 >undo
 
 @spoi
-#towers anagrams for curst palace
+#ttc-table-of-towers-anagrams-spectacular
 >xr curst palace #final
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
@@ -3833,13 +3846,17 @@ After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 >gt deposit
 You don't want to cross Leak Lake again.
 \\
-#ttc-table-of-goto-sectioning-loftier-trefoil-1--
+#+ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
 
-
 >score
 {$SCOS}
+
+@nud
+#+ttc-table-of-towers-readables-curst-palace
+>read curst palace
+Both Castle Up Arc and Castle Arc Up are in red.
 
 @nud
 #ttc-table-of-mislit-limits-nudges-mislit
@@ -3905,7 +3922,7 @@ That is a lot of blinks, but those blinks have to be almost as good as a purple 
 You're beyond the lake now.
 
 @spoi
-#towers anagrams for ur pine
+#ttc-table-of-towers-anagrams-punier
 >xr unripe #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -3957,7 +3974,7 @@ The retinas are more likely to zap you.
 You're probably better of dispelling all the things to repent about at once, not just one.
 
 @spoi
-#towers anagrams for nastier stainer retinas
+#ttc-table-of-towers-anagrams-antsier
 >xr retinas #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -3983,7 +4000,7 @@ by one point
 {$SCOS}
 
 @spoi
-#towers anagrams for repents serpent
+#ttc-table-of-towers-anagrams-present
 >xr serpent #end bonus
 You blink
 >y
@@ -4049,7 +4066,7 @@ Your word, stupendous as it is, has no effect. Yet. You may just need to go back
 !by one point
 
 @spoi
-#towers anagrams for itster
+#ttc-table-of-towers-anagrams-triste
 >xr tetris #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -4102,7 +4119,7 @@ You helped St. Teri directly. Now you need to deal with the Done-Any Anodyne.
 #this is a weird case. It's not the anodyne that's being rejected as much as the itster, which has now vanished and createe the Done-Any Anodyne upon fliptoing
 
 @spoi
-#towers anagrams for done any anodyne
+#ttc-table-of-towers-anagrams-annoyed
 >xr anodyne #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y

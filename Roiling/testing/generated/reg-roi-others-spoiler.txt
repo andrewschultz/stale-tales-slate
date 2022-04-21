@@ -25,12 +25,16 @@ Rustic Citrus
 You don't want to change. Well, not in that way.
 >gx curtis
 If Curtis had any materials, he wouldn't hide them from you.
+#ttc-table-of-others-anagrams-grapes
 >gx pagers
 You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipates.
+#ttc-table-of-others-anagrams-limes
 >gx slime
 You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
+#ttc-table-of-others-anagrams-pears
 >gx spear
 You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
+#ttc-table-of-others-anagrams-plums
 >gx lumps
 You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
@@ -52,6 +56,7 @@ You have 3 of 45 total points for the post-Elvira Others region, though you only
 >plums
 Your score has just gone up by one point.
 
+#ttc-table-of-others-anagrams-compass
 >gx moss cap
 Whoah! You suddenly see a COMPASS spinning around. The aftertaste of arugula finally dissipates.
 
@@ -60,6 +65,7 @@ You have 4 of 45 total points for the post-Elvira Others region, though you only
 
 >son 1
 Giving you the coin.
+#ttc-table-of-others-anagrams-icon
 >gx coin
 You see the coin could become an ICON. The aftertaste of arugula finally dissipates.
 >undo
@@ -72,6 +78,7 @@ Nothing happens. Maybe try to see through something else.
 >undo
 >son 3
 Giving you the coins.
+#ttc-table-of-others-anagrams-sonic-icons
 >gx coins
 You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
 >undo
@@ -102,27 +109,46 @@ Your score has just gone up by one point.
 
 >x ruts circuits
 
+#ttc-table-of-others-anagrams-dates
 >gx sated stead
 You have a vision of a fruit: DATES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-blueberries
 >gx eerie blurbs
 You have a vision of a fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-cantaloupe
 >gx peanut cola
 You have a vision of a fruit: CANTALOUPE. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-maraschino
 >gx harmonicas
 You have a vision of a fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
->gx omen prism
+
+#ttc-table-of-others-anagrams-persimmon
+#gx omen prism
 You have a vision of a fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-pomegranate
 >gx magenta rope
 You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+
+#+ttc-table-of-others-anagrams-pomegranate
 >gx megaton pear
 You blink and wind up refocusing on the magenta rope.
 You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+
+#+ttc-table-of-others-anagrams-pomegranate
 >gx rampage note
 You blink and wind up refocusing on the magenta rope.
 You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+
+#+ttc-table-of-others-anagrams-pomegranate
 >gx mopeage rant
 You blink and wind up refocusing on the magenta rope.
 You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-tamarind
 >gx mad train
 You have a vision of a fruit: TAMARIND. The aftertaste of arugula finally dissipates.
 
@@ -172,18 +198,30 @@ You have 12 of 45 total points for the post-Elvira Others region, though you onl
 >n
 Swell Wells
 
+#ttc-table-of-others-anagrams-apples
 >gx elp psa
 You have a vision of a fruit: APPLES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-apricot
 >gx riot cap
 You have a vision of a fruit: APRICOT. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-coconuts
 >gx stucco
 You have a vision of a fruit: COCONUTS. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-gooseberry
 >gx sorer bogey
 You have a vision of a fruit: GOOSEBERRY. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-mulberries
 >gx miser ruble
 You have a vision of a fruit: MULBERRIES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-tangerines
 >gx green stain
 You have a vision of a fruit: TANGERINES. The aftertaste of arugula finally dissipates.
+
 >gx mound
 Nothing happens. Maybe try to see through something else.
 
@@ -251,22 +289,39 @@ You fiddle with the coin you got
 >w
 Filed Field
 
+#ttc-table-of-others-anagrams-blackberries
 >gx barber sickle
 You have a vision of a fruit: BLACKBERRIES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-breadfruit
 >gx buried raft
 You have a vision of a fruit: BREADFRUIT. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-cranberries
 >gx briar screen
 You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
+
+#+ttc-table-of-others-anagrams-cranberries
 >gx barren cries
 You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-grapefruit
 >gx rapt figure
 You have a vision of a fruit: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-pineapple
 >gx pipe panel lie pen app
 You have a vision of a fruit: PINEAPPLE. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-raspberry
 >gx pryer bars
 You have a vision of a fruit: RASPBERRY. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-strawberries
 >gx barriers west
 You have a vision of a fruit: STRAWBERRIES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-watermelon
 >gx mean trowel
 You have a vision of a fruit: WATERMELON. The aftertaste of arugula finally dissipates.
 
@@ -336,22 +391,40 @@ Clangier Clearing
 
 >gx len craig
 Nothing, despite all Len Craig has to sell.
+
+#ttc-table-of-others-anagrams-olives
 >gx voiles
 You have a vision of a fruit: OLIVES. The aftertaste of arugula finally dissipates
+
+#ttc-table-of-others-anagrams-among
 >gx ammo gang
 You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-ancienter
 >gx nectarine
 You feel a need to make the nectarine ANCIENTER. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-cheap
 >gx peach
 You feel a need to call the peach CHEAP. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-cinque
 >gx quince
 You feel a need to order CINQUE. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-cripes
 >gx prices precis
 You feel a need to lash out and say CRIPES. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-mo-len
 >gx melon
 You feel a need to haggle with MO LEN. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-papayas
 >gx auction caution
 You have a vision of a fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-solemn
 >gx lemons
 You feel an urge to look SOLEMN. The aftertaste of arugula finally dissipates.
 
@@ -400,10 +473,15 @@ You have 38 of 45 total points for the post-Elvira Others region, though you onl
 >d
 Scape Space
 
+#ttc-table-of-others-anagrams-banana
 >gx a banna'
 You have a vision of a fruit: BANANA. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-go-near
 >gx orange
 You see how to get the orange: first, GO NEAR. The aftertaste of arugula finally dissipates.
+
+#ttc-table-of-others-anagrams-rhubarb
 >gx a brr hub
 You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
 
@@ -415,6 +493,7 @@ Dr. Severe
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
 !Your score has just gone up by one point.
 
+#ttc-table-of-others-anagrams-reversed
 >gx dr severe
 One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 
@@ -443,10 +522,15 @@ Gates Stage
 >n
 PERP
 
+#ttc-table-of-others-anagrams-review
 >gx viewer
 No. You don't want to use the arugula on the viewer. It's got to be pretty simple.
+
+#ttc-table-of-others-anagrams-research
 >gx searcher
 No. You don't want to use the arugula on the searcher. It's got to be pretty simple.
+
+#ttc-table-of-others-anagrams-prep
 >gx fleeing feeling
 No. You don't want to use the arugula on the fleeing feeling. It's got to be pretty simple.
 

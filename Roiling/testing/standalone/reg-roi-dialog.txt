@@ -488,11 +488,11 @@ Yellow: A E I O U
 [7] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-stable-quip
-#ttc-table-of-settler-letter-reasoning-a
+#+ttc-table-of-settler-letter-reasoning-a
 #ttc-table-of-settler-letter-reasoning-b
-#ttc-table-of-settler-letter-reasoning-e
-#ttc-table-of-settler-letter-reasoning-l
-#ttc-table-of-settler-letter-reasoning-s
+#+ttc-table-of-settler-letter-reasoning-e
+#+ttc-table-of-settler-letter-reasoning-l
+#+ttc-table-of-settler-letter-reasoning-s
 #ttc-table-of-settler-letter-reasoning-t
 >1
 DEBUG INFO: current quip = stable-quip.
@@ -505,11 +505,11 @@ DEBUG INFO: current quip = stable-quip.
 [7] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-chimney-quip
-#ttc-table-of-settler-letter-reasoning-c
-#ttc-table-of-settler-letter-reasoning-e
+#+ttc-table-of-settler-letter-reasoning-c
+#+ttc-table-of-settler-letter-reasoning-e
 #ttc-table-of-settler-letter-reasoning-h
-#ttc-table-of-settler-letter-reasoning-i
-#ttc-table-of-settler-letter-reasoning-m
+#+ttc-table-of-settler-letter-reasoning-i
+#+ttc-table-of-settler-letter-reasoning-m
 #ttc-table-of-settler-letter-reasoning-n
 #ttc-table-of-settler-letter-reasoning-y
 >1
@@ -525,13 +525,13 @@ DEBUG INFO: current quip = chimney-quip.
 >undo
 
 #ttc-table-of-elmo-comments-basement-quip
-#ttc-table-of-settler-letter-reasoning-a
-#ttc-table-of-settler-letter-reasoning-b
-#ttc-table-of-settler-letter-reasoning-e
-#ttc-table-of-settler-letter-reasoning-m
-#ttc-table-of-settler-letter-reasoning-n
-#ttc-table-of-settler-letter-reasoning-s
-#ttc-table-of-settler-letter-reasoning-t
+#+ttc-table-of-settler-letter-reasoning-a
+#+ttc-table-of-settler-letter-reasoning-b
+#+ttc-table-of-settler-letter-reasoning-e
+#+ttc-table-of-settler-letter-reasoning-m
+#+ttc-table-of-settler-letter-reasoning-n
+#+ttc-table-of-settler-letter-reasoning-s
+#+ttc-table-of-settler-letter-reasoning-t
 >2
 DEBUG INFO: current quip = basement-quip.
 [1] Recall the my niche/chimney flip.
@@ -543,10 +543,10 @@ DEBUG INFO: current quip = basement-quip.
 [7] Finish Fishin'.
 
 #ttc-table-of-elmo-comments-ramp-quip
-#ttc-table-of-settler-letter-reasoning-a
-#ttc-table-of-settler-letter-reasoning-m
-#ttc-table-of-settler-letter-reasoning-p
-#ttc-table-of-settler-letter-reasoning-r
+#+ttc-table-of-settler-letter-reasoning-a
+#+ttc-table-of-settler-letter-reasoning-m
+#+ttc-table-of-settler-letter-reasoning-p
+#+ttc-table-of-settler-letter-reasoning-r
 >2
 DEBUG INFO: current quip = ramp-quip.
 [1] Recall the my niche/chimney flip.
@@ -696,7 +696,7 @@ DEBUG INFO: current quip = satchel-quip.
 [4] Tell Elmo you got what the cheat button does, thanks!
 [5] Finish Fishin'.
 
-#ttc-table-of-elmo-comments-still-no-gp-quip
+#+ttc-table-of-elmo-comments-still-no-gp-quip
 >3
 DEBUG INFO: current quip = still-no-gp-quip.
 
@@ -754,7 +754,7 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [1] Ask Elmo about your trial trail
 [2] Finish Fishin'.
 
-#ttc-table-of-elmo-comments-trial-trail-quip
+#+ttc-table-of-elmo-comments-trial-trail-quip
 >1
 DEBUG INFO: current quip = trial-trail-quip.
 "More trouble, more stores. Six of 'em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes." Elmo hands you a paper. "It's a Gird Grid. More details there. Read it later."

@@ -376,7 +376,7 @@ UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis 
 PERUSED exhibits: coder decor (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
 \\
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-8
+#+ttc-table-of-demo-dome-exhibit-coder-decor-text-8
 >x coder decor
 NOTE: you've read all the way through.
 \\
