@@ -64,16 +64,6 @@ You can RECAP to see your options.
 >3
 Carven Cavern
 
-#ttc-table-of-goto-sectioning--1-ordeal-reload
->gt study
-Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
->gt gallery
-Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
->gt highest
-Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
->gt framing farming
-Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
-
 >staple
 >stapler
 >put staple in stapler
@@ -165,45 +155,15 @@ You don't need to do anything further with Brother Horbert. If you want to go wh
 
 >beneath
 
-#ttc-table-of-goto-sectioning--1-routes
->gt mesa
-Brother Horbert would be sad to see you return, unsuccessful.
-
 >until
 >around
 >along
 
-#ttc-table-of-goto-sectioning-harms-marsh-2--
->gt marsh
-You already muddled your way out of Harms Marsh. You may be lost now, but walking back would be worse.
-
-#+ttc-table-of-goto-sectioning--1-routes
->gt mesa
-Brother Horbert would be sad to see you return, unsuccessful.
 
 >amidst
 
-#ttc-table-of-goto-sectioning-ripe-pier-3--
->gt pier
-You have no idea how to turn the Cripple Clipper around, and you don't want to.
-
-#ttc-table-of-goto-sectioning-harms-marsh-2--
->gt marsh
-You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
-
-#+ttc-table-of-goto-sectioning--1-routes
->gt mesa
-You're not going back across the water. You're closer to the end of your quest.
 
 >athwart
-
-#ttc-table-of-goto-sectioning-cripple-clipper-4--
->gt cripple clipper
-The Sonancy Canyons lead to your destiny.
-
-#+ttc-table-of-goto-sectioning-ripe-pier-3--
->gt pier
-It's time to go forward, not backwards.
 
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
@@ -447,21 +407,11 @@ You should have what you need. It's time to sit down and plow through some compu
 
 >spill
 
-#ttc-table-of-goto-sectioning-posh-hops-shop-1--
->gt shop
-The LOLstr trolls would not welcome you back.
 
 >calm
 >run
 Disease Seaside
 
-#ttc-table-of-goto-sectioning-olde-lode-2--
->gt lode
-You don't want to go back near that urn.
-
-#+ttc-table-of-goto-sectioning-posh-hops-shop-1--
->gt shop
-The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >boast
 >gt lode
@@ -469,25 +419,8 @@ If only it was that easy. Well, I hope it's not too hard to figure the right act
 >gt shop
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
 
-#ttc-table-of-goto-sectioning-disease-seaside-3--
->gt seaside
-No sense crossing back. There's more on the other side of the shore.
 
 >leap
-
-#ttc-table-of-goto-sectioning-fighter-freight-4--
->gt freight
-You don't really want to revisit the crays.
-
-#ttc-table-of-goto-sectioning-disease-seaside-3--
->gt seaside
-No sense crossing back. There's more on this side of the shore.
-
-#+ttc-table-of-goto-sectioning-olde-lode-2--
->gt lode
-You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
->gt shop
-The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
 >spike
 >e
@@ -535,10 +468,6 @@ You got rid of the ant. Nothing more to do there.
 >yonder
 Topside Deposit
 
-#ttc-table-of-goto-sectioning-loftier-trefoil-1--
->gt trefoil
-You had your fun in there.
-
 >gonear waters
 >gt trefoil
 Progress isn't easy when you're flailing in water.
@@ -546,18 +475,6 @@ Progress isn't easy when you're flailing in water.
 Progress isn't easy when you're flailing in water.
 
 >nearest
-
-#ttc-table-of-goto-sectioning-rawest-waters-3--
->gt waters
-The Rawest Waters of Leak Lake would probably be even less fun the second time around.
-
-#ttc-table-of-goto-sectioning--2-towers
->gt deposit
-You don't want to cross Leak Lake again.
-
-#ttc-table-of-goto-sectioning-loftier-trefoil-1--
->gt trefoil
-That's way in the past.
 
 * otters-go-to
 
