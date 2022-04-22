@@ -8322,7 +8322,11 @@ this is the bore-shwich rule:
 
 check switching on the settler: try ssing instead;
 
+check switching on the whichs shwich: try ssing instead;
+
 check switching off the settler: try ssing instead;
+
+check switching off the whichs shwich: try ssing instead;
 
 section a tech etcha
 
@@ -8399,14 +8403,13 @@ to show-bluables:
 	else:
 		say "Many things:";
 	now blue-list is true;
-	say " [the list of bluable things]";
-	now blue-list is true;
+	say " [list of bluable things]";
+	now blue-list is false;
 	say " [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. [one of]It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal[or]You turn the settler off[stopping].[line break]";
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
 	if ever-blur was false and ever-blur is true, say "[line break]You'd guess the blurry stuff indicates something isn't necessary to flip, or maybe it's something that can help with another item.";
-	d "[list of bluable things].";
 
 blue-list is a truth state that varies.
 
@@ -8419,15 +8422,21 @@ after printing the name of a thing (called th) when blue-list is true:
 	else if th is blurry:
 		say " (a bit blurry)";
 
-before printing the name of a thing (called th) when blue-list is true:
-	if th is an altview listed in table of settler shake descriptions, do nothing instead;
-	continue the action;
+[before printing the name of a thing (called th) when blue-list is true: [ eliminate leading "the"s ]
+	if th is an blue-view-thing listed in table of settler shake descriptions:
+		do nothing instead;
+	if th is proper-named:
+		do nothing instead;
+	say "the";
+	continue the action;]
 
 for printing the name of a thing (called th) when blue-list is true:
-	if th is an altview listed in table of settler shake descriptions:
-		say "[alttext entry]" instead;
-	else:
+	if th is a blue-view-thing listed in table of settler shake descriptions:
+		say "[blue-view-text entry]" instead;
+	else if th is proper-named:
 		say "[printed name of th]";
+	else:
+		say "the [printed name of th]";
 
 ever-blur is a truth state that varies.
 ever-vblur is a truth state that varies.
@@ -8453,9 +8462,9 @@ definition: a thing (called mbbl) is blurry:
 	decide no;
 
 table of settler shake descriptions
-altview	alttext
+blue-view-thing	blue-view-text
 darkness	"a weird outline in the darkness" [routes]
-L Clear Cellar	"the outline of where L'Clear Cellar might be but isn't" [troves]
+L Clear Cellar	"the outline of a possible but incorrect location of L'Clear Cellar" [troves]
 Id Cede	"musical notes pulsing with the beat of [i]I'd Cede[r]"
 wzup	"a pair of hands patting [l-n-r] on the back" [presto]
 eeks	"some cartoony representation of [b]EEKS[r]" [oyster]
