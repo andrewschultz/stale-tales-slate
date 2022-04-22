@@ -1067,11 +1067,6 @@ The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitab
 >damn
 No, that's too strong for here. You've been doing quite well with the tame stuff.
 
-@verbs
-#verbcase listen-presto-if-player-is-in-dirge-ridge
->listen
-The odes song is gone, but you still just feel mad about things
-
 >darn
 Your score has just gone up by one point
 }}SCORE++
@@ -1132,9 +1127,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @verbs
 #verbcase listen-presto-if-noun-is-rand-or-noun-is-leo
 #verbcase listen-presto-if-noun-is-rand-or-noun-is-leo-if-rand-is-washed-up
-#verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
+>goodness
+by one point
 >listen
-small talk, and they open up to you a bit.
+small talk is not very deep or aggressive, and they don't seem to resent you for outsmarting them
+>undo
+>undo
 
 @hints
 #ttc-table-of-settler-shake-descriptions-wzup
@@ -1168,6 +1166,11 @@ by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@verbs
+#verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
+>listen
+/(Rand and Leo|Leo and Rand)'s small talk is not very deep or aggressive, and they are glad for a bit of banter, though not much comes of it\.
 
 @nud
 #mistake retest for leonard/renaldo/leandro/rolande
@@ -2441,11 +2444,13 @@ You can SLEEP once you've gotten a good start on your coding task.
 >futon
 Your score has just gone up by one point
 }}SCORE++
->score
-{$SCOS}
 
 @spoi
 #ttc-table-of-presto-anagrams-sleep
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to SLEEP on the futon.
+
+>score
+{$SCOS}
 
 @nud
 #ttc-table-of-presto-done-rejects-futon
@@ -2771,7 +2776,7 @@ DEBUG INFO: USB hinting.
 
 @spoi
 #ttc-table-of-presto-anagrams-sub
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a BUS or USB.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a BUS or SUB.
 
 >score
 @min

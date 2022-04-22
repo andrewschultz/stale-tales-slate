@@ -1349,6 +1349,7 @@ It'd sort of stink if a caps lock button broke in real life, so, no.
 
 >futon
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 

@@ -13,7 +13,6 @@
 >ts
 >a5
 >c
->otters
 
 >opt in
 >enter solid idols
@@ -81,8 +80,6 @@ by one point
 >listen
 Ick, man. Mackin'. You really don't want to pay attention to the details, but you get the general impression.
 >undo
->undo
-
 >undo
 
 >bossily

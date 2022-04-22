@@ -17,7 +17,6 @@
 >ts
 >a5
 >c
->otters
 
 >scam
 
@@ -52,9 +51,6 @@ Score in a scenario: 1 out of 35 total points in the current region, Otters. Low
 
 >l
 Burnt Brunt
-
->get cinders
-They crackle with energy and possibilities as you take them. Perhaps there is more than one thing you can do with them.
 
 >reedily
 Your score has just gone up by one point
@@ -118,6 +114,7 @@ by one point
 
 /You can make the macks talk more (BOSSILY|CATTILY|SEEDILY|IRATELY|TERSELY|ANGRILY|NASTILY|SHADILY|SNIDELY|STARKLY|BLEARILY|COITALLY|FORMALLY|RIBALDLY|SHABBILY|SHODDILY|SILENTLY|SUDDENLY|MODESTLY|STEAMILY|STUPIDLY|MARTIALLY|SINCERELY|SOBBINGLY|TEDIOUSLY|WEARINGLY|DESPERATELY|DRAWLINGLY|EMOTIONALLY|REACTIVELY|DESPAIRINGLY|INDISCREETLY)\.
 
+>undo
 >undo
 
 >bossily

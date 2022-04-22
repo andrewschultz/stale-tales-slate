@@ -13,7 +13,6 @@
 >ts
 >a5
 >c
->otters
 
 >opt in
 >enter solid idols
@@ -195,8 +194,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for sparely
 >psralye
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
->undo
 
 >bossily
 Your score has just gone up by one point.

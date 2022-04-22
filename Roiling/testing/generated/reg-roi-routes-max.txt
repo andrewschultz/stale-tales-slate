@@ -282,7 +282,7 @@ Your score has just gone up by one point
 
 >au 0
 >beyond
-This will solve Routes. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything?
+This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything?
 >undo
 >undo
 

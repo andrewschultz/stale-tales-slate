@@ -13,7 +13,6 @@
 >ts
 >a5
 >c
->otters
 
 >opt in
 >enter solid idols
@@ -196,8 +195,6 @@ You try to argue that you're that person who saved Yorpwald in the first place, 
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >undo
 >undo
->undo
-
 >undo
 
 >bossily

@@ -83,8 +83,6 @@ No, it's a thing you can change the tables to. You didn't have to deal with adje
 >think
 You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
 
-Whoah! Bangish bashing at the isolani liaison!
-
 #ttc-table-of-dusty-study-nudges-rove
 >roev
 That's not a way to sneak around and avoid the knock at the door.
@@ -662,6 +660,8 @@ You nod. "No clues counsel."
 Carven Cavern
 
 #ttc-table-of-ordeal-reload-spechelp-respect-specter
+>eecsprt
+The respect specter shrugs respectfully. "A deferred success."
 
 #ttc-table-of-carven-cavern-nudges-cavern
 >cavenr

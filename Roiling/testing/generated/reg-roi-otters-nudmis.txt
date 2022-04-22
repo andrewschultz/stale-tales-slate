@@ -13,7 +13,6 @@
 >ts
 >a5
 >c
->otters
 
 >opt in
 >enter solid idols
@@ -163,9 +162,6 @@ They crackle with energy and possibilities as you take them. Perhaps there is mo
 >reedily
 Your score has just gone up by one point
 
-#ttc-table-of-otters-nudges-cinders
->cindesr
-The cinders are gone for good.
 >n
 #ttc-table-of-shiner-shrine-nudges-remote
 >remoet
@@ -461,8 +457,6 @@ You needed to deal with all the players to knock them back a peg.
 >undo
 >undo
 >undo
->undo
-
 >undo
 
 >bossily
@@ -1324,6 +1318,10 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 31 out of 35 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
+
+#ttc-table-of-otters-nudges-cinders
+>cindesr
+The cinders are gone for good.
 
 #+ttc-table-of-reclusion-inclosure-nudges-ideas
 >edsia

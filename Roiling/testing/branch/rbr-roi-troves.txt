@@ -670,7 +670,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That
 @hints
 #ttc-table-of-settler-shake-descriptions-l-clear-cellar
 >ss
-You switch the settler, then shake it. Your vision swirls for a minute. Only the outline of L'Clear Cellar. You check: nope, not there is visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+You switch the settler, then shake it. Your vision swirls for a minute. Only the outline of a possible but incorrect location of L'Clear Cellar is visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
 
 >recall
 by one point
@@ -770,7 +770,7 @@ Your eyes gloss over all but the red name, ERGAL AGLER.
 @hints
 #ttc-table-of-settler-shake-descriptions-lager
 >ss
-A couple things: the can of Large Regal Lager (very blurry) and musical notes pulsing with the beat of I'd Cede are visible.
+A couple things: musical notes pulsing with the beat of I'd Cede and the can of Large Regal Lager (very blurry) are visible.
 
 @!mina,minb
 >glare
@@ -1132,9 +1132,6 @@ Nothing catches your eye except an article on RIDEES, captioned in red. Whether 
 #slider test for desire
 >ederis
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@spoi
-In particular, you feel the need to DESIRE right now.
 
 >desire
 Your score has just gone up by one point

@@ -13,7 +13,6 @@
 >ts
 >a5
 >c
->otters
 
 >opt in
 >enter solid idols
@@ -39,8 +38,6 @@ Score in a scenario: 2 out of 35 total points in the current region, Otters. Low
 
 >w
 Disowned Downside
-
->undo
 
 >bossily
 Your score has just gone up by one point.
@@ -80,6 +77,7 @@ by one point
 >misses
 !HOWEVER
 >undo
+>scam
 >n
 >n
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
@@ -87,6 +85,7 @@ You also feel there's something more to do here, if you want, but isn't critical
 >because
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
+>undo
 >undo
 >undo
 >undo

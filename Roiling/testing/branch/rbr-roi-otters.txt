@@ -45,7 +45,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >ts
 >a5
 >c
->otters
 
 @hin
 >scam
@@ -269,7 +268,8 @@ DEBUG INFO: Taking away a max point.
 >discern
 REEDILY
 }}CURMAX--
-@!
+
+@!min,hin
 >get cinders
 They crackle with energy and possibilities as you take them. Perhaps there is more than one thing you can do with them.
 
@@ -299,9 +299,6 @@ Your score has just gone up by one point
 You made a way west. You're done here.
 
 @nud
-#ttc-table-of-otters-nudges-cinders
->cindesr
-The cinders are gone for good.
 >n
 #ttc-table-of-shiner-shrine-nudges-remote
 >remoet
@@ -993,7 +990,8 @@ by one point
 #ttc-table-of-otters-anagrams-indiscreetly
 \\
 /You can make the macks talk more (BOSSILY|CATTILY|SEEDILY|IRATELY|TERSELY|ANGRILY|NASTILY|SHADILY|SNIDELY|STARKLY|BLEARILY|COITALLY|FORMALLY|RIBALDLY|SHABBILY|SHODDILY|SILENTLY|SUDDENLY|MODESTLY|STEAMILY|STUPIDLY|MARTIALLY|SINCERELY|SOBBINGLY|TEDIOUSLY|WEARINGLY|DESPERATELY|DRAWLINGLY|EMOTIONALLY|REACTIVELY|DESPAIRINGLY|INDISCREETLY)\.
-
+\\
+>undo
 >undo
 
 >bossily
@@ -1143,6 +1141,7 @@ by one point
 >misses
 !HOWEVER
 >undo
+>scam
 >n
 >n
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
@@ -1150,6 +1149,7 @@ You also feel there's something more to do here, if you want, but isn't critical
 >because
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
+>undo
 >undo
 >undo
 >undo
@@ -2746,6 +2746,11 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOMAX}
+
+@nud
+#ttc-table-of-otters-nudges-cinders
+>cindesr
+The cinders are gone for good.
 
 @nud
 #+ttc-table-of-reclusion-inclosure-nudges-ideas

@@ -492,7 +492,7 @@ The name of the train's creator is in red: DR. NIMATA.
 #ttc-table-of-others-spechelp-mad-train
 >madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the id-mantra mad train. That's a decent omen.
 #ttc-table-of-others-scannotes-id-mantra-mad-train
 >scan mad train
 The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention.
@@ -2035,7 +2035,7 @@ A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the p
 @hints
 #ttc-table-of-settler-shake-descriptions-a-banna
 >ss
-the (a) banna'
+the/(a) banna'
 
 @!min
 >banana

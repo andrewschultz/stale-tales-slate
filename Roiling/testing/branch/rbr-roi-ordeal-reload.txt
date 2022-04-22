@@ -149,6 +149,9 @@ No, it's a thing you can change the tables to. You didn't have to deal with adje
 @!max
 >think
 You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
+
+@!max,nud
+>x bookshelf
 \\
 Whoah! Bangish bashing at the isolani liaison!
 
@@ -1167,14 +1170,19 @@ EXTRA or TAX ER/TAXER toggles more advice for ambiguous/question mark hints. Thi
 >pad xtra
 !XTRA TRAX
 >xtu
-The xtra-trax-warn variable is alreadynow false.
+The xtra-trax-warn variable is already false.
+The xtra-trax variable is now false.
 
 @nud
 #ttc-table-of-ordeal-reload-spechelp-respect-specter
+>eecsprt
+The respect specter shrugs respectfully. "A deferred success."
 
 @max
 >eecsprt
-The respect specter shrugs respectfully. "A deferred success."
+!shrugs respectfully
+You feel a slight psychic push-pull coming from the Respect Specter. That's a decent omen.
+You can use the command XTRA TRAX to track the right combination of letters less generically. However, some hints might be a bit too pointed.
 
 @max
 #ttc-table-of-notepad-entries-xtra/trax
@@ -1536,7 +1544,7 @@ There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation 
 >xg 4
 A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
 >xg 5
-The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
+The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. The Curst Palace lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
 >xg 6
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 

@@ -199,10 +199,6 @@ The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitab
 >damn
 No, that's too strong for here. You've been doing quite well with the tame stuff.
 
-#verbcase listen-presto-if-player-is-in-dirge-ridge
->listen
-The odes song is gone, but you still just feel mad about things
-
 >darn
 Your score has just gone up by one point
 
@@ -214,9 +210,12 @@ You had your chance for a minor swear or two. And you took it. Yay, you.
 
 #verbcase listen-presto-if-noun-is-rand-or-noun-is-leo
 #verbcase listen-presto-if-noun-is-rand-or-noun-is-leo-if-rand-is-washed-up
-#verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
+>goodness
+by one point
 >listen
-small talk, and they open up to you a bit.
+small talk is not very deep or aggressive, and they don't seem to resent you for outsmarting them
+>undo
+>undo
 
 #not a mistake
 >whassup
@@ -229,6 +228,10 @@ Score in a scenario: 14 out of 41 total points in the current region, Presto. Lo
 by one point
 >score
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+#verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
+>listen
+/(Rand and Leo|Leo and Rand)'s small talk is not very deep or aggressive, and they are glad for a bit of banter, though not much comes of it\.
 
 >n
 
@@ -424,6 +427,7 @@ fits in perfectly
 
 >futon
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 

@@ -144,7 +144,7 @@ Score in a scenario: 10 out of 30 total points in the current region, Troves. Lo
 
 #ttc-table-of-settler-shake-descriptions-l-clear-cellar
 >ss
-You switch the settler, then shake it. Your vision swirls for a minute. Only the outline of L'Clear Cellar. You check: nope, not there is visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
+You switch the settler, then shake it. Your vision swirls for a minute. Only the outline of a possible but incorrect location of L'Clear Cellar is visible. It's a bit of a headache to stare too long, so you switch the settler off. The view quickly returns to normal.
 
 >recall
 by one point
@@ -172,7 +172,7 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 
 #ttc-table-of-settler-shake-descriptions-lager
 >ss
-A couple things: the can of Large Regal Lager (very blurry) and musical notes pulsing with the beat of I'd Cede are visible.
+A couple things: musical notes pulsing with the beat of I'd Cede and the can of Large Regal Lager (very blurry) are visible.
 
 >glare
 Your score has just gone up by one point
@@ -242,8 +242,6 @@ Score in a scenario: 18 out of 30 total points in the current region, Troves. Lo
 by one point
 
 >score
-
-In particular, you feel the need to DESIRE right now.
 
 >desire
 Your score has just gone up by one point

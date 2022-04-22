@@ -1484,6 +1484,7 @@ Your settler registers RRYR?Y*****.
 @spoi
 #towers anagrams for pirates
 #ttc-table-of-towers-anagrams-pastier
+>xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
 #ttc-table-of-towers-anagrams-semipro

@@ -356,12 +356,14 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
+#ttc-table-of-presto-anagrams-screen
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
 
 >screen
 by one point
 Only one more piece of hardware is needed, and the computer will work.
 
+#ttc-table-of-presto-anagrams-skid
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
 
 >score
@@ -370,6 +372,7 @@ Score in a scenario: 23 out of 41 total points in the current region, Presto. Lo
 >skid
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-leaf
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a LEAF.
 
 >score
@@ -400,12 +403,18 @@ Score in a scenario: 26 out of 41 total points in the current region, Presto. Lo
 #notmax
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-keyboard
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a KEYBOARD.
+
 >score
 Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >keyboard
 Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
+
+#ttc-table-of-presto-anagrams-disk
+You would rather change the skid back to the disk, then put the disk in the disk drive.
 
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
@@ -414,9 +423,13 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 
 >put disk in drive a
 
+#ttc-table-of-presto-anagrams-reboot
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to REBOOT with the E-Robot.
+
 >reboot
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-capslock
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
 
 >score
@@ -428,15 +441,23 @@ Your score has just gone up by one point
 >put lock on keyboard
 fits in perfectly
 
+#ttc-table-of-presto-anagrams-futon
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a FUTON.
 
 >futon
 Your score has just gone up by one point
+
+#ttc-table-of-presto-anagrams-sleep
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to SLEEP on the futon.
+
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >sleep
 Your score has just gone up by one point
+
+#ttc-table-of-presto-anagrams-compile
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to learn to COMPILE from the I'm Le Cop polemic.
 
 >score
 Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
@@ -444,6 +465,7 @@ Score in a scenario: 32 out of 41 total points in the current region, Presto. Lo
 >compile
 by one point
 
+#ttc-table-of-presto-anagrams-cola
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
 #ttc-table-of-presto-hint-request-rejects-im-le-cop-polemic
@@ -456,6 +478,7 @@ Score in a scenario: 33 out of 41 total points in the current region, Presto. Lo
 >cola
 Your score has just gone up by one point
 
+#ttc-table-of-presto-anagrams-mug
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a MUG.
 
 >score
@@ -502,10 +525,16 @@ The tab key will be useful without any further wizardry.
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
+#ttc-table-of-presto-anagrams-debug
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to DEBUG the code you compiled.
+
 >debug
 Your score has just gone up by one point
 
 DEBUG INFO: USB hinting.
+
+#ttc-table-of-presto-anagrams-sub
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a BUS or SUB.
 
 >score
 Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
