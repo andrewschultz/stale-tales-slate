@@ -3476,7 +3476,7 @@ to say get-a-man: say "[if Notices Section is unvisited][reject][else if Trips S
 
 chapter broad board
 
-the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but that can help you be right. So look out for red writing.[stopping]"
+the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but now you know that, it can help you be right. So look out for red writing.[stopping]"
 
 to say board-note:
 	pad-rec-q "board";
@@ -3486,6 +3486,12 @@ to say board-note:
 retry-known is a truth state that varies.
 
 understand "billboard" as broad board.
+
+broad-board-x-count is a number that varies. broad-board-x-count is 0.
+
+after examining broad board:
+	if broad-board-x-count < 3, increment broad-board-x-count;
+	continue the action
 
 chapter mega-ant
 
@@ -4125,8 +4131,6 @@ rule for supplying a missing noun when xmxing:
 
 xray-cheat is a truth state that varies.
 
-tag-warn is a truth state that varies.
-
 check xmxing:
 	if xray-cheat is true:
 		if xray-vision is false:
@@ -4138,13 +4142,17 @@ check xmxing:
 		try examining the noun instead;
 	if noun is a direction, say "[if player is in sf or player is in rf]You can't see which way to go--maybe use your other senses[else]Just try going [noun] instead[end if]." instead;
 
+this is the deadbeat-corn rule:
+	if noun is lost corn and bastion-evac is false:
+		say "The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead." ;
+
 carry out xmxing:
 	if xray-vision is false:
 		if saltine is moot, say "You lost your x-ray vision." instead;
 		try examining the noun instead;
 	if noun is a reading, try xmxing drainage instead;
 	if noun is unnecc:
-		say "Are you sure you want to use the saltine's vision on that?";
+		say "Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?";
 		if the player dir-consents:
 			do nothing;
 		else:
@@ -4173,9 +4181,8 @@ carry out xmxing:
 			say "Before staring at anything, you wonder if you could just think yourself back to the [b]ROOM[r]." instead;
 		if player is in Means Manse, say "You just want to [b]EXIST[r], really." instead;
 	if noun is nametag: [start Ordeal Loader]
-		if tag-warn is false:
-			now tag-warn is true;
-			say "You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is touchable]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
+		if broad-board-x-count < 3:
+			say "You pause a bit. Maybe there's something [broad-board-x]on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is touchable]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
 		say "Well, you probably just need to get through with things. You take a bite of the saltine, then you think 'How do I get through that gate, man?' Hmm...[b]GATEMAN[r]. That'd fit." instead;
 	if noun is gateway:
 		if nametag is moot, say "You don't need to unlock any further mysteries of the gateway." instead;
@@ -4240,12 +4247,12 @@ carry out xmxing:
 		say "The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.";
 		ditch-saltine instead;
 	if noun is warts, say "You can't see them, but you remember the palindrome 'No, too stupid a fad. I put soot on ...'" instead;
-	if noun is cask and sack is moot, say "You already changed the cask to a sack[if straw is moot], and you don't see any reason to do so again[else], and if you need to do so again, you won't forget[end if]." instead;
+	if noun is cask and sack is not off-stage, say "You already changed the cask to a sack[if straw is moot], and you don't see any reason to do so again[else], and if you need to do so again, you won't forget[end if]." instead;
 	if noun is sack, say "After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though." instead;
 	if noun is pat, say "You try to, but it's awkward making eye contact. Maybe you could stare at the air, to flow with the poetry's anapest beat." instead;
 	if noun is poem:
 		if poem is not folded:
-			say "[v-b][if smilies are touchable]you see the smilies fly off the page, and the folded poem becomes[else]the poem fold and become[end if] a panel.";
+			say "[v-b]you see [if smilies are touchable]the smilies flying off the page, then [end if]the poem folding and becoming a panel.";
 			ditch-saltine instead;
 		say "You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.";
 		ditch-saltine instead;
@@ -4254,23 +4261,28 @@ carry out xmxing:
 		if scraped wall is not hayfilled:
 			preef hallway;
 		ditch-saltine instead;
-	if noun is poem and pat is in the moor, try xmxing the location instead;
 	if noun is oils:
 		say "[v-b][if soil is in moor]you see a silo[else]you see soil, then a silo[end if].";
 		ditch-saltine instead;
+	if noun is begonias and heaths are not in Florae:
+		say "You already took the heaths." instead;
+	if noun is heaths and begonias are not in Florae:
+		say "You already took the begonias." instead;
 	if noun is begonias or noun is heaths: [start metros]
-		unless gardenia is moot, say "The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise." instead;
+		unless gardenia is moot, say "The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise." instead;
+		unless player carries noun, say "You should take [the noun] if you want to work on them." instead;
 	if noun is motto:
 		say "You thought you saw a tomato whiz by 'a motto,' there.";
 		ditch-saltine instead;
 	if noun is antlers:
-		say "You take care not to drop any crackers on the rug. A large FOR RENT sign seems to obscure the antlers for a moment.";
+		say "You take care not to drop any crackers on the rug. A large RENTAL sign seems to obscure the antlers for a moment.";
 		ditch-saltine instead;
 	if noun is dry cake and bastion-evac is false, say "Someone coughs 'discreetly' as you stare at the cake. If they were gone, you might be able to look at it more closely." instead;
 	if noun is nerds or noun is tulip:
 		if player does not have tulip:
 			say "You suddenly feel darkness, along with an urge to ask the nerds about it.";
 			ditch-saltine instead;
+	abide by the deadbeat-corn rule;
 	if noun is neon pig:
 		say "[v-b]you see an opening where the pig is.";
 		ditch-saltine instead;
@@ -4314,6 +4326,12 @@ carry out xmxing:
 	try examining the noun instead;
 	the rule succeeds.
 
+to say broad-board-x:
+	if broad-board-x-count is 1:
+		say "more ";
+	else if broad-board-x-count is 2:
+		say "you can re-read ";
+
 to say salt-text of (sal - a thing): [I couldn't seem to get indefinite articles to work, so I just hard coded it]
 	if sal is store f or sal is store i or sal is store r, say "a "; [stores]
 	if sal is bread or sal is ones or sal is noughts or sal is liches or sal is slit, say "a "; [forest]
@@ -4329,8 +4347,12 @@ to say v-b: say "Your vision blurs a bit, and instead ".
 
 xray-vision is a truth state that varies. xray-vision is usually false.
 
+saltine-warn is a truth state that varies.
+
 check eating the saltine:
-	if gateman is off-stage, say "Maybe you should find someone who can tell you what it does, first." instead;
+	if gateman is off-stage and saltine-warn is false:
+		now saltine-warn is true;
+		say "Maybe you should find someone who can tell you what it does, first." instead;
 	if gateman is touchable:
 		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
@@ -7635,6 +7657,9 @@ the Velcro is wearable.
 chapter lost corn
 
 some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. cert-text of lost corn is "-[ast]O[d1][ast]T[d1][ast]O[d1][d1]". rect-text of lost corn is "C[d1][d1][d1][d1][d1][d1][ast]S".
+
+check scaning corn:
+	abide by the deadbeat-corn rule;
 
 after taking the lost corn: say "'All yours, man,' says the deadbeat. 'It's some pretty good corn, too. Ask me if you like want details.'".
 
