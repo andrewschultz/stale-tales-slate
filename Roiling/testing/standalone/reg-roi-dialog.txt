@@ -589,7 +589,7 @@ DEBUG INFO: current quip = got-red-yellow-quip.
 #ttc-table-of-elmo-comments-still-busted-quip
 >3
 DEBUG INFO: current quip = still-busted-quip.
-You shake your head. "Duh, I'm humid."
+You shake your head. "Duh, I'm humid. Uh, dim."
 
 "A, e, i, o, u," Elmo points out. "Vowels."
 

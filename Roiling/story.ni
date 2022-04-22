@@ -9430,7 +9430,7 @@ scale-quip	"You experiment with changing the laces to a scale and back. Laces to
 gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
 elmomole-quip	"You flip the nametag to [b]MOLE[r] and back, tracking the scanner. Elmo to Mole is [if setspace is true]R Y R Y[else]RYRY[end if], Mole to Elmo is [if setspace is true]Y R R Y[else]YRRY[end if]. [mo-data]."
 got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything.' You try and think of something where it might."
-still-busted-quip	"You shake your head. 'Duh, I'm humid.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
+still-busted-quip	"You shake your head. 'Duh, I'm humid. Uh, dim.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
 showset-quip	"'Hint agent thing! Neat!' You show him what the red and yellow mean, then the green and purple. He asks if there are any other colors, like orange."
 lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
 gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green[if y-orange is false]. Any other colors? Hm, on the back of the settler, YORPWALD's D is orange, and WORDPLAY's W is, too[end if].'"
@@ -21705,7 +21705,7 @@ this is the spoil-hints rule:
 				moot crust instead;
 			say "[line break]You have [swears] bite[if swears > 1]s[end if] left." instead;
 		if player has snoop spoon:
-			if noun is thruhinted or noun is prefigured, say "Hmm, wait. Maybe there's something [spoil-entry entry]." instead;
+			if noun is thruhinted or noun is prefigured, say "Hmm, wait. Maybe there's something [spoil-entry entry] now." instead;
 			moot snoop spoon;
 			prevent undo;
 			now undo-code is 6;

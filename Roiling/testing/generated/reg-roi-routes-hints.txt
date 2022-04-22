@@ -55,7 +55,7 @@ Precise recipes
 The scripture picturers helped you get in, but they're just there to help other people now. Maybe.
 
 #ttc-table-of-routes-anagrams-past
-You angle your spoon a bit, and you realize you, or something, should be PAST.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go PAST.
 
 >past
 Your score has just gone up by one point
@@ -63,7 +63,7 @@ Your score has just gone up by one point
 Idle Deli
 
 #ttc-table-of-routes-anagrams-despite
-You angle your spoon a bit, and you realize you, or something, should be DESPITE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go DESPITE.
 
 >despite
 Your score has just gone up by one point
@@ -77,21 +77,21 @@ You got what you needed from the seed pit.
 >out
 
 #ttc-table-of-routes-anagrams-across
-You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
 
 >ptf 0
 >z
 >z
 >z
-Hmm, wait. Maybe you can just go ACROSS.
-!You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+Hmm, wait. Maybe there's something ACROSS now.
+!You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
 >ptf 2
 
 >across
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-opposite
-You angle your spoon a bit, and you realize you, or something, should be OPPOSITE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go OPPOSITE.
 
 Adobe Abode
 
@@ -104,13 +104,13 @@ The spoon points you out of Oscar's.
 >out
 
 #ttc-table-of-routes-anagrams-against
-You angle your spoon a bit, and you realize you, or something, should be AGAINST.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go AGAINST.
 
 >against
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-astride
-You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ASTRIDE.
 
 #ttc-table-of-routes-hint-request-rejects-sit-a-nag
 >hint sit a nag
@@ -123,7 +123,7 @@ Score in a scenario: 6 out of 22 total points in the current region, Routes. Low
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-below
-You angle your spoon a bit, and you realize you, or something, should be BELOW.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BELOW.
 
 #ttc-table-of-routes-hint-request-rejects-side-art
 >hint side art
@@ -134,7 +134,7 @@ You positioned yourself well to put up with Ian Gast's tirades. Time to try a ne
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-under
-You angle your spoon a bit, and you realize you, or something, should be UNDER.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNDER.
 
 #not a mistake (mistake code is for general preposition reject once you are under)
 >under
@@ -156,13 +156,13 @@ The spoon reflects back outside.
 >out
 
 #ttc-table-of-routes-anagrams-above
-You angle your spoon a bit, and you realize you, or something, should be ABOVE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ABOVE.
 
 >above
 Your score has just gone up by one point.
 
 #ttc-table-of-routes-anagrams-from
-You angle your spoon a bit, and you realize you, or something, should be FROM.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go FROM.
 
 >score
 Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
@@ -171,7 +171,7 @@ Score in a scenario: 11 out of 22 total points in the current region, Routes. Lo
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-beneath
-You angle your spoon a bit, and you realize you, or something, should be BENEATH.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BENEATH.
 
 #not a mistake (mistake code is for general preposition reject)
 >beneath
@@ -180,7 +180,7 @@ Your score has just gone up by one point
 Harms Marsh
 
 #ttc-table-of-routes-anagrams-until
-You angle your spoon a bit, and you realize you, or something, should be UNTIL.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNTIL.
 
 >score
 Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
@@ -194,19 +194,19 @@ A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blu
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-around
-You angle your spoon a bit, and you realize you, or something, should be AROUND.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go AROUND.
 
 >around
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-along
-You angle your spoon a bit, and you realize you, or something, should be ALONG.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ALONG.
 
 >along
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-amidst
-You angle your spoon a bit, and you realize you, or something, should be AMIDST.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go AMIDST.
 
 Ripe Pier
 
@@ -214,7 +214,7 @@ Ripe Pier
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-athwart
-You angle your spoon a bit, and you realize you, or something, should be ATHWART.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
 
 Cripple Clipper
 
@@ -222,7 +222,7 @@ Cripple Clipper
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-between
-You angle your spoon a bit, and you realize you, or something, should be BETWEEN.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BETWEEN.
 
 Sonancy Canyons
 
@@ -230,13 +230,13 @@ Sonancy Canyons
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-through
-You angle your spoon a bit, and you realize you, or something, should be THROUGH.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go THROUGH.
 
 >through
 Your score has just gone up by one point
 
 #ttc-table-of-routes-anagrams-beyond
-You angle your spoon a bit, and you realize you, or something, should be BEYOND.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BEYOND.
 
 >without
 Your score has just gone up by one point

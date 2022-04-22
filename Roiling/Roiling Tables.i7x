@@ -685,7 +685,7 @@ this is the post-hogs-or-keys rule:
 	moot keys;
 	move harpings phrasing to Saps Pass;
 	move mutism summit to Saps Pass;
-	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as the area suddenly becomes brighter...[paragraph break][b]Phat Path[r][line break]";
+	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The hogs slink off in despair at a job failed.[paragraph break]The area immediately grows brighter. You give a 'PHT!' as the lawl wall falls with a [i]THAP[r] as the area suddenly becomes brighter and you suddenly feel, err, [i]THAT HAP-P...[r][paragraph break][b]Phat Path[r][line break]";
 
 this is the pre-hogs-not-keys rule:
 	now hogs-not-keys is true;

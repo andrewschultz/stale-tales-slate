@@ -522,7 +522,7 @@ You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more
 
 @spoi
 #ttc-table-of-routes-anagrams-past
-You angle your spoon a bit, and you realize you, or something, should be PAST.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go PAST.
 
 @nud
 #+ttc-table-of-same-mesa-nudges-die
@@ -600,7 +600,7 @@ Idle Deli
 
 @spoi
 #ttc-table-of-routes-anagrams-despite
-You angle your spoon a bit, and you realize you, or something, should be DESPITE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go DESPITE.
 
 @nud
 #mistake retest for psat
@@ -743,7 +743,7 @@ You don't need to do anything with Pat, especially now you got the stupor sprout
 
 @spoi
 #ttc-table-of-routes-anagrams-across
-You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
 
 @nud
 #+ttc-table-of-same-mesa-nudges-resto
@@ -776,8 +776,8 @@ But the whales would be beached. Inside or outside of Oscar's.
 >z
 >z
 >z
-Hmm, wait. Maybe you can just go ACROSS.
-!You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+Hmm, wait. Maybe there's something ACROSS now.
+!You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
 >ptf 2
 
 >across
@@ -786,7 +786,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-opposite
-You angle your spoon a bit, and you realize you, or something, should be OPPOSITE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go OPPOSITE.
 
 Adobe Abode
 
@@ -862,7 +862,7 @@ Brother Horbert will work his magic with that.
 
 @spoi
 #ttc-table-of-routes-anagrams-against
-You angle your spoon a bit, and you realize you, or something, should be AGAINST.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go AGAINST.
 
 @nud
 #mistake retest for poopiest
@@ -923,7 +923,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-astride
-You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ASTRIDE.
 
 @hints
 #ttc-table-of-routes-hint-request-rejects-sit-a-nag
@@ -1010,7 +1010,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-below
-You angle your spoon a bit, and you realize you, or something, should be BELOW.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BELOW.
 
 @hints
 #ttc-table-of-routes-hint-request-rejects-side-art
@@ -1091,7 +1091,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-under
-You angle your spoon a bit, and you realize you, or something, should be UNDER.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNDER.
 
 @verbs
 >listen gast
@@ -1195,7 +1195,7 @@ No-Lag Logan may have left behind a ship that can get you out of here. It is bey
 
 @spoi
 #ttc-table-of-routes-anagrams-above
-You angle your spoon a bit, and you realize you, or something, should be ABOVE.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ABOVE.
 
 @nud
 #mistake test for along
@@ -1228,7 +1228,7 @@ Your score has just gone up by one point.
 
 @spoi
 #ttc-table-of-routes-anagrams-from
-You angle your spoon a bit, and you realize you, or something, should be FROM.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go FROM.
 
 >score
 {$SCOS}
@@ -1258,7 +1258,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-beneath
-You angle your spoon a bit, and you realize you, or something, should be BENEATH.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BENEATH.
 
 @verbs
 #verbcase listen-routes-if-player-is-in-same-mesa-if-the-bean-is-touchable
@@ -1308,7 +1308,7 @@ Harms Marsh
 
 @spoi
 #ttc-table-of-routes-anagrams-until
-You angle your spoon a bit, and you realize you, or something, should be UNTIL.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNTIL.
 
 @nud
 #ttc-table-of-harms-marsh-nudges-null
@@ -1382,7 +1382,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-around
-You angle your spoon a bit, and you realize you, or something, should be AROUND.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go AROUND.
 
 @nud
 #ttc-table-of-routes-done-rejects-un-road
@@ -1425,7 +1425,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-along
-You angle your spoon a bit, and you realize you, or something, should be ALONG.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ALONG.
 
 @nud
 #+ttc-table-of-harms-marsh-nudges-pyrites
@@ -1456,7 +1456,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-amidst
-You angle your spoon a bit, and you realize you, or something, should be AMIDST.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go AMIDST.
 
 Ripe Pier
 
@@ -1528,7 +1528,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-athwart
-You angle your spoon a bit, and you realize you, or something, should be ATHWART.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
 
 Cripple Clipper
 
@@ -1602,7 +1602,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-between
-You angle your spoon a bit, and you realize you, or something, should be BETWEEN.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BETWEEN.
 
 Sonancy Canyons
 
@@ -1711,7 +1711,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-through
-You angle your spoon a bit, and you realize you, or something, should be THROUGH.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go THROUGH.
 
 @verbs
 >listen hog
@@ -1735,7 +1735,7 @@ Your score has just gone up by one point
 
 @spoi
 #ttc-table-of-routes-anagrams-beyond
-You angle your spoon a bit, and you realize you, or something, should be BEYOND.
+You angle your spoon a bit, and you realize you, or something, should be, do, see or go BEYOND.
 
 @max
 >au 0
