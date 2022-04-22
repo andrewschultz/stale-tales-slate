@@ -44,17 +44,29 @@ You see yourself walking into woods instead of store F. Well, not quite woods. Y
 DEBUG: Store F being objhinted.
 >xc
 >eat saltine
+
+#ttc-table-of-stores-anagrams-acne-bit-cabinet
 >xx cabinet
 Your vision blurs a bit, and instead you see some Bactine.
+
+#ttc-table-of-stores-anagrams-store-b
 >xx store b
 Your vision blurs a bit, and instead you see sorbet.
+
+#ttc-table-of-stores-anagrams-store-f
 >xx store f
 Are you sure
 Your vision blurs a bit, and instead you see a forest.
+
+#ttc-table-of-stores-anagrams-store-i
 >xx store i
 Your vision blurs a bit, and instead you see a sortie.
+
+#ttc-table-of-stores-anagrams-store-m
 >xx store m
 Your vision blurs a bit, and instead you see metros.
+
+#ttc-table-of-stores-anagrams-store-r
 >xx store r
 Your vision blurs a bit, and instead you see a resort.
 

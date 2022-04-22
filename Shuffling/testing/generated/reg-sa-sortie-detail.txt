@@ -62,23 +62,6 @@ You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing no
 >open fridge
 You reopen and peer on. You see a grist and a cake pan inside.
 
->xx
-Nothing really sticks out. You may have to XX something specific.
->xx grist
-Your vision blurs a bit, and instead you see grits.
->xx cake pan
-Your vision blurs a bit, and instead you see a pancake.
->xx cathouse
-Your vision blurs a bit, and instead you see large packet of HOTSAUCE.
->xx tall trio
-Your vision blurs a bit, and instead you see a tortilla.
->xx cult tee
-Your vision blurs a bit, and instead you see a head of lettuce.
->xx skate
-Your vision blurs a bit, and instead you see cut-up steak.
->xx spearman
-Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
-
 #gadget test: tall trio to tortilla
 >rc tall trio
 You get to scanning, twiddling from certify to rectify and back.
@@ -340,7 +323,7 @@ Your gadget's not near anything, but it's registering RBBG.
 >ask peasant about straw
 "Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
 
->ask peasant about Woeful Pat
+>ask peasant about woeful pat
 "He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
 
 >score

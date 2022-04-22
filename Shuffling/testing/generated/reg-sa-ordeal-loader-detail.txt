@@ -210,13 +210,13 @@ too awesome
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 
->ask gateman about tinfoil info-lit
+>ask gateman about tinfoil info lit
 "Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
 
->ask gateman about Bud Helm
+>ask gateman about bud helm
 "Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now."
 
->ask gateman about Raw Rori
+>ask gateman about raw rori
 "Pure strength. That won't get the job done here."
 
 >ask gateman about pen
@@ -237,7 +237,7 @@ too awesome
 >ask gateman about gateman
 "Once I solved one of those hero mills with more hills..." he blinks. "I'm not important. You are. And what you can do."
 
- >ask gateman about arrow
+>ask gateman about arrow
 "That's just to show SECURE/RECUSE is linked to whether you can change between RECTIFY and CERTIFY."
 
 >ask gateman about knot

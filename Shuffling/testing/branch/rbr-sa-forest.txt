@@ -1,5 +1,4 @@
 # rbr-sa-forest.txt
-
 #
 # this covers maximum points, minimum points and nudges.
 #
@@ -544,10 +543,15 @@ Gnarliest Triangles
 
 @hin
 DEBUG: ones being objhinted.
+#ttc-table-of-forest-anagrams-ones
 >xx ones
 Your vision blurs a bit, and instead you see a nose.
+\\
+#ttc-table-of-forest-anagrams-dashes
 >xx dashes
 Your vision blurs a bit, and instead you see shades.
+\\
+#ttc-table-of-forest-anagrams-noughts
 >xx noughts
 Your vision blurs a bit, and instead you see a shotgun.
 
@@ -875,8 +879,11 @@ The one liver seems inactive by itself.
 bread from the Spam
 
 @hin
+#ttc-table-of-forest-anagrams-bread
 >xx bread
 Your vision blurs a bit, and instead you see a beard.
+\\
+#ttc-table-of-forest-anagrams-spam
 >xx spam
 Your vision blurs a bit, and instead you see maps.
 >beard
@@ -974,6 +981,11 @@ You should be able to walk NORTH from Self-ID Fields now with your disguise.
 The slit waxes and wanes a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the slit. Keep at it.
 
+@hin
+#ttc-table-of-forest-anagrams-slit
+>xx slit
+Are you sure
+
 @!min
 >silt
 by one point
@@ -1063,6 +1075,8 @@ The banshee whines, sure someone is trying to kill it! Or send it to a lower rin
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
 
 @hin
+#ttc-table-of-forest-anagrams-banshee
+\\
 >xx banshee
 The banshee seems to howl about becoming a has-been.
 
@@ -1073,6 +1087,7 @@ The liches whine, sure someone is trying to kill them! Or send it to a lower rin
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the liches. Keep at it.
 
 @hin
+#ttc-table-of-forest-anagrams-liches
 >xx liches
 Your vision blurs a bit, and instead you see a chisel.
 
@@ -1182,6 +1197,7 @@ LIVERS.
 
 @hin
 DEBUG: livers being objhinted.
+#ttc-table-of-forest-anagrams-livers
 >xx livers
 Your vision blurs a bit, and instead you see a silver sliver.
 
@@ -1258,6 +1274,7 @@ DEBUG: spread being objhinted.
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver for a few seconds.
 
 @hin
+#ttc-table-of-forest-anagrams-sliver
 >xx sliver
 The sliver turns silver for a moment.
 
@@ -1281,6 +1298,7 @@ You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 
 @hin
 ##balance undos
+#ttc-table-of-forest-anagrams-spread
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 #preefcheck drapes
@@ -1290,6 +1308,8 @@ spread -> drapes
 >undo
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
+\\
+#ttc-table-of-forest-anagrams-red-asp
 >xx red asp
 Your vision blurs a bit, and instead drapes seem to flutter in front of the red asp.
 >undo
@@ -1598,6 +1618,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 You see the vowels grow slavering teeth.
 
 @hin
+#ttc-table-of-forest-anagrams-vowels
 >xx vowels
 Your vision blurs a bit, and instead you see wolves.
 

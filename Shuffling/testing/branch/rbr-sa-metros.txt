@@ -40,12 +40,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >eat saltine
 >xc
 
-@nud
-#ttc-table-of-stores-spechelp-store-m
->metrso
-Store M shudders slightly. You wonder what sort of rapid transit is behind it.
-DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
-
 >metros
 Your score has just gone up by one point
 
@@ -67,8 +61,11 @@ You see yourself giving something reddish to some weird monster before it runs o
 
 @hin
 DEBUG: drainage being objhinted.
+#ttc-table-of-metros-anagrams-drainage
 >xx drainage
 Your vision blurs a bit, and instead you see a gardenia.
+\\
+#ttc-table-of-metros-anagrams-beats
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
@@ -334,6 +331,7 @@ Bile Libe
 
 @hin
 DEBUG: motto being objhinted.
+#ttc-table-of-metros-anagrams-motto
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
 
@@ -643,6 +641,11 @@ The gadget beeps once. A series of lights comes across: RRGGGRR.
 DEBUG INFO: Rect-text: K-----D.
 DEBUG INFO: Cert-text: --YCA--.
 
+@hin
+#ttc-table-of-metros-anagrams-antlers
+>xx antlers
+Are you sure
+
 @!min
 >rentals
 Your score has just gone up by one point.
@@ -754,6 +757,12 @@ The gadget beeps once. A series of lights comes across: RGRGRGRR.
 DEBUG INFO: Rect-text: C------S.
 DEBUG INFO: Cert-text: -O-T-O--.
 
+@hin
+#ttc-table-of-metros-anagrams-lost-corn
+>xx lost corn
+WRONG
+Your vision blurs a bit, and instead you see controls.
+
 >controls
 Your score has just gone up by one point.
 }}SCORE++
@@ -780,6 +789,7 @@ You feel like you can almost identify what the cake can become.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-dry-cake
 >xx cake
 Your vision blurs a bit, and instead you see a keycard.
 
@@ -812,6 +822,7 @@ The clover seems overcome with fuzz for a moment--but no, you missed a little so
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-clover
 >xx clover
 Your vision blurs a bit, and instead you see Velcro.
 
@@ -1068,9 +1079,16 @@ You stare at the heaths, picturing them in the circle and wondering which is the
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the heaths. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-begonias
 >xx begonias
-Your vision blurs a bit, and instead you see a noise bag.
+The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise.
+WRONG
+#Your vision blurs a bit, and instead you see a noise bag.
+\\
+#ttc-table-of-metros-anagrams-heaths
 >xx heaths
+The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise.
+WRONG
 Your vision blurs a bit, and instead you see a sheath.
 
 @max
@@ -1141,7 +1159,9 @@ The words seem to whizz around the air a bit, but they aren't tempered into some
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the words. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-words
 >xx words
+WRONG
 Your vision blurs a bit, and instead you see a sword.
 
 >sword
@@ -1168,6 +1188,7 @@ The brocade design seems simple, yet complex, and perhaps you don't have to chan
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the brocade. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-brocade
 >xx brocade
 Your vision blurs a bit, and instead you see a barcode.
 
@@ -1591,6 +1612,7 @@ The neon pig blinks as if in last-ditch defiance.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-neon-pig
 >xx neon pig
 Your vision blurs a bit, and instead you see an opening where the pig is.
 
@@ -1743,6 +1765,7 @@ The siren continues to blind you--like it's throwing dust in your eyes.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the siren. Keep at it.
 
 @hin
+#ttc-table-of-metros-anagrams-siren
 >xx siren
 Your vision blurs a bit, and instead you see some resin.
 

@@ -491,6 +491,12 @@ You need to take the phial for that to happen. The cabinet may not want to relin
 >score
 {$SCOS}
 
+@hin
+#ttc-table-of-ordeal-loader-anagrams-static
+>xx static
+You stop and think. The static doesn't seem as important as that gateway. Do so anyway?
+Your vision blurs a bit, and instead the static seems to form attics near the doll house.
+
 @nud
 #readables for gateway
 >read gateway
@@ -560,6 +566,11 @@ Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
 
+@hin
+#ttc-table-of-ordeal-loader-anagrams-attics
+>xx attics
+After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want.
+
 >score
 @min
 {$SCOS}
@@ -622,6 +633,25 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >get a man
 Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
 
+@him
+#ttc-table-of-ordeal-loader-anagrams-nametag
+>xx nametag
+You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
+\\
+>x board
+You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.DEBUG: pad-reccing retry.
+\\
+>xx nametag
+You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
+\\
+>x board
+Mt. Egana
+\\
+>xx nametag
+You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
+Well, you probably just need to get through with things. You take a bite of the saltine, then you think "How do I get through that gate, man?" Hmm...
+GATEMAN. That'd fit.
+
 >gateman
 Your score has just gone up by one point.
 
@@ -638,6 +668,11 @@ You hear tectonic noises, then an evil voice whispering "Once it's..." You sense
 @!min
 >score
 You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+
+@hin
+#ttc-table-of-ordeal-loader-anagrams-acne-bit-cabinet
+>xx cabinet
+Your vision blurs a bit, and instead you see some Bactine.
 
 @pad
 >pf
@@ -882,13 +917,13 @@ too awesome
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 \\
->ask gateman about tinfoil info-lit
+>ask gateman about tinfoil info lit
 "Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
 \\
->ask gateman about Bud Helm
+>ask gateman about bud helm
 "Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now."
 \\
->ask gateman about Raw Rori
+>ask gateman about raw rori
 "Pure strength. That won't get the job done here."
 \\
 >ask gateman about pen
@@ -909,7 +944,7 @@ too awesome
 >ask gateman about gateman
 "Once I solved one of those hero mills with more hills..." he blinks. "I'm not important. You are. And what you can do."
 \\
- >ask gateman about arrow
+>ask gateman about arrow
 "That's just to show SECURE/RECUSE is linked to whether you can change between RECTIFY and CERTIFY."
 \\
 >ask gateman about knot

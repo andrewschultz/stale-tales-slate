@@ -3476,7 +3476,7 @@ to say get-a-man: say "[if Notices Section is unvisited][reject][else if Trips S
 
 chapter broad board
 
-the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, if you see too much of it. So look out for red.[stopping]"
+the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but that can help you be right. So look out for red writing.[stopping]"
 
 to say board-note:
 	pad-rec-q "board";
@@ -4143,6 +4143,13 @@ carry out xmxing:
 		if saltine is moot, say "You lost your x-ray vision." instead;
 		try examining the noun instead;
 	if noun is a reading, try xmxing drainage instead;
+	if noun is unnecc:
+		say "Are you sure you want to use the saltine's vision on that?";
+		if the player dir-consents:
+			do nothing;
+		else:
+			say "Okay.";
+			the rule succeeds;
 	if noun is r2:
 		if moor is visited:
 			say "You non-magically space out and realize you can go back to the moor.";
@@ -4309,7 +4316,7 @@ carry out xmxing:
 
 to say salt-text of (sal - a thing): [I couldn't seem to get indefinite articles to work, so I just hard coded it]
 	if sal is store f or sal is store i or sal is store r, say "a "; [stores]
-	if sal is bread or sal is ones or sal is noughts or sal is liches, say "a "; [forest]
+	if sal is bread or sal is ones or sal is noughts or sal is liches or sal is slit, say "a "; [forest]
 	if sal is cake pan or sal is cult tee or sal is tall trio or sal is spearman or sal is taco, say "a "; [sortie]
 	if sal is anapest or sal is roadblock or sal is smilies, say "a ";
 	if sal is trees button or noun is hoots button, say "a ";

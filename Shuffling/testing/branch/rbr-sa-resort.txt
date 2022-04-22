@@ -2,6 +2,7 @@
 #
 # this covers maximum points, minimum points and nudges.
 #
+
 files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-sa-resort-hints.txt,reg-sa-resort-detail.txt
 ~	max	t0
 ~	min	t1
@@ -42,12 +43,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 @gle
 >monty glean
 You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around.
-
-@nud
-#ttc-table-of-stores-spechelp-store-r
->resotr
-Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
-DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
 
 >resort
 #notmax
@@ -109,8 +104,11 @@ The tiles blur a bit as you (de)-focus just right. You see subtleties in the blu
 While you're sort of trapped here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 
 @hin
+#ttc-table-of-resort-anagrams-tiles
 >xx stile
 As your vision blurs, the stile seems to stand over a small islet.
+\\
+#+ttc-table-of-resort-anagrams-tiles
 >xx tiles
 As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 
@@ -158,11 +156,17 @@ Gotta keep going forward.
 {$SCOS}
 
 @hin
+#ttc-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
+\\
+#ttc-table-of-resort-anagrams-swing
 >xx swing
 Your vision blurs a bit, and instead you see wings.
+\\
+#ttc-table-of-resort-anagrams-l2
 >xx leis
+Are you sure
 Your vision blurs as you recall people you thought you trusted telling you lies.
 
 @gn
@@ -268,7 +272,7 @@ No, you already saw the woodland was faked.
 #ttc-table-of-leis-isle-nudges-leis
 >isel
 You already noticed the leis. Use something on the isle to escape it.
-#ttc-table-of-leis-isle-nudges-lie
+#+ttc-table-of-leis-isle-nudges-lie
 >iel
 You already noticed the leis. Use something on the isle to escape it.
 
@@ -441,12 +445,19 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 There's not much of that left in this game, and more of it won't help you up the poles. The spore can be something sturdier. You see red wondering what.
 
 @hin
+#ttc-table-of-resort-anagrams-sprig
 >xx sprig
 Your vision blurs a bit, and instead you see grips.
+\\
+#ttc-table-of-resort-anagrams-poles
 >xx poles
 Your vision blurs a bit, and instead you see a slope.
+\\
+#ttc-table-of-resort-anagrams-spore
 >xx spore
 Your vision blurs a bit, and instead you see ropes.
+\\
+#ttc-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Your vision blurs a bit, and instead you see toeholds.
 
@@ -643,6 +654,7 @@ Potshot Hotspot
 You see the riot, happier now, discussing art and wearing dirty smocks.
 
 @hin
+#ttc-table-of-resort-anagrams-riot
 >xx riot
 Your vision blurs a bit, and instead you see a trio.
 
@@ -775,6 +787,7 @@ No, you see 'em, you just need a better way to disperse 'em.
 No, the clay is a clue to what the protest really wants to do.
 
 @hin
+#ttc-table-of-resort-anagrams-protest
 >xx protest
 You see the trio stopping their protest to get to work as potters.
 
@@ -831,6 +844,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
 @hin
+#ttc-table-of-resort-anagrams-chain-links
 >xx chain links
 Your vision blurs a bit, and instead you see some china and also kilns, to bake clay in, or something.
 
