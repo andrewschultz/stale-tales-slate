@@ -34,8 +34,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >poss
 >opt in
 
-
 @hin
+>au 2
 >monty hints
 >eat saltine
 >xc
@@ -257,6 +257,12 @@ You can't change the hotel, but you could have another look around.
 >n
 
 Roarings Garrison
+
+@hin
+#ttc-table-of-metros-anagrams-lost-corn
+>xx lost corn
+The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.
+Your vision blurs a bit, and instead you see controls.
 
 @mis
 #mistake test for isonome
@@ -644,7 +650,8 @@ DEBUG INFO: Cert-text: --YCA--.
 @hin
 #ttc-table-of-metros-anagrams-antlers
 >xx antlers
-Are you sure
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+You take care not to drop any crackers on the rug. A large RENTAL sign seems to obscure the antlers for a moment.
 
 @!min
 >rentals
@@ -760,7 +767,7 @@ DEBUG INFO: Cert-text: -O-T-O--.
 @hin
 #ttc-table-of-metros-anagrams-lost-corn
 >xx lost corn
-WRONG
+!The dead beat deadbeat eyes you
 Your vision blurs a bit, and instead you see controls.
 
 >controls
@@ -999,7 +1006,29 @@ The heaths are (still) merchandise. You don't want to find out what faeries do t
 >noise bag
 The begonias are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
 
+@hin
+#ttc-table-of-metros-anagrams-begonias
+>xx begonias
+The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
+!Your vision blurs
+\\
+#ttc-table-of-metros-anagrams-heaths
+>xx heaths
+The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
+!Your vision blurs
+
 >give gardenia to faeries
+
+@hin
+#ttc-table-of-metros-anagrams-begonias
+>xx begonias
+You should take the begonias if you want to work on them.
+!Your vision blurs
+\\
+#ttc-table-of-metros-anagrams-heaths
+>xx heaths
+You should take the heaths if you want to work on them.
+!Your vision blurs
 
 @nud
 #balance undos
@@ -1049,6 +1078,10 @@ DEBUG: begonias being objhinted.
 #pre-heaths-sheath rule retry
 >sheath
 You already got the begonias--don't mess with the merchandise.
+\\
+>xx heaths
+You already took the begonias.
+>undo
 >undo
 
 @hin,max
@@ -1056,6 +1089,10 @@ You already got the begonias--don't mess with the merchandise.
 >undo
 
 >take heaths
+
+@hin
+>xx begonias
+You already took the heaths.
 
 @hin
 >barcode
@@ -1081,14 +1118,10 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 @hin
 #ttc-table-of-metros-anagrams-begonias
 >xx begonias
-The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise.
-WRONG
 #Your vision blurs a bit, and instead you see a noise bag.
 \\
 #ttc-table-of-metros-anagrams-heaths
 >xx heaths
-The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise.
-WRONG
 Your vision blurs a bit, and instead you see a sheath.
 
 @max
@@ -1161,7 +1194,6 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 @hin
 #ttc-table-of-metros-anagrams-words
 >xx words
-WRONG
 Your vision blurs a bit, and instead you see a sword.
 
 >sword

@@ -14,6 +14,7 @@
 >poss
 
 >monty hints
+>au 2
 >xc
 
 >opt in
@@ -209,7 +210,8 @@ You should be able to walk NORTH from Self-ID Fields now with your disguise.
 
 #ttc-table-of-forest-anagrams-slit
 >xx slit
-Are you sure
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+Your vision blurs a bit, and instead you see a silt.
 
 >silt
 by one point
@@ -241,6 +243,7 @@ You currently have 9 out of 17 total points for the Forest region. Your minimum 
 #ttc-table-of-forest-anagrams-banshee
 
 >xx banshee
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 The banshee seems to howl about becoming a has-been.
 
 #ttc-table-of-forest-anagrams-liches

@@ -12,6 +12,7 @@
 >poss
 >opt in
 
+>au 2
 >monty hints
 >eat saltine
 >xc
@@ -29,8 +30,11 @@ Undesired Underside
 You see yourself giving something reddish to some weird monster before it runs off.
 
 DEBUG: drainage being objhinted.
+#ttc-table-of-metros-anagrams-drainage
 >xx drainage
 Your vision blurs a bit, and instead you see a gardenia.
+
+#ttc-table-of-metros-anagrams-beats
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
@@ -47,6 +51,11 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 Roarings Garrison
 
+#ttc-table-of-metros-anagrams-lost-corn
+>xx lost corn
+The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.
+Your vision blurs a bit, and instead you see controls.
+
 #mostly skipping the garrison right now to get the tomato from the bile libe
 
 >angle
@@ -56,6 +65,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 Bile Libe
 
 DEBUG: motto being objhinted.
+#ttc-table-of-metros-anagrams-motto
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
 
@@ -108,6 +118,11 @@ DEBUG: poses posse being objhinted.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake for a few seconds.
 
+#ttc-table-of-metros-anagrams-antlers
+>xx antlers
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+You take care not to drop any crackers on the rug. A large RENTAL sign seems to obscure the antlers for a moment.
+
 >rentals
 Your score has just gone up by one point.
 >score
@@ -138,12 +153,18 @@ It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about 
 >conr
 It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
+#ttc-table-of-metros-anagrams-lost-corn
+>xx lost corn
+!The dead beat deadbeat eyes you
+Your vision blurs a bit, and instead you see controls.
+
 >controls
 Your score has just gone up by one point.
 
 >score
 You currently have 6 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+#ttc-table-of-metros-anagrams-dry-cake
 >xx cake
 Your vision blurs a bit, and instead you see a keycard.
 
@@ -152,6 +173,7 @@ Your vision blurs a bit, and instead you see a keycard.
 >score
 You currently have 7 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+#ttc-table-of-metros-anagrams-clover
 >xx clover
 Your vision blurs a bit, and instead you see Velcro.
 
@@ -175,7 +197,27 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >n
 The only safe way out is back west.
 
+#ttc-table-of-metros-anagrams-begonias
+>xx begonias
+The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
+!Your vision blurs
+
+#ttc-table-of-metros-anagrams-heaths
+>xx heaths
+The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
+!Your vision blurs
+
 >give gardenia to faeries
+
+#ttc-table-of-metros-anagrams-begonias
+>xx begonias
+You should take the begonias if you want to work on them.
+!Your vision blurs
+
+#ttc-table-of-metros-anagrams-heaths
+>xx heaths
+You should take the heaths if you want to work on them.
+!Your vision blurs
 
 >barcode
 by one point
@@ -190,6 +232,9 @@ DEBUG: begonias being objhinted.
 
 >take heaths
 
+>xx begonias
+You already took the heaths.
+
 >barcode
 by one point
 
@@ -198,8 +243,11 @@ DEBUG: heaths being objhinted.
 
 >undo
 
+#ttc-table-of-metros-anagrams-begonias
 >xx begonias
-Your vision blurs a bit, and instead you see a noise bag.
+#Your vision blurs a bit, and instead you see a noise bag.
+
+#ttc-table-of-metros-anagrams-heaths
 >xx heaths
 Your vision blurs a bit, and instead you see a sheath.
 
@@ -221,6 +269,7 @@ You currently have 9 out of 18 total points for the Metros region. You have foun
 
 >w
 
+#ttc-table-of-metros-anagrams-words
 >xx words
 Your vision blurs a bit, and instead you see a sword.
 
@@ -231,6 +280,7 @@ You currently have 10 out of 18 total points for the Metros region. You have fou
 
 >e
 
+#ttc-table-of-metros-anagrams-brocade
 >xx brocade
 Your vision blurs a bit, and instead you see a barcode.
 
@@ -315,6 +365,7 @@ You see the neon pig exploding, the empty space being filled with--an ear of cor
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig for a few seconds.
 
+#ttc-table-of-metros-anagrams-neon-pig
 >xx neon pig
 Your vision blurs a bit, and instead you see an opening where the pig is.
 
@@ -357,6 +408,7 @@ You stare into the blue lube for a bit, then look around. The blue glow pulses w
 >gt underside
 No going back now. You came here to defeat the beats.
 
+#ttc-table-of-metros-anagrams-siren
 >xx siren
 Your vision blurs a bit, and instead you see some resin.
 

@@ -12,11 +12,6 @@
 >poss
 >opt in
 
-#ttc-table-of-stores-spechelp-store-m
->metrso
-Store M shudders slightly. You wonder what sort of rapid transit is behind it.
-DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
-
 >metros
 Your score has just gone up by one point
 

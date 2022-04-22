@@ -35,6 +35,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >xc
 
 @hin
+>au 2
 >monty hints
 
 >sortie
@@ -256,12 +257,12 @@ You reopen and peer on. You see a grist and a cake pan inside.
 Nothing really sticks out. You may have to XX something specific.
 #ttc-table-of-sortie-anagrams-grist
 >xx grist
-Are you sure
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see grits.
 \\
 #ttc-table-of-sortie-anagrams-cake-pan
 >xx cake pan
-Are you sure
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see a pancake.
 \\
 #ttc-table-of-sortie-anagrams-cathouse
@@ -846,6 +847,15 @@ DEBUG INFO: Cert-text: -A-K.
 Your score has just gone up by one point.
 }}SCORE++
 
+@hin
+>cask
+!by one point
+#ttc-table-of-sortie-anagrams-cask
+>xx cask
+You already changed the cask to a sack, and if you need to do so again, you won't forget.
+>undo
+>undo
+
 @scan
 #gadget test: sack to cask
 >rc sack
@@ -1193,9 +1203,10 @@ Your score has just gone up by one point.
 }}SCORE++
 
 @hin
-DEBUG: peasant being objhinted.
+#ttc-table-of-sortie-anagrams-r2
 >xx
 You have a very non-magical vision of the room you were in before you jumped to the moor.
+DEBUG: peasant being objhinted.
 
 @scan
 #gadget test: moor to room
@@ -1300,11 +1311,6 @@ No, the full roadblock.
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
-
-#ttc-table-of-sortie-anagrams-r2
->xx
-Your vision swirls, and you see a room.
-WRONG
 
 >room
 "The room's smoother," you muse...
@@ -1541,13 +1547,18 @@ Changing Lois is highly unlikely, and you should possess the oils before doing a
 >pour oils
 Fluids would leak through the sack. The cask you had would be better.
 
+@hin
+#+ttc-table-of-sortie-anagrams-sack
+>xx sack
+After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though.
+
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
 
 @hin
 #+ttc-table-of-sortie-anagrams-cask
 >xx cask
-WRONG
+You already changed the cask to a sack, and you don't see any reason to do so again.
 
 @mis
 #mistake retest for lois
@@ -1670,9 +1681,19 @@ The gadget beeps once. A series of lights comes across: RRRRGRR.
 DEBUG INFO: Rect-text: M-----E.
 DEBUG INFO: Cert-text: ----I--.
 
+@hin
+#ttc-table-of-sortie-anagrams-poem
+>xx poem
+you see the smilies flying off the page, then the poem folding and becoming a panel.
+
 >missile
 Your score has just gone up by one point.
 }}SCORE++
+
+@hin
+#+ttc-table-of-sortie-anagrams-poem
+>xx poem
+you see the poem folding and becoming a panel.
 
 @mis
 #mistake retest for mope
@@ -1698,11 +1719,6 @@ The missile emits an almost giggly sound but doesn't actually change.
 #pre-plane-panel rule
 >panel
 You'd need to fold the poem into a plane, first.
-
-@hin
-#ttc-table-of-sortie-anagrams-poem
->xx poem
-You see the smilies fly off the page, and the folded poem becomes a panel.
 
 >fold paper
 (the poem)

@@ -37,6 +37,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >au 2
 
+@hin
+>xc
+
 @mis
 #mistake test for laredo
 >laredo
@@ -633,7 +636,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >get a man
 Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
 
-@him
+@hin
 #ttc-table-of-ordeal-loader-anagrams-nametag
 >xx nametag
 You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
@@ -642,15 +645,19 @@ You pause a bit. Maybe there's something on the broad board that'd help you deci
 You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.DEBUG: pad-reccing retry.
 \\
 >xx nametag
-You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
+You pause a bit. Maybe there's something more on the broad board that'd help you decide what to do with the nametag. Or what not to do.
 \\
 >x board
 Mt. Egana
 \\
 >xx nametag
-You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
+You pause a bit. Maybe there's something you can re-read on the broad board that'd help you decide what to do with the nametag. Or what not to do.
+\\
+>x board
+Mt. Egana
+\\
+>xx nametag
 Well, you probably just need to get through with things. You take a bite of the saltine, then you think "How do I get through that gate, man?" Hmm...
-GATEMAN. That'd fit.
 
 >gateman
 Your score has just gone up by one point.
@@ -672,6 +679,7 @@ You currently have {MAX} out of {MAX} total points for the Ordeal Loader region.
 @hin
 #ttc-table-of-ordeal-loader-anagrams-acne-bit-cabinet
 >xx cabinet
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.
 
 @pad

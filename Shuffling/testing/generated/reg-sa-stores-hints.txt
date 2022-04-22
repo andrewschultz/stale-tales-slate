@@ -12,6 +12,7 @@
 >z
 >opt in
 
+>au 2
 >monty hints
 >ts 1
 DEBUG: Store I being objhinted.
@@ -47,15 +48,16 @@ DEBUG: Store F being objhinted.
 
 #ttc-table-of-stores-anagrams-acne-bit-cabinet
 >xx cabinet
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.
 
 #ttc-table-of-stores-anagrams-store-b
 >xx store b
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see sorbet.
 
 #ttc-table-of-stores-anagrams-store-f
 >xx store f
-Are you sure
 Your vision blurs a bit, and instead you see a forest.
 
 #ttc-table-of-stores-anagrams-store-i

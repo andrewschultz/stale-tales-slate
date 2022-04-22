@@ -14,11 +14,6 @@
 >opt in
 >poss
 
-#ttc-table-of-stores-spechelp-store-r
->resotr
-Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
-DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
-
 >resort
 #notmax
 Your score has just gone up by one point
@@ -137,7 +132,7 @@ You currently have 2 out of 15 total points for the Resort region. Your minimum 
 #ttc-table-of-leis-isle-nudges-leis
 >isel
 You already noticed the leis. Use something on the isle to escape it.
-#ttc-table-of-leis-isle-nudges-lie
+#+ttc-table-of-leis-isle-nudges-lie
 >iel
 You already noticed the leis. Use something on the isle to escape it.
 

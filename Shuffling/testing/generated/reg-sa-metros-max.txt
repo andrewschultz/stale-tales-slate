@@ -173,6 +173,10 @@ by one point
 #pre-heaths-sheath rule retry
 >sheath
 You already got the begonias--don't mess with the merchandise.
+
+>xx heaths
+You already took the begonias.
+>undo
 >undo
 
 >undo

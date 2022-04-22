@@ -22,7 +22,7 @@ files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt,reg-s
 }$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 }$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
 
-ALSO-IGNORE:rs *,sr *,au *
+ALSO-IGNORE:rs *,sr *
 
 ## *FILE
 ## *FORK
@@ -41,6 +41,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
+>au 2
 >xc
 
 >opt in
@@ -984,7 +985,8 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 @hin
 #ttc-table-of-forest-anagrams-slit
 >xx slit
-Are you sure
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+Your vision blurs a bit, and instead you see a silt.
 
 @!min
 >silt
@@ -1078,6 +1080,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #ttc-table-of-forest-anagrams-banshee
 \\
 >xx banshee
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 The banshee seems to howl about becoming a has-been.
 
 @nud

@@ -31,6 +31,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >opt in
 
 @hin
+>au 2
 >monty hints
 ##balance undos
 >ts 1
@@ -75,10 +76,12 @@ DEBUG: Store F being objhinted.
 \\
 #ttc-table-of-stores-anagrams-acne-bit-cabinet
 >xx cabinet
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.
 \\
 #ttc-table-of-stores-anagrams-store-b
 >xx store b
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see sorbet.
 \\
 #ttc-table-of-stores-anagrams-store-f

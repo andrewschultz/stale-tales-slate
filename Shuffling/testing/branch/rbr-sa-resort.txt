@@ -34,6 +34,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >tsf
 
 @hin
+>au 2
 >monty hints
 >xc
 
@@ -166,7 +167,7 @@ Your vision blurs a bit, and instead you see wings.
 \\
 #ttc-table-of-resort-anagrams-l2
 >xx leis
-Are you sure
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs as you recall people you thought you trusted telling you lies.
 
 @gn
@@ -292,6 +293,15 @@ by one point
 >undo
 >undo
 
+@hin
+>wings
+by one point
+#ttc-table-of-resort-anagrams-rock
+>xx rock
+Your vision blurs a bit, and instead you see cork.
+>undo
+>undo
+
 >cork
 Your score has just gone up by one point.
 }}SCORE++
@@ -315,6 +325,11 @@ You have a way off this island to the east, though you can make the other for fu
 >winsg
 The swing goes slightly airborne.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
+
+@hin
+#+ttc-table-of-resort-anagrams-swing
+>xx swing
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
 @!min
 >wings
@@ -555,9 +570,31 @@ by one point
 >undo
 >undo
 
+@hin
+##balance undos
+>grips
+by one point
+>ropes
+by one point
+#+ttc-table-of-resort-anagrams-tool-shed
+>xx toolshed
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+>undo
+>undo
+>undo
+
 >toeholds
 Your score has just gone up by two points.
 }}SCORE+=2
+
+@hin
+#ttc-table-of-resort-anagrams-sprig
+>xx sprig
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+\\
+#ttc-table-of-resort-anagrams-sprig
+>xx spore
+Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
 @gle
 You see yourself climbing east without much trouble.
@@ -857,6 +894,11 @@ Your score has just gone up by one point.
 \\
 >score
 {$SFIXMAX}
+
+@hin
+#ttc-table-of-resort-anagrams-chain-links
+>xx chain links
+Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
 
 @max
 #pre-chain-china rule
