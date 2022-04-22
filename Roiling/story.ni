@@ -6150,7 +6150,7 @@ listen-list of routes is { woe bow bell, gast, raptest patters }.
 
 listen-list of troves is { sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea }.
 
-listen-list of presto is { odes song }.
+listen-list of presto is { odes song, rand, leo }.
 
 listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer }.
 
@@ -6238,12 +6238,15 @@ to say dsoog: say "[first custom style]DENS SO OG[r]"
 this is the listen-presto rule:
 	if noun is odes song, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by [dsoog], a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering [dsoog] also wrote the appalling nonsense [first custom style]SEGS DO ON[r]. There was one more even worse[or][dsoog] also wrote [first custom style]SEGS DO ON[r] and the unmotivational [first custom style]NEGS? SO? DO[r][stopping]." instead; [presto] [bold-ok]
 	if noun is Rand or noun is Leo:
-		if Rand is washed up:
-			say "You horn in on [l-n-r]'s small talk, and they open up to you a bit.";
-			try asking a random washed up bruiser about "rannygazoo" instead;
+		if Leo is fightin or Rand is fightin:
+			say "General battle grunts from [random touchable fightin bruiser][if odes song is touchable] under the odes song[end if]." instead;
+		say "[l-n-r]'s small talk is not very deep or aggressive, and they [if rand is washed up]don't seem to resent you for outsmarting them[else]are glad for a bit of banter, though not much comes of it[end if].";
+		if rand is washed up:
+			try asking a random touchable bruiser about "rannygazoo";
+		the rule succeeds;
 	if player is in Dirge Ridge:
 		if Rand is washed up, try listening to Rand instead;
-		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with [l-n-r][end if]." instead;
+		say "[if odes song is moot]The odes song is gone, but you still[else]You[end if] just sort of expect a toll of doom any minute[if leo is eager], despite having worked things out with [l-n-r][end if]." instead;
 	if player is in Hacks Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
 
@@ -7159,7 +7162,7 @@ carry out xtraing:
 	now xtra-trax is whether or not xtra-trax is false;
 	say "Toggling correct-anagram nudges to [if xtra-trax is false]generic[else]detailed[end if].";
 	now xtra-trax-warn is true;
-	pad-rec-q "xtra";
+	pad-rec-q "xtra/trax";
 	the rule succeeds.
 
 chapter extraing
@@ -7952,6 +7955,9 @@ to decide which number is stuff-found:
 to decide whether report-porter-knocks:
 	if location of player is Dusty Study and stuff-found >= 3 and Report Porter Perrot is off-stage, yes;
 	no;
+
+every turn when location of player is Dusty Study and Report Porter Perrot is off-stage:
+	if debug-state is true, say "Stuff-found variable for [perrot] arriving is [stuff-found].";
 
 every turn when report-porter-knocks (this is the Report Porter Perrot Knocks rule):
 	increment okay-thats-it;
@@ -10617,7 +10623,7 @@ check going when THE BEAN is in Same Mesa and player is in Same Mesa:
 
 chapter A Bev O' Be Ova'
 
-A Bev O Be Ova is a proper-named thing. printed name is "A Bev O['] Be Ova[']". "[one of]A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them ... somehow.[or]You still see [be ova] at your feet. You're not thirsty, but it might be useful.[stopping]". bore-text of A Bev O Be Ova is "It's not to drink, but it is a clue where to look next.". bore-check of A Bev O Be Ova is the bore-bev rule. description is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look."
+A Bev O Be Ova is a proper-named thing. printed name is "A Bev['] O['] Be Ova[']". "[one of]A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them fool themselves into persisting at something they need to do when giving up seems more sensible.[or]You still see [be ova] at your feet. You're not thirsty, but it might be useful.[stopping]". bore-text of A Bev O Be Ova is "It's not to drink, but it is a clue where to look next.". bore-check of A Bev O Be Ova is the bore-bev rule. description is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look."
 
 a-text of A Bev O Be Ova is "YRYRY". b-text of A Bev O Be Ova is "???PY". parse-text of a bev o be ova is "?[sp]?[sp]?[sp]V[sp]E". a bev o be ova is parse-spoilable.
 
@@ -11282,7 +11288,7 @@ chapter adeiprs
 check examining Ires Pad for the first time:
 	say "It's, well, really red. It's not clear whether it advocates focusing or losing your bad emotions, but either way, it changes views each time you look at it. Since its help might be too on-the-nose, you abstain from looking into the details of the current picture. But you can always look again, if you need that." instead;
 
-the Ires Pad is auxiliary scenery in Drain Nadir. "It is the Hail-Maryest of motivational tools. Currently it contains a picture [one of]labeled [first custom style]AS I DERP[r][or]labeled [first custom style]ERA DIPS[r][or]labeled [first custom style]RIPE, SAD[r][or]labeled [first custom style]SPA RIDE[r][or]labeled [first custom style]RAP SIDE[r][or]by [first custom style]Si Preda[r][or]by [first custom style]Pa Dries[r][in random order]. So much red, too!"
+an Ires Pad is auxiliary scenery in Drain Nadir. "It is the Hail-Maryest of motivational tools. Currently it contains a picture [one of]labeled [first custom style]AS I DERP[r][or]labeled [first custom style]ERA DIPS[r][or]labeled [first custom style]RIPE, SAD[r][or]labeled [first custom style]SPA RIDE[r][or]labeled [first custom style]RAP SIDE[r][or]by [first custom style]Si Preda[r][or]by [first custom style]Pa Dries[r][in random order]. So much red, too!"
 
 a-text of Ires Pad is "RYRRYYR". b-text of Ires Pad is "RYRRYYR". parse-text of ires pad is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 

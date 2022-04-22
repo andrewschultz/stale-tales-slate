@@ -12,6 +12,8 @@ chapter combos
 
 [* this tests combinations of big tests e.g. going through each area]
 
+test this with "ts/gonear lager/ss/despair/ss".
+
 test win-quick with "test ordrelminn/test stores/test routes/test troves/switch patcher/test otters"
 
 test win-q-patchstore with "ts/y/zap store u/zap store w/zap store y/zap store v/zap store p/zap store t/test otters"
@@ -1742,6 +1744,8 @@ understand "xtu" as xtuing.
 
 carry out xtuing:
 	say "The xtra-trax-warn variable is [if xtra-trax-warn is false]already[else]now[end if] false.";
+	say "The xtra-trax variable is [if xtra-trax is false]already[else]now[end if] false.";
+	now xtra-trax is false;
 	now xtra-trax-warn is false;
 	the rule succeeds;
 
