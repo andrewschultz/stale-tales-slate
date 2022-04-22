@@ -1170,6 +1170,7 @@ by one point
 @verbs
 #verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
 >listen
+#APOSTROPHE-OK
 /(Rand and Leo|Leo and Rand)'s small talk is not very deep or aggressive, and they are glad for a bit of banter, though not much comes of it\.
 
 @nud

@@ -170,10 +170,6 @@ DEBUG INFO: I'd Cede hinting.
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
 
-#ttc-table-of-settler-shake-descriptions-lager
->ss
-A couple things: musical notes pulsing with the beat of I'd Cede and the can of Large Regal Lager (very blurry) are visible.
-
 >glare
 Your score has just gone up by one point
 >score

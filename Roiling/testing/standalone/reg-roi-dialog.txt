@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _quick-chat
+* quick-chat
 
 >au 2
 >chat
@@ -30,7 +30,7 @@ Rancho Archon Anchor
 >7
 No mercy, my crone!
 
-* _detail-perrot-chat
+* detail-perrot-chat
 
 >au 2
 >think
@@ -199,7 +199,7 @@ Her Arts Er Trash
 >x her arts
 No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
 
-* _detail-elmo-chat-gp-first
+* detail-elmo-chat-gp-first
 
 >au 2
 
@@ -885,7 +885,7 @@ DEBUG INFO: current quip = girls-quip.
 >1
 Carven Cavern
 
-* _detail-gretta-and-elvira-chat
+* detail-gretta-and-elvira-chat
 
 >au 2
 >seed 1
@@ -1089,7 +1089,7 @@ by one point
 
 Strip of Profits
 
-* _detail-gretta-chat-special-case
+* detail-gretta-chat-special-case
 
 >au 2
 >seed 1

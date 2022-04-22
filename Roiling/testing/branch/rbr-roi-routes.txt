@@ -1676,7 +1676,7 @@ The ciphers cannot be dispelled.
 >ciphre
 The ciphers cannot be dispelled.
 
-@max
+@nud
 #+ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.

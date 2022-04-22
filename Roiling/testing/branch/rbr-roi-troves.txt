@@ -767,11 +767,6 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 >read lager
 Your eyes gloss over all but the red name, ERGAL AGLER.
 
-@hints
-#ttc-table-of-settler-shake-descriptions-lager
->ss
-A couple things: musical notes pulsing with the beat of I'd Cede and the can of Large Regal Lager (very blurry) are visible.
-
 @!mina,minb
 >glare
 Your score has just gone up by one point

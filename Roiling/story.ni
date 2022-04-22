@@ -18217,7 +18217,7 @@ carry out discerning:
 				if there is a parallel-entry entry:
 					try discerning parallel-entry entry instead;
 				cinders-bye;
-				say "The cinders swirl away into the air. You have a revelation. [spoil-entry entry].";
+				say "The cinders swirl away into the air. You have a revelation: [spoil-entry entry].";
 				the rule succeeds;
 		say "You discern nothing. The cinders stay where they are. But that's a sort of clue in itself." instead;
 	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You are fully prepared to take on Elvira." instead;
@@ -21705,23 +21705,23 @@ this is the spoil-hints rule:
 				moot crust instead;
 			say "[line break]You have [swears] bite[if swears > 1]s[end if] left." instead;
 		if player has snoop spoon:
-			if noun is thruhinted or noun is prefigured, say "Hmm, wait. Maybe you can just go [b][spoil-entry entry][r]." instead;
+			if noun is thruhinted or noun is prefigured, say "Hmm, wait. Maybe there's something [spoil-entry entry]." instead;
 			moot snoop spoon;
 			prevent undo;
 			now undo-code is 6;
 			now noun is cheatitemed;
-			say "You angle your spoon a bit, and you realize you, or something, should be [b][spoil-entry entry][r].[paragraph break]The spoon fizzles and dissolves once you see how next to get around." instead;
+			say "You angle your spoon a bit, and you realize you, or something, should be, do, see or go [spoil-entry entry].[paragraph break]The spoon fizzles and dissolves once you see how next to get around." instead;
 		if player has fretful truffle:
-			if noun is thruhinted or noun is prefigured, say "You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to [b][spoil-entry entry][r]." instead;
+			if noun is thruhinted or noun is prefigured, say "You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to [spoil-entry entry]." instead;
 			moot fretful truffle;
 			prevent undo;
 			now undo-code is 4;
 			now noun is cheatitemed;
-			say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [b][spoil-entry entry][r] right now." instead;
+			say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
 		if player has cinders:
-			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [b][spoil-entry entry][r]." instead;
+			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [spoil-entry entry]." instead;
 			say "As you gaze into the cinders, they blow away, leaving you feeling ";
-			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][b][spoil-entry entry][r].";
+			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
 			if conditional-llp-present, say "[line break]You also feel there's something more to do here, if you want, but isn't critical.";
 			if noun is cinder-dissolve:
 				if scams is false:
