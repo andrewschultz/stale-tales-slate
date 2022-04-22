@@ -179,22 +179,24 @@ a region has a table name called hintobjstable.
 
 a region has a rule called altrule.
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.]
+a region has a rule called saltine-check-rule.
+
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.] saltine-check-rule of ordeal loader is ordeal loader saltine check rule.
 [LLP(s): both bulge/blot, both deer/goat, sent nets, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.]
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.] [saltine-check-rule of stores is stores saltine check rule.]
 [LLP(s): cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule. saltine-check-rule of forest is forest saltine check rule.
 [LLP(s): slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.]
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.] saltine-check-rule of sortie is sortie saltine check rule.
 [LLP(s): cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule. saltine-check-rule of metros is metros saltine check rule.
 [LLP(s): antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule. saltine-check-rule of resort is resort saltine check rule.
 [LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 Resort is not autosavable.
@@ -4141,52 +4143,13 @@ check xmxing:
 			say "You lost your x-ray vision, so you can only just examine, instead.";
 		try examining the noun instead;
 	if noun is a direction, say "[if player is in sf or player is in rf]You can't see which way to go--maybe use your other senses[else]Just try going [noun] instead[end if]." instead;
-
-this is the deadbeat-corn rule:
-	if noun is lost corn and bastion-evac is false:
-		say "The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead." ;
-
-carry out xmxing:
 	if xray-vision is false:
 		if saltine is moot, say "You lost your x-ray vision." instead;
 		try examining the noun instead;
-	if noun is a reading, try xmxing drainage instead;
-	if noun is unnecc:
-		say "Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?";
-		if the player dir-consents:
-			do nothing;
-		else:
-			say "Okay.";
-			the rule succeeds;
-	if noun is r2:
-		if moor is visited:
-			say "You non-magically space out and realize you can go back to the moor.";
-			the rule succeeds;
-		say "Your vision swirls, and you see a moor.";
-		ditch-saltine instead;
-	if noun is m2:
-		say "You have a very non-magical vision of the room you were in before you jumped to the moor.";
-		the rule succeeds;
-	if noun is t-n:
-		say "Your vision swirls, and you see a kitchen.";
-		ditch-saltine instead;
-	if noun is the location:
-		if player is in Bile Libe and words are in Bile Libe:
-			say "You stare at where the words may be coming from.";
-			try xmxing words instead;
-		if player is in the moor:
-			if pat is touchable:
-				say "You imagine a peasant coming by to disrupt Pat's poetry.";
-				ditch-saltine instead;
-			say "Before staring at anything, you wonder if you could just think yourself back to the [b]ROOM[r]." instead;
-		if player is in Means Manse, say "You just want to [b]EXIST[r], really." instead;
-	if noun is nametag: [start Ordeal Loader]
-		if broad-board-x-count < 3:
-			say "You pause a bit. Maybe there's something [broad-board-x]on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is touchable]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
-		say "Well, you probably just need to get through with things. You take a bite of the saltine, then you think 'How do I get through that gate, man?' Hmm...[b]GATEMAN[r]. That'd fit." instead;
-	if noun is gateway:
-		if nametag is moot, say "You don't need to unlock any further mysteries of the gateway." instead;
-		try xmxing nametag instead;
+	abide by the saltine-thrucheck rule;
+	abide by the saltine-llp rule;
+
+this is the saltine-thrucheck rule:
 	if noun is thruhinted:
 		say "You already hinted through for that. Are you sure you want to use the x-ray vision from your saltine?";
 		if xray-cheat is true:
@@ -4194,6 +4157,49 @@ carry out xmxing:
 		else:
 			unless the player dir-consents:
 				say "Ok." instead;
+
+this is the saltine-llp rule:
+	if noun is unnecc:
+		say "Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?";
+		if the player dir-consents:
+			do nothing;
+		else:
+			say "Okay.";
+			the rule succeeds;
+
+this is the saltine-location rule:
+	if player is in Bile Libe and words are in Bile Libe:
+		say "You stare at where the words may be coming from.";
+		try xmxing words instead;
+	if player is in the moor:
+		if pat is touchable:
+			say "You imagine a peasant coming by to disrupt Pat's poetry.";
+			ditch-saltine instead;
+		say "Before staring at anything, you wonder if you could just think yourself back to the [b]ROOM[r]." instead;
+	if player is in Means Manse, say "You just want to [b]EXIST[r], really." instead;
+
+carry out xmxing:
+	abide by the saltine-check-rule of mrlp;
+	if noun is the location of the player, abide by the saltine-location rule;
+	if noun is flippable: [start general case]
+		repeat through regana of mrlp:
+			if the-from entry is the noun:
+				if debug-state is true, say "DEBUG EXPERIMENT: article is [indefinite article of the-to entry].";
+				say "[v-b]you see [salt-text of noun][if the-to entry is a portal][printed name of go-region of the-to entry in lower case][else][the-to entry][end if].";
+				ditch-saltine instead;
+		say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
+	say "Though you squinted extra, you don't see anything beyond what you normally would've. Well, maybe some other time.";
+	try examining the noun instead;
+	the rule succeeds.
+
+this is the ordeal loader saltine check rule:
+	if noun is nametag:
+		if broad-board-x-count < 3:
+			say "You pause a bit. Maybe there's something [broad-board-x]on the broad board that'd help you decide what to do with the nametag. Or what not to do[if mega ant is touchable]. Maybe that mega-ant is, in its own way, a hint[end if]." instead;
+		say "Well, you probably just need to get through with things. You take a bite of the saltine, then you think 'How do I get through that gate, man?' Hmm...[b]GATEMAN[r]. That'd fit." instead;
+	if noun is gateway:
+		if nametag is moot, say "You don't need to unlock any further mysteries of the gateway." instead;
+		try xmxing nametag instead;
 	if noun is static:
 		say "[if gateman is touchable]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
 		unless the player dir-consents:
@@ -4201,7 +4207,15 @@ carry out xmxing:
 		say "[v-b]the static seems to form attics near the doll house[if gateman is touchable]. Nat Egam makes a dubious noise[end if].";
 		ditch-saltine instead;
 	if noun is attics, say "After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want." instead;
-	if noun is thorn: [start forest]
+
+to say broad-board-x:
+	if broad-board-x-count is 1:
+		say "more ";
+	else if broad-board-x-count is 2:
+		say "you can re-read ";
+
+this is the forest saltine check rule:
+	if noun is thorn:
 		say "Your vision blurs, and you see a compass rose pointed north.";
 		ditch-saltine instead;
 	if noun is stew:
@@ -4240,6 +4254,20 @@ carry out xmxing:
 	if noun is red asp:
 		say "[v-b]drapes seem to flutter in front of the red asp.";
 		ditch-saltine instead;
+
+this is the sortie saltine check rule:
+	if noun is t-n:
+		say "Your vision swirls, and you see a kitchen.";
+		ditch-saltine instead;
+	if noun is r2:
+		if moor is visited:
+			say "You non-magically space out and realize you can go back to the moor.";
+			the rule succeeds;
+		say "Your vision swirls, and you see a moor.";
+		ditch-saltine instead;
+	if noun is m2:
+		say "You have a very non-magical vision of the room you were in before you jumped to the moor.";
+		the rule succeeds;
 	if noun is trap exits and centrifuge-stopped is false: [start sortie]
 		say "The exits are rushing past too fast to focus on them. But you're in line with the dial.";
 		try xmxing dial instead;
@@ -4264,11 +4292,18 @@ carry out xmxing:
 	if noun is oils:
 		say "[v-b][if soil is in moor]you see a silo[else]you see soil, then a silo[end if].";
 		ditch-saltine instead;
+	if noun is t-n, say "[v-b]you see a kitchen." instead;
+	if player is in the nick and noun is not t-n:
+		say "You let your eyes wander.[paragraph break]";
+		try xmxing t-n instead;
+
+this is the metros saltine check rule:
+	if noun is a reading, try xmxing drainage instead;
 	if noun is begonias and heaths are not in Florae:
 		say "You already took the heaths." instead;
 	if noun is heaths and begonias are not in Florae:
 		say "You already took the begonias." instead;
-	if noun is begonias or noun is heaths: [start metros]
+	if noun is begonias or noun is heaths:
 		unless gardenia is moot, say "The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise." instead;
 		unless player carries noun, say "You should take [the noun] if you want to work on them." instead;
 	if noun is motto:
@@ -4282,11 +4317,15 @@ carry out xmxing:
 		if player does not have tulip:
 			say "You suddenly feel darkness, along with an urge to ask the nerds about it.";
 			ditch-saltine instead;
-	abide by the deadbeat-corn rule;
+	check-deadbeat-corn;
 	if noun is neon pig:
 		say "[v-b]you see an opening where the pig is.";
 		ditch-saltine instead;
-	if noun is tiles: [start resort]
+
+to check-deadbeat-corn: if noun is lost corn and bastion-evac is false, say "The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.[line break]" ;
+
+this is the resort saltine check rule:
+	if noun is tiles:
 		say "As your vision blurs, the tiles['] blue, green and brown re-form to make an islet.";
 		ditch-saltine instead;
 	if noun is stile:
@@ -4310,27 +4349,6 @@ carry out xmxing:
 	if noun is spire:
 		say "Your vision blurs a bit, and you see names and hear AMENs.";
 		ditch-saltine instead;
-	if noun is a teleporter:
-		if noun is t-n, say "[v-b]you see a kitchen." instead;
-	if noun is flippable: [start general case]
-		repeat through regana of mrlp:
-			if the-from entry is the noun:
-				if debug-state is true, say "DEBUG EXPERIMENT: article is [indefinite article of the-to entry].";
-				say "[v-b]you see [salt-text of noun][if the-to entry is a portal][printed name of go-region of the-to entry in lower case][else][the-to entry][end if].";
-				ditch-saltine instead;
-		say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
-	if player is in the nick and noun is not t-n:
-		say "You let your eyes wander.[paragraph break]";
-		try xmxing t-n instead;
-	say "Though you squinted extra, you don't see anything beyond what you normally would've. Well, maybe some other time.";
-	try examining the noun instead;
-	the rule succeeds.
-
-to say broad-board-x:
-	if broad-board-x-count is 1:
-		say "more ";
-	else if broad-board-x-count is 2:
-		say "you can re-read ";
 
 to say salt-text of (sal - a thing): [I couldn't seem to get indefinite articles to work, so I just hard coded it]
 	if sal is store f or sal is store i or sal is store r, say "a "; [stores]
@@ -7659,7 +7677,7 @@ chapter lost corn
 some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. cert-text of lost corn is "-[ast]O[d1][ast]T[d1][ast]O[d1][d1]". rect-text of lost corn is "C[d1][d1][d1][d1][d1][d1][ast]S".
 
 check scaning corn:
-	abide by the deadbeat-corn rule;
+	check-deadbeat-corn;
 
 after taking the lost corn: say "'All yours, man,' says the deadbeat. 'It's some pretty good corn, too. Ask me if you like want details.'".
 
