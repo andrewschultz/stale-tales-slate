@@ -18,9 +18,9 @@
 
 >stable
 >in
->stair
+>sitar
 >d
-Largely All-Grey Gallery
+Basement
 
 >basement
 Well, if you want points for that, you'll need to go back to the study.

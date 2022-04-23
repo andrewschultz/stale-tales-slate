@@ -2,16 +2,10 @@
 #
 #reg-roi-slider.txt
 #
-# test for basic wearing the slider out
+# the individual instances that cause the slider to squeal are in the generated files
 #
-# region specific slider tests are in the generated files
+# this tests more general cases including wearing the slider out
 #
-#
-#
-# routes/troves/presto written
-# oyster/towers started
-# otters to go
-
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
