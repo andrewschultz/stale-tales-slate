@@ -1006,6 +1006,27 @@ Your score has just gone up by one point.
 >score
 {$SCOS}
 
+@max
+##balance undos
+>sparely
+by one point
+\\
+>really
+by one point
+\\
+Boy, those players
+>undo
+>undo
+>really
+by one point
+\\
+>sparely
+by one point
+\\
+Boy, those players
+>undo
+>undo
+
 >blearily
 Your score has just gone up by one point.
 }}SCORE++

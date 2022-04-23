@@ -207,6 +207,25 @@ Your score has just gone up by one point.
 >score
 Score in a scenario: 4 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 35.
 
+>sparely
+by one point
+
+>really
+by one point
+
+Boy, those players
+>undo
+>undo
+>really
+by one point
+
+>sparely
+by one point
+
+Boy, those players
+>undo
+>undo
+
 >blearily
 Your score has just gone up by one point.
 
