@@ -248,7 +248,7 @@ The reed blows in an unseen breeze.
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
-#readables for toga
+#ttc-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
 
@@ -286,7 +286,7 @@ Notices Section
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
-#readables for gateway
+#ttc-table-of-readables-gateway
 >read gateway
 "E. g., man, TA!" is written in red, beneath the WARMUP/UM, WARP text.
 Maybe it's significant that the writing's red, and that can help you
@@ -429,7 +429,7 @@ The cabinet deserves a better fate than THAT.
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
-#readables for acne bit cabinet
+#ttc-table-of-readables-acne-bit-cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
@@ -466,3 +466,4 @@ You're the good guy, here. You don't need to steal.
 
 >in
 Trips Strip
+

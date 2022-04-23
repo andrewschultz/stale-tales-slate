@@ -61,6 +61,23 @@ Trips Strip
 >bactein
 The cabinet wobbles a bit.
 
+@max
+#ttc-table-of-iconmaps-1
+>x tepid
+/Near Store (F|I|M|R),
+\\
+#ttc-table-of-iconmaps-2
+>x tepid
+/Near Store (F|I|M|R),
+\\
+#ttc-table-of-iconmaps-3
+>x tepid
+/Near Store (F|I|M|R),
+\\
+#ttc-table-of-iconmaps-4
+>x tepid
+/Near Store (F|I|M|R),
+
 @gt
 >gt subsite
 You already solved that area.
@@ -367,7 +384,7 @@ Hmm...you get the feeling the store itself holds more adventure.
 #ttc-table-of-stores-nudges-sign
 >sgni
 Hmm...you get the feeling the store itself holds more adventure.
-#readables for roadsign
+#ttc-table-of-readables-roadsign
 >read roadsign
 /The sign appears to say, in all red, (E FORTS/OSTFER|TRESFO/S EFTRO) before a gust of wind picks it up and flips it around\.
 >read roadsign
@@ -385,11 +402,12 @@ You see yourself exploring the posted depots you created.
 #pre-storer-resort rule
 >resort
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
-#preefcheck ogled lodge
+#ttc-table-of-preflip-clues-ogled-lodge
 >pf
 Store R -> Resort
 
 @gn
+####### no test case here since it is in the common files
 >n
 As you try to flee the Trips Strip, a voice booms "Run off for fun? Urff, no!"
 Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
@@ -477,7 +495,7 @@ The hubs bush forces you back to the center of the Trips Strip. Guess you'll nee
 #ttc-table-of-stores-nudges-scented
 >scentde
 No way. It's your way down to ENTER the forest.
-#readables for store i
+#ttc-table-of-readables-store-i
 >read store i
 Red writing:
 RISE TO RITES, O! OR TIES.
@@ -565,32 +583,33 @@ It's going to get evil enough even without a high-ranking COBRA officer.
 #mistake test for doters
 >doters
 You don't need people oohing and ahing at your skill.
-\\
-#preefcheck of store p
+
+@max
+#ttc-table-of-preflip-clues-store-p
 >pf
 Store P -> PRESTO in A Roiling Original
 #mistake test for routes
 >routes
 Hm, that seems right, but it doesn't work this game!
-#preefcheck of store u
+#ttc-table-of-preflip-clues-store-u
 >pf
 Store U -> ROUTES in A Roiling Original
 #mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
-#preefcheck of store v
+#ttc-table-of-preflip-clues-store-v
 >pf
 Store V -> TROVES in A Roiling Original
 #mistake test for towers
 >towers
 That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
-#preefcheck of store w
+#ttc-table-of-preflip-clues-store-w
 >pf
 Store W -> TOWERS in A Roiling Original
 #mistake test for oyster
 >oyster
 Nice try, but that's next game!
-#preefcheck of store y
+#ttc-table-of-preflip-clues-store-y
 >pf
 Store Y -> OYSTER in A Roiling Original
 
@@ -628,6 +647,41 @@ You don't need to change the marquee now that you figured what it means.
 #pre-cabinet-bactine rule
 >bactine
 by one point
+
+@max
+#ttc-table-of-warpcmds-logoi
+>logoi
+You convince the powers that be that you remember all the words from Store F and the forest.
+You watch the scented descent crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
+\\
+#ttc-table-of-ranks-5
+>score
+You have the rank of solider soldier.
+\\
+#ttc-table-of-warpcmds-sooth
+>sooth
+You convince the powers that be that, in sooth, you really did run through Store I and the sortie earlier.
+You watch the posted depots crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
+\\
+#ttc-table-of-ranks-6
+>score
+You have the rank of a mature amateur.
+\\
+#ttc-table-of-warpcmds-say-bs
+>say bs
+You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense.
+You watch the trade tread crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
+\\
+#ttc-table-of-ranks-7
+>score
+You have the rank of new hero now here.
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 @nud
 >tsf

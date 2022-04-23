@@ -97,7 +97,7 @@ The feral flare crackles menacingly. You doubt you can change it for the better.
 >islte
 The tiles rattle as if to shift but settle down.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
-#readables for tiles
+#ttc-table-of-readables-tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
 #renudge for altar
@@ -129,6 +129,13 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RRRRR.
 DEBUG INFO: Rect-text: I---T.
 DEBUG INFO: Cert-text: -----.
+
+@gn
+#ttc-table-of-nowheres-astral-altars
+>w
+As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "ONE LIKE YOU IS BEYOND THE FERAL FLARE!"
+>w
+No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.
 
 >islet
 Your score has just gone up by one point.
@@ -171,6 +178,7 @@ Some aftertaste from the saltine doesn't feel great. You wonder if this is the b
 Your vision blurs as you recall people you thought you trusted telling you lies.
 
 @gn
+#ttc-table-of-nowheres-leis-isle
 >w
 You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 
@@ -264,6 +272,7 @@ by one point
 {$SCOS}
 
 @gn
+#+ttc-table-of-nowheres-leis-isle
 >w
 No, you already saw the woodland was faked.
 !but then, the leis were fake, too.
@@ -296,7 +305,7 @@ by one point
 @hin
 >wings
 by one point
-#ttc-table-of-resort-anagrams-rock
+#+ttc-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
 >undo
@@ -386,6 +395,7 @@ You see the poles to the east bend at an angle.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig for a few seconds.
 
 @gn
+#ttc-table-of-nowheres-rived-drive
 >n
 You'd probably get lost that way. Besides, the vague commotion to the east, past the rising poles, seems worth seeing.
 
@@ -542,7 +552,7 @@ You wonder if YOU are the poser, for not being able to figure what to do.
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
-#readables for u lock
+#ttc-table-of-readables-u-lock
 >read u lock
 Red writing shows the U-Lock brand is OLD THOSE.
 
@@ -588,11 +598,11 @@ Your score has just gone up by two points.
 }}SCORE+=2
 
 @hin
-#ttc-table-of-resort-anagrams-sprig
+#+ttc-table-of-resort-anagrams-sprig
 >xx sprig
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 \\
-#ttc-table-of-resort-anagrams-sprig
+#+ttc-table-of-resort-anagrams-sprig
 >xx spore
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
@@ -696,8 +706,10 @@ You see the riot, happier now, discussing art and wearing dirty smocks.
 Your vision blurs a bit, and instead you see a trio.
 
 @gn
+#ttc-table-of-nowheres-potshot-hotspot
 >n
 The only way you'll want to try to go is east.
+#+ttc-table-of-nowheres-potshot-hotspot
 >e
 That rabble seems mad at you. You'd better disperse them first.
 
@@ -896,7 +908,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @hin
-#ttc-table-of-resort-anagrams-chain-links
+#+ttc-table-of-resort-anagrams-chain-links
 >xx chain links
 Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
 
@@ -1146,6 +1158,7 @@ Even if they wouldn't, well, the Means Manse is for you and you alone. You earne
 You're not even up for THAT, now. You just want to BE.
 
 @gn
+#ttc-table-of-nowheres-means-manse
 >n
 You suddenly have ye taxin' any-exit anxiety. Like you're in the middle of an exitstential crisis.
 >n
@@ -1156,6 +1169,7 @@ Sit, ex-adventurer.
 Where would you go? Texis, perhaps
 >n
 Seeing exits just makes you want to...
+#+ttc-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 
@@ -1186,6 +1200,11 @@ Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher o
 #notana
 by one point
 My Adieu to You: Made It!
+
+@max
+#ttc-table-of-ranks-8
+#APOSTROPHE-OK
+Final rank: a smart gamin' anagrammist.
 
 @max
 >missed

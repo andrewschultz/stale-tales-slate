@@ -123,7 +123,7 @@ A reading (well, a bunch of papers) has blown in since last time you were here. 
 >readign
 It's *A* reading you need to worry about.
 
-#readables for a reading
+#ttc-table-of-readables-a-reading
 >read reading
 On one of several pages, you see: AID ANGER is written. The nonsense makes you see red.
 >read reading
@@ -946,7 +946,7 @@ It's not just that it's neon, it's that it's a pig.
 >pgi
 It's not just that it's a pig, it's that it's neon.
 
-#readables for neon pig
+#ttc-table-of-readables-neon-pig
 >read neon pig
 Apparently the neon pig is a creation of one INPENGO.
 
@@ -960,7 +960,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 14 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#readables for controls
+#ttc-table-of-readables-controls
 >read controls
 You notice that it's underwritten (in red) by ORTON LSC, whoever they are.
 #mistake retest for tar
@@ -996,7 +996,7 @@ No need. You made it above the cafe face with the velcro.
 >score
 You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#rereadables for controls
+#+ttc-table-of-readables-controls
 >read controls
 The opening isn't really an opening any more, what with the controls fitting in nicely.
 #renudge for gin
@@ -1082,11 +1082,6 @@ No use messing with the aligns signal when you need to focus on the beast.
 #ttc-table-of-metros-nudges-hilt
 >ilth
 The hilt serves a purpose, and besides, there's not much to change it to.
-
->alts
-While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
-You could have gotten the begonias from Fo' Real Florae Fare, Lo.
---the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

@@ -92,7 +92,7 @@ You don't need to deal with the dial, now.
 >n
 The Nick
 
-#readables for great grate
+#ttc-table-of-readables-great-grate
 >read great grate
 The grate seems to be made by HECK TIN. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.
 
@@ -237,7 +237,7 @@ Best not to get too crazy with food preparation.
 >tortilal
 The tall trio seem to look interested for a minute.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
-#readables for tall trio
+#ttc-table-of-readables-tall-trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
 >read tall trio
@@ -305,7 +305,7 @@ Fiddling with sauce packets is so awful! Until it's easy. And it should be, here
 >cheeys
 It's more that he's a spearman--but maybe his cheesiness is a clue.
 
-#readables for spearman
+#ttc-table-of-readables-spearman
 >take spearman
 As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.
 !Taken.
@@ -759,7 +759,7 @@ The scraped wall doesn't respond or come any closer to being a hallway.
 >scrapde
 The scraped wall doesn't respond or come any closer to being a hallway.
 
-#readables for scraped wall
+#ttc-table-of-readables-scraped-wall
 >read wall
 !You can no longer read
 HALLWAY UNDER (UN-)UN-CONSTRUCTION.
@@ -775,7 +775,7 @@ You currently have 18 out of 27 total points for the Sortie region. You have fou
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
-#rereadables for scraped wall
+#+ttc-table-of-readables-spearman
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 

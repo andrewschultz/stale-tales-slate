@@ -243,11 +243,6 @@ to item-warp:
 		repeat with Q running through all things enclosed by the player:
 			if Q is not warpable, moot Q;
 
-to reset-regions:
-	repeat through table of lastlocs:
-		now the item-list of r entry is {};
-		now the worn-list of r entry is {};
-
 ignore-line-break is a truth state that varies.
 
 to score-notify: do nothing;
@@ -2568,12 +2563,6 @@ carry out retrying:
 
 a thing can be warpable. a thing is usually not warpable.
 
-table of lastlocs
-r	l	first-text	return-text
-Forest	scented descent	"You go to the forest."	"You return to the forest."
-Sortie	posted depots	"You return to the [if last-loc of sortie is moor]moor[else]weird underground area[end if]."
-Metros	trade tread	"You return to the hustle, bustle, etc."
-
 book fliptoing
 
 chapter the verb
@@ -3097,7 +3086,7 @@ check going east in Busiest Subsite:
 		been-check east instead;
 
 check going west in Busiest Subsite:
-	say "The Caterers['] Terraces are west. They're rendin['] dinner. You see someone sweating over a bizarre brazier, hear how this next lecture will 'Prep us for supper,' and promptly lose your will to do anything for a minute.";
+	say "The Caterers['] Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will 'Prep us for supper,' and promptly lose your will to do anything for a minute.";
 	been-check west instead;
 
 check going south in Busiest Subsite:
@@ -3196,21 +3185,21 @@ check going inside in Busiest Subsite:
 
 dirs-missed is a number that varies. dirs-missed is 0.
 
-to been-check (subdir - a direction):
-	choose row with mydir of subdir in table of subsitedirchecks;
-	if explyet entry is true, continue the action;
-	now explyet entry is true;
-	increment dirs-missed;
-	choose row dirs-missed in table of subsitedirchecks;
-	if there is a blabola entry:
-		say "[blabola entry]";
+a direction can be subsite-fled. a direction is usually not subsite-fled.
 
-table of subsitedirchecks
-mydir	explyet	blabola
-north	false	--
-south	false	"[line break]Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it [if vacate caveat is examined or odd side passage is examined]another [else]a [end if]look.[line break]"
-east	false	"[line break]You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.[line break]"
-west	false	"[line break]The standard, usual directions don't seem to cut it. But there has to be somewhere else.[line break]"
+to been-check (subdir - a direction):
+	if subdir is subsite-fled, continue the action;
+	increment dirs-missed;
+	choose row dirs-missed in table of busiest subsite rejects;
+	say "[line break][cue-passage entry][line break]";
+	now subdir is subsite-fled;
+
+table of busiest subsite rejects
+cue-passage
+"For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own."
+"Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it [if vacate caveat is examined or odd side passage is examined]another [else]a [end if]look."
+"You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun."
+"The standard, usual directions don't seem to cut it. But there has to be somewhere else."
 
 check exiting in Busiest Subsite: try going outside instead;
 
@@ -3402,7 +3391,7 @@ chapter sent nets
 the sent nets are plural-named LLPish scenery in Thickest Thickets. "The sent nets seem sort of stuck in the ground. They're not very nature-like. I mean, maybe they're biodegradable, but perhaps you could find a way to get rid of them or change them into something useful.[paragraph break]You try counting them, but there must be TENS." [bold-ok]
 
 check going inside in thickest:
-	if goat is off-stage, say "There's nowhere to go in." instead;
+	if goat is off-stage or deer is off-stage, say "There's nowhere to go in." instead;
 	if sent nets are touchable, poss-d;
 	if reed is touchable or toga is touchable, poss-d;
 	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
@@ -8367,7 +8356,7 @@ to select-nerd-sol (nu - a number):
 	get-tulip;
 	reg-inc;
 	now nerd-sol is nu;
-	choose row nu in the table of tulip-acq;
+	choose row nu in the table of tulip acquisition methods;
 	now chosen entry is true;
 	now player is in Undesired Underside;
 
@@ -9621,7 +9610,7 @@ carry out scaning:
 	else if gadget is rect:
 		if noun is the magenta nametag:
 			now nt-rect is true;
-			say "The gadget's display is a bit of a mess. It starts at [bcn][bc][rc][bc][gc][bc][bc] and goes to [gcn][bc][bc][bc][bc][bc][rc] and back. [check-other-nt]." instead;
+			say "The gadget's display is a bit of a mess. It starts at [bcn][bc][rc][bc][gc][bc][bc] and goes to [gcn][bc][bc][bc][bc][bc][rc] and back[check-other-nt]." instead;
 		if noun is not inflexible:
 			say "Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: ";
 			say "[rgbtext of noun]";
@@ -9651,7 +9640,6 @@ kib	helpy
 motto	"Since Motto is only five letters, you wonder what's up, but it's labeled [b]A MOTTO[r]."
 tall trio	"You scanned each of the tall trio, and the readout didn't change."
 drainage	"[if gadget is cert]Uh, oh. Not really helpful at all[else]Not bad, but still[end if]. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage."
-magenta nametag	"[if gadget is cert]The sixth light starts red, then flashes to green and back[else]Hmm, two aspects to the magenta nametag to consider[end if][check-other-nt]."
 
 to say rgbtext of (sca - a thing):
 	if scan-to-header is true:
@@ -10135,9 +10123,8 @@ roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
 Stiller Trellis	"[dmb]You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Roarings Garrison	"There's [if Obtains Boastin Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not in Obtains Boastin Bastion], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
-Bile Libe	"Only way out's back east."
-Fo Real Florae	"The only safe way out is back west."
+Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you probably just want to go back east."
+Fo Real Florae	"The faeries wouldn't take kindly to snooping. The only safe way out is back west."
 The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
 Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
 Elm Train Terminal	"The tracks lead down east, and the city is back north."
@@ -10341,8 +10328,8 @@ to decide which number is player-rank:
 	if Rested Desert is not visited, decide on 1;
 	if Notices Section is not visited, decide on 2;
 	if Trips Strip is not visited, decide on 3;
-	let temp-rank be 3;
-	increase temp-rank by number of solved regions;
+	let temp-rank be 4;
+	increase temp-rank by number of passed-up regions;
 	decide on temp-rank.
 
 table of ranks
@@ -10719,18 +10706,18 @@ to say toolwood: say "[one of]. The sprig/spore was one way through, but the too
 
 to say alt-sols:
 	let firsty be false;
-	repeat through table of tulip-acq:
+	repeat through table of tulip acquisition methods:
 		if chosen entry is false:
 			say "[sol entry]";
 			if firsty is false:
 				say " or ";
 				now firsty is true;
 
-table of tulip-acq
-sol	chosen
-"[b]ASK NERDS ABOUT DARKNESS[r]"	false
-"[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"	false
-"[b]SHOW EMITTER TO DEADBEAT[r] after using it in [bastion], then using it again in the Esoteric Coteries"	false
+table of tulip acquisition methods
+chosen	sol
+false	"[b]ASK NERDS ABOUT DARKNESS[r]"
+false	"[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"
+false	"[b]SHOW EMITTER TO DEADBEAT[r] after using it in [bastion], then using it again in the Esoteric Coteries"
 
 chapter warning player who bypassed regions
 

@@ -35,6 +35,7 @@ A minus sign means you've reached the end of a hint loop. You can cycle through 
 >gt subsite
 Goodness, no.
 
+#ttc-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the odor.
 !The one you can probably go through.
@@ -47,6 +48,7 @@ by one point
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
+#+ttc-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
 !The one you can probably go through.
@@ -60,6 +62,7 @@ by one point
 >score
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
+#+ttc-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
@@ -68,6 +71,7 @@ Thickest Thickets
 
 /DEBUG: (reed|toga) being objhinted\.
 
+#ttc-table-of-nowheres-thickest-thickets
 >n
 You hit a snag, and the toga nags you. Or seems to.
 
@@ -92,6 +96,11 @@ Your score has just gone up by one point.
 
 You can just go IN, now.
 
+#+ttc-table-of-nowheres-thickest-thickets
+>w
+!You hit a snag, and the toga nags you
+you can go IN--there are no specific directions here
+
 >deer
 Your score has just gone up by one point.
 
@@ -107,6 +116,10 @@ You need to take the phial for that to happen. The cabinet may not want to relin
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+
+#ttc-table-of-nowheres-notices-section
+>w
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
 
 #ttc-table-of-ordeal-loader-anagrams-static
 >xx static
@@ -210,3 +223,4 @@ You reckon you can wait
 
 >in
 Trips Strip
+

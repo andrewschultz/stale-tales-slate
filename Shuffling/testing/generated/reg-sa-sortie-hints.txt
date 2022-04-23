@@ -39,6 +39,7 @@ You're already here. Or there. The precise grammar's neither here nor there.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial for a few seconds.
 
+#ttc-table-of-nowheres-trap-part
 >w
 You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
 Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
@@ -65,6 +66,7 @@ DEBUG: great grate being objhinted.
 You let your eyes wander.
 Your vision swirls, and you see a kitchen.
 
+#ttc-table-of-nowheres-the-nick
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
 
@@ -135,11 +137,13 @@ by one point
 You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes.
 >undo
 
->w
+#ttc-table-of-nowheres-kitchen
 >w
 Mum, dud mud blocks your way west. You can only go south to Trap Part or east
 !to Stiller Trellis.
+#trap part has no test case
 >s
+#+ttc-table-of-nowheres-trap-part
 >w
 Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
 >undo
@@ -241,6 +245,7 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 DEBUG: warts being objhinted.
 
+#+ttc-table-of-nowheres-kitchen
 >w
 >w
 Mum, dud mud blocks your way west. You can only go south to Trap Part or east to Stiller Trellis.
@@ -261,7 +266,7 @@ Your score has just gone up by one point.
 
 >cask
 !by one point
-#ttc-table-of-sortie-anagrams-cask
+#+ttc-table-of-sortie-anagrams-cask
 >xx cask
 You already changed the cask to a sack, and if you need to do so again, you won't forget.
 >undo
@@ -331,6 +336,7 @@ Your vision blurs a bit, and instead you see a peasant.
 >angle
 You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock for a few seconds.
 
+#ttc-table-of-nowheres-moor
 >s
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came.
 
@@ -411,6 +417,7 @@ You see the haywall vanishing.
 DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
 
+#ttc-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west or south.
 
@@ -426,6 +433,7 @@ Your score has just gone up by one point.
 
 You see yourself building a huge structure in the moor without saying anything.
 
+#+ttc-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
 
@@ -437,6 +445,7 @@ Sacred Cedars
 
 Once you change the sack to a cask, you can FILL CASK here, to start.
 
+#ttc-table-of-nowheres-sacred-cedars
 >n
 There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
 
@@ -463,6 +472,7 @@ You can't pour the oils anywhere in this enclosed area. Try going back to the mo
 
 >s
 
+#ttc-table-of-nowheres-roomroom
 >s
 Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 

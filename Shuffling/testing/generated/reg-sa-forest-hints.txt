@@ -88,6 +88,7 @@ You see yourself putting something on your face and then walking through Corses 
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) for a few seconds.
 
+#this is a test case not in the table: south in Self-ID Fields is the only "bad" exit
 >s
 Given that the people leaving the selves vessel look dead, you probably don't want to go in.
 #No going back. North or east or west is okay, though. = default nowhere but no other direction works
@@ -132,6 +133,7 @@ Your score has just gone up by one point.
 
 DEBUG: dashes being objhinted.
 
+#ttc-table-of-nowheres-gnarliest-triangles
 >e
 You don't need an alert sign to know running into the walls any direction but west would cause a real sting.
 
@@ -163,6 +165,7 @@ DEBUG: sandwich being objhinted.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam for a few seconds.
 
+#ttc-table-of-nowheres-flesh-shelf
 >w
 It's too steep down every way except back east.
 
@@ -234,6 +237,7 @@ You see the liches working their way under the meats, which fall into the grinde
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches for a few seconds.
 
+#ttc-table-of-nowheres-emptiness-sepiments
 >e
 The scoffer coffers and scoffin' coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind.
 
@@ -328,7 +332,7 @@ You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 #ttc-table-of-forest-anagrams-spread
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
-#preefcheck drapes
+#ttc-table-of-preflip-clues-drapes
 >pf
 spread -> drapes
 >undo
@@ -408,6 +412,7 @@ Ghouls' Slough
 >gt fields
 You've done all you could in Emptiness Sepiments and before. Onward.
 
+#ttc-table-of-nowheres-ghouls-slough
 >e
 Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.
 
@@ -425,6 +430,7 @@ Your vision blurs a bit, and instead you see wolves.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels for a few seconds.
 
+#ttc-table-of-nowheres-frost-forts
 >e
 The gnash hangs would, err, shnag you.
 
@@ -444,6 +450,7 @@ DEBUG: wolves being objhinted.
 >angle
 You won't need the blue lube to inform you that the wolves need to be dealt with. Un-magically.
 
+#+ttc-table-of-nowheres-frost-forts
 >e
 The werewolves will catch you easily.
 

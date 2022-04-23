@@ -8,34 +8,11 @@
 * nowhere-tables
 
 >gonear rested desert
-#nowhere rested desert
->w
-The size of the desert, um, deters you. You're steer'd back to the odor.
->door
->w
-The size of the desert, um, deters you. You're steer'd back to the door.
->blot
->w
-The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
 >gonear thickest thickets
-#nowhere thickest thickets
->w
-You hit a snag, and the toga nags you. Or seems to. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets.
-!you can go IN--there are no specific directions here
->goat
->w
-you can go IN--there are no specific directions here
->slander
-!You suppress an insult
 
 >gonear notices section
-#nowhere notices section
->w
-You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
->gateman
->w
-You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is!
+
 
 >gonear trips strip
 #nowhere trips strip

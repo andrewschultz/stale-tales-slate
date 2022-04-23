@@ -13,13 +13,53 @@
 
 >au 2
 
+#ttc-table-of-busiest-subsite-rejects-1
+>e
+That way's an hour or two of listening to an under-action denunciator. You sure?
+You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
+For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own.
+
+>e
+That way's an hour or two of listening to an under-action denunciator. You sure?
+You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
+!For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own.
+
+#ttc-table-of-busiest-subsite-rejects-2
+>n
+That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
+Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
+
+>n
+That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
+!Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
+#ttc-table-of-busiest-subsite-rejects-3
+>s
+You already spent too much time in the overlate elevator.
+You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
+>s
+You already spent too much time in the overlate elevator.
+!You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
+
+#ttc-table-of-busiest-subsite-rejects-4
+>w
+The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
+The standard, usual directions don't seem to cut it. But there has to be somewhere else.
+
+>w
+The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
+!The standard, usual directions don't seem to cut it. But there has to be somewhere else.
+
 #pre-nametag-gateman rule
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 [That's worth noting in your notepad for later, so you do, under FLIPS.]
-#preefcheck gateman
+#ttc-table-of-preflip-clues-gateman
 >pf
 nametag -> gateman
+
+#ttc-table-of-ranks-1
+>score
+You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every(wo)man.
 
 >in
 Rested Desert
@@ -29,6 +69,9 @@ by one point
 
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
+
+#ttc-table-of-ranks-2
+You haven't solved any regions yet. You have the rank of reduced deducer.
 
 >blot
 by one point
@@ -77,9 +120,12 @@ by one point
 
 >deer
 by one point
+>in
+Notices Section
 >misses
 --you could've changed the toga into a GOAT
 !--you could've changed the reed into a DEER
+>undo
 >undo
 >undo
 
@@ -97,6 +143,9 @@ Notices Section
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+
+#ttc-table-of-ranks-3
+You haven't solved any regions yet. You have the rank of (ow,) me, a stunted student.
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
@@ -128,3 +177,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 
 >in
 Trips Strip
+
+#ttc-table-of-ranks-4
+>score
+You have the rank of benigner beginner.

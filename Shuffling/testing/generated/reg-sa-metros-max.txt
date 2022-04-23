@@ -19,10 +19,16 @@ Your score has just gone up by one point
 
 Undesired Underside
 
+#ttc-table-of-kibitzes-drainage
+>rc drainage
+The gadget beeps once. A series of lights comes across: RRRRRRRR. Uh, oh. Not really helpful at all. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB.
+Not bad, but still. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage.
+
 #pre-beats-beast rule
 >beast
 That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
-#preefcheck beast
+#table-of-preflip-clues-beast
 >pf
 Stuff you figured, but you couldn't use it right away:
 beats -> beast
@@ -42,10 +48,16 @@ Roarings Garrison
 >w
 Bile Libe
 
+#ttc-table-of-kibitzes-motto
+>rc motto
+The gadget beeps once. A series of lights comes across: RRRRGG. Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
+Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO.
+
 #pre-words-sword rule
 >sword
 The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
-#preefcheck sword
+#table-of-preflip-clues-sword
 >pf
 words -> sword
 
@@ -95,7 +107,7 @@ So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til t
 [That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
 >keycard
 This would create quite a (negative) scene with people still in the bastion.
-#preefcheck keycard
+#table-of-preflip-clues-keycard
 >pf
 dry cake -> keycard
 
@@ -256,6 +268,15 @@ Esoteric Coteries
 You can also see a lit-up tulip here.
 The signers' ingress slides shut.
 
+>switch emitter
+by one point
+
+#ttc-table-of-tulip-acquisition-methods-1
+>alts
+--the other ways to get the tulip are to ASK NERDS ABOUT DARKNESS or OPEN NOISE BAG in the Esoteric Coteries after getting the begonias.
+>undo
+>undo
+
 >ask nerds about darkness
 #notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
@@ -319,6 +340,8 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 >alts
 While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
 You could have gotten the begonias from Fo' Real Florae Fare, Lo.
+#ttc-table-of-tulip-acquisition-methods-2
+#ttc-table-of-tulip-acquisition-methods-3
 --the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast

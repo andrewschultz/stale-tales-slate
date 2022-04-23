@@ -279,7 +279,7 @@ Hmm...you get the feeling the store itself holds more adventure.
 #ttc-table-of-stores-nudges-sign
 >sgni
 Hmm...you get the feeling the store itself holds more adventure.
-#readables for roadsign
+#ttc-table-of-readables-roadsign
 >read roadsign
 /The sign appears to say, in all red, (E FORTS/OSTFER|TRESFO/S EFTRO) before a gust of wind picks it up and flips it around\.
 >read roadsign
@@ -291,7 +291,7 @@ by one point
 #ttc-table-of-stores-nudges-scented
 >scentde
 No way. It's your way down to ENTER the forest.
-#readables for store i
+#ttc-table-of-readables-store-i
 >read store i
 Red writing:
 RISE TO RITES, O! OR TIES.
@@ -373,34 +373,6 @@ It's going to get evil enough even without a high-ranking COBRA officer.
 #mistake test for doters
 >doters
 You don't need people oohing and ahing at your skill.
-
-#preefcheck of store p
->pf
-Store P -> PRESTO in A Roiling Original
-#mistake test for routes
->routes
-Hm, that seems right, but it doesn't work this game!
-#preefcheck of store u
->pf
-Store U -> ROUTES in A Roiling Original
-#mistake test for troves
->troves
-Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
-#preefcheck of store v
->pf
-Store V -> TROVES in A Roiling Original
-#mistake test for towers
->towers
-That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
-#preefcheck of store w
->pf
-Store W -> TOWERS in A Roiling Original
-#mistake test for oyster
->oyster
-Nice try, but that's next game!
-#preefcheck of store y
->pf
-Store Y -> OYSTER in A Roiling Original
 
 >n
 hubs bush

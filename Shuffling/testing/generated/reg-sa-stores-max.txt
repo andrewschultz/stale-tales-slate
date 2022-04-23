@@ -15,10 +15,26 @@
 >ts
 Trips Strip
 
+#ttc-table-of-iconmaps-1
+>x tepid
+/Near Store (F|I|M|R),
+
+#ttc-table-of-iconmaps-2
+>x tepid
+/Near Store (F|I|M|R),
+
+#ttc-table-of-iconmaps-3
+>x tepid
+/Near Store (F|I|M|R),
+
+#ttc-table-of-iconmaps-4
+>x tepid
+/Near Store (F|I|M|R),
+
 #pre-storer-resort rule
 >resort
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
-#preefcheck ogled lodge
+#ttc-table-of-preflip-clues-ogled-lodge
 >pf
 Store R -> Resort
 
@@ -31,6 +47,34 @@ by one point
 >metros
 by one point
 
+#ttc-table-of-preflip-clues-store-p
+>pf
+Store P -> PRESTO in A Roiling Original
+#mistake test for routes
+>routes
+Hm, that seems right, but it doesn't work this game!
+#ttc-table-of-preflip-clues-store-u
+>pf
+Store U -> ROUTES in A Roiling Original
+#mistake test for troves
+>troves
+Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
+#ttc-table-of-preflip-clues-store-v
+>pf
+Store V -> TROVES in A Roiling Original
+#mistake test for towers
+>towers
+That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
+#ttc-table-of-preflip-clues-store-w
+>pf
+Store W -> TOWERS in A Roiling Original
+#mistake test for oyster
+>oyster
+Nice try, but that's next game!
+#ttc-table-of-preflip-clues-store-y
+>pf
+Store Y -> OYSTER in A Roiling Original
+
 >n
 hubs bush
 
@@ -40,4 +84,38 @@ by one point
 #pre-cabinet-bactine rule
 >bactine
 by one point
+
+#ttc-table-of-warpcmds-logoi
+>logoi
+You convince the powers that be that you remember all the words from Store F and the forest.
+You watch the scented descent crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
+
+#ttc-table-of-ranks-5
+>score
+You have the rank of solider soldier.
+
+#ttc-table-of-warpcmds-sooth
+>sooth
+You convince the powers that be that, in sooth, you really did run through Store I and the sortie earlier.
+You watch the posted depots crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
+
+#ttc-table-of-ranks-6
+>score
+You have the rank of a mature amateur.
+
+#ttc-table-of-warpcmds-say-bs
+>say bs
+You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense.
+You watch the trade tread crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
+
+#ttc-table-of-ranks-7
+>score
+You have the rank of new hero now here.
+
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 

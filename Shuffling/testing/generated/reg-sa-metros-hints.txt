@@ -69,8 +69,9 @@ DEBUG: motto being objhinted.
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
 
+#ttc-table-of-nowheres-bile-libe
 >w
-Only way out's back east.
+Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you probably just want to go back east
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the words and the motto for a few seconds.
@@ -91,6 +92,7 @@ You see yourself giving something reddish to the night thing in the hotel before
 
 DEBUG: Night Thing being objhinted.
 
+#ttc-table-of-nowheres-the-ol-hotel
 >s
 You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.
 
@@ -153,7 +155,7 @@ It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about 
 >conr
 It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
-#ttc-table-of-metros-anagrams-lost-corn
+#+ttc-table-of-metros-anagrams-lost-corn
 >xx lost corn
 !The dead beat deadbeat eyes you
 Your vision blurs a bit, and instead you see controls.
@@ -194,8 +196,9 @@ The faeries want a flower. You have one in your inventory.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade for a few seconds.
 
+#ttc-table-of-nowheres-fo-real-florae
 >n
-The only safe way out is back west.
+The faeries wouldn't take kindly to snooping. The only safe way out is back west.
 
 #ttc-table-of-metros-anagrams-begonias
 >xx begonias
@@ -209,12 +212,12 @@ The faeries buzz, perturbed. You really shouldn't do anything until you've trade
 
 >give gardenia to faeries
 
-#ttc-table-of-metros-anagrams-begonias
+#+ttc-table-of-metros-anagrams-begonias
 >xx begonias
 You should take the begonias if you want to work on them.
 !Your vision blurs
 
-#ttc-table-of-metros-anagrams-heaths
+#+ttc-table-of-metros-anagrams-heaths
 >xx heaths
 You should take the heaths if you want to work on them.
 !Your vision blurs
@@ -243,11 +246,11 @@ DEBUG: heaths being objhinted.
 
 >undo
 
-#ttc-table-of-metros-anagrams-begonias
+#+ttc-table-of-metros-anagrams-begonias
 >xx begonias
 #Your vision blurs a bit, and instead you see a noise bag.
 
-#ttc-table-of-metros-anagrams-heaths
+#+ttc-table-of-metros-anagrams-heaths
 >xx heaths
 Your vision blurs a bit, and instead you see a sheath.
 
@@ -313,6 +316,7 @@ DEBUG: nerds being objhinted.
 >xx nerds
 You suddenly feel darkness, along with an urge to ask the nerds about it.
 
+#ttc-table-of-nowheres-esoteric-coteries
 >e
 The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher.
 
@@ -369,6 +373,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 >xx neon pig
 Your vision blurs a bit, and instead you see an opening where the pig is.
 
+#ttc-table-of-nowheres-elm-train-terminal
 >e
 There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there.
 >s
@@ -408,6 +413,10 @@ You stare into the blue lube for a bit, then look around. The blue glow pulses w
 >gt underside
 No going back now. You came here to defeat the beats.
 
+#ttc-table-of-nowheres-bassy-abyss
+>n
+You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's an aligns signal, and it must be encompassing the whole abyss. It turns you back to face the beats.
+
 #ttc-table-of-metros-anagrams-siren
 >xx siren
 Your vision blurs a bit, and instead you see some resin.
@@ -431,11 +440,6 @@ The blue glow pulses with the beast's roars.
 You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >take sword
-
->alts
-While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
-You could have gotten the begonias from Fo' Real Florae Fare, Lo.
---the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

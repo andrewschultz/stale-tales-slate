@@ -123,6 +123,7 @@ Changing the dial would leave you stuck.
 You can probably TURN the dial to a number, e.g. 99
 
 @gn
+#ttc-table-of-nowheres-trap-part
 >w
 You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
 Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
@@ -173,6 +174,7 @@ You let your eyes wander.
 Your vision swirls, and you see a kitchen.
 
 @gn
+#ttc-table-of-nowheres-the-nick
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
 
@@ -181,7 +183,7 @@ You're trapped. If only the nick could be changed to something more to your tast
 That's not the magic way out. Sorry!
 
 @nud
-#readables for great grate
+#ttc-table-of-readables-great-grate
 >read great grate
 The grate seems to be made by HECK TIN. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.
 \\
@@ -289,6 +291,13 @@ Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 >gt nick
 No, you don't want to go back there.
 
+@max
+#ttc-table-of-kibitzes-tall-trio
+>rc tall trio
+The gadget beeps once. A series of lights comes across: GRRRRRRR. You scanned each of the tall trio, and the readout didn't change.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+You scanned each of the tall trio, and the readout didn't change.
+
 @scan
 #gadget test: tall trio to tortilla
 >rc tall trio
@@ -386,11 +395,13 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 The spearman is what's important.
 
 @gn
->w
+#ttc-table-of-nowheres-kitchen
 >w
 Mum, dud mud blocks your way west. You can only go south to Trap Part or east
 !to Stiller Trellis.
+#trap part has no test case
 >s
+#+ttc-table-of-nowheres-trap-part
 >w
 Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
 >undo
@@ -499,7 +510,7 @@ Best not to get too crazy with food preparation.
 >tortilal
 The tall trio seem to look interested for a minute.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
-#readables for tall trio
+#ttc-table-of-readables-tall-trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
 >read tall trio
@@ -588,7 +599,7 @@ Fiddling with sauce packets is so awful! Until it's easy. And it should be, here
 >cheeys
 It's more that he's a spearman--but maybe his cheesiness is a clue.
 \\
-#readables for spearman
+#ttc-table-of-readables-spearman
 >take spearman
 As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.
 !Taken.
@@ -807,6 +818,7 @@ No need for fashion tweaks.
 DEBUG: warts being objhinted.
 
 @gn
+#+ttc-table-of-nowheres-kitchen
 >w
 >w
 Mum, dud mud blocks your way west. You can only go south to Trap Part or east to Stiller Trellis.
@@ -850,7 +862,7 @@ Your score has just gone up by one point.
 @hin
 >cask
 !by one point
-#ttc-table-of-sortie-anagrams-cask
+#+ttc-table-of-sortie-anagrams-cask
 >xx cask
 You already changed the cask to a sack, and if you need to do so again, you won't forget.
 >undo
@@ -982,7 +994,7 @@ DEBUG INFO: Cert-text: ---ES.
 #pre-room-moor rule
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
-#preefcheck r2
+#ttc-table-of-preflip-clues-r2
 >pf
 room -> moor
 
@@ -1071,6 +1083,7 @@ DEBUG INFO: Rect-text: P-----T.
 DEBUG INFO: Cert-text: --A---T.
 
 @gn
+#ttc-table-of-nowheres-moor
 >s
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came.
 
@@ -1372,7 +1385,7 @@ The scraped wall doesn't respond or come any closer to being a hallway.
 >scrapde
 The scraped wall doesn't respond or come any closer to being a hallway.
 \\
-#readables for scraped wall
+#ttc-table-of-readables-scraped-wall
 >read wall
 !You can no longer read
 HALLWAY UNDER (UN-)UN-CONSTRUCTION.
@@ -1381,7 +1394,7 @@ HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 #pre-haywall-hallway rule
 >hallway
 Hm, that's possible, but you can't make the hallway until you add something to the wall.
-#preefcheck hallway
+#ttc-table-of-preflip-clues-hallway
 >pf
 WALL -> haywall -> hallway
 
@@ -1407,6 +1420,7 @@ DEBUG INFO: Rect-text: H-----Y.
 DEBUG INFO: Cert-text: HA-----.
 
 @gn
+#ttc-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west or south.
 
@@ -1421,7 +1435,7 @@ Mum, dud mud blocks your way north. You can only go west or south.
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
-#rereadables for scraped wall
+#+ttc-table-of-readables-spearman
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 
@@ -1438,6 +1452,7 @@ Your score has just gone up by one point.
 You see yourself building a huge structure in the moor without saying anything.
 
 @gn
+#+ttc-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
 
@@ -1459,6 +1474,7 @@ Sacred Cedars
 Once you change the sack to a cask, you can FILL CASK here, to start.
 
 @gn
+#ttc-table-of-nowheres-sacred-cedars
 >n
 There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
 
@@ -1595,8 +1611,8 @@ This is not a good place to put soil. Somewhere more wide open, where you can po
 #pre-oils-silo rule
 >silo
 This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?
-#preefcheck soil
-#preefcheck silo
+#ttc-table-of-preflip-clues-soil
+#ttc-table-of-preflip-clues-silo
 >pf
 oils -> soil
 oils -> silo
@@ -1613,6 +1629,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >s
 
 @gn
+#ttc-table-of-nowheres-roomroom
 >s
 Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 
@@ -1658,7 +1675,7 @@ Adding similes would mean the limerick wouldn't scan. They'd be more forced than
 #pre-smilies-missile rule
 >missile
 Good idea, but not in here. There'd be more room for that outside where you found the poem.
-#preefcheck missile
+#ttc-table-of-preflip-clues-missile
 >pf
 smilies -> missile
 

@@ -37,6 +37,43 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >au 2
 
+@max
+#ttc-table-of-busiest-subsite-rejects-1
+>e
+That way's an hour or two of listening to an under-action denunciator. You sure?
+You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
+For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own.
+\\
+>e
+That way's an hour or two of listening to an under-action denunciator. You sure?
+You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
+!For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own.
+\\
+#ttc-table-of-busiest-subsite-rejects-2
+>n
+That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
+Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
+\\
+>n
+That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
+!Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
+#ttc-table-of-busiest-subsite-rejects-3
+>s
+You already spent too much time in the overlate elevator.
+You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
+>s
+You already spent too much time in the overlate elevator.
+!You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
+\\
+#ttc-table-of-busiest-subsite-rejects-4
+>w
+The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
+The standard, usual directions don't seem to cut it. But there has to be somewhere else.
+\\
+>w
+The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
+!The standard, usual directions don't seem to cut it. But there has to be somewhere else.
+
 @hin
 >xc
 
@@ -83,7 +120,7 @@ Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 #brackets ok
 [That's worth noting in your notepad for later, so you do, under FLIPS.]
-#preefcheck gateman
+#ttc-table-of-preflip-clues-gateman
 >pf
 nametag -> gateman
 
@@ -162,6 +199,11 @@ Vandalizing the vacate caveat is probably more trouble than it's worth.
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
+@max
+#ttc-table-of-ranks-1
+>score
+You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every(wo)man.
+
 >in
 Rested Desert
 
@@ -217,6 +259,7 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 Goodness, no.
 
 @gn
+#ttc-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the odor.
 !The one you can probably go through.
@@ -231,7 +274,12 @@ by one point
 >score
 {$SCOS}
 
+@max
+#ttc-table-of-ranks-2
+You haven't solved any regions yet. You have the rank of reduced deducer.
+
 @gn
+#+ttc-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
 !The one you can probably go through.
@@ -330,6 +378,7 @@ by one point
 {$SCOS}
 
 @gn
+#+ttc-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
@@ -361,6 +410,7 @@ You won't need to do anything to the whole room unless you are trapped in a room
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
 
 @gn
+#ttc-table-of-nowheres-thickest-thickets
 >n
 You hit a snag, and the toga nags you. Or seems to.
 
@@ -425,7 +475,7 @@ The reed blows in an unseen breeze.
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
-#readables for toga
+#ttc-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
 
@@ -440,9 +490,12 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 @max
 >deer
 by one point
+>in
+Notices Section
 >misses
 --you could've changed the toga into a GOAT
 !--you could've changed the reed into a DEER
+>undo
 >undo
 >undo
 
@@ -457,6 +510,12 @@ Your score has just gone up by one point.
 
 @hin
 You can just go IN, now.
+
+@gn
+#+ttc-table-of-nowheres-thickest-thickets
+>w
+!You hit a snag, and the toga nags you
+you can go IN--there are no specific directions here
 
 @!min
 >deer
@@ -494,6 +553,15 @@ You need to take the phial for that to happen. The cabinet may not want to relin
 >score
 {$SCOS}
 
+@max
+#ttc-table-of-ranks-3
+You haven't solved any regions yet. You have the rank of (ow,) me, a stunted student.
+
+@gn
+#ttc-table-of-nowheres-notices-section
+>w
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
+
 @hin
 #ttc-table-of-ordeal-loader-anagrams-static
 >xx static
@@ -501,7 +569,7 @@ You stop and think. The static doesn't seem as important as that gateway. Do so 
 Your vision blurs a bit, and instead the static seems to form attics near the doll house.
 
 @nud
-#readables for gateway
+#ttc-table-of-readables-gateway
 >read gateway
 "E. g., man, TA!" is written in red, beneath the WARMUP/UM, WARP text.
 Maybe it's significant that the writing's red, and that can help you
@@ -691,7 +759,7 @@ You have nothing else you figured in advance.
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 #brackets ok
 [That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
-#preefcheck tenibac
+#ttc-table-of-preflip-clues-tenibac
 >pf
 Stuff you figured, but you couldn't use it right away:
 cabinet -> Bactine
@@ -795,7 +863,7 @@ The cabinet deserves a better fate than THAT.
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
-#readables for acne bit cabinet
+#ttc-table-of-readables-acne-bit-cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
@@ -1014,3 +1082,8 @@ you could've changed the bulge into a BUGLE.
 
 >in
 Trips Strip
+
+@max
+#ttc-table-of-ranks-4
+>score
+You have the rank of benigner beginner.

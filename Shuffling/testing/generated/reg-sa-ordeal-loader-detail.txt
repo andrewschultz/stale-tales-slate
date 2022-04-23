@@ -101,7 +101,7 @@ You have nothing else you figured in advance.
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 [That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
-#preefcheck tenibac
+#ttc-table-of-preflip-clues-tenibac
 >pf
 Stuff you figured, but you couldn't use it right away:
 cabinet -> Bactine
@@ -290,3 +290,4 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 
 >in
 Trips Strip
+

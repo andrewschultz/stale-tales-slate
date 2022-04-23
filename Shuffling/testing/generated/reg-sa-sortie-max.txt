@@ -41,6 +41,12 @@ You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing no
 >open fridge
 You reopen and peer on. You see a grist and a cake pan inside.
 
+#ttc-table-of-kibitzes-tall-trio
+>rc tall trio
+The gadget beeps once. A series of lights comes across: GRRRRRRR. You scanned each of the tall trio, and the readout didn't change.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+You scanned each of the tall trio, and the readout didn't change.
+
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
@@ -133,7 +139,7 @@ As the sack changes, the straw falls out.
 #pre-room-moor rule
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
-#preefcheck r2
+#ttc-table-of-preflip-clues-r2
 >pf
 room -> moor
 
@@ -211,7 +217,7 @@ Stiller Trellis
 #pre-haywall-hallway rule
 >hallway
 Hm, that's possible, but you can't make the hallway until you add something to the wall.
-#preefcheck hallway
+#ttc-table-of-preflip-clues-hallway
 >pf
 WALL -> haywall -> hallway
 
@@ -251,8 +257,8 @@ This is not a good place to put soil. Somewhere more wide open, where you can po
 #pre-oils-silo rule
 >silo
 This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?
-#preefcheck soil
-#preefcheck silo
+#ttc-table-of-preflip-clues-soil
+#ttc-table-of-preflip-clues-silo
 >pf
 oils -> soil
 oils -> silo
@@ -266,7 +272,7 @@ The cask is already full of oils.
 #pre-smilies-missile rule
 >missile
 Good idea, but not in here. There'd be more room for that outside where you found the poem.
-#preefcheck missile
+#ttc-table-of-preflip-clues-missile
 >pf
 smilies -> missile
 
