@@ -1,5 +1,5 @@
 # reg-roi-region-spoilers.txt
-# checks running through everything
+# checks the spoiler alerts if someone is struggling at the beginning of a region
 #
 
 ** game: /home/andrew/prt/debug-roiling.ulx
