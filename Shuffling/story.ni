@@ -472,7 +472,6 @@ book procedural AIP
 
 to decide whether the action is procedural: [aip]
 	if examining, yes;
-	if objasking generically, yes;
 	if searching, yes;
 	if fliptoing, yes;
 	if kicking, yes;
@@ -490,12 +489,15 @@ to decide whether the action is procedural: [aip]
 	if looking, yes;
 	if certifying, yes;
 	if rectifying, yes;
-	if objasking about, yes;
 	if requesting the score, yes;
 	if taking inventory, yes;
 	if gotothinging, yes;
 	if xmxing, yes;
 [	if out of world, yes;]
+	if objasking generically, yes;
+	if objasking about, yes;
+	if asking generically, yes;
+	if asking about, yes;
 	no;
 
 xmxing is an action applying to one thing. [xmxing is a debug-only command, but we need it to be procedural for automated testing.]
@@ -8413,7 +8415,7 @@ check going east in Elm Train Terminal:
 	if player does not have sheath and player does not have noise bag, say "You hear an even worse roaring than usual. Nothing you're carrying seems up to defeating it. You double back." instead;
 	if player has noise bag and noise bag does not contain words, say "You hear an even worse noise as you walk across the tracks. You run back across where you can reflect how it would be nice if you had something in that noise bag to combat...whatever it is there." instead;
 	if player has sheath and sword is not in sheath, say "You hear an even worse noise as you walk across the tracks. You run back across where you can reflect how it would be nice if you had a weapon in that sheath." instead;
-	say "Your lit-up tulip gives a welcoming anemic glow. You're ready to tackle whatever's lying craven in the cavern. Unfortunately, the glow, while it helps you avoid tripping over rails, doesn't save you from a passage weakened by the beats. You tumble down.";
+	say "Your lit-up tulip gives a welcoming anemic glow. You're ready to tackle whatever's lying craven in the cavern. Unfortunately, the glow, while it helps you avoid tripping over rails, doesn't save you from a foot-passage weakened by the beats. You hear a crack and tumble down.";
 
 to say terminal-if-piggy: say "[if neon pig is touchable]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in gin nope opening]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
 
@@ -9405,9 +9407,13 @@ after reading a command:
 			change the text of the player's command to XX;
 	if panel is touchable and panel is part of silo:
 		if the player's command matches the regular expression "buttons", say "One button at a time, please." instead;
-	if goat is touchable and toga is not touchable:
+	if goat is touchable:
 		if the player's command matches the regular expression "\bgoat\b":
 			say "[one of]The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
+			reject the player's command;
+	if deer is touchable:
+		if the player's command matches the regular expression "\deer\b":
+			say "[one of]The deer is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
 			reject the player's command;
 	if player is in Fo Real Florae:
 		if the player's command matches the text "fairies":
@@ -9695,7 +9701,7 @@ this is the a-warn rule:
 check objasking generically (This is the check for only one sensible object converser rule):
 	if the number of NPCish persons is 0:
 		repeat with X running through touchable scenery:
-			repeat through table of default-gen-blather:
+			repeat through table of unmatched topic responses:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		abide by the a-warn rule;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
@@ -9732,7 +9738,7 @@ understand "tell [thing] about [text]" as asking it about.
 Check asking generically (This is the check for only one sensible converser rule):
 	if the number of npcish people is 0:
 		repeat with X running through touchable scenery:
-			repeat through table of default-gen-blather:
+			repeat through table of unmatched topic responses:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		abide by the a-warn rule;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
@@ -9747,20 +9753,20 @@ check objasking it about (This is the check for object information rule): [ note
 	if noun is gateman:
 		if second noun is gadget or second noun is part of the gadget:
 			if scanned-g is false, say "[lazy-adv]" instead;
-	repeat through table of subject-blather:
-		if second noun is the person-subj entry:
-			if noun is the him-who entry:
-				say "[him-say entry][line break]";
+	repeat through table of matched thing responses:
+		if second noun is the subject-thing entry:
+			if noun is the asked-person entry:
+				say "[npc-text entry][line break]";
 				if noun is gateman and second noun is saltine, pad-rec "xx";
 				the rule succeeds;
-	repeat through table of default-sub-blather:
+	repeat through table of unmatched thing responses:
 		if noun is gateman:
 			if second noun is not goat:
 				if second noun is in Rested Desert, say "'In the past now. Nothing more to learn from that.'" instead;
 				if second noun is in Busiest Subsite, say "You'd know more about that than he would." instead;
 			if second noun is touchable, say "Examining would probably work better." instead;
-		if noun is him-who entry, say "[him-say entry][line break]" instead;
-	repeat through table of default-gen-blather:
+		if noun is asked-person entry, say "[npc-text entry][line break]" instead;
+	repeat through table of unmatched topic responses:
 		if noun is default-talker entry, say "[gen-blah entry][line break]" instead;
 	if noun is notepad, try consulting notepad about "[second noun]" instead;
 	if noun is not a person, say "You can only ask people about things." instead;
@@ -9769,14 +9775,14 @@ check objasking it about (This is the check for object information rule): [ note
 stupid-temp is text that varies.
 
 check asking about (This is the check for specific topics rule):
-	if the topic understood is a topic listed in the table of general-blather:
-		if him-who entry is the noun:
+	if the topic understood is a topic listed in the table of matched topic responses:
+		if asked-person entry is the noun:
 			if scanned-g is false:
 				if topic understood matches "certify" or topic understood matches "rectify", say "[lazy-adv]" instead;
-			say "[him-say entry][line break]" instead;
+			say "[npc-text entry][line break]" instead;
 			[would like to pad-rec "[what-pad-gen entry]" instead; but inform is confused with 2 tables]
 			do nothing instead;
-	repeat through table of default-gen-blather:
+	repeat through table of unmatched topic responses:
 		if the noun is default-talker entry, say "[gen-blah entry][line break]" instead;
 	if noun is notepad, try consulting notepad about "[second noun]" instead;
 	if noun is not a person, say "You can only ask people about things." instead;
@@ -9835,8 +9841,8 @@ after objasking about (this is the post-rec talking rule):
 	if noun is gateman and second noun is saltine, pad-rec "xx";
 	continue the action;
 
-table of subject-blather [tsb]
-him-who	person-subj	him-say
+table of matched thing responses [tsb]
+asked-person	subject-thing	npc-text
 gateman	redness	"[one of]'Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help.'[paragraph break]He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.[ask-red][or]'Hm. To keep it simple, red is wrong. And that helps you eliminate wrong guesses.'[stopping]"
 gateman	board	"'Good idea to take notes on it. But I can tell you about other stuff. Like [if player has gadget]your gadget[else]the gadget in the cabinet[end if]. Or even how it works.'"
 gateman	doll house	"[if attics are off-stage]'A nice warm-up puzzle, but if you're in a hurry, I'll respect that too. Not the doll house that needs changing.'[else]'You don't need to take it with or anything. Nice job with it, though.'[end if]"
@@ -9892,8 +9898,8 @@ faeries	drainage	"'Perhaps you can turn something in this city into a flower. We
 faeries	gardenia	"[if drainage is in Undesired Underside]You don't have a gardenia, yet. But you can find or make one.[else][faery-flower][end if]"
 faeries	heaths	"[if player has begonias or player has noise bag]The faeries have been generous enough.[else][faery-flower][end if]"
 faeries	begonias	"[if player has sheath or player has heaths]The faeries have been generous enough.[else][faery-flower][end if]"
-faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The fairies wonder aloud what sort of magic could conjure a sheath.[end if]"
-faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The faires wonder aloud what sort of magic could conjure a noise bag.[end if]"
+faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The faeries wonder aloud what sort of magic could conjure a sheath.[end if]"
+faeries	noise bag	"[if player has noise bag]'It is up to you to use it. We cannot help further.'[else]The faeries wonder aloud what sort of magic could conjure a noise bag.[end if]"
 faeries	merchandise	"[faery-flower]"
 faeries	beats	"'It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around.'"
 faeries	brocade	"[if player has brocade]'Do with it what you need.'[else if brocade is moot]'You have disposed of it! We hope it was useful.'[else]'It is free. But useless to us.'[end if]"
@@ -9946,7 +9952,7 @@ check examining the Memo Tote Tome:
 
 to say rose-sore: if player does not have gardenia, say "[one of]. It will probably be tougher than getting a sore and changing it to a rose[or][stopping]"
 
-table of default-gen-blather
+table of unmatched topic responses
 default-talker	gen-blah
 Red Bull Burdell	"'Ego? Tut!' you mumble, but it has nothing on action."
 banshee	"'I strip spirit!' it wails, then, 'Rather be breather!'"
@@ -9954,9 +9960,8 @@ beast	"It cares not for conversation, only noise."
 beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act."
 deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is touchable]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Esoteric Coteries are visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'We are grateful! You are an exceptional human! Thank you so much! [sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
-goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
 gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is touchable]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has tagged gadget] once you have the tagged gadget[end if]. Oh, about the gadget: you'll learn by doing.'[stopping]"
-gy	"The men passing through seem in a hurry."
+gy	"The men passing through seem too in a hurry to talk, but you doubt they know much."
 line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
 nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to [b]ASK NERDS[r] like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.[or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of [first custom style]SKASDREN[r] for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]" [bold-ok]
@@ -9970,21 +9975,13 @@ woeful pat	"[pat-blather]"
 wolves	"Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now is a time for violence and gore. You have the equipment."
 yourself	"'Self, what should I do now?' 'Self, don't start talking in the third person.' 'Self will make a point of it, self.'"
 
-table of default-sub-blather
-him-who	him-say
+table of unmatched thing responses
+asked-person	npc-text
 deadbeat	"He mumbles 'Mt. Rose Rots Me Moster' and giggles stupidly. You probably won't learn much from him except about instruments of subversion."
 faeries	"They possess wisdom humans never will, but they don't much want to help you with the physical realm, beyond flowers."
 gateman	"'Can't say anything about that. You'll have to find out for yourself later.'"
 nerds	"The nerds look at each other, wondering why you would ask about that, really. They are sure you have something important to ask them. Maybe somewhere you can't get to or through. They could figure it out if in your shoes.[paragraph break]Hmm. Apparently, when you [b]ASK NERDS[r], you need to come correct[one of]. All the same, you're a bit annoyed, and you wonder if you can maybe play a mean trick on them to get that tulip, instead[or][cycling]."
-yourself	"You're an interesting subject and all, but [if location of player is subsite]nobody else wants to bother[else]there's stuff to be done, and stuff[end if]."
-
-before objasking nerds about:
-	if player has tulip:
-		say "They don't want to be bugged any more. And, really, you don't want to bug them. You have what you wanted.";
-
-before asking nerds about:
-	if player has tulip:
-		say "They don't want to be bugged any more. You have what you wanted.";
+yourself	"You start a small mental conversation to take stock of your surroundings and what you might like to do."
 
 to say riot-trio-blather: say "You're not going to reason with them. Maybe reason about them, though.[no line break]"
 
@@ -10004,11 +10001,11 @@ Check talking to (this is the can only talk to talkables rule):
 	say "You ask about any old thing ([b]ASK X ABOUT Y[r] is the preferred syntax...)[paragraph break]";
 	try asking noun about "small talk" instead;
 
-table of general-blather
-him-who	topic	him-say
+table of matched topic responses
+asked-person	topic	npc-text
 gateman	"next guy"	"'Optimistic, aren't we?'"
 gateman	"gato"	"[goat-toga]"
-gateman	"sean/sane" or "sane sean"	"The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble."
+gateman	"sane/sean" or "sane sean"	"The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble."
 gateman	"general advice" or "advice" or "general"	"'Well, you figured a few things out. Probably want to focus more on changing stuff than weird actions. One thing, though. The things you need to change? Nothing too complex. Nothing over eight letters. Okay, maybe one two-word thing with nine. Red Bull Burdell often babbled about getting eighteen intelligence and wisdom from all that leveling up, but he never got a decent vocabulary. The philistine. Also, there will be clues--clues that seem all wrong, deliberately wrong, but their wrongness will stand out and help you.'[roo]"
 gateman	"scold/clods"	"'Like I said, no time for that. Time to fix things!'"
 gateman	"xyzzy"	"'Fool! That magic word has no place alongside your magic abilities.'"
@@ -10019,15 +10016,11 @@ gateman	"terry"	"'He's reliable.'"
 gateman	"lupine/lineup" or "lupine lineup"	"'Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary.'"
 gateman	"noble" or "ol' ben" or "noble ol' ben" or "ben"	"'He used to be fair and just. But he saw Red Bull Burdell [']leveling up,['] whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol['] Ben.'"
 gateman	"quest" or "purpose/goal" or "my purpose/goal"	"[one of]'Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol['] Ben: gone. Lorn. No longer.'[paragraph break]'And I think I know who's behind it: RED BULL BURDELL!'[or]He mentions 'Noise is one, lupine lineup, Noble Ol['] Ben gone, lorn, no longer.' Then he motions to the gateway. 'You'll see when you get there, I think.'[stopping]"
-gateman	"doll house/attic/attics/static/house"	"'Just something to get your feet wet, fiddling with the devices and such. Won't help with a quest[if attics are off-stage]. Though it's not the doll house but what's coming from it[else]. Good job with it, yes[end if].'"
 gateman	"certify" or "certifying"	"'Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong.'[prcer]"
 gateman	"rectify" or "rectifying"	"'Gives you the first and last letters of what something should be.'[prrec]"
-peasant	"hay"	"'I can't use it. But I could use some straw.'"
 woeful pat	"beat/rhythm/meter"	"[anapest-clue][run paragraph on]"
 woeful pat	"st paean" or "paean"	"'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier][end if].'"
 deadbeat	"slorntco"	"'Organized capital is so repressive, dude.'"
-faeries	"gardenia"	"[if player has gardenia]'Yes! We like that! Give it!'[else if gardenia is moot]'Yes! Thank you!'[else]'We need something for our garden-and-a-third!'[end if]"
-faeries	"heaths/begonias/heath/begonia"	"[he-be]"
 nerds	"darkness"	"[nerd-dark]"
 nerds	"dorks"	"They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help."
 nerds	"karkdoss"	"They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks."

@@ -431,6 +431,15 @@ You see yourself putting something on your face and then walking through Corses 
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) for a few seconds.
 
+@ask
+#ttc-table-of-unmatched-topic-responses-line-of-no-life
+>ask line of no life about anything
+You could never get everyone's attention at once.
+\\
+#ttc-table-of-unmatched-topic-responses-gy
+>ask man about anything
+The men passing through seem too in a hurry to talk, but you doubt they know much.
+
 @scan
 #gadget test: slit to silt
 >rc slit
@@ -1105,6 +1114,14 @@ You'd need exact spelling to turn the liches into salamanders. But really, you c
 >cleish
 You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.
 
+@ask
+#ttc-table-of-unmatched-topic-responses-liches
+>ask liches about aabbcc
+They are too busy moaning to each other.
+\\
+>ask liches about coffers
+They are too busy moaning to each other.
+
 >chisel
 Your score has just gone up by one point.
 }}SCORE++
@@ -1123,6 +1140,14 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RGRRRGR.
 DEBUG INFO: Rect-text: H-----N.
 DEBUG INFO: Cert-text: -A---E-.
+
+@ask
+#ttc-table-of-unmatched-topic-responses-banshee
+>ask banshee about aabbcc
+"I strip spirit!" it wails, then, "Rather be breather!"
+\\
+>ask banshee about coffers
+"I strip spirit!" it wails, then, "Rather be breather!"
 
 @!min
 >hasbeen
@@ -1724,6 +1749,11 @@ They'd be much less dangerous left in a pile. Maybe you have something that can 
 !====Forest:
 !--the slit on Corses Crosse could've been turned to SILT.
 !--the banshee could've become a HASBEEN (space or not).
+
+@ask
+#ttc-table-of-unmatched-topic-responses-wolves
+>ask wolves about abcdef
+Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now is a time for violence and gore. You have the equipment.
 
 >shoot wolves
 #notana

@@ -218,6 +218,15 @@ If you get to the end, you'll notice two rather forced ones. They both anagram o
 A door. (-)
 A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
 
+@ask
+#ttc-table-of-unmatched-topic-responses-yourself
+>ask me about abcd
+If only learning were so easy.
+\\
+#ttc-table-of-unmatched-thing-responses-yourself
+>ask me about me
+You start a small mental conversation to take stock of your surroundings and what you might like to do.
+
 @pad
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
@@ -808,6 +817,8 @@ You currently have {MAX} out of {MAX} total points for the Ordeal Loader region.
 @ask
 >get phial
 !Taken
+\\
+#ttc-table-of-matched-thing-responses-gateman-blue-lube
 >ask gateman about blue lube
 "Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 "If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
@@ -905,142 +916,189 @@ You're the good guy, here. You don't need to steal.
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 
 @ask
+#ttc-table-of-unmatched-thing-responses-gateman
+>ask gateman about sofa
+You'd know more about that than he would.
+\\
+#ttc-table-of-matched-topic-responses-gateman-xyzzy
 >ask gateman about xyzzy
 "Fool! That magic word has no place alongside your magic abilities."
 \\
+#ttc-table-of-matched-topic-responses-gateman-next-guy
 >ask gateman about next guy
 "Optimistic, aren't we?"
 \\
+#ttc-table-of-matched-topic-responses-gateman-sane-sean
 >ask gateman about sane sean
 The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble.
 \\
+#ttc-table-of-matched-topic-responses-gateman-general-advice
 >ask gateman about advice
 "Well, you figured a few things out. Probably want to focus more on changing stuff than weird actions. One thing, though. The things you need to change? Nothing too complex. Nothing over eight letters. Okay, maybe one two-word thing with nine. Red Bull Burdell often babbled about getting eighteen intelligence and wisdom from all that leveling up, but he never got a decent vocabulary. The philistine. Also, there will be clues--clues that seem all wrong, deliberately wrong, but their wrongness will stand out and help you."
 \\
+#ttc-table-of-matched-topic-responses-gateman-scold-clods
 >ask gateman about clods
-Like I said, no time for that. Time to fix things!"
+"Like I said, no time for that. Time to fix things!"
 \\
+#ttc-table-of-matched-topic-responses-gateman-world
 >ask gateman about world
 "Well, it wasn't a very SPECIAL world. In fact it was one of those hero mills. I remember more hills than anything else. Figure it had to break down for the next guy to save it."
 \\
+#ttc-table-of-matched-topic-responses-gateman-yorpwald
 >ask gateman about yorpwald
 "It's been shuffled, nearly f-flushed! You can rescue it from physical, economic and moral malaise. You will need to travel through Old Warpy to get there. The stuff in the cabinet should help. Ask me about it. I'm a hero emeritus, and stuff."
 \\
+#ttc-table-of-matched-topic-responses-gateman-old-warpy
 >ask gateman about old warpy
 "Once you step in, it'll take you somewhere far away. But it's perfectly harmless and not too bumpy. Like beyond that gateway getaway. Terry's in there, too, and he flips the switch so you can RETRY if you get stuck somewhere."
 \\
+#ttc-table-of-matched-topic-responses-gateman-terry
 >ask gateman about terry
 "He's reliable."
 \\
+#ttc-table-of-matched-topic-responses-gateman-lupine-lineup
 >ask gateman about lupine lineup
 Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary."
 \\
+#ttc-table-of-matched-topic-responses-gateman-noble
 >ask gateman about noble
 #APOSTROPHE-OK
 "He used to be fair and just. But he saw Red Bull Burdell 'leveling up,' whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol' Ben."
 \\
+#ttc-table-of-matched-topic-responses-gateman-quest
 >ask gateman about quest
 "Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol' Ben: gone. Lorn. No longer."
 "And I think I know who's behind it: RED BULL BURDELL!"
 \\
+#+ttc-table-of-matched-topic-responses-gateman-quest
 >ask gateman about quest
 He mentions "Noise is one, lupine lineup, Noble Ol' Ben gone, lorn, no longer." Then he motions to the gateway. "You'll see when you get there, I think."
 \\
+#ttc-table-of-unmatched-topic-responses-gateman
 >ask gateman about blozhko
 "Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The getaway! General advice! No time to scold clods asking about--whatever you just mumbled about."
 \\
+#+ttc-table-of-unmatched-topic-responses-gateman
 >ask gateman about blozhko
 Nat Egam pauses. "There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway. Oh, about the gadget: you'll learn by doing."
 \\
+#ttc-table-of-matched-thing-responses-gateman-redness
 >ask gateman about redness
 "Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
 #brackets ok
 [You record the information about red in your notepad.]
 \\
+#ttc-table-of-matched-thing-responses-gateman-board
 >ask gateman about board
 "Good idea to take notes on it. But I can tell you about other stuff. Like your gadget. Or even how it works."
 \\
+#ttc-table-of-matched-thing-responses-gateman-doll-house
 >ask gateman about doll house
 "You don't need to take it with or anything. Nice job with it, though."
 \\
+#ttc-table-of-matched-thing-responses-gateman-static
 >ask gateman about static
 "Good job getting rid of it."
 \\
+#ttc-table-of-matched-thing-responses-gateman-attics
 >ask gateman about attics
 "They're more appropriate to the doll house, definitely."
 \\
 >ask gateman about blue lube
 "You can just take it. The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 \\
+#ttc-table-of-matched-thing-responses-gateman-phail-phial
 >ask gateman about phail phial
 "Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
 \\
+#ttc-table-of-matched-thing-responses-gateman-prep-paper
 >ask gateman about prep paper
 "No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start."
 \\
+#ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
+#+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned..." His eyes grow mistened. "Ten dimes say it's end times. We've waited for an upturn to turn up..."
+#+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "The time for talk is over."
 \\
 >scan me
 too awesome
 \\
+#ttc-table-of-matched-thing-responses-gateman-tip
 >ask gateman about tip
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 \\
+#ttc-table-of-matched-thing-responses-gateman-tin-foil-info-lit
 >ask gateman about tinfoil info lit
 "Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
 \\
+#ttc-table-of-matched-thing-responses-gateman-bud-helm
 >ask gateman about bud helm
 "Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now."
 \\
+#ttc-table-of-matched-thing-responses-gateman-raw-rori
 >ask gateman about raw rori
 "Pure strength. That won't get the job done here."
 \\
+#ttc-table-of-matched-thing-responses-gateman-pen
 >ask gateman about pen
 "How thoughtful! Nobody's asked me for my autograph for a long time! Wait, we don't have time for that nonsense."
 \\
+#ttc-table-of-matched-thing-responses-gateman-dope-tan-notepad
 >ask gateman about dope tan notepad
 "Good choice, taking notes."
 \\
+#ttc-table-of-matched-thing-responses-gateman-new-land
 >ask gateman about new land
 "I can't tell you everything about it. But you'll see for yourself."
 \\
+#ttc-table-of-matched-thing-responses-gateman-nametag
 >ask gateman about nametag
 "Oh, did you have problems with it? Sorry. I'd have helped, but I was--I mean, I wasn't at all." He rolls his eyes.
 \\
->ask gateman about yourself
+#ttc-table-of-matched-thing-responses-gateman-yourself
+>ask gateman about me
 "We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!"
 \\
+#ttc-table-of-matched-thing-responses-gateman-gateman
 >ask gateman about gateman
 "Once I solved one of those hero mills with more hills..." he blinks. "I'm not important. You are. And what you can do."
 \\
+#ttc-table-of-matched-thing-responses-gateman-arrow
 >ask gateman about arrow
 "That's just to show SECURE/RECUSE is linked to whether you can change between RECTIFY and CERTIFY."
 \\
+#ttc-table-of-matched-thing-responses-gateman-knot
 >ask gateman about knot
 "It's good and tight. Case it gets joggled while you adventure. If the gadget isn't tagged, it loses its magic because, well..."
 \\
+#ttc-table-of-matched-thing-responses-gateman-examples
 >ask gateman about examples
 "Hm, LEMON and MELON have three letters in common, and they're all green. The two that switch are red. So that's not bad. PASTE and TAPES, on the other hand...the green T and red S on the left map to the first last letters on the right, and the P and E are green and red and map to the first and last letters on the left."
 \\
+#ttc-table-of-matched-thing-responses-gateman-disclaimer
 >ask gateman about disclaimer
 "Necessary legalese. But really, use the gadget as often or little as you want or need. Nobody will judge."
 \\
+#ttc-table-of-matched-thing-responses-gateman-recent-center
 >ask gateman about recent center
 "The Recent Center is a fancy name for a screen. It will light up when you scan something relevant, and that data will stay."
 \\
+#ttc-table-of-matched-thing-responses-gateman-handle
 >ask gateman about handle
 You can't imagine anything tricky about the handle, so you decide not to ask.
 \\
+#ttc-table-of-matched-thing-responses-gateman-goat
 >ask gateman about goat
 "Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
 \\
+#ttc-table-of-matched-thing-responses-gateman-toga
 >ask gateman about toga
 You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
 \\
@@ -1053,23 +1111,56 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 >ask gateman about thorn
 "Can't say anything about that. You'll have to find out for yourself later."
 \\
+#ttc-table-of-matched-thing-responses-gateman-getaway
 >ask gateman about getaway
 "It's safe. Don't worry! Get going through there!"
 \\
+#ttc-table-of-matched-thing-responses-gateman-gadget
 >ask gateman about gadget
 "Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red."
 \\
 >ask gateman about secure button
 "Could make things tougher at first, but then easier, maybe. Switch it, and you can only CERTIFY or RECTIFY, but not both. Later, though, you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so."
 \\
+#ttc-table-of-matched-thing-responses-gateman-noise-bag
 >ask gateman about noise bag
 "Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it."
 \\
+#ttc-table-of-matched-thing-responses-gateman-saltine
 >ask gateman about saltine
 "Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
 \\
+#ttc-table-of-matched-thing-responses-gateman-cabinet
 >ask gateman about cabinet
 "Everything in there's yours."
+\\
+#ttc-table-of-matched-thing-responses-gateman-reed
+>ask gateman about reed
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-gateman-deer
+>ask gateman about reed
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-gateman-pit
+>ask gateman about pit
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-gateman-s-r
+>ask gateman about secure
+WRONG
+\\
+#ttc-table-of-matched-topic-responses-gateman-certify
+>ask gateman about certify
+WRONG
+\\
+#ttc-table-of-matched-topic-responses-gateman-rectify
+>ask gateman about rectify
+WRONG
+\\
+#ttc-table-of-matched-topic-responses-gateman-gato
+>ask gateman about gato
+WRONG
 
 @min
 >misses

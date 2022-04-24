@@ -237,6 +237,11 @@ That might unleash a beast on innocent citizens. If there is one, you must face 
 Stuff you figured, but you couldn't use it right away:
 beats -> beast
 
+@ask
+#ttc-table-of-unmatched-topic-responses-beats
+>ask beats about aabbccdd
+Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act.
+
 >gardenia
 by one point
 }}SCORE++
@@ -309,33 +314,42 @@ You should probably just go north to look at the condo instead.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover for a few seconds.
 
 @ask
+#ttc-table-of-unmatched-topic-responses-deadbeat
 >ask deadbeat about blozhko
 He mumbles something about chillin' with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn, and he also complains about nerds down southish, for some reason.
 \\
+#ttc-table-of-unmatched-thing-responses-deadbeat
 >ask deadbeat about deadbeat
 He mumbles "Mt. Rose Rots Me Moster" and giggles stupidly. You probably won't learn much from him except about instruments of subversion.
 \\
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, you square, yo."
 \\
+#ttc-table-of-matched-topic-responses-deadbeat-slorntco
 >ask deadbeat about slorntco
 "Organized capital is so repressive, dude."
 \\
+#ttc-table-of-matched-thing-responses-deadbeat-nerds
 >ask deadbeat about nerds
 The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots.
 \\
+#ttc-table-of-matched-thing-responses-deadbeat-faeries
 >ask deadbeat about faeries
 The deadbeat doesn't believe in magic, now. But he did as a kid.
 \\
+#ttc-table-of-matched-thing-responses-deadbeat-red-bull-burdell
 >ask deadbeat about red bull burdell
 "He is oppressive, man, but he is just a symptom of disparity and malaise."
 \\
+#ttc-table-of-matched-thing-responses-deadbeat-poses-posse
 >ask deadbeat about poses posse
 The deadbeat starts up some nonsense pseudo-sociological mumblings.
 \\
+#ttc-table-of-matched-thing-responses-deadbeat-lost-corn
 >ask deadbeat about lost corn
 "Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?"
 \\
+#ttc-table-of-matched-thing-responses-deadbeat-termite-emitter
 >ask deadbeat about termite emitter
 "What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
 
@@ -431,6 +445,35 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 
 >e
 
+@ask
+#ttc-table-of-matched-thing-responses-faeries-gardenia
+>ask faeries about gardenia
+You don't have a gardenia, yet. But you can find or make one.
+\\
+#ttc-table-of-matched-thing-responses-faeries-tomato
+>e
+>ask faeries about tomato
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-faeries-clover
+>ask faeries about clover
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-faeries-heaths
+>ask faeries about heaths
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-faeries-merchandise
+>ask faeries about merchandise
+\\
+#ttc-table-of-matched-thing-responses-faeries-nerds
+>ask faeries about nerds
+WRONG
+\\
+#ttc-table-of-matched-thing-responses-faeries-deadbeat
+>ask faeries about deadbeat
+WRONG
+
 ####skip the camp again for detail testing. Let's get the
 >s
 >w
@@ -441,6 +484,11 @@ You see yourself giving something reddish to the night thing in the hotel before
 
 @hin
 DEBUG: Night Thing being objhinted.
+
+@ask
+#ttc-table-of-unmatched-topic-responses-night-thing
+>ask night thing about abcd
+"NYURGH! HUNGRY!" Easier to argue a grue away.
 
 @gn
 #ttc-table-of-nowheres-the-ol-hotel
@@ -639,8 +687,13 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 DEBUG: poses posse being objhinted.
 
 @ask
+#ttc-table-of-matched-thing-responses-poses-posse-dry-cake
 >ask poses posse about dry cake
 Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them.
+\\
+#ttc-table-of-unmatched-topic-responses-poses-posse
+>ask poses posse about abcd
+You get a few pinched, strained smiles, but no actual words. What would they say? "TALKERS STALKER?!"
 
 @gle
 >angle
@@ -738,6 +791,7 @@ You see yourself taking a free sample of some cloth.
 >s
 
 @ask
+#ttc-table-of-matched-thing-responses-deadbeat-beats
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, dude."
 
@@ -915,6 +969,11 @@ DEBUG INFO: Rect-text: N------G.
 DEBUG INFO: Cert-text: ------A-.
 
 @ask
+#ttc-table-of-unmatched-thing-responses-faeries
+>ask faeries about counter
+They possess wisdom humans never will, but they don't much want to help you with the physical realm, beyond flowers.
+\\
+#ttc-table-of-unmatched-topic-responses-faeries
 >ask faeries about xyzzy
 "You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim.
 !getting a sore
@@ -923,18 +982,23 @@ DEBUG INFO: Cert-text: ------A-.
 "You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
 >undo
 >undo
+#+ttc-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 >undo
+\\
+#ttc-table-of-matched-thing-responses-faeries-drainage
 >ask faeries about drainage
 "Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?"
 \\
+#ttc-table-of-matched-thing-responses-faeries-beats
 >ask faeries about beats
 "It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around."
 \\
 >take brocade
 The faeries buzz around for a bit, peeved at your boldness. "Well, maybe you will do something for us some day."
 The FREE TO FREELOADERS torn cue by the brocade vanishes as you take it. Nice magic touch, that.
+#+ttc-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 \\
@@ -1162,11 +1226,21 @@ You've transformed your flower, but you need to use your new item in the Bile Li
 The sheath remains still.
 
 @ask
+#ttc-table-of-matched-thing-responses-faeries-begonias
 >ask faeries about begonias
 The faeries have been generous enough.
 \\
+#ttc-table-of-matched-thing-responses-faeries-sheath
 >ask faeries about sheath
 "It is up to you to use it. We cannot help further."
+\\
+#ttc-table-of-matched-thing-responses-faeries-noise-bag
+>ask faeries about noise bag
+The faeries wonder aloud what sort of magic could conjure a noise bag.
+\\
+#ttc-table-of-matched-thing-responses-faeries-tulip
+>ask faeries about tulip
+WRONG
 
 >score
 @min
@@ -1178,6 +1252,7 @@ The faeries have been generous enough.
 "It is the least we can do for you! Thank you for helping us!"
 
 @ask
+#ttc-table-of-matched-thing-responses-faeries-brocade
 >ask faeries about brocade
 "Do with it what you need."
 >barcode
@@ -1308,7 +1383,12 @@ DEBUG: nerds being objhinted.
 You suddenly feel darkness, along with an urge to ask the nerds about it.
 
 @ask
->ask about xyzzy
+#ttc-table-of-unmatched-thing-responses-nerds
+>ask nerds about deadbeat
+The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
+\\
+#ttc-table-of-unmatched-topic-responses-nerds
+>ask nerds about xyzzy
 "Hm, should we even talk to an outsider about that?"
 "Well, if they found their way in, they can't be THAT dumb!"
 "Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here."
@@ -1316,52 +1396,87 @@ You suddenly feel darkness, along with an urge to ask the nerds about it.
 "GROAN! Nice Ignorance."
 They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip.
 "If they don't know what to ask nerds about, they deserve ED'S SNARK!" Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.
+\\
 >ask about xyzzy
 More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.
+\\
 >ask about xyzzy
 Laugh-tons onslaught as you haven't figured what to ask nerds.
+\\
 >ask about xyzzy
 They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.
+\\
 >ask about xyzzy
 A hundred-nerd DUH follow your latest ask-nerds attempt.
+\\
 >ask about xyzzy
 "Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!"
+\\
 >ask about xyzzy
 An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.
+\\
 >ask about xyzzy
 The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.
+\\
 >ask about xyzzy
 Apparently you haven't seen the light for what to ask nerds about. "We can wait here a thousand years!" one laughs. They debate on what's worse, dumb people in power or out.
+\\
 >ask about xyzzy
 One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.
+\\
 >ask about xyzzy
 One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.
+\\
 >ask about xyzzy
 A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.
+\\
 >ask about xyzzy
 One nerd jokingly refers you to DR. KASSEN.
+\\
 >ask about xyzzy
 "'K, Ren's sad," one nerd remarks, red-faced.
+\\
 >ask about xyzzy
 One nerd dumps out his shoe. "Erks! Sand!" He looks red-faced at such a public display.
+\\
 >ask about xyzzy
 Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.
+\\
+#ttc-table-of-matched-topic-responses-nerds-dorks
 >ask nerds about dorks
 They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help.
+\\
+#ttc-table-of-matched-topic-responses-nerds-karkdoss
 >ask nerds about karkdoss
 They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks.
+\\
+#ttc-table-of-matched-thing-responses-nerds-beats
 >ask nerds about beats
 "Anyone can be smart enough to build noise canceling homes to get rid of the beats!"
+\\
+#ttc-table-of-matched-thing-responses-nerds-controls
 >ask nerds about controls
 "Oh! These are simple controls! You don't even need to know about induction and charges and anything. Just slap them in where there's something missing. Pf, barely worth the time to ASK NERDS about."
+\\
+#ttc-table-of-matched-thing-responses-nerds-deadbeat
 >ask nerds about deadbeat
 The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
+\\
+#ttc-table-of-matched-thing-responses-nerds-faeries
 >ask nerds about faeries
 The nerds assure you science is better than magic.
+\\
+#ttc-table-of-matched-thing-responses-nerds-red-bull-burdell
 >ask nerds about red bull burdell
 "Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to ASK NERDS the right thing to help dethrone him!"
+\\
+#ttc-table-of-matched-thing-responses-nerds-tracks
 >ask nerds about tracks
 "We wouldn't touch it, that's for sure. I mean, even if we could see where it went."
+\\
+#ttc-table-of-matched-thing-responses-nerds-tulip
+>ask nerds about tracks
+"We've got plenty of light here. You can have it, if you know what to ask us about. And if the tulip would help."
 
 @gn
 #ttc-table-of-nowheres-esoteric-coteries
@@ -1510,6 +1625,9 @@ by one point
 --the other ways to get the tulip are to ASK NERDS ABOUT DARKNESS or OPEN NOISE BAG in the Esoteric Coteries after getting the begonias.
 >undo
 >undo
+
+@ask
+#ttc-table-of-matched-topic-responses-nerds-darkness
 
 >ask nerds about darkness
 #notana
@@ -1912,6 +2030,11 @@ You've changed the beats to something tangible, physically beatable.
 #renudge for aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beast.
+
+@ask
+#ttc-table-of-unmatched-topic-responses-beast
+>ask beast about abcd
+It cares not for conversation, only noise.
 
 >take sword
 

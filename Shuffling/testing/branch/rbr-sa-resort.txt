@@ -713,6 +713,11 @@ The only way you'll want to try to go is east.
 >e
 That rabble seems mad at you. You'd better disperse them first.
 
+@ask
+#ttc-table-of-unmatched-topic-responses-riot
+>ask riot about spore
+You're not going to reason with them. Maybe reason about them, though.
+
 @max
 >trio
 by one point
@@ -789,6 +794,11 @@ You see the trio, happier now, discussing art and wearing dirty smocks.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest for a few seconds.
 
+@ask
+#ttc-table-of-unmatched-topic-responses-protest
+>ask protest about abcde
+You're not going to reason with them. Maybe reason about them, though.
+
 >score
 {$SCOS}
 
@@ -852,6 +862,7 @@ DEBUG INFO: Cert-text: P--TE--.
 @ask
 >kilns
 by one point
+#ttc-table-of-matched-thing-responses-protest-kilns
 >ask protest about kilns
 "If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
 >undo
@@ -1046,6 +1057,11 @@ Finding Red Bull Burdell's weakness is your best bet for making this place less 
 @hin
 >xx toe
 You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells "GET OUT." Maybe you could pull it...no, not pull...well, there are only six possibilities...
+
+@ask
+#ttc-table-of-unmatched-topic-responses-red-bull-burdell
+>ask red bull burdell about abcdef
+"Ego? Tut!"
 
 >tug toe
 #notana

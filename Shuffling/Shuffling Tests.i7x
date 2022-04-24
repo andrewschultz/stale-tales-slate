@@ -274,26 +274,26 @@ understand "yack" as yacking.
 carry out yacking:
 	let cur-guy be poses posse;
 	let cur-line be 0;
-	repeat through the table of subject-blather:
-		if him-who entry is not visible:
-			move him-who entry to location of player;
-		say "[b]ASK [printed name of him-who entry in upper case] ABOUT[r] [person-subj entry]: [him-say entry][line break]"; [bold-ok]
-	repeat through table of default-sub-blather:
-		if him-who entry is not visible:
-			move him-who entry to location of player;
-		say "[b]ASK [printed name of him-who entry in upper case] ABOUT SOFA[r] (e.g. object in game): [him-say entry][line break]"; [bold-ok]
-	repeat through the table of default-gen-blather:
+	repeat through the table of matched thing responses:
+		if asked-person entry is not visible:
+			move asked-person entry to location of player;
+		say "[b]ASK [printed name of asked-person entry in upper case] ABOUT[r] [subject-thing entry]: [npc-text entry][line break]"; [bold-ok]
+	repeat through table of unmatched thing responses:
+		if asked-person entry is not visible:
+			move asked-person entry to location of player;
+		say "[b]ASK [printed name of asked-person entry in upper case] ABOUT SOFA[r] (e.g. object in game): [npc-text entry][line break]"; [bold-ok]
+	repeat through the table of unmatched topic responses:
 		if default-talker entry is not visible:
 			move default-talker entry to location of player;
-			say "[b]ASK [printed name of him-who entry in upper case] ABOUT MUMBLETY-PEG[r] (e.g. object not in game): [gen-blah entry][line break]"; [bold-ok]
-	repeat through the table of general-blather:
-		if him-who entry is not visible:
-			move him-who entry to location of player;
-		if him-who entry is not cur-guy:
-			now cur-guy is him-who entry;
+			say "[b]ASK [printed name of asked-person entry in upper case] ABOUT MUMBLETY-PEG[r] (e.g. object not in game): [gen-blah entry][line break]"; [bold-ok]
+	repeat through the table of matched topic responses:
+		if asked-person entry is not visible:
+			move asked-person entry to location of player;
+		if asked-person entry is not cur-guy:
+			now cur-guy is asked-person entry;
 			now cur-line is 0;
 		increment cur-line;
-		say "[b]ASK [him-who entry] ABOUT[r] (topic [cur-line]): [him-say entry][line break]"; [bold-ok]
+		say "[b]ASK [asked-person entry] ABOUT[r] (topic [cur-line]): [npc-text entry][line break]"; [bold-ok]
 	the rule succeeds;
 
 chapter unsolve
@@ -508,10 +508,10 @@ understand "babble" as babbleing.
 
 carry out babbleing: [Any way to pull out the topic?]
 	let X be indexed text;
-	repeat through table of general-blather:
-		say "============[location of him-who entry]: [him-who entry].";
-		move player to location of him-who entry, without printing a room description;
-		try asking him-who entry about topic entry;
+	repeat through table of matched topic responses:
+		say "============[location of asked-person entry]: [asked-person entry].";
+		move player to location of asked-person entry, without printing a room description;
+		try asking asked-person entry about topic entry;
 	the rule succeeds;
 
 chapter mooting
