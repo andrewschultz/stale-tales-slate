@@ -468,6 +468,9 @@ Your score has just gone up by one point.
 >score
 You have 38 of 45 total points for the post-Elvira Others region, though you only need 40 to win.
 
+>gx nectarine
+You've already changed the nectarine. The aftertaste of arugula finally dissipates.
+
 >w
 
 >d

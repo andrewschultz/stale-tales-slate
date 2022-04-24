@@ -18748,9 +18748,9 @@ t-sincerely is a pickup-line. pod-num is 5. pod-ord is 2. a-text of t-sincerely 
 
 t-sobbingly is a pickup-line. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]O[sp]B[sp]B[sp]I[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s continuing their lobbyings, far too cheery and confident.". pickup-description is "making lobbyings".
 
-t-tediously is a pickup-line. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]Y". player-move is "Each [pla-ma] discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". pickup-description is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
+t-tediously is a pickup-line. pod-num is 5. pod-ord is 4. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]Y". player-move is "Each [pla-ma] discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". pickup-description is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
 
-t-wearingly is a pickup-line. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s begin lawyering about why she should probably choose ONE of them. You see red, a bit.". pickup-description is "lawyering".
+t-wearingly is a pickup-line. pod-num is 5. pod-ord is 5. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s begin lawyering about why she should probably choose ONE of them. You see red, a bit.". pickup-description is "lawyering".
 
 section 10-11 letters - pod 6
 
@@ -19779,7 +19779,8 @@ carry out guruing:
 	repeat through table of others anagrams:
 		if noun is the-from entry:
 			if noun is reflexed:
-				say "You've already changed [the noun]. ";
+				say "You've already changed [the noun].";
+				the rule succeeds;
 			else if noun is moss cap:
 				say "Whoah! You suddenly see a [b]COMPASS[r] spinning around. ";
 			else if noun is coins:
@@ -22599,7 +22600,7 @@ this is the oyster-misses rule:
 	if lever is not reflexed, say "[2drm of tenfold]you could've stopped to [b]REVEL[r] before flipping the [b]LEVER[r].";
 	check-oyster-spill plasm lamps;
 	if Plasm Lamps is visited and bogus-psalm are not reflexed, say "[2drm of plasm lamps]you could've tried to [b]PSALM[r] in Plasm Lamps.";
-	if bogus-reangle is reflexive, say "[2da]you could've tried to [b]REANGLE[r] with the general gleaner.";
+	if bogus-reangle is reflexive, say "[2da]you could've tried to [b]REANGLE[r] the general gleaner before giving it to the papery yapper.";
 
 to check-oyster-spill (rm - a room):
 	if spill-loc is rm, say "[2drm of rm][endgame-spill-instead] in [rm].";

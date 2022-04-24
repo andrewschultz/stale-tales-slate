@@ -1762,6 +1762,10 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
+@spoi
+>gx nectarine
+You've already changed the nectarine. The aftertaste of arugula finally dissipates.
+
 @nud
 #ttc-table-of-others-done-rejects-olives
 >olives

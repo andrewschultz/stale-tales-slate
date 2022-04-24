@@ -1090,6 +1090,7 @@ carry out seeding: [100 = ordering players, 200 = skip trefoil, 400 = skip Disow
 			now mbb is Marble Blamer Balmer;
 		else:
 			now mbb is Marble Blamer Mr Beal;
+		say "[mbb] will be in [capsule].";
 	if seedflags <= 4:
 		if Disowned Downside is visited and gretta-score > 0: [next, seed the players' pickup lines in OTTERS]
 			say "Skipping Disowned Downside seeding because you already started wiping the players/macks out.";

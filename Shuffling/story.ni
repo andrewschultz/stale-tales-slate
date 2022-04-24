@@ -8606,7 +8606,7 @@ volume resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but it's still a prison[end if]. You also think you hear something.". roomnud of Astral Altars is table of Astral Altars nudges.
+Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "While this isn't an ugly place, it's a bit severe. Bright enough, to be sure, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but it's still a prison[end if]. You also think you hear something.". roomnud of Astral Altars is table of Astral Altars nudges.
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
@@ -10122,7 +10122,7 @@ The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better
 Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
 Elm Train Terminal	"The tracks lead down east, and the city is back north."
 Bassy Abyss	"You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
-Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE!'[or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
+Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!'[paragraph break]Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.[or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
 Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else][woodrev]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
 Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
 Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."

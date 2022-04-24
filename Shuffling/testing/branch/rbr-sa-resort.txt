@@ -133,7 +133,7 @@ DEBUG INFO: Cert-text: -----.
 @gn
 #ttc-table-of-nowheres-astral-altars
 >w
-As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "ONE LIKE YOU IS BEYOND THE FERAL FLARE!"
+As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!'[paragraph break]Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
 >w
 No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.
 
