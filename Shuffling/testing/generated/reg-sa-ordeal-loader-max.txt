@@ -162,6 +162,18 @@ Your score has just gone up by one point.
 >score
 You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
+>pf
+You have nothing else you figured in advance.
+!Stuff you figured, but you couldn't use it right away:
+!nametag -> gateman
+>bactine
+"Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
+[That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
+#ttc-table-of-preflip-clues-tenibac
+>pf
+Stuff you figured, but you couldn't use it right away:
+cabinet -> Bactine
+
 >take gadget
 As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
 Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."

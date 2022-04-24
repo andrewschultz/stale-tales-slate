@@ -38,6 +38,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >au 2
 >monty hints
 >eat saltine
+
+@max
 >xc
 
 >metros
@@ -201,11 +203,24 @@ Good try, but we're looking for a noun. With an extra A.
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage for a few seconds.
 
 @max
+# load up A Reading
+>x reading
+Sorry, I understood the verb, but I didn't understand the noun.
+>w
+>e
+A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
+\\
 #ttc-table-of-kibitzes-drainage
 >rc drainage
-The gadget beeps once. A series of lights comes across: RRRRRRRR. Uh, oh. Not really helpful at all. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage.
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB.
-Not bad, but still. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRRRRRRR (R = red, G = green).
+Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with a reading.
+\\
+#ttc-table-of-kibitzes-reading
+>rc a reading
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBBG.
+The gadget beeps once. A series of lights comes across: RRRRRRRR.
+Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with the drainage.
 
 @scan
 #gadget test: drainage to gardenia
@@ -365,7 +380,7 @@ You thought you saw a tomato whiz by "a motto," there.
 @max
 #ttc-table-of-kibitzes-motto
 >rc motto
-The gadget beeps once. A series of lights comes across: RRRRGG. Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO.
+The gadget beeps once. A series of lights comes across: RRRRGG.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
 Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO.
 

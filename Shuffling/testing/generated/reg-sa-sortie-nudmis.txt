@@ -646,12 +646,6 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >peasant
 Your score has just gone up by one point.
 
->ask peasant about straw
-"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
-
->ask peasant about woeful pat
-"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
-
 >score
 You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 

@@ -262,20 +262,32 @@ You currently have 15 out of 27 total points for the Sortie region. You have fou
 >mroo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 
+#ttc-table-of-matched-topic-responses-woeful-pat-beat-rhythm-meter
+>ask woeful pat about beat
+"I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
+
+#ttc-table-of-unmatched-topic-responses-woeful-pat
 >ask woeful pat about beat
 He holds up his hand for silence. He is too busy reciting his poem. You probably can't ask him about anything other than the poem. Or maybe its meter.
 
+#ttc-table-of-matched-topic-responses-woeful-pat-st-paean
 >ask woeful pat about paean
 "It will be my best reading yet. Even better than this. Here you go, just to make sure."
 
 >ask woeful pat about paean
 "It will be my best reading yet. Even better than this."
 
+#ttc-table-of-matched-thing-responses-woeful-pat-peasant
 >ask woeful pat about peasant
 "There is one who tries his best. But he is too...obvious."
 
+#ttc-table-of-matched-thing-responses-woeful-pat-anapest
 >ask woeful pat about anapest
 "I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
+
+#ttc-table-of-matched-thing-responses-woeful-pat-mean-old
+>ask woeful pat about mean old
+WRONG
 
 >z
 >z
@@ -305,26 +317,35 @@ Your score has just gone up by one point.
 Your gadget's not near anything, but it's registering RGGR.
 Your gadget's not near anything, but it's registering RBBG.
 
+#ttc-table-of-matched-thing-responses-peasant-mean-old
 >ask peasant about mean old
 "Used to be much nicer, I'd say!"
 
+#ttc-table-of-matched-thing-responses-peasant-poem
 >ask peasant about poem
 "I try my best at it."
 
 >ask peasant about peasant
 "I don't know much about that, that's sure. But I know from hay, being an abler baler."
 
+#ttc-table-of-matched-thing-responses-peasant-straw
 >ask peasant about straw
 "Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
 
+#ttc-table-of-matched-thing-responses-peasant-hay
 >ask peasant about hay
 "Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand..."
 
 >ask peasant about straw
 "Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
 
+#ttc-table-of-matched-thing-responses-peasant-woeful-pat
 >ask peasant about woeful pat
 "He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
+
+#ttc-table-of-unmatched-topic-responses-peasant
+>ask peasant about aabbcc
+"I don't know much about that, that's sure. But I know from hay, being an abler baler."
 
 >score
 You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

@@ -42,6 +42,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 @hin
 >monty hints
 >au 2
+
+@hin,max
 >xc
 
 >opt in
@@ -1328,15 +1330,21 @@ You see the spread fluttering as if outside an open window.
 You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 >undo
 
-@hin
+@max
 ##balance undos
-#ttc-table-of-forest-anagrams-spread
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 #ttc-table-of-preflip-clues-drapes
 >pf
 spread -> drapes
 >undo
+>undo
+
+@hin
+##balance undos
+#ttc-table-of-forest-anagrams-spread
+>xx spread
+Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 >undo
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.

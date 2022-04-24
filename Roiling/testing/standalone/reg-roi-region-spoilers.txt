@@ -416,6 +416,8 @@ by one point
 >w
 >7
 >play whistle
+#ttc-table-of-ranks-9
+Reposed Deposer
 
 >{include} _others_score_check
 
@@ -444,6 +446,18 @@ So here is a one-time general guideline on what to do in this area: you may need
 >n
 This region focuses on anagrammable fruits.
 
+>purloin passport
+>gonear gates stage
+>review
+by one point
+>research
+>by one point
+>au 0
+
+#ttc-table-of-ranks-11
+>n
+Reprieval Prevailer
+
 * warp command testing
 
 >au 2
@@ -455,8 +469,36 @@ This region focuses on anagrammable fruits.
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all.
 
+#ttc-table-of-ranks-12
 >score
 There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
+
+#+ttc-table-of-ranks-1
+#+ttc-table-of-ranks-2
+#+ttc-table-of-ranks-3
+#+ttc-table-of-ranks-4
+#+ttc-table-of-ranks-5
+#+ttc-table-of-ranks-6
+#+ttc-table-of-ranks-7
+#+ttc-table-of-ranks-8
+#+ttc-table-of-ranks-9
+#ttc-table-of-ranks-10
+#+ttc-table-of-ranks-11
+#+ttc-table-of-ranks-12
+>s
+Farce Facer
+Riled Idler
+Results Tussler
+Fierier Reifier
+Rifeness Finesser
+Lengthier Lightener
+Truculenter Unclutterer
+Unresting Insurgent
+Reposed Deposer
+Errantries Restrainer
+Reprieval Prevailer
+Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser
+
 
 >gonear dusty study
 
@@ -478,6 +520,6 @@ Enter the Throes Hoster for the final region.
 
 >in
 
+#+ttc-table-of-ranks-10
 >score
-!rank of
-
+rank of Errantries Restrainer

@@ -47,28 +47,26 @@ by one point
 >metros
 by one point
 
+>presto
+Your magic is not advanced enough to change Store P! Well, not this game!
 #ttc-table-of-preflip-clues-store-p
 >pf
 Store P -> PRESTO in A Roiling Original
-#mistake test for routes
 >routes
 Hm, that seems right, but it doesn't work this game!
 #ttc-table-of-preflip-clues-store-u
 >pf
 Store U -> ROUTES in A Roiling Original
-#mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
 #ttc-table-of-preflip-clues-store-v
 >pf
 Store V -> TROVES in A Roiling Original
-#mistake test for towers
 >towers
 That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
 #ttc-table-of-preflip-clues-store-w
 >pf
 Store W -> TOWERS in A Roiling Original
-#mistake test for oyster
 >oyster
 Nice try, but that's next game!
 #ttc-table-of-preflip-clues-store-y

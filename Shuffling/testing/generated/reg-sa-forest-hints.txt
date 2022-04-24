@@ -329,13 +329,17 @@ You see the spread fluttering as if outside an open window.
 You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 >undo
 
-#ttc-table-of-forest-anagrams-spread
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 #ttc-table-of-preflip-clues-drapes
 >pf
 spread -> drapes
 >undo
+>undo
+
+#ttc-table-of-forest-anagrams-spread
+>xx spread
+Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 >undo
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.

@@ -42,10 +42,11 @@ You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing no
 You reopen and peer on. You see a grist and a cake pan inside.
 
 #ttc-table-of-kibitzes-tall-trio
+# note a weird case here: the colors will be displayed, since it is the first time, even though it is not strictly a kibitz test.
 >rc tall trio
-The gadget beeps once. A series of lights comes across: GRRRRRRR. You scanned each of the tall trio, and the readout didn't change.
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+The gadget beeps once. A series of lights comes across: GRRRRRRR (R = red, G = green).
 You scanned each of the tall trio, and the readout didn't change.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB (R = red, G = green, B = blue).
 
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
@@ -187,12 +188,6 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 
 >peasant
 Your score has just gone up by one point.
-
->ask peasant about straw
-"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
-
->ask peasant about woeful pat
-"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
 
 >score
 You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

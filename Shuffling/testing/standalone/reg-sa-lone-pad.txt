@@ -16,8 +16,44 @@ You haven't solved any regions yet.
 
 [NOTE: You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.]
 
+>take writing
+
+#ttc-table-of-notepad-entries-writing
+>pad writing
+There's a lot of writing in Shuffling Around. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand.
+
+#ttc-table-of-notepad-entries-verbs
+>pad verbs
+--X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
+--The four directions, north, south, east and west.
+--PAD to see a list of topics. Then PAD VERBS, for example.
+--VERB/VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.
+
+#ttc-table-of-notepad-entries-talking
+>pad talking
+ASK for other people, or just say the word/s otherwise. Specific topics or in-game things are suggested, but default dialogues may give hints.
+
+#ttc-table-of-notepad-entries-notepad
+>pad notepad
+You keep the date you started using your notebooks on the inner front cover. This one's from three years ago.
+
+#ttc-table-of-notepad-entries-poss
 >pad poss
 POSS toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points.
+
+#ttc-table-of-notepad-entries-lecture
+>pad lecture
+An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.
+
+But hey, at least lunch was nice.
+
+#ttc-table-of-notepad-entries-access
+>pad access
+ACCESS toggles screen reader accessibility.
+
+#ttc-table-of-notepad-entries-options
+>pad options
+ACCESS toggles screen reader accessibility.
 
 >in
 
@@ -26,12 +62,21 @@ POSS toggles if you see the possible minimum and maximum scores on solving a reg
 >bugle
 >play bugle
 
+>gateman
+
+#ttc-table-of-notepad-entries-flips
+>pad flips
+Stuff you figured, but you couldn't use it right away:
+nametag -> gateman
+
 >in
 >slander
 >goat
 >in
 
 >x board
+
+#ttc-table-of-notepad-entries-board
 >pad board
 It's got notes on needing two simple 7-letter portmanteaux, which you need to figure out. The nametag seems to change to someone who can help you with whatever the gateway should become
 
@@ -46,6 +91,8 @@ RETRY gets Terry to send you to the Trips Strip, wherever that is.
 
 >ask gateman about advice
 [You record the information about advice in your notepad.]
+
+#ttc-table-of-notepad-entries-advice
 >pad advice
 --Nothing over eight words. Maybe one two-word deal.
 --Red Bull Burdell is much bigger and stronger than you. Traditional fighting won't work.
@@ -66,6 +113,7 @@ RETRY gets Terry to send you to the Trips Strip, wherever that is.
 "Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong."
 [You record the information about certify in your notepad.]
 
+#ttc-table-of-notepad-entries-certify
 >pad certify
 1 beep = 1 word, buzz = already changed, silence = nothing.
 red/green = right/wrong letters.
@@ -76,6 +124,7 @@ red/green = right/wrong letters.
 "Gives you the first and last letters of what something should be."
 [You record the information about rectify in your notepad.]
 
+#ttc-table-of-notepad-entries-rectify
 >pad rectify
 green dot = 1st letter. Red dot = last letter. Blue = the rest.
 >undo
@@ -87,6 +136,7 @@ green dot = 1st letter. Red dot = last letter. Blue = the rest.
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
 [You record the information about red in your notepad.]
 
+#ttc-table-of-notepad-entries-red
 >pad redness
 Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?
 
@@ -95,6 +145,7 @@ Any words that are red, or make you see red, or make people turn red, are all wr
 
 [You record the information about xx in your notepad.]
 
+#ttc-table-of-notepad-entries-xx
 >pad xx
 You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it.
 
@@ -120,8 +171,11 @@ The gadget beeps once. A series of lights comes across: RGRRRR.
 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB (R = red, G = green, B = blue).
 
+#+ttc-table-of-notepad-entries-rectify
 >pad rectify
 You haven't written anything about that. Currently you can consult the notepad about:
+
+#+ttc-table-of-notepad-entries-certify
 >pad certify
 You haven't written anything about that. Currently you can consult the notepad about:
 
@@ -165,14 +219,12 @@ RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the
 
 >access
 
->pad certify
->pad rectify
-
 >ask gateman about goat
 "Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
 
 [You record the information about the goat in your notepad.]
 
+#ttc-table-of-notepad-entries-the-goat
 >pad goat
 Certify = RGRR and Rectify = RBGB.
 
@@ -200,18 +252,22 @@ You need to READ or EXAMINE something instead of the WRITING on it.
 >pad burdell
 The guy I need to beat. Probably not with strength or anything like that.
 
+#ttc-table-of-notepad-entries-red-bull-burdell
 >pad red bull burdell
 The guy I need to beat. Probably not with strength or anything like that.
 
 >ask gateman about phail phial
 "Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
 
+#ttc-table-of-notepad-entries-lube
 >pad lube
 Worth looking into. Though you probably just want to ANGLE and GLEAN.
 
+#ttc-table-of-notepad-entries-angle
 >pad angle
 Lets you see what can be changed.
 
+#ttc-table-of-notepad-entries-glean
 >pad glean
 Lets you glimpse what you need to do.
 
@@ -221,22 +277,28 @@ Lets you glimpse what you need to do.
 They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only Store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them.
 [You record the information about stores in your notepad.]
 
+#ttc-table-of-notepad-entries-stores
 >pad stores
 --Store F
 --Store I
 --Store M
 --Store R
 
+#ttc-table-of-notepad-entries-retry
 >pad retry
 RETRY gets Terry to send you back to the Trips Strip.
 
+#ttc-table-of-notepad-entries-secure
 >pad secure
 Having SECURE activated will make the gadget less useful on any one puzzle but will let you skip a chunk of your quest later. SECURE will be locked once you visit certain places. The button will flash when you need to choose.
 
+#ttc-table-of-notepad-entries-recuse
 >pad recuse
 If you secured, RECUSE will come in handy once you've solved two quests, to skip a third.
 
 >son
+
+#ttc-table-of-notepad-entries-spaces
 >pad spaces
 SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off.
 
@@ -262,6 +324,7 @@ A shady figure sidles up to you. "Hey! Pal! The name's Marcos. Sellin' macros. W
 >rectify f
 >certify f
 
+#ttc-table-of-notepad-entries-macros
 >pad macros
 CR/RC (something) = C (something) + R(something).
 
@@ -271,6 +334,7 @@ CR/RC (something) = C (something) + R(something).
 You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 [You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 
+#ttc-table-of-notepad-entries-to-do
 >pad to-do
 What's on tap right now: Store R, Store M, Store I, Store F and Store B.
 
@@ -290,6 +354,7 @@ ANGLE=AN to see changeable items, GLEAN=GL to see the story ahead.
 >moters
 [NOTE: You can toggle detailed nudges when you're on the right track with OPT IN (to get them) and NO TIP (to hide them,) though they may give more hints than you want. You will always get this generic message, at least, in any case.]
 
+#ttc-table-of-notepad-entries-opt-in-no-tip
 >pad opt in
 OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram.
 
@@ -298,8 +363,19 @@ OPT IN gives you more detail when you are on the right track. NO TIP gives you l
 >n
 [Note: the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.]
 
+
+#ttc-table-of-notepad-entries-random-dialogue
 >pad hush
 UHHS turns on random dialogue, HUSH turns it off.
 >pad uhhs
 UHHS turns on random dialogue, HUSH turns it off.
 
+>gonear fridge
+
+>x fridge
+
+#ttc-table-of-notepad-entries-warts
+>pad warts
+"No, too stupid a fad. I put soot on warts." But what's too stupid?
+>straw
+This puzzle's crossed out. You feel good about that.

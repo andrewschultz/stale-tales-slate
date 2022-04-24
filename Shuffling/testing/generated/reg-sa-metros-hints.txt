@@ -15,7 +15,6 @@
 >au 2
 >monty hints
 >eat saltine
->xc
 
 >metros
 Your score has just gone up by one point

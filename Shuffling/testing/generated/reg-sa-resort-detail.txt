@@ -145,6 +145,10 @@ You currently have 9 out of 15 total points for the Resort region. Your minimum 
 
 Potshot Hotspot
 
+#ttc-table-of-unmatched-topic-responses-riot
+>ask riot about spore
+You're not going to reason with them. Maybe reason about them, though.
+
 #gadget test: riot to trio
 >rc riot
 You get to scanning, twiddling from certify to rectify and back.
@@ -155,6 +159,10 @@ DEBUG INFO: Cert-text: ----.
 
 >trio
 Your score has just gone up by one point.
+
+#ttc-table-of-unmatched-topic-responses-protest
+>ask protest about abcde
+You're not going to reason with them. Maybe reason about them, though.
 
 >score
 You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
@@ -169,6 +177,7 @@ DEBUG INFO: Cert-text: P--TE--.
 
 >kilns
 by one point
+#ttc-table-of-matched-thing-responses-protest-kilns
 >ask protest about kilns
 "If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
 >undo
@@ -203,6 +212,10 @@ You currently have 13 out of 15 total points for the Resort region. You have fou
 
 >get out
 !Your score has just
+
+#ttc-table-of-unmatched-topic-responses-red-bull-burdell
+>ask red bull burdell about abcdef
+"Ego? Tut!"
 
 >tug toe
 #notana

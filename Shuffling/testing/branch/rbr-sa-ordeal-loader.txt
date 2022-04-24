@@ -759,7 +759,7 @@ You currently have {MAX} out of {MAX} total points for the Ordeal Loader region.
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.
 
-@pad
+@max
 >pf
 You have nothing else you figured in advance.
 !Stuff you figured, but you couldn't use it right away:

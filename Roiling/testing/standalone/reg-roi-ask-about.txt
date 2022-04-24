@@ -228,7 +228,7 @@ Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about life
 "Life is, like, the time of your life!"
 
-#ttc-table-of-npc-and-topic-pairs-nestor-father-or-his-father
+#ttc-table-of-npc-and-topic-pairs-nestor-father
 >ask nestor about father
 You have a whole big land to save. Don't waste time shaming recreational drug users.
 
@@ -252,7 +252,7 @@ Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets la
 >ask basher about basher
 "I'm nothing without Max Peel's help." This continues for a minute, after which you sort of wish the Rehabs Basher WOULD be, or say, nothing. How tedious.
 
-#ttc-table-of-npc-and-topic-pairs-rehabs-basher-vitamins/nativism-or-nativism-vitamins
+#ttc-table-of-npc-and-topic-pairs-rehabs-basher-vitamins-nativism
 >ask basher about vitamins
 "Nice an' crunchy. Taste good too."
 
@@ -348,11 +348,11 @@ Your score has just gone up by one point
 >ask pat about yorpwald
 That might suck you into a boring discussion about politics. Or, worse, an exciting one.
 
-#ttc-table-of-topic-catchalls-nat-egam-or-nat/egam-or-tan-mage-or-tan/mage
+#ttc-table-of-topic-catchalls-nat-egam
 >ask pat about nat egam
 "Nat Egam, the gateman, is from Shuffling Around.
 
-#ttc-table-of-topic-catchalls-old-warpy-or-old/warpy
+#ttc-table-of-topic-catchalls-old-warpy
 >ask pat about old warpy
 Nobody comes close to understanding Old Warpy. It gets you where you want to go.
 

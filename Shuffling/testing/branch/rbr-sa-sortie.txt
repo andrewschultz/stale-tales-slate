@@ -293,10 +293,11 @@ No, you don't want to go back there.
 
 @max
 #ttc-table-of-kibitzes-tall-trio
+# note a weird case here: the colors will be displayed, since it is the first time, even though it is not strictly a kibitz test.
 >rc tall trio
-The gadget beeps once. A series of lights comes across: GRRRRRRR. You scanned each of the tall trio, and the readout didn't change.
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+The gadget beeps once. A series of lights comes across: GRRRRRRR (R = red, G = green).
 You scanned each of the tall trio, and the readout didn't change.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB (R = red, G = green, B = blue).
 
 @scan
 #gadget test: tall trio to tortilla
