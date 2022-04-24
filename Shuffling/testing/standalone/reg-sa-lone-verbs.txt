@@ -5,7 +5,7 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* intro-verbiage
+* _intro-verbiage
 
 >au 2
 
@@ -77,15 +77,11 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?
 Well, maybe it would not.
 
-You repress a four-letter word. Well, if things are that simple, it's probably a nicer four-letter word.
-
 You imagine a swordsman changing to sandworms, and back.
 
 >x breeze
 The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?
 Well, maybe it would not.
-
-You repress a four-letter word. Well, if things are that simple, it's probably a nicer four-letter word.
 
 You confuse latitude and altitude for a second. Odd.
 
@@ -111,34 +107,24 @@ I couldn't find anything like that to hint.
 It's brass, you guess, and it probably can't be too hard to play.
 
 >x doorway
-It's got a big musical chord painted on the front above where the bulge was. It's covered by a blot, too. You have no clue where the door could lead now you've opened it.
+It has OR DO written on it, with musical chords interspersed above where the bulge was. It's covered by a blot, too. You have no clue where the door could lead now you've opened it. You found both ways to deal with it, and you have nothing to do other than ENTER it.
 
 >blow pad
-It really only makes sense to BLOW an instrument. Well, CLEAN sense.
+BLOW only functions as a synonym for PLAY, as in playing an instrument, in Shuffling Around.
 >blow bugle
- The note from the bugle causes the door to swing back and forth, just as when you got rid of the bolt.
- >play pad
+The note from the bugle causes the door to swing back and forth, just as when you got rid of the bolt.
+>play pad
 That's not an instrument you can play.
 
 >play bugle
 Nothing further happens.
-
->x doorway
-It's really just the outline of a doorway now. You can just enter it.
 
 >in
 >x toga
 On it you see a four-legged animal with a sort of beard and horns. It's not very clear, but there are only so many possibilities--and if you read the toga, maybe you can see what's written on it.
 
 >read toga
-It's a dingy grey and says "You GOT A believe!" You'd expect that sort of excruciating grammar on a sports team's t-shirt, but not a toga. Hmm.
-
->x thickest
-Well, they're tangled enough, you'd probably get hurt going through them.
->x thickets
-Well, they're tangled enough, you'd probably get hurt going through them.
->x thickest thickets
-Well, they're tangled enough, you'd probably get hurt going through them.
+A GOT-TA GO ... hmm, not the very best ever.
 
 >goat
 
@@ -159,22 +145,21 @@ It seems ill-tempered despite, or perhaps because of, its eclectic recent meal.
 
 >in
 
->x billboard
+>x broad board
 
 You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.
 [You record the information about retry in your notepad.]
 
-
->x gate
+>x gateway
 You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ.
 
 Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back.
 
->read gate
+>read gateway
 "E. g., man, TA!" is written in red, beneath the WARMUP/UM, WARP text. The red text is just like A TAN GEM and such on the broad board. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice.
 
 >lift gateway
-It's open. It's just unclear where it leads.
+The getaway gateway is open, so you can just ENTER it to find somewhere new.
 
 >enter gateway
 >x mega-ant
@@ -189,17 +174,24 @@ They fit perfectly on what was once the top of the house. Maybe there's no way a
 >x dollhouse
 It's much nicer and quieter now that you tacked the attics on.
 
+>eat saltine
+Maybe you should find someone who can tell you what it does, first
+>undo
+
 >gateman
 
->talk to gateman
-You engage in small talk, which peters out. Perhaps you should ASK about something, instead.
+>eat saltine
+You might want to save that. It'll help you later, with a real puzzle, if you X, err, EXAMINE double hard.
+>undo
 
+>talk to gateman
+You aren't sure what to ask, so the conversation isn't very incisive. Perhaps you should ASK about something, instead.
 "Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The getaway! General advice! No time to scold clods asking about--whatever you just mumbled about."
 
 >x man
-"Stop staring!" he booms. "You should probably get equipped. Get the gadget in the cabinet."
+His sober robes are tan, but they're not important. "Stop staring!" he booms. "You might need some aids. Get the gadget from the cabinet."
 >x gate man
-"Stop staring!" he booms. "You should probably get equipped. Get the gadget in the cabinet."
+His sober robes are tan, but they're not important. "Stop staring!" he booms. "You might need some aids. Get the gadget from the cabinet."
 
 >x fellow
 
@@ -219,18 +211,13 @@ You engage in small talk, which peters out. Perhaps you should ASK about somethi
 
 >get saltine
 
->slander me
-That's not a useful action here. I mean, slander's never REALLY useful, but yeah.
->slander gateman
-That's not a useful action here. I mean, slander's never REALLY useful, but yeah.
-
 >in
 
 >dance
 You won't get caned for that,
 
 >walkthrough
-This game's gblorb file should come packaged with an InvisiClues-style HTML file and, in older versions, a text file called walkthrough.txt. However, there is a risk that will spoil a lot you won't want, especially since the areas are compartmentalized.
+Shuffling Around's gblorb file should come packaged with Trizbort maps, an InvisiClues-style HTML file and, in older versions, a text file called walkthrough.txt. However, there is a risk that will spoil a lot you won't want, especially since the areas are compartmentalized.
 
 You can ask for hints with the HINT command--they should deal with the puzzle currently restricting you the most and may be doled out slowly to avoid spoilers.
 
@@ -251,10 +238,13 @@ Testing all 29 possibilities...just to make sure...nope.
 Testing the 119 possibilities...including duplicates...
 
 >xx store i
-Store I has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher (*). You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them.
-[NOTE: this is not a political statement on their party.]
+Store I has something written on it. Perhaps there is something behind, trying to get you out of here.
+You can X STORES to examine all the stores.
 >xx store i
-!this is not a political statement on their party
+Store I has something written on it. Perhaps there is something behind, trying to get you out of here.
+!You can X STORES to examine all the stores.
+>eat saltine
+Small one-time warning: Nat Egam could've told you what the saltine does, though you may be able to guess.
 >eat saltine
 You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them.
 >xx store i
@@ -262,10 +252,8 @@ Your vision blurs a bit, and instead you see a sortie.
 You blink, and things look a little less sharp. The saltine's done its work.
 >xx store m
 You lost your x-ray vision, so you can only just examine, instead.
+There's no window in Store M--just a detailed map of a subway.
 
-There's no window in store m--just a detailed map of a subway.
-
-You can X STORES to examine all the stores.
 
 >parse
 The game is now parsing output from the gadget.
@@ -295,7 +283,7 @@ You are now seeing extra hints when you guess the right collection of letters. N
 >opt in
 You are already seeing extra hints when you guess the right collection of letters. NO TIP will set this option off.
 >forets
-That seemed right but didn't seem quite natural.
+That seemed right but not quite natural.
 >no tip
 You are now seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
 >no tip
@@ -322,7 +310,7 @@ Hints are disabled for this session.
 
 #####################forest
 
-* _forest-verbiage
+* forest-verbiage
 
 >sr nw
 
@@ -397,16 +385,17 @@ You stare into the blue lube for a bit. You see a small story unfold.
 You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 [You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 >harken
-You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
+!You decide to keep
 >hrn
-You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 >rk
-You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 >kn
-You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 
 >c store f
 The gadget beeps once. A series of lights comes across: RRRRRR.
@@ -419,7 +408,7 @@ The gadget beeps once. A series of lights comes across: RRRRRR.
 
 >r store f
 (switching to rectify first)
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.  (R = red, G = green, B = blue).
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG (R = red, G = green, B = blue).
 
 >rec store f
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
@@ -445,7 +434,7 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 #### extra space??
 
 >x device
-It looks like a wall stud sensor, six inches by twelve, with a screen on the top. A show hows tag you can read is tied by a tight knot to the handle, which narrows where it meets the main part. The gadget crackles with greeny energy. A tip in a pit on one of its edges points to RECTIFY.
+It looks like a wall stud sensor, six inches by twelve, with a screen (labeled "RECENT CENTER" with a NetRec brand) on the top. A show hows tag you can read is tied by a tight knot to the handle, which narrows where it meets the main part. The gadget crackles with greeny energy. A tip in a pit on one of its edges points to RECTIFY.
 
 You see a blurb above a button labeled SECURE/RECUSE.
 
@@ -465,19 +454,19 @@ The RECUSE button is for after you've solved two areas, but you haven't solved a
 >forest
 
 >about
-This game, the first of two in the Stale Tales Slate, is about a certain sort of wordplay. I think you know it, now that your score is positive?
+Shuffling Around is the first of three wordplay games in the Stale Tales Slate. It was inspired by replaying Nord and Bert Couldn't Make Head or Tail of It and then wondering if there was any way to riff on it. Here's what I came up with. I suspect Jeff O'Neil thought of it, too, but it would've been impossible to stuff any meaningful story in two 140k disks.
 
 >credits
-Tester Street residents ("no on tiredness:")
+Tester Street (gofer forge?):
 
 >release
 Each version of Shuffling Around should contain release notes, but here is a brief summary:
 
 >tech
-All three of these people's efforts spilled into this game's sequel in the Stale Tales Slate, A Roiling Original. So I am doubly thankful.
+All three of these people's efforts spilled into Shuffling Around's sequel in the Stale Tales Slate, A Roiling Original. So I am doubly thankful.
 
 >sites
-PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.
+PERL and Python for letting me parse through word-to-word anagrams and also helping me break one promising word into two.
 
 >options
 You read about options in your dope tan notepad.
@@ -490,9 +479,8 @@ You read about options in your dope tan notepad.
 --X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
 
 >poss
-Switching on minimum/maximum available point notification in the status line.
+Switching on minimum/maximum available point notification in the status line. [NOTE: this is a quasi-spoiler of sorts, since watching the maximum possible score drop means your most recent move precluded getting an easter egg. Or watching the minimum score increase may mean you found one.]
 
-[Note: this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.]
 >poss
 Switching off minimum/maximum available point notification in the status line.
 >poss
@@ -542,20 +530,20 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 Self-ID Fields
 
 >x bearded man
-Too late. He's gone. But here's another.
+They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.
 
 Dude, an undead!
 
 >x bearded guy
-Too late. He's gone. But here's another.
+They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.
 >x bearded figure
-Too late. He's gone. But here's another.
+They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.
 >x man
-Too late. He's gone. But here's another.
+They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.
 >x guy
-Too late. He's gone. But here's another.
+They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.
 >x figure
-Too late. He's gone. But here's another.
+They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.
 
 >x bearded men
 They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
@@ -593,21 +581,23 @@ They're labeled "ALMOST LOST, MA" and claim to lead to the slayer layers and hel
 It's a deplorably generic fake beard. It has a couple little bits that hook, one at the center and one at the edges, but they're not in use.
 
 >w
->x chicken
+>x river ville
 >x meat
 It's ugly and frozen and stamped 100% amalgamatable.
->x cow
+>x viler
 >x meat
 It's ugly and frozen and stamped 100% amalgamatable.
 
 >x livers
-You can't use multiple objects with that verb.
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
->peel chicken
+>peel river ville
 You have nothing to peel anything with.
->pry chicken
+>pry river ville
 You have nothing to peel anything with.
->scrape chicken
+>scrape river ville
+You have nothing to peel anything with.
+>scrape viler
 You have nothing to peel anything with.
 
 >x disguise
@@ -623,7 +613,7 @@ They easily pass the smell test for being ones.
 >x 0s
 One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.
 
-There is no bubble gum in this game.
+There is no bubble gum in Shuffling Around.
 >x zeros
 One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.
 >x zeroes
@@ -647,7 +637,7 @@ They're not dark enough to prevent you seeing anything. You suspect they'd fit y
 >shotgun
 
 >hook nose to beard
-[NOTE: while this game generally maps ATTACH/TIE X TO Y to PUT X ON/IN Y, PUT ON/IN is a bit more specific and is thus recommended.]
+[NOTE: while Shuffling Around generally maps ATTACH or TIE X TO Y to PUT X ON Y or PUT X IN Y, the PUT syntax is generally recommended, since it is more specific.]
 
 The nose hooks over the beard easily and naturally.
 >hook shades to beard
@@ -679,18 +669,19 @@ Too thick and heavy to walk through.
 
 >retry
 >i
-!  a full-blown beard disguise (being worn)
+!You are also wearing a full-blown beard disguise.
 
 >enter forest
 >i
-  a full-blown beard disguise (being worn)
+You are also wearing a full-blown beard disguise.
 
 >terry
 >i
-!  a full-blown beard disguise (being worn)
+!You are also wearing a full-blown beard disguise.
+
 >enter forest
 >i
-  a full-blown beard disguise (being worn)
+You are also wearing a full-blown beard disguise.
 
 >s
 >w
@@ -706,32 +697,32 @@ Sharp.
 >x blender
 It's got a pair of sabled blades that rotate opposite to each other when activated.
 
->chisel chicken
-Cr-r-r-r-k. The chisel successfully leverages the freezer-burned chicken liver from the wall.
+>chisel river ville
+Cr-r-r-r-k. The chisel successfully leverages the freezer-burned RiverVille Liver from the wall.
 >undo
->peel chicken with chisel
-Cr-r-r-r-k. The chisel successfully leverages the freezer-burned chicken liver from the wall.
+>peel river ville with chisel
+Cr-r-r-r-k. The chisel successfully leverages the freezer-burned RiverVille Liver from the wall.
 >undo
->peel chicken with gadget
+>peel river ville with gadget
 Wrong instrument.
->pry chicken with gadget
+>pry river ville with gadget
 Wrong instrument.
->scrape chicken with gadget
+>scrape river ville with gadget
 Wrong instrument.
 
->peel chicken liver
->peel cow liver
+>peel river ville liver
+>peel viler liver
 
 >grind notepad
 The canister's for processing food, and that doesn't count.
 
->put chicken in canister
->put cow in canister
+>put river ville in canister
+>put viler in canister
 
 >x glob
-Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.
+Amalgamated well enough that you can't recognize which parts came from where. You suspect they're an upgrade from the individual livers but need to figure out how.
 >x glop
-Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.
+Amalgamated well enough that you can't recognize which parts came from where. You suspect they're an upgrade from the individual livers but need to figure out how.
 
 >e
 
@@ -845,7 +836,7 @@ You're picking something up. Probably the aroma of teas.
 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 
-* _sortie-verbiage
+* sortie-verbiage
 
 >au 2
 
@@ -854,21 +845,7 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 
 >ts
 
->x pictures
-A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
->x picture
-A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
->x prime minister
-A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
->x prime ministers
-A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
->x minister
-A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
->x ministers
-A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
-
 >sortie
-
 
 >in
 
@@ -890,7 +867,7 @@ The room seems to slow down for a bit before picking up speed and spinning as fa
 The nick is all around.
 
 >x gate
-Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read.
+Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! It's branded with red writing you could probably READ.
 
 >lift grate
 You utterly fail to move it. If it could speak, it might sarcastically say
@@ -919,12 +896,13 @@ It's empty, and you wonder what it's doing in the fridge.
 You remember seeing someone wearing it. It's got a picture of a carrot, a cucumber, an olive and several different colored onions all in a bowl. They're drumming their fingers, waiting for someone or something. You remember this t-shirt being briefly in fashion back home, wherever that is.
 
 >x man
-He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You notice some writing on his armor--do you wish to read it?
+Hmm. You could TAKE him. He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You could probably READ him for clues, like his name and so forth.
 
-Don't put me NEAR SPAM. The red all-caps seem more overdone than his thumbs-up. The spearman wobbles a bit as you look closely at the writing--you can probably pick him up.
+>read man
+MR. SANE PA
 
 >x spear man
-He's got a stupid
+Hmm. You could TAKE him.
 
 >x cat perfume
 It's yellow-gold, like most. The bottle seems to advertise a spicy scent too hot for most people's tastes.
@@ -1006,7 +984,8 @@ Not apt.
 PUSH may be the synonym you want, here.
 
 >scan
-Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Before scanning for the first time, you fumble with the gadget and note it is set to CERTIFY.
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat.
+Before scanning for the first time, you fumble with the gadget and note it is set to CERTIFY.
 
 >x anapests
 You can't help NOT paying attention to the anapest.
@@ -1017,9 +996,9 @@ You can't help NOT paying attention to the anapest.
 
 >peasant
 >trade straw
-Instead of trading, use GIVE X to Y.
+Instead of trading, use GIVE X TO Y.
 >trade
-Instead of trading, use GIVE X to Y.
+Instead of trading, use GIVE X TO Y.
 >give straw to peasant
 
 >x block
@@ -1144,21 +1123,26 @@ It's on the left, and it's labeled STEER.
 >x left button
 It's on the left, and it's labeled STEER.
 
-* _metros-verbiage
+>push steer
+>push shoot
+
+Trips Strip
+
+* metros-verbiage
 
 >ts
 >metros
 
 >x metros
-The escalator has TO THE METROS scrawled on it.
+You can't see the metros where the trade tread ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it.
 
->x escalator
-The escalator has TO THE METROS scrawled on it.
+>x trade tread
+You can't see the metros where the trade tread ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it.
 
 >enter metros
 
 >x senser
-It has a small red optical beam.
+It has a small optical beam, probably for detecting proper identification.
 
 >x thumping
 You're sure some idiot would call them funky, but you don't have time for aesthetics.
@@ -1172,21 +1156,12 @@ Eww, don't even.
 >gardenia
 
 >unlock door
-It has no visible keyholes. The only possible interface seems to be the sensor.
+It has no visible keyholes. The only possible interface seems to be the friend finder.
 
 >n
 
->x driveway
-It's immaculate compared to the rest of the city.
->x drive way
-It's immaculate compared to the rest of the city.
->x drive
-It's immaculate compared to the rest of the city.
->x way
-It's immaculate compared to the rest of the city.
-
 >x man
-He's wearing some of the hardest-trashed threads you've seen. You know he's a deadbeat because his t-shirt says DEAD BEAT DEADBEAT. Which fits in with this world, yes, but about as half-donkeyed as possible. Oh, and he has a ridiculous goatee, too.
+He's wearing designer reedings.
 
 >steal corn
 The deadbeat almost gets up. "Hey, Man, like, how do we know someone undisreputable doesn't, like, like the Man, man? Hey? Hey?" he says, with no dearth of hatred as he jerks his thumb north. He might not do anything, but his friends might pour out from their tents. You don't need a fight right now.
@@ -1194,22 +1169,9 @@ The deadbeat almost gets up. "Hey, Man, like, how do we know someone undisreputa
 Maybe you need to strike a blow against some rich people to show you belong.
 
 >w
->x gunk
-Not important. Just here for local flavor. Not very palatable flavor, but flavor nonetheless.
->x bits
-Not important.
->x gunk bits
-Not important.
->x trash
-The garbage smell would make a bear gag--stink bug, gunk bits, etc.
->x placard
-[Fourth wall note: it's not really, primarily, a placard. People seeing it probably think more, "Hey! A motto!" than "Hey! A placard!"]
 
-It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.
-
-I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable.
->x writing
-It's labeled A MOTTO
+>x easel
+Somehow clinging to the lease easel is A MOTTO.
 
 >tomato
 >x rotten
@@ -1224,11 +1186,9 @@ It's as rotten as the motto
 It's grown wrong, a gigantic hairy eyeless potato clearly not the right girth. And it's wired weird, with a cruel ulcer for a mouth. It seems more in the mood for bellowing than fighting, but it still probably doesn't belong in the hotel. It's too big to fight and too fearsome to get near. It appears to be sitting on some sort of mattress.
 
 >x mattress
-Can't do or see much with the night thing on it.
+You can't see enough of the mattress with the night thing covering it.
 >x bump
-Can't do or see much with the night thing on it.
->x something
-Can't do or see much with the night thing on it.
+On getting close to the bump you realize it's due to something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.
 
 >throw tomato
 A direct hit!
@@ -1237,7 +1197,7 @@ A direct hit!
 A direct hit!
 
 >search mattress
-(Nothing in this game has anything deeply hidden, so searching works like examining.)
+(Nothing in Shuffling Around has anything deeply hidden, so searching works like examining.)
 
 >x machine
 It's a black box
@@ -1342,25 +1302,6 @@ You watch for the next Pa's PSA
 >s
 >e
 
->purloin can of beer
->x aged rain
-It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
->x beer can
-It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
->x aged
-It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
->x rain
-It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
-
->purloin soggy
->x dear inga
-Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
->x dear
-Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
->x inga
-Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
->x soggy note
-Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
 
 >resin
 >beast
@@ -1386,12 +1327,11 @@ no water nearby
 
 >x tiles
 They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.
->x colors
-They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.
 
 >islet
+by one point
 >islet
-You already made it
+That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave.
 
 >swim
 No other land anywhere close.
@@ -1410,10 +1350,10 @@ The knots where it is tied to the tree are too high up.
 by one point
 
 >fly
-An Odd Low Woodland
+Rived Drive
 >undo
 >swim
-An Odd Low Woodland
+Rived Drive
 
 >toeholds
 by two points
@@ -1472,7 +1412,7 @@ They're all smeared with--huh? Looks like clay? In any event, they don't look li
 >potters
 
 >x rbb
-His face is covered with crass scars, and he's wearing a t-shirt saying "thirst". He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason.
+His face is covered with crass scars, and he's wearing a t-shirt saying "THIRST" over some rage gear. He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason.
 >x his toe
 A toe just juts out from Burdell's boot, looking infected.
 >touch toe
@@ -1503,6 +1443,6 @@ The boot is too big to grab. Think smaller.
 >pull gadget
 No, not pull, something even shorter.
 
->gonear manor
+>gonear manse
 >x exits
 They are tempting you to adventure, but you'd rather be than do.

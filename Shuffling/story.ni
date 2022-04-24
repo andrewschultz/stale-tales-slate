@@ -316,6 +316,7 @@ a portal is usually boring. the bore-check of a portal is usually the bore-porta
 this is the bore-portal rule:
 	if the current action is opening, say "Just [b]ENTER[r] [the noun]." instead;
 	if the current action is entering, now boring-exception is true;
+	if the current action is knocking, now boring-exception is true;
 
 chapter stuff based on extensions
 
@@ -2002,7 +2003,7 @@ understand "peel [thing] with [thing]" as peeling it with.
 understand "scrape [thing] with [thing]" as peeling it with.
 understand "pry [thing] with [thing]" as peeling it with.
 
-understand "livers" as the plural of glopmeats.
+understand "livers" as the plural of a glopmeat.
 
 does the player mean doing something with livers when a glopmeat is touchable: it is very unlikely.
 
@@ -3384,10 +3385,10 @@ chapter sent nets
 the sent nets are plural-named LLPish scenery in Thickest Thickets. "The sent nets seem sort of stuck in the ground. They're not very nature-like. I mean, maybe they're biodegradable, but perhaps you could find a way to get rid of them or change them into something useful.[paragraph break]You try counting them, but there must be TENS." [bold-ok]
 
 check going inside in thickest:
-	if goat is off-stage or deer is off-stage, say "There's nowhere to go in." instead;
+	if goat is off-stage and deer is off-stage, say "There's nowhere to go in." instead;
 	if sent nets are touchable, poss-d;
 	if reed is touchable or toga is touchable, poss-d;
-	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
+	say "You leave the [if toga is touchable]deer[else if reed is touchable]goat[else]animals[end if] and the thickets behind. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
 	move player to Notices Section instead;
 
 the lgth of sent nets is 4. gpos of sent nets is 1. rpos of sent nets is 4. cert-text of sent nets is "[set-bug]". rect-text of sent nets is "[set-bug]". the rgtext of sent nets is "[rcn][rc][rc][rc]". [ note: you don't have the tagged gadget when you see the sent nets. ]
@@ -3408,7 +3409,7 @@ check going inside in Notices Section: try entering getaway gateway instead;
 
 chapter getaway gateway
 
-the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule. description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to [b]READ[r][one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping].". bore-text of getaway gateway is "It's mostly there to enter, to go somewhere new[if mega ant is in Notices Section], once you get rid of the mega ant[end if].". bore-check of getaway gateway is bore-gateway rule. [bold-ok]
+the getaway gateway is a portal in Notices Section. go-region of getaway gateway is Stores. "[one of]You see a gateway here. It doesn't look too dangerous, but who knows where it leads[or]The gateway still towers here[if mega ant is off-stage and gateman is off-stage], half daring you to enter[end if][stopping].". entry-rule of getaway gateway is enter-gateway rule. description of getaway gateway is "You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to [b]READ[r][one of].[paragraph break]Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back[or][stopping].". bore-text of getaway gateway is "The getaway gateway is open, so you can just [b]ENTER[r] it to find somewhere new[if mega ant is in Notices Section], once you get rid of the mega ant[end if].". bore-check of getaway gateway is bore-gateway rule. [bold-ok]
 
 this is the enter-gateway rule:
 	if gateman is off-stage:
@@ -4350,13 +4351,14 @@ xray-vision is a truth state that varies. xray-vision is usually false.
 saltine-warn is a truth state that varies.
 
 check eating the saltine:
-	if gateman is off-stage and saltine-warn is false:
-		now saltine-warn is true;
-		say "Maybe you should find someone who can tell you what it does, first." instead;
 	if gateman is touchable:
-		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
+		now saltine-warn is true;
+		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you [b]X[r], err, [b]EXAMINE[r] double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
 		the rule succeeds;
+	if saltine-warn is false:
+		now saltine-warn is true;
+		say "[if trips strip is visited]Small one-time warning: Nat Egam could've told you what the saltine does, though you may be able to guess[else]Maybe you should find someone who can tell you what it does, first[end if]." instead;
 	if faeries are touchable, say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
 	choose row with short of "xx" in table of notepad entries;
 	if known entry is false:
@@ -4519,6 +4521,8 @@ check opening a sto: say "It's locked, and you won't find the key." instead;
 check closing a sto: say "It's already closed. And locked." instead;
 
 the can't unlock without a lock rule is not listed in any rulebook.
+the can't unlock what's already unlocked rule is not listed in any rulebook.
+the can't unlock without the correct key rule is not listed in any rulebook.
 
 check unlocking:
 	if noun is a sto, say "Forget it. It's good and shut." instead;
@@ -4786,7 +4790,7 @@ understand "store 12/twelve" and "12/twelve" as store l when player is in Trips 
 
 section store m
 
-Store M is a sto. description of store m is "There's no window in store m--just a detailed map of a subway."
+Store M is a sto. description of store m is "There's no window in Store M--just a detailed map of a subway."
 
 understand "store 13/thirteen" and "13/thirteen" as store m when player is in Trips Strip.
 
@@ -5335,7 +5339,7 @@ after choosing notable locale objects when player is in Flesh Shelf: if sandwich
 for printing a locale paragraph about a thing (called sinkthing) in Flesh Shelf:
 	if sinkthing is not mentioned and sinkthing is not scenery:
 		if first-fs-yet is false:
-			say "You notice the skin sink contains, in particular, a scantier canister, a sandwich, and a liver stamped RIVERVILLE, along with one that's just, well, viler.";
+			say "You notice the skin sink contains, in particular, a scantier canister, a sandwich, and a liver stamped [b]RiverVille[r], along with one that's just, well, viler.";
 			now first-fs-yet is true;
 		else:
 			let Q be number of sinky things in Flesh Shelf;
@@ -5558,7 +5562,7 @@ before doing something with the viler liver when viler liver is touchable: now l
 before doing something with the River Ville liver when River Ville liver is touchable:
 	if liver-disambig-yet is false:
 		now liver-disambig-yet is true;
-		if the player's command does not match "River Ville":
+		if the player's command does not include "ville" and the player's command does not include "river":
 			say "(You aren't sure which liver to handle, but the viler liver is, well, viler. So, yeah, the River Ville.) ";
 
 after doing something with a glopmeat:
@@ -5613,7 +5617,7 @@ to say chiz-chiz: say ". But you look through your inventory, and that chisel [i
 
 chapter livers-sliver-silver
 
-the livers are plural-named things. description of livers is "Amalgamated well enough that you can't recognize which parts came from which. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]". cert-text of livers is "-[d1][d1][d1][d1][d1]". rect-text of livers is "S[d1][d1][d1][d1][ast]R".
+the livers are plural-named things. description of livers is "Amalgamated well enough that you can't recognize which parts came from where. You suspect they're an upgrade from the individual livers but need to figure out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]". cert-text of livers is "-[d1][d1][d1][d1][d1]". rect-text of livers is "S[d1][d1][d1][d1][ast]R".
 
 understand "glop" and "glob" as livers.
 
@@ -6018,6 +6022,10 @@ definition: a room is moory:
 section taping (joke verb)
 
 taping is an action applying to one thing.
+
+understand the command "tap" as something new.
+
+understand "tap [something]" as taping.
 
 rule for supplying a missing noun when taping:
 	if woeful pat is touchable:
@@ -6830,7 +6838,7 @@ to say reset-goof:
 
 chapter woeful pat
 
-Woeful Pat is a person in the moor. initial appearance of Woeful Pat is "Woeful Pat, the awful poet, [one of]sees he has an audience and administers a dose of his odes. It'd be almost enough to make you reverse back to the room, but you've already dealt with the Nick[or]is well into a ballad. It's all bad[stopping]."
+Woeful Pat is a person in the moor. initial appearance of Woeful Pat is "Woeful Pat, the awful poet, [one of]sees he has an audience and administers a dose of his odes. It'd be almost enough to make you reverse back to the room immediately[or]is well into a ballad. It's all bad[stopping]."
 
 understand "awful poet" and "awful" and "poet" as woeful pat.
 
@@ -6884,8 +6892,9 @@ rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos
 this is the bore-anapest rule:
 	if the current action is objasking generically, continue the action;
 	if the current action is listening, continue the action;
-	if the current action is scaning:
-		say "Yes, this sort of poetry doesn't require deep reading, just scanning. [if player has gadget]But seriously, your gadget seems to blink with the beat[else]Too bad you don't have a device to scan it more practically[end if].";
+
+check scaning anapest:
+	say "Yes, this sort of poetry doesn't require deep reading, just scanning. [if player has gadget]But seriously, your gadget seems to blink with the beat[else]Too bad you don't have a device to scan it more practically[end if].";
 
 chapter peasant
 
@@ -8208,7 +8217,7 @@ the bump is a boring thing. it is part of the mattress. description of the bump 
 
 this is the bore-bump rule:
 	if current action is objhinting, say "(You decide to examine it before asking for hints.)[paragraph break]";
-	say "On getting close to the bump you realize it's due something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.";
+	say "On getting close to the bump you realize it's due to something wedged inside the mattress. You search around, find a small machine that is apparently a termite emitter, and take it.";
 	moot bump;
 	now player has the emitter;
 
@@ -9285,8 +9294,10 @@ Rule for printing a parser error when the latest parser error is the can't see a
 		say "[one of]There's a lot of writing in [this-game][if Notices Section is visited], especially red writing[end if]. If you're trying to read writing, you may want to [b]READ[r] what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand[or]Try to [b]READ[r] the object you want, instead[stopping].";
 		pad-rec "writing";
 		the rule succeeds;
-	say "You can't see anything like that here. If you're trying to view the room, [b]L[r] or [b]LOOK[r] should work.";
+	say "[l-or-look-prompt].";
 	the rule succeeds;
+
+to say l-or-look-prompt: say "You can't see anything like that here. If you're trying to view the room, [b]L[r] or [b]LOOK[r] should work"
 
 Rule for printing a parser error when the latest parser error is the I beg your pardon error: say "[one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
 
@@ -9464,6 +9475,7 @@ does the player mean scaning the location:
 	if player is in Trips Strip:
 		it is likely;
 	else:
+		say "1.";
 		it is very likely;
 
 does the player mean certifying the location: it is very likely.
@@ -9520,6 +9532,7 @@ ever-scan is a truth state that varies.
 parse-output is a truth state that varies.
 
 carry out scaning:
+	d "scaning [noun].";
 	if Notices Section is not visited and mrlp is not Ordeal Loader, say "[bug-report] You should not get to this code before the Notices Section. You probably jumped away from the Ordeal Loader." instead;
 	if noun is storeall, say "Not all at once." instead;
 	if noun is disamb-store, say "Pick a specific store, instead." instead;
@@ -9900,9 +9913,9 @@ faeries	noise bag	"[if player has noise bag]'It is up to you to use it. We canno
 faeries	merchandise	"[faery-flower]"
 faeries	beats	"'It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around.'"
 faeries	brocade	"[if player has brocade]'Do with it what you need.'[else if brocade is moot]'You have disposed of it! We hope it was useful.'[else]'It is free. But useless to us.'[end if]"
-faeries	clover	"'That is just a weed! We have no use for it. But maybe it is useful to you.'"
-faeries	tomato	"'A putrid vegetable! [if player has tomato]We should kick you out right now[else]It must taste terrible[end if]!'"
-faeries	tulip	"'Some flower that is!'"
+faeries	clover	"'Just weeds! Not useful for our sophisticated magic. Maybe useful for mere human magic, though.'"
+faeries	tomato	"'[if player has tomato]Such a putrid plant! Keep it away from us[else]Even humans and monsters must find it revolting[end if]!'"
+faeries	tulip	"'For human flower magic, not bad at all! We guess.'"
 faeries	deadbeat	"The fairies buzz and give superior sniffs."
 faeries	nerds	"The fairies buzz and give superior sniffs."
 nerds	beats	"'Anyone can be smart enough to build noise canceling homes to get rid of the beats!'"
@@ -10098,7 +10111,7 @@ to say can-go of (d - a direction):
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
-Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go [b]IN[r]--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
+Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go [b]IN[r]--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere unseen, you might regret winding up in the Tuffest Tuffets[or][stopping]."
 Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[if gateman is in Notices Section]![else], though it'd be nice to have some help.[end if]"
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
@@ -10205,7 +10218,15 @@ carry out gotoing:
 	say "You retrace your steps...[line break]";
 	move player to noun;
 
+every turn when debug-state is true, d "[list of touchable things].";
+
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the straighten out go to rule) :
+	if word number 1 in the player's command is "x" or word number 1 in the player's command is "examine":
+		if the player's command includes "livers" and player is in flesh shelf and number of glopmeats in flesh shelf > 1:
+			say "You will need to figure how to combine the livers. Until then, you will want to act on each individually.";
+			the rule succeeds;
+		say "[l-or-look-prompt].";
+		the rule succeeds;
 	if word number 1 in the player's command is "go" or word number 1 in the player's command is "gt":
 		say "That wasn't a room in the current region that you've visited. You can only go to rooms, not objects.";
 		the rule succeeds;
@@ -10298,7 +10319,7 @@ to ask-to-cut:
 
 the mis send dimness is scenery. printed name is "mis-send dimness". "It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide."
 
-understand "doorway" as dimness when dimness is touchable.
+understand "doorway/door" as dimness when dimness is touchable.
 
 understand "miss end" and "miss/end dimness" and "miss end dimness" and "miss/end" as dimness when dimness is touchable.
 
@@ -10524,7 +10545,7 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Ordeal Loader is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore, Stefan Scheiffele and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
+	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore, Stefan Scheiffele and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:
@@ -10658,7 +10679,7 @@ great grate	"The grate seems to be made by [hktn]. It's not steel, but it's stil
 tall trio	"The names are Al, Tri, and Lot. [one of]If you [b]READ[r] again, maybe one of the six combinations will make you see red[or][first custom style]AL/LOT/TRI[r] makes you see red, for whatever reason[stopping]." [bold-ok]
 spearman	"The spearman's name, in red, is [first custom style]MR. SANE PA[r][if player carries spearman]. You also read, in red, one of three lines: [first custom style][one of]MEAN RAPS[r][or]MS. P. ARENA[r]--crossed out, but red[or]AMEN, RASP[r][in random order][end if]." [bold-ok]
 scraped wall	"[if scraped wall is hayfilled]You can no longer see where it says [end if]HALLWAY UNDER (UN-)UN-CONSTRUCTION." [bold-ok]
-a reading	"On one of several pages, you see: [one of][first custom style]AID ANGER[r] is written[or]conspiracy theories from [first custom style]EDGAR IAN[r][or]silly musings on being [first custom style]IN A GRADE[r][or]a horror story: [first custom style]DINER, AAG[r][or]conspiracy theories from [first custom style]NIA EDGAR[r][or]an exhortation to [first custom style]RIDE AGAN[r] (sic) on the last page[stopping]. The nonsense makes you see red." [metros] [bold-ok]
+a reading	"On one of several pages, you see: [one of][first custom style]AID ANGER[r] is written[or]conspiracy theories from [first custom style]EDGAR IAN[r][or]silly musings on being [first custom style]IN A GRADE[r][or]a horror story: [first custom style]DINER, AAG[r][or]conspiracy theories from [first custom style]NIA EDGAR[r][or]an exhortation to [first custom style]RIDE AGAN[r] (sic) on the next-to-last page[or]an order that this all should be [b]RED AGAIN[r] (sic) [stopping]. The nonsense makes you see red." [metros] [bold-ok]
 neon pig	"Apparently the neon pig is a creation of one [first custom style]INPENGO[r]."
 controls	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by [first custom style]ORTON LSC[r], whoever they are."
 tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out [first custom style]LEST I[r]. But with the effort, your eyes water, and you see red a bit." [resort]
