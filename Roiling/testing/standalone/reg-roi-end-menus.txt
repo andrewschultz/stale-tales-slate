@@ -216,6 +216,20 @@ Elvira's taunts (Rancho Archon Anchor):
 >demo dome mode
 Please give one of the answers above.
 
+>rank
+Farce Facer: be in Ordeal Reload
+Riled Idler: get to Strip of Profits
+Results Tussler: one of Stores P/T/U/V/W/Y solved
+Fierier Reifier: two of Stores P/T/U/V/W/Y solved
+Rifeness Finesser: three of Stores P/T/U/V/W/Y solved
+Lengthier Lightener: four of Stores P/T/U/V/W/Y solved
+Truculenter Unclutterer: five of Stores P/T/U/V/W/Y solved
+Unresting Insurgent: get powers back in Otters
+Reposed Deposer: defeat Elvira
+!Errantries Restrainer: take on the Store H quest
+!Reprieval Prevailer: Win Store H
+!Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
+
 * end-menus-others
 
 >emy
@@ -240,11 +254,40 @@ Selly Yells (Clangier Clearing):
 >l 73
 Oops! You can't reach that yet.
 
-* end-menus-demo-dome
+>rank
+
+Farce Facer: be in Ordeal Reload
+Riled Idler: get to Strip of Profits
+Results Tussler: one of Stores P/T/U/V/W/Y solved
+Fierier Reifier: two of Stores P/T/U/V/W/Y solved
+Rifeness Finesser: three of Stores P/T/U/V/W/Y solved
+Lengthier Lightener: four of Stores P/T/U/V/W/Y solved
+Truculenter Unclutterer: five of Stores P/T/U/V/W/Y solved
+Unresting Insurgent: get powers back in Otters
+Reposed Deposer: defeat Elvira
+Errantries Restrainer: take on the Store H quest
+Reprieval Prevailer: Win Store H
+!Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
+
+> * end-menus-demo-dome
 
 >au 2
 >demo dome
 >s
 >l 73
 Entries in the artsies' satires (Sparse Spares):
+
+>rank
+Farce Facer: be in Ordeal Reload
+Riled Idler: get to Strip of Profits
+Results Tussler: one of Stores P/T/U/V/W/Y solved
+Fierier Reifier: two of Stores P/T/U/V/W/Y solved
+Rifeness Finesser: three of Stores P/T/U/V/W/Y solved
+Lengthier Lightener: four of Stores P/T/U/V/W/Y solved
+Truculenter Unclutterer: five of Stores P/T/U/V/W/Y solved
+Unresting Insurgent: get powers back in Otters
+Reposed Deposer: defeat Elvira
+Errantries Restrainer: take on the Store H quest
+Reprieval Prevailer: Win Store H
+Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
 

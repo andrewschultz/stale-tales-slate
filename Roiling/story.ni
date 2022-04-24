@@ -3570,15 +3570,30 @@ definition: a region (called reg) is rank-increasing:
 [rejected: rode doer, Decried Decider]
 
 table of ranks
-rank-name
-"Farce Facer"
-"Riled Idler" [got to strip]
-"Results Tussler" [1 strip store solved]
-"Fierier Reifier" [2]
-"Rifeness Finesser" [3]
-"Lengthier Lightener" [4]
-"Truculenter Unclutterer" [5 strip stores solved, ready for otters]
-"Unresting Insurgent" [In Otters, got power back]
+show-at-end-rule	rank-name	to-achieve
+a rule	"Farce Facer"	"be in Ordeal Reload"
+--	"Riled Idler"	"get to Strip of Profits"
+--	"Results Tussler"	"[sol-by of 1]"
+--	"Fierier Reifier"	"[sol-by of 2]"
+--	"Rifeness Finesser"	"[sol-by of 3]"
+--	"Lengthier Lightener"	"[sol-by of 4]"
+--	"Truculenter Unclutterer"	"[sol-by of 5]"
+--	"Unresting Insurgent"	"get powers back in Otters"
+--	"Reposed Deposer"	"defeat Elvira"
+h-available rule	"Errantries Restrainer"	"take on the Store H quest"
+h-available rule	"Reprieval Prevailer"	"Win Store H"
+dome-seen rule	"Elites['] Listee / Greaten-Grantee / Derivin['] Diviner / Sharper Phraser"	"Visit Demo Dome"
+
+to say sol-by of (nu - a number):
+	say "[nu in words] of Stores P/T/U/V/W/Y solved"
+
+this is the h-available rule:
+	if peek keep is visited, the rule succeeds;
+	if others is solved, the rule succeeds; [ not technically necessary, but we can make sure ]
+	if roved is false, the rule fails;
+
+this is the dome-seen rule:
+	if peek keep is not visited, the rule fails;
 
 to say lomax of (re - a region): say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
@@ -22025,6 +22040,7 @@ final question wording	only if victorious	topic		final response rule		final resp
 "[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form" or "m or f" or "of mr"	the sort male female out rule	--
 "[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r]/[b]LG[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload, [b]LS[r] for Stores), or [b]LJ[r]/[b]LR[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
+"see [b]RANK[r]s and how to achieve them"	true	"rank/ranks"	show ranks rule	--
 
 dummy altpath showing is an activity.
 dummy missed stuff showing is an activity.

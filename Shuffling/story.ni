@@ -10326,19 +10326,21 @@ to decide which number is player-rank:
 	decide on temp-rank.
 
 table of ranks
-my-rank
-"(ow,) me, a nervy every(wo)man"
-"reduced deducer"
-"stunted student"
-"benigner beginner"
-"solider soldier"
-"a mature amateur"
-"new hero now here"
-"a smart gamin' anagrammist"
+show-at-end-rule	rank-name	to-achieve
+a rule	"(ow,) me, a nervy every(wo)man"	"only in Busiest Subsite"
+--	"reduced deducer"	"in Rested Desert or Thickest Thickets"
+--	"stunted student"	"in Notices Section"
+--	"benigner beginner"	"Trips Strip visited, [sol-by of 0]"
+--	"solider soldier"	"[sol-by of 1]"
+--	"a mature amateur"	"[sol-by of 2]"
+--	"new hero now here"	"[sol-by of 3]"
+--	"a smart gamin['] anagrammist"	"win the game"
+
+to say sol-by of (nu - a number): say "[nu in words] of Stores F/I/M solved yet"
 
 to say decide-rank:
 	choose row player-rank in table of ranks;
-	say "[my-rank entry]";
+	say "[rank-name entry]";
 
 understand "scores" as requesting the score when player is not in Self ID Fields.
 
@@ -10676,6 +10678,7 @@ Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule		final response activity
 "see what you may've [b]MISSED[r] point-wise"	true	"missed"	show what the player missed rule	--
 "see [b]ALT[r]ernate mutually exclusive ways through"	true	"alt/alts"	show alternate paths rule	--
+"see [b]RANK[r]s and how to achieve them"	true	"rank/ranks"	show ranks rule	--
 
 this is the show alternate paths rule:
 	say "Here are alternate paths through [if number of not solved regions is 0]all the regions[else]the regions you solved[end if].";

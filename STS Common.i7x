@@ -730,6 +730,17 @@ understand "emn" as emning.
 carry out emning:
 	the rule succeeds;
 
+volume ending stuff
+
+[ I'd rather not include a RANKS line of the table of final ending questions, as I'd like it last, since it is the least important/detailed of the endgame options ]
+
+this is the show ranks rule:
+	say "Here is a list of ranks achievable throughout [this-game].";
+	repeat through table of ranks:
+		if there is a show-at-end-rule entry:
+			process the show-at-end-rule entry;
+			if the rule failed, next;
+		say "[b][rank-name entry][r]: [to-achieve entry][line break]";
 
 volume specific items
 
