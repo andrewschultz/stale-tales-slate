@@ -1,12 +1,13 @@
 ## reg-sa-verbs.txt
-## tests for all the verbs and, well, other understand stuff too
+## tests for all the verbs and, well, other understand stuff too.
+## this isn't really a walkthrough, but rather, an exhaustive yes/no check of verbs that would just bog down regular tests
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * intro-verbiage
 
->au 1
+>au 2
 
 >follow me
 Tautological.
@@ -15,13 +16,13 @@ Rested Desert
 >undo
 
 >help
-There's not much to do here, but EXAMINEing different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
+There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 Note: If you want actual hints, you may wish to try HINT or HINTS.
 >info
-There's not much to do here, but EXAMINEing different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
+There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 !Note: If you want actual hints, you may wish to try HINT or HINTS.
 >instructions
-There's not much to do here, but EXAMINEing different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
+There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 !Note: If you want actual hints, you may wish to try HINT or HINTS.
 
 >pad lecture
@@ -39,7 +40,7 @@ It's stuck to your shirt, all right. Somehow, you got a magenta one while most o
 
 It does not make you feel like a powerful magnate, that's for sure.
 
->au 1
+>au 2
 >hint
 >hint
 
@@ -51,12 +52,12 @@ You consult your notepad but haven't figured any flips in advance yet.
 
 >consult pad
 Currently you can consult the notepad about:
---notepad, verbs, options, access.
---lecture.
+--access, lecture, notepad, options.
+--talking, verbs.
 >pad
 Currently you can consult the notepad about:
---notepad, verbs, options, access.
---lecture.
+--access, lecture, notepad, options.
+--talking, verbs.
 
 >exist
 You continue to exist. Perhaps this ability will come in handy some day.
@@ -73,14 +74,16 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 >in
 
 >x smell
-It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?
+The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?
+Well, maybe it would not.
 
 You repress a four-letter word. Well, if things are that simple, it's probably a nicer four-letter word.
 
 You imagine a swordsman changing to sandworms, and back.
 
 >x breeze
-It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?
+The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?
+Well, maybe it would not.
 
 You repress a four-letter word. Well, if things are that simple, it's probably a nicer four-letter word.
 
@@ -90,6 +93,9 @@ You confuse latitude and altitude for a second. Odd.
 
 >unlock door
 No keyholes. Maybe you can break it down some other way?
+
+>unlock me
+You don't need to unlock anything explicitly in Shuffling Around.
 
 >hint door
 You can just ENTER the door once you figure how to open it.
@@ -285,15 +291,15 @@ The gadget beeps once. A series of lights comes across: RRRRRR. Hmm, that means 
 
 >spare
 >opt in
-Now pointing you with an additional hint when you have the right anagram letters. NO TIP turns this back off.
+You are now seeing extra hints when you guess the right collection of letters. NO TIP will set this option off.
 >opt in
-You're already being pointed to extra hints.
+You are already seeing extra hints when you guess the right collection of letters. NO TIP will set this option off.
 >forets
 That seemed right but didn't seem quite natural.
 >no tip
-Now hiding tips in favor of a generic response. OPT IN turns this back on.
+You are now seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
 >no tip
-You're already requesting no tip.
+You are already seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
 >forets
 You feel a slight psychic push-pull coming from Store F. Keep at it.
 
@@ -316,7 +322,7 @@ Hints are disabled for this session.
 
 #####################forest
 
-* forest-verbiage
+* _forest-verbiage
 
 >sr nw
 
@@ -803,7 +809,7 @@ Mention what you want to shoot
 >shoot wolves
 Trips Strip
 
-* forest-alt
+* _forest-alt
 
 >sr se
 
@@ -839,9 +845,9 @@ You're picking something up. Probably the aroma of teas.
 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 
-* sortie-verbiage
+* _sortie-verbiage
 
->au 1
+>au 2
 
 >hint
 >hint
@@ -1138,7 +1144,7 @@ It's on the left, and it's labeled STEER.
 >x left button
 It's on the left, and it's labeled STEER.
 
-* metros-verbiage
+* _metros-verbiage
 
 >ts
 >metros
@@ -1364,7 +1370,7 @@ Someone has written DEAR INGA: in big letters. The waters have smudged the small
 >cut beast with sword
 Trips Strip
 
-* resort-verbiage
+* _resort-verbiage
 
 >ts
 

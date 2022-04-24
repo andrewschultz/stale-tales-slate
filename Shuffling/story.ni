@@ -2339,9 +2339,17 @@ to h-check:
 
 h-short is a number that varies. h-short-told is a truth state that varies.
 
-chapter pointing
+chapter point / opt in / no tip
+
+to set-optin-notip (ts - a truth state):
+	say "You are [if ts is point]already[else]now[end if] seeing extra hints when you guess the right collection of letters. ";
+	say "[if ts is false][b]OPT IN[r] will set this option on[else][b]NO TIP[r] will set this option off[end if].";
+	now point is ts;
+	now pointcue is true;
 
 point is a truth state that varies.
+
+section opt in
 
 optining is an action out of world.
 
@@ -2350,15 +2358,9 @@ understand the commands "opt in" and "optin" as something new.
 understand "optin" and "opt in" as optining.
 
 carry out optining:
-	if point is true:
-		say "You're already being pointed to extra hints when you have the right letter collection.";
-	else:
-		say "Now pointing you with an additional hint when you have the right anagram letters. [b]NO TIP[r] turns this back off.";
-		now point is true;
-		now pointcue is true;
-	the rule succeeds.
+	set-optin-notip true;
 
-chapter notiping
+section no tip
 
 notiping is an action out of world.
 
@@ -2367,13 +2369,7 @@ understand the commands "notip" and "no tip" as something new.
 understand "no tip" and "notip" as notiping.
 
 carry out notiping:
-	if point is false:
-		say "You're already receiving no extra hints beyond knowing you have the right letter collection.";
-	else:
-		say "Now hiding tips in favor of a generic response. [b]OPT IN[r] turns this back on.";
-		now pointcue is true;
-		now point is false;
-	the rule succeeds.
+	set-optin-notip false;
 
 chapter certifying
 
@@ -3233,7 +3229,7 @@ to say oddo: say "[if odor is in Rested Desert]odor[else]door[end if]"
 
 chapter odor
 
-the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things.". bore-check is bore-odor rule.
+the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?[paragraph break]Well, maybe it would not.". bore-check is bore-odor rule.
 
 this is the bore-odor rule:
 	if current action is smelling, try examining the odor instead;
@@ -4522,11 +4518,13 @@ check opening a sto: say "It's locked, and you won't find the key." instead;
 
 check closing a sto: say "It's already closed. And locked." instead;
 
-check of unlocking:
+the can't unlock without a lock rule is not listed in any rulebook.
+
+check unlocking:
 	if noun is a sto, say "Forget it. It's good and shut." instead;
 	if noun is signers ingress, say "It has no visible keyholes. The only possible interface seems to be the friend finder." instead;
 	if noun is OR DO door, say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is moot]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]" instead;
-	say "You don't need to." instead;
+	say "You don't need to unlock anything explicitly in [this-game]." instead;
 
 search-warn is a truth state that varies.
 
