@@ -2477,6 +2477,8 @@ to buzz-or-no-noise (ana - a thing):
 			continue the action;
 	say "The gadget makes no noise.";
 
+kibitz-on-scan is a truth state that varies. kibitz-on-scan is true.
+
 carry out cring:
 	if gadget-secured is true, say "You can't use this shortcut. Your gadget is locked." instead;
 	if player is in Potshot Hotspot and red bull is in Potshot Hotspot, try scaning red bull instead;
@@ -2486,18 +2488,15 @@ carry out cring:
 	now marcos-trumped is true;
 	if noun is pig and player is not on cafe face, say "You are too far away at the moment." instead;
 	now ever-scan is true;
-	if gadget is cert:
-		say "You get to scanning, twiddling from certify to rectify and back.";
-		gadflip;
-		try scaning the noun;
-		gadflip;
-		try scaning the noun;
-	else:
-		say "You get to scanning, twiddling from rectify to certify and back.";
-		gadflip;
-		try scaning the noun;
-		gadflip;
-		try scaning the noun;
+	now kibitz-on-scan is false;
+	say "You get to scanning, twiddling from [if gadget is cert]certify to rectify[else]rectify to certify[end if] and back.";
+	gadflip;
+	try scaning the noun;
+	gadflip;
+	try scaning the noun;
+	now kibitz-on-scan is true;
+	say "[line break]";
+	kibitz the noun;
 	d "Rect-text: [rect-text of noun].";
 	d "Cert-text: [cert-text of noun].";
 
@@ -9631,6 +9630,7 @@ carry out scaning:
 son-nos is a truth state that varies.
 
 to kibitz (sca - a thing):
+	if kibitz-on-scan is false, continue the action;
 	repeat through table of kibitzes:
 		if sca is kib entry:
 			say "[helpy entry][line break]";
@@ -9645,7 +9645,10 @@ table of kibitzes
 kib	helpy
 motto	"Since Motto is only five letters, you wonder what's up, but it's labeled [b]A MOTTO[r]."
 tall trio	"You scanned each of the tall trio, and the readout didn't change."
-drainage	"[if gadget is cert]Uh, oh. Not really helpful at all[else]Not bad, but still[end if]. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage."
+reading	"[read-drain] the drainage."
+drainage	"[read-drain] a reading."
+
+to say read-drain: say "Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with"
 
 to say rgbtext of (sca - a thing):
 	if scan-to-header is true:
