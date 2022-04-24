@@ -67,14 +67,14 @@ procedural rule: ignore the print final score rule.
 
 section your description
 
-description of the player is "Looking at your body, you're not as strong as you used to be. In good enough shape, you hope, but those jibes about not being half the person you used to be hurt--even if they're not true.[paragraph break]You have some tats which, in a pinch, could be changed to a [b]STAT[r] to help you out if you need help."
+description of the player is "Looking at your body, you're not as strong as you used to be. In good enough shape, you hope, but those jibes about not being half the person you used to be hurt--even if they're not true.[paragraph break][one of]You have some tats (Tas-T-Tats, actually) which[or]Your Tas-T-Tats[stopping], which, in a pinch, could be changed to a [b]STAT[r] to help you out if you need help."
 
 tats-stat is a number that varies.
 
 check taking inventory:
 	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a [b]STAT[r] from, if you want[end if][one of]. Being out of practice, it's nice to have the choice between using assistance and showing you've still 'got it,' whatever 'it' is[or][stopping]." instead;
 
-the player carries the tats. description of tats is "[tat-desc]."
+the player carries the tas t tats. description of tats is "[tat-desc]."
 
 to say tat-desc:
 	if location of player is solved:
@@ -90,7 +90,7 @@ after examining a flippable:
 	continue the action;
 
 instead of doing something with the tats:
-	say "The tats will change as you make guesses. You don't even have to examine them. You can [if tats-stat > 0]deactivate them with the TATS[else]activate them with the STAT[end if] command.";
+	say "The tats will change as you make guesses. You don't even have to examine them. You can [if tats-stat > 0]deactivate them with the [b]TATS[r][else]activate them with the [b]STAT[r][end if] command.";
 	if current action is examining and tats-stat > 0, continue the action;
 
 volume dubroom definitions
@@ -1012,6 +1012,8 @@ to say reject:
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";
+
+book Inform 6 stuff
 
 volume parser check tables
 

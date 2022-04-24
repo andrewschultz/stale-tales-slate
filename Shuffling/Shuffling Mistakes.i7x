@@ -133,7 +133,7 @@ understand "lost" as a mistake ("No, you need to find your way through individua
 
 understand "oyster" as a mistake ("Nice try, but that's next game![mistake-clue of store y]") when player is in Trips Strip.
 
-understand "presto" as a mistake ("Your magic is not advanced enough to change store p! Well, not this game![mistake-clue of store p]") when player is in Trips Strip.
+understand "presto" as a mistake ("Your magic is not advanced enough to change Store P! Well, not this game![mistake-clue of store p]") when player is in Trips Strip.
 
 understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.") when player is in Trips Strip and trade tread is in Trips Strip.
 

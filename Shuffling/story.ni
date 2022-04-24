@@ -2775,41 +2775,37 @@ to verbsplain (t - text):
 		say "[2dn][blurb entry][line break]";
 
 table of notepad entries
-topic (topic)	known	blurb	short	verify
-"notepad/pad/note" or "note pad"	true	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."	"notepad"	false
-"verbs/verb"	true	"[verb-list]"	"verbs"	false
-"options/option" or "post opts" or "ops"	true	"[opts-list]"	"options"	false
-"access"	true	"[b]ACCESS[r] toggles screen reader accessibility."	"access"	false
-"space/spaces"	false	"[b]SPACES[r] toggles whether you have an extra space in raw gadget results. [b]SPACE[r](S) [b]ON[r]/[b]SON[r] forces it on, while [b]NO SPACE[r](S)/[b]NOS[r] forces it off."	"spaces"	false
-"lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how [b]ONE WORD[r] could open a [b]NEW DOOR[r] in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
-"store/stores/malls/shop/shops/lots/mall"	false	"--[if scented descent is touchable]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are touchable]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is touchable]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is touchable]Resort[found-status of resort][else]Store R[reso-maybe][end if]"	"stores"
-"opt in" or "opt/notip/optin/tip" or "no tip"	false	"[b]OPT IN[r] gives you more detail when you are on the right track. [b]NO TIP[r] gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
-"poss"	false	"[b]POSS[r] toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points."	"poss"
-"store 6/six/f" or "6/six/f"	false	"Store F is very leafy and woodsy."	"store f"
-"store i/9/nine" or "i/9/nine"	false	"Store I appears to have a weird exit."	"store i"
-"store m/13/thirteen" or "m/13/thirteen"	false	"Store M appears to open to a whole metropolis."	"store m"
-"store r/18/eighteen" or "r/18/eighteen"	false	"Store R doesn't appear to be open yet."	"store r"
-"macros"	false	"[tell-macros][run paragraph on]"	"macros"
-"writing"	false	"You need to [b]READ[r] or [b]EXAMINE[r] something instead of the [b]WRITING[r] on it."	"writing"
-"c/cer/cert/certify"	false	"1 beep = 1 word, buzz = already changed, silence = nothing.[line break]red/green = right/wrong letters."	"certify"
-"r/rec/rect/rectify"	false	"green dot = 1st letter. Red dot = last letter. Blue = the rest."	"rectify"
-"secure"	false	"Having [b]SECURE[r] activated will make the gadget less useful on any one puzzle but will let you skip a chunk of your quest later. [b]SECURE[r] will be locked once you visit certain places. The button will flash when you need to choose."	"secure"
-"recuse"	false	"If you secured, [b]RECUSE[r] will come in handy once you've solved two quests, to skip a third."	"recuse"
-"talking"	false	"[b]ASK[r] for other people, or just say the word/s otherwise."	"talking"
-"goat/toga"	false	"Certify = [rcn][gc][rc][rc] and Rectify = [rcn][bc][gc][bc]."	"the goat"
-"warts"	false	"[if warts are touchable]'No, too stupid a fad. I put soot on warts.' But what's too stupid?[else]This puzzle's crossed out. You feel good about that.[end if]"	"warts"
-"red bull burdell" or "red/ bull/ burdell/" 	false	"The guy I need to beat. Probably not with strength or anything like that."	"Red Bull Burdell"
-"broad/board"	false	"[if location of player is Notices Section]It's got notes on needing two simple 7-letter portmanteaux[how-many-notices][else]You're past the bit about the introductory puzzles.[end if]"	"board"
-"terry" or "retry"	false	"[b]RETRY[r] gets Terry to send you [if Trips Strip is visited]back [end if]to the Trips Strip[if Trips Strip is unvisited], wherever that is[end if]."	"retry"
-"advice"	false	"--Nothing over eight words. Maybe one two-word deal.[line break]--Red Bull Burdell is much bigger and stronger than you. Traditional fighting won't work."	"advice"
-"phial" or "lube"	false	"Worth looking into. Though you probably just want to [b]ANGLE[r] and [b]GLEAN[r]."	"lube"
-"angle"	false	"Lets you see what can be changed."	"angle"
-"glean"	false	"Lets you glimpse what you need to do."	"glean"
-"to-do" or "todo" or "to do"	false	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."	"to-do"
-"flips"	false	"[what-can-flip]"	"flips"
-"random/dialogue" or "random dialogue" or "uhhs/hush"	false	"[b]UHHS[r] turns on random dialogue, [b]HUSH[r] turns it off."	"random dialogue"	true
-"xx"	false	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."	"xx"	true
-"red/redness"	false	"Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?"	"red"
+short	known	verify	topic (topic)	blurb
+"access"	true	false	"access"	"[b]ACCESS[r] toggles screen reader accessibility."
+"advice"	false	--	"advice"	"--Nothing over eight words. Maybe one two-word deal.[line break]--Red Bull Burdell is much bigger and stronger than you. Traditional fighting won't work."
+"angle"	false	--	"angle"	"Lets you see what can be changed."
+"board"	false	--	"broad/board"	"[if location of player is Notices Section]It's got notes on needing two simple 7-letter portmanteaux[how-many-notices][else]You're past the bit about the introductory puzzles.[end if]"
+"certify"	false	--	"c/cer/cert/certify"	"1 beep = 1 word, buzz = already changed, silence = nothing.[line break]red/green = right/wrong letters."
+"flips"	false	--	"flips"	"[what-can-flip]"
+"glean"	false	--	"glean"	"Lets you glimpse what you need to do."
+"lecture"	true	--	"lecture"	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how [b]ONE WORD[r] could open a [b]NEW DOOR[r] in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."
+"lube"	false	--	"phial" or "lube"	"Worth looking into. Though you probably just want to [b]ANGLE[r] and [b]GLEAN[r]."
+"macros"	false	--	"macros"	"[tell-macros][run paragraph on]"
+"notepad"	true	false	"notepad/pad/note" or "note pad"	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."
+"opt in/no tip"	false	false	"opt in" or "opt/notip/optin/tip" or "no tip"	"[b]OPT IN[r] gives you more detail when you are on the right track. [b]NO TIP[r] gives you less detail but lets you know you have the right anagram."
+"options"	true	false	"options/option" or "post opts" or "ops"	"[opts-list]"
+"poss"	false	--	"poss"	"[b]POSS[r] toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points."
+"random dialogue"	false	true	"random/dialogue" or "random dialogue" or "uhhs/hush"	"[b]UHHS[r] turns on random dialogue, [b]HUSH[r] turns it off."
+"rectify"	false	--	"r/rec/rect/rectify"	"green dot = 1st letter. Red dot = last letter. Blue = the rest."
+"recuse"	false	--	"recuse"	"If you secured, [b]RECUSE[r] will come in handy once you've solved two quests, to skip a third."
+"red"	false	--	"red/redness"	"Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?"
+"Red Bull Burdell"	false	--	"red bull burdell" or "red/ bull/ burdell/" 	"The guy I need to beat. Probably not with strength or anything like that."
+"retry"	false	--	"terry" or "retry"	"[b]RETRY[r] gets Terry to send you [if Trips Strip is visited]back [end if]to the Trips Strip[if Trips Strip is unvisited], wherever that is[end if]."
+"secure"	false	--	"secure"	"Having [b]SECURE[r] activated will make the gadget less useful on any one puzzle but will let you skip a chunk of your quest later. [b]SECURE[r] will be locked once you visit certain places. The button will flash when you need to choose."
+"spaces"	false	false	"space/spaces"	"[b]SPACES[r] toggles whether you have an extra space in raw gadget results. [b]SPACE[r](S) [b]ON[r]/[b]SON[r] forces it on, while [b]NO SPACE[r](S)/[b]NOS[r] forces it off."
+"stores"	false	--	"store/stores/malls/shop/shops/lots/mall"	"--[if scented descent is touchable]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are touchable]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is touchable]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is touchable]Resort[found-status of resort][else]Store R[reso-maybe][end if]"
+"talking"	true	--	"talking"	"[b]ASK[r] for other people, or just say the word/s otherwise. Specific topics or in-game things are suggested, but default dialogues may give hints."
+"the goat"	false	--	"goat/toga"	"Certify = [rcn][gc][rc][rc] and Rectify = [rcn][bc][gc][bc]."
+"to-do"	false	--	"to-do" or "todo" or "to do"	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."
+"verbs"	true	false	"verbs/verb"	"[verb-list]"
+"warts"	false	--	"warts"	"[if warts are touchable]'No, too stupid a fad. I put soot on warts.' But what's too stupid?[else]This puzzle's crossed out. You feel good about that.[end if]"
+"writing"	false	--	"writing"	"You need to [b]READ[r] or [b]EXAMINE[r] something instead of the [b]WRITING[r] on it."
+"xx"	false	true	"xx"	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."
 
 pf-warn is a truth state that varies.
 
@@ -9970,7 +9966,6 @@ liches	"They are too busy moaning to each other."
 nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to [b]ASK NERDS[r] like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.[or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of [first custom style]SKASDREN[r] for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]" [bold-ok]
 night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
 peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
-red bull burdell	"Your pale plea meets with strung grunts."
 riot	"[riot-trio-blather]"
 protest	"[riot-trio-blather]"
 poses posse	"You get a few pinched, strained smiles, but no actual words. What would they say? 'TALKERS STALKER?!'"
