@@ -19,6 +19,18 @@
 #
 # todo: see about horned/hedron vs OH NERD HERD NO
 #
+# approximate times in seconds for each section:
+# ordeal reload = 120
+# stores = 60
+# routes = 60
+# troves = 40
+# presto = 240
+# oyster = 480
+# towers = 420
+# otters = 180
+# others = 120
+#
+# to derive these times, comment out all * but then change * _only to * only
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -150,6 +162,9 @@ Strip of Profits
 
 >ts
 
+>z
+# otherwise "can't undo what hasn't been done"
+
 >presto
 Your score has just gone up by one point
 
@@ -171,7 +186,8 @@ Your score has just gone up by one point
 #ttc-table-of-stores-matched-item-responses-nestor--
 >nestor
 >ask nestor about store w
-Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants to just hang with his pals, who were in a nearby store.
+Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants to find his pals, who were in a nearby store.
+
 >undo
 >undo
 
@@ -350,7 +366,7 @@ That might suck you into a boring discussion about politics. Or, worse, an excit
 
 #ttc-table-of-topic-catchalls-nat-egam
 >ask pat about nat egam
-"Nat Egam, the gateman, is from Shuffling Around.
+Nat Egam, the gateman, is from Shuffling Around.
 
 #ttc-table-of-topic-catchalls-old-warpy
 >ask pat about old warpy
@@ -433,9 +449,9 @@ Your score has just gone up by one point
 
 #ttc-table-of-npc-yes-and-no-responses-gast
 >yes
-Passively agreeing with [him-her] might just keep things going ad infinitum. You need to find the right way to ride out the conversation.
+Passively agreeing with him might just keep things going ad infinitum. You need to find the right way to ride out the conversation.
 >no
-Disagreeing with [Gast] might make [him-her] too mad. You need to find the right way to ride out the conversation.
+Disagreeing with Ian Gast might make him too mad. You need to find the right way to ride out the conversation.
 
 #ttc-table-of-routes-matched-item-responses-gast-sit-a-nag
 >ask gast about sit a nag
@@ -785,9 +801,9 @@ The lamb looks even more paralyzed by fear. If only there were a way to get the 
 #ttc-table-of-presto-unmatched-topic-responses-lamb
 >ask lamb about lamb
 It's a baaaaad conversationalist.
+Hm, that wasn't very revealing. You probably won't get much from the lamb. You note this in your notepad.
 >ask lamb about xyzzy
 It's a baaaaad conversationalist.
-Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.
 
 #ttc-table-of-presto-matched-item-responses-plebe-elvira
 >ask plebe about elvira
@@ -850,7 +866,7 @@ They size him up and give a thumbs-down. Then they give you a double thumbs-down
 They snicker at the thought of you being clever or strong enough to get the keys.
 
 #ttc-table-of-presto-matched-item-responses-hogs-yourself
->ask hogs about yourself
+>ask hogs about earring
 The hogs smirk and flex a bit, to show they're bigger and stronger.
 
 #ttc-table-of-presto-matched-item-responses-hogs-elvira
@@ -947,6 +963,10 @@ Casper wants you to acknowledge he's writing it, but he's not going to hand out 
 >ask trolls about stumbler tumblers
 "Best to cough up some tips in there. For the wait staff."
 
+>ts
+>oyster
+>in
+
 #ttc-table-of-oyster-matched-item-responses-lolstr-trolls-oh-nerd-herd-no
 >ask trolls about hedron
 "The horned hedron's even more fun than here. Maybe we can get a job there some day."
@@ -1013,7 +1033,7 @@ Asking the clam about its feelings is a start.
 #ttc-table-of-oyster-unmatched-topic-responses-clam
 >ask clam about xyzzy
 It snaps back at you. Physically, not verbally. Words--okay, conversation--won't help it relax, so you clam up.
-Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.
+Hm, that wasn't very revealing. You probably won't get much from the clam. You note this in your notepad.
 
 >calm
 Your score has just gone up by one point
@@ -1209,15 +1229,15 @@ She's talking about herself every move, pretty much.
 Lapsin' Plains
 
 #ttc-table-of-inanimate-talkables-span-pans
->ask q about elvira
+>ask door about elvira
 The door seems to grumble and curse very quietly. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical.
 
 >splain
 
->ask q about q
+>ask door about door
 The door seems to grumble and curse very quietly. Well, you already splained to it.
 
->ask q about xyzzy
+>ask door bout xyzzy
 The door seems to grumble and curse very quietly. Well, you already splained to it.
 
 >trace
@@ -1409,7 +1429,7 @@ The yapper does not shut up about unbribability but still manages to wink and co
 >gonear ant
 >ask ant about elvira
 The ant twitches silently but menacingly.
-Hm, that wasn't very revealing. It doesn't look like talking with the natant ant can help you much. You note this in your notepad.
+Hm, that wasn't very revealing. You probably won't get much from the natant ant. You note this in your notepad.
 >ask ant about ant
 The ant twitches silently but menacingly.
 
@@ -1446,10 +1466,14 @@ Talking at the dialer does not reveal any further secrets of how to operate it.
 >spin pins
 Your score has just gone up by one point
 
+>au 0
+
 >redial
 Your score has just gone up by one point
 
->retry
+by one point
+
+Strip of Profits
 
 * _towers
 
@@ -2099,17 +2123,17 @@ The stinger almost seems to start humming a marching tune.
 #ttc-table-of-towers-ask-x-about-x-stinger
 >ask stinger about stinger
 The grin set in the stinger distracts you from what you meant to say. You feel almost drunk, and hear a weird voice in your head. "Ginster! Ginster!" You see red.
-Hm, that wasn't very revealing. It doesn't look like talking with the grin-set stinger can help you much. You note this in your notepad.
+Hm, that wasn't very revealing. You probably won't get much from the grin-set stinger. You note this in your notepad.
 
 
 #ttc-table-of-towers-unmatched-topic-responses-stinger
 >ask stinger about xyzzy
 The grin set in the stinger distracts you from what you meant to say. You feel almost drunk, and hear a weird voice in your head. "Ginster! Ginster!" You see red.
-!Hm, that wasn't very revealing. It doesn't look like talking with the grin-set stinger can help you much. You note this in your notepad.
+!Hm, that wasn't very revealing. You probably won't get much from the grin-set stinger. You note this in your notepad.
 
 >ask stinger about curst palace
 The grin set in the stinger distracts you from what you meant to say. You feel almost drunk, and hear a weird voice in your head. "Ginster! Ginster!" You see red.
-!Hm, that wasn't very revealing. It doesn't look like talking with the grin-set stinger can help you much. You note this in your notepad.
+!Hm, that wasn't very revealing. You probably won't get much from the grin-set stinger. You note this in your notepad.
 
 >resting
 >e
@@ -2172,7 +2196,7 @@ Dr. Yow scrunches his head a bit, then shrugs. "Ouch. Eleven letters. Maybe if i
 
 #ttc-table-of-npc-and-topic-pairs-dr-yow-key
 >ask yow about key
-Dr. Yow shrugs. If he knew where a key was, he'd find it.
+"Keycar? No, no, a key." Dr. Yow shrugs and shakes his head. Well, it's unlikely anyone just left a key lying around.
 
 >go to agnostic
 
@@ -2371,7 +2395,7 @@ St. Teri thanks you for aiding her spiritual growth. In return, just go out and 
 
 >ask sitter about curst palace
 "It can be something super special.
-He-he. Eh?" You got no concrete clues, but St. Teri's observations were a help. Maybe you can come back for another, later, if you still have no luck outside.
+He-he. Eh?" You got no concrete clues, but St. Teri's observations were a boost in their own way, you hope. Maybe you can come back for another, later, if you still have no luck outside.
 /(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed).*(Breathtaking|Exceptional|Fantastic|Magnificent|Marvelous|Miraculous|Outstanding|Overwhelming|Sensational|Stupendous|Superlative|Unsurpassed)
 
 >ask sitter about xyzzy
@@ -2404,13 +2428,13 @@ must be important. You note it as further scenery in your pedanto-notepad.
 >ask about curst palace
 super special
 
->out
-You notice something else you wouldn't have seen without St. Teri's help. That pest accrual must be important. You note it as further scenery in your pedanto-notepad.
-
 >spectacular
 [You add the information to your pedanto-notepad under FLIPS.]
 
 >out
+You notice something else you wouldn't have seen without St. Teri's help. That
+must be important. You note it as further scenery in your pedanto-notepad.
+
 >spectacular
 Strip of Profits
 
@@ -2606,7 +2630,7 @@ Lamer Realm
 #ttc-table-of-otters-unmatched-topic-responses-owls
 >ask owls about xyzzy
 They're too busy swooping at you to talk.
-Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.
+Hm, that wasn't very revealing. You probably won't get much from the owls. You note this in your notepad.
 
 >slow
 Your score has just gone up by one point
@@ -2696,7 +2720,7 @@ Perverse Preserve
 #ttc-table-of-otters-unmatched-topic-responses-raptor
 >ask raptor about xyzzy
 "Roooooooar."
-Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.
+Hm, that wasn't very revealing. You probably won't get much from the raptor. You note this in your notepad.
 
 >parrot
 
@@ -2818,9 +2842,9 @@ WTF FTW
 
 #ttc-table-of-npc-yes-and-no-responses-elvira
 >no
-Don't give in like that!
->yes
 Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS.
+>yes
+Don't give in like that!
 
 #ttc-table-of-otters-ask-x-about-x-elvira
 >ask elvira about elvira
@@ -3125,10 +3149,11 @@ You have other ways to consult the popstar's passport.
 Your score has just gone up by one point.
 >review
 Your score has just gone up by one point.
+>au 0
 >n
 You Did Great
 
-* targeted_testing_comment_uncomment_as_needed_check_regver_py_after
+* _targeted_testing_comment_uncomment_as_needed_check_regver_py_after
 
 #uncomment this is doing partial tests
 
@@ -3137,59 +3162,59 @@ You Did Great
 #this is a catch-all
 >ts
 
->{include} _only-stores
->{include} _only-routes
->{include} _only-troves
->{include} _only-presto
->{include} _only-oyster
->{include} _only-towers
->{include} _only-otters
->{include} _only-others
+#>{include} _only-stores
+#>{include} _only-routes
+#>{include} _only-troves
+#>{include} _only-presto
+#>{include} _only-oyster
+#>{include} _only-towers
+#>{include} _only-otters
+#>{include} _only-others
 
-* _only-ordeal-reload
+* only-ordeal-reload
 
 >{include} _ordeal-reload
 
-* _only-stores
+* only-stores
 
 >gonear strip
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* _only-troves
+* only-troves
 
 >gonear rathole
 >{include} _troves
 
-* _only-presto
+* only-presto
 
 >purloin settler
 >gonear gyre
 >{include} _presto
 
-* _only-oyster
+* only-oyster
 
 >purloin settler
 >gonear posh hops shop
 >{include} _oyster
 
-* _only-towers
+* only-towers
 
 >seed 1
 >gonear loftier trefoil
 >{include} _towers
 
-* _only-otters
+* only-otters
 
 >seed 1
 >gonear minded midden
 >{include} _otters
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >{include} _others

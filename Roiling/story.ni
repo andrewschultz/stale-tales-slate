@@ -1918,7 +1918,7 @@ this is the general topic scouring rule:
 			say "[dialogue-text entry][line break]";
 			if noun is terse and noun is not terse-warned:
 				now noun is terse-warned;
-				say "[line break]Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
+				say "[line break]Hm, that wasn't very revealing. You probably won't get much from [the noun]. You note this in your notepad.";
 				pad-rec "talking";
 			do nothing instead;
 
@@ -1944,7 +1944,7 @@ check objasking it about (This is the check for object information rule):
 		repeat through ask x about x table of mrlp:
 			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
 	repeat through matched item responses table of mrlp: [ the rules here work as follows: search for NPC/item combo, search for generic item reject, search for generic NP reject ]
-		if (noun is the askee entry or noun is chum of the askee entry) and (there is a game-thing entry and game-thing entry is the second noun):
+		if (noun is the askee entry or chum of noun is the askee entry) and (there is a game-thing entry and game-thing entry is the second noun):
 			say "[dialogue-text entry][line break]" instead;
 	if the noun is not to-gen-blather:
 		repeat through table of universal objasking subject defaults:
@@ -1960,7 +1960,7 @@ check objasking it about (This is the check for object information rule):
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
 definition: a thing (called th) is to-gen-blather:
-	if th is bonker or th is grin set stinger or th is fluster self rut or th is natant ant, yes;
+	if th is bonker or th is grin set stinger or th is fluster self rut or th is natant ant or th is dreads adders or th is lone duck or th is serpent, yes;
 	no;
 
 check asking about (This is the check for specific topics rule):
@@ -1968,9 +1968,9 @@ check asking about (This is the check for specific topics rule):
 	if noun is sausage:
 		if the topic understood matches the text "ruby", try objasking sausage about ruby instead;
 	abide by the bruiser-taunt rule;
-	if the topic understood is a topic listed in the table of NPC and topic pairs:
-		if noun is a person and noun is superchatty:
-			if askee entry is the noun, say "[dialogue-text entry][line break]" instead;
+	repeat through table of NPC and topic pairs:
+		if noun is askee entry and the topic understood matches topic entry:
+			say "[dialogue-text entry][line break]";
 	if the topic understood is a topic listed in the table of topic catchalls:
 		if there is a right-region entry:
 			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
@@ -2070,7 +2070,6 @@ table of NPC and topic pairs	[ask x about any old unusual subject] [xxtalk5]
 askee	topic	dialogue-text
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a whole big land to save. Don't waste time shaming recreational drug users."
-Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too.'"
 
 table of universal objasking subject defaults [this gives people default things to say about stuff, if they are not terse.] [xxtalk6]
@@ -9142,7 +9141,7 @@ check going inside in Carven Cavern:
 
 chapter Respect Specter
 
-the Respect Specter is a vanishing LLPish terse person in Carven Cavern. "[one of]You hear a rustle, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can [b]SCAN[r] me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can [b]SCAN[r] it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
+the Respect Specter is a vanishing LLPish person in Carven Cavern. "[one of]You hear a rustle, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can [b]SCAN[r] me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can [b]SCAN[r] it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
 
 a-text of respect specter is "RRYRRYR". b-text of respect specter is "?R?????". parse-text of respect specter is "?[sp]x[sp]?[sp]?[sp]?[sp]?[sp]?". respect specter is parse-spoilable.
 

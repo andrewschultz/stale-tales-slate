@@ -2944,6 +2944,7 @@ agnostic	toaster	"[if toaster is in Actionless Coastlines]'Gee, thanks for that!
 Dr Yow	duck	"[if Shaven Havens is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in Obscurest Subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
 Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]'I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
+Dr Yow	keycar	"'Keycar? No, no, a key.' Dr. Yow shrugs and shakes [his-her] head. Well, it's unlikely anyone just left a key lying around."
 Dr Yow	lake	"[doc-on-lake]"
 Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tutor someone!'[else if agnostic is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
