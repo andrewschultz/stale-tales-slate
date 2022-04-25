@@ -427,11 +427,11 @@ The players certainly do dance around a lot with their talk, so it's no surprise
 >sarpley
 The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
 
-#ttc-table-of-otters-scannotes-yer-all-a-yell'r
+#ttc-table-of-otters-scannotes-yer-all-a-yellr
 >scan yer all
 Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very.
 
-#ttc-table-of-otters-spechelp-yer-all-a-yell'r
+#ttc-table-of-otters-spechelp-yer-all-a-yellr
 >erlaly
 Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
 

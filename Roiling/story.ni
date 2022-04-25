@@ -1342,7 +1342,7 @@ report undoing an action:
 
 to say eh-eh:
 	now currently-rejecting is true;
-	say "A booming voice yells '[randbla]!' ";
+	say "A booming voice yells '[randbla]' ";
 	now currently-rejecting is false;
 
 currently-rejecting is a truth state that varies.
@@ -3537,6 +3537,7 @@ carry out requesting the score:
 	else:
 		say "[line break]You haven't solved any regions yet.";
 	show-rank;
+	d "[rank-index].";
 	if mrlp is others:
 		eval-fruits;
 		check-guru;
@@ -5280,7 +5281,9 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	if the player has the rigged digger:
 		if the player's command includes "prod", say "It's a digger, now." instead;
 	if word number 1 in the player's command is "consult":
-		say "You can [b]CONSULT PAD ABOUT X[r], [b]CONSULT ABOUT X[r], or [b]PAD X[r]." instead;
+		if the player's command includes "pad":
+			abide by the notepad check rule;
+		say "It looks like you tried to consult your notepad about something. The proper syntax is [b]CONSULT PAD ABOUT X[r], [b]CONSULT ABOUT X[r], or [b]PAD X[r]." instead;
 	say "[if location of player is dark]You can't locate that in the dark, if it's there[else]Nothing unusual like that around here[if-enter][end if]." instead;
 
 to say if-enter:
@@ -5604,7 +5607,7 @@ check going nowhere in Dusty Study:
 	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are touchable]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is touchable]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
 check going nowhere in Carven Cavern (this is the cavern check rule):
-	if apertured departure is not in Carven Cavern, say "You need to create a viable exit." instead;
+	if apertured departure is not in Carven Cavern, say "You need to create or discover a viable exit, first." instead;
 	say "The only way to make progress is inward, through [the departure].";
 	if stapler is moot:
 		say "[line break]Go through?";
@@ -6319,7 +6322,7 @@ this is the listen-towers rule:
 this is the listen-otters rule:
 	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead;
 	if noun is asyllabic lilac bays, say "[if lilac bays are reflexed]You can't hear anything from the bays now[else]An odd voice. [one of]'Silly Cab A ... Silly Cab A ...' You see red at such nonsense, but you didn't expect anything rigorously profound from flowers[or]'Clay Blais ... Clay Blais ...' oh, right! The exotic flower expert! You see red at his treatment under the new regime[in random order][one of]. The voice seems to change. Maybe there's something else[or][stopping][end if].";
-	if noun is Yer All a Yell'r, say "Goodness! [yer all] is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out. Sadly, now, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point." instead;
+	if noun is Yer All a Yell'r, say "Goodness! [yer all] is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out.[paragraph break]Sadly, now, with songs like [i]Yeah, Hey, A Yeeha, Yah[r], some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.[paragraph break]Maybe you can get rid of it, though." instead;
 	if noun is parleys splayer players, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
@@ -8650,7 +8653,8 @@ carry out vaguing:
 description of pedanto notepad is "Other people have computers, but your notepad is yours[one of]. It's made by Da Ponte, who now have a monopoly. But you just like it. The color, the feel[or][stopping]. [cur-has][run paragraph on]"
 
 check examining pedanto notepad for the first time:
-	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].[paragraph break](To use the notepad, you can type [b]PAD[r] (subject) or [b]CONSULT PAD ABOUT[r] (subject). If you forget what you've written about, you can type [b]PAD[r] or [b]CONSULT PAD[r].)";
+	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].";
+	ital-say "to use the notepad, you can type [b]PAD[r] (subject) or [b]CONSULT PAD ABOUT[r] (subject). If you forget what you've written about, you can type [b]PAD[r] or [b]CONSULT PAD[r].";
 	if player does not have pedanto notepad:
 		now player has pedanto notepad;
 		check-sad-ads;
@@ -8911,7 +8915,13 @@ understand "notepad [text]" and "pedanto [text]" and "pad [text]" as padding.
 
 padding is an action applying to one topic.
 
+this is the notepad check rule:
+	if location of player is not dusty study and location of notepad is dusty study:
+		ital-say "taking your notepad. It should have been implicitly taken once you left Dusty Study, so this is a [b]BUG[r]. Email me at [email] to let me know how this happened!";
+		now player has pedanto notepad;
+
 carry out padding:
+	process the notepad check rule;
 	try consulting pedanto notepad about topic understood instead;
 
 recbuffer is indexed text that varies.

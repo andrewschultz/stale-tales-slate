@@ -25,7 +25,7 @@ Ouch! You smack into the MEET-BANS.
 >gonear carven cavern
 #check going nowhere in Carven Cavern rule pretty much tells you the only way is in, so go that way ... it's not a flat reject
 >e
-You need to create or discover a viable exit first.
+You need to create or discover a viable exit, first.
 >stapler
 >staple
 >w

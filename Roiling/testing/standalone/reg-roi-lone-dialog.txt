@@ -212,10 +212,12 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 >lamp
 >satchel
 
+>x settler
+>scan pavement
+
 >basement
 >d
 
->x settler
 >in
 
 >flier

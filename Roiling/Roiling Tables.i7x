@@ -166,7 +166,7 @@ Store B	Store B	false	505285378	--	"sorbet"	"sorbet"	a rule	a rule	"You ask 'Got
 Store H	Throes Hoster	false	524148772	--	"others"	"others"	--	post-storeh-hoster rule	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."
 Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	post-storek-tokers rule	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	--	--	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
-suit ode	suit ode	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	pre-babbler-outside rule	--	"The Rehabs Basher and the blabber babbler are swept from the doorway and stage, respectively, by something unseen. The blabber babbler frantically babbles something about how this is why we need to fight drugs, but [he-she] is too busy backwards somersaulting to establish eye contact with [his-her] audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers express remorse they took the best stuff already. But what you got helps reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now.[paragraph break]Their general partying and babble about wanting to find adventure like yours tires you out. As you doze off, you hear them moaning they need more, uh, supplies. When you wake up, they're gone. Maybe for the best, there."
+suit ode	suit ode	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	pre-babbler-outside rule	post-babbler-outside rule	"The Rehabs Basher and the blabber babbler are swept from the doorway and stage, respectively, by something unseen. The blabber babbler frantically babbles something about how this is why we need to fight drugs, but [he-she] is too busy backwards somersaulting to establish eye contact with [his-her] audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers express remorse they took the best stuff already. But what you got helps reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now.[paragraph break]Their general partying and babble about wanting to find adventure like yours tires you out. As you doze off, you hear them moaning they need more, uh, supplies. When you wake up, they're gone. Maybe for the best, there."
 Store P	odorant tornado	false	568332432	--	"presto"	"presto"	--	--	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, something more nature-like, but daunting. You recognize an odorant tornado, which you can [b]ENTER[r], if you dare. You'll probably need to."
 Store T	solid idols	false	589976491	--	"otters"	"otters"	--	--	"The store divides in two until it becomes a path with solid idols packed so densely they block your view. They're all of otters, not-so-oddly."
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzyingly, making a source course. You can [b]ENTER[r] to see where it leads."
@@ -188,13 +188,12 @@ to say check-nestor:
 to say check-tokers:
 	say "[if tokers are in Strip of Profits]motion to the mangiest steaming.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][else]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
 
-this is the pre-babbler-outside rule: [there are no conditions here. We just want to organize everything before moving back to the Strip of Profits.]
+this is the pre-babbler-outside rule: [there are no conditions here. We just want to organize everything before moving back to the Strip of Profits. The exception is, we have a check for headaches=0 in the main flip text.]
 	moot nestor;
 	moot tokers;
 	moot mangiest steaming;
 	moot pamphlets;
 	now list-headache is true;
-	increase headaches by 10;
 	now lectures is shunned;
 	if t-tediously is in otters:
 		let A be pod-num of t-tediously;
@@ -202,6 +201,9 @@ this is the pre-babbler-outside rule: [there are no conditions here. We just wan
 		now t-tediously is off-stage;
 		let B be a random number from 1 to pickup-pod-size of A - 1; [I'm hard coding things here... assuming t-tediously has the highest pod number. Otherwise I am writing lots of code for one special case.]
 		install-pickup-line A and B;
+
+this is the post-babbler-outside rule:
+	increase headaches by 10;
 
 book routes
 

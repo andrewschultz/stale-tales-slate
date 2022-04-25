@@ -5,7 +5,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* spoil-all
+* _spoil-all
 
 >au 0
 
@@ -37,9 +37,7 @@ This would give you the rank of Farce Facer.
 
 #ttc-table-of-region-long-command-messages-ordeal-reload
 >xx yy
-The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
-So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
-
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
 
 >ts
 
@@ -403,6 +401,8 @@ So here is a one-time general guideline on what to do in this area: while some w
 >n
 This region focuses on adverbs (weakest, due to lost powers).
 
+* main
+
 #ttc-table-of-ranks-8
 >otw
 
@@ -415,15 +415,21 @@ by one point
 by one point
 >w
 >7
+>au 2
+>play whistle
+>au 0
 >play whistle
 #ttc-table-of-ranks-9
-Reposed Deposer
+REPOSED DEPOSER
+
+>rove over
+Strip of Profits
 
 >{include} _others_score_check
 
 #ttc-table-of-region-long-command-messages-others
 >xx yy
-The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something.
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: you may need a variety of tricks, here. One word is twelve letters long, but some are as short as five. You can even overlook twenty puzzles.
 
 >n
@@ -486,6 +492,7 @@ There's no score in the Demo Dome. You just need to look around. Well, if you'd 
 #+ttc-table-of-ranks-11
 #+ttc-table-of-ranks-12
 >s
+>rank
 Farce Facer
 Riled Idler
 Results Tussler

@@ -2,7 +2,10 @@
 ## specifically the towers/trefoil and otters/frontage
 ## the troves/upscale capsule randomization is here too
 ##
-
+## This is different from the tests run in the RBR files, where seed=1
+## and we place everything in the same room at once.
+## Here we have a reasonable try that, in fact, a random seeding results in solvable scenarios.
+##
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

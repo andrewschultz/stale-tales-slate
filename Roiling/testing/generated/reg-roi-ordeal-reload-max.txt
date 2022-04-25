@@ -54,7 +54,7 @@ Your score has just gone up by one point.
 >pad access
 Typing SCR or SCREEN toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently off.
 
-#ttc-table-of-notepad-entries-directions/dirs
+#ttc-table-of-notepad-entries-directions-dirs
 >pad dirs
 A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed.
 
@@ -107,7 +107,7 @@ Your score has just gone up by one point.
 #ttc-table-of-region-initial-scoring-commentary-ordeal-reload-2
 Yay! You're still changing things to other things, just like in Shuffling Around. For now. But you're on home turf, now. If you get out in the world, maybe it'll be trickier.
 
-#ttc-table-of-notepad-entries-opt-in/no-tip
+#ttc-table-of-notepad-entries-opt-in-no-tip
 >pad no tip
 OPT IN lets you see initial region hints. NO TIP turns them off.
 
@@ -315,7 +315,7 @@ DEBUG: Respect Specter being scanned.
 >pad question mark
 The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can HINT it if you're stuck.
 
-#ttc-table-of-notepad-entries-extra/taxer
+#ttc-table-of-notepad-entries-extra-taxer
 >pad extra
 EXTRA or TAX ER/TAXER toggles more advice for ambiguous/question mark hints. This is close to XTRA, but it is likely the player will want to set TAXER and not EXTRA back.
 >undo
@@ -333,7 +333,7 @@ The xtra-trax variable is now false.
 You feel a slight psychic push-pull coming from the Respect Specter. That's a decent omen.
 You can use the command XTRA TRAX to track the right combination of letters less generically. However, some hints might be a bit too pointed.
 
-#ttc-table-of-notepad-entries-xtra/trax
+#ttc-table-of-notepad-entries-xtra-trax
 >pad xtra
 You can use the command XTRA TRAX (or XTRA or TRAX) to toggle tracking the right combination of letters less generically. However, some hints might be a bit too pointed.
 

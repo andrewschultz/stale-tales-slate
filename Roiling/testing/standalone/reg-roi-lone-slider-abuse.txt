@@ -14,7 +14,7 @@
 
 >ts
 >i
-You're carrying your letters settler, to help with hints. Cheat/teach mode is off, and idlers' slider is off.
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, and the idlers' slider is off.
 
 #prepare the recharge right away
 >tokers
@@ -67,10 +67,12 @@ You figure you can take that noise seven more times.
 You figure you can take that noise six more times.
 
 >undo
-WRONG
+A booming voice yells
+You probably don't need to revisit that headache anyway.
+[NOTE: undo is only denied if you've used a cheat item, so don't worry. You can undo any death, and the game should not become unwinnable.]
 
 >i
-You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings six more times.
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, the idlers' slider is off, and you can put up with its beepings six more times.
 
 >pull slider
 >sorbte
@@ -92,10 +94,14 @@ You figure you can take that noise two more times.
 >sorbte
 You figure you can take that noise one more time.
 
+>z
 >enter steaming
 >outside
-WRONG
+But what you got helps reduce migraines' mini-rages, like that annoying noise from the slider. You can use the slider more, now.
 !You can use the slider again, now.
+
+>undo
+>undo
 
 >pull slider
 >sorbte
@@ -106,7 +112,7 @@ You're sick of those high notes.
 You can't afford any more headaches.
 
 >i
-You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can't put up with the slider's beeps any more.
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, the idlers' slider is off, and you can't put up with the slider's beeps any more.
 
 >enter steaming
 >outside
@@ -114,7 +120,7 @@ You're carrying your letters settler, to help with hints. Cheat/teach mode is of
 You can use the slider again, now.
 
 >i
-You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings ten more times.
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, the idlers' slider is off, and you can put up with its beepings ten more times.
 
 #make sure negative testing works
 
@@ -132,5 +138,5 @@ You figure you can take that noise nine more times.
 >outside
 
 >i
-You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings twenty more times.
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, the idlers' slider is off, and you can put up with its beepings twenty more times.
 

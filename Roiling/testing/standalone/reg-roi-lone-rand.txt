@@ -347,9 +347,12 @@ Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can
 
 >ramble
 
+>au 0
 #ttc-table-of-megachatter-table-of-songs-you-could-write
 >recant
 Your condensed rise to the top of this business business makes you efficient at doing enough nothing. Well, nothing profitable. You write wistful songs that someone has to like, surely: (table of songs you could write)
+
+>au 2
 
 ##################################presto
 
@@ -647,6 +650,7 @@ Elvira mocks you, but makes no attack: (table of Elvira taunts)
 
 >w
 
+>au 0
 #ttc-table-of-megachatter-table-of-elvira-battle-cries
 #ttc-table-of-megachatter-table-of-elvira-machines
 #ttc-table-of-megachatter-table-of-animal-friends
@@ -692,6 +696,7 @@ Selly yells:
 >listen
 (table of selly yells)
 >w
+>au 0
 >n
 >purloin passport
 >research
