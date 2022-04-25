@@ -269,7 +269,7 @@ Errantries Restrainer: take on the Store H quest
 Reprieval Prevailer: Win Store H
 !Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
 
-> * end-menus-demo-dome
+* end-menus-demo-dome
 
 >au 2
 >demo dome

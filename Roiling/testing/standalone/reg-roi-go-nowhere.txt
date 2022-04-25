@@ -25,11 +25,11 @@ Ouch! You smack into the MEET-BANS.
 >gonear carven cavern
 #check going nowhere in Carven Cavern rule pretty much tells you the only way is in, so go that way ... it's not a flat reject
 >e
-You need to make an exit, first.
+You need to create or discover a viable exit first.
 >stapler
 >staple
 >w
-The only way to make progress is inward, through that curtain.
+The only way to make progress is inward, through the apertured departure.
 
 >gonear gallery
 #ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery

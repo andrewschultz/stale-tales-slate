@@ -10981,7 +10981,7 @@ a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". pars
 
 book Cripple Clipper
 
-Cripple Clipper is a room in Routes. "Hooray...or ahoy? This isn't quite the HMS SMH. You feel a case of sail-ails, not being able to get going.[paragraph break]There's a free reef in the distance, but you didn't get enough instructions how to get there. You can pretty clearly see mess-up spumes all around.[paragraph break]The thickness sketchins, presumably from Logan, are all you have to go on. A bit nonsensical, but maybe they'll give a clue where or how to adventure next. They're all you've got.". roomnud of cripple clipper is table of cripple clipper nudges.
+Cripple Clipper is a room in Routes. "Hooray...or ahoy? This isn't quite the HMS SMH. It has no leeks for food or sleek keels for transport. You feel a case of sail-ails, not being able to get going.[paragraph break]There's a free reef in the distance, but you didn't get enough instructions how to get there. You can pretty clearly see mess-up spumes all around.[paragraph break]The thickness sketchins, presumably from Logan, are all you have to go on. A bit nonsensical, but maybe they'll give a clue where or how to adventure next. They're all you've got.". roomnud of cripple clipper is table of cripple clipper nudges.
 
 the bad oar is a thing. description is "It looks weird, but hey, it got you aboard the Cripple Clipper.". "The bad oar that helped you aboard the Cripple Clipper lies here, but you probably need to figure how to work things in general here."
 
