@@ -51,7 +51,7 @@ book Sortie
 table of Sortie anagrams [xxtia]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
 t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	kitchen
-warts	straw	"straw"	"warts"	--	--	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
+warts	straw	"straw"	"warts"	--	post-warts-straw rule	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
 skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
 cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
@@ -74,6 +74,9 @@ oils	silo	"silo"	--	pre-oils-silo rule	post-oils-silo rule	"You empty the cask a
 oils	soil	"soil"	--	pre-oils-soil rule	post-oils-soil rule	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
 hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	--	post-hoots-shoot rule	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
 trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	--	post-trees-steer rule	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
+
+this is the post-warts-straw rule:
+	pad-del "warts";
 
 book Metros
 

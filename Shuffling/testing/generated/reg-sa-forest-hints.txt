@@ -15,6 +15,7 @@
 
 >monty hints
 >au 2
+
 >xc
 
 >opt in
@@ -327,14 +328,6 @@ You see the spread fluttering as if outside an open window.
 
 >n
 You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
->undo
-
->xx spread
-Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
-#ttc-table-of-preflip-clues-drapes
->pf
-spread -> drapes
->undo
 >undo
 
 #ttc-table-of-forest-anagrams-spread

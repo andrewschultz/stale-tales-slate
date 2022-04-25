@@ -16,6 +16,8 @@
 >monty hints
 >eat saltine
 
+>xc
+
 >metros
 Your score has just gone up by one point
 
@@ -49,6 +51,12 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 >n
 
 Roarings Garrison
+
+#ttc-table-of-nowheres-roarings-garrison
+>in
+There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits or clear way INSIDE.
+>out
+There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits."
 
 #ttc-table-of-metros-anagrams-lost-corn
 >xx lost corn

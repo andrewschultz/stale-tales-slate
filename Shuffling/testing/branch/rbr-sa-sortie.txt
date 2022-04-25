@@ -1166,7 +1166,7 @@ He holds up his hand for silence. He is too busy reciting his poem. You probably
 \\
 #ttc-table-of-matched-thing-responses-woeful-pat-mean-old
 >ask woeful pat about mean old
-WRONG
+"He does not censor my art. He cannot be that bad!"
 
 >z
 >z

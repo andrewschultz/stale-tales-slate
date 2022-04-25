@@ -358,9 +358,6 @@ The trade tread isn't for commenting on, it's for passage to the metros.
 #mistake test for lost
 >lost
 No, you need to find your way through individual stores.
-#mistake test for presto
->presto
-Your magic is not advanced enough to change store p! Well, not this game!
 #mistake test for strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.

@@ -13,6 +13,8 @@
 >z
 >poss
 
+>xc
+
 >opt in
 
 >forest
@@ -144,6 +146,14 @@ You currently have 13 out of 17 total points for the Forest region. You have fou
 
 >e
 >n
+
+>xx spread
+Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
+#ttc-table-of-preflip-clues-drapes
+>pf
+spread -> drapes
+>undo
+>undo
 
 >drapes
 by one point

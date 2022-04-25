@@ -16,15 +16,12 @@ You haven't solved any regions yet.
 
 [NOTE: You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.]
 
->take writing
-
-#ttc-table-of-notepad-entries-writing
->pad writing
-There's a lot of writing in Shuffling Around. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand.
+#first let's look at the stuff in there from the start
 
 #ttc-table-of-notepad-entries-verbs
 >pad verbs
---X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
+--X or EXAMINE an object. You can get clues if you READ objects with writing.
+
 --The four directions, north, south, east and west.
 --PAD to see a list of topics. Then PAD VERBS, for example.
 --VERB/VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.
@@ -54,6 +51,14 @@ ACCESS toggles screen reader accessibility.
 #ttc-table-of-notepad-entries-options
 >pad options
 ACCESS toggles screen reader accessibility.
+
+# detour to look at writing. There are other ways to activate it later.
+>take writing
+#ttc-table-of-notepad-entries-writing
+>pad writing
+You need to READ or EXAMINE something instead of looking at the WRITING on it.
+>undo
+>undo
 
 >in
 
@@ -141,8 +146,7 @@ He shows you some calculations that any such writing can be expected to eliminat
 Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?
 
 >ask gateman about saltine
-"Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
-
+"Miniscule, but more than mini-clues. The next item that baffles you, eat that and XX ... not just X or EXAMINE, and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
 [You record the information about xx in your notepad.]
 
 #ttc-table-of-notepad-entries-xx
@@ -153,7 +157,7 @@ You can XX after you eat the saltine in order to see what an item should be. Thi
 >undo
 
 >eat saltine
-Nat Egam coughs. "You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static is just practice."
+Nat Egam coughs. "You might want to save that. It'll help you later, with a real puzzle, if you X, err, EXAMINE double hard. The static is just practice."
 
 >pad xx
 You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it.
@@ -229,18 +233,22 @@ RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the
 Certify = RGRR and Rectify = RBGB.
 
 >eat writing
-There's a lot of writing in Shuffling Around, especially red writing. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand.
-[You record the information about writing in your notepad.]
-
->undo
-
->xyz writing
-You don't have to do anything with any writing, just READ whatever the writing is on. That said, sorry for not implementing any and all writing fully.
-
+[NOTE: you don't have to do anything with any writing. Just READ whatever contains the writing.]
 [You record the information about writing in your notepad.]
 
 >pad writing
-You need to READ or EXAMINE something instead of the WRITING on it.
+You need to READ or EXAMINE something instead of looking at the WRITING on it.
+
+>undo
+>undo
+
+>xyz writing
+[NOTE: you don't have to do anything with any writing. Just READ whatever contains the writing.]
+[You record the information about writing in your notepad.]
+
+>pad writing
+You need to READ or EXAMINE something instead of looking at the WRITING on it.
+
 >undo
 >undo
 
@@ -250,11 +258,11 @@ You need to READ or EXAMINE something instead of the WRITING on it.
 [You record the information about Red Bull Burdell in your notepad.]
 
 >pad burdell
-The guy I need to beat. Probably not with strength or anything like that.
+The nemesis to be defeated here in Yorpwald. He is too physically strong. Perhaps anagramming magic can help.
 
 #ttc-table-of-notepad-entries-red-bull-burdell
 >pad red bull burdell
-The guy I need to beat. Probably not with strength or anything like that.
+The nemesis to be defeated here in Yorpwald. He is too physically strong. Perhaps anagramming magic can help.
 
 >ask gateman about phail phial
 "Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
@@ -335,7 +343,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 [You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 
 #ttc-table-of-notepad-entries-to-do
->pad to-do
+>pad to do
 What's on tap right now: Store R, Store M, Store I, Store F and Store B.
 
 >glean
@@ -363,19 +371,32 @@ OPT IN gives you more detail when you are on the right track. NO TIP gives you l
 >n
 [Note: the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.]
 
-
 #ttc-table-of-notepad-entries-random-dialogue
 >pad hush
 UHHS turns on random dialogue, HUSH turns it off.
 >pad uhhs
 UHHS turns on random dialogue, HUSH turns it off.
 
->gonear fridge
+>retry
+
+>sortie
+>enter posted depots
+>16
+>n
+>kitchen
 
 >x fridge
 
 #ttc-table-of-notepad-entries-warts
 >pad warts
-"No, too stupid a fad. I put soot on warts." But what's too stupid?
+"No, too stupid a fad. I put soot on warts." But what is it that's too stupid?
+
 >straw
-This puzzle's crossed out. You feel good about that.
+by one point
+
+#pad entry should be deleted
+>pad
+!warts
+
+>pad warts
+!too stupid

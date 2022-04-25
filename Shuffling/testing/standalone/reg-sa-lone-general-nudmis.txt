@@ -393,10 +393,6 @@ FIMR is just a mnemonic for the stores you need to explore, somehow.
 >ryter
 Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire.
 
-#+ttc-table-of-general-nudges-retry
->ryter
-You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
-
 # verb anagram(s)
 
 >averse

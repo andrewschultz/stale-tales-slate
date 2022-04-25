@@ -5,7 +5,7 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _intro-verbiage
+* intro-verbiage
 
 >au 2
 
@@ -589,7 +589,7 @@ It's ugly and frozen and stamped 100% amalgamatable.
 It's ugly and frozen and stamped 100% amalgamatable.
 
 >x livers
-You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+You will need to figure how to combine the livers. Until then, you will want to act on each individually.
 
 >peel river ville
 You have nothing to peel anything with.
@@ -800,7 +800,7 @@ Mention what you want to shoot
 >shoot wolves
 Trips Strip
 
-* _forest-alt
+* forest-alt
 
 >sr se
 
@@ -1311,7 +1311,7 @@ You watch for the next Pa's PSA
 >cut beast with sword
 Trips Strip
 
-* _resort-verbiage
+* resort-verbiage
 
 >ts
 

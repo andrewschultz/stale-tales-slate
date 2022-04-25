@@ -39,7 +39,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >monty hints
 >eat saltine
 
-@max
+@max,hin
 >xc
 
 >metros
@@ -190,7 +190,9 @@ On one of several pages, you see: conspiracy theories from NIA EDGAR. The nonsen
 >read reading
 On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last page. The nonsense makes you see red.
 >read reading
-On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last page. The nonsense makes you see red.
+On one of several pages, you see: an order that this all should be RED AGAIN (sic) on the last page. The nonsense makes you see red.
+>read reading
+On one of several pages, you see: an order that this all should be RED AGAIN (sic) on the last page. The nonsense makes you see red.
 
 @mis
 #mistake test for grained
@@ -257,6 +259,28 @@ beats -> beast
 >ask beats about aabbccdd
 Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act.
 
+@ask
+#first, take care of stuff that breaks our test pattern e.g. clue the drainage
+##balance undos
+>gonear florae
+#ttc-table-of-unmatched-topic-responses-faeries
+>ask faeries about xyzzy
+"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
+>abstract gardenia to underside
+>ask faeries about xyzzy
+"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim.
+!getting a sore
+>undo
+>undo
+>banish gardenia
+#ttc-table-of-matched-thing-responses-faeries-gardenia
+>ask faeries about gardenia
+You don't have a gardenia, yet. But you can find or make one.
+>undo
+>undo
+>undo
+>undo
+
 >gardenia
 by one point
 }}SCORE++
@@ -284,6 +308,14 @@ You can't change the hotel, but you could have another look around.
 >n
 
 Roarings Garrison
+
+@gn
+#ttc-table-of-nowheres-roarings-garrison
+>in
+There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits or clear way INSIDE.
+>out
+There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits."
+
 
 @hin
 #ttc-table-of-metros-anagrams-lost-corn
@@ -461,33 +493,30 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 >e
 
 @ask
-#ttc-table-of-matched-thing-responses-faeries-gardenia
->ask faeries about gardenia
-You don't have a gardenia, yet. But you can find or make one.
-\\
-#ttc-table-of-matched-thing-responses-faeries-tomato
 >e
+#ttc-table-of-matched-thing-responses-faeries-tomato
 >ask faeries about tomato
-WRONG
+"Such a putrid plant! Keep it away from us!"
 \\
 #ttc-table-of-matched-thing-responses-faeries-clover
 >ask faeries about clover
-WRONG
+"Just weeds! Not useful for our sophisticated magic. Maybe useful for mere human magic, though."
 \\
 #ttc-table-of-matched-thing-responses-faeries-heaths
 >ask faeries about heaths
-WRONG
+"We trade in flowers! Flowers we have for flowers we want! What do you have?"
 \\
 #ttc-table-of-matched-thing-responses-faeries-merchandise
 >ask faeries about merchandise
 \\
 #ttc-table-of-matched-thing-responses-faeries-nerds
 >ask faeries about nerds
-WRONG
+The fairies buzz and give superior sniffs.
 \\
 #ttc-table-of-matched-thing-responses-faeries-deadbeat
 >ask faeries about deadbeat
-WRONG
+The fairies buzz and give superior sniffs.
+>w
 
 ####skip the camp again for detail testing. Let's get the
 >s
@@ -984,23 +1013,13 @@ DEBUG INFO: Rect-text: N------G.
 DEBUG INFO: Cert-text: ------A-.
 
 @ask
+#+ttc-table-of-matched-thing-responses-faeries-tomato
+>ask faeries about tomato
+"Even humans and monsters must find it revolting!"
+\\
 #ttc-table-of-unmatched-thing-responses-faeries
 >ask faeries about counter
 They possess wisdom humans never will, but they don't much want to help you with the physical realm, beyond flowers.
-\\
-#ttc-table-of-unmatched-topic-responses-faeries
->ask faeries about xyzzy
-"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim.
-!getting a sore
->abstract gardenia to underside
->ask faeries about xyzzy
-"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
->undo
->undo
-#+ttc-table-of-matched-thing-responses-faeries-gardenia
->ask faeries about gardenia
-They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
->undo
 \\
 #ttc-table-of-matched-thing-responses-faeries-drainage
 >ask faeries about drainage
@@ -1013,9 +1032,20 @@ They see your gardenia and snatch it away before you can offer properly. "Yes! Y
 >take brocade
 The faeries buzz around for a bit, peeved at your boldness. "Well, maybe you will do something for us some day."
 The FREE TO FREELOADERS torn cue by the brocade vanishes as you take it. Nice magic touch, that.
+\\
 #+ttc-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+>undo
+>undo
+\\
+#+ttc-table-of-matched-thing-responses-faeries-gardenia
+>ask faeries about gardenia
+They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+\\
+>take brocade
+"It is the least we can do for you! Thank you for helping us!"
+The FREE TO FREEDOM FIGHTERS torn cue by the brocade vanishes as you take it. Nice magic touch, that.
 \\
 >ask faeries about xyzzy
 "We are grateful! You are an exceptional human! Thank you so much! Do remember to take your reward! Now go and save the city."
@@ -1184,6 +1214,11 @@ You already took the begonias.
 >undo
 >undo
 
+@ask
+#+ttc-table-of-matched-thing-responses-faeries-heaths
+>ask faeries about heaths
+"We have faith in you! You will make the city safe to grow flowers again!"
+
 >take heaths
 
 @hin
@@ -1255,7 +1290,7 @@ The faeries wonder aloud what sort of magic could conjure a noise bag.
 \\
 #ttc-table-of-matched-thing-responses-faeries-tulip
 >ask faeries about tulip
-WRONG
+"For human flower magic, not bad at all! We guess."
 
 >score
 @min
@@ -1490,7 +1525,7 @@ The nerds assure you science is better than magic.
 "We wouldn't touch it, that's for sure. I mean, even if we could see where it went."
 \\
 #ttc-table-of-matched-thing-responses-nerds-tulip
->ask nerds about tracks
+>ask nerds about tulip
 "We've got plenty of light here. You can have it, if you know what to ask us about. And if the tulip would help."
 
 @gn
