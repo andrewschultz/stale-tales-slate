@@ -3499,8 +3499,6 @@ carry out requesting the score:
 		show-rank;
 		if poss-score of others < max-score of others:
 			say "You can't get the maximum score, since you [if arugula is moot]used the arugula[end if][if poss-score of others is 43] and [end if][if s-i are moot and concisions are reflexive]missed a chance for something obscure with the sonic icons[end if].";
-		else:
-			say "[line break]";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
@@ -3546,15 +3544,22 @@ carry out requesting the score:
 
 to show-rank:
 	say "This would give you the rank of ";
-	if mrlp is others or roved is true or otters is solved:
-		say "Procured Producer.";
-		continue the action;
-	let Q be number of rank-increasing regions + 1 + boolval of power-back;
-	if Q > number of rows in table of ranks:
-		d "[Q] rank, but only [number of rows in table of ranks] rows. Find some more.";
-		now Q is number of rows in table of ranks;
-	choose row Q in table of ranks;
+	choose row rank-index in table of ranks;
 	say "[rank-name entry].";
+
+to decide which number is rank-index:
+	if mrlp is demo dome, decide on number of rows in table of ranks;
+	if roved is true:
+		let count be 1;
+		repeat through table of ranks:
+			if there is no show-at-end-rule entry:
+				increment count;
+			else:
+				break;
+		if droll dollar is not off-stage, increment count;
+		if gate-level is 2 and others is solved, increment count;
+		decide on count;
+	decide on number of rank-increasing regions + 1 + boolval of power-back;
 
 definition: a region (called reg) is redoing-ignored:
 	if reg is bypassed, yes;
@@ -3581,6 +3586,7 @@ a rule	"Farce Facer"	"be in Ordeal Reload"
 --	"Unresting Insurgent"	"get powers back in Otters"
 --	"Reposed Deposer"	"defeat Elvira"
 h-available rule	"Errantries Restrainer"	"take on the Store H quest"
+h-available rule	"Procured Producer"	"get everything you can from Curtis"
 h-available rule	"Reprieval Prevailer"	"Win Store H"
 dome-seen rule	"Elites['] Listee / Greaten-Grantee / Derivin['] Diviner / Sharper Phraser"	"Visit Demo Dome"
 
@@ -5441,7 +5447,6 @@ to say set-det:
 to say slider-detail:
 	if list-headache is false, continue the action;
 	say ", and you [if headaches is 0]can't put up with the slider's beeps any more[else]can put up with its beepings [headaches in words] more time[plur of headaches][end if]";
-	if headaches is 0 and debug-state is true, say "[line break]Debug note: [b]HR[r] recharges the headaches."
 
 after printing the name of the stapler while taking inventory:
 	if staple is in the stapler:
@@ -5473,6 +5478,7 @@ check taking inventory:
 		now lamp is unmarked for listing; [lamp can fit in purse but isn't useful there]
 	if player has settler and player has super purse:
 		say "You're carrying your letters settler, to help with hints. [set-det].[line break]";
+		if headaches is 0 and debug-state is true, say "Debug note: [b]HR[r] recharges the headaches.[line break]";
 		now settler is unmarked for listing;
 	if the number of regspecial things carried by the player is 0:
 		say "[line break]You are carrying nothing from this region in particular.[paragraph break]";
@@ -22112,7 +22118,7 @@ this is the activate demo dome mode rule:
 curlistnum is a number that varies.
 
 to decide which number is table-list-max:
-	if peek keep is visited, decide on number of rows in table of megachatter;
+	if mrlp is demo dome, decide on number of rows in table of megachatter;
 	let count be 0;
 	repeat through table of megachatter:
 		if whichreg entry is Demo Dome and peek keep is not visited, next;
@@ -22208,11 +22214,11 @@ oyster	"ly"
 to say sto-listed: say "Store [character number 2 in the player's command in upper case]".
 
 this is the is-demo-visited rule:
-	if peek keep is visited, continue the action;
+	if mrlp is demo dome, continue the action;
 	say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it." instead;
 
 to decide whether others-passed:
-	if peek keep is visited or others is solved, yes;
+	if mrlp is demo dome or others is solved, yes;
 	no;
 
 this is the is-others-passed rule:

@@ -320,6 +320,12 @@ carry out otwining:
 		moot Elmer;
 		now adjsolve is 3;
 		now nounsolve is 3;
+		now ordeal reload is solved;
+		now routes is solved;
+		now troves is solved;
+		now presto is solved;
+		now oyster is solved;
+		now towers is solved;
 		now player is in Reclusion Inclosure;
 	ital-say "Otters endgame cheats are invoked! You can't win directly, because there are things worth testing. You will need to [b]QUICKLY[i] before attacking Elvira, although of course the insta-death if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[i] or it won't work in Rancho Archon Anchor. And for further testing, if you want, [otw2].";
 	the rule succeeds;
