@@ -2477,6 +2477,8 @@ to buzz-or-no-noise (ana - a thing):
 
 kibitz-on-scan is a truth state that varies. kibitz-on-scan is true.
 
+first-scan-okay is a truth state that varies.
+
 carry out cring:
 	if gadget-secured is true, say "You can't use this shortcut. Your gadget is locked." instead;
 	if player is in Potshot Hotspot and red bull is in Potshot Hotspot, try scaning red bull instead;
@@ -2488,10 +2490,12 @@ carry out cring:
 	now ever-scan is true;
 	now kibitz-on-scan is false;
 	say "You get to scanning, twiddling from [if gadget is cert]certify to rectify[else]rectify to certify[end if] and back.";
+	now first-scan-okay is false;
+	try scaning the noun;
+	if first-scan-okay is false, say "You decide against [if gadget is cert]rectifying[else]certifying[end if] as well, since [if gadget is rect]rectifying[else]certifying[end if] didn't turn up anything just now." instead;
 	gadflip;
 	try scaning the noun;
 	gadflip;
-	try scaning the noun;
 	now kibitz-on-scan is true;
 	say "[line break]";
 	kibitz the noun;
@@ -9519,7 +9523,7 @@ this is the sortie-scan-check rule:
 	if location of player is trap part:
 		if noun is dial:
 			if numset of dial is 16, say "Your gadget is silent. You've figured what to do with the dial." instead;
-			say "The gadget, when over the [b]EXITS[r] part, reads[if player has gadget][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters [b]EXITS[r] in it, somehow." instead;
+			say "[ok-scan]The gadget, when over the [b]EXITS[r] part, reads[if gadget is cert][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters [b]EXITS[r] in it, somehow." instead;
 	if location of player is The Nick:
 		if noun is jail cell graffiti or noun is grate:
 			say "You see nothing new other than the latent colors registering.";
@@ -9571,13 +9575,14 @@ this is the metros-scan-check rule:
 
 this is the resort-scan-check rule:
 	if location of player is rived drive:
-		if noun is windows, say "The windows that held soot turn up [if gadget is cert][rc][rc][rc][rc][rc][rc][rc][rc][else][bc][bc][bc][bc][rc][bc][bc][gc][end if].";
-		if noun is outcroppings, say "They don't seem to give a different scan than the rest of the tool shed. But you might be able to climb on them, if you were smaller. They show [if gadget is cert][gc][gc][rc][rc][rc][rc][rc][rc][else][gc][bc][bc][bc][rc][bc][bc][bc][end if][shed-rect-clue]. Maybe they are a clue for what the tool shed can become." instead;
+		if noun is windows, say "[ok-scan]The windows that held soot turn up [if gadget is cert][rc][rc][rc][rc][rc][rc][rc][rc][else][bc][bc][bc][bc][rc][bc][bc][gc][end if].";
+		if noun is outcroppings, say "[ok-scan]They don't seem to give a different scan than the rest of the tool shed. But you might be able to climb on them, if you were smaller. They show [if gadget is cert][gc][gc][rc][rc][rc][rc][rc][rc][else][gc][bc][bc][bc][rc][bc][bc][bc][end if][shed-rect-clue]. Maybe they are a clue for what the tool shed can become." instead;
 	if location of player is means manse:
 		if noun is X ITES exits, try scaning the location instead;
 
 to say shed-rect-clue: say "[if parse-output is true and gadget is rect]. Hmm. T[d1][d1][d1][d1][d1][d1]S[end if]".
 
+to say ok-scan: now first-scan-okay is true;
 
 section main rule
 
@@ -9618,6 +9623,7 @@ carry out scaning:
 	if gadget is not examined or ever-scan is false:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
 		say "[line break]";
+	now first-scan-okay is true;
 	now ever-scan is true;
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
@@ -9655,11 +9661,14 @@ to kibitz (sca - a thing):
 		if sca is kib entry:
 			say "[helpy entry][line break]";
 			the rule succeeds;
-	say "[line break]";
-	if son-nos is false and sr-acc is false:
-		say "You can toggle spaces between the letters with [b]SPACE(S)[r], or you can set them directly with [b]SPACE(S) ON[r]/[b]NO SPACE(S)[r], or [b]SON[r]/[b]NOS[r] for short."; [bold-ok]
-		now son-nos is true;
-		pad-rec-q "spaces";
+	note-spaces;
+
+to note-spaces:
+	if first-scan-okay is true:
+		if son-nos is false and sr-acc is false:
+			say "You can toggle spaces between the letters with [b]SPACE(S)[r], or you can set them directly with [b]SPACE(S) ON[r]/[b]NO SPACE(S)[r], or [b]SON[r]/[b]NOS[r] for short."; [bold-ok]
+			now son-nos is true;
+			pad-rec-q "spaces";
 
 table of kibitzes
 kib	helpy
