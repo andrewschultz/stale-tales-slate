@@ -208,6 +208,7 @@ Your score has just gone up by one point.
 >score
 You have 26 of 45 total points for the post-Elvira Others region, though you only need 28 to win.
 #strawberries = last with minimum at base
+
 >grapefruit
 Your score has just gone up by one point.
 >score

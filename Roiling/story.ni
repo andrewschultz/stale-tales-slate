@@ -5575,11 +5575,16 @@ upwarned is a truth state that varies.
 
 general-troves-nowhere-warn is a truth state that varies.
 
+diagonal-warned is a truth state that  varies.
+
 check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
 			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
 			now upwarned is true instead;
+	if diagonal-warned is false:
+		ital-say "there are no diagonal connections between locations in [this-game].";
+		now diagonal-warned is true;
 	repeat through nowhere-table of mrlp:
 		if theloc entry is location of player:
 			say "[thereject entry][line break]";

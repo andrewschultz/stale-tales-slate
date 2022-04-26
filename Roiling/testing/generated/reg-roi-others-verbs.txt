@@ -15,6 +15,10 @@
 >in
 Rustic Citrus
 
+#ttc-table-of-others-nowheres-rustic-citrus
+>e
+With greenish sheering all around, one direction seems as good as any other. Maybe you need to help Curtis a bit more.
+
 #verbcase swear-others-if-player-is-in-rustic-citrus
 >bother
 Instead, you mumble ... "I, curst!"
@@ -64,8 +68,16 @@ You have 4 of 45 total points for the post-Elvira Others region, though you only
 >smell
 Smells, savory, vary so.
 
+#+ttc-table-of-others-nowheres-rustic-citrus
+>e
+With greenish sheering all around, one direction seems as good as any other. Maybe you need to tinker with the moss cap.
+
 >compass
 Your score has just gone up by one point.
+
+#+ttc-table-of-others-nowheres-rustic-citrus
+>e
+The compass will help point you north. You should go that way.
 
 #reverbcase listen-others-if-noun-is-rustic-citrus
 >listen
@@ -155,6 +167,10 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 Curtis hands you a coin
 scru-it
 
+#+ttc-table-of-others-nowheres-rustic-citrus
+>e
+You can only go north back to the Swell Wells and beyond.
+
 >n
 
 >icon
@@ -182,6 +198,13 @@ You fiddle with the coin you got
 >w
 Filed Field
 
+#ttc-table-of-others-nowheres-filed-field
+>w
+The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful.
+
+>n
+With all the foilage foliage and the pipe panel lie pen app too, the only way to say I fled is to go back east.
+
 #verbcase listen-others-if-noun-is-barren-cries
 >listen barren cries
 The barren cries are sour and bitter and tiny.
@@ -201,6 +224,10 @@ Your score has just gone up by one point.
 
 >score
 You have 22 of 45 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#+ttc-table-of-others-nowheres-filed-field
+>n
+With all the foilage foliage and the pipe panel lie pen app too, the only way to say I fled is to go back east.
 
 >pineapple
 Your score has just gone up by one point.
@@ -238,6 +265,11 @@ Your score has just gone up by one point.
 >score
 You have 26 of 45 total points for the post-Elvira Others region, though you only need 28 to win.
 #strawberries = last with minimum at base
+
+#+ttc-table-of-others-nowheres-filed-field
+>w
+With all the foilage foliage and even without the pipe panel lie pen app, the only way to say I fled is to go back east.
+
 >grapefruit
 Your score has just gone up by one point.
 >score
@@ -253,6 +285,10 @@ You have 29 of 45 total points for the post-Elvira Others region, though you onl
 >e
 >e
 Clangier Clearing
+
+#ttc-table-of-others-nowheres-clangier-clearing
+>e
+You don't need anything in the superstore. You might get lost, anyway.
 
 #verbcase listen-others-if-noun-is-ammo-gang
 >listen ammo gang
@@ -313,6 +349,10 @@ You have 38 of 45 total points for the post-Elvira Others region, though you onl
 >d
 Scape Space
 
+#ttc-table-of-others-nowheres-scape-space
+>e
+One look at the warding drawing disabuses you of any notion of going anywhere except back up.
+
 #ttc-table-of-others-attacks-red-rat-art-erd
 >attack red rat art erd
 If anyone deserves it, he does. But even he still doesn't. He's already had enough physical abuse, anyway.
@@ -355,6 +395,10 @@ There are no fruits left to find or give back to Curtis.
 >u
 >n
 Gates Stage
+
+#ttc-table-of-others-nowheres-gates-stage
+>e
+You don't want to know how effective the gropin' roping is. The gates are more interesting, anyway.
 
 >n
 PERP

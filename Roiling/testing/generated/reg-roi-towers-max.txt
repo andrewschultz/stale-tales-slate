@@ -317,6 +317,18 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 
 Fringe Finger
 
+#ttc-table-of-towers-nowheres-fringe-finger
+>d
+The logged dogleg prevents you from jumping to your doom below to the unorg'd ground.
+>w
+/You try the logged dogleg's west entry, get twisted around, and come out the (north|south) entry\.
+>n
+/You try the logged dogleg's north entry, get twisted around, and come out the (west|south) entry\.
+>s
+/You try the logged dogleg's south entry, get twisted around, and come out the (north|west) entry\.
+>sw
+The logged dogleg has no diagonal entries.
+
 #ttc-table-of-towers-progress-comments-fringe-finger
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
@@ -355,6 +367,11 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 >n
 
 Shaven Havens
+
+# no offical table test case, just verifying you can get to the Dourest Detours
+>e
+You get lost in the savager ravages a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
+>undo
 
 #ttc-table-of-towers-progress-comments-shaven-havens
 You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
@@ -474,6 +491,7 @@ Lost Lots
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
 >w
+You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 Dourest Detours
 
 >rousted

@@ -53,6 +53,11 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 
 Loftier Trefoil
 
+@verbs
+#ttc-table-of-towers-nowheres-loftier-trefoil
+>e
+One look from Rodney, and you stay put
+
 @max
 #ttc-table-of-towers-progress-comments-loftier-trefoil
 The palace--well, you couldn't even see it before you stepped in here. Maybe someone will help you, once you've sorted this mess out.
@@ -236,7 +241,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 >undo
 >undo
-
 
 @spoi
 ##balance undos
@@ -716,6 +720,11 @@ by one point
 }}CURMIN++
 }}SCORE++
 
+@verbs
+#+ttc-table-of-towers-nowheres-loftier-trefoil
+>e
+Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
+
 >yonder
 Your score has just gone up by one point
 }}SCORE++
@@ -740,6 +749,10 @@ You apparently can't scan the curst palace fully with the settler 'til you're al
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
 
 @verbs
+#ttc-table-of-towers-nowheres-topside-deposit
+>e
+The Wildest Wilteds are too dangerous any way but north, and the dreads adders are in the way right now.
+\\
 #verbcase listen-towers-if-player-is-in-topside-deposit
 >listen
 An unconvincing voice from where you came moans "Stop! Die!" You must ignore it and go forward.
@@ -979,6 +992,7 @@ The palace seems a bit closer now. You probably have a way to go, but it's a sta
 #verbcase listen-towers-if-noun-is-diners
 >listen diners
 An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red.
+\\
 #verbcase listen-towers-if-noun-is-butlers
 >listen butlers
 The butlers loudly banter "Let's rub (you) the wrong way!" You see red.
@@ -1173,6 +1187,22 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
+
+@verbs
+>w
+#ttc-table-of-towers-nowheres-outer-route
+>w
+You get lost in the sway-ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
+>undo
+>undo
+\\
+>s
+#ttc-table-of-towers-nowheres-topside-deposit
+>e
+The Wildest Wilteds are too dangerous any way but back north.
+\\
+>undo
+>undo
 
 @minh
 >reined
@@ -1710,6 +1740,18 @@ Your score has just gone up by one point
 \\
 Fringe Finger
 
+#ttc-table-of-towers-nowheres-fringe-finger
+>d
+The logged dogleg prevents you from jumping to your doom below to the unorg'd ground.
+>w
+/You try the logged dogleg's west entry, get twisted around, and come out the (north|south) entry\.
+>n
+/You try the logged dogleg's north entry, get twisted around, and come out the (west|south) entry\.
+>s
+/You try the logged dogleg's south entry, get twisted around, and come out the (north|west) entry\.
+>sw
+The logged dogleg has no diagonal entries.
+
 @max
 #ttc-table-of-towers-progress-comments-fringe-finger
 This may've been a step away from the palace, but hooray, stuff to pick up.
@@ -1863,6 +1905,12 @@ Your score has just gone up by one point
 >n
 \\
 Shaven Havens
+
+@max
+# no offical table test case, just verifying you can get to the Dourest Detours
+>e
+You get lost in the savager ravages a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
+>undo
 
 @max
 #ttc-table-of-towers-progress-comments-shaven-havens
@@ -2425,6 +2473,14 @@ Actionless Coastlines
 #ttc-table-of-towers-progress-comments-actionless-coastlines
 You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
 
+@verbs
+#ttc-table-of-towers-nowheres-actionless-coastlines
+>n
+You can't get across Leak Lake without some sort of craft.
+\\
+>sw
+You don't need to explore the natatorium or Hatchery.
+
 @!minh,mini
 >s
 >s
@@ -2588,6 +2644,7 @@ This may've been a step away from the palace, but hooray, stuff to pick up.
 
 @!minh,mini
 >w
+You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 Dourest Detours
 }}CURMIN++
 
@@ -2639,6 +2696,10 @@ Do so anyway?
 After a thoughtful gaze, you reckon the seismal samiels could be AIMLESS.
 
 @verbs
+#ttc-table-of-towers-nowheres-dourest-detours
+>n
+Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
+\\
 #verbcase listen-towers-if-player-is-in-dourest-detours
 >listen
 You hear something that makes you see red.
@@ -2710,6 +2771,10 @@ After a thoughtful gaze, you reckon the sporties' ripostes could be PROSIEST.
 #verbcase listen-towers-if-noun-is-sporties-ripostes
 >listen ripostes
 The sporties' ripostes
+\\
+#ttc-table-of-towers-nowheres-lost-lots
+>e
+Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?
 
 @!minh,mini
 >prosiest
@@ -2736,6 +2801,20 @@ You can't change the gadflies. There are too many.
 #ttc-table-of-lost-lots-nudges-gadflie
 >gadflei
 You can't change the gadflies. There are too many.
+
+@verbs
+>gonear shaven havens
+#ttc-table-of-towers-nowheres-shaven-havens
+>e
+You wander off, but you hear hikers shreik "Shrike! Shrike!"
+Any direction but back south might drive you too far from the palace.
+\\
+>e
+!You wander off, but you hear hikers shreik "Shrike! Shrike!"
+Any direction but back south might drive you too far from the palace.
+>undo
+>undo
+>undo
 
 @!minh,mini
 >n
@@ -2843,6 +2922,11 @@ You're going side-to-side to see the Curst Palace, but hooray to seeing some oth
 
 @hin
 Dr. Yow can be manipulated, even behind the prison ropins.
+
+@verbs
+#ttc-table-of-towers-nowheres-obscurest-subsector
+>e
+A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now.
 
 @nud
 #ttc-table-of-obscurest-subsector-nudges-locked
@@ -3209,9 +3293,14 @@ After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
 You smell something generically nice from the campsite nearby and say "Ahhhh! Nature!" a bit too loud. Ugg. You won't do that again.
+\\
 >listen
 #verbcase listen-towers-if-player-is-in-outer-route
 The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
+\\
+#+ttc-table-of-towers-nowheres-outer-route
+>w
+The sway-ways are not reliable. You probably just want to go back east.
 
 >revised
 }}SCORE++
@@ -3705,6 +3794,13 @@ The Rawest Waters of Leak Lake would probably be even less fun the second time a
 >undo
 >undo
 >undo
+#ttc-table-of-towers-nowheres-rawest-waters
+>e
+Spirited riptides! You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
+>n
+Spirited riptides! That'd only make the Earnest Eastern Neaters further away.
+>undo
+>undo
 >undo
 >undo
 
@@ -3850,6 +3946,11 @@ You don't want to cross Leak Lake again.
 #+ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
+
+@verbs
+#ttc-table-of-towers-nowheres-mislit-limits
+>n
+The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
 
 >score
 {$SCOS}
@@ -4249,6 +4350,12 @@ The final entry blinks alternately with the fifth--neither is purple at the same
 !Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
 >scan palace
 !The entire settler lights up, finally!
+
+@verbs
+#+ttc-table-of-towers-nowheres-mislit-limits
+>sw
+You don't want to go back across Leak Lake.
+!Maybe there is a clue
 
 @minh,mini
 >au 0

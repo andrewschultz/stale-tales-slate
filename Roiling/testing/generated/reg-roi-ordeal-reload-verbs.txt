@@ -10,6 +10,10 @@
 >au 2
 >posf
 
+#no table entry for dusty-study: nowhere-ing is too complex, so it's in check going nowhere in Dusty Study
+>e
+You're just in the mood for quiet time, now, just looking around
+
 #verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
 >sleep
 But you just woke up!
@@ -102,6 +106,10 @@ Score in a scenario: 7 out of 15 total points in the current region, Ordeal Relo
 >in
 Farming Framing
 
+#ttc-table-of-ordeal-reload-nowheres-farming-framing
+>n
+No time for mooching around your means manse. You probably need to take a secret passage in, or down.
+
 #verbcase smell-ordeal-reload-if-player-is-in-farming-framing
 >smell
 Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap.
@@ -112,9 +120,17 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
+#+ttc-table-of-ordeal-reload-nowheres-farming-framing
+>n
+No time for mooching around your means manse. You probably need to take that secret passage in, or down.
+
 >out
 >u
 Highest Heights
+
+#ttc-table-of-ordeal-reload-nowheres-highest-heights
+>n
+You can go back IN to the study, though you don't need to, or you could try to get the pram out of the way.
 
 >ramp
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
@@ -122,8 +138,16 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
+#+ttc-table-of-ordeal-reload-nowheres-highest-heights
+>n
+You can go back IN to the study, though you don't need to, or you could try going DOWN the ramp.
+
 >d
 Largely All-Grey Gallery
+
+#ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
+>w
+You can probably go back up, or you can go in if you're ready to face what's beyond.
 
 #verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
 >listen
@@ -163,6 +187,10 @@ Elmo checks you for a second. "You sure you know how to use the settler?"
 You nod. "No clues counsel."
 
 Carven Cavern
+
+# Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
+>e
+You need to create or discover a viable exit, first.
 
 >sleep
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
@@ -204,6 +232,11 @@ It's still too thick, even though some of the plaster is peeled away.
 
 >score
 Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+# Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
+>au 0
+>w
+The only way to make progress is inward, through the apertured departure.
 
 #+ttc-table-of-ordeal-reload-attacks-apertured-departure
 >attack apertured departure

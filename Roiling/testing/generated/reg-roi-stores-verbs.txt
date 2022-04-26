@@ -47,12 +47,19 @@ Cruelest Lectures
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
+#ttc-table-of-stores-nowheres-cruelest-lectures
+>n
+You fear a "BE RASH? EH, BARS!" from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.
+But there must be a generic way to leave!
+
 #verbcase smell-stores-if-player-is-in-cruelest-lectures
 >smell
 It smells depressingly antiseptic here.
+
 #verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
+
 >listen
 #verbcase listen-stores-if-noun-is-suit-ode
 You listen for anything at all besides the blabber babbler. You pick up some background music--why, yes, it is the the horrendous self-helpy song Suit Ode: Douse It.

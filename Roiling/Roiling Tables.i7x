@@ -2604,7 +2604,7 @@ askee	dialogue-text
 plebe	"You figure you should grill him about how worthless he thinks he is, but you lack the right word or words."
 Rand	"Rand gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"Leo gives a whole new dimension to small talk. But not for long, thankfully."
-hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to guard you from what's beyond, and that wall is helping."
+hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to prevent you from seeing from what's beyond, and that wall is helping."
 Zo Mavelt	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 Tom Avlez	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 Lev Tzoma	"'If you scan me and go north, I'll go away, and someone else might appear.'"
@@ -3108,7 +3108,7 @@ table of routes nowheres
 theloc	thereject
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
-Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
+Ripe Pier	"You've lost all sense of direction here, but you still somehow need to figure how to get on that boat."
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor."
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
@@ -3152,7 +3152,7 @@ Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin Plains	"With the sloppy polyps on most all sides, you can only go back south or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
 Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
-Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go [b]IN[r] to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
+Horned Hedron	"The main exit is south, [if sausage is moot]and you daren't go west now the [sausage] took care of things[else if Rascal Craals is visited]though you can go back west to the Rascal Craals[else]though an area west is in disrepair[end if]. You can also go [b]IN[r] [if pol art portal is touchable]through the portal[else]past the ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 End Den	"You're disoriented here, but you can go back [b]OUT[r] to get to the Horned Hedron."
 Plasm Lamps	"It's you against the ant! There's no running, but it can't be too hard to defeat."
@@ -3166,13 +3166,13 @@ to say posh-cant-exit:
 
 to say unless-max:
 	let my-tot be poss-score of oyster - cur-score of oyster;
-	if lever is reflexive:
+	if lever is not moot:
 		decrement my-tot;
 	if bogus-derail is reflexive:
 		decrement my-tot;
 	if bogus-redial is reflexive:
 		decrement my-tot;
-	say "[if my-tot is 0], and you've done everything else[else], or maybe you can look around to get more points[end if]";
+	say "[if my-tot is 0], as you've done everything else you can[else], or maybe you can look around to get more points[end if]";
 
 section oyster auxiliary
 
@@ -3248,7 +3248,7 @@ book others
 
 table of others nowheres
 theloc	thereject
-Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]."
+Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else if moss cap is moot]The compass will help point you north. You should go that way[else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]."
 Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [and-pen], the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabuses you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."

@@ -17,6 +17,10 @@
 
 Loftier Trefoil
 
+#ttc-table-of-towers-nowheres-loftier-trefoil
+>e
+One look from Rodney, and you stay put
+
 >z
 
 #verbcase listen-towers-if-noun-is-rodney
@@ -54,10 +58,18 @@ Score in a scenario: 6 out of 57 total points in the current region, Towers. Low
 >talcier
 by one point
 
+#+ttc-table-of-towers-nowheres-loftier-trefoil
+>e
+Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
+
 >yonder
 Your score has just gone up by one point
 
 Topside Deposit
+
+#ttc-table-of-towers-nowheres-topside-deposit
+>e
+The Wildest Wilteds are too dangerous any way but north, and the dreads adders are in the way right now.
 
 #verbcase listen-towers-if-player-is-in-topside-deposit
 >listen
@@ -93,6 +105,7 @@ Scope Copse
 #verbcase listen-towers-if-noun-is-diners
 >listen diners
 An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red.
+
 #verbcase listen-towers-if-noun-is-butlers
 >listen butlers
 The butlers loudly banter "Let's rub (you) the wrong way!" You see red.
@@ -115,6 +128,21 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+
+>w
+#ttc-table-of-towers-nowheres-outer-route
+>w
+You get lost in the sway-ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
+>undo
+>undo
+
+>s
+#ttc-table-of-towers-nowheres-topside-deposit
+>e
+The Wildest Wilteds are too dangerous any way but back north.
+
+>undo
+>undo
 
 >reined
 Your score has just gone up by one point
@@ -183,6 +211,18 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 >w
 
 Fringe Finger
+
+#ttc-table-of-towers-nowheres-fringe-finger
+>d
+The logged dogleg prevents you from jumping to your doom below to the unorg'd ground.
+>w
+/You try the logged dogleg's west entry, get twisted around, and come out the (north|south) entry\.
+>n
+/You try the logged dogleg's north entry, get twisted around, and come out the (west|south) entry\.
+>s
+/You try the logged dogleg's south entry, get twisted around, and come out the (north|west) entry\.
+>sw
+The logged dogleg has no diagonal entries.
 
 >rustled
 Your score has just gone up by one point
@@ -310,6 +350,13 @@ Score in a scenario: 30 out of 57 total points in the current region, Towers. Lo
 >n
 Actionless Coastlines
 
+#ttc-table-of-towers-nowheres-actionless-coastlines
+>n
+You can't get across Leak Lake without some sort of craft.
+
+>sw
+You don't need to explore the natatorium or Hatchery.
+
 >s
 >s
 
@@ -346,7 +393,12 @@ Score in a scenario: 33 out of 57 total points in the current region, Towers. Lo
 Lost Lots
 
 >w
+You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 Dourest Detours
+
+#ttc-table-of-towers-nowheres-dourest-detours
+>n
+Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
 
 #verbcase listen-towers-if-player-is-in-dourest-detours
 >listen
@@ -372,11 +424,28 @@ Score in a scenario: 35 out of 57 total points in the current region, Towers. Lo
 >listen ripostes
 The sporties' ripostes
 
+#ttc-table-of-towers-nowheres-lost-lots
+>e
+Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?
+
 >prosiest
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 36 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+
+>gonear shaven havens
+#ttc-table-of-towers-nowheres-shaven-havens
+>e
+You wander off, but you hear hikers shreik "Shrike! Shrike!"
+Any direction but back south might drive you too far from the palace.
+
+>e
+!You wander off, but you hear hikers shreik "Shrike! Shrike!"
+Any direction but back south might drive you too far from the palace.
+>undo
+>undo
+>undo
 
 >n
 
@@ -411,6 +480,10 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 >e
 
 Obscurest Subsector
+
+#ttc-table-of-towers-nowheres-obscurest-subsector
+>e
+A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now.
 
 #ttc-table-of-towers-attacks-prison-ropins
 >attack prison ropins
@@ -481,9 +554,14 @@ Outer Route
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
 You smell something generically nice from the campsite nearby and say "Ahhhh! Nature!" a bit too loud. Ugg. You won't do that again.
+
 >listen
 #verbcase listen-towers-if-player-is-in-outer-route
 The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
+
+#+ttc-table-of-towers-nowheres-outer-route
+>w
+The sway-ways are not reliable. You probably just want to go back east.
 
 >revised
 
@@ -573,6 +651,13 @@ The Rawest Waters of Leak Lake would probably be even less fun the second time a
 >undo
 >undo
 >undo
+#ttc-table-of-towers-nowheres-rawest-waters
+>e
+Spirited riptides! You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
+>n
+Spirited riptides! That'd only make the Earnest Eastern Neaters further away.
+>undo
+>undo
 >undo
 >undo
 
@@ -599,6 +684,10 @@ You don't want to cross Leak Lake again.
 #+ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
+
+#ttc-table-of-towers-nowheres-mislit-limits
+>n
+The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
@@ -651,6 +740,11 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >out
 
 >misses
+
+#+ttc-table-of-towers-nowheres-mislit-limits
+>sw
+You don't want to go back across Leak Lake.
+!Maybe there is a clue
 
 >spectacular
 Your score has just gone up by one point

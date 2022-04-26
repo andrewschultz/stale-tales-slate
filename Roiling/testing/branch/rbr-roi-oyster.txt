@@ -46,6 +46,14 @@ Taken.
 >monty hints
 >ptf 2
 
+@verbs
+#ttc-table-of-oyster-nowheres-posh-hops-shop
+>e
+You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them
+\\
+>outside
+So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image.
+
 @max
 >talk to casper
 #brackets ok
@@ -57,7 +65,6 @@ If the Horned Hedron could be undermined or infiltrated, perhaps things would ge
 #ttc-table-of-notepad-entries-the-haunter
 >pad haunter
 The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it.
-
 
 @max
 ##balance undos
@@ -449,6 +456,10 @@ Olde Lode
 DEBUG INFO: clam hinting.
 
 @verbs
+#ttc-table-of-oyster-nowheres-olde-lode
+>e
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex.
+\\
 #ttc-table-of-goto-sectioning-posh-hops-shop-1--
 >gt shop
 The LOLstr trolls would not welcome you back.
@@ -546,6 +557,11 @@ DEBUG INFO: urn hinting.
 }}SCORE++
 {$SCOS}
 
+@verbs
+#+ttc-table-of-oyster-nowheres-olde-lode
+>e
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex.
+
 @nud
 #ttc-table-of-olde-lode-nudges-calm
 >clma
@@ -586,6 +602,11 @@ Now you've charged up the frat raft, you need to find a way to use the oars.
 >undo
 
 @verbs
+#ttc-table-of-oyster-nowheres-disease-seaside
+>e
+The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.
+You need to cross to the north for more action.
+\\
 #verbcase smell-oyster-if-player-is-in-disease-seaside
 >smell
 Say, spare sea spray.
@@ -792,6 +813,11 @@ DEBUG INFO: pale plea hinting.
 
 >score
 {$SCOS}
+
+@verbs
+#ttc-table-of-oyster-nowheres-fighter-freight
+>e
+Directions aren't what matters here. You just need some sort of action to get off the boat.
 
 @sli
 #slider test for leap
@@ -1040,7 +1066,6 @@ Anger Range won't be helped by an advice column or columnist.
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Though another try actually gets a point here. You're really close.
 
-
 @sli
 #slider test for slander
 >lsnaerd
@@ -1094,6 +1119,11 @@ Hardest Trashed Dearths
 
 @hin
 DEBUG INFO: eeks hinting.
+
+@verbs
+#ttc-table-of-oyster-nowheres-hardest-trashed-dearths
+>e
+Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow.
 
 @sli
 #slider test for seek
@@ -1200,12 +1230,18 @@ Lean Lane
 DEBUG INFO: Tea-at-a-Tee hinting.
 
 @verbs
+#ttc-table-of-oyster-nowheres-lean-lane
+>e
+Though you are a guest, probably best not to go poking around. You can go back west.
+\\
 #verbcase swear-oyster-if-player-is-in-lean-lane
 >bother
 You don't want Aunt Tuna to perform a tsk task.
+\\
 #verbcase smell-oyster-if-player-is-in-lean-lane
 >smell
 Antiseptic spice taint.
+\\
 #verbcase listen-oyster-if-noun-is-aunt-tuna
 >listen tuna
 Aunt Tuna is humming something tuneless as she goes about her business.
@@ -1412,6 +1448,11 @@ Lapsin' Plains
 @hin
 DEBUG INFO: wherever the crate is coming from hinting.
 DEBUG INFO: crate hinting.
+
+@verbs
+#ttc-table-of-oyster-nowheres-lapsin-plains
+>e
+With the sloppy polyps on most all sides, you can only go back south or, once the span pans are neutralized, inside.
 
 @max
 >warp
@@ -1743,6 +1784,11 @@ Your score has just gone up by one point
 #ttc-table-of-oyster-location-hint-checkoffs-lapsin-plains
 With the way inside open, you no longer have anything you need to do here.
 
+@verbs
+#ttc-table-of-oyster-nowheres-lapsin-plains
+>e
+With the sloppy polyps on most all sides, you can only go back south or inside.
+
 >score
 {$SCOS}
 
@@ -2037,9 +2083,14 @@ Sclerous Closures
 DEBUG INFO: Paw-R-Wrap hinting.
 
 @verbs
+#ttc-table-of-oyster-nowheres-sclerous-closures
+>w
+You can only go north to the Horned Hedron, once the sardine is gone, or east back to Anger Range. The Handsome Sand Home blocks you west and south.
+\\
 #verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
 >smell
 Sea rind.
+\\
 #verbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU.
@@ -2108,6 +2159,10 @@ Your score has just gone up by one point
 DEBUG INFO: Achers' Chaser Arches hinting.
 
 @verbs
+#+ttc-table-of-oyster-nowheres-sclerous-closures
+>w
+You can only go north to the Horned Hedron or east back to Anger Range. The Handsome Sand Home blocks you west and south.
+\\
 #reverbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence.
@@ -2227,6 +2282,10 @@ Horned Hedron
 DEBUG INFO: weaselly walleyes hinting.
 
 @verbs
+#ttc-table-of-oyster-nowheres-horned-hedron
+>e
+The main exit is south, though an area west is in disrepair. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
+\\
 #verbcase smell-oyster-if-noun-is-weaselly-walleyes
 >smell walleyes
 The weaselly walleyes smell of Skum-Musk.
@@ -2290,6 +2349,10 @@ Rascal Craals
 DEBUG INFO: ruby hinting.
 
 @verbs
+#ttc-table-of-oyster-nowheres-rascal-craals
+>w
+The round bay boundary blocks you from going any way but back east.
+\\
 #verbcase smell-oyster-if-player-is-in-rascal-craals
 >smell
 This situation only stinks in general, not literally.
@@ -2332,6 +2395,12 @@ The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
 It was enough to bury the ruby.
 
 >e
+
+@verbs
+#+ttc-table-of-oyster-nowheres-horned-hedron
+>e
+The main exit is south, though you can go back west to the Rascal Craals. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
+
 >s
 >e
 
@@ -2401,25 +2470,19 @@ Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh)
 by one point
 }}SCORE++
 
+ascal Craals
+orned Hedron
+
 @hin
 DEBUG INFO: ol' trap hinting.
 
 >score
 {$SCOS}
 
->w
-
-@hin
-DEBUG INFO: ol' trap hinting.
-
->n
-
-@hin
-DEBUG INFO: ol' trap hinting.
-
->w
-
+@verbs
+#+ttc-table-of-oyster-nowheres-horned-hedron
 >e
+The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN past the ol' trap once you disarm it.
 
 @sli
 #slider test for patrol
@@ -2467,6 +2530,11 @@ Your score has just gone up by one point
 #ttc-table-of-oyster-location-hint-checkoffs-horned-hedron
 You've found a way further in, and that's all you need here
 
+@verbs
+#+ttc-table-of-oyster-nowheres-horned-hedron
+>e
+The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN through the portal.
+
 >score
 {$SCOS}
 
@@ -2483,9 +2551,13 @@ Tenfold
 >undo
 
 @verbs
-# prime GT END DEN for later
+# prime GT END DEN for later. Oh, and poke the table of nowheres, too!
 >in
 End Den
+\\
+#ttc-table-of-oyster-nowheres-end-den
+>e
+You're disoriented here, but you can go back OUT to get to the Horned Hedron.
 \\
 >out
 Horned Hedron
@@ -2706,6 +2778,11 @@ You can TRAMPLE the templar ramplet now you have a shiny worthy weapon.
 >undo
 >undo
 
+@verbs
+#ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+>e
+While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
+
 @max
 >trample ramplet
 by one point
@@ -2726,6 +2803,10 @@ DEBUG INFO: natant ant hinting.
 {$SCOS}
 
 @verbs
+#ttc-table-of-oyster-nowheres-plasm-lamps
+>e
+It's you against the ant! There's no running, but it can't be too hard to defeat.
+\\
 #verbcase goto-oyster-if-location-of-player-is-plasm-lamps
 >gt hedron
 Aw, c'mon, the ant should be no problem.
@@ -2955,6 +3036,11 @@ The lever was designed not to give extra points for pulling it too much.
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
 #ttc-table-of-oyster-spechelp-bogus-derail
+
+@verbs
+#+ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+>e
+While you can go back outside, you can just finish things here, as you've done everything else you can.
 
 @min
 >au 0

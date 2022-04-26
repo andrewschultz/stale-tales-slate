@@ -21,6 +21,11 @@
 >enter tastee
 Loather Rathole
 
+#ttc-table-of-troves-nowheres-loather-rathole
+>e
+Consciously going into any hurt-thru might leave you vulnerable. You need to find temporary warmth now you were kicked out from Eh, At Heat.
+Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
+
 #verbcase sleep-troves-default
 >sleep
 Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now.
@@ -74,6 +79,11 @@ Score in a scenario: 2 out of 30 total points in the current region, Troves. Low
 >hate
 Your score has just gone up by one point
 
+#ttc-table-of-troves-nowheres-loather-rathole
+>e
+Consciously going into any hurt-thru might leave you vulnerable. You need to find motivation to get through the Race Acre. You need to catch that thief!
+!Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
+
 >score
 Score in a scenario: 3 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
@@ -82,6 +92,10 @@ Score in a scenario: 3 out of 30 total points in the current region, Troves. Low
 Your score has just gone up by one point
 
 Bustle Sublet
+
+#ttc-table-of-troves-nowheres-bustle-sublet
+>e
+The reastier arteries lead nowhere good. You still have a lot to look for.
 
 >score
 Score in a scenario: 4 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
@@ -110,6 +124,10 @@ Boarded Roadbed
 >score
 Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
 
+#ttc-table-of-troves-nowheres-boarded-roadbed
+>e
+A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think.
+
 >stay
 by one point
 >score
@@ -133,6 +151,10 @@ A snore arises from the arena. You see red. There's more, if you can deal with i
 >believe
 Your score has just gone up by one point
 
+#+ttc-table-of-troves-nowheres-boarded-roadbed
+>e
+There's a chance you might wind up in ruts: Rustin' Ruin St.!
+
 >reason
 Your score has just gone up by one point
 
@@ -154,11 +176,19 @@ by one point
 
 Drain Nadir
 
+#ttc-table-of-troves-nowheres-drain-nadir
+>e
+No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
+
 >score
 Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
 
 >despair
 Your score has just gone up by one point
+
+#+ttc-table-of-troves-nowheres-drain-nadir
+>e
+No. You're so low, you can picture yourself slipping on a rind or dinar. "I... darn." You need to build yourself up here, somehow.
 
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
@@ -194,9 +224,14 @@ Boredom Bedroom
 >score
 Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
 
+#ttc-table-of-troves-nowheres-boredom-bedroom
+>e
+Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better.
+
 #verbcase listen-troves-if-player-is-in-boredom-bedroom
 >listen
 The dead air inspires no rad idea.
+
 #verbcase sleep-troves-if-player-is-in-boredom-bedroom
 >sleep
 You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker.
@@ -223,9 +258,14 @@ Your score has just gone up by one point
 
 Browse Bowers
 
+#ttc-table-of-troves-nowheres-browse-bowers
+>e
+You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more.
+
 #verbcase smell-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone-or-player-is-in-upscale-capsule
 >smell
 Perfumed. Dump-free.
+
 #verbcase sleep-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone
 >sleep
 In a public place? Worse, in an upscale public place? How shocking!
@@ -248,15 +288,21 @@ Econ-Cone
 >score
 Score in a scenario: 20 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
 
+#ttc-table-of-troves-nowheres-econ-cone
+>e
+The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!
+
 #verbcase listen-troves-if-noun-is-praise-spirea
 >listen praise spirea
 You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.
+
 >listen praise spirea
 The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I reaps! Ire? Sap!"
 >undo
 >undo
 >listen
 You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.
+
 >listen
 The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I reaps! Ire? Sap!"
 
@@ -295,6 +341,10 @@ Your score has just gone up by one point
 
 Upscale Capsule
 
+#ttc-table-of-troves-nowheres-upscale-capsule
+>e
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
+
 >score
 Score in a scenario: 24 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
@@ -308,11 +358,19 @@ White noise, it is on. Whee.
 >deserve
 Your score has just gone up by one point
 
+#+ttc-table-of-troves-nowheres-upscale-capsule
+>e
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you'd need to have proved yourself. You haven't, yet.
+
 >score
 Score in a scenario: 25 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 
 >last
 Your score has just gone up by one point
+
+#+ttc-table-of-troves-nowheres-upscale-capsule
+>e
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. I guess you could leave now, if you did the right thing, first.
 
 >score
 Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.

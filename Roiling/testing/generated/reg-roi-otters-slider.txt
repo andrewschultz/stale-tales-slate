@@ -546,7 +546,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 
-#this is just to get rid of Elvira
+#this is how we get rid of Elvira
 >w
 Rancho Archon Anchor
 WTF FTW

@@ -17,6 +17,10 @@
 >enter tornado
 Grey Gyre
 
+#this is a special "can't go that way" for Grey Gyre, since all 4 directions are viable
+>n
+You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze.
+
 #verbcase swear-presto-if-cur-score-of-presto-is-0
 >damn
 That's too strong for here. But you have the right idea.
@@ -29,6 +33,10 @@ It smells a bit stinky here, but more pressingly, it just FEELS stinky
 >umph
 Your score has just gone up by one point
 Austerer Treasure
+
+#ttc-table-of-presto-nowheres-austerer-treasure
+>n
+The treasure room has no secret passages, so you can only go back east.
 
 #reverbcase smell-presto-default
 >smell
@@ -53,34 +61,12 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 
 >e
 
->n
->w
->w
-#verbcase smell-presto-if-location-of-player-is-in-the-maze
->smell
-You smell a gefilte and think "get a life."
->n
-#verbcase swear-presto-if-location-of-player-is-in-the-maze
->damn
-Unnecessary mazes do have that effect on people.
->n
->e
->e
->e
->n
->w
->n
-Unwary Runway
->n
->gt nowt town
-#verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
->gt unwary runway
-#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
-
 >s
 Char Arch
+
+#ttc-table-of-presto-nowheres-char-arch
+>e
+East or west would be an alpinist tailspin ("CHARGE! Eh, crag.") Try north or south, instead.
 
 #not a mistake
 >rats
@@ -104,6 +90,166 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 >damn
 The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting.
 
+#one trip through the maze!
+>n
+#ttc-table-of-presto-nowheres-nowt-town
+
+>n
+Nowt Town holds no secrets. You can only go west or south.
+
+>w
+#generic reject for touching a wall in r10
+>s
+You walk into a wall, which goes ZVT. "Lame-o," you think, seeing red. Maybe that ZVT was a VZT.
+>w
+
+#verbcase smell-presto-if-location-of-player-is-in-the-maze
+>smell
+You smell a gefilte and think "get a life."
+
+#verbcase swear-presto-if-location-of-player-is-in-the-maze
+>damn
+Unnecessary mazes do have that effect on people.
+
+#generic reject for touching a wall in r00
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>n
+#generic reject for touching a wall in r01
+>w
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>n
+#generic reject for touching a wall in r02
+>w
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>n
+#generic reject for touching a wall in r03
+>w
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
+>undo
+>e
+#generic reject for touching a wall in r12
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>s
+#generic reject for touching a wall in r11
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>e
+#generic reject for touching a wall in r21
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>e
+#generic reject for touching a wall in r31
+>e
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>e
+#generic reject for touching a wall in r22
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>e
+#generic reject for touching a wall in r32
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>e
+#generic reject for touching a wall in r42
+>e
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>s
+#generic reject for touching a wall in r41
+>e
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>s
+#generic reject for touching a wall in r40
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#generic reject for touching a wall in r30
+>w
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>n
+#generic reject for touching a wall in r43
+>e
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>n
+#generic reject for touching a wall in r44
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#generic reject for touching a wall in r34
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>n
+#generic reject for touching a wall in r33
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#generic reject for touching a wall in r23
+>s
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#generic reject for touching a wall in r13
+>w
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>n
+#generic reject for touching a wall in r14
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>w
+#generic reject for touching a wall in r04
+>n
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>n
+
+Unwary Runway
+
+>gt nowt town
+#verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
+GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
+
+#ttc-table-of-presto-nowheres-unwary-runway
+>w
+The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?
+>n
+
+Grey Gyre
+>gt unwary runway
+#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
+GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
+
+>gonear runway
+#ttc-table-of-presto-nowheres-unwary-runway
+>w
+Zo Mavelt waves frantically at you NOT to touch the east and west walls. They may be extra shocking here!
+>n
+
 #not a mistake
 >bleep
 Your score has just gone up by one point
@@ -114,6 +260,10 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 >e
 Marines Seminar Remains
 
+#ttc-table-of-presto-nowheres-marines-seminar-remains
+>e
+While you're impressed with people who can navigate sport ports, you couldn't do much more than show respect for them, if you need a distraction from your main quest.
+
 >get popgun
 
 >prost
@@ -122,6 +272,10 @@ DEBUG INFO: min-up codepath
 
 >score
 Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+
+#+ttc-table-of-presto-nowheres-marines-seminar-remains
+>e
+While you're impressed with people who can navigate sport ports, you already saluted them. No need to do more.
 
 >w
 
@@ -177,6 +331,10 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 
 >s
 Dirge Ridge
+
+#ttc-table-of-presto-nowheres-dirge-ridge
+>e
+The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches.
 
 #ttc-table-of-presto-attacks-leo
 >attack leo
@@ -274,6 +432,10 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 >n
 Saps' Pass
 
+#ttc-table-of-presto-nowheres-saps-pass
+>sw
+There's no way around the hogs. You need to get rid of them.
+
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
@@ -292,6 +454,10 @@ If you were as strong as
 Your score has just gone up by one point
 
 Phat Path
+
+#+ttc-table-of-presto-nowheres-saps-pass
+>sw
+It's best to stay on the Phat Path.
 
 >what
 Your score has just gone up by one point

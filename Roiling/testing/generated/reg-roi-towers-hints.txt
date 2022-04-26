@@ -370,6 +370,18 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 
 Fringe Finger
 
+#ttc-table-of-towers-nowheres-fringe-finger
+>d
+The logged dogleg prevents you from jumping to your doom below to the unorg'd ground.
+>w
+/You try the logged dogleg's west entry, get twisted around, and come out the (north|south) entry\.
+>n
+/You try the logged dogleg's north entry, get twisted around, and come out the (west|south) entry\.
+>s
+/You try the logged dogleg's south entry, get twisted around, and come out the (north|west) entry\.
+>sw
+The logged dogleg has no diagonal entries.
+
 #ttc-table-of-towers-anagrams-rustled
 >xr strudel
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -565,6 +577,7 @@ Score in a scenario: 33 out of 57 total points in the current region, Towers. Lo
 Lost Lots
 
 >w
+You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 Dourest Detours
 
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.

@@ -22,7 +22,6 @@ files=reg-roi-stores-max.txt,reg-roi-stores-min.txt,reg-roi-stores-nudmis.txt,re
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {CURMAX} points.
 }$SCODONE=Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
 
-
 }$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {CURMIN}.
 
 ## *FILE
@@ -408,12 +407,19 @@ Cruelest Lectures
 {$SCOS}
 
 @verbs
+#ttc-table-of-stores-nowheres-cruelest-lectures
+>n
+You fear a "BE RASH? EH, BARS!" from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.
+But there must be a generic way to leave!
+\\
 #verbcase smell-stores-if-player-is-in-cruelest-lectures
 >smell
 It smells depressingly antiseptic here.
+\\
 #verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
+\\
 >listen
 #verbcase listen-stores-if-noun-is-suit-ode
 You listen for anything at all besides the blabber babbler. You pick up some background music--why, yes, it is the the horrendous self-helpy song Suit Ode: Douse It.

@@ -1301,6 +1301,7 @@ The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
 It was enough to bury the ruby.
 
 >e
+
 >s
 >e
 
@@ -1341,16 +1342,11 @@ Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh)
 #notana
 by one point
 
+ascal Craals
+orned Hedron
+
 >score
 Score in a scenario: 34 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
-
->w
-
->n
-
->w
-
->e
 
 >gonear anger range
 #mistake test for horse

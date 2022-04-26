@@ -541,7 +541,7 @@ There's nothing you really need to attack or avoid quickly here or nearby.
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 
-#this is just to get rid of Elvira
+#this is how we get rid of Elvira
 >w
 Rancho Archon Anchor
 WTF FTW

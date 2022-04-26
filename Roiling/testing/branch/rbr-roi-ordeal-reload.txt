@@ -37,6 +37,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >au 2
 >posf
 
+@verbs
+#no table entry for dusty-study: nowhere-ing is too complex, so it's in check going nowhere in Dusty Study
+>e
+You're just in the mood for quiet time, now, just looking around
+
 @max
 >painting
 There's no need to tidy your study up just now. Still, that seems right, so you file that idea away for later.
@@ -289,7 +294,6 @@ You wrote some notes about the Tagged Gadget from Shuffling Around in here, abou
 #ttc-table-of-notepad-entries-warp
 >pad warp
 FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.
-
 
 >score
 {$SCOS}
@@ -708,6 +712,10 @@ The settler is pretty powerful, but it can't build bridges.
 Farming Framing
 
 @verbs
+#ttc-table-of-ordeal-reload-nowheres-farming-framing
+>n
+No time for mooching around your means manse. You probably need to take a secret passage in, or down.
+\\
 #verbcase smell-ordeal-reload-if-player-is-in-farming-framing
 >smell
 Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap.
@@ -747,6 +755,11 @@ To put spaces in letters settler readings, type SPACEON or SON. NOSPACE or NOS r
 >score
 {$SCOS}
 
+@verbs
+#+ttc-table-of-ordeal-reload-nowheres-farming-framing
+>n
+No time for mooching around your means manse. You probably need to take that secret passage in, or down.
+
 @nud
 #mistake retest for astir
 >astir
@@ -759,6 +772,11 @@ The stair helps you get around more easily, so it doesn't need to be changed bac
 >out
 >u
 Highest Heights
+
+@verbs
+#ttc-table-of-ordeal-reload-nowheres-highest-heights
+>n
+You can go back IN to the study, though you don't need to, or you could try to get the pram out of the way.
 
 @nud
 #ttc-table-of-highest-heights-nudges-highest
@@ -796,6 +814,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a d
 \\
 >score
 {$SCOS}
+
+@verbs
+#+ttc-table-of-ordeal-reload-nowheres-highest-heights
+>n
+You can go back IN to the study, though you don't need to, or you could try going DOWN the ramp.
 
 @nud
 #ttc-table-of-ordeal-reload-done-rejects-ramp
@@ -869,6 +892,10 @@ The steel pad intertwines into a marginally artistic pedestal.
 Largely All-Grey Gallery
 
 @verbs
+#ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
+>w
+You can probably go back up, or you can go in if you're ready to face what's beyond.
+\\
 #verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
 >listen
 Merciful quiet, for the moment.
@@ -1132,6 +1159,11 @@ You nod. "No clues counsel."
 
 Carven Cavern
 
+@verbs
+# Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
+>e
+You need to create or discover a viable exit, first.
+
 @max
 #ttc-table-of-notepad-entries-clues
 >pad clues
@@ -1204,7 +1236,6 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >gt framing farming
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
-
 @sli
 #slider test for staple
 >tspael
@@ -1271,7 +1302,6 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-
 @nud
 #+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
@@ -1324,6 +1354,11 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 {$SCOS}
 
 @verbs
+# Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
+>au 0
+>w
+The only way to make progress is inward, through the apertured departure.
+\\
 #+ttc-table-of-ordeal-reload-attacks-apertured-departure
 >attack apertured departure
 You can just enter it.

@@ -72,7 +72,8 @@ You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued 
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
 >listen
 #verbcase listen-otters-if-noun-is-yer-all-a-yell'r
-Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out. Sadly, now, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
+Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out.
+Sadly, now, with songs like Yeah, Hey, A Yeeha, Yah, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
 
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
 >really
@@ -112,6 +113,10 @@ You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy
 
 >n
 Loop Pool
+
+#ttc-table-of-otters-nowheres-loop-pool
+>e
+The pool is wide and long. You can only go back south.
 
 #verbcase smell-otters-if-player-is-in-loop-pool
 >smell
@@ -154,6 +159,10 @@ Score in a scenario: 8 out of 35 total points in the current region, Otters. Low
 >s
 
 Bran Barn
+
+#ttc-table-of-otters-nowheres-bran-barn
+>e
+You don't need to explore Mr. Lee's property. Your only way out is back north.
 
 #verbcase listen-otters-if-player-is-in-bran-barn
 >listen
@@ -204,6 +213,10 @@ Score in a scenario: 12 out of 35 total points in the current region, Otters. Lo
 >n
 Shiner Shrine
 
+#ttc-table-of-otters-nowheres-shiner-shrine
+>e
+The coma camo may be detectable, but you can't change it.
+
 #verbcase listen-otters-if-noun-is-sly-imp
 >listen
 The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now.
@@ -236,6 +249,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 15 out of 35 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 35.
+
+#ttc-table-of-otters-nowheres-lamer-realm
+>n
+You can only go back south. Yup, lame.
 
 #ttc-table-of-otters-attacks-leopard
 >attack leopard
@@ -274,6 +291,10 @@ Score in a scenario: 18 out of 35 total points in the current region, Otters. Lo
 >l
 Blest Belts
 
+#+ttc-table-of-otters-nowheres-lamer-realm
+>n
+You can only go back south. The Blest Belts are private to animals and those who helped them.
+
 >garbed
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
@@ -301,6 +322,10 @@ It's bigger than average. And the leopard would back it up.
 >s
 
 Clarthead Cathedral
+
+#ttc-table-of-otters-nowheres-clarthead-cathedral
+>e
+The coma camo may be detectable, but you can't change it.
 
 #verbcase listen-otters-if-noun-is-whiners
 >listen
@@ -336,6 +361,10 @@ You'll need a bit of magic, not force, to tame the raptor.
 
 >parrot
 Your score has just gone up by one point
+
+#ttc-table-of-otters-nowheres-perverse-preserve
+>w
+You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS-RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot!
 
 >score
 Score in a scenario: 22 out of 35 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 35.
@@ -416,9 +445,14 @@ Score in a scenario: 28 out of 35 total points in the current region, Otters. Lo
 >w
 Reclusion Inclosure
 
+#ttc-table-of-otters-nowheres-reclusion-inclosure
+>n
+The coevals' alcoves north and south may seem less intimidating, but you really should be focused on what's to the west.
+
 #verbcase swear-otters-if-player-is-in-reclusion-inclosure-and-elmer-is-in-reclusion-inclosure
 >bother
 sniff faux-piously.
+
 #verbcase smell-otters-if-player-is-in-reclusion-inclosure
 >smell
 A clove, likely from one alcove.
@@ -460,22 +494,29 @@ Score in a scenario: 32 out of 35 total points in the current region, Otters. Th
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 
-#this is just to get rid of Elvira
+#this is how we get rid of Elvira
 >w
 Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"
 
+#ttc-table-of-otters-nowheres-rancho-archon-anchor
+>n
+Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east.
+
 #verbcase listen-otters-if-player-is-in-rancho-archon-anchor
 >listen
 Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE.
+
 #verbcase smell-otters-if-player-is-in-rancho-archon-anchor
 >smell
 Vast vats' sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin' cyanide, too.
+
 #verbcase swear-otters-if-player-is-in-rancho-archon-anchor
 >bother
 Yup. It's gotten REAL. But that won't help.
+
 #verbcase goto-otters-if-player-is-in-rancho-archon-anchor
 >gt inclosure
 You leave her sin shrine with extra quickness before getting a shiner.

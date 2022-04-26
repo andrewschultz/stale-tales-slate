@@ -71,6 +71,10 @@ Rustic Citrus
 You can GURU something after eating the augural arugula.
 
 @verbs
+#ttc-table-of-others-nowheres-rustic-citrus
+>e
+With greenish sheering all around, one direction seems as good as any other. Maybe you need to help Curtis a bit more.
+\\
 #verbcase swear-others-if-player-is-in-rustic-citrus
 >bother
 Instead, you mumble ... "I, curst!"
@@ -343,7 +347,6 @@ The icons seem appropriate as-is.
 >undo
 >undo
 
-
 @nud
 #ttc-table-of-rustic-citrus-nudges-moss
 >msso
@@ -367,11 +370,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #verbcase smell-others-default
 >smell
 Smells, savory, vary so.
+\\
+#+ttc-table-of-others-nowheres-rustic-citrus
+>e
+With greenish sheering all around, one direction seems as good as any other. Maybe you need to tinker with the moss cap.
 
 >compass
 Your score has just gone up by one point.
 
 @verbs
+#+ttc-table-of-others-nowheres-rustic-citrus
+>e
+The compass will help point you north. You should go that way.
+\\
 #reverbcase listen-others-if-noun-is-rustic-citrus
 >listen
 Curtis continues to sing and hum the tidiest dietist ditties.
@@ -394,7 +405,6 @@ You'll eventually want to get that So-Great Storage down the road.
 >undo
 >undo
 >undo
-
 
 @nud
 #ttc-table-of-rustic-citrus-nudges-ditties
@@ -915,6 +925,11 @@ Only the icons you made are visible. You turn the settler off.
 Curtis hands you a coin
 scru-it
 
+@verbs
+#+ttc-table-of-others-nowheres-rustic-citrus
+>e
+You can only go north back to the Swell Wells and beyond.
+
 @spoi
 ##balance undos
 >gx coin
@@ -1088,6 +1103,13 @@ The singed design on the icons reads, when you look close, property of NISCO.
 Filed Field
 
 @verbs
+#ttc-table-of-others-nowheres-filed-field
+>w
+The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful.
+\\
+>n
+With all the foilage foliage and the pipe panel lie pen app too, the only way to say I fled is to go back east.
+\\
 #verbcase listen-others-if-noun-is-barren-cries
 >listen barren cries
 The barren cries are sour and bitter and tiny.
@@ -1319,13 +1341,17 @@ Your score has just gone up by one point.
 >watermelon
 Your score has just gone up by one point.
 
-
 @hin
 /DEBUG INFO: (barriers west|buried raft|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
 >score
 }}SCORE++
 {$SCOS}
+
+@verbs
+#+ttc-table-of-others-nowheres-filed-field
+>n
+With all the foilage foliage and the pipe panel lie pen app too, the only way to say I fled is to go back east.
 
 @!min
 >pineapple
@@ -1340,7 +1366,6 @@ min-up
 >score
 }}SCORE++
 {$SCOS}
-
 
 >e
 >s
@@ -1429,6 +1454,13 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 #strawberries = last with minimum at base
+
+@verbs
+#+ttc-table-of-others-nowheres-filed-field
+>w
+With all the foilage foliage and even without the pipe panel lie pen app, the only way to say I fled is to go back east.
+
+@!min
 >grapefruit
 Your score has just gone up by one point.
 {--hin}/DEBUG INFO: (buried raft|pryer bars) hinting\.
@@ -1630,6 +1662,10 @@ The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
 
 @verbs
+#ttc-table-of-others-nowheres-clangier-clearing
+>e
+You don't need anything in the superstore. You might get lost, anyway.
+\\
 #verbcase listen-others-if-noun-is-ammo-gang
 >listen ammo gang
 A small voice is saying, "Go, man!" You see red as it begins to nag mo'. Where? How?
@@ -1809,7 +1845,7 @@ You've already established yourself as a prompt payer.
 The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
 >undo
 >undo
-#need to undo and not just go south as there is a test for gates stage being (not) visited
+#need to undo and not just go south as there is a test for gates-stage being (not) visited
 
 >d
 Scape Space
@@ -1822,6 +1858,11 @@ You can trade the dollar for the So-Great Storage.
 >give dollar
 You probably want to put the sonic icons in the slot.
 Dr. Severe
+
+@verbs
+#ttc-table-of-others-nowheres-scape-space
+>e
+One look at the warding drawing disabuses you of any notion of going anywhere except back up.
 
 @spoi
 \\
@@ -2105,6 +2146,11 @@ Gates Stage
 
 @hin
 /DEBUG INFO: (searcher|viewer) hinting\.
+
+@verbs
+#ttc-table-of-others-nowheres-gates-stage
+>e
+You don't want to know how effective the gropin' roping is. The gates are more interesting, anyway.
 
 @nud
 #mistake test for saget

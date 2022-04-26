@@ -13,6 +13,13 @@
 Posh Hops Shop
 >posf
 
+#ttc-table-of-oyster-nowheres-posh-hops-shop
+>e
+You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them
+
+>outside
+So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image.
+
 #verbcase swear-oyster-if-player-is-in-posh-hops-shop
 >bother
 This is the place for it, but you can't bring yourself to be heard.
@@ -77,6 +84,10 @@ by one point
 
 Olde Lode
 
+#ttc-table-of-oyster-nowheres-olde-lode
+>e
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex.
+
 #ttc-table-of-goto-sectioning-posh-hops-shop-1--
 >gt shop
 The LOLstr trolls would not welcome you back.
@@ -99,6 +110,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
+#+ttc-table-of-oyster-nowheres-olde-lode
+>e
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex.
+
 #ttc-table-of-oyster-attacks-urn
 >attack urn
 Your irrational anger turns to irrational greed when you get close enough to smack it.
@@ -107,6 +122,11 @@ Your irrational anger turns to irrational greed when you get close enough to sma
 Your score has just gone up by one point
 
 Disease Seaside
+
+#ttc-table-of-oyster-nowheres-disease-seaside
+>e
+The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.
+You need to cross to the north for more action.
 
 #verbcase smell-oyster-if-player-is-in-disease-seaside
 >smell
@@ -143,6 +163,10 @@ Fighter Freight
 
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
+
+#ttc-table-of-oyster-nowheres-fighter-freight
+>e
+Directions aren't what matters here. You just need some sort of action to get off the boat.
 
 #verbcase goto-oyster-if-player-is-in-fighter-freight
 >gt olde lode
@@ -218,6 +242,10 @@ As you kick at the area, a vision of a red hate urn, replete with frowns and sco
 >e
 Hardest Trashed Dearths
 
+#ttc-table-of-oyster-nowheres-hardest-trashed-dearths
+>e
+Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow.
+
 >score
 Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
 
@@ -241,12 +269,18 @@ Your score has just gone up by one point
 
 Lean Lane
 
+#ttc-table-of-oyster-nowheres-lean-lane
+>e
+Though you are a guest, probably best not to go poking around. You can go back west.
+
 #verbcase swear-oyster-if-player-is-in-lean-lane
 >bother
 You don't want Aunt Tuna to perform a tsk task.
+
 #verbcase smell-oyster-if-player-is-in-lean-lane
 >smell
 Antiseptic spice taint.
+
 #verbcase listen-oyster-if-noun-is-aunt-tuna
 >listen tuna
 Aunt Tuna is humming something tuneless as she goes about her business.
@@ -297,6 +331,10 @@ Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lo
 >n
 Lapsin' Plains
 
+#ttc-table-of-oyster-nowheres-lapsin-plains
+>e
+With the sloppy polyps on most all sides, you can only go back south or, once the span pans are neutralized, inside.
+
 >splain
 by one point
 DEBUG INFO: min-up codepath
@@ -342,6 +380,10 @@ Score in a scenario: 21 out of 44 total points in the current region, Oyster. Lo
 
 >snap
 Your score has just gone up by one point
+
+#ttc-table-of-oyster-nowheres-lapsin-plains
+>e
+With the sloppy polyps on most all sides, you can only go back south or inside.
 
 >score
 Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
@@ -391,15 +433,24 @@ Score in a scenario: 27 out of 44 total points in the current region, Oyster. Lo
 >w
 Sclerous Closures
 
+#ttc-table-of-oyster-nowheres-sclerous-closures
+>w
+You can only go north to the Horned Hedron, once the sardine is gone, or east back to Anger Range. The Handsome Sand Home blocks you west and south.
+
 #verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
 >smell
 Sea rind.
+
 #verbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU.
 
 >warp
 Your score has just gone up by one point
+
+#+ttc-table-of-oyster-nowheres-sclerous-closures
+>w
+You can only go north to the Horned Hedron or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 
 #reverbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
@@ -425,12 +476,20 @@ Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lo
 >n
 Horned Hedron
 
+#ttc-table-of-oyster-nowheres-horned-hedron
+>e
+The main exit is south, though an area west is in disrepair. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
+
 #verbcase smell-oyster-if-noun-is-weaselly-walleyes
 >smell walleyes
 The weaselly walleyes smell of Skum-Musk.
 
 >w
 Rascal Craals
+
+#ttc-table-of-oyster-nowheres-rascal-craals
+>w
+The round bay boundary blocks you from going any way but back east.
 
 #verbcase smell-oyster-if-player-is-in-rascal-craals
 >smell
@@ -443,6 +502,11 @@ Your score has just gone up by one point
 Score in a scenario: 31 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >e
+
+#+ttc-table-of-oyster-nowheres-horned-hedron
+>e
+The main exit is south, though you can go back west to the Rascal Craals. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
+
 >s
 >e
 
@@ -464,16 +528,15 @@ Score in a scenario: 33 out of 44 total points in the current region, Oyster. Lo
 #notana
 by one point
 
+ascal Craals
+orned Hedron
+
 >score
 Score in a scenario: 34 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
->w
-
->n
-
->w
-
+#+ttc-table-of-oyster-nowheres-horned-hedron
 >e
+The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN past the ol' trap once you disarm it.
 
 #verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
 >gt rascal craals
@@ -482,12 +545,20 @@ The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn throug
 >patrol
 Your score has just gone up by one point
 
+#+ttc-table-of-oyster-nowheres-horned-hedron
+>e
+The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN through the portal.
+
 >score
 Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
-# prime GT END DEN for later
+# prime GT END DEN for later. Oh, and poke the table of nowheres, too!
 >in
 End Den
+
+#ttc-table-of-oyster-nowheres-end-den
+>e
+You're disoriented here, but you can go back OUT to get to the Horned Hedron.
 
 >out
 Horned Hedron
@@ -529,12 +600,20 @@ Score in a scenario: 37 out of 44 total points in the current region, Oyster. Lo
 >attack dialer
 That would only sabotage communications here. You need to sabotage the supplier.
 
+#ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+>e
+While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
+
 >trample
 
 Plasm Lamps
 
 >score
 Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
+
+#ttc-table-of-oyster-nowheres-plasm-lamps
+>e
+It's you against the ant! There's no running, but it can't be too hard to defeat.
 
 #verbcase goto-oyster-if-location-of-player-is-plasm-lamps
 >gt hedron
@@ -586,6 +665,10 @@ DEBUG INFO: min-up codepath
 
 >score
 Score in a scenario: 43 out of 44 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 44 points.
+
+#+ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+>e
+While you can go back outside, you can just finish things here, as you've done everything else you can.
 
 #not a mistake
 >redial

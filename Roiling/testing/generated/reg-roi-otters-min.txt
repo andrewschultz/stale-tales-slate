@@ -206,7 +206,7 @@ Score in a scenario: 21 out of 35 total points in the current region, Otters. Lo
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 
-#this is just to get rid of Elvira
+#this is how we get rid of Elvira
 >w
 Rancho Archon Anchor
 WTF FTW

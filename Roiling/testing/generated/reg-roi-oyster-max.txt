@@ -593,6 +593,7 @@ Your score has just gone up by one point
 Score in a scenario: 31 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >e
+
 >s
 >e
 
@@ -622,16 +623,11 @@ Score in a scenario: 33 out of 44 total points in the current region, Oyster. Lo
 #notana
 by one point
 
+ascal Craals
+orned Hedron
+
 >score
 Score in a scenario: 34 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
-
->w
-
->n
-
->w
-
->e
 
 >patrol
 Your score has just gone up by one point

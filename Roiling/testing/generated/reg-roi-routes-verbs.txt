@@ -62,6 +62,10 @@ Your score has just gone up by one point
 
 Idle Deli
 
+#ttc-table-of-routes-nowheres-idle-deli
+>n
+Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
+
 #verbcase smell-routes-if-noun-is-seed-pit
 >smell seed pit
 The seed pit smells a bit musty.
@@ -75,6 +79,10 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 Adobe Abode
+
+#ttc-table-of-routes-nowheres-adobe-abode
+>e
+This do be a one-room place. You can really only go outside.
 
 #verbcase smell-routes-if-noun-is-pipe-soot
 >smell pipe soot
@@ -169,6 +177,10 @@ Your score has just gone up by one point
 
 Harms Marsh
 
+#ttc-table-of-routes-nowheres-harms-marsh
+>n
+Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
+
 #ttc-table-of-goto-sectioning--1-routes
 >gt mesa
 Brother Horbert would be sad to see you return, unsuccessful.
@@ -180,6 +192,10 @@ Score in a scenario: 13 out of 22 total points in the current region, Routes. Lo
 >until
 Your score has just gone up by one point
 
+#+ttc-table-of-routes-nowheres-harms-marsh
+>n
+Far into a rift? No. You can't rely on directions, here.
+
 >around
 Your score has just gone up by one point
 
@@ -187,6 +203,10 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 Ripe Pier
+
+>w
+#ttc-table-of-routes-nowheres-ripe-pier
+You've lost all sense of direction here, but you still somehow need to figure how to get on that boat.
 
 #verbcase listen-routes-if-player-is-in-ripe-pier
 >listen
@@ -208,6 +228,13 @@ Brother Horbert would be sad to see you return, unsuccessful.
 Your score has just gone up by one point
 
 Cripple Clipper
+
+#ttc-table-of-routes-nowheres-cripple-clipper
+>d
+Locked ol' deck. No bowel on below.
+
+>s
+Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.
 
 #verbcase sleep-routes-if-player-is-in-cripple-clipper
 >sleep
@@ -233,6 +260,10 @@ You're not going back across the water. You're closer to the end of your quest.
 Your score has just gone up by one point
 
 Sonancy Canyons
+
+#ttc-table-of-routes-nowheres-sonancy-canyons
+>n
+You might run into the spheric ciphers. You still don't have your sense of direction back.
 
 #verbcase listen-routes-if-noun-is-raptest-patters
 >listen

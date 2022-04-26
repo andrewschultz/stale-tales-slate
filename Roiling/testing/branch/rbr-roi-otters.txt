@@ -571,7 +571,8 @@ You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued 
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
 >listen
 #verbcase listen-otters-if-noun-is-yer-all-a-yell'r
-Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out. Sadly, now, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
+Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out.
+Sadly, now, with songs like Yeah, Hey, A Yeeha, Yah, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
 
 @verbs
 ##balance undos
@@ -1187,6 +1188,10 @@ Loop Pool
 As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
 
 @verbs
+#ttc-table-of-otters-nowheres-loop-pool
+>e
+The pool is wide and long. You can only go back south.
+\\
 #verbcase smell-otters-if-player-is-in-loop-pool
 >smell
 Salt Water. Wet, astral.
@@ -1385,6 +1390,10 @@ As you gaze into the cinders, they blow away, leaving you feeling the medals nee
 You also feel there's something more to do here, if you want, but isn't critical.
 
 @verbs
+#ttc-table-of-otters-nowheres-bran-barn
+>e
+You don't need to explore Mr. Lee's property. Your only way out is back north.
+\\
 #verbcase listen-otters-if-player-is-in-bran-barn
 >listen
 You hear morose mooers you can't see.
@@ -1521,6 +1530,11 @@ Shiner Shrine
 
 @hin
 DEBUG INFO: simply sly imp hinting.
+
+@verbs
+#ttc-table-of-otters-nowheres-shiner-shrine
+>e
+The coma camo may be detectable, but you can't change it.
 
 @spoi
 ##balance undos
@@ -1725,6 +1739,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @verbs
+#ttc-table-of-otters-nowheres-lamer-realm
+>n
+You can only go back south. Yup, lame.
+\\
 #ttc-table-of-otters-attacks-leopard
 >attack leopard
 Messing with a leopard is a bad idea, especially one with orange jumpsuit-ish markings.
@@ -1740,7 +1758,6 @@ He's bigger than average. And the leopard would back him up.
 #ttc-table-of-otters-attacks-badger
 >attack badger
 It's bigger than average. And the leopard would back it up.
-
 
 @sli
 #slider test for paroled
@@ -1932,6 +1949,11 @@ You feel a surge, but not enough. One of the medals seems tarnished. Maybe there
 >l
 Blest Belts
 
+@verbs
+#+ttc-table-of-otters-nowheres-lamer-realm
+>n
+You can only go back south. The Blest Belts are private to animals and those who helped them.
+
 @nud
 #+ttc-table-of-lamer-realm-nudges-shades
 >shadse
@@ -1994,6 +2016,11 @@ Clarthead Cathedral
 @hin
 DEBUG INFO: shrewin' whiners hinting.
 The whiners have a lot of energy and exercise it many different ways. (+)
+
+@verbs
+#ttc-table-of-otters-nowheres-clarthead-cathedral
+>e
+The coma camo may be detectable, but you can't change it.
 
 @spoi
 #ttc-table-of-otters-anagrams-joltily
@@ -2175,6 +2202,11 @@ Your score has just gone up by one point
 
 @hin
 /DEBUG INFO: (pines|thrones|corona|nails) hinting\.
+
+@verbs
+#ttc-table-of-otters-nowheres-perverse-preserve
+>w
+You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS-RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot!
 
 >score
 {$SCOS}
@@ -2561,9 +2593,14 @@ You don't know if someone named Cornelius would help or hurt you.
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 
 @verbs
+#ttc-table-of-otters-nowheres-reclusion-inclosure
+>n
+The coevals' alcoves north and south may seem less intimidating, but you really should be focused on what's to the west.
+\\
 #verbcase swear-otters-if-player-is-in-reclusion-inclosure-and-elmer-is-in-reclusion-inclosure
 >bother
 sniff faux-piously.
+\\
 #verbcase smell-otters-if-player-is-in-reclusion-inclosure
 >smell
 A clove, likely from one alcove.
@@ -2867,7 +2904,7 @@ The medals clink together. You feel infused with speed. Even your fats feel fast
 by one point
 }}SCORE++
 
-#this is just to get rid of Elvira
+#this is how we get rid of Elvira
 >w
 Rancho Archon Anchor
 WTF FTW
@@ -2875,16 +2912,23 @@ WTF FTW
 "No mercy, my crone! Corny, me?"
 
 @verbs
+#ttc-table-of-otters-nowheres-rancho-archon-anchor
+>n
+Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east.
+\\
 #verbcase listen-otters-if-player-is-in-rancho-archon-anchor
 >listen
 Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE.
+\\
 #verbcase smell-otters-if-player-is-in-rancho-archon-anchor
 >smell
 #OK-APOSTROPHE
 Vast vats' sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin' cyanide, too.
+\\
 #verbcase swear-otters-if-player-is-in-rancho-archon-anchor
 >bother
 Yup. It's gotten REAL. But that won't help.
+\\
 #verbcase goto-otters-if-player-is-in-rancho-archon-anchor
 >gt inclosure
 You leave her sin shrine with extra quickness before getting a shiner.
