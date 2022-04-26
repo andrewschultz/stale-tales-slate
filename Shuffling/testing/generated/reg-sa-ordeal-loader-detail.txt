@@ -230,10 +230,14 @@ He shows you some calculations that any such writing can be expected to eliminat
 >ask gateman about red bull burdell
 "The time for talk is over."
 
+#ttc-table-of-matched-thing-responses-gateman-tip
+>ask gateman about tip
+"Scan something. Even if it doesn't give any readings. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
 >scan me
 too awesome
 
-#ttc-table-of-matched-thing-responses-gateman-tip
+#+ttc-table-of-matched-thing-responses-gateman-tip
 >ask gateman about tip
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
@@ -304,7 +308,7 @@ You can't imagine anything tricky about the handle, so you decide not to ask.
 
 #ttc-table-of-matched-thing-responses-gateman-toga
 >ask gateman about toga
-You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
+You don't wish to dwell too much on past accomplishments. It's probably better to PAD GOAT for the important information.
 
 >ask gateman about shrub
 "In the past now. Nothing more to learn from that."
@@ -323,6 +327,7 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 >ask gateman about gadget
 "Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red."
 
+#ttc-table-of-matched-thing-responses-gateman-s-r
 >ask gateman about secure button
 "Could make things tougher at first, but then easier, maybe. Switch it, and you can only CERTIFY or RECTIFY, but not both. Later, though, you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so."
 
@@ -332,7 +337,7 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 
 #ttc-table-of-matched-thing-responses-gateman-saltine
 >ask gateman about saltine
-"Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
+"Miniscule, but more than mini-clues. The next item that baffles you, eat that and XX ... not just X or EXAMINE, and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
 
 #ttc-table-of-matched-thing-responses-gateman-cabinet
 >ask gateman about cabinet
@@ -340,31 +345,28 @@ You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat
 
 #ttc-table-of-matched-thing-responses-gateman-reed
 >ask gateman about reed
-WRONG
+"Hm, yes, good job with the deer. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Green-Red in Certify mode and Red-Blue-Blue-Green in Rectify."
 
 #ttc-table-of-matched-thing-responses-gateman-deer
 >ask gateman about reed
-WRONG
+You don't wish to dwell too much on past accomplishments. It's probably better to PAD DEER for the important information.
 
 #ttc-table-of-matched-thing-responses-gateman-pit
 >ask gateman about pit
-WRONG
-
-#ttc-table-of-matched-thing-responses-gateman-s-r
->ask gateman about secure
-WRONG
+"Well, one of rectify or certify is overall better than the other. Would you like to know which, again?"
+"Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 
 #ttc-table-of-matched-topic-responses-gateman-certify
 >ask gateman about certify
-WRONG
+"Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong."
 
 #ttc-table-of-matched-topic-responses-gateman-rectify
 >ask gateman about rectify
-WRONG
+"Gives you the first and last letters of what something should be."
 
 #ttc-table-of-matched-topic-responses-gateman-gato
 >ask gateman about gato
-WRONG
+You don't wish to dwell too much on past accomplishments. It's probably better to PAD GOAT for the important information.
 
 >in
 Trips Strip

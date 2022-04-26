@@ -181,22 +181,24 @@ a region has a rule called altrule.
 
 a region has a rule called saltine-check-rule.
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.] saltine-check-rule of ordeal loader is ordeal loader saltine check rule.
+a region has a rule called prescan check rule.
+
+ Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.] saltine-check-rule of ordeal loader is ordeal loader saltine check rule. prescan check rule of ordeal loader is ordeal-loader-scan-check rule.
 [LLP(s): both bulge/blot, both deer/goat, sent nets, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.] [saltine-check-rule of stores is stores saltine check rule.]
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.] [saltine-check-rule of stores is stores saltine check rule.] prescan check rule of stores is stores-scan-check rule.
 [LLP(s): cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule. saltine-check-rule of forest is forest saltine check rule.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule. saltine-check-rule of forest is forest saltine check rule. prescan check rule of forest is forest-scan-check rule.
 [LLP(s): slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.] saltine-check-rule of sortie is sortie saltine check rule.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.] saltine-check-rule of sortie is sortie saltine check rule. prescan check rule of sortie is sortie-scan-check rule.
 [LLP(s): cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule. saltine-check-rule of metros is metros saltine check rule.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule. saltine-check-rule of metros is metros saltine check rule. prescan check rule of metros is metros-scan-check rule.
 [LLP(s): antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule. saltine-check-rule of resort is resort saltine check rule.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule. saltine-check-rule of resort is resort saltine check rule. prescan check rule of resort is resort-scan-check rule.
 [LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 Resort is not autosavable.
@@ -3729,9 +3731,9 @@ the handle is a boring thing. it is part of the tagged gadget. description of ha
 
 the cratered bits are part of the cabinet. understand "acne" and "bit" as cratered bits.
 
-scanned-g is a truth state that varies.
+scanned-for-gateman is a truth state that varies.
 
-check dropping the gadget: say "It seems far too useful[if scanned-g is false], if indeed it works[else], especially since it actually works[end if]." instead;
+check dropping the gadget: say "It seems far too useful[if scanned-for-gateman is false], if indeed it works[else], especially since it actually works[end if]." instead;
 
 check examining tagged gadget (this is the did I break gadget rule): if gadget is broken, say "It's lifeless without the tag. Nice work!" instead;
 
@@ -5300,17 +5302,6 @@ Flesh Shelf is west of Self ID Fields. "It's cold here, but you'd expect that, o
 
 the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink." [bold-ok]
 
-check scaning when player is in Gnarliest Triangles (this is the scan what's in Gnarliest Triangles containers rule):
-	if noun is bucket and ones are in bucket:
-		say "The bucket registers four lights, so it is probably the ones inside.";
-		try scaning ones instead;
-	if noun is shell and dashes are in shell:
-		say "The shell registers six lights, so it is probably the dashes inside.";
-		try scaning dashes instead;
-	if noun is bubble and noughts are in bubble:
-		say "The bubble registers seven lights, so it is probably the noughts inside.";
-		try scaning noughts instead;
-
 chapter iciest cities
 
 the iciest cities are bounding boring scenery in Flesh Shelf. description of cities is "They are spooky and all, but thankfully, they're too far away.". bore-text is "The cities are too far away to do anything with. Or to do anything to you."
@@ -6087,8 +6078,6 @@ check turning the dial:
 	if numset of dial is 16, try dialsetting dial to 0 instead;
 	say "You need to specify a number: 0-99." instead;
 
-check scaning dial when centrifuge-stopped is false: say "You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, [if gadget is cert]all red except for the middle that flashes green[else]green flashing between 5 and 7, red flashing between 1 and 6[end if]. Hm, exits plus two letters. What number could that be, or become." instead;
-
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][else]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
 description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]ou see [b]EXITS [if numset of dial is 16]N E[r] [else]? ?[r]--you can see two letters, but they're scrolling through the four cardinal directions[end if]. The dial's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with [b]TURN DIAL TO[r] or just the number[end if][dial-hints]." [bold-ok]
@@ -6419,11 +6408,6 @@ description of spearman is "[if player does not have spearman]Hmm. You could [b]
 report taking the spearman:
 	say "As you pick up the spearman, you notice something on the bottom. Perhaps you could [b]READ[r] the spearman to see what it is.";
 	the rule succeeds;
-
-check scaning (this is the scan the spearman and not his parts rule):
-	if noun is spear:
-		say "That's part of the spearman, really, even with the writing on it. At least, the eight lights from your gadget seem to indicate that. [run paragraph on]";
-		try scaning spearman instead;
 
 understand "spear man" as spearman.
 
@@ -6759,8 +6743,6 @@ the scraped wall is scenery in Stiller Trellis. the scraped wall can be hayfille
 
 the rgtext of scraped wall is "[gc][gc][rc][rc][rc][rc][rc]". the lgth of scraped wall is 7. gpos of scraped wall is 1. rpos of scraped wall is 3. cert-text of scraped wall is "H[ast]A[d1][d1][d1][d1][d1]". rect-text of scraped wall is "H[d1][d1][d1][d1][d1][ast]Y".
 
-check scaning scraped wall when scraped wall is not hayfilled: say "The gadget makes a noise and blinks briefly. Perhaps the wall is not ready to be changed." instead;
-
 check climbing scraped wall: say "No good handholds, and it goes up too high anyway." instead;
 
 check climbing trel-priv: say "No good handholds, and it goes up too high anyway." instead;
@@ -6861,8 +6843,6 @@ section pat's expo flier
 
 the expo flier is a thing. description of expo flier is "It's two-sided. One says Stick Figure Connoisseur Expo and Open Poetry Session at [one of][first custom style]ST. PAEAN[r] the so-sinful-(s)he's-holy this Yorpday[or][first custom style]SANE TAP[r] pub and grill next Waldday[cycling]![paragraph break]Well, you know where you won't be." [bold-ok]
 
-check scaning the expo flier: say "[if anapest is in moor]Your gadget makes no noise, but you can't help feeling the name St. Paean is totally wrong[else]No sound[end if]." instead;
-
 poetry-listening is a truth state that varies. poetry-listening is usually false.
 
 to say anapest-clue:
@@ -6883,8 +6863,6 @@ this is the bore-anapest rule:
 	if the current action is objasking generically, continue the action;
 	if the current action is listening, continue the action;
 
-check scaning anapest:
-	say "Yes, this sort of poetry doesn't require deep reading, just scanning. [if player has gadget]But seriously, your gadget seems to blink with the beat[else]Too bad you don't have a device to scan it more practically[end if].";
 
 chapter peasant
 
@@ -7473,8 +7451,6 @@ section friend finder (part of ingress)
 
 The friend finder is scenery in Undesired Underside. description of the friend finder is "It has a small optical beam, probably for detecting proper identification.". understand "sensor/senser" as friend finder.
 
-check scaning friend finder: say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead;
-
 to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteric Coteries are visited]guard the tulip[else]want to see[end if]"
 
 keycard-put is a truth state that varies. keycard-put is usually false.
@@ -7580,11 +7556,6 @@ chapter deadbeat
 
 the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if bastion-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. He nods at you in solidarity for your work in the Bastion[end if]."
 
-check scaning (this is the antlers and deadbeat silliness rule):
-	if noun is antlers:
-		say "You scan the antlers all sneaky-like, so nobody thinks you're trying anything subversive. They look useless, but you get a reading.";
-	if noun is deadbeat or noun is designer reedings, say "'Whoah, don't tase me, bro. I have civil rights!'" instead;
-
 check giving to deadbeat:
 	if noun is a flower or noun is clover or noun is tulip, say "'Flowers, man? During this totally intense class warfare?'" instead;
 	say "'One act of guilt-driven re-gifting is no plan of general redistribution and fairness, man!'" instead;
@@ -7658,9 +7629,6 @@ the Velcro is wearable.
 chapter lost corn
 
 some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. cert-text of lost corn is "-[ast]O[d1][ast]T[d1][ast]O[d1][d1]". rect-text of lost corn is "C[d1][d1][d1][d1][d1][d1][ast]S".
-
-check scaning corn:
-	check-deadbeat-corn;
 
 after taking the lost corn: say "'All yours, man,' says the deadbeat. 'It's some pretty good corn, too. Ask me if you like want details.'".
 
@@ -8412,10 +8380,6 @@ to say terminal-if-piggy: say "[if neon pig is touchable]a neon pig embedded in 
 
 to say terminal-if-pigcon: say "[if pig is touchable] with the pig[else if controls are not in gin nope opening] and away from the opening you made[else] and away from the controls you put in[end if]".
 
-check scaning in Elm Train Terminal (this is the can't scan some things til you climbed rule):
-	if noun is neon pig or noun is gin nope opening:
-		if player is not on cafe face, say "The pig doesn't register. Maybe you're too far away, and you'd have to climb the cafe face to get near it." instead;
-
 check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe you could climb it[if cafe-climbed is true] again[end if]." instead;
 
 check going up in Elm Train Terminal: try climbing the cafe face instead;
@@ -8484,9 +8448,6 @@ after examining the neon pig:
 chapter gin nope opening
 
 the gin nope opening is a scenery container. description is "[if controls are in gin nope opening]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on cafe face]You can see that the opening isn't just a blank area with a 'GIN NOPE' warning, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you [b]READ[r], you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if].". the printed name of gin nope opening is "the gin-nope opening"
-
-check scaning gin nope opening (this is the too far from opening rule):
-	if player is not on cafe face, say "You're too far away." instead;
 
 procedural rule while examining gin nope opening: ignore the examine containers rule.
 
@@ -8817,15 +8778,9 @@ description of tool shed is "It's metal, with no touchable entry or even windows
 
 the windows are part of the tool shed. the windows are useless and plural-named.
 
-carry out scaning windows: say "The windows that held soot turn up [if gadget is cert][rc][rc][rc][rc][rc][rc][rc][rc][else][bc][bc][bc][bc][rc][bc][bc][gc][end if].".
-
-to say shed-rect-clue: say "[if parse-output is true and gadget is rect]. Hmm. T[d1][d1][d1][d1][d1][d1]S[end if]".
-
 description of windows is "They have held soot enough to turn your eyes all red just thinking of what's inside."
 
 the outcroppings are part of the tool shed. the outcroppings are plural-named.
-
-carry out scaning outcroppings: say "They don't seem to give a different scan than the rest of the tool shed. But you might be able to climb on them, if you were smaller. They show [if gadget is cert][gc][gc][rc][rc][rc][rc][rc][rc][else][gc][bc][bc][bc][rc][bc][bc][bc][end if][shed-rect-clue]. Maybe they are a clue for what the tool shed can become." instead;
 
 description of outcroppings is "They are something you could put your feet--no, the edge of them--on. They look sturdy enough to hold you, but the problem is, they don't lead anywhere."
 
@@ -9097,8 +9052,6 @@ book Means Manse
 Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead; [bold-ok]
-
-check scaning X ITES exits: try scaning the location instead;
 
 the X ITES exits are flippable plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do.". understand "xites" and "xites exits" as X ITES exits when player is in Means Manse. printed name of X ITES exits is "X-ITES exits".
 
@@ -9512,10 +9465,10 @@ before scaning (this is the take gadget if you can rule):
 
 rgb-yet is a truth state that varies.
 
-nt-rect is a truth state that varies. nt-cert is a truth state that varies.
+nametag-rectified is a truth state that varies. nametag-certified is a truth state that varies.
 
 to say check-other-nt:
-	if nt-rect is false or nt-cert is false:
+	if nametag-rectified is false or nametag-certified is false:
 		say ". Maybe the gadget's other setting will give you more information, or maybe the ambiguous information is giving you more than you think"
 
 last-scan is an object that varies. last-scan is nothing.
@@ -9524,55 +9477,122 @@ ever-scan is a truth state that varies.
 
 parse-output is a truth state that varies.
 
-carry out scaning:
-	d "scaning [noun].";
-	if Notices Section is not visited and mrlp is not Ordeal Loader, say "[bug-report] You should not get to this code before the Notices Section. You probably jumped away from the Ordeal Loader." instead;
+section region-specific rules
+
+this is the stores-scan-check rule:
 	if noun is storeall, say "Not all at once." instead;
 	if noun is disamb-store, say "Pick a specific store, instead." instead;
+	if noun is subway map, say "The reading's different over the map of Mt. Rose than the store proper.[if gadget is cert][gcn][rc][rc][rc][rc][rc][else if gadget is rect][gcn][bc][bc][bc][rc][bc][end if]." instead;
+
+this is the ordeal-loader-scan-check rule:
+	if noun is doll house:
+		if attics are touchable:
+			say "The gadget only seems to register anything when pointed at the attics.";
+			try scaning attics instead;
+		if static is touchable:
+			say "Before your gadget gets close, you begin to pick something up. Perhaps it isn't the doll house you need to do something with. Something ambient--like the static. So you do that.";
+			try scaning static instead;
+		say "[bug-report] One of attics and static should always be in view." instead;
+	if noun is gateman, say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Nat Egam. 'Maybe ask me questions instead.'" instead;
+	if noun is the OR DO door: [ this should not happen! But just in case... ]
+		say "You see no activity until you wave your gadget over the bulge. So you leave it there, and you pick something up.[line break]";
+		try scaning bulge instead;
+	if noun is the broad board, say "The gadget makes no noise[if gateman is touchable][cant-change][else]." instead;
+
+this is the forest-scan-check rule:
+	if player is in gnarliest triangles:
+		if noun is bucket and ones are in bucket:
+			say "The bucket registers four lights, so it is probably the ones inside.";
+			try scaning ones instead;
+		if noun is shell and dashes are in shell:
+			say "The shell registers six lights, so it is probably the dashes inside.";
+			try scaning dashes instead;
+		if noun is bubble and noughts are in bubble:
+			say "The bubble registers seven lights, so it is probably the noughts inside.";
+			try scaning noughts instead;
+	if noun is banshee:
+		if liches are touchable, say "The banshee's annoying but not as obstructive and lethal as the liches. In fact, you can't tell where it is." instead;
+	if noun is sandwich, say "Your gadget refuses to remain stable. As if it's trying to read two things at once. Perhaps if you pulled the components apart?" instead;
+	if noun is River Ville liver or noun is viler liver, say "You see five red lights in a row--but you only see the [if noun is viler liver]bottom[else]top[end if] half of them. Odd." instead;
+
+this is the sortie-scan-check rule:
+	if location of player is trap part:
+		if noun is dial:
+			if numset of dial is 16, say "Your gadget is silent. You've figured what to do with the dial." instead;
+			say "The gadget, when over the [b]EXITS[r] part, reads[if player has gadget][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters [b]EXITS[r] in it, somehow." instead;
+	if location of player is The Nick:
+		if noun is jail cell graffiti or noun is grate:
+			say "You see nothing new other than the latent colors registering.";
+			try scaning location of player instead;
+	if location of player is kitchen:
+		if noun is spear:
+			say "That's part of the spearman, really, even with the writing on it. At least, the eight lights from your gadget seem to indicate that. [run paragraph on]";
+			try scaning spearman instead;
+	if location of player is stiller trellis:
+		if noun is scraped wall and scraped wall is not hayfilled, say "The gadget makes a noise and blinks briefly. Perhaps the wall is not ready to be changed." instead;
+	if location of player is moor:
+		if noun is anapest, say "Yes, this sort of poetry doesn't require deep reading, just scanning. [if player has gadget]But seriously, your gadget seems to blink with the beat[else]Too bad you don't have a device to scan it more practically[end if].";
+		if noun is pat:
+			say "'Fie!' yells Pat. 'My poem transcends technology! I am sure such a fancy gadget could not even tell me its meter!' Then he gets back to recitation." instead;
+	if noun is poem and poem is not folded:
+		if smilies are part of the poem:
+			say "The gadget is more active on the right edge where the smilies are, so you move it over there.";
+			try examining the smilies instead;
+		say "The gadget makes an odd noise. Perhaps the poem's in some weird state between forms. If poems can mean different things, they can probably become different things." instead;
+	if noun is poem and poem is not folded:
+		if smilies are touchable:
+			say "Your gadget doesn't do much [']til it's over the smilies. So you look more closely at those.";
+			try scaning smilies instead;
+	if noun is expo flier, say "[if anapest is in moor]Your gadget makes no noise, but you can't help feeling the name St. Paean is totally wrong[else]No sound now you dealt with Pat[end if]." instead;
+
+this is the metros-scan-check rule:
+	if location of player is Undesired Underside:
+		if noun is friend finder, say "It registers nothing. Perhaps it's there to scan you or something in your inventory." instead;
+	if location of player is The Ol Hotel:
+		if noun is night thing, say "No way you're getting close enough." instead;
+	if location of player is Roarings Garrison:
+		if noun is deadbeat or noun is designer reedings, say "'Whoah, don't tase me, bro. I have civil rights!'" instead;
+	if location of player is Fo Real Florae:
+		if noun is faeries, say "You sense that would be a breach of some magical etiquette you don't understand." instead;
+		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
+	if location of player is Esoteric Coteries:
+		if noun is nerds, say "[one of]'Whoah! Hey! What's this, a Skansder?' You turn red, explaining you don't know what that is. 'You didn't make that, did you? Don't know the specifications? Thought not.'[or]'Still messing with technology over your head, eh? Like that Skansder you don't know what it is.'[stopping][paragraph break]As the nerds ask other questions, the gadget lights up, and you notice [nerdsask], until the nerds ask no more. Then it goes back to [asknerds] as you think how, why and what to ask nerds." instead;
+		if noun is tulip, say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sort of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
+	if noun is neon pig or noun is gin nope opening:
+		if player is not on cafe face, say "The [if noun is neon pig][pig][else][gin nope][end if] doesn't register. Maybe you're too far away, and you'd have to climb the cafe face to get near it." instead;
+	if noun is barcode:
+		say "[one of]You receive a rush of insight unlike anything anywhere else in the game![or]You receive more practical insight![stopping][paragraph break]";
+		say "[one of]Bread, $1 per loaf[or]Condensed cream of mushroom soup, $.39[or]Cabbage, $.19/lb[or]Ice Cream, $2.50/gallon[or]Jack's Pizza, 5/$10, limit 5[or]OnCor entrees, $2[or]Hot dogs, 89 cents[or]7 oz. pasta, 3/$1[or]Milk, $1.99/gallon[or]Root Beer, $.68 per liter bottle[at random] at BreadCo. Much better than [one of]Winn-Dixie[or]Strack and Van Til[or]SuperFresh[or]Marsh[or]Kroger[or]Piggly Wiggly[or]Jewel Finer Foods[or]Aldi[or]Safeway[or]Moo and Oink[at random]!" instead;
+	if location of player is Obtains Boastin Bastion:
+		if noun is candelabra, say "Way too high up." instead;
+		if noun is antlers:
+			say "You scan the antlers all sneaky-like, so nobody thinks you're trying anything subversive. They look useless, but you get a reading.";
+	if noun is corn, check-deadbeat-corn;
+
+this is the resort-scan-check rule:
+	if location of player is rived drive:
+		if noun is windows, say "The windows that held soot turn up [if gadget is cert][rc][rc][rc][rc][rc][rc][rc][rc][else][bc][bc][bc][bc][rc][bc][bc][gc][end if].";
+		if noun is outcroppings, say "They don't seem to give a different scan than the rest of the tool shed. But you might be able to climb on them, if you were smaller. They show [if gadget is cert][gc][gc][rc][rc][rc][rc][rc][rc][else][gc][bc][bc][bc][rc][bc][bc][bc][end if][shed-rect-clue]. Maybe they are a clue for what the tool shed can become." instead;
+	if location of player is means manse:
+		if noun is X ITES exits, try scaning the location instead;
+
+to say shed-rect-clue: say "[if parse-output is true and gadget is rect]. Hmm. T[d1][d1][d1][d1][d1][d1]S[end if]".
+
+
+section main rule
+
+this is the basic scaning game state checks rule:
+	if Notices Section is not visited and mrlp is not Ordeal Loader, say "[bug-report] You should not get to this code before the Notices Section. You probably jumped away from the Ordeal Loader or (hopefully) used a testing command that will not show in the release" instead;
 	if player has gadget:
 		now gadget-scanned is true;
 	if player does not have gadget:
 		if Notices Section is unvisited, say "[reject]" instead;
 		say "You'll need the gadget to scan anything." instead;
-	now scanned-g is true;
-	if noun is banshee:
-		if liches are touchable, say "The banshee's annoying but not as obstructive and lethal as the liches. In fact, you can't tell where it is." instead;
-	if noun is tulip and nerds are touchable, say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sort of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
-	if noun is faeries, say "You sense that would be a breach of some magical etiquette you don't understand." instead;
-	if noun is jail cell graffiti or noun is grate:
-		say "You see nothing new other than the latent colors registering.";
-		try scaning location of player instead;
-	if noun is night thing, say "No way you're getting close enough." instead;
-	if noun is nerds, say "[one of]'Whoah! Hey! What's this, a Skansder?' You turn red, explaining you don't know what that is. 'You didn't make that, did you? Don't know the specifications? Thought not.'[or]'Still messing with technology over your head, eh? Like that Skansder you don't know what it is.'[stopping][paragraph break]As the nerds ask other questions, the gadget lights up, and you notice [nerdsask], until the nerds ask no more. Then it goes back to [asknerds] as you think how, why and what to ask nerds." instead;
-	if location of player is Fo Real Florae:
-		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
-	if noun is poem and poem is not folded:
-		if smilies are touchable:
-			say "Your gadget doesn't do much [']til it's over the smilies. So you look more closely at those.";
-			try scaning smilies instead;
+
+this is the basic scaning item checks rule: [ this is for things that can cross regions ]
+	now scanned-for-gateman is true;
 	if noun is tin foil info lit, say "Nothing happens. Which just proves the paper's premise that this is all too ridiculous, amirite?" instead;
-	if noun is barcode:
-		say "[one of]You receive a rush of insight unlike anything anywhere else in the game![or]You receive more practical insight![stopping][paragraph break]";
-		say "[one of]Bread, $1 per loaf[or]Condensed cream of mushroom soup, $.39[or]Cabbage, $.19/lb[or]Ice Cream, $2.50/gallon[or]Jack's Pizza, 5/$10, limit 5[or]OnCor entrees, $2[or]Hot dogs, 89 cents[or]7 oz. pasta, 3/$1[or]Milk, $1.99/gallon[or]Root Beer, $.68 per liter bottle[at random] at BreadCo. Much better than [one of]Winn-Dixie[or]Strack and Van Til[or]SuperFresh[or]Marsh[or]Kroger[or]Piggly Wiggly[or]Jewel Finer Foods[or]Aldi[or]Safeway[or]Moo and Oink[at random]!" instead;
-	if noun is pat, say "'Fie!' yells Pat. 'My poem transcends technology! I am sure such a fancy gadget could not even tell me its meter!' Then he gets back to recitation." instead;
-	if noun is the broad board, say "The gadget makes no noise[if gateman is touchable][cant-change][else]." instead;
-	if noun is the player:
-		if warts are touchable:
-			say "Hm, the warts are registering. [no line break]";
-			try scaning warts instead;
-		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
-	if noun is gateman, say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Nat Egam. 'Maybe ask me questions instead.'" instead;
-	if noun is the OR DO door:
-		say "You see no activity until you wave your gadget over the bulge. So you leave it there, and you pick something up.[line break]";
-		try scaning bulge instead;
-	if noun is sandwich, say "Your gadget refuses to remain stable. As if it's trying to read two things at once. Perhaps if you pulled the components apart?" instead;
-	if noun is candelabra, say "Way too high up." instead;
-	if noun is doll house:
-		if attics are touchable, try scaning attics instead;
-		if static is touchable:
-			say "Before your gadget gets close, you begin to pick something up. Perhaps it isn't the doll house you need to do something with. Something ambient--like the static. So you do that.";
-			try scaning static instead;
-		say "[bug-report] One of attics and static should always be in view." instead;
+	if noun is cabinet, say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about where it is acne-bit and red." instead;
 	if noun is part of the gadget, say "If that part of the gadget were detectable, you'd have gone crazy from the beeping by now." instead;
 	if noun is gadget:
 		if the player's command matches "scan":
@@ -9582,12 +9602,18 @@ carry out scaning:
 		else:
 			say "You don't need to use a command to set the gadget specifically. You can [b]RECTIFY[r] or [b]CERTIFY[r] it as you please.";
 		the rule succeeds;
-	if noun is poem and poem is not folded:
-		if smilies are part of the poem:
-			say "The gadget is more active on the right edge where the smilies are, so you move it over there.";
-			try examining the smilies instead;
-		say "The gadget makes an odd noise. Perhaps it's in some weird state between forms. If poems can mean different things, they can probably become different things." instead;
+	if noun is the player:
+		if warts are touchable:
+			say "Hm, the warts are registering. [no line break]";
+			try scaning warts instead;
+		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
 	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [if noun is plural-named]those[else]that[end if] around." instead;
+
+carry out scaning:
+	d "scaning [noun].";
+	abide by the basic scaning game state checks rule;
+	abide by the basic scaning item checks rule;
+	abide by the prescan check rule of mrlp;
 	now last-scan is noun; [DIVIDING LINE FOR SUCCESSFUL SCAN]
 	if gadget is not examined or ever-scan is false:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
@@ -9596,36 +9622,30 @@ carry out scaning:
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
 	now last-obj is noun;
-	if noun is River Ville liver or noun is viler liver, say "You see five red lights in a row--but you only see the [if noun is viler liver]bottom[else]top[end if] half of them. Odd." instead;
-	if noun is dial:
-		if numset of dial is 16, say "Your gadget is silent. You've figured what to do with the dial." instead;
-		say "The gadget, when over the [b]EXITS[r] part, reads[if player has gadget][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters [b]EXITS[r] in it, somehow." instead;
-	if noun is cabinet, say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about where it is acne-bit and red." instead;
-	if noun is subway map, say "The reading's different over the map of Mt. Rose than the store proper.[if gadget is cert][gcn][rc][rc][rc][rc][rc][else if gadget is rect][gcn][bc][bc][bc][rc][bc][end if]." instead;
-	if noun is magenta nametag:
-		if gadget is cert, now nt-cert is true;
-		if gadget is rect, now nt-rect is true;
+	if noun is nametag, abide by the nametag scanning rule;
 	if gadget is cert:
-		if noun is not inflexible:
-			say "[if noun is begonias or noun is roadblock or noun is acne bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
-			if parse-output is true:
-				say "Hmm, that means [cert-text of noun]. ";
-			kibitz noun;
-			check-marcos instead;
+		say "[if noun is begonias or noun is roadblock or noun is acne bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
+		if parse-output is true:
+			say "Hmm, that means [cert-text of noun]. ";
+		kibitz noun;
+		check-marcos instead;
 	else if gadget is rect:
-		if noun is the magenta nametag:
-			now nt-rect is true;
-			say "The gadget's display is a bit of a mess. It starts at [bcn][bc][rc][bc][gc][bc][bc] and goes to [gcn][bc][bc][bc][bc][bc][rc] and back[check-other-nt]." instead;
-		if noun is not inflexible:
-			say "Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: ";
-			say "[rgbtext of noun]";
-			if rgb-yet is false:
-				say " (R = red, G = green, B = blue)";
-				now rgb-yet is true;
-			say ".";
-			kibitz noun;
-			check-marcos instead;
+		say "Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: ";
+		say "[rgbtext of noun]";
+		if rgb-yet is false:
+			say " (R = red, G = green, B = blue)";
+			now rgb-yet is true;
+		say ".";
+		kibitz noun;
+		check-marcos instead;
 	buzz-or-no-noise noun instead;
+
+this is the nametag scanning rule:
+	if gadget is rect:
+		now nametag-rectified is true;
+		say "The gadget's display is a bit of a mess. It starts at [bcn][bc][rc][bc][gc][bc][bc] and goes to [gcn][bc][bc][bc][bc][bc][rc] and back[check-other-nt]." instead;
+	else if gadget is cert:
+		now nametag-certified is true;
 
 son-nos is a truth state that varies.
 
@@ -9750,12 +9770,12 @@ Check asking generically (This is the check for only one sensible converser rule
 	if debug-state is true, say "[list of NPCish people].";
 	say "Ambiguous--more than two people here." instead;
 
-to say lazy-adv: say "'Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me.' It shouldn't be too hard to humor him.".
+to say lazy-adv: say "'Scan something. Even if it doesn't give any readings. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me.' It shouldn't be too hard to humor him.".
 
 check objasking it about (This is the check for object information rule): [ note: there is no item1 -- item2 parallel asking, so if something is missing we need NPC/item1/"text" to be duplicated by NPC/item2/"text"]
 	if noun is gateman:
 		if second noun is gadget or second noun is part of the gadget:
-			if scanned-g is false, say "[lazy-adv]" instead;
+			if scanned-for-gateman is false, say "[lazy-adv]" instead;
 	repeat through table of matched thing responses:
 		if second noun is the subject-thing entry:
 			if noun is the asked-person entry:
@@ -9780,7 +9800,7 @@ stupid-temp is text that varies.
 check asking about (This is the check for specific topics rule):
 	if the topic understood is a topic listed in the table of matched topic responses:
 		if asked-person entry is the noun:
-			if scanned-g is false:
+			if scanned-for-gateman is false:
 				if topic understood matches "certify" or topic understood matches "rectify", say "[lazy-adv]" instead;
 			say "[npc-text entry][line break]" instead;
 			[would like to pad-rec "[what-pad-gen entry]" instead; but inform is confused with 2 tables]
@@ -9795,14 +9815,17 @@ to say goat-toga:
 	if toga is not moot:
 		say "'Oh, yes, the toga could've become a [b]GOAT[r].'";
 	else:
-		say "[one of]'Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify.'[or]You don't wish to revisit past glories. It's probably better to [b]PAD GOAT[r] for Nat Egam's information.[stopping]";
+		say "[one of]'Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify.'[or][dont-dwell of goat].[stopping]";
 	pad-rec "the goat";
 
 to say reed-deer:
 	if reed is not moot:
 		say "'Oh, yes, the reed could've become a [b]DEER[r].'";
 	else:
-		say "[one of]'Hm, yes, good job with the deer. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Green-Red in Certify mode and Red-Blue-Blue-Green in Rectify.'[or]You don't wish to revisit past glories. It's probably better to [b]PAD GOAT[r] for Nat Egam's information.[stopping]";
+		say "[one of]'Hm, yes, good job with the deer. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Green-Red in Certify mode and Red-Blue-Blue-Green in Rectify.'[or][dont-dwell of deer].[stopping]";
+
+to say dont-dwell of (th - a thing):
+	say "You don't wish to dwell too much on past accomplishments. It's probably better to [b]PAD [printed name of th in upper case][r] for the important information"
 
 check asking gateman about "world peace": say "That goal's a slog, but I've got confidence." instead;
 

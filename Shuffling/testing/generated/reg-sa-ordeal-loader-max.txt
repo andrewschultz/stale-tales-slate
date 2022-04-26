@@ -145,7 +145,7 @@ Notices Section
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #ttc-table-of-ranks-3
-You haven't solved any regions yet. You have the rank of (ow,) me, a stunted student.
+You haven't solved any regions yet. You have the rank of stunted student.
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
