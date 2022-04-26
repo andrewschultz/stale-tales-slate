@@ -1,0 +1,58 @@
+function usage()
+{
+	  echo Main quest stores are uvpywt
+	  echo h tests Others region
+	  echo a tests intro, o tests stores/hub, x tests everything else.
+	  exit
+}
+
+export TEMP=$1
+
+if [[ "$TEMP" == "" ]]
+then
+  usage
+fi
+
+export TEMP=$1
+
+while [[ "$TEMP" != "" ]]
+do
+  mychar=${TEMP:0:1}
+  case $mychar in
+    u)
+	  r1m roi-routes
+	  ;;
+    v)
+	  r1m roi-troves
+	  ;;
+    p)
+	  r1m roi-presto
+	  ;;
+    y)
+	  r1m roi-oyster
+	  ;;
+    w)
+	  r1m roi-towers
+	  ;;
+    t)
+	  r1m roi-otters
+	  ;;
+    h)
+	  r1m roi-others
+	  ;;
+    a)
+	  r1m roi-ordeal-reload
+	  ;;
+    o)
+	  r1m roi-stores
+	  ;;
+    x)
+	  r1m roi-lone
+	  ;;
+    *)
+	  echo character {$TEMP:0:1} not recognized.
+	  usage
+  esac
+  TEMP=${TEMP:1}
+done
+

@@ -1,0 +1,46 @@
+function usage()
+{
+	  echo Main quest stores are FIMR
+	  echo a tests intro, o tests stores/hub, x tests everything else.
+	  exit
+}
+
+export TEMP=$1
+
+if [[ "$TEMP" == "" ]]
+then
+  usage
+fi
+
+while [[ "$TEMP" != "" ]]
+do
+  mychar=${TEMP:0:1}
+  case $mychar in
+    f)
+	  r1m sa-forest
+	  ;;
+    i)
+	  r1m sa-sortie
+	  ;;
+    m)
+	  r1m sa-metros
+	  ;;
+    r)
+	  r1m sa-roster
+	  ;;
+    a)
+	  r1m sa-ordeal-reload
+	  ;;
+    o)
+	  r1m sa-stores
+	  ;;
+    x)
+	  r1m sa-lone
+	  ;;
+    *)
+	  echo character {$TEMP:0:1} not recognized.
+	  usage  
+  esac
+  TEMP=${TEMP:1}
+done
+
