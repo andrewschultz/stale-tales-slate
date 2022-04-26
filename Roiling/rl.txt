@@ -760,7 +760,9 @@ SEARCH.
 # logic for general gleaner
 ?What do I need to do to the general gleaner?
 The gleaner gives YRR??RY to start. That means slot 4 is a or e, and slot 5 is n or r. That at least letsus know if a consonant or vowel is in each question slot.
-Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L. From there, poking around should give ENLARGE.
+Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L.
+From there, poking around should give ENLARGE.
+# more logic for general gleaner
 ?Is there something else I can and should do?
 There's an optional point. Look at it better than just examining.
 The gleaner gives a different reading: R?YRRRY. This is a different word and a more obscure one. It's a way to examine.
@@ -896,6 +898,13 @@ But this helps with the question marks. There are no other yellow/green readings
 Now you can listen to the train or reaqd who made it. But you can also use more logic. In particular, T in slot 7 or 8 gives odd combinations of consonants, so it can fit in slot 1 if you parse through all the possibilities.
 Similarly D in slot 7 is odd, as is M, so that leaves N in slot 7.
 But then R is in slot 5 and TADARINM is not a word, so TAMARIND it is.
+# logic for hire recs re riches
+?How can I deal with Hire Recs Re: Riches?
+Well, you get slot 8 directly from the settler, and then slot 1 can't be H or R, so it's C. That's even before tackling the question marks!
+Slot 7 must then be an E, since it can't be C, and similarly slot 5 must be an R.
+Slot 6 is a vowel that can't be E, so it's I. Slot 3, the remaining vowel, is E.
+That leaves CREHRIES or ...
+CHERRIES.
 # logic for coins
 ?Why are the coins giving me such confusing clues?
 The (plain) coins near the end are, unavoidably, confusing. That's because they can, like the USB, get a description and become a thing which has no letters in common.

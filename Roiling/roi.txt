@@ -1720,8 +1720,10 @@ Beyond that, he just takes stuff. But you don't need any one specific fruit for 
 ?Is the sated stead useful?
 Yes.
 It can become <b>DATES</b>.
-?Mad Train?
+?Id-Mantra Mad Train?
 <b>TAMARIND</b>.
+?Hire Recs Re: Riches?
+<b>CHERRIES</b>.
 ?Peanut Cola?
 Some clues on the can.
 <b>CANTALOUPE</b>.

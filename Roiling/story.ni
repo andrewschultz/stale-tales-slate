@@ -300,9 +300,16 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 45. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.]
-[There are so many possibilities for a minimum solution--about 38 choose 20, or 33.6 billion--I won't go through them all. Well, technically, take away 10c3*28c17 + 10c2*28c18 + 10c1*28c19 + 10c0*28c20 to get 31.9 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
-only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (38) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 46. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.]
+[There are so many possibilities for a minimum solution--about 39 choose 20, or 68.9 billion--I won't go through them all. Well, technically, take away 10c3*29c17 + 10c2*29c18 + 10c1*29c19 + 10c0*29c20 to get 68.4 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
+only need 20 fruits. Best score is # of fruits (39) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.
+7 non fruit points, so max - 7 = total
+1 = compass
+2 = sonic icons
+1 = put coin in slot
+2 = passport
+1 = bonus for not using arugula
+]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint request rejects.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [matched item responses table of demo dome is table of demo dome matched item responses.] [readable table of demo dome is table of demo dome readables.] [unmatched topic responses table of demo dome is table of demo dome unmatched topic responses.] [ask x about x table of demo dome is table of demo dome ask x about x.] [misses-rule of demo dome is demo dome-misses rule.] [preeftable of demo dome is table of demo dome prefigurings.]
 
@@ -4377,7 +4384,7 @@ section random fruit hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-rustic-hard-items is a list of things variable. rustic-hard-items is { sated stead, eerie blurbs, harmonicas, id mantra mad train, magenta rope, omen prism, peanut cola }
+rustic-hard-items is a list of things variable. rustic-hard-items is { sated stead, recs hire re riches, eerie blurbs, harmonicas, id mantra mad train, magenta rope, omen prism, peanut cola }
 
 wells-hintables is a list of things variable. wells-hintables is { green stain, miser ruble, PSA Elp, riot cap, sorer bogey, stucco }.
 
@@ -5575,7 +5582,7 @@ upwarned is a truth state that varies.
 
 general-troves-nowhere-warn is a truth state that varies.
 
-diagonal-warned is a truth state that  varies.
+diagonal-warned is a truth state that varies.
 
 check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
@@ -19833,7 +19840,7 @@ carry out guruing:
 			else if noun is a fruit or noun is Dr Severe:
 				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. ";
 			else:
-				say "You have a vision of a fruit: [right-word entry in upper case]. ";
+				say "You have a vision of fruit: [right-word entry in upper case]. ";
 			now can-guru is false;
 			now noun is prefigured;
 			say "The aftertaste of arugula finally dissipates.";
@@ -19946,7 +19953,7 @@ to coin-eval:
 		if number of carried fruits > 4:
 			say "Curtis goes to take your bounty but backs off on seeing how much there is. 'I, old as...' He snaps his fingers. 'A solid load is laid, so! Lo, aids! Oi, lads!' he booms, and a couple assistants carry away your haul[one of]. 'Do sail!' he exhorts you[or][stopping].";
 		else:
-			say "Curtis relieves you of the burden[if number of carried fruits > 1]s[end if] you found[one of]. He thanks you but is curt[or][stopping].";
+			say "Curtis ships your find[if number of carried fruits > 1]s[end if] off to some hidden storage area where you're not allowed[one of]. He thanks you but is curt[or][stopping].";
 		repeat with fru running through carried fruits:
 			moot fru;
 	if curtis-level > temp:
@@ -20050,7 +20057,7 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, an id-mantra mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
+the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope.[paragraph break]Some piece of writing called [hire recs], a weird omen prism, an id-mantra mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
 after examining ruts circuits (this is the reveal ruts circuits rule) :
 	move sated stead to Rustic Citrus;
@@ -20063,8 +20070,9 @@ after examining ruts circuits (this is the reveal ruts circuits rule) :
 	move harmonicas to Rustic Citrus;
 	move mad train to Rustic Citrus;
 	move eerie blurbs to Rustic Citrus;
+	move Hire Recs Re Riches to Rustic Citrus;
 	moot ruts circuits;
-	say "Now that you've found everything they contain, the ruts circuits have become a sated stead.";
+	say "Also, now you've found everything they contain, the ruts circuits have become a sated stead.";
 	continue the action;
 
 chapter sated stead
@@ -20074,6 +20082,14 @@ a sated stead is boring vanishing scenery. description is "It seems like it's do
 a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "x[sp]?[sp]?[sp]?[sp]x". sated stead is parse-spoilable.
 
 the dates are a plural-named fruit. description is "They're dates. They're edible.". frroom of dates is Rustic Citrus.
+
+chapter Hire Recs Re Riches
+
+Hire Recs Re Riches is a thing. "Some writing called [hire recs], more than a pamphlet but not quite a book, lies here waiting to be consumed and processed.". description is "It's a book, probably about entrepeneurism, autographed by the author, whose name you can read in red. It was published by Schreier-Reichers, which is not in red.[paragraph break]Perhaps Curtis used it to summon you, in some weird way.". printed name is "[i]Hire Recs Re: Riches[r]".
+
+a-text of hire recs re riches is "RRYRRYYR". b-text of hire recs re riches is "RRYR?Y?P". parse-text of hire recs re riches is "c[sp]x[sp]e[sp]x[sp]r[sp]i[sp]e[sp]s".
+
+the cherries are a fruit.
 
 chapter maraschino
 
@@ -22706,6 +22722,7 @@ this is the others-misses rule:
 	else:
 		if dates are not moot, say "[2drm of Rustic Citrus]the sated stead could've become [b]DATES[r].";
 		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a [b]TAMARIND[r].";
+		if cherries are not moot, say "[2drm of Rustic Citrus][hire recs] could've become [b]CHERRIES[r].";
 		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become [b]MARASCHINO[r] cherries.";
 		if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become [b]BLUEBERRIES[r].";
 		if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a [b]CANTALOUPE[r].";

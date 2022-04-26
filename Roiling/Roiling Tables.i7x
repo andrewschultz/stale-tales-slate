@@ -1809,17 +1809,18 @@ book others
 table of others anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which is able to tell the direction! You look at where it points north. You will be able to progress without risk through the greenish sheering." [this must come first or Inform thinks we want a fruit in column 2]
-slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry." [start rustic citrus easy]
-spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold!"
-lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around."
-pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, less noise, more merchandise!'"
-sated stead	dates	true	350407000	--	"dates"	"dates/date"	--	--	"The sated stead shakes a bit, then disappears. In its place are some dates."
-eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	--	--	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes." [start rustic citrus hard]
-peanut cola	cantaloupe	true	637943038	--	"cantaloupe"	"cantaloupe"	--	--	"The cola bottle turns into a sort of tannish sphere, and you hear pulps splup inside."
-harmonicas	maraschino cherry	true	494589373	--	"maraschino"	"maraschino" or "maraschino cherries/cherry"	--	--	"Several painfully tinny chords later, the off-red harmonicas become a maraschino cherry."
-omen prism	persimmon	true	707273074	--	"persimmon"	"persimmon"	--	--	"The omen prism's red outside schlurps and changes color to form something better looking--a persimmon."
-magenta rope	pomegranate	true	769822574	--	"pomegranate"	"pomegranate"	--	post-pomegranate rule	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings."
-mad train	tamarind	true	391814053	--	"tamarind"	"tamarind"	--	--	"Well, you aren't sure if it is that much of an improvement, but a fruit is a fruit. Curtis seems pleased. Everybody gets suckered into buying one of these once, and after a few months, they forget how nasty it was and buy it again."
+slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry. Curtis is thrilled to see so many, though." [start rustic citrus easy]
+spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold at once! You help Curtis clean things up."
+lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around, until Curtis picks them up."
+pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, less noise, more merchandise!' says Curtis. 'Different colors, too!'"
+sated stead	dates	true	350407000	--	"dates"	"dates/date"	--	--	"The sated stead shakes a bit, then disappears. In its place are some dates. Curtis wipes them off to make sure they're clean."
+hire recs re riches	cherries	true	623814520	--	"cherries"	"cherries"	--	post-either-cherry rule	"The book/pamphlet reddens into something vaguely spherical with a stem. Well, a bunch of them. Curtis collects them dutifully."
+eerie blurbs	blueberries	true	891090201	--	"blueberries"	"blueberries/blueberry"	--	--	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes. Curtis takes care not to burst any of the berries." [start rustic citrus hard]
+peanut cola	cantaloupe	true	637943038	--	"cantaloupe"	"cantaloupe"	--	--	"The cola bottle turns into a sort of tannish sphere, and you hear pulps splup inside. Curtis briefly spins one of the larger ones on his finger while whistling 'Sweet Georgia Brown.'"
+harmonicas	maraschino cherry	true	494589373	--	"maraschino"	"maraschino" or "maraschino cherries/cherry"	--	post-either-cherry rule	"Several painfully tinny chords later, the off-red harmonicas become a maraschino cherry. Curtis removes his fingers from his ears to take them."
+omen prism	persimmon	true	707273074	--	"persimmon"	"persimmon"	--	--	"The omen prism's red outside schlurps and changes color to form something better looking--a persimmon. Well, several. Good enough for Curtis."
+magenta rope	pomegranate	true	769822574	--	"pomegranate"	"pomegranate"	--	post-pomegranate rule	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings. Curtis juggles a few pomegranates before storing them."
+mad train	tamarind	true	391814053	--	"tamarind"	"tamarind"	--	--	"Well, you aren't sure if it is that much of an improvement, but a fruit is a fruit. Curtis seems pleased. Everybody gets suckered into buying one of these once, and after a few months, they forget how nasty it was and buy it again. Curtis doesn't even make a slight frown as he takes it."
 PSA Elp	apples	true	443013650	--	"apples"	"apples/apple"	--	--	"The PSA [']Elp falls off from the wells and pops out into a few apples, red and yellow and green, like the readings on your settler. Well, you may not have ESP, but it's something almost as good." [start swell wells]
 riot cap	apricot	true	410438606	--	"apricot"	"apricot"	--	--	"The riot cap rounds into an apricot, which you take."
 stucco	coconuts	true	560113623	--	"coconuts"	"coconuts/coconut"	--	--	"The stucco that was part of the well congeals into a hairy ball (you don't want to know how) and rolls on the ground."
@@ -1857,6 +1858,10 @@ s-c	s-i	false	303532482	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip r
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 fleeing feeling	fleeing feeling	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+
+this is the post-either-cherry rule:
+	if cherries are moot or maraschino is moot:
+		say "You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!"; [this is a tricky one! We could define things as vanishing to change the "or" to "and," which would make more logical sense. But the "Curtis takes you fruits" rule doesn't kick in until after.]
 
 this is the post-pomegranate rule: [the magenta rope is already flipped]
 	moot megaton pear;
@@ -2368,6 +2373,7 @@ whistle	"[if player does not have whistle]You strain your eyes to see that [end 
 
 table of others readables
 to-read	what-read	alt-read
+hire recs re riches	"It's autographed in red, and pompously, by someone who's scribbled [first custom style]HERE'S RIC[r]."
 id mantra mad train	"The name of the train's creator is in red: [first custom style]DR. NIMATA[r]."
 eerie blurbs	"One reads [first custom style][one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order][r], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
@@ -3484,6 +3490,7 @@ book others
 table of others scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 sated stead	true	true	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
+hire recs re riches	true	true	false	false	"As [recs] recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!"
 id mantra mad train	true	true	false	false	"The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention."
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice."
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
@@ -3834,6 +3841,7 @@ pagers	"The pagers light up slightly. Maybe give it another go."
 slime	"The slime shifts about slightly, but not enough--yet."
 spear	"The spear stays as-is. But it can't be that hard to change."
 sated stead	"The sated stead bubbles slightly."
+hire recs re riches	"The pages of [recs hire] flutter briefly."
 eerie blurbs	"The blurbs turn a few shades of purple before settling again."
 harmonicas	"The harmonicas whistle, as if something happened."
 mad train	"The train emits some fake smoke and seems ready to blow up--but no."

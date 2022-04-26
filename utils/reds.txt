@@ -460,8 +460,10 @@ deeply,edplye,....L.
 #rustic citrus
 #qver of sated stead
 dates,R???R=sated=stead
-#qver of tamarind
+#qver of id mantra mad train
 tamarind,R????YRR=idmantra=madtrain
+#qver of hire recs re riches
+cherries,RRYR?Y?P=hirerecs=reriches
 blueberries,ereisrubble,reelrisebub,rubberielse,rublebeesir,reelrusebib
 tamarind,drnimata
 persimmon,mrpinsome,onemrspim,monisperm,nopemrsim,rompsinme,mosirpenm

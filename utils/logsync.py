@@ -868,6 +868,8 @@ with open(logic_invis_file) as file:
             if last_comment_line > last_question_line:
                 print("RL.TXT Two logic-for comments in a row without a question:", last_comment_line, line_count, ll)
             last_comment_line = line_count
+        if ll.startswith("# more logic for ") or ll.startswith("#more logic for for"):
+            last_comment_line = line_count
         last_comment = ll.startswith("#")
 
 with open(logic_reds_file) as file:

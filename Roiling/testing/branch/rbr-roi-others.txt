@@ -24,8 +24,8 @@ files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,re
 
 ALSO-IGNORE:t,c
 
-}}MAX=45
-}}CURMAX=45
+}}MAX=46
+}}CURMAX=46
 }}SCORE=0
 }}CURMIN=25
 
@@ -102,16 +102,16 @@ You don't want to change. Well, not in that way.
 If Curtis had any materials, he wouldn't hide them from you.
 #ttc-table-of-others-anagrams-grapes
 >gx pagers
-You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: GRAPES. The aftertaste of arugula finally dissipates.
 #ttc-table-of-others-anagrams-limes
 >gx slime
-You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: LIMES. The aftertaste of arugula finally dissipates.
 #ttc-table-of-others-anagrams-pears
 >gx spear
-You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: PEARS. The aftertaste of arugula finally dissipates.
 #ttc-table-of-others-anagrams-plums
 >gx lumps
-You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 @nud
 #mistake test for earp
@@ -285,7 +285,7 @@ Curtis mumbles various business ideas to himself.
 >z
 >gx lumps
 No, you already know PLUMS changes the lumps.
-!You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
+!You have a vision of fruit: PLUMS. The aftertaste of arugula finally dissipates.
 >ptf 2
 
 >score
@@ -425,7 +425,7 @@ The needle is working fine. No need to meddle.
 >x ruts circuits
 
 @hin
-/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola|Hire Recs Re: Riches) hinting\.
 
 @mis
 #mistake test for tased
@@ -435,46 +435,50 @@ You don't need that, and neither does Curtis.
 @spoi
 #ttc-table-of-others-anagrams-dates
 >gx sated stead
-You have a vision of a fruit: DATES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: DATES. The aftertaste of arugula finally dissipates.
+\\
+#ttc-table-of-others-anagrams-cherries
+>gx hire recs
+You have a vision of fruit: CHERRIES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-blueberries
 >gx eerie blurbs
-You have a vision of a fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-cantaloupe
 >gx peanut cola
-You have a vision of a fruit: CANTALOUPE. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: CANTALOUPE. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-maraschino
 >gx harmonicas
-You have a vision of a fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-persimmon
 #gx omen prism
-You have a vision of a fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-pomegranate
 >gx magenta rope
-You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 \\
 #+ttc-table-of-others-anagrams-pomegranate
 >gx megaton pear
 You blink and wind up refocusing on the magenta rope.
-You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 \\
 #+ttc-table-of-others-anagrams-pomegranate
 >gx rampage note
 You blink and wind up refocusing on the magenta rope.
-You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 \\
 #+ttc-table-of-others-anagrams-pomegranate
 >gx mopeage rant
 You blink and wind up refocusing on the magenta rope.
-You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-tamarind
 >gx mad train
-You have a vision of a fruit: TAMARIND. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: TAMARIND. The aftertaste of arugula finally dissipates.
 
 @sli
 #slider test for dates
@@ -496,6 +500,18 @@ Three of five letters is a lot of ambiguity, but you are pretty sure what sort o
 The sated stead bubbles slightly.
 
 @nud
+#ttc-table-of-others-scannotes-hire-recs-re-riches
+>scan hire recs
+As Hire Recs Re: Riches recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!
+\\
+#ttc-table-of-others-spechelp-hire-recs-re-riches
+>cherreis
+The pages of Recs Hire Re: Riches flutter briefly.
+\\
+#ttc-table-of-others-readables-hire-recs-re-riches
+>read riches
+It's autographed in red, and pompously, by someone who's scribbled HERE'S RIC.
+\\
 #ttc-table-of-others-readables-id-mantra-mad-train
 >read mad train
 The name of the train's creator is in red: DR. NIMATA.
@@ -604,7 +620,7 @@ Not just omen, or prism. It's an omen prism.
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
 @hin
-/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola|Hire Recs Re: Riches) hinting\.
 
 >score
 }}SCORE++
@@ -630,7 +646,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola|Hire Recs Re: Riches) hinting\.
 
 >score
 }}SCORE++
@@ -639,7 +655,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (sated stead|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
+/DEBUG INFO: (sated stead|harmonicas|magenta rope|omen prism|peanut cola|Hire Recs Re: Riches) hinting\.
 
 >score
 }}SCORE++
@@ -648,7 +664,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (sated stead|harmonicas|magenta rope|omen prism) hinting\.
+/DEBUG INFO: (sated stead|harmonicas|magenta rope|omen prism|Hire Recs Re: Riches) hinting\.
 
 >score
 }}SCORE++
@@ -674,22 +690,44 @@ Take on a token
 Your score has just gone up by one point.
 
 @hin
-/DEBUG INFO: (sated stead|harmonicas|magenta rope) hinting\.
+/DEBUG INFO: (sated stead|harmonicas|magenta rope|Hire Recs Re: Riches) hinting\.
+
+@max
+# test cherry flips either way
+>maraschino
+by one point
+!You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
+>cherries
+by one point
+You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
+>undo
+>undo
 
 >score
 }}SCORE++
 {$SCOS}
 >maraschino
 Your score has just gone up by one point.
+!You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 @hin
-/DEBUG INFO: (sated stead|magenta rope) hinting.
+/DEBUG INFO: (sated stead|magenta rope|Hire Recs Re: Riches) hinting.
 
 >score
 }}SCORE++
 {$SCOS}
 >pomegranate
 Your score has just gone up by one point.
+
+@hin
+/DEBUG INFO: (sated stead|Hire Recs Re: Riches) hinting.
+
+>score
+}}SCORE++
+{$SCOS}
+>cherries
+Your score has just gone up by one point.
+You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 @hin
 DEBUG INFO: sated stead hinting.
@@ -735,27 +773,27 @@ something pulsing in rhythm with the whines from the sorer bogey
 @spoi
 #ttc-table-of-others-anagrams-apples
 >gx elp psa
-You have a vision of a fruit: APPLES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: APPLES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-apricot
 >gx riot cap
-You have a vision of a fruit: APRICOT. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: APRICOT. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-coconuts
 >gx stucco
-You have a vision of a fruit: COCONUTS. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: COCONUTS. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-gooseberry
 >gx sorer bogey
-You have a vision of a fruit: GOOSEBERRY. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: GOOSEBERRY. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-mulberries
 >gx miser ruble
-You have a vision of a fruit: MULBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: MULBERRIES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-tangerines
 >gx green stain
-You have a vision of a fruit: TANGERINES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: TANGERINES. The aftertaste of arugula finally dissipates.
 \\
 >gx mound
 Nothing happens. Maybe try to see through something else.
@@ -1117,39 +1155,39 @@ The barren cries are sour and bitter and tiny.
 @spoi
 #ttc-table-of-others-anagrams-blackberries
 >gx barber sickle
-You have a vision of a fruit: BLACKBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: BLACKBERRIES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-breadfruit
 >gx buried raft
-You have a vision of a fruit: BREADFRUIT. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: BREADFRUIT. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-cranberries
 >gx briar screen
-You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 \\
 #+ttc-table-of-others-anagrams-cranberries
 >gx barren cries
-You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-grapefruit
 >gx rapt figure
-You have a vision of a fruit: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-pineapple
 >gx pipe panel lie pen app
-You have a vision of a fruit: PINEAPPLE. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: PINEAPPLE. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-raspberry
 >gx pryer bars
-You have a vision of a fruit: RASPBERRY. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: RASPBERRY. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-strawberries
 >gx barriers west
-You have a vision of a fruit: STRAWBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: STRAWBERRIES. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-watermelon
 >gx mean trowel
-You have a vision of a fruit: WATERMELON. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: WATERMELON. The aftertaste of arugula finally dissipates.
 
 @hin
 /DEBUG INFO: (barber sickle|barren cries|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
@@ -1340,6 +1378,8 @@ Your score has just gone up by one point.
 {$SCOS}
 >watermelon
 Your score has just gone up by one point.
+min-up
+}}CURMIN++
 
 @hin
 /DEBUG INFO: (barriers west|buried raft|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
@@ -1495,7 +1535,7 @@ Nothing, despite all Len Craig has to sell.
 \\
 #ttc-table-of-others-anagrams-olives
 >gx voiles
-You have a vision of a fruit: OLIVES. The aftertaste of arugula finally dissipates
+You have a vision of fruit: OLIVES. The aftertaste of arugula finally dissipates
 \\
 #ttc-table-of-others-anagrams-among
 >gx ammo gang
@@ -1523,7 +1563,7 @@ You feel a need to haggle with MO LEN. The aftertaste of arugula finally dissipa
 \\
 #ttc-table-of-others-anagrams-papayas
 >gx auction caution
-You have a vision of a fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-solemn
 >gx lemons
@@ -1868,7 +1908,7 @@ One look at the warding drawing disabuses you of any notion of going anywhere ex
 \\
 #ttc-table-of-others-anagrams-banana
 >gx a banna'
-You have a vision of a fruit: BANANA. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: BANANA. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-go-near
 >gx orange
@@ -1876,7 +1916,7 @@ You see how to get the orange: first, GO NEAR. The aftertaste of arugula finally
 \\
 #ttc-table-of-others-anagrams-rhubarb
 >gx a brr hub
-You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
+You have a vision of fruit: RHUBARB. The aftertaste of arugula finally dissipates.
 
 @nud
 #ttc-table-of-others-nudges-storage
