@@ -919,6 +919,10 @@ understand "deltaic" as a mistake ("Reorganizing the geography around the Edicta
 
 chapter Minded Midden
 
+understand "able" and "ables" as a mistake ("But you already gained your powers back! You're quite able enough as-is.") when blase bales are touchable.
+
+understand "beal" and "beals" as a mistake ("The bales can be transformed, but into something less unsightly.") when blase bales are touchable.
+
 understand "dim den" as a mistake ("You remain outside in (relative) light.") when player is in Minded Midden and bleary barley is in Minded Midden.
 
 understand "dim end" and "end dim" as a mistake ("Okay, if you say so...[paragraph break][uurrgg]") when player is in Minded Midden and bleary barley is in Minded Midden.

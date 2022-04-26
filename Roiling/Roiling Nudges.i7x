@@ -1821,6 +1821,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rye"	335489164	deli rye	--	"[del-ry]."
 "lied"	247641883	deli rye	--	"[del-ry]."
 "sandwich"	397613884	deli rye	--	"[del-ry]."
+"bale"	202226671	blase bales	--	"You need to deal with all the bales."
 
 to say add-ly: say "[adv-help-1][adv-help-2]"
 
@@ -2136,9 +2137,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "train"	304521993	mad train	--	"[whole-item]."
 "peanut"	488583219	peanut cola	--	"[whole-item]."
 "cola"	149359819	peanut cola	--	"[whole-item]."
+"hire"	295405057	--	--	"[re-riches]."
+"riches"	410684608	--	--	"[re-riches]."
+"recs"	328409463	--	--	"[re-riches]."
 "moss"	330975662	moss cap	--	"[whole-item]." [stuff gotten from Curtis]
 "cap"	102659362	moss cap	--	"[whole-item]."
 "ditties"	541314892	--	--	"The ditties are Curtis's. They're really quite good and don't need changing. You're pretty sure you couldn't improve them, anyway."
+
+to say re-riches: say "Work with [hire recs] in its entirety"
 
 to say plur-fruit: say "Well, you don't technically need plurals for this, but you're on the right track"
 

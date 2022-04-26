@@ -799,7 +799,7 @@ Then the next letter is very likely R. Again, TL and TM and TP don't start any w
 TR(AE)(ML)(MP)(MLP)(AE) remains and has six possibilities. You can guess, or reading will kill off possibilities.
 LAMPERT as red text leaves TRAMPLE.
 >STORE T
->>BLEARY BARLEY
+>>MINDED MIDDEN
 # logic for bleary barley
 ?How do I get rid of the bleary barley?
 The settler gives P??YRB -- the B you may not have seen before, but it has to be brown based on the upper window. Brown = blue + orange, and orange is Y.
@@ -812,6 +812,11 @@ You may need a bit of word-logic here, but the R?RR??R leaves two vowels. If the
 Here you may also notice that one of the two verbs must have E in the fifth slot, because of the question mark, putting I in the second.
 -I--E-- and with Sr Indec and Nrdices as clues, you can get close. The last lousy point is trickier, but once you know DISCERN, you know that all the question marks are because DISCERN is right. DISCERN will give you a few hints, but what about the other?
 This requires a bit more trial and error. However, we know that slot 5 can't be E and slot 6 can't be R, or there wouldn't be question marks. That cuts things down. Also, we can assume that slot 2 is a vowel, but it can't be I, or the question mark would be definite. So it is E. The result is probably the trickiest puzzle of the game. You may have to do some guessing. But it IS a last lousy point.
+# logic for blase bales
+?What can I do with the blase bales?
+Well, the two question marks must be vowels, since you already can see where the three consonants go.
+With -A--E, you can almost but not quite get something just from logic, as slot 1 can't be B, 3 can't be L, and 4 can't be L.
+LASBE isn't a word, so SABLE it is.
 >>DISOWNED DOWNSIDE
 # logic for atmo moat
 ?How do I destroy the atmo-moat?

@@ -1506,6 +1506,7 @@ leopard	leopard	false	445979194	--	"paroled"	"paroled"	--	post-lamer-realm-flip 
 badger	badger	false	287365426	--	"garbed"	"garbed"	--	post-lamer-realm-flip rule	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."
 satyr	satyr	false	409254857	--	"artsy"	"artsy"	--	post-lamer-realm-flip rule	"The satyr shakes a bit as if he has had a vision. He begins drawing figures in the air, standing on his hind legs and conducting an imaginary orchestra. He seems less strictly focused on his own survival now."
 lilac bays	lilac bays	false	413053868	--	"basically"	"basically"	--	--	"Nothing happens, until the asyllabic lilac bays bloom unexpectedly! Weird that such a flabby word would provide them with nourishment, but hey, plants already like plant food, which is weird enough. Well, you've prettified things."
+blase bales	blase bales	false	298500637	--	"sable"	"sable"	--	--	"The blase bales rumble and pop, and suddenly, out flies a small sable that chatters as it runs around you several times. It seems to nod before running off, surely to get allies. It did not seem fearful--you've clearly put a dent in Elvira's power. But you still need to [if rancho archon anchor is visited]figure how to defeat[else]find[end if] her."
 weltish whistle	weltish whistle	false	534280357	--	"deeply"	"deeply"	pre-whistle-deeply rule	--	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."
 medals	medals	false	482616124	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]Oh, also, if you were waiting all game, wondering when you'd get to use the 'Q before U' factoid, I guess it just slipped in under the wire!"
 
@@ -3482,6 +3483,7 @@ medals	true	false	false	false	"[if cheat-on is true]The medals clink back and fo
 cut ya all cult laya	true	false	false	false	"The words of the [laya] certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading."
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
+blase bales	true	true	false	false	"The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters."
 
@@ -3794,6 +3796,7 @@ xtrhelp	helptxt
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all."
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
 asyllabic lilac bays	"You almost hear music as the lilac bays rustle."
+blase bales	"The blase bales seem to darken and shake a bit."
 cut ya all cult laya	"The jabber from [the laya] turns slightly less inane for a moment."
 motleyer	"[imp-nag]."
 butlery	"[imp-nag]."
@@ -4706,6 +4709,7 @@ hint-entry	advice-entry	parallel-entry	spoil-entry
 bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is [b]BARELY[r] there.[minus][cycling]"	--	"the barley can appear [b]BARELY[r]"
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can [b]DISCERN[r] (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or][b]RESCIND[r].[minus][cycling]"
 asyllabic lilac bays	"[one of]The lilac bays need a word that will nurture them. It's useless in regular conversation, but for whatever reason, the lilac bays like it.[plus][or][b]BASICALLY[r].[minus][cycling]"
+blase bales	"[one of]The blase bales can become something more interesting[plus][or]They are one more animal to rescue.[plus][or]A [b]SABLE[r].[minus][cycling]"
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a [b]YIELDER[r].[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or][b]REEDILY[r].[minus][cycling]"	--	"Ed Riley can speak [b]REEDILY[r]"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."

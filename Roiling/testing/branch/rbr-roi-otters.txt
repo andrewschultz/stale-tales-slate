@@ -15,8 +15,8 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ~	hints,hin,spoi	t5
 ~	verbs	t6
 
-}}MAX=35
-}}CURMAX=35
+}}MAX=36
+}}CURMAX=36
 }}SCORE=0
 }}CURMIN=24
 
@@ -1001,12 +1001,6 @@ Your score has just gone up by one point.
 >score
 {$SCOS}
 
->angrily
-Your score has just gone up by one point.
-}}SCORE++
->score
-{$SCOS}
-
 @max
 ##balance undos
 >sparely
@@ -1027,6 +1021,12 @@ by one point
 Boy, those players
 >undo
 >undo
+
+>angrily
+Your score has just gone up by one point.
+}}SCORE++
+>score
+{$SCOS}
 
 >blearily
 Your score has just gone up by one point.
@@ -2518,6 +2518,38 @@ You can't hear anything from the bays now
 !/(Silly Cab A|Clay Blais)
 !An odd voice.
 
+@nudmis
+#ttc-table-of-minded-midden-nudges-bale
+>aleb
+"You need to deal with all the bales."
+
+@nudmis
+#ttc-table-of-otters-scannotes-blase-bales
+>scan blase bales
+The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced.
+\\
+#ttc-table-of-otters-spechelp-blase-bales
+>elsab
+"The blase bales seem to darken and shake a bit."
+
+@sli
+#slider test for sable
+>asleb
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!min
+>sable
+by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
+@nudmis
+#ttc-table-of-otters-done-rejects-sable
+>eblas
+"The sable is running around quite happily. No need to change it."
+
 >w
 
 @hin
@@ -3002,6 +3034,13 @@ Your destiny awaits to the west! You are fully prepared to take on Elvira.
 @hin
 DEBUG INFO: Elvira hinting.
 Just PLAY THE WHISTLE to defeat her.
+
+>score
+
+@min
+{$SCOS}
+@!
+{$SCOMAX}
 
 >w
 

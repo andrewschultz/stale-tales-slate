@@ -285,7 +285,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=31 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 [towers-min-adj must be changed if we fix something beyond Mislit Limits]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 36. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -295,8 +295,9 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 7=31 for all Lamer Realm animals
 8=32 for all Uprates Pasture animals
 9=33 for BASICALLY back at Brunt, post-animal help
-10=34 for ASIDE around Elmer/Merle
-11=35 for HONESTLY after ASIDE
+10=34 for SABLE at the blase bales after all animals are helped
+11=35 for ASIDE around Elmer/Merle
+12=36 for HONESTLY after ASIDE
 NON ANAGRAM: PLAY WHISTLE
 ]
 
@@ -18310,6 +18311,12 @@ check going in Minded Midden:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
 			continue the action;
 
+after printing the locale description for minded midden when nounsolve is 4 and adjsolve is 4:
+	if blase bales are off-stage:
+		say "What's this? You missed this before. Of course, it was easy. There are blase bales littered all around the nude dune! Well, you wonder what you can make of them.";
+		move blase bales to minded midden;
+	continue the action;
+
 chapter bleary barley
 
 the bleary barley is scenery in Minded Midden. description of bleary barley is "It ranges expansively--but the weird thing is, it hasn't flowered. And it's not all planted. Someone must have placed it very carefully or deliberately so you'd progress slowly."
@@ -18329,6 +18336,12 @@ this is the bore-dune rule:
 chapter asyllabic lilac bays
 
 the asyllabic lilac bays are reflexive LLPish scenery. "They [if lilac bays are reflexed]look nice now you fixed them[else]look like they need something. You're not sure what. You've heard plants like classical music, but they're unusual plants, so they just might need the right word. It's weird, but if you listen closely, the wind through the lilacs seems to say something[end if]."
+
+chapter blase bales
+
+the blase bales are boring vanishing LLPish scenery. "They look so boring, such a dull color. You're not even sure if they're straw or hay, and you feel like you should know the difference after swapping the two in [shuf]. Nevertheless, it would be nice to bring them to life.". bore-text of blase bales is "They are bales. You can't do much with them in their present state."
+
+a-text of blase bales is "RYRRY". b-text of blase bales is "R?RR?". parse-text of blase bales is "x[sp]a[sp]x[sp]x[sp]e".
 
 chapter Ed Riley
 
@@ -19097,7 +19110,7 @@ for printing a locale paragraph about a reflexive puzanimal (called th) in Lamer
 for printing a locale paragraph about a reflexed puzanimal (called th) in Lamer Realm:
 	if th is mentioned, continue the action;
 	let X be number of reflexed puzanimals in Lamer Realm;
-	say "Just seeing the animal[if X > 1]s you helped ([end if][list of touchable reflexed puzanimals]) leaves a peaceful feeling--you have allies nearby against Elvira.";
+	say "Just seeing the animal[if X > 1]s[end if] you helped ([list of touchable reflexed puzanimals]) leaves a peaceful feeling--you have allies nearby against Elvira.";
 	now all touchable reflexed puzanimals are mentioned;
 
 after choosing notable locale objects when player is in Lamer Realm (this is the group animals in lamer realm rule):
@@ -22692,6 +22705,10 @@ to towers-miss-track (rm - a room):
 this is the otters-misses rule:
 	if rescind-cinders is false, say "[2drm of minded midden]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
 	if asyllabic lilac bays are in Minded Midden, say "[2drm of minded midden]you could've said [b]BASICALLY[r] around the asyllabic lilac bays in Burnt Brunt.";
+	if blase bales are in Minded Midden:
+		say "[2drm of minded midden]you could've made the blase bales into a [b]SABLE[r].";
+	else if blase bales are off-stage:
+		say "[2drm of minded midden]you could've found something else to make an animal from if you'd freed one more animal in [if nounsolve is 3 and adjsolve is 4][perverse preserve][else if nounsolve is 4 and adjsolve is 3][lamer realm][else][Perverse Preserve] and [lamer realm][end if].";
 	if cult laya is in Disowned Downside, say "[2drm of disowned downside]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
 	if loop pool is visited:
 		if eels are not reflexed, say "[2drm of loop pool]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
