@@ -23,7 +23,7 @@ Undesired Underside
 
 # load up A Reading
 >x reading
-Sorry, I understood the verb, but I didn't understand the noun.
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 >w
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.

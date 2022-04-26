@@ -2285,10 +2285,10 @@ carry out angleing:
 		say "You notice [if ang is 1]a weird haze[else]weird hazes[end if] around [the list of angleable things] for a few seconds[if warts are part of the player]. Your warts also tingle[end if].";
 	now all angleable things are padded;
 	h-check;
-	choose row with short of "to-do" in table of notepad entries;
+	choose row with short of "to do" in table of notepad entries;
 	if there is a known entry and known entry is false:
 		say "[i][bracket]You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.[close bracket][line break]";
-	pad-rec-q "to-do";
+	pad-rec-q "to do";
 	the rule succeeds;
 
 after printing the name of an unnecc thing while angleing: say " (faint)". [unnecc is necessary (heh) because LLPish means you get a point for it, but flipping the attics/static infinitely is possible. ]
@@ -2747,7 +2747,7 @@ to decide whether gadget-active:
 	decide yes;
 
 to say verb-list:
-	say "[2dn]X or [b]EXAMINE[r] an object. If an object has writing, [b]READ[r] it instead of X [b]WRITING[r].";
+	say "[2dn]X or [b]EXAMINE[r] an object. You can get clues if you [b]READ[r] objects with writing.";
 	say "[2dn]The four directions, north, south, east and west.";
 	say "[2dn][b]PAD[r] to see a list of topics. Then [b]PAD VERBS[r], for example.";
 	say "[2dn][b]VERB[r]/[b]VERBS[r] shows this, [b]OPTIONS[r] shows options you can change, and informational meta-commands include [b]ABOUT[r], [b]CREDITS[r], [b]TECH[r], [b]SITES[r], and [b]RELEASE[r].";
@@ -2790,18 +2790,18 @@ short	known	verify	topic (topic)	blurb
 "random dialogue"	false	true	"random/dialogue" or "random dialogue" or "uhhs/hush"	"[b]UHHS[r] turns on random dialogue, [b]HUSH[r] turns it off."
 "rectify"	false	--	"r/rec/rect/rectify"	"green dot = 1st letter. Red dot = last letter. Blue = the rest."
 "recuse"	false	--	"recuse"	"If you secured, [b]RECUSE[r] will come in handy once you've solved two quests, to skip a third."
-"red"	false	--	"red/redness"	"Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?"
-"Red Bull Burdell"	false	--	"red bull burdell" or "red/ bull/ burdell/" 	"The guy I need to beat. Probably not with strength or anything like that."
+"Red Bull Burdell"	false	--	"red bull burdell" or "red bull" or "red/bull burdell" or "red/bull/burdell" 	"The nemesis to be defeated here in Yorpwald. He is too physically strong. Perhaps anagramming magic can help."
+"red"	false	--	"red/reds/redness"	"Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?" [note: this comes second, because otherwise it trumps "red bull burdell"]
 "retry"	false	--	"terry" or "retry"	"[b]RETRY[r] gets Terry to send you [if Trips Strip is visited]back [end if]to the Trips Strip[if Trips Strip is unvisited], wherever that is[end if]."
 "secure"	false	--	"secure"	"Having [b]SECURE[r] activated will make the gadget less useful on any one puzzle but will let you skip a chunk of your quest later. [b]SECURE[r] will be locked once you visit certain places. The button will flash when you need to choose."
 "spaces"	false	false	"space/spaces"	"[b]SPACES[r] toggles whether you have an extra space in raw gadget results. [b]SPACE[r](S) [b]ON[r]/[b]SON[r] forces it on, while [b]NO SPACE[r](S)/[b]NOS[r] forces it off."
 "stores"	false	--	"store/stores/malls/shop/shops/lots/mall"	"--[if scented descent is touchable]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are touchable]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is touchable]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is touchable]Resort[found-status of resort][else]Store R[reso-maybe][end if]"
 "talking"	true	--	"talking"	"[b]ASK[r] for other people, or just say the word/s otherwise. Specific topics or in-game things are suggested, but default dialogues may give hints."
 "the goat"	false	--	"goat/toga"	"Certify = [rcn][gc][rc][rc] and Rectify = [rcn][bc][gc][bc]."
-"to-do"	false	--	"to-do" or "todo" or "to do"	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."
+"to do"	false	--	"todo" or "to do"	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."
 "verbs"	true	false	"verbs/verb"	"[verb-list]"
-"warts"	false	--	"warts"	"[if warts are touchable]'No, too stupid a fad. I put soot on warts.' But what's too stupid?[else]This puzzle's crossed out. You feel good about that.[end if]"
-"writing"	false	--	"writing"	"You need to [b]READ[r] or [b]EXAMINE[r] something instead of the [b]WRITING[r] on it."
+"warts"	false	--	"warts"	"'No, too stupid a fad. I put soot on warts.' But what is it that's too stupid?"
+"writing"	false	--	"writing"	"You need to [b]READ[r] or [b]EXAMINE[r] something instead of looking at the [b]WRITING[r] on it."
 "xx"	false	true	"xx"	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."
 
 pf-warn is a truth state that varies.
@@ -6023,18 +6023,23 @@ section taping (joke verb)
 
 taping is an action applying to one thing.
 
-understand the command "tap" as something new.
+[NOTE: If definitions are put here, they overwrite the mistake file, which gives instructions for TAP FEET. So that's why they seem to be missing. ]
 
-understand "tap [something]" as taping.
+to say pat-tap:
+	say "'Ah! You are TAPping your feet to my anapest beat!'";
+	ital-say "[b]TAP[i] is not a standard verb. [b]PUSH[i] may work better when not around Pat, but Pat will be gone by then.";
 
 rule for supplying a missing noun when taping:
 	if woeful pat is touchable:
-		now noun is woeful pat;
+		say "[pat-tap]";
+		reject the player's command;
+	else if spout is touchable:
+		now noun is spout;
 	else:
 		now noun is player;
 
 carry out taping:
-	if noun is pat, say "Not apt." instead;
+	if pat is in moor and player is in moor, say "Not apt. Though you can [b]TAP FEET[r] for a clue." instead;
 	if noun is spout:
 		if cask is touchable, try filling the cask instead;
 		say "The oils would go to waste." instead;
@@ -6581,10 +6586,10 @@ to decide which number is fridge-score:
 	if cake pan is moot, increment temp;
 	decide on temp;
 
-description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything. You could just [b]OPEN[r] it[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything. You could just [b]OPEN[r] it[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
 
 after examining griefd fridge:
-	pad-rec-q "warts";
+	pad-rec "warts";
 	continue the action;
 
 fridge-open is a truth state that varies.
@@ -9188,11 +9193,17 @@ volume parser errors
 rewarn-val is a number that varies. rewarn-val is usually 0.
 rewarn-next is a number that varies. rewarn-val is usually 2.
 
-Rule for printing a parser error when the latest parser error is the not a verb I recognise error: [verb guess]
+writing-warn is a truth state that varies.
+
+this is the writing-warn rule:
+	if writing-warn is true, continue the action;
 	if the player's command includes "writing":
-		say "You don't have to do anything with any writing, just [b]READ[r] whatever the writing is on. That said, sorry for not implementing any and all writing fully.";
+		ital-say "you don't have to do anything with any writing. Just [b]READ[i] whatever contains the writing.";
 		pad-rec "writing";
 		reject the player's command;
+
+Rule for printing a parser error when the latest parser error is the not a verb I recognise error: [verb guess]
+	abide by the writing-warn rule;
 	let myh be the hash of the player's command;
 	let myh2 be the hash of word number 1 in the player's command;
 	repeat through regana of mrlp:	[this code vacuums up the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
@@ -9262,6 +9273,7 @@ Rule for printing a parser error when the latest parser error is the nothing to 
 long-word-warned is a truth state that varies. long-word-warned is false.
 
 Rule for printing a parser error when the latest parser error is didn't understand error:
+	abide by the writing-warn rule;
 	[let hop be hash of the player's command;
 	d "[hop] = [the player's command].";]
 	if long-word-warned is false:
@@ -9290,10 +9302,7 @@ Rule for printing a parser error when the latest parser error is didn't understa
 book parsing
 
 Rule for printing a parser error when the latest parser error is the can't see any such thing error:
-	if the player's command includes "writing":
-		say "[one of]There's a lot of writing in [this-game][if Notices Section is visited], especially red writing[end if]. If you're trying to read writing, you may want to [b]READ[r] what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand[or]Try to [b]READ[r] the object you want, instead[stopping].";
-		pad-rec "writing";
-		the rule succeeds;
+	abide by the writing-warn rule;
 	say "[l-or-look-prompt].";
 	the rule succeeds;
 
@@ -9887,7 +9896,7 @@ gateman	getaway	"[oma-gate]"
 gateman	gadget	"'[one of]Powerful. Not as a weapon. Won't be many fights. But you can [b]SCAN[r] an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you[or]It can [b]SCAN[r] other things[stopping]. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red.'"
 gateman	s-r	"'Could make things tougher at first, but then easier, maybe. Switch it, and you can only [b]CERTIFY[r] or [b]RECTIFY[r], but not both. Later, though, you can [b]RECUSE[r] yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so.'[pad-sec]"
 gateman	noise bag	"'Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it.'" [!! HACK ... NOISE BAG comes before NOISE]
-gateman	saltine	"'Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix.'"
+gateman	saltine	"'Miniscule, but more than mini-clues. The next item that baffles you, eat that and [b]XX[r] ... not just [b]X[r] or [b]EXAMINE[r], and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix.'"
 gateman	cabinet	"'[if lube-asked is false][lubeit]It's kind of picky and defensive. Might not give you everything [']til I tell it.' He goes over to the cabinet, pats it on its top, and returns. 'Now you should be able to get everything from there.[else]Everything in there's yours.[end if]'"
 peasant	hay	"'Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand...'"
 peasant	poem	"'I try my best at it.'"
@@ -10125,6 +10134,7 @@ roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
 Stiller Trellis	"[dmb]You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
+Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[if noun is inside] or clear way [b]INSIDE[r][end if]."
 Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you probably just want to go back east."
 Fo Real Florae	"The faeries wouldn't take kindly to snooping. The only safe way out is back west."
 The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
@@ -10679,7 +10689,7 @@ great grate	"The grate seems to be made by [hktn]. It's not steel, but it's stil
 tall trio	"The names are Al, Tri, and Lot. [one of]If you [b]READ[r] again, maybe one of the six combinations will make you see red[or][first custom style]AL/LOT/TRI[r] makes you see red, for whatever reason[stopping]." [bold-ok]
 spearman	"The spearman's name, in red, is [first custom style]MR. SANE PA[r][if player carries spearman]. You also read, in red, one of three lines: [first custom style][one of]MEAN RAPS[r][or]MS. P. ARENA[r]--crossed out, but red[or]AMEN, RASP[r][in random order][end if]." [bold-ok]
 scraped wall	"[if scraped wall is hayfilled]You can no longer see where it says [end if]HALLWAY UNDER (UN-)UN-CONSTRUCTION." [bold-ok]
-a reading	"On one of several pages, you see: [one of][first custom style]AID ANGER[r] is written[or]conspiracy theories from [first custom style]EDGAR IAN[r][or]silly musings on being [first custom style]IN A GRADE[r][or]a horror story: [first custom style]DINER, AAG[r][or]conspiracy theories from [first custom style]NIA EDGAR[r][or]an exhortation to [first custom style]RIDE AGAN[r] (sic) on the next-to-last page[or]an order that this all should be [b]RED AGAIN[r] (sic) [stopping]. The nonsense makes you see red." [metros] [bold-ok]
+a reading	"On one of several pages, you see: [one of][first custom style]AID ANGER[r] is written[or]conspiracy theories from [first custom style]EDGAR IAN[r][or]silly musings on being [first custom style]IN A GRADE[r][or]a horror story: [first custom style]DINER, AAG[r][or]conspiracy theories from [first custom style]NIA EDGAR[r][or]an exhortation to [first custom style]RIDE AGAN[r] (sic) on the next-to-last page[or]an order that this all should be [b]RED AGAIN[r] (sic) on the last page[stopping]. The nonsense makes you see red." [metros] [bold-ok]
 neon pig	"Apparently the neon pig is a creation of one [first custom style]INPENGO[r]."
 controls	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by [first custom style]ORTON LSC[r], whoever they are."
 tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out [first custom style]LEST I[r]. But with the effort, your eyes water, and you see red a bit." [resort]

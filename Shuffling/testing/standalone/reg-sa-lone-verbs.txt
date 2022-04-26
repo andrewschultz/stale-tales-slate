@@ -472,11 +472,11 @@ PERL and Python for letting me parse through word-to-word anagrams and also help
 You read about options in your dope tan notepad.
 
 >verb
---X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
+--X or EXAMINE an object. You can get clues if you READ objects with writing.
 
 ##### holy extra line breaks Batman
 >verbs
---X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
+--X or EXAMINE an object. You can get clues if you READ objects with writing.
 
 >poss
 Switching on minimum/maximum available point notification in the status line. [NOTE: this is a quasi-spoiler of sorts, since watching the maximum possible score drop means your most recent move precluded getting an easter egg. Or watching the minimum score increase may mean you found one.]
