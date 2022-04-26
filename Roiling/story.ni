@@ -2711,8 +2711,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		if sitar is escanned or stria is escanned:
 			if sitar is moot or stria is moot, now stair-quip is Elmo-av;
 		d "Available to Elmo: [list of elmo-av quips].";
-		choose row with short of "diorama" in table of notepad entries;
-		if known entry is true, enact dio-quip;
+		if "diorama" is padded, enact dio-quip;
 		if niche is escanned and niche is moot:
 			enact chimney-quip;
 			now chimney-quip is Elmo-av;
@@ -8060,8 +8059,7 @@ the diorama is a backdrop. drop-region of diorama is Ordeal Reload. "[one of]Yes
 
 after scaning when player is in Dusty Study (this is the pad-diorama rule) :
 	if noun is part of diorama:
-		choose row with short of "diorama" in table of notepad entries;
-		if known entry is true, continue the action;
+		if "diorama" is padded, continue the action;
 		say "You tinker with the rest of the diorama as well, flipping things back and forth.";
 		pad-rec "diorama";
 	continue the action;
@@ -8764,11 +8762,6 @@ to say opts-list:
 	verbsplain "xtra/trax";
 	verbsplain "extra/taxer";
 
-to verbsplain (t - text):
-	choose row with short of t in table of notepad entries;
-	if known entry is true:
-		say "[2da][blurb entry][line break]";
-
 definition: a person (called per) is terse-ok:
 	unless per is terse-warned, no;
 	if per is moot, no;
@@ -9026,8 +9019,7 @@ carry out pfing:
 	if player does not have pedanto notepad:
 		say "You need your notepad to use the [b]PF[r] shortcut.";
 	else:
-		choose row with short of "flips" in table of notepad entries;
-		if known entry is false, say "You consult your notepad but haven't figured any flips in advance yet." instead;
+		unless "flips" is padded, say "You consult your notepad but haven't figured any flips in advance yet." instead;
 		try consulting pedanto notepad about "flips";
 	the rule succeeds;
 

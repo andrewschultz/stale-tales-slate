@@ -433,7 +433,6 @@ You can just walk to the kitchen. There's no need to revisit the nick, and there
 >ketchin
 Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
 
-
 @!min
 #######dumb stuff
 >x fridge
@@ -955,7 +954,6 @@ The straw remains motionless.
 #ttc-table-of-sortie-nudges-shoe
 >heos
 There's more than one hose here.
-
 
 @nud
 #mistake test for shoe

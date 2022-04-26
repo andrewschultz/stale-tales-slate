@@ -2285,8 +2285,7 @@ carry out angleing:
 		say "You notice [if ang is 1]a weird haze[else]weird hazes[end if] around [the list of angleable things] for a few seconds[if warts are part of the player]. Your warts also tingle[end if].";
 	now all angleable things are padded;
 	h-check;
-	choose row with short of "to do" in table of notepad entries;
-	if there is a known entry and known entry is false:
+	unless "to do" is padded:
 		say "[i][bracket]You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.[close bracket][line break]";
 	pad-rec-q "to do";
 	the rule succeeds;
@@ -2734,7 +2733,7 @@ to say found-status of (a - a region): say " ([if a is solved or a is bypassed]s
 to say reso-maybe: if store r is prefigured, say " (resort, not opened)[run paragraph on]";
 
 to say opts-list:
-	if gadget-active, say "[2dn][b]PARSE[r] interprets the gadget's clues, and [b]SPARE[r] hides them. [b]PARSE[r] is currently [on-off of parse-output].";
+	if gadget-active, say "[2da][b]PARSE[r] interprets the gadget's clues, and [b]SPARE[r] hides them. [b]PARSE[r] is currently [on-off of parse-output].";
 	verbsplain "opt in/no tip";
 	verbsplain "random dialogue";
 	verbsplain "access";
@@ -2747,29 +2746,17 @@ to decide whether gadget-active:
 	decide yes;
 
 to say verb-list:
-	say "[2dn]X or [b]EXAMINE[r] an object. You can get clues if you [b]READ[r] objects with writing.";
-	say "[2dn]The four directions, north, south, east and west.";
-	say "[2dn][b]PAD[r] to see a list of topics. Then [b]PAD VERBS[r], for example.";
-	say "[2dn][b]VERB[r]/[b]VERBS[r] shows this, [b]OPTIONS[r] shows options you can change, and informational meta-commands include [b]ABOUT[r], [b]CREDITS[r], [b]TECH[r], [b]SITES[r], and [b]RELEASE[r].";
+	say "[2da]X or [b]EXAMINE[r] an object. You can get clues if you [b]READ[r] objects with writing.";
+	say "[2da]The four directions, north, south, east and west.";
+	say "[2da][b]PAD[r] to see a list of topics. Then [b]PAD VERBS[r], for example.";
+	say "[2da][b]VERB[r]/[b]VERBS[r] shows this, [b]OPTIONS[r] shows options you can change, and informational meta-commands include [b]ABOUT[r], [b]CREDITS[r], [b]TECH[r], [b]SITES[r], and [b]RELEASE[r].";
 	if gadget-active:
 		if button-locked is false:
-			choose row with short of "macros" in table of notepad entries;
-			if known entry is true, say "[2dn][b]RC[r] or [b]CR[r] lets you scan both ways.";
-	choose row with short of "rectify" in table of notepad entries;
-	if known entry is true:
-		say "[2dn][b]RECTIFY[r][if rectify-short is true], or [b]RECT[r]/[b]REC[r]/[b]R[r] for short,[end if] has the gadget rectify the first and last letters of what you need.";
-	choose row with short of "certify" in table of notepad entries;
-	if known entry is true:
-		say "[2dn][b]CERTIFY[r][if certify-short is true], or [b]CERT[r]/[b]CER[r]/[b]C[r] for short,[end if] has the gadget certify which letters are correct in the thing you wish to change.";
-	choose row with short of "angle" in table of notepad entries;
-	if known entry is true:
-		say "[2dn][b]ANGLE[r] lets you see what can be changed, while [b]GLEAN[r] gives you more general hints about your direction.";
+			if "macros" is padded, say "[2da][b]RC[r] or [b]CR[r] lets you scan both ways.";
+	if "rectify" is padded, say "[2da][b]RECTIFY[r][if rectify-short is true], or [b]RECT[r]/[b]REC[r]/[b]R[r] for short,[end if] has the gadget rectify the first and last letters of what you need.";
+	if "certify" is padded, say "[2da][b]CERTIFY[r][if certify-short is true], or [b]CERT[r]/[b]CER[r]/[b]C[r] for short,[end if] has the gadget certify which letters are correct in the thing you wish to change.";
+	if "angle" is padded, say "[2da][b]ANGLE[r] lets you see what can be changed, while [b]GLEAN[r] gives you more general hints about your direction.";
 	verbsplain "xx";
-
-to verbsplain (t - text):
-	choose row with short of t in table of notepad entries;
-	if known entry is true:
-		say "[2dn][blurb entry][line break]";
 
 table of notepad entries
 short	known	verify	topic (topic)	blurb
@@ -2886,8 +2873,7 @@ carry out pfing:
 	if player does not have dope tan notepad:
 		say "You need your notepad to use the [b]PF[r] shortcut.";
 	else:
-		choose row with short of "flips" in table of notepad entries;
-		if known entry is false, say "You consult your notepad but haven't figured any flips in advance yet." instead;
+		unless "flips" is padded, say "You consult your notepad but haven't figured any flips in advance yet." instead;
 		try consulting dope tan notepad about "flips";
 	the rule succeeds;
 
@@ -3461,7 +3447,7 @@ to say get-a-man: say "[if Notices Section is unvisited][reject][else if Trips S
 
 chapter broad board
 
-the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but now you know that, it can help you be right. So look out for red writing.[stopping]"
+the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2da]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2da]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2da]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2da]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but now you know that, it can help you be right. So look out for red writing.[stopping]"
 
 to say board-note:
 	pad-rec-q "board";
@@ -4360,12 +4346,11 @@ check eating the saltine:
 		now saltine-warn is true;
 		say "[if trips strip is visited]Small one-time warning: Nat Egam could've told you what the saltine does, though you may be able to guess[else]Maybe you should find someone who can tell you what it does, first[end if]." instead;
 	if faeries are touchable, say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
-	choose row with short of "xx" in table of notepad entries;
-	if known entry is false:
+	if "xx" is padded:
+		say "Gulp. It tastes decent enough.";
+	else:
 		say "You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them. In other words, [b]XX THING[r] instead of [b]X THING[r].";
 		pad-rec "xx";
-	else:
-		say "Gulp. It tastes decent enough.";
 	moot saltine;
 	now xray-vision is true;
 	now undo-code is 2;
@@ -10755,8 +10740,6 @@ to say what-bypassed: say "[if number of bypassed regions is 1]a region behind a
 
 chapter missed rules
 
-to say 2dn: say "[unless sr-acc is true]--[end if]"
-
 to show-miss (myreg - a region) and (ts - a truth state):
 	now miss-room is adorb bardo;
 	if ts is true and myreg is not solved, continue the action;
@@ -10814,7 +10797,7 @@ this is the forest-alt rule:
 this is the metros-alt rule:
 	say "[line break]While the other regions are linear, the Metros has five paths based on the flowers you choose from [florae] (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.";
 	say "You could have gotten the [if begonias are not moot]begonias[else]heaths[end if] from [florae].";
-	say "[2dn]the other ways to get the tulip are to [alt-sols].";
+	say "[2da]the other ways to get the tulip are to [alt-sols].";
 
 this is the resort-alt rule:
 	say "[line break]There were three final commands to win the game. You chose [if end-path is 0][b]EXIST[r][else if end-path is 1][b]NAMES[r][else][b]AMENS[r][end if], but [one of]there are two other ways to win. Type [b]MISSED[r] again to see them, unless you want to type [b]UNDO[r] to guess[or]you could also have tried [if end-path is 0][b]NAMES[r]/[b]AMENS[r][else if end-path is 1][b]EXIST[r]/[b]AMENS[r][else][b]EXIST[r]/[b]NAMES[r][end if][stopping]."

@@ -239,7 +239,7 @@ when play begins (this is the check objects and rooms rule):
 to say miss-types: [this is different from Roiling]
 	say "[this-game] only offers [b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
 	if mrlp is metros and nerd-sol > 1:
-		say "[2dn]the other ways to get the tulip are to [alt-sols].";
+		say "[2da]the other ways to get the tulip are to [alt-sols].";
 	say "If nothing else is below, you found everything";
 
 chapter alting

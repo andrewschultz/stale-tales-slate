@@ -40,6 +40,24 @@ to decide whether the action is talkative:
 	if asking about, yes;
 	no;
 
+chapter notepad stuff
+
+to decide whether (tx - text) is padded:
+	repeat through table of notepad entries:
+		if short entry is tx:
+			if known entry is true, yes;
+			no;
+	say "BUG: [tx] should have a notepad entry but doesn't! This isn't critical, but I'd like to know about it.";
+	no;
+
+to verbsplain (t - text):
+	repeat through table of notepad entries:
+		if t is short entry:
+			if known entry is true:
+				if t is padded, say "[2da][blurb entry][line break]";
+			continue the action;
+	say "BUG: unknown verb-to-explain [t].";
+
 chapter default rules to ignore
 
 procedural rule: ignore the print final score rule.

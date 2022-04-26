@@ -1247,5 +1247,4 @@ You chose NAMES, but there are two other ways to win.
 >alt
 There were three final commands to win the game. You chose NAMES, but you could also have tried EXIST/AMENS.
 
-
 ################################################

@@ -668,7 +668,6 @@ DEBUG INFO: Cert-text: -T----.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 
-
 @nud
 #ttc-table-of-ordeal-loader-spechelp-attics
 >attisc
@@ -853,7 +852,6 @@ coughs
 \\
 >eat saltine
 You reckon you can wait
-
 
 @mis
 #mistake test for remove [something] from [something]

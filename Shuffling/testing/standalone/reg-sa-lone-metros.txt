@@ -104,6 +104,7 @@ Elm Train Terminal
 Your score has just gone up by one point.
 
 >put controls in opening
+Your score has just gone up by one point.
 
 >n
 >n
@@ -137,9 +138,11 @@ Man, I've done enough work today
 >s
 
 >e
+Esoteric Coteries
 Your score has just gone up by one point.
 
 >ask nerds about darkness
+Your score has just gone up by one point.
 
 >s
 >e
@@ -181,6 +184,8 @@ Man, I've done enough work today
 Your score has just gone up by one point.
 
 >switch emitter
+by one point
+
 >s
 >e
 Bassy Abyss

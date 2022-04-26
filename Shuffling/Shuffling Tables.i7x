@@ -200,11 +200,9 @@ this is the post-warts-straw rule:
 
 to say drop-straw:
 	say ", which [if player carries sack]you drop into the sack before it falls out of your arms[else]is too heavy to carry. You drop it[end if]";
-	choose row with short of "warts" in table of notepad entries;
-	if known entry is true:
+	if "warts" is padded:
 		say ". You run a big line through your entry on warts in your dope tan notepad";
-		now known entry is false;
-	if player carries sack:
+		pad-del "warts";
 		now straw is in sack;
 	else:
 		move straw to location of the player;
