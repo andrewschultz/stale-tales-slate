@@ -781,6 +781,8 @@ chapter Outer Route
 
 understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, [the deviser] looks complex enough. It will probably reject or accept what it needs to[else]The diverse deviser is in no shape to do any more work[end if].") when player is in Outer Route and diverse deviser is reflexed.
 
+understand "yaws" as a mistake ("The sway-ways shake for a moment. But at least they do not carry a highly contagious tropical disease. You hope.") when player is in Outer Route.
+
 chapter Baldest Blasted Saltbed
 
 understand "fluters" as a mistake ("[this-game] has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.

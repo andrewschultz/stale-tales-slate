@@ -68,9 +68,15 @@ Your score has just gone up by one point.
 #slider test for dates
 >adest
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#slider test for cherries
+>hcreesri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 #slider test for tamarind
 >atamirdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 #slider test for maraschino
 >amarcsihon
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -132,11 +138,6 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 
 >score
 You have 12 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
->dates
-Your score has just gone up by one point.
-
->score
-You have 13 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
 Swell Wells
@@ -164,22 +165,22 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 14 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 13 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >apples
 Your score has just gone up by one point.
 
 >score
-You have 15 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 14 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >mulberries
 Your score has just gone up by one point.
 
 >score
-You have 16 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 15 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >gooseberry
 Your score has just gone up by one point.
 
 >score
-You have 17 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 16 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -211,19 +212,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >icon
 Your score has just gone up by one point.
 >score
-You have 18 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 17 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >coconuts
 Your score has just gone up by one point.
 
 >score
-You have 19 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 18 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >tangerines
 Your score has just gone up by one point.
 
 >score
-You have 20 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 19 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >s
 You fiddle with the coin you got
@@ -262,29 +263,35 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 21 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 20 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 22 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 21 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >watermelon
 Your score has just gone up by one point.
-min-up
 
 >score
-You have 23 of 46 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 22 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >pineapple
 Your score has just gone up by one point.
 min-up
 
 >score
-You have 24 of 46 total points for the post-Elvira Others region, though you only need 27 to win.
+You have 23 of 46 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >e
 >s
 Nice going.
+
+droll dollar
+
+>dates
+Your score has just gone up by one point.
+>score
+You have 24 of 46 total points for the post-Elvira Others region, though you only need 27 to win.
 
 #there are more possible tests here but let's worry about this...
 #slider test for sonic

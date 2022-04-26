@@ -1197,7 +1197,7 @@ You get lost in the sway-ways a bit. And it's fun for a while, until you realize
 >undo
 \\
 >s
-#ttc-table-of-towers-nowheres-topside-deposit
+#+ttc-table-of-towers-nowheres-topside-deposit
 >e
 The Wildest Wilteds are too dangerous any way but back north.
 \\
@@ -1740,6 +1740,7 @@ Your score has just gone up by one point
 \\
 Fringe Finger
 
+@verbs
 #ttc-table-of-towers-nowheres-fringe-finger
 >d
 The logged dogleg prevents you from jumping to your doom below to the unorg'd ground.

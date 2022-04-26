@@ -387,6 +387,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
+#slider test for reangle
+>ereglna
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >n
 Horned Hedron
 

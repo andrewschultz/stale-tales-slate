@@ -381,7 +381,7 @@ Score in a scenario: 21 out of 44 total points in the current region, Oyster. Lo
 >snap
 Your score has just gone up by one point
 
-#ttc-table-of-oyster-nowheres-lapsin-plains
+#+ttc-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or inside.
 

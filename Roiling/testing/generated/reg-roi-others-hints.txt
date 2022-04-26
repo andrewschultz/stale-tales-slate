@@ -149,11 +149,6 @@ DEBUG INFO: sated stead hinting.
 
 >score
 You have 12 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
->dates
-Your score has just gone up by one point.
-
->score
-You have 13 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
 Swell Wells
@@ -176,7 +171,7 @@ Your score has just gone up by one point.
 /DEBUG INFO: (green stain|miser ruble|PSA 'Elp|sorer bogey|stucco) hinting\.
 
 >score
-You have 14 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 13 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >apples
 Your score has just gone up by one point.
 
@@ -185,21 +180,21 @@ Falling through to check the fruit we would've hinted for test scripts...
 /DEBUG INFO: (green stain|miser ruble|sorer bogey|stucco) hinting\.
 
 >score
-You have 15 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 14 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >mulberries
 Your score has just gone up by one point.
 
 /DEBUG INFO: (green stain|sorer bogey|stucco) hinting\.
 
 >score
-You have 16 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 15 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >gooseberry
 Your score has just gone up by one point.
 
 /DEBUG INFO: (green stain|stucco) hinting\.
 
 >score
-You have 17 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 16 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -230,7 +225,7 @@ scru-it
 Your score has just gone up by one point.
 /DEBUG INFO: (stucco|green stain) hinting\.
 >score
-You have 18 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 17 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >coconuts
 Your score has just gone up by one point.
@@ -238,7 +233,7 @@ Your score has just gone up by one point.
 DEBUG INFO: green stain hinting.
 
 >score
-You have 19 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 18 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >tangerines
 Your score has just gone up by one point.
@@ -248,7 +243,7 @@ Falling through to check the fruit we would've hinted for test scripts...
 Nothing specific to do here, but there are other places where you can make fruits to give to Curtis.
 
 >score
-You have 20 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 19 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >s
 You fiddle with the coin you got
@@ -256,7 +251,7 @@ You fiddle with the coin you got
 DEBUG INFO: icons hinting.
 >sonic
 >score
-You have 21 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 20 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
 
@@ -271,22 +266,21 @@ Your score has just gone up by one point.
 /DEBUG INFO: (barber sickle|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
 >score
-You have 22 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 21 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >blackberries
 Your score has just gone up by one point.
 
 /DEBUG INFO: (barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
 >score
-You have 23 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 22 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 >watermelon
 Your score has just gone up by one point.
-min-up
 
 /DEBUG INFO: (barriers west|buried raft|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
 >score
-You have 24 of 46 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 23 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >pineapple
 Your score has just gone up by one point.
@@ -295,11 +289,18 @@ min-up
 /DEBUG INFO: (barriers west|buried raft|pryer bars|rapt figure) hinting\.
 
 >score
-You have 25 of 46 total points for the post-Elvira Others region, though you only need 27 to win.
+You have 24 of 46 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >e
 >s
 Nice going.
+
+droll dollar
+
+>dates
+Your score has just gone up by one point.
+>score
+You have 25 of 46 total points for the post-Elvira Others region, though you only need 27 to win.
 
 >concisions
 Your score has just gone up by one point.

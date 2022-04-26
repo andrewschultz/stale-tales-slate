@@ -460,7 +460,7 @@ by one point
 >by one point
 >au 0
 
-#ttc-table-of-ranks-11
+#ttc-table-of-ranks-12
 >n
 Reprieval Prevailer
 
@@ -475,7 +475,7 @@ Reprieval Prevailer
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all.
 
-#ttc-table-of-ranks-12
+#ttc-table-of-ranks-13
 >score
 There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
 
@@ -489,8 +489,9 @@ There's no score in the Demo Dome. You just need to look around. Well, if you'd 
 #+ttc-table-of-ranks-8
 #+ttc-table-of-ranks-9
 #ttc-table-of-ranks-10
-#+ttc-table-of-ranks-11
+#ttc-table-of-ranks-11
 #+ttc-table-of-ranks-12
+#+ttc-table-of-ranks-13
 >s
 >rank
 Farce Facer
@@ -530,3 +531,9 @@ Enter the Throes Hoster for the final region.
 #+ttc-table-of-ranks-10
 >score
 rank of Errantries Restrainer
+
+>purloin droll dollar
+#+ttc-table-of-ranks-11
+>score
+rank of Procured Producer
+

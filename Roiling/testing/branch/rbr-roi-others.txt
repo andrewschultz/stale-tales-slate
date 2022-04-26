@@ -11,6 +11,8 @@
 #
 # gxv.py is used to verify the GX commands (guru-extended, can reuse arugula)
 #
+# if we need to add another fruit, we will need to re-check the hint commands once we have returned to Curtis and he says "Nice going."
+# Then remember to CURMIN++ there.
 
 files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,reg-roi-others-slider.txt,reg-roi-others-hints.txt,reg-roi-others-spoiler.txt,reg-roi-others-verbs.txt
 
@@ -484,9 +486,15 @@ You have a vision of fruit: TAMARIND. The aftertaste of arugula finally dissipat
 #slider test for dates
 >adest
 Your settler begins to make noises: a low hum, but nothing really piercing.
+\\
+#slider test for cherries
+>hcreesri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+\\
 #slider test for tamarind
 >atamirdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
+\\
 #slider test for maraschino
 >amarcsihon
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -526,6 +534,19 @@ The train seems to toot joyously at seemingly confusing your letters settler, so
 @verbs
 >listen mad train
 A constant droning of "AND I'M ART!" makes you see red.
+
+@nud
+#ttc-table-of-rustic-citrus-nudges-hire
+>iher
+"Work with Hire Recs Re: Riches in its entirety."
+\\
+#ttc-table-of-rustic-citrus-nudges-recs
+>ercs
+"Work with Hire Recs Re: Riches in its entirety."
+\\
+#ttc-table-of-rustic-citrus-nudges-riches
+>ichser
+"Work with Hire Recs Re: Riches in its entirety."
 
 @nud
 #+ttc-table-of-rustic-citrus-nudges-ruts
@@ -731,12 +752,6 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 
 @hin
 DEBUG INFO: sated stead hinting.
-
->score
-}}SCORE++
-{$SCOS}
->dates
-Your score has just gone up by one point.
 
 >score
 }}SCORE++
@@ -1378,8 +1393,6 @@ Your score has just gone up by one point.
 {$SCOS}
 >watermelon
 Your score has just gone up by one point.
-min-up
-}}CURMIN++
 
 @hin
 /DEBUG INFO: (barriers west|buried raft|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
@@ -1410,6 +1423,16 @@ min-up
 >e
 >s
 Nice going.
+
+droll dollar
+
+@!min
+>dates
+Your score has just gone up by one point.
+>score
+}}CURMIN++
+}}SCORE++
+{$SCOS}
 
 @nud
 #ttc-table-of-others-nudges-bluer

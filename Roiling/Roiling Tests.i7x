@@ -12,7 +12,7 @@ chapter combos
 
 [* this tests combinations of big tests e.g. going through each area]
 
-test this with "ts/gonear lager/ss/despair/ss".
+test this with "seed 1/ts/a5/t/otters/opt in/enter solid idols/barely/l/discern ed riley/discern/reedily/w/bossily/angrily/blearily/au 0/1/3/no/n/because/else/s/atom/e/n/enragedly/remotely/n/slow/coolest/paroled/artsy/l/s/s/s/loathingly/joltily/s/parrot/snail/hornets/racoon/l/n/n".
 
 test win-quick with "test ordrelminn/test stores/test routes/test troves/switch patcher/test otters"
 

@@ -1813,7 +1813,6 @@ this is the general-ask rule:
 		say "[basher-pamph]";
 		the rule succeeds;
 	if noun is the player, say "You talk to yourself, hoping for a eureka moment. None pops up." instead;
-	if second noun is the player, say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
 
 section generically asking
 
@@ -1886,7 +1885,7 @@ askee	talk-reject
 mussier misuser	"The [misuser] can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do." [troves]
 spider	"Spoiloplis is definitely not a [i]Charlotte's Web[r] kind of town."
 Trevis Vister	"Trevis Vister has strong opinions on everything and all kinds of success plans, but most of them revolve around having inherited wealth already."
-span pans	"The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]."
+span pans	"The pans seem to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing them without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]."
 flea	"It's dead. Perhaps it can be reincarnated as something else."
 computer screen	"Honestly, throwing words at a computer screen and expecting something clever in response is about the most unconstructive thing I can imagine." [presto]
 sabot boats	"You get the feeling that what you talk about isn't as important as how you do so. You might really need to yell to get the boats['] attention." [oyster]
@@ -1959,6 +1958,7 @@ check objasking it about (This is the check for object information rule):
 			if game-thing entry is not second noun, next;
 			if there is a right-region entry and right-region entry is not mrlp, say "This is the wrong region to ask about [the second noun]." instead;
 			say "[dialogue-text entry][line break]" instead;
+	if second noun is the player, say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead; [ this needs to be placed here as sometimes you may get a joke response for asking enemies about you]
 	repeat through matched item responses table of mrlp:
 		if (noun is the askee entry or noun is chum of the askee entry) and there is no game-thing entry:
 			say "[dialogue-text entry][line break]" instead;
@@ -5624,7 +5624,7 @@ check going nowhere in Carven Cavern (this is the cavern check rule):
 	say "The only way to make progress is inward, through [the departure].";
 	if stapler is moot:
 		say "[line break]Go through?";
-		if the player regex-prompt-consents, try going inside instead;
+		if the player dir-consents, try going inside instead;
 		say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
 	do nothing instead;
 
@@ -8484,7 +8484,8 @@ for printing the name of a thing (called th) when blue-list is true:
 ever-blur is a truth state that varies.
 ever-vblur is a truth state that varies.
 
-definition: a thing (called lp) is llpish-plus: [this means it's part of a puzzle already solved?]
+definition: a thing (called lp) is llpish-plus: [this means it's LLPish or 1 of 2 parts of a this-or-that puzzle and the other is solved]
+	if lp is reflexed, no;
 	if lp is llpish, yes;
 	if lp is lobster and me arts are moot, decide yes; [troves]
 	if lp is me arts and lobster is moot, decide yes;
@@ -16294,7 +16295,7 @@ chapter scenery
 
 section sway ways
 
-sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the Wildest Wilteds, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.". bore-check of sway ways is bore-sway-ways rule.
+the sway ways are plural-named boring bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the Wildest Wilteds, anyway.". bore-text of sway ways is "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to.". bore-check of sway ways is bore-sway-ways rule. printed name of sway ways is "sway-ways".
 
 understand "yaws" and "sway-ways" as sway ways.
 

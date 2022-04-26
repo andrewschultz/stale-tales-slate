@@ -1785,7 +1785,7 @@ Your score has just gone up by one point
 With the way inside open, you no longer have anything you need to do here.
 
 @verbs
-#ttc-table-of-oyster-nowheres-lapsin-plains
+#+ttc-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or inside.
 
@@ -2253,6 +2253,11 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
+
+@sli
+#slider test for reangle
+>ereglna
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @hints
 #ttc-table-of-settler-shake-descriptions-bogus-reangle

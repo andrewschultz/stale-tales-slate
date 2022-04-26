@@ -255,7 +255,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @verbs
-#ttc-table-of-troves-nowheres-loather-rathole
+#+ttc-table-of-troves-nowheres-loather-rathole
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find motivation to get through the Race Acre. You need to catch that thief!
 !Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.

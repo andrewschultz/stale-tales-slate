@@ -7,6 +7,8 @@
 ## * only-(region), * region
 ##
 ## template for adding new stuff (uncomment, of course):
+##
+## (matched subject, reflexive, unmatched subject, unmatched topic, likely-matched subject)
 #
 #>ask q about elvira
 #WRONG
@@ -16,8 +18,6 @@
 #WRONG
 #>ask q about curst palace
 #WRONG
-#
-# todo: see about horned/hedron vs OH NERD HERD NO
 #
 # approximate times in seconds for each section:
 # ordeal reload = 120
@@ -30,7 +30,7 @@
 # otters = 180
 # others = 120
 #
-# to derive these times, comment out all * but then change * _only to * only
+# to (re-)derive these times, comment out all * but then change * _only to * only
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -866,7 +866,7 @@ They size him up and give a thumbs-down. Then they give you a double thumbs-down
 They snicker at the thought of you being clever or strong enough to get the keys.
 
 #ttc-table-of-presto-matched-item-responses-hogs-yourself
->ask hogs about earring
+>ask hogs about yourself
 The hogs smirk and flex a bit, to show they're bigger and stronger.
 
 #ttc-table-of-presto-matched-item-responses-hogs-elvira
@@ -875,7 +875,7 @@ They snicker and nod.
 
 #ttc-table-of-presto-ask-x-about-x-hogs
 >ask hogs about hogs
-The whole "Who do you think you are" won't go well with these hogs. They're here to guard you from what's beyond, and that wall is helping.
+The whole "Who do you think you are" won't go well with these hogs. They're here to prevent you from seeing what's beyond, and that wall is helping.
 
 #ttc-table-of-presto-unmatched-topic-responses-hogs
 >ask hogs about xyzzy
@@ -1229,16 +1229,16 @@ She's talking about herself every move, pretty much.
 Lapsin' Plains
 
 #ttc-table-of-inanimate-talkables-span-pans
->ask door about elvira
-The door seems to grumble and curse very quietly. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical.
+>ask pans about elvira
+The pans seem to grumble and curse very quietly. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical.
 
 >splain
 
 >ask door about door
-The door seems to grumble and curse very quietly. Well, you already splained to it.
+The pans seem to grumble and curse very quietly. Well, you already splained to it.
 
 >ask door bout xyzzy
-The door seems to grumble and curse very quietly. Well, you already splained to it.
+The pans seem to grumble and curse very quietly. Well, you already splained to it.
 
 >trace
 Your score has just gone up by one point
@@ -2194,7 +2194,7 @@ Dr. Yow is too modest--and focused on his science--to bang on about previous ach
 >ask dr yow about curst palace
 Dr. Yow scrunches his head a bit, then shrugs. "Ouch. Eleven letters. Maybe if it was shorter. Unless you mean getting there...you'd need a craft to cross Leak Lake to the northeast."
 
-#ttc-table-of-npc-and-topic-pairs-dr-yow-key
+#ttc-table-of-towers-matched-item-responses-dr-yow-keycar
 >ask yow about key
 "Keycar? No, no, a key." Dr. Yow shrugs and shakes his head. Well, it's unlikely anyone just left a key lying around.
 
@@ -3153,7 +3153,7 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* _targeted_testing_comment_uncomment_as_needed_check_regver_py_after
+* targeted_testing_comment_uncomment_as_needed_check_regver_py_after
 
 #uncomment this is doing partial tests
 
@@ -3162,59 +3162,59 @@ You Did Great
 #this is a catch-all
 >ts
 
-#>{include} _only-stores
-#>{include} _only-routes
-#>{include} _only-troves
-#>{include} _only-presto
-#>{include} _only-oyster
-#>{include} _only-towers
-#>{include} _only-otters
-#>{include} _only-others
+>{include} _only-stores
+>{include} _only-routes
+>{include} _only-troves
+>{include} _only-presto
+>{include} _only-oyster
+>{include} _only-towers
+>{include} _only-otters
+>{include} _only-others
 
-* only-ordeal-reload
+* _only-ordeal-reload
 
 >{include} _ordeal-reload
 
-* only-stores
+* _only-stores
 
 >gonear strip
 >{include} _stores
 
-* only-routes
+* _only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* only-troves
+* _only-troves
 
 >gonear rathole
 >{include} _troves
 
-* only-presto
+* _only-presto
 
 >purloin settler
 >gonear gyre
 >{include} _presto
 
-* only-oyster
+* _only-oyster
 
 >purloin settler
 >gonear posh hops shop
 >{include} _oyster
 
-* only-towers
+* _only-towers
 
 >seed 1
 >gonear loftier trefoil
 >{include} _towers
 
-* only-otters
+* _only-otters
 
 >seed 1
 >gonear minded midden
 >{include} _otters
 
-* only-others
+* _only-others
 
 >gonear rustic citrus
 >{include} _others
