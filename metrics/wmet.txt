@@ -178,25 +178,50 @@ parrot/snail/hornets/snipe/racoon
 actually/basically
 honestly/aside/raptor/deeply/quickly
 Others (min)
-limes/grapes/pears/plums/compass
+#now sorted in absolute easiest to hardest
+prep
+banana
+among/cheap/dates/icons/limes/mo len/pears/plums/sonic
+apples
+papayas
+cinque/cripes/go near/grapes/olives/solemn
+rhubarb
+compass
+reversed
+apricot
+# 5040 = max above
 #4 easiest from wells/space/field open up clearing
-apples/apricot/banana/go near
-#now the rest
-among/cheap/cripes/mo len
-cinque/solemn/papayas/rhubarb
 #small detail here: raspberry/pineapple have more letters but fewer possibilities than tamarind
-reversed/tamarind
-coconuts/ancienter/dates/olives
-icon/sonic/prep/review
+#the below are required but the rest are fungible
+#limes/grapes/pears/plums/compass
+#icon/sonic/prep/review
 Others (max)
-limes/grapes/pears/plums/compass
-dates/blueberries/maraschino/tamarind/pomegranate/persimmon/cantaloupe
-tangerines/mulberries/apples/apricot/gooseberry/coconuts
-blackberries/cranberries/strawberries/breadfruit/watermelon/pineapple/raspberry/grapefruit
-among/papayas/solemn/mo len/ancienter/cheap/cripes/cinque/olives
-rhubarb/reversed/banana/go near
+among/cheap/dates/icons/limes/mo len/pears/plums/sonic
+banana
+apples/review
+go near
+papayas
+cinque/cripes/grapes/olives/solemn
+rhubarb
+compass
+reversed
+apricot
+coconuts/research
+cherries
+tamarind
+pineapple
+raspberry
 concisions
-sonic/icons/research/review
+ancienter
+persimmon
+gooseberry
+mulberries/tangerines
+blueberries
+breadfruit/cantaloupe/grapefruit/maraschino/watermelon
+cranberries
+pomegranate
+strawberries
+blackberries
 ;
 ######For reference, all the Store T stuff
 Store Q (max)

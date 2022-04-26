@@ -33,6 +33,7 @@ my $debug         = 0;
 my $launch        = 0;
 my $showMaxMin    = 0;
 my $checkRegScore = 0;
+my $showPoss      = 0;
 
 #####vars
 my @fact;    # factorial array so don't have to keep recalculating
@@ -80,6 +81,7 @@ while ( $count <= $#ARGV ) {
     /^-?e$/ && do { `$inFile`; exit(); };
     /^-?ec$/ && do { my $f = __FILE__; npx($f); exit(); };
     /^-?ea$/ && do { `$adjustFile`; exit(); };
+    /^-?sp$/         && do { $showPoss     = 1;  $count++; next; };
     /^-?d$/         && do { $debug         = 1;  $count++; next; };
     /^-?nd$/        && do { $debug         = 0;  $count++; next; };
     /^-?cs$/        && do { $checkRegScore = 1;  $count++; next; };
@@ -233,7 +235,7 @@ sub evaluate {
       $inHere,
       torgb( $t1, 18, 367, "total letters in puzzles" ),
       $t1,
-      torgb( $t2, 97, 2876, "puzzle letter square sum" ),
+      torgb( $t2, 97, 2940, "puzzle letter square sum" ),
       $t2,
       torgb( $t1a, 4, 7.84, "average letters in puzzle" ),
       $t1a,
@@ -243,7 +245,7 @@ sub evaluate {
       $thislog,
       torgb( $tla, 4, 9.53, "average of logs of possibilities, no settler" ),
       $tla,
-      torgb( $thisset, 8, 237, "sum of logs of possibilities with settlers" ),
+      torgb( $thisset, 8, 242.1, "sum of logs of possibilities with settlers" ),
       $thisset,
       torgb( $tlb, 2, 5.5, "average of logs of possibilities with settlers" ),
       $tlb
@@ -322,7 +324,7 @@ sub combos {
   $notedYet{ $_[0] } = 1;
   $thisTime{ $_[0] } = 1;
 
-  #print "$_[0] -> $poss $sett\n";
+  if ($showPoss) { printf("%12s -> $poss $sett\n", $_[0]); }
   return ( $poss, $sett );
 }
 
