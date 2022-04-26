@@ -316,7 +316,6 @@ There's a residence north, a library west, a flower shop east, and a seedier are
 >out
 There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits."
 
-
 @hin
 #ttc-table-of-metros-anagrams-lost-corn
 >xx lost corn
@@ -583,7 +582,6 @@ You see bugs crawling over rich people, while you sit in the center, smiling.
 >score
 {$SCOS}
 
-
 @nud
 #ttc-table-of-the-ol-hotel-nudges-bump
 >bupm
@@ -811,7 +809,6 @@ This would create quite a (negative) scene with people still in the bastion.
 #ttc-table-of-preflip-clues-keycard
 >pf
 dry cake -> keycard
-
 
 >switch emitter
 #notana
@@ -1346,7 +1343,6 @@ Your vision blurs a bit, and instead you see a sword.
 {$SFIXNOMAX}
 @!
 {$SFIXMAX}
-
 
 @nud
 #ttc-table-of-metros-done-rejects-sword

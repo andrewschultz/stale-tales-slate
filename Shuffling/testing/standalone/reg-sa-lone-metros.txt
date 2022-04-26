@@ -1,0 +1,328 @@
+## reg-sa-lone-metros-all.txt
+## this tests all the paths through METROS
+##
+## There are 5 total combinations of ways through. They are labeled in the titles below.
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+** precommand: ts
+** precommand: metros
+** precommand: in
+
+* metros-1
+
+>{include} _metstart
+>{include} _metros-heaths-darkness
+
+* metros-2
+
+>{include} _metstart
+>{include} _metros-heaths-gnats
+
+* metros-3
+
+>{include} _metstart
+>{include} _metros-begonias-darkness
+
+* metros-4
+
+>{include} _metstart
+>{include} _metros-begonias-gnats
+
+* metros-5
+
+>{include} _metstart
+>{include} _metros-begonias-noise
+
+* _metstart
+
+###############################################
+#this gets you to the flower shop with a choice of flowers, with everything else possible taken (except how to get the tulip) care of
+
+>gardenia
+Your score has just gone up by one point.
+
+>n
+Roarings Garrison
+
+>w
+Bile Libe
+
+>tomato
+Your score has just gone up by one point.
+
+>e
+>velcro
+Your score has just gone up by one point.
+
+>s
+Undesired Underside
+
+>w
+The Ol' Hotel
+
+>throw tomato at thing
+Your score has just gone up by one point.
+
+>x mattress
+>e
+>n
+>n
+Obtains/Boastin' Bastion
+
+>switch emitter
+Your score has just gone up by one point.
+
+>get cake
+>s
+>keycard
+Your score has just gone up by one point.
+>controls
+Your score has just gone up by one point.
+
+>e
+Fo' Real Florae Fare, Lo
+
+>give gardenia to faeries
+Powerful pure flow
+
+>barcode
+Your score has just gone up by one point.
+>put barcode on keycard
+
+>w
+>s
+
+>s
+Elm Train Terminal
+
+>u
+(on the cafe face)
+
+>opening
+Your score has just gone up by one point.
+
+>put controls in opening
+
+>n
+>n
+>e
+
+* _metros-heaths-darkness
+
+# this is the "main line" I use to get through the game. Mainly because it was the first I thought of.
+
+>get heaths
+
+>sheath
+Your score has just gone up by one point.
+
+>noise bag
+You already got the heaths--don't mess with the merchandise.
+
+>w
+>w
+
+>sword
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+
+>s
+
+>e
+Your score has just gone up by one point.
+
+>ask nerds about darkness
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>get sword
+The sword is yours
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-heaths-gnats
+
+>get heaths
+>sheath
+Your score has just gone up by one point.
+
+>w
+>w
+>sword
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+
+>s
+>e
+Your score has just gone up by one point.
+
+>switch emitter
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+>betsa
+
+>get sword
+The sword is yours
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-darkness
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+swirling into the bag
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+
+>s
+>e
+Your score has just gone up by one point.
+
+>ask nerds about darkness
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-gnats
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+swirling into the bag
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+
+>s
+>e
+Your score has just gone up by one point.
+
+>switch emitter
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-noise
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+swirling into the bag
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+
+>s
+>e
+Your score has just gone up by one point.
+
+>open bag
+BE FAIR
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+

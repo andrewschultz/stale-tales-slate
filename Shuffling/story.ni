@@ -7781,7 +7781,6 @@ check opening noise bag:
 		if location of player is Esoteric Coteries:
 			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later."; [bold-ok]
 			moot keycard;
-			reg-inc;
 			select-nerd-sol 2;
 			the rule succeeds;
 		if location of player is Abyss, say "[if beast is touchable]The beast has no time for words! You need to attack it more directly, with something else[else]The beats will drown the words out[end if]." instead;
@@ -10227,8 +10226,6 @@ carry out gotoing:
 	abide by the goto-check of mrlp;
 	say "You retrace your steps...[line break]";
 	move player to noun;
-
-every turn when debug-state is true, d "[list of touchable things].";
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the straighten out go to rule) :
 	if word number 1 in the player's command is "x" or word number 1 in the player's command is "examine":
