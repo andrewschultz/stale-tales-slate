@@ -10107,9 +10107,15 @@ chapter going diagonally
 
 the reject diagonals rule is listed first in the check going rules.
 
+diag-init is a truth state that varies.
+
 check going when noun is a diagonal (this is the reject diagonals rule):
 	if player is in Busiest Subsite, say "You walk around the perimeter of the big hall. It's weird. The passage by the Vacate Caveat isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to [b]ENTER[r] it or go [b]INSIDE[r]." instead;
-	say "[one of](NOTE: you never have to go in a diagonal direction in [this-game].)[paragraph break][or][stopping][one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
+	if diag-init is false:
+		ital-say "you never have to go in a diagonal direction in [this-game].";
+		now diag-init is true;
+		the rule succeeds;
+	say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
 
 chapter going nowhere
 
@@ -10133,6 +10139,8 @@ to say can-go of (d - a direction):
 	let droom be the room d of location of player;
 	say "[d][if droom is visited] to [droom][end if]"
 
+to say inside-ambig: if noun is inside, say " or clear way [b]INSIDE[r]"
+
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
@@ -10150,7 +10158,8 @@ roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
 Stiller Trellis	"[dmb]You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[if noun is inside] or clear way [b]INSIDE[r][end if]."
+Undesired Underside	"A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
+Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[inside-ambig]."
 Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you probably just want to go back east."
 Fo Real Florae	"The faeries wouldn't take kindly to snooping. The only safe way out is back west."
 The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
