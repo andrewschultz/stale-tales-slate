@@ -6814,13 +6814,21 @@ to say reset-goof:
 
 chapter woeful pat
 
-Woeful Pat is a person in the moor. initial appearance of Woeful Pat is "Woeful Pat, the awful poet, [one of]sees he has an audience and administers a dose of his odes. It'd be almost enough to make you reverse back to the room immediately[or]is well into a ballad. It's all bad[stopping]."
+Woeful Pat is an auxiliary person in the moor. initial appearance of Woeful Pat is "Woeful Pat, the awful poet, [one of]sees he has an audience and administers a dose of his odes. It'd be almost enough to make you reverse back to the room immediately[or]is well into a ballad. It's all bad[stopping]."
+
+rgtext of Woeful Pat is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of Woeful Pat is 7. gpos of Woeful Pat is 5. rpos of Woeful Pat is 7. cert-text of Woeful Pat is "-[d1][d1][d1][d1][d1][ast]T". rect-text of Woeful Pat is "P[d1][d1][d1][d1][d1][ast]T".
 
 understand "awful poet" and "awful" and "poet" as woeful pat.
 
-to say pat-blather: say "He holds up his hand for silence. He is too busy reciting his poem. You probably can't ask him about anything other than the poem[if anapest-clued is false]. Or maybe its meter[end if].[run paragraph on][line break]".
+understand "sane" and "sane pat" as woeful pat when pat-flattered is true.
 
-description of Woeful Pat is "His clothes are dark and strategically scuffed. Good thing chain wallets and other ugly stuff haven't made it here yet. But looks aren't really important. It's that poetry you find awful."
+to say pat-wants-quiet: say "He holds up his hand for silence. He is too busy reciting his poem. Maybe you have to ask about the right things, like the poem's [b]RHYTHM[r]. Or, well, him[if anapest-clued is false]. Or maybe its meter[end if]".
+
+description of Woeful Pat is "His clothes are dark and strategically scuffed. Good thing chain wallets and other ugly stuff haven't made it here yet. But looks aren't really important. It's that poetry you find awful that needs to be changed, somehow."
+
+pat-flattered is a truth state that varies.
+
+to say flatter-pat: now pat-flattered is true;
 
 section dark clothes
 
@@ -6850,16 +6858,18 @@ the expo flier is a thing. description of expo flier is "It's two-sided. One say
 poetry-listening is a truth state that varies. poetry-listening is usually false.
 
 to say anapest-clue:
-	say "[one of][if anapest-clued is false]'I noticed you nodding your head to the beat. You probably don't even know it's called [b]ANAPEST[r]. But the proper meter of my poem is but the surface of its multifaceted splendor!'[else]'Ah, an appreciator of fine [b]ANAPEST[r]. I will waste little time discussing its details, since you already seem to know them.'[end if][line break]Before you realize he'd given you a break from his poetry, he starts up again. He didn't even tell you the poem's name.[or]He explains that this will not be as great as his next, [first custom style]TAN APSE[r]. You see red at the thought of a sequel.[or]Red-faced, he derides a fellow poet, Nate. SAP![or]'Spent! Aa!' he cries, turning red, brushing you away, but not really[one of][or]. That's all you will get from him[stopping].[stopping]";
+	say "[one of][if anapest-clued is false]'I noticed you nodding your head to the beat. You probably don't even know it's called [b]ANAPEST[r]. But the proper meter of my poem is but the surface of its multifaceted splendor!'[else]'Ah, an appreciator of fine [b]ANAPEST[r]. I will waste little time discussing its details, since you already seem to know them.'[end if][line break]Before you realize he'd given you a break from his poetry, he starts up again. He didn't even tell you the poem's name.[or]He explains that this will not be as great as his next, [first custom style]TAN APSE[r]. You see red at the thought of a sequel.[or]Red-faced, he derides a fellow poet, [first custom style]Nate. SAP![r][or]'[first custom style]Spent! Aa![run paragraph on][r]' he cries, turning red, brushing you away, but not really[one of][or]. That's all you will get from him[stopping].[stopping]";
 	now anapest-clued is true;
 
 check listening to anapest:
 	if anapest-clued is false, say "[anapest-clue]" instead;
-	say "[one of]He at least has the meter--what was it again, anapest?--right. 'End of canto,' he says.[or]'Are you reflecting on the inner meaning? Or are you just amazed I have gotten the anapest right in every single line? Even--pff--mathy types who can't count meter right.'[stopping]" instead;
+	say "[one of]He at least has the meter--what was it again, [b]ANAPEST[r]?--right. 'End of canto,' he says.[or]'Are you reflecting on the inner meaning? Or are you just amazed I have gotten the anapest right in every single line? Even--pff--mathy types who can't count meter right are amazed, missing the more far-arcing reaches of my wordsmithing.'[stopping]" instead;
 
 chapter anapest
 
-the anapest is boring scenery in moor. understand "anapests" as anapest. understand "poem/poetry" as anapest when anapest is touchable.
+the anapest is boring scenery in moor. understand "anapests" as anapest.
+
+understand "poem" as anapest when anapest is touchable.
 
 rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T". bore-text is "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)". description of anapest is "You can't help NOT paying attention to the anapest.". bore-check is bore-anapest rule.
 
@@ -9537,7 +9547,9 @@ this is the sortie-scan-check rule:
 	if location of player is moor:
 		if noun is anapest, say "Yes, this sort of poetry doesn't require deep reading, just scanning. [if player has gadget]But seriously, your gadget seems to blink with the beat[else]Too bad you don't have a device to scan it more practically[end if].";
 		if noun is pat:
-			say "'Fie!' yells Pat. 'My poem transcends technology! I am sure such a fancy gadget could not even tell me its meter!' Then he gets back to recitation." instead;
+			if pat-flattered is false:
+				say "'Fie!' yells Pat. 'My poetic voice transcends technology! I am sure such a fancy gadget could not even discern the meter is [b]ANAPEST[r]!' Then he gets back to recitation.[paragraph break]Perhaps if you asked Pat about himself or the beats or the poetry, he might let you scan him." instead;
+			if first-scan-okay is false, say "'Of course, that thing, whatever it is, cannot recognize why I deserve to be called [b]SANE PAT[r] despite my wondrous visions. But perhaps it will help your less creative mind appreciate my wellsprings of verbal virtuosity.'[line break]";
 	if noun is poem and poem is not folded:
 		if smilies are part of the poem:
 			say "The gadget is more active on the right edge where the smilies are, so you move it over there.";
@@ -9919,6 +9931,7 @@ peasant	poem	"'I try my best at it.'"
 peasant	straw	"'Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though.'"
 peasant	Woeful Pat	"'He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes.'"
 peasant	Mean Old	"'Used to be much nicer, I'd say!'"
+woeful pat	woeful pat	"[flatter-pat]'Of course it would be absorbing to learn about my life and struggles and views,' he drones airily. 'Suffice it to say I deserve also to be known as [b]SANE PAT[r], for all the accusations leveled against me. But you will find right now my poetry is even more profound! It has an [b]ANAPEST[r] beat.'"
 woeful pat	Mean Old	"'He does not censor my art. He cannot be that bad!'"
 woeful pat	peasant	"'There is one who tries his best. But he is too...obvious.'"
 woeful pat	anapest	"[if anapest-clued is false][anapest-clue][run paragraph on][else][one of]'A mere creative writing teacher could educate you as to the pedantic details of writing doggerel that mimics my epic's flow!'[or]You didn't REALLY want the anapest explanation again, did you?[ana-true][stopping][end if]"
@@ -10005,7 +10018,7 @@ peasant	"'I don't know much about that, that's sure. But I know from hay, being 
 riot	"[riot-trio-blather]"
 protest	"[riot-trio-blather]"
 poses posse	"You get a few pinched, strained smiles, but no actual words. What would they say? 'TALKERS STALKER?!'"
-woeful pat	"[pat-blather]"
+woeful pat	"[pat-wants-quiet]."
 wolves	"Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now is a time for violence and gore. You have the equipment."
 yourself	"'Self, what should I do now?' 'Self, don't start talking in the third person.' 'Self will make a point of it, self.'"
 
@@ -10052,8 +10065,8 @@ gateman	"noble" or "ol' ben" or "noble ol' ben" or "ben"	"'He used to be fair an
 gateman	"quest" or "purpose/goal" or "my purpose/goal"	"[one of]'Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol['] Ben: gone. Lorn. No longer.'[paragraph break]'And I think I know who's behind it: RED BULL BURDELL!'[or]He mentions 'Noise is one, lupine lineup, Noble Ol['] Ben gone, lorn, no longer.' Then he motions to the gateway. 'You'll see when you get there, I think.'[stopping]"
 gateman	"certify" or "certifying"	"'Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong.'[prcer]"
 gateman	"rectify" or "rectifying"	"'Gives you the first and last letters of what something should be.'[prrec]"
-woeful pat	"beat/rhythm/meter"	"[anapest-clue][run paragraph on]"
-woeful pat	"st paean" or "paean"	"'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier][end if].'"
+woeful pat	"beat/rhythm/meter"	"[flatter-pat][anapest-clue][run paragraph on]"
+woeful pat	"st paean" or "paean"	"[flatter-pat]'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier][end if].'"
 deadbeat	"slorntco"	"'Organized capital is so repressive, dude.'"
 nerds	"darkness"	"[nerd-dark]"
 nerds	"dorks"	"They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help."
