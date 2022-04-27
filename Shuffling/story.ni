@@ -3295,9 +3295,9 @@ the bugle is a thing. description of bugle is "It's brass, you guess, and it pro
 
 bugle-played is a truth state that varies. bugle-played is false.
 
-understand "horn" as bugle when bugle is touchable.
+understand "horn" as bugle when bugle is fungible.
 
-understand "doorway" as OR DO door when OR DO door is touchable.
+understand "doorway" as OR DO door when OR DO door is fungible.
 
 check opening OR DO door:
 	if bugle-played is false and bolt is touchable, say "There's no real handle to grab[if bulge is part of the OR DO door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
@@ -3346,6 +3346,8 @@ section deer
 
 the deer is an animal. "The deer is half-sleeping here. It's probably best left that way."
 
+understand "animal" as goat when deer is fungible and goat is not fungible.
+
 check taking the deer: say "Dear, dear. That would not be endearin['] to the deer." instead;
 
 description of the deer is "It seems quite peaceful, sleeping. That meal did it some good. You've done all you can for it, and it's done all it can for you."
@@ -3354,7 +3356,7 @@ section goat
 
 the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 
-understand "animal" as goat when goat is touchable and deer is not touchable.
+understand "animal" as goat when goat is fungible and deer is not fungible.
 
 check taking the goat: say "Trying to get the goat would more likely get the goat's goat." instead;
 
@@ -3431,7 +3433,7 @@ the new land is boring scenery in Notices Section. description of new land is "Y
 this is the bore-new-land rule:
 	if current action is entering, try entering the getaway instead;
 
-understand "gate" as getaway when getaway is touchable.
+understand "gate" as getaway when getaway is fungible.
 
 gadget-warned is a truth state that varies. gadget-warned is false.
 
@@ -3506,7 +3508,7 @@ section attics
 
 the attics are reversible plural-named scenery. the attics are flippable and flipped-yet. lgth of attics is 6. gpos of attics is 6. rpos of attics is 5. rgtext of attics is "[rcn][gc][rc][rc][rc][rc]". cert-text of attics is "-[ast]T[d1][d1][d1][d1]". rect-text of attics is "S[d1][d1][d1][d1][ast]C".
 
-understand "attic" as attics when attics are touchable or static is touchable.
+understand "attic" as attics when attics are fungible or static is fungible.
 
 check taking the attics: say "You could flip them back to the static if you want, but it'd be mean to steal what you just built. And useless." instead;
 
@@ -4955,7 +4957,7 @@ does the player mean entering the scented descent: it is likely. [forest is firs
 
 the scented descent is a portal. go-region of scented descent is Forest. "There's a scented descent to a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". solved-text of scented descent is "You already [if forest is bypassed]bypassed[else]solved[end if] the forest. Maybe you should look elsewhere?". entry-rule of scented descent is the forest-entry rule.
 
-understand "forest" as scented descent when scented descent is touchable.
+understand "forest" as scented descent when scented descent is fungible.
 
 description of scented descent is "[if forest is solved]It's real verdant, yeah. I could tell you about what's inside, but you've been through it[else]It's bigger on the inside than the outside, you're sure, or something like that[end if]."
 
@@ -4997,7 +4999,7 @@ section metros portal
 
 the trade tread is a portal. go-region of trade tread is Metros. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see the metros where the trade tread ends, but you probably want to [b]ENTER[r] or [b]FOLLOW[r] it, now that you've revealed it.". solved-text of trade tread is "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you.". entry-rule of trade tread is metros-entry rule.
 
-understand "metros" as trade tread when trade tread is touchable.
+understand "metros" as trade tread when trade tread is fungible.
 
 check climbing trade tread: try entering trade tread instead;
 
@@ -5080,7 +5082,7 @@ a whiff of stew is a guider. godir of whiff of stew is west. description of whif
 
 lgth of stew is 4. gpos of stew is 4. rpos of stew is 2. rgtext of stew is "[rc][rc][rc][rc]". cert-text of stew is "-[d1][d1][d1]". rect-text of stew is "W[d1][d1][ast]T".
 
-understand "smell" as whiff of stew when whiff of stew is touchable.
+understand "smell" as whiff of stew when whiff of stew is fungible.
 
 a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or any of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". badana of thorn is "The thorn wilts slightly for a second"
 
@@ -5090,7 +5092,7 @@ an aroma of teas is a guider. godir of aroma of teas is east. description of tea
 
 rgtext of teas is "[rc][rc][rc][rc]". the lgth of teas is 4. gpos of teas is 2. rpos of teas is 1. cert-text of teas is "-[d1][d1][d1]". rect-text of teas is "E[d1][d1][ast]T".
 
-understand "smell" as aroma of teas when aroma of teas is touchable.
+understand "smell" as aroma of teas when aroma of teas is fungible.
 
 understand "tea" as aroma of teas.
 
@@ -5098,7 +5100,7 @@ a rambling shout is a guider. godir of rambling shout is south. description of s
 
 rgtext of shout is "[gc][rc][rc][rc][rc]". the lgth of shout is 5. gpos of shout is 1. rpos of shout is 2. cert-text of shout is "S[d1][d1][d1][d1]". rect-text of shout is "S[d1][d1][d1][ast]H".
 
-understand "noise/sound" as rambling shout when rambling shout is touchable.
+understand "noise/sound" as rambling shout when rambling shout is fungible.
 
 book Rest of Forest
 
@@ -5500,7 +5502,9 @@ some Spam is part of the sandwich. rgtext of Spam is "[rcn][rc][rc][rc]". lgth o
 
 the Spam is flippable. description of Spam is "It's nastily marbled with mostly pink and some white."
 
-understand "meat" as Spam when Spam is touchable. does the player mean doing something with Spam: it is likely.
+understand "meat" as Spam when Spam is fungible.
+
+does the player mean doing something with Spam: it is likely.
 
 check peelxing Spam:
 	if Spam is part of the sandwich, try taking Spam instead;
@@ -5605,9 +5609,9 @@ the sliver is a thing. the sliver is flippable. rgtext of sliver is "[gcn][rc][r
 
 description of sliver is "Surprisingly sharp and of an odd metal. It could cut something as long as you didn't have to saw much."
 
-the silver is a thing. the printed name of silver is "silver cylinder". understand "silver cylinder" and "cylinder" and "silver bullet" and "bullet" as silver when silver is touchable.
+the silver is a thing. the printed name of silver is "silver cylinder". understand "silver cylinder" and "cylinder" and "silver bullet" and "bullet" as silver when silver is fungible.
 
-understand "shell" as silver when silver is touchable.
+understand "shell" as silver when silver is fungible.
 
 does the player mean doing something with the shell when silver is touchable: it is unlikely.
 
@@ -5718,7 +5722,7 @@ section shades
 
 the shades are a plural-named disguise-piece. the elevation of the shades is 2.
 
-understand "shade" and "glasses" as shades when shades are touchable.
+understand "shade" and "glasses" as shades when shades are fungible.
 
 description of shades is "They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits[if shades are part of the nose] and are attached to a nose[else if shades are part of beard]. A fake beard hangs snugly over the stems[end if]."
 
@@ -5751,7 +5755,7 @@ nau-nou is a truth state that varies.
 
 section shotgun
 
-the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is touchable.
+the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is fungible.
 
 the shotgun can be loaded. the shotgun is not loaded.
 
@@ -5863,12 +5867,12 @@ section drapes
 
 the drapes are plural-named scenery. description of drapes is "Too thick and heavy to walk through.". bore-text of drapes is "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them.". bore-check of drapes is bore-drapes rule.
 
-understand "cloth" as drapes when drapes are touchable.
+understand "cloth" as drapes when drapes are fungible.
 
 this is the bore-drapes rule:
 	if current action is cutwithing or current action is unfolding, now boring-exception is true;
 
-understand "cloth" as spread when spread is touchable.
+understand "cloth" as spread when spread is fungible.
 
 section red asp
 
@@ -5966,7 +5970,7 @@ understand "a/e/i/o/u" as vowels when player is in Frost Forts.
 this is the bore-vowels rule:
 	if current action is taking, say "They're just way too big. Like that LOVE statue in Philadelphia. But they fill you with fear, unlike the LOVE statue, because they spell AIE OOU, and that's how it sounds as the wind blows through them." instead;
 
-understand "vowels/letters/five/six/tall/aplastic/capital/capitals/pyramid" as vowels when vowels are touchable.
+understand "vowels/letters/five/six/tall/aplastic/capital/capitals/pyramid" as vowels when vowels are fungible.
 
 description of vowels is "[vowel-desc]"
 
@@ -6255,7 +6259,7 @@ The great grate is scenery in The Nick. "Huge. Eugh. Nat Egam couldn't magic it,
 
 check opening great grate: say "You utterly fail to move it. If it could speak, it might sarcastically say [one of]Boring? Brig? No![or]Give up! And mean it, inmate![or]Denied, Indeed![or]Weak Try, Raw Tyke![at random]" instead;
 
-understand "gate" as great grate when grate is touchable.
+understand "gate" as great grate when grate is fungible.
 
 section graffiti
 
@@ -6405,7 +6409,9 @@ after doing something with the spearman:
 	set the pronoun him to the spearman;
 	continue the action;
 
-understand "man" as spearman when spearman is touchable. the spearman can be female or male. the spearman is male.
+understand "man" as spearman when spearman is fungible.
+
+the spearman can be female or male. the spearman is male.
 
 description of spearman is "[if player does not have spearman]Hmm. You could [b]TAKE[r] him. [end if]He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You could probably [b]READ[r] him for clues, like his name and [if player carries spearman]what's on the base and [end if]so forth.".
 
@@ -6492,7 +6498,7 @@ understand "covering" as HOTSAUCE when HOTSAUCE is part of tortilla.
 
 check opening large packet: try attacking large packet instead;
 
-understand "hot sauce" and "hot/sauce" as HOTSAUCE when player has HOTSAUCE or HOTSAUCE is touchable.
+understand "hot sauce" and "hot/sauce" as HOTSAUCE when player has HOTSAUCE or HOTSAUCE is fungible.
 
 section lettuce
 
@@ -6506,7 +6512,7 @@ some cut up steak is an ingredient. printed name of steak is "cut-up steak". des
 
 section parmesan
 
-the pile of grated Parmesan cheese is an ingredient. understand "cheese" as Parmesan when Parmesan is touchable.
+the pile of grated Parmesan cheese is an ingredient. understand "cheese" as Parmesan when Parmesan is fungible.
 
 description of Parmesan is "Already grated, for which you are grateful. (Sorry if the description grates.)"
 
@@ -6584,8 +6590,8 @@ some grist is in the fridge. it is LLPish. it is singular-named. lgth of grist i
 
 description of grist is "It's a heapin['] helpin['] of the stuff, haphazardly lumped at the bottom of the fridge."
 
-understand "heapin helpin" and "heapin/helpin" as grist when grist is touchable.
-understand "heapin helpin" and "heapin/helpin" as grits when grits are touchable.
+understand "heapin helpin" and "heapin/helpin" as grist when grist is fungible and fridge-open is true.
+understand "heapin helpin" and "heapin/helpin" as grits when grits are fungible and fridge-open is true.
 
 the grits are a plural-named thing.
 
@@ -6869,7 +6875,7 @@ chapter anapest
 
 the anapest is boring scenery in moor. understand "anapests" as anapest.
 
-understand "poem" as anapest when anapest is touchable.
+understand "poem/poetry" as anapest when anapest is fungible.
 
 rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T". bore-text is "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)". description of anapest is "You can't help NOT paying attention to the anapest.". bore-check is bore-anapest rule.
 
@@ -6916,7 +6922,7 @@ chapter poem
 
 a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgtext of poem is "[gcn][rc][rc][rc][rc]". cert-text of poem is "P[d1][d1][d1][d1]". rect-text of poem is "P[d1][d1][d1][ast]L".
 
-understand "poetry" as poem when poem is touchable.
+understand "poetry" as poem when poem is fungible.
 
 after printing the name of the poem while taking inventory:
 	if smilies are part of the poem, say " (improperly punctuated)";
@@ -6929,7 +6935,7 @@ does the player mean doing something with prep paper when the poem is touchable:
 
 understand "limerick" as poem when poem is not folded.
 
-understand "paper" as poem when poem is touchable.
+understand "paper" as poem when poem is fungible.
 
 description of poem is "'I'm just a guy who loves his work[smy][line break]Not like that poet, he's a jerk[smy][line break]He says he rhymes neater[smy][line break]And rips on my meter[smy][line break]I'd like to punch him in his smirk[smy]'[paragraph break][if missile is off-stage]Whoah, lots of smilies, there. They'd drive a grammar pedant ballistic[else]The limerick doesn't make you want to lick the mire like Woeful Pat's stuff[end if]. The paper seems creased on a few diagonals."
 
@@ -7059,7 +7065,7 @@ chapter roadblock
 
 the roadblock is a thing in the moor. "A roadblock that isn't actually blocking any roads lies here. Maybe it can become more useful.". rgtext of roadblock is "[rcn][rc][gc][rc][rc][rc][gc][rc][rc]". lgth of roadblock is 9. gpos of roadblock is 5. rpos of roadblock is 1. cert-text of roadblock is "-[d1][ast]A[d1][d1][d1][ast]O[d1][d1]". rect-text of roadblock is "B[d1][d1][d1][d1][d1][d1][d1][ast]R".
 
-understand "block" as roadblock when roadblock is touchable.
+understand "block" as roadblock when roadblock is fungible.
 
 description of roadblock is "It's about eight feet long and really dark (you pause and hope you don't need to learn COBOL) and dented about halfway through--well, four-ninths of the way from the right. You are utterly unsure what it could possibly be guarding, and you also notice bright red graffiti[one of].[paragraph break]You think back to how your nametag was creased, and how the roadblock probably doesn't change into anything too easy like a broad lock. The moor [if sack is not off-stage]and the sack [end if]already felt a bit easy[or][stopping]."
 
@@ -7108,13 +7114,13 @@ the hoots button is a thing. description is "It's on the right, and it's labeled
 
 lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4. cert-text of hoots button is "-[d1][ast]O[d1][d1]". rect-text of hoots button is "S[d1][d1][d1][ast]T". rgtext of hoots button is "[rcn][rc][gc][rc][rc]".
 
-understand "right" and "right button" as hoots button when hoots button is touchable.
+understand "right" and "right button" as hoots button when hoots button is fungible.
 
 section shoot
 
 the shoot button is a thing. description is "It's on the right, and it's labeled [b]SHOOT[r].".
 
-understand "right" and "right button" as shoot button when shoot button is touchable.
+understand "right" and "right button" as shoot button when shoot button is fungible.
 
 check pushing hoots button: say "You hear loud hoots. You're not sure if people are laughing, or alerting you to the fact that this button doesn't do what it's supposed to, or if maybe it's some high-tech/magic war dance or even an air raid siren. Whatever it is, it's clear noise won't get the missile launched." instead;
 
@@ -7131,7 +7137,7 @@ the trees button is a thing. description is "It's on the left, and it's labeled 
 
 lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2. rgtext of trees button is "[rcn][rc][gc][gc][rc]". cert-text of trees button is "-[d1][ast]E[ast]E[d1]". rect-text of trees button is "S[d1][d1][d1][ast]R".
 
-understand "left" and "left button" as trees button when trees button is touchable.
+understand "left" and "left button" as trees button when trees button is fungible.
 
 check pushing trees button:
 	now trees-is-pushed is true;
@@ -7141,7 +7147,7 @@ section steer
 
 the steer button is a thing. description is "It's on the left, and it's labeled [b]STEER[r]."
 
-understand "left" and "left button" as steer button when steer button is touchable.
+understand "left" and "left button" as steer button when steer button is fungible.
 
 missile-steered is a truth state that varies. missile-steered is usually false.
 
@@ -7309,7 +7315,7 @@ lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 i
 
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
-understand "oil" as oils when oils are touchable.
+understand "oil" as oils when oils are fungible.
 
 check taking oils: say "They'd go through your fingers[if player has cask]. You can pour the oils, or fill the cask, instead[end if]." instead;
 
@@ -7580,7 +7586,7 @@ check showing emitter to deadbeat: try objasking deadbeat about emitter instead;
 
 check giving emitter to deadbeat: try objasking deadbeat about emitter instead;
 
-understand "man" as deadbeat when deadbeat is touchable.
+understand "man" as deadbeat when deadbeat is fungible.
 
 description of deadbeat is "He's wearing designer reedings."
 
@@ -7600,7 +7606,7 @@ description of clover is "You touch the leaves a bit, and the are sturdy, fuzzy,
 
 check wearing clover: say "You can't wear that as-is, but it'd be helpful to stick to something if it became wearable." instead;
 
-understand "leaves" as clover when clover is touchable.
+understand "leaves" as clover when clover is fungible.
 
 Report taking the clover:
 	say "You pluck it.";
@@ -7608,7 +7614,7 @@ Report taking the clover:
 
 chapter velcro
 
-some Velcro is a singular-named thing. it is not fixed in place. understand "mittens" and "gloves" as Velcro when Velcro is touchable.
+some Velcro is a singular-named thing. it is not fixed in place. understand "mittens" and "gloves" as Velcro when Velcro is fungible.
 
 check taking off Velcro:
 	if player is on cafe face, say "You'd fall. Best get down from the cafe face, first." instead;
@@ -7689,7 +7695,7 @@ does the player mean examining the location: it is very likely.
 
 description of kernels is "Most are yellow but others are discolored--red and black and white."
 
-understand "kernels" as discolored buttons when lost corn is touchable.
+understand "kernels" as discolored buttons when lost corn is fungible.
 
 chapter controls
 
@@ -8020,7 +8026,7 @@ the merchandise is scenery in Fo Real Florae. "All sorts of flower-related semi-
 
 does the player mean objasking the faeries about the merchandise: it is likely.
 
-understand "flowers/seeds/flower/seed" as merchandise when merchandise is touchable.
+understand "flowers/seeds/flower/seed" as merchandise when merchandise is fungible.
 
 chapter heaths
 
@@ -8038,7 +8044,7 @@ report taking heaths:
 
 section stems
 
-stems are part of the heaths. understand "narrow tube" as stems when stems are touchable.
+stems are part of the heaths. understand "narrow tube" as stems when stems are fungible.
 
 description of stems is "The stems seem to be forming a narrow tube. It's weird--you can't see anything holding the flowers together."
 
@@ -8091,7 +8097,9 @@ description of brocade is "It's rather plain and white with lots of black bars. 
 
 chapter barcode
 
-the barcode is a thing. understand "code" and "bar" as barcode when barcode is touchable.
+the barcode is a thing.
+
+understand "code" and "bar" as barcode when barcode is fungible.
 
 check objhinting barcode when barcode is part of the keycard: try objhinting keycard instead;
 
@@ -8133,7 +8141,7 @@ after doing something with the night thing:
 
 description of Night Thing is "It's grown wrong, a gigantic hairy eyeless potato clearly not the right girth. And it's wired weird, with a cruel ulcer for a mouth. It seems more in the mood for bellowing than fighting, but it still probably doesn't belong in the hotel. It's too big to fight and too fearsome to get near. It appears to be sitting on some sort of mattress."
 
-understand "potato" as night thing when night thing is touchable.
+understand "potato" as night thing when night thing is fungible.
 
 check showing something to the night thing: try giving noun to night thing instead;
 
@@ -8192,7 +8200,7 @@ this is the bore-bump rule:
 	moot bump;
 	now player has the emitter;
 
-understand "something" as bump when bump is part of the mattress and mattress is touchable.
+understand "something" as bump when bump is part of the mattress and mattress is fungible.
 
 does the player mean throwing the tomato at the night thing: it is very likely.
 
@@ -8222,7 +8230,7 @@ after examining termite emitter:
 
 check examining the termite emitter: ignore the examine devices rule.
 
-understand "black box" and "black/box" and "machine" as termite emitter when termite emitter is touchable.
+understand "black box" and "black/box" and "machine" as termite emitter when termite emitter is fungible.
 
 bastion-evac is a truth state that varies. bastion-evac is usually false.
 
@@ -8844,7 +8852,9 @@ chapter sprig - grips
 
 section sprig
 
-the sprig is in Rived Drive. "A sprig of some tree or weed you can't identify is here.". understand "weed" as sprig when sprig is touchable.
+the sprig is in Rived Drive. "A sprig of some tree or weed you can't identify is here.".
+
+understand "weed" as sprig when sprig is fungible.
 
 check taking the sprig: say "Uprooting it would probably kill it." instead;
 
@@ -8922,7 +8932,7 @@ before asking protest about: say "You're not going to reason with them. Maybe re
 
 lgth of protest is 7. gpos of protest is 1. rpos of protest is 6. rgtext of protest is "[gcn][rc][rc][gc][gc][rc][rc]". cert-text of protest is "P[d1][d1][ast]T[ast]E[d1][d1]". rect-text of protest is "P[d1][d1][d1][d1][d1][ast]S".
 
-understand "trio" as protest when riot is not touchable and tall trio is not touchable.
+understand "trio" as protest when riot is not fungible and tall trio is not fungible.
 
 understand "three/protesters/crowd/uprisers/horde/rioters" and "rabble" and "mob" as protest when protest is in location of player. ["touchable" here and below causes a nasty infinite loop.]
 
@@ -8934,7 +8944,7 @@ description of protest is "They're all smeared with--huh? Looks like clay? In an
 
 chapter potters
 
-the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are touchable.
+the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are fungible.
 
 Include (-
 	has transparent animate
@@ -8954,7 +8964,7 @@ lgth of chain links is 5. gpos of chain links is 4. rpos of chain links is 5. ce
 
 description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near the Means Manse."
 
-understand "chains" as chain links when chain links are touchable.
+understand "chains" as chain links when chain links are fungible.
 
 check taking chain links: say "[one of]Get chain = cheating.[paragraph break]Seriously, though. You'd still be outnumbered. They need something to do with their hands[or]Maybe you could change the links, instead[stopping]." instead;
 
@@ -10365,9 +10375,9 @@ to ask-to-cut:
 
 the mis send dimness is scenery. printed name is "mis-send dimness". "It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide."
 
-understand "doorway/door" as dimness when dimness is touchable.
+understand "doorway/door" as dimness when dimness is fungible.
 
-understand "miss end" and "miss/end dimness" and "miss end dimness" and "miss/end" as dimness when dimness is touchable.
+understand "miss end" and "miss/end dimness" and "miss end dimness" and "miss/end" as dimness when dimness is fungible.
 
 check opening dimness: try going inside instead;
 

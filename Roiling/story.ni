@@ -6125,7 +6125,7 @@ chapter thinking
 
 thinko is a truth state that varies.
 
-understand "ponder" as thinking when END PRONER POD is not touchable.
+understand "ponder" as thinking when END PRONER POD is not fungible.
 
 in-think is a truth state that varies.
 
@@ -9891,7 +9891,7 @@ to it-him-her (x - a thing):
 
 section throes hoster
 
-the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is touchable. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-hoster rule. go-region of Throes Hoster is Others.
+the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is fungible. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-hoster rule. go-region of Throes Hoster is Others.
 
 this is the enter-hoster rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
@@ -10006,7 +10006,7 @@ a-text of tropes poster is "RRYRRY". b-text of tropes poster is "??YRRY". parse-
 
 section odorant tornado
 
-the odorant tornado is a portal. understand "presto" as odorant tornado when odorant tornado is touchable. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if Grey Gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if Grey Gyre is visited]re-[end if][b]ENTER[r] them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-tornado rule.
+the odorant tornado is a portal. understand "presto" as odorant tornado when odorant tornado is fungible. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if Grey Gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if Grey Gyre is visited]re-[end if][b]ENTER[r] them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-tornado rule.
 
 this is the enter-tornado rule:
 	say "[one of]Shoof! Foosh! A tentacle of Old Warpy snatches at you as you enter the odorant tornado, and you don't stop spinning for a minute. [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through the odorant tornado and Old Warpy again, managing to land on your feet this time.[stopping]"
@@ -10039,7 +10039,7 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 section solid idols portal
 
-the solid idols are a plural-named not lumpable portal. understand "otters" as solid idols when solid idols are touchable. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-idols rule. go-region of solid idols is Otters.
+the solid idols are a plural-named not lumpable portal. understand "otters" as solid idols when solid idols are fungible. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-idols rule. go-region of solid idols is Otters.
 
 report examining solid idols: try examining engravings;
 
@@ -10077,7 +10077,7 @@ a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is
 
 section course source
 
-the course source is a portal. diffic of course source is 3. understand "routes" as course source when source course is touchable. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if Same Mesa is visited]re[end if]enter it.". entry-rule of course source is enter-source rule. go-region of course source is Routes.
+the course source is a portal. diffic of course source is 3. understand "routes" as course source when source course is fungible. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if Same Mesa is visited]re[end if]enter it.". entry-rule of course source is enter-source rule. go-region of course source is Routes.
 
 this is the enter-source rule:
 	say "[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and each seems to lead through Old Warpy, anyway. But still you keep walking, until you cross a red line and hear a buzz. There is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
@@ -10098,7 +10098,7 @@ a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters
 
 section Tastee Estate
 
-the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is touchable. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you [b]ENTER[r].". entry-rule of Tastee Estate is enter-estate rule.
+the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is fungible. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you [b]ENTER[r].". entry-rule of Tastee Estate is enter-estate rule.
 
 this is the enter-estate rule:
 	say "[one of][if tokers are in Strip of Profits]'Materialism! It's a trap! Like, literally!' But you don't listen, as you know how the word 'literally' can be abused. But there is one![paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and you start to feel VERY cold before winding up in a hovel labeled [heat].[paragraph break]But you are soon thrown outside! There are no freeloaders in that most successful of cities: Spoiloplis![wfak][paragraph break]A girdled griddle where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
@@ -10113,7 +10113,7 @@ a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of stor
 
 section truster turrets
 
-the truster turrets are a plural-named portal. diffic of truster turrets is 7. understand "towers" as truster turrets when truster turrets are touchable. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can [b]ENTER[r]. But their size indicates a hefty quest ahead.". entry-rule of truster turrets is enter-turrets rule.
+the truster turrets are a plural-named portal. diffic of truster turrets is 7. understand "towers" as truster turrets when truster turrets are fungible. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can [b]ENTER[r]. But their size indicates a hefty quest ahead.". entry-rule of truster turrets is enter-turrets rule.
 
 towers-warn is a truth state that varies.
 
@@ -10145,7 +10145,7 @@ the shells are a boring thing. they are part of store y. the shells are uncluing
 
 section barnacle balancer
 
-the balancer barnacle is a portal. diffic of balancer barnacle is 6. understand "oyster" as barnacle balancer when barnacle balancer is touchable. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-barnacle rule.
+the balancer barnacle is a portal. diffic of balancer barnacle is 6. understand "oyster" as barnacle balancer when barnacle balancer is fungible. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-barnacle rule.
 
 oyster-warn is a truth state that varies.
 
@@ -10193,7 +10193,7 @@ after examining magneto montage when change-warn is false:
 
 section engravings
 
-the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are touchable.
+the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are fungible.
 
 description of engravings is "[emph of odorant tornado]Man, [r][b]SOMEONE[r] [emph of truster turrets]evil[r] [emph of Tastee Estate]will[r] [emph of barnacle balancer]pay[r] [emph of course source]up[r], [emph of solid idols]hard[r].[paragraph break][i]NOUNED: UNDONE.[r][if note-progress is true][paragraph break]The letter emphases seem to have changed since you last read the engravings.[npoff][end if]"
 
@@ -12655,7 +12655,7 @@ this is the bore-alocalco-cola rule:
 Does the player mean drinking ALocalCo: it is very likely.
 does the player mean drinking the mug: it is very likely.
 
-understand "bottle" as ALocalCo Cola when ALocalCo Cola is touchable.
+understand "bottle" as ALocalCo Cola when ALocalCo Cola is fungible.
 
 chapter fount / futon
 
@@ -13668,7 +13668,7 @@ chapter Lil Ps Pills
 
 the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'l P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did not solve them yourself. Plus you won't get bonus point for figuring how best to use them, and it will not help you with stuff you don't 100% need[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil Ps Pills is "Li'l P's Pills".
 
-understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are touchable.
+understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are fungible.
 
 a-text of Lil Ps Pills is "RRYRR". b-text of Lil Ps Pills is "RRY?R.". parse-text of lil ps pills is "S[sp]x[sp]I[sp]x[sp]x". lil ps pills is parse-spoilable.
 
@@ -14223,9 +14223,9 @@ check taking sausage:
 check answering sausage that (this is the ruby answer rule):
 	if the player's command includes "ruby", try objasking sausage about ruby instead;
 
-understand "ghost" as sausage when sausage is touchable or player is in posh hops shop.
+understand "ghost" as sausage when sausage is fungible or player is in posh hops shop.
 
-understand "etahn/ru" and "etahn ru" as sausage when sausage is touchable.
+understand "etahn/ru" and "etahn ru" as sausage when sausage is fungible.
 
 a-text of use saga sausage is "YRRYYRY". b-text of use saga sausage is "Y?RYGP?". parse-text of use saga sausage is "-[sp]?[sp]S[sp]-[sp]A[sp]G[sp]?". use saga sausage is parse-spoilable.
 
@@ -16179,7 +16179,7 @@ understand "brownie" and "owers/bin/ower brownie" and "ower brownies" as Owers B
 
 chapter spec-o-scope
 
-the Spec O Scope is scenery in Scope Copse. understand "speco/specoscope" and "copse scope" as Spec O Scope. understand "map/telescope" as Spec O Scope when Spec O Scope is touchable and Spec O Scope is examined. printed name of Spec O Scope is "Spec-O-Scope".
+the Spec O Scope is scenery in Scope Copse. understand "speco/specoscope" and "copse scope" as Spec O Scope. understand "map/telescope" as Spec O Scope when Spec O Scope is fungible and Spec O Scope is examined. printed name of Spec O Scope is "Spec-O-Scope".
 
 Include (-
 	has transparent talkable
@@ -19374,7 +19374,7 @@ the aside-llp is privately-named proper-named vanishing LLPish scenery in Reclus
 
 a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "-[sp]S[sp]-[sp]D[sp]-". aside-llp is parse-spoilable.
 
-understand "aidesllp" as aside-llp when debug-state is true and aside-llp is touchable.
+understand "aidesllp" as aside-llp when debug-state is true and aside-llp is fungible.
 
 section holy nest
 
