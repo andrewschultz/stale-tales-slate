@@ -12,7 +12,7 @@ definition: a thing (called t) is quickvis:
 
 section understand logic
 
-understand "tap [something]" as taping.
+understand "tap" as taping.
 
 understand the command "tap" as something new.
 
@@ -335,7 +335,7 @@ understand "sooth" as a mistake ("Close...what you need to do will sooth, in a b
 
 understand "stere" as a mistake ("Units of measurements are abstract. We need something concrete.") when player is in moor and panel is part of silo.
 
-understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break]([b]TAP[r] is not a standard verb. [b]PUSH[r] may work better, but Pat will be gone by then.)") when woeful pat is touchable.
+understand "tap [text]" as a mistake ("[pat-tap]") when woeful pat is touchable.
 
 understand "terse" as a mistake ("[if trees button is touchable]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
 

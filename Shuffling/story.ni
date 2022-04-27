@@ -1603,13 +1603,15 @@ rule for supplying a missing noun when entering:
 	if or do door is touchable:
 		now noun is or do door;
 	else if number of touchable portals is 1:
-		try entering a random touchable portal;
+		now noun is random touchable portal;
+		say "0.";
 	else if mis send dimness is touchable:
-		try entering mis send dimness;
-	else if player is in self id fields:
-		try going north instead;
-	say "I couldn't determine anything to enter. This may be the fault of imprecise code, so you may have to stat what you specifically want to enter.";
-	reject the player's command;
+		now noun is mis send dimness;
+	else if player is in self id fields and corses crosse is in self id fields:
+		now noun is corses crosse;
+	else:
+		say "I couldn't determine anything to enter. This may be the fault of imprecise code, so you may have to stat what you specifically want to enter.";
+		reject the player's command;
 
 chapter kicking-attacking
 
@@ -6007,10 +6009,12 @@ section taping (joke verb)
 
 taping is an action applying to one thing.
 
-[NOTE: If definitions are put here, they overwrite the mistake file, which gives instructions for TAP FEET. So that's why they seem to be missing. ]
+understand "tap [something]" as taping.
+
+[NOTE: If "something new" is put here, they overwrite the mistake file, which gives instructions for TAP FEET. So that's why they seem to be missing. ]
 
 to say pat-tap:
-	say "'Ah! You are TAPping your feet to my anapest beat!'";
+	say "'Ah! You are TAPping your feet to my anapest beat!'[line break]";
 	ital-say "[b]TAP[i] is not a standard verb. [b]PUSH[i] may work better when not around Pat, but Pat will be gone by then.";
 
 rule for supplying a missing noun when taping:
@@ -6553,7 +6557,7 @@ the griefd fridge is scenery in kitchen. understand "refrigerator" as fridge. un
 
 understand "fig/red/figred fridge" and "fig red fridge" as fridge when fridge-score is 2.
 
-the griefd fridge is an opaque openable container.
+the griefd fridge is an opaque openable closed container.
 
 check examining fridge: ignore examine containers rule.
 
@@ -6828,7 +6832,7 @@ understand "awful poet" and "awful" and "poet" as woeful pat.
 
 understand "sane" and "sane pat" as woeful pat when pat-flattered is true.
 
-to say pat-wants-quiet: say "He holds up his hand for silence. He is too busy reciting his poem. Maybe you have to ask about the right things, like the poem's [b]RHYTHM[r]. Or, well, him[if anapest-clued is false]. Or maybe its meter[end if]".
+to say pat-wants-quiet: say "He holds up his hand for silence. He is too busy reciting his poem. Maybe you have to ask about the right things, like the poem's [b]RHYTHM[r] or [b]METER[r]. Or, well, him[if anapest-clued is false]. Or maybe its meter[end if]".
 
 description of Woeful Pat is "His clothes are dark and strategically scuffed. Good thing chain wallets and other ugly stuff haven't made it here yet. But looks aren't really important. It's that poetry you find awful that needs to be changed, somehow."
 
@@ -7374,10 +7378,6 @@ book Undesired Underside
 
 Undesired Underside is a room in Metros. last-loc of metros is Undesired Underside. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west.". roomnud of Undesired Underside is table of Undesired Underside nudges.
 
-check going inside in Undesired Underside: say "That's ambiguous with the hotel west and the metal door east." instead;
-
-check going outside in Undesired Underside: say "You already are in the not-so-great outdoors." instead;
-
 check going east in Undesired Underside:
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
@@ -7810,8 +7810,6 @@ Obtains Boastin Bastion is north of Roarings Garrison. Obtains Boastin Bastion i
 
 check going inside in Obtains Boastin Bastion: say "You're already inside." instead;
 
-check going outside in Obtains Boastin Bastion: try going south instead;
-
 after looking in Obtains Boastin Bastion:
 	if poses posse are in Obtains Boastin Bastion, set the pronoun them to poses posse;
 	continue the action;
@@ -8164,8 +8162,6 @@ the description of the ketchup bottle is "It is THE PUCK brand ketchup. And it's
 check taking the ketchup bottle: say "[if night thing is not touchable]Trust me. You don't need it[else]The night thing roars. Though it's drained the bottle of its contents, it still feels an emotional attachment you would be wise not to break[end if]." instead;
 
 check inserting into the bottle: say "Ketchup bottles have those narrow necks, so nothing really fits. One look at the bottle, and you probably don't WANT anything to fit." instead;
-
-check going outside in The Ol Hotel: try going east instead;
 
 chapter smartest mattress
 
@@ -9543,7 +9539,7 @@ this is the sortie-scan-check rule:
 	if location of player is trap part:
 		if noun is dial:
 			if numset of dial is 16, say "Your gadget is silent. You've figured what to do with the dial." instead;
-			say "[ok-scan]The gadget, when over the [b]EXITS[r] part, reads[if gadget is cert][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters [b]EXITS[r] in it, somehow." instead;
+			say "[ok-scan]The gadget, when over the [b]EXITS[r] part, reads [if gadget is cert][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][else][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters [b]EXITS[r] in it, somehow." instead;
 	if location of player is The Nick:
 		if noun is jail cell graffiti or noun is grate:
 			say "You see nothing new other than the latent colors registering.";
@@ -10076,7 +10072,7 @@ gateman	"quest" or "purpose/goal" or "my purpose/goal"	"[one of]'Three major pro
 gateman	"certify" or "certifying"	"'Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong.'[prcer]"
 gateman	"rectify" or "rectifying"	"'Gives you the first and last letters of what something should be.'[prrec]"
 woeful pat	"beat/rhythm/meter"	"[flatter-pat][anapest-clue][run paragraph on]"
-woeful pat	"st paean" or "paean"	"[flatter-pat]'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier][end if].'"
+woeful pat	"st paean" or "paean"	"[flatter-pat]'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go. Have this flier, just to make sure[give-flier][end if].'"
 deadbeat	"slorntco"	"'Organized capital is so repressive, dude.'"
 nerds	"darkness"	"[nerd-dark]"
 nerds	"dorks"	"They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help."

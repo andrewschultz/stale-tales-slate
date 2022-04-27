@@ -23,8 +23,8 @@ Trap Part
 
 #gadget test: exitsne to sixteen
 >rc dial
-You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, green flashing between 5 and 7, red flashing between 1 and 6. Hm, exits plus two letters. What number could that be, or become.
-You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, all red except for the middle that flashes green. Hm, exits plus two letters. What number could that be, or become.
+The gadget, when over the EXITS part, reads RRRRR ? ?--flipping between RR and GG. The dial's solution probably has the letters EXITS in it, somehow.
+The gadget, when over the EXITS part, reads BBBBG ? ?--flipping reds and blues. The dial's solution probably has the letters EXITS in it, somehow.
 
 >sixteen
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
@@ -248,6 +248,28 @@ Your gadget's not near anything, but it's registering RBBG.
 >moor
 Your score has just gone up by one point.
 
+# ask early before you get the flier in other ways, but undo, so pat still mistrusts you
+#ttc-table-of-matched-topic-responses-woeful-pat-st-paean
+>ask pat about st paean
+"It will be my best reading yet. Even better than this. Here you go. Have this flier, just to make sure."
+>undo
+
+>cr pat
+!that thing
+"Fie!" yells Pat. "My poetic voice transcends technology! I am sure such a fancy gadget could not even discern the meter is ANAPEST!" Then he gets back to recitation.
+Perhaps if you asked Pat about himself or the beats or the poetry, he might let you scan him.
+You decide against rectifying as well, since certifying didn't turn up anything just now.
+
+#ttc-table-of-matched-thing-responses-woeful-pat-woeful-pat
+>ask pat about pat
+"Of course it would be absorbing to learn about my life and struggles and views," he drones airily.
+
+>cr pat
+!such a fancy
+"Of course, that thing, whatever it is, cannot recognize why I deserve to be called SANE PAT despite my wondrous visions. But perhaps it will help your less creative mind appreciate my wellsprings of verbal virtuosity."
+The gadget beeps once. A series of lights comes across: RRRRRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBGBR.
+
 #gadget test: anapest to peasant
 >rc anapest
 You get to scanning, twiddling from certify to rectify and back.
@@ -263,16 +285,17 @@ You currently have 15 out of 27 total points for the Sortie region. You have fou
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 
 #ttc-table-of-matched-topic-responses-woeful-pat-beat-rhythm-meter
->ask woeful pat about beat
+>ask woeful pat about rhythm
 "I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
 
 #ttc-table-of-unmatched-topic-responses-woeful-pat
->ask woeful pat about beat
-He holds up his hand for silence. He is too busy reciting his poem. You probably can't ask him about anything other than the poem. Or maybe its meter.
+>ask woeful pat about xxxxx
+He holds up his hand for silence. He is too busy reciting his poem. Maybe you have to ask about the right things, like the poem's RHYTHM or METER. Or, well, him.
 
-#ttc-table-of-matched-topic-responses-woeful-pat-st-paean
+#+ttc-table-of-matched-topic-responses-woeful-pat-st-paean
 >ask woeful pat about paean
-"It will be my best reading yet. Even better than this. Here you go, just to make sure."
+"It will be my best reading yet. Even better than this."
+!Here you go.
 
 >ask woeful pat about paean
 "It will be my best reading yet. Even better than this."
@@ -283,7 +306,7 @@ He holds up his hand for silence. He is too busy reciting his poem. You probably
 
 #ttc-table-of-matched-thing-responses-woeful-pat-anapest
 >ask woeful pat about anapest
-"I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
+"A mere creative writing teacher could educate you as to the pedantic details of writing doggerel that mimics my epic's flow!"
 
 #ttc-table-of-matched-thing-responses-woeful-pat-mean-old
 >ask woeful pat about mean old

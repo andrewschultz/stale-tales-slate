@@ -313,8 +313,6 @@ Roarings Garrison
 #ttc-table-of-nowheres-roarings-garrison
 >in
 There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits or clear way INSIDE.
->out
-There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits."
 
 @hin
 #ttc-table-of-metros-anagrams-lost-corn
@@ -1687,6 +1685,11 @@ Undesired Underside
 @gt
 >gt coteries
 You got something from the nerds. They've probably had enough of you.
+
+@gn
+#ttc-table-of-nowheres-undesired-underside
+>in
+A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
 
 >score
 @min

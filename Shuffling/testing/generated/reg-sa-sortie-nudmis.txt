@@ -547,10 +547,10 @@ Your score has just gone up by one point.
 #mistake test for tap/tap [text]
 >tap
 "Ah! You are TAPping your feet to my anapest beat!"
-(TAP is not a standard verb. PUSH may work better, but Pat will be gone by then.)
+[NOTE: TAP is not a standard verb. PUSH may work better when not around Pat, but Pat will be gone by then.]
 >tap zozimus
 "Ah! You are TAPping your feet to my anapest beat!"
-(TAP is not a standard verb. PUSH may work better, but Pat will be gone by then.)
+[NOTE: TAP is not a standard verb. PUSH may work better when not around Pat, but Pat will be gone by then.]
 
 #mistake test for mope
 >mope

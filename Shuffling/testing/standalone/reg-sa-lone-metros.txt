@@ -161,6 +161,8 @@ The sword is yours
 Your score has just gone up by one point.
 Trips Strip
 
+DEBUG INFO: So far you have 17 of 18 points.
+
 * _metros-heaths-gnats
 
 >get heaths
@@ -204,6 +206,8 @@ The sword is yours
 Your score has just gone up by one point.
 Trips Strip
 
+DEBUG INFO: So far you have 17 of 18 points.
+
 * _metros-begonias-darkness
 
 >get begonias
@@ -246,6 +250,8 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 Trips Strip
 
+DEBUG INFO: So far you have 17 of 18 points.
+
 * _metros-begonias-gnats
 
 >get begonias
@@ -287,6 +293,8 @@ Your score has just gone up by one point.
 >attack beast
 Your score has just gone up by one point.
 Trips Strip
+
+DEBUG INFO: So far you have 17 of 18 points.
 
 * _metros-begonias-noise
 
@@ -331,3 +339,4 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 Trips Strip
 
+DEBUG INFO: So far you have 17 of 18 points.

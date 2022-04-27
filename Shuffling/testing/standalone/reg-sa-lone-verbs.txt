@@ -198,11 +198,11 @@ His sober robes are tan, but they're not important. "Stop staring!" he booms. "Y
 >get gadget
 
 >talk to gateman about gadget
-"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+"Scan something. Even if it doesn't give any readings. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 >ask gateman about gadget
-"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+"Scan something. Even if it doesn't give any readings. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 >tell gateman about gadget
-"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+"Scan something. Even if it doesn't give any readings. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 
 >ask gateman about xyzzy
 "Fool! That magic word has no place alongside your magic abilities."
@@ -981,7 +981,7 @@ PUSH may be the synonym you want, here.
 Not apt.
 
 >tap me
-PUSH may be the synonym you want, here.
+Not apt.
 
 >scan
 Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat.
@@ -991,8 +991,6 @@ Before scanning for the first time, you fumble with the gadget and note it is se
 You can't help NOT paying attention to the anapest.
 >x poem
 You can't help NOT paying attention to the anapest.
->x poetry
-You can't help NOT paying attention to the anapest.
 
 >peasant
 >trade straw
@@ -1000,6 +998,9 @@ Instead of trading, use GIVE X TO Y.
 >trade
 Instead of trading, use GIVE X TO Y.
 >give straw to peasant
+
+>tap me
+PUSH may be the synonym you want, here.
 
 >x block
 It's about eight feet long and really dark (you pause and hope you don't need to learn COBOL) and dented about halfway through--well, four-ninths of the way from the right. You are utterly unsure what it could possibly be guarding, and you also notice bright red graffiti.
