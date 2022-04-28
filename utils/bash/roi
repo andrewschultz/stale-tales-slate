@@ -1,56 +1,128 @@
 function usage()
 {
 	  echo Main quest stores are uvpywt
-	  echo h tests Others region
-	  echo a tests intro, o tests stores/hub, x tests everything else.
+	  echo h = Others region
+	  echo o = ordeal reload, s = stores, d = demo dome, l\(lone\)/x = everything else
+	  echo a \(alone\) = everything in this order: $FULL_TEST
 	  exit
 }
 
+export FULL_TEST=osuvpywthdx
 export TEMP=$1
 
 if [[ "$TEMP" == "" ]]
 then
   usage
+elif [[ "$TEMP" == "a" ]]
+then
+  export TEMP=$FULL_TEST
 fi
-
-export TEMP=$1
 
 while [[ "$TEMP" != "" ]]
 do
   mychar=${TEMP:0:1}
   case $mychar in
     u)
-	  r1m roi-routes
+	  if [[ "$got_u" != "1" ]]
+	  then
+	    r1m roi-routes
+		got_u=1
+	  else
+	    echo extra u/routes skipped
+	  fi
 	  ;;
     v)
-	  r1m roi-troves
+	  if [[ "$got_v" != "1" ]]
+	  then
+	    r1m roi-troves
+		got_v=1
+	  else
+	    echo extra v/troves skipped
+	  fi
 	  ;;
     p)
-	  r1m roi-presto
+	  if [[ "$got_p" != "1" ]]
+	  then
+	    r1m roi-presto
+		got_p=1
+	  else
+	    echo extra p/presto skipped
+	  fi
 	  ;;
     y)
-	  r1m roi-oyster
+	  if [[ "$got_y" != "1" ]]
+	  then
+	    r1m roi-oyster
+		got_y=1
+	  else
+	    echo extra y/oyster skipped
+	  fi
 	  ;;
     w)
-	  r1m roi-towers
+	  if [[ "$got_w" != "1" ]]
+	  then
+	    r1m roi-towers
+		got_w=1
+	  else
+	    echo extra w/towers skipped
+	  fi
 	  ;;
     t)
-	  r1m roi-otters
+	  if [[ "$got_t" != "1" ]]
+	  then
+	    r1m roi-otters
+		got_t=1
+	  else
+	    echo extra t/otters skipped
+	  fi
 	  ;;
     h)
-	  r1m roi-others
-	  ;;
-    a)
-	  r1m roi-ordeal-reload
+	  if [[ "$got_h" != "1" ]]
+	  then
+	    r1m roi-others
+		got_h=1
+	  else
+	    echo extra h/others skipped
+	  fi
 	  ;;
     o)
-	  r1m roi-stores
+	  if [[ "$got_o" != "1" ]]
+	  then
+	    r1m roi-ordeal-reload
+		got_o=1
+	  else
+	    echo extra o/ordeal reload skipped
+	  fi
 	  ;;
-    x)
-	  r1m roi-lone
+    s)
+	  if [[ "$got_s" != "1" ]]
+	  then
+	    r1m roi-stores
+		got_s=1
+	  else
+	    echo extra s/stores skipped
+	  fi
+	  ;;
+    d)
+	  if [[ "$got_d" != "1" ]]
+	  then
+	    r1m roi-demo
+		got_d=1
+	  else
+	    echo extra d/demo dome skipped
+	  fi
+	  ;;
+    l | x)
+	  if [[ "$got_x" != "1" ]]
+	  then
+	    r1m roi-lone
+		got_x=1
+	  else
+	    echo extra lone files skipped
+	  fi
 	  ;;
     *)
-	  echo character {$TEMP:0:1} not recognized.
+	  echo character ${TEMP:0:1} not recognized.
 	  usage
   esac
   TEMP=${TEMP:1}

@@ -1,11 +1,22 @@
 function usage()
 {
 	  echo Main quest stores are FIMR
-	  echo a tests intro, o tests stores/hub, x tests everything else.
+	  echo o = intro, s = stores/hub, l\(lone\)/x = everything else
+	  exit
+	  echo a \(alone\) = everything in this order: $FULL_TEST
 	  exit
 }
 
+export FULL_TEST=osfimrx
 export TEMP=$1
+
+if [[ "$TEMP" == "" ]]
+then
+  usage
+elif [[ "$TEMP" == "a" ]]
+then
+  export TEMP=$FULL_TEST
+fi
 
 if [[ "$TEMP" == "" ]]
 then
@@ -17,28 +28,70 @@ do
   mychar=${TEMP:0:1}
   case $mychar in
     f)
-	  r1m sa-forest
+	  if [[ "$got_f" != "1" ]]
+	  then
+	    r1m sa-forest
+		got_f=1
+	  else
+	    echo extra f/forest skipped
+	  fi
 	  ;;
     i)
-	  r1m sa-sortie
+	  if [[ "$got_i" != "1" ]]
+	  then
+	    r1m sa-sortie
+		got_i=1
+	  else
+	    echo extra i/sortie skipped
+	  fi
 	  ;;
     m)
-	  r1m sa-metros
+	  if [[ "$got_m" != "1" ]]
+	  then
+	    r1m sa-metros
+		got_m=1
+	  else
+	    echo extra m/metros skipped
+	  fi
 	  ;;
     r)
-	  r1m sa-roster
-	  ;;
-    a)
-	  r1m sa-ordeal-reload
+	  if [[ "$got_r" != "1" ]]
+	  then
+	    r1m sa-resort
+		got_r=1
+	  else
+	    echo extra r/resort skipped
+	  fi
 	  ;;
     o)
-	  r1m sa-stores
+	  if [[ "$got_o" != "1" ]]
+	  then
+	    r1m sa-ordeal-loader
+		got_o=1
+	  else
+	    echo extra o/ordeal loader skipped
+	  fi
 	  ;;
-    x)
-	  r1m sa-lone
+    s)
+	  if [[ "$got_s" != "1" ]]
+	  then
+	    r1m sa-stores
+		got_s=1
+	  else
+	    echo extra s/store skipped
+	  fi
+	  ;;
+    l | x)
+	  if [[ "$got_x" != "1" ]]
+	  then
+	    r1m sa-lone
+		got_x=1
+	  else
+	    echo extra lone files skipped
+	  fi
 	  ;;
     *)
-	  echo character {$TEMP:0:1} not recognized.
+	  echo character ${TEMP:0:1} not recognized.
 	  usage  
   esac
   TEMP=${TEMP:1}
