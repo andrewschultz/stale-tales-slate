@@ -55,32 +55,33 @@ You think you hear a small voice echoing throughout the torus. You sort of want 
 >a
 #ttc-table-of-times-around-2
 >a
-You start feeling bummed you haven't gotten anywhere. A voice in your hea says to think positive. But surely it can't just be easy as saying YES, can it?
+You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. But surely it can't just be easy as saying YES, can it?
 >a
 >a
 >a
 >a
 >a
 >a
-#ttc-table-of-times-around-3
->a
-/(Ugh\. Tricky\.|What sort of ant was it|)
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-3
->a
-/(NATANT ant|CONCISIONS!)
->a
->a
->a
->a
->a
+
+#here quickly test the blank clue that makes you skip a row
+>
+You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
 >a
 #ttc-table-of-times-around-4
+/(Ugh\. Tricky\.|What sort of ant was it|)
+!murmur
+>undo
+>undo
+#ttc-table-of-times-around-3
+>a
+You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-4
 >a
 /(Ugh\. Tricky\.|What sort of ant was it|)
 >a
@@ -100,7 +101,16 @@ You start feeling bummed you haven't gotten anywhere. A voice in your hea says t
 >a
 #ttc-table-of-times-around-5
 >a
-Tan ant, natant. Sonic coins, concisions.
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-5
+>a
+/(NATANT ant|CONCISIONS!)
 >a
 >a
 >a
@@ -109,6 +119,15 @@ Tan ant, natant. Sonic coins, concisions.
 >a
 #ttc-table-of-times-around-6
 >a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-7
+>a
 You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
 >a
@@ -116,7 +135,7 @@ You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives
 >a
 >a
 >a
-#+ttc-table-of-times-around-6
+#+ttc-table-of-times-around-7
 >a
 You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a

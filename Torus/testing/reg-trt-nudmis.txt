@@ -10,12 +10,24 @@
 >au 2
 >z
 
-#ttc-table-of-one-time-warnings-sys/eye
+#ttc-table-of-one-time-warnings-sys-eye
 >yes
 Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that. But maybe the SYS-EYE can help you in its own weird way.
 
 >yes
 The SYS-EYE does not reveal itself. Perhaps it is just there as bizarre help, in its own way.
+
+#ttc-table-of-nudge-hashes-sys
+>ssy
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+
+#ttc-table-of-nudge-hashes-eye
+>yee
+
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+#ttc-table-of-nudge-hashes-yes
+>sey
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
 
 #ttc-table-of-pre-brushoffs-ehs-ehs-(eh|ehs)
 >eh
@@ -25,13 +37,132 @@ No, you can't lackadaisically go along with what's there. You need to invent, or
 >x voice
 NOTE: if there's a voice in the room description, you just need to LISTEN.
 
-#nudge for tours
+#ttc-table-of-nudge-hashes-tours
 >tousr
 You don't need to act on the whole torus, here.
 
-#nudge for rout
+#ttc-table-of-nudge-hashes-rout
 >rotu
 You don't need to act on the whole torus, here.
+
+#ttc-table-of-nudge-hashes-tas
+>sta
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+#ttc-table-of-nudge-hashes-tast
+>ttsa
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+
+>a
+>a
+>a
+>a
+>a
+>a
+You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-2
+>a
+You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. But surely it can't just be easy as saying YES, can it?
+>a
+>a
+>a
+>a
+>a
+>a
+
+#here quickly test the blank clue that makes you skip a row
+>
+You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
+>a
+#ttc-table-of-times-around-4
+/(Ugh\. Tricky\.|What sort of ant was it|)
+!murmur
+>undo
+>undo
+#ttc-table-of-times-around-3
+>a
+You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-4
+>a
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-4
+>a
+/(NATANT ant|CONCISIONS!)
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-5
+>a
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-5
+>a
+/(NATANT ant|CONCISIONS!)
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-6
+>a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-7
+>a
+You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-7
+>a
+You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
+>a
+
+#ttc-table-of-nudge-hashes-tastats
+>tasttas
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+
+#ttc-table-of-nudge-hashes-tasttat
+>tastatt
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+
+#ttc-table-of-nudge-hashes-tat
+>tta
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
 
 >a
 >a
@@ -42,15 +173,14 @@ You don't need to act on the whole torus, here.
 >a
 >listen
 
+#ttc-table-of-nudge-hashes-tsetse
+The tsetse fly can't really be changed.
+
 #mistake test for testes
 >testes
 Really! This isn't that sort of game.
 
-#nudge for tsetse
->tsetes
-The tsetse fly can't really be changed.
-
-#nudge for set
+#ttc-table-of-nudge-hashes-set
 >ste
 The tsetse fly can't really be changed.
 
@@ -114,11 +244,11 @@ No daredevil gunman appears to help you out.
 >reap pear
 You are very, very, very close indeed. Everything is in the right order.
 
-#nudge for prep
+#ttc-table-of-nudge-hashes-prep
 >prpe
 Act on the whole area, here.
 
-#nudge for area
+#ttc-table-of-nudge-hashes-area
 >arae
 Act on the whole area, here.
 
@@ -232,7 +362,7 @@ You're too old for the nightlife. Or bad spelling.
 You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
 !Besides
 
-#nudge for tine
+#ttc-table-of-nudge-hashes-tine
 >tien
 You're missing an (s) to make things plural, here.
 
@@ -329,7 +459,7 @@ All manner of whirring seems to flow around you. The cylinder in the center of t
 >in
 Scene Scene
 
-#nudge for cene
+#ttc-table-of-nudge-hashes-cene
 >ceen
 You're missing an (s) to make things plural, here.
 

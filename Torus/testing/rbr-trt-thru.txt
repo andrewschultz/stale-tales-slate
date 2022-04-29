@@ -28,13 +28,24 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 >z
 
 @nud
-#ttc-table-of-one-time-warnings-sys/eye
+#ttc-table-of-one-time-warnings-sys-eye
 >yes
 Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that. But maybe the SYS-EYE can help you in its own weird way.
 \\
 >yes
 The SYS-EYE does not reveal itself. Perhaps it is just there as bizarre help, in its own way.
 \\
+#ttc-table-of-nudge-hashes-sys
+>ssy
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+\\
+#ttc-table-of-nudge-hashes-eye
+>yee
+\\
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+#ttc-table-of-nudge-hashes-yes
+>sey
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
 
 @hin
 #ttc-table-of-cylinder-descriptions-1
@@ -78,21 +89,28 @@ No, you can't lackadaisically go along with what's there. You need to invent, or
 NOTE: if there's a voice in the room description, you just need to LISTEN.
 
 @nud
-#nudge for tours
+#ttc-table-of-nudge-hashes-tours
 >tousr
 You don't need to act on the whole torus, here.
 \\
-#nudge for rout
+#ttc-table-of-nudge-hashes-rout
 >rotu
 You don't need to act on the whole torus, here.
+\\
+#ttc-table-of-nudge-hashes-tas
+>sta
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+#ttc-table-of-nudge-hashes-tast
+>ttsa
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
 
-@hints
+@hints,nud
 >a
 >a
 >a
 >a
 >a
-#ttc-table-of-times-around-1
+{--hints}#ttc-table-of-times-around-1
 >a
 You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
 >a
@@ -103,32 +121,33 @@ You think you hear a small voice echoing throughout the torus. You sort of want 
 >a
 #ttc-table-of-times-around-2
 >a
-You start feeling bummed you haven't gotten anywhere. A voice in your hea says to think positive. But surely it can't just be easy as saying YES, can it?
+You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. But surely it can't just be easy as saying YES, can it?
 >a
 >a
 >a
 >a
 >a
 >a
-#ttc-table-of-times-around-3
->a
-/(Ugh\. Tricky\.|What sort of ant was it|)
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-3
->a
-/(NATANT ant|CONCISIONS!)
->a
->a
->a
->a
->a
+\\
+#here quickly test the blank clue that makes you skip a row
+>
+You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
 >a
 #ttc-table-of-times-around-4
+/(Ugh\. Tricky\.|What sort of ant was it|)
+!murmur
+>undo
+>undo
+#ttc-table-of-times-around-3
+>a
+You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-4
 >a
 /(Ugh\. Tricky\.|What sort of ant was it|)
 >a
@@ -148,7 +167,16 @@ You start feeling bummed you haven't gotten anywhere. A voice in your hea says t
 >a
 #ttc-table-of-times-around-5
 >a
-Tan ant, natant. Sonic coins, concisions.
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-5
+>a
+/(NATANT ant|CONCISIONS!)
 >a
 >a
 >a
@@ -157,6 +185,15 @@ Tan ant, natant. Sonic coins, concisions.
 >a
 #ttc-table-of-times-around-6
 >a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-7
+>a
 You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
 >a
@@ -164,10 +201,23 @@ You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives
 >a
 >a
 >a
-#+ttc-table-of-times-around-6
+#+ttc-table-of-times-around-7
 >a
 You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
+
+@nud
+#ttc-table-of-nudge-hashes-tastats
+>tasttas
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+\\
+#ttc-table-of-nudge-hashes-tasttat
+>tastatt
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+\\
+#ttc-table-of-nudge-hashes-tat
+>tta
+You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
 
 @mis
 >a
@@ -179,15 +229,14 @@ You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lot
 >a
 >listen
 \\
+#ttc-table-of-nudge-hashes-tsetse
+The tsetse fly can't really be changed.
+\\
 #mistake test for testes
 >testes
 Really! This isn't that sort of game.
 \\
-#nudge for tsetse
->tsetes
-The tsetse fly can't really be changed.
-\\
-#nudge for set
+#ttc-table-of-nudge-hashes-set
 >ste
 The tsetse fly can't really be changed.
 
@@ -225,6 +274,8 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 >sheesh
 by one point
 Sheesh
+
+@nud
 
 @alt
 #+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
@@ -300,11 +351,11 @@ No daredevil gunman appears to help you out.
 You are very, very, very close indeed. Everything is in the right order.
 
 @nud
-#nudge for prep
+#ttc-table-of-nudge-hashes-prep
 >prpe
 Act on the whole area, here.
 \\
-#nudge for area
+#ttc-table-of-nudge-hashes-area
 >arae
 Act on the whole area, here.
 
@@ -322,7 +373,7 @@ You're not sure what you are prepping--a thing or an action. But once you do, th
 You meet (hah) up with a teammate! It's good to have one on this forbidding torus. After some talk, they admit they're out of ideas. But maybe when you come back at the right time, you'll have something to think up. You can only hope.
 !Now that you have a teammate and a reason to reappear
 >bb
-#ttc-table-of-room-combos-prep-area-meta-meat
+#+ttc-table-of-room-combos-prep-area-meta-meat
 >reappear
 Now that you have a teammate and a reason to reappear, you have a plan to brainstorm separately and then together. You figure a lot of things that make the Torus a lot more alive. It glows significantly.
 !You get some practice in reappearing. Maybe soon you will have someone to reappear for.
@@ -341,7 +392,7 @@ by one point
 Reappear
 
 @alt
-#ttc-table-of-room-combos-prep-area-meta-meat
+#+ttc-table-of-room-combos-prep-area-meta-meat
 You get some practice in reappearing. Maybe soon you will have someone to reappear for.
 
 @max
@@ -438,7 +489,6 @@ Arraigning
 !You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
 You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
 !Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
-
 
 @max
 #ttc-table-of-progress-3
@@ -553,7 +603,7 @@ You mentally show off your anagramming skills in languages other than English. P
 !Besides
 
 @nud
-#nudge for tine
+#ttc-table-of-nudge-hashes-tine
 >tien
 You're missing an (s) to make things plural, here.
 
@@ -590,7 +640,7 @@ by one point
 Intestines
 
 @alt
-#ttc-table-of-room-combos-tines-inset-pechan-pechan
+#+ttc-table-of-room-combos-tines-inset-pechan-pechan
 !The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
 Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
 !You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
@@ -650,7 +700,7 @@ by one point
 Happenchance
 
 @alt
-#ttc-table-of-room-combos-tines-inset-pechan-pechan
+#+ttc-table-of-room-combos-tines-inset-pechan-pechan
 The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
 !Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
 !You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
@@ -861,7 +911,7 @@ When you wake up and take stock, things are different. You feel you've seen this
 You already are.
 
 @nud
-#nudge for cene
+#ttc-table-of-nudge-hashes-cene
 >ceen
 You're missing an (s) to make things plural, here.
 
