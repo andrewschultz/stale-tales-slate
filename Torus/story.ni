@@ -895,6 +895,12 @@ this is the show what you missed rule:
 
 volume parser errors
 
+murmur-yet is a truth state that varies.
+
+rule for printing a parser error when the latest parser error is the i beg your pardon error:
+	say "[umm-urr].";
+	now murmur-yet is true;
+
 cmdhash is a number that varies.
 
 firstwordhash is a number that varies.

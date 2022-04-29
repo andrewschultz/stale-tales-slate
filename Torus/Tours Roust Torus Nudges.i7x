@@ -53,7 +53,7 @@ to say sys-eye-clue: say "[if score > 0]The SYS-EYE seems less prominent now tha
 
 book auxiliary
 
-to say just-stat: say "You can just use [b]STAT[r] and [b]TATS[r]"
+to say just-stat: say "So you can just use [b]STAT[r] and [b]TATS[r]"
 
 Tours Roust Torus Nudges ends here.
 
