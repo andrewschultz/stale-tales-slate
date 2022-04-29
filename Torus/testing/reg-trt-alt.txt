@@ -1,0 +1,252 @@
+## reg-trt-alt.txt
+
+## alternate paths/solutions
+
+** game: /home/andrew/prt/debug-tours-roust-torus.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* trt-thru
+
+>au 2
+>z
+
+>a
+>reappear
+by one point
+>b
+#ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+>sheesh
+by one point
+Your immediate reaction is to feel a bit silly figuring this area just now, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but "Sheesh?"
+!BUG
+>undo
+>undo
+>undo
+>undo
+
+>sheesh
+by one point
+Sheesh
+
+#+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+!BUG
+
+>a
+
+>aa
+>teammate
+#ttc-table-of-room-combos-prep-area-meta-meat
+You meet (hah) up with a teammate! It's good to have one on this forbidding torus. After some talk, they admit they're out of ideas. But maybe when you come back at the right time, you'll have something to think up. You can only hope.
+!Now that you have a teammate and a reason to reappear
+>bb
+#+ttc-table-of-room-combos-prep-area-meta-meat
+>reappear
+Now that you have a teammate and a reason to reappear, you have a plan to brainstorm separately and then together. You figure a lot of things that make the Torus a lot more alive. It glows significantly.
+!You get some practice in reappearing. Maybe soon you will have someone to reappear for.
+>undo
+>undo
+>undo
+>undo
+
+>reappear
+by one point
+Reappear
+
+#+ttc-table-of-room-combos-prep-area-meta-meat
+You get some practice in reappearing. Maybe soon you will have someone to reappear for.
+
+>a
+
+#ttc-table-of-room-combos-grain-grain-latte-latte
+>bbb
+>tattletale
+by one point
+You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
+!You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
+>aaa
+>arraigning
+by one point
+Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
+>undo
+>undo
+>undo
+>undo
+
+>arraigning
+by one point
+Arraigning
+
+#+ttc-table-of-room-combos-grain-grain-latte-latte
+!You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
+You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
+!Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
+
+>a
+
+>teammate
+by one point
+Teammate
+
+>a
+
+#ttc-table-of-room-combos-tines-inset-pechan-pechan
+>a
+>happenchance
+by one point
+>b
+>intestines
+by one point
+The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
+!Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
+!You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
+>undo
+>undo
+>undo
+>undo
+
+>intestines
+by one point
+Intestines
+
+#+ttc-table-of-room-combos-tines-inset-pechan-pechan
+!The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
+Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
+!You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
+
+>a
+
+>happenchance
+by one point
+Happenchance
+
+#+ttc-table-of-room-combos-tines-inset-pechan-pechan
+The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
+!Okay, so there are intestines next to a stomach. You probably need a bit of luck to get things working. But you've made a good start.
+!You've made your own luck in this stomach-y room. But a stomach by itself can't do much.
+
+>a
+
+>tattletale
+by one point
+Tattletale
+
+A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+#+ttc-table-of-room-combos-grain-grain-latte-latte
+!You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
+!You have an area for arraigning someone bad, but you have nobody to tell you where to find said bad people.
+Aha! Now that you have summoned a tattletale and arraigning, the tattletale tattles, and you have somewhere to send the perpetrators, whoever they are, to justice.
+
+>on
+Yes, you decide it's time to start going ON. Tattletale seems as good a place to start as any others. The ground beneath you in Tattletale seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
+>on
+You're already in the process of going on.
+>a
+Odd. You can't move that slowly. Moving one section over isn't really moving ON, I guess. So going A or B is out.
+>b
+Odd. You can't move that slowly. Moving one section over isn't really moving ON, I guess. So going A or B is out.
+>aa
+>aa
+>aa
+>aa
+>aa
+>aa
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you took an easy way to touch all the rooms.
+
+>on
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
+>aaa
+>aaa
+>aaa
+>aaa
+>aaa
+>aaa
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you again took an easy way to touch all the rooms.
+
+>on
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
+>bb
+>bb
+>bb
+>bb
+>bb
+>bb
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
+
+>on
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
+>bbb
+>bbb
+>bbb
+>bbb
+>bbb
+>bbb
+The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
+
+# test reversal from b
+>on
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
+>bb
+>aa
+You can't reverse direction on the torus like that.
+>aaa
+You can't reverse direction on the torus like that.
+>bbb
+>bb
+
+# test reversal from a
+>on
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
+>aa
+>bb
+You can't reverse direction on the torus like that.
+>bbb
+You can't reverse direction on the torus like that.
+>aaa
+>aa
+# test alternate path through
+>on
+Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
+>bbb
+>bb
+>bbb
+>bbb
+>bb
+>bbb
+All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+>undo
+>bb
+
+>on
+
+>aaa
+>aa
+>aaa
+>aaa
+>aa
+>aaa
+All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+
+>in
+Scene Scene
+
+>deeded
+You're not sure what to do, but there's a lot to do!
+!You already took on an additional challenge.
+
+>shammash
+by one point
+>insciences
+by one point
+>mesosome
+by one point
+>mimetite
+by one point
+>prepress
+by one point
+
+>senescence
+by one point
+
+*** Feats! Fates-Feast! Taffetases! ***
