@@ -14,17 +14,23 @@ table of nudge hashes
 cmd-val (text)	cmd-hash (number)	cmd-loc	cmd-rule	nudge-text
 "tours"	464166171	--	--	"[whole-torus]."
 "rout"	367892205	--	--	"[whole-torus]."
+"tast"	304681820	--	--	"[tats-only]."
+"tas"	201571802	--	--	"[tats-only]."
+"tasttat"	513089674	--	--	"[all-tats]."
+"tastats"	506253622	--	--	"[all-tats]."
+"tat"	208407854	--	--	"[all-tats]."
 "tine"	344816481	Tines Inset	--	"[plural]."
 "prep"	376061830	Prep Area	--	"[asym-area]."
 "area"	217505548	Prep Area	--	"[asym-area]."
 "cene"	343525311	Scene Scene	--	"[plural]."
 "tsetse"	654380186	--	tsetse-there rule	"[tsetse-ok]."
 "set"	327190093	--	tsetse-there rule	"[tsetse-ok]."
-"sys"	314907184	--	--	"[sys-eye-clue]."
-"eye"	377971470	--	--	"[sys-eye-clue]."
-"yes"	346439327	--	--	"[sys-eye-clue]."
+
+to say all-tats: say "You need all the tats to help you, and you don't need to shift them. [just-stat]"
 
 to say whole-torus: say "You don't need to act on the whole torus, here"
+
+to say tats-only: say "There's no tricky command to manipulate the tats further. [just-stat]"
 
 to say plural: say "You're missing an (s) to make things plural, here"
 
@@ -37,6 +43,8 @@ to say sys-eye-clue: say "[if score > 0]The SYS-EYE seems less prominent now tha
 this is the tsetse-there rule:
 	if tsetse is not off-stage, the rule succeeds;
 	the rule fails;
+
+to say just-stat: say "You can just use [b]STAT[r] and [b]TATS[r]"
 
 Tours Roust Torus Nudges ends here.
 

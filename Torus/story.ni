@@ -74,7 +74,9 @@ tats-stat is a number that varies.
 check taking inventory:
 	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a [b]STAT[r] from, if you want[end if][one of]. Being out of practice, it's nice to have the choice between using assistance and showing you've still 'got it,' whatever 'it' is[or][stopping]." instead;
 
-the player carries the tas t tats. description of tats is "[tat-desc]."
+the player carries the Tas T Tats. description of tats is "[tat-desc]."
+
+printed name of Tas T Tats is "Tas-T-Tats"
 
 to say tat-desc:
 	if location of player is solved:
@@ -701,7 +703,7 @@ carry out stating:
 		now tats-stat is 1;
 		the rule succeeds;
 	if tats-stat is 1:
-		say "You gaze at your tats to get an extra stat from them when you try to guess what to do.";
+		say "You gaze at your tats to get an extra stat from them when you try to guess what to do[one of]. [b]STAT[r] again will give slightly less information[or][stopping].";
 	else:
 		say "Your tats are now in stat-giving mode. [b]STAT[r] again will give even more potentially revealing stats when you make guesses. [b]TATS[r] will get rid of stat-giving mode.";
 	increment tats-stat;
