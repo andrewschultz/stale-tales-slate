@@ -530,7 +530,7 @@ Besides
 There's nothing strictly to tame here. If there were, maybe you could use some help.
 !Besides
 \\
-#mistake test for mate/team
+#mistake test for team/mate
 >team
 You sort of need a pal, and you sort of need a bit more.
 !Besides

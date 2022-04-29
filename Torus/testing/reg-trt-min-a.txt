@@ -1,0 +1,81 @@
+## reg-trt-min-a.txt
+
+## minimum walkthrough a
+
+** game: /home/andrew/prt/debug-tours-roust-torus.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* trt-thru
+
+>au 2
+>z
+
+>sheesh
+by one point
+Sheesh
+
+>a
+
+>reappear
+by one point
+Reappear
+
+>a
+
+>arraigning
+by one point
+Arraigning
+
+>a
+
+>teammate
+by one point
+Teammate
+
+>a
+
+>intestines
+by one point
+Intestines
+
+>a
+
+>happenchance
+by one point
+Happenchance
+
+>a
+
+>tattletale
+by one point
+Tattletale
+
+A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+
+>on
+
+Yes, you decide it's time to start going ON.
+seems as good a place to start as any others. The ground beneath you
+seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
+[NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
+
+Tattletale
+
+>aaa
+>aa
+>aaa
+>aaa
+>aa
+>aaa
+All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+
+>in
+Scene Scene
+
+>senescence
+by one point
+
+#should be ttc-table-of-progress-8 but the script can't handle that yet as it goes to max
+That's all. You've found a new home, one where you don't have to do anything, but you'd like to. That stuff that wasn't DEEDED, well, you can take care of it later.
+
+*** Feats! Fates-Feast! Taffetases! ***
