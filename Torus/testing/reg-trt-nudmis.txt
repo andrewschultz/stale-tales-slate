@@ -47,10 +47,10 @@ You don't need to act on the whole torus, here.
 
 #ttc-table-of-nudge-hashes-tas
 >sta
-You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
 #ttc-table-of-nudge-hashes-tast
 >ttsa
-You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
+There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
 
 >a
 >a
@@ -67,7 +67,7 @@ You think you hear a small voice echoing throughout the torus. You sort of want 
 >a
 #ttc-table-of-times-around-2
 >a
-You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. But surely it can't just be easy as saying YES, can it?
+You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying YES, can it?
 >a
 >a
 >a
@@ -84,6 +84,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 !murmur
 >undo
 >undo
+>a
 #ttc-table-of-times-around-3
 >a
 You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
@@ -174,6 +175,7 @@ You need all the tats to help you, and you don't need to shift them. So you can 
 >listen
 
 #ttc-table-of-nudge-hashes-tsetse
+>etsets
 The tsetse fly can't really be changed.
 
 #mistake test for testes

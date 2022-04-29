@@ -55,7 +55,7 @@ You think you hear a small voice echoing throughout the torus. You sort of want 
 >a
 #ttc-table-of-times-around-2
 >a
-You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. But surely it can't just be easy as saying YES, can it?
+You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying YES, can it?
 >a
 >a
 >a
@@ -72,6 +72,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 !murmur
 >undo
 >undo
+>a
 #ttc-table-of-times-around-3
 >a
 You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.

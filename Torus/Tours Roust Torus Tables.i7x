@@ -6,29 +6,33 @@ volume times around
 
 voice-listen is a truth state that varies.
 
-table of times around
-clue-group	clue-text
-1	"[next-clue-set]You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to [b]LISTEN[r]."
-2	"[next-clue-set-skip-umm]You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying [b]YES[r], can it?"
-3	"[next-clue-set][umm-urr]."
-4	"[one of]You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you managed to [b]TAN ANT[r] in Store Y, many years ago. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will help you recall ancient accomplishments. [or][next-clue-set]You've run around the torus again. You remember now! When you had to [b]TAN ANT[r]! It was a [b]NATANT[r] ant! Maybe that will help you here. [stopping][oh-voice]"
-4	"[one of]Ugh. Tricky. You remember the coins Curtis gave you back at Rustic Citrus many years ago for finding those fruits, after you got rid of Elvira. You made them icons, then sonic as well. Or was it the other way around? But they inspired one more thing. A weird word. One that helped you be better not at anagramming, but putting words together snappily. What was it? [or][next-clue-set]Ah yes. That's what the sonic coins gave you. CONCISIONS! [stopping][oh-voice]"
-5	"[next-clue-set]Tan ant, natant. Sonic coins, concisions. [oh-voice]"
-6	"[next-clue-set]You feel hounded [one of][or]once again [stopping]by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is."
+urr-found is a truth state that varies.
 
-to say umm-urr: say "You murmur 'Umm, urr...,' which somehow feels very appropriate and not at all rum"
+table of times around
+clue-group	skip-rule	clue-text
+1	--	"[next-clue-set]You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to [b]LISTEN[r]."
+2	--	"[next-clue-set]You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying [b]YES[r], can it?"
+3	already-urr rule	"[next-clue-set][umm-urr]."
+4	--	"[one of]You're a bit frustrated with your lack of progress, so you think back to former glories. You remember how you managed to [b]TAN ANT[r] in Store Y, many years ago. You know, in that place with the side quest you didn't have to do. What sort of ant was it? Maybe another run-around will help you recall ancient accomplishments. [or][next-clue-set]You've run around the torus again. You remember now! When you had to [b]TAN ANT[r]! It was a [b]NATANT[r] ant! Maybe that will help you here. [stopping][oh-voice]"
+4	--	"[one of]Ugh. Tricky. You remember the coins Curtis gave you back at Rustic Citrus many years ago for finding those fruits, after you got rid of Elvira. You made them icons, then sonic as well. Or was it the other way around? But they inspired one more thing. A weird word. One that helped you be better not at anagramming, but putting words together snappily. What was it? [or][next-clue-set]Ah yes. That's what the sonic coins gave you. CONCISIONS! [stopping][oh-voice]"
+5	--	"[next-clue-set]Tan ant, natant. Sonic coins, concisions. [oh-voice]"
+6	--	"[next-clue-set]You feel hounded [one of][or]once again [stopping]by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is."
 
 to say next-clue-set: increment clue-row;
 
-to say next-clue-set-skip-umm:
-	increment clue-row;
-	if murmur-yet is true, increment clue-row;
+this is the already-urr rule:
+	if urr-found is true, the rule succeeds;
+	the rule fails;
+
+to say umm-urr: say "[find-urr]You murmur 'Umm, urr...,' which somehow feels very appropriate and not at all rum"
 
 to say oh-voice:
 	if voice-listen is false:
 		say "Oh. You could always listen to that voice, too.";
 	else:
 		say "[line break]"
+
+to say find-urr: now urr-found is true;
 
 volume room combos
 

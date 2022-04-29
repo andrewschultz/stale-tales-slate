@@ -2,7 +2,7 @@
 
 volume top level stuff
 
-the release number is 1.
+the release number is 2.
 
 release along with the "parchment" interpreter.
 
@@ -431,12 +431,24 @@ after printing the locale description (this is the clue on complete tour rule):
 		if ever-heptagon-puzzle is true and solved-heptagon is false:
 			say "Hmm. Nothing new to do. You should really try going [b]ON[r] again.";
 			continue the action;
+		show-next-clue;
+
+to show-next-clue:
+	while clue-row < number of rows in table of times around:
 		choose row clue-row in table of times around;
-		say "[clue-text entry][line break]";
-		now cheat-voice is true;
-		if clue-row > number of rows in table of times around:
-			decrement clue-row;
-	continue the action;
+		if there is no skip-rule entry:
+			break;
+		process the skip-rule entry;
+		if the rule succeeded:
+			say "Skipping [clue-row].";
+			increment clue-row;
+		else:
+			break;
+	if clue-row > number of rows in table of times around:
+		decrement clue-row;
+	choose row clue-row in table of times around;
+	say "[clue-text entry][line break]";
+	now cheat-voice is true;
 
 volume game progress verb
 
