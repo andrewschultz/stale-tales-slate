@@ -39,7 +39,7 @@ include Old School Verb Total Carnage by Andrew Schultz.
 volume globals and such
 
 report undoing an action:
-	say "Undoing. [if solved-heptagon is true]Now you opened up the center of the torus, there's no need to undo anything[else]Note that, while there's no way to get in an unwinnable state, [b]UNDO[r] may save you a few moves [when-undo-helps].";
+	say "Undoing. [if solved-heptagon is true]Now you opened up the center of the torus, there's no need to undo anything[else]A random dunno-duo walks by, belying their name by mentioning that, while there's no way to get in an unwinnable state, [b]UNDO[r] may save you a few moves [when-undo-helps].";
 
 to say when-undo-helps:
 	say "[if ever-heptagon-puzzle is true]if you go the wrong way after [b]ON[r][else]if you slip up in a later puzzle and don't want to restart[end if]"
@@ -563,6 +563,12 @@ to fail-heptagon:
 
 volume meta verbs
 
+check restarting the game:
+	say "A random voice booms 'Restart-Set rates tears!'";
+
+check restoring the game:
+	say "A random voice booms 'Restore-tos? Rotes! Rotes!'";
+
 chapter abouting
 
 big-details is a truth state that varies.
@@ -760,6 +766,8 @@ carry out verbing:
 	stat-mention;
 	if zero-one-warn is true:
 		say "[line break]You also have the option of referring to areas of the torus as numbers after you've gone [b]ON[r]. This can be done with [b]0[r] or [b]1[r]. Typing the same number twice removes the numerical reference. Currently numerical referencing is [if on-base is -1]off[else][on-base in words]-based[end if].";
+	if score is 0 and clue-row > 1:
+		say "[line break]Also, if you'd like a clue, you can enter a blank command.";
 	the rule succeeds;
 
 section swearing
