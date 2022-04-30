@@ -456,7 +456,7 @@ You have a vision of fruit: CANTALOUPE. The aftertaste of arugula finally dissip
 You have a vision of fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-persimmon
-#gx omen prism
+>gx omen prism
 You have a vision of fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
 \\
 #ttc-table-of-others-anagrams-pomegranate
@@ -514,7 +514,7 @@ As Hire Recs Re: Riches recommended hiring out the tricky technical parts, so to
 \\
 #ttc-table-of-others-spechelp-hire-recs-re-riches
 >cherreis
-The pages of Recs Hire Re: Riches flutter briefly.
+The pages of Hire Recs Re: Riches flutter briefly.
 \\
 #ttc-table-of-others-readables-hire-recs-re-riches
 >read riches
@@ -538,15 +538,15 @@ A constant droning of "AND I'M ART!" makes you see red.
 @nud
 #ttc-table-of-rustic-citrus-nudges-hire
 >iher
-"Work with Hire Recs Re: Riches in its entirety."
+Work with Hire Recs Re: Riches in its entirety.
 \\
 #ttc-table-of-rustic-citrus-nudges-recs
 >ercs
-"Work with Hire Recs Re: Riches in its entirety."
+Work with Hire Recs Re: Riches in its entirety.
 \\
 #ttc-table-of-rustic-citrus-nudges-riches
 >ichser
-"Work with Hire Recs Re: Riches in its entirety."
+Work with Hire Recs Re: Riches in its entirety.
 
 @nud
 #+ttc-table-of-rustic-citrus-nudges-ruts
@@ -960,6 +960,8 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 >coconuts
 by one point
 >s
+>dates
+by one point
 #ttc-table-of-settler-shake-descriptions-coins
 >ss
 Only Curtis's coins are visible. You turn the settler off.
@@ -968,6 +970,7 @@ by one point
 #ttc-table-of-settler-shake-descriptions-icons
 >ss
 Only the icons you made are visible. You turn the settler off.
+>undo
 >undo
 >undo
 >undo
@@ -1863,7 +1866,8 @@ Your score has just gone up by one point.
 
 @spoi
 >gx nectarine
-You've already changed the nectarine. The aftertaste of arugula finally dissipates.
+You've already changed the nectarine.
+!The aftertaste of arugula finally dissipates.
 
 @nud
 #ttc-table-of-others-done-rejects-olives
@@ -2367,10 +2371,12 @@ by one point
 
 @min
 # let's check "here/valence enclave" conditional text in the score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
+You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >s
 >score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win.
+You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >n
 @!
 {$SCOVERYLAST}

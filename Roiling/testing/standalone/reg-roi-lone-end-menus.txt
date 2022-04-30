@@ -274,6 +274,10 @@ Reprieval Prevailer: Win Store H
 >au 2
 >demo dome
 >s
+Are you sure
+>yes
+UNDO
+RANK
 >l 73
 Entries in the artsies' satires (Sparse Spares):
 

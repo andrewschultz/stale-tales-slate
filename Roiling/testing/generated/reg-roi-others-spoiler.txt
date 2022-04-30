@@ -130,7 +130,7 @@ You have a vision of fruit: CANTALOUPE. The aftertaste of arugula finally dissip
 You have a vision of fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
 
 #ttc-table-of-others-anagrams-persimmon
-#gx omen prism
+>gx omen prism
 You have a vision of fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
 
 #ttc-table-of-others-anagrams-pomegranate
@@ -483,7 +483,8 @@ Your score has just gone up by one point.
 You have 39 of 46 total points for the post-Elvira Others region, though you only need 41 to win.
 
 >gx nectarine
-You've already changed the nectarine. The aftertaste of arugula finally dissipates.
+You've already changed the nectarine.
+!The aftertaste of arugula finally dissipates.
 
 >w
 

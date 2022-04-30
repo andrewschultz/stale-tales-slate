@@ -10,19 +10,32 @@
 >au 2
 >posf
 
+#prime the UNDO command later
+>z
+
 #ttc-table-of-ordeal-reload-nudges-ordeal
 >ordela
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #mistake test for walkthrough/walkthru
 >walkthrough
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+
 >walkthru
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+
 #mistake test for use [text]
 >use zozimus
 The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors
+
 >purloin settler
+
+#mistake test for consult [text]
+>consult zozimus
+It looks like you tried to consult your notepad about something. The proper syntax is CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 #mistake test for knock [text]
+>undo
+
 >knock zozimus
 Just KNOCK instead.
 #mistake test for hug [text]/hug
@@ -35,9 +48,6 @@ Hug? Ugh. Guh.
 Hug? Ugh. Guh.
 >embrace
 Hug? Ugh. Guh.
-#mistake test for consult [text]
->consult zozimus
-You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 #ttc-table-of-dusty-study-nudges-study
 >stuyd
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -53,18 +63,27 @@ No need to surprise a guest like that. Just open the door.
 #ttc-table-of-ordeal-reload-nudges-manse
 >manes
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #ttc-table-of-dusty-study-nudges-chair
 >chari
 The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing.
+
 #ttc-table-of-dusty-study-nudges-rich
 >rihc
 The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
+
 #ttc-table-of-dusty-study-nudges-niche
 >niceh
 It's not any old niche. It's your niche. And by your niche, I mean you see it as "my niche."
+
 >get notepad
 Good choice taking the notepad. It'll help you tame lots that's meta, mate.
 Taking the pedanto-notepad uncovered some sad ads on the chair.
+
+#mistake retest for consult [text]
+>consult zozimus
+You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
+
 #ttc-table-of-dusty-study-nudges-sad
 >sda
 The ads have probably gone through enough word-twisting.

@@ -2521,7 +2521,7 @@ You can't hear anything from the bays now
 @nudmis
 #ttc-table-of-minded-midden-nudges-bale
 >aleb
-"You need to deal with all the bales."
+You need to deal with all the bales.
 
 @nudmis
 #ttc-table-of-otters-scannotes-blase-bales
@@ -2530,7 +2530,7 @@ The bales may be blase, but you don't think you'll mind this solution being blas
 \\
 #ttc-table-of-otters-spechelp-blase-bales
 >elsab
-"The blase bales seem to darken and shake a bit."
+The blase bales seem to darken and shake a bit.
 
 @sli
 #slider test for sable
@@ -2544,11 +2544,6 @@ by one point
 }}CURMIN++
 >score
 {$SCOS}
-
-@nudmis
-#ttc-table-of-otters-done-rejects-sable
->eblas
-"The sable is running around quite happily. No need to change it."
 
 >w
 

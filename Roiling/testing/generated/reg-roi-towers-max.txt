@@ -356,13 +356,13 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 
 Shaven Havens
 
+#ttc-table-of-towers-progress-comments-shaven-havens
+You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
+
 # no offical table test case, just verifying you can get to the Dourest Detours
 >e
 You get lost in the savager ravages a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 >undo
-
-#ttc-table-of-towers-progress-comments-shaven-havens
-You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
 
 >s
 >e

@@ -201,6 +201,8 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 >coconuts
 by one point
 >s
+>dates
+by one point
 #ttc-table-of-settler-shake-descriptions-coins
 >ss
 Only Curtis's coins are visible. You turn the settler off.
@@ -209,6 +211,7 @@ by one point
 #ttc-table-of-settler-shake-descriptions-icons
 >ss
 Only the icons you made are visible. You turn the settler off.
+>undo
 >undo
 >undo
 >undo

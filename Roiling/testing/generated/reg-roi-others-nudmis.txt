@@ -201,7 +201,7 @@ As Hire Recs Re: Riches recommended hiring out the tricky technical parts, so to
 
 #ttc-table-of-others-spechelp-hire-recs-re-riches
 >cherreis
-The pages of Recs Hire Re: Riches flutter briefly.
+The pages of Hire Recs Re: Riches flutter briefly.
 
 #ttc-table-of-others-readables-hire-recs-re-riches
 >read riches
@@ -220,15 +220,15 @@ The train seems to toot joyously at seemingly confusing your letters settler, so
 
 #ttc-table-of-rustic-citrus-nudges-hire
 >iher
-"Work with Hire Recs Re: Riches in its entirety."
+Work with Hire Recs Re: Riches in its entirety.
 
 #ttc-table-of-rustic-citrus-nudges-recs
 >ercs
-"Work with Hire Recs Re: Riches in its entirety."
+Work with Hire Recs Re: Riches in its entirety.
 
 #ttc-table-of-rustic-citrus-nudges-riches
 >ichser
-"Work with Hire Recs Re: Riches in its entirety."
+Work with Hire Recs Re: Riches in its entirety.
 
 #+ttc-table-of-rustic-citrus-nudges-ruts
 >rust

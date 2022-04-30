@@ -88,9 +88,9 @@ You look just fine.
 
 @max
 >score
-There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
+There's no score in the Demo Dome, so this just tracks things you haven't looked at yet or looked at completely. But if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
 You saw the disport tripods here in Peek Keep, but you didn't examine them.
-You can toggle
+!You can toggle
 \\
 >score
 !There's no score
@@ -99,14 +99,15 @@ You saw the disport tripods here in Peek Keep, but you didn't examine them.
 
 @max
 >s
-Are you sure you want to leave before looking at everything? You can type SCORE or THINK to see what you still haven't done.
->y
+Are you sure you want to leave before looking at all the exhibits? You can type SCORE or THINK to see what you still haven't done.
+>yes
 It's--yes, you've sort of lived it, already. You're just too busy for frivolity.
 >undo
 >s
->n
+>no
 Okay, why not look around a bit more.
 \\
+>undo
 >xtrak
 \\
 UNNOTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
@@ -331,6 +332,11 @@ More on testing.
 >xab tester street
 More on testing.
 \\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: Tester Street (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep).
+\\
 #ttc-table-of-demo-dome-exhibit-tester-street-text-11
 >x tester street
 Many of the original testers of Shuffling Around have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better.
@@ -338,14 +344,9 @@ Many of the original testers of Shuffling Around have moved on. But thinking, ye
 >score
 /You saw (the coder decor|the raised aiders) here in Hows Show, but you didn't examine (it|them).
 \\
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: Tester Street (Hows Show).
-EXHAUSTED exhibits: disport tripods (Peek Keep).
-\\
 >x tester street
 More on testing.
-NOTE: you've read all the way through.
+!NOTE: you've read all the way through.
 \\
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
@@ -723,7 +724,7 @@ You glance over page 1. The most interesting bit seems to be Page One: Openage. 
 >w
 >s
 Are you sure you want to leave before exhaustively
->n
+>no
 Okay, why not look around a bit more.
 >undo
 \\
@@ -905,7 +906,11 @@ EXHAUSTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Str
 \\
 >w
 >s
-You take a break, ignoring the final nine things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
+Are you sure you want to leave before examining what's left in Sparse Spares, such as the
+You can type SCORE or THINK to see what you still haven't done.
+>yes
+It's--yes, you've sort of lived it, already. You're just too busy for frivolity like examining
+in Sparse Spares.
 \\
 >undo
 
@@ -980,7 +985,9 @@ You could still examine the parcels clasper here.
 You could still examine the parcels clasper in Sparse Spares.
 \\
 >s
-You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
+Are you sure you want to leave before examining what's left in Sparse Spares, such as the parcels clasper? You can type SCORE or THINK to see what you still haven't done.
+>yes
+It's--yes, you've sort of lived it, already. You're just too busy for frivolity like examining the parcels clasper.
 \\
 >undo
 >d
@@ -988,6 +995,7 @@ You take a break, ignoring the parcels clasper in Sparse Spares, and get back to
 \\
 >u
 >s
+!Are you sure
 You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
 !ignoring
 

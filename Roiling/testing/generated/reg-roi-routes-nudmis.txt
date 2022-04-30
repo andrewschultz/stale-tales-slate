@@ -1023,9 +1023,14 @@ The ciphers cannot be dispelled.
 >ciphre
 The ciphers cannot be dispelled.
 
+>through
+That could work later, but the hog and ewe don't trust you to go by yet.
+!by one point
 #+ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+>undo
+>undo
 
 >between
 Your score has just gone up by one point
