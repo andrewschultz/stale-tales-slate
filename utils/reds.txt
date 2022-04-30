@@ -405,7 +405,7 @@ aimless,YY?R?R?=seismal=samiels
 #qver of nastier stainer retinas
 antsier,YR?R???=nastier=stainer=retinas
 ################otters
-#bleary barley/burnt brunt
+#minded midden/burnt brunt
 #qver of bleary barley
 barely,P??YRB=bleary=barley
 reedily,lyredie,drilyee
@@ -413,6 +413,8 @@ reedily,lyredie,drilyee
 #qver ignore because all 3 clues give no ?'s
 discern,nrdices,icnerds,srindec
 rescind,nrdices,icnerds,srindec
+#qver of blase bales
+sable,R?RR?,blase,bales
 #clarthead cathedral
 loathingly,allnightyo,aholyglint,onlylaghit,hatinglyol,halyinglot
 #disowned downside

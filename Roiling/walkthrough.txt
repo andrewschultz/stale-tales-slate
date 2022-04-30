@@ -1,12 +1,12 @@
-Hello there! This is my walkthrough for A Roiling Original, a sequel to Shuffling Around. I hope you're just reading this due to a lack of time, or curiosity about a point you may have missed, and not due to frustration. Whatever the case, you don't need to have played Shuffling Around to solve A Roiling Original. There are some references to Shuffling Around, but they shouldn't distract from the story too much. The big ones? Nat Egam, gateman, helped you at the start of your journey to defeat Red Bull Burdell. In Shuffling Around, you changed things to other things. In A Roiling Original, well ... you will see.
+Hello there! This is my walkthrough for A Roiling Original, a sequel to Shuffling Around and a precursor to Tours Roust Torus. I hope you're just reading this due to a lack of time, or curiosity about a point you may have missed, and not due to frustration. Whatever the case, you don't need to have played Shuffling Around to solve A Roiling Original. There are some references to Shuffling Around, but they shouldn't distract from the story too much. The big ones? Nat Egam, gateman, helped you at the start of your journey to defeat Red Bull Burdell. In Shuffling Around, you changed things to other things. In A Roiling Original, well ... you will see.
 
 Whether you just want to make sure you missed a silly gag, or you're stuck on a specific section, welcome I hope this walkthrough helps without spoiling too much! I wanted to try to weave the story in without making it too big, so you didn't feel like you were just typing commands, or maybe you could see one last hint before revealing the answer.
 
-If you're wondering about how to figure things out, especially when the settler pops up question marks, logic.htm will do a better job. (TLDR: question marks usually help you, if you think about them right!)
+If you're wondering about how to figure things out, especially when the settler pops up question marks, logic.htm will do a better job. (TLDR: question marks seem like they're there to confuse you, but they usually help you, if you think about them right!)
 
-I've semi-hidden some Last Lousy Points to give you one more chance at getting them on your own and also to focus on th walkthrough. They are at the very end. You can cut and paste text to ROT13.com for those.
+I've semi-hidden some Last Lousy Points to give you one more chance at getting them on your own and also to focus on the walkthrough. They are at the very end. You can cut and paste text to ROT13.com for those. If you are able to translate ROT13 at a glance, well, I'm guessing you probably don't need this walkthrough.
 
-If you're a bit more worried about spoilers, you may want the HTML version, which has expandable InvisiClues. These should both have similar content, and they should be in the bundle with this file and the game file.
+Though if you're a bit more worried about spoilers, you may want the HTML version, which has expandable InvisiClues. These should both have similar content, and they should be in the bundle with this file and the game file.
 
 If you're the technical type, you can use the command
 
@@ -14,7 +14,7 @@ type roil-thru.txt | grep -iE "^>" | sed "s/^>//g"
 
 Or, since I label some alternate paths with (ALT),
 
-type roil-thru.txt | grep -iE "^.ALT. >" | sed "s/^>//g"
+type roil-thru.txt | grep -iE "^(.ALT. )?>" | sed "s/^>//g"
 
 To delete my comments and have a list of commands you can cut and paste. You can also replace ^[^>].* with nothing and \r\n\r\n with \r\n if you have a text editor that accepts regular expression replacement. This will zap everything without a > to start, then lump the lines together.
 
@@ -30,7 +30,9 @@ For those who played the (long-ago) comp version and want to see the new area(s)
 
 You can also access the new area(s) that appeared in releases 2 and 3 by playing through the game proper, but I think a shortcut is fair, since the game is rather long. And, in the case of the comp release, more abstruse and occasionally unfair.
 
-So ... ROVE OVER and DEMO DOME MODE don't actually spoil any of the game's main puzzles.
+So ... ROVE OVER and DEMO DOME MODE, or even knowing they exist, won't actually spoil any of the game's main puzzles.
+
+Any complaints or even praise can be sent to blurglecruncheon@gmail.com. https://github.com/andrewschultz/stale-tales-slate/issues is where to report an issue.
 
   Thanks,
   Andrew Schultz
@@ -379,13 +381,15 @@ And you get something for later. The nice mush munchies let you use the slider m
 
 STORE V WALKTHROUGH
 
-STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though STORE U has fewer maximum puzzles. Store V is very one-way. There are eight rooms as you move from poverty to the very top. Many of the optional points occur when you only need to solve one of two puzzles to advance. When this happens, I will list them both. Neither is "better" than the other. Store V also has a full Last Lousy Point in every room.
+STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though STORE U has fewer maximum puzzles. Store V is very one-way. There are eight rooms as you move from poverty to the very top. Many of the optional points occur when you only need to solve one of two puzzles to advance. No one is better than the other, though it may save a keystroke or two. When this happens, I will list them both.
 
-Last Lousy Points can be clued with shaking the settler, but if you examine them, the game should say you don't necessarily have to deal with them, but it'd be nice.
+Store V also has a full Last Lousy Point in every room, along with one general one.
+
+Last Lousy Points can be clued with shaking the settler, but if you examine everything, the game should say you don't necessarily have to deal with what might be an obstacle, but it'd be nice.
 
 > TROVES
 
-The portal name doesn't matter, but I hope you find my choices amusing. In fact, if there is just one, you can go IN to save keystrokes. The game will detect it.
+The stores' portal names don't matter, but I hope you find my choices amusing. You can have as many lying out there as you want, but if there is just one, you can go IN to save keystrokes. The game will detect it. In fact, the game will nudge you towards the "easiest" portal if more than one is open.
 
 > ENTER TASTEE ESTATE
 
@@ -420,7 +424,7 @@ or
 
 Doing both gets you an extra point.
 
-Now the cellar caller the bee was on is broken. It would get help you find the cellar pretty easily. So you need to think things out yourself.
+Now the L'Clear Cellar you were looking for has shifted a bit. So you need to think things out yourself. You can't quite remember.
 
 > RECALL
 
@@ -480,7 +484,7 @@ or
 (ALT) > RESIST
 (or both, for a bonus point!)
 
-You can also get another LLP with Creationism, Reactionism, but it's a tough one.
+You can also get another LLP with Creationism, Reactionism, but it's a tough one. The toughest LLP that cannot make progress towards your main goal, in fact.
 
 You're tired. There's that Trance Nectar which can help you be more productive. It's totally different from the Large Regal Lager! But you still don't want to drink it. One last action or thought will help you break free.
 
@@ -1755,6 +1759,8 @@ You have enough allies now. Time to kill the hardy hydra.
 
 > N
 
+Hey, wait! Some new scenery! Yes, you can do something with the blase bales.
+
 > W
 
 > W
@@ -2014,7 +2020,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
-  * release 4: I added yet a few more ways the players were annoying, because it was fun for me. Added another LLP to irritate Elmer and Merle as well as a further one for clearing both north and south of the Downside. The Inclosure is now where Elmer and Merle are, and the Rancho is now the final room. Two ways to dispel the animal guardians were replaced with more thematic words and moved to the Downside.
+  * release 4: I added yet a few more ways the players were annoying, because it was fun for me. Added another LLP to irritate Elmer and Merle as well as a further one for clearing both north and south of the Downside. The Inclosure is now where Elmer and Merle are, and the Rancho is now the final room. Two ways to dispel the animal guardians were replaced with more thematic words and moved to the Downside. Blase bales appear, too.
 8 OTHERS was an added area for release 2, so there are really no comparisons from release 1 to release 2. Other than that I hid it for release 1 a week before the deadline because I realized it wasn't a good introduction, and I wanted to put it somewhere, but I didn't know where.
  * release 3: added persimmon and breadfruit. I forget if Curtis gave you the token right away in release 2, or you had to wait.
  * release 4: added coconuts and other fruits. New puzzle for tangerine, and melons/lemon each have their own word now.
@@ -2091,9 +2097,9 @@ Store W has a minimum of 164-168 and a maximum of 363-367, subjected to some ran
 
 You can save keystrokes with other alternate puzzles, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two based on randomness since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why the totals are not exact: the prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip too much to list here. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store T has a minimum of 142 and a maximum of 235. The bran barn path forces you to use one more letter than the loop pool, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (21) vs the minimum (17) or decide whether to pick the long option for the imp (19 vs. 16). The players' solutions in letters also can swing from 20 (the players, Yer All a Yell'r and their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
+Store T has a minimum of 142 and a maximum of 240. The bran barn path forces you to use one more letter than the loop pool, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (21) vs the minimum (17) or decide whether to pick the long option for the imp (19 vs. 16). The players' solutions in letters also can swing from 20 (the players, Yer All a Yell'r and their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
 
-Store H has a minimum of 163 and a maximum of 342. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet. The last two points are intentionally close to trivial, as well. Walking through the gates gives an even easier optional puzzle to end.
+Store H has a minimum of 133 and a maximum of 350. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet. The last two points are intentionally close to trivial, as well. Walking through the gates gives an even easier optional puzzle to end.
 
 LAST LOUSY POINTS
 
@@ -2249,10 +2255,14 @@ You can say NPGHNYYL around the Cut-Ya-All Cult Laya'.
 If you cleared the Bran Barn, you can say UBJRIRE to the vow here.
 If you cleared the Loop Pool, you can say HAYRFF to "Sullenness, Us."
 
-You can say ONFVPNYYL around the asyllabic lilac bays that appear after you rescued enough animals.
+You can say ONFVPNYYL around the asyllabic lilac bays that appear in Minded Midden after you rescued one animal.
+
+You can say FNOYR after the blase bales that appear in Minded Midden after you rescue all the animals in the Preserve and Realm.
 
 There are also two ways to annoy Elmer and Merle.
-Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR. This gives another LLP.
+
+Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR. This gives another LLP, the holy nest.
+
 After the holy nest appears, UBARFGYL is in tune with the area's earlier theme, an -LY adverb.
 
 OTHERS:
@@ -2261,7 +2271,7 @@ Resisting the temptation to use the arugula to "guru" any item successfully nets
 
 Fruits not covered in walkthrough:
 
-First, the ones you can't directly name.
+First, the ones you can't directly name or see.
 
 SCAPE SPACE
 
@@ -2295,7 +2305,10 @@ RUSTIC CITRUS
 Harmonicas:
 > ZNENFPUVAB
 
-Mad Train:
+Hire Recs Re: Riches:
+> PUREEVRF
+
+Id-Mantra Mad Train:
 > GNZNEVAQ
 
 Eerie blurbs:
@@ -2336,6 +2349,8 @@ CLANGIER CLEARING
 PAY ASAP: (from reading the auction caution)
 > CNCNLNF
 
-Oh. There's one final. The sonic icons can become ...
+Oh. There's one final point, which is not a fruit. The sonic icons can lead you to ...
 
 > PBAPVFVBAF
+
+This leads to slightly different endgame text.

@@ -1,4 +1,8 @@
-# this tests both PREEF and pre- rules.
+# pres.py: this marks test cases/lines for both PREEF commands and pre- rules.
+#
+# we should probably make things so that this is subsumed into the ttc.py framework e.g. not just searching for tables.
+#
+# creating rule test cases and so forth, as well as specific keywords matched to tables
 #
 # todo: add PREEFSAY
 #

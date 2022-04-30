@@ -164,7 +164,7 @@ remote/enraged
 slow/paroled/coolest/artsy/garbed
 loathing/stoical
 parrot/snail/hornets/snipe/racoon
-actual/basical
+actual/basical/sable
 honest/aside/raptor/deep/quick
 # non anagram point = play whistle
 Otters (max)
@@ -175,7 +175,7 @@ remotely/enragedly
 slow/paroled/coolest/artsy/garbed
 loathingly/stoically
 parrot/snail/hornets/snipe/racoon
-actually/basically
+actually/basically/sable
 honestly/aside/raptor/deeply/quickly
 Others (min)
 #now sorted in absolute easiest to hardest
