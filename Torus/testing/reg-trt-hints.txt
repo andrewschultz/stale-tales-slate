@@ -10,6 +10,9 @@
 >au 2
 >z
 
+>verbs
+!Also, if you'd like a clue, you can enter a blank command.
+
 #ttc-table-of-cylinder-descriptions-1
 >x cylinder
 Man! It's blurry. You're really seeing double. Or is it actually wobbling?
@@ -49,6 +52,10 @@ There's nothing to go inside to, yet. Well, nothing enough. And no way to get th
 You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
 >a
 >a
+
+>verbs
+Also, if you'd like a clue, you can enter a blank command.
+
 >a
 >a
 >a
@@ -144,6 +151,9 @@ You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lot
 >sheesh
 by one point
 Sheesh
+
+>verbs
+!Also, if you'd like a clue, you can enter a blank command.
 
 #ttc-table-of-cylinder-descriptions-2
 >x cylinder

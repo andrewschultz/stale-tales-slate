@@ -52,107 +52,6 @@ There's no tricky command to manipulate the tats further. So you can just use ST
 >ttsa
 There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
 
->a
->a
->a
->a
->a
->a
-You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
->a
->a
->a
->a
->a
->a
-#ttc-table-of-times-around-2
->a
-You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying YES, can it?
->a
->a
->a
->a
->a
->a
-
-#here quickly test the blank clue that makes you skip a row
->
-You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
->a
-#ttc-table-of-times-around-4
-/(Ugh\. Tricky\.|What sort of ant was it|)
-!murmur
->undo
->undo
->a
-#ttc-table-of-times-around-3
->a
-You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-4
->a
-/(Ugh\. Tricky\.|What sort of ant was it|)
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-4
->a
-/(NATANT ant|CONCISIONS!)
->a
->a
->a
->a
->a
->a
-#ttc-table-of-times-around-5
->a
-/(Ugh\. Tricky\.|What sort of ant was it|)
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-5
->a
-/(NATANT ant|CONCISIONS!)
->a
->a
->a
->a
->a
->a
-#ttc-table-of-times-around-6
->a
-Tan ant, natant. Sonic coins, concisions.
->a
->a
->a
->a
->a
->a
-#ttc-table-of-times-around-7
->a
-You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-7
->a
-You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
->a
-
 #ttc-table-of-nudge-hashes-tastats
 >tasttas
 You need all the tats to help you, and you don't need to shift them. So you can just use STAT and TATS.
@@ -321,7 +220,7 @@ Besides
 There's nothing strictly to tame here. If there were, maybe you could use some help.
 !Besides
 
-#mistake test for mate/team
+#mistake test for team/mate
 >team
 You sort of need a pal, and you sort of need a bit more.
 !Besides

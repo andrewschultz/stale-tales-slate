@@ -27,6 +27,10 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 >au 2
 >z
 
+@hin
+>verbs
+!Also, if you'd like a clue, you can enter a blank command.
+
 @nud
 #ttc-table-of-one-time-warnings-sys-eye
 >yes
@@ -104,17 +108,21 @@ There's no tricky command to manipulate the tats further. So you can just use ST
 >ttsa
 There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
 
-@hints,nud
+@hints
 >a
 >a
 >a
 >a
 >a
-{--hints}#ttc-table-of-times-around-1
+#ttc-table-of-times-around-1
 >a
 You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
 >a
 >a
+\\
+>verbs
+Also, if you'd like a clue, you can enter a blank command.
+\\
 >a
 >a
 >a
@@ -277,7 +285,9 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 by one point
 Sheesh
 
-@nud
+@hin
+>verbs
+!Also, if you'd like a clue, you can enter a blank command.
 
 @alt
 #+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
@@ -591,14 +601,12 @@ Besides
 >stein
 You have nothing to drink, so you do not need a drink container.
 !Besides
-
-@mis
+\\
 #mistake test for nites
 >nites
 You're too old for the nightlife. Or bad spelling.
 !Besides
-
-@mis
+\\
 #mistake test for tiens
 >tiens
 You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
