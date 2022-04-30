@@ -1386,6 +1386,11 @@ rule for deciding whether to allow undo:
 			ital-say "the 'you died' message is random--but there are [number of rows in table of death messages]. So if you're hunting them, it may be more efficient to win to see them all.";
 		else if undo-code is 11:
 			say "You can't undo from Demo Dome Mode. Well, if you really think you missed something, you can make a move and undo twice. But it'll look weird warping back to [if gates stage is visited]Gates Stage[else]the start[end if].";
+			if debug-state is false:
+				deny undo;
+			else:
+				say "[line break]";
+				ital-say "undoing only allowed for testing purposes.";
 		else if scams is true:
 			say "Allowing undo because you are in scams mode.";
 		else if undo is prevented:
@@ -2983,7 +2988,7 @@ warn-left-text of towers is "This will restore the Curst Palace, but you can als
 
 warn-left-text of otters is "This will defeat Elvira, but there are loose ends to tie up, if you like that sort of thing."
 
-warn-left-text of others is "You have some more fruits to rustle up. [number of dislodged fruits in words], to be precise.".
+warn-left-text of others is "You have some more fruits to rustle up: [number of dislodged fruits in words], to be precise.".
 
 chapter zaping (with patcher)
 
@@ -3485,12 +3490,16 @@ to say poss-range:
 
 dome-score-not is a truth state that varies.
 
+to decide whether concisions-missed:
+	if s-i are moot and concisions are reflexive, yes;
+	no;
+
 carry out requesting the score:
 	abide by the no-meta-in-convo rule;
 	if mrlp is nothing, say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites['] Listee, Greaten-Grantee, Derivin['] Diviner or Sharper Phraser. Or have them all. You've earned it!";
+			say "There's no score in the Demo Dome, so this just tracks things you haven't looked at yet or looked at completely. But if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites['] Listee, Greaten-Grantee, Derivin['] Diviner or Sharper Phraser. Or have them all. You've earned it!";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true and player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to change and get through store H[else]Enter the Throes Hoster for the final region[end if]." instead;
@@ -3502,10 +3511,10 @@ carry out requesting the score:
 			say ", though you only need [min-score of mrlp] to win";
 		if fruits-left is 0:
 			say ". There are no fruits left to find or give back to Curtis";
-		say ".  ";
+		say ". ";
 		show-rank;
 		if poss-score of others < max-score of others:
-			say "You can't get the maximum score, since you [if arugula is moot]used the arugula[end if][if poss-score of others is 43] and [end if][if s-i are moot and concisions are reflexive]missed a chance for something obscure with the sonic icons[end if].";
+			say "You can't get the maximum score, since you [if arugula is moot]used the arugula[end if][if arugula is moot and concisions-missed] and [end if][if concisions-missed]missed a chance for something obscure with the sonic icons[end if].";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
@@ -5290,7 +5299,12 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	if word number 1 in the player's command is "consult":
 		if the player's command includes "pad":
 			abide by the notepad check rule;
-		say "It looks like you tried to consult your notepad about something. The proper syntax is [b]CONSULT PAD ABOUT X[r], [b]CONSULT ABOUT X[r], or [b]PAD X[r]." instead;
+		say "It looks like you tried to consult your notepad about something. The proper syntax is [b]CONSULT PAD ABOUT X[r], [b]CONSULT ABOUT X[r], or [b]PAD X[r].";
+		if player does not have notepad:
+			say "[line break]Also, [if notepad is in location of player]you decide to take the notepad so it's easy to consult[else]you should have taken the notepad back in Dusty Study[end if].";
+			try taking notepad;
+			now player has notepad;
+			the rule succeeds;
 	say "[if location of player is dark]You can't locate that in the dark, if it's there[else]Nothing unusual like that around here[if-enter][end if]." instead;
 
 to say if-enter:
@@ -6143,8 +6157,9 @@ check thinking:
 		say "So far, the [players] have been [list of ment pickup-lines].";
 		now in-think is false;
 	if mrlp is demo dome, try requesting the score instead;
-	if number of unfigured things > 0:
-		say "[line break][prefigured-things]"; [?? this creates a problem: are things wiped from "unfigured" once we're done? Should we define unfigured + in-region?]
+	if number of prefigured things > 0:
+		say "[line break][prefigured-things]";
+		the rule succeeds;
 	say "Nothing immediate comes up. If you need help, just say [b]HINT[r]. K?" instead;
 
 for printing the name of a pickup-line when in-think is true: say "[pickup-description]"
@@ -21073,20 +21088,6 @@ carry out xabing:
 		try examining the noun;
 	the rule succeeds;
 
-chapter xtraking
-
-[must be here since we try xtraking when we leave Demo Dome. The actual syntax is defined in a test file.]
-
-xtraking is an action out of world.
-
-after printing the name of an exhibit (called myx) when xtraking: say " ([location of myx])";
-
-carry out xtraking:
-	say "[b]UNNOTED[r] exhibits: [list of unnoted exhibits].";
-	say "[b]PERUSED[r] exhibits: [list of perused exhibits].";
-	say "[b]EXHAUSTED[r] exhibits: [list of exhausted exhibits].";
-	the rule succeeds;
-
 chapter the basics
 
 demoing is an action applying to nothing.
@@ -21125,20 +21126,38 @@ the saying ignsay is scenery in Peek Keep. "Unfold old fun! Memoir: I'm More!"
 
 to say esi-pro: set the pronoun it to saying ignsay;
 
+to decide whether all-clear-demo-dome:
+	if number of not exhausted exhibits > 0, no;
+	if number of unexamined things in sparse spares > 0, no;
+	yes;
+
 check going south in Peek Keep:
-	if debug-state is true:
-		try xtraking;
-	if number of not exhausted exhibits is 0:
-		say "You take a break[unex-left] and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers['] money.";
-		end the story;
+	if all-clear-demo-dome:
+		say "You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers['] money.";
+		now undo-code is 0;
+		end the story saying "Inceptions Inspection: Nice Points";
 	else:
-		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
-		if the player dir-consents:
-			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
+		say "Are you sure you want to leave before [demo-to-do]? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
+		if the player regex-prompt-consents: [ this shouldn't be dir-consents since my test script tries a lot of yes/no here ]
+			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of not exhausted exhibits is 0 and number of unexamined things in sparse spares > 0] like [spares-unexamine-count][else if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
 			dome-wipe-final-questions;
+			now undo-code is 0;
 			end the story finally saying "Epilogue's Up! Lie, Ego";
 		else:
 			say "Okay, why not look around a bit more." instead;
+
+to say spares-unexamine-count:
+	let ue be number of unexamined things in sparse spares;
+	if ue is 1:
+		say "examining [the random unexamined thing in sparse spares]";
+	else:
+		say "examining the final [ue in words] things in Sparse Spares"
+
+to say demo-to-do:
+	if number of not exhausted exhibits is 0:
+		say "examining what's left in Sparse Spares, such as [the random unexamined thing in Sparse Spares]";
+	else:
+		say "[if number of unnoted exhibits is 0]exhaustively [end if]looking at all the exhibits";
 
 to dome-wipe-final-questions:
 	if others is not solved:

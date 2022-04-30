@@ -3492,7 +3492,7 @@ book others
 table of others scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 sated stead	true	true	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
-hire recs re riches	true	true	false	false	"As [recs] recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!"
+hire recs re riches	true	true	false	false	"As [hire recs] recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!"
 id mantra mad train	true	true	false	false	"The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention."
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice."
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
@@ -4008,7 +4008,6 @@ table of otters done rejects
 specdone	spectalk
 nude dune	"You've dealt with the barley. You can move around a lot more, now."
 asyllabic lilac bays	"The [lilac bays] are quite nice as-is after your brilliant plant-whispering."
-sable	"The sable is running around quite happily. No need to change it."
 parleys splayer players	"You've already made the macks/players talk a bit slower. Now you need to deal with their arguments."
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."

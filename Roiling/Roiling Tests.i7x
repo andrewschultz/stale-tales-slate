@@ -1557,7 +1557,7 @@ carry out mbbnuming:
 		say "1 = Balmer, 2 = Mr Beal." instead;
 	move mbb to Upscale Capsule;
 	now not-mbb is off-stage;
-	say "Moved [mbb] to Upscale capsule, [not-mbb] off-stage." instead;
+	say "Moved [mbb] to Upscale Capsule, [not-mbb] off-stage." instead;
 	the rule succeeds;
 
 chapter srqing
@@ -1729,11 +1729,25 @@ understand "xab [something]" as xabing.
 
 chapter xtraking
 
-[ tracks exhibits. Main code is in story.ni because we have an if-debug statement when we leave Demo Dome. ]
-
 understand the command "xtrak" as something new.
 
 understand "xtrak" as xtraking.
+
+check going south in Peek Keep:
+	try xtraking;
+
+xtraking is an action out of world.
+
+after printing the name of an exhibit (called myx) when xtraking: say " ([location of myx])";
+
+carry out xtraking:
+	say "[b]UNNOTED[r] exhibits: [list of unnoted exhibits].";
+	say "[b]PERUSED[r] exhibits: [list of perused exhibits].";
+	say "[b]EXHAUSTED[r] exhibits: [list of exhausted exhibits].";
+	if sparse spares is visited:
+		say "[b]UNEXAMINED[r] in Sparse Spares: [list of unexamined things in sparse spares].";
+		say "[b]EXAMINED[r] in Sparse Spares: [list of examined things in sparse spares].";
+	the rule succeeds;
 
 chapter xtuing
 
