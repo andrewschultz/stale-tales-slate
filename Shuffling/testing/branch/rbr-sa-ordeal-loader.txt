@@ -32,6 +32,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * ordeal_thru
 
+Busiest Subsite
+
 >opt in
 >poss
 
@@ -73,6 +75,11 @@ The standard, usual directions don't seem to cut it. But there has to be somewhe
 >w
 The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
 !The standard, usual directions don't seem to cut it. But there has to be somewhere else.
+
+@gn
+>exit
+WRONG
+>undo
 
 @hin
 >xc
@@ -206,6 +213,11 @@ You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every
 
 >in
 Rested Desert
+
+@gn
+>exit
+WRONG
+>undo
 
 @hin
 What can the odor turn into? Your random thoughts are not so random. (+)
@@ -394,6 +406,11 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 >open door
 Thickest Thickets
 
+@gn
+>exit
+WRONG
+>undo
+
 @min
 }}CURMAX--
 
@@ -550,6 +567,11 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 
 >in
 Notices Section
+
+@gn
+>exit
+WRONG
+>undo
 
 @hin
 DEBUG: magenta nametag being objhinted.

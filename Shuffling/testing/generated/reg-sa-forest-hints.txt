@@ -58,6 +58,10 @@ You see yourself considering all four compass directions before picking the righ
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the thorn for a few seconds.
 
+>exit
+Hmm, that's the question. Which way to exit?
+>undo
+
 >e
 /You go east a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
 >s
@@ -76,6 +80,10 @@ Your vision blurs, and you see a compass rose pointed east.
 
 You see yourself considering all four compass directions before picking the right one.
 
+>exit
+Hmm, that's the question. Which way to exit?
+>undo
+
 >gt forest1
 You can't retrace your steps.
 
@@ -88,6 +96,10 @@ Go east and west and look around a bit. There're only three rooms to start, and 
 You see yourself putting something on your face and then walking through Corses Crosse with ease.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) for a few seconds.
+
+>exit
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
+>undo
 
 #this is a test case not in the table: south in Self-ID Fields is the only "bad" exit
 >s
@@ -129,6 +141,10 @@ Your vision blurs a bit, and instead you see a shotgun.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the ones, the dashes and the noughts for a few seconds.
 
+>exit
+The only way to exit is west, so let's go that way.
+>undo
+
 >nose
 Your score has just gone up by one point.
 
@@ -165,6 +181,10 @@ DEBUG: sandwich being objhinted.
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam for a few seconds.
+
+>exit
+The only way to exit is east, so let's go that way.
+>undo
 
 #ttc-table-of-nowheres-flesh-shelf
 >w
@@ -241,6 +261,10 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 #ttc-table-of-nowheres-emptiness-sepiments
 >e
 The scoffer coffers and scoffin' coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind.
+
+>exit
+The only way to exit is south, so let's go that way.
+>undo
 
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
@@ -406,6 +430,12 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 >n
 Ghouls' Slough
 
+DEBUG: maps being objhinted.
+
+>exit
+Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog. Hey, those maps might be useful to look at, though.
+>undo
+
 >gt fields
 You've done all you could in Emptiness Sepiments and before. Onward.
 
@@ -413,7 +443,8 @@ You've done all you could in Emptiness Sepiments and before. Onward.
 >e
 Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.
 
-DEBUG: maps being objhinted.
+>score
+You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >x maps
 Frost Forts
@@ -426,6 +457,10 @@ Your vision blurs a bit, and instead you see wolves.
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels for a few seconds.
+
+>exit
+The gnash hangs would, err, shnag you.
+>undo
 
 #ttc-table-of-nowheres-frost-forts
 >e

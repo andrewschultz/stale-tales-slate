@@ -71,6 +71,11 @@ Your vision blurs a bit, and instead you see a gardenia.
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
+@gn
+>exit
+You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
+>undo
+
 @mis
 #mistake test for singers
 >singers
@@ -357,6 +362,11 @@ You should probably just go north to look at the condo instead.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover for a few seconds.
 
+@gn
+>exit
+You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
+>undo
+
 @ask
 #ttc-table-of-unmatched-topic-responses-deadbeat
 >ask deadbeat about blozhko
@@ -475,6 +485,11 @@ The words become a sword, too large and terrifying to carry. The talk resumes as
 >pf
 words -> sword
 
+@gn
+>exit
+The only way to exit is east, so let's go that way.
+>undo
+
 >tomato
 Your score has just gone up by one point.
 }}SCORE++
@@ -525,6 +540,11 @@ You see yourself giving something reddish to the night thing in the hotel before
 
 @hin
 DEBUG: Night Thing being objhinted.
+
+@gn
+>exit
+The only way to exit is east, so let's go that way.
+>undo
 
 @ask
 #ttc-table-of-unmatched-topic-responses-night-thing
@@ -725,6 +745,11 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 @hin
 DEBUG: poses posse being objhinted.
+
+@gn
+>exit
+The only way to exit is south, so let's go that way.
+>undo
 
 @ask
 #ttc-table-of-matched-thing-responses-poses-posse-dry-cake
@@ -989,6 +1014,11 @@ The faeries want a flower. You have one in your inventory.
 @gle
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade for a few seconds.
+
+@gn
+>exit
+The only way to exit is west, so let's go that way.
+>undo
 
 @scan
 #gadget test: heaths to sheath
@@ -1426,6 +1456,11 @@ DEBUG: nerds being objhinted.
 >xx nerds
 You suddenly feel darkness, along with an urge to ask the nerds about it.
 
+@gn
+>exit
+The only way to exit is west, so let's go that way.
+>undo
+
 @ask
 #ttc-table-of-unmatched-thing-responses-nerds
 >ask nerds about deadbeat
@@ -1720,6 +1755,11 @@ You see the neon pig exploding, the empty space being filled with--an ear of cor
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig for a few seconds.
 
+@gn
+>exit
+The only way to exit is north, so let's go that way.
+>undo
+
 @nud
 #ttc-table-of-elm-train-terminal-nudges-cafe
 >caef
@@ -1940,6 +1980,12 @@ You don't need to close up the opening. The controls are in, and they fill it we
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
 
 >d
+
+@gn
+>exit
+You have more than one way to leave: north and east. So you'll need to specify which one.
+>undo
+
 >e
 
 Bassy Abyss
@@ -1963,6 +2009,11 @@ No going back now. You came here to defeat the beats.
 #ttc-table-of-nowheres-bassy-abyss
 >n
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's an aligns signal, and it must be encompassing the whole abyss. It turns you back to face the beats.
+
+@gn
+>exit
+You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's that aligns signal, again. It turns you back to face the beats.
+>undo
 
 @nud
 #ttc-table-of-bassy-abyss-nudges-aligns

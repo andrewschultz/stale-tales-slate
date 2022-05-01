@@ -131,11 +131,19 @@ DEBUG INFO: Rect-text: I---T.
 DEBUG INFO: Cert-text: -----.
 
 @gn
+>exit
+As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
+Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
+>undo
+\\
 #ttc-table-of-nowheres-astral-altars
 >w
 As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
 Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
 >w
+No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.
+\\
+>exit
 No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.
 
 >islet
@@ -163,6 +171,11 @@ Gotta keep going forward.
 @nud
 >score
 {$SCOS}
+
+@gn
+>exit
+You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
+>undo
 
 @hin
 #ttc-table-of-resort-anagrams-rock
@@ -520,6 +533,11 @@ The gadget beeps once. A series of lights comes across: RRRRR.
 DEBUG INFO: Rect-text: R---S.
 DEBUG INFO: Cert-text: -----.
 
+@gn
+>exit
+The only way to exit is east, so let's go that way.
+>undo
+
 >slope
 by one point
 }}SCORE++
@@ -710,9 +728,18 @@ Your vision blurs a bit, and instead you see a trio.
 #ttc-table-of-nowheres-potshot-hotspot
 >n
 The only way you'll want to try to go is east.
+\\
+>w
+No going back now.
+\\
 #+ttc-table-of-nowheres-potshot-hotspot
 >e
 That rabble seems mad at you. You'd better disperse them first.
+
+@gn
+>exit
+That rabble seems mad at you. You'd better disperse them first.
+>undo
 
 @ask
 #ttc-table-of-unmatched-topic-responses-riot
@@ -1189,6 +1216,11 @@ Seeing exits just makes you want to...
 #+ttc-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
+
+@gn
+>exit
+No, you need to stay here and put down roots. But how?
+>undo
 
 @min
 >misses

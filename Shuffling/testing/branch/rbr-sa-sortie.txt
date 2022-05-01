@@ -65,6 +65,12 @@ Trap Part
 >xx dial
 The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
 
+@gn
+>exit
+You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
+Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
+>undo
+
 @gt
 >gt trap part
 You're already here. Or there. The precise grammar's neither here nor there.
@@ -178,6 +184,11 @@ Your vision swirls, and you see a kitchen.
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
 
+@gn
+>exit
+You're trapped. If only the nick could be changed to something more to your taste.
+>undo
+
 @gt
 >gt trap part
 That's not the magic way out. Sorry!
@@ -234,6 +245,11 @@ Kitchen
 
 @hin
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
+
+@gn
+>exit
+You have more than one way to leave: south and east. So you'll need to specify which one.
+>undo
 
 @gle
 >angle
@@ -814,6 +830,8 @@ No need for fashion tweaks.
 
 >e
 
+Stiller Trellis
+
 @hin
 DEBUG: warts being objhinted.
 
@@ -1055,6 +1073,16 @@ You see a flash and get a glimpse of a moor, but it is just too cold. You blink 
 >undo
 >undo
 
+@gn
+>exit
+You have more than one way to leave: north and west. So you'll need to specify which one.
+>undo
+>w
+>exit
+You have more than one way to leave: north and east. So you'll need to specify which one.
+>undo
+>undo
+
 >moor
 Your score has just gone up by one point.
 }}SCORE++
@@ -1067,6 +1095,11 @@ You see a rough but friendly fellow scaring Pat away.
 DEBUG: anapest being objhinted.
 >xx
 Your vision blurs a bit, and instead you see a peasant.
+
+@gn
+>exit
+The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
+>undo
 
 @gle
 >angle
@@ -1108,7 +1141,7 @@ DEBUG INFO: Cert-text: --A---T.
 @gn
 #ttc-table-of-nowheres-moor
 >s
-The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came.
+The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 
 @mis
 #mistake test for tap/tap [text]
@@ -1467,7 +1500,7 @@ DEBUG INFO: Cert-text: HA-----.
 @gn
 #ttc-table-of-nowheres-stiller-trellis
 >n
-Mum, dud mud blocks your way north. You can only go west or south.
+Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room.
 
 >score
 @min
@@ -1499,7 +1532,12 @@ You see yourself building a huge structure in the moor without saying anything.
 @gn
 #+ttc-table-of-nowheres-stiller-trellis
 >n
-Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
+Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room or, since you opened the hallway, east.
+
+@gn
+>exit
+You have more than one way to leave: south, east and west. So you'll need to specify which one.
+>undo
 
 >score
 @min
@@ -1517,6 +1555,11 @@ Sacred Cedars
 
 @hin
 Once you change the sack to a cask, you can FILL CASK here, to start.
+
+@gn
+>exit
+The only way to exit is west, so let's go that way.
+>undo
 
 @gn
 #ttc-table-of-nowheres-sacred-cedars

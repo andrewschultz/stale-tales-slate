@@ -42,11 +42,19 @@ As your vision blurs, the stile seems to stand over a small islet.
 >xx tiles
 As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 
+>exit
+As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
+Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
+>undo
+
 #ttc-table-of-nowheres-astral-altars
 >w
 As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
 Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
 >w
+No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.
+
+>exit
 No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.
 
 >islet
@@ -67,6 +75,10 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 
 >gt tiles
 Gotta keep going forward.
+
+>exit
+You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
+>undo
 
 #ttc-table-of-resort-anagrams-rock
 >xx rock
@@ -155,6 +167,10 @@ Your vision blurs a bit, and instead you see ropes.
 >xx toolshed
 Your vision blurs a bit, and instead you see toeholds.
 
+>exit
+The only way to exit is east, so let's go that way.
+>undo
+
 >slope
 by one point
 
@@ -230,9 +246,17 @@ Your vision blurs a bit, and instead you see a trio.
 #ttc-table-of-nowheres-potshot-hotspot
 >n
 The only way you'll want to try to go is east.
+
+>w
+No going back now.
+
 #+ttc-table-of-nowheres-potshot-hotspot
 >e
 That rabble seems mad at you. You'd better disperse them first.
+
+>exit
+That rabble seems mad at you. You'd better disperse them first.
+>undo
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot for a few seconds.
@@ -340,6 +364,10 @@ Seeing exits just makes you want to...
 #+ttc-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
+
+>exit
+No, you need to stay here and put down roots. But how?
+>undo
 
 >exist
 #notana

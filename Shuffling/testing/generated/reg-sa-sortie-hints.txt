@@ -33,6 +33,11 @@ Trap Part
 >xx dial
 The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
 
+>exit
+You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
+Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
+>undo
+
 >gt trap part
 You're already here. Or there. The precise grammar's neither here nor there.
 
@@ -69,6 +74,10 @@ Your vision swirls, and you see a kitchen.
 #ttc-table-of-nowheres-the-nick
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
+
+>exit
+You're trapped. If only the nick could be changed to something more to your taste.
+>undo
 
 >gt trap part
 That's not the magic way out. Sorry!
@@ -243,6 +252,8 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 >e
 
+Stiller Trellis
+
 DEBUG: warts being objhinted.
 
 #+ttc-table-of-nowheres-kitchen
@@ -323,6 +334,15 @@ You currently have 14 out of 27 total points for the Sortie region. You have fou
 >xx
 Your vision swirls, and you see a moor.
 
+>exit
+You have more than one way to leave: north and west. So you'll need to specify which one.
+>undo
+>w
+>exit
+You have more than one way to leave: north and east. So you'll need to specify which one.
+>undo
+>undo
+
 >moor
 Your score has just gone up by one point.
 
@@ -333,12 +353,16 @@ DEBUG: anapest being objhinted.
 >xx
 Your vision blurs a bit, and instead you see a peasant.
 
+>exit
+The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
+>undo
+
 >angle
 You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock for a few seconds.
 
 #ttc-table-of-nowheres-moor
 >s
-The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came.
+The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 
 >score
 You currently have 15 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -413,7 +437,7 @@ You stuffed the hay in the wall. What does the gadget offer? (+)
 
 #ttc-table-of-nowheres-stiller-trellis
 >n
-Mum, dud mud blocks your way north. You can only go west or south.
+Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room.
 
 >score
 You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -429,7 +453,11 @@ You see yourself building a huge structure in the moor without saying anything.
 
 #+ttc-table-of-nowheres-stiller-trellis
 >n
-Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
+Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room or, since you opened the hallway, east.
+
+>exit
+You have more than one way to leave: south, east and west. So you'll need to specify which one.
+>undo
 
 >score
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -438,6 +466,10 @@ You currently have 19 out of 27 total points for the Sortie region. You have fou
 Sacred Cedars
 
 Once you change the sack to a cask, you can FILL CASK here, to start.
+
+>exit
+The only way to exit is west, so let's go that way.
+>undo
 
 #ttc-table-of-nowheres-sacred-cedars
 >n

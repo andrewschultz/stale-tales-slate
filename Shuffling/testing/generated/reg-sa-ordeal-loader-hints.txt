@@ -8,10 +8,16 @@
 
 * ordeal_thru
 
+Busiest Subsite
+
 >opt in
 >poss
 
 >au 2
+
+>exit
+WRONG
+>undo
 
 >xc
 
@@ -21,6 +27,10 @@ You're not in the area where the magic happens, yet. The cardinal directions, in
 
 >in
 Rested Desert
+
+>exit
+WRONG
+>undo
 
 What can the odor turn into? Your random thoughts are not so random. (+)
 Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
@@ -69,6 +79,10 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 >open door
 Thickest Thickets
 
+>exit
+WRONG
+>undo
+
 /DEBUG: (reed|toga) being objhinted\.
 
 #ttc-table-of-nowheres-thickest-thickets
@@ -109,6 +123,10 @@ You currently have 6 out of 8 total points for the Ordeal Loader region. Your mi
 
 >in
 Notices Section
+
+>exit
+WRONG
+>undo
 
 DEBUG: magenta nametag being objhinted.
 >monty glean

@@ -159,6 +159,9 @@ You currently have 13 out of 17 total points for the Forest region. Your minimum
 >n
 Ghouls' Slough
 
+>score
+You currently have 13 out of 17 total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
+
 >x maps
 Frost Forts
 

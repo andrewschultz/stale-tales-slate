@@ -330,6 +330,9 @@ You currently have 15 out of 17 total points for the Forest region. You have fou
 >n
 Ghouls' Slough
 
+>score
+You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
 >x maps
 Frost Forts
 

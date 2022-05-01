@@ -356,6 +356,11 @@ You see yourself considering all four compass directions before picking the righ
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the thorn for a few seconds.
 
+@gn
+>exit
+Hmm, that's the question. Which way to exit?
+>undo
+
 @scan
 #gadget test: thorn to north
 >rc thorn
@@ -402,6 +407,11 @@ Your vision blurs, and you see a compass rose pointed east.
 @gle
 You see yourself considering all four compass directions before picking the right one.
 
+@gn
+>exit
+Hmm, that's the question. Which way to exit?
+>undo
+
 @gt
 >gt forest1
 You can't retrace your steps.
@@ -420,11 +430,6 @@ by one point
 Self-ID Fields
 }}SCORE++
 
-@mis
-#mistake test for scores
->scores
-Yes, there are scores and scores in the line of no life.
-
 @hin
 Go east and west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
 
@@ -432,6 +437,16 @@ Go east and west and look around a bit. There're only three rooms to start, and 
 You see yourself putting something on your face and then walking through Corses Crosse with ease.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) for a few seconds.
+
+@gn
+>exit
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
+>undo
+
+@mis
+#mistake test for scores
+>scores
+Yes, there are scores and scores in the line of no life.
 
 @ask
 #ttc-table-of-unmatched-topic-responses-line-of-no-life
@@ -710,6 +725,11 @@ No, you can't afford to wait that long.
 The ones rattle a bit. Maybe you can sense out what they should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the ones. Keep at it.
 
+@gn
+>exit
+The only way to exit is west, so let's go that way.
+>undo
+
 @mis
 #mistake test for enos
 >enos
@@ -814,6 +834,11 @@ DEBUG: sandwich being objhinted.
 @gle
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam for a few seconds.
+
+@gn
+>exit
+The only way to exit is east, so let's go that way.
+>undo
 
 @gn
 #ttc-table-of-nowheres-flesh-shelf
@@ -1043,6 +1068,11 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RRRRGR.
 DEBUG INFO: Rect-text: C----L.
 DEBUG INFO: Cert-text: ----E-.
+
+@gn
+>exit
+The only way to exit is south, so let's go that way.
+>undo
 
 >score
 {$SCOS}
@@ -1549,6 +1579,17 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 >n
 Ghouls' Slough
 
+@min
+}}CURMIN-=2
+
+@hin
+DEBUG: maps being objhinted.
+
+@gn
+>exit
+Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog. Hey, those maps might be useful to look at, though.
+>undo
+
 @gt
 >gt fields
 You've done all you could in Emptiness Sepiments and before. Onward.
@@ -1611,8 +1652,11 @@ Oh, and you can undo this, too.
 UNDO
 >undo
 
-@hin
-DEBUG: maps being objhinted.
+>score
+@min
+{$SFIXNOMAX}
+@!
+{$SFIXMAX}
 
 >x maps
 Frost Forts
@@ -1666,6 +1710,11 @@ Your vision blurs a bit, and instead you see wolves.
 @gle
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels for a few seconds.
+
+@gn
+>exit
+The gnash hangs would, err, shnag you.
+>undo
 
 @gn
 #ttc-table-of-nowheres-frost-forts
