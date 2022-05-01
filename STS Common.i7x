@@ -303,6 +303,8 @@ a room can be shunned. a room is usually not shunned. [Force GO TO ROOM to fail 
 
 a room has a number called progval. progval of a room is usually 0. [again for GO TO ROOM, from progval of 2 to 1 is not valid]
 
+a room has text called exit-text.
+
 definition: a room (called myr) is really-nearby:
 	if myr is in mrlp and myr is visited and myr is not shunned, yes;
 	no;

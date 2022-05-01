@@ -1304,21 +1304,42 @@ understand "throw [something preferably held] at [something]" as throwing it at.
 
 chapter exiting
 
-definition: a direction (called myd) is viable:
+definition: a direction (called myd) is viable: [ note to self: NEVER USE NOUN. Always use myd. ]
 	if myd is east and location of player is Leis Isle:
 		if player has wings or player has cork, decide yes;
+	if location of player is emptiness sepiments:
+		if myd is north or myd is inside:
+			if drapes are moot, yes;
+			no;
+	if location of player is stiller trellis and myd is east:
+		if scraped wall is moot, yes;
+		no;
+	if location of player is elm train terminal:
+		if myd is east:
+			if beast-prepared, yes;
+			no;
 	if the room myd of location of player is nowhere, decide no;
 	decide yes;
 
+to decide whether beast-prepared:
+	if player does not have tulip, no;
+	if player does not have sheath and player does not have noise bag, no;
+	if player has noise bag and noise bag does not contain words, no;
+	if player has sheath and sword is not in sheath, no;
+	if controls are not in gin nope opening, no;
+	yes;
+
 the can't exit when not inside anything rule is not listed in any rulebook.
 
-check exiting:
-	if number of viable directions is 0, say "You don't seem to have any way out. Maybe you have a puzzle to solve, here." instead;
+check exiting (this is the check for default exit rule):
+	if number of viable directions is 0:
+		if exit-text of location of player is not empty, say "[exit-text of location of player][line break]" instead;
+		abide by the find-nowhere-text rule;
 	if number of viable directions is 1:
 		let rvd be random viable direction;
 		say "The only way to exit is [rvd], so let's go that way.";
 		try going rvd instead;
-	say "There's more than one way to leave: [list of viable directions]. So you'll need to specify which one." instead;
+	say "You have more than one way to leave: [list of viable directions]. So you'll need to specify which one." instead;
 
 chapter buying
 
@@ -1604,7 +1625,6 @@ rule for supplying a missing noun when entering:
 		now noun is or do door;
 	else if number of touchable portals is 1:
 		now noun is random touchable portal;
-		say "0.";
 	else if mis send dimness is touchable:
 		now noun is mis send dimness;
 	else if player is in self id fields and corses crosse is in self id fields:
@@ -4987,7 +5007,7 @@ this is the sortie-entry rule:
 
 understand "sortie" as depots when player is in Trips Strip and depots are in Trips Strip.
 
-check exiting in Trips Strip: try entering noun instead;
+check exiting in Trips Strip: if number of portals in trips strip > 0, try entering instead;
 
 description of posted depots is "It's a stairway. For making a sortie. Exiting[sortie-have]"
 
@@ -5060,6 +5080,10 @@ book Softer Forest (sf)
 
 sf is a privately-named room in Forest. the printed name of sf is "Softer Forest". last-loc of Forest is sf.
 
+exit-text of sf is "[ww-exit]?"
+
+to say ww-exit: say "Hmm, that's the question. Which way to exit"
+
 after printing the locale description for sf when sf is unvisited: set the pronoun it to a random guider in sf.
 
 understand "forest1" as sf when debug-state is true.
@@ -5107,6 +5131,8 @@ understand "noise/sound" as rambling shout when rambling shout is fungible.
 book Rest of Forest
 
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint].". roomnud of rf is table of Rest of Forest nudges.
+
+exit-text of rf is "[ww-exit]?"
 
 after printing the locale description for rf when rf is unvisited: set the pronoun it to a random guider in rf.
 
@@ -5922,8 +5948,6 @@ to say end-it: end the story.
 book Frost Forts
 
 Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if].". roomnud of Frost Forts is table of Frost Forts nudges.
-
-Frost Forts is north of Ghouls Slough. nowhere is south of Frost Forts.
 
 after printing the locale description for forts when forts is unvisited:
 	set the pronoun them to vowels;
@@ -8868,6 +8892,8 @@ book Potshot Hotspot
 
 Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort. printed name of Potshot Hotspot is "[if red bull burdell is moot]Setter Street[else]Potshot Hotspot[end if]". roomnud of Potshot Hotspot is table of Potshot Hotspot nudges.
 
+west of Potshot Hotspot is nothing.
+
 check going inside in Potshot Hotspot: try going east instead;
 
 description of Potshot Hotspot is "An arid, trod dirt road[if red bull burdell is moot]--named after you, who set things straight[end if]. Frust turfs blocks the way north and south. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is not touchable]It's a nice and peaceful neighborhood now, with Red Bull Burdell gone, but you're not fully home[else]There's one more person with potshots, though[end if].".
@@ -9070,6 +9096,8 @@ carry out tuging:
 book Means Manse
 
 Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
+
+west of Means Manse is nowhere. exit-text of Means Manse is "No, you need to stay here and put down roots. But how?"
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead; [bold-ok]
 
@@ -10140,13 +10168,16 @@ chapter going nowhere
 
 upwarned is a truth state that varies.
 
+this is the find-nowhere-text rule:
+	repeat through table of nowheres:
+		if theloc entry is location of player, say "[thereject entry][line break]" instead;
+
 check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
 			say "You never need to go up or down anywhere in [this-game]. Some passages may be described as leading down or up, but the four cardinal directions are all you need.";
 			now upwarned is true instead;
-	repeat through table of nowheres:
-		if theloc entry is location of player, say "[thereject entry][line break]" instead;
+	abide by the find-nowhere-text rule;
 	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
 	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
@@ -10174,8 +10205,8 @@ Trap Part	"[dmb]You can only go north to the kitchen or east[or-room]." [see bef
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
 Kitchen	"[dmb]You can only go [can-go of south] or [can-go of east]."
 roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
-Stiller Trellis	"[dmb]You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
-moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
+Stiller Trellis	"[dmb]You can only go [can-go of west] or [can-go of south][if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
+moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the [b]ROOM[r]."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
 Undesired Underside	"A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
 Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[inside-ambig]."

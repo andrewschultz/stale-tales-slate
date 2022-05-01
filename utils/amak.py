@@ -12,6 +12,7 @@ import re
 import sys
 import i7
 from collections import defaultdict
+from itertools import permutations
 
 reg_verbs = defaultdict(str)
 amak_txt = "c:/writing/scripts/amak.txt"
@@ -20,6 +21,8 @@ total_shifts = 0
 #option(s). There may be more later.
 shift_1_on_no_repeat = False
 try_rotating_first = False
+
+unmatches_to_find = 0
 
 add_suggested = True
 
@@ -58,6 +61,23 @@ def slider_script_check():
                 prev_blank = not line.strip()
     if not extraneous + linebreak_errs: print("No errors in the script check test!")
     else: print(extraneous, "extraneous tests and", linebreak_errs, "line break tests.")
+
+def any_common_slots(list1, list2):
+    for x in range(0, len(list1)):
+        if list1[x] == list2[x]:
+            return True
+    return False
+
+def first_x_anagrams(my_word, my_number):
+    lw = list(my_word)
+    count = 0
+    for x in permutations(lw):
+        if any_common_slots(lw, x):
+            continue
+        yield ''.join(x)
+        count += 1
+        if count == my_number:
+            break
 
 def test_search(to_search):
     search_mod = to_search.replace(' ', '-')
@@ -198,7 +218,10 @@ def show_results(q, result_string = "{0} has this anagram with no letters in com
     if q != q.lower():
         result_string = result_string.replace('@sli\n', '')
         q = q.lower()
-    temp = find_nomatch_anagram(q)
+    if unmatches_to_find > 0:
+        temp = ','.join(first_x_anagrams(q, unmatches_to_find))
+    else:
+        temp = find_nomatch_anagram(q)
     if not temp: return
     print(result_string.format(q, temp))
 
@@ -274,6 +297,8 @@ if len(sys.argv) > 1:
         elif q == 'c': format_type = COMMAND_AND_COMMENT
         elif q == 'cx': format_type = FULL_TEST_FILE_NOTES
         elif q == 'nc': format_type = NO_FORMATS
+        elif q.isdigit():
+            unmatches_to_find = int(q)
         elif q[:2] == 's=':
             start_word = q[2:]
         elif q[:2] == 'e=':
