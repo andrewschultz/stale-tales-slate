@@ -687,7 +687,7 @@ this is the post-hogs-or-keys rule:
 	moot keys;
 	move harpings phrasing to Saps Pass;
 	move mutism summit to Saps Pass;
-	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The hogs slink off in despair at a job failed.[paragraph break]The area immediately grows brighter. You give a 'PHT!' as the lawl wall falls with a [i]THAP[r] as the area suddenly becomes brighter and you suddenly feel, err, [i]THAT HAP-P...[r][paragraph break][b]Phat Path[r][line break]";
+	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The hogs slink off in despair at a job failed.[paragraph break]The area immediately grows brighter. You give a 'PHT!' as the lawl wall falls with a [i]THAP[r] as the area suddenly becomes brighter and you suddenly feel, err, [i]THAT HAP-P...[r][line break][b]Phat Path[r][line break]";
 
 this is the pre-hogs-not-keys rule:
 	now hogs-not-keys is true;
@@ -2376,6 +2376,7 @@ cinders	"[one of]You see red realizing you aren't as crafty as [first custom sty
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage.'"
 cut ya all cult laya	"One of the two designers['] names is [first custom style][one of]Clay Laut[or]Lucy Lata[in random order][r]."
+pen o nope	"The [pen o] reads [first custom style]NONE, PEPO['][r]."
 sullenness us	"You focus on the voices swirling around, and a despairing bit of poetry appears in red: [first custom style]LE SUNLESS SUN[r]."
 holy nest	"Scrawled in red on the holy nest is [first custom style][one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order][r]"
 stray satyr	"You see [first custom style]TSYRA[r] branded in red under the stray satyr's shoulder."
@@ -3025,9 +3026,8 @@ neon pope	nope peon	"'Helps me guard the Citadel well enough, I guess!'"
 nope peon	pen o NOPE	"'Sturdy, isn't it? Keeps people like you out!'"
 Elmer	Merle	"'Almost as interesting as me.'"
 Merle	Elmer	"'Almost as interesting as me.'"
-Merle	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
 Elmer	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
-Elvira	Gretta	"'Not as unselfish as she thought she was.'"
+Elvira	Gretta	"'Like most of the lamestream media, not as unselfish as she pretends she is. A real virtue-signaler!'"
 Elvira	Mr Lee	"'Hopeless. Paranoid.'"
 Elvira	eels	"'Their electric shocks would be useful--but they didn't let me harness them.'"
 Elvira	Le Mer	"'Not dangerous.'"
@@ -3135,6 +3135,7 @@ book routes
 
 table of routes nowheres
 theloc	thereject
+Same Mesa	"You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes."
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you still somehow need to figure how to get on that boat."
@@ -3151,7 +3152,7 @@ Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to 
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where [cellar] must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red [first custom style]Ell Car[r] (Yorpwald public transport) rattle by[or]you ran into construction by [first custom style]LC Lear[r]--the name written in red[or]you ran into construction by [first custom style]Larlec[r], written in red[cycling][end if]." [bold-ok]
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to [b]SAD PIER[r] and end it all, maybe after eating a few rad pies that won't make you see red[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
-Browse Bowers	"You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more."
+Browse Bowers	"You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more right here."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!"
 Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out for no reason at all[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 
@@ -3226,6 +3227,7 @@ Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Cops
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"[if noun is southwest]You don't need to explore the natatorium or Hatchery[else]You can't get across Leak Lake without some sort of craft[like-boat][end if]."
 Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
+Dire and Arid Den	"[if noun is up]No, there can't be anything [noun]. You feel drained just considering that."
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now."

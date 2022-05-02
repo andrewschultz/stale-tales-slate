@@ -18668,13 +18668,22 @@ does the player mean opening Pen O Nope: it is likely;
 
 section Neon Pope
 
-the Neon Pope is an auxiliary person. description of the Neon Pope is "A glowing exemplar of all things pro-Elvira, the Neon Pope encapsulates the 'respect authority' side of why Elvira is so great."
+a nonepepo is a kind of person. initial appearance of a nonepepo is "BUG the [pen o] guardians should be listed together!"
+
+for printing a locale paragraph about a nonepepo (called per) in Disowned Downside:
+	unless per is Neon Pope or per is Nope Peon, continue the action;
+	if per is mentioned, continue the action;
+	say "The Neon Pope and Nope Peon continue to taunt you from the safety of [the pen o]. If only there were a simple way to get through!";
+	now neon pope is mentioned;
+	now nope peon is mentioned;
+
+the Neon Pope is an auxiliary nonepepo. description of the Neon Pope is "A glowing exemplar of all things pro-Elvira, the Neon Pope encapsulates the 'respect authority' side of why Elvira is so great."
 
 a-text of neon pope is "YRYR". b-text of neon pope is "YRY?". parse-text of neon pope is "UNIQUE".
 
 section Nope Peon
 
-the Nope Peon is an auxiliary person. description of the Nope Peon is "A smarmy Uriah Heep type, one of many who like to convince others that, despite Elivra wielding most of the power in Yorpawld these days, it's still rebellious and edgy to think she needs even more power, and any arguments against her gaining more power deserve a big fat, well, nope."
+the Nope Peon is an auxiliary nonepepo. description of the Nope Peon is "A smarmy Uriah Heep type, one of many who like to convince others that, despite Elivra wielding most of the power in Yorpawld these days, it's still rebellious and edgy to think she needs even more power, and any arguments against her gaining more power deserve a big fat, well, nope."
 
 the chum of the Neon Pope is the Nope Peon.
 
@@ -18685,7 +18694,7 @@ check scaning neon pope: [ this is just to avoid duplicate/super similar text an
 
 section pen o nope
 
-the Pen O Nope is vanishing scenery. description is "It's blocking you right now. It's constructed relatively simply, though. Perhaps its purpose is symbolic, or perhaps it's the sort of thing Elvira's followers use to make dissidents feel, geez, if something wimpy like that blocks me, what the heck good can I do?". printed name is "Pen O['] NOPE".
+the Pen O Nope is vanishing scenery. description is "It's blocking you right now. It's constructed relatively simply, though. Perhaps its purpose is symbolic, or perhaps it's the sort of thing Elvira's followers use to make dissidents feel, geez, if something wimpy like that blocks me, what the heck good can I do?[paragraph break]It has some red writing on it, too.". printed name is "Pen O['] NOPE".
 
 a-text of Pen O Nope is "YRYR". b-text of Pen O Nope is "YRYR". parse-text of Pen O Nope is "-[sp]x[sp]-[sp]x".
 
