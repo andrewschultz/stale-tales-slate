@@ -328,6 +328,10 @@ a sideroom is a kind of room.
 
 a sideroom has text called missed-text.
 
+a room can be stairy. a room is usually not stairy.
+
+a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
+
 chapter things
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
@@ -371,17 +375,41 @@ a thing can be hinthelpy. a thing is usually not hinthelpy.
 
 a thing can be score-once. a thing is usually not score-once.
 
-chapter rooms
+chapter people
 
-a room can be stairy. a room is usually not stairy.
-
-a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
-
-a person can be superchatty, subject-talking or terse. a person is usually subject-talking. [terse = they ignore general defaults like asking about Elvira, subject-talking = ignore silly details.]
+a person can be talkative or terse. a person is usually talkative.
 
 a person can be terse-warned. a person is usually not terse-warned.
 
 a person has a person called the chum. [a chum is someone whom they imitate in dialogue. For instance, Rand's chum is Leo. All picaros' chums are Andres. And so on. If A is B's chum, B should NOT be A's chum. This may cause an infinite loop of chumminess.]
+
+chapter directions
+
+Direction viability is a direction based rulebook.
+
+definition: a direction (called dir) is viable:
+	follow the direction viability rules for dir;
+	if the rule succeeded, yes;
+	if the rule failed, no;
+	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
+	decide no;
+
+a direction viability rule for a direction (called dir) when mrlp is ordeal reload:
+	if player is in Largely All Grey Gallery and dir is inside, the rule succeeds;
+	if player is in Carven Cavern and dir is inside and stapler is moot, the rule succeeds;
+
+a direction viability rule for a direction (called dir) when mrlp is presto:
+	if player is in Saps Pass and dir is north and Leo is touchable, no;
+
+a direction viability rule for a direction (called dir) when mrlp is oyster:
+	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, no;
+
+a direction viability rule for a direction (called dir) when mrlp is oyster:
+	if player is in Disowned Downside and dir is west and pen o nope is not moot, no;
+	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
+
+a direction viability rule for a direction (called dir) when mrlp is others:
+	if player is in Gates Stage and player does not have passport and dir is north, no;
 
 chapter action
 
@@ -5603,7 +5631,7 @@ check going nowhere (this is the main can't go that way rule) :
 		if noun is up or noun is down:
 			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
 			now upwarned is true instead;
-	if diagonal-warned is false:
+	if noun is diagonal and diagonal-warned is false:
 		ital-say "there are no diagonal connections between locations in [this-game].";
 		now diagonal-warned is true;
 	repeat through nowhere-table of mrlp:
@@ -9134,6 +9162,7 @@ check going up in Largely All Grey Gallery:
 settler-x-nag is a truth state that varies.
 
 check going inside in Largely All Grey Gallery:
+	say "You prepare to sneak into the evac-cave to get out of here.[line break]";
 	if player has latches:
 		if treatise is off-stage:
 			say "You fumble nervously with the latches before entering, and a treatise falls out. Maybe it will help you decide what to do with the latches, before you go out into the wide world without a scanning device to help you know where to use your power.";
@@ -9588,7 +9617,7 @@ backcheck is a truth state that varies.
 check going outside in Farming Framing:
 	if backcheck is true:
 		now backcheck is false;
-		say "You don't really need to go back inside unless you're unsure of how your powers work[if latches are not moot]. You haven't figured what to do with the latches, and maybe their 'right' form will give you clues[end if]. Plus, the sitar [if sitar is touchable]has an odd thereness about it[else]became a nice stair to the basement[end if].[paragraph break]Still, go back to the study anyway?";
+		say "You don't really need to go back to Dusty Study unless you're unsure of how your powers work[if latches are not moot]. You haven't figured what to do with the latches, and maybe their 'right' form will give you clues[end if]. Plus, the sitar [if sitar is touchable]has an odd thereness about it[else]became a nice stair to the basement[end if].[paragraph break]Still, go back to the study anyway?";
 		if the player regex-prompt-consents, continue the action;
 		say "Okay, onward." instead;
 
@@ -10387,6 +10416,8 @@ check objasking brother horbert about a quest-item:
 book Same Mesa
 
 Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
+
+exit-text of Same Mesa is "Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -12270,8 +12301,6 @@ after looking in Austerer Treasure:
 	if ye hoop is in Austerer Treasure, set the pronoun it to ye hoop;
 	continue the action;
 
-check going outside in Austerer Treasure: try going east instead;
-
 chapter Ye Hoop
 
 Ye Hoop is proper-named vanishing boring scenery in Austerer Treasure. description of Ye Hoop is "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is.". bore-check of Ye Hoop is bore-hoop rule.
@@ -13180,21 +13209,6 @@ the zaphint rule is listed before the main can't go that way rule in the check g
 
 before going up when location of player is a mazeroom or location of player is Unwary Runway (this is the photopia reference rule) :
 	say "You know, there was one really fun text adventure where this was the solution. I'd be plagiarizing if that was here. And if you haven't played it, I don't want to spoil it." instead;
-
-a direction can be viable.
-
-definition: a direction (called dir) is viable:
-	if player is in Saps Pass and dir is north and Leo is touchable, no;
-	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, no;
-	if player is in Disowned Downside and atmo moat is in Disowned Downside and dir is west, no;
-	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
-	if player is in Gates Stage and player does not have passport and dir is north, no;
-	if player is in Sclerous Closures and sardine is in Sclerous Closures and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
-	if player is in Horned Hedron and dir is inside and walleyes are moot and ol trap is reflexed, yes;
-	if player is in Largely All Grey Gallery and dir is inside, yes;
-	if player is in Carven Cavern and dir is inside and stapler is moot, yes;
-	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
-	decide no;
 
 to say exits-lead:
 	say ". The walls glow[if voltwarn is false] like an old static electricity ball from that physics class where you learned so much[end if]";
@@ -21532,12 +21546,14 @@ to say way-tow: if Mislit Limits is unvisited, say "way ";
 book exiting
 
 before exiting (this is the exiting is the only way out rule):
+	d "Viable directions: [list of viable directions].";
 	unless the room outside of location of player is nowhere:
 		continue the action;
 	if number of viable directions is 1:
 		let XY be a random viable direction;
-		d "Going [XY].";
-		if XY is not the noun, try going XY instead;
+		if XY is not the noun:
+			say "The only way to exit is [XY], so let's go that way.";
+			try going XY instead;
 		move player to the room outside of location of the player;
 	abide by the inside-outside rule;
 
@@ -21555,7 +21571,10 @@ before going outside (this is the out is the only way rule):
 
 check an actor exiting (this is the custom not in anything rule):
 	let the local room be the location of the actor;
-	if the container exited from is the local room, say "[b]EXIT[r]/[b]OUT[r] isn't usable here--it's used when there's only one direction, or you are told you can go [b]OUT[r]." instead; [?? can we shuffle the check going rules to remove "before"?]
+	if the container exited from is the local room:
+		if exit-text of location of actor is not empty, say "[exit-text of location of actor][line break]" instead;
+		if number of viable directions > 1, say "Exiting is ambiguous here, since you can go [list of viable directions]." instead;
+		say "Standard directions may not get you out of here. There is probably a puzzle you need to figure." instead; [?? can we shuffle the check going rules to remove "before"?]
 
 the custom not in anything rule is listed before the can't exit when not inside anything rule in the check exiting rulebook.
 
