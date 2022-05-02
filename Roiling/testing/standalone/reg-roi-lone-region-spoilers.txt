@@ -477,7 +477,7 @@ So here is a one-time general guideline on what to do in this area: you don't ne
 
 #ttc-table-of-ranks-13
 >score
-There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
+There's no score in the Demo Dome, so this just tracks things you haven't looked at yet or looked at completely. But if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
 
 #+ttc-table-of-ranks-1
 #+ttc-table-of-ranks-2
@@ -493,6 +493,7 @@ There's no score in the Demo Dome. You just need to look around. Well, if you'd 
 #+ttc-table-of-ranks-12
 #+ttc-table-of-ranks-13
 >s
+>yes
 >rank
 Farce Facer
 Riled Idler

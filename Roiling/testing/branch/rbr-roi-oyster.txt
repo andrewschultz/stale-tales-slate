@@ -100,7 +100,7 @@ by one point
 This is the place for it, but you can't bring yourself to be heard.
 #verbcase smell-oyster-if-player-is-in-posh-hops-shop
 >smell
-You catch a whiff of some mokes' smoke.
+You catch a whiff: 'k, some mokes' smoke.
 #verbcase sleep-oyster-default
 >sleep
 You feel too inclined towards action for that.
@@ -1462,46 +1462,51 @@ That would be fun but useless here. Perhaps you could annoy someone with it. Som
 #mistake test for tush
 >tush
 Oh, behave.
+\\
 #mistake test for brides
 >brides
 No, no time to think about romance, now.
+\\
 #mistake test for caret
 >caret
 You need to shift letters and not sixes, here.
+\\
 #mistake test for cater
 >cater
 No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.
+\\
 #mistake test for lapins
 >lapins
 Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.
+\\
 #mistake test for naps
 >naps
 You need action, here! Maybe nothing too exhausting, but some action nonetheless.
-#mistake test for nepo
->nepo
-No world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!
+\\
 #mistake test for palins
 >palins
 Michael and Sarah are both funny enough on their own. I really couldn't do them justice in A Roiling Original.
-#mistake test for pone
->pone
-The message is corny, but the door's a piece of cake once you figure what to do with the knob.
+\\
 #mistake test for thus
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
+\\
 #mistake test for troy/tory
 >troy
 Apparently, the span pans don't have a name.
 >tory
 Apparently, the span pans don't have a name.
+\\
 #mistake test for saplin
 >saplin
 No tre begins to grow. Er, tree.
+\\
 #mistake test for slapin/slap in
 >slapin
 No vilence, err, violence, please.
 >slap in
 No vilence, err, violence, please.
+\\
 #mistake test for nkob
 >nkob
 The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
@@ -1510,46 +1515,49 @@ The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
 #ttc-table-of-oyster-done-rejects-wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
+\\
 #ttc-table-of-lapsin'-plains-nudges-acters
 >actesr
 Hmm, no, it's only one crate at a time.
+\\
 #ttc-table-of-lapsin'-plains-nudges-debris
 >debrsi
 You can't learn much from the debris. You're pretty sure it's from a crate.
+\\
 #ttc-table-of-lapsin'-plains-nudges-fragments
 >fragmenst
 They're fragments of a crate--this may or may not help.
+\\
 #ttc-table-of-lapsin'-plains-nudges-fragment
 >fragmetn
 They're fragments of a crate--this may or may not help.
+\\
 #ttc-table-of-lapsin'-plains-nudges-shut
 >shtu
 The huts are too secure, but maybe you can go by the pans.
+\\
 #ttc-table-of-lapsin'-plains-nudges-hut
 >htu
 The huts are too secure, but maybe you can go by the pans.
+\\
 #ttc-table-of-lapsin'-plains-nudges-plain
 >plani
 "I...plan," you think, then in a fit of confidence, "I...PLANS!"
+\\
 #ttc-table-of-lapsin'-plains-nudges-polyp
 >polpy
 You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further.
+\\
 #ttc-table-of-lapsin'-plains-nudges-polyps
 >polysp
 You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further.
-#ttc-table-of-lapsin'-plains-nudges-inthere
->intheer
-The words on the pans don't change. They are just a generic taunt.
+\\
 #ttc-table-of-lapsin'-plains-nudges-pna
 >pan
 There are two pans.
 #ttc-table-of-lapsin'-plains-nudges-isk
 >iks
 But you need to remove both skis.
-\\
-#ttc-table-of-lapsin'-plains-nudges-open
->opne
-The words on the pans don't change. They are just a generic taunt.
 \\
 #ttc-table-of-lapsin'-plains-nudges-doorknob
 >doorknbo
@@ -1588,7 +1596,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 #ttc-table-of-oyster-scannotes-bogus-plains
 >scan
 !Your settler appears to register this all across the plains.
-#here we want to scan only the crates.
+\\
+#above, we are directed to the crates, which help game progress, but below, the plains LLP give a specific reading
 >scan plains
 Your settler appears to register this all across the plains.
 

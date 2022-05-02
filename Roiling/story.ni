@@ -1918,7 +1918,7 @@ askee	talk-reject
 mussier misuser	"The [misuser] can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do." [troves]
 spider	"Spoiloplis is definitely not a [i]Charlotte's Web[r] kind of town."
 Trevis Vister	"Trevis Vister has strong opinions on everything and all kinds of success plans, but most of them revolve around having inherited wealth already."
-span pans	"The pans seem to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing them without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]."
+span pans	"The pans seem to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing them without explicitly talking, but it's probably not critical[else]. Well, you already splained to them[end if]."
 flea	"It's dead. Perhaps it can be reincarnated as something else."
 computer screen	"Honestly, throwing words at a computer screen and expecting something clever in response is about the most unconstructive thing I can imagine." [presto]
 sabot boats	"You get the feeling that what you talk about isn't as important as how you do so. You might really need to yell to get the boats['] attention." [oyster]
@@ -1984,7 +1984,8 @@ check objasking it about (This is the check for object information rule):
 		repeat through ask x about x table of mrlp:
 			if noun is askee entry and there is a dialogue-text entry, say "[dialogue-text entry][line break]" instead;
 	repeat through matched item responses table of mrlp: [ the rules here work as follows: search for NPC/item combo, search for generic item reject, search for generic NP reject ]
-		if (noun is the askee entry or chum of noun is the askee entry) and (there is a game-thing entry and game-thing entry is the second noun):
+		unless noun is askee entry or chum of noun is askee entry, next;
+		if there is a game-thing entry and game-thing entry is the second noun:
 			say "[dialogue-text entry][line break]" instead;
 	if the noun is not to-gen-blather:
 		repeat through table of universal objasking subject defaults:
@@ -1993,7 +1994,8 @@ check objasking it about (This is the check for object information rule):
 			say "[dialogue-text entry][line break]" instead;
 	if second noun is the player, say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead; [ this needs to be placed here as sometimes you may get a joke response for asking enemies about you]
 	repeat through matched item responses table of mrlp:
-		if (noun is the askee entry or noun is chum of the askee entry) and there is no game-thing entry:
+		unless noun is askee entry or chum of noun is askee entry, next;
+		if there is no game-thing entry:
 			say "[dialogue-text entry][line break]" instead;
 	abide by the general topic scouring rule;
 	if noun is not a person, say "You can only ask people about things." instead;
@@ -6476,7 +6478,7 @@ this is the smell-presto rule:
 	say "[if cur-score of presto is 0]It smells a bit stinky here, but more pressingly, it just FEELS stinky[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
 
 this is the smell-oyster rule:
-	if player is in Posh Hops Shop, say "You catch a whiff of some mokes['] smoke." instead; [oyster]
+	if player is in Posh Hops Shop, say "You catch a whiff: [']k, some mokes['] smoke." instead; [oyster]
 	if player is in Disease Seaside, say "Say, spare sea spray." instead;
 	if player is in Fighter Freight, say "You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly." instead;
 	if player is in Sclerous Closures and sardine is in Sclerous Closures, say "Sea rind." instead;
@@ -14770,7 +14772,7 @@ carry out bonking:
 
 chapter span pans
 
-the span pans are plural-named vanishing scenery in Lapsin Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!' ... they seem less relevant than the red writing of who created them.[paragraph break][if skis are in Lapsin Plains and knob is in Lapsin Plains]Skis and a knob hold the pans together[else if skis are in Lapsin Plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]." [bold-ok]
+the span pans are plural-named vanishing scenery in Lapsin Plains. "They're squarish, so you can't scootch under them, and they're too sturdy to push aside directoy. However, the red writing of who created them may provide a clue.[paragraph break][if skis are in Lapsin Plains and knob is in Lapsin Plains]Skis and a knob hold the pans together[else if skis are in Lapsin Plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]." [bold-ok]
 
 check scaning span pans:
 	if knob is moot and skis are moot, continue the action;
@@ -14982,7 +14984,7 @@ section OH NERD HERD NO
 
 OH NERD HERD NO is boring scenery in Sclerous Closures. "OH NERD HERD NO covers the front of the Horned Hedron. I suppose it's not meant to be welcoming.". bore-text of OH NERD HERD NO is "Doing anything with or to a 'welcoming' message isn't constructive.". bore-check of OH NERD HERD NO is bore-onho rule.
 
-understand "horned/hedron" and "horned hedron" as OH NERD HERD NO when player is in Sclerous Closures or player is in posh hops shop or player is in Den Loft or player is in Lean Lane. [this is a potentially bad hack to redirect conversation to the hedron, because the game doesn't see the hedron as a topic of conversation]
+understand "horned/hedron" and "horned hedron" as OH NERD HERD NO. [this is a potentially bad hack to redirect conversation to the hedron, because the game doesn't see the hedron as a topic of conversation]
 
 this is the bore-onho rule:
 	if current action is entering, try going north instead;
@@ -22462,19 +22464,27 @@ bredo-bored is a truth state that varies.
 naiv-nat is a truth state that varies.
 
 this is the towers-alt rule:
-	say "[eqls][b]TOWERS[r][line break]";
 	if bredo is moot:
-		say "[2da]Bredo could've also become [if bredo-bored is true][b]ROBED[r][else][b]BORED[r][instead].";
+		say "[2drm of Loftier Trefoil]Bredo could've also become [if bredo-bored is true][b]ROBED[r][else][b]BORED[r][instead].";
 	else if towers is not solved and Bredo is in Loftier Trefoil:
-		say "[2da]Bredo has two solutions.";
-	if towers is not solved and Reeds Ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
-	if Reeds Ale is moot, say "[2da]you could've also [if rese is true][b]RELEASED[r][else][b]RESEALED[r][end if] [el-la-full] to give [him-her] a new outlook on life.";
-	if towers is not solved and natives site van is not moot, say "[2da]Two solutions for the natives['] site van.";
-	if natives site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true][b]VAINEST[r][else][b]NAIVEST[r][end if] to uproot them.";
-	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the [neaters] [b]NEAREST[r][else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster [b]STABLER[r][else]you'd have passed Rawest Waters if you'd have made the turbos [b]ROBUST[r][end if].";
+		say "[2drm of Loftier Trefoil]Bredo had two solutions.";
+	if rodyon is false and roddro is false:
+		say "[2drm of Loftier Trefoil]You managed to find both solutions for Rodney by trying to get rid of him before enough picaros were gone and after. Well done!";
+	else:
+		say "[2drm of Loftier Trefoil]you could also have made Rodney [b][if roddro is true]YONDER[else]DRONEY[end if][r].";
+	if Reeds Ale is moot:
+		say "[2da]you could've also [if rese is true][b]RELEASED[r][else][b]RESEALED[r][end if] [el-la-full] to give [him-her] a new outlook on life.";
+	else:
+		say "[2da]Two solutions for the [el-la-full].";
+	if natives site van is moot:
+		say "[2da]you could've also made the natives['] site van [if naiv-nat is true][b]VAINEST[r][else][b]NAIVEST[r][end if] to uproot them.";
+	else:
+		say "[2drm of Danger Garden]there were two solutions for the natives['] site van guarding the passage south.";
+	if lone duck is moot, say "[2drm of obscurest subsector]Instead of [ff of true], you could've [ff of false].";
+	if Mislit Limits are visited:
+		say "[2drm of Actionless Coastlines][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the [neaters] [b]NEAREST[r][else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster [b]STABLER[r][else]you'd have passed Rawest Waters if you'd have made the turbos [b]ROBUST[r][end if].";
 	if towers is not solved and otters is not solved and Mislit Limits are not visited, say "[2da]Branch upcoming before crossing Leak Lake.";
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
-	if lone duck is moot, say "[2da]Instead of [ff of true], you could've [ff of false].";
 
 to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure] [b]FUSSIER[r][else]using the lone duck to make the prison ropins [b]UNLOCKED[r][end if]"
 

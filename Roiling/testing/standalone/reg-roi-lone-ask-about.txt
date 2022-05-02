@@ -913,6 +913,8 @@ Honestly, throwing words at a computer screen and expecting something clever in 
 >l
 Posh Hops Shop
 
+>au 0
+
 >ask casper about elvira
 Before you can pull a bar seat abreast... "Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad." He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says "Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back."
 #ttc-table-of-oyster-ask-x-about-x-casper
@@ -957,15 +959,11 @@ Casper wants you to acknowledge he's writing it, but he's not going to hand out 
 
 #ttc-table-of-oyster-matched-item-responses-lolstr-trolls-gins-sign
 >ask trolls about gins sign
+"Lotsa people think they're really cute, like they've got something special can make them disobey that sign."
 
 #ttc-table-of-oyster-matched-item-responses-lolstr-trolls-tips-pits
-"Lotsa people think they're really cute, like they've got something special can make them disobey that sign."
 >ask trolls about stumbler tumblers
 "Best to cough up some tips in there. For the wait staff."
-
->ts
->oyster
->in
 
 #ttc-table-of-oyster-matched-item-responses-lolstr-trolls-oh-nerd-herd-no
 >ask trolls about hedron
@@ -1230,15 +1228,15 @@ Lapsin' Plains
 
 #ttc-table-of-inanimate-talkables-span-pans
 >ask pans about elvira
-The pans seem to grumble and curse very quietly. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical.
+The pans seem to grumble and curse very quietly. Perhaps you could find a way of lecturing them without explicitly talking, but it's probably not critical.
 
 >splain
 
->ask door about door
-The pans seem to grumble and curse very quietly. Well, you already splained to it.
+>ask pans about pans
+The pans seem to grumble and curse very quietly. Well, you already splained to them.
 
->ask door bout xyzzy
-The pans seem to grumble and curse very quietly. Well, you already splained to it.
+>ask pans bout xyzzy
+The pans seem to grumble and curse very quietly. Well, you already splained to them.
 
 >trace
 Your score has just gone up by one point
@@ -2564,6 +2562,49 @@ The moat bubbles angrily. Dialogue won't work, but maybe the right word will.
 >atom
 Your score has just gone up by one point
 
+>open
+Your score has just gone up by one point
+
+#ttc-table-of-otters-ask-x-about-x-nope-peon
+>ask peon about peon
+"Proud to occupy the Pen O' NOPE and guard the Edictal Citadel!"
+
+#ttc-table-of-otters-ask-x-about-x-neon-pope
+>ask pope about pope
+"Proud to occupy the Pen O' NOPE and guard the Edictal Citadel!"
+
+#ttc-table-of-otters-matched-item-responses-neon-pope-nope-peon
+>ask pope about peon
+"Helps me guard the Citadel well enough, I guess!"
+
+#ttc-table-of-otters-matched-item-responses-nope-peon-elvira
+>ask peon about elvira
+"You will never be as great as she is! Neither will I, but I recognize that, and that makes me closer to her greatness than you!"
+
+#ttc-table-of-otters-matched-item-responses-neon-pope-elvira
+>ask pope about elvira
+"You will never be as great as she is! Neither will I, but I recognize that, and that makes me closer to her greatness than you!"
+
+#ttc-table-of-otters-matched-item-responses-nope-peon-neon-pope
+>ask peon about pope
+"Helps me guard the Citadel well enough, I guess!"
+
+#ttc-table-of-otters-matched-item-responses-nope-peon-pen-o-nope
+>ask nope peon about pen o nope
+"Sturdy, isn't it? Keeps people like you out!"
+
+#ttc-table-of-otters-matched-item-responses-neon-pope-pen-o-nope
+>ask neon pope about pen o nope
+"Sturdy, isn't it? Keeps people like you out!"
+
+#ttc-table-of-otters-unmatched-topic-responses-neon-pope
+>ask neon pope about xyzzy
+"NO! Peep on!" the Neon Pope chides you, and you doubt the substance of what you said deserved such a nonsequitur. Maybe you could get rid of them somehow
+
+#ttc-table-of-otters-unmatched-topic-responses-nope-peon
+>ask nope peon about xyzzy
+"NO! Peep on!" the Nope Peon chides you, and you doubt the substance of what you said deserved such a nonsequitur. Maybe you could get rid of them somehow
+
 >s
 
 #ttc-table-of-otters-matched-item-responses-mr-lee-elvira
@@ -2807,7 +2848,7 @@ Nobody in the game can tell you anything new about yourself. Well, anything new 
 
 #ttc-table-of-otters-ask-x-about-x-elmer
 >ask elmer about elmer
-"Slightly more interesting than my friend."
+"Slightly more interesting and useful to Elvira than my friend."
 
 #ttc-table-of-otters-unmatched-topic-responses-elmer
 >ask elmer about xyzzy
@@ -2819,7 +2860,7 @@ Nobody in the game can tell you anything new about yourself. Well, anything new 
 
 #ttc-table-of-otters-ask-x-about-x-merle
 >ask merle about merle
-"Slightly more interesting than my friend."
+"Slightly more interesting and useful to Elvira than my friend."
 
 #ttc-table-of-otters-unmatched-topic-responses-merle
 >ask merle about xyzzy
@@ -2856,7 +2897,7 @@ She sniffs haughtily. As if you have to ask! As if you're NOT too biased to beli
 
 #ttc-table-of-otters-matched-item-responses-elvira-gretta
 >ask elvira about gretta
-"Not as unselfish as she thought she was."
+"Not as unselfish as she thought she was. A real virtue-signaler!"
 
 #ttc-table-of-otters-matched-item-responses-elvira-mr-lee
 >ask elvira about mr lee
@@ -3157,19 +3198,19 @@ You Did Great
 
 #uncomment this is doing partial tests
 
->{include} _only-ordeal-reload
+#>{include} _only-ordeal-reload
 
 #this is a catch-all
 >ts
 
->{include} _only-stores
->{include} _only-routes
->{include} _only-troves
->{include} _only-presto
->{include} _only-oyster
->{include} _only-towers
+#>{include} _only-stores
+#>{include} _only-routes
+#>{include} _only-troves
+#>{include} _only-presto
+#>{include} _only-oyster
+#>{include} _only-towers
 >{include} _only-otters
->{include} _only-others
+#>{include} _only-others
 
 * _only-ordeal-reload
 
@@ -3198,8 +3239,9 @@ You Did Great
 
 * _only-oyster
 
->purloin settler
->gonear posh hops shop
+>ts
+>oyster
+>enter barnacle
 >{include} _oyster
 
 * _only-towers

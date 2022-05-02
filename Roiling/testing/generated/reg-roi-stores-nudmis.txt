@@ -205,7 +205,7 @@ The smell from Store B becomes fruitier and more delicious.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a decent omen.
 
 #(we need ts to set autosave-known to true)
-#mistake retest for reaves
+#mistake test for reaves
 >reaves
 You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
 

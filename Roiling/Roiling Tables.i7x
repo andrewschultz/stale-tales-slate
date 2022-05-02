@@ -1409,6 +1409,10 @@ this is the pre-rodney rule:
 		the rule fails;
 
 this is the post-rodney rule:
+	if the player's command includes "yonder":
+		now rodyon is true;
+	else:
+		now roddro is true;
 	now all picaros in Loftier Trefoil are pinko;
 	if here-picaros > 0, decrease poss-score of towers by here-picaros;
 	if recital article is not moot, poss-d;
@@ -2620,7 +2624,7 @@ askee	dialogue-text
 plebe	"You figure you should grill him about how worthless he thinks he is, but you lack the right word or words."
 Rand	"Rand gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"Leo gives a whole new dimension to small talk. But not for long, thankfully."
-hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to prevent you from seeing from what's beyond, and that wall is helping."
+hogs	"The whole 'Who do you think you are' won't go well with these hogs. They're here to prevent you from seeing what's beyond, and that wall is helping."
 Zo Mavelt	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 Tom Avlez	"'If you scan me and go north, I'll go away, and someone else might appear.'"
 Lev Tzoma	"'If you scan me and go north, I'll go away, and someone else might appear.'"
@@ -2688,8 +2692,8 @@ Ed Riley	"'I'd ... LEERY!' Ed booms, puffing himself up a bit."
 whiners	--
 players	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
 Gretta	"She's got enough people asking about her right now."
-Elmer	"'Slightly more interesting than my friend.'"
-Merle	"'Slightly more interesting than my friend.'"
+Elmer	"'[elm-mer-refl].'"
+Merle	"'[elm-mer-refl].'"
 Mr Lee	--
 gore ogre	--
 le mer	--
@@ -2706,6 +2710,8 @@ sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 nope peon	"'[nope-refl]!'"
 neon pope	"'[nope-refl]!'"
+
+to say elm-mer-refl: say "Slightly more interesting and useful to Elvira than my friend"
 
 to say nope-refl: say "Proud to occupy the [pen o] and guard the Edictal Citadel"
 
