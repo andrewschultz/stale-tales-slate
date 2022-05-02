@@ -174,8 +174,8 @@ cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shred
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
 cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	--	--	"The [cathouse] turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
 tall trio	tortilla	"tortilla"	"tall trio"	--	--	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
-grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
-cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge-open is false]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
+grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [closed-note]refines itself into something more edible. Relatively."	false	362300335
+cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge is closed]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
 taco	coat	"coat"	"taco"	--	--	"Before changing the hot-to-your-tongue taco to a warm-to-your-body coat, you wisely take out a few small bites from the bottom (like adults always said not to) to form the arm-holes. Delicious! You ate just enough to feel fortified, and you've got something to wear, too."	false	198655998
 cask	sack	"sack"	--	pre-cask-sack rule	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	pre-sack-cask rule	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
@@ -191,6 +191,8 @@ oils	silo	"silo"	--	pre-oils-silo rule	post-oils-silo rule	"You empty the cask a
 oils	soil	"soil"	--	pre-oils-soil rule	post-oils-soil rule	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
 hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	--	post-hoots-shoot rule	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
 trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	--	post-trees-steer rule	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
+
+to say closed-note: if fridge is closed, say "you didn't even open yet "
 
 this is the post-thenick-kitchen rule:
 	if straw is in the nick, now straw is in kitchen;
@@ -211,10 +213,9 @@ this is the post-fridgey-flip rule:
 	if noun is pancake or noun is grits:
 		now noun is in fridge;
 		say "[line break]Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
-		if fridge-open is false:
+		if fridge is closed:
 			say "[line break]You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
-			now fridge-open is true;
-			now fridge is transparent;
+			now fridge is open;
 		if fridge-score is 2, say "[line break]I suppose you could also say you fig'red the fridge, too, now.";
 
 this is the pre-cask-sack rule:
@@ -467,9 +468,11 @@ this is the post-leis-lies rule:
 
 this is the post-rock-cork rule:
 	if swing is not moot, now swing is LLPish;
+	note-isle-left;
 
 this is the post-swing-wings rule:
 	if rock is not moot, now rock is LLPish;
+	note-isle-left;
 
 this is the post-ropes-grips rule:
 	process the realize-rived-drive rule;
@@ -536,6 +539,17 @@ section ordeal loader auxiliary
 section forest auxiliary
 
 section sortie auxiliary
+
+section metros auxiliary
+
+section resort auxiliary
+
+to note-isle-left:
+	unless swing is moot and rock is moot:
+		say "The [noun] will get you out of here, but there's a bit more to clean up, if you want.";
+		continue the action;
+	if l2 is not moot:
+		say "There's something weird about this isle you can't put your finger on. It's not critical, but maybe there's more to do, in addition to finding multiple ways of transport out."
 
 book general auxiliary rules
 

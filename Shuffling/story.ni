@@ -495,15 +495,12 @@ to decide whether the action is procedural: [aip]
 	if requesting the score, yes;
 	if taking inventory, yes;
 	if gotothinging, yes;
-	if xmxing, yes;
 [	if out of world, yes;]
 	if objasking generically, yes;
 	if objasking about, yes;
 	if asking generically, yes;
 	if asking about, yes;
 	no;
-
-xmxing is an action applying to one thing. [xmxing is a debug-only command, but we need it to be procedural for automated testing.]
 
 book megachatter
 
@@ -2330,7 +2327,8 @@ definition: a thing (called amiun) is unnecc:
 
 definition: a thing (called cand) is angleable:
 	if cand is cake pan or cand is grist:
-		if fridge-open is false, no;
+		if player is in kitchen and fridge is open and cand is in fridge, yes;
+		no;
 	if cand is anapest, decide no;
 	if cand is beats, decide no;
 	if cand is words:
@@ -2596,6 +2594,7 @@ definition: a thing (called xx) is fungible:
 	if xx is held, yes;
 	[if location of xx is location of player, yes;]
 	if xx is touchable, yes;
+	if location of player is kitchen and fridge contains xx and fridge is open, yes;
 	no.
 
 definition: a thing (called xx) is available-to-flip:
@@ -2603,6 +2602,7 @@ definition: a thing (called xx) is available-to-flip:
 	[if location of xx is location of player, yes;]
 	if xx is touchable, yes;
 	if xx is words and xx is in noise bag, yes;
+	if location of player is kitchen and fridge contains xx, yes;
 	no.
 
 fliptoing is an action applying to one visible thing.
@@ -4106,11 +4106,6 @@ to ditch-saltine:
 		pad-del "xx";
 		prevent undo;
 
-understand the command "xx" as something new.
-
-understand "xx [something]" as xmxing.
-understand "xx " as xmxing.
-
 rule for supplying a missing noun when xmxing:
 	if player is in the nick:
 		now noun is t-n;
@@ -4131,6 +4126,13 @@ rule for supplying a missing noun when xmxing:
 	reject the player's command;
 
 xray-cheat is a truth state that varies.
+
+understand the command "xx" as something new.
+
+understand "xx [something]" as xmxing.
+understand "xx " as xmxing.
+
+xmxing is an action applying to one thing. [xmxing is a debug-only command, but we need it to be procedural for automated testing.]
 
 check xmxing:
 	if xray-cheat is true:
@@ -5819,6 +5821,8 @@ check going inside in Emptiness Sepiments:
 	moot nose;
 	moot shades;
 	moot beard;
+	if banshee is not moot, poss-d;
+	if slit is not moot, poss-d;
 
 chapter banshee
 
@@ -6593,18 +6597,20 @@ to decide which number is fridge-score:
 	if cake pan is moot, increment temp;
 	decide on temp;
 
-description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything. You could just [b]OPEN[r] it[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [a list of things in fridge][else]. It doesn't appear locked or anything. You could just [b]OPEN[r] it[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
 
 after examining griefd fridge:
 	pad-rec "warts";
 	continue the action;
 
-fridge-open is a truth state that varies.
+check closing griefd fridge:
+	if fridge is closed, say "It already is." instead;
+	if fridge is open, say "You closed it right after opening it. You know what's in there." instead;
 
 check opening griefd fridge:
-	now fridge-open is true;
-	now fridge is transparent;
-	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in griefd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping]." instead;
+	now fridge is open;
+	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in griefd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping].";
+	the rule succeeds;
 
 to say guards-say-hi: say ". [if fridge-score is 0]They smile and apologize awkwardly, and you say no problem[else if fridge-score is 1]They thank you for leaving enough food to tide them over but not too much. They needed room for a feast[else]They thank you for leaving them so much food even after they--well. They were too lazy when they woke up[end if]";
 
@@ -6614,12 +6620,12 @@ the manila animal is an amusing boring thing. it is part of the griefd fridge. u
 
 section grist and grits
 
-some grist is in the fridge. it is LLPish. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
+the grist is in the fridge. it is LLPish. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S". indefinite article of grist is "some".
 
 description of grist is "It's a heapin['] helpin['] of the stuff, haphazardly lumped at the bottom of the fridge."
 
-understand "heapin helpin" and "heapin/helpin" as grist when grist is fungible and fridge-open is true.
-understand "heapin helpin" and "heapin/helpin" as grits when grits are fungible and fridge-open is true.
+understand "heapin helpin" and "heapin/helpin" as grist when grist is fungible and fridge is open.
+understand "heapin helpin" and "heapin/helpin" as grits when grits are fungible and fridge is open.
 
 the grits are a plural-named thing.
 
@@ -6634,7 +6640,7 @@ description of grits is "They look more edible than the grist, but you're not TH
 
 section cake pan and pancake
 
-the cake pan is in the fridge. the cake pan is LLPish. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
+a cake pan is in the fridge. the cake pan is LLPish. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
 
 understand "cakepan" as cake pan.
 
@@ -6910,7 +6916,6 @@ rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos
 this is the bore-anapest rule:
 	if the current action is objasking generically, continue the action;
 	if the current action is listening, continue the action;
-
 
 chapter peasant
 
@@ -9423,7 +9428,7 @@ after reading a command:
 		if tell-flag is false:
 			say "[bracket]NOTE: [this-game] uses 'ASK X ABOUT Y,' as you don't need to order NPCs around. So the parser will attempt to convert this to asking.[close bracket][line break][wfak]";
 			now tell-flag is true;
-	repeat with QQ running through fungible things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
+	repeat with QQ running through available-to-flip things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
 		if QQ is a the-from listed in regana of mrlp:
 			d "candidate fungible: [QQ].";
 			if the player's command matches exact-text entry:
@@ -9606,7 +9611,7 @@ this is the metros-scan-check rule:
 		if noun is faeries, say "You sense that would be a breach of some magical etiquette you don't understand." instead;
 		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
 	if location of player is Esoteric Coteries:
-		if noun is nerds, say "[one of]'Whoah! Hey! What's this, a Skansder?' You turn red, explaining you don't know what that is. 'You didn't make that, did you? Don't know the specifications? Thought not.'[or]'Still messing with technology over your head, eh? Like that Skansder you don't know what it is.'[stopping][paragraph break]As the nerds ask other questions, the gadget lights up, and you notice [nerdsask], until the nerds ask no more. Then it goes back to [asknerds] as you think how, why and what to ask nerds." instead;
+		if noun is nerds, say "[ok-scan][one of]'Whoah! Hey! What's this, a Skansder?' You turn red, explaining you don't know what that is. 'You didn't make that, did you? Don't know the specifications? Thought not.'[or]'Still messing with technology over your head, eh? Like that Skansder you don't know what it is.'[stopping][line break]As the nerds ask other questions, the gadget lights up, and you notice [nerdsask], until the nerds ask no more. Then it goes back to [asknerds] as you think how, why and what to ask nerds." instead;
 		if noun is tulip, say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sort of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
 	if noun is neon pig or noun is gin nope opening:
 		if player is not on cafe face, say "The [if noun is neon pig][pig][else][gin nope][end if] doesn't register. Maybe you're too far away, and you'd have to climb the cafe face to get near it." instead;
