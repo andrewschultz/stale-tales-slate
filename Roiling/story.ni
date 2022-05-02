@@ -394,22 +394,42 @@ definition: a direction (called dir) is viable:
 	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
 	decide no;
 
+[ note: below, the rules will fail if we use the words noun, yes or no. Use dir and "the rule succeeds/fails." ]
+
 a direction viability rule for a direction (called dir) when mrlp is ordeal reload:
 	if player is in Largely All Grey Gallery and dir is inside, the rule succeeds;
 	if player is in Carven Cavern and dir is inside and stapler is moot, the rule succeeds;
 
 a direction viability rule for a direction (called dir) when mrlp is presto:
-	if player is in Saps Pass and dir is north and Leo is touchable, no;
+	if player is in Saps Pass and dir is north and hogs are touchable, the rule fails;
+	if player is in Unwary Runway and dir is north, the rule succeeds;
+	if player is in Char Arch and yak is moot and dir is south, the rule fails;
+	if player is in Hacks Shack and dir is south and robot is reflexed, the rule fails;
 
 a direction viability rule for a direction (called dir) when mrlp is oyster:
-	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, no;
+	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, the rule fails;
+	if player is in Sclerous Closures and dir is north and sandier sardine is in Sclerous Closures, the rule fails;
+	if player is in Horned Hedron and dir is inside and pol art portal is in Hedron, the rule succeeds;
 
-a direction viability rule for a direction (called dir) when mrlp is oyster:
-	if player is in Disowned Downside and dir is west and pen o nope is not moot, no;
-	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
+a direction viability rule for a direction (called dir) when mrlp is towers:
+	repeat with GU running through touchable guardians:
+		if dir is guadir of GU and location of player is gualoc of GU, the rule fails;
+		if location of player is the room (guadir of GU) of (gualoc of GU):
+			if dir is opposite of guadir of GU, the rule fails;
+	if player is in Mislit Limits and serpent is in Mislit Limits and dir is west, the rule fails;
+
+a direction viability rule for a direction (called dir) when mrlp is otters:
+	if player is in Minded Midden and barley is not moot, the rule fails;
+	if player is in Minded Midden and Ed Riley is in Minded Midden and dir is west, the rule fails;
+	if player is in Disowned Downside and dir is west and pen o nope is not moot, the rule fails;
+	if player is in Reclusion Inclosure and merle is in Reclusion Inclosure and dir is west, the rule fails;
 
 a direction viability rule for a direction (called dir) when mrlp is others:
-	if player is in Gates Stage and player does not have passport and dir is north, no;
+	if player is in Rustic Citrus and compass is off-stage and dir is north, the rule fails;
+	if player is in Gates Stage and player does not have passport and dir is north, the rule succeeds;
+
+a direction viability rule for a direction (called dir) when mrlp is demo dome:
+	if player is in peek keep and dir is south, the rule succeeds;
 
 chapter action
 
@@ -453,6 +473,10 @@ to decide whether the action is procedural: [aip]
 		if gotothinging, yes;
 	if xring, yes; [this is a debug command]
 	no;
+
+chapter rules orderings
+
+the map outside to directions if possible rule is listed first in the check going rules.
 
 chapter portals
 
@@ -3712,21 +3736,26 @@ understand the command "exits" as something new.
 
 understand "exits" as exitsing.
 
+this is the mesa-go-reject rule:
+	if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
+	if a bev o be ova is touchable, say "You don't know if you should go anywhere. With [bev] lying around, maybe that's where the adventure is." instead;
+	if MORF FORM is not off-stage, say "You probably don't want to go anywhere with that [if MORF FORM is in Same Mesa]thing[else]bean[end if] around." instead;
+
 check exitsing:
 	if player is in Strip of Profits, say "There are no directional exits here, but you [if number of touchable portals is 0]may want to try opening up a store[else if number of touchable portals is 1]can go [b]IN[r] to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead; [exits stores]
+	if player is in Cruelest Lectures, say "You can't make it to any exits right now. You need to disrupt things. Listen or talk to the Rehabs Basher for clues." instead;
 	if mrlp is routes:
 		if player is in Same Mesa:
-			if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
-			if MORF FORM is not off-stage, say "You probably don't want to go anywhere with that [if MORF FORM is in Same Mesa]thing[else]bean[end if] around." instead;
+			abide by the mesa-go-reject rule;
 			say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
 		if player is in Idle Deli or player is in adobe or player is in Cleric Circle, say "You can go back out." instead;
-		say "Looks like you will need to figure a way to go onward without directions. You've been doing well so far." instead;
-	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world." instead;
+		say "Looks like you will need to figure a way to move forward without directions. You've [if sonancy canyons are visited]got to be really close[else]been doing well so far[end if]." instead;
+	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move [if econ cone is visited]even [end if][if browse bowers are visited]further [end if]ahead in the world." instead;
 	if player is in Tenfold Teflond Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [exits oyster]
 	if player is in end den, say "You can go back outside to the Horned Hedron." instead;
 	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [exits towers]
 	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [exits otters]
-	if player is in rustic and Swell Wells is unvisited, say "You've lost your bearings a bit, but maybe [if player has compass]the compass could help[else]if you got enough fruits, Curtis would help you[end if]." instead;
+	if player is in rustic and compass is off-stage, say "You've lost your bearings a bit, but maybe [if player has moss cap]the moss cap could help in another form[else]if you got enough fruits, Curtis would help you[end if]." instead;
 
 carry out exitsing:
 	if number of viable directions is 0, say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of touchable enterable things > 0], and it looks like there's something to [b]ENTER[r][end if]." instead;
@@ -5636,6 +5665,15 @@ general-troves-nowhere-warn is a truth state that varies.
 
 diagonal-warned is a truth state that varies.
 
+this is the find-nowhere-text rule:
+	repeat through nowhere-table of mrlp:
+		if theloc entry is location of player:
+			say "[thereject entry][line break]";
+			if mrlp is troves and general-troves-nowhere-warn is false:
+				say "[line break]";
+				break;
+			the rule succeeds;
+
 check going nowhere (this is the main can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
@@ -5644,13 +5682,7 @@ check going nowhere (this is the main can't go that way rule) :
 	if noun is diagonal and diagonal-warned is false:
 		ital-say "there are no diagonal connections between locations in [this-game].";
 		now diagonal-warned is true;
-	repeat through nowhere-table of mrlp:
-		if theloc entry is location of player:
-			say "[thereject entry][line break]";
-			if mrlp is troves and general-troves-nowhere-warn is false:
-				say "[line break]";
-				break;
-			the rule succeeds;
+	abide by the find-nowhere-text rule;
 	if mrlp is troves:
 		now general-troves-nowhere-warn is true;
 		say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on." instead; [this should not be relevant, as all Troves locations should be in the table above, but just in case...]
@@ -5703,7 +5735,6 @@ check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles
 			move player to Cleric Circle instead;
 		if noun is down and THE BEAN is touchable, say "Down isn't quite how to descend here." instead;
 		if noun is up or noun is down, say "That won't work right now." instead;
-		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
 	else:
 		say "No matter where you try to wander, you wind up back where you are." instead;
 
@@ -5716,6 +5747,7 @@ check going nowhere in Cripple Clipper:
 	if noun is inside or noun is down, say "Locked ol['] deck. No bowel on below." instead;
 
 check going nowhere when location of player is a mazeroom (this is the zaphint rule):
+	if noun is inside, continue the action;
 	if voltzap is false:
 		say "You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT.";
 		now voltzap is true;
@@ -9776,6 +9808,8 @@ book Strip of Profits
 
 Strip of Profits is a room in Stores. last-loc of Stores is Strip of Profits. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if-bush].". roomnud of strip of profits is table of strip of profits nudges.
 
+exit-text of Strip of Profits is "The stores are where it's at. You can go [b]IN[r] [now-once of whether or not number of not off-stage portals > 0] you've found what they can become.".
+
 hub-room is Strip of Profits.
 
 understand "trips/profit" as Strip of Profits when debug-state is true.
@@ -10283,6 +10317,8 @@ book Cruelest Lectures
 
 Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium. There's some teasing seating, but you're not sure it'd improve the experience[one of]. A blabber babbler at the front leaves your fellow speaker parkees in a trance. But not drug-induced, of course[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E.". roomnud of cruelest lectures is table of cruelest lectures nudges.
 
+exit-text of cruelest lectures is "There must be a general way to leave, but that's not quite it."
+
 check looking in Cruelest Lectures for the first time: say "As you march through the smoke, you hear 'Pored? ... ROPED, doper! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
 check exiting in Cruelest Lectures:
@@ -10425,9 +10461,15 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
+when play begins (this is the make one way passages rule):
+	now same mesa is mapped outside idle deli;
+	now same mesa is mapped outside adobe abode;
+	now same mesa is mapped outside cleric circle;
+	now horned hedron is mapped outside end den;
+
 Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
 
-exit-text of Same Mesa is "Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around."
+exit-text of Same Mesa is "[if a bev o be ova is off-stage]Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around[else]There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -12669,10 +12711,11 @@ this is the shack-south rule:
 		say "You're so close. You must be. [if dude bub egg is reflexed]Just do something simple with that [b]USB[r][else]You can't [i]budge[r] until you fix this program, here[end if].";
 		the rule fails;
 	if keyboard is not off-stage and screen is not off-stage:
-		say "You should have what you need. It's time to sit down and plow through some computer work, here.";
 		if hawt thaw is moot and starch charts are moot and lamb is moot and sport ports are reflexed:
 			say "You've done everything else you could've, including some weird small details. You probably want to focus on things here.";
-			the rule fails;
+		else:
+			say "You should have what you need. It's time to sit down and plow through some computer work, here.";
+		the rule fails;
 	else if screen is off-stage:
 		say "You feel you're missing something. You probably should see about [treas-west].";
 	else if keyboard is off-stage:
@@ -13400,6 +13443,8 @@ book Posh Hops Shop
 
 Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do almost anything to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and LOLstr trolls block the way out.". roomnud of posh hops shop is table of posh hops shop nudges.
 
+exit-text of Posh Hops Shop is "Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by [the trolls] somehow.".
+
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of pesty types to 0;
 
@@ -13854,6 +13899,8 @@ book Olde Lode
 
 Olde Lode is a room in Oyster. "You've reached what was probably an old mining pit. As in the Hops Shop, you can't tell one direction from another, especially not with those scary baser braes all around. You feel both a need to panic and a need not to panic. But there must be simple action to take to get out of here.". roomnud of Olde Lode is table of Olde Lode nudges.
 
+exit-text of Olde Lode is "As in the [hops shop], it's not about any one direction but getting past an obstacle."
+
 after looking in Olde Lode:
 	if clam is in Olde Lode, set the pronoun it to clam;
 	continue the action;
@@ -13915,6 +13962,8 @@ the baser braes are plural-named bounding boring scenery in Olde Lode. descripti
 book Disease Seaside
 
 Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packed with sabot boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
+
+exit-text of Disease Seaside is "Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it."
 
 after looking in Disease Seaside:
 	set the pronoun them to sabot boats;
@@ -17542,6 +17591,10 @@ book Dire and Arid Den
 
 there is a sideroom called Dire and Arid Den. It is innie. It is in Towers. "You feel drained dreadin['] at the thought of dying here. It's so thick, you bet you could examine or even scan it. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here, too.". roomnud of Arid Den is table of Dire And Arid Den nudges. missed-text of Arid Den is "a room below the [denim] in [gradient]".
 
+check going up in Dire and Arid Den: say "You're too far below the surface. Well, not super-far, but enough to leave your will momentarily drained." instead;
+
+exit-text of arid den is "You need to snap out of the funk you're in. Get the right mindset.".
+
 chapter bogus-dandier (flippable scenery for room)
 
 the bogus-dandier is privately-named ssno vanishing scenery in Arid Den. description is "BUG: you should not see this.". printed name is "Dire and Arid Den".
@@ -18322,6 +18375,8 @@ book Minded Midden
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
 Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley and can see the Edictal Citadel to the west[end if][if lilac bays are in minded midden][lilac-bay-desc][end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+
+exit-text of Midden is "There's no way out until the bleary barley is gone.".
 
 understand "burnt brunt" and "burnt/brunt" as Minded Midden when bleary barley is moot.
 
@@ -19771,6 +19826,8 @@ book Rustic Citrus
 
 Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus. roomnud of Rustic Citrus is table of Rustic Citrus nudges.
 
+exit-text of Rustic Citrus is "But you're not even sure which way is out!"
+
 after choosing notable locale objects when player is in Rustic Citrus:
 	set the locale priority of Curtis to 2;
 	repeat with spf running through all touchable start-pre-fruits:
@@ -21192,7 +21249,9 @@ to decide whether all-clear-demo-dome:
 	if number of unexamined things in sparse spares > 0, no;
 	yes;
 
-check going south in Peek Keep:
+the demo dome exiting rule is listed before the map outside to directions if possible rule in the check going rules.
+
+check going in Peek Keep when noun is south or noun is outside (this is the demo dome exiting rule):
 	if all-clear-demo-dome:
 		say "You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers['] money.";
 		now undo-code is 0;
@@ -21555,40 +21614,25 @@ check burning:
 
 to say way-tow: if Mislit Limits is unvisited, say "way ";
 
-book exiting
+book exiting/going outside
 
-before exiting (this is the exiting is the only way out rule):
-	d "Viable directions: [list of viable directions].";
-	unless the room outside of location of player is nowhere:
-		continue the action;
+the check for default exit rule is listed first in the check exiting rules.
+
+check exiting (this is the check for default exit rule): try going outside instead;
+
+check going outside (this is the map outside to directions if possible rule):
+	if number of viable directions is 0:
+		if exit-text of location of player is not empty, say "[exit-text of location of player][line break]" instead;
+		abide by the find-nowhere-text rule;
+		say "There is probably a puzzle you need to figure to leave here. That I am not more specific is a BUG." instead;
 	if number of viable directions is 1:
-		let XY be a random viable direction;
-		if XY is not the noun:
-			say "The only way to exit is [XY], so let's go that way.";
-			try going XY instead;
+		let rvd be random viable direction;
+		if rvd is not the noun:
+			say "The only way to exit is [rvd], so let's go that way.";
+			try going rvd instead;
 		move player to the room outside of location of the player;
-	abide by the inside-outside rule;
-
-this is the inside-outside rule:
-	if location of player is Cripple Clipper, say "Drowning ails or roils a sailor." instead;
-	if mrlp is troves, say "Exiting is not an option. You must earn the right to move on." instead;
-
-before going outside (this is the out is the only way rule):
-	unless the room noun of location of player is nowhere, continue the action;
-	if number of viable directions is 1:
-		let XY be a random viable direction;
-		if XY is not the noun, try going XY instead;
-		move player to the room outside of location of the player;
-	abide by the inside-outside rule;
-
-check an actor exiting (this is the custom not in anything rule):
-	let the local room be the location of the actor;
-	if the container exited from is the local room:
-		if exit-text of location of actor is not empty, say "[exit-text of location of actor][line break]" instead;
-		if number of viable directions > 1, say "Exiting is ambiguous here, since you can go [list of viable directions]." instead;
-		say "Standard directions may not get you out of here. There is probably a puzzle you need to figure." instead; [?? can we shuffle the check going rules to remove "before"?]
-
-the custom not in anything rule is listed before the can't exit when not inside anything rule in the check exiting rulebook.
+		the rule succeeds;
+	say "You have more than one way to leave: [list of viable directions]. So you'll need to specify which one." instead;
 
 book throwing
 
