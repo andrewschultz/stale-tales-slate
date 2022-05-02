@@ -1304,7 +1304,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "palace"	286467128	--	degen-true rule	"It's not just that it's a palace, it's a [b]CURST PALACE[r]."
 "castle"	402197335	--	degen-true rule	"Not just any castle. [up-arc]."
 "acpru"	293088972	--	degen-true rule	"It's not just the castle name but the full title you need to work with."
-"lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if Mislit Limits is visited]You're beyond the lake now.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
+"lake"	236740944	--	degen-true rule	"[if player is in Rawest Waster Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if Mislit Limits is visited]You're beyond the lake now.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
 "pot"	258928554	top opt pot	--	"The best--well, the only--way to change the top opt pot is to put something in it, but you haven't seen anything suitable yet."
 "blub"	195757456	blub bulb	--	"Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new."
 "renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if top opt pot is moot]You got his present to [the sitter][else if anodyne is moot]You've cheered [sitter] up a lot and should probably just give her the gift[else if itster is moot]You've found and made [the sitter] a bit happier, but maybe you can do even more[else if Mesprise Premises is visited][the sitter] is still unreceptive, though[else]You haven't yet found anyone who might want the top opt pot, anyway[end if]."
@@ -1659,9 +1659,9 @@ to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You 
 
 to say act-on-instance: say "You should probably act on what the instances are saying. You don't need to change anything back here any more"
 
-chapter rawest waters
+chapter Rawest Waster Waters
 
-table of Rawest Waters nudges [4 3]
+table of Rawest Waster Waters nudges [4 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "waster"	522636487	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. The [neaters] still seem to want to help you, though."
 "spray"	387610798	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
@@ -2502,7 +2502,7 @@ this is the past-strip rule:
 	if Strip of Profits is visited, the rule succeeds;
 	the rule fails;
 
-to say diag-dir-rej: say "This game doesn't require you to mess with diagonal directions[if player is in Rawest Waters], so maybe you should consider the other shores[else], so I hope that's a relief[end if]";
+to say diag-dir-rej: say "This game doesn't require you to mess with diagonal directions[if player is in Rawest Waster Waters], so maybe you should consider the other shores[else], so I hope that's a relief[end if]";
 
 to say dir-rej: say "This game almost never requires you to mess with cardinal directions";
 

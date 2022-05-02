@@ -877,11 +877,11 @@ understand "sectional" and "sectionals" as a mistake ("You're not competing with
 
 understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when weirder red wire is touchable.
 
-chapter Rawest Waters
+chapter Rawest Waster Waters
 
-understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in Rawest Waters.
+understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in Rawest Waster Waters.
 
-understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in Rawest Waters.
+understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in Rawest Waster Waters.
 
 chapter Mislit Limits
 

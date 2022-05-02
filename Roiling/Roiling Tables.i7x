@@ -1986,7 +1986,7 @@ thistext
 "(Y) The Blowfish Fishbowl becomes Helots['] Hostel before settling on Lean Lane, which is revealed as the predecessor of Hardest Trashed Dearths."
 "(Y) You watch Hero's Shore get renamed to Saccade Cascade but reserved as the post-haunter name for Anger Range."
 "(Y) You watch the Scum Ant Sanctum morph into Plasm Lamps."
-"(W) You watch as the Servant Taverns are moved from after Rawest Waters and placed at the start of the Towers area. It is renamed the Loftier Trefoil."
+"(W) You watch as the Servant Taverns are moved from after Rawest Waster Waters and placed at the start of the Towers area. It is renamed the Loftier Trefoil."
 "(W) You see a wholesale switching of locations in the Wildest Wilteds, even when they were the Bland Sad Badlands and before. Danger/Gander Garden is moved from the start to guarding Dr. Yow. Unblest Sunbelt becomes the Leveraged Everglade. Campiest Campsite is moved west of Scope Copse and demoted to scenery for Outer Route, which is moved south and replaced by Fringe Finger. Shaven Havens is moved north of the admirer, with Savager Ravages demoted to bounding scenery. Dopiest Topside is the new introductory name. Heron Isle Shoreline goes through several iterations: Ole Shrine Shoreline, Strati Strait, and finally Artist Traits Strait. Ruffian Funfair becomes Baldest Blasted Saltbed."
 "(T) The Maiden Median becomes Gent-Fora/Frat-Gone Frontage, then Disowned Downside."
 "(T) Less Nice Silences becomes Tapering Anger Pit/Inert Gap, then Shiner Shrine."
@@ -3230,7 +3230,7 @@ Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to y
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now."
 Shaven Havens	"[one of]You wander off, but you hear hikers shreik 'Shrike! Shrike!'[paragraph break][or][stopping]Not worth it. Any direction but back south might drive you too far from the palace."
-Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
+Rawest Waster Waters	"[if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
 Mislit Limits	"[if noun is south or noun is southwest]You don't want to go back across Leak Lake[else]The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[mislit-clue][end if]."
 
 to say like-boat: say "[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]"

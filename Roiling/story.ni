@@ -1516,7 +1516,7 @@ this is the goto-towers rule:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
 		continue the action;
-	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
+	if location of player is Rawest Waster Waters, say "Progress isn't easy when you're flailing in water." instead;
 
 this is the goto-otters rule:
 	if player is in Rancho Archon Anchor, elvira-flee-taunt;
@@ -1554,7 +1554,7 @@ Fighter Freight	4	--	"You don't really want to revisit the crays."
 --	5	oyster	[oyster]
 Loftier Trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
 --	2	towers	"You don't want to cross Leak Lake again."
-Rawest Waters	3	--	"The Rawest Waters of Leak Lake would probably be even less fun the second time around."
+Rawest Waster Waters	3	--	"The Rawest Waster Waters of Leak Lake would probably be even less fun the second time around."
 Mesprise Premises	4	--
 Mislit Limits	4	--	[towers]
 
@@ -3712,7 +3712,7 @@ understand the command "exits" as something new.
 
 understand "exits" as exitsing.
 
-carry out exitsing:
+check exitsing:
 	if player is in Strip of Profits, say "There are no directional exits here, but you [if number of touchable portals is 0]may want to try opening up a store[else if number of touchable portals is 1]can go [b]IN[r] to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead; [exits stores]
 	if mrlp is routes:
 		if player is in Same Mesa:
@@ -3727,10 +3727,18 @@ carry out exitsing:
 	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [exits towers]
 	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [exits otters]
 	if player is in rustic and Swell Wells is unvisited, say "You've lost your bearings a bit, but maybe [if player has compass]the compass could help[else]if you got enough fruits, Curtis would help you[end if]." instead;
+
+carry out exitsing:
 	if number of viable directions is 0, say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of touchable enterable things > 0], and it looks like there's something to [b]ENTER[r][end if]." instead;
-	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions].";
+	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions]." instead;
 	say "There are [number of viable directions in words] viable exits[if mrlp is towers and guar-here > 0], though not all are unblocked[end if]: [list of viable directions].";
 	the rule succeeds;
+
+after printing the name of a direction (called dir) when exitsing:
+	let RDLP be the room dir of location of player;
+	unless RDLP is nothing:
+		if RDLP is visited, say " to [RDLP]";
+	continue the action;
 
 chapter game-start
 
@@ -3954,7 +3962,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is pins;
 			continue the action;
 	else if mrlp is towers:
-		if player is in Rawest Waters:
+		if player is in Rawest Waster Waters:
 			now noun is Earnest Eastern Neaters;
 			continue the action;
 		if player is in Dourest Detours:
@@ -4814,7 +4822,7 @@ to say to-center:
 
 this is the towers-hinting rule:
 	if player is in Loftier Trefoil, try objhinting h-p instead;
-	if location of player is Rawest Waters, try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
+	if location of player is Rawest Waster Waters, try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
 	if mardier admirer is touchable, try objhinting mardier admirer instead; [we do some intelligent hinting here for guardians of highest priority]
 	if bonker is touchable, try objhinting bonker instead;
 	if stinger is touchable, try objhinting stinger instead;
@@ -6364,7 +6372,7 @@ this is the listen-towers rule:
 	if noun is lars eede or noun is elsa erde, say "[el-la-full] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
 	if noun is wait seer, say "The wait-seer is so serene, you almost can't waste ire on being blocked. Almost. Maybe even saying random stuff might help a hint slip." instead;
-	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
+	if player is in Rawest Waster Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Dourest Detours, say "You hear something that makes you see red. '[first custom style][one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[r][stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead; [bold-ok]
 	if noun is bonker, say "A menacing silence spews from the bonker. Or maybe it's just your imagination." instead;
 	if noun is stinger, say "A twanging e-string emits from the stinger. You can't even see red at it." instead;
@@ -6669,7 +6677,7 @@ this is the swear-oyster rule:
 
 this is the swear-towers rule:
 	if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from [if lois is touchable][lois the][else][the he lot][end if]!" instead;
-	if player is in Rawest Waters, say "Trying to cross languages and make this Swears-Wasser does no good." instead;
+	if player is in Rawest Waster Waters, say "Trying to cross languages and make this Swears-Wasser does no good." instead;
 
 this is the swear-otters rule:
 	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead;
@@ -13596,7 +13604,7 @@ rule for supplying a missing noun when spiting:
 carry out spiting:
 	if noun is the player, say "I! Pst! It's I! Psst!" instead;
 	if noun is tips pits, try fliptoing tips pits instead;
-	if player is in Cripple Clipper or player is in Fighter Freight or player is in Disease Seaside or player is in Rawest Waters, say "Pointless." instead;
+	if player is in Cripple Clipper or player is in Fighter Freight or player is in Disease Seaside or player is in Rawest Waster Waters, say "Pointless." instead;
 	if noun is a person, say "Loogy-ology is not useful except in one specific case[if noun is a person]. Plus, spitting on people is rude[end if]."; [?? test double]
 
 chapter inseting
@@ -15610,14 +15618,14 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 	if LP is Treading Gradient or LP is Obscurest Subsector or LP is Danger Garden or LP is Shaven Havens or LP is Anemic Cinema, decide on 7;
 	if LP is Salted Deltas or LP is Artist Traits Strait, decide on 8;
 	if LP is Actionless Coastlines, decide on 9;
-	if LP is Rawest Waters or LP is Mesprise Premises, decide on 10;
+	if LP is Rawest Waster Waters or LP is Mesprise Premises, decide on 10;
 	if LP is Mislit Limits, decide on 11;
 	decide on 2;
 
 book drawing the map
 
 to decide whether across-leak-lake:
-	if Rawest Waters is visited or Mislit Limits is visited, yes;
+	if Rawest Waster Waters is visited or Mislit Limits is visited, yes;
 	no;
 
 to decide whether can-see-map:
@@ -15845,7 +15853,7 @@ Obscurest Subsector	--	"You're going side-to-side to see the Curst Palace, but h
 Lost Lots	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 Fringe Finger	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 Actionless Coastlines	7	--
-Rawest Waters	8	--
+Rawest Waster Waters	8	--
 Mislit Limits	9	--
 
 to say tow-dirs:
@@ -17076,12 +17084,12 @@ check entering bot boat:
 	if turbos are reflexive and blaster is reflexive, say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the agnostic mutters to [him-her]self.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
 	say "BRRRRM! The boat works great. 'I'll make a glider girdle next!' the agnostic shouts, out of view.";
 	if turbos are reflexed and blaster is reflexed:
-		say "You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!";
+		say "You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!";
 		towers-min-adj;
 		now player is in Mislit Limits instead;
 	say "Then you hear a voice call AIR FLUE FAILURE as you hear the [if turbos are reflexive]turbos go burst-o[else]blaster, er, blast[end if]. You fall in the waters, about halfway to the opposite shore.[paragraph break]Panicked, you grab at your super purse, but it's sealed automatically--and it's water-proof, too! Whew.";
 	towers-min-adj;
-	now player is in Rawest Waters instead;
+	now player is in Rawest Waster Waters instead;
 
 check going inside when player is in Actionless Coastlines:
 	if bot boat is in Actionless Coastlines, try entering bot boat instead;
@@ -17111,9 +17119,9 @@ to towers-min-adj: [this is when you leave the mainland]
 	now poss-score of towers is cur-score of towers + 7; [SPECTACULAR (required), punier, antsier, present, triste, annoyed, give top opt pot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
-		increment poss-score of towers; [dropping the player in Rawest Waters means we haven't gotten the second boat point yet.]
+		increment poss-score of towers; [dropping the player in Rawest Waster Waters means we haven't gotten the second boat point yet.]
 		min-up;
-		d "adding min/poss points for Rawest Waters. [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
+		d "adding min/poss points for Rawest Waster Waters. [cur-score of mrlp] [min-score of towers]-[poss-score of towers].";
 	if used-ray is false:
 		increment poss-score of towers;
 		if number of carried skansnaks is 0, min-up; [no way to cheat if we have no skansnaks]
@@ -17193,24 +17201,26 @@ a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of 
 
 check taking sled rut: say "[if strudel is in Fringe Finger]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
-book Rawest Waters
+book Rawest Waster Waters
 
-Rawest Waters is a sideroom in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back. All you hear is [one of]a call ... can it be? It is! The [neaters]! They are always willing to help someone, but they can't do it by themselves[or]the [neaters], again[stopping].". roomnud of Rawest Waters is table of Rawest Waters nudges. missed-text of Rawest Waters is "the middle of Leak Lake if you didn't fix a bot-boat".
+Rawest Waster Waters is a sideroom in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back. All you hear is [one of]a call ... can it be? It is! The [neaters]! They are always willing to help someone, but they can't do it by themselves[or]the [neaters], again[stopping].". roomnud of Rawest Waster Waters is table of Rawest Waster Waters nudges. missed-text of Rawest Waster Waters is "the middle of Leak Lake if you didn't fix a bot-boat".
 
-every turn when player is in Rawest Waters:
-	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
+exit-text of Rawest Waster Waters is "You know you need to exit, but you need to change things so an exit's more accessible."
+
+every turn when player is in Rawest Waster Waters:
+	say "Spirited riptides... your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
 
 chapter scenery
 
 section Earnest Eastern Neaters (flippable)
 
-the Earnest Eastern Neaters are boring plural-named reflexive scenery in Rawest Waters. "The Earnest Eastern Neaters can help you, but they just feel a bit too far away. You may need to help them, too."
+the Earnest Eastern Neaters are boring plural-named reflexive scenery in Rawest Waster Waters. "The Earnest Eastern Neaters can help you, but they just feel a bit too far away. You may need to help them, too."
 
 a-text of Earnest Eastern Neaters is "RYYRYRR". b-text of Earnest Eastern Neaters is "???RG??". parse-text of Earnest Eastern Neaters is "?[sp]?[sp]?[sp]x[sp]E[sp]?[sp]?". Earnest Eastern Neaters are parse-spoilable.
 
 section raspy spray (bounding)
 
-the raspy spray is boring bounding scenery in Rawest Waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores.". bore-text of raspy spray is "You need to worry about getting away from the spray. One of the shores must be reachable.". bore-check of raspy spray is bore-raspy-spray rule.
+the raspy spray is boring bounding scenery in Rawest Waster Waters. description is "Well, you don't have much time to look at it in detail. You'd just like to get to one of the shores.". bore-text of raspy spray is "You need to worry about getting away from the spray. One of the shores must be reachable.". bore-check of raspy spray is bore-raspy-spray rule.
 
 does the player mean drinking the spray: it is very likely.
 
@@ -17959,7 +17969,7 @@ to shuffle-guardians (goner - a guardian):
 
 definition: a room (called rm) is towers-access-needed:
 	unless map region of rm is towers, no;
-	if rm is Loftier Trefoil or rm is Fringe Finger or rm is Lost Lots or rm is Rawest Waters or rm is Mislit Limits or rm is Mesprise Premises, no;
+	if rm is Loftier Trefoil or rm is Fringe Finger or rm is Lost Lots or rm is Rawest Waster Waters or rm is Mislit Limits or rm is Mesprise Premises, no;
 	if rm is tower-accessible, no;
 	yes;
 
@@ -22482,7 +22492,7 @@ this is the towers-alt rule:
 		say "[2drm of Danger Garden]there were two solutions for the natives['] site van guarding the passage south.";
 	if lone duck is moot, say "[2drm of obscurest subsector]Instead of [ff of true], you could've [ff of false].";
 	if Mislit Limits are visited:
-		say "[2drm of Actionless Coastlines][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the [neaters] [b]NEAREST[r][else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster [b]STABLER[r][else]you'd have passed Rawest Waters if you'd have made the turbos [b]ROBUST[r][end if].";
+		say "[2drm of Actionless Coastlines][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the [neaters] [b]NEAREST[r][else if turbos are reflexed]you'd have passed Rawest Waster Waters if you'd have made the blaster [b]STABLER[r][else]you'd have passed Rawest Waster Waters if you'd have made the turbos [b]ROBUST[r][end if].";
 	if towers is not solved and otters is not solved and Mislit Limits are not visited, say "[2da]Branch upcoming before crossing Leak Lake.";
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
 
@@ -22932,8 +22942,8 @@ index map with Browse Bowers mapped east of Boredom Bedroom.
 index map with Topside Deposit mapped east of Highest Heights.
 
 index map with Topside Deposit mapped west of Loftier Trefoil.
-index map with Rawest Waters mapped east of Actionless Coastlines.
-index map with Mislit Limits mapped north of Rawest Waters.
+index map with Rawest Waster Waters mapped east of Actionless Coastlines.
+index map with Mislit Limits mapped north of Rawest Waster Waters.
 
 [map tweaks for others]
 

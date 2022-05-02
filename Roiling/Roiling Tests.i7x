@@ -1664,7 +1664,7 @@ definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for 
 		if th is carps or th is pikes:
 			if pikes are moot, yes;
 	if mrlp is towers:
-		if rawest waters is visited or mislit limits is visited:
+		if Rawest Waster Waters is visited or mislit limits is visited:
 			if th is turbos or th is blaster or th is earnest eastern neaters, yes;
 	if mrlp is others:
 		if gate-level is 2:
