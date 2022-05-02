@@ -9808,7 +9808,7 @@ book Strip of Profits
 
 Strip of Profits is a room in Stores. last-loc of Stores is Strip of Profits. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others][else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here[end if][if-bush].". roomnud of strip of profits is table of strip of profits nudges.
 
-exit-text of Strip of Profits is "The stores are where it's at. You can go [b]IN[r] [now-once of whether or not number of not off-stage portals > 0] you've found what they can become.".
+outside-text of Strip of Profits is "The stores are where it's at. You can go [b]IN[r] [now-once of whether or not number of not off-stage portals > 0] you've found what they can become.".
 
 hub-room is Strip of Profits.
 
@@ -10317,7 +10317,7 @@ book Cruelest Lectures
 
 Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium. There's some teasing seating, but you're not sure it'd improve the experience[one of]. A blabber babbler at the front leaves your fellow speaker parkees in a trance. But not drug-induced, of course[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E.". roomnud of cruelest lectures is table of cruelest lectures nudges.
 
-exit-text of cruelest lectures is "There must be a general way to leave, but that's not quite it."
+outside-text of cruelest lectures is "There must be a general way to leave, but that's not quite it."
 
 check looking in Cruelest Lectures for the first time: say "As you march through the smoke, you hear 'Pored? ... ROPED, doper! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
@@ -10469,7 +10469,7 @@ when play begins (this is the make one way passages rule):
 
 Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
 
-exit-text of Same Mesa is "[if a bev o be ova is off-stage]Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around[else]There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go[end if]."
+outside-text of Same Mesa is "[if a bev o be ova is off-stage]Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around[else]There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -13443,7 +13443,7 @@ book Posh Hops Shop
 
 Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do almost anything to get rid of emit from a jukebox[end if][if tips pits are in hops shop], pits['] tips lie within reach[end if], and LOLstr trolls block the way out.". roomnud of posh hops shop is table of posh hops shop nudges.
 
-exit-text of Posh Hops Shop is "Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by [the trolls] somehow.".
+outside-text of Posh Hops Shop is "Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by [the trolls] somehow.".
 
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of pesty types to 0;
@@ -13899,7 +13899,7 @@ book Olde Lode
 
 Olde Lode is a room in Oyster. "You've reached what was probably an old mining pit. As in the Hops Shop, you can't tell one direction from another, especially not with those scary baser braes all around. You feel both a need to panic and a need not to panic. But there must be simple action to take to get out of here.". roomnud of Olde Lode is table of Olde Lode nudges.
 
-exit-text of Olde Lode is "As in the [hops shop], it's not about any one direction but getting past an obstacle."
+outside-text of Olde Lode is "As in the [hops shop], it's not about any one direction but getting past an obstacle."
 
 after looking in Olde Lode:
 	if clam is in Olde Lode, set the pronoun it to clam;
@@ -13963,7 +13963,7 @@ book Disease Seaside
 
 Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packed with sabot boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
 
-exit-text of Disease Seaside is "Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it."
+outside-text of Disease Seaside is "Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it."
 
 after looking in Disease Seaside:
 	set the pronoun them to sabot boats;
@@ -17254,7 +17254,7 @@ book Rawest Waster Waters
 
 Rawest Waster Waters is a sideroom in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back. All you hear is [one of]a call ... can it be? It is! The [neaters]! They are always willing to help someone, but they can't do it by themselves[or]the [neaters], again[stopping].". roomnud of Rawest Waster Waters is table of Rawest Waster Waters nudges. missed-text of Rawest Waster Waters is "the middle of Leak Lake if you didn't fix a bot-boat".
 
-exit-text of Rawest Waster Waters is "You know you need to exit, but you need to change things so an exit's more accessible."
+outside-text of Rawest Waster Waters is "You know you need to exit, but you need to change things so an exit's more accessible."
 
 every turn when player is in Rawest Waster Waters:
 	say "Spirited riptides... your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
@@ -17593,7 +17593,7 @@ there is a sideroom called Dire and Arid Den. It is innie. It is in Towers. "You
 
 check going up in Dire and Arid Den: say "You're too far below the surface. Well, not super-far, but enough to leave your will momentarily drained." instead;
 
-exit-text of arid den is "You need to snap out of the funk you're in. Get the right mindset.".
+outside-text of arid den is "You need to snap out of the funk you're in. Get the right mindset.".
 
 chapter bogus-dandier (flippable scenery for room)
 
@@ -18376,7 +18376,7 @@ to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking t
 
 Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley and can see the Edictal Citadel to the west[end if][if lilac bays are in minded midden][lilac-bay-desc][end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
 
-exit-text of Midden is "There's no way out until the bleary barley is gone.".
+outside-text of Midden is "There's no way out until the bleary barley is gone.".
 
 understand "burnt brunt" and "burnt/brunt" as Minded Midden when bleary barley is moot.
 
@@ -19835,7 +19835,7 @@ book Rustic Citrus
 
 Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus. roomnud of Rustic Citrus is table of Rustic Citrus nudges.
 
-exit-text of Rustic Citrus is "But you're not even sure which way is out!"
+outside-text of Rustic Citrus is "But you're not even sure which way is out!"
 
 after choosing notable locale objects when player is in Rustic Citrus:
 	set the locale priority of Curtis to 2;
@@ -21631,7 +21631,7 @@ check exiting (this is the check for default exit rule): try going outside inste
 
 check going outside (this is the map outside to directions if possible rule):
 	if number of viable directions is 0:
-		if exit-text of location of player is not empty, say "[exit-text of location of player][line break]" instead;
+		if outside-text of location of player is not empty, say "[outside-text of location of player][line break]" instead;
 		abide by the find-nowhere-text rule;
 		say "There is probably a puzzle you need to figure to leave here. That I am not more specific is a BUG." instead;
 	if number of viable directions is 1:

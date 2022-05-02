@@ -1330,7 +1330,7 @@ the can't exit when not inside anything rule is not listed in any rulebook.
 
 check exiting (this is the check for default exit rule):
 	if number of viable directions is 0:
-		if exit-text of location of player is not empty, say "[exit-text of location of player][line break]" instead;
+		if outside-text of location of player is not empty, say "[outside-text of location of player][line break]" instead;
 		abide by the find-nowhere-text rule;
 	if number of viable directions is 1:
 		let rvd be random viable direction;
@@ -5082,7 +5082,7 @@ book Softer Forest (sf)
 
 sf is a privately-named room in Forest. the printed name of sf is "Softer Forest". last-loc of Forest is sf.
 
-exit-text of sf is "[ww-exit]?"
+outside-text of sf is "[ww-exit]?"
 
 to say ww-exit: say "Hmm, that's the question. Which way to exit"
 
@@ -5134,7 +5134,7 @@ book Rest of Forest
 
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint].". roomnud of rf is table of Rest of Forest nudges.
 
-exit-text of rf is "[ww-exit]?"
+outside-text of rf is "[ww-exit]?"
 
 after printing the locale description for rf when rf is unvisited: set the pronoun it to a random guider in rf.
 
@@ -9102,7 +9102,7 @@ book Means Manse
 
 Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
 
-west of Means Manse is nowhere. exit-text of Means Manse is "No, you need to stay here and put down roots. But how?"
+west of Means Manse is nowhere. outside-text of Means Manse is "No, you need to stay here and put down roots. But how?"
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead; [bold-ok]
 
