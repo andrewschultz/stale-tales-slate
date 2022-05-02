@@ -1456,7 +1456,8 @@ vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the 
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if].[paragraph break][revelv]And yet, voices remain, asking, or stating, 'Sullenness? Us?' Or maybe 'Sullenness! Us!'"
 sullenness us	sullenness us	false	548181195	--	"unless"	"unless"	--	--	"You provide a counter-point. The voices need not remain sad, because you have a way to defeat Elvira. You think. You hope. You sense less tension in the air."
-atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
+atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	post-moat-atom rule	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change.[paragraph break]And it looks like there is something, or rather, there are some people! Beyond the moat, a Neon Pope and a Nope-Peon, who encapsulate both the authoritarian and anti-authoritarian forces Elvira has in her psy-ops to conquer Yorpwald, appear. They are guarding a big ol['] Pen O['] Nope!"
+Pen O NOPE	Pen O NOPE	false	352532153	--	"open"	"open"	--	--	"It can't be THAT easy, can it? Or maybe it can! You aren't sure whether to think of 'open' as a verb or adjective or noun, but either way, the [pen o nope] crumbles once you focus.[paragraph break]The Nope Peon and Neon Pope look at each other, terrified. You're worried they're going to go run and inform Elvira, but they flee, instead. Perhaps she has not gotten as strong as you feared, or maybe she just does not want to hear word of failure.[paragraph break]For a brief moment, you worry perhaps an Epono-Pen would've fallen apart less quickly, until you realize it actually has 'open' in the name, so maybe not. But either way, you can go west."
 yer all a yell'r	yer all a yell'r	false	445304660	--	"really"	"really"	--	post-gretta-help rule	"You point out just how bad [yer all] is. With logic, of course, but more importantly with an appeal to emotion. Why, the singer/author didn't have any remotely popular follow-ups! That sort of thing. But more importantly, you just keep nagging [the players] with 'Really?! I mean, REALLY?'[paragraph break]It's an effective strategy when logic isn't on your side, and here, it really (heh!) is. The [players] turn the music down, complaining that you are draining the energy all up in here. Gretta looks slightly relieved. As the 'music' fades, you remember the joker who actually wrote and sang it: Ellray Lyerla." [bold-ok]
 parleys splayer players	parleys splayer players	false	569230746	--	"sparely"	"sparely"	--	post-gretta-help rule	"The [pla-ma]s['] enthusiasm drains a bit. They take breaks while they're speaking. Gretta looks relieved for a moment."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The [pla-ma]s cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin DOWNSIDE 7]
@@ -1590,14 +1591,18 @@ this is the post-eels-else rule:
 	move sullenness us to Loop Pool;
 
 this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
+	if power-back is true, continue the action;
 	if players are in Disowned Downside:
 		say "Your powers aren't back yet, but if they were, that'd definitely tip the [pla-ma]s off to who you were. They'd let Elvira know quickly.";
-		preef atmo moat;
-		do nothing instead;
-	else if power-back is false:
+	else:
 		say "That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.";
-		preef atmo moat;
-		do nothing instead;
+	preef atmo moat;
+	do nothing instead;
+
+this is the post-moat-atom rule:
+	move Neon Pope to Disowned Downside;
+	move Pen O Nope to Disowned Downside;
+	move Nope Peon to Disowned Downside;
 
 this is the post-gretta-help rule:
 	d "Checking progress on flipping [the noun].";
@@ -2545,8 +2550,10 @@ Gore Ogre	"'EORG EORG EORG!!!'"
 Gretta	"[if player is female]The [players] block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The [players] manage to small-talk you down[end if]. Gretta probably wouldn't tell you anything important with them around, anyway."
 players	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
-Elmer	"[mon-men]"
-Merle	"[mon-men][no line break]"
+Elmer	"[mon-men]."
+Merle	"[mon-men]."
+neon pope	"[peep-on]."
+nope peon	"[peep-on]."
 sly imp	"It could talk circles around you as-is. So talking may not be the way to get past it."
 whiners	"Rational conversation won't make the whiners budge. You probably need to make them quieter."
 ocelots	"[if ocelots are reflexive]Flimsy I'm-flys[else]'You're cool.'[paragraph break]'You? Cooler!' You feel [one of]encouraged by this exchange, impressed they got away with that[or]awkward about this repeat, but they don't--there's just nothing else to say around them[stopping][end if]."
@@ -2566,7 +2573,9 @@ to say tho-need: if power-back is true, say ", though I feel you may not need th
 
 to say tho-eels: if power-back is true, say ", though you wonder if you need a double-charge after talking to the eels"
 
-to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if Merle is reflexive][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[else]ignore you--you seem easy to push around[end if]."
+to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if holy nest is touchable][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[else]ignore you--you seem easy to push around[end if]"
+
+to say peep-on: say "'NO! Peep on!' [the noun] chides you, and you doubt the substance of what you said deserved such a nonsequitur. Maybe you could get rid of them somehow"
 
 table of others unmatched topic responses
 askee	dialogue-text
@@ -2695,6 +2704,10 @@ leopard	--
 badger	"[if badger is reflexive]It covers its exposed parts and turns away[else]It fumbles happily with its now-clothed chest[end if]."
 sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
+nope peon	"'[nope-refl]!'"
+neon pope	"'[nope-refl]!'"
+
+to say nope-refl: say "Proud to occupy the [pen o] and guard the Edictal Citadel"
 
 table of others ask x about x
 askee	dialogue-text
@@ -2798,7 +2811,6 @@ hogs	keys	"They snicker at the thought of you being clever or strong enough to g
 hogs	Elvira	"They snicker and nod."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger."
 yak	--	"You yack about your quest. The yak's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing. Maybe if you got rid of the yoke, it might help you, and the yak would be happier, too."
-
 
 to say plebe-threat of (per - a person): say "[if per is touchable]You tell the plebe [per] might push [him-her] aside, but no dice. Maybe a brutish word, not brute force[else]The plebe wouldn't go AWOL over to [Dirge Ridge]. You can take care of them and [per] in any order[end if]."
 
@@ -3001,6 +3013,10 @@ snail	Elvira	"It shudders."
 snipe	Elvira	"It shudders."
 racoon	Elvira	"It shudders."
 hornets	Elvira	"The buzzing seems almost angry."
+nope peon	Elvira	"'You will never be as great as she is! Neither will I, but I recognize that, and that makes me closer to her greatness than you!'"
+nope peon	neon pope	"'Helps me guard the Citadel well enough, I guess!'"
+neon pope	nope peon	"'Helps me guard the Citadel well enough, I guess!'"
+nope peon	pen o NOPE	"'Sturdy, isn't it? Keeps people like you out!'"
 Elmer	Merle	"'Almost as interesting as me.'"
 Merle	Elmer	"'Almost as interesting as me.'"
 Merle	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
@@ -3482,6 +3498,7 @@ t-silently	true	true	false	false	"Wow! Three things to consider here. This might
 medals	true	false	false	false	"[if cheat-on is true]The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
 cut ya all cult laya	true	false	false	false	"The words of the [laya] certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading."
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
+nope peon	true	false	false	false	"You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 blase bales	true	true	false	false	"The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
@@ -3811,6 +3828,7 @@ parleys splayer players	"The [players] slip for a moment but quickly resume thei
 Yer All a Yell'r	"[yer all] changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track."
 holy nest	"The holy nest flutters silently."
 atmo moat	"Hm, that's not it, but it must be elemental. No, elementary."
+pen o nope	"The way west remains blocked, but you feel there has to be a simple way past."
 sea cube	"The sea cube shakes a bit."
 eels	"The eels swim a bit faster."
 owls	"Hmm. The owls still swarm and swirl too fast."
@@ -4723,6 +4741,9 @@ ghoul hat	"[one of]Mr. Lee's '[b]HOLA, THUG[r]' greeting is not very nice. He se
 Gore Ogre	"[if ghoul hat is not moot]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjunction that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or][b]ERGO[r].[minus][cycling]"	--	"you can say [b]ERGO[r]"
 Vow Here	"[one of]You don't need to deal with the vow here, but since it appears in an area where you've used conjunctions, you need one more.[plus][or]Listening to the vow here may help a bit.[plus][or]You can say [b]HOWEVER[r].[minus][cycling]"	--	"you can say [b]HOWEVER[r]"
 atmo moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an [b]ATOM[r], [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make an [b]ATOM[r]"
+pen o nope	"[one of]The word here has several different purposes, but it's a short one. What's one thing you can do to create a new passage? The [pen o] isn't that imposing.[plus][or]You need something nonmagical.[plus][or]Just [b]OPEN[r].[minus][cycling]"	--	"you can [b]OPEN[r] passage west"
+nope peon	--	pen o nope
+neon pope	--	pen o nope
 le mer	--	sea cube
 sea cube	"[one of]The sea cube in the Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The [b]SEA CUBE[r] draws you to it.[plus][or][b]BECAUSE[r].[minus][cycling]"	--	"you can say [b]BECAUSE[r]"
 eels	"[one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them [b]ELSE[r].[plus][or][b]BECAUSE[r].[minus][cycling]"	--	"you can say [b]ELSE[r]"

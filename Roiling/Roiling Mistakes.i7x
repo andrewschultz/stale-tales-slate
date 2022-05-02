@@ -657,8 +657,6 @@ understand "lapins" as a mistake ("Cute bunnies can make any game better, but ha
 
 understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are touchable.
 
-understand "nepo" as a mistake ("No world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!") when span pans are touchable.
-
 understand "nkob" as a mistake ("[if knob is moot]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in [this-game].") when player is in Lapsin Plains.
@@ -948,7 +946,11 @@ chapter Disowned Downside
 
 understand "indiscretely" as a mistake ("Yes, yes, I am being pedantic here. But discreet and discrete are different enough.") when t-indiscreetly is touchable and t-indiscreetly is playable.
 
+understand "nepo" as a mistake ("No past or current world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!") when span pans are touchable.
+
 understand "parsley" as a mistake ("Despite your best efforts, they remain meatheads.") when parleys splayer players are touchable.
+
+understand "pone" as a mistake ("You're not going to bribe the folks blocking the way west with food. Or, well, with anything") when span pans are touchable.
 
 understand "slap em" as a mistake ("[if parleys splayer players are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
 

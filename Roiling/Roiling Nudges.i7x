@@ -1191,10 +1191,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "plain"	251367970	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, '[b]I...PLANS[r]!'[end if]" [bold-ok]
 "polyp"	413457586	--	--	"[polyp-no]."
 "polyps"	509731552	--	--	"[polyp-no]."
-"inthere"	595228692	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "pna"	152561285	span pans	--	"There are two pans."
 "isk"	194199990	skis	--	"But you need to remove both skis."
-"open"	352532153	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "doorknob"	469670214	knob	--	"It's just a knob. Which thankfully cuts down the possibilities."
 "acters"	433707299	--	--	"Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time[if crate is reflexed], and you dealt with things, anyway[end if]..."
 "debris"	393844718	crate	--	"You can't learn much from the debris. You're pretty sure it's from a crate."
@@ -1884,6 +1882,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "amck"	138201734	--	players-macked rule	"If you messed with one [pla-ma], the others would gang up on you. Work on the argument, instead."
 "amcks"	234475700	--	players-macked rule	"Hm, you probably can't change the [pla-ma]s. They're dead set in their ways. Perhaps you can reframe what they are saying[if gretta-score > 0] some more[end if]."
 "gretta"	454137468	Gretta	--	"Enough people are trying to manipulate Gretta. [if parleys splayer players are touchable]Deal with them directly[else]Listen to what she has to say, instead[end if]."
+"enp"	278179576	pen o nope	--	"You'll need to tackle all of the [pen o]. It can't be too bad."
 
 to say maples-no: say "No need to change the maples. They are the least dreary part of the Downside"
 

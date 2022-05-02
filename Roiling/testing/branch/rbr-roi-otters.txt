@@ -15,10 +15,10 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ~	hints,hin,spoi	t5
 ~	verbs	t6
 
-}}MAX=36
-}}CURMAX=36
+}}MAX=37
+}}CURMAX=37
 }}SCORE=0
-}}CURMIN=24
+}}CURMIN=25
 
 }$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
@@ -1514,6 +1514,51 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 DEBUG INFO: atmo-moat hinting.
 
 >atom
+Your score has just gone up by one point
+}}SCORE++
+
+@hin
+#ttc-table-of-otters-anagrams-open
+DEBUG INFO: Pen O' NOPE hinting.
+
+@nud
+#ttc-table-of-disowned-downside-nudges-enp
+>epn
+You'll need to tackle all of the Pen O' NOPE. It can't be too bad.
+\\
+#ttc-table-of-otters-scannotes-nope-peon
+>scan nope peon
+You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here.
+\\
+>scan neon pope
+You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here.
+\\
+#ttc-table-of-otters-spechelp-pen-o-nope
+>epno
+The way west remains blocked, but you feel there has to be a simple way past.
+
+@sli
+#slider test for pen o nope
+>pnoe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>score
+{$SCOS}
+
+@max
+##balance undos
+>open nope
+(the Pen O' NOPE)
+by one point
+>undo
+>open pope
+by one point
+>undo
+>open pen o nope
+by one point
+>undo
+
+>open
 Your score has just gone up by one point
 }}SCORE++
 

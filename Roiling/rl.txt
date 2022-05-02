@@ -823,6 +823,15 @@ LASBE isn't a word, so SABLE it is.
 This one may be guessable, but let's look at it anyway.
 With ??YR for atmo/moat, we know A can't be in slot 3, but since slot 2 is T or O, that leaves just slot 1 for A. Then slot 2 must be a consonant, or T.
 AT(vowel)(consonant) means ATOM.
+# logic for neon pope
+# +logic for nope peon
+?What do I do with the neon pope and nope peon guarding the Pen O' Nope?
+Both of the people give a unique solution pretty quickly.
+The question mark is slot 4 must be a consonant, so from E or N, it is N.
+That leaves slot 2 as P, the other consonant.
+But for the neon pope and peon, O is disqualified from slot 3.
+That leaves OPEN as the only choice.
+Note the Pen O' Nope, which has no ambiguous readings, also doesn't give any consonants or vowels to eliminate.
 # logic for parleys splayer players
 ?How do I deal with the parleys splayer players in general?
 The settler's initial logic gives (PS)(AP)(AR)(SPR)(EY)(SPL)Y. Even without knowing the nature of the area, slot 6 is L. That leaves E for slot 5.

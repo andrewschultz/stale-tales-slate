@@ -1580,7 +1580,7 @@ The former yielder speaks boomingly.
 
 > REEDILY
 
-The cinders are a bonus point. DISCERN will help you get a free pass anywhere, or...well, the other is a Last Lousy Point.
+The cinders are a bonus point. DISCERN will help you get a free pass by any one puzzle here, or...well, the other is a Last Lousy Point.
 
 > W
 
@@ -1669,9 +1669,15 @@ The vow here is a last lousy point.
 
 > S
 
-Now you can get rid of the moat.
+Now you can get rid of the moat. You don't have to, but it's not too hard.
 
 > ATOM
+
+Similarly for the neon pope, nope peon and Pen O' Nope that pop up.
+
+> OPEN
+
+(No noun is needed.) Hmm! No immediate retribution. You can go west now, but you can't do anything for a long while.
 
 The next part with Mr. Lee is an alternate solution, if you went south first. It's also a way to get full points. Longer words, though.
 
@@ -1689,7 +1695,7 @@ The "vow here" is an LLP. But back to the main line...
 
 > N
 
-The imp needs to be provoked. There are three ways, based on its description. You only need two, and they're all functinally equivalent. Again, let's save a couple keystrokes by using the shortest ways through. It's actually a bit tougher than its colleagues to the south.
+The imp needs to be provoked. There are three ways, based on its description. You only need two, and they're all functionally equivalent. Again, let's save a couple keystrokes by using the shortest ways through. It's actually a bit tougher than its colleagues to the south.
 
 > BRUTELY
 > REMOTELY
@@ -1721,6 +1727,8 @@ You may notice one of your medals has changed now.
 > S
 
 > S
+
+The asyllabic lilac bays are an LLP but not necessary.
 
 > S
 
@@ -1759,7 +1767,7 @@ You have enough allies now. Time to kill the hardy hydra.
 
 > N
 
-Hey, wait! Some new scenery! Yes, you can do something with the blase bales.
+Hey, wait! Some new scenery! Yes, you can do something with the blase bales, but they're not critical.
 
 > W
 
@@ -2097,7 +2105,7 @@ Store W has a minimum of 164-168 and a maximum of 363-367, subjected to some ran
 
 You can save keystrokes with other alternate puzzles, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two based on randomness since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why the totals are not exact: the prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip too much to list here. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store T has a minimum of 142 and a maximum of 240. The bran barn path forces you to use one more letter than the loop pool, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (21) vs the minimum (17) or decide whether to pick the long option for the imp (19 vs. 16). The players' solutions in letters also can swing from 20 (the players, Yer All a Yell'r and their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
+Store T has a minimum of 146 and a maximum of 244. The bran barn path forces you to use one more letter than the loop pool, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (21) vs the minimum (17) or decide whether to pick the long option for the imp (19 vs. 16). The players' solutions in letters also can swing from 20 (the players, Yer All a Yell'r and their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
 
 Store H has a minimum of 133 and a maximum of 350. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet. The last two points are intentionally close to trivial, as well. Walking through the gates gives an even easier optional puzzle to end.
 

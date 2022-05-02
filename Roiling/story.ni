@@ -285,19 +285,19 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=31 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 [towers-min-adj must be changed if we fix something beyond Mislit Limits]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 36. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 37. min-score of otters is 25. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings.
 [LLP list:
-1=25 for RESCIND
-2=26 for ACTUALLY
-4=28 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
-5=29 HOWEVER post Bran Barn
-6=30 UNLESS post Loop Pool
-7=31 for all Lamer Realm animals
-8=32 for all Uprates Pasture animals
-9=33 for BASICALLY back at Brunt, post-animal help
-10=34 for SABLE at the blase bales after all animals are helped
-11=35 for ASIDE around Elmer/Merle
-12=36 for HONESTLY after ASIDE
+1=26 for RESCIND
+2=27 for ACTUALLY
+4=29 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
+5=30 HOWEVER post Bran Barn
+6=31 UNLESS post Loop Pool
+7=32 for all Lamer Realm animals
+8=33 for all Uprates Pasture animals
+9=34 for BASICALLY back at Brunt, post-animal help
+10=35 for SABLE at the blase bales after all animals are helped
+11=36 for ASIDE around Elmer/Merle
+12=37 for HONESTLY after ASIDE
 NON ANAGRAM: PLAY WHISTLE
 ]
 
@@ -2963,7 +2963,6 @@ this is the region-done-check rule:
 	if cur-score of mrlp is poss-score of mrlp - 1, continue the action;
 	if bonus-point-available and cur-score of mrlp is poss-score of mrlp - 2, continue the action;
 	now mrlp is miss-point-warned;
-	say "[poss-score of mrlp] [max-score of mrlp] ";
 	say "[warn-left-text of mrlp] Stay back and clean up everything[if poss-score of mrlp < max-score of mrlp] you can[end if]?";
 	if the player dir-consents, the rule succeeds;
 	say "Okay[one of]. This nag will appear once for each region where you have points you can earn[or][stopping].";
@@ -4866,6 +4865,7 @@ to decide which thing is otters-cur-item: [this does not include LLPs. I don't w
 			decide on pickup-to-hint;
 		if Gretta is touchable, decide on Gretta;
 		if atmo moat is in Disowned Downside and power-back is true, decide on atmo moat;
+		if pen o nope is in Disowned Downside, decide on pen o nope;
 	if player is in Bran Barn and power-back is false:
 		if Mr Lee wears ghoul hat, decide on ghoul hat;
 		if gore ogre is in Bran Barn, decide on gore ogre;
@@ -4943,7 +4943,7 @@ this is the otters-hinting rule:
 	if player is in Minded Midden and Ed Riley is moot, all-say "You made a way west. You're done here." instead;
 	if player is in Disowned Downside:
 		if Gretta is moot and power-back is false, all-say "Gretta's gone. The first thing to do is to go north or south to regain your powers." instead;
-		if atmo moat is moot, say "Gretta's gone. [if medals-shiny is 2]Fulfill your destiny to the west[else]Go back east for help[end if]." instead;
+		if pen o nope is moot, say "Gretta's gone. [if medals-shiny is 2]Fulfill your destiny to the west[else]Go back east for help[end if]." instead;
 	if in-extra-powers, all-say "The [location of player] isn't critical since you've solved the [other-power-room], but the puzzle may still interest you.";
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
 	if player is in Lamer Realm or player is in Perverse Preserve:
@@ -18397,6 +18397,7 @@ check taking atmo moat:
 check going west in Disowned Downside:
 	if players are in Disowned Downside, say "One of the [players] stops you from falling in the atmo-moat, and he tries to convince Gretta he's a great guy for saving you. The others yell at him for trying to play hero too obviously." instead;
 	if atmo moat is in Disowned Downside, say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
+	if pen o nope is in Disowned Downside, say "No, the [pen o] is manned. But there must be a simple way to dispel it!" instead;
 	if Gretta is touchable, say "[cree-pee]." instead;
 
 chapter atmo-moat
@@ -18572,6 +18573,40 @@ the sample maples are boring amusing scenery in Disowned Downside. "Well, they'r
 understand "elm sap" as sample maples.
 
 understand "sample maple" and "maple" as sample maples.
+
+chapter OPEN puzzle
+
+rule for supplying a missing noun when opening:
+	if player is in disowned downside and Neon Pope is in disowned downside:
+		try fliptoing Pen O Nope instead;
+
+check opening when player is in disowned downside (this is the assume the player sees OPEN flip rule):
+	if noun is Pen O Nope or noun is Neon Pope or noun is Nope Peon, try fliptoing Pen O Nope instead;
+
+does the player mean opening Pen O Nope: it is likely;
+
+section Neon Pope
+
+the Neon Pope is an auxiliary person. description of the Neon Pope is "A glowing exemplar of all things pro-Elvira, the Neon Pope encapsulates the 'respect authority' side of why Elvira is so great."
+
+a-text of neon pope is "YRYR". b-text of neon pope is "YRY?". parse-text of neon pope is "UNIQUE".
+
+section Nope Peon
+
+the Nope Peon is an auxiliary person. description of the Nope Peon is "A smarmy Uriah Heep type, one of many who like to convince others that, despite Elivra wielding most of the power in Yorpawld these days, it's still rebellious and edgy to think she needs even more power, and any arguments against her gaining more power deserve a big fat, well, nope."
+
+the chum of the Neon Pope is the Nope Peon.
+
+a-text of nope peon is "YRYR". b-text of nope peon is "YRY?". parse-text of nope peon is "UNIQUE".
+
+check scaning neon pope: [ this is just to avoid duplicate/super similar text and so the player doesn't have to scan both the pope and peon ]
+	try scaning nope peon instead;
+
+section pen o nope
+
+the Pen O Nope is vanishing scenery. description is "It's blocking you right now. It's constructed relatively simply, though. Perhaps its purpose is symbolic, or perhaps it's the sort of thing Elvira's followers use to make dissidents feel, geez, if something wimpy like that blocks me, what the heck good can I do?". printed name is "Pen O['] NOPE".
+
+a-text of Pen O Nope is "YRYR". b-text of Pen O Nope is "YRYR". parse-text of Pen O Nope is "-[sp]x[sp]-[sp]x".
 
 chapter booting - not for release
 
@@ -22720,8 +22755,10 @@ this is the otters-misses rule:
 	if blase bales are in Minded Midden:
 		say "[2drm of minded midden]you could've made the blase bales into a [b]SABLE[r].";
 	else if blase bales are off-stage:
-		say "[2drm of minded midden]you could've found something else to make an animal from if you'd freed one more animal in [if nounsolve is 3 and adjsolve is 4][perverse preserve][else if nounsolve is 4 and adjsolve is 3][lamer realm][else][Perverse Preserve] and [lamer realm][end if].";
+		say "[2drm of minded midden]one hidden animal would have appeared until you all its friends in [if nounsolve is 3 and adjsolve is 4][perverse preserve][else if nounsolve is 4 and adjsolve is 3][lamer realm][else][Perverse Preserve] and [lamer realm][end if].";
 	if cult laya is in Disowned Downside, say "[2drm of disowned downside]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
+	if loop pool is not visited, say "[2drm of disowned downside]you missed two points for boosting your powers further, along with an LLP, to the north of Disowned Downside.";
+	if bran barn is not visited, say "[2drm of disowned downside]you missed two points for boosting your powers further, along with an LLP, to the south of Disowned Downside.";
 	if loop pool is visited:
 		if eels are not reflexed, say "[2drm of loop pool]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
 		if Sullenness Us is in Loop Pool, say "[2drm of loop pool]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
