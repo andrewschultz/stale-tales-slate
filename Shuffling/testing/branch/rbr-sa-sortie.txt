@@ -255,6 +255,10 @@ You have more than one way to leave: south and east. So you'll need to specify w
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate and the cheesy spearman for a few seconds. Your warts also tingle.
 
+@max
+>x fridge
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. It doesn't appear locked or anything. You could just OPEN it. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+
 @scan
 #gadget test: warts to straw
 >rc warts
@@ -266,9 +270,9 @@ DEBUG INFO: Cert-text: --R--.
 
 @!min
 >open fridge
-You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
+You see some grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
 >open fridge
-You reopen and peer on. You see a grist and a cake pan inside.
+You reopen and peer on. You see some grist and a cake pan inside.
 
 @hints
 >xx
@@ -452,7 +456,7 @@ Nothing happens. Well, you didn't really want to go back to the nick, and there'
 @!min
 #######dumb stuff
 >x fridge
-While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see grist and cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see some grist and a cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 
 @hin
 /DEBUG: (skate|bottle of CATHOUSE perfume|cheesy spearman|cult tee|tall trio) being objhinted.

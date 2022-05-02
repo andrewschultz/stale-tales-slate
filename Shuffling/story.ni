@@ -5920,16 +5920,16 @@ book Ghouls' Slough
 
 Ghouls Slough is inside of Emptiness Sepiments. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping]. A cruel ones['] enclosure is nearby, but it can't be where you want to go.". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough. printed name is "Ghouls['] Slough". [bold-ok]
 
+outside of Ghouls Slough is nowhere.
+
 check examining maps in Ghouls Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...[paragraph break]"; [bold-ok]
 	now maps are realized;
-	if banshee is not moot, poss-d;
-	if slit is not moot, poss-d;
 	move player to Frost Forts instead;
 
 chapter Cruel Ones' Enclosure
 
-the Cruel Ones' Enclosure is boring amusing scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but cleatly irrelevant, invective against whoever demoted them after release 4 from the room you just left to, well, this less relevant outpost here. You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "It looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
+the Cruel Ones' Enclosure is boring amusing scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but cleatly irrelevant, invective against whoever demoted them after release 4. Why, they used to have a whole room named after them. The one you just left! You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "The [enclosure] looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
 
 understand "cruel ones" and "ones enclosure" and "cruel ones enclosure" and "ones" as Cruel Ones' Enclosure when player is in Ghouls Slough.
 
@@ -6331,7 +6331,7 @@ to say gad: say "Your gadget's not near anything, but it's registering ".
 
 book Kitchen
 
-Kitchen is north of Trap Part. Kitchen is in Sortie. roomnud of kitchen is table of kitchen nudges. description of Kitchen is "This is a kitchen, though it's a bit bare, except for the griefd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the Trap Part you escaped, and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+Kitchen is north of Trap Part. Kitchen is in Sortie. roomnud of kitchen is table of kitchen nudges. description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the Trap Part you escaped, and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
 
 kitchen-hint-list is a list of things variable.
 
@@ -8901,7 +8901,7 @@ west of Potshot Hotspot is nothing.
 
 check going inside in Potshot Hotspot: try going east instead;
 
-description of Potshot Hotspot is "An arid, trod dirt road[if red bull burdell is moot]--named after you, who set things straight[end if]. Frust turfs blocks the way north and south. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is not touchable]It's a nice and peaceful neighborhood now, with Red Bull Burdell gone, but you're not fully home[else]There's one more person with potshots, though[end if].".
+description of Potshot Hotspot is "An arid, trod dirt road[if red bull burdell is moot]--named after you, who set things straight[end if]. Frust turfs blocks the way north and south. East is siesta, with a bunch of ransom manors. West is Rived Drive, but there's no need to go back.[paragraph break][if riot is touchable][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! Not just a horde. A full-blown [b]RIOT[r][or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do. If only there was a way to depopulate said riot[cycling][else if protest is touchable]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are touchable]The potters aren't just pottering around[pottiness][else if red bull burdell is not touchable]It's a nice and peaceful neighborhood now, with Red Bull Burdell gone, but you're not fully home[else]There's one more person with potshots, though[end if].".
 
 after printing the locale description for hotspot when hotspot is unvisited:
 	set the pronoun it to riot;
