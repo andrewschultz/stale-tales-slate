@@ -11,6 +11,8 @@
 >ts
 >routes
 >enter routes
+Same Mesa
+
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 

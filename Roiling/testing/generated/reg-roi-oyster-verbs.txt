@@ -17,15 +17,20 @@ Posh Hops Shop
 >e
 You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them
 
+#testcase-outside-posh-hops-shop
 >outside
 So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image.
+
+#testcase-exits-posh-hops-shop
+>exits
+Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by the LOLstr Trolls somehow.
 
 #verbcase swear-oyster-if-player-is-in-posh-hops-shop
 >bother
 This is the place for it, but you can't bring yourself to be heard.
 #verbcase smell-oyster-if-player-is-in-posh-hops-shop
 >smell
-You catch a whiff of some mokes' smoke.
+You catch a whiff: 'k, some mokes' smoke.
 #verbcase sleep-oyster-default
 >sleep
 You feel too inclined towards action for that.
@@ -92,6 +97,14 @@ Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't
 >gt shop
 The LOLstr trolls would not welcome you back.
 
+#testcase-outside-olde-lode
+>outside
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex, even if you once again can't use directions.
+
+#testcase-exits-olde-lode
+>exits
+As in the Posh Hops Shop, it's not about any one direction but getting past an obstacle.
+
 >thisalt
 --You could have also REMAPped the perma-amper to break the jukebox.
 SPIT
@@ -152,6 +165,15 @@ You don't want to go back near that urn.
 >gt shop
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
+#testcase-outside-disease-seaside
+>outside
+The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront. Going back to the Olde Lode or Posh Hops Shop seems pointless, too.
+You need to cross to the north for more action.
+
+#testcase-exits-disease-seaside
+>exits
+Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it.
+
 >score
 Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
@@ -211,6 +233,14 @@ You don't want to go back near that urn, and it'd be hard, being on the other si
 >gt shop
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
+#testcase-outside-anger-range
+>out
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
+
+#exits-outside-anger-range
+>exits
+There are three viable exits: north, east and west.
+
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
@@ -245,6 +275,16 @@ Hardest Trashed Dearths
 #ttc-table-of-oyster-nowheres-hardest-trashed-dearths
 >e
 Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow.
+
+#testcase-outside-hardest-trashed-dearths
+>out
+The only way to exit is west, so let's go that way.
+The eeks shouldn't be too hard to find. Still go back west?
+>undo
+
+#testcase-exits-hardest-trashed-dearths
+>exits
+The only way you seem to be able to go is west to Anger Range.
 
 >score
 Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
@@ -288,6 +328,16 @@ Aunt Tuna is humming something tuneless as she goes about her business.
 #ttc-table-of-oyster-attacks-trout
 >attack trout
 A Roiling Original's kind of topsy turvy, but not like THAT.
+
+#testcase-outside-lean-lane
+>out
+The only way to exit is west, so let's go that way.
+
+>undo
+
+#testcase-exits-lean-lane
+>exits
+The only way you seem to be able to go is west to Anger Range.
 
 >score
 Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
@@ -334,6 +384,15 @@ Lapsin' Plains
 #ttc-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or, once the span pans are neutralized, inside.
+
+#testcase-outside-lapsin-plains
+>out
+The only way to exit is south, so let's go that way.
+>undo
+
+#testcase-exits-lapsin-plains
+>exits
+The only way you seem to be able to go is south to Anger Range.
 
 >splain
 by one point
@@ -385,12 +444,26 @@ Your score has just gone up by one point
 >e
 With the sloppy polyps on most all sides, you can only go back south or inside.
 
+#+testcase-exits-lapsin-plains
+>exits
+There are two viable exits: south to Anger Range and inside.
+
 >score
 Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
 >in
 
 Shuttle Hutlets
+
+#+testcase-outside-shuttle-hutlets
+>out
+!The only way to exit
+Lapsin' Plains
+>undo
+
+#+testcase-exits-shuttle-hutlets
+>exits
+The only way you seem to be able to go is outside to Lapsin' Plains.
 
 >bust
 Your score has just gone up by one point
@@ -445,6 +518,23 @@ Sea rind.
 >listen
 Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU.
 
+#testcase-outside-sclerous-closures
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-exits-sclerous-closures
+>exits
+The only way you seem to be able to go is east to Anger Range.
+
+#testcase-outside-sclerous-closures
+>out
+You have more than one way to leave: north and east. So you'll need to specify which one.
+
+#testcase-exits-sclerous-closures
+>exits
+There are two viable exits: north and east to Anger Range.
+
 >warp
 Your score has just gone up by one point
 
@@ -484,6 +574,15 @@ The main exit is south, though an area west is in disrepair. You can also go IN 
 >smell walleyes
 The weaselly walleyes smell of Skum-Musk.
 
+#testcase-outside-horned-hedron
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-horned-hedron
+>exits
+There are two viable exits: south to Sclerous Closures and west.
+
 >w
 Rascal Craals
 
@@ -494,6 +593,14 @@ The round bay boundary blocks you from going any way but back east.
 #verbcase smell-oyster-if-player-is-in-rascal-craals
 >smell
 This situation only stinks in general, not literally.
+
+#testcase-outside-rascal-craals
+>out
+The only way to exit is east, so let's go that way.
+
+#testcase-exits-rascal-craals
+>exits
+The only way you seem to be able to go is east to Horned Hedron.
 
 >bury
 Your score has just gone up by one point
@@ -538,6 +645,15 @@ Score in a scenario: 34 out of 44 total points in the current region, Oyster. Lo
 >e
 The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN past the ol' trap once you disarm it.
 
+#+testcase-outside-horned-hedron
+>out
+WRONG
+>undo
+
+#+testcase-exits-horned-hedron
+>exits
+WRONG
+
 #verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
 >gt rascal craals
 The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
@@ -548,6 +664,15 @@ Your score has just gone up by one point
 #+ttc-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN through the portal.
+
+#+testcase-outside-horned-hedron
+>out
+WRONG
+>undo
+
+#+testcase-exits-horned-hedron
+>exits
+WRONG
 
 >score
 Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
@@ -560,7 +685,13 @@ End Den
 >e
 You're disoriented here, but you can go back OUT to get to the Horned Hedron.
 
+#testcase-exits-end-den
+>exits
+You can go back outside to the Horned Hedron.
+
+#testcase-outside-end-den
 >out
+!The only way to exit is
 Horned Hedron
 
 >x gleaner
@@ -572,6 +703,14 @@ No need to go back there.
 >in
 
 Tenfold Teflon'd Den Loft
+
+#testcase-outside-tenfold-teflond-den-loft
+>exits
+You can go back outside, though you can also finish the job back here.
+
+#testcase-exits-tenfold-teflond-den-loft
+>out
+While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
 
 #verbcase listen-oyster-if-noun-is-papery-yapper
 >listen yapper

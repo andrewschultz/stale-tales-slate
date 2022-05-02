@@ -11,6 +11,8 @@
 >ts
 >routes
 >enter routes
+Same Mesa
+
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
@@ -21,6 +23,18 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 #ttc-table-of-routes-attacks-scripture-picturers
 >attack scripture picturers
 A shameful attempt at vandalism.
+#ttc-table-of-routes-nowheres-same-mesa
+>n
+You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the south, after several minutes.
+
+#testcase-outside-same-mesa
+>out
+
+Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around.
+
+#testcase-exits-same-mesa
+>exits
+There are plenty of ways to go, but they don't seem to lead anywhere. There are three places to enter, though they do seem to shift.
 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -49,6 +63,10 @@ UNDO
 >listen
 Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
 
+#testcase-exits-cleric-circle
+>exits
+You can go back out.
+
 >x list o toils
 
 #x list o toils
@@ -56,6 +74,9 @@ Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure 
 Precise recipes
 
 >out
+
+#testcase-outside-adobe-abode
+!The only way to exit is
 
 >past
 Your score has just gone up by one point
@@ -66,6 +87,10 @@ Idle Deli
 >n
 Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
 
+#testcase-exits-idle-deli
+>exits
+You can go back out.
+
 #verbcase smell-routes-if-noun-is-seed-pit
 >smell seed pit
 The seed pit smells a bit musty.
@@ -74,6 +99,9 @@ The seed pit smells a bit musty.
 Your score has just gone up by one point
 
 >out
+
+#testcase-outside-idle-deli
+!The only way to exit is
 
 >across
 Your score has just gone up by one point
@@ -84,6 +112,10 @@ Adobe Abode
 >e
 This do be a one-room place. You can really only go outside.
 
+#testcase-exits-adobe-abode
+>exits
+You can go back out.
+
 #verbcase smell-routes-if-noun-is-pipe-soot
 >smell pipe soot
 The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong, so the pipe soot probably won't burn your hands if you can take it.
@@ -93,6 +125,9 @@ The lingering pipe smoke that made the soot is actually agreeable. The ashtray i
 Your score has just gone up by one point
 
 >out
+
+#testcase-outside-cleric-circle
+!The only way to exit is
 
 >against
 Your score has just gone up by one point
@@ -150,6 +185,13 @@ DEBUG INFO: General LLPish min-up for worst ad.
 
 >out
 
+#testcase-outside-same-mesa
+>out
+There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go.
+#testcase-exits-same-mesa
+>exits
+You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, maybe that's where the adventure is.
+
 >above
 Your score has just gone up by one point.
 
@@ -180,6 +222,14 @@ Harms Marsh
 #ttc-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
+
+#testcase-outside-harms-marsh
+>out
+Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
+
+#testcase-exits-harms-marsh
+>exits
+Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 #ttc-table-of-goto-sectioning--1-routes
 >gt mesa
@@ -224,6 +274,14 @@ You already muddled your way out of Harms Marsh. You may be lost now, but walkin
 >gt mesa
 Brother Horbert would be sad to see you return, unsuccessful.
 
+#testcase-outside-ripe-pier
+>out
+You've lost all sense of direction here, but you still somehow need to figure how to get on that boat.
+
+#testcase-exits-ripe-pier
+>exits
+Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
+
 >amidst
 Your score has just gone up by one point
 
@@ -256,6 +314,14 @@ You already muddled your way out of Harms Marsh. You may be lost now, but sailin
 >gt mesa
 You're not going back across the water. You're closer to the end of your quest.
 
+#testcase-outside-cripple-clipper
+>out
+Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.
+
+#testcase-exits-cripple-clipper
+>exits
+Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
+
 >athwart
 Your score has just gone up by one point
 
@@ -280,6 +346,14 @@ The Sonancy Canyons lead to your destiny.
 #+ttc-table-of-goto-sectioning-ripe-pier-3--
 >gt pier
 It's time to go forward, not backwards.
+
+#testcase-outside-sonancy-canyons
+>out
+You might run into the spheric ciphers. You still don't have your sense of direction back.
+
+#testcase-exits-sonancy-canyons
+>exits
+Looks like you will need to figure a way to move forward without directions. You've got to be really close.
 
 >without
 It's always tough to figure how to ignore stuff.

@@ -2581,7 +2581,7 @@ Your score has just gone up by one point
 >ask peon about elvira
 "You will never be as great as she is! Neither will I, but I recognize that, and that makes me closer to her greatness than you!"
 
-#ttc-table-of-otters-matched-item-responses-neon-pope-elvira
+#+ttc-table-of-otters-matched-item-responses-nope-peon-elvira
 >ask pope about elvira
 "You will never be as great as she is! Neither will I, but I recognize that, and that makes me closer to her greatness than you!"
 
@@ -2593,7 +2593,8 @@ Your score has just gone up by one point
 >ask nope peon about pen o nope
 "Sturdy, isn't it? Keeps people like you out!"
 
-#ttc-table-of-otters-matched-item-responses-neon-pope-pen-o-nope
+#+ttc-table-of-otters-matched-item-responses-nope-peon-pen-o-nope
+# this is testing the "chum" property where merle mimics elmer about various subjects
 >ask neon pope about pen o nope
 "Sturdy, isn't it? Keeps people like you out!"
 
@@ -2854,7 +2855,8 @@ Nobody in the game can tell you anything new about yourself. Well, anything new 
 >ask elmer about xyzzy
 "We're Elvira's monster mentors. Making REAL animals. You don't need Eden." They
 
-#ttc-table-of-otters-matched-item-responses-merle-elvira
+#+ttc-table-of-otters-matched-item-responses-elmer-elvira
+# this is testing the "chum" property where merle mimics elmer about various subjects
 >ask merle about elvira
 "She is up to something interesting to the west, you'll have to admit. And you'll have to trust us."
 
@@ -2897,7 +2899,7 @@ She sniffs haughtily. As if you have to ask! As if you're NOT too biased to beli
 
 #ttc-table-of-otters-matched-item-responses-elvira-gretta
 >ask elvira about gretta
-"Not as unselfish as she thought she was. A real virtue-signaler!"
+"Like most of the lamestream media, not as unselfish as she pretends she is. A real virtue-signaler!"
 
 #ttc-table-of-otters-matched-item-responses-elvira-mr-lee
 >ask elvira about mr lee

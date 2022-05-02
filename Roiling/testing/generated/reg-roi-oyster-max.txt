@@ -141,6 +141,9 @@ Your score has just gone up by one point
 
 Disease Seaside
 
+>n
+You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents.
+
 >score
 Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 

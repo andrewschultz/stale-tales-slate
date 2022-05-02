@@ -25,6 +25,17 @@ For reasons of continuity
 >demo dome
 Peek Keep
 
+#testcase-outside-peek-keep
+>out
+Are you sure
+>no
+Okay, why not look around a bit more.
+>undo
+
+#testcase-exits-peek-keep
+>exits
+There are six viable exits: north, south, east, west, down and inside.
+
 >undo
 >demo mode
 Peek Keep
@@ -127,6 +138,14 @@ The Spy Dial Display is currently off and out of reach.
 
 >n
 Hows Show
+
+#testcase-outside-hows-show
+>out
+The only way to exit is south, so let's go that way.
+
+#exits-outside-hows-show
+>exits
+The only way you seem to be able to go is south to Peek Keep.
 
 #ttc-table-of-demo-dome-exhibit-tester-street-text-1
 >x tester street
@@ -244,6 +263,14 @@ You can only go south here.
 >s
 >w
 Ned's Dens
+
+#testcase-outside-neds-dens
+>out
+The only way to exit is east, so let's go that way.
+
+#exits-outside-neds-dens
+>exits
+The only way you seem to be able to go is east to Peek Keep.
 
 >score
 You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
@@ -406,12 +433,25 @@ UNNOTED exhibits: novella (Evoc-Cove).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 
+#testcase-exits-intel-inlet
+>exits
+The only way you seem to be able to go is outside to Peek Keep.
+
+#testcase-outside-intel-inlet
+
 >out
 
 >e
 
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
+
+#testcase-outside-evoc-cove
+>out
+The only way to exit is west, so let's go that way.
+
+>exits
+The only way you seem to be able to go is west to Peek Keep.
 
 >out
 >e
@@ -637,6 +677,14 @@ in Sparse Spares.
 
 >d
 Sparse Spares
+
+#testcase-outside-sparse-spares
+>out
+The only way to exit is up, so let's go that way.
+
+#exits-outside-sparse-spares
+>exits
+The only way you seem to be able to go is up to Peek Keep.
 
 >score
 /You could still examine the (artsies' satires|parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.

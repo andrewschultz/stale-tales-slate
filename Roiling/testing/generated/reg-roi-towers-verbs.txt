@@ -62,6 +62,14 @@ by one point
 >e
 Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
 
+#testcase-outside-loftier-trefoil
+>out
+Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
+>undo
+#testcase-exits-loftier-trefoil
+>exits
+WRONG 728
+
 >yonder
 Your score has just gone up by one point
 
@@ -79,6 +87,15 @@ An unconvincing voice from where you came moans "Stop! Die!" You must ignore it 
 >gt trefoil
 You had your fun in there.
 
+#testcase-outside-topside-deposit
+>out
+The Wildest Wilteds are too dangerous any way but north, and the dreads adders are in the way right now.
+>undo
+
+#testcase-exits-topside-deposit
+>exits
+WRONG 769
+
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
 
@@ -93,6 +110,15 @@ You need to see into the dreads adders's nature and change it, instead--that dag
 
 >sadder
 Your score has just gone up by one point
+
+#+testcase-outside-topside-deposit
+>out
+The only way to exit is north, so let's go that way.
+>undo
+
+#+testcase-exits-topside-deposit
+>exits
+WRONG 979
 
 >score
 Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -125,6 +151,14 @@ They're probably trained to hand out ur-belts.
 
 >subtler
 Your score has just gone up by one point
+
+#testcase-outside-scope-copse
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+
+#testcase-exits-scope-copse
+>exits
+WRONG 1205
 
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
@@ -175,10 +209,28 @@ Score in a scenario: 15 out of 57 total points in the current region, Towers. Lo
 >attack promise imposer
 That might be RIP-some.
 
+#testcase-outside-baldest-blasted-saltbed
+>out
+WRONG
+>undo
+
+#testcase-exits-baldest-blasted-saltbed
+>exits
+WRONG 1573
+
 >semipro
 Your score has just gone up by one point
 >score
 Score in a scenario: 16 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+
+#+testcase-outside-baldest-blasted-saltbed
+>out
+WRONG
+>undo
+
+#+testcase-exits-baldest-blasted-saltbed
+>exits
+WRONG 1586
 
 >pastier
 Your score has just gone up by one point
@@ -188,6 +240,15 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 >n
 
 Anemic Cinema
+
+#testcase-outside-anemic-cinema
+>out
+WRONG
+>undo
+
+#testcase-exits-anemic-cinema
+>exits
+WRONG 1634
 
 #verbcase listen-towers-if-noun-is-angriest-ingrates
 >listen ingrates
@@ -224,6 +285,15 @@ The logged dogleg prevents you from jumping to your doom below to the unorg'd gr
 >sw
 The logged dogleg has no diagonal entries.
 
+#testcase-outside-fringe-finger
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-exits-fringe-finger
+>exits
+WRONG 1795
+
 >rustled
 Your score has just gone up by one point
 >score
@@ -236,6 +306,15 @@ Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
 >score
 Score in a scenario: 20 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+
+#+testcase-outside-anemic-cinema
+>out
+WRONG
+>undo
+
+#+testcase-exits-anemic-cinema
+>exits
+WRONG 1945
 
 >married
 Your score has just gone up by one point
@@ -269,6 +348,30 @@ The atheists are really spelling out their logical arguments against any sort of
 >attack sweatier wait seer
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
+#testcase-outside-salted-deltas
+>out
+WRONG
+
+>undo
+
+#testcase-exits-salted-deltas
+>exits
+WRONG 2100
+
+>e
+
+#testcase-outside-actionless-coastlines
+>out
+WRONG
+
+#testcase-exits-actionless-coastlines
+>exits
+WRONG 2106
+>undo
+>undo
+>undo
+>undo
+
 >hastiest
 Your score has just gone up by one point
 >score
@@ -284,6 +387,15 @@ Treading Gradient
 #ttc-table-of-towers-attacks-mended-mini-denim
 >attack mended mini denim
 You've got nothing sharp enough. That denim's been mended nicely, for sure.
+
+#testcase-outside-treading-gradient
+>out
+WRONG
+>undo
+
+#testcase-exits-treading-gradient
+>exits
+WRONG 2135
 
 >nerdiest
 Your score has just gone up by one point
@@ -315,6 +427,19 @@ You'd expect a great din, but you don't hear one, thankfully.
 >d
 Dire and Arid Den
 
+#ttc-table-of-towers-nowheres-dire-and-arid-den
+>w
+No, there can't be anything west. You feel drained just considering that.
+
+#testcase-outside-dire-and-arid-den
+>out
+You need to snap out of the funk you're in. Get the right mindset.
+>undo
+
+#testcase-exits-dire-and-arid-den
+>exits
+WRONG 2376
+
 #verbcase smell-towers-if-noun-is-nerd-aid
 >smell nerd aid
 The Nerd-Aid smells suspiciously like the very red Rind-Ade drink.
@@ -327,6 +452,15 @@ Treading Gradient
 >score
 Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >e
+
+#testcase-outside-artist-traits-strait
+>out
+WRONG
+>undo
+
+#testcase-exits-artist-traits-strait
+>exits
+WRONG 2532
 
 #verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
 >bother
@@ -384,6 +518,17 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
+Leveraged Everglade
+
+#testcase-outside-leveraged-everglade
+>out
+WRONG
+>undo
+
+#testcase-exits-leveraged-everglade
+>exits
+WRONG 2662
+
 >grandiose
 Your score has just gone up by one point
 >score
@@ -396,6 +541,15 @@ Lost Lots
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 Dourest Detours
 
+#testcase-outside-dourest-detours
+>out
+Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
+>undo
+
+#testcase-others-dourest-detours
+>exits
+WRONG 2743
+
 #ttc-table-of-towers-nowheres-dourest-detours
 >n
 Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
@@ -403,6 +557,15 @@ Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong
 #verbcase listen-towers-if-player-is-in-dourest-detours
 >listen
 You hear something that makes you see red.
+
+#testcase-outside-lost-lots
+>out
+The only way to exit is north, so let's go that way.
+>undo
+
+#testcase-exits-lost-lots
+>exits
+WRONG 2803
 
 >rousted
 by one point
@@ -449,6 +612,17 @@ Any direction but back south might drive you too far from the palace.
 
 >n
 
+Danger Garden
+
+#testcase-outside-danger-garden
+>out
+WRONG
+>undo
+
+#testcase-exits-danger-garden
+>exits
+WRONG 2925
+
 #verbcase listen-towers-if-noun-is-bonker
 >listen bonker
 A menacing silence spews from the bonker. Or maybe it's just your imagination.
@@ -485,6 +659,15 @@ Obscurest Subsector
 >e
 A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now.
 
+#testcase-outside-obscurest-subsector
+>out
+The only way to exit is west, so let's go that way.
+>undo
+
+#testcase-exits-obscurest-subsector
+>exits
+WRONG 3039
+
 #ttc-table-of-towers-attacks-prison-ropins
 >attack prison ropins
 The dagger is not very sharp. Besides, force doesn't seem to be the right way in.
@@ -508,6 +691,15 @@ Your score has just gone up by one point
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-wordy
 >listen yow
 Dr. Yow is talking slowly and soothingly.
+
+#testcase-outside-shaven-havens
+>out
+The only way to exit is south, so let's go that way.
+>undo
+
+#testcase-exits-shaven-havens
+>exits
+WRONG 3201
 
 >score
 Score in a scenario: 39 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
@@ -562,6 +754,15 @@ The diverse deviser machine fizzles along. The chirping of birds from the campie
 #+ttc-table-of-towers-nowheres-outer-route
 >w
 The sway-ways are not reliable. You probably just want to go back east.
+
+#testcase-outside-outer-route
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-exits-outer-route
+>exits
+WRONG 3423
 
 >revised
 
@@ -631,31 +832,41 @@ No thanks. Once was enough.
 >robust
 by one point
 >enter boat
-Rawest Waters
-#verbcase listen-towers-if-player-is-in-rawest-waters
+Rawest Waster Waters
+#verbcase listen-towers-if-player-is-in-rawest-waster-waters
 >listen
 A scrawny swan cry. But not the Sawn Swan. You hope.
-#verbcase swear-towers-if-player-is-in-rawest-waters
+#verbcase swear-towers-if-player-is-in-rawest-waster-waters
 >bother
 Trying to cross languages and make this Swears-Wasser does no good.
-#verbcase goto-towers-if-location-of-player-is-rawest-waters
+#verbcase goto-towers-if-location-of-player-is-rawest-waster-waters
 >gt coastlines
 Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
-#ttc-table-of-goto-sectioning-rawest-waters-3--
+#ttc-table-of-goto-sectioning-rawest-waster-waters-3--
 >gt waters
-The Rawest Waters of Leak Lake would probably be even less fun the second time around.
+The Rawest Waster Waters of Leak Lake would probably be even less fun the second time around.
 >undo
 >undo
 >undo
 >undo
 >undo
-#ttc-table-of-towers-nowheres-rawest-waters
+#ttc-table-of-towers-nowheres-rawest-waster-waters
 >e
-Spirited riptides! You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
+You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
 >n
-Spirited riptides! That'd only make the Earnest Eastern Neaters further away.
+That'd only make the Earnest Eastern Neaters further away.
+#testcase-outside-rawest-waster-waters
+>out
+You know you need to exit, but you need to change things so an exit's more accessible.
+>undo
+
+#testcase-exits-rawest-waster-waters
+>exits
+WRONG 3925
+
+>undo
 >undo
 >undo
 >undo
@@ -673,7 +884,7 @@ Your score has just gone up by one point
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >enter boat
-You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
 
@@ -689,11 +900,19 @@ That's way in the past.
 >n
 The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
 
+#testcase-outside-mislit-limits
+>out
+The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
+>undo
+#testcase-exits-mislit-limits
+>exits
+WRONG 4082
+
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >thisalt
---If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here
@@ -714,6 +933,15 @@ Your score has just gone up by one point
 # add minimum point here
 >score
 Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
+
+#+testcase-outside-mislit-limits
+>out
+The only way to exit is west, so let's go that way.
+>undo
+
+#+testcase-exits-mislit-limits
+>exits
+WRONG 4258
 
 >in
 
@@ -738,6 +966,8 @@ Your score has just gone up by one point
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
+
+The only way to exit is east, so let's go that way.
 
 >misses
 

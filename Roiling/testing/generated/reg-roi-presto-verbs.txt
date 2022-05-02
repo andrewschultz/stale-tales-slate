@@ -21,6 +21,15 @@ Grey Gyre
 >n
 You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze.
 
+#testcase-outside-grey-gyre
+>out
+You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-grey-gyre
+>exits
+WRONG 55
+
 #verbcase swear-presto-if-cur-score-of-presto-is-0
 >damn
 That's too strong for here. But you have the right idea.
@@ -35,8 +44,19 @@ Your score has just gone up by one point
 Austerer Treasure
 
 #ttc-table-of-presto-nowheres-austerer-treasure
->n
+>r
 The treasure room has no secret passages, so you can only go back east.
+
+#testcase-outside-austerer-treasure
+>out
+The only way to exit is east, so let's go that way.
+
+Grey Gyre
+>undo
+
+#testcase-exits-austerer-treasure
+>exits
+WRONG 183
 
 #reverbcase smell-presto-default
 >smell
@@ -68,6 +88,15 @@ Char Arch
 >e
 East or west would be an alpinist tailspin ("CHARGE! Eh, crag.") Try north or south, instead.
 
+#testcase-outside-char-arch
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-exits-char-arch
+>exits
+WRONG 316
+
 #not a mistake
 >rats
 Your score has just gone up by one point
@@ -97,10 +126,33 @@ The plebe perks his ears up, but maybe that was too strong. Perhaps you should u
 >n
 Nowt Town holds no secrets. You can only go west or south.
 
+#testcase-outside-nowt-town
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-nowt-town
+>exits
+WRONG 539
+
 >w
+
 #generic reject for touching a wall in r10
 >s
 You walk into a wall, which goes ZVT. "Lame-o," you think, seeing red. Maybe that ZVT was a VZT.
+
+#testcase-outside-r10
+>out
+You have more than one way to leave: east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r10
+>exits
+WRONG 550
+
+>in
+You can go east and west here, but not inside.
+
 >w
 
 #verbcase smell-presto-if-location-of-player-is-in-the-maze
@@ -114,36 +166,123 @@ Unnecessary mazes do have that effect on people.
 #generic reject for touching a wall in r00
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r00
+>out
+You have more than one way to leave: north and east. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r00
+>exits
+WRONG 572
+
 >n
+
 #generic reject for touching a wall in r01
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r01
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r01
+>exits
+WRONG 583
+
 >n
+
 #generic reject for touching a wall in r02
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r02
+>out
+You have more than one way to leave: north, south and east. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r02
+>exits
+WRONG 594
+
 >n
 #generic reject for touching a wall in r03
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r03
+>out
+The only way to exit is south, so let's go that way.
+>undo
+
+#testcase-exits-r03
+>exits
+WRONG 604
 >undo
 >undo
+>undo
+
 >e
+
 #generic reject for touching a wall in r12
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r12
+>out
+You have more than one way to leave: south, east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r12
+>exits
+WRONG 617
+
 >s
+
 #generic reject for touching a wall in r11
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r11
+>out
+You have more than one way to leave: north and east. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r11
+>exits
+WRONG 628
+
 >e
+
 #generic reject for touching a wall in r21
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r21
+>out
+You have more than one way to leave: east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r21
+>exits
+WRONG 639
+
 >e
+
 #generic reject for touching a wall in r31
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r31
+>out
+The only way to exit is west, so let's go that way.
+
+>undo
+
+#testcase-exits-r31
+>exits
+WRONG 650
 >undo
 >undo
 >undo
@@ -151,29 +290,96 @@ You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see r
 >undo
 >undo
 >e
+
 #generic reject for touching a wall in r22
 >n
+
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r22
+>out
+You have more than one way to leave: east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r22
+>exits
+WRONG 667
+
 >e
+
 #generic reject for touching a wall in r32
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r32
+>out
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r32
+>exits
+WRONG 678
+
 >e
+
 #generic reject for touching a wall in r42
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r42
+>out
+You have more than one way to leave: north, south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r42
+>exits
+WRONG 689
+
 >s
+
 #generic reject for touching a wall in r41
 >e
+
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
 >s
+
+#testcase-outside-r41
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r41
+>exits
+WRONG 702
+
 #generic reject for touching a wall in r40
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r40
+>out
+You have more than one way to leave: north and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r40
+>exits
+WRONG 711
+
 >w
+
 #generic reject for touching a wall in r30
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r30
+>out
+The only way to exit is east, so let's go that way.
+
+>undo
+
+#testcase-exits-r30
+>exits
+WRONG 722
 >undo
 >undo
 >undo
@@ -181,17 +387,50 @@ You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see r
 >undo
 >undo
 >n
+
 #generic reject for touching a wall in r43
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r43
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r43
+>exits
+WRONG 738
+
 >n
+
 #generic reject for touching a wall in r44
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r44
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r44
+>exits
+WRONG 749
+
 >w
+
 #generic reject for touching a wall in r34
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r34
+>out
+The only way to exit is east, so let's go that way.
+
+>undo
+
+#testcase-exits-r34
+>exits
+WRONG 760
 >undo
 >undo
 >undo
@@ -201,25 +440,80 @@ You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see r
 >undo
 >undo
 >n
+
 #generic reject for touching a wall in r33
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r33
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r33
+>exits
+WRONG 778
+
 >w
+
 #generic reject for touching a wall in r23
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r23
+>out
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r23
+>exits
+WRONG 789
+
 >w
+
 #generic reject for touching a wall in r13
 >w
+
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r13
+>out
+You have more than one way to leave: north and east. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r13
+>exits
+WRONG 801
+
 >n
+
 #generic reject for touching a wall in r14
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r14
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-r14
+>exits
+WRONG 812
+
 >w
 #generic reject for touching a wall in r04
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+
+#testcase-outside-r04
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-exits-r04
+>exits
+WRONG 822
+>undo
 >undo
 >undo
 >undo
@@ -237,6 +531,16 @@ GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way t
 #ttc-table-of-presto-nowheres-unwary-runway
 >w
 The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?
+
+#testcase-outside-unwary-runway
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-exits-unwary-runway
+>exits
+WRONG 844
+
 >n
 
 Grey Gyre
@@ -263,6 +567,15 @@ Marines Seminar Remains
 #ttc-table-of-presto-nowheres-marines-seminar-remains
 >e
 While you're impressed with people who can navigate sport ports, you couldn't do much more than show respect for them, if you need a distraction from your main quest.
+
+#testcase-outside-marines-seminar-remains
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+
+#testcase-exits-marines-seminar-remains
+>exits
+WRONG 912
 
 >get popgun
 
@@ -335,6 +648,15 @@ Dirge Ridge
 #ttc-table-of-presto-nowheres-dirge-ridge
 >e
 The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches.
+
+#testcase-outside-dirge ridge
+>out
+Char Arch
+>undo
+
+#testcase-exits-dirge ridge
+>exits
+WRONG 1314
 
 #ttc-table-of-presto-attacks-leo
 >attack leo
@@ -436,6 +758,16 @@ Saps' Pass
 >sw
 There's no way around the hogs. You need to get rid of them.
 
+#testcase-outside-saps-pass
+>out
+The only way to exit is south, so let's go that way.
+Grey Gyre
+>undo
+
+#testcase-exits-saps-pass
+>exits
+WRONG 1729
+
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
@@ -490,6 +822,15 @@ by one point
 >score
 Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
+#+testcase-outside-saps-pass
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#+testcase-exits-saps-pass
+>exits
+WRONG 2144
+
 >n
 Hacks' Shack
 
@@ -499,6 +840,14 @@ While computer hackery involves a lot of spontaneous swearing at times, it won't
 #verbcase listen-presto-if-player-is-in-hacks'-shack
 >listen
 Classic techno music from the Baleets: "Be Stale."
+
+#testcase-outside-hacks-shack
+>out
+The only way to exit is south, so let's go that way.
+
+#testcase-exits-hacks-shack
+>exits
+WRONG 2185
 
 >screen
 by one point
@@ -581,6 +930,14 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 
 >reboot
 Your score has just gone up by one point
+
+#+testcase-outside-hacks-shack
+>out
+WRONG
+
+#+testcase-exits-hacks-shack
+>exits
+WRONG 2185
 
 >score
 Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.

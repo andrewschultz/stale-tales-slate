@@ -548,6 +548,8 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
+Leveraged Everglade
+
 You need a way past the bonker
 
 #ttc-table-of-towers-anagrams-grandiose
@@ -611,6 +613,8 @@ Your score has just gone up by one point
 Score in a scenario: 36 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
 >n
+
+Danger Garden
 
 #ttc-table-of-towers-anagrams-broken
 >xr bonker
@@ -805,7 +809,7 @@ Your score has just gone up by one point
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >enter boat
-You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
 
@@ -823,7 +827,7 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 
 >thisalt
---If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here

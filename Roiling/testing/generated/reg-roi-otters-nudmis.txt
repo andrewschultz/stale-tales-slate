@@ -678,6 +678,10 @@ The way west remains blocked, but you feel there has to be a simple way past.
 >score
 Score in a scenario: 12 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
+#ttc-table-of-otters-readables-pen-o-nope
+>read pen
+The Pen O' NOPE reads NONE, PEPO'.
+
 >open
 Your score has just gone up by one point
 

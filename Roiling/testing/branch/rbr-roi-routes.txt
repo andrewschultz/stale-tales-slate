@@ -38,6 +38,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >ts
 >routes
 >enter routes
+Same Mesa
+
 >score
 {$SCOS}
 
@@ -77,6 +79,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-routes-attacks-scripture-picturers
 >attack scripture picturers
 A shameful attempt at vandalism.
+#ttc-table-of-routes-nowheres-same-mesa
+>n
+You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the south, after several minutes.
+\\
+#testcase-outside-same-mesa
+>out
+\\
+Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around.
+\\
+#testcase-exits-same-mesa
+>exits
+There are plenty of ways to go, but they don't seem to lead anywhere. There are three places to enter, though they do seem to shift.
 
 @nud
 >au 2
@@ -342,6 +356,10 @@ UNDO
 #verbcase listen-routes-if-player-is-in-cleric-circle
 >listen
 Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
+\\
+#testcase-exits-cleric-circle
+>exits
+You can go back out.
 
 >x list o toils
 
@@ -486,6 +504,10 @@ Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sn
 
 >out
 
+@verbs
+#testcase-outside-adobe-abode
+!The only way to exit is
+
 @hints
 #ttc-table-of-routes-hint-request-rejects-scripture-picturers
 >hint scripture picturers
@@ -601,6 +623,10 @@ Idle Deli
 #ttc-table-of-routes-nowheres-idle-deli
 >n
 Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
+\\
+#testcase-exits-idle-deli
+>exits
+You can go back out.
 
 @spoi
 #ttc-table-of-routes-anagrams-despite
@@ -745,6 +771,10 @@ You don't need to do anything with Pat, especially now you got the stupor sprout
 
 >out
 
+@verbs
+#testcase-outside-idle-deli
+!The only way to exit is
+
 @spoi
 #ttc-table-of-routes-anagrams-across
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
@@ -798,6 +828,10 @@ Adobe Abode
 #ttc-table-of-routes-nowheres-adobe-abode
 >e
 This do be a one-room place. You can really only go outside.
+\\
+#testcase-exits-adobe-abode
+>exits
+You can go back out.
 
 @nud
 #mistake retest for orcas
@@ -868,6 +902,10 @@ Besides, you got the pipe soot
 Brother Horbert will work his magic with that.
 
 >out
+
+@verbs
+#testcase-outside-cleric-circle
+!The only way to exit is
 
 @spoi
 #ttc-table-of-routes-anagrams-against
@@ -1230,6 +1268,14 @@ You suspect you have a little way to go before finding clues of No-Lag Logan.
 >baveo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#testcase-outside-same-mesa
+>out
+There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go.
+#testcase-exits-same-mesa
+>exits
+You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, maybe that's where the adventure is.
+
 >above
 }}SCORE++
 Your score has just gone up by one point.
@@ -1318,6 +1364,14 @@ Harms Marsh
 #ttc-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
+\\
+#testcase-outside-harms-marsh
+>out
+Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
+\\
+#testcase-exits-harms-marsh
+>exits
+Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 @spoi
 #ttc-table-of-routes-anagrams-until
@@ -1498,6 +1552,14 @@ You already muddled your way out of Harms Marsh. You may be lost now, but walkin
 #+ttc-table-of-goto-sectioning--1-routes
 >gt mesa
 Brother Horbert would be sad to see you return, unsuccessful.
+\\
+#testcase-outside-ripe-pier
+>out
+You've lost all sense of direction here, but you still somehow need to figure how to get on that boat.
+\\
+#testcase-exits-ripe-pier
+>exits
+Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 @nud
 #ttc-table-of-ripe-pier-nudges-pier
@@ -1581,6 +1643,14 @@ You already muddled your way out of Harms Marsh. You may be lost now, but sailin
 #+ttc-table-of-goto-sectioning--1-routes
 >gt mesa
 You're not going back across the water. You're closer to the end of your quest.
+\\
+#testcase-outside-cripple-clipper
+>out
+Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.
+\\
+#testcase-exits-cripple-clipper
+>exits
+Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 @nud
 #ttc-table-of-cripple-clipper-nudges-mess
@@ -1655,6 +1725,14 @@ The Sonancy Canyons lead to your destiny.
 #+ttc-table-of-goto-sectioning-ripe-pier-3--
 >gt pier
 It's time to go forward, not backwards.
+\\
+#testcase-outside-sonancy-canyons
+>out
+You might run into the spheric ciphers. You still don't have your sense of direction back.
+\\
+#testcase-exits-sonancy-canyons
+>exits
+Looks like you will need to figure a way to move forward without directions. You've got to be really close.
 
 @sli
 #slider test for through

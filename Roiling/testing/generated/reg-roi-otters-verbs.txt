@@ -21,9 +21,27 @@
 >bother
 At the moment, even your profanities lack power.
 
+#testcase-outside-minded-midden
+>out
+There's no way out until the bleary barley is gone.
+>undo
+
+#testcase-extra-minded-midden
+>exits
+WRONG
+
 #forceignore
 >barely
 Your score has just gone up by one point
+
+#+testcase-outside-minded-midden
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#+testcase-extra-minded-midden
+>exits
+WRONG
 
 #verbcase listen-otters-if-noun-is-ed-riley
 >listen
@@ -49,11 +67,29 @@ The deli rye smells good, but Ed won't share.
 >reedily
 Your score has just gone up by one point
 
+#+testcase-outside-minded-midden
+>out
+You have more than one way to leave: north, south and west. So you'll need to specify which one.
+>undo
+
+#+testcase-extra-minded-midden
+>exits
+WRONG
+
 >score
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >w
 Disowned Downside
+
+#testcase-outside-disowned-downside
+>out
+You have more than one way to leave: north, south and east. So you'll need to specify which one.
+>undo
+
+#testcase-extra-disowned-downside
+>exits
+WRONG
 
 #ttc-table-of-otters-attacks-players
 >attack players
@@ -122,6 +158,15 @@ The pool is wide and long. You can only go back south.
 >smell
 Salt Water. Wet, astral.
 
+#testcase-outside-loop-pool
+>out
+The only way to exit is south, so let's go that way.
+>undo
+
+#testcase-extra-loop-pool
+>exits
+WRONG
+
 #ttc-table-of-otters-attacks-sea-cube
 >attack sea cube
 Bounce no cube.
@@ -172,6 +217,15 @@ You hear morose mooers you can't see.
 >attack mr lee
 Be nice. He's on your side. Or he will be, once you gain his trust.
 
+#testcase-outside-bran-barn
+>out
+The only way to exit is north, so let's go that way.
+>undo
+
+#testcase-extra-bran-barn
+>exits
+WRONG
+
 >although
 by one point
 DEBUG INFO: min-up codepath
@@ -211,6 +265,15 @@ Score in a scenario: 12 out of 37 total points in the current region, Otters. Lo
 >open
 Your score has just gone up by one point
 
+#+testcase-outside-disowned-downside
+>out
+You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
+>undo
+
+#+testcase-extra-disowned-downside
+>exits
+WRONG
+
 >score
 Score in a scenario: 13 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
@@ -222,6 +285,15 @@ Shiner Shrine
 #ttc-table-of-otters-nowheres-shiner-shrine
 >e
 The coma camo may be detectable, but you can't change it.
+
+#testcase-outside-shiner-shrine
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-extra-shiner-shrine
+>exits
+WRONG
 
 #verbcase listen-otters-if-noun-is-sly-imp
 >listen
@@ -249,6 +321,15 @@ Lamer Realm
 #ttc-table-of-otters-attacks-owls
 >attack owls
 You are outnumbered. You need a bit of magic here.
+
+#testcase-outside-lamer-realm
+>out
+The only way to exit is south, so let's go that way.
+>undo
+
+#testcase-extra-lamer-realm
+>exits
+WRONG
 
 >slow
 Your score has just gone up by one point
@@ -333,6 +414,15 @@ Clarthead Cathedral
 >e
 The coma camo may be detectable, but you can't change it.
 
+#testcase-outside-clarthead-cathedral
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-extra-clarthead-cathedral
+>exits
+WRONG
+
 #verbcase listen-otters-if-noun-is-whiners
 >listen
 It's hard not to hear what the shrewin' whiners have to say, actually
@@ -360,6 +450,15 @@ Perverse Preserve
 #verbcase listen-otters-if-player-is-in-perverse-preserve
 >listen
 You hear no metronomes you could turn into monotremes.
+
+#testcase-outside-perverse-preserve
+>out
+The only way to exit is north, so let's go that way.
+>undo
+
+#testcase-extra-perverse-preserve
+>exits
+WRONG
 
 #ttc-table-of-otters-attacks-raptor
 >attack raptor
@@ -456,6 +555,15 @@ Score in a scenario: 30 out of 37 total points in the current region, Otters. Lo
 >w
 Reclusion Inclosure
 
+#testcase-outside-reclusion-inclosure
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-extra-reclusion-inclosure
+>exits
+WRONG
+
 #ttc-table-of-otters-nowheres-reclusion-inclosure
 >n
 The coevals' alcoves north and south may seem less intimidating, but you really should be focused on what's to the west.
@@ -498,6 +606,15 @@ Score in a scenario: 33 out of 37 total points in the current region, Otters. Th
 >raptor
 Your score has just gone up by one point
 
+#+testcase-outside-reclusion-inclosure
+>out
+You have more than one way to leave: east and west. So you'll need to specify which one.
+>undo
+
+#+testcase-extra-reclusion-inclosure
+>exits
+WRONG
+
 >score
 Score in a scenario: 34 out of 37 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 37 points.
 
@@ -538,6 +655,15 @@ Elvira mocks you again:
 >undo
 >undo
 >undo
+
+#testcase-outside-rancho-archon-anchor
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-extra-rancho-archon-anchor
+>exits
+WRONG
 
 >e
 

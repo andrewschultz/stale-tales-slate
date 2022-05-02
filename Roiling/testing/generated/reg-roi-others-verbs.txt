@@ -35,6 +35,11 @@ The slime actually smells...nice, like dishwashing detergent.
 >attack curtis
 Aw, c'mon. Maybe Curtis is sort of bossy, but he's not that bad.
 
+#testcase-outside-rustic-citrus
+>out
+You've lost your bearings a bit, but maybe the moss cap could help in another form
+>undo
+
 >c
 >z
 >z
@@ -72,6 +77,10 @@ Smells, savory, vary so.
 >e
 With greenish sheering all around, one direction seems as good as any other. Maybe you need to tinker with the moss cap.
 
+#+testcase-exits-rustic-citrus
+>exits
+You've lost your bearings a bit, but maybe the moss cap could help in another form.
+
 >compass
 Your score has just gone up by one point.
 
@@ -82,6 +91,10 @@ The compass will help point you north. You should go that way.
 #reverbcase listen-others-if-noun-is-rustic-citrus
 >listen
 Curtis continues to sing and hum the tidiest dietist ditties.
+
+#+testcase-exits-rustic-citrus
+>exits
+The only way you seem to be able to go is north.
 
 # we can go north, but let's look for a few more points first.
 
@@ -141,6 +154,15 @@ Swell Wells
 #verbcase listen-others-if-noun-is-sorer-bogey
 >listen sorer bogey
 /"I am the sorer bogey!" you hear\. "(Be sorry, ego|Oy! Erg! Sober|Ye sorer gob)!" it cries, as you see your skin redden.
+
+#testcase-outside-swell-wells
+>out
+You have more than one way to leave: north, south, east, west and down. So you'll need to specify which one.
+>undo
+
+#testcase-exits-swell-wells
+>exits
+There are five viable exits: north, south to Rustic Citrus, east, west and down.
 
 >apricot
 Your score has just gone up by one point.
@@ -210,6 +232,15 @@ With all the foilage foliage and the pipe panel lie pen app too, the only way to
 #verbcase listen-others-if-noun-is-barren-cries
 >listen barren cries
 The barren cries are sour and bitter and tiny.
+
+#testcase-outside-filed-field
+>out
+The only way to exit is east, so let's go that way.
+>undo
+
+#testcase-exits-filed-field
+>exits
+The only way you seem to be able to go is east to Swell Wells.
 
 >cranberries
 Your score has just gone up by one point.
@@ -306,6 +337,15 @@ A small voice is saying, "Go, man!" You see red as it begins to nag mo'. Where? 
 #ttc-table-of-others-attacks-len-craig
 >attack len craig
 Len Craig's prices are relatively fair. He's on your side. There's no reason to attack him.
+
+#testcase-outside-clangier-clearing
+>out
+The only way to exit is west, so let's go that way.
+>undo
+
+#exits-outside-clangier-clearing
+>exits
+The only way you seem to be able to go is west to Swell Wells.
 
 >olives
 Your score has just gone up by one point.
@@ -408,6 +448,20 @@ Gates Stage
 #ttc-table-of-others-nowheres-gates-stage
 >e
 You don't want to know how effective the gropin' roping is. The gates are more interesting, anyway.
+
+#testcase-outside-gates-stage
+>banish passport
+>out
+The only way to exit is south, so let's go that way.
+>undo
+>undo
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#testcase-exits-gates-stage
+>exits
+The only way you seem to be able to go is south to Swell Wells.
 
 >n
 PERP

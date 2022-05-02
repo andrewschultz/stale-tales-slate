@@ -1219,6 +1219,8 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
+Leveraged Everglade
+
 #ttc-table-of-leveraged-everglade-nudges-leveraged
 >leveragde
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
@@ -1358,6 +1360,8 @@ You can't change the gadflies. There are too many.
 You can't change the gadflies. There are too many.
 
 >n
+
+Danger Garden
 
 #ttc-table-of-towers-spechelp-bonker
 >bonkre
@@ -1859,7 +1863,7 @@ That's some ambiguous readings, but I guess before you get help, you'll need to 
 >scan palace
 Your settler registers RRYR?YRYRY*.
 >undo
-#ttc-table-of-rawest-waters-nudges-waster
+#ttc-table-of-rawest-waster-waters-nudges-waster
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. The Earnest Eastern Neaters still seem to want to help you, though.
 >undo
@@ -1867,11 +1871,11 @@ Ew. Rats. You do feel like a waster, doing something with the waters. The Earnes
 >laek
 Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
 >undo
-#ttc-table-of-rawest-waters-nudges-spray
+#ttc-table-of-rawest-waster-waters-nudges-spray
 >sprya
 The spray will still drown you if you don't figure a way to move somewhere.
 >undo
-#ttc-table-of-rawest-waters-nudges-water
+#ttc-table-of-rawest-waster-waters-nudges-water
 >watre
 The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the Earnest Eastern Neaters?
 >undo
@@ -1883,7 +1887,7 @@ The shore wants to get physically closer to you now. You can feel it. But that d
 >prays
 Too late to be a prayers sprayer.
 >undo
-#ttc-table-of-rawest-waters-nudges-neater
+#ttc-table-of-rawest-waster-waters-nudges-neater
 >neatre
 You need more than one Neater to help you.
 >undo
@@ -1982,7 +1986,7 @@ Your score has just gone up by one point
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >enter boat
-You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
 
@@ -2044,7 +2048,7 @@ That is a lot of blinks, but those blinks have to be almost as good as a purple 
 You're beyond the lake now.
 
 >thisalt
---If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here

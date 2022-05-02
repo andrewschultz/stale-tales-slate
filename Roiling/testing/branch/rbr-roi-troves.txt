@@ -58,6 +58,14 @@ Loather Rathole
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find temporary warmth now you were kicked out from Eh, At Heat.
 Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
+\\
+#testcase-outside-loather-rathole
+>out
+Consciously going into any hurt-thru might leave you vulnerable. You need to find temporary warmth now you were kicked out from Eh, At Heat.
+\\
+#testcase-exits-loather-rathole
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 @spoi
 #ttc-table-of-troves-anagrams-hate
@@ -310,6 +318,14 @@ Bustle Sublet
 #ttc-table-of-troves-nowheres-bustle-sublet
 >e
 The reastier arteries lead nowhere good. You still have a lot to look for.
+\\
+#testcase-outside-bustle-sublet
+>out
+The reastier arteries lead nowhere good. You still have a lot to look for.
+#testcase-exits-bustle-sublet
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 @spoi
 #ttc-table-of-troves-anagrams-observe
@@ -481,6 +497,16 @@ Boarded Roadbed
 #ttc-table-of-troves-nowheres-boarded-roadbed
 >e
 A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think.
+!Nevertheless, on your brief walk, you saw
+\\
+#testcase-outside-boarded-roadbed
+>out
+A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think.
+!Nevertheless, on your brief walk, you saw
+#testcase-exits-boarded-roadbed
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 @sli
 #slider test for stay
@@ -710,6 +736,14 @@ Drain Nadir
 #ttc-table-of-troves-nowheres-drain-nadir
 >e
 No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
+\\
+#testcase-outside-drain-nadir
+>out
+No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
+#testcase-exits-drain-nadir
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 @spoi
 #ttc-table-of-troves-anagrams-despair
@@ -903,6 +937,14 @@ The dead air inspires no rad idea.
 #verbcase sleep-troves-if-player-is-in-boredom-bedroom
 >sleep
 You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker.
+\\
+#testcase-outside-boredom-bedroom
+>out
+Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better.
+#testcase-exits-boredom-bedroom
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 @nud
 #ttc-table-of-boredom-bedroom-nudges-shmoe
@@ -1084,7 +1126,7 @@ In particular, you feel the need to DESIRE right now.
 @verbs
 #ttc-table-of-troves-nowheres-browse-bowers
 >e
-You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more.
+You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more right here.
 \\
 #verbcase smell-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone-or-player-is-in-upscale-capsule
 >smell
@@ -1093,6 +1135,14 @@ Perfumed. Dump-free.
 #verbcase sleep-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone
 >sleep
 In a public place? Worse, in an upscale public place? How shocking!
+\\
+#testcase-outside-browse-bowers
+>out
+You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more right here.
+#testcase-exits-browse-bowers
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move further ahead in the world.
 
 >score
 {$SCOS}
@@ -1214,6 +1264,14 @@ You hear something from the praise spirea. It might help you, but then again, it
 \\
 >listen
 The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I reaps! Ire? Sap!"
+\\
+#testcase-outside-econ-cone
+>out
+The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!
+#testcase-exits-econ-cone
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move even further ahead in the world.
 
 @nud
 #mistake test for once
@@ -1423,6 +1481,14 @@ Upscale Capsule
 #ttc-table-of-troves-nowheres-upscale-capsule
 >e
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
+\\
+#testcase-outside-upscale-capsule
+>out
+You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
+#testcase-exits-upscale-capsule
+\\
+>exits
+No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move even further ahead in the world.
 
 @spoi
 #ttc-table-of-troves-anagrams-deserve

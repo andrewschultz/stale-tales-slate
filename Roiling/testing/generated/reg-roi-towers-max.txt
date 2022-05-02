@@ -467,6 +467,8 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
+Leveraged Everglade
+
 >grandiose
 Your score has just gone up by one point
 >score
@@ -505,6 +507,8 @@ Your score has just gone up by one point
 Score in a scenario: 36 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
 >n
+
+Danger Garden
 
 >broken
 Your score has just gone up by one point
@@ -620,16 +624,16 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 >robust
 by one point
 >enter boat
-Rawest Waters
+Rawest Waster Waters
 #ttc-table-of-castle-approaching-narratives-8
-#ttc-table-of-towers-progress-comments-rawest-waters
+#ttc-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
 #altpath
 Mislit Limits
 >thisalt
---you'd have passed Rawest Waters if you'd have made the blaster STABLER.
+--you'd have passed Rawest Waster Waters if you'd have made the blaster STABLER.
 >undo
 >undo
 >undo
@@ -637,13 +641,13 @@ Mislit Limits
 >stabler
 Your score has just gone up by one point
 >enter boat
-Rawest Waters
+Rawest Waster Waters
 >nearest
 #notmax
 Your score has just gone up by one point
 Mislit Limits
 >thisalt
---you'd have passed Rawest Waters if you'd have made the turbos ROBUST.
+--you'd have passed Rawest Waster Waters if you'd have made the turbos ROBUST.
 >undo
 >undo
 >undo
@@ -656,7 +660,7 @@ Your score has just gone up by one point
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >enter boat
-You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
 
@@ -673,7 +677,7 @@ This will restore the Curst Palace, but you can also figure what to do with that
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >thisalt
---If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here

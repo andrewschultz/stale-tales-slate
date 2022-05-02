@@ -139,6 +139,10 @@ Score in a scenario: 15 out of 57 total points in the current region, Towers. Lo
 
 Danger Garden
 
+Leveraged Everglade
+
+Danger Garden
+
 >broken
 Your score has just gone up by one point
 
@@ -217,7 +221,7 @@ by one point
 by one point
 
 >enter boat
-You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
 

@@ -113,6 +113,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #verbcase swear-otters-if-power-back-is-false
 >bother
 At the moment, even your profanities lack power.
+\\
+#testcase-outside-minded-midden
+>out
+There's no way out until the bleary barley is gone.
+>undo
+\\
+#testcase-extra-minded-midden
+>exits
+WRONG
 
 @max
 #ttc-table-of-notepad-entries-powers
@@ -127,6 +136,16 @@ Your score has just gone up by one point
 @max
 #ttc-table-of-region-initial-scoring-commentary-otters-1
 You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!
+
+@verbs
+#+testcase-outside-minded-midden
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+\\
+#+testcase-extra-minded-midden
+>exits
+WRONG
 
 @spoi
 #ttc-table-of-otters-anagrams-reedily
@@ -298,6 +317,16 @@ Your score has just gone up by one point
 @hin
 You made a way west. You're done here.
 
+@verbs
+#+testcase-outside-minded-midden
+>out
+You have more than one way to leave: north, south and west. So you'll need to specify which one.
+>undo
+\\
+#+testcase-extra-minded-midden
+>exits
+WRONG
+
 @nud
 >n
 #ttc-table-of-shiner-shrine-nudges-remote
@@ -324,6 +353,16 @@ Disowned Downside
 
 @spoi
 As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
+
+@verbs
+#testcase-outside-disowned-downside
+>out
+You have more than one way to leave: north, south and east. So you'll need to specify which one.
+>undo
+\\
+#testcase-extra-disowned-downside
+>exits
+WRONG
 
 @nud
 #ttc-table-of-disowned-downside-nudges-parley
@@ -1195,6 +1234,15 @@ The pool is wide and long. You can only go back south.
 #verbcase smell-otters-if-player-is-in-loop-pool
 >smell
 Salt Water. Wet, astral.
+\\
+#testcase-outside-loop-pool
+>out
+The only way to exit is south, so let's go that way.
+>undo
+\\
+#testcase-extra-loop-pool
+>exits
+WRONG
 
 @sli
 #slider test for because
@@ -1401,6 +1449,15 @@ You hear morose mooers you can't see.
 #ttc-table-of-otters-attacks-mr-lee
 >attack mr lee
 Be nice. He's on your side. Or he will be, once you gain his trust.
+\\
+#testcase-outside-bran-barn
+>out
+The only way to exit is north, so let's go that way.
+>undo
+\\
+#testcase-extra-bran-barn
+>exits
+WRONG
 
 @nud
 #ttc-table-of-bran-barn-nudges-barn
@@ -1558,12 +1615,27 @@ by one point
 by one point
 >undo
 
+@nud
+#ttc-table-of-otters-readables-pen-o-nope
+>read pen
+The Pen O' NOPE reads NONE, PEPO'.
+
 >open
 Your score has just gone up by one point
 }}SCORE++
 
 @hin
 Gretta's gone. Go back east for help.
+
+@verbs
+#+testcase-outside-disowned-downside
+>out
+You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
+>undo
+\\
+#+testcase-extra-disowned-downside
+>exits
+WRONG
 
 >score
 {$SCOS}
@@ -1580,6 +1652,15 @@ DEBUG INFO: simply sly imp hinting.
 #ttc-table-of-otters-nowheres-shiner-shrine
 >e
 The coma camo may be detectable, but you can't change it.
+\\
+#testcase-outside-shiner-shrine
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+\\
+#testcase-extra-shiner-shrine
+>exits
+WRONG
 
 @spoi
 ##balance undos
@@ -1765,6 +1846,15 @@ As you gaze into the cinders, they blow away, leaving you feeling you can make t
 #ttc-table-of-otters-attacks-owls
 >attack owls
 You are outnumbered. You need a bit of magic here.
+\\
+#testcase-outside-lamer-realm
+>out
+The only way to exit is south, so let's go that way.
+>undo
+\\
+#testcase-extra-lamer-realm
+>exits
+WRONG
 
 >slow
 Your score has just gone up by one point
@@ -2066,6 +2156,15 @@ The whiners have a lot of energy and exercise it many different ways. (+)
 #ttc-table-of-otters-nowheres-clarthead-cathedral
 >e
 The coma camo may be detectable, but you can't change it.
+\\
+#testcase-outside-clarthead-cathedral
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+\\
+#testcase-extra-clarthead-cathedral
+>exits
+WRONG
 
 @spoi
 #ttc-table-of-otters-anagrams-joltily
@@ -2215,6 +2314,15 @@ Perverse Preserve
 #verbcase listen-otters-if-player-is-in-perverse-preserve
 >listen
 You hear no metronomes you could turn into monotremes.
+\\
+#testcase-outside-perverse-preserve
+>out
+The only way to exit is north, so let's go that way.
+>undo
+\\
+#testcase-extra-perverse-preserve
+>exits
+WRONG
 
 @nud
 #ttc-table-of-otters-spechelp-raptor
@@ -2634,6 +2742,16 @@ As you gaze into the cinders, they blow away, leaving you feeling you can re-mak
 @hin
 DEBUG INFO: parrot hinting.
 
+@verbs
+#testcase-outside-reclusion-inclosure
+>out
+The only way to exit is east, so let's go that way.
+>undo
+\\
+#testcase-extra-reclusion-inclosure
+>exits
+WRONG
+
 @hints
 #ttc-table-of-settler-shake-descriptions-aside-llp
 >ss
@@ -2932,6 +3050,16 @@ DEBUG INFO: weltish whistle hinting.
 @min
 }}CURMAX-=2
 
+@verbs
+#+testcase-outside-reclusion-inclosure
+>out
+You have more than one way to leave: east and west. So you'll need to specify which one.
+>undo
+\\
+#+testcase-extra-reclusion-inclosure
+>exits
+WRONG
+
 >score
 @min
 {$SCOS}
@@ -3011,6 +3139,15 @@ Elvira mocks you again:
 >undo
 >undo
 >undo
+\\
+#testcase-outside-rancho-archon-anchor
+>out
+The only way to exit is east, so let's go that way.
+>undo
+\\
+#testcase-extra-rancho-archon-anchor
+>exits
+WRONG
 
 >e
 

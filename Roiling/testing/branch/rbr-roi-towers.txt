@@ -724,6 +724,14 @@ by one point
 #+ttc-table-of-towers-nowheres-loftier-trefoil
 >e
 Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
+\\
+#testcase-outside-loftier-trefoil
+>out
+Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
+>undo
+#testcase-exits-loftier-trefoil
+>exits
+WRONG 728
 
 >yonder
 Your score has just gone up by one point
@@ -760,6 +768,15 @@ An unconvincing voice from where you came moans "Stop! Die!" You must ignore it 
 #ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 You had your fun in there.
+\\
+#testcase-outside-topside-deposit
+>out
+The Wildest Wilteds are too dangerous any way but north, and the dreads adders are in the way right now.
+>undo
+\\
+#testcase-exits-topside-deposit
+>exits
+WRONG 769
 
 @nud
 #ttc-table-of-towers-readables-curst-palace
@@ -964,6 +981,16 @@ Looking at yourself after eating the pastry, you see you can see what you'd want
 #ttc-table-of-notepad-entries-xray
 >pad xray
 You can XRAY something you can't describe to see what it can or should be, with that skan-snak you ate. You can wait as long as you want/need.
+
+@verbs
+#+testcase-outside-topside-deposit
+>out
+The only way to exit is north, so let's go that way.
+>undo
+\\
+#+testcase-exits-topside-deposit
+>exits
+WRONG 979
 
 >score
 {$SCOS}
@@ -1184,6 +1211,15 @@ They're probably trained to hand out ur-belts.
 >subtler
 Your score has just gone up by one point
 }}SCORE++
+
+@verbs
+#testcase-outside-scope-copse
+>out
+You have more than one way to leave: south and west. So you'll need to specify which one.
+\\
+#testcase-exits-scope-copse
+>exits
+WRONG 1205
 
 >score
 {$SCOS}
@@ -1548,12 +1584,32 @@ The promise imposer seems a little less intimidating.
 >attack promise imposer
 That might be RIP-some.
 
+@verbs
+#testcase-outside-baldest-blasted-saltbed
+>out
+WRONG
+>undo
+\\
+#testcase-exits-baldest-blasted-saltbed
+>exits
+WRONG 1573
+
 @!minh,mini
 >semipro
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@verbs
+#+testcase-outside-baldest-blasted-saltbed
+>out
+WRONG
+>undo
+\\
+#+testcase-exits-baldest-blasted-saltbed
+>exits
+WRONG 1586
 
 @max
 >e
@@ -1596,6 +1652,16 @@ Anemic Cinema
 #+ttc-table-of-castle-approaching-narratives-4
 #ttc-table-of-towers-progress-comments-anemic-cinema
 The palace looks a little bigger now--but you may eventually need to cut east a bit to get to it. It looks like there're dead ends north and west, and you still aren't sure how to cross Leak Lake.
+
+@verbs
+#testcase-outside-anemic-cinema
+>out
+WRONG
+>undo
+\\
+#testcase-exits-anemic-cinema
+>exits
+WRONG 1634
 
 @hin
 DEBUG INFO: mardier admirer hinting.
@@ -1752,6 +1818,15 @@ The logged dogleg prevents you from jumping to your doom below to the unorg'd gr
 /You try the logged dogleg's south entry, get twisted around, and come out the (north|west) entry\.
 >sw
 The logged dogleg has no diagonal entries.
+\\
+#testcase-outside-fringe-finger
+>out
+The only way to exit is east, so let's go that way.
+>undo
+\\
+#testcase-exits-fringe-finger
+>exits
+WRONG 1795
 
 @max
 #ttc-table-of-towers-progress-comments-fringe-finger
@@ -1896,6 +1971,16 @@ You're not sure why the Salted Deltas could be slated, or how. You're not here f
 !You've gotten rid of all nuisances here, anyway.
 >undo
 >undo
+
+@verbs
+#+testcase-outside-anemic-cinema
+>out
+WRONG
+>undo
+\\
+#+testcase-exits-anemic-cinema
+>exits
+WRONG 1945
 
 @!minh,mini
 >married
@@ -2046,6 +2131,31 @@ Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 >attack sweatier wait seer
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
+@verbs
+#testcase-outside-salted-deltas
+>out
+WRONG
+\\
+>undo
+\\
+#testcase-exits-salted-deltas
+>exits
+WRONG 2100
+\\
+>e
+\\
+#testcase-outside-actionless-coastlines
+>out
+WRONG
+\\
+#testcase-exits-actionless-coastlines
+>exits
+WRONG 2106
+>undo
+>undo
+>undo
+>undo
+
 @!minh,mini
 >hastiest
 Your score has just gone up by one point
@@ -2067,6 +2177,15 @@ Treading Gradient
 #ttc-table-of-towers-attacks-mended-mini-denim
 >attack mended mini denim
 You've got nothing sharp enough. That denim's been mended nicely, for sure.
+\\
+#testcase-outside-treading-gradient
+>out
+WRONG
+>undo
+\\
+#testcase-exits-treading-gradient
+>exits
+WRONG 2135
 
 @nud
 #+ttc-table-of-towers-scannotes-curst-palace
@@ -2299,6 +2418,20 @@ Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, 
 >d
 Dire and Arid Den
 
+@verbs
+#ttc-table-of-towers-nowheres-dire-and-arid-den
+>w
+No, there can't be anything west. You feel drained just considering that.
+\\
+#testcase-outside-dire-and-arid-den
+>out
+You need to snap out of the funk you're in. Get the right mindset.
+>undo
+\\
+#testcase-exits-dire-and-arid-den
+>exits
+WRONG 2376
+
 @nud
 #ttc-table-of-towers-scannotes-bogus-dandier
 >scan
@@ -2443,6 +2576,15 @@ Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 Whoah, A Roiling Original's pretty retro, but nothing that ancient. Besides, you want a better way for the Hostile-Is-He Lot to be.
 
 @verbs
+#testcase-outside-artist-traits-strait
+>out
+WRONG
+>undo
+\\
+#testcase-exits-artist-traits-strait
+>exits
+WRONG 2532
+\\
 #verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
 >bother
 Oh, the self-righteous backlash you'd get from the Hostile-Is-He Lot!
@@ -2571,8 +2713,20 @@ Your score has just gone up by one point
 {$SCOS}
 >w
 
+Leveraged Everglade
+
 @hin
 You need a way past the bonker
+
+@verbs
+#testcase-outside-leveraged-everglade
+>out
+WRONG
+>undo
+\\
+#testcase-exits-leveraged-everglade
+>exits
+WRONG 2662
 
 @nud
 #ttc-table-of-leveraged-everglade-nudges-leveraged
@@ -2649,6 +2803,16 @@ You get lost in the gadflies' gasfield a bit. And it's fun for a while, until yo
 Dourest Detours
 }}CURMIN++
 
+@verbs
+#testcase-outside-dourest-detours
+>out
+Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
+>undo
+\\
+#testcase-others-dourest-detours
+>exits
+WRONG 2743
+
 @spoi
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
 #ttc-table-of-towers-anagrams-rousted
@@ -2657,7 +2821,6 @@ Your x-ray vision seems to enlighten ... well, all around you.
 !You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
 >undo
-\\
 
 @sli
 #slider test for rousted
@@ -2704,6 +2867,15 @@ Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong
 #verbcase listen-towers-if-player-is-in-dourest-detours
 >listen
 You hear something that makes you see red.
+\\
+#testcase-outside-lost-lots
+>out
+The only way to exit is north, so let's go that way.
+>undo
+\\
+#testcase-exits-lost-lots
+>exits
+WRONG 2803
 
 @!minh,mini
 >rousted
@@ -2820,6 +2992,18 @@ Any direction but back south might drive you too far from the palace.
 @!minh,mini
 >n
 
+Danger Garden
+
+@verbs
+#testcase-outside-danger-garden
+>out
+WRONG
+>undo
+\\
+#testcase-exits-danger-garden
+>exits
+WRONG 2925
+
 @sli
 #slider test for broken
 >rbkone
@@ -2928,6 +3112,15 @@ Dr. Yow can be manipulated, even behind the prison ropins.
 #ttc-table-of-towers-nowheres-obscurest-subsector
 >e
 A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now.
+\\
+#testcase-outside-obscurest-subsector
+>out
+The only way to exit is west, so let's go that way.
+>undo
+\\
+#testcase-exits-obscurest-subsector
+>exits
+WRONG 3039
 
 @nud
 #ttc-table-of-obscurest-subsector-nudges-locked
@@ -3085,6 +3278,15 @@ That duck in the Shaven Havens seemed awfully lonely. Maybe you can bring it hom
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-wordy
 >listen yow
 Dr. Yow is talking slowly and soothingly.
+\\
+#testcase-outside-shaven-havens
+>out
+The only way to exit is south, so let's go that way.
+>undo
+\\
+#testcase-exits-shaven-havens
+>exits
+WRONG 3201
 
 >score
 {$SCOS}
@@ -3302,6 +3504,15 @@ The diverse deviser machine fizzles along. The chirping of birds from the campie
 #+ttc-table-of-towers-nowheres-outer-route
 >w
 The sway-ways are not reliable. You probably just want to go back east.
+\\
+#testcase-outside-outer-route
+>out
+The only way to exit is east, so let's go that way.
+>undo
+\\
+#testcase-exits-outer-route
+>exits
+WRONG 3423
 
 >revised
 }}SCORE++
@@ -3639,7 +3850,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @sli
->gonear rawest waters
+>gonear rawest waster waters
 #slider test for nearest
 >enesatr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -3665,7 +3876,7 @@ That's some ambiguous readings, but I guess before you get help, you'll need to 
 >scan palace
 Your settler registers RRYR?YRYRY*.
 >undo
-#ttc-table-of-rawest-waters-nudges-waster
+#ttc-table-of-rawest-waster-waters-nudges-waster
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. The Earnest Eastern Neaters still seem to want to help you, though.
 >undo
@@ -3673,11 +3884,11 @@ Ew. Rats. You do feel like a waster, doing something with the waters. The Earnes
 >laek
 Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
 >undo
-#ttc-table-of-rawest-waters-nudges-spray
+#ttc-table-of-rawest-waster-waters-nudges-spray
 >sprya
 The spray will still drown you if you don't figure a way to move somewhere.
 >undo
-#ttc-table-of-rawest-waters-nudges-water
+#ttc-table-of-rawest-waster-waters-nudges-water
 >watre
 The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the Earnest Eastern Neaters?
 >undo
@@ -3689,7 +3900,7 @@ The shore wants to get physically closer to you now. You can feel it. But that d
 >prays
 Too late to be a prayers sprayer.
 >undo
-#ttc-table-of-rawest-waters-nudges-neater
+#ttc-table-of-rawest-waster-waters-nudges-neater
 >neatre
 You need more than one Neater to help you.
 >undo
@@ -3775,31 +3986,41 @@ No thanks. Once was enough.
 >robust
 by one point
 >enter boat
-Rawest Waters
-#verbcase listen-towers-if-player-is-in-rawest-waters
+Rawest Waster Waters
+#verbcase listen-towers-if-player-is-in-rawest-waster-waters
 >listen
 A scrawny swan cry. But not the Sawn Swan. You hope.
-#verbcase swear-towers-if-player-is-in-rawest-waters
+#verbcase swear-towers-if-player-is-in-rawest-waster-waters
 >bother
 Trying to cross languages and make this Swears-Wasser does no good.
-#verbcase goto-towers-if-location-of-player-is-rawest-waters
+#verbcase goto-towers-if-location-of-player-is-rawest-waster-waters
 >gt coastlines
 Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
-#ttc-table-of-goto-sectioning-rawest-waters-3--
+#ttc-table-of-goto-sectioning-rawest-waster-waters-3--
 >gt waters
-The Rawest Waters of Leak Lake would probably be even less fun the second time around.
+The Rawest Waster Waters of Leak Lake would probably be even less fun the second time around.
 >undo
 >undo
 >undo
 >undo
 >undo
-#ttc-table-of-towers-nowheres-rawest-waters
+#ttc-table-of-towers-nowheres-rawest-waster-waters
 >e
-Spirited riptides! You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
+You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
 >n
-Spirited riptides! That'd only make the Earnest Eastern Neaters further away.
+That'd only make the Earnest Eastern Neaters further away.
+#testcase-outside-rawest-waster-waters
+>out
+You know you need to exit, but you need to change things so an exit's more accessible.
+>undo
+\\
+#testcase-exits-rawest-waster-waters
+>exits
+WRONG 3925
+\\
+>undo
 >undo
 >undo
 >undo
@@ -3848,16 +4069,16 @@ After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST
 >robust
 by one point
 >enter boat
-Rawest Waters
+Rawest Waster Waters
 #ttc-table-of-castle-approaching-narratives-8
-#ttc-table-of-towers-progress-comments-rawest-waters
+#ttc-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
 #altpath
 Mislit Limits
 >thisalt
---you'd have passed Rawest Waters if you'd have made the blaster STABLER.
+--you'd have passed Rawest Waster Waters if you'd have made the blaster STABLER.
 >undo
 >undo
 >undo
@@ -3865,13 +4086,13 @@ Mislit Limits
 >stabler
 Your score has just gone up by one point
 >enter boat
-Rawest Waters
+Rawest Waster Waters
 >nearest
 #notmax
 Your score has just gone up by one point
 Mislit Limits
 >thisalt
---you'd have passed Rawest Waters if you'd have made the turbos ROBUST.
+--you'd have passed Rawest Waster Waters if you'd have made the turbos ROBUST.
 >undo
 >undo
 >undo
@@ -3912,7 +4133,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 >enter boat
-You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 Mislit Limits
 
@@ -3952,6 +4173,14 @@ That's way in the past.
 #ttc-table-of-towers-nowheres-mislit-limits
 >n
 The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
+\\
+#testcase-outside-mislit-limits
+>out
+The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
+>undo
+#testcase-exits-mislit-limits
+>exits
+WRONG 4082
 
 >score
 {$SCOS}
@@ -4033,7 +4262,7 @@ After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 
 @!minh,mini
 >thisalt
---If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here
@@ -4122,6 +4351,16 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@verbs
+#+testcase-outside-mislit-limits
+>out
+The only way to exit is west, so let's go that way.
+>undo
+\\
+#+testcase-exits-mislit-limits
+>exits
+WRONG 4258
 
 @nud
 #ttc-table-of-mislit-limits-nudges-present
@@ -4272,6 +4511,9 @@ He-he. Eh?" You got no concrete clues, but St. Teri's observations were a boost 
 
 @!minh,mini
 >out
+
+@verbs
+The only way to exit is east, so let's go that way.
 
 @nud
 You notice something you wouldn't have seen without St. Teri's help.

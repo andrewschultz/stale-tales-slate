@@ -59,6 +59,16 @@ The resort and Store R led to the Means Manse last game. It won't go anywhere ne
 @verbs
 >gt study
 You already solved Ordeal Reload.
+\\
+>z
+\\
+#testcase-outside-strip-of-profits
+>out
+The stores are where it's at. You can go IN once you've found what they can become.
+\\
+#testcase-exits-strip-of-profits
+>exits
+There are no directional exits here, but you may want to try opening up a store.
 
 @max
 >x montage
@@ -423,6 +433,14 @@ You'll need to find your way back. Don't worry. There are clues. And a small rew
 >listen
 #verbcase listen-stores-if-noun-is-suit-ode
 You listen for anything at all besides the blabber babbler. You pick up some background music--why, yes, it is the the horrendous self-helpy song Suit Ode: Douse It.
+\\
+#testcase-outside-cruelest-lectures
+>out
+There must be a general way to leave, but that's not quite it.
+\\
+#testcase-exits-cruelest-lectures
+>exits
+You can't make it to any exits right now. You need to disrupt things. Listen or talk to the Rehabs Basher for clues.
 
 @mis
 #mistake test for douse it
@@ -556,6 +574,15 @@ You kind of destroyed Cruelest Lectures, and you won't get any rewards for going
 }}SCORE++
 Your score has just gone up by one point
 
+@verbs
+#+testcase-outside-strip-of-profits
+>out
+The stores are where it's at. You can go IN now you've found what they can become.
+\\
+#+testcase-exits-strip-of-profits
+>exits
+There are no directional exits here, but you can go IN to the store-portal you made.
+
 >score
 {$SCOS}
 
@@ -582,6 +609,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a de
 >troves
 Your score has just gone up by one point
 }}SCORE++
+
+@verbs
+\\
+#+testcase-exits-strip-of-profits
+>exits
+There are no directional exits here, but you have multiple ex-stores you can enter.
 
 >score
 {$SCOS}
