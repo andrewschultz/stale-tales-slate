@@ -623,7 +623,7 @@ to say 2da: if screenread is false, say "--";
 
 to say 2dg of (rg - a region):
 	if rg is not tickedoff:
-		say "[eqls][b][rg][r][line break]";
+		say "[eqls][b][printed name of rg in upper case][r][line break]";
 		now rg is tickedoff;
 
 to say 2dmiss of (cr2 - a region):

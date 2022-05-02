@@ -436,6 +436,10 @@ silently,P??YRR?O=stylenet=sillynet=snityell
 actually,YR?Y?R?O=cut ya all=cult laya
 #qver of atmo moat
 atom,??YR=atmo=moat
+#qver of neon pope
+open,YRY?=neon=pope
+#qver of nope peon
+open,YRY?=nope=peon
 #qver of iqluckyluckyiq
 quickly,R?YRRR?=iqlucky=luckyiq
 #loop pool

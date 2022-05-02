@@ -40,6 +40,7 @@ aro_ignore = defaultdict(str)
 aro_got = defaultdict(bool)
 aro_line = defaultdict(int)
 parse_text_ignore = defaultdict(int)
+noscan = defaultdict(bool)
 
 logic_invis_file = "c:\\writing\\scripts\\invis\\rl.txt"
 logic_reds_file = "c:\\writing\\dict\\reds.txt"
@@ -104,6 +105,11 @@ def read_data_file():
                 l2 = re.sub(".*=", "", ll)
                 if in_roiling: aro_ignore[l2] = True
                 else: sa_ignore[l2] = True
+                continue
+            if ll.startswith("noscan="):
+                ary = re.sub(".*=", "", ll).split(",")
+                for a in ary:
+                    noscan[a] = True
                 continue
             if ll.startswith("parseignore"):
                 ary = re.sub(".*:", "", ll).split(",")
@@ -846,6 +852,14 @@ hunt_for_comments = False
 last_comment_line = 0
 last_question_line = 0
 
+def is_logic_comment(my_line):
+    if my_line[0] != '#':
+        return False
+    my_line = my_line[1:].strip()
+    if my_line.startswith("+"):
+        my_line = my_line[1:]
+    return my_line.startswith("logic for")
+
 with open(logic_invis_file) as file:
     for (line_count, line) in enumerate(file, 1):
         if 'STORE P' in line:
@@ -855,8 +869,8 @@ with open(logic_invis_file) as file:
             if hunt_for_comments and last_question_line > last_comment_line:
                 print("RL.TXT Line", line_count, "may be two questions in a row. Last question =", last_question_line, "Last comment = ", last_comment_line)
             last_question_line = line_count
-        if ll.startswith("# logic for ") or ll.startswith("#logic for"):
-            scanned = re.sub("^# ?logic for ", "", ll)
+        if is_logic_comment(ll):
+            scanned = re.sub("^#[\+ ]*logic for ", "", ll)
             scanned = re.sub(" */ *", " ", scanned)
             if scanned in got_logic_invis.keys():
                 print("Duplicate logic-for in rl.txt:", scanned, "line", line_count, "originally", got_logic_invis[scanned])
@@ -865,7 +879,7 @@ with open(logic_invis_file) as file:
                     print("Acknowledging volt maze in invisiclues file without requiring it in source.")
                 else:
                     got_logic_invis[scanned] = line_count
-            if last_comment_line > last_question_line:
+            if last_comment_line > last_question_line and not '+logic' in ll:
                 print("RL.TXT Two logic-for comments in a row without a question:", last_comment_line, line_count, ll)
             last_comment_line = line_count
         if ll.startswith("# more logic for ") or ll.startswith("#more logic for for"):

@@ -159,7 +159,7 @@ raptor/deeply/quickly
 Otters adjusted (max)
 bare/rescind/reedi
 sobbing/emotional/despairing
-because/else/atom/although/ergo/however/unless
+because/else/atom/open/although/ergo/however/unless
 remote/enraged
 slow/paroled/coolest/artsy/garbed
 loathing/stoical
@@ -170,7 +170,7 @@ honest/aside/raptor/deep/quick
 Otters (max)
 barely/rescind/reedily
 sobbingly/emotionally/despairingly
-because/else/atom/although/ergo/however/unless
+because/else/atom/open/although/ergo/however/unless
 remotely/enragedly
 slow/paroled/coolest/artsy/garbed
 loathingly/stoically

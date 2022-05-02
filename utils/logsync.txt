@@ -41,6 +41,7 @@ banshee>hasbeen
 vowels>wolves
 #sortie
 #(thing name)(optional ~ what to flip) > (what it needs to be)
+woeful pat~sane pat>peasant
 grist>grits
 cake pan>pancake
 skate>steak
@@ -479,6 +480,11 @@ ed riley>reedily
 blase bales>sable
 ####disowned downside
 atmo moat>atom
+>IGNORE=neon pope
+#neon pope>open
+nope peon>open
+pen o nope>open
+NOSCAN=neon pope
 parleys splayer players>sparely
 yer all a yell'r>really
 t-bossily~i sly sob si bloys>bossily
