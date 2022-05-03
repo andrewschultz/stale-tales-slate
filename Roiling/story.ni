@@ -3728,13 +3728,7 @@ carry out posfing:
 	pad-rec-q "poss";
 	the rule succeeds;
 
-chapter exitsing
-
-exitsing is an action out of world.
-
-understand the command "exits" as something new.
-
-understand "exits" as exitsing.
+chapter exitsing special rules
 
 this is the mesa-go-reject rule:
 	if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
@@ -3742,32 +3736,12 @@ this is the mesa-go-reject rule:
 	if MORF FORM is not off-stage, say "You probably don't want to go anywhere with that [if MORF FORM is in Same Mesa]thing[else]bean[end if] around." instead;
 
 check exitsing:
-	if player is in Strip of Profits, say "There are no directional exits here, but you [if number of touchable portals is 0]may want to try opening up a store[else if number of touchable portals is 1]can go [b]IN[r] to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead; [exits stores]
-	if player is in Cruelest Lectures, say "You can't make it to any exits right now. You need to disrupt things. Listen or talk to the Rehabs Basher for clues." instead;
 	if mrlp is routes:
 		if player is in Same Mesa:
 			abide by the mesa-go-reject rule;
 			say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
-		if player is in Idle Deli or player is in adobe or player is in Cleric Circle, say "You can go back out." instead;
 		say "Looks like you will need to figure a way to move forward without directions. You've [if sonancy canyons are visited]got to be really close[else]been doing well so far[end if]." instead;
 	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move [if econ cone is visited]even [end if][if browse bowers are visited]further [end if]ahead in the world." instead;
-	if player is in Tenfold Teflond Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [exits oyster]
-	if player is in end den, say "You can go back outside to the Horned Hedron." instead;
-	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [exits towers]
-	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [exits otters]
-	if player is in rustic and compass is off-stage, say "You've lost your bearings a bit, but maybe [if player has moss cap]the moss cap could help in another form[else]if you got enough fruits, Curtis would help you[end if]." instead;
-
-carry out exitsing:
-	if number of viable directions is 0, say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of touchable enterable things > 0], and it looks like there's something to [b]ENTER[r][end if]." instead;
-	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions]." instead;
-	say "There are [number of viable directions in words] viable exits[if mrlp is towers and guar-here > 0], though not all are unblocked[end if]: [list of viable directions].";
-	the rule succeeds;
-
-after printing the name of a direction (called dir) when exitsing:
-	let RDLP be the room dir of location of player;
-	unless RDLP is nothing:
-		if RDLP is visited, say " to [RDLP]";
-	continue the action;
 
 chapter game-start
 
@@ -9810,6 +9784,8 @@ Strip of Profits is a room in Stores. last-loc of Stores is Strip of Profits. "[
 
 outside-text of Strip of Profits is "The stores are where it's at. You can go [b]IN[r] [now-once of whether or not number of not off-stage portals > 0] you've found what they can become.".
 
+exits-text of Strip of Profits is "There are no directional exits here, but you [if number of touchable portals is 0]may want to try opening up a store[else if number of touchable portals is 1]can go [b]IN[r] to the store-portal you made[else]have multiple ex-stores you can enter[end if].".
+
 hub-room is Strip of Profits.
 
 understand "trips/profit" as Strip of Profits when debug-state is true.
@@ -10319,6 +10295,8 @@ Cruelest Lectures is an innie room in Stores. "You're standing in the back of an
 
 outside-text of cruelest lectures is "There must be a general way to leave, but that's not quite it."
 
+exits-text of Cruelest Lectures is "You can't make it to any exits right now. You need to disrupt things. Listen or talk to the Rehabs Basher for clues.".
+
 check looking in Cruelest Lectures for the first time: say "As you march through the smoke, you hear 'Pored? ... ROPED, doper! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
 check exiting in Cruelest Lectures:
@@ -10769,6 +10747,10 @@ book Cleric Circle
 
 Cleric Circle is an innie room in Routes. "Things seem less confused here than outside--but oppressive, from organs['] groans to a Latiny litany to skyier kyries. Chants snatch but don't stanch[if list o toils is touchable]. You see a list-o-toils on the wall[end if]. Of course, there are Spew Pews, a common legacy from Elvira's suggestions to make religion more exciting and practical, along with a lament-mantle.". roomnud of cleric circle is table of cleric circle nudges.
 
+exits-text of Cleric Circle is "[only-mesa].".
+
+to say only-mesa: say "You can only go back out to the Same Mesa"
+
 after looking in Cleric Circle:
 	if number of held quest-items is 3:
 		mootl list of all quest-items;
@@ -10937,6 +10919,8 @@ book Adobe Abode
 
 Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray, which [if pipe soot is in Adobe Abode]could use some emptying[else]you emptied, so there's probably not much left to do here[end if]. The only exit is out to the Mesa.".roomnud of adobe abode is table of adobe abode nudges.
 
+exits-text of Adobe Abode is "[only-mesa].".
+
 check exiting in Adobe Abode: try going outside instead;
 
 check going outside in Adobe Abode:
@@ -10977,6 +10961,8 @@ check eating pipe soot: say "Well, it doesn't [b]SMELL[r] that bad, but...umm, n
 book Idle Deli
 
 Idle Deli is an innie room in Routes. "This restaurant has no customers and little ambience, not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa.[paragraph break]A seed pit gapes at you[unless stupor sprout is off-stage], but you already got the stupor sprout from there[end if].". roomnud of idle deli is table of idle deli nudges.
+
+exits-text of Idle Deli is "[only-mesa].".
 
 after looking in Idle Deli:
 	set the pronoun him to pat;
@@ -12553,7 +12539,7 @@ hogs-not-keys is a truth state that varies.
 
 after printing the locale description for Saps Pass when Saps Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
-	say "A 'PSS!' Suddenly three hogs, all [l-n-r]'s size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your tsar star and crumples before going to guard the keys, the big jerk. What to do?";
+	say "A 'PSS!' Suddenly three hogs, all [l-n-r]'s size, block your way.'Hello, eh?! LOL!'[paragraph break]One just up and takes your popgun, smashes it, laughs, and even rips off your tsar star and crumples before going to guard the keys, the big jerk. What to do?";
 	moot tsar star;
 	moot popgun;
 
@@ -15218,6 +15204,8 @@ book End Den
 
 End Den is an innie sideroom in Oyster. "You look around, but this probably isn't where you're supposed to be. You can probably go back out[if player has gleaner]. Or maybe you have something that could get you to the right place[end if].". roomnud of End Den is table of End Den nudges. missed-text of End Den is "a useless dead-end room if you'd entered the portal without examining the enlarged gleaner".
 
+exits-text of end den is "You can go back outside to the Horned Hedron.".
+
 check exiting in End Den:
 	say "You find your way back to the Horned Hedron entrance.";
 	if sausage is touchable, move sausage to Horned Hedron;
@@ -15274,6 +15262,8 @@ carry out taning:
 book Den Loft
 
 Tenfold Teflond Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in Tenfold Teflond Den Loft], and there's a lever to the side, too[end if].". roomnud of den loft is table of den loft nudges. printed name is "Tenfold Teflon'd Den Loft".
+
+exits-text of Tenfold Teflond Den Loft is "You can go back outside, though you can also finish the job back here."
 
 understand "loft den" as Tenfold Teflond Den Loft.
 
@@ -15935,6 +15925,8 @@ a-text of yacker keycar is "RRYYRO". b-text of yacker keycar is "RRYYRO". parse-
 book Loftier Trefoil
 
 Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits.". roomnud of Loftier Trefoil is table of Loftier Trefoil nudges.
+
+exits-text of Loftier Trefoil is "You probably aren't going anywhere until Rodney does, first.".
 
 last-loc of Towers is Loftier Trefoil.
 
@@ -18378,6 +18370,8 @@ Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if ble
 
 outside-text of Midden is "There's no way out until the bleary barley is gone.".
 
+exits-text of Minded Midden is "Maybe you'll see some exits if you get rid of the barley.".
+
 understand "burnt brunt" and "burnt/brunt" as Minded Midden when bleary barley is moot.
 
 to say lilac-bay-desc:
@@ -19185,8 +19179,7 @@ after doing something with imp (this is the imp gender neutralize imp rule):
 
 check taking imp: say "Simply much too fast." instead;
 
-to decide which number is imp-score:
-	decide on (boolval of whether or not motleyer is moot) + (boolval of whether or not butlery is moot) + (boolval of whether or not legendary is moot)
+to decide which number is imp-score: decide on number of moot northern block-concepts.
 
 section motleyer
 
@@ -19333,8 +19326,7 @@ check going south in Clarthead Cathedral:
 		now try-fail-cathedral-south is true;
 		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
 
-to decide which number is whiner-score:
-	decide on (boolval of whether or not callosity is moot) + (boolval of whether or not tallyhoing is moot) + (boolval of whether or not jollity is moot)
+to decide which number is whiner-score: decide on number of moot southern block-concepts
 
 chapter shrewin whiners
 
@@ -19836,6 +19828,8 @@ book Rustic Citrus
 Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus. roomnud of Rustic Citrus is table of Rustic Citrus nudges.
 
 outside-text of Rustic Citrus is "But you're not even sure which way is out!"
+
+exits-text of Rustic Citrus is "You've lost your bearings a bit, but maybe [if player has moss cap]the moss cap could help in another form[else]if you got enough fruits, Curtis would help you[end if].".
 
 after choosing notable locale objects when player is in Rustic Citrus:
 	set the locale priority of Curtis to 2;
