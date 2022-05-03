@@ -4,6 +4,12 @@ Version 1/190507 of STS Common by Andrew Schultz begins here.
 
 include STS Universal by Andrew Schultz.
 
+part trivial stubs
+
+to say now-once of (ts - a truth state): say "[if ts is true]now[else]once[end if]"
+
+to say now-once-num of (nu - a number): say "[if nu > 0]now[else]once[end if]"
+
 part game-dependent variables and super-stubs
 
 orig-region is a region that varies. [ordeal loader/ (means manse or ordeal reload)]
@@ -751,6 +757,29 @@ understand "emn" as emning.
 
 carry out emning:
 	the rule succeeds;
+
+volume exits metaverb
+
+exitsing is an action out of world.
+
+understand the command "exits" as something new.
+
+understand "exits" as exitsing.
+
+carry out exitsing:
+	if exits-text of location of player is not empty, say "[exits-text of location of player][line break]" instead;
+	if number of viable directions is 0:
+		d "This is the generic no-exits message, so you'll want to add exits-text for [location of player] in story.ni.";
+		say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of touchable enterable things > 0], and it looks like there's something to [b]ENTER[r][end if]." instead;
+	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions]." instead;
+	say "There are [number of viable directions in words] unblocked exits: [list of viable directions].";
+	the rule succeeds;
+
+after printing the name of a direction (called dir) when exitsing:
+	let RDLP be the room dir of location of player;
+	unless RDLP is nothing:
+		if RDLP is visited, say " to [RDLP]";
+	continue the action;
 
 volume ending stuff
 

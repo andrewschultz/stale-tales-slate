@@ -12,9 +12,9 @@ definition: a thing (called t) is quickvis:
 
 section understand logic
 
-understand "tap" as taping.
-
 understand the command "tap" as something new.
+
+understand "tap" as taping.
 
 book general
 

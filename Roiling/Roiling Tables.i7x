@@ -1516,6 +1516,7 @@ weltish whistle	weltish whistle	false	534280357	--	"deeply"	"deeply"	pre-whistle
 medals	medals	false	482616124	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]Oh, also, if you were waiting all game, wondering when you'd get to use the 'Q before U' factoid, I guess it just slipped in under the wire!"
 
 this is the post-barley-barely rule:
+	now exits-text of Minded Midden is "";
 	set the pronoun them to cinders;
 	set the pronoun him to Ed Riley;
 	move ed riley to Minded Midden;
@@ -1818,7 +1819,7 @@ book others
 
 table of others anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which is able to tell the direction! You look at where it points north. You will be able to progress without risk through the greenish sheering." [this must come first or Inform thinks we want a fruit in column 2]
+moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	post-moss-cap-compass rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which is able to tell the direction! You look at where it points north. You will be able to progress without risk through the greenish sheering." [this must come first or Inform thinks we want a fruit in column 2]
 slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry. Curtis is thrilled to see so many, though." [start rustic citrus easy]
 spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold at once! You help Curtis clean things up."
 lumps	plums	true	400734724	--	"plums"	"plums" or "plum"	--	--	"The lumps grow circular and purplish, and suddenly plums are rolling all around, until Curtis picks them up."
@@ -1868,6 +1869,9 @@ s-c	s-i	false	303532482	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip r
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 fleeing feeling	fleeing feeling	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+
+this is the post-moss-cap-compass rule:
+	now exits-text of Rustic Citrus is "";
 
 this is the post-either-cherry rule:
 	if cherries are moot or maraschino is moot:
@@ -3175,7 +3179,7 @@ book oyster
 table of oyster nowheres
 theloc	thereject
 Posh Hops Shop	"[posh-cant-exit]."
-Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
+Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex, even if you once again can't use directions."
 Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront. Going back to the Olde Lode or Posh Hops Shop seems pointless, too.[paragraph break]You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
@@ -4065,8 +4069,6 @@ to say now-once-medals: say "[if player has medals]now[else]once[end if] you hav
 node-preef is a truth state that varies.
 
 duck-preef is a truth state that varies.
-
-to say now-once of (ts - a truth state): say "[if ts is true]now[else]once[end if]"
 
 to say now-gast-gone: say "[now-once of whether or not Gast is moot] things are a bit more settled"
 

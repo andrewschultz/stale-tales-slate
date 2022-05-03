@@ -545,6 +545,7 @@ section metros auxiliary
 section resort auxiliary
 
 to note-isle-left:
+	now exits-text of Leis Isle is "";
 	unless swing is moot and rock is moot:
 		say "The [noun] will get you out of here, but there's a bit more to clean up, if you want.";
 		continue the action;
