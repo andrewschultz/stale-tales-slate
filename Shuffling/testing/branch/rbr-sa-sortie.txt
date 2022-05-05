@@ -84,7 +84,7 @@ You're already here. Or there. The precise grammar's neither here nor there.
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial for a few seconds.
 
 @mis
-#mistake retest for turn [text]
+#+testcase-mistake-shuffling-turn-text
 >turn zozimus
 You can probably TURN the dial to a number, e.g. 99.
 
@@ -124,11 +124,11 @@ The spinning seems to slow a bit.
 The mud is just there. You can't change it.
 
 @mis
-#mistake test for a lid
+#testcase-mistake-shuffling-a-lid
 >a lid
 Changing the dial would leave you stuck.
 \\
-#mistake retest for turn [text]
+#+testcase-mistake-shuffling-turn-text
 >turn zozimus
 You can probably TURN the dial to a number, e.g. 99
 
@@ -155,7 +155,7 @@ Things look hazy. You find yourself in a cell, which is a bit scary, but you can
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
 @mis
-#mistake retest for turn [text]
+#+testcase-mistake-shuffling-turn-text
 >turn zozimus
 You can probably just SWITCH something with two text settings.
 
@@ -166,7 +166,7 @@ You can probably just SWITCH something with two text settings.
 #renudge for part
 >patr
 You don't want to go back to how the Trap Part was.
-#mistake retest for a lid
+#+testcase-mistake-shuffling-a-lid
 >a lid
 You don't need to deal with the dial, now.
 
@@ -228,7 +228,7 @@ The nick blurs a little but snaps back to normal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 @mis
-#mistake test for thicken
+#testcase-mistake-shuffling-thicken
 >thicken
 You might rather thin-nen to slip through the bars, but you can't.
 
@@ -407,11 +407,11 @@ You see yourself making a meal, then dressing up to go out. Funny, though. The m
 >undo
 
 @mis
-#mistake test for limes
+#testcase-mistake-shuffling-limes
 >limes
 I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.
 \\
-#mistake test for pears
+#testcase-mistake-shuffling-pears
 >pears
 I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
 
@@ -419,7 +419,7 @@ I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't
 #ttc-table-of-kitchen-nudges-rendin
 >rendni
 You don't need to change the red inn. It will support your cooking efforts.
-#mistake retest for thicken
+#+testcase-mistake-shuffling-thicken
 >thicken
 This would be the place, but you're not hungry for anything TOO fatty right now
 #ttc-table-of-kitchen-nudges-ditties
@@ -595,7 +595,7 @@ It's the full name brand that really catches your eye.
 >hotsauec
 The bottle of CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
-#mistake test for sauce
+#testcase-mistake-shuffling-sauce
 >sauce
 Close, but you need the whole name of the sauce.
 
@@ -679,16 +679,16 @@ You thought you smelled meat there, for a minute. Hm.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the skate. Keep at it.
 
 @mis
-#mistake test for stake
+#testcase-mistake-shuffling-stake
 >stake
 A stake would have no use here. So that might be a miskate. Err...
-#mistake test for takes
+#testcase-mistake-shuffling-takes
 >takes
 You do a take, then a double take, at how odd this all is.
-#mistake test for teaks
+#testcase-mistake-shuffling-teaks
 >teaks
 Hm. An indoor forest. That would be neat to see. But this is a kitchen.
-#mistake test for keats
+#testcase-mistake-shuffling-keats
 >keats
 This is wordplay, not poetry. But the skate does glow red.
 !The steak is
@@ -707,7 +707,7 @@ DEBUG: cult tee being objhinted.
 {$SFIXMAX}
 
 @mis
-#mistake retest for keats
+#+testcase-mistake-shuffling-keats
 >keats
 This is wordplay, not poetry. The steak is what it needs to be.
 !But the skate
@@ -760,7 +760,7 @@ You just need to combine ingredients you've already made and PUT them on each ot
 Best not to get too crazy with food preparation.
 
 @mis
-#mistake test for littoral
+#testcase-mistake-shuffling-littoral
 >littoral
 How frustrating! A shoreline doesn't appear. You're still stuck in here, but maybe there's another way out.
 
@@ -794,7 +794,7 @@ Weird. The taco almost seemed to grow arms, or even sleeves.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the taco. Keep at it.
 
 @mis
-#mistake test for cato
+#testcase-mistake-shuffling-cato
 >cato
 You don't need to know your classics, here.
 
@@ -834,13 +834,13 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 {$SFIXMAX}
 
 @mis
-#mistake test for dumdum/dum/dum dum
+#testcase-mistake-shuffling-dumdum-dum-dum-dum
 >dumdum
 The mud is stuck that way. You don't need to change it.
 !Besides, you already figured how to get out.
 
 @mis
-#mistake retest for cato
+#+testcase-mistake-shuffling-cato
 >cato
 You don't need to know your classics, here.
 
@@ -995,7 +995,7 @@ The straw remains motionless.
 There's more than one hose here.
 
 @nud
-#mistake test for shoe
+#testcase-mistake-shuffling-shoe
 >shoe
 You need more than one shoe.
 >undo
@@ -1007,7 +1007,7 @@ Something leaks out of the hoses. Hm. What else can be rubber, now.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
 
 @mis
-#mistake test for hoes
+#testcase-mistake-shuffling-hoes
 >hoes
 One, there's more than one hose. Two, this isn't that sort of game. Innuendo only, if you please!
 
@@ -1051,7 +1051,7 @@ The whole room seems lit up.
 There's nothing else, here, than the general glow.
 
 @mis
-#mistake retest for hoes
+#+testcase-mistake-shuffling-hoes
 >hoes
 One, there's more than one shoe. Two, this isn't that sort of game. Innuendo only, if you please!
 
@@ -1180,7 +1180,7 @@ DEBUG INFO: Cert-text: --A---T.
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 
 @mis
-#mistake test for tap/tap [text]
+#testcase-mistake-shuffling-tap-text
 >tap
 "Ah! You are TAPping your feet to my anapest beat!"
 [NOTE: TAP is not a standard verb. PUSH may work better when not around Pat, but Pat will be gone by then.]
@@ -1188,11 +1188,11 @@ The rime-mire all round is too dangerous, but nothing's stopping you from leavin
 "Ah! You are TAPping your feet to my anapest beat!"
 [NOTE: TAP is not a standard verb. PUSH may work better when not around Pat, but Pat will be gone by then.]
 \\
-#mistake test for mope
+#testcase-mistake-shuffling-mope
 >mope
 Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
 \\
-#mistake test for peom
+#testcase-mistake-shuffling-peom
 >peom
 Nigel Molesworth salutes your spelling technique, if not your tendency to play weedy wet text adventures.
 
@@ -1206,7 +1206,7 @@ Nigel Molesworth salutes your spelling technique, if not your tendency to play w
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 
 @mis
-#mistake test for emir
+#testcase-mistake-shuffling-emir
 >emir
 You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.
 
@@ -1306,7 +1306,7 @@ Pat won't react kindly to modifications of his poem.
 >z
 
 @mis
-#mistake test for rifle
+#testcase-mistake-shuffling-rifle
 >rifle
 Shooting things up is not the answer
 
@@ -1370,12 +1370,12 @@ Your gadget's not near anything, but it's registering RBBG.
 {$SFIXMAX}
 
 @mis
-#mistake test for yah
+#testcase-mistake-shuffling-yah
 >yah
 It's not nice to make fun of the peasant for having hay he doesn't want
 
 @mis
-#mistake test for trade/trade [text]
+#testcase-mistake-shuffling-trade-trade-text
 >trade
 Instead of trading, use GIVE X TO Y.
 >trade zozimus
@@ -1401,7 +1401,7 @@ You see yourself filling up the wall in Stiller Trellis then making it disappear
 {$SFIXMAX}
 
 @mis
-#mistake retest for yah
+#+testcase-mistake-shuffling-yah
 >yah
 You're glad you've got the hay, but you're not excited, and you can't fake it.
 
@@ -1464,7 +1464,7 @@ You see yourself filling up the wall here then making it disappear.
 DEBUG: scraped wall being objhinted.
 
 @mis
-#mistake retest for dumdum/dum/dum dum
+#+testcase-mistake-shuffling-dumdum-dum-dum-dum
 >dumdum
 The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
 >dum
@@ -1473,7 +1473,7 @@ The mud is stuck that way. You don't need to change it. Besides, you already fig
 The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
 
 @mis
-#mistake test for tillers
+#testcase-mistake-shuffling-tillers
 >tillers
 You aren't going to sea in this game.
 
@@ -1611,25 +1611,25 @@ The only way you seem to be able to go is west to Stiller Trellis.
 There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
 
 @mis
-#mistake test for cadres
+#testcase-mistake-shuffling-cadres
 >cadres
 You must do this on your own.
-#mistake test for ecards
+#testcase-mistake-shuffling-ecards
 >ecards
 Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
-#mistake test for lois
+#testcase-mistake-shuffling-lois
 >lois
 You suddenly feel discontent at your container of choice.
-#mistake test for potus
+#testcase-mistake-shuffling-potus
 >potus
 This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.
-#mistake test for pray
+#testcase-mistake-shuffling-pray
 >pray
 It's been so long, you only mouth a "Yarp!"
-#mistake test for serve
+#testcase-mistake-shuffling-serve
 >serve
 You must serve by going forth on your mission of warlikeness and love.
-#mistake test for sever
+#testcase-mistake-shuffling-sever
 >sever
 Violence or vandalism in such a holy place? For shame.
 
@@ -1709,7 +1709,7 @@ The sack stiffens, rises and becomes less blobby. It's the cask again, nice and 
 You already changed the cask to a sack, and you don't see any reason to do so again.
 
 @mis
-#mistake retest for lois
+#+testcase-mistake-shuffling-lois
 >lois
 Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves.
 
@@ -1729,7 +1729,7 @@ You can't pour the oils anywhere in this enclosed area. Try going back to the mo
 That's inadvisable. The oils would leak out.
 
 @mis
-#mistake retest for lois
+#+testcase-mistake-shuffling-lois
 >lois
 Lois is silent. You must figure what to pour, where.
 #renudge for lois
@@ -1766,7 +1766,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 
 @mis
-#mistake retest for pray
+#+testcase-mistake-shuffling-pray
 >pray
 Things aren't THAT bad.
 
@@ -1795,11 +1795,11 @@ The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
 
 @mis
-#mistake retest for mope
+#+testcase-mistake-shuffling-mope
 >mope
 You try, but the smilies on the poem prevent you.
 \\
-#mistake test for similes
+#testcase-mistake-shuffling-similes
 >similes
 Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.
 
@@ -1845,11 +1845,11 @@ Your score has just gone up by one point.
 you see the poem folding and becoming a panel.
 
 @mis
-#mistake retest for mope
+#+testcase-mistake-shuffling-mope
 >mope
 You mope, but it doesn't change the poem. Or even give you an idea for one.
 \\
-#mistake retest for similes
+#+testcase-mistake-shuffling-similes
 >similes
 You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.
 
@@ -1901,7 +1901,7 @@ The plane can probably become something else, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
 
 @mis
-#mistake test for nepal
+#testcase-mistake-shuffling-nepal
 >nepal
 Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
 
@@ -1929,7 +1929,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @mis
-#mistake retest for mope
+#+testcase-mistake-shuffling-mope
 >mope
 You mope, but you imagine no poem.
 
@@ -1981,7 +1981,7 @@ The roadblock changes all the colors of the rainbow, but none seem appropriate.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
 
 @mis
-#mistake test for blackdoor
+#testcase-mistake-shuffling-black-rood-rood-blackrood
 >black rood
 Hm, no, keep religion out of it.
 >rood
@@ -2008,7 +2008,7 @@ Your score has just gone up by one point.
 }}SCORE++
 
 @mis
-#mistake retest for blackdoor
+#+testcase-mistake-shuffling-black-rood-rood-blackrood
 >blackrood
 Hm, no, keep religion out of it--you have what you need.
 
@@ -2058,7 +2058,7 @@ Gainly laying the cask under the spout, you pour in some oils.
 A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
 
 @mis
-#mistake retest for lois
+#+testcase-mistake-shuffling-lois
 >lois
 You feel guilt at asking Lois for more.
 
@@ -2159,7 +2159,7 @@ You see yourself assembling the silo further.
 @nud
 >room
 ###skip test checking
-#mistake retest for lois
+#+testcase-mistake-shuffling-lois
 >lois
 Lois may not hear you out here--she has left you to your own devices, but you must be close.
 >moor
@@ -2185,11 +2185,11 @@ You schlep the missile through the door. You hear some mechanics and whizzing. A
 You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar.
 
 @mis
-#mistake test for otohs
+#testcase-mistake-shuffling-otohs
 >otohs
 You start fruitlessly double- and triple- thinking whether you should change the hoots button.
 \\
-#mistake test for reest
+#testcase-mistake-shuffling-reest
 >reest
 You are noisily uncooperative for a minute. With what, I don't know. But you are.
 
@@ -2240,12 +2240,12 @@ No, you're overthinking it. Just the text.
 Hmm, that doesn't work, but you bet you can bull your way through things.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
 \\
-#mistake test for stere
+#testcase-mistake-shuffling-stere
 >stere
 Units of measurements are abstract. We need something concrete.
 
 @mis
-#mistake test for terse
+#testcase-mistake-shuffling-terse
 >terse
 All five wrong.
 
@@ -2259,7 +2259,7 @@ Your vision blurs a bit, and instead you see a steer button.
 Your vision blurs a bit, and instead you see a shoot button.
 
 @mis
-#mistake test for reset/reset button
+#testcase-mistake-shuffling-reset-reset-button
 >push trees
 Trees begin growing out of the side of the silo. The Trees button switches to a reset button which starts blinking violently. You push it before the trees crash down on you. They vanish, and it's a trees button again. Whew.
 >steer
@@ -2303,7 +2303,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @mis
-#mistake retest for terse
+#+testcase-mistake-shuffling-terse
 >terse
 Already good.
 
@@ -2314,7 +2314,7 @@ You suppress a few minor swears as you realize that can't be right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
 
 @mis
-#mistake test for sooth
+#testcase-mistake-shuffling-sooth
 >sooth
 Close...what you need to do will sooth, in a bit.
 
@@ -2332,7 +2332,7 @@ Your score has just gone up by one point.
 }}SCORE++
 
 @mis
-#mistake retest for otohs
+#+testcase-mistake-shuffling-otohs
 >otohs
 You start fruitlessly double- and triple- thinking whether you should change back to the hoots button.
 
@@ -2343,7 +2343,7 @@ You start fruitlessly double- and triple- thinking whether you should change bac
 {$SFIXMAX}
 
 @mis
-#mistake retest for sooth
+#+testcase-mistake-shuffling-sooth
 >sooth
 Close...what you need to do will sooth, in a bit.
 

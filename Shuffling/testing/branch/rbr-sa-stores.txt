@@ -370,7 +370,7 @@ The badge just has general information. It's not useful on its own.
 The flier's just there to tell you if you're done or not.
 
 @nud
-#mistake retest for get a man
+#+testcase-mistake-shuffling-get-a-man
 >get a man
 Tan Mage Nat Egam cannot help you now.
 
@@ -530,7 +530,7 @@ You can't do anything to the depots besides ENTER them.
 #ttc-table-of-stores-nudges-depots
 >depost
 You can't do anything to the depots besides ENTER them.
-#mistake test for despot
+#testcase-mistake-shuffling-despot
 >despot
 Summoning Red Bull Burdell would be unwise. Best not try it again.
 >despot
@@ -577,54 +577,54 @@ No, you can just FOLLOW or ENTER the trade tread.
 #ttc-table-of-stores-nudges-trades
 >tradse
 No, you can just FOLLOW or ENTER the trade tread.
-#mistake test for dater
+#testcase-mistake-shuffling-dater
 >dater
 This is not a romance game.
-#mistake test for rated
+#testcase-mistake-shuffling-rated
 >rated
 The trade tread isn't for commenting on, it's for passage to the metros.
-#mistake test for lost
+#testcase-mistake-shuffling-lost
 >lost
 No, you need to find your way through individual stores.
-#mistake test for strobe
+#testcase-mistake-shuffling-strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.
-#mistake test for tories
+#testcase-mistake-shuffling-tories
 >tories
 I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
-#mistake test for destro
+#testcase-mistake-shuffling-destro
 >destro
 It's going to get evil enough even without a high-ranking COBRA officer.
-#mistake test for doters
+#testcase-mistake-shuffling-doters
 >doters
 You don't need people oohing and ahing at your skill.
 
 @max,mis
-{--mis}#mistake test for presto
+{--mis}#testcase-mistake-shuffling-presto
 >presto
 Your magic is not advanced enough to change Store P! Well, not this game!
 {--max}#ttc-table-of-preflip-clues-store-p
 >pf
 Store P -> PRESTO in A Roiling Original
-{--mis}#mistake test for routes
+{--mis}#testcase-mistake-shuffling-routes
 >routes
 Hm, that seems right, but it doesn't work this game!
 {--max}#ttc-table-of-preflip-clues-store-u
 >pf
 Store U -> ROUTES in A Roiling Original
-{--mis}#mistake test for troves
+{--mis}#testcase-mistake-shuffling-troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
 {--max}#ttc-table-of-preflip-clues-store-v
 >pf
 Store V -> TROVES in A Roiling Original
-{--mis}#mistake test for towers
+{--mis}#testcase-mistake-shuffling-towers
 >towers
 That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
 {--max}#ttc-table-of-preflip-clues-store-w
 >pf
 Store W -> TOWERS in A Roiling Original
-{--mis}#mistake test for oyster
+{--mis}#testcase-mistake-shuffling-oyster
 >oyster
 Nice try, but that's next game!
 {--max}#ttc-table-of-preflip-clues-store-y
@@ -661,7 +661,7 @@ The stores are where it's at. You can go IN to the trade tread, the posted depot
 by one point
 
 @mis
-#mistake retest for strobe
+#+testcase-mistake-shuffling-strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
 
