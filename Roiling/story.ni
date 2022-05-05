@@ -2975,6 +2975,7 @@ to solve-region (sre - a region):
 	else:
 		d "Player moved from [location of player].";
 		move player to Strip of Profits;
+		notify-portal-gone sre;
 	if sre is not spoiled and solid idols are examined:
 		now note-progress is true;
 	see-about-patcher;

@@ -102,6 +102,8 @@ a portal has a rule called entry-rule. entry-rule of a portal is usually the deb
 
 a portal can be ever-entered or never-entered. a portal is usually never-entered.
 
+default-portal is a portal that varies.
+
 report entering a portal: process the move dumbdrops rule;
 
 this is the debug-fill-in-here rule:
@@ -116,6 +118,24 @@ check closing a portal: say "You can't close [the noun], but there's no need to.
 check taking a portal:
 	say "I'll assume you meant 'take' as in entering [the noun]. If not, you can undo.";
 	try entering the noun instead;
+
+section region-solved munging
+
+to notify-portal-gone (rg - a region):
+	if rg is not orig-region:
+		let old-portal be go-portal of rg;
+		say "You notice that [the old-portal] you created from [the go-store of rg] [if old-portal is plural-named]have[else]has[end if] vanished.";
+
+to decide which portal is go-portal of (rg - a region):
+	repeat with MYP running through portals:
+		if go-region of MYP is rg, decide on MYP;
+	decide on default-portal;
+
+to decide which thing is go-store of (rg - a region):
+	repeat through regana of hub-region:
+		if the-to entry is a portal and go-region of the-to entry is rg, decide on the-from entry;
+	say "(BUG choosing store) ";
+	decide on Store A;
 
 chapter region stuff
 

@@ -223,7 +223,9 @@ to solve-region (sre - a region):
 			moot reg-sto of sre;
 	item-warp;
 	process the autosave on region complete rule;
-	if player is not in Trips Strip, move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
+	if player is not in Trips Strip:
+		move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
+		notify-portal-gone sre;
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
 		say "Man! With the [b]SECURE[r] settings on your gadget, you can [b]RECUSE[r] if you want and hit Store R.";
 	if number of passed-up regions is 3:
