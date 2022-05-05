@@ -22217,10 +22217,42 @@ final question wording	only if victorious	topic		final response rule		final resp
 "[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r]/[b]LG[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload, [b]LS[r] for Stores), or [b]LJ[r]/[b]LR[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
 "see [b]RANK[r]s and how to achieve them"	true	"rank/ranks"	show ranks rule	--
+--	true	"pod/pods/seed/seeds/seeding/seedings"	show seeds rule	--
 
 dummy altpath showing is an activity.
 dummy missed stuff showing is an activity.
 dummy demo dome mode activating is an activity.
+
+global-ord is a number that varies.
+
+definition: a thing (called th) is current-list:
+	if pod-num of th is global-ord, yes;
+	no;
+
+bold-chosen is a truth state that varies.
+
+this is the show seeds rule:
+	now bold-chosen is true;
+	now global-ord is 1;
+	say "Here is a complete list of randomizations with no spoilers. Ones you encountered this play-through are in [b]BOLD[r].";
+	say "Here are the pods for Rodney's prosaic picaros:[line break]";
+	while number of current-list picaros > 0:
+		say "You will see one of pod [global-ord] at random: [list of current-list picaros].";
+		increment global-ord;
+	now global-ord is 1;
+	now in-think is true;
+	say "Here are the pods for the parleys splayer players['] pickup lines:[line break]";
+	while number of current-list pickup-lines > 0:
+		say "You will see one pickup line from pod [global-ord] at random: [list of current-list pickup-lines].";
+		increment global-ord;
+	now in-think is false;
+	now bold-chosen is false:
+
+before printing the name of a thing (called th) when bold-chosen is true:
+	if th is not off-stage, say "[b]".
+
+after printing the name of a thing (called th) when bold-chosen is true:
+	if th is not off-stage, say "[r]".
 
 this is the sort male female out rule:
 	say "Here is what the game treats differently: (* = trivial)[line break]";
