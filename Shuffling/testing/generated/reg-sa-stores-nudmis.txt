@@ -266,7 +266,7 @@ The badge just has general information. It's not useful on its own.
 >flire
 The flier's just there to tell you if you're done or not.
 
-#mistake retest for get a man
+#+testcase-mistake-shuffling-get-a-man
 >get a man
 Tan Mage Nat Egam cannot help you now.
 
@@ -285,6 +285,21 @@ Hmm...you get the feeling the store itself holds more adventure.
 >read roadsign
 /The sign appears to say, in all red, (E FORTS/OSTFER|TRESFO/S EFTRO) before a gust of wind picks it up and flips it around\.
 
+#testcase-mistake-shuffling-retros
+>retros
+You mull hopping on over to ifdb.org, the interactive fiction database, to find even more fun text adventures. But only once you finish this first!
+
+#testcase-mistake-shuffling-sorter
+>sorter
+But you've already been picked! No need for further sorting.
+
+#testcase-mistake-shuffling-torres-tresor
+>torres
+Grand, but unfortunately, not in English.
+
+>tresor
+Grand, but unfortunately, not in English.
+
 >forest
 by one point
 
@@ -302,6 +317,14 @@ RISE TO TIES OR RITES, O!
 Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
 
+#testcase-mistake-shuffling-reaves
+>reaves
+You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
+
+#testcase-mistake-shuffling-roesti
+>roesti
+You say to yourself, "Self, what I could really use right now is a German-Swiss dish of fried potatoes!" Then you say to yourself, "Self, there's probably no deli within a long way of here, so you'll have to wait. Hey, we can wait together and commiserate."
+
 >sortie
 by one point
 
@@ -315,7 +338,7 @@ You can't do anything to the depots besides ENTER them.
 #ttc-table-of-stores-nudges-depots
 >depost
 You can't do anything to the depots besides ENTER them.
-#mistake test for despot
+#testcase-mistake-shuffling-despot
 >despot
 Summoning Red Bull Burdell would be unwise. Best not try it again.
 >despot
@@ -349,49 +372,49 @@ No, you can just FOLLOW or ENTER the trade tread.
 #ttc-table-of-stores-nudges-trades
 >tradse
 No, you can just FOLLOW or ENTER the trade tread.
-#mistake test for dater
+#testcase-mistake-shuffling-dater
 >dater
 This is not a romance game.
-#mistake test for rated
+#testcase-mistake-shuffling-rated
 >rated
 The trade tread isn't for commenting on, it's for passage to the metros.
-#mistake test for lost
+#testcase-mistake-shuffling-lost
 >lost
 No, you need to find your way through individual stores.
-#mistake test for strobe
+#testcase-mistake-shuffling-strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.
-#mistake test for tories
+#testcase-mistake-shuffling-tories
 >tories
 I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
-#mistake test for destro
+#testcase-mistake-shuffling-destro
 >destro
 It's going to get evil enough even without a high-ranking COBRA officer.
-#mistake test for doters
+#testcase-mistake-shuffling-doters
 >doters
 You don't need people oohing and ahing at your skill.
 
-#mistake test for presto
+#testcase-mistake-shuffling-presto
 >presto
 Your magic is not advanced enough to change Store P! Well, not this game!
 >pf
 Store P -> PRESTO in A Roiling Original
-#mistake test for routes
+#testcase-mistake-shuffling-routes
 >routes
 Hm, that seems right, but it doesn't work this game!
 >pf
 Store U -> ROUTES in A Roiling Original
-#mistake test for troves
+#testcase-mistake-shuffling-troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
 >pf
 Store V -> TROVES in A Roiling Original
-#mistake test for towers
+#testcase-mistake-shuffling-towers
 >towers
 That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
 >pf
 Store W -> TOWERS in A Roiling Original
-#mistake test for oyster
+#testcase-mistake-shuffling-oyster
 >oyster
 Nice try, but that's next game!
 >pf
@@ -414,7 +437,7 @@ You don't need to change the marquee, but maybe it'd be fun to see what's inside
 >sorbet
 by one point
 
-#mistake retest for strobe
+#+testcase-mistake-shuffling-strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
 

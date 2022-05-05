@@ -328,10 +328,12 @@ DEBUG INFO: Rect-text: S---H.
 DEBUG INFO: Cert-text: S----.
 >s
 #gadget test: stew to west
+#ttc-table-of-kibitzes-whiff-of-stew
 >rc stew
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG.
 The gadget beeps once. A series of lights comes across: RRRR.
+Four entries. Whiff and smell are five letters. The reading must rely on what the smell is.
 DEBUG INFO: Rect-text: W--T.
 DEBUG INFO: Cert-text: ----.
 >undo
@@ -426,10 +428,12 @@ You can't retrace your steps.
 
 @scan
 #gadget test: teas to east
+#ttc-table-of-kibitzes-aroma-of-teas
 >rc teas
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 The gadget beeps once. A series of lights comes across: RRRR.
+Four entries. Aroma and smell are five letters. The reading must rely on what the smell is.
 DEBUG INFO: Rect-text: E--T.
 DEBUG INFO: Cert-text: ----.
 
@@ -941,6 +945,11 @@ You'll need to be more specific about the meat to poke at.
 #ttc-table-of-forest-nudges-liver
 >livre
 The one liver seems inactive by itself.
+
+@mis
+#testcase-mistake-shuffling-schwandi
+>schwandi
+Perhaps the sandwich is from a small village in Switzerland, but it may just be easier to OPEN the sandwich, instead.
 
 >open sandwich
 bread from the Spam

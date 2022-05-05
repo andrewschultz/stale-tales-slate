@@ -125,6 +125,24 @@ Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
+@mis
+>x passage
+It seems to say OPEN a bunch of times in a row. That means it is open, not that you should try to. But if you blink a bit, the OPENs run together and say NOPE. Hmm.
+\\
+#testcase-mistake-shuffling-peon
+NOPE
+>peon
+You take a passive-aggressive stab at the person, now gone, who mocked you when you examined the passage. It felt good.
+\\
+#testcase-mistake-shuffling-pone
+>pone
+The meals here are much more highfalutin' than that!
+
+@nudmis
+#ttc-table-of-busiest-subsite-nudges-eopn
+>eopn
+The passage looks unblocked already, so you don't need to look for any other possibilities.
+
 @max
 #pre-nametag-gateman rule
 >gateman
@@ -659,9 +677,14 @@ The red text is just like A TAN GEM and such on the broad board
 #testcase-mistake-shuffling-mist
 >mist
 No, those TMIs on the broad board are useful.
+\\
 #testcase-mistake-shuffling-noetics
 >noetics
 There's enough information here.
+\\
+#testcase-mistake-shuffling-tastic
+>tastic
+Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
 
 @nud
 #ttc-table-of-notices-section-nudges-notices
@@ -719,14 +742,21 @@ After some thought, that seems like it'd be a waste, since you know what they we
 @!
 {$SFIXMAX}
 
+@mis
+#+testcase-mistake-shuffling-tastic
+>tastic
+Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
+
 @scan
 #gadget test: attics to static
+#ttc-table-of-kibitzes-attics
 >rc attics
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
 DEBUG INFO: Rect-text: S----C.
 DEBUG INFO: Cert-text: -T----.
+Hmm. You thought the attics would be more appropriate for the doll house, but maybe the gadget detects you can change back, too.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 

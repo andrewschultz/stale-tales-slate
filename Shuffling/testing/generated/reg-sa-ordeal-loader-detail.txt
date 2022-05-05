@@ -89,12 +89,14 @@ Your score has just gone up by one point.
 You currently have 7 out of 8 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 #gadget test: attics to static
+#ttc-table-of-kibitzes-attics
 >rc attics
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
 DEBUG INFO: Rect-text: S----C.
 DEBUG INFO: Cert-text: -T----.
+Hmm. You thought the attics would be more appropriate for the doll house, but maybe the gadget detects you can change back, too.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 

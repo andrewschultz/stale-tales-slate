@@ -23,17 +23,17 @@ The trade tread doesn't need to be changed. What's behind it, does.
 
 Undesired Underside
 
-#mistake test for singers
+#testcase-mistake-shuffling-singers
 >singers
 The beats would drown the singers out.
 
-#mistake test for snores/snore
+#testcase-mistake-shuffling-snores-snore
 >snores
 Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
 >snore
 Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
 
-#mistake test for resign/resigns
+#testcase-mistake-shuffling-resign-resigns
 >resign
 Reverse psychology won't work on the ingress, here.
 >resigns
@@ -47,7 +47,7 @@ You can't change the hotel, but you could have a look around.
 #nudge for etch
 >ethc
 The tech-etch is pretty securely, um, etched on.
-#mistake test for bates
+#testcase-mistake-shuffling-bates
 >bates
 You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
 #ttc-table-of-undesired-underside-nudges-titling
@@ -70,10 +70,10 @@ You can't do much with or to the camp, here or north.
 >capm
 You can't do much with or to the camp, here or north.
 
-#mistake test for refind
+#testcase-mistake-shuffling-refind
 >refind
 Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.
-#mistake test for senors/senor
+#testcase-mistake-shuffling-senors-senor
 >senors
 The senors you want to see are behind the door.
 >senor
@@ -141,7 +141,7 @@ On one of several pages, you see: an order that this all should be RED AGAIN (si
 >read reading
 On one of several pages, you see: an order that this all should be RED AGAIN (sic) on the last page. The nonsense makes you see red.
 
-#mistake test for grained
+#testcase-mistake-shuffling-grained
 >grained
 Good try, but we're looking for a noun. With an extra A.
 
@@ -171,11 +171,11 @@ You can't change the hotel, but you could have another look around.
 
 Roarings Garrison
 
-#mistake test for isonome
+#testcase-mistake-shuffling-isonome
 >isonome
 The noisome Moonies pretend to be all about nature, but as for actually understanding science? Pfft.
 
-#mistake test for stent
+#testcase-mistake-shuffling-stent
 >stent
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
@@ -394,16 +394,16 @@ You can't change who they are. They probably can't, either. It's sad.
 #ttc-table-of-obtains-boastin-bastion-nudges-pose
 >poes
 You can't change who they are. They probably can't, either. It's sad.
-#mistake test for opes
+#testcase-mistake-shuffling-opes
 >opes
 You feel no 'ope, and nothing opens up.
-#mistake test for peso/pesos
+#testcase-mistake-shuffling-peso-pesos
 >peso
 The poses posse doesn't need or want a handout.
 >pesos
 The poses posse doesn't need or want a handout.
 
-#mistake test for spose
+#testcase-mistake-shuffling-spose
 >spose
 Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.
 
@@ -459,7 +459,7 @@ You take care not to let the cake tear as you pick it up.
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
 
-#mistake test for tang/tangs
+#testcase-mistake-shuffling-tang-tangs
 >tang
 How the angst gnats taste doesn't matter.
 >tangs
@@ -518,7 +518,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#mistake test for smitten
+#testcase-mistake-shuffling-smitten
 >smitten
 No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they could stick really well on the right surface.
 
@@ -544,21 +544,21 @@ The mittens are as comfortable as they're going to be.
 >e
 Fo' Real Florae
 
-#mistake test for loafer
+#testcase-mistake-shuffling-loafer
 >loafer
 You're un-magically being a loafer, with ideas like that.
 
-#mistake test for recount
+#testcase-mistake-shuffling-recount
 >recount
 The faeries aren't interested in what you've done so far, only what you can do.
 
-#mistake test for trounce/trounce counter
+#testcase-mistake-shuffling-trounce-trounce-counter
 >trounce
 The faeries have very magic and very demoralizing anti-vandalism spells.
 >trounce counter
 The faeries have very magic and very demoralizing anti-vandalism spells.
 
-#mistake retest for bates
+#+testcase-mistake-shuffling-bates
 >bates
 You don't need to deal with a knife-wielding psycho on top of all this.
 #ttc-table-of-fo-real-florae-nudges-florae
@@ -706,13 +706,7 @@ Esoteric Coteries
 >score
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#mistake test for nerd door e
->odor
-It would stink to be you if you did that. The nerds outnumber you and would crucify you.
->rood
-It would stink to be you if you did that. The nerds outnumber you and would crucify you.
-
-#mistake test for up til/uptil
+#testcase-mistake-shuffling-up-til-uptil
 >up til
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 >uptil
@@ -735,7 +729,7 @@ Esoteric Coteries
 
 >w
 
-#mistake retest for resign/resigns
+#+testcase-mistake-shuffling-resign-resigns
 >resign
 The ingress already did. You got by.
 
@@ -808,7 +802,7 @@ Oh no. You'd change it for the worse. And the nerds would be mad.
 >toem
 Oh no. You'd change it for the worse. And the nerds would be mad.
 
-#mistake test for nerd door w
+#testcase-mistake-shuffling-odor-rood-2
 >odor
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 >rood
@@ -822,12 +816,18 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 
 Undesired Underside
 
+#testcase-mistake-shuffling-odor-rood
+>odor
+That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+>rood
+That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 #again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
-#mistake retest for snores/snore
+#+testcase-mistake-shuffling-snores-snore
 >snores
 No need to put the sensor to sleep now you got what you want.
 
@@ -844,47 +844,47 @@ Elm Train Terminal
 #ttc-table-of-elm-train-terminal-nudges-cafe
 >caef
 The cafe face can't transform into anything.
-#mistake test for gip
+#testcase-mistake-shuffling-gip
 >gip
 Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.
-#mistake test for none
+#testcase-mistake-shuffling-none
 >none
 Bummer! You'd think that worked to get rid of the pig, but that's probably too abstract a noun. Probably have to deal with the whole neon pig.
-#mistake test for pass
+#testcase-mistake-shuffling-pass
 >pass
 You take a pass on etiquette advice. You need results right now!
-#mistake test for rat
+#testcase-mistake-shuffling-rat
 >rat
 No, you don't need a rat chasing you around.
-#mistake test for sap/saps
+#testcase-mistake-shuffling-sap-saps
 >sap
 The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
 >saps
 The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
-#mistake test for spa/spas
+#testcase-mistake-shuffling-spa-spas
 >spa
 You haven't earned a break yet.
 >spas
 You haven't earned a break yet.
-#mistake test for tar
+#testcase-mistake-shuffling-tar
 >tar
 That'd be neat, make the wall sticky so you could climb and deal with that stupid pig...but you might get stuck to it, too. Need something clingy but less gooey.
-#mistake test for asp/asps
+#testcase-mistake-shuffling-asp-asps
 >asp
 That's just what you need, a snake chasing you with everything else going on.
 >asps
 That's just what you need, a snake chasing you with everything else going on.
-#mistake test for lair/lairs
+#testcase-mistake-shuffling-lair-lairs
 >lair
 That might work, if the rail did not lead to a lair already.
 >lairs
 That might work, if the rail did not lead to a lair already.
-#mistake test for liar/liars
+#testcase-mistake-shuffling-liar-liars
 >liar
 The number of liars the rails would create would be shocking.
 >liars
 The number of liars the rails would create would be shocking.
-#mistake test for lira
+#testcase-mistake-shuffling-lira
 >lira
 But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
 
@@ -965,7 +965,7 @@ You currently have 14 out of 18 total points for the Metros region. You have fou
 #ttc-table-of-readables-controls
 >read controls
 You notice that it's underwritten (in red) by ORTON LSC, whoever they are.
-#mistake retest for tar
+#+testcase-mistake-shuffling-tar
 >tar
 That'd be neat, make the wall sticky so you could climb and deal with that opening you made...but you might get stuck to it, too. Need something clingy but less gooey.
 #ttc-table-of-elm-train-terminal-nudges-nope
@@ -984,11 +984,11 @@ You've already made nothing out of something, and instead of reversing that, you
 >u
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
 
-#mistake retest for smitten
+#+testcase-mistake-shuffling-smitten
 >smitten
 No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they stuck really well on the cafe face.
 
-#mistake retest for tar
+#+testcase-mistake-shuffling-tar
 >tar
 No need. You made it above the cafe face with the velcro.
 
@@ -1022,17 +1022,17 @@ No use messing with the aligns signal when you need to focus on the beats.
 #ttc-table-of-bassy-abyss-nudges-align
 >aling
 No use messing with the aligns signal when you need to focus on the beats.
-#mistake test for reins
+#testcase-mistake-shuffling-reins
 >reins
 Horsing around like that won't hold back the beats. You need to get a grip another way, but you're on the right track.
-#mistake test for rinse
+#testcase-mistake-shuffling-rinse
 >rinse
 No water source. You can do better than short-circuiting the siren with water, though.
-#mistake test for risen
+#testcase-mistake-shuffling-risen
 >risen
 You don't need the siren's volume or the beats' volume to have risen. Oh, no.
 #??You don't need the beast's power/beats' to have risen. Oh, no.
-#mistake retest for bates
+#+testcase-mistake-shuffling-bates
 >bates
 You don't need to deal with a knife-wielding psycho along with the beats.
 
@@ -1052,7 +1052,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >score
 You currently have 16 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#mistake retest for rinse
+#+testcase-mistake-shuffling-rinse
 >rinse
 Time for that after you get your hands dirty and slay the final enemy, here.
 
@@ -1104,7 +1104,7 @@ Won now: the Ordeal Loader and Metros regions.
 >abstract soggy love to terminal
 >purloin noise bag
 
-#mistake test for baste/baste beats/baste beast
+#testcase-mistake-shuffling-baste-baste-beats-baste-beast
 >baste
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
 >baste beats
@@ -1119,10 +1119,10 @@ Even if you could do anything, that'd rip the noise bag open.
 >bga
 Even if you could do anything, that'd rip the noise bag open.
 
-#mistake test for eosin
+#testcase-mistake-shuffling-eosin
 >eosin
 You need the bag, not a dying powder.
-#mistake test for gab
+#testcase-mistake-shuffling-gab
 >gab
 That's not a powerful enough noise to fight the beats.
 

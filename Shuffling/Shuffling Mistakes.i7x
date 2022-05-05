@@ -121,7 +121,7 @@ understand "noetics" as a mistake ("There's enough information here.[note-great-
 
 understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.[note-great-guesses]") when salient saltine is touchable.
 
-understand "tastic" as a mistake ("Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.") when attics are touchable.
+understand "tastic" as a mistake ("Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.") when player is in Notices Section.
 
 book stores
 

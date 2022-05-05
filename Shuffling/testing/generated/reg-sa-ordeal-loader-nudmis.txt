@@ -15,7 +15,7 @@ Busiest Subsite
 
 >au 2
 
-#mistake test for laredo
+#testcase-mistake-shuffling-laredo
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
 
@@ -28,59 +28,75 @@ The Oafs' Sofa is there, and there's nothing you can do about it.
 #ttc-table-of-busiest-subsite-nudges-oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
-#mistake test for magnet
+#testcase-mistake-shuffling-magnet
 >magnet
 Your magenta nametag is on securely enough. Not that you actually like having it on, but you'd get scolded for not having it.
 >a magnet
 You never need to use the article "a" when changing things up. In particular, "a magnet" is a good guess, but it's not what the nametag ultimately needs to be. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to consider instead of one.
-#mistake test for afos
+#testcase-mistake-shuffling-afos
 >afos
 You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
-#mistake test for faso
+#testcase-mistake-shuffling-faso
 >faso
 There are even further-away places to explore in this game than Burkina Faso.
-#mistake test for salt mine/saltmine
+#testcase-mistake-shuffling-salt-mine-saltmine
 >salt mine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
+>x passage
+It seems to say OPEN a bunch of times in a row. That means it is open, not that you should try to. But if you blink a bit, the OPENs run together and say NOPE. Hmm.
+
+#testcase-mistake-shuffling-peon
+NOPE
+>peon
+You take a passive-aggressive stab at the person, now gone, who mocked you when you examined the passage. It felt good.
+
+#testcase-mistake-shuffling-pone
+>pone
+The meals here are much more highfalutin' than that!
+
+#ttc-table-of-busiest-subsite-nudges-eopn
+>eopn
+The passage looks unblocked already, so you don't need to look for any other possibilities.
+
 #general stuff
-#mistake test for use [text]
+#testcase-mistake-shuffling-use-text
 >use zozimus
 Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
-#mistake test for turn [text]
+#testcase-mistake-shuffling-turn-text
 >turn zozimus
 You can probably just SWITCH something with two text settings.
 # stuff to test before you get settler
-#mistake test for scan
+#testcase-mistake-shuffling-scan
 >scan
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for scan [text]
+#testcase-mistake-shuffling-scan-text
 >scan xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for c
+#testcase-mistake-shuffling-c
 >c
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for c [text]
+#testcase-mistake-shuffling-c-text
 >c xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for r
+#testcase-mistake-shuffling-r
 >r
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for r [text]
+#testcase-mistake-shuffling-r-text
 >r xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for cr
+#testcase-mistake-shuffling-cr
 >cr
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for cr [text]
+#testcase-mistake-shuffling-cr-text
 >cr xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for rc
+#testcase-mistake-shuffling-rc
 >rc
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-#mistake test for rc [text]
+#testcase-mistake-shuffling-rc-text
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
@@ -124,7 +140,7 @@ Rested Desert
 #ttc-table-of-rested-desert-nudges-rested
 >restde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. You'll find a hint device for that soon enough.
-#mistake test for deters
+#testcase-mistake-shuffling-deters
 >deters
 No! You're trying to make progress here.
 
@@ -140,7 +156,7 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 The odor doesn't seem too complex. You pause. You can figure what it should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
 
-#mistake test for or do door
+#testcase-mistake-shuffling-rood
 >rood
 This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -150,7 +166,7 @@ by one point
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
-#mistake retest for or do door
+#+testcase-mistake-shuffling-rood
 >rood
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -195,11 +211,11 @@ You currently have 3 out of 8 total points for the Ordeal Loader region. Your mi
 >open door
 Thickest Thickets
 
-#mistake test for erde
+#testcase-mistake-shuffling-erde
 >erde
 There's enough earth around here, and this game's not in German.
 
-#mistake test for rede
+#testcase-mistake-shuffling-rede
 >rede
 You probably don't want medieval-style advice. You don't need it. HINT should work better.
 
@@ -211,7 +227,7 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >thickte
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
 
-#mistake test for ent/ents
+#testcase-mistake-shuffling-ent-ents
 >ent
 While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
 >ents
@@ -232,7 +248,7 @@ by one point
 >ntse
 The nest just looks right here, now that you summoned it.
 
-#mistake retest for ent/ents
+#+testcase-mistake-shuffling-ent-ents
 >ent
 That's a bit too magical for here and now. The nest is nice enough.
 >ents
@@ -254,10 +270,10 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
 
-#mistake test for believe
+#testcase-mistake-shuffling-believe
 >believe
 Yes, but what do you believe you can do or change?
-#mistake test for gato
+#testcase-mistake-shuffling-gato
 >gato
 Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
 
@@ -303,12 +319,17 @@ mega-ant
 The red text is just like A TAN GEM and such on the broad board
 !There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice
 
-#mistake test for mist
+#testcase-mistake-shuffling-mist
 >mist
 No, those TMIs on the broad board are useful.
-#mistake test for noetics
+
+#testcase-mistake-shuffling-noetics
 >noetics
 There's enough information here.
+
+#testcase-mistake-shuffling-tastic
+>tastic
+Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
 
 #ttc-table-of-notices-section-nudges-notices
 >noticse
@@ -327,6 +348,10 @@ Your score has just gone up by one point.
 
 >score
 You currently have 7 out of 8 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#+testcase-mistake-shuffling-tastic
+>tastic
+Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
 
 #ttc-table-of-ordeal-loader-spechelp-attics
 >attisc
@@ -366,7 +391,7 @@ You will have to change the new land one item at a time.
 The nametag peels infinitesimally.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
 
-#mistake test for get a man
+#testcase-mistake-shuffling-get-a-man
 >get a man
 Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
 
@@ -376,11 +401,11 @@ Your score has just gone up by one point.
 >score
 You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
-#mistake retest for get a man
+#+testcase-mistake-shuffling-get-a-man
 >get a man
 "Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions."
 
-#mistake test for almond
+#testcase-mistake-shuffling-almond
 >almond
 "Don't try anything too nutty!" booms Nat Egam.
 
@@ -415,15 +440,15 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 
 >ask gateman about cabinet
 
-#mistake test for remove [something] from [something]
+#testcase-mistake-shuffling-remove-something-from-something
 >remove phial from cabinet
 To keep things simple for you (and, okay, for my coding efforts,) I recommend TAKE X instead of REMOVE/FROM. REMOVE defaults to carried or worn items, and I'm too lazy to tweak that.
 
-#mistake test for angel
+#testcase-mistake-shuffling-angel
 >angel
 You've got enough practical help. You don't need anything supernatural.
 
-#mistake test for beatnic
+#testcase-mistake-shuffling-beatnic
 >beatnic
 The cabinet deserves a better fate than THAT.
 
@@ -457,12 +482,12 @@ Here is one of several writings in red in the cabinet:
 #renudge for notices
 >noticse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#mistake test for elastin/nailset
+#testcase-mistake-shuffling-elastin-nailset
 >elastin
 The saltine's there to help you. Changing it might work against you.
 >nailset
 The saltine's there to help you. Changing it might work against you.
-#mistake test for stealin
+#testcase-mistake-shuffling-stealin
 >stealin
 You're the good guy, here. You don't need to steal.
 

@@ -25,10 +25,10 @@ You already made passage to the ogled lodge. It's good enough. Why change it?
 >enter resort
 Astral Altars
 
-#mistake test for lites
+#testcase-mistake-shuffling-lites
 >lites
 Light isn't the problem here. It's not having anywhere to go.
-#mistake test for slite
+#testcase-mistake-shuffling-slite
 >slite
 That's bad spelling, and it won't shrink your problems.
 
@@ -70,7 +70,7 @@ Leis Isle
 >score
 You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
 
-#mistake test for download
+#testcase-mistake-shuffling-download
 >download
 The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real
 !But then, since the leis were fake, you shouldn't be surprised the woodland is, too.
@@ -136,7 +136,7 @@ You already noticed the leis. Use something on the isle to escape it.
 >iel
 You already noticed the leis. Use something on the isle to escape it.
 
-#mistake test for lies/lie
+#testcase-mistake-shuffling-lies-lie
 >lies
 You reflect on how insidious it was to stick you here in a false paradise.
 >lie
@@ -181,15 +181,15 @@ The tree sits there.
 >e
 Rived Drive
 
-#mistake test for repos
+#testcase-mistake-shuffling-repos
 >repos
 You resolve to organize your programming code better once this adventure is over.
 
-#mistake test for verdi
+#testcase-mistake-shuffling-verdi
 >verdi
 You don't need a musical score for this adventure.
 
-#mistake test for diver
+#testcase-mistake-shuffling-diver
 >diver
 But you just got by a lot of water. No need to go back in.
 
@@ -238,7 +238,7 @@ Only changing one pole would still leave a vertical barrier.
 The poles start to bend at an angle--or maybe that's the light.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
 
-#mistake test for prose
+#testcase-mistake-shuffling-prose
 >prose
 There's not much of that left in this game, and more of it won't help you up the poles. The spore can be something sturdier. You see red wondering what.
 
@@ -252,15 +252,15 @@ You currently have 5 out of 15 total points for the Resort region. Your minimum 
 >pelso
 You wouldn't want to make the slope crumble away.
 
-#mistake test for loot
+#testcase-mistake-shuffling-loot
 >loot
 You don't have time for treasure with Red Bull Burdell waiting.
 
-#mistake test for pores
+#testcase-mistake-shuffling-pores
 >pores
 Almost. But you don't need to create holes.
 
-#mistake test for poser
+#testcase-mistake-shuffling-poser
 >poser
 You wonder if YOU are the poser, for not being able to figure what to do.
 
@@ -293,15 +293,15 @@ Your score has just gone up by one point.
 >score
 You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
 
-#mistake retest for prose
+#+testcase-mistake-shuffling-prose
 >prose
 There's not much of that left in this game, and more of it won't help you up the slope. The ropes will.
 
-#mistake retest for poser
+#+testcase-mistake-shuffling-poser
 >poser
 You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near.
 
-#mistake retest for pores
+#+testcase-mistake-shuffling-pores
 >pores
 No, you had it.
 
@@ -318,7 +318,7 @@ Those are already useful.
 The sprig seems to grow less fragile for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
 
-#mistake test for prigs
+#testcase-mistake-shuffling-prigs
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
 
@@ -328,7 +328,7 @@ Your score has just gone up by one point.
 >score
 You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
-#mistake retest for prigs
+#+testcase-mistake-shuffling-prigs
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
@@ -376,7 +376,7 @@ No, the clay is a clue to what the protest really wants to do.
 The riot's still a crowd, and a big one, too.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
 
-#mistake test for i rot
+#testcase-mistake-shuffling-i-rot
 >i rot
 Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
 
@@ -398,7 +398,7 @@ No, the clay is a clue to what the trio really wants to do.
 >ersprotest
 They're just a simple protest.
 
-#mistake test for ether
+#testcase-mistake-shuffling-ether
 >ether
 They're not bad people. But even bad people don't deserve to vanish like that! Give them something constructive to do.
 >kilns
@@ -413,15 +413,15 @@ They're not bad people. But even bad people don't deserve to vanish like that! M
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
 
-#mistake test for roister
+#testcase-mistake-shuffling-roister
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
 
-#mistake test for spotter
+#testcase-mistake-shuffling-spotter
 >spotter
 No, you see 'em, you just need a better way to disperse 'em.
 
-#mistake test for lacy
+#testcase-mistake-shuffling-lacy
 >lacy
 No, the clay is a clue to what the protest really wants to do.
 
@@ -452,7 +452,7 @@ You're overthinking it. Or you hope you are. It's both a chain, and links.
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
 
-#mistake test for achin
+#testcase-mistake-shuffling-achin
 >achin
 You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
@@ -463,11 +463,11 @@ Your score has just gone up by one point.
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#mistake retest for achin
+#+testcase-mistake-shuffling-achin
 >achin
 You don't have the ability to dish out an achin'.
 
-#mistake test for slink
+#testcase-mistake-shuffling-slink
 >slink
 Too many people are watching for you to slink away.
 
@@ -489,11 +489,11 @@ You currently have 13 out of 15 total points for the Resort region. You have fou
 >get out
 !Your score has just
 
-#mistake retest for slink
+#+testcase-mistake-shuffling-slink
 >slink
 You couldn't slink behind the kilns even if they were here.
 
-#mistake test for brb
+#testcase-mistake-shuffling-brb
 >brb
 You don't know him that well. No riffing on his initials!
 
@@ -561,25 +561,25 @@ Your score has just gone up by one point.
 >score
 You currently have 14 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#mistake retest for slink
+#+testcase-mistake-shuffling-slink
 >slink
 Why slink? No one is blocking or watching you any more.
 
-#mistake test for morans/moran
+#testcase-mistake-shuffling-morans-moran
 >morans
 A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!
 >moran
 A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!
 
-#mistake test for retest
+#testcase-mistake-shuffling-retest
 >retest
 Oh, wow! Do you really want to play through again? I'm flattered!
 
-#mistake test for romans
+#testcase-mistake-shuffling-romans
 >romans
 It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.
 
-#mistake test for tester
+#testcase-mistake-shuffling-tester
 >tester
 Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.
 On the other hand, if you're volunteering to test my other games, I could always use the help.
@@ -617,19 +617,19 @@ No more fancy anagrams. Well, maybe one more, based on the whole big picture her
 >toastre
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 
-#mistake test for amen/name
+#testcase-mistake-shuffling-amen-name
 >amen
 I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
 >name
 I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
-#mistake test for blamer
+#testcase-mistake-shuffling-blamer
 >blamer
 No, we know who's to blame. He's done with. Time to move on.
-#mistake test for mensa
+#testcase-mistake-shuffling-mensa
 >mensa
 No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant or character-developing or literary enough. Sheesh.
 Even if they wouldn't, well, the Means Manse is for you and you alone. You earned it.
-#mistake test for sex it
+#testcase-mistake-shuffling-sex-it
 >sex it
 You're not even up for THAT, now. You just want to BE.
 
