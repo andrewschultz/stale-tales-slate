@@ -43,8 +43,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "banner"	371551651	--	--	"[word-games]."
 "oafs"	199329257	--	--	"[sofa-there]."
 "oaf"	103055291	--	--	"[sofa-there]."
+"eopn"	352532153	--	nope-yet rule	"The passage looks unblocked already, so you don't need to look for any other possibilities."
 "noentry"	650766775	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
 "caveat"	361462168	--	--	"Vandalizing the vacate caveat is probably more trouble than it's worth."
+
+this is the nope-yet rule:
+	if passage is examined, the rule succeeds;
+	the rule fails;
 
 to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is in acne bit cabinet and acne bit cabinet is unexamined]. You'll find a hint device for that soon enough[end if]"
 
@@ -251,7 +256,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 this is the first-two-forest rule:
 	if player is in sf or player is in rf, the rule succeeds;
-	the rule fails
+	the rule fails;
 
 to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
 

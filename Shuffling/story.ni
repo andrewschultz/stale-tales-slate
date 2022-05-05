@@ -823,7 +823,7 @@ this is the ordeal-loader-hinting rule:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
 		if player does not have gadget, all-say "You probably want to [b]TAKE GADGET[r] before entering the gate. Well, maybe even [b]TAKE ALL[r]." instead;
 		if lube-asked is false, all-say "You need to ASK GATEMAN ABOUT CABINET." instead;
-		all-say "You can just enter the gate now." instead;
+		all-say "You can just enter the getaway gateway now." instead;
 
 section stores
 
@@ -4501,7 +4501,7 @@ to say exc-which:
 
 chapter tepid icon depiction
 
-the tepid icon depiction is scenery in Trips Strip. "It's not high art, but you [if regions-to-clue is 1]look at the remaining [else]pick [one of]another [or][stopping]one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
+the tepid icon depiction is scenery in Trips Strip. "It's not high art, but it seems practical. You [if regions-to-clue is 1]look at the only remaining bit[else]pick [one of][or]another [stopping]one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
 
 to decide which number is regions-to-clue:
 	let temp be 0;
@@ -4538,8 +4538,8 @@ this is the metros-unsolved rule:
 	the rule fails;
 
 this is the resort-ready rule:
-	if metros is unsolved or sortie is unsolved or forest is unsolved, the rule succeeds;
-	the rule fails;
+	if metros is unsolved or sortie is unsolved or forest is unsolved, the rule fails;
+	the rule succeeds;
 
 icon-index is a number that varies. icon-index is 1.
 
@@ -4558,7 +4558,7 @@ to say icon-depict:
 			say "[icon-text entry]";
 			now icon-index is current-icon;
 			the rule succeeds;
-	say "You see nothing. You should see something, but you don't.";
+	say "You see nothing. You should see something, but you don't";
 
 section direction redirection
 
@@ -4583,7 +4583,7 @@ check going inside in Trips Strip:
 
 cool-index is a number that varies.
 
-the begad badge is boring scenery in Trips Strip. description of begad badge is "'For warping purposes, a store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'".
+the begad badge is boring scenery in Trips Strip. description of begad badge is "'For warping purposes, a store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it. Not enough possibilities. Stores, though...'".
 
 chapter stos (sto = type of thing)
 

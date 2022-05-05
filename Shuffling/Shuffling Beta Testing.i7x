@@ -282,15 +282,7 @@ carry out tsing:
 		else:
 			moot bolt;
 	if Notices Section is unvisited, move player to Notices Section, without printing a room description;
-	moot nametag;
-	solve-region Ordeal Loader;
-	now Notices Section is visited;
-	now player has the gadget;
-	now player has the prep paper;
-	now player has the saltine;
-	now player has the phial;
-	now Ordeal Loader is solved;
-	move cabinet to Trips Strip;
+	get-cool-stuff;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
 	say "Note that [b]TS[r] can be used with a number, or [b]TSF[r] can solve everything. 4=metros 2=sortie 1=forest.";
 	let curstuff be number understood;
