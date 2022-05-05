@@ -21286,9 +21286,9 @@ to say demo-to-do:
 
 to dome-wipe-final-questions:
 	if others is not solved:
-		choose row with final response activity of dummy altpath showing in table of final question options;
+		choose row with final response rule of the show alternate paths rule in table of final question options;
 		blank out the final response rule entry;
-		choose row with final response activity of dummy missed stuff showing in table of final question options;
+		choose row with final response rule of the show what the player missed rule in table of final question options;
 		blank out the final response rule entry;
 
 to say unex-left:
@@ -22210,8 +22210,8 @@ Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
 "[b]ROVE OVER[r] to see what's behind [b]STORE H[r]"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
-"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	dummy altpath showing
-"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	dummy missed stuff showing
+"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	--
+"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	--
 --	true	"l/list"	the show list of lists rule	--
 --	true	"n/ln/nl"	the list next megachatter table rule	--
 --	true	"p/pl"	the list previous megachatter table rule	--
@@ -22226,9 +22226,7 @@ final question wording	only if victorious	topic		final response rule		final resp
 
 section dummy actions
 
-dummy altpath showing is an activity.
-dummy missed stuff showing is an activity.
-dummy demo dome mode activating is an activity.
+dummy demo dome mode activating is an activity. [this needs to be here, or it needs to be here in some form, as we have some options we wish to shut off/on when we actually win. There used to be dummy showing alternate paths/what the player missed activities, but they could be deleted. Note that eliminating the row here is not really an option, as if the player beat Elvira and eliminted the row, then beat Store H, it would be hard to get the row back. So we have a dummy activity as a placeholder until Store H is solved. This has confused me before, so I want to write in a note so I don't lose time/effort over it again.]
 
 chapter ROVE OVER and i6 stub to make it work
 
@@ -22969,28 +22967,28 @@ chapter show ranks rule
 
 chapter seeding descriptions (hidden)
 
-global-ord is a number that varies.
+global-pod-num is a number that varies.
 
 definition: a thing (called th) is current-list:
-	if pod-num of th is global-ord, yes;
+	if pod-num of th is global-pod-num, yes;
 	no;
 
 bold-chosen is a truth state that varies.
 
 this is the show seeds rule:
 	now bold-chosen is true;
-	now global-ord is 1;
+	now global-pod-num is 1;
 	say "Here is a complete list of randomizations with no spoilers. Ones you encountered this play-through are in [b]BOLD[r].";
 	say "Here are the pods for Rodney's prosaic picaros:[line break]";
 	while number of current-list picaros > 0:
-		say "You will see one of pod [global-ord] at random: [list of current-list picaros].";
-		increment global-ord;
-	now global-ord is 1;
+		say "You will see one of pod [global-pod-num] at random: [list of current-list picaros].";
+		increment global-pod-num;
+	now global-pod-num is 1;
 	now in-think is true;
 	say "Here are the pods for the parleys splayer players['] pickup lines:[line break]";
 	while number of current-list pickup-lines > 0:
-		say "You will see one pickup line from pod [global-ord] at random: [list of current-list pickup-lines].";
-		increment global-ord;
+		say "You will see one pickup line from pod [global-pod-num] at random: [list of current-list pickup-lines].";
+		increment global-pod-num;
 	now in-think is false;
 	now bold-chosen is false:
 
