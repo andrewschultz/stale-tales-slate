@@ -226,6 +226,8 @@ to solve-region (sre - a region):
 	if player is not in Trips Strip, move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
 		say "Man! With the [b]SECURE[r] settings on your gadget, you can [b]RECUSE[r] if you want and hit Store R.";
+	if number of passed-up regions is 3:
+		ital-say "you unlocked a new command for if you want to see the endgame again. [b]LEADIN DENIAL[i] or [b]LEADIN NAILED[r] will put the game-state where you just have to tackle Store R. This is also doable with the warp commands from each store in order, but I hope this is easier to remember. You either nailed the lead-in, or you denied the game the chance to put you through the other three stores. Also, you can put a space in [b]LEAD IN[r]."
 
 to say espec-xtra:
 	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tin foil is in cabinet]. Well, except the tinfoil info lit[end if]";
@@ -9548,6 +9550,74 @@ definition: a thing (called x) is takeable:
 	if x is the player, decide no;
 	if x is fixed in place, decide no;
 	decide yes;
+
+volume jumpaheads from Roiling
+
+to get-cool-stuff:
+	moot nametag;
+	let temp-bool be autosave;
+	now autosave is false;
+	now autosave is temp-bool; [ this skips the save dialogue ]
+	now all rooms in Ordeal Loader are visited;
+	now player has the gadget;
+	now player has the prep paper;
+	now player has the saltine;
+	now player has the phial;
+	now Ordeal Loader is solved;
+	move cabinet to Trips Strip;
+	move player to trips strip;
+	now good-guesses-noted is true;
+
+chapter rig one (ignore region)
+
+rigoneing is an action applying to nothing.
+
+understand the command "ignore region" as something new.
+
+understand "ignore region" as rigoneing.
+
+understand "rig one" and "rig one region" as rigoneing.
+
+one-rigged is a truth state that varies.
+
+carry out rigoneing:
+	if one-rigged is true, say "You already did." instead;
+	if player is not in Busiest Subsite, say "You need to be in the Busiest Subsite for [b]IGNORE REGION[r] to work. Otherwise it is messy to reset variables. So restart and you should be okay." instead;
+	say "Warping space and time, you move (back) to the Trips Strip, with all possible goodies from the cabinet...";
+	now one-rigged is true;
+	get-cool-stuff;
+	now Ordeal Loader is bypassed;
+	the rule succeeds;
+
+chapter lead in denial (ignore everything up to last region)
+
+denialnaileding is an action applying to nothing.
+
+understand the command "leadin denial" and "lead in denial" as something new.
+
+understand the command "leadin denial nailed" and "lead in denial nailed" as something new.
+
+understand "leadin denial nailed" and "lead in denial nailed" as denialnaileding.
+understand "leadin denial" and "lead in denial" as denialnaileding.
+understand "leadin nailed" and "lead in nailed" as denialnaileding.
+
+denial is a truth state that varies.
+
+carry out denialnaileding:
+	if denial is true, say "You already did." instead;
+	if player is not in Busiest Subsite, say "You need to be in the Busiest Subsite for [b]IGNORE REGION[r] to work. Otherwise it is messy to reset variables. So restart and you should be okay." instead;
+	say "Warping space and time, you move (back) to the Trips Strip, with all possible goodies from the cabinet, with only Store R left...";
+	now forest is bypassed;
+	now sortie is bypassed;
+	now metros is bypassed;
+	moot store f;
+	moot scented descent;
+	moot store i;
+	moot posted depots;
+	moot store m;
+	moot trade tread;
+	get-cool-stuff;
+	now cur-score of stores is 3;
 
 volume scanning
 
