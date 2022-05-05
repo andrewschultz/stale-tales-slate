@@ -20,7 +20,7 @@ book general
 
 understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can [b]SWITCH[r] something, or [b]PUT[r] something [b]IN[r]/[b]ON[r] something, or even [b]ATTACH[r] something to something. You can [b]PUSH[r] a button or [b]OPEN[r] something, as well. Specific items should clue you what to do if you [b]EXAMINE[r] them.")
 
-understand "get a man" as a mistake ("[get-a-man][run paragraph on]")
+understand "get a man" as a mistake ("[if Notices Section is unvisited][reject][else if Trips Strip is visited]Tan Mage Nat Egam cannot help you now.[else if gateman is touchable]You already did[else]Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?[end if][note-great-guesses]").
 
 understand "scan" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
@@ -46,11 +46,11 @@ understand "remove [something] from [something]" as a mistake("To keep things si
 
 chapter specific anagrams of universal commands or items
 
-understand "reaves" as a mistake ("You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.") when autosave-known is true.
+understand "reaves" as a mistake ("You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.[note-great-guesses]") when autosave-known is true.
 
 book Ordeal Loader
 
-understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.") when mrlp is Ordeal Loader. [bold-ok]
+understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.[note-great-guesses]") when mrlp is Ordeal Loader. [bold-ok]
 
 chapter Busiest Subsite
 
@@ -72,80 +72,84 @@ to say not-a-magnet:
 	if player is not in Busiest Subsite:
 		say "[one of][or].[paragraph break]You also wonder if saying 'a magnet' instead of 'magnet' is cheating a bit. It probably is[stopping]"
 
-understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.") when player is in Busiest Subsite.
+understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.[note-great-guesses]") when player is in Busiest Subsite.
 
-understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.") when player is in Busiest Subsite.
+understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.[note-great-guesses]") when player is in Busiest Subsite.
 
-understand "magnet" as a mistake ("[not-a-magnet].") when magenta nametag is touchable.
+understand "magnet" as a mistake ("[not-a-magnet].[note-great-guesses]") when magenta nametag is touchable.
 
-understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?") when the player is in Busiest Subsite.
+understand "peon" as a mistake ("You take a passive-aggressive stab at the person, now gone, who mocked you when you examined the passage. It felt good.[note-great-guesses]") when player is in Busiest Subsite and passage is examined.
+
+understand "pone" as a mistake ("The meals here are much more highfalutin['] than that![note-great-guesses]") when player is in Busiest Subsite and passage is examined.
+
+understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?[note-great-guesses]") when player is in Busiest Subsite.
 
 chapter Rested Desert
 
-understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in Rested Desert.
+understand "deters" as a mistake ("No! You're trying to make progress here.[note-great-guesses]") when player is in Rested Desert.
 
 [def=OR DO door]
-understand "rood" as a mistake ("[if OR DO door is in Rested Desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in Rested Desert.
+understand "rood" as a mistake ("[if OR DO door is in Rested Desert]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.[note-great-guesses]") when player is in Rested Desert.
 
 chapter Thickest Thickets
 
-understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is touchable.
+understand "believe" as a mistake ("Yes, but what do you believe you can do or change?[note-great-guesses]") when toga is touchable.
 
-understand "ent" and "ents" as a mistake ("[if sent nets are touchable]While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers[else]That's a bit too magical for here and now. The nest is nice enough[end if].") when player is in Thickest Thickets.
+understand "ent" and "ents" as a mistake ("[if sent nets are touchable]While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers[else]That's a bit too magical for here and now. The nest is nice enough[end if].[note-great-guesses]") when player is in Thickest Thickets.
 
-understand "erde" as a mistake ("There's enough earth around here, and this game's not in German.") when player is in Thickest Thickets.
+understand "erde" as a mistake ("There's enough earth around here, and this game's not in German.[note-great-guesses]") when player is in Thickest Thickets.
 
-understand "gato" as a mistake ("Nice try, but wrong language. [if goat is touchable]The goat already ate[else]Another animal would be more likely to eat[end if] through the thickets.") when player is in Thickest Thickets.
+understand "gato" as a mistake ("Nice try, but wrong language. [if goat is touchable]The goat already ate[else]Another animal would be more likely to eat[end if] through the thickets.[note-great-guesses]") when player is in Thickest Thickets.
 
-understand "rede" as a mistake ("You probably don't want medieval-style advice. You don't need it. [b]HINT[r] should work better.") when player is in Thickest Thickets.
+understand "rede" as a mistake ("You probably don't want medieval-style advice. You don't need it. [b]HINT[r] should work better.[note-great-guesses]") when player is in Thickest Thickets.
 
 chapter Notices Section
 
-understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.") when player is in Notices Section and gateman is in Notices Section.
+understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.[note-great-guesses]") when player is in Notices Section and gateman is in Notices Section.
 
-understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.") when phial is touchable.
+understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.[note-great-guesses]") when phial is touchable.
 
-understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.") when cabinet is in location of player.
+understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.[note-great-guesses]") when cabinet is in location of player.
 
-understand "elastin" and "nailset" as a mistake ("That would make the saltine less edible.") when player has saltine.
+understand "elastin" and "nailset" as a mistake ("That would make the saltine less edible.[note-great-guesses]") when player has saltine.
 
-understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.") when show hows tag is touchable.
+understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.[note-great-guesses]") when show hows tag is touchable.
 
-understand "mist" as a mistake ("No, those TMIs on the broad board are useful.") when player is in Notices Section.
+understand "mist" as a mistake ("No, those TMIs on the broad board are useful.[note-great-guesses]") when player is in Notices Section.
 
-understand "noetics" as a mistake ("There's enough information here.") when player is in Notices Section.
+understand "noetics" as a mistake ("There's enough information here.[note-great-guesses]") when player is in Notices Section.
 
-understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.") when salient saltine is touchable.
+understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.[note-great-guesses]") when salient saltine is touchable.
 
 book stores
 
 chapter Trips Strip
 
-understand "dater" as a mistake ("This is not a romance game.") when player is in Trips Strip and trade tread is in Trips Strip.
+understand "dater" as a mistake ("This is not a romance game.[note-great-guesses]") when player is in Trips Strip and trade tread is in Trips Strip.
 
-understand "despot" as a mistake ("[one of]Summoning Red Bull Burdell would be unwise. Best not try it again.[or]Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak]So [']dept.[stopping]") when player is in Trips Strip and posted depots are in Trips Strip.
+understand "despot" as a mistake ("[one of]Summoning Red Bull Burdell would be unwise. Best not try it again.[or]Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak]So [']dept.[stopping][note-great-guesses]") when player is in Trips Strip and posted depots are in Trips Strip.
 
-understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in Trips Strip.
+understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.[note-great-guesses]") when player is in Trips Strip.
 
-understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Trips Strip.
+understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.[note-great-guesses]") when player is in Trips Strip.
 
-understand "lost" as a mistake ("No, you need to find your way through individual stores.") when player is in Trips Strip.
+understand "lost" as a mistake ("No, you need to find your way through individual stores.[note-great-guesses]") when player is in Trips Strip.
 
-understand "oyster" as a mistake ("Nice try, but that's next game![mistake-clue of store y]") when player is in Trips Strip.
+understand "oyster" as a mistake ("Nice try, but that's next game![mistake-clue of store y][note-great-guesses]") when player is in Trips Strip.
 
-understand "presto" as a mistake ("Your magic is not advanced enough to change Store P! Well, not this game![mistake-clue of store p]") when player is in Trips Strip.
+understand "presto" as a mistake ("Your magic is not advanced enough to change Store P! Well, not this game![mistake-clue of store p][note-great-guesses]") when player is in Trips Strip.
 
-understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.") when player is in Trips Strip and trade tread is in Trips Strip.
+understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.[note-great-guesses]") when player is in Trips Strip and trade tread is in Trips Strip.
 
-understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![mistake-clue of store u]") when player is in Trips Strip.
+understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![mistake-clue of store u][note-great-guesses]") when player is in Trips Strip.
 
-understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is moot]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].") when player is in Trips Strip.
+understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is moot]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].[note-great-guesses]") when player is in Trips Strip.
 
-understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in Trips Strip.
+understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.[note-great-guesses]") when player is in Trips Strip.
 
-understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[mistake-clue of store w]") when player is in Trips Strip.
+understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[mistake-clue of store w][note-great-guesses]") when player is in Trips Strip.
 
-understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[mistake-clue of store v]") when player is in Trips Strip.
+understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[mistake-clue of store v][note-great-guesses]") when player is in Trips Strip.
 
 book store f
 

@@ -381,6 +381,8 @@ fullcmd is a number that varies. [key]
 
 good-guesses-noted is a truth state that varies.
 
+great-guesses-noted is a truth state that varies.
+
 to say note-good-guesses:
 	if good-guesses-noted is true, continue the action;
 	say "[line break]";
@@ -388,10 +390,11 @@ to say note-good-guesses:
 	now good-guesses-noted is true;
 
 to say note-great-guesses:
-	if good-guesses-noted is true, continue the action;
-	say "[line break]";
+	if great-guesses-noted is true, continue the action;
+	say "[paragraph break]";
 	ital-say "you found a great guess, but such a change wouldn't push the story forward. Still, if you find one, the responses are meant to either be amusing or provide a small clue.";
-	now good-guesses-noted is true;
+	say "[run paragraph on]";
+	now great-guesses-noted is true;
 
 to decide whether (nt - a table name) is hash-found:
 	repeat through nt:
@@ -3515,8 +3518,6 @@ understand "old man" and "man" as gateman when player is in Notices Section and 
 
 check taking gateman: say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'" instead; [??]
 
-to say get-a-man: say "[if Notices Section is unvisited][reject][else if Trips Strip is visited]Tan Mage Nat Egam cannot help you now.[else if gateman is touchable]You already did[else]Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?[end if]";
-
 chapter broad board
 
 the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2da]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2da]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2da]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2da]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is touchable]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but now you know that, it can help you be right. So look out for red writing.[stopping]"
@@ -5017,7 +5018,9 @@ check entering a portal (this is the check if portal region is solved rule):
 	abide by the entry-rule of noun;
 	let gr be go-region of noun;
 	if gr is regsolve, say "[solved-text of noun]" instead;
-	if gr is not hub-region, now good-guesses-noted is true;
+	if gr is not hub-region:
+		now good-guesses-noted is true;
+		now great-guesses-noted is true;
 	check-2-of-3;
 	now the noun is ever-entered;
 	last-loc-move gr;
@@ -9567,6 +9570,7 @@ to get-cool-stuff:
 	move cabinet to Trips Strip;
 	move player to trips strip;
 	now good-guesses-noted is true;
+	now great-guesses-noted is true;
 
 chapter rig one (ignore region)
 
