@@ -5,6 +5,50 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
+* end-menus-bad-death
+
+# negative testing here
+>gonear seaside
+
+>ocean
+You probably want to UNDO, but your full list of choices is to RESTART, RESTORE a saved game, QUIT, or UNDO the last command.
+
+>rove over
+Please give one of the answers above.
+
+>demo dome
+Please give one of the answers above.
+
+>alt
+Please give one of the answers above.
+
+>l
+Please give one of the answers above.
+
+>n
+Please give one of the answers above.
+
+>p
+Please give one of the answers above.
+
+>la
+Please give one of the answers above.
+
+>rj
+Please give one of the answers above.
+
+>l 1
+Please give one of the answers above.
+
+>form
+Please give one of the answers above.
+
+>rank
+Please give one of the answers above.
+
+>seed
+Please give one of the answers above.
+
 * end-menus-otters
 
 # this tests fixed commands that should be seen everywhere. LN and such are not tested.
@@ -230,6 +274,24 @@ Reposed Deposer: defeat Elvira
 !Reprieval Prevailer: Win Store H
 !Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
 
+>seed
+Here are the pods for Rodney's prosaic picaros:
+You will see one of pod 1 at random: Geno, Royce, Tyson and Wade.
+You will see one of pod 2 at random: Daryl, Dewey, Goldy and Shane.
+You will see one of pod 3 at random: Blake, Bredo, Edwin and Eldon.
+You will see one of pod 4 at random: Archie, Barney, Ernest and Reggie.
+You will see one of pod 5 at random: Andres, Andrew, Marcel and Marlon.
+You will see one of pod 6 at random: Cedrick, Demitri, Leander, Preston and Terrance.
+You will see one of pod 7 at random: Yo-Rend-Or-Deny Rodney.
+Here are the pods for the parleys splayer players' pickup lines:
+You will see one pickup line from pod 1 at random: (not) being sly bois, acting tacitly, twiddling their eyelids, defining reality and continuing to restyle and restyle.
+You will see one pickup line from pod 2 at random: discoursing rangily, acting saintly, seeming ladyish, negging Lindsey and comparing Gretta and Krystal.
+You will see one pickup line from pod 3 at random: interrupting each other reliably, "admiring" this locality, acting too formally, talking bridally, describing things shabbily, giving an odd sly hi, having a snit-yell and not stopping suddenly.
+You will see one pickup line from pod 4 at random: behaving fake-modestly, mis-discussing Misty Ale and talking all tidy-plus.
+You will see one pickup line from pod 5 at random: blabbing maritally, speaking too sincerely, making lobbyings, disparaging a lousy diet and lawyering.
+You will see one pickup line from pod 6 at random: continuing to stare deeply, blabbing about drywalling, behaving emotionally and discoursing creatively.
+You will see one pickup line from pod 7 at random: redisplaying their "greatness" and wearing clothes shining iridescently.
+
 * end-menus-others
 
 >emy
@@ -269,6 +331,10 @@ Errantries Restrainer: take on the Store H quest
 Reprieval Prevailer: Win Store H
 !Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
 
+>seed
+Here are the pods for Rodney's prosaic picaros:
+Here are the pods for the parleys splayer players' pickup lines:
+
 * end-menus-demo-dome
 
 >au 2
@@ -295,3 +361,6 @@ Errantries Restrainer: take on the Store H quest
 Reprieval Prevailer: Win Store H
 Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Demo Dome
 
+>seed
+Here are the pods for Rodney's prosaic picaros:
+Here are the pods for the parleys splayer players' pickup lines:
