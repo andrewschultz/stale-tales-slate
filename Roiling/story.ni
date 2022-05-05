@@ -18652,6 +18652,8 @@ understand "sample maple" and "maple" as sample maples.
 chapter OPEN puzzle
 
 rule for supplying a missing noun when opening:
+	say "1.";
+	say "2.";
 	if player is in disowned downside and Neon Pope is in disowned downside:
 		try fliptoing Pen O Nope instead;
 
@@ -22206,106 +22208,60 @@ part real options
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
+"[b]ROVE OVER[r] to see what's behind [b]STORE H[r]"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
+"[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
 "see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	dummy altpath showing
 "check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	the show what the player missed rule	dummy missed stuff showing
---	false	"l/list"	the show list of lists rule	--
---	false	"n/ln/nl"	the list next megachatter table rule	--
---	false	"p/pl"	the list previous megachatter table rule	--
---	false	"la/lb/lc/ld/le/lf/lg/lh/li/lj/lk/ll/lm/lo/lp/lq/ls/lt/lu/lv/lw/lx/ly/lz"	the showing regional lists rule	--
---	false	"rj/lr/jr"	the list next region random text rule	--
-"[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form" or "m or f" or "of mr"	the sort male female out rule	--
+--	true	"l/list"	the show list of lists rule	--
+--	true	"n/ln/nl"	the list next megachatter table rule	--
+--	true	"p/pl"	the list previous megachatter table rule	--
+--	true	"la/lb/lc/ld/le/lf/lg/lh/li/lj/lk/ll/lm/lo/lp/lq/ls/lt/lu/lv/lw/lx/ly/lz"	the showing regional lists rule	--
+--	true	"rj/lr/jr"	the list next region random text rule	--
 "[b]L[r]([b]IST[r]) to see random dialogues, etc., [b]L[r]([b]IST[r]) ([b]NUMBER[r]) for a particular one, [b]LN[r]/[b]NL[r] for the next or [b]L[r](store letter) for one region ([b]LA[r]/[b]LG[r] for general stuff, [b]L*[r] for store *, [b]LO[r] for Ordeal Reload, [b]LS[r] for Stores), or [b]LJ[r]/[b]LR[r] to jump to the next region's next list set"	true	"l/list [number]"	the show a list by number rule	--
-"[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
+"[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form" or "m or f" or "of mr"	the sort male female out rule	--
 "see [b]RANK[r]s and how to achieve them"	true	"rank/ranks"	show ranks rule	--
 --	true	"pod/pods/seed/seeds/seeding/seedings"	show seeds rule	--
+
+[note: the Show Ranks Rule is in the common file.]
+
+section dummy actions
 
 dummy altpath showing is an activity.
 dummy missed stuff showing is an activity.
 dummy demo dome mode activating is an activity.
 
-global-ord is a number that varies.
+chapter ROVE OVER and i6 stub to make it work
 
-definition: a thing (called th) is current-list:
-	if pod-num of th is global-ord, yes;
-	no;
+Include (-
 
-bold-chosen is a truth state that varies.
+[ ASK_FINAL_QUESTION_R;
+	print "^";
+	(+ escape mode +) = false;
+	while ((+ escape mode +) == false) {
+		CarryOutActivity(DEALING_WITH_FINAL_QUESTION_ACT);
+		DivideParagraphPoint();
+	}
+];
 
-this is the show seeds rule:
-	now bold-chosen is true;
-	now global-ord is 1;
-	say "Here is a complete list of randomizations with no spoilers. Ones you encountered this play-through are in [b]BOLD[r].";
-	say "Here are the pods for Rodney's prosaic picaros:[line break]";
-	while number of current-list picaros > 0:
-		say "You will see one of pod [global-ord] at random: [list of current-list picaros].";
-		increment global-ord;
-	now global-ord is 1;
-	now in-think is true;
-	say "Here are the pods for the parleys splayer players['] pickup lines:[line break]";
-	while number of current-list pickup-lines > 0:
-		say "You will see one pickup line from pod [global-ord] at random: [list of current-list pickup-lines].";
-		increment global-ord;
-	now in-think is false;
-	now bold-chosen is false:
+-) instead of "Ask The Final Question Rule" in "OrderOfPlay.i6t".
 
-before printing the name of a thing (called th) when bold-chosen is true:
-	if th is not off-stage, say "[b]".
+The escape mode is a truth state that varies.
 
-after printing the name of a thing (called th) when bold-chosen is true:
-	if th is not off-stage, say "[r]".
+To fully resume the story:
+	sort table of megachatter in init-order order;
+	resume the story;
+	now escape mode is true;
+	now otters is solved;
+	now last-solved-region is otters;
+	clear the screen;
+	say paragraph break.
 
-this is the sort male female out rule:
-	say "Here is what the game treats differently: (* = trivial)[line break]";
-	repeat through table of sexdif:
-		say "[2da][examp entry][line break]";
-	if others is solved:
-		repeat through table of others sexdif:
-			say "[2da][examp entry][line break]";
+This is the epilogue rule:
+	fully resume the story;
+	say "You decide, why not [b]ROVE OVER[r]?";
+	clean-for-roving;
 
-table of sexdif [tsx]
-examp
-"[bold type](general)[r] Dropping something."
-"Examining yourself."
-"[bold type](Ordeal Reload)[r] The note from [gtmn] about the purse, and the purse itself too"
-"Ditching Report Porter Perrot."
-"Complain about the media to Elmo."
-"Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
-"One page of the dope op-ed is named differently."
-"The clues for the ramp are different, but the name Mr. Pa is still cringy either way. I hope it's the right sort of cringy."
-"The message for leaving the Means Manse."
-"[bold type](stores)[r] The hoarder/acuter curate says something different when you return."
-"Double dipping on sorbet in Store B."
-"[bold type](routes)[r] Cursing in Cleric Circle."
-"Going a direction in Same Mesa."
-"[bold type](troves)[r] catching the thief."
-"Saying [b]ACRE[r]."
-"Reading [b]DEAL[r]."
-"When entering the Upscale Capsule."
-"[bold type](presto)[r] The plebe stops you or lets you by with different text."
-"[bold type](oyster)[r] The win-text for the [b]OYSTER[r] region."
-"Anger Range changes to Hero's or Shero Shore."
-"Shoer Osher changes gender too."
-"Attacking the pikes/carps."
-"[bold type](towers)[r] The mardier admirer reacts differently to TALKing/KISSing, etc."
-"The diverse deviser reminds you of Boy/Girl Scouts."
-"The ego drains drain you a bit more if you're female."
-"The Coasting Agnostic has a different name, with a (sic) on making the bot-boat."
-"Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."
-"Lars Eede/Elsa Erde has the Reed's Ale east of Treading Gradient."
-"Luc Sym or Ms. Lucy guards north of the Scope Copse."
-"The Hostile-is-He Lot or Lois the Hostile guards south of Actionless Coastlines."
-"[bold type](otters)[r] reactions to KISSing, EXAMINEing the [pla-ma], talking/dispelling/attacking or leaving while they're in the Disowned Downside."
-"[b]KISS[r]ing Gretta or taking to her with the [pla-ma] around."
-"Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
-"[b]KISS[r]ing Elvira or losing to her in battle."[]
-"The win text."
-
-table of others sexdif
-examp
-"[bold type](others)[r] Trying to make [b]GAPERS[r] in Rustic Citrus."
-"The win-text for beating [b]OTHERS[r]."
-"Lord Al Ollard or Dr. Lola Ollard appears on a droll dollar."
-"Red Rat Art Erd or Dr. Tera Darter is the Tarred Trader."
+chapter Demo Dome option
 
 this is the activate demo dome mode rule:
 	fully resume the story;
@@ -22316,173 +22272,7 @@ this is the activate demo dome mode rule:
 	demo-dome-status;
 	the rule succeeds;
 
-curlistnum is a number that varies.
-
-to decide which number is table-list-max:
-	if mrlp is demo dome, decide on number of rows in table of megachatter;
-	let count be 0;
-	repeat through table of megachatter:
-		if whichreg entry is Demo Dome and peek keep is not visited, next;
-		if others-passed or whichreg entry is not others, increment count;
-	decide on count;
-
-this is the list next megachatter table rule:
-	now listpoke is false;
-	increment curlistnum;
-	if curlistnum > table-list-max:
-		say "(Cycling back to 1.)[line break]";
-		now curlistnum is 1;
-	try liliing curlistnum;
-	next-list-poke;
-
-this is the list previous megachatter table rule:
-	decrement curlistnum;
-	if curlistnum < 1:
-		say "(Cycling back to [table-list-max].)[line break]";
-		now curlistnum is table-list-max;
-	try liliing curlistnum;
-	next-list-poke;
-
-to decide which number is next-region-start of (x - a number):
-	if x is 0, decide on 1;
-	choose row x in table of megachatter;
-	let temp-int be x;
-	let temp-reg be whichreg entry;
-	while whichreg entry is temp-reg:
-		increment temp-int;
-		if temp-int > table-list-max:
-			say "(Cycling back to the top.)";
-			decide on 1;
-		choose row temp-int in table of megachatter;
-	decide on temp-int;
-
-this is the list next region random text rule: [ lr command in post-game ]
-	now lj-cue-prod is false;
-	choose row (next-region-start of curlistnum) in table of megachatter;
-	region-random-list whichreg entry;
-	now curlistnum is (next-region-start of curlistnum);
-
-to decide which number is rand-txt-count of (rg - a region):
-	let temp be 0;
-	repeat through table of megachatter:
-		if there is a whichreg entry and rg is whichreg entry:
-			increment temp;
-	decide on temp;
-
-to region-random-list (rg - a region):
-	let rtc be rand-txt-count of rg;
-	if rtc is 0:
-		say "There is no random text for [rg].";
-		continue the action;
-	say "Here [if rtc > 2]are all the random text lists[else if rtc is 2]are both the random text lists[else]is the only random text list[end if] [if rg is Meta Team]for general commands[else]for [rg][end if].";
-	let mycount be 0;
-	repeat through table of megachatter:
-		if there is a whichreg entry and rg is whichreg entry:
-			increment mycount;
-			let nr be number of rows in mytab entry;
-			if there is a lasties entry and number of characters in lasties entry > 2, increment nr; [account for the final message that is outside the table]
-			say "[mycount]. [descr entry] ([nr] anagrams)[line break]";
-	lj-cue;
-
-lj-cue-prod is a truth state that varies.
-
-to lj-cue:
-	if lj-cue-prod is false:
-		say "You can type [b]LJ[r]/[b]RJ[r]/[b]JR[r] to jump to the next region's lists.";
-		now lj-cue-prod is true;
-
-megsort is a truth state that varies.
-
-table of endgame region abbreviations
-this-reg	this-top (topic)	this-pre-rule	this-text
-Meta Team	"la/lg"
---	"lc"	--	"There's nothing extra, or extra licentious, behind Store C."
-Demo Dome	"ld"	is-demo-visited rule
---	"lb/le/lj/ll/lq/lx/lz"	--	"There was nothing to explore behind [sto-listed]."
---	"lf/li/lm"	--	"[sto-listed] was available to explore in [shuf] but not [this-game]."
-Meta Team	"lg"
-others	"lh"	is-others-passed rule
---	"lk"	--	"No region was behind Store K[if tokers are off-stage], though you could get a small bit of help from it[end if]."
-Ordeal Reload	"lo"
-presto	"lp"
-stores	"ls"
-otters	"lt"
-routes	"lu"
-troves	"lv"
-towers	"lw"
-oyster	"ly"
-
-to say sto-listed: say "Store [character number 2 in the player's command in upper case]".
-
-this is the is-demo-visited rule:
-	if mrlp is demo dome, continue the action;
-	say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it." instead;
-
-to decide whether others-passed:
-	if mrlp is demo dome or others is solved, yes;
-	no;
-
-this is the is-others-passed rule:
-	if others-passed, continue the action;
-	say "I can't show you the random text lists for Store H, yet. You haven't solved it." instead;
-
-this is the showing regional lists rule:
-	repeat through table of endgame region abbreviations:
-		if the player's command matches this-top entry:
-			if there is a this-pre-rule entry, abide by the this-pre-rule entry;
-			if there is a this-text entry:
-				say "[this-text entry][line break]";
-			else:
-				region-random-list this-reg entry;
-			the rule succeeds;
-	say "There was a code fall-through here. I should have given a more detailed message, but to specify a region, you need to say [if peek keep is visited]ld/[end if]lg/[if others-passed]lh/[end if]lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload (intro) and G being general stuff e.g. responses to empty commands. [b]LA[r]=all.";
-
-this is the show list of lists rule:
-	let myrow be 0;
-	let nr be 0;
-	say "Here is a list of all the lists of random anagrams. If you did not visit a region, no spoilers are contained here. Pick a number to see which one, or [b]N/[r]/[b]LN[r]/[b]LN[r] lets you see the next. ";
-	now listpoke is true;
-	ital-say "the distribution of list sizes (numbers or bytes) approximately obeys Benford's and Zipf's Law, which I think is very cool. Both the laws, and that the lists obey them.";
-	repeat through table of megachatter:
-		increment myrow;
-		if there is a mytab entry:
-			now nr is number of rows in mytab entry;
-		else:
-			d "Blank row.";
-			now nr is 16; [undos]
-		if there is a lasties entry and number of characters in lasties entry > 2, increment nr;
-		if whichreg entry is others and not others-passed:
-			say "([b]REDACTED[r] post-Elvira stuff behind Store H.)[line break]";
-			the rule succeeds;
-		if whichreg entry is demo dome and peek keep is unvisited:
-			say "[b]REDACTED[r]) [b]DEMO DOME MODE[r] stuff.)[line break]";
-		say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
-		if the remainder after dividing myrow by 20 is 0:
-			abide by the avoid keypress in menu testing rule;
-			say "<press Q to quit or another key to see more>";
-			let cholet be the chosen letter;
-			if cholet is 113 or cholet is 81:
-				general-randtext-nag;
-				the rule succeeds;
-	general-randtext-nag;
-	next-list-poke;
-
-randtext-nag-yet is a truth state that varies.
-
-to general-randtext-nag:
-	if randtext-nag-yet is false:
-		now randtext-nag-yet is true;
-		say "By the way, you can list a region's random text with, say, [b]LO[r] for Ordeal Reload, [b]LY[r] for oyster, etc"
-
-listpoke is a truth state that varies.
-
-to next-list-poke:
-	if listpoke is false:
-		ital-say "you can see the next list if you type [b]N[i], [b]NL[i] or [b]LN[i]";
-		now listpoke is true;
-
-this is the show a list by number rule:
-	try liliing the number understood instead;
+chapter alternate paths
 
 to say remap-unset: say "[if remapped is true][b]UNSET[r] the tunes[else][b]REMAP[r] the perma-amper[end if]";
 
@@ -22606,6 +22396,7 @@ this is the show alternate paths rule:
 	d "[list of solved regions].";
 	repeat with myr running through regions-in-order:
 		if myr is solved, process the altroutes of myr;
+	say "There are two regions that choose randomly from many different obstacles at the beginning of play. The prosaic picaros in the Loftier Trefoil and the pickup lines in the Disowned Downside are two examples. A command hidden in the menu, [b]SEED[r] or [b]POD[r], will show you all the possibilities."
 
 to say presto-3 of (n - a number):
 	if n is not 1, say "pushing the skid to the shack with the yak on it";
@@ -22674,6 +22465,15 @@ to say d-then:
 	if doublecheat is true:
 		say "[b]DERAIL[r] then ";
 
+section deprecated code
+
+to sort-meg: [i'd rather not sort random tables by number since we will have different cases when we look things up]
+	if megsort is false:
+		now megsort is true;
+		sort table of megachatter in reverse table-size order;
+
+chapter misses rules
+
 to say how-pills-used:
 	repeat through hintobjstable of oyster:
 		if spill-target is hint-entry entry:
@@ -22721,14 +22521,7 @@ definition: a region (called R) is test-jumped:
 
 to say keycar-loc: say "in [location of keycar]"
 
-section deprecated code
-
-to sort-meg: [i'd rather not sort random tables by number since we will have different cases when we look things up]
-	if megsort is false:
-		now megsort is true;
-		sort table of megachatter in reverse table-size order;
-
-chapter misses rules
+section actual misses rules
 
 this is the ordeal-reload-misses rule:
 	if giant pin is in Dusty Study, say "[2drm of dusty study]the giant pin could've become a [b]PAINTING[r].";
@@ -22945,42 +22738,267 @@ this is the others-misses rule:
 this is the demo-dome-misses rule:
 	say "No points in the Demo Dome, so nothing to find.";
 
-book epilogue transition
+chapter lists post-game commands
 
-book epilogue bugfixes to i6
+curlistnum is a number that varies.
 
-Include (-
+to decide which number is table-list-max:
+	if mrlp is demo dome, decide on number of rows in table of megachatter;
+	let count be 0;
+	repeat through table of megachatter:
+		if whichreg entry is Demo Dome and peek keep is not visited, next;
+		if others-passed or whichreg entry is not others, increment count;
+	decide on count;
 
-[ ASK_FINAL_QUESTION_R;
-	print "^";
-	(+ escape mode +) = false;
-	while ((+ escape mode +) == false) {
-		CarryOutActivity(DEALING_WITH_FINAL_QUESTION_ACT);
-		DivideParagraphPoint();
-	}
-];
+this is the list next megachatter table rule:
+	now listpoke is false;
+	increment curlistnum;
+	if curlistnum > table-list-max:
+		say "(Cycling back to 1.)[line break]";
+		now curlistnum is 1;
+	try liliing curlistnum;
+	next-list-poke;
 
--) instead of "Ask The Final Question Rule" in "OrderOfPlay.i6t".
+this is the list previous megachatter table rule:
+	decrement curlistnum;
+	if curlistnum < 1:
+		say "(Cycling back to [table-list-max].)[line break]";
+		now curlistnum is table-list-max;
+	try liliing curlistnum;
+	next-list-poke;
 
-The escape mode is a truth state that varies.
+to decide which number is next-region-start of (x - a number):
+	if x is 0, decide on 1;
+	choose row x in table of megachatter;
+	let temp-int be x;
+	let temp-reg be whichreg entry;
+	while whichreg entry is temp-reg:
+		increment temp-int;
+		if temp-int > table-list-max:
+			say "(Cycling back to the top.)";
+			decide on 1;
+		choose row temp-int in table of megachatter;
+	decide on temp-int;
 
-To fully resume the story:
-	sort table of megachatter in init-order order;
-	resume the story;
-	now escape mode is true;
-	now otters is solved;
-	now last-solved-region is otters;
-	clear the screen;
-	say paragraph break.
+this is the list next region random text rule: [ lr command in post-game ]
+	now lj-cue-prod is false;
+	choose row (next-region-start of curlistnum) in table of megachatter;
+	region-random-list whichreg entry;
+	now curlistnum is (next-region-start of curlistnum);
 
-Table of Final Question Options (continued)
-final question wording	only if victorious	topic	final response rule	final response activity
-"[b]ROVE OVER[r] to see what's behind [b]STORE H[r]"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
+to decide which number is rand-txt-count of (rg - a region):
+	let temp be 0;
+	repeat through table of megachatter:
+		if there is a whichreg entry and rg is whichreg entry:
+			increment temp;
+	decide on temp;
 
-This is the epilogue rule:
-	fully resume the story;
-	say "You decide, why not [b]ROVE OVER[r]?";
-	clean-for-roving;
+to region-random-list (rg - a region):
+	let rtc be rand-txt-count of rg;
+	if rtc is 0:
+		say "There is no random text for [rg].";
+		continue the action;
+	say "Here [if rtc > 2]are all the random text lists[else if rtc is 2]are both the random text lists[else]is the only random text list[end if] [if rg is Meta Team]for general commands[else]for [rg][end if].";
+	let mycount be 0;
+	repeat through table of megachatter:
+		if there is a whichreg entry and rg is whichreg entry:
+			increment mycount;
+			let nr be number of rows in mytab entry;
+			if there is a lasties entry and number of characters in lasties entry > 2, increment nr; [account for the final message that is outside the table]
+			say "[mycount]. [descr entry] ([nr] anagrams)[line break]";
+	lj-cue;
+
+lj-cue-prod is a truth state that varies.
+
+to lj-cue:
+	if lj-cue-prod is false:
+		say "You can type [b]LJ[r]/[b]RJ[r]/[b]JR[r] to jump to the next region's lists.";
+		now lj-cue-prod is true;
+
+megsort is a truth state that varies.
+
+table of endgame region abbreviations
+this-reg	this-top (topic)	this-pre-rule	this-text
+Meta Team	"la/lg"
+--	"lc"	--	"There's nothing extra, or extra licentious, behind Store C."
+Demo Dome	"ld"	is-demo-visited rule
+--	"lb/le/lj/ll/lq/lx/lz"	--	"There was nothing to explore behind [sto-listed]."
+--	"lf/li/lm"	--	"[sto-listed] was available to explore in [shuf] but not [this-game]."
+Meta Team	"lg"
+others	"lh"	is-others-passed rule
+--	"lk"	--	"No region was behind Store K[if tokers are off-stage], though you could get a small bit of help from it[end if]."
+Ordeal Reload	"lo"
+presto	"lp"
+stores	"ls"
+otters	"lt"
+routes	"lu"
+troves	"lv"
+towers	"lw"
+oyster	"ly"
+
+to say sto-listed: say "Store [character number 2 in the player's command in upper case]".
+
+this is the is-demo-visited rule:
+	if mrlp is demo dome, continue the action;
+	say "I can't show you the list for the final non-puzzle area, yet. You haven't solved it." instead;
+
+to decide whether others-passed:
+	if mrlp is demo dome or others is solved, yes;
+	no;
+
+this is the is-others-passed rule:
+	if others-passed, continue the action;
+	say "I can't show you the random text lists for Store H, yet. You haven't solved it." instead;
+
+this is the showing regional lists rule:
+	repeat through table of endgame region abbreviations:
+		if the player's command matches this-top entry:
+			if there is a this-pre-rule entry, abide by the this-pre-rule entry;
+			if there is a this-text entry:
+				say "[this-text entry][line break]";
+			else:
+				region-random-list this-reg entry;
+			the rule succeeds;
+	say "There was a code fall-through here. I should have given a more detailed message, but to specify a region, you need to say [if peek keep is visited]ld/[end if]lg/[if others-passed]lh/[end if]lo/lp/lt/lu/lv/lw/ly. The second letter refers to the store that leads to the region, with O being Ordeal Reload (intro) and G being general stuff e.g. responses to empty commands. [b]LA[r]=all.";
+
+this is the show list of lists rule:
+	let myrow be 0;
+	let nr be 0;
+	say "Here is a list of all the lists of random anagrams. If you did not visit a region, no spoilers are contained here. Pick a number to see which one, or [b]N/[r]/[b]LN[r]/[b]LN[r] lets you see the next. ";
+	now listpoke is true;
+	ital-say "the distribution of list sizes (numbers or bytes) approximately obeys Benford's and Zipf's Law, which I think is very cool. Both the laws, and that the lists obey them.";
+	repeat through table of megachatter:
+		increment myrow;
+		if there is a mytab entry:
+			now nr is number of rows in mytab entry;
+		else:
+			d "Blank row.";
+			now nr is 16; [undos]
+		if there is a lasties entry and number of characters in lasties entry > 2, increment nr;
+		if whichreg entry is others and not others-passed:
+			say "([b]REDACTED[r] post-Elvira stuff behind Store H.)[line break]";
+			the rule succeeds;
+		if whichreg entry is demo dome and peek keep is unvisited:
+			say "[b]REDACTED[r]) [b]DEMO DOME MODE[r] stuff.)[line break]";
+		say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
+		if the remainder after dividing myrow by 20 is 0:
+			abide by the avoid keypress in menu testing rule;
+			say "<press Q to quit or another key to see more>";
+			let cholet be the chosen letter;
+			if cholet is 113 or cholet is 81:
+				general-randtext-nag;
+				the rule succeeds;
+	general-randtext-nag;
+	next-list-poke;
+
+randtext-nag-yet is a truth state that varies.
+
+to general-randtext-nag:
+	if randtext-nag-yet is false:
+		now randtext-nag-yet is true;
+		say "By the way, you can list a region's random text with, say, [b]LO[r] for Ordeal Reload, [b]LY[r] for oyster, etc"
+
+listpoke is a truth state that varies.
+
+to next-list-poke:
+	if listpoke is false:
+		ital-say "you can see the next list if you type [b]N[i], [b]NL[i] or [b]LN[i]";
+		now listpoke is true;
+
+this is the show a list by number rule:
+	try liliing the number understood instead;
+
+chapter m vs f rule
+
+this is the sort male female out rule:
+	say "Here is what the game treats differently: (* = trivial)[line break]";
+	repeat through table of sexdif:
+		say "[2da][examp entry][line break]";
+	if others is solved:
+		repeat through table of others sexdif:
+			say "[2da][examp entry][line break]";
+
+table of sexdif [tsx]
+examp
+"[bold type](general)[r] Dropping something."
+"Examining yourself."
+"[bold type](Ordeal Reload)[r] The note from [gtmn] about the purse, and the purse itself too"
+"Ditching Report Porter Perrot."
+"Complain about the media to Elmo."
+"Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
+"One page of the dope op-ed is named differently."
+"The clues for the ramp are different, but the name Mr. Pa is still cringy either way. I hope it's the right sort of cringy."
+"The message for leaving the Means Manse."
+"[bold type](stores)[r] The hoarder/acuter curate says something different when you return."
+"Double dipping on sorbet in Store B."
+"[bold type](routes)[r] Cursing in Cleric Circle."
+"Going a direction in Same Mesa."
+"[bold type](troves)[r] catching the thief."
+"Saying [b]ACRE[r]."
+"Reading [b]DEAL[r]."
+"When entering the Upscale Capsule."
+"[bold type](presto)[r] The plebe stops you or lets you by with different text."
+"[bold type](oyster)[r] The win-text for the [b]OYSTER[r] region."
+"Anger Range changes to Hero's or Shero Shore."
+"Shoer Osher changes gender too."
+"Attacking the pikes/carps."
+"[bold type](towers)[r] The mardier admirer reacts differently to TALKing/KISSing, etc."
+"The diverse deviser reminds you of Boy/Girl Scouts."
+"The ego drains drain you a bit more if you're female."
+"The Coasting Agnostic has a different name, with a (sic) on making the bot-boat."
+"Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."
+"Lars Eede/Elsa Erde has the Reed's Ale east of Treading Gradient."
+"Luc Sym or Ms. Lucy guards north of the Scope Copse."
+"The Hostile-is-He Lot or Lois the Hostile guards south of Actionless Coastlines."
+"[bold type](otters)[r] reactions to KISSing, EXAMINEing the [pla-ma], talking/dispelling/attacking or leaving while they're in the Disowned Downside."
+"[b]KISS[r]ing Gretta or taking to her with the [pla-ma] around."
+"Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
+"[b]KISS[r]ing Elvira or losing to her in battle."[]
+"The win text."
+
+table of others sexdif
+examp
+"[bold type](others)[r] Trying to make [b]GAPERS[r] in Rustic Citrus."
+"The win-text for beating [b]OTHERS[r]."
+"Lord Al Ollard or Dr. Lola Ollard appears on a droll dollar."
+"Red Rat Art Erd or Dr. Tera Darter is the Tarred Trader."
+
+chapter show ranks rule
+
+[note: the show ranks rule is in the common file]
+
+chapter seeding descriptions (hidden)
+
+global-ord is a number that varies.
+
+definition: a thing (called th) is current-list:
+	if pod-num of th is global-ord, yes;
+	no;
+
+bold-chosen is a truth state that varies.
+
+this is the show seeds rule:
+	now bold-chosen is true;
+	now global-ord is 1;
+	say "Here is a complete list of randomizations with no spoilers. Ones you encountered this play-through are in [b]BOLD[r].";
+	say "Here are the pods for Rodney's prosaic picaros:[line break]";
+	while number of current-list picaros > 0:
+		say "You will see one of pod [global-ord] at random: [list of current-list picaros].";
+		increment global-ord;
+	now global-ord is 1;
+	now in-think is true;
+	say "Here are the pods for the parleys splayer players['] pickup lines:[line break]";
+	while number of current-list pickup-lines > 0:
+		say "You will see one pickup line from pod [global-ord] at random: [list of current-list pickup-lines].";
+		increment global-ord;
+	now in-think is false;
+	now bold-chosen is false:
+
+before printing the name of a thing (called th) when bold-chosen is true:
+	if th is not off-stage, say "[b]".
+
+after printing the name of a thing (called th) when bold-chosen is true:
+	if th is not off-stage, say "[r]".
 
 volume mapping
 
