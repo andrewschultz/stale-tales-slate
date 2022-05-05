@@ -2809,7 +2809,7 @@ Dourest Detours
 Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
 >undo
 \\
-#testcase-others-dourest-detours
+#testcase-exits-dourest-detours
 >exits
 WRONG 2743
 
@@ -4375,6 +4375,9 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 
 @!minh,mini
 >in
+\\
+Mesprise Premises
+
 
 @nud
 #ttc-table-of-mesprise-premises-nudges-mesprise
@@ -4418,6 +4421,15 @@ After a thoughtful gaze, you reckon the itster could make the Tetris Sitter TRIS
 >give pot to sitter
 #OK-APOSTROPHE
 She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to change her outlook. You see red at her mumbling.
+
+@verbs
+#testcase-outside-mesprise-premises
+>out
+The only way to exit is east, so let's go that way.
+\\
+#testcase-exits-mesprise-premises
+>exits
+The only way you seem to be able to go is east.
 
 @verbs
 #ttc-table-of-towers-attacks-tetris-sitter

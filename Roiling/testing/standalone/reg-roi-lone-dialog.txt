@@ -811,7 +811,7 @@ DEBUG INFO: current quip = clues-quip.
 DEBUG INFO: current quip = gretta-quip.
 "She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target." You both cringe. "No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits." Elmo shows you a picture of her.
 
-[You record the information about Gretta in your notepad.]
+(You record the information about Gretta in your notepad.)
 
 [1] Jumbo, um, job. Six of 'em? Some fix!
 [2] Finish Fishin'.

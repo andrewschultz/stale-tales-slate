@@ -382,7 +382,7 @@ Smells, savory, vary so.
 >e
 With greenish sheering all around, one direction seems as good as any other. Maybe you need to tinker with the moss cap.
 \\
-#+testcase-exits-rustic-citrus
+#testcase-exits-rustic-citrus
 >exits
 You've lost your bearings a bit, but maybe the moss cap could help in another form.
 
@@ -1776,7 +1776,7 @@ Len Craig's prices are relatively fair. He's on your side. There's no reason to 
 The only way to exit is west, so let's go that way.
 >undo
 \\
-#exits-outside-clangier-clearing
+#testcase-exits-clangier-clearing
 >exits
 The only way you seem to be able to go is west to Swell Wells.
 
@@ -1970,6 +1970,15 @@ Dr. Severe
 #ttc-table-of-others-nowheres-scape-space
 >e
 One look at the warding drawing disabuses you of any notion of going anywhere except back up.
+\\
+#testcase-outside-scape-space
+>out
+The only way to exit is up, so let's go that way.
+\\
+#testcase-exits-scape-space
+>exits
+The only way you seem to be able to go is up.
+
 
 @spoi
 \\

@@ -328,7 +328,7 @@ Hows Show
 >out
 The only way to exit is south, so let's go that way.
 \\
-#exits-outside-hows-show
+#testcase-exits-hows-show
 >exits
 The only way you seem to be able to go is south to Peek Keep.
 
@@ -489,7 +489,7 @@ Ned's Dens
 >out
 The only way to exit is east, so let's go that way.
 \\
-#exits-outside-neds-dens
+#testcase-exits-neds-dens
 >exits
 The only way you seem to be able to go is east to Peek Keep.
 
@@ -731,6 +731,7 @@ A welcoming place full of feeling and peace and weird new ideas that it's just g
 >out
 The only way to exit is west, so let's go that way.
 \\
+#testcase-exits-evoc-cove
 >exits
 The only way you seem to be able to go is west to Peek Keep.
 
@@ -992,7 +993,7 @@ Sparse Spares
 >out
 The only way to exit is up, so let's go that way.
 \\
-#exits-outside-sparse-spares
+#testcase-exits-sparse-spares
 >exits
 The only way you seem to be able to go is up to Peek Keep.
 

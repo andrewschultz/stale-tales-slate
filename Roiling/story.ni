@@ -2533,7 +2533,7 @@ before quipping when player is in Disowned Downside (this is the Gretta checks r
 					say "A bit of awkward silence follows, but it's nowhere near as awkward as the [players]['] conversation was.[no line break]";
 					now hold-it-up is true;
 					the rule succeeds;
-				say "OK.";
+				say "Okay.";
 				continue the action;
 
 this is the no-meta-in-convo rule: if rq is active, say "[convoforce]." instead;
@@ -4143,13 +4143,13 @@ before scaning (this is the check for cheats the player doesn't want rule):
 		if squee is true:
 			say "You hear loud squealings from the equals sign. This may be a near or total spoiler. Go ahead anyway?";
 			if the player regex-prompt-consents, continue the action;
-			say "OK." instead;
+			say "Okay." instead;
 		if squee-warn is false and equals-pushed is false:
 			now squee-warn is true;
 			ital-say "this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.";
 			say "You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?";
 			if the player yes-consents, continue the action;
-			say "OK." instead;
+			say "Okay." instead;
 
 check-spoil is a truth state that varies.
 
@@ -7173,7 +7173,7 @@ carry out abouting:
 		say "You push your luck, but no u-boat shows up. [if Ripe Pier is unvisited]Good thing you're above-ground[else if player is in Ripe Pier]A ship is already there[else if player is in Cripple Clipper]That's the last thing you'd need now[else][end if].";
 		say "Oh, wait, did you want to see the [b]ABOUT[r] message for real? I should note here you don't need [b]ABOUT[r] to win the Routes area.";
 		unless the player regex-prompt-consents:
-			say "OK." instead;
+			say "Okay." instead;
 	say "[this-game] is the sequel to [shuf] and part 2 in my Stale Tales Slate. The third is [trt], which is much shorter but milks the concept completely dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as [shuf] but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story and hinting in the post-comp release. You can see more abut the people who helped the game come to be by typing [b]CREDITS[r]. There are a lot of them!";
 	say "[line break][this-game] is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, but you don't get anything special for that beyond a feeling of accomplishment.";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing [b]TRANSCRIPT[i] at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [ghsite]--no need for an account." instead;
@@ -9022,7 +9022,7 @@ to pad-rec (q - text):
 			if known entry is false:
 				now known entry is true;
 				if there is no verify entry or verify entry is true or number of characters in recbuffer > 0:
-					say "[if need-line-break][line break][end if][i][bracket]You record the information about [recbuffer][short entry] in [mult-if]your [one of]pedanto-[or][stopping]notepad.[close bracket][r][line break]";
+					say "[if need-line-break][line break][end if][i](You record the information about [recbuffer][short entry] in [mult-if]your [one of]pedanto-[or][stopping]notepad.)[r][line break]";
 			now recbuffer is "";
 			the rule succeeds;
 	say "BUG! Tried to write [q], a notepad entry that wasn't there. This isn't a game-breaking bug, but it's bad for user-friendliness. Please let me know at [email].";
@@ -13226,7 +13226,7 @@ check scaning USB:
 		now usb-scan-warn is true;
 		say "You wonder if you need to. There aren't many possibilities. There may even be two ways to change it. After all, it's pretty universal. Scan anyway?";
 		if the player yes-consents:
-			say "Ok.";
+			say "Okay.";
 		else:
 			say "Good sport!" instead;
 
