@@ -249,6 +249,13 @@ to item-warp:
 
 ignore-line-break is a truth state that varies.
 
+to say ilb-later:
+	now ignore-line-break is true;
+
+to say opt-break: [ I really hate having to use this! But in one case, it worked well. The problem is, it's so hard to turn off if you miss anything. ]
+	if ignore-line-break is true, say "[run paragraph on]";
+	now ignore-line-break is false;
+
 to score-notify: do nothing;
 
 book inform 6 stubs
@@ -826,7 +833,7 @@ this is the ordeal-loader-hinting rule:
 	if player is in Notices Section:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
 		if player does not have gadget, all-say "You probably want to [b]TAKE GADGET[r] before entering the gate. Well, maybe even [b]TAKE ALL[r]." instead;
-		if lube-asked is false, all-say "You need to ASK GATEMAN ABOUT CABINET." instead;
+		if lube-asked is false, all-say "You can [b]ASK GATEMAN ABOUT CABINET[r] to get some goodies in adddition to the tagged gadget." instead;
 		all-say "You can just enter the getaway gateway now." instead;
 
 section stores
@@ -1490,10 +1497,13 @@ check inserting it into (this is the straw-hay insert rule):
 			if second noun is scraped wall, say "Straw would be perfectly sensible, to make the scraped wall impermeable. It seems to indicate the need for a hallway, though. Maybe another material." instead;
 			if second noun is not sack, say "The straw is probably more useful thatching a cottage or something. You haven't seen any, yet." instead;
 	if second noun is silo:
-		if noun is not missile and noun is not panel and noun is not door, say "That doesn't belong in or on the silo." instead;
+		if noun is not missile and noun is not panel and noun is not door, say "[that-those-do of noun] belong in or on the silo." instead;
 	if second noun is cafe face:
 		if gin nope opening is touchable, try putting noun on gin nope opening instead;
 		say "[if player is on cafe face]There's no place something'll stick on the cafe face this high up. Well, not yet[else]The bottom of the cafe face doesn't seem like a useful place to stick things[end if]." instead;
+
+to say that-those-do of (th - a thing):
+	say "[if noun is plural-named]That doesn't[else]Those don't[end if]"
 
 check putting on scraped wall: try inserting noun into scraped wall instead;
 
@@ -2111,7 +2121,7 @@ carry out peeling it with:
 	if noun is show hows tag:
 		say "That'd be one way to remove it. But it would probably disable the gadget.";
 		ask-to-cut instead;
-	if noun is not a glopmeat, say "That doesn't need to be scraped. Try something stuck to something." instead;
+	if noun is not a glopmeat, say "[that-those-do of noun] need to be scraped. Try something stuck to something." instead;
 	if noun is in canister, say "The chisel and the blades would have a big fight first." instead;
 	if noun is not in Flesh Shelf, say "You already peeled it off." instead;
 	say "Cr-r-r-r-k. The chisel successfully leverages the freezer-burned [noun] from the wall.";
@@ -2857,7 +2867,8 @@ pf-warn is a truth state that varies.
 
 to preef (flipper - a thing):
 	if flipper is unfigured:
-		say "[i][bracket]That's worth noting in your notepad for later, so you do[one of][or], once again[stopping], under [b]FLIPS[r].[close bracket][r][line break]";
+		say "[i](That's worth noting in your notepad for later, so you do[one of][or], once again[stopping], under [b]FLIPS[r].)[r][if ignore-line-break is true][run paragraph on][else][line break][end if]";
+		now ignore-line-break is false;
 	now flipper is prefigured;
 	choose row with short of "flips" in table of notepad entries;
 	now known entry is true;
@@ -3010,6 +3021,7 @@ scan-to-header is a truth state that varies.
 
 to say last-scan-thing:
 	if last-scan is nothing or last-scan is moot, continue the action;
+	if map region of location of last-scan is not mrlp, continue the action;
 	now scan-to-header is true;
 	say " || ";
 	say "[last-scan]:[if last-was-cert is true][rgtext of last-scan][else][rgbtext of last-scan][end if]";
@@ -3596,7 +3608,7 @@ check inserting into the acne bit cabinet:
 
 check examining cabinet:
 	ignore the examine containers rule;
-	if location of player is Trips Strip, say "You've no idea where the cabinet puts all its items. Maybe you didn't read the right fantasy books. But--they're there, helping keep your inventory free. A small favor[if number of things in cabinet > 0]. You notice some potentially useful stuff in the cabinet: [list of things in cabinet]." instead;
+	if location of player is Trips Strip, say "You've no idea where the cabinet puts all its items. Maybe you didn't read the right fantasy books. But--they're there, helping keep your inventory free. A small favor[if number of things in cabinet > 0]. You notice some potentially useful stuff in the cabinet: [list of things in cabinet][end if]." instead;
 
 check opening acne bit cabinet: say "It already is." instead;
 
@@ -3858,7 +3870,7 @@ check taking the show hows tag:
 			say "Ok, taking the gadget.";
 			try taking the gadget instead;
 		else:
-			say "Ok.";
+			say "Okay.";
 	the rule succeeds;
 
 check pulling show hows tag: try taking show hows tag instead;
@@ -4205,7 +4217,7 @@ this is the saltine-thrucheck rule:
 			say "BYPASSING FOR TESTING."; [bold-ok]
 		else:
 			unless the player dir-consents:
-				say "Ok." instead;
+				say "Okay." instead;
 
 this is the saltine-llp rule:
 	if noun is unnecc:
@@ -4656,7 +4668,7 @@ to pad-rec (q - text):
 			if known entry is false:
 				now known entry is true;
 				if there is no verify entry or verify entry is true or number of characters in recbuffer > 0:
-					say "[line break][i][bracket]You record the information about [recbuffer][short entry] in [mult-if]your [one of]dope tan [or][stopping]notepad.[close bracket][r][no line break]";
+					say "[line break][i](You record the information about [recbuffer][short entry] in [mult-if]your [one of]dope tan [or][stopping]notepad.)[r][no line break]";
 			now recbuffer is "";
 			if say-break is true:
 				say "[line break]";
@@ -5163,9 +5175,9 @@ understand "forest1" as sf when debug-state is true.
 
 understand "softer" and "softer forest" as sf when mrlp is forest.
 
-description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear sign of clearings. But [vis-hint]."
+description of sf is "You recognize no trees: no sprucy cyprus, forensic conifers, or even a clear sign of clearings. But [vis-hint]."
 
-to say vis-hint: say "[if stew is touchable or teas are touchable]there's a[nuthers] smell[else if shout is touchable]you hear a rambling shout[else if thorn is touchable]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
+to say vis-hint: say "[if stew is touchable or teas are touchable]there's a[nuthers] smell you should check out[else if shout is touchable]you hear a rambling shout[else if thorn is touchable]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
 
 to say nuthers: if player is in rf, say "[if stew is in sf or teas are in sf]nother[end if]"
 
@@ -5394,7 +5406,7 @@ report wearing the beard:
 check putting it on(this is the disguise-piece creation rule):
 	if noun is a disguise-piece and second noun is a disguise-piece:
 		if elevation of second noun > elevation of noun, try putting second noun on noun instead;
-		say "The [noun] hook[if noun is not shades]s[end if] over the [second noun] easily and naturally.";
+		say "The [noun] hook[if noun is not shades]s[end if] over the [second noun] easily and naturally.[opt-break]";
 		now noun is part of second noun;
 		if shades are part of nose and nose is part of beard:
 			now shades are part of beard;
@@ -5850,7 +5862,7 @@ the noughts are a plural-named thing in bubble. understand "naughts" as noughts.
 
 understand "0s" and "zeros" and "zeroes" as noughts.
 
-description of the noughts is "One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.[paragraph break]There is no bubble gum in [this-game]."
+description of the noughts is "One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.[paragraph break]There is no bubble gum in [this-game]. But hey, two out of three ain't bad."
 
 after doing something with noughts:
 	if nau-nou is false and the player's command matches "naughts":
@@ -5859,13 +5871,16 @@ after doing something with noughts:
 
 nau-nou is a truth state that varies.
 
+check taking the noughts:
+	say "You seem to hear a chorus of ugh-nots." instead;
+
 section shotgun
 
 the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is fungible.
 
 the shotgun can be loaded. the shotgun is not loaded.
 
-description of shotgun is "It's pretty dingy but still intimidating, and it's stamped [b]NO THUGS[r] in red. For whatever reason, it's six-barreled at the muzzle end[if shotgun is not loaded]. Not loaded, though[else]. It's loaded[end if]."
+description of shotgun is "A glance at your shotgun: it's pretty dingy but still intimidating, and it's stamped [b]NO THUGS[r] in red. For whatever reason, it's six-barreled at the muzzle end[if shotgun is not loaded]. Not loaded, though[else]. It's loaded. You will probably need to [b]SHOOT[r] it at some point[end if]."
 
 the muzzle is part of the shotgun. description of muzzle is "Six-barreled. Weird."
 
@@ -5946,7 +5961,7 @@ chapter silly scenery
 
 section scoffer coffers
 
-to say scoffy-desc: say "The [item described] remind you of all the times you were laughed at and how even the tritest titters hurt."
+to say scoffy-desc: say "The [item described] remind you of all the times you were laughed at and how even the tritest titters hurt"
 
 to say scoffy-bore: say "You don't want to mess with [the item described] and the horrible laughter contained therein. Plus, they may be guarding you from worse"
 
@@ -6007,7 +6022,7 @@ check examining maps in Ghouls Slough:
 
 chapter Cruel Ones' Enclosure
 
-the Cruel Ones' Enclosure is boring amusing scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but cleatly irrelevant, invective against whoever demoted them after release 4. Why, they used to have a whole room named after them. The one you just left! You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "The [enclosure] looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
+the Cruel Ones' Enclosure is boring amusing scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but clearly irrelevant, invective against whoever demoted them after release 4. Why, they used to have a whole room named after them. The one you just left! You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "The [enclosure] looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
 
 understand "cruel ones" and "ones enclosure" and "cruel ones enclosure" and "ones" as Cruel Ones' Enclosure when player is in Ghouls Slough.
 
@@ -9298,12 +9313,10 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 				[d "the-from [myh] [the-from entry] visible.";]
 				if there is an exact-text entry and the player's command matches exact-text entry:
 					[d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";]
-					now ignore-line-break is true;
 					try fliptoing the-to entry;
 					the rule succeeds;
 				if there is a text-back entry and the player's command matches text-back entry:
 					[d "2nd loop Flipfroming from anagram loop: [the-from entry] with command [the player's command].";]
-					now ignore-line-break is true;
 					try fliptoing the-from entry;
 					the rule succeeds;
 				if the-from entry is sliver, break;
@@ -9339,6 +9352,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 			else:
 				say "It looks like you may be trying to combine the two items. PUT X ON Y is the recommended verb. Would you like to do so right now?";
 				if the player yes-consents:
+					now ignore-line-break is true;
 					if bin-try is 3, try putting nose on shades instead;
 					if bin-try is 5, try putting nose on beard instead;
 					if bin-try is 6, try putting beard on shades instead;
@@ -9391,7 +9405,10 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	say "[l-or-look-prompt].";
 	the rule succeeds;
 
-to say l-or-look-prompt: say "You can't see anything like that here. If you're trying to view the room, [b]L[r] or [b]LOOK[r] should work"
+to say l-or-look-prompt:
+	say "You can't see anything like that here. If you're trying to view the room, [b]L[r] or [b]LOOK[r] should work[if number of words in the player's command > 2]";
+	if the player's command includes "to" or the player's command includes "behind" or the player's command includes "under":
+		say ". Prepositions are also not needed with looking or examining"
 
 Rule for printing a parser error when the latest parser error is the I beg your pardon error: say "[one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
 
@@ -9832,7 +9849,7 @@ this is the basic scaning item checks rule: [ this is for things that can cross 
 			say "Hm, the warts are registering. [no line break]";
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
-	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [if noun is plural-named]those[else]that[end if] around." instead;
+	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [the noun] around." instead;
 
 carry out scaning:
 	d "scaning [noun].";
@@ -9892,6 +9909,9 @@ to note-spaces:
 
 table of kibitzes
 kib	helpy
+whiff of stew	"Four entries. Whiff and smell are five letters. The reading must rely on what the smell is."
+aroma of teas	"Four entries. Aroma and smell are five letters. The reading must rely on what the smell is."
+attics	"Hmm. You thought the attics would be more appropriate for the doll house, but maybe the gadget thinks you can change back, too."
 motto	"Since Motto is only five letters, you wonder what's up, but it's labeled [b]A MOTTO[r]."
 tall trio	"You scanned each of the tall trio, and the readout didn't change."
 reading	"[read-drain] the drainage."
@@ -10888,7 +10908,8 @@ first-wfak is a truth state that varies. first-wfak is false.
 to say wfak:
 	if debug-state is false:
 		if first-wfak is false:
-			say "(this is the first in-game pause[if numsaves > 0] after a saved game[end if]. Whenever the game pauses without a cursor in the future, you need to push any key to continue.)";
+			say "[line break]";
+			ital-say "this is the first in-game pause[if numsaves > 0] after a saved game[end if]. Whenever the game pauses without a cursor in the future, you need to push any key to continue.";
 			now first-wfak is true;
 			say "[line break]";
 		wait for any key;
@@ -10923,8 +10944,10 @@ check reading (this is the reading is almost examining rule):
 	if noun is gadget, try examining tag instead;
 	repeat through table of readables:
 		if noun is to-read entry, say "[the-red entry][line break]" instead;
-	say "You found nothing to read, so you just [b]EXAMINE[r], instead.";
+	say "Most of the time[if-map], unless writing is specifically indicated, [b]READ[r] maps to [b]EXAMINE[r], so let's [b]EXAMINE[r].";
 	try examining the noun instead;
+
+to say if-map: if noun is maps, say " (even with the maps)"
 
 table of readables
 to-read	the-red

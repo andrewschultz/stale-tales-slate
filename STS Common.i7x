@@ -683,6 +683,7 @@ chapter rules
 this is the autosave on region complete rule:
 	if autosave is true and mrlp is autosavable:
 		if autosave-known is false and mrlp is orig-region:
+			say "[line break]";
 			ital-say "[this-game][i] is configured to create an auto-save dialogue after each region you solve. This can be switched off with [b]AVERSE[i] or switched back on with [b]RESAVE[i]. You can also abort saving with no penalty. This nag will not reappear.";
 			wfak;
 		if debug-state is false:

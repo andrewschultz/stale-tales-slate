@@ -1087,7 +1087,7 @@ X ITES exits	"[one of]The exits remind you of something to do. Or not do. You do
 
 to say toho: say "[if grips are touchable and ropes are touchable]you did a bit more[else]you can also meddle with the sprig and spore[end if]".
 
-to say no-sto: say "Nothing is hidden in that store".
+to say no-sto: say "Nothing is hidden in [noun]".
 
 to say nxt-g: say "Maybe next game".
 

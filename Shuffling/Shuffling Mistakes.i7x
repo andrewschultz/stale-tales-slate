@@ -121,6 +121,8 @@ understand "noetics" as a mistake ("There's enough information here.[note-great-
 
 understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.[note-great-guesses]") when salient saltine is touchable.
 
+understand "tastic" as a mistake ("Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.") when attics are touchable.
+
 book stores
 
 chapter Trips Strip
@@ -141,11 +143,19 @@ understand "presto" as a mistake ("Your magic is not advanced enough to change S
 
 understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.[note-great-guesses]") when player is in Trips Strip and trade tread is in Trips Strip.
 
+understand "retros" as a mistake ("You mull hopping on over to ifdb.org, the interactive fiction database, to find even more fun text adventures. But only once you finish this first!") when player is in Trips Strip and Store R is touchable.
+
+understand "roesti" as a mistake ("You say to yourself, 'Self, what I could really use right now is a German-Swiss dish of fried potatoes!' Then you say to yourself, 'Self, there's probably no deli within a long way of here, so you'll have to wait. Hey, we can wait together and commiserate.'") when player is in Trips Strip and store i is in trips strip.
+
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![mistake-clue of store u][note-great-guesses]") when player is in Trips Strip.
+
+understand "sorter" as a mistake ("But you've already been picked! No need for further sorting.") when player is in Trips Strip and Store R is touchable.
 
 understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is moot]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].[note-great-guesses]") when player is in Trips Strip.
 
 understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.[note-great-guesses]") when player is in Trips Strip.
+
+understand "torres" and "tresor" as a mistake ("Grand, but unfortunately, not in English.") when player is in Trips Strip and Store R is touchable.
 
 understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[mistake-clue of store w][note-great-guesses]") when player is in Trips Strip.
 
@@ -204,7 +214,9 @@ understand "inks" as a mistake ("The skin sink bleeds no color.") when player is
 
 understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers .") when player is in Flesh Shelf.
 
-understand "silver" as a mistake ("The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.[paragraph break][preef-silv]") when livers are touchable.
+understand "schwandi" as a mistake ("Perhaps the sandwich is from a small village in Switzerland, but it may just be easier to [b]OPEN[r] the sandwich, instead.") when sandwich is touchable.
+
+understand "silver" as a mistake ("The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.[paragraph break][ilb-later][preef-silv]") when livers are touchable.
 
 understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
 

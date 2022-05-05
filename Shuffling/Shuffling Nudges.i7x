@@ -245,7 +245,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "east"	329377911	--	forest-east rule	"[forest-no of teas]."
 "eat"	233103945	teas	--	"[forest-no of teas]. Anyway, it doesn't smell like just one tea."
 "muzzle"	596740144	shotgun	--	"You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough."
-"sandwich"	397613884	sandwich	--	"It would be easier to just pick it apart physically, without anything fancy."
+"sandwich"	397613884	sandwich	--	"Hmm. That's a lot of letters. You wonder if pulling the sandwich apart might break it into smaller, more manageable (or anagrammable) pieces."
 "meat"	297179098	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	see-meats rule	"[spec-meat]."
 "liver"	419101417	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon. You put one liver where it needs to be. No need to futz with the remaining liver[else if River Ville liver is not touchable or viler liver is not touchable]Your thoughts go to the other liver[else][bothlivers][end if]."
@@ -338,11 +338,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "ink"	166833532	--	--	"The skin sink is frozen that way. Ba dum bum."
 "cities"	436181370	--	--	"[ice-cit]."
 "city"	289467701	--	--	"[ice-cit]."
-"canister"	547607653	grinder	--	"The canister [if canister is not broken]is too solid[else]has suffered enough abuse. No need to break it further[end if]."
-"grinder"	465982860	grinder	--	"The grinder is too solid."
+"canister"	547607653	grinder	--	"The canister [cant-grind]."
+"grinder"	465982860	grinder	--	"The grinder [cant-grind]."
 "grin"	231823859	grinder	--	"The ring does not bend."
 "hams"	199819236	canister	--	"You think 'Hm, as...' but don't know what to do. Maybe that is just writing, and [if canister is broken]in any case, you broke the canister, anyway[else]you just put stuff in the canister[end if]."
 "bleads"	319529726	--	--	"The blades, buried in the grinder, remain lifeless."
+
+to say cant-grind: say "[if canister is not broken]just sits there. Perhaps it has a more mundane purpose or fate[else]has suffered enough abuse. No need to break it further[end if]"
 
 to say ice-cit: say "Taking care of the main menace may change the iciest cities"
 
@@ -1029,7 +1031,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "prep"	376061830	prep paper	--	"[no-2]."
 "sheet"	492278501	prep paper	--	"[no-2]."
 "firm"	220906698	prep paper	--	"FIMR is just a mnemonic for the [if Trips Strip is unvisited]places[else]stores[end if] you need to explore[if cur-score of stores is 0], somehow[end if]."
-"tinfoil"	416684530	tin foil info lit	--	"Wrestling with the ramblings on the [tinfoil] won't help anyone."
+"tinfoil"	416684530	tin foil info lit	--	"Wrestling with the ramblings on the [tin foil] won't help anyone."
 "tagged"	319332438	gadget	--	"Bad idea to mess with electronics you don't understand."
 "lemon"	388955186	gadget	--	"That's just an example, for [b]CERTIFY[r]."
 "paste"	410843870	gadget	--	"That's just an example, for [b]RECTIFY[r]."
