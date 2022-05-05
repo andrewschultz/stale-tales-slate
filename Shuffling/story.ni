@@ -133,6 +133,8 @@ include STS Common by Andrew Schultz.
 
 include First Word Retry by Andrew Schultz.
 
+include Bold Final Question Rows by Andrew Schultz.
+
 section test module(s) - not for release
 
 include STS Tests by Andrew Schultz

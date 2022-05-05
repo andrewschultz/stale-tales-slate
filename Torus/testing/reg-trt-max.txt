@@ -10,12 +10,18 @@
 >au 2
 >z
 
+>xyzzy
+So close! Just one letter off. Or one too much. You can maybe guess which one.
+
 >sheesh
 by one point
 Sheesh
 
 #ttc-table-of-progress-1
 The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too.
+
+>xyzzy
+So close! Just one letter off. Or one too much. You probably know which one.
 
 >a
 
@@ -120,5 +126,34 @@ by one point
 
 #ttc-table-of-progress-8
 That's all. You've found a new home, one where you don't have to do anything, but you'd like to. You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more. And yet the lessons you applied ruling Yorpwald will work here in the Strainer Terrains, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later.
+
+>rejects
+Here are some rejected words:
+HORSESHOER could have been a good one, but there was already a Hero's Shore with Shoer Osher in A Roiling Original.
+APPEASES is definitely a word that could've come from APSE, APSE, but it's a verb in a weird tense, so I couldn't fit it in. Also, PEAS could've worked, but it's in the answer.
+SALALS are an evergreen shrub, but no three-letter words make sense.
+A MILLIEME is, apparently, Tunisian currency, so that's too obscure. LIME and MILE would've worked so well!
+BILABIAL means with both lips, but I saw no connection to BAIL.
+GENSENGS was flagged in my words file, but NEGSand GENSdidn't work.
+NOTIONISTS came from oints, twice, but oint is not short for ointment but rather a verb tense of smearing with oil.
+Some other words were neat but too abstract or obscure, or they had nothing that half-anagrammed: JIPIJAPA, SASARARA(scolding), SASSARARAS, SNIFFINESSES(FINESS "almost" works), SNIPPINESSES and TRISECTRICES.
+
+>rej
+Here are some rejected words:
+
+>rejected
+Here are some rejected words:
+
+>rejects
+Here are some rejected words:
+
+>reject
+Here are some rejected words:
+
+>amusing
+If you are wondering whether you missed any cute responses or anagrams, you can look in the Tours Roust Torus Mistakes.i7x file that should come with the distributable from itch.io.
+
+>missed
+You started so quickly, you missed a chance to have a friendly NPC help you. If you visited all the areas without solving any of the rooms, one would help you and continue to help you until you scored a point. I won't spoil it, as it's easy enough to traverse the rooms.
 
 *** Feats! Fates-Feast! Taffetases! ***

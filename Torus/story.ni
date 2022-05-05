@@ -770,7 +770,7 @@ carry out verbing:
 		say "[line break]Also, if you'd like a clue, you can enter a blank command.";
 	the rule succeeds;
 
-section swearing
+chapter swearing
 
 the block swearing obscenely rule is not listed in any rulebook.
 the block swearing mildly rule is not listed in any rulebook.
@@ -778,6 +778,18 @@ the block swearing mildly rule is not listed in any rulebook.
 check swearing mildly: try swearing obscenely instead;
 
 check swearing obscenely: say "Appall? Pal! PAL!" instead;
+
+chapter xyzzying
+
+xyzzying is an action out of world.
+
+understand the command "xyzzy" as something new.
+
+understand "xyzzy" as xyzzying.
+
+carry out xyzzying:
+	say "So close! Just one letter off. Or one too much. You [if score > 0]probably know[else]can maybe guess[end if] which one.";
+	the rule succeeds;
 
 volume endgame
 
@@ -886,14 +898,14 @@ volume endgames
 
 this is the show rejected words rule:
 	say "Here are some rejected words:";
-	say "[line break]HORSESHOER could have been a good one, but there was already a Hero's Shore with Shoer Osher in [aro].";
-	say "APPEASES is definitely a word that could've come from APSE, APSE, but it's a verb in a weird tense, so I couldn't fit it in.";
-	say "SALALS are an evergreen shrub, but no three-letter words make sense.";
-	say "A MILLIEME is, apparently, Tunisian currency, so that's too obscure. LIME and MILE would've worked so well!";
-	say "BILABIAL means with both lips, but I saw no connection to BAIL.";
-	say "GENSENGS was flagged in my words file, but NEGS and GENS didn't work.";
-	say "NOTIONISTS came from oints, twice, but oint is not short for ointment but rather a verb tense of smearing with oil.";
-	say "Some other words were neat but too abstract or obscure, or they had nothing that half-anagrammed: JIPIJAPA, SASARARA (scolding), SASSARARAS, SNIFFINESSES (finess 'almost' works), SNIPPINESSES and TRISECTRICES.";
+	say "[line break][b]HORSESHOER[r] could have been a good one, but there was already a Hero's Shore with Shoer Osher in [aro].";
+	say "[b]APPEASES[r] is definitely a word that could've come from [b]APSE[r], [b]APSE[r], but it's a verb in a weird tense, so I couldn't fit it in. Also, [b]PEAS[r] could've worked, but it's in the answer.";
+	say "[b]SALALS[r] are an evergreen shrub, but no three-letter words make sense.";
+	say "A [b]MILLIEME[r] is, apparently, Tunisian currency, so that's too obscure. [b]LIME[r] and [b]MILE[r] would've worked so well!";
+	say "[b]BILABIAL[r] means with both lips, but I saw no connection to [b]BAIL[r].";
+	say "[b]GENSENGS[r] was flagged in my words file, but [b]NEGS[r]and [b]GENS[r]didn't work.";
+	say "[b]NOTIONISTS[r] came from oints, twice, but oint is not short for ointment but rather a verb tense of smearing with oil.";
+	say "Some other words were neat but too abstract or obscure, or they had nothing that half-anagrammed: [b]JIPIJAPA[r], [b]SASARARA[r](scolding), [b]SASSARARAS[r], [b][b]SNIFFINESSES[r]([b]FINESS[r] 'almost' works), [b]SNIPPINESSES[r] and [b]TRISECTRICES[r].";
 
 after printing the name of a flippable (called fl) when detail-flippable is true:
 	say "([b][word-to-include of fl in upper case][r])";
@@ -902,16 +914,27 @@ after printing the name of a flippable (called fl) when detail-flippable is true
 deed-spoil-warn is a truth state that varies. detail-flippable is a truth state that varies.
 
 this is the show what you missed rule:
-	say "The only opportunities for additional points are in [scene scene]. ";
-	if deededed is false and deed-spoil-warn is false:
-		say "You could have typed [b]DEEDED[r] to bring out some new puzzles. ";
-		say "I'll make you type [b]MISSED[r] again to see spoilers for what is there.";
-		now deed-spoil-warn is true;
+	if score is not maximum score:
+		say "The only opportunities for additional points are in [scene scene]. ";
+		if deededed is false and deed-spoil-warn is false:
+			say "You could have typed [b]DEEDED[r] to bring out some new puzzles. ";
+			say "I'll make you type [b]MISSED[r] again to see spoilers for what is there.";
+			now deed-spoil-warn is true;
+		else:
+			now detail-flippable is true;
+			say "You missed [list of flippables in scene scene].";
+			now detail-flippable is false;
 	else:
-		now detail-flippable is true;
-		say "You missed [list of flippables in scene scene].";
-		now detail-flippable is false;
-	if ever-voice is false, say "[line break]You also missed a chance to have a friendly NPC help you. If you visited all the areas without solving any of the rooms, one would help you and continue to help you until you scored a point. I won't spoil it, as it's easy enough to traverse the rooms."
+		say "You missed nothing in [scene scene]. Well done!";
+	if ever-voice is false, say "[line break]You [if score is maximum score]started so quickly, you[else]also[end if] missed a chance to have a friendly NPC help you. If you visited all the areas without solving any of the rooms, one would help you and continue to help you until you scored a point. I won't spoil it, as it's easy enough to traverse the rooms.";
+	say "[line break]This is the practical, point-scoring stuff. [b]AMUSING[r] has odds and ends.";
+
+
+Rule for amusing a victorious player:
+	say "If you are wondering whether you missed any cute responses or anagrams, you can look in the [b]Tours Roust Torus Mistakes.i7x[r] file that should come with the distributable from itch.io.";
+	say "[line break]Also, you can see it at: [b]https://raw.githubusercontent.com/andrewschultz/stale-tales-slate/main/Torus/Tours%20Roust%20Torus%20Mistakes.i7x[r].[paragraph break]The full source is at [b]https://github.com/andrewschultz/stale-tales-slate/tree/main/Torus[r].";
+	say "[line break]You also get clues for swearing, saying [b]XYZZY[r], saying [b]YES[r], for entering an empty command before circling the torus a few times, and [b]LISTEN[r]ing. These may not be side-splitters, but I smiled when I thought of them.";
+	say "[line break]The Nudges file (replace Mistakes with Nudges) shows rejects for when you try certain anagrams."
 
 volume parser errors
 
