@@ -7789,19 +7789,17 @@ chapter rig one (ignore region)
 
 rigoneing is an action applying to nothing.
 
-understand the command "leadin denial" and "lead in denial" as something new.
-
 understand the command "ignore region" as something new.
 
 understand "ignore region" as rigoneing.
+
+understand "rig one" and "rig one region" as rigoneing.
 
 one-rigged is a truth state that varies.
 
 carry out rigoneing:
 	if one-rigged is true, say "You already did." instead;
-	if mrlp is not Ordeal Reload, say "You can only [b]IGNORE REGION[r] in the Dusty Study." instead;
-	if player is not in Dusty Study, say "You need to do this in the Dusty Study." instead;
-	if Report Porter Perrot is not off-stage, say "You need to reset the game to before when Report Porter Perrot knocks at the door." instead;
+	if mrlp is not Ordeal Reload or player is not in Dusty Study or Report Porter Perrot is not off-stage, say "You can only [b]IGNORE REGION[r] before Report Porter Perrot knocks." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
 	say "Warping space and time, you move back to the Strip of Profits...";
 	get-cool-stuff;
@@ -7810,9 +7808,11 @@ carry out rigoneing:
 	now Ordeal Reload is bypassed;
 	the rule succeeds;
 
-chapter lead in denial
+chapter lead in denial (ignore everything up to last region)
 
 denialnaileding is an action applying to nothing.
+
+understand the command "leadin denial" and "lead in denial" as something new.
 
 understand the command "leadin denial nailed" and "lead in denial nailed" as something new.
 
