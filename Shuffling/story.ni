@@ -772,6 +772,7 @@ this is the first-time-hint-check rule:
 	if first-hint-check is true, continue the action;
 	now first-hint-check is true;
 	say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
+	ital-say "this warning is here because you may wish to hint a specific item but avoid other spoilers. If you say no, the warning will not show again.";
 	if player dir-consents:
 		say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
 		continue the action;
@@ -1924,7 +1925,9 @@ understand the command "help/info/instructions" as something new.
 understand "help" and "info" and "instructions" as instructionsing.
 
 carry out instructionsing:
-	say "[if location of player is Busiest Subsite]There's not much to do here, but if you [b]EXAMINE[r] different things may give you a clue what's going on[else if cur-score of Ordeal Loader is 0]You need to do something with the odor[else]What you did with the odor will clue the rest of the game[end if]. This is a part of all the puzzles in the game, but you'll have to do other things, too[one of].[paragraph break]Note: If you want actual hints, you may wish to try [b]HINT[r] or [b]HINTS[r][or][stopping].";
+	say "[if location of player is Busiest Subsite]There's not much to do here, but if you [b]EXAMINE[r] different things may give you a clue what's going on[else if cur-score of Ordeal Loader is 0]You need to do something with the odor[else]What you did with the odor will clue the rest of the game[end if]. This is a part of most of the puzzles in the game, with some item-munging, but you'll have to do other things, too.";
+	if first-hint-check is false:
+		ital-say "if you want actual hints, you may wish to try [b]HINT[i] or [b]HINTS[i]. You also may wish to [b]HINT[i] a specific object, as generic hinting may point you to something you don't want spoiled yet.";
 	the rule succeeds;
 
 chapter knocking
@@ -3282,7 +3285,7 @@ to say oddo: say "[if odor is in Rested Desert]odor[else]door[end if]"
 
 chapter odor
 
-the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?[paragraph break]Well, maybe it would not.". bore-check is bore-odor rule.
+the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?[paragraph break]Well, maybe it would not[one of].[or]. There are only so many things the odor could become[stopping].". bore-check is bore-odor rule.
 
 this is the bore-odor rule:
 	if current action is smelling, try examining the odor instead;
@@ -3343,7 +3346,7 @@ the bulge is part of the OR DO door.
 
 lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E". rgtext of bulge is "[gcn][gc][rc][rc][gc]".
 
-description of the bulge is "It's shaped like a narrow rectangle with rounded corners. It has an upper corner that fans out. There's no way to pry it from the door. [run paragraph on][bugle-clue]."
+description of the bulge is "It's shaped like a narrow rectangle with rounded corners. Very unnatural! There's no way to pry or pull it from the door, given its shape. [run paragraph on][bugle-clue]."
 
 to say bugle-clue: say "[one of]You give it a few taps, but it's wedged in[or]Maybe it could become some sort of instrument to get rid of the door[or]It's stuck to the door proper, like a tattoo[or]You guess it's your charge to open the door with it[or]You've got no reveilleation, err, revelation, what it should be, yet[or]You pay closer attention--it's early on, and surely you don't have to mix letters too much[cycling]"
 
@@ -3627,7 +3630,7 @@ report taking salient saltine for the first time:
 	say "Got it. You'd have liked a beefier freebie, but with calm opining, you see no use complaining.";
 	the rule succeeds;
 
-description of salient saltine is "It says SLAINTE on the package." [bold-ok]
+description of salient saltine is "It says [b]SLAINTE[r][one of] (pronounced slan-chuh, a Gaelic toast for health)[or][stopping] on the package. Not a brand name, but appropriate in the circumstances."
 
 Undo flag is a number variable. Undo flag is 0.
 
@@ -3967,7 +3970,9 @@ check examining blue lube:
 			now last-lube-turn is turn count;
 
 report taking phail phial:
-	if player has phail phial, say "The cabinet's doors seem to waver a bit[if cabinet-bit-me is true], but this time it doesn't nick you[else], but they don't slam on you[end if]." instead;
+	if player has phail phial:
+		say "The cabinet's doors seem to waver a bit[if cabinet-bit-me is true], but this time it doesn't nick you[else], but they don't slam on you[end if].";
+		say "[line break]'Oh! I should mention the two commands on the phial are the only ones you need. I hope they're powerful enough,' Nat Egam remarks.";
 	continue the action;
 
 section secureing
@@ -9526,7 +9531,12 @@ after reading a command:
 				d "To = [the-to entry].";
 				try fliptoing the-to entry;
 				the rule succeeds;
+	if player is in notices section and gateman is in notices section and cabinet-flip-try is false and hash of the player's command is 384428789:
+		say "''Kind of you to try to help the cabinet, but its wounds are too recent,' says Nat Egam.";
+		now cabinet-flip-try is true;
 	continue the action;
+
+cabinet-flip-try is a truth state that varies.
 
 to reject-msg (rejitm - a thing):
 	repeat through done reject table of mrlp:
@@ -10880,6 +10890,7 @@ to say wfak:
 		if first-wfak is false:
 			say "(this is the first in-game pause[if numsaves > 0] after a saved game[end if]. Whenever the game pauses without a cursor in the future, you need to push any key to continue.)";
 			now first-wfak is true;
+			say "[line break]";
 		wait for any key;
 
 numsaves is a number that varies.

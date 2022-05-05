@@ -1029,7 +1029,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "prep"	376061830	prep paper	--	"[no-2]."
 "sheet"	492278501	prep paper	--	"[no-2]."
 "firm"	220906698	prep paper	--	"FIMR is just a mnemonic for the [if Trips Strip is unvisited]places[else]stores[end if] you need to explore[if cur-score of stores is 0], somehow[end if]."
-"tinfoil"	416684530	tin foil info lit	--	"Wrestling with paranoid ramblings helps no-one."
+"tinfoil"	416684530	tin foil info lit	--	"Wrestling with the ramblings on the [tinfoil] won't help anyone."
 "tagged"	319332438	gadget	--	"Bad idea to mess with electronics you don't understand."
 "lemon"	388955186	gadget	--	"That's just an example, for [b]CERTIFY[r]."
 "paste"	410843870	gadget	--	"That's just an example, for [b]RECTIFY[r]."
@@ -1053,7 +1053,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "salient"	497092104	salient saltine	--	"The saltine's there to help you. Changing it might work against you."
 "point"	372828908	--	know-point rule	"There's no secret cheat between [b]NO TIP[r] and [b]OPT IN[r]."
 "parse"	393057655	--	can-i-parse rule	"There's no in-between for the [b]PARSE[r] and [b]SPARE[r] commands for the gadget."
-"angle"	285314976	phail phial	--	"There's nothing between [b]ANGLE[r] and [b]GLEAN[r] that you can do with the blue lube."
+"angle"	285314976	phail phial	--	"There's no secret command between [b]ANGLE[r] and [b]GLEAN[r] that gives special clues."
 "yorpwald"	548467110	--	past-loader rule	"[if player is in Notices Section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
 "retry"	523922985	--	know-retry-yet rule	"[if player is in trips strip or trips strip is unvisited]You consider trying to mess with [b]RETRY[r] to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no[else]Being able to [b]RETRY[r] is good enough. You don't want to do anything too weird. It could backfire[end if]."
 "notepad"	478859078	--	degen-true rule	"[what-for]."
@@ -1108,7 +1108,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 to say no-2: say "You can't really second-guess the help on the prep paper";
 
-to say chem-bad: say "Bad idea to mess with chemical compounds you don't understand"
+to say chem-bad: say "Whatever organic compounds exist in the blue lube or [phial] don't need rearranging. That stuff's beyond you. They will help you when you want or need it. You just need to [b]GLEAN[r] or [b]ANGLE[r]"
 
 to say gad-part: say "You don't need to mess with the gadget or any part of it. It's probably better not to try"
 

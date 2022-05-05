@@ -363,32 +363,23 @@ Rule for supplying a missing noun while gotothinging:
 
 part xrooming
 
+room-look-warn is a truth state that varies.
+
 xrooming is an action applying to one visible thing.
 
 understand "x [any room]" as xrooming.
 understand "examine [any room]" as xrooming.
 
-check examining location of player:
-	if noun is location of player:
-		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is equivalent to [b]LOOK[r] in [this-game].";
-		try looking instead;
-
 check xrooming:
 	if noun is location of player:
-		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is equivalent to [b]LOOK[r] in [this-game].";
+		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is equivalent to [b]LOOK[r] in [this-game]. Sometimes this will describe scenery for you, but it doesn't have critical information.";
 		try examining location of player instead; [shouldn't happen but just in case]
-	say "[if noun is visited]You've been there, but[else]You haven't gotten there yet, and[end if] you can't see that far[x-room-n].";
-
-check examining location of player (this is the fake the scenery rule) : try looking instead.
-
-room-look-warn is a truth state that varies.
-
-check xrooming:
+	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if].";
 	if room-look-warn is false:
-		say "[b]X[r]/[b]EXAMINE[r] ([b]ROOM[r]) is usually equivalent to [b]LOOK[r] in [this-game]. Sometimes it will describe scenery for you, but it doesn't have critical information.";
+		say "[line break]";
+		ital-say "[b]X[i]/[b]EXAMINE[i] ([b]ROOM[i]) is usually equivalent to [b]LOOK[i] in [this-game].";
 		now room-look-warn is true;
-	if noun is location of player, try looking instead; [shouldn't happen but just in case]
-	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if]." instead;
+	the rule succeeds;
 
 to say x-room-n: say "[one of]. [b]X ROOM[r] is really just the same as [b]LOOK[r] for the room you're in, and you don't need to look ahead or behind[or][stopping]"
 

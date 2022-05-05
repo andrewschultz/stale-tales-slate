@@ -105,6 +105,7 @@ this is the pre-cabinet-bactine rule: [ic]
 	if Trips Strip is unvisited:
 		say "[if gateman is off-stage]That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.[else]'Hey, that's a good idea,' says the gateman. 'The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work.' He pauses. 'Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox.'[end if]";
 		preef tenibac;
+		now cabinet-flip-try is true;
 		the rule fails;
 
 this is the post-cabinet-bactine rule: [ic]

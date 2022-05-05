@@ -283,7 +283,6 @@ You don't need to mess with the gadget or any part of it. It's probably better n
 >examplse
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-
 #ttc-table-of-general-nudges-certify
 >certiyf
 There's no extra setting besides CERTIFY and RECTIFY.
@@ -305,15 +304,15 @@ You've got enough practical help. You don't need anything supernatural.
 
 #ttc-table-of-general-nudges-angle
 >anleg
-There's nothing between ANGLE and GLEAN that you can do with the blue lube.
+There's no secret command between ANGLE and GLEAN that gives special clues.
 
 #ttc-table-of-general-nudges-phail
 >phila
-Bad idea to mess with chemical compounds you don't understand
+Whatever organic compounds exist in the blue lube or PHAIL phial don't need rearranging. That stuff's beyond you. They will help you when you want or need it. You just need to GLEAN or ANGLE.
 
 #ttc-table-of-general-nudges-blue
 >bleu
-Bad idea to mess with chemical compounds you don't understand
+Whatever organic compounds exist in the blue lube or PHAIL phial don't need rearranging. That stuff's beyond you. They will help you when you want or need it. You just need to GLEAN or ANGLE.
 
 # prep paper testing
 
@@ -343,7 +342,7 @@ FIMR is just a mnemonic for the places
 
 #ttc-table-of-general-nudges-tinfoil
 >tinfoli
-Wrestling with paranoid ramblings helps no-one.
+Wrestling with the ramblings on the tin foil info lit won't help anyone.
 
 #########################################change world state
 
