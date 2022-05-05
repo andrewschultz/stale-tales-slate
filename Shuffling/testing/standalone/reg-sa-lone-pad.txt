@@ -95,7 +95,7 @@ RETRY gets Terry to send you to the Trips Strip, wherever that is.
 >gateman
 
 >ask gateman about advice
-[You record the information about advice in your notepad.]
+(You record the information about advice in your notepad.)
 
 #ttc-table-of-notepad-entries-advice
 >pad advice
@@ -110,13 +110,13 @@ RETRY gets Terry to send you to the Trips Strip, wherever that is.
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 
-[You record the information about certify/rectify in multiple entries in your notepad.]
+(You record the information about certify/rectify in multiple entries in your notepad.)
 
 >undo
 
 >ask about certify
 "Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong."
-[You record the information about certify in your notepad.]
+(You record the information about certify in your notepad.)
 
 #ttc-table-of-notepad-entries-certify
 >pad certify
@@ -127,7 +127,7 @@ red/green = right/wrong letters.
 
 >ask about rectify
 "Gives you the first and last letters of what something should be."
-[You record the information about rectify in your notepad.]
+(You record the information about rectify in your notepad.)
 
 #ttc-table-of-notepad-entries-rectify
 >pad rectify
@@ -139,7 +139,7 @@ green dot = 1st letter. Red dot = last letter. Blue = the rest.
 "Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
-[You record the information about red in your notepad.]
+(You record the information about red in your notepad.)
 
 #ttc-table-of-notepad-entries-red
 >pad redness
@@ -147,7 +147,7 @@ Any words that are red, or make you see red, or make people turn red, are all wr
 
 >ask gateman about saltine
 "Miniscule, but more than mini-clues. The next item that baffles you, eat that and XX ... not just X or EXAMINE, and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
-[You record the information about xx in your notepad.]
+(You record the information about xx in your notepad.)
 
 #ttc-table-of-notepad-entries-xx
 >pad xx
@@ -226,7 +226,7 @@ RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the
 >ask gateman about goat
 "Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
 
-[You record the information about the goat in your notepad.]
+(You record the information about the goat in your notepad.)
 
 #ttc-table-of-notepad-entries-the-goat
 >pad goat
@@ -234,7 +234,7 @@ Certify = RGRR and Rectify = RBGB.
 
 >eat writing
 [NOTE: you don't have to do anything with any writing. Just READ whatever contains the writing.]
-[You record the information about writing in your notepad.]
+(You record the information about writing in your notepad.)
 
 >pad writing
 You need to READ or EXAMINE something instead of looking at the WRITING on it.
@@ -244,7 +244,7 @@ You need to READ or EXAMINE something instead of looking at the WRITING on it.
 
 >xyz writing
 [NOTE: you don't have to do anything with any writing. Just READ whatever contains the writing.]
-[You record the information about writing in your notepad.]
+(You record the information about writing in your notepad.)
 
 >pad writing
 You need to READ or EXAMINE something instead of looking at the WRITING on it.
@@ -255,7 +255,7 @@ You need to READ or EXAMINE something instead of looking at the WRITING on it.
 >ask gateman about red bull burdell
 "Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
 
-[You record the information about Red Bull Burdell in your notepad.]
+(You record the information about Red Bull Burdell in your notepad.)
 
 >pad burdell
 The nemesis to be defeated here in Yorpwald. He is too physically strong. Perhaps anagramming magic can help.
@@ -283,7 +283,7 @@ Lets you glimpse what you need to do.
 
 >x stores
 They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only Store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them.
-[You record the information about stores in your notepad.]
+(You record the information about stores in your notepad.)
 
 #ttc-table-of-notepad-entries-stores
 >pad stores

@@ -131,10 +131,15 @@ DEBUG INFO: Rect-text: I---T.
 DEBUG INFO: Cert-text: -----.
 
 @gn
+#testcase-outside-astral-altars
 >exit
 As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
 Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
 >undo
+\\
+#testcase-exits-astral-altars
+>exits
+There seem to be no barriers but also nowhere you'd really want to go.
 \\
 #ttc-table-of-nowheres-astral-altars
 >w
@@ -173,9 +178,13 @@ Gotta keep going forward.
 {$SCOS}
 
 @gn
+#testcase-outside-leis-isle
 >exit
 You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 >undo
+#testcase-exits-leis-isle
+>exits
+You can't leave the Leis Isle without transport.
 
 @hin
 #ttc-table-of-resort-anagrams-rock
@@ -395,6 +404,16 @@ The tree sits there.
 >angle
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
+@gn
+#+testcase-outside-leis-isle
+>exit
+The only way to exit is east, so let's go that way.
+>undo
+\\
+#+testcase-exits-leis-isle
+>exits
+The only way you seem to be able to go is east.
+
 >e
 Rived Drive
 
@@ -534,9 +553,13 @@ DEBUG INFO: Rect-text: R---S.
 DEBUG INFO: Cert-text: -----.
 
 @gn
+#testcase-outside-rived-drive
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+#testcase-exits-rived-drive
+>exits
+The only way you seem to be able to go is east.
 
 >slope
 by one point
@@ -737,9 +760,13 @@ No going back now.
 That rabble seems mad at you. You'd better disperse them first.
 
 @gn
+#testcase-outside-potshot-hotspot
 >exit
 That rabble seems mad at you. You'd better disperse them first.
 >undo
+#testcase-exits-potshot-hotspot
+>exits
+The only way you seem to be able to go is east.
 
 @ask
 #ttc-table-of-unmatched-topic-responses-riot
@@ -1218,13 +1245,17 @@ Seeing exits just makes you want to...
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 
 @gn
+#testcase-outside-means-manse
 >exit
-No, you need to stay here and put down roots. But how?
+Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 >undo
+#testcase-exits-means-manse
+>exits
+There's nowhere else you want to be.
 
 @min
 >misses
-/====Resort
+/====RESORT
 --you could've said LIES to expose the Leis Isle as an illusion.
 !--the rock was changeable to CORK.
 --the swing was changeable to WINGS.
@@ -1235,7 +1266,7 @@ No, you need to stay here and put down roots. But how?
 --the chain links could've become CHINA. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
 
 @max
-!====Resort
+!====RESORT
 !--you could've said LIES to expose the Leis Isle as an illusion.
 !--the rock was changeable to CORK.
 !--the swing was changeable to WINGS.
@@ -1257,7 +1288,7 @@ Final rank: a smart gamin' anagrammist.
 
 @max
 >missed
-!====Resort
+!====RESORT
 >alts
 You chose EXIST, but there are two other ways to win.
 >alt

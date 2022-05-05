@@ -33,10 +33,14 @@ Trap Part
 >xx dial
 The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
 
+#testcase-outside-trap-part
 >exit
 You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
 Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
 >undo
+#testcase-exits-trap-part
+>exits
+There are two unblocked exits: north and east.
 
 >gt trap part
 You're already here. Or there. The precise grammar's neither here nor there.
@@ -75,9 +79,13 @@ Your vision swirls, and you see a kitchen.
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
 
+#testcase-outside-the-nick
 >exit
 You're trapped. If only the nick could be changed to something more to your taste.
 >undo
+#testcase-exits-the-nick
+>exits
+You can't just walk out of the nick, but there's a way to think yourself out.
 
 >gt trap part
 That's not the magic way out. Sorry!
@@ -92,9 +100,13 @@ Kitchen
 
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
 
+#testcase-outside-kitchen
 >exit
 You have more than one way to leave: south and east. So you'll need to specify which one.
 >undo
+#testcase-exits-kitchen
+>exits
+There are two unblocked exits: south to Trap Part and east.
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate and the cheesy spearman for a few seconds. Your warts also tingle.
@@ -338,12 +350,23 @@ You currently have 14 out of 27 total points for the Sortie region. You have fou
 >xx
 Your vision swirls, and you see a moor.
 
+#testcase-outside-room
 >exit
 You have more than one way to leave: north and west. So you'll need to specify which one.
 >undo
+#testcase-exits-room
+>exits
+There are two unblocked exits: north to Stiller Trellis and west to Trap Part.
+>undo
 >w
+#+testcase-outside-trap-part
 >exit
 You have more than one way to leave: north and east. So you'll need to specify which one.
+
+#+testcase-exits-trap-part
+>exits
+There are two unblocked exits: north to Kitchen and east to Room.
+>undo
 >undo
 >undo
 
@@ -357,9 +380,13 @@ DEBUG: anapest being objhinted.
 >xx
 Your vision blurs a bit, and instead you see a peasant.
 
+#testcase-outside-moor
 >exit
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 >undo
+#testcase-exits-moor
+>exits
+You don't need to walk anywhere else. You can only go back to the ROOM.
 
 >angle
 You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock for a few seconds.
@@ -459,9 +486,13 @@ You see yourself building a huge structure in the moor without saying anything.
 >n
 Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room or, since you opened the hallway, east.
 
+#testcase-outside-stiller-trellis
 >exit
 You have more than one way to leave: south, east and west. So you'll need to specify which one.
 >undo
+#testcase-exits-stiller-trellis
+>exits
+There are three unblocked exits: south to Room, east and west to Kitchen.
 
 >score
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -471,9 +502,13 @@ Sacred Cedars
 
 Once you change the sack to a cask, you can FILL CASK here, to start.
 
+#testcase-outside-sacred-cedars
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+#testcase-exits-sacred-cedars
+>exits
+The only way you seem to be able to go is west to Stiller Trellis.
 
 #ttc-table-of-nowheres-sacred-cedars
 >n
@@ -589,6 +624,18 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
 
 Crashing Archings
+
+#+ttc-table-of-nowheres-stiller-trellis
+>n
+Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room.
+
+#+testcase-outside-stiller-trellis
+>exit
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+#+testcase-exits-stiller-trellis
+>exits
+There are two unblocked exits: south to Room and west to Kitchen.
 
 >gt cedars
 You can't go back there.

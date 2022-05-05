@@ -215,7 +215,7 @@ You currently have 16 out of 18 total points for the Metros region. Your final p
 >take sword
 
 >misses
-/====Metros
+/====METROS
 --the antlers in the Obtains/Boastin' Bastion could've become RENTALS.
 
 >attack beast

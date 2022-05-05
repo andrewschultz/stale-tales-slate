@@ -557,10 +557,10 @@ Taking care of the main menace may change the iciest cities
 It would be easier to just pick it apart physically, without anything fancy.
 #ttc-table-of-flesh-shelf-nudges-canister
 >canistre
-The canister is too solid.
+The canister just sits there. Perhaps it has a more mundane purpose or fate.
 #ttc-table-of-flesh-shelf-nudges-grinder
 >grindre
-The grinder is too solid.
+The grinder just sits there. Perhaps it has a more mundane purpose or fate.
 #ttc-table-of-flesh-shelf-nudges-grin
 >grni
 The ring does not bend.

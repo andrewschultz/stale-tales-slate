@@ -91,6 +91,14 @@ The hubs bush forces you back to the center of the Trips Strip. Guess you'll nee
 >undo
 >undo
 
+#testcase-outside-trips-strip
+>exit
+The stores are where it's at. You can go IN once you've found what they can become.
+>undo
+#testcase-exits-trips-strip
+>exits
+The stores are where it's at. You can go IN once you've found what they can become.
+
 >forest
 by one point
 
@@ -108,11 +116,27 @@ The hubs bush forces you back to the center of the Trips Strip. Guess you'll nee
 >sortie
 by one point
 
+#+testcase-outside-trips-strip
+>exit
+That's ambiguous--you can currently enter the posted depots and the scented descent to explore areas you haven't solved yet.
+>undo
+#+testcase-exits-trips-strip
+>exits
+The stores are where it's at. You can go IN to the posted depots and the scented descent.
+
 >metros
 by one point
 
 >n
 hubs bush
+
+#+testcase-outside-trips-strip
+>exit
+That's ambiguous--you can currently enter the trade tread, the posted depots and the scented descent to explore areas you haven't solved yet.
+>undo
+#+testcase-exits-trips-strip
+>exits
+The stores are where it's at. You can go IN to the trade tread, the posted depots and the scented descent.
 
 >sorbet
 by one point

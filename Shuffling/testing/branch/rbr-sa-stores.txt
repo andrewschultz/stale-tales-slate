@@ -474,6 +474,15 @@ The gadget beeps once. A series of lights comes across: GRGRRR.
 DEBUG INFO: Rect-text: R----T.
 DEBUG INFO: Cert-text: R-S---.
 
+@gn
+#testcase-outside-trips-strip
+>exit
+The stores are where it's at. You can go IN once you've found what they can become.
+>undo
+#testcase-exits-trips-strip
+>exits
+The stores are where it's at. You can go IN once you've found what they can become.
+
 >forest
 by one point
 
@@ -548,6 +557,15 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
+
+@gn
+#+testcase-outside-trips-strip
+>exit
+That's ambiguous--you can currently enter the posted depots and the scented descent to explore areas you haven't solved yet.
+>undo
+#+testcase-exits-trips-strip
+>exits
+The stores are where it's at. You can go IN to the posted depots and the scented descent.
 
 >metros
 by one point
@@ -628,6 +646,15 @@ The hubs bush is too sturdy. You can't escape the Trips Strip.
 #ttc-table-of-stores-nudges-marquee
 >marqeue
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
+
+@gn
+#+testcase-outside-trips-strip
+>exit
+That's ambiguous--you can currently enter the trade tread, the posted depots and the scented descent to explore areas you haven't solved yet.
+>undo
+#+testcase-exits-trips-strip
+>exits
+The stores are where it's at. You can go IN to the trade tread, the posted depots and the scented descent.
 
 @!min
 >sorbet

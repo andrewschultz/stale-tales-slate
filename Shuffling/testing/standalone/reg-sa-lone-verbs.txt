@@ -148,7 +148,7 @@ It seems ill-tempered despite, or perhaps because of, its eclectic recent meal.
 >x broad board
 
 You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.
-[You record the information about retry in your notepad.]
+(You record the information about retry in your notepad.)
 
 >x gateway
 You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ.

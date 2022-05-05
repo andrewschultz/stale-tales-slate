@@ -201,7 +201,7 @@ Your score has just gone up by one point.
 You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >misses
-!====Forest:
+!====FOREST
 !--the slit on Corses Crosse could've been turned to SILT.
 !--the banshee could've become a HASBEEN (space or not).
 

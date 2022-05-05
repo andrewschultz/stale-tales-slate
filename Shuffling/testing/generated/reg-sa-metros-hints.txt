@@ -39,9 +39,13 @@ Your vision blurs a bit, and instead you see a gardenia.
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
+#testcase-outside-undesired-underside
 >exit
 You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
 >undo
+#testcase-exits-undesired-underside
+>exits
+There are four unblocked exits: north, south, east and west.
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage for a few seconds.
@@ -70,9 +74,13 @@ Your vision blurs a bit, and instead you see controls.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover for a few seconds.
 
+#testcase-outside-roarings-garrison
 >exit
 You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
 >undo
+#testcase-exits-roarings-garrison
+>exits
+There are four unblocked exits: north, south to Undesired Underside, east and west.
 
 >w
 Bile Libe
@@ -89,9 +97,13 @@ Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you 
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the words and the motto for a few seconds.
 
+#testcase-outside-bile-libe
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+#testcase-exits-bile-libe
+>exits
+The only way you seem to be able to go is east to Roarings Garrison.
 
 >tomato
 Your score has just gone up by one point.
@@ -109,9 +121,13 @@ You see yourself giving something reddish to the night thing in the hotel before
 
 DEBUG: Night Thing being objhinted.
 
+#testcase-outside-the-ol-hotel
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+#testcase-exits-the-ol-hotel
+>exits
+The only way you seem to be able to go is east to Undesired Underside.
 
 #ttc-table-of-nowheres-the-ol-hotel
 >s
@@ -138,9 +154,13 @@ Obtains/Boastin' Bastion
 
 DEBUG: poses posse being objhinted.
 
+#testcase-outside-obtains-boastin-bastion
 >exit
 The only way to exit is south, so let's go that way.
 >undo
+#testcase-exits-obtains-boastin-bastion
+>exits
+The only way you seem to be able to go is south to Roarings Garrison.
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake for a few seconds.
@@ -221,9 +241,13 @@ The faeries want a flower. You have one in your inventory.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade for a few seconds.
 
+#testcase-outside-fo-real-florae
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+#testcase-exits-fo-real-florae
+>exits
+The only way you seem to be able to go is west to Roarings Garrison.
 
 #ttc-table-of-nowheres-fo-real-florae
 >n
@@ -345,9 +369,13 @@ DEBUG: nerds being objhinted.
 >xx nerds
 You suddenly feel darkness, along with an urge to ask the nerds about it.
 
+#testcase-outside-esoteric-coteries
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+#testcase-exits-esoteric-coteries
+>exits
+The only way you seem to be able to go is west to Undesired Underside.
 
 #ttc-table-of-nowheres-esoteric-coteries
 >e
@@ -406,9 +434,13 @@ You see the neon pig exploding, the empty space being filled with--an ear of cor
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig for a few seconds.
 
+#testcase-outside-elm-train-terminal
 >exit
 The only way to exit is north, so let's go that way.
 >undo
+#testcase-exits-elm-train-terminal
+>exits
+The only way you seem to be able to go is north to Undesired Underside.
 
 #ttc-table-of-metros-anagrams-neon-pig
 >xx neon pig
@@ -440,9 +472,13 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 
 >d
 
+#+testcase-outside-elm-train-terminal
 >exit
 You have more than one way to leave: north and east. So you'll need to specify which one.
 >undo
+#+testcase-exits-elm-train-terminal
+>exits
+There are two unblocked exits: north to Undesired Underside and east.
 
 >e
 
@@ -463,9 +499,13 @@ No going back now. You came here to defeat the beats.
 >n
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's an aligns signal, and it must be encompassing the whole abyss. It turns you back to face the beats.
 
+#testcase-outside-bassy-abyss
 >exit
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's that aligns signal, again. It turns you back to face the beats.
 >undo
+#testcase-exits-bassy-abyss
+>exits
+There's no way out or back. But you should have what you need to defeat the beats.
 
 #ttc-table-of-metros-anagrams-siren
 >xx siren

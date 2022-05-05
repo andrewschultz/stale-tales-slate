@@ -42,10 +42,15 @@ As your vision blurs, the stile seems to stand over a small islet.
 >xx tiles
 As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 
+#testcase-outside-astral-altars
 >exit
 As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
 Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
 >undo
+
+#testcase-exits-astral-altars
+>exits
+There seem to be no barriers but also nowhere you'd really want to go.
 
 #ttc-table-of-nowheres-astral-altars
 >w
@@ -76,9 +81,13 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >gt tiles
 Gotta keep going forward.
 
+#testcase-outside-leis-isle
 >exit
 You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 >undo
+#testcase-exits-leis-isle
+>exits
+You can't leave the Leis Isle without transport.
 
 #ttc-table-of-resort-anagrams-rock
 >xx rock
@@ -135,6 +144,15 @@ You currently have 4 out of 15 total points for the Resort region. Your minimum 
 >angle
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
+#+testcase-outside-leis-isle
+>exit
+The only way to exit is east, so let's go that way.
+>undo
+
+#+testcase-exits-leis-isle
+>exits
+The only way you seem to be able to go is east.
+
 >e
 Rived Drive
 
@@ -167,9 +185,13 @@ Your vision blurs a bit, and instead you see ropes.
 >xx toolshed
 Your vision blurs a bit, and instead you see toeholds.
 
+#testcase-outside-rived-drive
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+#testcase-exits-rived-drive
+>exits
+The only way you seem to be able to go is east.
 
 >slope
 by one point
@@ -254,9 +276,13 @@ No going back now.
 >e
 That rabble seems mad at you. You'd better disperse them first.
 
+#testcase-outside-potshot-hotspot
 >exit
 That rabble seems mad at you. You'd better disperse them first.
 >undo
+#testcase-exits-potshot-hotspot
+>exits
+The only way you seem to be able to go is east.
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot for a few seconds.
@@ -365,9 +391,13 @@ Seeing exits just makes you want to...
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 
+#testcase-outside-means-manse
 >exit
-No, you need to stay here and put down roots. But how?
+Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 >undo
+#testcase-exits-means-manse
+>exits
+There's nowhere else you want to be.
 
 >exist
 #notana

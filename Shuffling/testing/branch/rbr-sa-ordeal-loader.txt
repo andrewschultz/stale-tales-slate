@@ -77,9 +77,13 @@ The Caterers' Terraces are west. You see someone sweating over a bizarre brazier
 !The standard, usual directions don't seem to cut it. But there has to be somewhere else.
 
 @gn
+#testcase-outside-busiest-subsite
 >exit
-WRONG
+There are many ways out. You may want to be more specific or have somewhere interesting or unusual in mind.
 >undo
+#testcase-exits-busiest-subsite
+>exits
+Something in the scenery will be worth entering.
 
 @hin
 >xc
@@ -214,11 +218,6 @@ You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every
 >in
 Rested Desert
 
-@gn
->exit
-WRONG
->undo
-
 @hin
 What can the odor turn into? Your random thoughts are not so random. (+)
 Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
@@ -229,6 +228,16 @@ If you get to the end, you'll notice two rather forced ones. They both anagram o
 >z
 A door. (-)
 A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
+
+@gn
+#testcase-outside-rested-desert
+>exit
+You'd just get even more lost.
+>undo
+\\
+#testcase-exits-rested-desert
+>exits
+You won't get anywhere with a long walk.
 
 @ask
 #ttc-table-of-unmatched-topic-responses-yourself
@@ -304,6 +313,16 @@ You haven't solved any regions yet. You have the rank of reduced deducer.
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
 !The one you can probably go through.
+
+@gn
+#+testcase-outside-rested-desert
+>exit
+You'd just get even more lost. Going IN that door looks like a safer bet.
+>undo
+\\
+#+testcase-exits-rested-desert
+>exits
+You won't get anywhere with a long walk, but there's got to be a way to get through that door.
 
 @mis
 #mistake retest for or do door
@@ -395,6 +414,16 @@ by one point
 @!min
 }}CURMIN++
 
+@gn
+#+testcase-outside-rested-desert
+>exit
+You'd just get even more lost. The door is open. You should just walk IN.
+>undo
+\\
+#+testcase-exits-rested-desert
+>exits
+You won't get anywhere with a long walk, but you should be able to go IN the door.
+
 >score
 {$SCOS}
 
@@ -405,11 +434,6 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 
 >open door
 Thickest Thickets
-
-@gn
->exit
-WRONG
->undo
 
 @min
 }}CURMAX--
@@ -467,6 +491,16 @@ There's something you can do with all the nets, if you think about it.
 #ttc-table-of-ordeal-loader-spechelp-sent-nets
 >etns
 The sent nets rustle slightly.
+
+@gn
+#testcase-outside-thickest-thickets
+>exit
+# this is 2nd in a list of one ... or ...
+You're feeling negative to vegetation, so you can't see a way through.
+>undo
+#testcase-exits-thickest-thickets
+>exits
+You need some way to cut through the vegetation to find a passage.
 
 @!min
 >nest
@@ -568,11 +602,6 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 >in
 Notices Section
 
-@gn
->exit
-WRONG
->undo
-
 @hin
 DEBUG: magenta nametag being objhinted.
 >monty glean
@@ -580,6 +609,17 @@ You need to take the phial for that to happen. The cabinet may not want to relin
 
 @min
 }}CURMAX-=2
+
+@gn
+# this is before we actually do anything
+#testcase-outside-notices-section
+>exit
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
+\\
+>undo
+#testcase-exits-notices-section
+>exits
+Sooner or later, you're probably going to want to ENTER the getaway gateway.
 
 >score
 {$SCOS}
@@ -591,7 +631,7 @@ You haven't solved any regions yet. You have the rank of stunted student.
 @gn
 #ttc-table-of-nowheres-notices-section
 >w
-You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 @hin
 #ttc-table-of-ordeal-loader-anagrams-static
@@ -640,7 +680,7 @@ Goodness, no.
 
 @gn
 >n
-You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 @nud
 #ttc-table-of-ordeal-loader-spechelp-static
@@ -768,7 +808,7 @@ You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE
 
 @gn
 >n
-You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is!
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway.
 
 @!min
 >score
@@ -844,9 +884,19 @@ You currently have {MAX} out of {MAX} total points for the Ordeal Loader region.
 "Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 "If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
 #brackets ok
-[You record the information about lube/angle/glean in multiple entries in your dope tan notepad.]
+(You record the information about lube/angle/glean in multiple entries in your dope tan notepad.)
 >undo
 >undo
+
+@gn
+# test things slightly difference once we got rid of the nametag
+#+testcase-outside-notices-section
+>exit
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway.
+>undo
+#+testcase-exits-notices-section
+>exits
+Sooner or later, you're probably going to want to ENTER the getaway gateway.
 
 >ask gateman about cabinet
 
@@ -863,7 +913,7 @@ You see Nat Egam sneaking up from behind you and smacking you on the head, sayin
 And a few seconds later, he does. Again. Hooray for double-checking, I think.
 
 @hin
-You can just enter the gate now.
+You can just enter the getaway gateway now.
 
 @sal
 >get saltine
@@ -1007,7 +1057,7 @@ Nat Egam pauses. "There's so much in the world we all want to understand. But un
 "Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
 #brackets ok
-[You record the information about red in your notepad.]
+(You record the information about red in your notepad.)
 \\
 #ttc-table-of-matched-thing-responses-gateman-board
 >ask gateman about board

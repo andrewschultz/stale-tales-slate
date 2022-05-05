@@ -350,7 +350,7 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 >take sword
 
 >misses
-!====Metros:
+!====METROS
 !--the antlers in the Obtains Boastin Bastion could've become RENTALS.
 
 >alts

@@ -66,10 +66,14 @@ Trap Part
 The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
 
 @gn
+#testcase-outside-trap-part
 >exit
 You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
 Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
 >undo
+#testcase-exits-trap-part
+>exits
+There are two unblocked exits: north and east.
 
 @gt
 >gt trap part
@@ -185,9 +189,13 @@ Your vision swirls, and you see a kitchen.
 You're trapped. If only the nick could be changed to something more to your taste.
 
 @gn
+#testcase-outside-the-nick
 >exit
 You're trapped. If only the nick could be changed to something more to your taste.
 >undo
+#testcase-exits-the-nick
+>exits
+You can't just walk out of the nick, but there's a way to think yourself out.
 
 @gt
 >gt trap part
@@ -247,9 +255,13 @@ Kitchen
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
 
 @gn
+#testcase-outside-kitchen
 >exit
 You have more than one way to leave: south and east. So you'll need to specify which one.
 >undo
+#testcase-exits-kitchen
+>exits
+There are two unblocked exits: south to Trap Part and east.
 
 @gle
 >angle
@@ -258,6 +270,11 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 @max
 >x fridge
 While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. It doesn't appear locked or anything. You could just OPEN it. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+# later we examine it and "i put soot on warts" is gone
+>x fridge
+!in dust
+>undo
+>undo
 
 @scan
 #gadget test: warts to straw
@@ -1078,12 +1095,23 @@ You see a flash and get a glimpse of a moor, but it is just too cold. You blink 
 >undo
 
 @gn
+#testcase-outside-room
 >exit
 You have more than one way to leave: north and west. So you'll need to specify which one.
 >undo
+#testcase-exits-room
+>exits
+There are two unblocked exits: north to Stiller Trellis and west to Trap Part.
+>undo
 >w
+#+testcase-outside-trap-part
 >exit
 You have more than one way to leave: north and east. So you'll need to specify which one.
+\\
+#+testcase-exits-trap-part
+>exits
+There are two unblocked exits: north to Kitchen and east to Room.
+>undo
 >undo
 >undo
 
@@ -1101,9 +1129,13 @@ DEBUG: anapest being objhinted.
 Your vision blurs a bit, and instead you see a peasant.
 
 @gn
+#testcase-outside-moor
 >exit
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 >undo
+#testcase-exits-moor
+>exits
+You don't need to walk anywhere else. You can only go back to the ROOM.
 
 @gle
 >angle
@@ -1539,9 +1571,13 @@ You see yourself building a huge structure in the moor without saying anything.
 Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room or, since you opened the hallway, east.
 
 @gn
+#testcase-outside-stiller-trellis
 >exit
 You have more than one way to leave: south, east and west. So you'll need to specify which one.
 >undo
+#testcase-exits-stiller-trellis
+>exits
+There are three unblocked exits: south to Room, east and west to Kitchen.
 
 >score
 @min
@@ -1561,9 +1597,13 @@ Sacred Cedars
 Once you change the sack to a cask, you can FILL CASK here, to start.
 
 @gn
+#testcase-outside-sacred-cedars
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+#testcase-exits-sacred-cedars
+>exits
+The only way you seem to be able to go is west to Stiller Trellis.
 
 @gn
 #ttc-table-of-nowheres-sacred-cedars
@@ -2045,6 +2085,11 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 
 Crashing Archings
 
+@gn
+#+ttc-table-of-nowheres-stiller-trellis
+>n
+Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room.
+
 @nud
 #ttc-table-of-stiller-trellis-nudges-arching
 >archign
@@ -2061,6 +2106,15 @@ The rubble is too dense to rearrange, physically or magically. You should have a
 #renudge for trellis
 >trellsi
 You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
+
+@gn
+#+testcase-outside-stiller-trellis
+>exit
+You have more than one way to leave: south and west. So you'll need to specify which one.
+>undo
+#+testcase-exits-stiller-trellis
+>exits
+There are two unblocked exits: south to Room and west to Kitchen.
 
 @gt
 >gt cedars
@@ -2318,13 +2372,13 @@ No, the shoot button HAS to be right.
 
 @min
 >misses
-/====Sortie
+/====SORTIE
 --the cake pan in the fridge could've become a PANCAKE.
 --the grist in the fridge could've become GRITS.
 
 @max
 >misses
-!====Sortie
+!====SORTIE
 !--the cake pan in the fridge could've become a PANCAKE.
 !--the grist in the fridge could've become GRITS.
 
