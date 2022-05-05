@@ -649,12 +649,12 @@ Dirge Ridge
 >e
 The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches.
 
-#testcase-outside-dirge ridge
+#testcase-outside-dirge-ridge
 >out
 Char Arch
 >undo
 
-#testcase-exits-dirge ridge
+#testcase-exits-dirge-ridge
 >exits
 WRONG 1314
 

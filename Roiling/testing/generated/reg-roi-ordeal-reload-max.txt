@@ -42,10 +42,6 @@ Bangish bashing
 
 >5
 
->sleep
-#verbcase sleep-ordeal-reload-default
-You probably can't spend another night in the Means Manse. You need to get going, here!
-
 >lamp
 Your score has just gone up by one point.
 
@@ -149,7 +145,7 @@ RPGRR*RRYR RPGRRRYRR
 #ttc-table-of-notepad-entries-long-commands
 >this is a test here
 [NOTE: you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.]
-[You record the information about long commands in your notepad.]
+(You record the information about long commands in your notepad.)
 >pad long commands
 Commands over 4 words long aren't necessary. You can say TAKE or GET ALL, eliminate THE, or use half an open compound word without repercussions.
 #ttc-table-of-notepad-entries-poss
@@ -269,10 +265,10 @@ DEBUG INFO: current quip = toy-theory-quip.
 DEBUG INFO: current quip = trial-trail-quip.
 >3
 DEBUG INFO: current quip = clues-quip.
-[You record the information about clues in your notepad.]
+(You record the information about clues in your notepad.)
 >3
 DEBUG INFO: current quip = gretta-quip.
-[You record the information about Gretta in your notepad.]
+(You record the information about Gretta in your notepad.)
 >1
 DEBUG INFO: current quip = trips-quip.
 

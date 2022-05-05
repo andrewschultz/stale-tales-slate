@@ -237,7 +237,7 @@ The LOLstr trolls would not welcome you back, and it'd take too long to get ther
 >out
 You have more than one way to leave: north, east and west. So you'll need to specify which one.
 
-#exits-outside-anger-range
+#testcase-exits-anger-range
 >exits
 There are three viable exits: north, east and west.
 
@@ -455,13 +455,13 @@ Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lo
 
 Shuttle Hutlets
 
-#+testcase-outside-shuttle-hutlets
+#testcase-outside-shuttle-hutlets
 >out
 !The only way to exit
 Lapsin' Plains
 >undo
 
-#+testcase-exits-shuttle-hutlets
+#testcase-exits-shuttle-hutlets
 >exits
 The only way you seem to be able to go is outside to Lapsin' Plains.
 
@@ -527,11 +527,11 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east to Anger Range.
 
-#testcase-outside-sclerous-closures
+#+testcase-outside-sclerous-closures
 >out
 You have more than one way to leave: north and east. So you'll need to specify which one.
 
-#testcase-exits-sclerous-closures
+#+testcase-exits-sclerous-closures
 >exits
 There are two viable exits: north and east to Anger Range.
 

@@ -49,6 +49,9 @@ You're in a conversation. Your turn to speak.
 #verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
+>exit
+You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
+
 #verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-study-is-dark
 >smell
 That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.

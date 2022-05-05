@@ -2294,8 +2294,8 @@ A reminder that cussing won't make a computer work any better, and you need to g
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
 
 @mis
-#testcase-mistake-roiling-elf
->elf
+#testcase-mistake-roiling-a-elf
+>a elf
 You don't need any D&D character to magick things the rest of the way here.
 \\
 #testcase-mistake-roiling-alef

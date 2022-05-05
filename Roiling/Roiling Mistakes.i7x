@@ -1,6 +1,6 @@
 Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
-[ttc has replaced mist.py to harvest test case checks
+[ttc has replaced mist.py to harvest test case checks]
 [malf.py alphabetizes mistakes by section]
 [books are arranged by difficulty/first viewed, and rooms are arranged by first viewed]
 [note the code may look weird since room names don't have hyphens, to facilitate parser usage for the player with GT]
@@ -12,11 +12,13 @@ book "mistakes" with a leading a that don't quite fit in the code, so I fake the
 [
 understand "a rec" as a mistake ("null") when player is in Loather Rathole.
 understand "a gps" as a mistake ("null") when player is in Char Arch.
+understand "a elf" as a mistake ("null") when flea is touchable or leaf is touchable.
 understand "a cone" as a mistake ("null") when player is in Disease Seaside.
 understand "a nut" as a mistake ("null") when player is in Lean Lane.
 understand "a place" as a mistake ("null") when mrlp is towers and player is not in Loftier Trefoil.
 understand "in tears" as a mistake ("null") when nastier stainer retinas are touchable.
 understand "a lol" as a mistake ("null") when mrlp is others and Dr Lola Ollard is touchable.
+]
 
 book verb redefinitions before the fact
 
@@ -541,8 +543,6 @@ understand "clock sap" and "cock slap" and "slap cock" as a mistake ("The locs a
 
 understand "diver" as a mistake ("It's you that'll need to dive into some code.") when player is in Hacks Shack.
 
-understand "elf" as a mistake ("You don't need any D&D character to magick things the rest of the way here.") when flea is touchable or leaf is touchable.
-
 understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is touchable or flea is touchable.
 
 understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is touchable]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid-disk-touch.
@@ -673,8 +673,6 @@ understand "naps" as a mistake ("You need action, here! Maybe nothing too exhaus
 understand "nkob" as a mistake ("[if knob is moot]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in [this-game].") when player is in Lapsin Plains.
-
-understand "pone" as a mistake ("The message [if span pans are moot]was[else]is[end if] corny, but the door[if span pans are moot] was[else]'s[end if] a piece of cake [if span pans are not moot]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
 
 understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin Plains.
 
@@ -959,11 +957,11 @@ chapter Disowned Downside
 
 understand "indiscretely" as a mistake ("Yes, yes, I am being pedantic here. But discreet and discrete are different enough.") when t-indiscreetly is touchable and t-indiscreetly is playable.
 
-understand "nepo" as a mistake ("No past or current world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!") when span pans are touchable.
+understand "nepo" as a mistake ("No past or current world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!") when neon pope is touchable.
 
 understand "parsley" as a mistake ("Despite your best efforts, they remain meatheads.") when parleys splayer players are touchable.
 
-understand "pone" as a mistake ("You're not going to bribe the folks blocking the way west with food. Or, well, with anything") when span pans are touchable.
+understand "pone" as a mistake ("You're not going to bribe the folks blocking the way west with food. Or, well, with anything") when neon pope is touchable.
 
 understand "slap em" as a mistake ("[if parleys splayer players are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
 

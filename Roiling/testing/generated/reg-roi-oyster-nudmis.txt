@@ -33,27 +33,27 @@ You already got a temporary escape from the bad music. You can't really do any m
 Almost, but with the stein, there.
 >insert stein
 It almost fits when you try to insert it. About five-sixths of the way. Perhaps you could find some other way to do things.
-#mistake test for insert
+#testcase-mistake-roiling-insert
 >insert
 Almost, with the stein, there.
-#mistake test for inset [text]
+#testcase-mistake-roiling-inset-text
 >inset zozimus zozimus zozimus
 You may want to INSERT X IN Y instead.
 >inset zozimus
 You may not be using an object in the game, and you may wish to inseRt, instead.
-#mistake test for nites
+#testcase-mistake-roiling-nites
 >nites
 Misspellings don't work, here.
-#mistake test for pacers
+#testcase-mistake-roiling-pacers
 >pacers
 Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.
-#mistake test for parsec
+#testcase-mistake-roiling-parsec
 >parsec
 Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.
-#mistake test for phos
+#testcase-mistake-roiling-phos
 >phos
 The bar fails to change into an ethnic restaurant.
-#mistake test for spyte
+#testcase-mistake-roiling-spyte
 >spyte
 The pesty types probably spell it that way, but I'm not letting YOU do so.
 #ttc-table-of-posh-hops-shop-nudges-pti
@@ -267,32 +267,32 @@ INSET
 >score
 Score in a scenario: 4 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
-#mistake test for stroll [text]/stroll
+#testcase-mistake-roiling-stroll-text-stroll
 >stroll zozimus
 No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
 >stroll
 No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
-#mistake test for bare/bares
+#testcase-mistake-roiling-bare-bares
 >bare
 A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
 Really, what did you expect?
 >bares
 A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
 Really, what did you expect?
-#mistake test for bear/bears
+#testcase-mistake-roiling-bear-bears
 >bear
 You don't need any predators chasing you.
 >bears
 You don't need any predators chasing you.
-#mistake test for dole
+#testcase-mistake-roiling-dole
 >dole
 Alas, no unemployment check, pineapple or former Republican presidential candidate arrives.
-#mistake test for saber/sabre
+#testcase-mistake-roiling-saber-sabre
 >saber
 A weapon won't do much good here. You need action!
 >sabre
 A weapon won't do much good here. You need action!
-#mistake test for el doodle
+#testcase-mistake-roiling-el-doodle
 >el doodle
 That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.
 #ttc-table-of-olde-lode-nudges-lode
@@ -331,10 +331,10 @@ Disease Seaside
 >score
 Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
-#mistake test for rosa
+#testcase-mistake-roiling-rosa
 >rosa
 Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for A Roiling Original.
-#mistake test for arrive
+#testcase-mistake-roiling-arrive
 >arrive
 Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
 #ttc-table-of-oyster-spechelp-frat-raft
@@ -361,13 +361,13 @@ The streamlets change, and don't change, at the same time. But that's just becau
 #ttc-table-of-disease-seaside-nudges-streamlets
 >streamlest
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
-#mistake test for a cone
+#testcase-mistake-roiling-a-cone
 >a cone
 That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.
 #ttc-table-of-disease-seaside-nudges-canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
-#mistake test for ocean
+#testcase-mistake-roiling-ocean
 >ocean
 As you seek to change the canoe, you hear a rush of water, quickly examine the canoe, and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
 joke death
@@ -460,7 +460,7 @@ Fighter Freight
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
-#mistake test for refight
+#testcase-mistake-roiling-refight
 >refight
 That's not very good English, and you haven't gotten in a fight yet. Soon, though.
 #ttc-table-of-fighter-freight-nudges-freight
@@ -488,7 +488,7 @@ The crays are still slightly leery the settler might be a weapon. During the mom
 Your settler registers RYYR.
 >scan crays
 You worry what will happen to you, or the settler, if you pull it out again. You remember seeing RYYR from the pale plea.
-#mistake test for peal
+#testcase-mistake-roiling-peal
 >peal
 The pale plea already sort of is. You need a stronger action than that.
 
@@ -500,15 +500,15 @@ Anger Range
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 
-#mistake test for boast
+#testcase-mistake-roiling-boast
 >boast
 Batso.
 
-#mistake test for fart
+#+testcase-mistake-roiling-fart
 >fart
 Gag! Ass-gas.
 
-#mistake test for craps
+#testcase-mistake-roiling-craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
 #ttc-table-of-anger-range-nudges-anger
@@ -534,16 +534,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a 
 >trotu
 The best way to help the trout at the moment is to deal with the carps and pikes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the trout. That's a decent omen.
-#mistake test for kepis
+#testcase-mistake-roiling-kepis
 >kepis
 If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
-#mistake test for scarp
+#testcase-mistake-roiling-scarp
 >scarp
 Don't flee! Help the poor trout.
-#mistake test for unheart
+#testcase-mistake-roiling-unheart
 >unheart
 Silly Internet slang isn't active enough, here.
-#mistake test for renga
+#testcase-mistake-roiling-renga
 >renga
 Now is not the time for poetry.
 
@@ -576,10 +576,10 @@ So very tangled! No vowels showed up for certain, which makes it tougher ... or 
 >snadrel
 The snarled darnels rustle a bit.
 
-#mistake test for landers
+#testcase-mistake-roiling-landers
 >landers
 Anger Range won't be helped by an advice column or columnist.
-#mistake test for sandler
+#testcase-mistake-roiling-sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Though another try actually gets a point here. You're really close.
 
@@ -589,10 +589,10 @@ by one point
 >score
 Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
 
-#mistake retest for landers
+#+testcase-mistake-roiling-landers
 >landers
 Anger Range won't be helped further by an advice column or columnist.
-#mistake retest for sandler
+#+testcase-mistake-roiling-sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
@@ -642,12 +642,12 @@ Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lo
 >scna
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cans. That's a decent omen.
-#mistake test for hatred/hatreds
+#testcase-mistake-roiling-hatred-hatreds
 >hatred
 There's enough of that going around.
 >hatreds
 There's enough of that going around.
-#mistake test for thread/threads
+#testcase-mistake-roiling-thread-threads
 >thread
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 >threads
@@ -669,25 +669,25 @@ Lean Lane
 >score
 Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
 
-#mistake test for a nut
+#testcase-mistake-roiling-a-nut
 >a nut
 That's not nice. You are a guest.
-#mistake test for redraw
+#testcase-mistake-roiling-redraw
 >redraw
 Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.
-#mistake test for aet
+#testcase-mistake-roiling-aet
 >aet
 Oh, this region won't go into extra time unless you want to do the side quest.
-#mistake test for ate
+#testcase-mistake-roiling-ate
 >ate
 You're getting ahead of yourself here.
-#mistake test for elan
+#testcase-mistake-roiling-elan
 >elan
 Lean Lane will never be pretty, and it doesn't need to be.
-#mistake test for eta
+#testcase-mistake-roiling-eta
 >eta
 ETA's one move later now that you went fishing for this anagram.
-#mistake test for neal
+#testcase-mistake-roiling-neal
 >neal
 It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.
 #ttc-table-of-lean-lane-nudges-lean
@@ -734,7 +734,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 44 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 44.
 
-#mistake test for wrap [text]
+#testcase-mistake-roiling-wrap-text
 >wrap zozimus
 The bubble wrap is already covering something.
 #+ttc-table-of-lean-lane-nudges-reward
@@ -779,55 +779,55 @@ You will need to use them all at once, and on something else
 >n
 Lapsin' Plains
 
-#mistake test for tush
+#testcase-mistake-roiling-tush
 >tush
 Oh, behave.
 
-#mistake test for brides
+#testcase-mistake-roiling-brides
 >brides
 No, no time to think about romance, now.
 
-#mistake test for caret
+#testcase-mistake-roiling-caret
 >caret
 You need to shift letters and not sixes, here.
 
-#mistake test for cater
+#testcase-mistake-roiling-cater
 >cater
 No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.
 
-#mistake test for lapins
+#testcase-mistake-roiling-lapins
 >lapins
 Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.
 
-#mistake test for naps
+#testcase-mistake-roiling-naps
 >naps
 You need action, here! Maybe nothing too exhausting, but some action nonetheless.
 
-#mistake test for palins
+#testcase-mistake-roiling-palins
 >palins
 Michael and Sarah are both funny enough on their own. I really couldn't do them justice in A Roiling Original.
 
-#mistake test for thus
+#testcase-mistake-roiling-thus
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
 
-#mistake test for troy/tory
+#testcase-mistake-roiling-troy-tory
 >troy
 Apparently, the span pans don't have a name.
 >tory
 Apparently, the span pans don't have a name.
 
-#mistake test for saplin
+#testcase-mistake-roiling-saplin
 >saplin
 No tre begins to grow. Er, tree.
 
-#mistake test for slapin/slap in
+#testcase-mistake-roiling-slapin-slap-in
 >slapin
 No vilence, err, violence, please.
 >slap in
 No vilence, err, violence, please.
 
-#mistake test for nkob
+#testcase-mistake-roiling-nkob
 >nkob
 The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
 
@@ -934,7 +934,7 @@ You start up a grand lecture again, but you feel something spinal and think "I..
 >plani
 You had your say.
 
-#mistake retest for thus
+#+testcase-mistake-roiling-thus
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
 #+ttc-table-of-lapsin'-plains-nudges-acters
@@ -964,7 +964,7 @@ Score in a scenario: 19 out of 44 total points in the current region, Oyster. Lo
 #+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
-#mistake retest for caret
+#+testcase-mistake-roiling-caret
 >caret
 You needed to shift letters and not sixes, here.
 #ttc-table-of-oyster-done-rejects-crate
@@ -993,7 +993,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 21 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
-#mistake retest for nkob
+#+testcase-mistake-roiling-nkob
 >nkob
 You already did what you needed with the knob, Step by Step.
 
@@ -1008,10 +1008,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
 
-#mistake retest for thus
+#+testcase-mistake-roiling-thus
 >thus
 Your inactive word does nothing to the huts. But you don't need to do any more, since you can walk in.
-#mistake retest for pone
+#testcase-mistake-roiling-pone
 >pone
 The message was corny, but the door was a piece of cake since you figured what to do with the knob.
 
@@ -1019,16 +1019,16 @@ The message was corny, but the door was a piece of cake since you figured what t
 
 Shuttle Hutlets
 
-#mistake test for auth
+#testcase-mistake-roiling-auth
 >auth
 Sorry! I'm too busy to cameo in my own game at the moment.
-#mistake test for buts
+#testcase-mistake-roiling-buts
 >buts
 You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
-#mistake test for stub
+#testcase-mistake-roiling-stub
 >stub
 You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.
-#mistake test for utah
+#testcase-mistake-roiling-utah
 >utah
 The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
 #ttc-table-of-shuttle-hutlets-nudges-hutlet
@@ -1070,10 +1070,10 @@ Score in a scenario: 24 out of 44 total points in the current region, Oyster. Lo
 >diggre
 It's already been, err, rigged, enough.
 
-#mistake test for bury [text]
+#testcase-mistake-roiling-bury-text
 >bury zozimus
 Nothing worth burying.
-#mistake test for dig/dig [text]
+#testcase-mistake-roiling-dig-dig-text
 >dig
 You need to dig to some purpose, though maybe somewhere else--and not just dig.
 >dig zozimus
@@ -1088,10 +1088,10 @@ You managed to get a digger from a prod, and that's good enough.
 You make an effort to clean the waste but feel you could do better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a decent omen.
 
-#mistake test for sweat [text]
+#testcase-mistake-roiling-sweat-text
 >sweat zozimus
 Don't sweat the extra words. Just sweat.
-#mistake test for tawse
+#testcase-mistake-roiling-tawse
 >tawse
 You don't need that sort of weapon.
 
@@ -1171,7 +1171,7 @@ You need a slightly more organized way to reveal what's under the ground with yo
 >w
 Sclerous Closures
 
-#mistake test for rasche
+#testcase-mistake-roiling-rasche
 >rasche
 Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.
 
@@ -1255,12 +1255,12 @@ Hmm! There's something more to do with the gleaner. You've gotten what you need,
 >n
 Horned Hedron
 
-#mistake test for part trap/part
+#testcase-mistake-roiling-part-trap-part
 >part trap
 The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
 >part
 The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
-#mistake test for tarp
+#testcase-mistake-roiling-tarp
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
 #ttc-table-of-horned-hedron-nudges-hedrno
@@ -1358,10 +1358,10 @@ orned Hedron
 Score in a scenario: 34 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >gonear anger range
-#mistake test for horse
+#testcase-mistake-roiling-horse
 >horse
 A horse won't help you explore the Hedron.
-#mistake test for hoser
+#testcase-mistake-roiling-hoser
 >hoser
 It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.
 >undo
@@ -1396,7 +1396,7 @@ You discovered the portal. No need to look further.
 
 >in
 End Den
-#mistake test for ned
+#testcase-mistake-roiling-ned
 
 >ned
 That was my pen name in Shuffling Around.
@@ -1454,7 +1454,7 @@ The yapper might alert its cronies if you try anything. Even something not quite
 #ttc-table-of-oyster-scannotes-papery-yapper
 >scan papery yapper
 Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully.
-#mistake test for redial
+#testcase-mistake-roiling-redial
 >redial
 You can't even dial with the yapper around.
 >undo
@@ -1475,7 +1475,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 37 out of 44 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 44.
 
-#mistake retest for redial
+#+testcase-mistake-roiling-redial
 >redial
 You need use the dialer meaningfully first.
 >undo
@@ -1502,10 +1502,10 @@ Plasm Lamps
 >score
 Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
 
-#mistake test for nat
+#testcase-mistake-roiling-nat
 >nat
 You don't need to name the ant. It's not a pet.
-#mistake test for splam
+#testcase-mistake-roiling-splam
 >splam
 There's a simpler way to attack the ant.
 
@@ -1523,7 +1523,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That
 >psaml
 The plasm lamps flicker slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
-#mistake test for atn
+#testcase-mistake-roiling-atn
 >atn
 You've already got the ant's attention. You'll need to take care of it, now.
 #ttc-table-of-plasm-lamps-nudges-plam
@@ -1570,10 +1570,10 @@ Score in a scenario: 41 out of 44 total points in the current region, Oyster. Lo
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
 
-#mistake test for nips
+#testcase-mistake-roiling-nips
 >nips
 You see red at the thought of voluntarily pricking yourself with pins.
-#mistake test for snip/snip pins
+#testcase-mistake-roiling-snip-snip-pins
 >snip
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
 >snip pins
@@ -1615,7 +1615,7 @@ Your score has just gone up by one point
 
 Strip of Profits
 
-#mistake retest for fart
+#+testcase-mistake-roiling-fart
 >fart
 You feel slightly dafter, having farted to no good purpose
 

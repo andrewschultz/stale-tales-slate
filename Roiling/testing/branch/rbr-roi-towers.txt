@@ -3476,6 +3476,11 @@ That's not something you can say, do or see here. For a general list of verbs, t
 >eresdvi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@mis
+#testcase-mistake-roiling-yaws
+>yaws
+The sway-ways shake for a moment. But at least they do not carry a highly contagious tropical disease. You hope.
+
 @nud
 #ttc-table-of-towers-spechelp-diverse-deviser
 >revisde
@@ -4323,6 +4328,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The nastier stainer retinas seem to blink a bit and look around uneasily.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nastier stainer retinas.
 
+@mis
+#testcase-mistake-roiling-in-tears
+>in tears
+Clever, but maybe you can make the nastier stainer retinas so they feel a need to be in tears.
+
 @!minh,mini
 >antsier
 by one point
@@ -4377,7 +4387,6 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 >in
 \\
 Mesprise Premises
-
 
 @nud
 #ttc-table-of-mesprise-premises-nudges-mesprise

@@ -697,6 +697,8 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 
 >in
 
+Mesprise Premises
+
 #pre-curst-palace-spectacular rule retry
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.

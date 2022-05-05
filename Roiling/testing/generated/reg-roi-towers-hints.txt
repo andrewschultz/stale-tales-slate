@@ -859,6 +859,8 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 
 >in
 
+Mesprise Premises
+
 #ttc-table-of-towers-anagrams-triste
 >xr tetris
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?

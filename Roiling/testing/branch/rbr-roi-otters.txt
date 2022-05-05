@@ -1599,6 +1599,11 @@ The way west remains blocked, but you feel there has to be a simple way past.
 >pnoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@mis
+#testcase-mistake-roiling-nepo
+>nepo
+No past or current world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!
+
 >score
 {$SCOS}
 
@@ -2689,6 +2694,15 @@ The blase bales seem to darken and shake a bit.
 #slider test for sable
 >asleb
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@mis
+#testcase-mistake-roiling-able-ables
+>able ables
+But you already gained your powers back! You're quite able enough as-is.
+\\
+#testcase-mistake-roiling-beal-beals
+>beal beals
+The bales can be transformed, but into something less unsightly.
 
 @!min
 >sable

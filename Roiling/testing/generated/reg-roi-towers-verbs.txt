@@ -546,7 +546,7 @@ Dourest Detours
 Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that.
 >undo
 
-#testcase-others-dourest-detours
+#testcase-exits-dourest-detours
 >exits
 WRONG 2743
 
@@ -944,6 +944,16 @@ The only way to exit is west, so let's go that way.
 WRONG 4258
 
 >in
+
+Mesprise Premises
+
+#testcase-outside-mesprise-premises
+>out
+The only way to exit is east, so let's go that way.
+
+#testcase-exits-mesprise-premises
+>exits
+The only way you seem to be able to go is east.
 
 #ttc-table-of-towers-attacks-tetris-sitter
 >attack tetris sitter

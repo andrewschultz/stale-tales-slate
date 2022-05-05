@@ -18,17 +18,17 @@
 >demo dome
 Peek Keep
 
-#mistake test for singed
+#testcase-mistake-roiling-singed
 >singed
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You already saw a singed design when you helped Curtis. Plus, arson is bad.
 
-#mistake test for dali
+#testcase-mistake-roiling-dali
 >dali
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !Not surreal enough for you?
 
-#mistake test for laid
+#testcase-mistake-roiling-laid
 >laid
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !The spy dial is already laid out.
@@ -108,16 +108,16 @@ Meta-commands don't have any easter eggs, sadly.
 
 >x grate
 
-#mistake retest for singed
+#+testcase-mistake-roiling-singed
 >singed
 !There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 You already saw a singed design when you helped Curtis. Plus, arson is bad.
 
-#mistake retest for dali
+#+testcase-mistake-roiling-dali
 >dali
 Not surreal enough for you?
 
-#mistake retest for laid
+#+testcase-mistake-roiling-laid
 >laid
 The spy dial is already laid out.
 
@@ -204,7 +204,7 @@ This is a museum! Messing with the exhibits would be very bad form.
 >w
 Ned's Dens
 
-#mistake test for send
+#testcase-mistake-roiling-send
 >send
 Maybe in another game, you could do that, if you walked around right. But not this one.
 
@@ -263,7 +263,7 @@ A welcoming place full of feeling and peace and weird new ideas that it's just g
 >novelal
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 
-#mistake test for neva/lol
+#testcase-mistake-roiling-neva-lol
 >neva
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 >lol
@@ -286,7 +286,7 @@ You don't need to flip anything here, really. Certainly not a room.
 >d
 Sparse Spares
 
-#mistake test for spears
+#testcase-mistake-roiling-spears
 >spears
 There's nothing you need a weapon to fight against.
 
@@ -343,7 +343,7 @@ This is a museum! Messing with the exhibits would be very bad form.
 You don't need to flip anything here, really. Certainly not a room.
 #ttc-table-of-sparse-spares-nudges-spare
 
-#mistake test for clasp
+#testcase-mistake-roiling-clasp
 >clasp
 If there were a puzzle for stealing stuff, that'd work. But there isn't.
 

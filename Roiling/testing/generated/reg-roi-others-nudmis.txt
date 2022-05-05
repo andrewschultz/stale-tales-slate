@@ -19,50 +19,50 @@ Rustic Citrus
 >z
 >z
 
-#mistake test for earp
+#testcase-mistake-roiling-earp
 >earp
 No daredevil gunman appears to help you. This isn't that sort of game.
-#mistake test for boarder
+#testcase-mistake-roiling-boarder
 >boarder
 Rustic Citrus doesn't make for great living quarters.
-#mistake test for broader
+#testcase-mistake-roiling-broader
 >broader
 Rustic Citrus is secluded enough.
-#mistake test for cruits
+#testcase-mistake-roiling-cruits
 >cruits
 Alas, no recruits named Ric or Stu arrive for you to delegate anything to.
-#mistake test for gapers
+#testcase-mistake-roiling-gapers
 >gapers
 Really, you don't need people all Damn Mister Master Mind over changing those pagers into anything else. That's not your style.
 >gs
 female
-#mistake retest for gapers
+#+testcase-mistake-roiling-gapers
 >gapers
 Really, you don't need people all Named It Mrs. Master Mind over changing those pagers into anything else. That's not your style.
 >gs
 male
-#mistake test for gasper
+#testcase-mistake-roiling-gasper
 >gasper
 Not as healthy as fruit, to be sure!
-#mistake test for slump
+#testcase-mistake-roiling-slump
 >slump
 Don't get exhausted! This area should be a bit of a break! I hope.
-#mistake test for reaps
+#testcase-mistake-roiling-reaps
 >reaps
 No, not verbs. Well, not here by Curtis.
-#mistake test for spare
+#testcase-mistake-roiling-spare
 >spare
 No, not adjectives. Well, not here by Curtis.
-#mistake test for rapes/rape
+#testcase-mistake-roiling-rapes-rape
 >rapes
 Some things, you can't joke about. So please, don't try that again.
 >undo
 >rape
 Some things, you can't joke about. So please, don't try that again.
-#mistake test for smile
+#testcase-mistake-roiling-smile
 >smile
 You smile at the slime. It can't be that hard to figure what to do. You even see red a bit, frustrated you haven't figured things out yet.
-#mistake test for miles
+#testcase-mistake-roiling-miles
 >miles
 You don't want miles and miles of slime.
 
@@ -104,7 +104,7 @@ Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might t
 #ttc-table-of-rustic-citrus-nudges-ruts
 >urst
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
-#mistake test for rust
+#testcase-mistake-roiling-rust
 >rust
 You're trying to make things MORE organic, not less.
 #ttc-table-of-rustic-citrus-nudges-lime
@@ -127,7 +127,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a 
 The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
 
-#mistake test for parse
+#testcase-mistake-roiling-parse
 >parse
 You've parsed the spelling of quite a few words so far. Just a bit more, now.
 
@@ -184,7 +184,7 @@ The needle is working fine. No need to meddle.
 
 >x ruts circuits
 
-#mistake test for tased
+#testcase-mistake-roiling-tased
 >tased
 You don't need that, and neither does Curtis.
 
@@ -477,7 +477,7 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 Curtis hands you a coin
 scru-it
 
-#mistake test for deign/deigns
+#testcase-mistake-roiling-deign-deigns
 >deign
 The singed design on the coin should make you not just want to deign but DO.
 >deigns
@@ -491,7 +491,7 @@ The design is sort of glommed onto the coin. So you should figure what to do, th
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
 
-#mistake test for sonic
+#testcase-mistake-roiling-sonic
 >sonic
 Maybe if you had more than one coin.
 
@@ -569,7 +569,7 @@ You have 18 of 46 total points for the post-Elvira Others region, though you onl
 #ttc-table-of-others-done-rejects-icon
 >inco
 The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more.
-#mistake retest for sonic
+#+testcase-mistake-roiling-sonic
 >sonic
 Maybe if you had more than one icon.
 
@@ -591,10 +591,10 @@ The singed design on the icons reads, when you look close, property of NISCO.
 >w
 Filed Field
 
-#mistake test for fidel
+#testcase-mistake-roiling-fidel
 >fidel
 A thin voice howls "I fled!"
-#mistake retest for fart
+#testcase-mistake-roiling-fart
 >fart
 This raft isn't as receptive as the one in Anger Range.
 #ttc-table-of-filed-field-nudges-liepen
@@ -768,7 +768,7 @@ You have 24 of 46 total points for the post-Elvira Others region, though you onl
 >ubler
 That doesn't really describe the Tekno-Token
 
-#mistake test for scion
+#testcase-mistake-roiling-scion
 >scion
 Money, or something like it, should not be the guide of you.
 
@@ -777,7 +777,7 @@ Money, or something like it, should not be the guide of you.
 >icosn
 The icons rattle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the icons. That's a decent omen.
-#mistake retest for scion
+#+testcase-mistake-roiling-scion
 >scion
 Money, or something like it, should not be the guide of you.
 >undo
@@ -792,7 +792,7 @@ Blam!
 >score
 You have 25 of 46 total points for the post-Elvira Others region, though you only need 27 to win.
 
-#mistake retest for scion
+#+testcase-mistake-roiling-scion
 >scion
 Money, or something like it, should not be the guide of you.
 
@@ -833,18 +833,18 @@ You have 30 of 46 total points for the post-Elvira Others region, though you onl
 >e
 Clangier Clearing
 
-#mistake test for sell/sell [text]
+#testcase-mistake-roiling-sell-sell-text
 >sell
 You are trying to buy or find stuff here, not sell it.
 >sell zozimus
 You are trying to buy or find stuff here, not sell it.
-#mistake test for lameness
+#testcase-mistake-roiling-lameness
 >lameness
 No need to judge the nameless salesmen. We can't all be heroes.
-#mistake test for spicer
+#testcase-mistake-roiling-spicer
 >spicer
 You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.
-#mistake test for cigar
+#testcase-mistake-roiling-cigar
 >cigar
 That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
 
@@ -856,7 +856,7 @@ The selly yells just add atmosphere. They can't be changed.
 >yelsl
 The selly yells just add atmosphere. They can't be changed.
 
-#mistake test for lyle/lyles
+#testcase-mistake-roiling-lyle-lyles
 >lyle
 Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.
 
@@ -948,16 +948,16 @@ Your score has just gone up by one point.
 >score
 You have 34 of 46 total points for the post-Elvira Others region, though you only need 36 to win.
 
-#mistake test for mango
+#testcase-mistake-roiling-mango
 >mango
 That's the fruit you need to find. You see red wondering where or how.
-#mistake test for go man
+#testcase-mistake-roiling-go-man
 >go man
 That's the right idea but the wrong sorts of words.
-#mistake test for nag mo
+#testcase-mistake-roiling-nag-mo
 >nag mo
 You get all red faced asking people how to trade for a mango, and asking, and asking.
-#mistake test for an omg
+#testcase-mistake-roiling-an-omg
 >an omg
 Lashing out that way leaves you feeling you must be close to the right way to get a mango.
 #ttc-table-of-others-scannotes-ammo-gang
@@ -1066,15 +1066,15 @@ You might break what is in the storage.
 >grtea
 You might break what is in the storage. Then it would be neither great nor so great.
 
-#mistake test for gorean
+#testcase-mistake-roiling-gorean
 >gorean
 A Roiling Original isn't about that sort of stuff. Not that there's anything wrong with that.
 
-#mistake test for darter
+#testcase-mistake-roiling-darter
 >darter
 Art Erd has nowhere to run, and you don't know if you want him taking that So-Great Storage with him.
 
-#mistake test for retard
+#testcase-mistake-roiling-retard
 >retard
 You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
 
@@ -1111,13 +1111,13 @@ first-name basis
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 >gs
 female
-#mistake test for red rat
+#testcase-mistake-roiling-red-rat
 >red rat
 Red? Dr. Tera Darter is nowhere NEAR that left-wing. Rat? Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
-#mistake test for allo
+#testcase-mistake-roiling-allo
 >allo
 Lola says nothing back.
-#mistake test for a lol
+#testcase-mistake-roiling-a-lol
 >a lol
 You laugh at how silly Dr. Lola Ollard looks on the fake currency.
 #ttc-table-of-others-nudges-lola
@@ -1140,10 +1140,10 @@ Nothing close to anagramming LOST is on the box right now. You may need to use s
 !Your score has just gone up by one point.
 Dr. Severe
 
-#mistake test for lots
+#testcase-mistake-roiling-lots
 >lots
 You only need the one slot.
-#mistake test for reeves
+#testcase-mistake-roiling-reeves
 >reeves
 You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
 
@@ -1237,10 +1237,10 @@ That's not the way to learn from the searcher--it's probably not that complicate
 >n
 Gates Stage
 
-#mistake test for saget
+#testcase-mistake-roiling-saget
 >saget
 You don't need to be part of Yorpwald's Funniest* Home Videos right now.
-#mistake test for poring
+#testcase-mistake-roiling-poring
 >poring
 You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.
 #ttc-table-of-gates-stage-nudges-gates

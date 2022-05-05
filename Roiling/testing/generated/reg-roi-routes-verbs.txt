@@ -185,10 +185,10 @@ DEBUG INFO: General LLPish min-up for worst ad.
 
 >out
 
-#testcase-outside-same-mesa
+#+testcase-outside-same-mesa
 >out
 There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go.
-#testcase-exits-same-mesa
+#+testcase-exits-same-mesa
 >exits
 You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, maybe that's where the adventure is.
 

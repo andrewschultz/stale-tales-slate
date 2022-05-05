@@ -26,7 +26,7 @@ At the moment, even your profanities lack power.
 There's no way out until the bleary barley is gone.
 >undo
 
-#testcase-extra-minded-midden
+#testcase-exits-minded-midden
 >exits
 WRONG
 
@@ -39,7 +39,7 @@ Your score has just gone up by one point
 You have more than one way to leave: north and south. So you'll need to specify which one.
 >undo
 
-#+testcase-extra-minded-midden
+#+testcase-exits-minded-midden
 >exits
 WRONG
 
@@ -72,7 +72,7 @@ Your score has just gone up by one point
 You have more than one way to leave: north, south and west. So you'll need to specify which one.
 >undo
 
-#+testcase-extra-minded-midden
+#+testcase-exits-minded-midden
 >exits
 WRONG
 
@@ -87,7 +87,7 @@ Disowned Downside
 You have more than one way to leave: north, south and east. So you'll need to specify which one.
 >undo
 
-#testcase-extra-disowned-downside
+#testcase-exits-disowned-downside
 >exits
 WRONG
 
@@ -163,7 +163,7 @@ Salt Water. Wet, astral.
 The only way to exit is south, so let's go that way.
 >undo
 
-#testcase-extra-loop-pool
+#testcase-exits-loop-pool
 >exits
 WRONG
 
@@ -222,7 +222,7 @@ Be nice. He's on your side. Or he will be, once you gain his trust.
 The only way to exit is north, so let's go that way.
 >undo
 
-#testcase-extra-bran-barn
+#testcase-exits-bran-barn
 >exits
 WRONG
 
@@ -270,7 +270,7 @@ Your score has just gone up by one point
 You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
 >undo
 
-#+testcase-extra-disowned-downside
+#+testcase-exits-disowned-downside
 >exits
 WRONG
 
@@ -291,7 +291,7 @@ The coma camo may be detectable, but you can't change it.
 You have more than one way to leave: north and south. So you'll need to specify which one.
 >undo
 
-#testcase-extra-shiner-shrine
+#testcase-exits-shiner-shrine
 >exits
 WRONG
 
@@ -327,7 +327,7 @@ You are outnumbered. You need a bit of magic here.
 The only way to exit is south, so let's go that way.
 >undo
 
-#testcase-extra-lamer-realm
+#testcase-exits-lamer-realm
 >exits
 WRONG
 
@@ -419,7 +419,7 @@ The coma camo may be detectable, but you can't change it.
 You have more than one way to leave: north and south. So you'll need to specify which one.
 >undo
 
-#testcase-extra-clarthead-cathedral
+#testcase-exits-clarthead-cathedral
 >exits
 WRONG
 
@@ -456,7 +456,7 @@ You hear no metronomes you could turn into monotremes.
 The only way to exit is north, so let's go that way.
 >undo
 
-#testcase-extra-perverse-preserve
+#testcase-exits-perverse-preserve
 >exits
 WRONG
 
@@ -560,7 +560,7 @@ Reclusion Inclosure
 The only way to exit is east, so let's go that way.
 >undo
 
-#testcase-extra-reclusion-inclosure
+#testcase-exits-reclusion-inclosure
 >exits
 WRONG
 
@@ -611,7 +611,7 @@ Your score has just gone up by one point
 You have more than one way to leave: east and west. So you'll need to specify which one.
 >undo
 
-#+testcase-extra-reclusion-inclosure
+#+testcase-exits-reclusion-inclosure
 >exits
 WRONG
 
@@ -661,7 +661,7 @@ Elvira mocks you again:
 The only way to exit is east, so let's go that way.
 >undo
 
-#testcase-extra-rancho-archon-anchor
+#testcase-exits-rancho-archon-anchor
 >exits
 WRONG
 
