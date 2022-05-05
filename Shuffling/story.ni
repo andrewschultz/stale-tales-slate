@@ -377,21 +377,34 @@ cur-ceil is a number that varies. cur-ceil is usually 3.
 firstword is a number that varies. [key2]
 fullcmd is a number that varies. [key]
 
+good-guesses-noted is a truth state that varies.
+
+to say note-good-guesses:
+	if good-guesses-noted is true, continue the action;
+	say "[line break]";
+	ital-say "this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.";
+	now good-guesses-noted is true;
+
+to say note-great-guesses:
+	if good-guesses-noted is true, continue the action;
+	say "[line break]";
+	ital-say "you found a great guess, but such a change wouldn't push the story forward. Still, if you find one, the responses are meant to either be amusing or provide a small clue.";
+	now good-guesses-noted is true;
+
 to decide whether (nt - a table name) is hash-found:
 	repeat through nt:
 		if firstword is the hashval entry or fullcmd is the hashval entry:
 			if there is a this-rule entry:
-				say "[run paragraph on]";
-				consider this-rule entry;
+				process this-rule entry;
 				if the rule succeeded:
-					say "[this-clue entry][line break]";
+					say "[this-clue entry][line break][note-good-guesses]";
 					decide yes;
 			else if there is a this-item entry:
 				if this-item entry is touchable:
-					say "[this-clue entry][line break]";
+					say "[this-clue entry][line break][note-good-guesses]";
 					decide yes;
 			else:
-				say "[this-clue entry][line break]";
+				say "[this-clue entry][line break][note-good-guesses]";
 				decide yes;
 	decide no;
 
@@ -4959,6 +4972,7 @@ check entering a portal (this is the check if portal region is solved rule):
 	abide by the entry-rule of noun;
 	let gr be go-region of noun;
 	if gr is regsolve, say "[solved-text of noun]" instead;
+	if gr is not hub-region, now good-guesses-noted is true;
 	check-2-of-3;
 	now the noun is ever-entered;
 	last-loc-move gr;
