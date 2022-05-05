@@ -141,7 +141,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >au 2
-#mistake test for real hot
+#testcase-mistake-roiling-real-hot
 >real hot
 But what emotion would provide heat?
 #ttc-table-of-loather-rathole-nudges-hurt
@@ -284,7 +284,7 @@ DEBUG INFO: Race Acre hinting.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake retest for real hot
+#+testcase-mistake-roiling-real-hot
 >real hot
 You already got hot. Now you need to summon a different emotion.
 #ttc-table-of-troves-done-rejects-heat
@@ -297,7 +297,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a 
 #ttc-table-of-troves-scannotes-race-acre
 >scan race acre
 Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT.
-#mistake test for a rec
+#testcase-mistake-roiling-a-rec
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
 
@@ -335,7 +335,7 @@ In particular, you feel the need to OBSERVE right now.
 {$SCOS}
 
 @mis
-#mistake test for pots
+#testcase-mistake-roiling-pots
 >pots
 You can't see what you would do with a bunch of pots.
 
@@ -401,7 +401,7 @@ POP'S TOTS is written in red on the stop post.
 >scan sob ever verbose
 Your settler registers YRR?RR?.
 !The question marks ... hmm. Oh, you get it now.
-#mistake test for obverse
+#testcase-mistake-roiling-obverse
 >obverse
 You can't just make things obverse by wanting them to be. But if change comes within, perhaps things are closer to obverse than you think.
 
@@ -564,13 +564,13 @@ A snore arises from the arena. You see red. There's more, if you can deal with i
 "NO EARS! NO EARS!" you hear, seeing red, because that's obviously wrong.
 
 @mis
-#mistake test for norse
+#testcase-mistake-roiling-norse
 >norse
 The bee or arena's nationality is not relevant, and besides, it is a snore.
-#mistake test for noser
+#testcase-mistake-roiling-noser
 >noser
 A small orange blob with big eyes, short legs, and no arms falls off to the side, emitting garbled pseudo-profanity.
-#mistake test for senor
+#testcase-mistake-roiling-senor
 >senor
 The bee's gender is only relevant to the point of knowing it's a senora.
 
@@ -694,7 +694,7 @@ Nothing now that you reasoned your way around the arena's distractions.
 {$SCOS}
 
 @mis
-#mistake retest for norse
+#+testcase-mistake-roiling-norse
 >norse
 The bee or arena's nationality is not relevant, and besides, it was a snore.
 
@@ -767,10 +767,10 @@ You don't need to riff on any location names to win the game, unless there's not
 #ttc-table-of-drain-nadir-nudges-spider
 >spidre
 The diapers, the Ires Pad--the spider only fits in as *a* spider.
-#mistake test for aspired
+#testcase-mistake-roiling-aspired
 >aspired
 Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!
-#mistake test for praised
+#testcase-mistake-roiling-praised
 >praised
 You would like to be, but you can't just want others to. Change comes from within.
 
@@ -828,7 +828,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Reg
 #ttc-table-of-troves-scannotes-large-regal-lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
-#mistake test for alger
+#testcase-mistake-roiling-alger
 >alger
 What would an Alger hero DO to such foul spirits as the lager, though?
 #ttc-table-of-troves-readables-large-regal-lager
@@ -861,7 +861,7 @@ Ew--mild mildew. A mustier semi-rut.
 You stare into space some more but get distracted.
 
 @nud
-#mistake test for snog
+#testcase-mistake-roiling-snog
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
 #ttc-table-of-drain-nadir-nudges-diapers
@@ -956,10 +956,10 @@ The people living in them don't want to change. You can't make them. You need to
 #ttc-table-of-boredom-bedroom-nudges-bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#mistake test for broomed
+#testcase-mistake-roiling-broomed
 >broomed
 You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.
-#mistake test for aled
+#testcase-mistake-roiling-aled
 >aled
 Getting drunk will not solve your problems. Besides, you missed your "chance" with the lager in Drain Nadir. You see red at yourself for such thoughts.
 
@@ -994,7 +994,7 @@ The ME ARTS nourished you spiritually. Time to move on, though you could poke at
 >undo
 
 @mis
-#mistake test for repeal/repeals
+#testcase-mistake-roiling-repeal-repeals
 >repeal
 That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEAL is only six letters. There is a better way to forsake the false pleasure of the pleaser leapers!
 >repeals
@@ -1068,7 +1068,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's 
 #ttc-table-of-troves-scannotes-me-arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
-#mistake test for maters/tamers
+#testcase-mistake-roiling-maters-tamers
 >maters
 Perhaps they know their trade, well, but you need to, too.
 >tamers
@@ -1179,10 +1179,10 @@ by one point
 {$SCOS}
 
 @nud
-#mistake test for bowser
+#testcase-mistake-roiling-bowser
 >bowser
 A Roiling Original is pretty old school, but it has enough obstacles.
-#mistake test for eiders
+#testcase-mistake-roiling-eiders
 >eiders
 But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
 #ttc-table-of-browse-bowers-nudges-eder
@@ -1274,7 +1274,7 @@ The Save Aves are a well-off place, to be sure, where everyone has a nice vase, 
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move even further ahead in the world.
 
 @nud
-#mistake test for once
+#testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! But you're nowhere near enthused enough.
 #ttc-table-of-econ-cone-nudges-cone
@@ -1310,7 +1310,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. T
 #ttc-table-of-troves-scannotes-praise-spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
-#mistake test for persia
+#testcase-mistake-roiling-persia
 >persia
 You redden at the thought of mystical lands that aren't relevant to the here and now.
 
@@ -1346,13 +1346,13 @@ You have shut off the random posh dialogue with HUSH. Anyway, no more badgering 
 Random dialogue on again.
 
 @nud
-#mistake test for penrod
+#testcase-mistake-roiling-penrod
 >penrod
 Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!
-#mistake test for pernod
+#testcase-mistake-roiling-pernod
 >pernod
 There will be time for ritzy, overpriced alcohol once you have made it to the top. But until then, you need to keep focused.
-#mistake retest for once
+#+testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! You're enthused enough, but you need to strategize.
 #ttc-table-of-troves-done-rejects-praise-spirea
@@ -1391,7 +1391,7 @@ DEBUG INFO: END PRONER POD hinting.
 {$SCOS}
 
 @nud
-#mistake retest for once
+#+testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! You're more than enthused enough, but you need to strategize.
 #+ttc-table-of-econ-cone-nudges-statue
@@ -1511,7 +1511,7 @@ You got here by doing nothing while conscious, not doing nothing while unconscio
 White noise, it is on. Whee.
 
 @nud
-#mistake test for fren
+#testcase-mistake-roiling-fren
 >fren
 No dog walks along dragging Sebastian in their mouth.
 #ttc-table-of-upscale-capsule-nudges-upscale
@@ -1554,17 +1554,17 @@ DEBUG INFO: St. Al Salt hinting.
 {$SCOS}
 
 @nud
-#mistake test for lsat
+#testcase-mistake-roiling-lsat
 >lsat
 #OK-APOSTROPHE
 Oh dear. Is a standardized lawyers' aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.
-#mistake test for slat
+#testcase-mistake-roiling-slat
 >slat
 You're not in the window making business.
-#mistake test for wogan
+#testcase-mistake-roiling-wogan
 >wogan
 You don't need Terry Wogan announcing your progress like it's Eurovision.
-#mistake test for gwano
+#testcase-mistake-roiling-gwano
 >gwano
 Enough with the (redacted) spelling.
 #ttc-table-of-upscale-capsule-nudges-shaker
@@ -1645,7 +1645,7 @@ You couldn't just run out on your company and your responsibilities like that! Y
 You've lasted long enough. There are new things to look at, now.
 
 @nud
-#mistake test for ambler
+#testcase-mistake-roiling-ambler
 >ambler
 You see red slightly as Marble Blamer Balmer fails to look away.
 >x blamer balmer
@@ -1670,10 +1670,10 @@ The likeness was drawn up by E. R. Lamb, whose signature is in red.
 #ttc-table-of-upscale-capsule-nudges-beal
 >bela
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
-#mistake test for able
+#testcase-mistake-roiling-able
 >able
 Fortuntaely, Marble Blamer Mr. Beal doesn't become physically able.
-#mistake test for bale
+#testcase-mistake-roiling-bale
 >bale
 Neither you nor Marble Blamer Mr. Beal turns into hay.
 #ttc-table-of-troves-spechelp-marble-blamer-mr-beal

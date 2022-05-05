@@ -1,11 +1,24 @@
 Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
-[mist.py checks to make sure the unit tests are synced with this]
+[ttc has replaced mist.py to harvest test case checks
 [malf.py alphabetizes mistakes by section]
 [books are arranged by difficulty/first viewed, and rooms are arranged by first viewed]
 [note the code may look weird since room names don't have hyphens, to facilitate parser usage for the player with GT]
 
 volume Roiling Mistakes
+
+book "mistakes" with a leading a that don't quite fit in the code, so I fake their presence for ttc.py the test script harvester
+
+[
+understand "a rec" as a mistake ("null") when player is in Loather Rathole.
+understand "a gps" as a mistake ("null") when player is in Char Arch.
+understand "a cone" as a mistake ("null") when player is in Disease Seaside.
+understand "a nut" as a mistake ("null") when player is in Lean Lane.
+understand "a place" as a mistake ("null") when mrlp is towers and player is not in Loftier Trefoil.
+understand "in tears" as a mistake ("null") when nastier stainer retinas are touchable.
+understand "a lol" as a mistake ("null") when mrlp is others and Dr Lola Ollard is touchable.
+
+book verb redefinitions before the fact
 
 [some of these were defined in the main file, but if we do that, we wipe out the mistakes]
 
@@ -751,7 +764,7 @@ understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from ga
 
 understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become the main warden over Rodney.") when Andrew is touchable.
 
-understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when Edwin is touchable.
+understand "wendi" and "widen" as a mistake ("Now that would be too radical. Maybe go with something that makes him feel bad the next morning, but nothing too drastic.") when Edwin is touchable.
 
 chapter Topside Deposit
 

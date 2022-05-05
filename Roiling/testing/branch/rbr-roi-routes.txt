@@ -95,62 +95,62 @@ There are plenty of ways to go, but they don't seem to lead anywhere. There are 
 @nud
 >au 2
 >c
-#mistake test for follow [text]
+#testcase-mistake-roiling-follow-text
 >follow zozimus
 A Roiling Original doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
-#mistake test for psat
+#testcase-mistake-roiling-psat
 >psat
 You have enough word juggling now. You don't need a standardized test, too.
-#mistake test for beneath
+#testcase-mistake-roiling-beneath
 >beneath
 Nice try, but wrong preposition for the situation.
-#mistake test for below
+#testcase-mistake-roiling-below
 >below
 Nice try, but wrong preposition for the situation.
-#mistake test for spat
+#testcase-mistake-roiling-spat
 >spat
 Picking a fight--or spitting--is uncouth.
-#mistake test for staider
+#testcase-mistake-roiling-staider
 >staider
 Nothing has gotten too riotous yet.
-#mistake test for taps
+#testcase-mistake-roiling-taps
 >taps
 You have no bugle. Well, not in A Roiling Original.
-#mistake test for satired
+#testcase-mistake-roiling-satired
 >satired
 You find nothing to satirize.
-#mistake test for ptas
+#testcase-mistake-roiling-ptas
 >ptas
 Concerned parents won't be able to help you here.
-#mistake test for tardies
+#testcase-mistake-roiling-tardies
 >tardies
 Actually, you have all the time in the world, and you don't need to delay anyone.
-#mistake test for under
+#testcase-mistake-roiling-under
 >under
 There's nobody to hide from, though you could fit under the anti-sag sit-a-nag later.
-#mistake test for among
+#testcase-mistake-roiling-among
 >among
 Maybe if there were mango trees around.
-#mistake test for preposition/prepositions
+#testcase-mistake-roiling-preposition-prepositions
 >preposition
 Yes, prepositions are the way, but you need to find which work, where. There are only so many, you think. You hope.
 >prepositions
 Yes, prepositions are the way, but you need to find which work, where. There are only so many, you think. You hope.
-#mistake test for ouster-in-routes
+#testcase-mistake-roiling-ouster-2
 >ouster
 You're the ouster here, trying to get by the routes.
-#mistake test for ames
+#testcase-mistake-roiling-ames
 >ames
 Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.
-#mistake test for seam
+#testcase-mistake-roiling-seam
 >seam
 You can't find any crack in the Same Mesa that you could follow.
 \\
-#mistake test for aint
+#testcase-mistake-roiling-aint
 >aint
 You don't need to make the anti-sag sit-a-nag any sturdier. And calling it ain't-sag would be false advertising.
 \\
-#mistake test for aint gas/gas
+#testcase-mistake-roiling-aint-gas-gas
 >aint gas
 The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 >gas
@@ -267,15 +267,15 @@ DEBUG INFO: scripture picturers hinting.
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not precisely like that. Your thoughts are close, but jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
-#mistake test for indies
+#testcase-mistake-roiling-indies
 >indies
 You don't need to worry about art, here.
-#mistake test for apts
+#testcase-mistake-roiling-apts
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
 
 @nud
-#mistake test for ides/rat/tar
+#testcase-mistake-roiling-ides-rat-tar
 >ides
 It's the whole side art you need to deal with.
 >rat
@@ -397,13 +397,13 @@ Rev. Ali left, but with one final "character-building" challenge. The roads out 
 It was rumored Rev. Ali moved on to a new community to "help." His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow.
 
 @nud
-#mistake test for noops
+#testcase-mistake-roiling-noops
 >noops
 The snoop spoon isn't as complicated as assembly language.
 #ttc-table-of-routes-nudges-spoon
 >ospon
 Instead of bending the spoon, use it to help your magic powers if need be.
-#mistake test for man let/let man
+#testcase-mistake-roiling-man-let-let-man
 >man let
 Your heart is in the right place, but telling the mantle to cool it won't do much good.
 >let man
@@ -486,7 +486,7 @@ You can't change stuff like that by brute force. But you don't need to.
 Precise recipes
 
 @nud
-#mistake test for opposite
+#testcase-mistake-roiling-opposite
 >opposite
 Hm. The list doesn't seem to be what you need to stand opposite from. If it were, maybe Brother Horbert could and would have.
 #ttc-table-of-routes-nudges-boko
@@ -633,19 +633,19 @@ You can go back out.
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go DESPITE.
 
 @nud
-#mistake retest for psat
+#+testcase-mistake-roiling-psat
 >psat
 You have enough word juggling now. You don't need a standardized test, too.
-#mistake retest for spat
+#+testcase-mistake-roiling-spat
 >spat
 Picking a fight--or spitting--is uncouth.
-#mistake retest for taps
+#+testcase-mistake-roiling-taps
 >taps
 You have no bugle. Well, not in A Roiling Original.
-#mistake retest for ptas
+#+testcase-mistake-roiling-ptas
 >ptas
 Concerned parents won't be able to help you here.
-#mistake test for lied
+#testcase-mistake-roiling-lied
 >lied
 There has been no false advertising.
 #ttc-table-of-idle-deli-nudges-idle
@@ -671,29 +671,29 @@ It's not the carvings that need changing.
 >cravign
 It's not the carvings that need changing.
 !You got
-#mistake test for scarving
+#testcase-mistake-roiling-scarving
 >scarving
 Changing the restaurant to a clothes boutique isn't helpful.
-#mistake test for pta
+#testcase-mistake-roiling-pta
 >pta
 You don't need to attend any school board meetings.
-#mistake test for tap pat/tap
+#testcase-mistake-roiling-tap-pat-tap
 >tap pat
 You have Pat's attention, already, and he's not letting you in that seed pit without argument.
 >tap
 You have Pat's attention, already, and he's not letting you in that seed pit without argument.
-#mistake test for apt
+#testcase-mistake-roiling-apt
 >apt
 Actually, Pat's advice may not be apt. Look to the seed pit.
-#mistake test for atp
+#testcase-mistake-roiling-atp
 >atp
 No need for biochemistry, here.
-#mistake test for pat pat/pat
+#testcase-mistake-roiling-pat-pat-pat
 >pat pat
 Pat doesn't need consolation for his lost business.
 >pat
 Pat doesn't need consolation for his lost business.
-#mistake retest for apts
+#+testcase-mistake-roiling-apts
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
 
@@ -729,7 +729,7 @@ The spoon points you out of the Idle Deli.
 You got what you needed from the seed pit.
 
 @nud
-#mistake retest for tap pat/tap
+#+testcase-mistake-roiling-tap-pat-tap
 >tap
 You have Pat's attention, already, and you don't really need it now that you got the stupor sprout.
 #ttc-table-of-routes-done-rejects-stupor-sprout
@@ -737,13 +737,13 @@ You have Pat's attention, already, and you don't really need it now that you got
 That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 >despite
 That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
-#mistake retest for apt
+#+testcase-mistake-roiling-apt
 >apt
 Actually, Pat's advice may not be apt.
 !Look to the seed pit.
 
 @mis
-#mistake test for proust
+#testcase-mistake-roiling-proust
 >proust
 Alas, the stupor sprout has nothing in common with madeleine.
 
@@ -793,15 +793,15 @@ You need to figure out what the whole SOS ARC in the lairage regalia can become.
 #ttc-table-of-same-mesa-nudges-arc
 >acr
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
-#mistake test for car
+#testcase-mistake-roiling-car
 >car
 Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.
-#mistake test for scoar/scoars
+#testcase-mistake-roiling-scoar-scoars
 >scoar
 You don't get points just for asking them.
 >scoars
 You don't get points just for asking them.
-#mistake test for orcas
+#testcase-mistake-roiling-orcas
 >orcas
 But the whales would be beached. Inside or outside of Oscar's.
 
@@ -834,7 +834,7 @@ This do be a one-room place. You can really only go outside.
 You can go back out.
 
 @nud
-#mistake retest for orcas
+#+testcase-mistake-roiling-orcas
 >orcas
 But the whales would be beached. Besides, it's the pipe soot you want
 #ttc-table-of-adobe-abode-nudges-trashy
@@ -862,7 +862,7 @@ You don't need to do anything with Oscar, but maybe you can sneak the pipe soot 
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for poopiest
+#testcase-mistake-roiling-poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, well, dingy enough.
 #ttc-table-of-routes-spechelp-pipe-soot
@@ -893,7 +893,7 @@ Your score has just gone up by one point
 The spoon points you out of Oscar's.
 
 @nud
-#mistake retest for orcas
+#+testcase-mistake-roiling-orcas
 >orcas
 Besides, you got the pipe soot
 #ttc-table-of-routes-done-rejects-pipe-soot
@@ -912,7 +912,7 @@ Brother Horbert will work his magic with that.
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AGAINST.
 
 @nud
-#mistake retest for poopiest
+#+testcase-mistake-roiling-poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And the pipe soot is icky enough as-is.
 #+ttc-table-of-same-mesa-nudges-uhh
@@ -996,12 +996,12 @@ You don't have a weapon big enough to take Ian Gast. One won't appear in your su
 {$SCOS}
 
 @mis
-#mistake test for gats/tags
+#testcase-mistake-roiling-gats-tags
 >gats
 A Roiling Original is not violent enough for tags with gats.
 >tags
 A Roiling Original is not violent enough for tags with gats.
-#mistake test for stag
+#testcase-mistake-roiling-stag
 >stag
 Ian Gast already came alone and does not deserve to be changed into an animal.
 
@@ -1009,7 +1009,7 @@ Ian Gast already came alone and does not deserve to be changed into an animal.
 #ttc-table-of-same-mesa-nudges-gast
 >gsta
 You can't change Ian Gast permanently. You just have to work around him.
-#mistake retest for staider
+#+testcase-mistake-roiling-staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit
 #ttc-table-of-routes-done-rejects-gast
@@ -1023,7 +1023,7 @@ It's the whole side art you need to deal with.
 It's the whole side art you need to deal with.
 
 @nud
-#mistake retest for under
+#+testcase-mistake-roiling-under
 >under
 You can't hide from Ian Gast like that, right now.
 #ttc-table-of-same-mesa-nudges-tirade
@@ -1047,7 +1047,7 @@ It's the whole side art you need to deal with.
 It's the whole side art you need to deal with.
 >tar
 It's the whole side art you need to deal with.
-#mistake retest for staider
+#+testcase-mistake-roiling-staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit.
 
@@ -1065,10 +1065,10 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 You positioned yourself well to put up with Ian Gast's tirades. Time to try a new direction.
 
 @mis
-#mistake retest for ides/rat/tar
+#+testcase-mistake-roiling-ides-rat-tar
 >ides
 It's the whole side art you needed to deal with.
-#mistake retest for staider
+#+testcase-mistake-roiling-staider
 >staider
 You already did your best with the tirades and side art.
 
@@ -1113,7 +1113,7 @@ It seems best to deal with the whole WOE BOW BELL.
 >bell
 It seems best to deal with the whole WOE BOW BELL.
 \\
-#mistake test for bowel/elbow/bowels/elbows
+#testcase-mistake-roiling-bowel-elbow-bowels-elbows
 >bowel
 The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
 >elbow
@@ -1145,7 +1145,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 Ian Gast is banging on about Rude 'N Nuder, now.
 
 @nud
-#mistake retest for below
+#+testcase-mistake-roiling-below
 >below
 You already tried this preposition. There must be others.
 #ttc-table-of-routes-done-rejects-rude-n-nuder
@@ -1196,7 +1196,7 @@ The spoon points to the Cleric Circle now you have all the items.
 >sitagna
 The anti-sag sit-a-nag isn't important with Ian Gast gone.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
-#mistake retest for satired
+#+testcase-mistake-roiling-satired
 >satired
 Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
 #ttc-table-of-routes-done-rejects-u-nerd-endur-redun
@@ -1244,7 +1244,7 @@ No-Lag Logan may have left behind a ship that can get you out of here. It is bey
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ABOVE.
 
 @nud
-#mistake test for along
+#testcase-mistake-roiling-along
 >along
 You aren't far enough along to, err, look along
 #ttc-table-of-same-mesa-nudges-bev
@@ -1325,7 +1325,7 @@ You hear people far away crying "The Bean has landed!"
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for under-generic
+#testcase-mistake-roiling-under-2
 >under
 You already went UNDER. You need something new. Something slightly different.
 #ttc-table-of-routes-done-rejects-the-bean
@@ -1338,7 +1338,7 @@ THE BEAN has too much gravitas to be just a bean.
 >beneaht
 THE BEAN rolls back and forth a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from THE BEAN. That's a decent omen.
-#mistake test for bane
+#testcase-mistake-roiling-bane
 >bane
 You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.
 joke death
@@ -1385,10 +1385,10 @@ The whole NULL-IT UNIT.
 >unti
 The whole NULL-IT UNIT.
 # above the proper name has unit lower-cased, but we want to tell the anagram
-#mistake test for helos
+#testcase-mistake-roiling-helos
 >helos
 Helicopters can't make it underground.
-#mistake retest for along
+#+testcase-mistake-roiling-along
 >along
 There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
 #ttc-table-of-harms-marsh-nudges-marsh
@@ -1438,7 +1438,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blurry) are visible.
 
 @nud
-#mistake test for around
+#testcase-mistake-roiling-around
 >around
 You can't see an un-road yet, or anything that might lead to it.
 
@@ -1595,7 +1595,7 @@ Like most ads, it doesn't pose any great logical problems.
 Well! The data isn't dim from the settler. There's a lot to work with, here.
 
 @mis
-#mistake test for ta da/tada
+#testcase-mistake-roiling-ta-da-tada
 >ta da
 This is the wrong region for that sort of flash of insight.
 >tada
@@ -1662,12 +1662,12 @@ The mess-up spumes are too chaotic. You'll need to work your way around them ano
 #ttc-table-of-cripple-clipper-nudges-spumes
 >spumse
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
-#mistake test for abroad/aboard
+#testcase-mistake-roiling-abroad-aboard
 >abroad
 Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
 >aboard
 Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
-#mistake test for feer
+#testcase-mistake-roiling-feer
 >feer
 Fearing or pretending fake fear won't help, here.
 #ttc-table-of-cripple-clipper-nudges-clipper
@@ -1755,13 +1755,13 @@ That could work later, but the hog and ewe don't trust you to go by yet.
 You can go THROUGH once you've managed to deal with the bent ewe.
 
 @nud
-#mistake test for thru
+#testcase-mistake-roiling-thru
 >thru
 Well, sort of, but not so colloquial.
-#mistake test for tapster
+#testcase-mistake-roiling-tapster
 >tapster
 No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start playing, either.
-#mistake test for spatter
+#testcase-mistake-roiling-spatter
 >spatter
 No violence!
 #ttc-table-of-sonancy-canyons-nudges-canyon
@@ -1898,10 +1898,10 @@ you missed some extra stuff you can't go back for
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake retest for tapster
+#+testcase-mistake-roiling-tapster
 >tapster
 !No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start playing, either.
-#mistake retest for spatter
+#+testcase-mistake-roiling-spatter
 >spatter
 !No violence!
 #ttc-table-of-routes-spechelp-yob-den

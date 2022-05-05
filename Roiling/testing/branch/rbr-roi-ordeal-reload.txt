@@ -88,33 +88,33 @@ Peace and quiet. No adventure. Yet.
 >ordela
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 \\
-#mistake test for walkthrough/walkthru
+#testcase-mistake-roiling-walkthrough-walkthru
 >walkthrough
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
 \\
 >walkthru
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
 \\
-#mistake test for use [text]
+#testcase-mistake-roiling-use-text
 >use zozimus
 The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors
 \\
 >purloin settler
 \\
-#mistake test for consult [text]
+#testcase-mistake-roiling-consult-text
 >consult zozimus
 It looks like you tried to consult your notepad about something. The proper syntax is CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
-#mistake test for knock [text]
+#testcase-mistake-roiling-knock-text
 >undo
 \\
 >knock zozimus
 Just KNOCK instead.
-#mistake test for hug [text]/hug
+#testcase-mistake-roiling-hug-text-hug
 >hug zozimus
 Hug? Ugh. Guh.
 >hug
 Hug? Ugh. Guh.
-#mistake test for embrace [text]/embrace
+#testcase-mistake-roiling-embrace-text-embrace
 >embrace zozimus
 Hug? Ugh. Guh.
 >embrace
@@ -122,13 +122,13 @@ Hug? Ugh. Guh.
 #ttc-table-of-dusty-study-nudges-study
 >stuyd
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-#mistake test for nip
+#testcase-mistake-roiling-nip
 >nip
 Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.
-#mistake test for odor
+#testcase-mistake-roiling-odor
 >odor
 You'd stink as a host, trying that.
-#mistake test for rood
+#testcase-mistake-roiling-rood
 >rood
 No need to surprise a guest like that. Just open the door.
 #ttc-table-of-ordeal-reload-nudges-manse
@@ -158,7 +158,7 @@ You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 #ttc-table-of-dusty-study-nudges-sad
 >sda
 The ads have probably gone through enough word-twisting.
-#mistake test for [text] stable [text]/stable [text]/[text] stable
+#testcase-mistake-roiling-text-stable-text-stable-text-text-stable
 >zozimus stable zozimus
 You can just change the tables by saying STABLE--well, once you've had an introductory dialogue with an NPC.
 >stable zozimus
@@ -166,7 +166,7 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 >zozimus stable
 You can just change the tables by saying STABLE--well, once you've had an introductory dialogue with an NPC.
 \\
-#mistake test for ablest
+#testcase-mistake-roiling-ablest
 >ablest
 No, it's a thing you can change the tables to. You didn't have to deal with adjectives in Shuffling Around, but maybe you will here, later. Much later.
 
@@ -213,7 +213,7 @@ You probably can't spend another night in the Means Manse. You need to get going
 You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
 
 @nud
-#mistake retest for [text] stable [text]/stable [text]/[text] stable
+#mistake retest for [text] stable-text-stable-text-[text] stable
 >zozimus stable zozimus
 You can just change the tables by saying STABLE.
 >stable zozimus
@@ -226,7 +226,7 @@ No, you need a light source, not a way out.
 #mistake retest for rood
 >rood
 You need a light source.
-#mistake test for laredo
+#testcase-mistake-roiling-laredo
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
 
@@ -329,7 +329,7 @@ The lamp will last as long as you need it to.
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's a decent omen.
-#mistake test for chalets
+#testcase-mistake-roiling-chalets
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
 #ttc-table-of-dusty-study-nudges-latch
@@ -475,7 +475,7 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 #ttc-table-of-ordeal-reload-scannotes-meet-bans
 >scan meet bans
 You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
-#mistake test for palm
+#testcase-mistake-roiling-palm
 >palm
 Maybe you could, but you will need the light. You won't need the landscaping.
 #ttc-table-of-ordeal-reload-done-rejects-lamp
@@ -487,7 +487,7 @@ The smell would gag you before the shouty youths.
 #mistake retest for rood
 >rood
 It'd be your own crucifix if you let the shouty youths outside in.
-#mistake test for pedo
+#testcase-mistake-roiling-pedo
 >pedo
 Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her "clever" games.
 >pedo
@@ -498,32 +498,32 @@ Don't dwell on it. It's lies.
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS. That's a decent omen.
-#mistake test for net/net beams/beams net
+#testcase-mistake-roiling-net-net-beams-beams-net
 >net
 But the net would still block you.
 >net beams
 But the net would still block you.
 >beams net
 But the net would still block you.
-#mistake test for basement
+#testcase-mistake-roiling-basement
 >gonear largely gallery
 >basement
 Well, if you want points for that, you'll need to go back to the study.
-#mistake test for sitar
+#testcase-mistake-roiling-sitar
 >sitar
 You don't need music right now. A way to get around would be better.
 >undo
 >undo
 >undo
 #!these previous mistake tests are a cheap cheat to pick off an obscure mistake
-#mistake test for basement [text]/[text] basement [text]/[text] basement
+#testcase-mistake-roiling-basement-text-text-basement-text-text-basement
 >basement zozimus
 You can just change the ten beams by saying BASEMENT.
 >zozimus basement zozimus
 You can just change the ten beams by saying BASEMENT.
 >zozimus basement
 You can just change the ten beams by saying BASEMENT.
-#mistake test for best name/bestname
+#testcase-mistake-roiling-best-name-bestname
 >best name
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
 >bestname
@@ -548,7 +548,7 @@ Your score has just gone up by two points
 {$SCOS}
 
 @nud
-#mistake retest for basement [text]/[text] basement [text]/[text] basement
+#mistake retest for basement-text-[text] basement-text-[text] basement
 >basement zozimus
 You can just go DOWN to enter the basement.
 #ttc-table-of-dusty-study-nudges-tenbeams
@@ -701,7 +701,7 @@ You don't need a safe home, right now. You need adventure.
 #ttc-table-of-ordeal-reload-done-rejects-letters-settler
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
-#mistake test for cheat on/off/teach on/off
+#testcase-mistake-roiling-cheat-on-off-teach-on-off
 >c
 >cheat on
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
@@ -713,19 +713,19 @@ Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is curr
 >teach off
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
 >c
-#mistake test for pace/paces
+#testcase-mistake-roiling-pace-paces
 >pace
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
 >paces
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
-#mistake retest for [text] stable [text]/stable [text]/[text] stable
+#mistake retest for [text] stable-text-stable-text-[text] stable
 >zozimus stable zozimus
 You can just go IN to the stable.
 >stable zozimus
 You can just go IN to the stable.
 >zozimus stable
 You can just go IN to the stable.
-#mistake test for trestle
+#testcase-mistake-roiling-trestle
 >trestle
 The settler is pretty powerful, but it can't build bridges.
 
@@ -750,7 +750,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sitar. That's a 
 #ttc-table-of-ordeal-reload-readables-sitar
 >read sitar
 Oh, right. You bought it from Trisa Israt.
-#mistake test for astir
+#testcase-mistake-roiling-astir
 >astir
 You need to change that to something else, then it'll be astir.
 #ttc-table-of-farming-framing-nudges-framing
@@ -981,7 +981,7 @@ Surely a stair is more handy right now.
 >snbi
 The ISBN bins creak slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ISBN bins. That's a decent omen.
-#mistake test for bsin/bs in
+#testcase-mistake-roiling-bsin-bs-in
 >bsin
 Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 >bs in
@@ -1064,13 +1064,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a 
 #ttc-table-of-ordeal-reload-readables-rifle
 >read rifle
 It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
-#mistake test for filer
+#testcase-mistake-roiling-filer
 >filer
 You can't just give Elmo a desk job. Though maybe some paperwork would help.
-#mistake test for lifer
+#testcase-mistake-roiling-lifer
 >lifer
 You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.
-#mistake test for mole
+#testcase-mistake-roiling-mole
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
 >x elmo
@@ -1100,7 +1100,7 @@ Changing Elmo won't work. It's his rifle.
 #ttc-table-of-largely-all-grey-gallery-nudges-ugn
 >ung
 It's not a gun but a rifle.
-#mistake test for gnu
+#testcase-mistake-roiling-gnu
 >gnu
 It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 
@@ -1287,10 +1287,10 @@ You have no idea which plate to focus on, so maybe you should focus on the plate
 #ttc-table-of-carven-cavern-nudges-tapler
 >taplre
 What you need is singular, but you sense it's all the plaster that matters.
-#mistake test for craven
+#testcase-mistake-roiling-craven
 >craven
 Ok, the Carven Cavern IS pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
-#mistake test for trainer
+#testcase-mistake-roiling-trainer
 >trainer
 You're on your own. Perhaps you'd be better off scanning the plaster and twiddling the plates to get on with things.
 #ttc-table-of-ordeal-reload-spechelp-plates
@@ -1303,10 +1303,10 @@ EPSTAL is written as an author's signature.
 #ttc-table-of-ordeal-reload-scannotes-palest-pastel-plates
 >scan plates
 Hmm, maybe the question mark isn't as vague as you're worried it is.
-#mistake test for petals
+#testcase-mistake-roiling-petals
 >petals
 That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.
-#mistake test for pleats
+#testcase-mistake-roiling-pleats
 >pleats
 You are a text adventurer, not a fashion designer.
 #mistake retest for trainer
@@ -1419,11 +1419,11 @@ TALKing is the equivalent of asking someone about themselves.
 >undo
 
 @mis
-#mistake test for spectre
+#testcase-mistake-roiling-spectre
 >spectre
 "Spelling matters, here. If I were a spectre, I'd give a different cheat reading. Slots six and seven would turn yellow and red, respectfully. Err, respectively," says the Respect Specter.
 You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.
-#mistake test for sceptre
+#testcase-mistake-roiling-sceptre
 >sceptre
 "Spelling matters, here. If it were a spectre, I'd give a different cheat reading. Slots six and seven would turn red and yellow, respectfully. Err, respectively," says the Respect Specter.
 You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.

@@ -115,10 +115,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the volt maze. That'
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lamb. That's a decent omen.
-#mistake test for balm
+#testcase-mistake-roiling-balm
 >balm
 Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
-#mistake test for enemy tzar/tzar enemy
+#testcase-mistake-roiling-enemy-tzar-tzar-enemy
 >enemy tzar
 You hear a rumbling. Then Elvira appears from the maze! "Oh, dear, this will be easy," she says. And it is.
 joke death
@@ -160,7 +160,7 @@ It's the maze you need to change, not the zany meter.
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hump. That's a decent omen.
-#mistake test for hm up/up hm
+#testcase-mistake-roiling-hm-up-up-hm
 >hm up
 You don't need to levitate the hump. You need a way to jump over it.
 >up hm
@@ -214,12 +214,12 @@ You don't smell anything that'd make you say what you've needed to say in this a
 {$SCOS}
 
 @nud
-#mistake test for ooph/phoo
+#testcase-mistake-roiling-ooph-phoo
 >ooph
 That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
 >phoo
 That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
-#mistake test for pheyoo
+#testcase-mistake-roiling-pheyoo
 >pheyoo
 But nothing really smells in here. Perhaps you need something more straightforward and universal.
 #ttc-table-of-austerer-treasure-nudges-austerer
@@ -243,13 +243,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for bleep
+#testcase-mistake-roiling-bleep
 >bleep
 I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.
-#mistake test for rats
+#testcase-mistake-roiling-rats
 >rats
 Boy! It'd be neat to have something that made you more authoritative.
-#mistake test for whassup
+#testcase-mistake-roiling-whassup
 >whassup
 You probably want to TALK to people instead. Well, most of the time.
 
@@ -294,7 +294,7 @@ You are done here in Austerer Treasure. The earring will change when the time is
 The earring pulses a bit more, but you doubt you can do anything with it on your own.
 
 @mis
-#mistake test for rangier/rearing
+#testcase-mistake-roiling-rangier-rearing
 >rangier
 The earring shakes a bit more than usual, but maybe you're not in an area where it can be itself, or what it needs to be, yet.
 >rearing
@@ -338,39 +338,39 @@ You gulp the crust and can't help thinking RATS. But you are too polite and/or r
 DEBUG INFO: tsar star hinting.
 
 @nud
-#mistake test for tars
+#testcase-mistake-roiling-tars
 >tars
 !But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
-#mistake test for a gps
+#testcase-mistake-roiling-a-gps
 >a gps
 A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
-#mistake test for cafe
+#testcase-mistake-roiling-cafe
 >cafe
 You don't need caffeine or food here.
-#mistake test for gpa/gpas
+#testcase-mistake-roiling-gpa-gpas
 >gpa
 You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
 >gpas
 You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
-#mistake test for kay
+#testcase-mistake-roiling-kay
 >kay
 You try to nag the yak with a "kay?" but without the "mm" it's just not Lumberghian enough to work.
-#mistake test for kya
+#testcase-mistake-roiling-kya
 >kya
 The yak is unimpressed with your karate noises.
-#mistake test for mad
+#testcase-mistake-roiling-mad
 >mad
 How can you feel mad, looking at such a beautiful work of nature?
-#mistake test for okey
+#testcase-mistake-roiling-okey
 >okey
 You try to make things okey (sic) but you aren't enough of a bard to.
-#mistake test for spag
+#testcase-mistake-roiling-spag
 >spag
 You don't have time to read text-adventuring magazines right now. You're too busy living them.
-#mistake test for srat
+#testcase-mistake-roiling-srat
 >srat
 The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.
-#mistake test for pga/pgas
+#testcase-mistake-roiling-pga-pgas
 >pga
 No golfers appear.
 >pgas
@@ -446,10 +446,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That'
 #ttc-table-of-char-arch-nudges-tar
 >tra
 The tars remain heterogeneous. And very sticky. And the same size.
-#mistake test for arts
+#testcase-mistake-roiling-arts
 >arts
 Being an arts tsar won't help. You need a word that shows anger.
-#mistake test for tard
+#testcase-mistake-roiling-tard
 >tard
 Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! A Roiling Original doesn't want to be THAT sort of juvenile.
 You see red at your slight indiscretion
@@ -472,7 +472,7 @@ You gulp the crust and can't help thinking DRAT. But you are too polite and/or r
 DEBUG INFO: dart hinting.
 
 @nud
-#mistake retest for tars
+#+testcase-mistake-roiling-tars
 >tars
 But you already took the tsar star from the tars! Plus, you'd get all sticky.
 
@@ -1043,23 +1043,23 @@ You gulp the crust and can't help thinking BINGO. But you are too polite and/or 
 DEBUG INFO: boing-go bin hinting.
 
 @nud
-#mistake test for oppugn [text]/oppugn
+#testcase-mistake-roiling-oppugn-text-oppugn
 >oppugn zozimus
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
 >oppugn
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
-#mistake test for nobig/no big
+#testcase-mistake-roiling-nobig-no-big
 >nobig
 Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
 >no big
 Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
-#mistake test for pilots
+#testcase-mistake-roiling-pilots
 >pilots
 You don't need to fly anywhere. Besides, it's a popgun, not a pistol.
-#mistake test for smearin
+#testcase-mistake-roiling-smearin
 >smearin
 That may've happened during the seminar, but you don't need that sort of violence here and now.
-#mistake test for strop
+#testcase-mistake-roiling-strop
 >strop
 That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.
 #ttc-table-of-marines-seminar-remains-nudges-marines
@@ -1225,7 +1225,7 @@ This is just the entry. You may want to tackle the whole maze.
 #ttc-table-of-nowt-town-nudges-bigl
 >bilg
 The big L may be some sort of clue, but you can't do anything with it.
-#mistake test for glib
+#testcase-mistake-roiling-glib
 >glib
 You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
 >w
@@ -1240,13 +1240,13 @@ You can't think of any way to tackle this one room. Perhaps it is the whole maze
 You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
 >w
 >w
-#mistake test for lawls/lawl
+#testcase-mistake-roiling-lawls-lawl
 >lawls
 You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
 >lawl
 You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
 \\
-#mistake test for bing
+#testcase-mistake-roiling-bing
 >bing
 You come to four-fifths of a revelation, but it's not about this maze, sadly.
 >bingo
@@ -1274,7 +1274,7 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 #ttc-table-of-r22-nudges-bigr
 >birg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
-#mistake test for brig
+#testcase-mistake-roiling-brig
 >brig
 There, there. This maze is much less hard to get out of than a prison.
 >e
@@ -1447,7 +1447,7 @@ WRONG 1314
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for evil
+#testcase-mistake-roiling-evil
 >evil
 There's no sense in making the vile veil worse than it is and even less sense in turning Leo evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
 !That'd be mean.
@@ -1461,13 +1461,13 @@ The vile veil is impassive. It--kind of protects you, actually.
 >oel
 There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Leo. That's a decent omen.
-#mistake test for elo
+#testcase-mistake-roiling-elo
 >elo
 Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.
-#mistake test for eol
+#testcase-mistake-roiling-eol
 >eol
 Somehow, you doubt Leo is into computers.
-#mistake test for asswhup/whupass
+#testcase-mistake-roiling-asswhup-whupass
 >asswhup
 No chance.
 >whupass
@@ -1519,10 +1519,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes s
 #ttc-table-of-presto-scannotes-sods-gone-odes-song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
-#mistake retest for evil
+#+testcase-mistake-roiling-evil
 >evil
 There's no sense in making the vile veil worse than it is and even less sense in turning Rand evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
-#mistake test for leonard/renaldo/leandro/rolande
+#testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 >renaldo
@@ -1531,7 +1531,7 @@ There's no sense in making the vile veil worse than it is and even less sense in
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 >rolande
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
-#mistake test for rondale
+#testcase-mistake-roiling-rondale
 >rondale
 #OK-APOSTROPHE
 /Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
@@ -1571,7 +1571,7 @@ You gulp the crust and can't help thinking WHASSUP. But you are too polite and/o
 You had your chance for a minor swear or two. And you took it. Yay, you.
 
 @nud
-#mistake retest for evil
+#+testcase-mistake-roiling-evil
 >evil
 There's no sense in making the vile veil worse than it is.
 #ttc-table-of-presto-done-rejects-rand
@@ -1589,18 +1589,18 @@ Maybe something like that'd work with just one washup. But there are two.
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Rand and Leo|Leo and Rand). That's a decent omen.
-#mistake test for whasup/whasups
+#testcase-mistake-roiling-whasup-whasups
 >whasup
 That feels almost right, but you remember that that word has 2 s's in a row.
 >whasups
 That feels almost right, but you remember that that word has 2 s's in a row.
-#mistake retest for asswhup/whupass
+#+testcase-mistake-roiling-asswhup-whupass
 >asswhup
 It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins' cistern.
-#mistake retest for tard
+#+testcase-mistake-roiling-tard
 >tard
 /You pause before saying/thinking that, especially with (Rand and Leo|Leo and Rand) around. They may've heard that, before.
-#mistake retest for leonard/renaldo/leandro/rolande
+#+testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
 You need to find a way to cheer them up.
 
@@ -1659,10 +1659,10 @@ by one point
 /(Rand and Leo|Leo and Rand)'s small talk is not very deep or aggressive, and they are glad for a bit of banter, though not much comes of it\.
 
 @nud
-#mistake retest for leonard/renaldo/leandro/rolande
+#+testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
 You wouldn't want that, now they're your friends.
-#mistake retest for asswhup/whupass
+#+testcase-mistake-roiling-asswhup-whupass
 >asswhup
 They're on your side. They will fight when they need to.
 #ttc-table-of-presto-done-rejects-wzup
@@ -1749,15 +1749,15 @@ Maybe the dart can fit in the popgun.
 {$SCOS}
 
 @nud
-#mistake retest for nobig/no big
+#+testcase-mistake-roiling-nobig-no-big
 >no big
 Hey, now, that's just humblebragging.
 >nobig
 Hey, now, that's just humblebragging.
-#mistake test for fire [text]
+#testcase-mistake-roiling-fire-text
 >fire zozimus
 SHOOT something with the gun instead.
-#mistake test for shoot [text] with [text]
+#testcase-mistake-roiling-shoot-text-with-text
 >shoot zozimus with zozimus
 Just say what you want to shoot.
 #ttc-table-of-presto-done-rejects-boing-go-bin
@@ -1870,26 +1870,26 @@ WRONG 1729
 #different message for making it to the phat path 1st time? ??
 
 @mis
-#mistake test for delis
+#testcase-mistake-roiling-delis
 >delis
 You don't need food. And the food would probably be pretty evil, anyway.
-#mistake test for idles
+#testcase-mistake-roiling-idles
 >idles
 Deil's Slide can out-wait you. So you'll want to get on with things.
-#mistake test for sidle
+#testcase-mistake-roiling-sidle
 >sidle
 You don't need to sneak up Deil's Slide.
-#mistake test for asp/asps
+#testcase-mistake-roiling-asp-asps
 >asp
 Saps' Pass is dangerous enough.
 >asps
 Saps' Pass is dangerous enough.
-#mistake test for psa/psas
+#testcase-mistake-roiling-psa-psas
 >psa
 Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
 >psas
 Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
-#mistake test for spa/spas
+#testcase-mistake-roiling-spa-spas
 >spa
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 >spas
@@ -1971,7 +1971,7 @@ SYKE was another way around the hogs to get the keys.
 >undo
 
 @nud
-#mistake retest for rats
+#+testcase-mistake-roiling-rats
 >rats
 Boy! You miss that tsar star.
 #+ttc-table-of-saps'-pass-nudges-mount
@@ -2008,7 +2008,7 @@ DEBUG INFO: harpings phrasing hinting.
 It's best to stay on the Phat Path.
 
 @nud
-#mistake test for ptah
+#testcase-mistake-roiling-ptah
 >ptah
 No Egyptian deity comes to your rescue. Or needs to.
 #ttc-table-of-saps'-pass-nudges-phat
@@ -2019,10 +2019,10 @@ You don't need to riff on any location names to win the game, unless there's not
 No, it's not just any clump, but hawt thaw.
 
 @nud
-#mistake test for alter
+#testcase-mistake-roiling-alter
 >alter
 Vandalism! For shame!
-#mistake test for slog on
+#testcase-mistake-roiling-slog-on
 >slog on
 /You need (Rand and Leo|Leo and Rand) to go away, for now, before you can slog on.
 #ttc-table-of-presto-spechelp-hawt-thaw
@@ -2104,7 +2104,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. T
 #ttc-table-of-presto-scannotes-alert
 >scan alert
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
-#mistake test for artel
+#testcase-mistake-roiling-artel
 >artel
 /You, (Rand and Leo|Leo and Rand) have already engaged in a collective effort.
 
@@ -2294,11 +2294,11 @@ A reminder that cussing won't make a computer work any better, and you need to g
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
 
 @mis
-#mistake test for elf
+#testcase-mistake-roiling-elf
 >elf
 You don't need any D&D character to magick things the rest of the way here.
 \\
-#mistake test for alef
+#testcase-mistake-roiling-alef
 >alef
 You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.
 
@@ -2409,16 +2409,16 @@ You add the information to your pedanto-notepad under FLIPS.
 >undo
 
 @nud
-#mistake test for rived
+#testcase-mistake-roiling-rived
 >rived
 You don't need to do that sort of hacking.
-#mistake test for diver
+#testcase-mistake-roiling-diver
 >diver
 It's you that'll need to dive into some code.
-#mistake test for feal
+#testcase-mistake-roiling-feal
 >feal
 Nobody needs allegiance, here.
-#mistake test for clock sap/cock slap/slap cock
+#testcase-mistake-roiling-clock-sap-cock-slap-slap-cock
 >clock sap
 The locs aren't that gangsta, and neither are you. And that's a good thing.
 >cock slap
@@ -2557,10 +2557,10 @@ You need to deal with the full Clack Ops Locs Pack.
 >lefa
 The flea makes a crinkly noise but still seems quite dead.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea. That's a decent omen.
-#mistake test for idks
+#testcase-mistake-roiling-idks
 >idks
 You'll need to figure stuff out with the disk, but right now, yeah, you're all "I don't know."
-#mistake test for kids
+#testcase-mistake-roiling-kids
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with programming, anyway.
 However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus.
@@ -2626,11 +2626,11 @@ No, skid <=> disk is about it. There's no tricky third way.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake retest for kids
+#+testcase-mistake-roiling-kids
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with pushing the skid, anyway.
 !that's a plus
-#mistake test for repo
+#testcase-mistake-roiling-repo
 >repo
 Nobody else seems to own the oper rope or the skid.
 #ttc-table-of-presto-spechelp-skid
@@ -2657,10 +2657,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. Th
 >gmu
 Ugg... umm... you stare at the gum. Not many ways to stretch it, really.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a decent omen.
-#mistake test for alco
+#testcase-mistake-roiling-alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
-#mistake test for loca
+#testcase-mistake-roiling-loca
 >loca
 What you want needs to help programming more than water or French champagne or dancing in the rain.
 
@@ -2802,7 +2802,7 @@ You would rather change the skid back to the disk, then put the disk in the disk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for bat
+#testcase-mistake-roiling-bat
 >bat
 You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
 #ttc-table-of-presto-done-rejects-keyboard
@@ -2834,7 +2834,7 @@ The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command l
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
 
 @mis
-#mistake test for to be or
+#testcase-mistake-roiling-to-be-or
 >to be or
 The Be-Troo E-Robot isn't interested in monologues.
 
@@ -3098,7 +3098,7 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 {$SCOS}
 
 @mis
-#mistake retest for loca
+#+testcase-mistake-roiling-loca
 >loca
 What you have helps programming more than water or French champagne or dancing in the rain.
 
@@ -3112,16 +3112,16 @@ It's cola, not soda or pop. And you can just drink it.
 #ttc-table-of-hacks'-shack-nudges-pop
 >ppo
 It's cola, not soda or pop. And you can just drink it.
-#mistake retest for alco
+#+testcase-mistake-roiling-alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
-#mistake test for pop
+#testcase-mistake-roiling-pop
 >pop
 It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
-#mistake test for soda
+#testcase-mistake-roiling-soda
 >soda
 It's cola. It has to be. Soda could make you into a sod, of course.
-#mistake retest for feal
+#+testcase-mistake-roiling-feal
 
 >mug
 Your score has just gone up by one point
@@ -3162,7 +3162,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a de
 >drivee
 Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a decent omen.
-#mistake test for redive
+#testcase-mistake-roiling-redive
 >redive
 But you've figured nothing about Drive E yet. Not that you strictly need to.
 
@@ -3227,7 +3227,7 @@ The tab key will be useful without any further wizardry.
 #+ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
-#mistake retest for redive
+#+testcase-mistake-roiling-redive
 >redive
 Deriving was tricky enough.
 #+ttc-table-of-presto-readables-drive-a

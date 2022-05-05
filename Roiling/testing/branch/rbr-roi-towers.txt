@@ -354,42 +354,42 @@ Boy! Terrance might be less oppressive if he were RECREANT.
 @mis
 ##balance undos
 >allrand
-#mistake test for enters
+#testcase-mistake-roiling-enters
 >enters
 You'll need a few exits, here, really.
 >undo
-#mistake test for new id
+#testcase-mistake-roiling-new-id
 >new id
 You need to make sure Edwin's new ID is something negative.
 >undo
-#mistake test for radly
+#testcase-mistake-roiling-radly
 >radly
 Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.
 >undo
-#mistake test for recalm/recalm marcel
+#testcase-mistake-roiling-recalm-recalm-marcel
 >recalm
 Right idea, but it might work better in another area.
 >recalm marcel
 Right idea, but it might work better in another area.
 >undo
 >undo
-#mistake test for resent
+#testcase-mistake-roiling-resent
 >resent
 But how could you make Ernest feel so he'd resent his position?
 >undo
-#mistake test for wander
+#testcase-mistake-roiling-wander
 >wander
 A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead.
 >undo
-#mistake test for warden
+#testcase-mistake-roiling-warden
 >warden
 Andrew doesn't look like he has the leadership qualities necessary to become the main warden over Rodney.
 >undo
-#mistake test for wendi/widen
+#testcase-mistake-roiling-wendi-widen
 >wendi
-Now that would be too embarrassing. Maybe you could embarrass him a little, though.
+Now that would be too radical. Maybe go with something that makes him feel bad the next morning, but nothing too drastic.
 >widen
-Now that would be too embarrassing. Maybe you could embarrass him a little, though.
+Now that would be too radical. Maybe go with something that makes him feel bad the next morning, but nothing too drastic.
 >undo
 >undo
 >undo
@@ -690,14 +690,14 @@ There's only one picaro left, and his name is Rodney.
 Perhaps Rodney's over-florid title will wind up being a weakness.
 
 @mis
-#mistake test for nerd yo/nerdy o/yo nerd
+#testcase-mistake-roiling-nerd-yo-nerdy-o-yo-nerd
 >nerd yo
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
 >nerdy o
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
 >yo nerd
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
-#mistake test for clear it
+#testcase-mistake-roiling-clear-it
 >clear it
 The recital article stays in place. You see red, upset the brute-force magic didn't work.
 
@@ -806,24 +806,24 @@ Your word, stupendous as it is, has no effect. Yet. You are probably not close e
 You can make the Curst Palace SPECTACULAR once you're near it.
 
 @nud
-#mistake test for wist led/its lewd
+#testcase-mistake-roiling-wist-led-its-lewd
 >wist led
 Editorializing about the Wildest Wilteds won't help.
 >its lewd
 Editorializing about the Wildest Wilteds won't help.
-#mistake test for stop die
+#testcase-mistake-roiling-stop-die
 >stop die
 The voice you heard no longer echoes. You'll find a way north to the Wildest Wilteds.
-#mistake test for posited
+#testcase-mistake-roiling-posited
 >posited
 You formulate a proof that the place you are in does actually exist.
-#mistake test for cleats
+#testcase-mistake-roiling-cleats
 >cleats
 The castle is run-down and unromantic enough. Changing it to cleats would be even worse.
-#mistake test for a place
+#testcase-mistake-roiling-a-place
 >a place
 It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.
-#mistake test for crust
+#testcase-mistake-roiling-crust
 >crust
 It probably needs less crust, not more. The whole curst palace.
 #ttc-table-of-towers-spechelp-curst-palace
@@ -912,7 +912,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. T
 >scan dreads adders
 Your settler registers RY?RYR.
 Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
-#mistake test for dopiest
+#testcase-mistake-roiling-dopiest
 >dopiest
 You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
 
@@ -998,12 +998,12 @@ WRONG 979
 >get all
 
 @nud
-#mistake test for retoast/retoast [text]
+#testcase-mistake-roiling-retoast-retoast-text
 >retoast
 A good try, but this isn't the right area. All you can do is TOAST and then EAT a skan snak once you have it.
 >retoast zozimus
 A good try, but this isn't the right area. All you can do is TOAST and then EAT a skan snak once you have it.
-#mistake retest for dopiest
+#+testcase-mistake-roiling-dopiest
 >dopiest
 You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
 
@@ -1041,13 +1041,13 @@ Wow, lots of blank data. You may want to get closer to get fuller clues about ho
 You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
 >undo
 >undo
-#mistake test for copes
+#testcase-mistake-roiling-copes
 >copes
 You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.
-#mistake test for pecos
+#testcase-mistake-roiling-pecos
 >pecos
 A Roiling Original ain't a dadgum Western.
-#mistake test for bustler
+#testcase-mistake-roiling-bustler
 >bustler
 The butlers are plural, and anyway, they're bustling plenty as-is.
 #ttc-table-of-scope-copse-nudges-copse
@@ -1081,7 +1081,7 @@ Well, the orange kind of gives things away. And even with brute force, you can p
 #ttc-table-of-towers-scannotes-denier-nereid
 >scan denier nereid
 You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
-#mistake test for ursty/ur sty
+#testcase-mistake-roiling-ursty-ur-sty
 >ursty
 You're trying to destroy the yurts, not build them up.
 >ur sty
@@ -1150,7 +1150,7 @@ DEBUG INFO: Taking away a max point.
 }}CURMAX--
 
 @mis
-#mistake test for xray/x ray
+#testcase-mistake-roiling-xray-x-ray
 >xray
 You don't have x-ray vision right now.
 >x ray
@@ -1174,7 +1174,7 @@ Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, e
 #+ttc-table-of-scope-copse-nudges-copse
 >cepos
 The copse and the Spec-O-Scope are both fine as-is.
-#mistake test for worse
+#testcase-mistake-roiling-worse
 >worse
 The brownies don't need to taste any worse.
 #ttc-table-of-towers-nudges-brownie
@@ -1711,10 +1711,10 @@ DOUBLE PROBLEM FOR: released.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @mis
-#mistake test for tasering
+#testcase-mistake-roiling-tasering
 >tasering
 You don't want to make the ingrates even angrier.
-#mistake test for ice man/iceman
+#testcase-mistake-roiling-ice-man-iceman
 >ice man
 The iceman cometh, and your life passeth.
 joke death
@@ -1765,7 +1765,7 @@ Hmm, there are some matches, and maybe one of the two variable settings will wor
 #ttc-table-of-towers-scannotes-mardier-admirer
 >scan mardier admirer
 Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants.
-#mistake test for granites/granite
+#testcase-mistake-roiling-granites-granite
 >granites
 They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
 >granite
@@ -1833,7 +1833,7 @@ WRONG 1795
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
 @mis
-#mistake test for rustle/rustle strudel
+#testcase-mistake-roiling-rustle-rustle-strudel
 >rustle
 Wrong type of word, and you're missing a d.
 >rustle strudel
@@ -1845,7 +1845,7 @@ Wrong type of word, and you're missing a d.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for refing
+#testcase-mistake-roiling-refing
 >refing
 You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.
 #ttc-table-of-fringe-finger-nudges-finger
@@ -1965,7 +1965,7 @@ You'd have to drop the strudel on the ground and get it germy to try that again.
 The mardier admirer looks askance, then returns to evaluating you some more.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mardier admirer. That's a decent omen.
 >e
-#mistake test for slated
+#testcase-mistake-roiling-slated
 >slated
 You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research.
 !You've gotten rid of all nuisances here, anyway.
@@ -2012,7 +2012,7 @@ You think you hear NEVAHs, but that's got to be just internal melodrama.
 Such a lost, gentle animal certainly doesn't have a clonk due. You see red for even thinking of such an act.
 
 @nud
-#mistake test for unlocked
+#testcase-mistake-roiling-unlocked
 >unlocked
 There's nothing here to unlock. Maybe someone's imprisoned somewhere. And besides, the duck doesn't seem cooperative, yet. Still, that's an idea.
 #ttc-table-of-shaven-havens-nudges-shaven
@@ -2099,7 +2099,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sweatier wait-se
 >scan sweatier wait seer
 The letters blink from red/yellow to purple/green and back.
 \\
-#mistake test for sweat/waste/waste ire
+#testcase-mistake-roiling-sweat-waste-waste-ire
 >sweat
 You waste sweat and ire thinking what to do.
 >waste
@@ -2223,7 +2223,7 @@ The resident trendies sniff a bit. No, that's uncool, they say. But they look a 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
 
 @mis
-#mistake test for inserted
+#testcase-mistake-roiling-inserted
 >inserted
 You see red realizing the resident trendies already inserted themselves here.
 
@@ -2241,7 +2241,7 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @mis
-#mistake test for dang rite
+#testcase-mistake-roiling-dang-rite
 >dang rite
 Creative, but ineffective, positive colloquialism.
 
@@ -2277,7 +2277,7 @@ The realist tailers take time to sniff at that ... whatever it is. You shouldn't
 #ttc-table-of-towers-nudges-tailer
 >talier
 No, you need to deal with all the tailers.
-#mistake test for retail/retails
+#testcase-mistake-roiling-retail-retails
 >retail
 The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
 >retails
@@ -2310,7 +2310,7 @@ Gumming up one weed wouldn't get the others.
 >weesd
 The weeds almost seem to shrug.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weeds. That's a decent omen.
-#mistake test for swede
+#testcase-mistake-roiling-swede
 >swede
 That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
 !Mel Fish
@@ -2375,7 +2375,7 @@ You look at the denim and it's probably the denim you want to deal with, not its
 #ttc-table-of-treading-gradient-nudges-mini
 >miin
 You look at the denim and it's probably the denim you want to deal with, not its properties.
-#mistake test for i mend
+#testcase-mistake-roiling-i-mend
 >i mend
 You're more interested in doing the opposite--seeing what's behind.
 #+ttc-table-of-treading-gradient-nudges-gradient
@@ -2571,7 +2571,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 
 @mis
-#mistake test for eoliths
+#testcase-mistake-roiling-eoliths
 >eoliths
 Whoah, A Roiling Original's pretty retro, but nothing that ancient. Besides, you want a better way for the Hostile-Is-He Lot to be.
 
@@ -2652,7 +2652,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut
 #ttc-table-of-towers-scannotes-fluster-self-rut
 >scan fluster self rut
 You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
-#mistake test for fluters
+#testcase-mistake-roiling-fluters
 >fluters
 A Roiling Original has no soundtrack, and if I made one, it wouldn't be very good.
 
@@ -2778,7 +2778,7 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 After a thoughtful gaze, you reckon the organised ego drains could be GRANDIOSE.
 
 @mis
-#mistake test for organdies
+#testcase-mistake-roiling-organdies
 >organdies
 The ego-drains remain made of sturdy material.
 
@@ -2906,18 +2906,18 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for reposit/reposits
+#testcase-mistake-roiling-reposit-reposits
 >reposit
 You can't just push the ripostes aside. There must be a way to change them.
 >reposits
 You can't just push the ripostes aside. There must be a way to change them.
-#mistake test for prosties
+#testcase-mistake-roiling-prosties
 >prosties
 Not that sort of game. There's some suggestive stuff, but nothing like that.
-#mistake test for slot
+#testcase-mistake-roiling-slot
 >slot
 If you made it, you might fall in the slot and never get out.
-#mistake test for tripose/triposes
+#testcase-mistake-roiling-tripose-triposes
 >tripose
 No organic chemistry, please.
 >triposes
@@ -3087,7 +3087,7 @@ Honk, honk.
 {$SCOS}
 
 @nud
-#mistake test for ranged
+#testcase-mistake-roiling-ranged
 >ranged
 The garden does not get any bigger.
 #ttc-table-of-danger-garden-nudges-geese
@@ -3153,19 +3153,19 @@ The dagger is not very sharp. Besides, it'd be too easy to lost in the Wildest W
 You can't reach in, and it's a bad idea anyway.
 
 @mis
-#mistake test for fires
+#testcase-mistake-roiling-fires
 >fires
 Fries, fires, it'll still hurt anyone who goes poking at it. Maybe there's a way to make it seem less of a trap?
-#mistake test for goal
+#testcase-mistake-roiling-goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
-#mistake test for dowry
+#testcase-mistake-roiling-dowry
 >dowry
 Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
-#mistake test for delock
+#testcase-mistake-roiling-delock
 >delock
 No, this is the wrong area for pure action.
-#mistake test for olga
+#testcase-mistake-roiling-olga
 >olga
 Even if the goal could become a person, they'd be kind of wooden.
 
@@ -3347,10 +3347,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
 >scan prison ropins
 Nothing happens until you scan the luck node.
-#mistake test for locked
+#testcase-mistake-roiling-locked
 >locked
 No, the opposite...
-#mistake retest for dowry
+#+testcase-mistake-roiling-dowry
 >dowry
 Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
 >gs
@@ -3364,7 +3364,7 @@ by one point
 >undo
 
 @mis
-#mistake test for clonk due/due clonk/conk duel/cold nuke/nuke cold
+#testcase-mistake-roiling-clonk-due-due-clonk-conk-duel-cold-nuke-nuke-cold
 >clonk due
 The luck node can and should be defeated nonviolently.
 >due clonk
@@ -3402,13 +3402,13 @@ You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see fu
 {$SCOS}
 
 @nud
-#mistake retest for delock
+#+testcase-mistake-roiling-delock
 >delock
 Unlocked worked better, here.
-#mistake retest for locked
+#+testcase-mistake-roiling-locked
 >locked
 You don't need to fiddle with the lock now.
-#mistake retest for goal
+#+testcase-mistake-roiling-goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
 #+ttc-table-of-obscurest-subsector-nudges-ropins
@@ -3446,7 +3446,7 @@ The palace has receded a bit, but--well--that machine's got to be good for somet
 DEBUG INFO: diverse deviser hinting.
 
 @nud
-#mistake test for pairer
+#testcase-mistake-roiling-pairer
 >pairer
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 #ttc-table-of-outer-route-nudges-roeut
@@ -3523,7 +3523,7 @@ WRONG 3423
 The diverse deviser is complicated enough. You probably just need to figure what to put in it.
 
 @mis
-#mistake retest for pairer
+#+testcase-mistake-roiling-pairer
 >pairer
 You don't need duplicates of anything here. Besides, the diverse deviser looks complex enough. It will probably reject or accept what it needs to.
 
@@ -3563,7 +3563,7 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 #ttc-table-of-towers-nudges-zomg
 >zogm
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
-#mistake retest for pairer
+#+testcase-mistake-roiling-pairer
 >pairer
 The diverse deviser is in no shape to do any more work.
 #+ttc-table-of-outer-route-nudges-repair
@@ -3573,7 +3573,7 @@ The diverse deviser is complicated enough. You already got something from it, an
 >gt coastlines
 
 @nud
-#mistake test for kale
+#testcase-mistake-roiling-kale
 >kale
 "More kale, dear?" / "Did I ASK for more kale, dear?"
 Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
@@ -3632,10 +3632,10 @@ You can't manipulate the clouds, and you don't need to. It's really more fun to 
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 >n
 >w
-#mistake retest for slated
+#+testcase-mistake-roiling-slated
 >slated
 You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research. You've gotten rid of all nuisances here, anyway.
-#mistake test for lasted
+#testcase-mistake-roiling-lasted
 >lasted
 The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway.
 #ttc-table-of-salted-deltas-nudges-salted
@@ -3665,7 +3665,7 @@ After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 #palace 9 lights
 >scan palace
 Your settler registers RRYR?YRYR**.
-#mistake test for coatings
+#testcase-mistake-roiling-coatings
 >coatings
 No, Scot Agin doesn't need to change like THAT.
 #ttc-table-of-towers-readables-dinger
@@ -3693,7 +3693,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The overwhelming smell of kale is not offensive, but you'd like to get by Leak Lake, all the same.
 
 @mis
-#mistake test for sectional/sectionals
+#testcase-mistake-roiling-sectional-sectionals
 >sectionals
 You're not competing with anyone, and you certainly wouldn't want to have to navigate the traffic of a boat race as you crossed Leak Lake.
 
@@ -3750,7 +3750,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a 
 Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about.
 
 @mis
-#mistake test for parley
+#testcase-mistake-roiling-parley
 >parley
 The raves saver/replay player can be parleyed into something shinier.
 
@@ -3789,7 +3789,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @mis
-#mistake retest for parley
+#+testcase-mistake-roiling-parley
 >parley
 The raves saver/replay player has already been parleyed into something shinier.
 
@@ -3892,11 +3892,11 @@ The spray will still drown you if you don't figure a way to move somewhere.
 >watre
 The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the Earnest Eastern Neaters?
 >undo
-#mistake test for earnest
+#testcase-mistake-roiling-earnest
 >earnest
 The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.
 >undo
-#mistake test for prays
+#testcase-mistake-roiling-prays
 >prays
 Too late to be a prayers sprayer.
 >undo
@@ -4117,7 +4117,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire
 #ttc-table-of-towers-scannotes-weirder-red-wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you see any extra red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
-#mistake test for were rid
+#testcase-mistake-roiling-were-rid
 >were rid
 No, you can't just yank the red wire out.
 #+ttc-table-of-actionless-coastlines-nudges-bot
@@ -4216,19 +4216,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for spenter
+#testcase-mistake-roiling-spenter
 >spenter
 You're not sure if the serpent's ever been spent, so you can't quite make it spent-er, whether or not that's really a word. Still, that's got to be somehere in the ballpark of how to get rid of it.
 \\
-#mistake test for purine
+#testcase-mistake-roiling-purine
 >purine
 You can change the ur-pine without getting too far into organic chemistry.
 \\
-#mistake test for repents
+#testcase-mistake-roiling-repents
 >repents
 The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.
 \\
-#mistake test for respent
+#testcase-mistake-roiling-respent
 >respent
 You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.
 \\
@@ -4277,26 +4277,26 @@ Your score has just gone up by one point
 Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
 
 @mis
-#mistake test for its near/sit near
+#testcase-mistake-roiling-its-near-sit-near
 >its near
 The retinas care not for physical proximity. They will just stare.
 >sit near
 The retinas care not for physical proximity. They will just stare.
-#mistake test for ranties
+#testcase-mistake-roiling-ranties
 >ranties
 Oh, no. Their icy gazes are quite enough.
-#mistake test for restain
+#testcase-mistake-roiling-restain
 >restain
 The retinas haven't stained you yet. You don't want to be stained, much less re-stained. You see red at the thought.
-#mistake test for retain/retains
+#testcase-mistake-roiling-retain-retains
 >retain
 Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.
 >retains
 Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.
-#mistake test for stearin
+#testcase-mistake-roiling-stearin
 >stearin
 The retinas are probably full of all kinds of indescribable weird organic compounds. But there may be a practical way to describe them better.
-#mistake test for taserin
+#testcase-mistake-roiling-taserin
 >taserin
 The retinas are more likely to zap you.
 
@@ -4366,7 +4366,7 @@ WRONG 4258
 #ttc-table-of-mislit-limits-nudges-present
 >pretnes
 The serpent is taken care of.
-#mistake test for occurs
+#testcase-mistake-roiling-occurs
 >occurs
 You need to make something occur.
 #ttc-table-of-towers-nudges-occurs
@@ -4393,7 +4393,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a
 #ttc-table-of-towers-scannotes-tetris-sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
-#mistake test for titres/titers
+#testcase-mistake-roiling-titres-titers
 >titres
 No physical sciences are necessary here.
 >titers
@@ -4639,7 +4639,7 @@ Strip of Profits
 
 @mis
 #this can't be easily tested elsewhere without cheating e.g. gonear limits, spectacular
-#mistake retest for tortes
+#+testcase-mistake-roiling-tortes
 >tortes
 There's no time for food! Especially fatty, non-brain food! Besides, the towers had plenty of food. There was your chance!
 

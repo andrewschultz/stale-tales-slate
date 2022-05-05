@@ -66,15 +66,15 @@ DEBUG INFO: bleary barley hinting.
 You think you're on to something, but no--you can't find anything to focus on, thinking that.
 >stuflyf
 !You think you're on to something, but no--you can't find anything to focus on, thinking that.
-#mistake test for id mend/mend id
+#testcase-mistake-roiling-id-mend-mend-id
 >id mend
 It's not that easy. Find what to mend.
 >mend id
 It's not that easy. Find what to mend.
-#mistake test for dim den
+#testcase-mistake-roiling-dim-den
 >dim den
 You remain outside in (relative) light.
-#mistake test for dim end/end dim
+#testcase-mistake-roiling-dim-end-end-dim
 >dim end
 Okay, if you say so...
 NOTE: this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.
@@ -175,7 +175,7 @@ Ed Riley doesn't seem to make any noise. He just blocks you west.
 Burnt Brunt
 
 @mis
-#mistake test for deltaic
+#testcase-mistake-roiling-deltaic
 >deltaic
 Reorganizing the geography around the Edictal Citadel won't help.
 
@@ -183,12 +183,12 @@ Reorganizing the geography around the Edictal Citadel won't help.
 #ttc-table-of-otters-nudges-citadel
 >citadle
 Transform the whole Citadel? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there, with help and your powers back. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
-#mistake test for end u
+#testcase-mistake-roiling-end-u
 >end u
 No, end *U*!
 joke death
 >undo
-#mistake test for dialect
+#testcase-mistake-roiling-dialect
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
 #ttc-table-of-otters-done-rejects-nude-dune
@@ -205,7 +205,7 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 DOUBLE PROBLEM FOR: rescind.
 
 @nud
-#mistake test for increds
+#testcase-mistake-roiling-increds
 >increds
 You marvel at the possible power of the cinders and even see red at the thought of giving them up.
 #ttc-table-of-minded-midden-nudges-burtn
@@ -259,16 +259,16 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a decent omen.
-#mistake test for deli-rye-otters
+#testcase-mistake-roiling-lied-2
 >lied
 You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
-#mistake test for reedy
+#testcase-mistake-roiling-reedy
 >reedy
 No, the adverb.
-#mistake test for yer
+#testcase-mistake-roiling-yer
 >yer
 Yup! It's Ed's!
-#mistake test for idle
+#testcase-mistake-roiling-idle
 >idle
 Ed Riley looks pleased he's pressured you into laziness.
 
@@ -370,7 +370,7 @@ WRONG
 You need to deal with all the players to knock them back a peg.
 
 @mis
-#mistake test for parsley
+#testcase-mistake-roiling-parsley
 >parsley
 Despite your best efforts, they remain meatheads.
 
@@ -386,7 +386,7 @@ Being outnumbered, maybe you can attack their arguments instead.
 @mis
 ##balance undos
 >allrand
-#mistake test for indiscretely
+#testcase-mistake-roiling-indiscretely
 >indiscretely
 Yes, yes, I am being pedantic here. But discreet and discrete are different enough.
 >undo
@@ -624,10 +624,10 @@ Ick, man. Mackin'. You really don't want to pay attention to the details, but yo
 >undo
 
 @nud
-#mistake test for slap em
+#testcase-mistake-roiling-slap-em
 >slap em
 Violence is not the answer! Be clever, here.
-#mistake test for slap me
+#testcase-mistake-roiling-slap-me
 >slap me
 That's kind of a silly way to motivate yourself.
 #ttc-table-of-disowned-downside-nudges-downside
@@ -1128,7 +1128,7 @@ The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no ful
 You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
 
 @nud
-#mistake retest for slap em
+#+testcase-mistake-roiling-slap-em
 >slap em
 The maples are harmless.
 
@@ -1253,13 +1253,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for slee
+#testcase-mistake-roiling-slee
 >slee
 The eels aren't what needs to be reduced to rubble, here.
-#mistake test for lees
+#testcase-mistake-roiling-lees
 >lees
 The eels would be insulted to be referred to as dregs.
-#mistake test for polo
+#testcase-mistake-roiling-polo
 >polo
 No time for games! You don't have your powers back, anyway. Rather than change the water, change what's in it.
 #ttc-table-of-loop-pool-nudges-pool
@@ -1538,7 +1538,7 @@ The whole vow here.
 #ttc-table-of-otters-nudges-here
 >heer
 The whole vow here.
-#mistake test for whoever
+#testcase-mistake-roiling-whoever
 >whoever
 You wonder whoever could be saying the vow here. You suspect you are very close and very far at once.
 
@@ -1699,13 +1699,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @mis
-#mistake test for implys
+#testcase-mistake-roiling-implys
 >implys
 You will have to be subtle here, but you'll want to work on actions, instead.
-#mistake test for rhines
+#testcase-mistake-roiling-rhines
 >rhines
 You don't need a river or two impeding your progress.
-#mistake test for green lady
+#testcase-mistake-roiling-green-lady
 >green lady
 You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.
 
@@ -1829,7 +1829,7 @@ You probably want the owls not to swoop low. And you'll want to take care of the
 >owsl
 Hmm. The owls still swarm and swirl too fast.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a decent omen.
-#mistake test for lows
+#testcase-mistake-roiling-lows
 >lows
 Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.
 
@@ -1947,18 +1947,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a
 The satyr puts a hand on its chin as if pondering deeper things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
 \\
-#mistake test for ratsy
+#testcase-mistake-roiling-ratsy
 >ratsy
 You don't want a rat on your side. Or someone who says rats too much.
-#mistake test for stary
+#testcase-mistake-roiling-stary
 >stary
 What good would the satyr be, staring all the time?
-#mistake test for ape lord/apelord
+#testcase-mistake-roiling-ape-lord-apelord
 >ape lord
 You can't change what the leopard is, but you need to release it from its captivity.
 >apelord
 You can't change what the leopard is, but you need to release it from its captivity.
-#mistake test for preload/pre-load/pre load
+#testcase-mistake-roiling-preload-pre-load-pre-load
 >preload
 The leopard is plenty powerful as-is, but you need to get it on your side.
 >pre load
@@ -2057,20 +2057,20 @@ DEBUG INFO: damsel medals hinting.
 {$SCOS}
 
 @nud
-#mistake retest for preload/pre-load/pre load
+#+testcase-mistake-roiling-preload-pre-load-pre-load
 >preload
 The leopard is plenty powerful as-is, and it's already on your side.
 >pre load
 The leopard is plenty powerful as-is, and it's already on your side.
 >pre load
 The leopard is plenty powerful as-is, and it's already on your side.
-#mistake test for barged
+#testcase-mistake-roiling-barged
 >barged
 You don't want the badger to have barged into you. Clothed or not.
-#mistake test for trays
+#testcase-mistake-roiling-trays
 >trays
 You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)
-#mistake retest for ape lord/apelord
+#+testcase-mistake-roiling-ape-lord-apelord
 >ape lord
 You already changed the leopard.
 >apelord
@@ -2102,7 +2102,7 @@ You don't need to riff on any location names to win the game, unless there's not
 #ttc-table-of-lamer-realm-nudges-belt
 >betl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#mistake test for b grade/bgrade
+#testcase-mistake-roiling-b-grade-bgrade
 >b grade
 The badger already feels second-rate, so you need another way to help it.
 >bgrade
@@ -2119,7 +2119,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#mistake retest for b grade/bgrade
+#+testcase-mistake-roiling-b-grade-bgrade
 >b grade
 The badger no longer feels second-rate, so it needs no more help.
 >bgrade
@@ -2186,7 +2186,7 @@ It's hard not to hear what the shrewin' whiners have to say, actually
 That idea is banefully unflyable.
 
 @mis
-#mistake test for sherwin
+#testcase-mistake-roiling-sherwin
 >sherwin
 No cryptozookeeper appears.
 
@@ -2365,16 +2365,16 @@ You feel jolted as you go that way. You may not be able to see it, but you know 
 {$SCOS}
 
 @nud
-#mistake test for penis
+#testcase-mistake-roiling-penis
 >penis
 Huh huh huh, Beavis. That was cool.
-#mistake retest for penis
+#+testcase-mistake-roiling-penis
 >penis
 Dammit, Beavis. You like have a game to solve.
-#mistake test for spine
+#testcase-mistake-roiling-spine
 >spine
 You don't need to grow a spine. You've gotten this far.
-#mistake test for shorten
+#testcase-mistake-roiling-shorten
 >shorten
 Well--not shorten, but break it down...you see red from the effort.
 
@@ -2438,7 +2438,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a 
 >coroan
 The corona scurries about for a bit before settling down again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a decent omen.
-#mistake test for slain/as nil
+#testcase-mistake-roiling-slain-as-nil
 >slain
 The nails are already dead as a doornail.
 
@@ -2567,10 +2567,10 @@ DEBUG INFO: damsel medals hinting.
 !racoon
 
 @nud
-#mistake retest for slain/as nil
+#+testcase-mistake-roiling-slain-as-nil
 >as nil
 Not the way to save the animals, surprisingly.
-#mistake retest for shorten
+#+testcase-mistake-roiling-shorten
 >shorten
 They're more likely to shorten you with a few stings.
 #+ttc-table-of-perverse-preserve-nudges-raccoon
@@ -2626,7 +2626,7 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
 
 @mis
-#mistake test for pasteur/paseturs
+#testcase-mistake-roiling-pasteur-paseturs
 >pasteur
 Microbes aren't the problem in Yorpwald.
 >paseturs
@@ -2764,19 +2764,19 @@ You don't need to riff on any location names to win the game, unless there's not
 #ttc-table-of-reclusion-inclosure-nudges-enclosure
 >enclosuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#mistake test for drobe
+#testcase-mistake-roiling-drobe
 >drobe
 That's pretty much their whole drobe. You're not here to talk fashion, anyway.
-#mistake test for cornelius
+#testcase-mistake-roiling-cornelius
 >cornelius
 You don't know if someone named Cornelius would help or hurt you.
-#mistake test for coins lure
+#testcase-mistake-roiling-coins-lure
 >coins lure
 /(Elmer and Merle|Merle and Elmer) look around greedily for a second.
-#mistake test for nicer soul
+#testcase-mistake-roiling-nicer-soul
 >nicer soul
 /(Elmer and Merle|Merle and Elmer) are beyond redemption.
-#mistake test for rule scion
+#testcase-mistake-roiling-rule-scion
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 >eelmr
@@ -2796,7 +2796,7 @@ sniff faux-piously.
 A clove, likely from one alcove.
 
 @mis
-#mistake test for edisa/sadie
+#testcase-mistake-roiling-edisa-sadie
 >edisa
 On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want more ideas aides annoying and blocking you?
 >sadie
@@ -3152,13 +3152,13 @@ WRONG
 >e
 
 @nud
-#mistake retest for coins lure
+#+testcase-mistake-roiling-coins-lure
 >coins lure
 You're not after loot right now.
-#mistake retest for nicer soul
+#+testcase-mistake-roiling-nicer-soul
 >nicer soul
 Yes, you are. But you need to be a braver soul and go west.
-#mistake retest for rule scion
+#+testcase-mistake-roiling-rule-scion
 >rule scion
 That's what you're trying to stop, here.
 !Besides,
@@ -3194,7 +3194,7 @@ Ed Plye, apparently, made the whistle.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake test for aliver
+#testcase-mistake-roiling-aliver
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
 #ttc-table-of-otters-done-rejects-medals
@@ -3231,25 +3231,25 @@ The whistle's already in tune.
 #ttc-table-of-rancho-archon-anchor-nudges-crone
 >croen
 You can't do much with Elvira's "real" name. Or her ex-hydra's. You need to act.
-#mistake retest for aliver
+#+testcase-mistake-roiling-aliver
 >aliver
 For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.
 QUIT, or UNDO the last command.
 >undo
-#mistake test for drop it
+#testcase-mistake-roiling-drop-it
 >drop it
 For whatever reason, you just decide to give up. Elvira cackles. "I knew you'd see it my way." You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.
 joke death
 >undo
-#mistake test for prod it
+#testcase-mistake-roiling-prod-it
 >prod it
 You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.
 joke death
 >undo
-#mistake test for sherpa
+#testcase-mistake-roiling-sherpa
 >sherpa
 You don't need someone to help you climb. You need help fighting Elvira.
-#mistake test for charon
+#testcase-mistake-roiling-charon
 >charon
 The Rancho won't change to the river of the dead just like that, but on the other hand, if you wait around, you'll get to see the river of the dead once Elvira takes action.
 #ttc-table-of-rancho-archon-anchor-nudges-archon
