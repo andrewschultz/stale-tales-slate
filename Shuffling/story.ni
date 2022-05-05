@@ -1314,22 +1314,34 @@ understand "throw [something preferably held] at [something]" as throwing it at.
 
 chapter exiting
 
-definition: a direction (called myd) is viable: [ note to self: NEVER USE NOUN. Always use myd. ]
-	if myd is east and location of player is Leis Isle:
-		if player has wings or player has cork, decide yes;
-	if location of player is emptiness sepiments:
-		if myd is north or myd is inside:
-			if drapes are moot, yes;
-			no;
-	if location of player is stiller trellis and myd is east:
-		if scraped wall is moot, yes;
-		no;
-	if location of player is elm train terminal:
-		if myd is east:
-			if beast-prepared, yes;
-			no;
-	if the room myd of location of player is nowhere, decide no;
+Direction viability is a direction based rulebook.
+
+definition: a direction (called dir) is viable: [ note to self: NEVER USE NOUN. Always use dir. ]
+	follow the direction viability rules for dir;
+	if the rule succeeded, yes;
+	if the rule failed, no;
+	if the room dir of location of player is nowhere, decide no;
 	decide yes;
+
+a direction viability rule for a direction (called dir) when location of player is self id fields:
+	if dir is north:
+		if ever-failed-crosse is true and player does not wear beard, the rule fails;
+
+a direction viability rule for a direction (called dir) when location of player is emptiness sepiments:
+	if dir is north or dir is inside:
+		if drapes are moot, the rule succeeds;
+		the rule fails;
+
+a direction viability rule for a direction (called dir) when location of player is stiller trellis:
+	if dir is east:
+		if trel-priv is moot, the rule fails;
+		if scraped wall is in Stiller Trellis, the rule fails;
+
+a direction viability rule for a direction (called dir) when location of player is elm train terminal:
+	if dir is east and not beast-prepared, the rule fails;
+
+a direction viability rule for a direction (called dir) when location of player is leis isle:
+	if dir is east and leis-isle-transport > 0, the rule succeeds;
 
 to decide whether beast-prepared:
 	if player does not have tulip, no;
@@ -1343,8 +1355,9 @@ the can't exit when not inside anything rule is not listed in any rulebook.
 
 check exiting (this is the check for default exit rule):
 	if number of viable directions is 0:
-		if outside-text of location of player is not empty, say "[outside-text of location of player][line break]" instead;
 		abide by the find-nowhere-text rule;
+		if outside-text of location of player is not empty, say "[outside-text of location of player][line break]" instead;
+		say "There appears to be no way to [b]EXIT[r], so this is likely a sort of puzzle room. I should really have a less generic message here." instead;
 	if number of viable directions is 1:
 		let rvd be random viable direction;
 		say "The only way to exit is [rvd], so let's go that way.";
@@ -3085,6 +3098,8 @@ book Busiest Subsite
 
 Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an slim neat name list tacked on by it.[paragraph break]There's a vacate caveat over an odd side passage, and also, an Oafs['] Sofa is planted squarely in the center.".  roomnud of Busiest Subsite is table of Busiest Subsite nudges.
 
+exits-text of Busiest Subsite is "Something in the scenery will be worth entering."
+
 last-loc of Ordeal Loader is Busiest Subsite.
 
 section directional rejects
@@ -3228,7 +3243,12 @@ book Rested Desert
 
 Rested Desert is a room in Ordeal Loader. roomnud of Rested Desert is table of Rested Desert nudges.
 
-check exiting in Rested Desert: say "You'd just get even more lost." instead;
+to decide which number is door-score:
+	decide on (boolval of whether or not blot is touchable) + boolval of bugle-played;
+
+exits-text of Rested Desert is "You won't get anywhere with a long walk[if door-score > 0], but you should be able to go [b]IN[r] the door[else if or do door is in desert], but there's got to be a way to get through that door[end if]."
+
+check exiting in Rested Desert: say "You'd just get even more lost[if door-score > 0]. The door is open. You should just walk [b]IN[r][else if or do door is in desert]. Going [b]IN[r] that door looks like a safer bet[end if]." instead;
 
 report looking in Rested Desert for the first time: say "[i]So what was that lecture supposed to be about? One word changing how we look at things, how things are? Rubbish. It has to be. You think.[line break][r]"
 
@@ -3353,6 +3373,11 @@ book Thickest Thickets
 
 Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. It's too, uh, thick to go in [if goat is in Thickest Thickets or deer is in thickest thickets]almost all directions, but you can go [b]IN[r][else]all directions[end if][if nest is touchable]. That nest you made lies off to the side[else]. Some nets have been, uh, sent here. They're littering up the ground. If you wanted, you could clean them up[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
 
+exits-text of Thickest Thickets is "[if thickets-score > 0]You can go IN again[else]You need some way to cut through the vegetation to find a passage[end if]."
+
+to decide which number is thickets-score:
+	decide on (boolval of whether or not toga is moot) + (boolval of whether or not reed is moot);
+
 chapter reed
 
 the reed is a thing in Thickest Thickets. "A large reed has grown here, even though you don't seem to be near a swamp or a river. It seems out of place."
@@ -3429,6 +3454,8 @@ the nest is boring scenery. description of nest is "It's about the same color as
 book Notices Section
 
 Notices Section is a room in Ordeal Loader. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board SMIT with TMIs[or]The broad board is SMIT with TMIs you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping].". roomnud of Notices Section is table of Notices Section nudges.
+
+exits-text of notices section is "Sooner or later, you're probably going to want to [b]ENTER[r] the getaway gateway.".
 
 understand "tmi/tmis" as broad board when player is in Notices Section.
 
@@ -4409,6 +4436,22 @@ Trips Strip is a room in Stores. last-loc of Stores is Trips Strip. "You see wha
 
 hub-room is Trips Strip.
 
+outside-text of trips strip is "[trips-bound]."
+
+exits-text of trips strip is "[trips-bound]."
+
+to say trips-bound: say "The stores are where it's at. You can go [b]IN[r] [if number of discovered portals is 0]once you've found what they can become[else if number of portals in trips strip > 0]to [the list of portals in trips strip][else]once you open another portal[end if]"
+
+after printing the locale description for Trips Strip when Trips Strip is unvisited:
+	if one-rigged is false and denial is false:
+		ital-say "if, for whatever reason you lose a save file or wish to replay, [b]IGNORE REGION[i] or [b]RIG ONE REGION[i] will skip the introduction you just played and give you all the goodies.";
+	continue the action;
+
+definition: a portal (called PO) is discovered:
+	if PO is gateway, no;
+	if PO is off-stage, no;
+	yes;
+
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
 	if scented descent is in Trips Strip, set the locale priority of scented descent to 6;
 	if posted depots are in Trips Strip, set the locale priority of posted depots to 7;
@@ -5096,9 +5139,13 @@ book Softer Forest (sf)
 
 sf is a privately-named room in Forest. the printed name of sf is "Softer Forest". last-loc of Forest is sf.
 
-outside-text of sf is "[ww-exit]?"
+outside-text of sf is "[ww-outside]?"
 
-to say ww-exit: say "Hmm, that's the question. Which way to exit"
+exits-text of sf is "[ww-exits]?".
+
+to say ww-outside: say "Hmm, that's the question. Which way to exit"
+
+to say ww-exits: say "One compass direction out will move ahead. The others won't. But which does which"
 
 after printing the locale description for sf when sf is unvisited: set the pronoun it to a random guider in sf.
 
@@ -5148,7 +5195,9 @@ book Rest of Forest
 
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint].". roomnud of rf is table of Rest of Forest nudges.
 
-outside-text of rf is "[ww-exit]?"
+outside-text of rf is "[ww-outside]?"
+
+exits-text of rf is "[ww-exits]?".
 
 after printing the locale description for rf when rf is unvisited: set the pronoun it to a random guider in rf.
 
@@ -5193,6 +5242,8 @@ check going north in Self ID Fields when Emptiness Sepiments is unvisited and pl
 
 to say agn: say "[one of][or] again[stopping]".
 
+ever-failed-crosse is a truth state that varies.
+
 check going north in Self ID Fields:
 	say "'Scopers! Process corpses!' you hear.[paragraph break]";
 	check-beard;
@@ -5203,6 +5254,7 @@ check going north in Self ID Fields:
 			now can-pass-crosse is true;
 		continue the action;
 	else:
+		now ever-failed-crosse is true;
 		say "Corses Crosse blocks you invisibly. There's no way around it. Maybe it doesn't like your face[if number of things that are part of beard is 2]. Perhaps that disguise could fool it[end if]." instead;
 
 chapter generic guy
@@ -5936,6 +5988,8 @@ Ghouls Slough is inside of Emptiness Sepiments. It is in Forest. "This is as eth
 
 outside of Ghouls Slough is nowhere.
 
+exits-text of Ghouls Slough is "You might get lost going in any direction without help. Hmm."
+
 check examining maps in Ghouls Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...[paragraph break]"; [bold-ok]
 	now maps are realized;
@@ -5966,6 +6020,8 @@ to say end-it: end the story.
 book Frost Forts
 
 Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if].". roomnud of Frost Forts is table of Frost Forts nudges.
+
+exits-text of Frost Forts is "You're stuck here. This is the final battle!"
 
 after printing the locale description for forts when forts is unvisited:
 	set the pronoun them to vowels;
@@ -6270,6 +6326,8 @@ book The Nick
 A room called The Nick is in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if].". roomnud of the nick is table of the nick nudges.
 
 understand "nick" as nick when player is in nick.
+
+exits-text of the nick is "You can't just walk out of the nick, but there's a way to think yourself out."
 
 section how to get here
 
@@ -6831,6 +6889,8 @@ this is the bore-hallway rule:
 book moor
 
 Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mire all around leaves you feeling a bit trapped, even though you know you could go back the way you came[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if].". roomnud of moor is table of moor nudges.
+
+exits-text of Moor is "You don't need to walk anywhere else. You can only go back to the [b]ROOM[r]."
 
 after printing the locale description for moor when moor is unvisited:
 	move r2 backdrop to all moory rooms;
@@ -8556,6 +8616,8 @@ book Bassy Abyss
 
 Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are touchable]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is touchable]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the Trips Strip, since you won. This is a BUG[end if].". Abyss is in Metros. roomnud of Bassy Abyss is table of Bassy Abyss nudges.
 
+exits-text of Bassy Abyss is "There's no way out or back. But you should have what you need to defeat the [if beast is touchable]beast[else]beats[end if]."
+
 west of Bassy Abyss is nowhere.
 
 after printing the locale description for abyss when abyss is unvisited:
@@ -8621,6 +8683,8 @@ chapter Astral Altars
 
 Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "While this isn't an ugly place, it's a bit severe. Bright enough, to be sure, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but it's still a prison[end if]. You also think you hear something.". roomnud of Astral Altars is table of Astral Altars nudges.
 
+exits-text of Astral Altars is "[if feral flare is in astral altars]There's no way to escape by running out[else]There seem to be no barriers but also nowhere you'd really want to go[end if]."
+
 understand "altar" as Astral Altars when Astral Altars is visited.
 
 chapter tiles
@@ -8643,7 +8707,9 @@ book Leis Isle
 
 Leis Isle is a room in Resort. "[if l2 are in Leis Isle]Well, this is a little more like a proper resort. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in Leis Isle], and now the leis here were exposed, you probably want to get going that way, too[end if]. The isle is covered with sand and sands and sands, which seem appropriate, if not helpful.". roomnud of Leis Isle is table of Leis Isle nudges.
 
-printed name of Leis Isle is "[if l2 are in Leis Isle]Leis[else]Lies[end if] Isle"
+exits-text of Leis Isle is "You can't leave the Leis Isle without transport.".
+
+printed name of Leis Isle is "[if l2 are in Leis Isle]Leis[else]Lies[end if] Isle".
 
 understand "lies isle" as isle when l2 are not in Leis Isle.
 
@@ -8666,6 +8732,9 @@ check going in Leis Isle (this is the Isle escape rule):
 	moot cork;
 	moot wings;
 	now player is in Rived Drive instead;
+
+to decide which number is leis-isle-transport:
+	decide on (boolval of whether or not player has wings) + (boolval of whether or not player has cork);
 
 section leis
 
@@ -9116,7 +9185,9 @@ book Means Manse
 
 Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
 
-west of Means Manse is nowhere. outside-text of Means Manse is "No, you need to stay here and put down roots. But how?"
+west of Means Manse is nowhere.
+
+exits-text of Means Manse is "There's nowhere else you want to be."
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead; [bold-ok]
 
@@ -10214,7 +10285,7 @@ table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
 Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go [b]IN[r]--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere unseen, you might regret winding up in the Tuffest Tuffets[or][stopping]."
-Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[if gateman is in Notices Section]![else], though it'd be nice to have some help.[end if]"
+Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. You should probably explicitly [b]ENTER[r] the gateway[if gateman is in Notices Section][else], though it'd be nice to have some help first[end if]."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
@@ -10224,7 +10295,7 @@ Trap Part	"[dmb]You can only go north to the kitchen or east[or-room]." [see bef
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
 Kitchen	"[dmb]You can only go [can-go of south] or [can-go of east]."
 roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
-Stiller Trellis	"[dmb]You can only go [can-go of west] or [can-go of south][if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
+Stiller Trellis	"[dmb]You can only go [can-go of west] or [can-go of south][if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis and trel-priv is not moot] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the [b]ROOM[r]."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
 Undesired Underside	"A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
