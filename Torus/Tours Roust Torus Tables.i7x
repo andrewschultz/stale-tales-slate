@@ -129,7 +129,7 @@ to decide whether maxed-it:
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
-"see [b](REJ)ECTS[r]/[b]REJECTED[r] words"	true	"reject/rejected/rejects"	the show rejected words rule	--
+"see [b](REJ)ECT(S)[r]/[b]REJECTED[r] words"	true	"rej/reject/rejected/rejects"	the show rejected words rule	--
 "see what you [b]MISSED[r]"	true	"miss/misses/missed"	the show what you missed rule
 
 volume parser keyword tables

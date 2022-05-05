@@ -5,6 +5,33 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
+* end-menu-death
+
+>gonear slough
+>gob
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+
+>l 0
+Please give one of the answers above.
+
+>l
+Please give one of the answers above.
+
+>ln
+Please give one of the answers above.
+
+>alt
+Please give one of the answers above.
+
+>missed
+Please give one of the answers above.
+
+>amusing
+Please give one of the answers above.
+
+>rank
+Please give one of the answers above.
+
 * end-menus
 
 # test 0 regions bypassed
@@ -70,7 +97,7 @@ There were three final commands to win the game. You chose NAMES, but you could 
 [NOTE: You bypassed some regions behind some stores, so there may be minor spoilers if you list random text. This nag will not be repeated.]
 Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALTernate mutually exclusive ways through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random  NPC text, or LN for the next one?
 
-> l
+>l
 !You bypassed
 1. Names of other job applicants (Ordeal Loader)
 2. Evil locations in the slit (F)
@@ -82,41 +109,41 @@ Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSIN
 8. Rioters' chants (R)
 9. Red Bull Burdell's taunts (R)
 
-> l 1
+>l 1
 LAST ENTRY: That's the last. Boy--you can't imagine you'll ever fit in.
-> l 2
+>l 2
 LAST ENTRY: (worst and last) Hell's Shell.
-> l 3
+>l 3
 LAST ENTRY: "O Scant Cantos!" cries Pat. He asks what you thought of his Marsh Poet Metaphors. "Souly," you say. "It's...THY."
-> l 4
+>l 4
 LAST ENTRY: Chants stanch. "Restin', OK?" Their tone irks, then ... "Restokin'! Strike on!" Petitioner repetition.
-> l 5
+>l 5
 LAST ENTRY: Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...
-> l 6
+>l 6
 LAST ENTRY: DON'T PIRATE TRAIN DEPOT POINTED ART is the last bit of advice.
-> l 7
+>l 7
 LAST ENTRY: For a second this anti-cool location ain't loco. Then, LO, ACTION.
-> l 8
+>l 8
 LAST ENTRY: The protesters seem out of ideas before egging to get going: "Persons! Press on!" The swarm warms to a re-blab. Rabble.
-> l 9
+>l 9
 LAST ENTRY: Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?
-> ln
+>ln
 LAST ENTRY: That's the last. Boy--you can't imagine you'll ever fit in.
-> ln
+>ln
 LAST ENTRY: (worst and last) Hell's Shell.
-> ln
+>ln
 LAST ENTRY: "O Scant Cantos!" cries Pat. He asks what you thought of his Marsh Poet Metaphors. "Souly," you say. "It's...THY."
-> ln
+>ln
 LAST ENTRY: Chants stanch. "Restin', OK?" Their tone irks, then ... "Restokin'! Strike on!" Petitioner repetition.
-> ln
+>ln
 LAST ENTRY: Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...
-> ln
+>ln
 LAST ENTRY: DON'T PIRATE TRAIN DEPOT POINTED ART is the last bit of advice.
-> ln
+>ln
 LAST ENTRY: For a second this anti-cool location ain't loco. Then, LO, ACTION.
-> ln
+>ln
 LAST ENTRY: The protesters seem out of ideas before egging to get going: "Persons! Press on!" The swarm warms to a re-blab. Rabble.
-> ln
+>ln
 LAST ENTRY: Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?
 
 >rank
