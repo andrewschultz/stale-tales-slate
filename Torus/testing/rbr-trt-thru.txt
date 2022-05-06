@@ -54,6 +54,10 @@ You doubt you can do something with the sys-eye beyond thinking yes. But maybe t
 #ttc-table-of-nudge-hashes-yes
 >sey
 You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+\\
+#ttc-table-of-nudge-hashes-yseyse
+>yseyse
+You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
 
 @hin
 #ttc-table-of-cylinder-descriptions-1
@@ -133,6 +137,15 @@ Also, if you'd like a clue, you can enter a blank command.
 >a
 #ttc-table-of-times-around-2
 >a
+That's funny. First you thought you heard something, and now you feel like there's something to SMELL.
+>a
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-3
 You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying YES, can it?
 >a
 >a
@@ -145,13 +158,13 @@ You start feeling bummed you haven't gotten anywhere. A voice in your head says 
 >
 You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
 >a
-#ttc-table-of-times-around-4
+#ttc-table-of-times-around-5
 /(Ugh\. Tricky\.|What sort of ant was it|)
 !murmur
 >undo
 >undo
 >a
-#ttc-table-of-times-around-3
+#ttc-table-of-times-around-4
 >a
 You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
 >a
@@ -160,25 +173,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 >a
 >a
-#+ttc-table-of-times-around-4
->a
-/(Ugh\. Tricky\.|What sort of ant was it|)
->a
->a
->a
->a
->a
->a
-#+ttc-table-of-times-around-4
->a
-/(NATANT ant|CONCISIONS!)
->a
->a
->a
->a
->a
->a
-#ttc-table-of-times-around-5
+#+ttc-table-of-times-around-5
 >a
 /(Ugh\. Tricky\.|What sort of ant was it|)
 >a
@@ -198,7 +193,16 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 #ttc-table-of-times-around-6
 >a
-Tan ant, natant. Sonic coins, concisions.
+/(Ugh\. Tricky\.|What sort of ant was it|)
+>a
+>a
+>a
+>a
+>a
+>a
+#+ttc-table-of-times-around-6
+>a
+/(NATANT ant|CONCISIONS!)
 >a
 >a
 >a
@@ -207,6 +211,15 @@ Tan ant, natant. Sonic coins, concisions.
 >a
 #ttc-table-of-times-around-7
 >a
+Tan ant, natant. Sonic coins, concisions.
+>a
+>a
+>a
+>a
+>a
+>a
+#ttc-table-of-times-around-8
+>a
 You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
 >a
@@ -214,7 +227,7 @@ You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives
 >a
 >a
 >a
-#+ttc-table-of-times-around-7
+#+ttc-table-of-times-around-8
 >a
 You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
 >a
@@ -254,6 +267,35 @@ Really! This isn't that sort of game.
 >ste
 The tsetse fly can't really be changed.
 
+@nud
+#ttc-table-of-nudge-hashes-hya
+>ayh
+general list of verbs
+\\
+#ttc-table-of-nudge-hashes-yahyah
+>hyhyaa
+general list of verbs
+
+@mis
+>a
+>a
+>a
+>a
+>a
+>a
+>a
+>smell
+You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
+
+@nud
+#ttc-table-of-nudge-hashes-hya
+>ayh
+While lots of snappy noises come to mind, you can't do anything with the smell of hay. It was there, and it gave you a boost you'll cash in on, you're sure.
+\\
+#ttc-table-of-nudge-hashes-yahyah
+>hyhyaa
+No, you can't do anything with the smell of hay. It was there, and it gave you a boost you'll cash in on, you're sure.
+
 @mis
 #mistake test for he/hes/she
 >he
@@ -288,6 +330,11 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 >sheesh
 by one point
 Sheesh
+
+@nud
+#+ttc-table-of-nudge-hashes-hya
+>ayh
+While lots of snappy noises come to mind, you can't do anything with the smell of hay. It was there, and it gave you a boost to get you started.
 
 @hin
 >verbs
