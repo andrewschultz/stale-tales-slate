@@ -179,7 +179,7 @@ grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist
 cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge is closed]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
 taco	coat	"coat"	"taco"	--	--	"Before changing the hot-to-your-tongue taco to a warm-to-your-body coat, you wisely take out a few small bites from the bottom (like adults always said not to) to form the arm-holes. Delicious! You ate just enough to feel fortified, and you've got something to wear, too."	false	198655998
 cask	sack	"sack"	--	pre-cask-sack rule	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
-sack	cask	"cask"	--	pre-sack-cask rule	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
+sack	cask	"cask"	--	pre-sack-cask rule	post-sack-cask rule	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright."	true	170400547
 hoses	shoes	"shoes"	"hoses"	--	post-hoses-shoes rule	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
 r2	teleporter	"moor"	--	pre-room-moor rule	post-room-moor rule	"[moor-jump]."	false	298104110	--	moor
 m2	teleporter	"room"	--	--	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse..."	false	298104110	--	roomroom
@@ -225,9 +225,13 @@ this is the pre-cask-sack rule:
 this is the pre-sack-cask rule:
 	if sack is touchable:
 		if number of things in sack > 0:
-			say "As the sack changes, [the list of things in sack] falls out.";
+			say "As the sack changes, [the list of things in sack] falls out.[line break]";
 			repeat with Q running through things in sack:
 				move Q to location of player;
+
+this is the post-sack-cask rule:
+	unless straw was in sack or hay was in sack, continue the action;
+	say "Thankfully, the dispossessed [if straw was in sack]straw[else]hay[end if] fell into a pretty tidy heap, so it can be collected easily again."
 
 this is the post-hoses-shoes rule:
 	moot shoes;
@@ -264,11 +268,9 @@ to say moor-jump:
 		if location of player is cedars and caskfillings is 2:
 			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return";
 		else:
-			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if]";
-	if moor is unvisited:
-		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if]";
-	else:
-		say "[line break]Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if]";
+			say "'The mire, I'm there,' you muse[one of][or] once[stopping] again[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect this time, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if]";
+		continue the action;
+	say "You knew the moor would be cold, but it was a bit colder than you suspected. Fortunately, your coat keeps you warm[if player was not wearing coat], as you managed to slip it on as the scenery changed and the temperature dropped[end if]";
 
 this is the post-anapest-peasant rule:
 	moot pat;
@@ -296,7 +298,10 @@ this is the pre-haywall-hallway rule:
 
 this is the pre-oils-silo rule:
 	if oils are not in cask:
-		if location of player is Sacred Cedars, say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo[end if]." instead;
+		if location of player is Sacred Cedars:
+			say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a better place to make a silo[end if].";
+			preef-l silo;
+			do nothing instead;
 		if oils are touchable:
 			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type [b]UNDO[r] and send a transcript of what you did.";
 		continue the action;
@@ -315,7 +320,10 @@ this is the post-oils-silo rule:
 
 this is the pre-oils-soil rule:
 	if oils are not in cask:
-		if location of player is Sacred Cedars, say "[if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to soil[end if]." instead;
+		if location of player is Sacred Cedars:
+			say "[ilb-later][if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a place that could use soil, though[end if].";
+			preef-l soil;
+			do nothing instead;
 		if oils are touchable:
 			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type [b]UNDO[r] and send a transcript of what you did.";
 	else if player is not in moor:
@@ -682,7 +690,7 @@ to say spec-help of (itm - a thing):
 			say "You made your choice.";
 			continue the action;
 	if itm is oils and oils are not in cask:
-		say "[if player is in Sacred Cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
+		say "You should possess the oils before doing anything with them[if player is in Sacred Cedars]. As for changing Lois, the provider of the oils? Very unlikely indeed[end if].";
 		continue the action;
 	let got-spec be false;
 	repeat through spechelp of mrlp:
@@ -978,7 +986,7 @@ hoots button	"[one of]The hoots button isn't up to much.[plus][or]You don't hoot
 trees button	"[one of]The trees button isn't much help launching a missile.[plus][or]You don't want that missile going just anywhere.[plus][or][b]STEER BUTTON[r].[minus][cycling]"
 steer button	"You should just need to push the [b]STEER[r] button now."
 shoot button	"[if missile-steered is true]You should just need to [b]PUSH[r] the [b]SHOOT[r] button now[else]You may want guidance before you [b]PUSH[r] the [b]SHOOT[r] button[end if]."
-scraped wall	"[if straw is off-stage]You don't have anything to stuff in the wall. Maybe you can find something. It may be right under your nose. [else if player has the straw or straw is in sack]Hm, the straw is too bulky to fit in the wall. Something like it, perhaps. [else if player has the hay or hay is in sack][one of]The hay might fit in well with the wall.[plus][or]PUT HAY IN WALL.[minus][cycling][else][one of]You stuffed the hay in the wall. What does the gadget offer?[plus][or]The hay wall can become a [b]HALLWAY[r]![minus][cycling][end if]"
+scraped wall	"[if straw is off-stage]You don't have anything to stuff in the wall. Maybe you can find something. It may be right under your nose. [else if player has the straw or straw is in sack]Hm, the straw is too bulky to fit in the wall. Something like it, perhaps. [else if scraped wall is hayfilled][one of]You stuffed the hay in the wall. What does the gadget offer?[plus][or]The hay wall can become a [b]HALLWAY[r]![minus][cycling][else][one of]The hay might fit in well with the wall.[plus][or]PUT HAY IN WALL.[minus][cycling][end if]"
 missile	"[if silo is off-stage]You have nowhere to put the missile, yet[else if black door is not moot]You need a way to open up the silo[else]You should be able to put the missile in the silo now[end if]."
 spout	"[if caskfillings is 2]You've gotten all the oil you need[else if caskfillings is 1]You may be able to get more oils[else]you can [b]POUR OILS[r] into the cask from the spout[end if]."
 soil	"[if silo is off-stage]The soil is a good foundation for a structure[else]You've built a structure on the  soil[end if]."

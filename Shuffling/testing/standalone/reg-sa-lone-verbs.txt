@@ -16,14 +16,16 @@ Rested Desert
 >undo
 
 >help
-There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
-Note: If you want actual hints, you may wish to try HINT or HINTS.
+There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of most of the puzzles in the game, with some item-munging, but you'll have to do other things, too.
+NOTE: if you want actual hints, you may wish to try HINT or HINTS.
+
 >info
-There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
-!Note: If you want actual hints, you may wish to try HINT or HINTS.
+There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of most of the puzzles in the game, with some item-munging, but you'll have to do other things, too.
+NOTE: if you want actual hints, you may wish to try HINT or HINTS.
+
 >instructions
-There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
-!Note: If you want actual hints, you may wish to try HINT or HINTS.
+There's not much to do here, but if you EXAMINE different things may give you a clue what's going on. This is a part of most of the puzzles in the game, with some item-munging, but you'll have to do other things, too.
+NOTE: if you want actual hints, you may wish to try HINT or HINTS.
 
 >pad lecture
 An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.
@@ -93,10 +95,21 @@ No keyholes. Maybe you can break it down some other way?
 >unlock me
 You don't need to unlock anything explicitly in Shuffling Around.
 
+>hint
+this is just a one-time warning because you may wish to hint a specific item instead, avoiding accidental spoilers. It will not show again.
+
+>undo
+
 >hint door
+this is just a one-time warning against potential spoilers and temptation. It will not show again.
 You can just ENTER the door once you figure how to open it.
+
 >hint blot
 I couldn't find anything like that to hint.
+
+>info
+What you did with the odor will clue the rest of the game. This is a part of most of the puzzles in the game, with some item-munging, but you'll have to do other things, too.
+!if you want actual hints
 
 >hint bugle
 I couldn't find anything like that to hint.
@@ -220,13 +233,6 @@ You won't get caned for that,
 Shuffling Around's gblorb file should come packaged with Trizbort maps, an InvisiClues-style HTML file and, in older versions, a text file called walkthrough.txt. However, there is a risk that will spoil a lot you won't want, especially since the areas are compartmentalized.
 
 You can ask for hints with the HINT command--they should deal with the puzzle currently restricting you the most and may be doled out slowly to avoid spoilers.
-
->help
-What you did with the odor will clue the rest of the game. This is a part of all the puzzles in the game, but you'll have to do other things, too.
->info
-What you did with the odor will clue the rest of the game. This is a part of all the puzzles in the game, but you'll have to do other things, too.
->instructions
-What you did with the odor will clue the rest of the game. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 
 >xyzzy
 What a mess! Hard to do anything with that.

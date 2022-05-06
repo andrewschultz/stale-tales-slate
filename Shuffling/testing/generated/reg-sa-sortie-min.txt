@@ -195,6 +195,9 @@ Gainly laying the cask under the spout, you pour in some oils.
 >s
 
 >moor
+"The mire, I'm there," you muse again.
+
+Moor
 
 >missile
 Your score has just gone up by one point.

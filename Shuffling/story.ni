@@ -783,12 +783,14 @@ this is the first-time-hint-check rule:
 	if first-hint-check is true, continue the action;
 	now first-hint-check is true;
 	say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
-	ital-say "this warning is here because you may wish to hint a specific item but avoid other spoilers. If you say no, the warning will not show again.";
+	ital-say "this is just a one-time warning [if current action is objhinting]against potential spoilers and temptation[else]because you may wish to hint a specific item instead, avoiding accidental spoilers[end if]. It will not show again.";
 	if player dir-consents:
 		say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
 		continue the action;
 	else:
 		say "Her cheats sachet tempts you, even trying to scathe as you remain chaste. [hintblah]" instead;
+
+every turn: say "[first-hint-check].";
 
 carry out objhinting:
 	if hintsoff is true, say "Hints are disabled for this session." instead;
@@ -2868,6 +2870,14 @@ short	known	verify	topic (topic)	blurb
 "xx"	false	true	"xx"	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."
 
 pf-warn is a truth state that varies.
+
+to preef-l (flipper - a thing):
+	if flipper is unfigured:
+		say "[line break][i](That's worth noting in your notepad for later, so you do[one of][or], once again[stopping], under [b]FLIPS[r].)[r][if ignore-line-break is true][run paragraph on][end if]";
+		now ignore-line-break is false;
+	now flipper is prefigured;
+	choose row with short of "flips" in table of notepad entries;
+	now known entry is true;
 
 to preef (flipper - a thing):
 	if flipper is unfigured:
@@ -6145,7 +6155,7 @@ to say pat-tap:
 	ital-say "[b]TAP[i] is not a standard verb. [b]PUSH[i] may work better when not around Pat, but Pat will be gone by then.";
 
 rule for supplying a missing noun when taping:
-	if woeful pat is touchable:
+	if woeful pat is in location of player:
 		say "[pat-tap]";
 		reject the player's command;
 	else if spout is touchable:
@@ -6813,7 +6823,7 @@ check taking the straw:
 		say "You lump the straw in the sack.";
 		now straw is in the sack instead;
 	else:
-		say "Too unwieldy to carry anywhere as-is. It needs a container." instead;
+		say "You try to pick up the straw, and you get about half of it in your arms, and then ... [paragraph break] ... it slips out of your arms and falls to the floor. You'll probably need a container to keep it from spilling. Nothing too fancy." instead;
 
 [rule for implicitly taking the straw:
 	say "(gathering it up)";
@@ -9592,6 +9602,7 @@ to get-cool-stuff:
 	let temp-bool be autosave;
 	now autosave is false;
 	now autosave is temp-bool; [ this skips the save dialogue ]
+	now autosave-known is true;
 	now all rooms in Ordeal Loader are visited;
 	now player has the gadget;
 	now player has the prep paper;

@@ -49,13 +49,6 @@ You see some grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing
 >open fridge
 You reopen and peer on. You see some grist and a cake pan inside.
 
-#ttc-table-of-kibitzes-tall-trio
-# note a weird case here: the colors will be displayed, since it is the first time, even though it is not strictly a kibitz test.
->rc tall trio
-The gadget beeps once. A series of lights comes across: GRRRRRRR (R = red, G = green).
-You scanned each of the tall trio, and the readout didn't change.
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB (R = red, G = green, B = blue).
-
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
@@ -282,6 +275,9 @@ Good idea, but not in here. There'd be more room for that outside where you foun
 smilies -> missile
 
 >moor
+"The mire, I'm there," you muse again.
+
+Moor
 
 >missile
 Your score has just gone up by one point.

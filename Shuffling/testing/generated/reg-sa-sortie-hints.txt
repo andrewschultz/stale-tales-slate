@@ -541,8 +541,6 @@ You can't pour the oils anywhere in this enclosed area. Try going back to the mo
 >s
 Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 
->moor
-
 #ttc-table-of-sortie-anagrams-oils
 >xx oils
 Your vision blurs a bit, and instead you see soil, then a silo.
@@ -553,6 +551,11 @@ Your vision blurs a bit, and instead you see a missile.
 #ttc-table-of-sortie-anagrams-poem
 >xx poem
 you see the smilies flying off the page, then the poem folding and becoming a panel.
+
+>moor
+"The mire, I'm there," you muse again.
+
+Moor
 
 >missile
 Your score has just gone up by one point.

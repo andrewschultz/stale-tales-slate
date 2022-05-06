@@ -328,13 +328,12 @@ Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 >gt nick
 No, you don't want to go back there.
 
-@max
+@scan
 #ttc-table-of-kibitzes-tall-trio
-# note a weird case here: the colors will be displayed, since it is the first time, even though it is not strictly a kibitz test.
 >rc tall trio
-The gadget beeps once. A series of lights comes across: GRRRRRRR (R = red, G = green).
+The gadget beeps once. A series of lights comes across: GRRRRRRR.
 You scanned each of the tall trio, and the readout didn't change.
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB (R = red, G = green, B = blue).
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
 
 @scan
 #gadget test: tall trio to tortilla
@@ -1689,7 +1688,7 @@ Best not defile this shrine. Or even try to. The oils from the spout are gift en
 @mis
 #ttc-table-of-sortie-nudges-lois
 >losi
-Changing Lois is highly unlikely, and you should possess the oils before doing anything with them.
+You should possess the oils before doing anything with them. As for changing Lois, the provider of the oils? Very unlikely indeed.
 
 @max
 >pour oils
@@ -1771,12 +1770,6 @@ Mum, dud mud blocks your way south. You can only go west to Trap Part or north t
 Things aren't THAT bad.
 
 @nud
->moor
-"The mire, I'm there," you muse.
-Oh, hey, teleporting's easier with experience.
-Moor
-
-@nud
 #ttc-table-of-sortie-nudges-folded
 >foldde
 !It's a plane, now, for sure.
@@ -1811,8 +1804,6 @@ Good idea, but not in here. There'd be more room for that outside where you foun
 >pf
 smilies -> missile
 
->moor
-
 @hin
 #ttc-table-of-sortie-anagrams-oils
 >xx oils
@@ -1834,6 +1825,11 @@ DEBUG INFO: Cert-text: ----I--.
 #ttc-table-of-sortie-anagrams-poem
 >xx poem
 you see the smilies flying off the page, then the poem folding and becoming a panel.
+
+>moor
+"The mire, I'm there," you muse again.
+
+Moor
 
 >missile
 Your score has just gone up by one point.
@@ -2123,6 +2119,9 @@ You can't go back there.
 >s
 
 >moor
+
+@nud
+you muse once again
 
 @hin
 #+ttc-table-of-sortie-anagrams-oils

@@ -62,6 +62,12 @@ You see some grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing
 >open fridge
 You reopen and peer on. You see some grist and a cake pan inside.
 
+#ttc-table-of-kibitzes-tall-trio
+>rc tall trio
+The gadget beeps once. A series of lights comes across: GRRRRRRR.
+You scanned each of the tall trio, and the readout didn't change.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+
 #gadget test: tall trio to tortilla
 >rc tall trio
 You get to scanning, twiddling from certify to rectify and back.
@@ -427,8 +433,6 @@ Gainly laying the cask under the spout, you pour in some oils.
 
 >s
 
->moor
-
 #gadget test: smilies to missile
 >rc smilies
 You get to scanning, twiddling from certify to rectify and back.
@@ -436,6 +440,11 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RRRRGRR.
 DEBUG INFO: Rect-text: M-----E.
 DEBUG INFO: Cert-text: ----I--.
+
+>moor
+"The mire, I'm there," you muse again.
+
+Moor
 
 >missile
 Your score has just gone up by one point.

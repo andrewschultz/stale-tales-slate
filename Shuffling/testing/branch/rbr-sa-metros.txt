@@ -213,7 +213,7 @@ Good try, but we're looking for a noun. With an extra A.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage for a few seconds.
 
-@max
+@scan
 # load up A Reading
 >x reading
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
@@ -232,13 +232,12 @@ Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine t
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRRRR.
 Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with the drainage.
-
-@scan
+\\
 #gadget test: drainage to gardenia
 >rc drainage
 You get to scanning, twiddling from certify to rectify and back.
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB (R = red, G = green, B = blue).
-The gadget beeps once. A series of lights comes across: RRRRRRRR (R = red, G = green).
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB.
+The gadget beeps once. A series of lights comes across: RRRRRRRR.
 DEBUG INFO: Rect-text: G------A.
 DEBUG INFO: Cert-text: --------.
 
@@ -424,7 +423,7 @@ DEBUG: motto being objhinted.
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
 
-@max
+@scan
 #ttc-table-of-kibitzes-motto
 >rc motto
 The gadget beeps once. A series of lights comes across: RRRRGG.
@@ -845,8 +844,7 @@ It isn't just any cake. It's dry cake.
 >keycard
 The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.
 So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til they're gone.
-#brackets ok
-[That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
+(That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
 >keycard
 This would create quite a (negative) scene with people still in the bastion.
 #ttc-table-of-preflip-clues-keycard

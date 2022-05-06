@@ -864,7 +864,7 @@ Best not defile this shrine. Or even try to. The oils from the spout are gift en
 
 #ttc-table-of-sortie-nudges-lois
 >losi
-Changing Lois is highly unlikely, and you should possess the oils before doing anything with them.
+You should possess the oils before doing anything with them. As for changing Lois, the provider of the oils? Very unlikely indeed.
 
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
@@ -896,11 +896,6 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >pray
 Things aren't THAT bad.
 
->moor
-"The mire, I'm there," you muse.
-Oh, hey, teleporting's easier with experience.
-Moor
-
 #ttc-table-of-sortie-nudges-folded
 >foldde
 !It's a plane, now, for sure.
@@ -927,6 +922,9 @@ You try, but the smilies on the poem prevent you.
 Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.
 
 >moor
+"The mire, I'm there," you muse again.
+
+Moor
 
 >missile
 Your score has just gone up by one point.
@@ -1091,6 +1089,8 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 >s
 
 >moor
+
+you muse once again
 
 #renudge for lois
 >olsi

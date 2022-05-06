@@ -147,8 +147,7 @@ The passage looks unblocked already, so you don't need to look for any other pos
 #pre-nametag-gateman rule
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
-#brackets ok
-[That's worth noting in your notepad for later, so you do, under FLIPS.]
+(That's worth noting in your notepad for later, so you do, under FLIPS.)
 #ttc-table-of-preflip-clues-gateman
 >pf
 nametag -> gateman
@@ -270,7 +269,7 @@ You start a small mental conversation to take stock of your surroundings and wha
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 #brackets ok
-[That's worth noting in your notepad for later, so you do, under FLIPS.]
+(That's worth noting in your notepad for later, so you do, under FLIPS.)
 >pf
 Stuff you figured, but you couldn't use it right away:
 nametag -> gateman
@@ -858,7 +857,7 @@ You have nothing else you figured in advance.
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 #brackets ok
-[That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
+(That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
 #ttc-table-of-preflip-clues-tenibac
 >pf
 Stuff you figured, but you couldn't use it right away:
