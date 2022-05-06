@@ -20,6 +20,8 @@ book general
 
 understand "testes" as a mistake ("Really! This isn't that sort of game.") when tsetse fly is not off-stage.
 
+understand "hah" and "yah" and "ayy" as a mistake ("You were glad to have the smell of hay as a clue, but let's not overdo it!") when hay-smell-known is true.
+
 book Ehs Ehs
 
 understand "he" and "hes" and "she" as a mistake ("[no-pron][if ehs ehs is not solved]. Maybe a different sort of word[extra-she][else][besides][end if].") when player is in Ehs Ehs.

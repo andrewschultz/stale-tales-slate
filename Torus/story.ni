@@ -663,7 +663,7 @@ instead of doing something with tsetse fly:
 	if current action is examining, continue the action;
 	say "The tsetse fly is doing all it can. You don't want to do anything to, or with, it."
 
-section score
+chapter score
 
 check requesting the score:
 	if deededed is true:
@@ -673,7 +673,21 @@ check requesting the score:
 	say "You've figured [score] of [maximum score] areas of the Torus. [if number of unvisited rooms is 1 and score < 7][one of]Why, yes, there is a way to the center[or][stopping][else if number of unvisited rooms > 1]You may wish to explore the whole torus to see what you might be able to do[else if hams are off-stage]You can just go ahead and figure how to end your journey, but there are bonus puzzles if you [b]LISTEN[r] and do as the voice says[end if].";
 	the rule succeeds;
 
-section going outside
+chapter smelling
+
+the block smelling rule is not listed in any rulebook.
+
+every turn: say "[hay-smell-known].";
+
+check smelling:
+	if player is in scene scene, say "It smells nice here." instead;
+	if hay-smell-available is true:
+		now hay-smell-known is true;
+		say "You smell hay[one of][or], again[stopping], and you can't help theatrically [one of][or]re-[stopping]exclaiming 'Ahh! Yay! Hay!' as you recall trading the straw for hay way back when." instead;
+	say "Nothing unusual." instead;
+
+
+chapter going outside
 
 the convert exit into go out rule is not listed in any rulebook.
 
