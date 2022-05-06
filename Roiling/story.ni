@@ -23007,91 +23007,95 @@ after printing the name of a thing (called th) when bold-chosen is true:
 
 volume mapping
 
-[map tweaks for ordeal reload]
+[map tweaks for towers]
 
-index map with Highest Heights mapped east of Dusty Study.
-index map with Farming Framing mapped west of Dusty Study.
-index map with gallery mapped north of Dusty Study.
-index map with Carven Cavern mapped north of gallery.
-
-[map tweaks for stores]
-
-index map with Cruelest Lectures mapped north of Strip of Profits.
+index map with Topside Deposit mapped west of Loftier Trefoil.
+index map with Rawest Waster Waters mapped east of Actionless Coastlines.
+index map with Mislit Limits mapped north of Rawest Waster Waters.
+Index map with Arid Den mapped east of Lost Lots.
+Index map with Dourest Detours mapped south of Outer Route.
 
 [map tweaks for routes]
 
-index map with Same Mesa mapped west of Strip of Profits.
-index map with Idle Deli mapped north of Same Mesa.
-index map with Cleric Circle mapped west of Idle Deli.
-index map with Adobe Abode mapped south of Cleric Circle.
-index map with Harms Marsh mapped south of Adobe Abode.
-index map with Ripe Pier mapped east of Harms Marsh.
-index map with clipper cripple mapped east of Ripe Pier.
+index map with Idle Deli mapped north of Salted Deltas.
+index map with Adobe Abode mapped north of Idle Deli.
+index map with Cleric Circle mapped west of Adobe Abode.
+index map with Same Mesa mapped north of Cleric Circle.
+index map with Harms Marsh mapped north of Adobe Abode.
+index map with Clipper Cripple mapped east of Adobe Abode.
+index map with Ripe Pier mapped north of Cripple Clipper.
+index map with Sonancy Canyons mapped east of Cripple Clipper.
+
+[map tweaks for others]
+
+index map with Rustic Citrus mapped west of Fringe Finger.
+index map with Scape Space mapped west of Cleric Circle.
+[index map with stadium mapped north of Scape Space.]
+
+[map tweaks for presto]
+
+index map with Marines Seminar Remains mapped north of Filed Field.
+index map with Austerer Treasure mapped south of Saps Pass.
 
 [map tweaks for troves]
 
-index map with Upscale Capsule mapped north of Cruelest Lectures.
-index map with Loather Rathole mapped west of Upscale Capsule.
+index map with Bustle Sublet mapped north of Hacks Shack.
 index map with Bustle Sublet mapped west of Loather Rathole.
+index map with Loather Rathole mapped west of Upscale Capsule.
 index map with Boarded Roadbed mapped north of Bustle Sublet.
 index map with Drain Nadir mapped north of Boarded Roadbed.
 index map with Boredom Bedroom mapped east of Drain Nadir.
 index map with Econ Cone mapped south of Boredom Bedroom.
 index map with Browse Bowers mapped east of Boredom Bedroom.
 
-[map tweaks for towers]
+[map tweaks for ordeal reload]
 
-index map with Topside Deposit mapped east of Highest Heights.
-
-index map with Topside Deposit mapped west of Loftier Trefoil.
-index map with Rawest Waster Waters mapped east of Actionless Coastlines.
-index map with Mislit Limits mapped north of Rawest Waster Waters.
-
-Index map with Arid Den mapped east of Lost Lots.
-Index map with Dourest Detours mapped north of Obscurest Subsector.
-
-[map tweaks for others]
-
-index map with Filed Field mapped south of Cripple Clipper.
-index map with Scape Space mapped north of Clangier Clearing.
-[index map with stadium mapped north of Scape Space.]
-
-[map tweaks for oyster]
-
-index map with Posh Hops Shop mapped east of Cruelest Lectures.
-index map with Olde Lode mapped east of Posh Hops Shop.
-index map with Disease Seaside mapped east of Olde Lode.
-index map with Fighter Freight mapped east of Disease Seaside.
-index map with Sclerous Closures mapped north of Posh Hops Shop.
-index map with Lean Lane mapped east of Lapsin Plains.
-index map with Hardest Trashed Dearths mapped east of Lean Lane.
-index map with tenfold mapped north of Horned Hedron.
-index map with Plasm Lamps mapped east of tenfold.
-index map with end den mapped east of Plasm Lamps.
-index map with Shuttle Hutlets mapped east of end den.
+index map with Highest Heights mapped north of Outer Route.
+index map with Dusty Study mapped west of Outer Route.
+index map with Farming Framing mapped north of Dusty Study.
+index map with Gallery mapped west of Farming Framing.
+index map with Carven Cavern mapped north of Gallery.
 
 [map tweaks for otters]
 
-index map with Rancho Archon Anchor mapped east of Anger Range.
-
-[map tweaks for towers]
-
-index map with Shaven Havens mapped south of Neds Dens.
-
-[map tweaks for presto]
-
-index map with Hacks Shack mapped south of Harms Marsh.
-index map with Austerer Treasure mapped south of Saps Pass.
-index map with r44 mapped west of Hacks Shack.
+index map with Perverse Preserve mapped north of Sonancy Canyons.
 
 [map tweaks for demo dome]
 
-index map with Neds Dens mapped east of Scape Space.
-index map with Intel Inlet mapped north of Evoc Cove.
+index map with Hows Show mapped west of Gallery.
+index map with Intel Inlet mapped west of Hows Show.
 index map with Sparse Spares mapped south of Peek Keep.
+index map with Neds Dens mapped west of Peek Keep.
 
-index map with Meatier Emerita Emirate mapped south of Austerer Treasure.
-index map with Adorb Bardo mapped south of Meatier Emerita Emirate.
+[extra weird rule that shouldn't need to be there (I think) but does]
+
+index map with Clangier Clearing mapped west of Shaven Havens.
+
+[map tweaks for stores]
+
+index map with Cruelest Lectures mapped south of Upscale Capsule.
+index map with Strip of Profits mapped south of Cruelest Lectures.
+
+[map tweaks for oyster]
+[oyster gets screwed in the faithful mapping sweepstakes since it 1) a lot of standalone rooms you can shuffle to any point and 2) still sprawls a bit with the fixed rooms]
+
+index map with Rascal Craals mapped east of Econ Cone.
+index map with Hardest Trashed Dearths mapped south of Rancho Archon Anchor.
+index map with Anger Range mapped west of Rancho Archon Anchor.
+index map with Lean Lane mapped east of Hardest Trashed Dearths.
+index map with Posh Hops Shop mapped east of Strip of Profits.
+index map with Olde Lode mapped east of Posh Hops Shop.
+index map with Disease Seaside mapped north of Olde Lode.
+index map with Fighter Freight mapped west of Disease Seaside.
+index map with Den Loft mapped north of Horned Hedron.
+index map with Plasm Lamps mapped east of Den Loft.
+index map with End Den mapped east of Plasm Lamps.
+index map with Shuttle Hutlets mapped east of Lapsin Plains.
+
+[meta region tweaks]
+
+index map with Meatier Emerita Emirate mapped south of Evoc Cove.
+index map with Adorb Bardo mapped east of Meatier Emerita Emirate.
 
 volume spare ideas
 
