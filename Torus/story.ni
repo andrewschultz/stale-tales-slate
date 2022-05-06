@@ -1021,12 +1021,16 @@ to say reject:
 		else:
 			say "[how-many-right of the player's command].";
 		continue the action;
-	if location is not solved:
-		repeat through table of nudge hashes:
-			if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
-				if there is no cmd-loc entry or location of player is cmd-loc entry:
-					say "[nudge-text entry][line break]";
-					continue the action;
+	repeat through table of nudge hashes:
+		if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
+			if there is a cmd-loc entry:
+				if location of player is not cmd-loc entry, next;
+				if location of player is solved, next;
+			if there is a cmd-rule entry:
+				process the cmd-rule entry;
+				if the rule failed, next;
+			say "[nudge-text entry][line break]";
+			continue the action;
 	if rufhash is uniq-hash of location of player or ruffirst is uniq-hash of location of player:
 		say "Man! You had all the right letters, you think, but they didn't come together.";
 		continue the action;
