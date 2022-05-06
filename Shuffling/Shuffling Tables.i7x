@@ -181,7 +181,7 @@ taco	coat	"coat"	"taco"	--	--	"Before changing the hot-to-your-tongue taco to a 
 cask	sack	"sack"	--	pre-cask-sack rule	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	pre-sack-cask rule	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
 hoses	shoes	"shoes"	"hoses"	--	post-hoses-shoes rule	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
-r2	teleporter	"moor"	--	pre-room-moor rule	post-room-moor rule	"[moor-jump]"	false	298104110	--	moor
+r2	teleporter	"moor"	--	pre-room-moor rule	post-room-moor rule	"[moor-jump]."	false	298104110	--	moor
 m2	teleporter	"room"	--	--	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse..."	false	298104110	--	roomroom
 anapest	peasant	"peasant"	"anapest"	--	post-anapest-peasant rule	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He [exp-fli]storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196
 roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	--	--	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is touchable]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is touchable]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
@@ -213,7 +213,7 @@ to say drop-straw:
 this is the post-fridgey-flip rule:
 	if noun is pancake or noun is grits:
 		now noun is in fridge;
-		say "[line break]Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
+		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
 		if fridge is closed:
 			say "[line break]You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
 			now fridge is open;
@@ -256,19 +256,19 @@ this is the post-room-moor rule:
 	if room-flip is false:
 		now coat is realized;
 		now shoes are realized;
-		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
+		say "[i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
 		now room-flip is true;
 
 to say moor-jump:
 	if moor is visited:
 		if location of player is cedars and caskfillings is 2:
-			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return.";
+			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return";
 		else:
-			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
+			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in Sacred Cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if]";
 	if moor is unvisited:
-		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
+		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if]";
 	else:
-		say "[line break]Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
+		say "[line break]Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if]";
 
 this is the post-anapest-peasant rule:
 	moot pat;
@@ -983,7 +983,7 @@ missile	"[if silo is off-stage]You have nowhere to put the missile, yet[else if 
 spout	"[if caskfillings is 2]You've gotten all the oil you need[else if caskfillings is 1]You may be able to get more oils[else]you can [b]POUR OILS[r] into the cask from the spout[end if]."
 soil	"[if silo is off-stage]The soil is a good foundation for a structure[else]You've built a structure on the  soil[end if]."
 Woeful Pat	"Pat's poetry is useless, but its beat isn't."
-peasant	"[one of]The peasant has a bunch of hay he doesn't want. Mean Old Mondale-Doleman said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw. [if sack is off-stage]The cask can be made into a sack[else]It can fit in the sack[end if].[plus][or]GIVE STRAW TO PEASANT.[minus][cycling]"
+peasant	"[one of]The peasant has a bunch of hay he doesn't want. Mean Old Mondale-Doleman said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw[if straw is not touchable] back in [location of straw][end if]. [if sack is off-stage]It won't fit into a cask, but maybe it'll fit into a similar, or similary-spelled, container[else]It can fit in the sack[end if].[plus][or]GIVE STRAW TO PEASANT[if straw is not in sack], once you can transport the straw[end if].[minus][cycling]"
 black door	"[if silo is not touchable]You probably need to build a structure to attach the black door to[else if black door is not part of the silo]Just PUT BLACK DOOR ON SILO[else]The black door's okay where it is[end if]."
 dashed boundary	"You need to put some sort of door on it[if black door is off-stage], but there are no doors in the moor, yet[else], and maybe that black door will work[end if]."
 dotted rectangle	"You need to put something in the rectangle[if panel is off-stage], but nothing is the right size[else], and the panel is the right size[end if]."

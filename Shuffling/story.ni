@@ -1599,12 +1599,12 @@ check taking inventory:
 	say "Warpable [list of warpable things enclosed by player].";]
 	say "Item time! [run paragraph on]";
 	if mrlp is Ordeal Loader or mrlp is stores, continue the action;
-	if player carries Mean Old Mondale Doleman, now Mean Old Mondale Doleman is unmarked for listing;
 	if the number of regspecial things enclosed by the player is 0:
 		say "You have nothing from this region in particular.";
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
+		if player carries Mean Old Mondale Doleman, now Mean Old Mondale Doleman is unmarked for listing;
 		say "In this region you have found:[line break]";
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
@@ -6669,7 +6669,7 @@ report wearing the coat:
 	say "It's nice and warm. Not enough to make you sweat. But handy if you [if r2 is prefigured]try to poke around the moor[else]find a way outside of here. There must be one[end if].";
 	the rule succeeds;
 
-description of coat is "It's warm and fuzzy and shapeless and as multi-colored as the taco you made it from."
+description of coat is "It's warm and fuzzy and shapeless and as multi-colored as the taco you made it from[if player is in kitchen].[paragraph break]So warm, you're remided of the phrase 'If you can't take the head, get out of tt he kitchen.' You can take the heat, but you've probably done everything strictly necessary here[end if]."
 
 check taking off the coat:
 	if player is in moor, say "Too cold." instead;
@@ -7229,7 +7229,7 @@ black door is pushable between rooms.
 
 check pushing black door to:
 	if second noun is inside and silo is touchable, try pushing black door instead;
-	say "You don't need to get rid of the black door or move it anywhere else." instead;
+	say "Dragging the door around would be too exhausting. [if silo is touchable]Why not push the door inside the silo?[else]Maybe you can create a structure the door will fit into.[end if]" instead;
 
 check opening black door: say "[if black door is part of the silo][one of]A quick peek inside, and you see enough machinery to know this is not a grain silo. You quickly close the door--the machinery may be beyond you, and you don't need to deal with it[or]You should probably work at the silo from the outside[stopping][else]Other doors in [this-game] may lead somewhere for no reason, but this doesn't[end if]." instead;
 
@@ -9915,7 +9915,7 @@ table of kibitzes
 kib	helpy
 whiff of stew	"Four entries. Whiff and smell are five letters. The reading must rely on what the smell is."
 aroma of teas	"Four entries. Aroma and smell are five letters. The reading must rely on what the smell is."
-attics	"Hmm. You thought the attics would be more appropriate for the doll house, but maybe the gadget thinks you can change back, too."
+attics	"Hmm. You thought the attics would be more appropriate for the doll house, but maybe the gadget detects you can change back, too."
 motto	"Since Motto is only five letters, you wonder what's up, but it's labeled [b]A MOTTO[r]."
 tall trio	"You scanned each of the tall trio, and the readout didn't change."
 reading	"[read-drain] the drainage."
