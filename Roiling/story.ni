@@ -401,6 +401,7 @@ definition: a direction (called dir) is viable:
 [ note: below, the rules will fail if we use the words noun, yes or no. Use dir and "the rule succeeds/fails." ]
 
 a direction viability rule for a direction (called dir) when mrlp is ordeal reload:
+	if player is in Framing Farming and dir is outside, the rule fails;
 	if player is in Largely All Grey Gallery and dir is inside, the rule succeeds;
 	if player is in Carven Cavern and dir is inside and stapler is moot, the rule succeeds;
 
@@ -1476,7 +1477,7 @@ check gotoing:
 	if noun is strip and strip is visited and player is not in Cruelest Lectures:
 		say "The command you may be looking for is [b]RETRY[r]. Do that now instead?";
 		if the player yes-consents, try retrying instead;
-		say "OK. You will want to use [b]RETRY[r] in the future." instead;
+		say "Okay. You will want to use [b]RETRY[r] in the future." instead;
 	if qbc_litany is not table of no conversation, say "End your conversation first." instead;
 	let noureg be map region of location of noun;
 	if noureg is solved and noureg is not stores, say "You already solved [noureg]." instead;
@@ -3733,20 +3734,25 @@ carry out posfing:
 	pad-rec-q "poss";
 	the rule succeeds;
 
-chapter exitsing special rules
+chapter exitsing special by-region rules (not quite enough to make this part of a region)
 
 this is the mesa-go-reject rule:
 	if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
 	if a bev o be ova is touchable, say "You don't know if you should go anywhere. With [bev] lying around, maybe that's where the adventure is." instead;
 	if MORF FORM is not off-stage, say "You probably don't want to go anywhere with that [if MORF FORM is in Same Mesa]thing[else]bean[end if] around." instead;
 
-check exitsing:
-	if mrlp is routes:
-		if player is in Same Mesa:
-			abide by the mesa-go-reject rule;
-			say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
-		say "Looks like you will need to figure a way to move forward without directions. You've [if sonancy canyons are visited]got to be really close[else]been doing well so far[end if]." instead;
-	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move [if econ cone is visited]even [end if][if browse bowers are visited]further [end if]ahead in the world." instead;
+check exitsing when mrlp is ordeal reload:
+	if player is in Dusty Study and number of viable directions is 0:
+		say "[if Perrot is off-stage]You feel trapped right now, and you know if you stay here too long, you'll be apprehended. It's as if you need that kick to tell you, yes, you need to get on with things and take your chances[else]You haven't made a way out yet[end if]." instead;
+
+check exitsing when mrlp is routes:
+	if player is in Same Mesa:
+		abide by the mesa-go-reject rule;
+		say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
+	say "Looks like you will need to figure a way to move forward without directions. You've [if sonancy canyons are visited]got to be really close[else]been doing well so far[end if]." instead;
+
+check exitsing when mrlp is troves:
+	say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move [if econ cone is visited]even [end if][if browse bowers are visited]further [end if]ahead in the world." instead;
 
 chapter game-start
 
@@ -5048,7 +5054,7 @@ after reading a command:
 					do nothing;
 				else:
 					pad-rec "saying";
-					say "OK. Hit the up arrow then enter if you change your mind.";
+					say "Okay. Hit the up arrow then enter if you change your mind.";
 					reject the player's command;
 				pad-rec "saying";
 			say "(cutting off the trailing '[word number 1 in the player's command]')[line break]";
@@ -7619,7 +7625,9 @@ Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the c
 
 the player is in Dusty Study.
 
-to say tables-beams: if tables are in Dusty Study or meet bans are in Dusty Study, say ", [if tables are in Dusty Study]tables (the spreadsheety kind) on one wall[else]a way [b]OUT[r] where the tables were[end if], and [if meet bans are in Dusty Study]beams on another wall[else]a way down where those beams were[end if]";
+outside-text of Dusty Study is "You haven't made a way outside the Dusty Study. But one does exist. More than one. You just hid them a bit, so only your powers can activate them."
+
+to say tables-beams: if tables are in Dusty Study or meet bans are in Dusty Study, say ", [if tables are in Dusty Study]tables (the spreadsheety kind) on one wall[else]a way [b]OUT[r] where the tables were[end if], and [if meet bans are in Dusty Study]beams on another wall[else]a way down where those beams were[end if]".
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
 	ital-say "you may wish to type [b]ABOUT[i] or [b]VERBS[i] to see information about the game and what words work best.";
@@ -8070,7 +8078,7 @@ to decide whether report-porter-knocks:
 	no;
 
 every turn when location of player is Dusty Study and Report Porter Perrot is off-stage:
-	if debug-state is true, say "Stuff-found variable for [perrot] arriving is [stuff-found].";
+	d "Stuff-found variable for [perrot] arriving is [stuff-found].";
 
 every turn when report-porter-knocks (this is the Report Porter Perrot Knocks rule):
 	increment okay-thats-it;
@@ -9196,7 +9204,7 @@ check going up in Largely All Grey Gallery:
 settler-x-nag is a truth state that varies.
 
 check going inside in Largely All Grey Gallery:
-	say "You prepare to sneak into the evac-cave to get out of here.[line break]";
+	say "You prepare to sneak into the evac-cave to get out of here.[paragraph break]";
 	if player has latches:
 		if treatise is off-stage:
 			say "You fumble nervously with the latches before entering, and a treatise falls out. Maybe it will help you decide what to do with the latches, before you go out into the wide world without a scanning device to help you know where to use your power.";
@@ -9213,6 +9221,12 @@ check going inside in Largely All Grey Gallery:
 book Carven Cavern
 
 Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if stapler is moot]The apertured departure is open now to wherever [b]IN[r] leads[else if departure is touchable]An apertured departure might lead somewhere if it were open further[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way.". roomnud of carven cavern is table of carven cavern nudges.
+
+to say cavern-in: say "You can just go [b]IN[r] the departure to start your adventure in earnest"
+
+outside-text of Carven Cavern is "[if departure is not in cavern]There's something behind the psalter[else if stapler is not moot]You can't go inside the departure until you open it further[else][cavern-in][end if]."
+
+exits-text of Carven Cavern is "[if departure is not in cavern]Nothing yet. You need to use your powers to reveal the exit[else if stapler is not moot]You can't fit through the departure yet[else][cavern-in][end if]."
 
 after looking in Carven Cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in Carven Cavern, set the pronoun them to palest pastel plates;
@@ -9257,9 +9271,9 @@ this is the bore-deduct rule:
 	if current action is dropping:
 		say "Are you sure you wish to drop [deductin]? You should only do so if you fully understand what ambiguous cheat mode readings do, or you're worried that learning might spoil too many puzzles.";
 		if the player regex-prompt-consents:
-			say "Ok. It's gone now.";
+			say "Okay. It's gone now.";
 			moot inducted deductin;
-		say "Ok. The nag will appear if you try again, but you can still drop it." instead;
+		say "Okay. The nag will appear if you try again, but you can still drop it." instead;
 
 carry out examining a deduction-page:
 	now noun is read-yet;
@@ -9636,7 +9650,9 @@ to say area-but: say " area, as if there isn't enough already. But on the other 
 
 book Farming Framing
 
-Farming Framing is an innie sideroom in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is touchable]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].". roomnud of farming framing is table of farming framing nudges. missed-text of Farming Framing is "a room behind the tables in Dusty Study".
+Farming Framing is an innie sideroom in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is touchable]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go back [b]IN[r] to the Dusty Study[note-study-out][end if].". roomnud of farming framing is table of farming framing nudges. missed-text of Farming Framing is "a room behind the tables in Dusty Study".
+
+to say note-study-out: if sitar is not moot, say " or, since that's the only exit, [b]OUT[r] works, too"
 
 understand "stable" as Framing Farming when tables are moot or framing farming is visited.
 
@@ -10888,7 +10904,7 @@ after examining summary (this is the notify last summary page rule) :
 			try examining the summary;
 			the rule succeeds;
 		else:
-			say "OK. You'll start at the next page, next time. You can [b]OPEN[r] or [b]CLOSE[r] the summary to start at the first page.";
+			say "Okay. You'll start at the next page, next time. You can [b]OPEN[r] or [b]CLOSE[r] the summary to start at the first page.";
 			the rule succeeds;
 	the rule succeeds;
 
@@ -11310,7 +11326,7 @@ check examining sob ever verbose:
 		now verbose-sob-check is true;
 		say "You wonder if the sob ever verbose might reveal TOO much information. Maybe if you figured what to do, you'd feel obliged to it. Listen closer anyway?";
 		if the player yes-consents, continue the action;
-		say "OK. This nag won't appear next time." instead;
+		say "Okay. This nag won't appear next time." instead;
 
 chapter stop post
 
@@ -15619,7 +15635,7 @@ check xraying:
 	if noun is xray-warnable:
 		say "You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?";
 		unless the player regex-prompt-consents:
-			say "OK. Save it for something else.";
+			say "Okay. Save it for something else.";
 			continue the action;
 	if noun is guardian:
 		say "Hmm. You bet you could get past if [the noun] were [big-hint of noun].";

@@ -65,6 +65,8 @@ this is the post-pram-ramp rule:
 		min-up;
 	else if meet bans are moot:
 		min-up; [check if passage is already available via beams or stable->stair]
+	now dusty study is mapped inside highest heights;
+	now gallery is mapped below highest heights;
 
 this is the post-sitar-or-stria-to-stair rule:
 	now Largely All Grey Gallery is mapped below Farming Framing;
@@ -127,7 +129,7 @@ this is the post-specter-scepter rule:
 	say "'Oh. One more thing. Instead of the scepter you could've had, have [deductin]. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can [b]DROP[r] it. But if you want it, here it is.'";
 	now player has Inducted Deductin;
 	set the pronoun it to Inducted Deductin;
-	say "[line break]The [specter] leaves for a bit but then pops out from behind a fourth wall. 'Oh. I said one more thing, but I meant two. You can [b]PARSE[r], and with the settler in cheat mode, the game will tell you what can logically be figured out. [b]SPARE[r] undoes this.";
+	say "[line break]The [specter] leaves for a bit but then pops out from behind a fourth wall. 'Oh. I said one more thing, but I meant two. You can [b]PARSE[r], and with the settler in cheat mode, the game will tell you what can logically be figured out. [b]SPARE[r] undoes this.'";
 	moot respect specter; [not necessary if you solve the specter, but if you pass by it, this makes some if statements easier]
 
 to say scep-scan-track:

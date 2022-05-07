@@ -209,6 +209,11 @@ You're in a conversation. Your turn to speak.
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
 @verbs
+#testcase-outside-dusty-study
+>exit
+You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
+\\
+#testcase-exits-dusty-study
 >exit
 You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
 
@@ -547,6 +552,16 @@ Your score has just gone up by two points
 >score
 {$SCOS}
 
+@verbs
+#+testcase-outside-dusty-study
+>exit
+Gallery
+>undo
+\\
+#+testcase-exits-dusty-study
+>exits
+The only way you seem to be able to go is down.
+
 @nud
 #mistake retest for basement-text-[text] basement-text-[text] basement
 >basement zozimus
@@ -626,6 +641,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
 >score
 {$SCOS}
+
+@verbs
+#+testcase-outside-dusty-study
+>exit
+You have more than one way to leave: up, down and inside. So you'll need to specify which one.
+\\
+#+testcase-exits-dusty-study
+>exits
+There are three unblocked exits: up, down and inside.
 
 @nud
 #+ttc-table-of-dusty-study-nudges-ceiling
@@ -734,6 +758,14 @@ The settler is pretty powerful, but it can't build bridges.
 Farming Framing
 
 @verbs
+#testcase-outside-farming-framing
+>exit
+The only way to exit is outside, so let's go that way.
+\\
+#testcase-exits-farming-framing
+>exits
+The only way to exit is outside, so let's go that way.
+\\
 #ttc-table-of-ordeal-reload-nowheres-farming-framing
 >n
 No time for mooching around your means manse. You probably need to take a secret passage in, or down.
@@ -799,6 +831,31 @@ Highest Heights
 #ttc-table-of-ordeal-reload-nowheres-highest-heights
 >n
 You can go back IN to the study, though you don't need to, or you could try to get the pram out of the way.
+\\
+#testcase-exits-highest-heights
+>exits
+The only way you seem to be able to go is down to Dusty Study.
+\\
+#testcase-outside-highest-heights
+>exit
+The only way to exit is down, so let's go that way.
+\\
+You go back down to the closets, not able to figure the pram yet.
+>undo
+>ramp
+by one point
+#+testcase-exits-highest-heights
+>exits
+There are two unblocked exits: down and inside to Dusty Study.
+\\
+#+testcase-outside-highest-heights
+>exit
+You have more than one way to leave: down and inside. So you'll need to specify which one.
+\\
+You go back down to the closets, not able to figure the pram yet.
+>undo
+>undo
+>undo
 
 @nud
 #ttc-table-of-highest-heights-nudges-highest
@@ -921,6 +978,14 @@ You can probably go back up, or you can go in if you're ready to face what's bey
 #verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
 >listen
 Merciful quiet, for the moment.
+\\
+#testcase-exits-all-grey-gallery
+>exits
+There are two unblocked exits: up to Dusty Study and inside.
+\\
+#testcase-outside-all-grey-gallery
+>out
+You have more than one way to leave: up and inside. So you'll need to specify which one.
 
 @sli
 #slider test for pavement
@@ -1185,6 +1250,14 @@ Carven Cavern
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
 >e
 You need to create or discover a viable exit, first.
+\\
+#testcase-exits-carven-cavern
+>exit
+There's something behind the psalter.
+\\
+#testcase-outside-carven-cavern
+>exits
+Nothing yet. You need to use your powers to reveal the exit.
 
 @max
 #ttc-table-of-notepad-entries-clues
@@ -1374,6 +1447,15 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 
 >score
 {$SCOS}
+
+@verbs
+#+testcase-exits-carven-cavern
+>exits
+You can't go inside the departure until you open it further.
+\\
+#+testcase-outside-carven-cavern
+>exit
+You can't fit through the departure yet.
 
 @verbs
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
@@ -1590,6 +1672,15 @@ by one point
 }}CURMIN++
 >score
 Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+
+@verbs
+#+testcase-exits-carven-cavern
+>exits
+You can just go IN the departure to start your adventure in earnest
+\\
+#+testcase-outside-carven-cavern
+>exit
+You can just go IN the departure to start your adventure in earnest
 
 @max
 >xg 1

@@ -30,7 +30,9 @@ chapter ordeal reload
 
 test porter with "x bookshelf/think/open door/1"
 
-test elmo with "test porter/5/lamp/satchel/x settler/basement/in"
+test qs with "x bookshelf/think/open door/1/5/lamp"
+
+test elmo with "test porter/5/lamp/satchel/x settler/basement/d/in"
 
 test orxdial with "test porter/5/sb niche/sb beams/sb tables/basement/chimney/stable/u/sb pram/ramp/enter closets/in/sb stair/stair/d".
 

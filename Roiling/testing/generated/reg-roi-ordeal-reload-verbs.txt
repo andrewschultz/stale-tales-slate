@@ -49,6 +49,11 @@ You're in a conversation. Your turn to speak.
 #verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
+#testcase-outside-dusty-study
+>exit
+You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
+
+#testcase-exits-dusty-study
 >exit
 You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
 
@@ -82,6 +87,15 @@ Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
+#testcase-outside-dusty-study
+>exit
+Gallery
+>undo
+
+#testcase-exits-dusty-study
+>exits
+The only way you seem to be able to go is down.
+
 >d
 >stair
 by one point
@@ -100,6 +114,14 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
 
+#testcase-outside-dusty-study
+>exit
+You have more than one way to leave: up, down and inside. So you'll need to specify which one.
+
+#+testcase-exits-dusty-study
+>exits
+There are three unblocked exits: up, down and inside.
+
 >painting
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
@@ -108,6 +130,14 @@ Score in a scenario: 7 out of 15 total points in the current region, Ordeal Relo
 
 >in
 Farming Framing
+
+#testcase-outside-farming-framing
+>exit
+The only way to exit is outside, so let's go that way.
+
+#testcase-exits-farming-framing
+>exits
+The only way to exit is outside, so let's go that way.
 
 #ttc-table-of-ordeal-reload-nowheres-farming-framing
 >n
@@ -135,6 +165,31 @@ Highest Heights
 >n
 You can go back IN to the study, though you don't need to, or you could try to get the pram out of the way.
 
+#testcase-exits-highest-heights
+>exits
+The only way you seem to be able to go is down to Dusty Study.
+
+#testcase-outside-highest-heights
+>exit
+The only way to exit is down, so let's go that way.
+
+You go back down to the closets, not able to figure the pram yet.
+>undo
+>ramp
+by one point
+#+testcase-exits-highest-heights
+>exits
+There are two unblocked exits: down and inside to Dusty Study.
+
+#+testcase-outside-highest-heights
+>exit
+You have more than one way to leave: down and inside. So you'll need to specify which one.
+
+You go back down to the closets, not able to figure the pram yet.
+>undo
+>undo
+>undo
+
 >ramp
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
 
@@ -155,6 +210,14 @@ You can probably go back up, or you can go in if you're ready to face what's bey
 #verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
 >listen
 Merciful quiet, for the moment.
+
+#testcase-exits-all-grey-gallery
+>exits
+There are two unblocked exits: up to Dusty Study and inside.
+
+#testcase-outside-all-grey-gallery
+>out
+You have more than one way to leave: up and inside. So you'll need to specify which one.
 
 >snib
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
@@ -194,6 +257,14 @@ Carven Cavern
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
 >e
 You need to create or discover a viable exit, first.
+
+#testcase-exits-carven-cavern
+>exit
+There's something behind the psalter.
+
+#testcase-outside-carven-cavern
+>exits
+Nothing yet. You need to use your powers to reveal the exit.
 
 >sleep
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
@@ -236,6 +307,14 @@ It's still too thick, even though some of the plaster is peeled away.
 >score
 Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
+#testcase-exits-carven-cavern
+>exits
+You can't go inside the departure until you open it further.
+
+#testcase-outside-carven-cavern
+>exit
+You can't fit through the departure yet.
+
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
 >au 0
 >w
@@ -251,6 +330,14 @@ The Respect Specter coughs.
 by one point
 >score
 Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+
+#testcase-exits-carven-cavern
+>exits
+You can just go IN the departure to start your adventure in earnest
+
+#testcase-outside-carven-cavern
+>exit
+You can just go IN the departure to start your adventure in earnest
 
 >in
 Strip of Profits
