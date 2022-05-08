@@ -259,7 +259,7 @@ You need all the tats to help you, and you don't need to shift them. So you can 
 >etsets
 The tsetse fly can't really be changed.
 \\
-#mistake test for testes
+#testcase-mistake-tours-roust-torus-testes
 >testes
 Really! This isn't that sort of game.
 \\
@@ -276,7 +276,6 @@ general list of verbs
 >hyhyaa
 general list of verbs
 
-@mis
 >a
 >a
 >a
@@ -287,17 +286,27 @@ general list of verbs
 >smell
 You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
 
+#testcase-mistake-tours-roust-torus-hah-yah-ayy
+>hah
+You were glad to have the smell of hay as a clue, but let's not overdo it!
+\\
+>yah
+You were glad to have the smell of hay as a clue, but let's not overdo it!
+\\
+>ayy
+You were glad to have the smell of hay as a clue, but let's not overdo it!
+
 @nud
-#ttc-table-of-nudge-hashes-hya
+#+ttc-table-of-nudge-hashes-hya
 >ayh
 While lots of snappy noises come to mind, you can't do anything with the smell of hay. It was there, and it gave you a boost you'll cash in on, you're sure.
 \\
-#ttc-table-of-nudge-hashes-yahyah
+#+ttc-table-of-nudge-hashes-yahyah
 >hyhyaa
 No, you can't do anything with the smell of hay. It was there, and it gave you a boost you'll cash in on, you're sure.
 
 @mis
-#mistake test for he/hes/she
+#testcase-mistake-tours-roust-torus-he-hes-she
 >he
 You don't need to deal with pronouns. Maybe a different sort of word.
 !halfway
@@ -382,38 +391,38 @@ You don't need to deal with pronouns. Besides, you already did what you needed, 
 >a
 
 @mis
-#mistake test for rapparee
+#testcase-mistake-tours-roust-torus-rapparee
 >rapparee
 You don't need to consort with thieves.
 !Besides
 
 @mis
-#mistake test for reap
+#testcase-mistake-tours-roust-torus-reap
 >reap
 Perhaps there is something to reap once you figure what to do here. In a weird way, you feel you're halfway there, though.
 
 @mis
-#mistake test for perp
+#testcase-mistake-tours-roust-torus-perp
 >perp
 That doesn't take care of the whole area.
 
 @mis
-#mistake test for pear
+#testcase-mistake-tours-roust-torus-pear
 >pear
 You already got fruits for Curtis in Rustic Citrus long ago. In a weird way, you feel you're halfway there, though.
 
 @mis
-#mistake test for rape
+#testcase-mistake-tours-roust-torus-rape
 >rape
 Tours Roust Torus is about light-hearted jokes, and there's nothing light-hearted about that. So, yeah, don't try it again.
 
 @mis
-#mistake test for earp
+#testcase-mistake-tours-roust-torus-earp
 >earp
 No daredevil gunman appears to help you out.
 !Besides
 \\
-#mistake test for reap pear
+#testcase-mistake-tours-roust-torus-reap-pear
 >reap pear
 You are very, very, very close indeed. Everything is in the right order.
 
@@ -511,12 +520,12 @@ No daredevil gunman appears to help you out. Besides, you already did what you n
 >a
 
 @mis
-#mistake test for ragin
+#testcase-mistake-tours-roust-torus-ragin
 >ragin
 Getting mad won't help.
 !Besides
 \\
-#mistake test for raging rain
+#testcase-mistake-tours-roust-torus-raging-rain
 >raging rain
 You don't need to battle the weather as well.
 !Besides
@@ -590,12 +599,12 @@ Besides
 >a
 
 @mis
-#mistake test for tame
+#testcase-mistake-tours-roust-torus-tame
 >tame
 There's nothing strictly to tame here. If there were, maybe you could use some help.
 !Besides
 \\
-#mistake test for team/mate
+#testcase-mistake-tours-roust-torus-team-mate
 >team
 You sort of need a pal, and you sort of need a bit more.
 !Besides
@@ -652,17 +661,17 @@ Besides
 >a
 
 @mis
-#mistake test for stein
+#testcase-mistake-tours-roust-torus-stein
 >stein
 You have nothing to drink, so you do not need a drink container.
 !Besides
 \\
-#mistake test for nites
+#testcase-mistake-tours-roust-torus-nites
 >nites
 You're too old for the nightlife. Or bad spelling.
 !Besides
 \\
-#mistake test for tiens
+#testcase-mistake-tours-roust-torus-tiens
 >tiens
 You mentally show off your anagramming skills in languages other than English. Perhaps it's not the brain that needs attention here, though.
 !Besides
@@ -746,7 +755,7 @@ You mentally show off your anagramming skills in languages other than English. N
 >a
 
 @mis
-#mistake test for happen chance
+#testcase-mistake-tours-roust-torus-happen-chance
 >happen chance
 You are very, very, very close indeed. Everything is in the right order.
 
@@ -793,7 +802,7 @@ Maybe if the walkway were a bit more solid.
 >a
 
 @mis
-#mistake test for let at
+#testcase-mistake-tours-roust-torus-let-at
 >let at
 You don't need permission to be let at anything.
 !Besides
@@ -986,15 +995,15 @@ You're missing an (s) to make things plural, here.
 You know what to do here. You may not be as sharp as you were younger, but you see the pattern. You may not see how to go through with it right away, but you see it.
 
 @mis
-#mistake test for senescense
+#testcase-mistake-tours-roust-torus-senescense
 >senescense
 Almost, but I'm going to play spelling cop, here.
 \\
-#mistake test for trainer
+#testcase-mistake-tours-roust-torus-trainer
 >trainer
 You're on your own here. If almost three games aren't enough to whip you in shape, I don't know what is.
 \\
-#mistake test for retrain/retrains
+#testcase-mistake-tours-roust-torus-retrain-retrains
 >retrain
 It's too late for that now, but you should be able to push through as needed.
 >retrains

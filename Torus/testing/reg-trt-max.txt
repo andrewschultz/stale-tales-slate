@@ -13,6 +13,26 @@
 >xyzzy
 So close! Just one letter off. Or one too much. You can maybe guess which one.
 
+>a
+>a
+>a
+>a
+>a
+>a
+>a
+>smell
+You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
+
+#testcase-mistake-tours-roust-torus-hah-yah-ayy
+>hah
+You were glad to have the smell of hay as a clue, but let's not overdo it!
+
+>yah
+You were glad to have the smell of hay as a clue, but let's not overdo it!
+
+>ayy
+You were glad to have the smell of hay as a clue, but let's not overdo it!
+
 >sheesh
 by one point
 Sheesh
