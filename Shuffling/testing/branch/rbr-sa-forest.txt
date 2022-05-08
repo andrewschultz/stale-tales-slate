@@ -105,7 +105,7 @@ by one point
 Rest of Forest
 #ttc-table-of-rest-of-forest-nudges-rest
 >rets
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 >undo
 #ttc-table-of-forest-nudges-rambling
 >ramblign
@@ -380,7 +380,7 @@ DEBUG INFO: Cert-text: -----.
 #these are universal to SF/RF
 #ttc-table-of-forest-nudges-forest
 >forets
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-forest-nudges-conifer
 >conifre
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
@@ -515,13 +515,13 @@ It is too late to help the line of no life by showing love.
 You don't want to change a region drastically while you're in it
 #ttc-table-of-self-id-fields-nudges-selfid
 >selfdi
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-self-id-fields-nudges-self
 >sefl
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-self-id-fields-nudges-field
 >ifdle
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-self-id-fields-nudges-selves
 >selvse
 The selves vessel is much too sturdy to manipulate.
@@ -1120,11 +1120,11 @@ The only way you seem to be able to go is south to Self-ID Fields.
 @nud
 #ttc-table-of-emptiness-sepiments-nudges-emptiness
 >emptinsse
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #ttc-table-of-emptiness-sepiments-nudges-sepiment
 >sepimetn
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #ttc-table-of-emptiness-sepiments-nudges-scoffin
 >scoffni
@@ -1654,10 +1654,10 @@ This place is too stark to offer clues, and if it did, they'd probably be wrong 
 @nud
 #ttc-table-of-ghouls-slough-nudges-slough
 >slouhg
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-ghouls-slough-nudges-lough
 >louhg
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-ghouls-slough-nudges-cruel
 >crule
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
@@ -1708,7 +1708,7 @@ Frost Forts
 @nud
 #ttc-table-of-frost-forts-nudges-frost
 >frots
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-frost-forts-nudges-snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.

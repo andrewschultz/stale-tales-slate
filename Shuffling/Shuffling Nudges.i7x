@@ -51,7 +51,7 @@ this is the nope-yet rule:
 	if passage is examined, the rule succeeds;
 	the rule fails;
 
-to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is in acne bit cabinet and acne bit cabinet is unexamined]. You'll find a hint device for that soon enough[end if]"
+to say loc-rej: say "[if notices is unvisited]You may need to change a room later, but you'll have a hint device to do so[else if player has gadget]Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room[else if player is in notices and gadget is in cabinet]You don't need to change this place, though the cabinet holds a hint device to tell you when to act on your location[else]You usually don't need to act on locations. Unfortunately, it seems you lost your gadget, so you may need educated guesswork to figure when and where[end if]"
 
 to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
 
@@ -79,7 +79,7 @@ chapter Thickest Thickets
 table of Thickest Thickets nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "thickets"	584514019	--	--	"[loc-rej]."
-"thicket"	488240053	--	--	"[loc-rej]"
+"thicket"	488240053	--	--	"[loc-rej]."
 "shrub"	342404780	--	--	"The [if goat is touchable]remains of the [end if]shrub and brush waver, then point towards the [if toga is touchable]toga[else]opening in the thickets[end if]."
 "net"	299823635	sent nets	--	"There's something you can do with all the nets, if you think about it."
 
@@ -208,6 +208,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "subwaymap"	600009451	store m	--	"[no-store-m]."
 "hubs"	257080977	hubs bush	--	"[hub-stur]."
 "buh"	160807011	hubs bush	--	"[hub-stur]."
+"store"	486866473	--	--	"You will want to focus on changing a specific store, e.g. Store A."
 
 to say tid: say "The depiction is there as a hint, not as a puzzle";
 
@@ -914,7 +915,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "flare"	295646465	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
 "tile"	329722812	--	--	"You need to deal with all the tiles."
 
-to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
+to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful"
 
 chapter Leis Isle
 
@@ -1144,7 +1145,7 @@ to say dir-rej:
 	if player is in sf or player is in rf:
 		say "You think you're on to something, but you still feel stuck";
 	else:
-		say "This game usually doesn't require you to mess with cardinal directions[if sf is visited]. You got by the forest puzzle, and that's all you needed to do[else]Hopefully it'll be clear if and when you need to[end if]";
+		say "This game usually doesn't require you to mess with cardinal directions. [if sf is visited]You got by the forest puzzle, and that's all you needed to do[else]Hopefully it'll be clear if and when you need to[end if]";
 
 to say xyzzys: say "A hollow voice booms, 'Lo! Of...'[no line break]"
 

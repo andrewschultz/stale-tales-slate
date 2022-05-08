@@ -81,7 +81,7 @@ The senors you want to see are behind the door.
 
 #ttc-table-of-undesired-underside-nudges-undesired
 >undesirde
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 #ttc-table-of-metros-nudges-metros
 >mersto
@@ -181,10 +181,10 @@ Medical procedures aren't necessary here. The noise is too distracting anyway.
 
 #ttc-table-of-roarings-garrison-nudges-roarings
 >roarinsg
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-roarings-garrison-nudges-roaring
 >roarign
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-roarings-garrison-nudges-reedings
 >reedinsg
 He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be .
@@ -207,11 +207,11 @@ Bile Libe
 
 #ttc-table-of-bile-libe-nudges-bile
 >ible
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 #ttc-table-of-bile-libe-nudges-librayr
 >librayr
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 #ttc-table-of-bile-libe-nudges-motto
 >motot
@@ -246,9 +246,13 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 >w
 The Ol' Hotel
 
+#testcase-mistake-shuffling-smatters
+>smatters
+The mattress is in bad enough shape as it is. It should be easy enough to sift through once the night thing is gone.
+
 #ttc-table-of-the-ol-hotel-nudges-thelo
 >helot
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 #ttc-table-of-the-ol-hotel-nudges-thing
 >thign
@@ -282,6 +286,10 @@ Nothing to change the mattress to, even if you could move the night thing off.
 #notana
 by one point
 
+#+testcase-mistake-shuffling-smatters
+>smatters
+The mattress is in bad enough shape as it is. It should be easy enough to sift through.
+
 >score
 You currently have 3 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
@@ -303,6 +311,10 @@ Nothing to change the mattress to, and you already looted it
 #ttc-table-of-the-ol-hotel-nudges-emitter
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
+
+#+testcase-mistake-shuffling-smatters
+>smatters
+The mattress is in bad enough shape as it is. You got what you needed from it.
 
 >e
 
@@ -384,10 +396,10 @@ Obtains/Boastin' Bastion
 
 #ttc-table-of-obtains-boastin-bastion-nudges-boastin
 >boastni
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-obtains-boastin-bastion-nudges-obtain
 >obtani
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-obtains-boastin-bastion-nudges-poses
 >essop
 You can't change who they are. They probably can't, either. It's sad.
@@ -563,13 +575,13 @@ The faeries have very magic and very demoralizing anti-vandalism spells.
 You don't need to deal with a knife-wielding psycho on top of all this.
 #ttc-table-of-fo-real-florae-nudges-florae
 >florea
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-fo-real-florae-nudges-real
 >rela
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-fo-real-florae-nudges-fare
 >faer
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-fo-real-florae-nudges-heath
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
@@ -761,7 +773,7 @@ The signers' ingress slides shut.
 
 #ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #renudge for beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
@@ -890,7 +902,7 @@ But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which do
 
 #ttc-table-of-elm-train-terminal-nudges-tramline
 >tramline
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 #renudge for tulip
 >ulipt
@@ -1038,7 +1050,7 @@ You don't need to deal with a knife-wielding psycho along with the beats.
 
 #ttc-table-of-bassy-abyss-nudges-bassy
 >bassy
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-metros-nudges-beta
 >ebta
 This racket isn't just one beat.

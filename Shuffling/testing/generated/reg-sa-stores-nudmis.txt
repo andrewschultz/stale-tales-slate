@@ -21,7 +21,7 @@ The cabinet wobbles a bit.
 
 #ttc-table-of-stores-nudges-trips
 >trisp
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 #ttc-table-of-stores-nudges-masll
 >masll
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
@@ -187,6 +187,11 @@ You need to manipulate each store as a store, not a mall or a lot.
 #ttc-table-of-stores-nudges-mallz
 >malzl
 You need to manipulate each store as a store, not a mall or a lot.
+
+#ttc-table-of-stores-nudges-store
+>rteos
+You will want to focus on changing a specific store, e.g. Store A.
+
 #ttc-table-of-stores-nudges-storea
 >storae
 Store A seems like a good candidate to change and reveal something, but nothing happens.

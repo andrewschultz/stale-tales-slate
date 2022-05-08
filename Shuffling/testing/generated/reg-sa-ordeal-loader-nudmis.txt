@@ -102,7 +102,7 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 
 #ttc-table-of-busiest-subsite-nudges-busiest
 >busiets
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+You may need to change a room later, but you'll have a hint device to do so.
 #ttc-table-of-busiest-subsite-nudges-noentry
 >noentyr
 You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
@@ -139,7 +139,7 @@ Rested Desert
 
 #ttc-table-of-rested-desert-nudges-rested
 >restde
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. You'll find a hint device for that soon enough.
+You may need to change a room later, but you'll have a hint device to do so.
 #testcase-mistake-shuffling-deters
 >deters
 No! You're trying to make progress here.
@@ -221,11 +221,11 @@ You probably don't want medieval-style advice. You don't need it. HINT should wo
 
 #ttc-table-of-thickest-thickets-nudges-thickets
 >thicktes
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+You may need to change a room later, but you'll have a hint device to do so.
 
 #ttc-table-of-thickest-thickets-nudges-thicket
 >thickte
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
+You may need to change a room later, but you'll have a hint device to do so.
 
 #testcase-mistake-shuffling-ent-ents
 >ent
@@ -333,7 +333,7 @@ Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's
 
 #ttc-table-of-notices-section-nudges-notices
 >noticse
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. There's a hint device here that'll help, then.
+You don't need to change this place, though the cabinet holds a hint device to tell you when to act on your location.
 
 #ttc-table-of-ordeal-loader-spechelp-static
 >attisc
@@ -481,12 +481,15 @@ Here is one of several writings in red in the cabinet:
 
 #renudge for notices
 >noticse
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+
 #testcase-mistake-shuffling-elastin-nailset
 >elastin
 The saltine's there to help you. Changing it might work against you.
+
 >nailset
 The saltine's there to help you. Changing it might work against you.
+
 #testcase-mistake-shuffling-stealin
 >stealin
 You're the good guy, here. You don't need to steal.

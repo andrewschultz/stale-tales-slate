@@ -452,7 +452,7 @@ A round den, unadorned. A lid lies where once the dial laid. Exits lie north and
 \\
 #ttc-table-of-trap-part-nudges-aroundden
 >aroundden
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #renudge for dial
 >dila
@@ -589,6 +589,11 @@ It's the full name brand that really catches your eye.
 >houes
 It's the full name brand that really catches your eye.
 
+@mis
+#testcase-mistake-shuffling-soutache
+>soutache
+The CATHOUSE doesn't need a decorative trimming.
+
 @nud
 #ttc-table-of-sortie-spechelp-cathouse
 >hotsauec
@@ -618,6 +623,11 @@ Your score has just gone up by one point.
 #notmax
 by one point
 
+@mis
+#testcase-mistake-shuffling-soutache
+>soutache
+The hot sauce doesn't need a decorative trimming.
+
 @nud
 #ttc-table-of-sortie-done-rejects-hotsauce
 >hotsauec
@@ -641,11 +651,15 @@ As you pick up the spearman, you notice something on the bottom. Perhaps you cou
 !Taken.
 >read spearman
 The spearman's name, in red, is MR. SANE PA.
+There are three additional bits of writing that may help you, too.
 >read spearman
+!There are three additional bits of writing that may help you, too.
 /You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 >read spearman
+!There are three additional bits of writing that may help you, too.
 /You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 >read spearman
+!There are three additional bits of writing that may help you, too.
 /You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 \\
 #ttc-table-of-sortie-spechelp-spearman
@@ -1488,7 +1502,7 @@ There's no room between the nick and kitchen. You already found a better way out
 @nud
 #ttc-table-of-stiller-trellis-nudges-trellis
 >trellsi
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #ttc-table-of-stiller-trellis-nudges-wall
 >wlla
@@ -1635,11 +1649,11 @@ Violence or vandalism in such a holy place? For shame.
 @nud
 #ttc-table-of-sacred-cedars-nudges-cedars
 >cedasr
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #ttc-table-of-sacred-cedars-nudges-cedar
 >cedra
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #ttc-table-of-sacred-cedars-nudges-drawing
 >drawign
@@ -1790,7 +1804,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 @mis
 #+testcase-mistake-shuffling-mope
 >mope
-You try, but the smilies on the poem prevent you.
+You try, but the smilies on the poem prevent you. You consider ways to wipe them off the paper for good.
 \\
 #testcase-mistake-shuffling-similes
 >similes
@@ -2093,7 +2107,7 @@ Neither arching shakes. They're probably too sturdy, and you're probably not mea
 \\
 #ttc-table-of-stiller-trellis-nudges-crashing
 >crashign
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
 #ttc-table-of-stiller-trellis-nudges-rubble
 >rubbel

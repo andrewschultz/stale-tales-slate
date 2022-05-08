@@ -10,7 +10,7 @@ definition: a thing (called t) is quickvis:
 	if t is enclosed by location of player, yes;
 	no;
 
-section understand logic
+section non-mistake definitions
 
 understand the command "tap" as something new.
 
@@ -308,6 +308,8 @@ understand "pears" as a mistake ("I think you have the wrong food group. The spe
 
 understand "sauce" as a mistake ("Close, but you need the whole name of the sauce.") when cathouse is touchable.
 
+understand "soutache" as a mistake ("The [if hotsauce is fungible]hot sauce[else]CATHOUSE[end if] doesn't need a decorative trimming.") when cathouse is touchable or hotsauce is touchable.
+
 understand "stake" as a mistake ("A stake would have no use here. So that might be a miskate. Err...") when steak is touchable or skate is touchable.
 
 understand "takes" as a mistake ("You do a take, then a double take, at how odd this all is.") when steak is touchable or skate is touchable.
@@ -331,7 +333,7 @@ understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep r
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
-understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is touchable or woeful pat is moot.
+understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you. You consider ways to wipe them off the paper for good.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is touchable or woeful pat is moot.
 
 understand "nepal" as a mistake ("Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.") when plane-or-panel
 
@@ -397,6 +399,10 @@ understand "senors" and "senor" as a mistake ("The senors you [want-wanted] are 
 understand "singers" as a mistake ("The beats would drown the singers out.") when player is in Undesired Underside.
 
 understand "snores" and "snore" as a mistake ("[if esoteric coteries is visited]No need to put the sensor to sleep now you got what you want[else]Any noise would be better than the beats, but without the sensor, you're probably not getting by the door[end if].") when player is in Undesired Underside.
+
+chapter hotel
+
+understand "smatters" as a mistake ("The mattress is in bad enough shape as it is. [if emitter is off-stage]It should be easy enough to sift through[else]You got what you needed from it[end if][if night thing is in hotel] once the night thing is gone[end if].") when player is in The Ol Hotel.
 
 chapter Roarings Garrison
 
