@@ -289,17 +289,17 @@ Cruelest Lectures
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
-#testcase-mistake-roiling-douse-it
->douse it
-Sort of, but why not get rid of it--this whole boondoggle--outright?
 #testcase-mistake-roiling-hear-bs-hear-b-s
 >hear bs
 You can't help but do so, alas.
+
 >hear b s
 You can't help but do so, alas.
+
 #testcase-mistake-roiling-tedious
 >tedious
 Yes, it's tedious enough to make you see red.
+
 #testcase-mistake-roiling-be-rash
 >be rash
 It'd get you in trouble around here.

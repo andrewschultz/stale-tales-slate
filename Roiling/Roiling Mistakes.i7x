@@ -61,39 +61,51 @@ to say intro-warn: if Report Porter Perrot is off-stage, say "--well, once you'v
 
 understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying [b]STABLE[r][intro-warn][else]go [b]IN[r] to the stable[end if].") when player is in Dusty Study.
 
-understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.") when tables are touchable.
+understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.[note-great-guesses]") when tables are touchable.
 
 understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying [b]BASEMENT[r][intro-warn][else]go [b]DOWN[r] to enter the basement[end if].") when player is in Dusty Study.
 
-understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
+understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)[note-great-guesses]")
 
-understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].") when latches are not off-stage.
+understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].[note-great-guesses]") when latches are not off-stage.
 
-understand "net" and "net beams" and "beams net" as a mistake ("But the net would still block you.") when player is in Dusty Study and meet bans are in Dusty Study.
+understand "net" and "net beams" and "beams net" as a mistake ("But the net would still block you.[note-great-guesses]") when player is in Dusty Study and meet bans are in Dusty Study.
 
-understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.") when player is in Dusty Study and giant pin is in Dusty Study.
+understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.[note-great-guesses]") when player is in Dusty Study and giant pin is in Dusty Study.
 
-understand "odor" as a mistake ("[if Report Porter Perrot is off-stage]You'd stink as a host, trying that[else if Dusty Study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].") when player is in Dusty Study.
+understand "odor" as a mistake ("[if Report Porter Perrot is off-stage]You'd stink as a host, trying that[else if Dusty Study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].[note-great-guesses]") when player is in Dusty Study.
 
 understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when player has lamp
 
-understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in Dusty Study and op ed is in Dusty Study.
+understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].[note-great-guesses]") when player is in Dusty Study and op ed is in Dusty Study.
 
-understand "rood" as a mistake ("[if Report Porter Perrot is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when player is in Dusty Study.
+understand "rood" as a mistake ("[if Report Porter Perrot is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].[note-great-guesses]") when player is in Dusty Study.
 
-understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.") when player has settler.
+understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.[note-great-guesses]") when player has settler.
 
 chapter Largely All-Grey Gallery
 
-understand "astir" as a mistake ("[if stair is touchable]You don't need a moving stair.[else]You need to change that to something else, then it'll be astir[end if].") when stair is touchable or stria is in location of player or sitar is in location of player.
+to say sitar-here-back: say "[if sitar is moot]back[else]down here[end if]"
+
+understand "astir" as a mistake ("[if stair is touchable]You don't need a moving stair.[else]You need to change that to something else, then it'll be astir[end if].[note-great-guesses]") when stair is touchable or stria is in location of player or sitar is in location of player.
 
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All Grey Gallery and meet bans are in Dusty Study.
 
-understand "bsin" and "bs in" as a mistake ("Now, now! [this-game] is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the [bins][end if].") when player is in Largely All Grey Gallery.
+understand "bsin" and "bs in" as a mistake ("Now, now! [this-game] is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the [bins][end if].[note-great-guesses]") when player is in Largely All Grey Gallery.
 
-understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.") when rifle is touchable.
+understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.[note-great-guesses]") when rifle is touchable.
 
-understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All Grey Gallery.
+understand "sitar" as a mistake ("[if farming framing is visited]You don't need to bring the sitar [sitar-here-back]. What could it and the stria become?[else if stair is touchable]Surely a stair is more handy right now.[note-great-guesses][else]You don't need music right now. A way to get around would be better.[note-great-guesses][end if]") when player is in Largely All Grey Gallery.
+
+section Elmo dialogue
+
+to say check-sign-imminent: process the sign-imminent rule;
+
+understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.[check-sign-imminent][note-great-guesses]") when elmo is in location of player and elmo has rifle.
+
+understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.[paragraph break][check-sign-imminent][note-great-guesses]") when elmo is in location of player and elmo has rifle.
+
+understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.[paragraph break][check-sign-imminent][note-great-guesses]") when Elmo is in location of player.
 
 chapter Carven Cavern
 
@@ -101,89 +113,79 @@ to decide whether plates-staple-touch:
 	if plates are touchable or stapler is touchable, yes;
 	no;
 
-to say check-sign-imminent: process the sign-imminent rule;
-
 to say spelling-matters of (ts - a truth state): say "'Spelling matters, here. If [if ts is true]I[else]it[end if] were a spectre, I'd give a different cheat reading. Slots six and seven would turn [if ts is true]yellow and red[else]red and yellow[end if], respectfully. Err, respectively,' says the Respect Specter.[paragraph break]You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time"
 
-understand "craven" as a mistake ("Ok, the Carven Cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
+understand "craven" as a mistake ("Ok, the Carven Cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.[note-great-guesses]") when player is in Carven Cavern.
 
-understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.[check-sign-imminent]") when elmo is in location of player and elmo has rifle.
+understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.[note-great-guesses]") when plates-staple-touch.
 
-understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.[paragraph break][check-sign-imminent]") when elmo is in location of player and elmo has rifle.
+understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.[note-great-guesses]") when plates-staple-touch.
 
-understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.[paragraph break][check-sign-imminent]") when Elmo is in location of player.
+understand "sceptre" as a mistake ("[spelling-matters of false].[note-great-guesses]") when Respect Specter is touchable.
 
-understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates-staple-touch.
+understand "spectre" as a mistake ("[spelling-matters of true].[note-great-guesses]") when Respect Specter is touchable.
 
-understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates-staple-touch.
-
-understand "sceptre" as a mistake ("[spelling-matters of false].") when Respect Specter is touchable.
-
-understand "spectre" as a mistake ("[spelling-matters of true].") when Respect Specter is touchable.
-
-understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]making use of the staple[else]twiddling the plates[end if] to get on with things.") when player is in Carven Cavern. [?? respect specter is not here for that]
+understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]making use of the staple[else]twiddling the plates[end if] to get on with things.[note-great-guesses]") when player is in Carven Cavern. [?? respect specter is not here for that]
 
 book stores
 
 chapter Strip of Profits
 
-understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in Strip of Profits.
+understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.[note-great-guesses]") when player is in Strip of Profits.
 
-understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Strip of Profits.
+understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.[note-great-guesses]") when player is in Strip of Profits.
 
-understand "ektor" and "ektors" as a mistake ("There's only one Ektor Mastiff, and to find him, you'd need to visit Marco Innocenti's most un-cyanotic Andromeda Collection.") when Store K is in location of player or tokers are in location of player.
+understand "ektor" and "ektors" as a mistake ("There's only one Ektor Mastiff, and to find him, you'd need to visit Marco Innocenti's most un-cyanotic Andromeda Collection.[note-great-guesses]") when Store K is in location of player or tokers are in location of player.
 
-understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is in location of player.
+understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.[note-great-guesses]") when Store G is in location of player.
 
-understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow that these days.") when Store G is in location of player.
+understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow that these days.[note-great-guesses]") when Store G is in location of player.
 
-understand "gots er" as a mistake ("And what would you do with Store G, when you take it?") when Store G is in location of player.
+understand "gots er" as a mistake ("And what would you do with Store G, when you take it?[note-great-guesses]") when Store G is in location of player.
 
-understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is examined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
+understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is examined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?[note-great-guesses]") when Store H is in location of player.
 
-understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in Strip of Profits]Store U[else]the course source[end if], but you'll need to warp out of the Strip.") when Store U is in location of player or course source is in location of player.
+understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in Strip of Profits]Store U[else]the course source[end if], but you'll need to warp out of the Strip.[note-great-guesses]") when Store U is in location of player or course source is in location of player.
 
 understand "pteros" as a mistake ("You don't need to face any predators. Aigh!") when player is in Strip of Profits and store p is in Strip of Profits.
 
-understand "repost" as a mistake ("That's not what you need to do with Store P--you even see red trying to figure HOW you would.") when player is in Strip of Profits and Store P is in Strip of Profits.
+understand "repost" as a mistake ("That's not what you need to do with Store P--you even see red trying to figure HOW you would.[note-great-guesses]") when player is in Strip of Profits and Store P is in Strip of Profits.
 
-understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in Strip of Profits.
+understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.[note-great-guesses]") when player is in Strip of Profits.
 
-understand "restow" as a mistake ("Store W glows red as you try this.") when Store W is touchable.
+understand "restow" as a mistake ("Store W glows red as you try this.[note-great-guesses]") when Store W is touchable.
 
-understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.") when player is in Strip of Profits.
+understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.[note-great-guesses]") when player is in Strip of Profits.
 
 understand "stoner" as a mistake ("[if nestor is in location of player]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' you hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased the person in Store N enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 
-understand "storge" as a mistake ("[one of]You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes[or]Stop trying to make Pillar of Storge happen[stopping].") when Store G is in location of player.
+understand "storge" as a mistake ("[one of]You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes[or]Stop trying to make Pillar of Storge happen[stopping].[note-great-guesses]") when Store G is in location of player.
 
-understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.") when player is in strip and mangiest steaming is off-stage.
+understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.[note-great-guesses]") when player is in strip and mangiest steaming is off-stage.
 
-understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is in location of player or course source is in location of player.
+understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.[note-great-guesses]") when Store U is in location of player or course source is in location of player.
 
-understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. Try [if otters is solved or others is unsolved]thinking of a more common word[else]looking at stores at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
+understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. Try [if otters is solved or others is unsolved]thinking of a more common word[else]looking at stores at the other end of the alphabet[end if].[note-great-guesses]") when Store H is in location of player or Throes Hoster is in location of player.
 
 understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if Topside Deposit is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
-understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The Throes Hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in Strip of Profits
+understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The Throes Hoster does look a bit weird, but you need to enter it, not change it[end if].[note-great-guesses]") when player is in Strip of Profits
 
-understand "toyers" as a mistake ("You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the [first custom style]TOYERS[r] with the red line through in the window.") when store y is in location of player.
+understand "toyers" as a mistake ("You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the [first custom style]TOYERS[r] with the red line through in the window.[note-great-guesses]") when store y is in location of player.
 
-understand "troyes" as a mistake ("Store Y does not lead to France.") when store y is in location of player.
+understand "troyes" as a mistake ("Store Y does not lead to France.[note-great-guesses]") when store y is in location of player.
 
 chapter Cruelest Lectures
 
-understand "be rash" as a mistake ("It'd get you in trouble around here.") when player is in Cruelest Lectures.
+understand "be rash" as a mistake ("It'd get you in trouble around here.[note-great-guesses]") when player is in Cruelest Lectures.
 
-understand "douse it" as a mistake ("Sort of, but why not get rid of it--this whole boondoggle--outright?") when player is in Cruelest Lectures.
+understand "easting" as a mistake ("Compass directions aren't relevant here. You need to upset everything, somehow.[note-great-guesses]") when player is in Cruelest Lectures.
 
-understand "easting" as a mistake ("Compass directions aren't relevant here. You need to upset everything, somehow.") when player is in Cruelest Lectures.
+understand "eatings" and "tangies" as a mistake ("You might be suspected of having the munchies if you tried that.[note-great-guesses]") when player is in Cruelest Lectures.
 
-understand "eatings" and "tangies" as a mistake ("You might be suspected of having the munchies if you tried that.") when player is in Cruelest Lectures.
+understand "hear bs" or "hear b s" as a mistake ("You can't help but do so, alas.[note-great-guesses]") when player is in Cruelest Lectures.
 
-understand "hear bs" or "hear b s" as a mistake ("You can't help but do so, alas.") when player is in Cruelest Lectures.
-
-understand "ingates" as a mistake ("More like, you could use out-gates to leave, amirite?") when player is in Cruelest Lectures.
+understand "ingates" as a mistake ("More like, you could use out-gates to leave, amirite?[note-great-guesses]") when player is in Cruelest Lectures.
 
 understand "tedious" as a mistake ("Yes, it's tedious enough to make you see red.") when player is in Cruelest Lectures.
 
