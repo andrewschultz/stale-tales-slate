@@ -431,7 +431,9 @@ a direction viability rule for a direction (called dir) when mrlp is otters:
 
 a direction viability rule for a direction (called dir) when mrlp is others:
 	if player is in Rustic Citrus and compass is off-stage and dir is north, the rule fails;
-	if player is in Gates Stage and player does not have passport and dir is north, the rule succeeds;
+	if player is in Gates Stage and dir is north:
+		if gates-score is 2, the rule succeeds;
+		the rule fails;
 
 a direction viability rule for a direction (called dir) when mrlp is demo dome:
 	if player is in peek keep and dir is south, the rule succeeds;
@@ -1959,7 +1961,7 @@ organised ego drains	"The silence after talking to the ego drains leaves you fee
 unripe ur pine	"The [ur pine] towers over you, silent. Maybe something is hidden behind its bulk, something you won't find by talking."
 cinders	"You need the right actions to gain information from the cinders." [otters]
 moat	"The moat bubbles angrily. Dialogue won't work, but maybe the right word will."
-popstar passport	"You [if gate-level is 2]got what you needed from [the passport][else]have other ways to consult [the passport][end if]." [others]
+popstar passport	"You [if gates-score is 2]got what you needed from [the passport][else]have other ways to consult [the passport][end if]." [others]
 
 section specific subjects that are not people or objects
 
@@ -3564,7 +3566,7 @@ carry out requesting the score:
 	if roved is true and player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to change and get through store H[else]Enter the Throes Hoster for the final region[end if]." instead;
 	if mrlp is others:
 		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region";
-		if gate-level is 2:
+		if gates-score is 2:
 			say ", and you should be able to go north from [here-there of Gates Stage] to the Valence Enclave to win";
 		else if fruits-left > 0:
 			say ", though you only need [min-score of mrlp] to win";
@@ -3633,7 +3635,7 @@ to decide which number is rank-index:
 			else:
 				break;
 		if droll dollar is not off-stage, increment count;
-		if gate-level is 2 and others is solved, increment count;
+		if gates-score is 2 and others is solved, increment count;
 		decide on count;
 	decide on number of rank-increasing regions + 1 + boolval of power-back;
 
@@ -4403,7 +4405,7 @@ this is the others-hinting rule:
 		say "You have gotten enough fruits, so from here on out you'll need to hint something specific if you want to change it. You'll want to go [if player is in Gates Stage]north of the gates[else if Gates Stage is visited]back north to the Gates Stage[else]north[end if]." instead;
 	if player has passport:
 		if Gates Stage is unvisited, all-say "You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport." instead;
-		if gate-level is 2, all-say "Go north to win!" instead;
+		if gates-score is 2, all-say "Go north to win!" instead;
 		if viewer-first is true and viewer is not reflexed, try objhinting viewer instead;
 		if searcher is not reflexed, try objhinting searcher instead;
 		if viewer is not reflexed, try objhinting viewer instead;
@@ -8624,7 +8626,7 @@ definition: a thing (called candi) is bluable:
 	if candi is crate and player is in Lapsin Plains:
 		if bogus-trace is in Lapsin Plains, yes;
 	if candi is elmer, no; [specific to oyster]
-	if player is in Gates Stage and gate-level is 2: [specific to others]
+	if player is in Gates Stage and gates-score is 2: [specific to others]
 		if candi is fleeing feeling or candi is searcher or candi is viewer, no;
 	if player is in Filed Field and candi is barren cries, no;
 	if candi is touchable, yes;
@@ -20451,7 +20453,7 @@ book Gates Stage
 
 Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The Swell Wells are back south, and important-looking gates, [if halt lath is in Gates Stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. [one of]What could be behind them? A near arena? You take a step back. Yes...it looks like you have found a secret rear entrance to the Valence Enclave, where great political debates and pronouncements are always held![or]The Valence Enclave lies ahead.[stopping]". Gates Stage is in Others. roomnud of Gates Stage is table of Gates Stage nudges.
 
-check going south in gates stage when gate-level is 2 and min-score of others is poss-score of others: say "You've done everything you possibly can. Time to see what's to the north!" instead;
+check going south in gates stage when gates-score is 2 and min-score of others is poss-score of others: say "You've done everything you possibly can. Time to see what's to the north!" instead;
 
 after looking in Gates Stage (this is the retract halt lath rule):
 	if halt lath is in Gates Stage and player has popstar passport:
@@ -20520,11 +20522,11 @@ check going north in Gates Stage:
 	if number of carried fruits > 0:
 		say "(First returning the extra fruit[unless number of carried fruits is 1]s[end if])[paragraph break]";
 		mootl list of all carried fruits;
-	if gate-level < 2:
+	if gates-score < 2:
 		now perp-check is true;
 		now player has fleeing feeling;
-	if gate-level is 0, say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
-	if gate-level is 1, say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells '[b]PERP[r]!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
+	if gates-score is 0, say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
+	if gates-score is 1, say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells '[b]PERP[r]!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
 	abide by the region-done-check rule;
 	if player has tekno token:
 		say "You have a thought as you sneak in--give Curtis his Tekno-Token back first. Complete transparent honesty and all that.[paragraph break]";
@@ -20711,15 +20713,12 @@ a-text of searcher is "RYRYYRRR". b-text of searcher is "RGRYYRRR". parse-text o
 
 chapter passport stuff
 
-to decide which number is gate-level:
-	let A be 0;
-	if viewer is reflexed, increment A;
-	if searcher is reflexed, increment A;
-	if fleeing feeling is reflexed, increment A;
-	if A > 2:
+to decide which number is gates-score: [ synonyms: gate-level gates-level gate-score gates-points gate-points ]
+	let temp be (boolval of whether or not viewer is reflexed) + (boolval of whether or not searcher is reflexed) + (boolval of whether or not fleeing feeling is reflexed);
+	if temp > 2:
 		if debug-state is true, say " (DEBUG: all 3 passport points are registered, defaulting to just two)";
 		decide on 2;
-	decide on A.
+	decide on temp.
 
 book Clangier Clearing
 

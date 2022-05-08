@@ -1669,7 +1669,7 @@ definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for 
 		if Rawest Waster Waters is visited or mislit limits is visited:
 			if th is turbos or th is blaster or th is earnest eastern neaters, yes;
 	if mrlp is others:
-		if gate-level is 2:
+		if gates-score is 2:
 			if th is viewer or th is searcher or th is fleeing feeling, yes;
 	if th is not-mbb, yes;
 	no;
