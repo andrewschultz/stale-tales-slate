@@ -3233,7 +3233,7 @@ Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Cops
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"[if noun is southwest]You don't need to explore the natatorium or Hatchery[else]You can't get across Leak Lake without some sort of craft[like-boat][end if]."
 Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
-Dire and Arid Den	"[if noun is up]No, there can't be anything [noun]. You feel drained just considering that."
+Dire and Arid Den	"No, there can't be anything [noun]. You feel drained just considering that."
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now."

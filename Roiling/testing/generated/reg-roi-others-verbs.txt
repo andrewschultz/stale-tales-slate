@@ -37,7 +37,7 @@ Aw, c'mon. Maybe Curtis is sort of bossy, but he's not that bad.
 
 #testcase-outside-rustic-citrus
 >out
-You've lost your bearings a bit, but maybe the moss cap could help in another form
+But you're not even sure which way is out!
 >undo
 
 >c
@@ -162,7 +162,7 @@ You have more than one way to leave: north, south, east, west and down. So you'l
 
 #testcase-exits-swell-wells
 >exits
-There are five viable exits: north, south to Rustic Citrus, east, west and down.
+There are five unblocked exits: north, south to Rustic Citrus, east, west and down.
 
 >apricot
 Your score has just gone up by one point.
@@ -406,9 +406,10 @@ One look at the warding drawing disabuses you of any notion of going anywhere ex
 >out
 The only way to exit is up, so let's go that way.
 
+>undo
 #testcase-exits-scape-space
 >exits
-The only way you seem to be able to go is up.
+The only way you seem to be able to go is up to Swell Wells.
 
 #ttc-table-of-others-attacks-red-rat-art-erd
 >attack red rat art erd
@@ -458,13 +459,8 @@ Gates Stage
 You don't want to know how effective the gropin' roping is. The gates are more interesting, anyway.
 
 #testcase-outside-gates-stage
->banish passport
 >out
 The only way to exit is south, so let's go that way.
->undo
->undo
->out
-You have more than one way to leave: north and south. So you'll need to specify which one.
 >undo
 
 #testcase-exits-gates-stage
@@ -487,6 +483,15 @@ by one point
 >score
 
 You have 45 of 46 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+
+#+testcase-outside-gates-stage
+>out
+You have more than one way to leave: north and south. So you'll need to specify which one.
+>undo
+
+#+testcase-exits-gates-stage
+>exits
+There are two unblocked exits: north and south to Swell Wells.
 
 >n
 #notana

@@ -207,7 +207,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
->out
+>in
 >u
 Highest Heights
 

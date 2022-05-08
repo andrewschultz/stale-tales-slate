@@ -666,7 +666,9 @@ Score in a scenario: 39 out of 57 total points in the current region, Towers. Lo
 The duck won't follow you. It doesn't trust your voice.
 
 >gt duck
+
 >push repeat
+
 >gt subsector
 
 #not a mistake

@@ -3738,6 +3738,8 @@ carry out posfing:
 
 chapter exitsing special by-region rules (not quite enough to make this part of a region)
 
+rule for printing the name of a mazeroom when exitsing: say "another part of the maze"
+
 this is the mesa-go-reject rule:
 	if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
 	if a bev o be ova is touchable, say "You don't know if you should go anywhere. With [bev] lying around, maybe that's where the adventure is." instead;
@@ -3751,10 +3753,20 @@ check exitsing when mrlp is routes:
 	if player is in Same Mesa:
 		abide by the mesa-go-reject rule;
 		say "There are plenty of ways to go, but they don't seem to lead anywhere. [if Cleric Circle is visited or Idle Deli is visited or adobe is visited]You've made it in one place, here, so maybe you can make it in another[else]There are three places to enter, though they do seem to shift[end if]." instead;
-	say "Looks like you will need to figure a way to move forward without directions. You've [if sonancy canyons are visited]got to be really close[else]been doing well so far[end if]." instead;
+	if exits-text of location of player is empty, say "Looks like you will need to figure a way to move forward without directions. You've [if sonancy canyons are visited]got to be really close[else]been doing well so far[end if]." instead;
 
 check exitsing when mrlp is troves:
 	say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move [if econ cone is visited]even [end if][if browse bowers are visited]further [end if]ahead in the world." instead;
+
+check exitsing when mrlp is presto:
+	if player is in hacks shack and e robot is reflexed:
+		say "You could leave, but it's time to complete the programming job here and now." instead;
+
+check exitsing when mrlp is towers:
+	if player is in topside deposit and dreads adders are in topside deposit:
+		say "The dreads adders are blocking the way north, so you'd better get rid of them." instead;
+	if player is in mislit limits and serpent is in mislit limits:
+		say "You don't have to go anywhere before chainging the Curst Palace, although the serpent guards a dwelling." instead;
 
 chapter game-start
 
@@ -9050,7 +9062,7 @@ to pad-rec (q - text):
 			if known entry is false:
 				now known entry is true;
 				if there is no verify entry or verify entry is true or number of characters in recbuffer > 0:
-					say "[if need-line-break][line break][end if][i](You record the information about [recbuffer][short entry] in [mult-if]your [one of]pedanto-[or][stopping]notepad.)[r][line break]";
+					say "[if need-line-break][line break][end if][i](You record the information about [recbuffer][short entry] in [mult-if]your [one of]pedanto-[or][stopping]notepad.)[r]";
 			now recbuffer is "";
 			the rule succeeds;
 	say "BUG! Tried to write [q], a notepad entry that wasn't there. This isn't a game-breaking bug, but it's bad for user-friendliness. Please let me know at [email].";
@@ -9224,11 +9236,9 @@ book Carven Cavern
 
 Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if stapler is moot]The apertured departure is open now to wherever [b]IN[r] leads[else if departure is touchable]An apertured departure might lead somewhere if it were open further[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way.". roomnud of carven cavern is table of carven cavern nudges.
 
-to say cavern-in: say "You can just go [b]IN[r] the departure to start your adventure in earnest"
+outside-text of Carven Cavern is "[if departure is not in cavern]There's something behind the psalter[else if stapler is not moot]You can't go inside the departure until you open it further[else]BUG! You should just have entered the departure. Try going [b]IN[r]. instead[end if]."
 
-outside-text of Carven Cavern is "[if departure is not in cavern]There's something behind the psalter[else if stapler is not moot]You can't go inside the departure until you open it further[else][cavern-in][end if]."
-
-exits-text of Carven Cavern is "[if departure is not in cavern]Nothing yet. You need to use your powers to reveal the exit[else if stapler is not moot]You can't fit through the departure yet[else][cavern-in][end if]."
+exits-text of Carven Cavern is "[if departure is not in cavern]Nothing yet. You need to use your powers to reveal the exit[else if stapler is not moot]You can't fit through the departure yet[else]You can just go [b]IN[r] the departure to start your adventure in earnest[end if]."
 
 after looking in Carven Cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in Carven Cavern, set the pronoun them to palest pastel plates;
@@ -12677,6 +12687,8 @@ book Hacks' Shack
 
 Hacks Shack is an innie room in Presto. Hacks Shack is north of Saps Pass. "[if Hacks Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[else]You're in the shack where you probably need to write a program or something[end if][if Im Le Cop polemic is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if].". roomnud of Hacks Shack is table of Hacks' Shack nudges. printed name of Hacks Shack is "Hacks['] Shack".
 
+outside-text of Hacks Shack is "No. You can't go out until the job here is done. You don't need to."
+
 shack-looked-yet is a truth state that varies.
 
 after looking in Hacks Shack (this is the implicitly change angrier earring and keyboard rule):
@@ -13478,6 +13490,8 @@ Posh Hops Shop is an innie room in oyster. last-loc of Oyster is Posh Hops Shop.
 
 outside-text of Posh Hops Shop is "Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by [the trolls] somehow.".
 
+exits-text of Posh Hops Shop is "You can't just sneak past the LOLstr trolls. But there is a way."
+
 after choosing notable locale objects when player is in Posh Hops Shop:
 	set the locale priority of pesty types to 0;
 
@@ -13932,7 +13946,7 @@ book Olde Lode
 
 Olde Lode is a room in Oyster. "You've reached what was probably an old mining pit. As in the Hops Shop, you can't tell one direction from another, especially not with those scary baser braes all around. You feel both a need to panic and a need not to panic. But there must be simple action to take to get out of here.". roomnud of Olde Lode is table of Olde Lode nudges.
 
-outside-text of Olde Lode is "As in the [hops shop], it's not about any one direction but getting past an obstacle."
+exits-text of Olde Lode is "As in the [hops shop], it's not about any one direction but getting past an obstacle."
 
 after looking in Olde Lode:
 	if clam is in Olde Lode, set the pronoun it to clam;
@@ -13996,7 +14010,7 @@ book Disease Seaside
 
 Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packed with sabot boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
 
-outside-text of Disease Seaside is "Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it."
+exits-text of Disease Seaside is "Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it."
 
 after looking in Disease Seaside:
 	set the pronoun them to sabot boats;
@@ -17295,6 +17309,8 @@ Rawest Waster Waters is a sideroom in Towers. "Ew. Rats. You're splashing around
 
 outside-text of Rawest Waster Waters is "You know you need to exit, but you need to change things so an exit's more accessible."
 
+exits-text of Rawest Waters is "The [neaters] will help you leave. But you need to help them align right!"
+
 every turn when player is in Rawest Waster Waters:
 	say "Spirited riptides... your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
 
@@ -17317,7 +17333,7 @@ this is the bore-raspy-spray rule:
 
 book Mesprise/Emprise Premise(s)
 
-Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Mesprise Premises is "[if anodyne is moot]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges. missed-text of Mesprise Premises is "a dwelling west of Mislit Limits".
+Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Mesprise Premises is "[if anodyne is not moot]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges. missed-text of Mesprise Premises is "a dwelling west of Mislit Limits".
 
 chapter tetris sitter
 
@@ -17630,9 +17646,11 @@ book Dire and Arid Den
 
 there is a sideroom called Dire and Arid Den. It is innie. It is in Towers. "You feel drained dreadin['] at the thought of dying here. It's so thick, you bet you could examine or even scan it. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here, too.". roomnud of Arid Den is table of Dire And Arid Den nudges. missed-text of Arid Den is "a room below the [denim] in [gradient]".
 
-check going up in Dire and Arid Den: say "You're too far below the surface. Well, not super-far, but enough to leave your will momentarily drained." instead;
+check going up in Dire and Arid Den: say "You wish you could feel positive enough to figure a way back up, but you're just too drained." instead;
 
 outside-text of arid den is "You need to snap out of the funk you're in. Get the right mindset.".
+
+exits-text of arid den is "You aren't thinking positively enough to find a way out at the moment."
 
 chapter bogus-dandier (flippable scenery for room)
 
@@ -17659,6 +17677,8 @@ a-text of Nerd Aid Diner ad is "RYRRYYR". b-text of Nerd Aid Diner ad is "?Y??YY
 book Dourest Detours
 
 Dourest Detours is an outie sideroom in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges. missed-text of Dourest Detours is "a room outside of the dead-end edge-rooms if you try to go further out".
+
+exits-text of Dourest Detours is "You don't have the energy to find exits in any direction at the moment. How to change that?"
 
 last-detour is a room that varies.
 
@@ -18288,7 +18308,7 @@ to preef (thi - a thing): [text listed in table of preflip clues]
 	if player is in Dusty Study:
 		check-get-pad;
 	if thi is not prefigured:
-		say "[line break][i][bracket]You add the information to your pedanto-notepad under [b]FLIPS[r].[close bracket][r][paragraph break]";
+		say "[line break][i](You add the information to your pedanto-notepad under [b]FLIPS[r].)[r]";
 	now thi is prefigured;
 	if player is not in Dusty Study and player does not have pedanto notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
@@ -18299,7 +18319,7 @@ to preef (thi - a thing): [text listed in table of preflip clues]
 to preef-nol (thi - a thing):
 	now ever-fig is true;
 	if thi is not prefigured:
-		say "[i][bracket]You add the information to your pedanto-notepad under [b]FLIPS[r].[close bracket][r]";
+		say "[i](You add the information to your pedanto-notepad under [b]FLIPS[r].)[r]";
 	now thi is prefigured;
 	if player is in Dusty Study:
 		check-get-pad;
@@ -20513,7 +20533,7 @@ this is the bore-perp rule:
 
 a-text of fleeing feeling is "RRYR". b-text of fleeing feeling is "PRYP". parse-text of fleeing feeling is "UNIQUE". fleeing feeling is any-spoilable.
 
-every turn when player has fleeing feeling: say "You [one of][or]still [stopping]can't shake that fleeing feeling you should just run, because you're [if gate-level is 1]kind of [end if]a [b]PERP[r].";
+every turn when player has fleeing feeling: say "You [one of][or]still [stopping]can't shake that fleeing feeling you should just run, because you're [if gates-score is 1]kind of [end if]a [b]PERP[r].";
 
 chapter big endgame check
 

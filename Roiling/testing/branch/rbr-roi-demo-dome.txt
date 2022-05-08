@@ -51,7 +51,7 @@ Okay, why not look around a bit more.
 \\
 #testcase-exits-peek-keep
 >exits
-There are six viable exits: north, south, east, west, down and inside.
+There are six unblocked exits: north, south, east, west, down and inside.
 
 @max
 >undo

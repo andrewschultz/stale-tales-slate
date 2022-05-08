@@ -68,7 +68,7 @@ Taverns are generally meant to make you forget compass directions, among other t
 >undo
 #testcase-exits-loftier-trefoil
 >exits
-WRONG 728
+You probably aren't going anywhere until Rodney does, first.
 
 >yonder
 Your score has just gone up by one point
@@ -94,7 +94,7 @@ The Wildest Wilteds are too dangerous any way but north, and the dreads adders a
 
 #testcase-exits-topside-deposit
 >exits
-WRONG 769
+The dreads adders are blocking the way north, so you'd better get rid of them.
 
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -118,7 +118,7 @@ The only way to exit is north, so let's go that way.
 
 #+testcase-exits-topside-deposit
 >exits
-WRONG 979
+The only way you seem to be able to go is north.
 
 >score
 Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -158,7 +158,7 @@ You have more than one way to leave: south and west. So you'll need to specify w
 
 #testcase-exits-scope-copse
 >exits
-WRONG 1205
+There are two unblocked exits: south to Topside Deposit and west.
 
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
@@ -211,12 +211,13 @@ That might be RIP-some.
 
 #testcase-outside-baldest-blasted-saltbed
 >out
-WRONG
+The only way to exit is south, so let's go that way.
+
 >undo
 
 #testcase-exits-baldest-blasted-saltbed
 >exits
-WRONG 1573
+The only way you seem to be able to go is south to Scope Copse.
 
 >semipro
 Your score has just gone up by one point
@@ -225,12 +226,12 @@ Score in a scenario: 16 out of 57 total points in the current region, Towers. Lo
 
 #+testcase-outside-baldest-blasted-saltbed
 >out
-WRONG
+You have more than one way to leave: south and east. So you'll need to specify which one.
 >undo
 
 #+testcase-exits-baldest-blasted-saltbed
 >exits
-WRONG 1586
+There are two unblocked exits: south to Scope Copse and east.
 
 >pastier
 Your score has just gone up by one point
@@ -243,12 +244,12 @@ Anemic Cinema
 
 #testcase-outside-anemic-cinema
 >out
-WRONG
+The only way to exit is south, so let's go that way.
 >undo
 
 #testcase-exits-anemic-cinema
 >exits
-WRONG 1634
+The only way you seem to be able to go is south to Baldest Blasted Saltbed.
 
 #verbcase listen-towers-if-noun-is-angriest-ingrates
 >listen ingrates
@@ -292,7 +293,7 @@ The only way to exit is east, so let's go that way.
 
 #testcase-exits-fringe-finger
 >exits
-WRONG 1795
+The only way you seem to be able to go is east to Anemic Cinema.
 
 >rustled
 Your score has just gone up by one point
@@ -309,12 +310,12 @@ Score in a scenario: 20 out of 57 total points in the current region, Towers. Lo
 
 #+testcase-outside-anemic-cinema
 >out
-WRONG
+You have more than one way to leave: south, east and west. So you'll need to specify which one.
 >undo
 
 #+testcase-exits-anemic-cinema
 >exits
-WRONG 1945
+There are three unblocked exits: south to Baldest Blasted Saltbed, east and west to Fringe Finger.
 
 >married
 Your score has just gone up by one point
@@ -348,25 +349,30 @@ The atheists are really spelling out their logical arguments against any sort of
 >attack sweatier wait seer
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
+# here we test salted deltas AND actionless coastlines at once.
 #testcase-outside-salted-deltas
 >out
-WRONG
+The only way to exit is west, so let's go that way.
 
 >undo
 
 #testcase-exits-salted-deltas
 >exits
-WRONG 2100
+The only way you seem to be able to go is west to Anemic Cinema.
+
+>hastiest
+by one point
 
 >e
 
 #testcase-outside-actionless-coastlines
 >out
-WRONG
+The only way to exit is west, so let's go that way.
+>undo
 
 #testcase-exits-actionless-coastlines
 >exits
-WRONG 2106
+The only way you seem to be able to go is west to Salted Deltas.
 >undo
 >undo
 >undo
@@ -390,12 +396,12 @@ You've got nothing sharp enough. That denim's been mended nicely, for sure.
 
 #testcase-outside-treading-gradient
 >out
-WRONG
+You have more than one way to leave: north and west. So you'll need to specify which one.
 >undo
 
 #testcase-exits-treading-gradient
 >exits
-WRONG 2135
+There are two unblocked exits: north to Salted Deltas and west to Baldest Blasted Saltbed.
 
 >nerdiest
 Your score has just gone up by one point
@@ -431,6 +437,9 @@ Dire and Arid Den
 >w
 No, there can't be anything west. You feel drained just considering that.
 
+>u
+You wish you could feel positive enough to figure a way back up, but you're just too drained.
+
 #testcase-outside-dire-and-arid-den
 >out
 You need to snap out of the funk you're in. Get the right mindset.
@@ -438,7 +447,7 @@ You need to snap out of the funk you're in. Get the right mindset.
 
 #testcase-exits-dire-and-arid-den
 >exits
-WRONG 2376
+You aren't thinking positively enough to find a way out at the moment.
 
 #verbcase smell-towers-if-noun-is-nerd-aid
 >smell nerd aid
@@ -455,12 +464,12 @@ Score in a scenario: 28 out of 57 total points in the current region, Towers. Lo
 
 #testcase-outside-artist-traits-strait
 >out
-WRONG
+The only way to exit is west, so let's go that way.
 >undo
 
 #testcase-exits-artist-traits-strait
 >exits
-WRONG 2532
+The only way you seem to be able to go is west to Treading Gradient.
 
 #verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
 >bother
@@ -522,12 +531,12 @@ Leveraged Everglade
 
 #testcase-outside-leveraged-everglade
 >out
-WRONG
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
 >undo
 
 #testcase-exits-leveraged-everglade
 >exits
-WRONG 2662
+There are three unblocked exits: north to Treading Gradient, east to Danger Garden and west to Scope Copse.
 
 >grandiose
 Your score has just gone up by one point
@@ -548,7 +557,7 @@ Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong
 
 #testcase-exits-dourest-detours
 >exits
-WRONG 2743
+You don't have the energy to find exits in any direction at the moment. How to change that?
 
 #ttc-table-of-towers-nowheres-dourest-detours
 >n
@@ -557,15 +566,6 @@ Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong
 #verbcase listen-towers-if-player-is-in-dourest-detours
 >listen
 You hear something that makes you see red.
-
-#testcase-outside-lost-lots
->out
-The only way to exit is north, so let's go that way.
->undo
-
-#testcase-exits-lost-lots
->exits
-WRONG 2803
 
 >rousted
 by one point
@@ -582,6 +582,15 @@ Score in a scenario: 34 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 57 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 57.
+
+#testcase-outside-lost-lots
+>out
+The only way to exit is north, so let's go that way.
+>undo
+
+#testcase-exits-lost-lots
+>exits
+The only way you seem to be able to go is north to Danger Garden.
 
 #verbcase listen-towers-if-noun-is-sporties-ripostes
 >listen ripostes
@@ -616,12 +625,12 @@ Danger Garden
 
 #testcase-outside-danger-garden
 >out
-WRONG
+You have more than one way to leave: north, south and west. So you'll need to specify which one.
 >undo
 
 #testcase-exits-danger-garden
 >exits
-WRONG 2925
+There are three unblocked exits: north to Artist Traits Strait, south to Lost Lots and west to Leveraged Everglade.
 
 #verbcase listen-towers-if-noun-is-bonker
 >listen bonker
@@ -666,7 +675,7 @@ The only way to exit is west, so let's go that way.
 
 #testcase-exits-obscurest-subsector
 >exits
-WRONG 3039
+The only way you seem to be able to go is west to Gander Garden.
 
 #ttc-table-of-towers-attacks-prison-ropins
 >attack prison ropins
@@ -692,15 +701,6 @@ Your score has just gone up by one point
 >listen yow
 Dr. Yow is talking slowly and soothingly.
 
-#testcase-outside-shaven-havens
->out
-The only way to exit is south, so let's go that way.
->undo
-
-#testcase-exits-shaven-havens
->exits
-WRONG 3201
-
 >score
 Score in a scenario: 39 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
@@ -714,7 +714,19 @@ Score in a scenario: 39 out of 57 total points in the current region, Towers. Lo
 Dr. Yow is silent once again.
 
 >gt duck
+
+# we could not have done this when we actually visited the shaven havens because it would have directed us to Dourest Detours
+#testcase-outside-shaven-havens
+>out
+The only way to exit is south, so let's go that way.
+>undo
+
+#testcase-exits-shaven-havens
+>exits
+The only way you seem to be able to go is south to Anemic Cinema.
+
 >push repeat
+
 >gt subsector
 
 #verbcase goto-towers-if-duck-is-touchable-and-duck-is-friendly
@@ -762,7 +774,7 @@ The only way to exit is east, so let's go that way.
 
 #testcase-exits-outer-route
 >exits
-WRONG 3423
+The only way you seem to be able to go is east to Scope Copse.
 
 >revised
 
@@ -864,7 +876,7 @@ You know you need to exit, but you need to change things so an exit's more acces
 
 #testcase-exits-rawest-waster-waters
 >exits
-WRONG 3925
+The Earnest Eastern Neaters will help you leave. But you need to help them align right!
 
 >undo
 >undo
@@ -906,7 +918,7 @@ The scaly clays are too treacherous. You need to find the word to restore the cu
 >undo
 #testcase-exits-mislit-limits
 >exits
-WRONG 4082
+You don't have to go anywhere before chainging the Curst Palace, although the serpent guards a dwelling.
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
@@ -941,7 +953,7 @@ The only way to exit is west, so let's go that way.
 
 #+testcase-exits-mislit-limits
 >exits
-WRONG 4258
+The only way you seem to be able to go is west.
 
 >in
 
@@ -951,9 +963,11 @@ Mesprise Premises
 >out
 The only way to exit is east, so let's go that way.
 
+>undo
+
 #testcase-exits-mesprise-premises
 >exits
-The only way you seem to be able to go is east.
+The only way you seem to be able to go is east to Mislit Limits.
 
 #ttc-table-of-towers-attacks-tetris-sitter
 >attack tetris sitter

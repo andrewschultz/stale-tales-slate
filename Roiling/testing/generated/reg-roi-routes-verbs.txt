@@ -65,7 +65,7 @@ Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure 
 
 #testcase-exits-cleric-circle
 >exits
-You can go back out.
+You can only go back out to the Same Mesa.
 
 >x list o toils
 
@@ -89,7 +89,7 @@ Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it 
 
 #testcase-exits-idle-deli
 >exits
-You can go back out.
+You can only go back out to the Same Mesa.
 
 #verbcase smell-routes-if-noun-is-seed-pit
 >smell seed pit
@@ -114,7 +114,7 @@ This do be a one-room place. You can really only go outside.
 
 #testcase-exits-adobe-abode
 >exits
-You can go back out.
+You can only go back out to the Same Mesa.
 
 #verbcase smell-routes-if-noun-is-pipe-soot
 >smell pipe soot

@@ -80,6 +80,15 @@ But you just woke up!
 >listen
 Peace and quiet. No adventure. Yet.
 
+@verbs
+#testcase-outside-dusty-study
+>exit
+You haven't made a way outside the Dusty Study. But one does exist. More than one. You just hid them a bit, so only your powers can activate them.
+\\
+#testcase-exits-dusty-study
+>exits
+You feel trapped right now, and you know if you stay here too long, you'll be apprehended. It's as if you need that kick to tell you, yes, you need to get on with things and take your chances.
+
 @nud
 #prime the UNDO command later
 >z
@@ -209,13 +218,13 @@ You're in a conversation. Your turn to speak.
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
 @verbs
-#testcase-outside-dusty-study
+#+testcase-outside-dusty-study
 >exit
-You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
+You haven't made a way outside the Dusty Study. But one does exist. More than one. You just hid them a bit, so only your powers can activate them.
 \\
-#testcase-exits-dusty-study
->exit
-You don't want to go outside, and you don't want to walk around where you might be seen, especially after that chat with Report Porter Perrot.
+#+testcase-exits-dusty-study
+>exits
+You haven't made a way out yet.
 
 @nud
 #mistake retest for [text] stable-text-stable-text-[text] stable
@@ -760,11 +769,13 @@ Farming Framing
 @verbs
 #testcase-outside-farming-framing
 >exit
-The only way to exit is outside, so let's go that way.
+The only way to exit is inside, so let's go that way.
+\\
+>undo
 \\
 #testcase-exits-farming-framing
 >exits
-The only way to exit is outside, so let's go that way.
+The only way you seem to be able to go is inside to Dusty Study.
 \\
 #ttc-table-of-ordeal-reload-nowheres-farming-framing
 >n
@@ -823,7 +834,7 @@ You don't need a moving stair.
 The stair helps you get around more easily, so it doesn't need to be changed back.
 
 @!min
->out
+>in
 >u
 Highest Heights
 
@@ -852,7 +863,7 @@ There are two unblocked exits: down and inside to Dusty Study.
 >exit
 You have more than one way to leave: down and inside. So you'll need to specify which one.
 \\
-You go back down to the closets, not able to figure the pram yet.
+You have more than one way to leave: down and inside. So you'll need to specify which one.
 >undo
 >undo
 >undo
@@ -1440,6 +1451,17 @@ The plaster was cracking anyway, before you made it a shiny stapler. You don't n
 >trainer
 You're on your own. Perhaps you'd be better off making use of the staple to get on with things.
 
+@verbs
+#+testcase-outside-carven-cavern
+>exit
+You can't go inside the departure until you open it further.
+\\
+>undo
+\\
+#+testcase-exits-carven-cavern
+>exits
+You can't fit through the departure yet.
+
 >put staple in stapler
 
 >staple aperture
@@ -1447,15 +1469,6 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 
 >score
 {$SCOS}
-
-@verbs
-#+testcase-exits-carven-cavern
->exits
-You can't go inside the departure until you open it further.
-\\
-#+testcase-outside-carven-cavern
->exit
-You can't fit through the departure yet.
 
 @verbs
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
@@ -1680,7 +1693,8 @@ You can just go IN the departure to start your adventure in earnest
 \\
 #+testcase-outside-carven-cavern
 >exit
-You can just go IN the departure to start your adventure in earnest
+Strip of Profits
+>undo
 
 @max
 >xg 1

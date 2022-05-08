@@ -459,7 +459,7 @@ You don't need a moving stair.
 >stari
 The stair helps you get around more easily, so it doesn't need to be changed back.
 
->out
+>in
 >u
 Highest Heights
 

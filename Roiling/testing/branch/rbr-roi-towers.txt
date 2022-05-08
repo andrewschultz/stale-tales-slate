@@ -731,7 +731,7 @@ Taverns are generally meant to make you forget compass directions, among other t
 >undo
 #testcase-exits-loftier-trefoil
 >exits
-WRONG 728
+You probably aren't going anywhere until Rodney does, first.
 
 >yonder
 Your score has just gone up by one point
@@ -776,7 +776,7 @@ The Wildest Wilteds are too dangerous any way but north, and the dreads adders a
 \\
 #testcase-exits-topside-deposit
 >exits
-WRONG 769
+The dreads adders are blocking the way north, so you'd better get rid of them.
 
 @nud
 #ttc-table-of-towers-readables-curst-palace
@@ -990,7 +990,7 @@ The only way to exit is north, so let's go that way.
 \\
 #+testcase-exits-topside-deposit
 >exits
-WRONG 979
+The only way you seem to be able to go is north.
 
 >score
 {$SCOS}
@@ -1219,7 +1219,7 @@ You have more than one way to leave: south and west. So you'll need to specify w
 \\
 #testcase-exits-scope-copse
 >exits
-WRONG 1205
+There are two unblocked exits: south to Topside Deposit and west.
 
 >score
 {$SCOS}
@@ -1587,12 +1587,13 @@ That might be RIP-some.
 @verbs
 #testcase-outside-baldest-blasted-saltbed
 >out
-WRONG
+The only way to exit is south, so let's go that way.
+\\
 >undo
 \\
 #testcase-exits-baldest-blasted-saltbed
 >exits
-WRONG 1573
+The only way you seem to be able to go is south to Scope Copse.
 
 @!minh,mini
 >semipro
@@ -1604,12 +1605,12 @@ Your score has just gone up by one point
 @verbs
 #+testcase-outside-baldest-blasted-saltbed
 >out
-WRONG
+You have more than one way to leave: south and east. So you'll need to specify which one.
 >undo
 \\
 #+testcase-exits-baldest-blasted-saltbed
 >exits
-WRONG 1586
+There are two unblocked exits: south to Scope Copse and east.
 
 @max
 >e
@@ -1656,12 +1657,12 @@ The palace looks a little bigger now--but you may eventually need to cut east a 
 @verbs
 #testcase-outside-anemic-cinema
 >out
-WRONG
+The only way to exit is south, so let's go that way.
 >undo
 \\
 #testcase-exits-anemic-cinema
 >exits
-WRONG 1634
+The only way you seem to be able to go is south to Baldest Blasted Saltbed.
 
 @hin
 DEBUG INFO: mardier admirer hinting.
@@ -1826,7 +1827,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-fringe-finger
 >exits
-WRONG 1795
+The only way you seem to be able to go is east to Anemic Cinema.
 
 @max
 #ttc-table-of-towers-progress-comments-fringe-finger
@@ -1975,12 +1976,12 @@ You're not sure why the Salted Deltas could be slated, or how. You're not here f
 @verbs
 #+testcase-outside-anemic-cinema
 >out
-WRONG
+You have more than one way to leave: south, east and west. So you'll need to specify which one.
 >undo
 \\
 #+testcase-exits-anemic-cinema
 >exits
-WRONG 1945
+There are three unblocked exits: south to Baldest Blasted Saltbed, east and west to Fringe Finger.
 
 @!minh,mini
 >married
@@ -2132,25 +2133,31 @@ Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
 
 @verbs
+##balance undos
+# here we test salted deltas AND actionless coastlines at once.
 #testcase-outside-salted-deltas
 >out
-WRONG
+The only way to exit is west, so let's go that way.
 \\
 >undo
 \\
 #testcase-exits-salted-deltas
 >exits
-WRONG 2100
+The only way you seem to be able to go is west to Anemic Cinema.
+\\
+>hastiest
+by one point
 \\
 >e
 \\
 #testcase-outside-actionless-coastlines
 >out
-WRONG
+The only way to exit is west, so let's go that way.
+>undo
 \\
 #testcase-exits-actionless-coastlines
 >exits
-WRONG 2106
+The only way you seem to be able to go is west to Salted Deltas.
 >undo
 >undo
 >undo
@@ -2180,12 +2187,12 @@ You've got nothing sharp enough. That denim's been mended nicely, for sure.
 \\
 #testcase-outside-treading-gradient
 >out
-WRONG
+You have more than one way to leave: north and west. So you'll need to specify which one.
 >undo
 \\
 #testcase-exits-treading-gradient
 >exits
-WRONG 2135
+There are two unblocked exits: north to Salted Deltas and west to Baldest Blasted Saltbed.
 
 @nud
 #+ttc-table-of-towers-scannotes-curst-palace
@@ -2423,6 +2430,9 @@ Dire and Arid Den
 >w
 No, there can't be anything west. You feel drained just considering that.
 \\
+>u
+You wish you could feel positive enough to figure a way back up, but you're just too drained.
+\\
 #testcase-outside-dire-and-arid-den
 >out
 You need to snap out of the funk you're in. Get the right mindset.
@@ -2430,7 +2440,7 @@ You need to snap out of the funk you're in. Get the right mindset.
 \\
 #testcase-exits-dire-and-arid-den
 >exits
-WRONG 2376
+You aren't thinking positively enough to find a way out at the moment.
 
 @nud
 #ttc-table-of-towers-scannotes-bogus-dandier
@@ -2578,12 +2588,12 @@ Whoah, A Roiling Original's pretty retro, but nothing that ancient. Besides, you
 @verbs
 #testcase-outside-artist-traits-strait
 >out
-WRONG
+The only way to exit is west, so let's go that way.
 >undo
 \\
 #testcase-exits-artist-traits-strait
 >exits
-WRONG 2532
+The only way you seem to be able to go is west to Treading Gradient.
 \\
 #verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
 >bother
@@ -2721,12 +2731,12 @@ You need a way past the bonker
 @verbs
 #testcase-outside-leveraged-everglade
 >out
-WRONG
+You have more than one way to leave: north, east and west. So you'll need to specify which one.
 >undo
 \\
 #testcase-exits-leveraged-everglade
 >exits
-WRONG 2662
+There are three unblocked exits: north to Treading Gradient, east to Danger Garden and west to Scope Copse.
 
 @nud
 #ttc-table-of-leveraged-everglade-nudges-leveraged
@@ -2811,7 +2821,7 @@ Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong
 \\
 #testcase-exits-dourest-detours
 >exits
-WRONG 2743
+You don't have the energy to find exits in any direction at the moment. How to change that?
 
 @spoi
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
@@ -2867,15 +2877,6 @@ Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong
 #verbcase listen-towers-if-player-is-in-dourest-detours
 >listen
 You hear something that makes you see red.
-\\
-#testcase-outside-lost-lots
->out
-The only way to exit is north, so let's go that way.
->undo
-\\
-#testcase-exits-lost-lots
->exits
-WRONG 2803
 
 @!minh,mini
 >rousted
@@ -2899,6 +2900,16 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 \\
+
+@verbs
+#testcase-outside-lost-lots
+>out
+The only way to exit is north, so let's go that way.
+>undo
+\\
+#testcase-exits-lost-lots
+>exits
+The only way you seem to be able to go is north to Danger Garden.
 
 @sli
 #slider test for prosiest
@@ -2997,12 +3008,12 @@ Danger Garden
 @verbs
 #testcase-outside-danger-garden
 >out
-WRONG
+You have more than one way to leave: north, south and west. So you'll need to specify which one.
 >undo
 \\
 #testcase-exits-danger-garden
 >exits
-WRONG 2925
+There are three unblocked exits: north to Artist Traits Strait, south to Lost Lots and west to Leveraged Everglade.
 
 @sli
 #slider test for broken
@@ -3120,7 +3131,7 @@ The only way to exit is west, so let's go that way.
 \\
 #testcase-exits-obscurest-subsector
 >exits
-WRONG 3039
+The only way you seem to be able to go is west to Gander Garden.
 
 @nud
 #ttc-table-of-obscurest-subsector-nudges-locked
@@ -3278,15 +3289,6 @@ That duck in the Shaven Havens seemed awfully lonely. Maybe you can bring it hom
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-wordy
 >listen yow
 Dr. Yow is talking slowly and soothingly.
-\\
-#testcase-outside-shaven-havens
->out
-The only way to exit is south, so let's go that way.
->undo
-\\
-#testcase-exits-shaven-havens
->exits
-WRONG 3201
 
 >score
 {$SCOS}
@@ -3322,7 +3324,20 @@ The duck won't follow you. It doesn't trust your voice.
 Dr. Yow is silent once again.
 
 >gt duck
+
+@verbs
+# we could not have done this when we actually visited the shaven havens because it would have directed us to Dourest Detours
+#testcase-outside-shaven-havens
+>out
+The only way to exit is south, so let's go that way.
+>undo
+\\
+#testcase-exits-shaven-havens
+>exits
+The only way you seem to be able to go is south to Anemic Cinema.
+
 >push repeat
+
 >gt subsector
 
 @verbs
@@ -3517,7 +3532,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-outer-route
 >exits
-WRONG 3423
+The only way you seem to be able to go is east to Scope Copse.
 
 >revised
 }}SCORE++
@@ -4023,7 +4038,7 @@ You know you need to exit, but you need to change things so an exit's more acces
 \\
 #testcase-exits-rawest-waster-waters
 >exits
-WRONG 3925
+The Earnest Eastern Neaters will help you leave. But you need to help them align right!
 \\
 >undo
 >undo
@@ -4185,7 +4200,7 @@ The scaly clays are too treacherous. You need to find the word to restore the cu
 >undo
 #testcase-exits-mislit-limits
 >exits
-WRONG 4082
+You don't have to go anywhere before chainging the Curst Palace, although the serpent guards a dwelling.
 
 >score
 {$SCOS}
@@ -4370,7 +4385,7 @@ The only way to exit is west, so let's go that way.
 \\
 #+testcase-exits-mislit-limits
 >exits
-WRONG 4258
+The only way you seem to be able to go is west.
 
 @nud
 #ttc-table-of-mislit-limits-nudges-present
@@ -4436,9 +4451,11 @@ She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to 
 >out
 The only way to exit is east, so let's go that way.
 \\
+>undo
+\\
 #testcase-exits-mesprise-premises
 >exits
-The only way you seem to be able to go is east.
+The only way you seem to be able to go is east to Mislit Limits.
 
 @verbs
 #ttc-table-of-towers-attacks-tetris-sitter

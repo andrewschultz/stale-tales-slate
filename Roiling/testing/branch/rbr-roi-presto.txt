@@ -59,7 +59,7 @@ You have more than one way to leave: north, south, east and west. So you'll need
 \\
 #testcase-exits-grey-gyre
 >exits
-WRONG 55
+There are four unblocked exits: north, south, east and west.
 
 @hin
 >monty hints
@@ -181,7 +181,7 @@ It feels cathartic, using a non-dirty exclamation to get going.
 
 @verbs
 #ttc-table-of-presto-nowheres-austerer-treasure
->r
+>n
 The treasure room has no secret passages, so you can only go back east.
 \\
 #testcase-outside-austerer-treasure
@@ -193,7 +193,7 @@ Grey Gyre
 \\
 #testcase-exits-austerer-treasure
 >exits
-WRONG 183
+The only way you seem to be able to go is east to Grey Gyre.
 
 @spoi
 #ttc-table-of-presto-anagrams-pooh
@@ -328,7 +328,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-char-arch
 >exits
-WRONG 316
+There are two unblocked exits: north to Grey Gyre and south.
 
 @spoi
 #ttc-table-of-presto-anagrams-rats
@@ -555,7 +555,7 @@ You have more than one way to leave: south and west. So you'll need to specify w
 \\
 #testcase-exits-nowt-town
 >exits
-WRONG 539
+There are two unblocked exits: south to Grey Gyre and west.
 \\
 >w
 \\
@@ -570,7 +570,7 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 \\
 #testcase-exits-r10
 >exits
-WRONG 550
+There are two unblocked exits: east to Nowt Town and west.
 \\
 >in
 You can go east and west here, but not inside.
@@ -596,7 +596,7 @@ You have more than one way to leave: north and east. So you'll need to specify w
 \\
 #testcase-exits-r00
 >exits
-WRONG 572
+There are two unblocked exits: north and east to another part of the maze.
 \\
 >n
 \\
@@ -611,7 +611,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-r01
 >exits
-WRONG 583
+There are two unblocked exits: north and south to another part of the maze.
 \\
 >n
 \\
@@ -626,7 +626,7 @@ You have more than one way to leave: north, south and east. So you'll need to sp
 \\
 #testcase-exits-r02
 >exits
-WRONG 594
+There are three unblocked exits: north, south to another part of the maze and east.
 \\
 >n
 #generic reject for touching a wall in r03
@@ -640,7 +640,7 @@ The only way to exit is south, so let's go that way.
 \\
 #testcase-exits-r03
 >exits
-WRONG 604
+The only way you seem to be able to go is south to another part of the maze.
 >undo
 >undo
 >undo
@@ -658,13 +658,14 @@ You have more than one way to leave: south, east and west. So you'll need to spe
 \\
 #testcase-exits-r12
 >exits
-WRONG 617
+There are three unblocked exits: south, east and west to another part of the maze.
 \\
 >s
 \\
 #generic reject for touching a wall in r11
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r11
 >out
@@ -673,13 +674,14 @@ You have more than one way to leave: north and east. So you'll need to specify w
 \\
 #testcase-exits-r11
 >exits
-WRONG 628
+There are two unblocked exits: north to another part of the maze and east.
 \\
 >e
 \\
 #generic reject for touching a wall in r21
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r21
 >out
@@ -688,13 +690,14 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 \\
 #testcase-exits-r21
 >exits
-WRONG 639
+There are two unblocked exits: east and west to another part of the maze.
 \\
 >e
 \\
 #generic reject for touching a wall in r31
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r31
 >out
@@ -704,7 +707,8 @@ The only way to exit is west, so let's go that way.
 \\
 #testcase-exits-r31
 >exits
-WRONG 650
+The only way you seem to be able to go is west to another part of the maze.
+#now we go back to 1-2
 >undo
 >undo
 >undo
@@ -712,6 +716,7 @@ WRONG 650
 >undo
 >undo
 >e
+big R
 \\
 #generic reject for touching a wall in r22
 >n
@@ -725,13 +730,15 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 \\
 #testcase-exits-r22
 >exits
-WRONG 667
+There are two unblocked exits: east and west to another part of the maze.
 \\
 >e
+big S
 \\
 #generic reject for touching a wall in r32
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r32
 >out
@@ -740,13 +747,15 @@ You have more than one way to leave: north, east and west. So you'll need to spe
 \\
 #testcase-exits-r32
 >exits
-WRONG 678
+There are three unblocked exits: north, east and west to another part of the maze.
 \\
 >e
 \\
 #generic reject for touching a wall in r42
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+\\
+>undo
 \\
 #testcase-outside-r42
 >out
@@ -755,7 +764,7 @@ You have more than one way to leave: north, south and west. So you'll need to sp
 \\
 #testcase-exits-r42
 >exits
-WRONG 689
+There are three unblocked exits: north, south and west to another part of the maze.
 \\
 >s
 \\
@@ -763,7 +772,7 @@ WRONG 689
 >e
 \\
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
->s
+>undo
 \\
 #testcase-outside-r41
 >out
@@ -772,11 +781,13 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-r41
 >exits
-WRONG 702
+There are two unblocked exits: north to another part of the maze and south.
 \\
+>s
 #generic reject for touching a wall in r40
 >s
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r40
 >out
@@ -785,13 +796,14 @@ You have more than one way to leave: north and west. So you'll need to specify w
 \\
 #testcase-exits-r40
 >exits
-WRONG 711
+There are two unblocked exits: north to another part of the maze and west.
 \\
 >w
 \\
 #generic reject for touching a wall in r30
 >w
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r30
 >out
@@ -801,7 +813,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-r30
 >exits
-WRONG 722
+The only way you seem to be able to go is east to another part of the maze.
 >undo
 >undo
 >undo
@@ -813,6 +825,7 @@ WRONG 722
 #generic reject for touching a wall in r43
 >e
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r43
 >out
@@ -821,13 +834,14 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-r43
 >exits
-WRONG 738
+There are two unblocked exits: north and south to another part of the maze.
 \\
 >n
 \\
 #generic reject for touching a wall in r44
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r44
 >out
@@ -836,13 +850,14 @@ You have more than one way to leave: south and west. So you'll need to specify w
 \\
 #testcase-exits-r44
 >exits
-WRONG 749
+There are two unblocked exits: south to another part of the maze and west.
 \\
 >w
 \\
 #generic reject for touching a wall in r34
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r34
 >out
@@ -852,7 +867,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-r34
 >exits
-WRONG 760
+The only way you seem to be able to go is east to another part of the maze.
 >undo
 >undo
 >undo
@@ -862,6 +877,7 @@ WRONG 760
 >undo
 >undo
 >n
+big T
 \\
 #generic reject for touching a wall in r33
 >n
@@ -874,9 +890,10 @@ You have more than one way to leave: south and west. So you'll need to specify w
 \\
 #testcase-exits-r33
 >exits
-WRONG 778
+There are two unblocked exits: south to another part of the maze and west.
 \\
 >w
+big U
 \\
 #generic reject for touching a wall in r23
 >s
@@ -889,7 +906,7 @@ You have more than one way to leave: north, east and west. So you'll need to spe
 \\
 #testcase-exits-r23
 >exits
-WRONG 789
+There are three unblocked exits: north, east to another part of the maze and west.
 \\
 >w
 \\
@@ -897,6 +914,7 @@ WRONG 789
 >w
 \\
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r13
 >out
@@ -905,13 +923,14 @@ You have more than one way to leave: north and east. So you'll need to specify w
 \\
 #testcase-exits-r13
 >exits
-WRONG 801
+There are two unblocked exits: north and east to another part of the maze.
 \\
 >n
 \\
 #generic reject for touching a wall in r14
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r14
 >out
@@ -920,12 +939,13 @@ You have more than one way to leave: south and west. So you'll need to specify w
 \\
 #testcase-exits-r14
 >exits
-WRONG 812
+There are two unblocked exits: south to another part of the maze and west.
 \\
 >w
 #generic reject for touching a wall in r04
 >n
 You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+>undo
 \\
 #testcase-outside-r04
 >out
@@ -934,8 +954,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-r04
 >exits
-WRONG 822
->undo
+The only way you seem to be able to go is east to another part of the maze.
 >undo
 >undo
 >undo
@@ -961,7 +980,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-unwary-runway
 >exits
-WRONG 844
+There are two unblocked exits: north and south to another part of the maze.
 \\
 >n
 \\
@@ -1028,12 +1047,12 @@ While you're impressed with people who can navigate sport ports, you couldn't do
 \\
 #testcase-outside-marines-seminar-remains
 >out
-You have more than one way to leave: south and west. So you'll need to specify which one.
+The only way to exit is west, so let's go that way.
 >undo
 \\
 #testcase-exits-marines-seminar-remains
 >exits
-WRONG 912
+The only way you seem to be able to go is west to Grey Gyre.
 
 @spoi
 #ttc-table-of-presto-anagrams-bingo
@@ -1439,7 +1458,7 @@ Char Arch
 \\
 #testcase-exits-dirge-ridge
 >exits
-WRONG 1314
+The only way you seem to be able to go is north to Char Arch.
 
 @sli
 #slider test for ole
@@ -1859,7 +1878,7 @@ Grey Gyre
 \\
 #testcase-exits-saps-pass
 >exits
-WRONG 1729
+The only way you seem to be able to go is south to Grey Gyre.
 
 @spoi
 #ttc-table-of-presto-anagrams-gosh
@@ -2276,7 +2295,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #+testcase-exits-saps-pass
 >exits
-WRONG 2144
+There are two unblocked exits: north and south to Grey Gyre.
 
 >n
 Hacks' Shack
@@ -2318,9 +2337,11 @@ Classic techno music from the Baleets: "Be Stale."
 >out
 The only way to exit is south, so let's go that way.
 \\
+>undo
+\\
 #testcase-exits-hacks-shack
 >exits
-WRONG 2185
+The only way you seem to be able to go is south to Phat Path.
 
 @nud
 #ttc-table-of-presto-scannotes-n-e-recs-censer
@@ -2923,11 +2944,11 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 @verbs
 #+testcase-outside-hacks-shack
 >out
-WRONG
+No. You can't go out until the job here is done. You don't need to.
 \\
 #+testcase-exits-hacks-shack
 >exits
-WRONG 2185
+You could leave, but it's time to complete the programming job here and now.
 
 >score
 {$SCOS}

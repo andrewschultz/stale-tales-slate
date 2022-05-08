@@ -121,7 +121,7 @@ There's no way out until the bleary barley is gone.
 \\
 #testcase-exits-minded-midden
 >exits
-WRONG
+Maybe you'll see some exits if you get rid of the barley.
 
 @max
 #ttc-table-of-notepad-entries-powers
@@ -145,7 +145,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #+testcase-exits-minded-midden
 >exits
-WRONG
+There are two unblocked exits: north and south.
 
 @spoi
 #ttc-table-of-otters-anagrams-reedily
@@ -325,7 +325,7 @@ You have more than one way to leave: north, south and west. So you'll need to sp
 \\
 #+testcase-exits-minded-midden
 >exits
-WRONG
+There are three unblocked exits: north, south and west.
 
 @nud
 >n
@@ -362,7 +362,7 @@ You have more than one way to leave: north, south and east. So you'll need to sp
 \\
 #testcase-exits-disowned-downside
 >exits
-WRONG
+There are three unblocked exits: north, south and east to Burnt Brunt.
 
 @nud
 #ttc-table-of-disowned-downside-nudges-parley
@@ -1242,7 +1242,7 @@ The only way to exit is south, so let's go that way.
 \\
 #testcase-exits-loop-pool
 >exits
-WRONG
+The only way you seem to be able to go is south to Disowned Downside.
 
 @sli
 #slider test for because
@@ -1457,7 +1457,7 @@ The only way to exit is north, so let's go that way.
 \\
 #testcase-exits-bran-barn
 >exits
-WRONG
+The only way you seem to be able to go is north to Disowned Downside.
 
 @nud
 #ttc-table-of-bran-barn-nudges-barn
@@ -1640,7 +1640,7 @@ You have more than one way to leave: north, south, east and west. So you'll need
 \\
 #+testcase-exits-disowned-downside
 >exits
-WRONG
+There are four unblocked exits: north to Loop Pool, south to Bran Barn, east to Burnt Brunt and west.
 
 >score
 {$SCOS}
@@ -1665,7 +1665,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-shiner-shrine
 >exits
-WRONG
+There are two unblocked exits: north and south to Burnt Brunt.
 
 @spoi
 ##balance undos
@@ -1859,7 +1859,7 @@ The only way to exit is south, so let's go that way.
 \\
 #testcase-exits-lamer-realm
 >exits
-WRONG
+The only way you seem to be able to go is south to Shiner Shrine.
 
 >slow
 Your score has just gone up by one point
@@ -2169,7 +2169,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 \\
 #testcase-exits-clarthead-cathedral
 >exits
-WRONG
+There are two unblocked exits: north to Burnt Brunt and south.
 
 @spoi
 #ttc-table-of-otters-anagrams-joltily
@@ -2327,7 +2327,7 @@ The only way to exit is north, so let's go that way.
 \\
 #testcase-exits-perverse-preserve
 >exits
-WRONG
+The only way you seem to be able to go is north to Clarthead Cathedral.
 
 @nud
 #ttc-table-of-otters-spechelp-raptor
@@ -2764,7 +2764,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-reclusion-inclosure
 >exits
-WRONG
+The only way you seem to be able to go is east to Disowned Downside.
 
 @hints
 #ttc-table-of-settler-shake-descriptions-aside-llp
@@ -3072,7 +3072,7 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 \\
 #+testcase-exits-reclusion-inclosure
 >exits
-WRONG
+There are two unblocked exits: east to Disowned Downside and west.
 
 >score
 @min
@@ -3161,7 +3161,7 @@ The only way to exit is east, so let's go that way.
 \\
 #testcase-exits-rancho-archon-anchor
 >exits
-WRONG
+The only way you seem to be able to go is east to Hidings Dishing Shindig.
 
 >e
 

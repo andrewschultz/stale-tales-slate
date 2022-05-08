@@ -19,11 +19,11 @@ You just got here, so direction means nothing. So you can only really go out, bu
 
 #testcase-outside-posh-hops-shop
 >outside
-So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image.
+Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by the LOLstr trolls somehow.
 
 #testcase-exits-posh-hops-shop
 >exits
-Bars tend to be a bit disorienting regarding compass directions. So you figure you need to get by the LOLstr Trolls somehow.
+You can't just sneak past the LOLstr trolls. But there is a way.
 
 #verbcase swear-oyster-if-player-is-in-posh-hops-shop
 >bother
@@ -91,7 +91,7 @@ Olde Lode
 
 #ttc-table-of-oyster-nowheres-olde-lode
 >e
-Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex.
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex, even if you once again can't use directions.
 
 #ttc-table-of-goto-sectioning-posh-hops-shop-1--
 >gt shop
@@ -125,7 +125,7 @@ Score in a scenario: 5 out of 44 total points in the current region, Oyster. Low
 
 #+ttc-table-of-oyster-nowheres-olde-lode
 >e
-Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex.
+Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex, even if you once again can't use directions.
 
 #ttc-table-of-oyster-attacks-urn
 >attack urn
@@ -239,7 +239,7 @@ You have more than one way to leave: north, east and west. So you'll need to spe
 
 #testcase-exits-anger-range
 >exits
-There are three viable exits: north, east and west.
+There are three unblocked exits: north, east and west.
 
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -446,7 +446,7 @@ With the sloppy polyps on most all sides, you can only go back south or inside.
 
 #+testcase-exits-lapsin-plains
 >exits
-There are two viable exits: south to Anger Range and inside.
+There are two unblocked exits: south to Anger Range and inside.
 
 >score
 Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 44.
@@ -527,14 +527,6 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east to Anger Range.
 
-#+testcase-outside-sclerous-closures
->out
-You have more than one way to leave: north and east. So you'll need to specify which one.
-
-#+testcase-exits-sclerous-closures
->exits
-There are two viable exits: north and east to Anger Range.
-
 >warp
 Your score has just gone up by one point
 
@@ -545,6 +537,14 @@ You can only go north to the Horned Hedron or east back to Anger Range. The Hand
 #reverbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence.
+
+#+testcase-outside-sclerous-closures
+>out
+You have more than one way to leave: north and east. So you'll need to specify which one.
+
+#+testcase-exits-sclerous-closures
+>exits
+There are two unblocked exits: north and east to Anger Range.
 
 >score
 Score in a scenario: 28 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
@@ -581,7 +581,7 @@ You have more than one way to leave: south and west. So you'll need to specify w
 
 #testcase-exits-horned-hedron
 >exits
-There are two viable exits: south to Sclerous Closures and west.
+There are two unblocked exits: south to Sclerous Closures and west.
 
 >w
 Rascal Craals
@@ -597,6 +597,8 @@ This situation only stinks in general, not literally.
 #testcase-outside-rascal-craals
 >out
 The only way to exit is east, so let's go that way.
+
+>undo
 
 #testcase-exits-rascal-craals
 >exits
@@ -647,12 +649,12 @@ The main exit is south, and you daren't go west now the Use-Saga Sausage took ca
 
 #+testcase-outside-horned-hedron
 >out
-WRONG
+You have more than one way to leave: south and west. So you'll need to specify which one.
 >undo
 
 #+testcase-exits-horned-hedron
 >exits
-WRONG
+There are two unblocked exits: south to Sclerous Closures and west to Rascal Craals.
 
 #verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
 >gt rascal craals
@@ -667,12 +669,12 @@ The main exit is south, and you daren't go west now the Use-Saga Sausage took ca
 
 #+testcase-outside-horned-hedron
 >out
-WRONG
+You have more than one way to leave: south, west and inside. So you'll need to specify which one.
 >undo
 
 #+testcase-exits-horned-hedron
 >exits
-WRONG
+There are three unblocked exits: south to Sclerous Closures, west to Rascal Craals and inside.
 
 >score
 Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.

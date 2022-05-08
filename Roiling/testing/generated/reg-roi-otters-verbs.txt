@@ -28,7 +28,7 @@ There's no way out until the bleary barley is gone.
 
 #testcase-exits-minded-midden
 >exits
-WRONG
+Maybe you'll see some exits if you get rid of the barley.
 
 #forceignore
 >barely
@@ -41,7 +41,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 
 #+testcase-exits-minded-midden
 >exits
-WRONG
+There are two unblocked exits: north and south.
 
 #verbcase listen-otters-if-noun-is-ed-riley
 >listen
@@ -74,7 +74,7 @@ You have more than one way to leave: north, south and west. So you'll need to sp
 
 #+testcase-exits-minded-midden
 >exits
-WRONG
+There are three unblocked exits: north, south and west.
 
 >score
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
@@ -89,7 +89,7 @@ You have more than one way to leave: north, south and east. So you'll need to sp
 
 #testcase-exits-disowned-downside
 >exits
-WRONG
+There are three unblocked exits: north, south and east to Burnt Brunt.
 
 #ttc-table-of-otters-attacks-players
 >attack players
@@ -165,7 +165,7 @@ The only way to exit is south, so let's go that way.
 
 #testcase-exits-loop-pool
 >exits
-WRONG
+The only way you seem to be able to go is south to Disowned Downside.
 
 #ttc-table-of-otters-attacks-sea-cube
 >attack sea cube
@@ -224,7 +224,7 @@ The only way to exit is north, so let's go that way.
 
 #testcase-exits-bran-barn
 >exits
-WRONG
+The only way you seem to be able to go is north to Disowned Downside.
 
 >although
 by one point
@@ -272,7 +272,7 @@ You have more than one way to leave: north, south, east and west. So you'll need
 
 #+testcase-exits-disowned-downside
 >exits
-WRONG
+There are four unblocked exits: north to Loop Pool, south to Bran Barn, east to Burnt Brunt and west.
 
 >score
 Score in a scenario: 13 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
@@ -293,7 +293,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 
 #testcase-exits-shiner-shrine
 >exits
-WRONG
+There are two unblocked exits: north and south to Burnt Brunt.
 
 #verbcase listen-otters-if-noun-is-sly-imp
 >listen
@@ -329,7 +329,7 @@ The only way to exit is south, so let's go that way.
 
 #testcase-exits-lamer-realm
 >exits
-WRONG
+The only way you seem to be able to go is south to Shiner Shrine.
 
 >slow
 Your score has just gone up by one point
@@ -421,7 +421,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 
 #testcase-exits-clarthead-cathedral
 >exits
-WRONG
+There are two unblocked exits: north to Burnt Brunt and south.
 
 #verbcase listen-otters-if-noun-is-whiners
 >listen
@@ -458,7 +458,7 @@ The only way to exit is north, so let's go that way.
 
 #testcase-exits-perverse-preserve
 >exits
-WRONG
+The only way you seem to be able to go is north to Clarthead Cathedral.
 
 #ttc-table-of-otters-attacks-raptor
 >attack raptor
@@ -562,7 +562,7 @@ The only way to exit is east, so let's go that way.
 
 #testcase-exits-reclusion-inclosure
 >exits
-WRONG
+The only way you seem to be able to go is east to Disowned Downside.
 
 #ttc-table-of-otters-nowheres-reclusion-inclosure
 >n
@@ -613,7 +613,7 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 
 #+testcase-exits-reclusion-inclosure
 >exits
-WRONG
+There are two unblocked exits: east to Disowned Downside and west.
 
 >score
 Score in a scenario: 34 out of 37 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 37 points.
@@ -663,7 +663,7 @@ The only way to exit is east, so let's go that way.
 
 #testcase-exits-rancho-archon-anchor
 >exits
-WRONG
+The only way you seem to be able to go is east to Hidings Dishing Shindig.
 
 >e
 

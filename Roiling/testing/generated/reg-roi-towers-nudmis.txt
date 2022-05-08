@@ -1513,7 +1513,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 >push retape
 
 >gt duck
+
 >push repeat
+
 >gt subsector
 
 #+ttc-table-of-towers-spechelp-fissure
