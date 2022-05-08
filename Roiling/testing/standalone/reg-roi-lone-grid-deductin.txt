@@ -84,88 +84,112 @@ You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!
 
 #ttc-table-of-x1-reasoning-1
 >x x1
-Example 1 gives the example of APES' APSE and RYY?.
+(1/4) Example 1 gives the example of APES' APSE and RYY?.
 
 #ttc-table-of-x1-reasoning-2
 >x x1
-The fourth letter of APES/APSE must be E or S, but it also must be a consonant, or the final word would have three consonants and one vowel. So it is S.
+(2/4) The fourth letter of APES/APSE must be E or S, but it also must be a consonant, or the final word would have three consonants and one vowel. So it is S.
 
 #ttc-table-of-x1-reasoning-3
 >x x1
-Knowing slot 4 is S, then slot 1 is P.
+(3/4) Knowing slot 4 is S means slot 1, a consonant, is P.
 
 #ttc-table-of-x1-reasoning-4
 >x x1
-But then since slot 3 is yellow, it can't be E. That gives us PEAS.
+(4/4) But then since slot 3 is yellow, it can't be E. That gives us PEAS.
 
 #ttc-table-of-x2-reasoning-1
 >x x2
-Example 2 is MERE MOOR scanning to R?R?. It notes the two words aren't anagrams, but combined, they anagram EMOR EMOR, twice.
+(1/5) Example 2 is MERE MOOR scanning to R?R?. It notes the two words aren't anagrams, but combined, they anagram EMOR EMOR, twice.
 
 #ttc-table-of-x2-reasoning-2
 >x x2
-So the final word is an anagram of EMOR. Figuring the "right" anagram from two different words that don't anagram each other requires a bit of counting. So what is the original word?
+(2/5) So the final word is an anagram of EMOR. Figuring the "right" anagram from two different words that don't anagram each other requires a bit of counting. So what is the original word?
 
 #ttc-table-of-x2-reasoning-3
 >x x2
-You may note both slots 2 and 4 must be vowels, so the final word has two vowels and two consonants.
+(3/5) Since slots 1 and 3 are consonants, and the final word has two vowels and two consonants, so both slots 2 and 4 must be vowels.
 
 #ttc-table-of-x2-reasoning-4
 >x x2
-Slot 2 is ambiguous as it can be E or O, but slot 4 has to be E. So slot 2 is O.
+(4/5) Slot 2 is ambiguous as it can be E or O, but slot 4 has to be E. So slot 2 is O.
 
 #ttc-table-of-x2-reasoning-5
 >x x2
-Slot 1 can't be M, so it is R. ROME. Note that this is a proper name, which should not show up except for optional points.
+(5/5) Slot 1 can't be M, so it is R. ROME. Note that this is a proper name, which should not show up except for optional points.
 
 #ttc-table-of-x3-reasoning-1
 >x x3
-Example 3 is of the SACRED CEDARS you visited on your trip to Yorpwald, and if, hypothetically, it scanned six question marks. Which seems completely unhelpful. But it is not!
+(1/5) Example 3 is of the SACRED CEDARS you visited on your trip to Yorpwald, and if, hypothetically, it scanned six question marks. Which seems completely unhelpful. But it is not!
 
 #ttc-table-of-x3-reasoning-2
 >x x3
-Each ambiguous reading has two possibilities, giving SC/AE/CD/RA/ER/DS.
+(2/5) Each ambiguous reading has two possibilities, giving SC/AE/CD/RA/ER/DS.
 
 #ttc-table-of-x3-reasoning-3
 >x x3
-Here is where there is relatively focused guesswork. S, C and D form a loop, as do A, R and E. There are four possibilities total.
+(3/5) Here is where there is relatively focused guesswork. S, C and D form a loop, as do A, R and E. There are four possibilities total.
 
 #ttc-table-of-x3-reasoning-4
 >x x3
-SACRED, SECARD. CADRES, CEDRAS.
+(4/5) SACRED, SECARD. CADRES, CEDRAS.
 
 #ttc-table-of-x3-reasoning-5
 >x x3
-Since SACRED is an original word, it can't work, but CADRES does.
+(5/5) Since SACRED is part of the original phrase, you can eliminate it. Two of the possibilities are, in fact, proper names, but CADRES is the only one that's a word.
 
 #ttc-table-of-x4-reasoning-1
 >x x4
-Example 4 is an ESPRIT STRIPE. The clue is ?R??R?.
+(1/6) Example 4 is of a three-word thing object called a LOTS-O-LOOTS STOOL. In this case, the three groupings of five letters may make question marks more ambiguous, but non-question marks may be clearer.
 
 #ttc-table-of-x4-reasoning-2
 >x x4
-Believe it or not, nearly everything falls into place quickly here.
+(2/6) If the reading you get is R??R?, you may be discouraged to see slot 5 can be O, S and L. Slot 2 and 3 can be O or T, making slot 5 a consonant, but since there are two O's, you could have OO to make slot 5 a vowel.
 
 #ttc-table-of-x4-reasoning-3
 >x x4
-The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T.
+(3/6) However, you may notice slot 1 is forced to be T, since it's a consonant and not L or S.
 
 #ttc-table-of-x4-reasoning-4
 >x x4
-Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T).
+(4/6) Similarly, slot 4 must be L.
 
 #ttc-table-of-x4-reasoning-5
 >x x4
-That makes a total of four, and you can guess if you want from sprite, eprist, erpist, and srpite.
+(5/6) That leaves OO for slots 2 and 3, and slot 5 is S. TOOLS is the answer.
 
 #ttc-table-of-x4-reasoning-6
 >x x4
-But you also may be aided by red writing that indicates all letters are wrong. In this case, PRIEST written on the stripe would help you eliminate three options.
+(6/6) This case is here to remind you that sometimes question-marked clues will lead the way, but other times, solid colors on the settler will. Especially for longer words, it's worth writing your logic out.
 
-#ttc-table-of-x4-reasoning-7
->x x4
-Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE. One more note, though.
+#ttc-table-of-x5-reasoning-1
+>x x5
+(1/8) Example 5 is an ESPRIT STRIPE. The clue is ?R??R?.
 
-#ttc-table-of-x4-reasoning-8
->x x4
-At some point, strict logic isn't quite enough. Common sense may eliminate the last few answers, or for longer words, you may need legitimate guesswork.
+#ttc-table-of-x5-reasoning-2
+>x x5
+(2/8) Believe it or not, things falls into place quickly if you use some logic-puzzle tricks.
+
+#ttc-table-of-x5-reasoning-3
+>x x5
+(3/8) The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T.
+
+#ttc-table-of-x5-reasoning-4
+>x x5
+(4/8) The fourth letter is the only one that doesn't eliminate I. Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T).
+
+#ttc-table-of-x5-reasoning-5
+>x x5
+(5/8) That makes a total of four, and you can probably guess which of SPRITE, EPRIST, ERPIST, and SRPITE is an actual word.
+
+#ttc-table-of-x5-reasoning-6
+>x x5
+(6/8) But you also may be aided by red writing that indicates all letters are wrong. In this case, if PRIEST were written on the stripe in red, it would help you eliminate three options.
+
+#ttc-table-of-x5-reasoning-7
+>x x5
+(7/8) Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE. One more note, though.
+
+#ttc-table-of-x5-reasoning-8
+>x x5
+(8/8) At some point, though, strict logic isn't quite enough. Common sense may eliminate answers with too many consonants in a row, and certain combinations of letters can be removed. It's also possible to use trial-and-error zebra-puzzle logic on many longer words.

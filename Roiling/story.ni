@@ -9263,7 +9263,7 @@ got-thru-respect is a truth state that varies.
 
 section Inducted Deductin
 
-Inducted Deductin is a warpable boring thing. printed name is "Inducted Deductin[']". initial appearance is "(bug)". description is "Inducted Deductin['] has [number of deduction-pages in words] pages of brief examples. You can read them by saying X X1, X X2, X X3, and X X4. Explicitly READing them goes back to the start.[paragraph break]You can also [b]DROP[r] it if you feel you don't need it.". bore-check of Inducted Deductin is bore-deduct rule.
+Inducted Deductin is a warpable boring thing. printed name is "Inducted Deductin[']". initial appearance is "(bug)". description is "Inducted Deductin['] has [number of deduction-pages in words] pages of brief examples. You can read them by saying X X1, X X2, X X3, X X4 and X X5. If you READ a page explicitly, you start over.[paragraph break]You can also [b]DROP[r] it if you feel you don't need it.". bore-check of Inducted Deductin is bore-deduct rule.
 
 a deduction-page is a kind of thing. it is usually boring and cluey. bore-text of a deduction-page is usually "You can really only examine or read the Inducted Deductin['] pages to see their sample logic.". a deduction-page has a number called deduct-part. a deduction-page has a table name called logic-table. bore-check of a deduction-page is usually bore-deduct rule. description of a deduction-page is usually "BUG.".
 
@@ -9278,13 +9278,13 @@ this is the bore-deduct rule:
 carry out examining a deduction-page:
 	now noun is read-yet;
 	if deduct-part of noun is 0:
-		say "You read the first logical step. It looks like there are [logic-steps of noun in words] total.[line break]";
+		say "You read the first logical step. It looks like there are [logic-steps of noun in words] total.[paragraph break]";
 	increment deduct-part of noun;
 	if deduct-part of noun > logic-steps of noun:
-		say "You go back to the top and begin rereading.[line break]";
+		say "You go back to the top and begin rereading.[paragraph break]";
 		now deduct-part of noun is 1;
 	choose row (deduct-part of noun) in logic-table of noun;
-	say "[cheat-clue entry][line break]";
+	say "([deduct-part of noun]/[number of rows in logic-table of noun]) [cheat-clue entry][line break]";
 	if deduct-part of noun is logic-steps of noun, say "[line break]Well, that's the end of that example.";
 	the rule succeeds;
 
@@ -9301,7 +9301,7 @@ table of X1 reasoning
 cheat-clue
 "Example 1 gives the example of [b]APES[r]['] [b]APSE[r] and RYY?."
 "The fourth letter of [b]APES[r]/[b]APSE[r] must be E or S, but it also must be a consonant, or the final word would have three consonants and one vowel. So it is S."
-"Knowing slot 4 is S, then slot 1 is P."
+"Knowing slot 4 is S means slot 1, a consonant, is P."
 "But then since slot 3 is yellow, it can't be E. That gives us [b]PEAS[r]."
 
 X2 is a deduction-page. it is part of Inducted Deductin. logic-table of X2 is table of X2 reasoning.
@@ -9310,7 +9310,7 @@ table of X2 reasoning
 cheat-clue
 "Example 2 is [b]MERE MOOR[r] scanning to R?R?. It notes the two words aren't anagrams, but combined, they anagram [b]EMOR EMOR[r], twice."
 "So the final word is an anagram of [b]EMOR[r]. Figuring the 'right' anagram from two different words that don't anagram each other requires a bit of counting. So what is the original word?"
-"You may note both slots 2 and 4 must be vowels, so the final word has two vowels and two consonants."
+"Since slots 1 and 3 are consonants, and the final word has two vowels and two consonants, so both slots 2 and 4 must be vowels."
 "Slot 2 is ambiguous as it can be E or O, but slot 4 has to be E. So slot 2 is O."
 "Slot 1 can't be M, so it is R. [b]ROME[r]. Note that this is a proper name, which should not show up except for optional points."
 
@@ -9322,20 +9322,31 @@ cheat-clue
 "Each ambiguous reading has two possibilities, giving [b]SC[r]/[b]AE[r]/[b]CD[r]/[b]RA[r]/[b]ER[r]/[b]DS[r]."
 "Here is where there is relatively focused guesswork. S, C and D form a loop, as do A, R and E. There are four possibilities total."
 "[b]SACRED[r], [b]SECARD[r]. [b]CADRES[r], [b]CEDRAS[r]."
-"Since [b]SACRED[r] is an original word, it can't work, but [b]CADRES[r] does."
+"Since [b]SACRED[r] is part of the original phrase, you can eliminate it. Two of the possibilities are, in fact, proper names, but [b]CADRES[r] is the only one that's a word."
 
 X4 is a deduction-page. it is part of Inducted Deductin. logic-table of X4 is table of X4 reasoning.
 
 table of X4 reasoning
 cheat-clue
-"Example 4 is an [b]ESPRIT STRIPE[r]. The clue is ?R??R?."
-"Believe it or not, nearly everything falls into place quickly here."
+"Example 4 is of a three-word thing object called a [b]LOTS-O-LOOTS STOOL[r]. In this case, the three groupings of five letters may make question marks more ambiguous, but non-question marks may be clearer."
+"If the reading you get is R??R?, you may be discouraged to see slot 5 can be O, S and L. Slot 2 and 3 can be O or T, making slot 5 a consonant, but since there are two O's, you could have OO to make slot 5 a vowel."
+"However, you may notice slot 1 is forced to be T, since it's a consonant and not L or S."
+"Similarly, slot 4 must be L."
+"That leaves OO for slots 2 and 3, and slot 5 is S. [b]TOOLS[r] is the answer."
+"This case is here to remind you that sometimes question-marked clues will lead the way, but other times, solid colors on the settler will. Especially for longer words, it's worth writing your logic out."
+
+X5 is a deduction-page. it is part of Inducted Deductin. logic-table of X5 is table of X5 reasoning.
+
+table of X5 reasoning
+cheat-clue
+"Example 5 is an [b]ESPRIT STRIPE[r]. The clue is ?R??R?."
+"Believe it or not, things falls into place quickly if you use some logic-puzzle tricks."
 "The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T."
-"Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T)." [bold-ok]
-"That makes a total of four, and you can guess if you want from sprite, eprist, erpist, and srpite."
-"But you also may be aided by red writing that indicates all letters are wrong. In this case, [b]PRIEST[r] written on the stripe would help you eliminate three options."
+"The fourth letter is the only one that doesn't eliminate I. Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T)." [bold-ok]
+"That makes a total of four, and you can probably guess which of [b]SPRITE[r], [b]EPRIST[r], [b]ERPIST[r], and [b]SRPITE[r] is an actual word."
+"But you also may be aided by red writing that indicates all letters are wrong. In this case, if [b]PRIEST[r] were written on the stripe in red, it would help you eliminate three options."
 "Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: [b]SPRITE[r]. One more note, though."
-"At some point, strict logic isn't quite enough. Common sense may eliminate the last few answers, or for longer words, you may need legitimate guesswork."
+"At some point, though, strict logic isn't quite enough. Common sense may eliminate answers with too many consonants in a row, and certain combinations of letters can be removed. It's also possible to use trial-and-error zebra-puzzle logic on many longer words."
 
 chapter plaster psalter
 
