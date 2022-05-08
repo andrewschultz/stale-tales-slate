@@ -3286,7 +3286,7 @@ to decide whether (tn - a table name) is hash-found:
 					else:
 						now print-this-clue is true;
 			if print-this-clue is true:
-				say "[this-clue entry][line break]";
+				say "[this-clue entry][line break][note-good-guesses]";
 				if read-slider-after is true:
 					if cmdhash is hashval entry:
 						match-process the player's command and the this-cmd entry;

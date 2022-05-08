@@ -390,23 +390,6 @@ cur-ceil is a number that varies. cur-ceil is usually 3.
 firstword is a number that varies. [key2]
 fullcmd is a number that varies. [key]
 
-good-guesses-noted is a truth state that varies.
-
-great-guesses-noted is a truth state that varies.
-
-to say note-good-guesses:
-	if good-guesses-noted is true, continue the action;
-	say "[line break]";
-	ital-say "this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.";
-	now good-guesses-noted is true;
-
-to say note-great-guesses:
-	if great-guesses-noted is true, continue the action;
-	say "[paragraph break]";
-	ital-say "you found a great guess, but such a change wouldn't push the story forward. Still, if you find one, the responses are meant to either be amusing or provide a small clue.";
-	say "[run paragraph on]";
-	now great-guesses-noted is true;
-
 to decide whether (nt - a table name) is hash-found:
 	repeat through nt:
 		if firstword is the hashval entry or fullcmd is the hashval entry:
