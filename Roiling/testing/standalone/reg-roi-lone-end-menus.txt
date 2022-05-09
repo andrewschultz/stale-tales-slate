@@ -4,8 +4,9 @@
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
 
-* end-menus-bad-death
+* _end-menus-bad-death
 
 # negative testing here
 >gonear seaside
@@ -49,7 +50,7 @@ Please give one of the answers above.
 >seed
 Please give one of the answers above.
 
-* end-menus-otters
+* _end-menus-otters
 
 # this tests fixed commands that should be seen everywhere. LN and such are not tested.
 
@@ -292,7 +293,7 @@ You will see one pickup line from pod 5 at random: blabbing maritally, speaking 
 You will see one pickup line from pod 6 at random: continuing to stare deeply, blabbing about drywalling, behaving emotionally and discoursing creatively.
 You will see one pickup line from pod 7 at random: redisplaying their "greatness" and wearing clothes shining iridescently.
 
-* end-menus-others
+* _end-menus-others
 
 >emy
 >endgame
@@ -335,7 +336,7 @@ Reprieval Prevailer: Win Store H
 Here are the pods for Rodney's prosaic picaros:
 Here are the pods for the parleys splayer players' pickup lines:
 
-* end-menus-demo-dome
+* _end-menus-demo-dome
 
 >au 2
 >demo dome
@@ -364,3 +365,152 @@ Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser: Visit Dem
 >seed
 Here are the pods for Rodney's prosaic picaros:
 Here are the pods for the parleys splayer players' pickup lines:
+
+* brute-force-menu-text
+
+>tp
+Finished dumping table of empty command rejects.
+>tp
+Finished dumping table of undo rejects.
+>tp
+Finished dumping table of undo allows.
+>tp
+Finished dumping table of noage.
+>tp
+Finished dumping table of yessage.
+>tp
+Finished dumping table of singing rejects.
+>tp
+Finished dumping table of wait responses.
+>tp
+Finished dumping table of cussing rejects.
+>tp
+Finished dumping table of nonviolence messages.
+>tp
+Finished dumping table of sleep rejects.
+>tp
+Finished dumping table of death messages.
+>tp
+Finished dumping table of help companies.
+>tp
+Finished dumping table of elmo emo.
+>tp
+Finished dumping table of sports chatter.
+>tp
+Finished dumping table of biopics.
+>tp
+Finished dumping table of bad rappers.
+>tp
+Finished dumping table of lame computer games.
+>tp
+Finished dumping table of comedians.
+>tp
+Finished dumping table of laughhouses.
+>tp
+Finished dumping table of lame talk shows.
+>tp
+Finished dumping table of lame movies.
+>tp
+Finished dumping table of lame tv shows.
+>tp
+Finished dumping table of oldies singers.
+>tp
+Finished dumping table of lousy hit songs.
+>tp
+Finished dumping table of random books.
+>tp
+Finished dumping table of ad slogans.
+>tp
+Finished dumping table of mob chants.
+>tp
+Finished dumping table of idiotic babbler points.
+>tp
+Finished dumping table of overdone movies.
+>tp
+Finished dumping table of sicko movies.
+>tp
+Finished dumping table of store c competitors.
+>tp
+Finished dumping table of store c ads.
+>tp
+Finished dumping table of tokers nonsense.
+>tp
+Finished dumping table of moralizers.
+>tp
+Finished dumping table of mantle laments.
+>tp
+Finished dumping table of horbert musings.
+>tp
+Finished dumping table of horbert farewells.
+>tp
+Finished dumping table of missing deli foods.
+>tp
+Finished dumping table of iffy advice.
+>tp
+Finished dumping table of posse bosses.
+>tp
+Finished dumping table of prestigious bums.
+>tp
+Finished dumping table of DIVORCES articles.
+>tp
+Finished dumping table of real estate ads.
+>tp
+Finished dumping table of non-skeds.
+>tp
+Finished dumping table of sked items.
+>tp
+Finished dumping table of self-help bestsellers.
+>tp
+Finished dumping table of songs you could write.
+>tp
+Finished dumping table of gritty dialogue.
+>tp
+Finished dumping table of posh dialogue.
+>tp
+Finished dumping table of Leo-Rand chitchat.
+>tp
+Finished dumping table of Leo-Rand idols.
+>tp
+Finished dumping table of catechism pages.
+>tp
+Finished dumping table of research topics.
+>tp
+Finished dumping table of smartypants.
+>tp
+Finished dumping table of bedding brands.
+>tp
+Finished dumping table of bar dialogue.
+>tp
+Finished dumping table of competing bars.
+>tp
+Finished dumping table of Casper mumbles.
+>tp
+Finished dumping table of fish fries.
+>tp
+Finished dumping table of unpopular girls.
+>tp
+Finished dumping table of tuna gossip.
+>tp
+Finished dumping table of aunt tuna chatter.
+>tp
+Finished dumping table of theses.
+>tp
+Finished dumping table of rodney bluster.
+>tp
+Finished dumping table of gizmo parts.
+>tp
+Finished dumping table of ideas aides squabbles.
+>tp
+Finished dumping table of Elvira battle cries.
+>tp
+Finished dumping table of Elvira machines.
+>tp
+Finished dumping table of Elvira taunts.
+>tp
+Finished dumping table of animal friends.
+>tp
+Finished dumping table of political slogans.
+>tp
+Finished dumping table of selly yells.
+>tp
+Finished dumping table of three way anagrams.

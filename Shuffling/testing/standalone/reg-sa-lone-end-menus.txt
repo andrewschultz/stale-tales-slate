@@ -4,6 +4,7 @@
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
 
 * end-menu-death
 
@@ -155,3 +156,25 @@ solider soldier: one of Stores F/I/M solved yet
 a mature amateur: two of Stores F/I/M solved yet
 new hero now here: three of Stores F/I/M solved yet
 a smart gamin' anagrammist: win the game
+
+* brute-force-menu-text
+
+>tp
+Finished dumping table of job searcher names.
+>tp
+Finished dumping table of evil locations.
+>tp
+Finished dumping table of poem codas.
+>tp
+Finished dumping table of garrison chants.
+>tp
+Finished dumping table of bastion dialogue.
+>tp
+Finished dumping table of psas.
+>tp
+Finished dumping table of nerd natter.
+>tp
+Finished dumping table of riot slogans.
+>tp
+Finished dumping table of red bull taunts.
+
