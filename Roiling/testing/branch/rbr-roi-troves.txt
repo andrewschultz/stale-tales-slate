@@ -35,6 +35,7 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
 
 * trove-thru
 

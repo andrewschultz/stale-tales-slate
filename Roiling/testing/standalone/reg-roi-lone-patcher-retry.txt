@@ -7,9 +7,9 @@
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
 
-
-* to-strip
+* _to-strip
 
 >au 2
 >purloin settler
@@ -20,7 +20,7 @@
 >staple departure
 >in
 
-* cheat-routes
+* _cheat-routes
 
 >gonear sonancy canyons
 >between
@@ -28,23 +28,23 @@
 >beyond
 Strip of Profits
 
-* cheat-troves
+* _cheat-troves
 
 >gonear upscale capsule
->ignore
+>deserve
 >last
 >ramble
 >recant
 Strip of Profits
 
-* cheat-presto
+* _cheat-presto
 
 >gonear hacks' shack
 >purloin usb
 >bus
 Strip of Profits
 
-* cheat-oyster
+* _cheat-oyster
 
 >gonear tenfold
 >prepay
@@ -53,7 +53,7 @@ Strip of Profits
 >redial
 Strip of Profits
 
-* cheat-towers
+* _cheat-towers
 
 >gonear mislit limits
 >spectacular
