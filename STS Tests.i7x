@@ -540,6 +540,39 @@ check montying:
 	if the topic understood matches "hint" or the topic understood matches "hints":
 		now first-hint-check is true;
 
+chapter hreging (hint through a region)
+
+to hintthru (th - a thing):
+	try objhinting th;
+	let count be 1;
+	if plus-after is false, continue the action;
+	while plus-after is true and count < 12:
+		try objhinting th;
+		increment count;
+	if count is 12:
+		say "WARNING: we have a nonterminating sequence of clues for [the th].";
+	if minus-after is false:
+		say "WARNNG: we never got to a minus in the hints for [the th].";
+
+hreging is an action out of world.
+
+understand the command "hreg" as something new.
+
+understand "hreg" as hreging.
+
+to brute-force-hints (tn - a table name):
+	say "We are brute-forcing our way through the hints for [tn].";
+	repeat through tn:
+		say "Hinting [hint-entry entry].";
+		hintthru hint-entry entry;
+
+carry out hreging:
+	now in-hint-testing is true;
+	brute-force-hints hintobjstable of mrlp;
+	if mrlp is hub-region, brute-force-hints table of general hintobjs; [ not orig-region as the TS command gives us some goodies worth hinting ]
+	now in-hint-testing is false;
+	the rule succeeds;
+
 volume tabpunc = table punctuation
 
 chapter tabpuncing

@@ -759,9 +759,6 @@ to realize (th - a thing): now th is realized;
 
 cur-item is a thing that varies.
 
-to say that-those-is-are of (x - a thing):
-	say "[if x is plural-named]Those are[else]That is[end if]"
-
 this is the first-time-hint-check rule:
 	if first-hint-check is true, continue the action;
 	now first-hint-check is true;
@@ -779,15 +776,8 @@ carry out objhinting:
 	abide by the first-time-hint-check rule;
 	now ever-obj-hinted is true;
 	now cur-item is noun;
-	if noun is location, all-say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues, and [this-game] will pick up something worth lookng at." instead;
-	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
-	if noun is moot, all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
-	if noun is not a backdrop and noun is not scenery:
-		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
-	if noun is bounding, all-say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
-	if noun is realized, all-say "[that-those-is-are of noun] no longer part of a puzzle." instead;
-	if noun is amusing, all-say "[that-those-is-are of noun] in there for general silliness." instead;
-	if noun is useless, all-say "[that-those-is-are of noun] in there for local flavor and scenery." instead;
+	abide by the reject unknowable objects if not testing rule;
+	abide by the generic hint state rejects rule;
 	if there is hint-entry of noun in hintobjstable of mrlp:
 		choose row with hint-entry of noun in hintobjstable of mrlp;
 		if there is a parallel-entry entry, try objhinting parallel-entry entry instead;

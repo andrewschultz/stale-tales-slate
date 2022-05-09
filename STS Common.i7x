@@ -10,6 +10,14 @@ to say now-once of (ts - a truth state): say "[if ts is true]now[else]once[end i
 
 to say now-once-num of (nu - a number): say "[if nu > 0]now[else]once[end if]"
 
+to say past-tense of (th - a thing): say "[if noun is plural-named]They've[else if noun is a male person]He's[else if noun is a female person]She's[else]That's[end if]".
+
+to say that-those-is-are of (x - a thing):
+	if x is a person:
+		say "[if x is plural-named]They are[else if x is male]He is[else if x is female]She is[else]It is[end if]";
+	else:
+		say "[if x is plural-named]Those are[else]That is[end if]";
+
 part game-dependent variables and super-stubs
 
 orig-region is a region that varies. [ordeal loader/ (means manse or ordeal reload)]
@@ -589,6 +597,10 @@ minus-noted is a truth state that varies.
 
 minus-after is a truth state that varies.
 
+check objhinting:
+	now plus-after is false;
+	now minus-after is false;
+
 to say plus:
 	say "[run paragraph on] (+)";
 	skip upcoming rulebook break;
@@ -610,6 +622,21 @@ report objhinting:
 		now plus-noted is true;
 
 prevent-thruhint-flag is a truth state that varies. [a test variable for ignoring random hints that fall through]
+
+this is the reject unknowable objects if not testing rule:
+	if in-hint-testing is true, continue the action;
+	if location of noun is nothing and noun is not a backdrop, all-say "You probably shouldn't know about [the noun], yet. And if you do, try asking about objects you can see." instead;
+	if noun is not a backdrop and noun is not scenery:
+		if noun is off-stage or mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
+	if noun is moot, all-say "[noun]: [past-tense of noun] been dealt with. I'm pretty sure." instead;
+
+this is the generic hint state rejects rule:
+	if noun is location, all-say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues, and [this-game] will pick up something worth lookng at." instead;
+	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type [b]HINT[r] for the current puzzle to look at." instead;
+	if noun is bounding, all-say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
+	if noun is realized, all-say "[that-those-is-are of noun] no longer part of a puzzle." instead;
+	if noun is amusing, all-say "[that-those-is-are of noun] in there for general silliness." instead;
+	if noun is useless, all-say "[that-those-is-are of noun] in there for local flavor and scenery." instead;
 
 chapter ptfing - not for release
 
@@ -779,7 +806,9 @@ carry out averseing:
 	now autosave is false;
 	the rule succeeds;
 
-volume debug variables that must be in common file since they appear in release functions
+volume debug variables that must be in common file / release code since they appear in release functions and cannot be moved
+
+in-hint-testing is a truth state that varies.
 
 end-menu-testing is a truth state that varies.
 
