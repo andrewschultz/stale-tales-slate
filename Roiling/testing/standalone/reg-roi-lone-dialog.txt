@@ -792,7 +792,7 @@ DEBUG INFO: current quip = trips-quip.
 DEBUG INFO: current quip = artsy-quip.
 "Where do I look? Is there a bare min--uh, most efficient way through?"
 
-"Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later.
+"Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
 
 [1] Poss. Clue? Closeups?
 [2] Jumbo, um, job. Six of 'em? Some fix!
@@ -964,7 +964,8 @@ DEBUG INFO: current quip = gre-north-quip.
 "Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them."
 
 >5
-You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list the options.]
+You murmur "Umm...urr."
+[Valid responses range from 1-3. Type REPEAT to re-list the options.]
 
 #ttc-table-of-gretta-comments-gre-south-quip
 >1
@@ -1023,6 +1024,8 @@ DEBUG INFO: current quip = gre-go-quip.
 >n
 >w
 >atom
+by one point
+>open
 by one point
 >w
 >aside

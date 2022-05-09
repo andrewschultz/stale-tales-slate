@@ -493,7 +493,18 @@ Store H looks totally different for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a decent omen.
 #ttc-table-of-stores-readables-store-h
 >read store h
-"All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth"
+The warning in bright red says:
+All who enter here risk exclusion. Closed for having a truly frightening red HOSTER. There's more.
+#ttc-table-of-stores-readables-store-h
+>read store h
+The warning in bright red says:
+All who enter here risk exclusion. Closed for having a truly frightening red HOSTER. Trespassers will be, er, shot
+It's signed in red, too.
+#ttc-table-of-stores-readables-store-h
+>read store h
+The warning in bright red says:
+All who enter here risk exclusion. Closed for having a truly frightening red HOSTER. Trespassers will be, er, shot
+E. S. Roth.
 
 >others
 Your score has just gone up by one point

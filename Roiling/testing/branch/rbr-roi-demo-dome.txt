@@ -53,6 +53,8 @@ Okay, why not look around a bit more.
 #testcase-exits-peek-keep
 >exits
 There are six unblocked exits: north, south, east, west, down and inside.
+\\
+>undo
 
 @max
 >undo
@@ -329,6 +331,8 @@ Hows Show
 >out
 The only way to exit is south, so let's go that way.
 \\
+>undo
+\\
 #testcase-exits-hows-show
 >exits
 The only way you seem to be able to go is south to Peek Keep.
@@ -489,6 +493,8 @@ Ned's Dens
 #testcase-outside-neds-dens
 >out
 The only way to exit is east, so let's go that way.
+\\
+>undo
 \\
 #testcase-exits-neds-dens
 >exits
@@ -720,7 +726,9 @@ The only way you seem to be able to go is outside to Peek Keep.
 \\
 #testcase-outside-intel-inlet
 
+# don't undo this, because "out" is, in fact, the only way back out of the Intel Inlet
 >out
+!The only way
 
 >e
 
@@ -731,6 +739,8 @@ A welcoming place full of feeling and peace and weird new ideas that it's just g
 #testcase-outside-evoc-cove
 >out
 The only way to exit is west, so let's go that way.
+\\
+>undo
 \\
 #testcase-exits-evoc-cove
 >exits
@@ -993,6 +1003,8 @@ Sparse Spares
 #testcase-outside-sparse-spares
 >out
 The only way to exit is up, so let's go that way.
+\\
+>undo
 \\
 #testcase-exits-sparse-spares
 >exits

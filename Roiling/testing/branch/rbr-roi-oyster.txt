@@ -62,8 +62,7 @@ You can't just sneak past the LOLstr trolls. But there is a way.
 
 @max
 >talk to casper
-#brackets ok
-[You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.]
+(You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.)
 \\
 #ttc-table-of-notepad-entries-die-thou
 >pad die thou

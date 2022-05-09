@@ -253,7 +253,9 @@ I have full creative control over the Passe Apses, and I'm not giving it up.
 >apes
 I have full creative control over the Passe Apses, and I'm not giving it up.
 
+# don't undo this, because "out" is, in fact, the only way back out of the Intel Inlet
 >out
+!The only way
 
 >e
 

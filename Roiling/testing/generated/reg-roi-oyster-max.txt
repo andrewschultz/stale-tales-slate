@@ -15,7 +15,7 @@ Posh Hops Shop
 >posf
 
 >talk to casper
-[You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.]
+(You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.)
 
 #ttc-table-of-notepad-entries-die-thou
 >pad die thou

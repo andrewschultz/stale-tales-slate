@@ -1,6 +1,6 @@
 ###############################
 #
-# reg-roi-rand.txt
+# reg-roi-lone-rand.txt
 #
 # regression test for all the random text
 #
@@ -620,6 +620,7 @@ or (table of gizmo parts)
 >w
 >w
 >atom
+>open
 >w
 
 #ttc-table-of-megachatter-table-of-ideas-aides-squabbles
@@ -710,4 +711,4 @@ Selly yells:
 >gonear sparse spares
 #ttc-table-of-megachatter-table-of-three-way-anagrams
 >x satires
-You see rough notes on (table of three way anagrams)
+You see rough notes: (table of three way anagrams)

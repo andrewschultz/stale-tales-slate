@@ -657,10 +657,10 @@ Nothing happens. Perhaps it's the whole item that's important.
 Nothing happens. Perhaps it's the whole item that's important.
 #ttc-table-of-filed-field-nudges-drupelet
 >drupelet
-No, it's the whole pryer bars.
+Not just the drupelets. The pryer bars in their entirety.
 #ttc-table-of-filed-field-nudges-drupelets
 >drupelets
-No, it's the whole pryer bars
+Not just the drupelets. The pryer bars in their entirety.
 #ttc-table-of-filed-field-nudges-briar
 >brira
 Nothing happens. Perhaps it's the whole item that's important.

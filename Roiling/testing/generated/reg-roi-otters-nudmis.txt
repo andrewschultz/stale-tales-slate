@@ -1187,11 +1187,17 @@ The bales may be blase, but you don't think you'll mind this solution being blas
 The blase bales seem to darken and shake a bit.
 
 #testcase-mistake-roiling-able-ables
->able ables
+>able
+But you already gained your powers back! You're quite able enough as-is.
+
+>ables
 But you already gained your powers back! You're quite able enough as-is.
 
 #testcase-mistake-roiling-beal-beals
->beal beals
+>beal
+The bales can be transformed, but into something less unsightly.
+
+>beals
 The bales can be transformed, but into something less unsightly.
 
 >sable

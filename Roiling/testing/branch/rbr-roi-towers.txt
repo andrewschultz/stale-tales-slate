@@ -1230,6 +1230,11 @@ There are two unblocked exits: south to Topside Deposit and west.
 #ttc-table-of-towers-nowheres-outer-route
 >w
 You get lost in the sway-ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
+#+ttc-table-of-outer-route-nudges-sway
+>swya
+You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful, though there is a bonus point for going in a "wrong" direction.
+\\
+>undo
 >undo
 >undo
 \\
@@ -2723,7 +2728,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >w
-
+\\
 Leveraged Everglade
 
 @hin
@@ -3003,7 +3008,7 @@ Any direction but back south might drive you too far from the palace.
 
 @!minh,mini
 >n
-
+\\
 Danger Garden
 
 @verbs
@@ -3468,9 +3473,10 @@ That's not something you can say, do or see here. For a general list of verbs, t
 #ttc-table-of-outer-route-nudges-roeut
 >roetu
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
-#ttc-table-of-outer-route-nudges-sway
+#+ttc-table-of-outer-route-nudges-sway
 >swya
-You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful
+You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful.
+\\
 #ttc-table-of-outer-route-nudges-camp
 >capm
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!

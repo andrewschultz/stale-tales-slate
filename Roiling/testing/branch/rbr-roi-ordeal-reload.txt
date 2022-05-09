@@ -1053,7 +1053,8 @@ The evac-cave is your way out. It'd be a bad idea to change it.
 No, all the bins.
 #mistake retest for sitar
 >sitar
-Surely a stair is more handy right now.
+Surely a stair is more handy right now than music.
+!What could it
 #ttc-table-of-ordeal-reload-spechelp-ISBN-bins
 >snbi
 The ISBN bins creak slightly.
