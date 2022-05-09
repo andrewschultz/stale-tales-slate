@@ -3271,33 +3271,29 @@ read-slider-after is a truth state that varies.
 to decide whether (tn - a table name) is hash-found:
 	let print-this-clue be false;
 	repeat through tn:
-		if there is a hashval entry:
-			if cmdhash is not 0:
-				if cmdhash is hashval entry or firstwordhash is hashval entry:
-					if there is a this-item entry:
-						if this-item entry is touchable:
-							unless this-item entry is a pickup-line and this-item entry is not playable: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
-								now print-this-clue is true;
-					else if there is a this-rule entry:
-						say "[run paragraph on]";
-						process the this-rule entry;
-						if the rule succeeded:
-							now print-this-clue is true;
-					else:
-						now print-this-clue is true;
-			if print-this-clue is true:
-				say "[this-clue entry][line break][note-good-guesses]";
-				if read-slider-after is true:
-					if cmdhash is hashval entry:
-						match-process the player's command and the this-cmd entry;
-					else:
-						match-process word number 1 in the player's command and the this-cmd entry;
-				now read-slider-after is false;
-				decide yes;
-			if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
-				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that[if concisions are not moot]--though in the future, it does give a bonus point, for a special but odd word[end if].";
-				now doublewarn is true;
-				decide yes;
+		if there is no hashval entry, next;
+		if cmdhash is 0, next;
+		if cmdhash is not hashval entry and firstwordhash is not hashval entry, next;
+		if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
+			say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that[if concisions are not moot]--though in the future, it does give a bonus point, for a special but odd word[end if].";
+			now doublewarn is true;
+			decide yes;
+		if there is a this-item entry:
+			if this-item entry is touchable:
+				if this-item entry is a pickup-line and this-item entry is not playable: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
+					next;
+		else if there is a this-rule entry:
+			say "[run paragraph on]";
+			process the this-rule entry;
+			unless the rule succeeded, next;
+		say "[this-clue entry][line break][note-good-guesses]";
+		if read-slider-after is true:
+			if cmdhash is hashval entry:
+				match-process the player's command and the this-cmd entry;
+			else:
+				match-process word number 1 in the player's command and the this-cmd entry;
+		now read-slider-after is false;
+		decide yes;
 	decide no;
 
 definition: a thing (called ge) is final-flipped:
