@@ -14,7 +14,7 @@
 >others
 
 >in
-Rustic Citrus
+/^Rustic Citrus
 
 >c
 >z
@@ -107,7 +107,7 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 You have 12 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
-Swell Wells
+/^Swell Wells
 
 >apricot
 Your score has just gone up by one point.
@@ -161,7 +161,7 @@ You fiddle with the coin you got
 >n
 
 >w
-Filed Field
+/^Filed Field
 
 >cranberries
 Your score has just gone up by one point.
@@ -196,7 +196,7 @@ You have 23 of 46 total points for the post-Elvira Others region, though you onl
 >n
 
 >d
-Scape Space
+/^Scape Space
 
 >give dollar
 !Your score has just gone up by one point.
@@ -221,7 +221,7 @@ You can't get the maximum score, since you used the arugula
 
 >u
 >n
-Gates Stage
+/^Gates Stage
 
 >n
 PERP

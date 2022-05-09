@@ -16,7 +16,7 @@
 
 >presto
 >enter tornado
-Grey Gyre
+/^Grey Gyre
 
 #pre-plebe-bleep rule
 >bleep
@@ -34,7 +34,7 @@ You're not messing around! You see the best way to destroy the maze, and you're 
 
 >umph
 Your score has just gone up by one point
-Austerer Treasure
+/^Austerer Treasure
 
 #ttc-table-of-region-initial-scoring-commentary-presto-1
 It feels cathartic, using a non-dirty exclamation to get going.
@@ -55,7 +55,7 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >e
 
 >s
-Char Arch
+/^Char Arch
 
 #pre-yak-keyboard rule
 >keyboard
@@ -88,7 +88,7 @@ Your score has just gone up by one point
 Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >e
-Marines Seminar Remains
+/^Marines Seminar Remains
 
 >bingo
 #pre-boing-bingo rule
@@ -142,7 +142,7 @@ You can shout THERE once you have the force to win the fight in the ether.
 >s
 
 >s
-Dirge Ridge
+/^Dirge Ridge
 
 >ole
 by one point
@@ -219,14 +219,14 @@ Your score has just gone up by one point
 Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
-Saps' Pass
+/^Saps' Pass
 
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
 >gosh
 Your score has just gone up by one point
-Phat Path
+/^Phat Path
 >score
 Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 #pre-hogs-not-keys rule
@@ -239,7 +239,7 @@ SYKE was another way around the hogs to get the keys.
 >syke
 Your score has just gone up by one point
 
-Phat Path
+/^Phat Path
 
 >what
 Your score has just gone up by one point
@@ -329,7 +329,7 @@ by one point
 Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >n
-Hacks' Shack
+/^Hacks' Shack
 
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
@@ -620,7 +620,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 >bus
 Your score has just gone up by one point
 Drive time
-Strip of Profits
+/^Strip of Profits
 >missalt
 You could also have made the USB into a SUB.
 >undo
@@ -630,7 +630,7 @@ You could also have made the USB into a SUB.
 Your score has just gone up by one point
 Diver time
 
-Strip of Profits
+/^Strip of Profits
 
 >missalt
 You could also have made the USB into a BUS.

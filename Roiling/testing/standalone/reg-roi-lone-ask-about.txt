@@ -131,7 +131,7 @@ You don't want to go off on any tangents, here.
 >20
 [Valid responses range from 1-3. Type REPEAT to re-list the options.]
 >3
-Carven Cavern
+/^Carven Cavern
 
 #ttc-table-of-ordeal-reload-matched-item-responses-respect-specter-elvira
 >ask respect specter about elvira
@@ -157,7 +157,7 @@ Your score has just gone up by one point
 
 >staple departure
 >in
-Strip of Profits
+/^Strip of Profits
 
 * _stores
 
@@ -354,7 +354,7 @@ Precise recipes
 >past
 Your score has just gone up by one point
 
-Idle Deli
+/^Idle Deli
 
 >despite
 Your score has just gone up by one point

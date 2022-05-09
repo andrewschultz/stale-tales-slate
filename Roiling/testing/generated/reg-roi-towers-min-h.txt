@@ -16,7 +16,7 @@
 >seed 1
 >enter turrets
 
-Loftier Trefoil
+/^Loftier Trefoil
 
 >z
 
@@ -38,7 +38,7 @@ Score in a scenario: 3 out of 57 total points in the current region, Towers. Low
 >yonder
 Your score has just gone up by one point
 
-Topside Deposit
+/^Topside Deposit
 
 >score
 Score in a scenario: 4 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 53.
@@ -52,7 +52,7 @@ Score in a scenario: 5 out of 57 total points in the current region, Towers. Low
 >get all
 
 >n
-Scope Copse
+/^Scope Copse
 
 >eat tarts
 You figure you'd better heat the pack of start tarts up in the toaster first. So you do. Mmm, not bad.
@@ -84,7 +84,7 @@ Your score has just gone up by one point
 Score in a scenario: 7 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >n
 
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 >semipro
 Your score has just gone up by one point
 >score
@@ -97,7 +97,7 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 #notmax
 >n
 
-Anemic Cinema
+/^Anemic Cinema
 
 >married
 Your score has just gone up by one point
@@ -106,13 +106,13 @@ Score in a scenario: 10 out of 57 total points in the current region, Towers. Lo
 #notmax
 >n
 
-Shaven Havens
+/^Shaven Havens
 
 >s
 >s
 >e
 
-Treading Gradient
+/^Treading Gradient
 
 >sewed
 Your score has just gone up by one point
@@ -126,7 +126,7 @@ Score in a scenario: 12 out of 57 total points in the current region, Towers. Lo
 #notmax
 >e
 
-Artist Traits Strait
+/^Artist Traits Strait
 
 >marginal
 Your score has just gone up by one point
@@ -140,7 +140,7 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 #notmax
 >n
 
-Actionless Coastlines
+/^Actionless Coastlines
 >hastiest
 Your score has just gone up by one point
 >score
@@ -149,7 +149,7 @@ Score in a scenario: 15 out of 57 total points in the current region, Towers. Lo
 >s
 >s
 
-Danger Garden
+/^Danger Garden
 
 >broken
 Your score has just gone up by one point
@@ -165,7 +165,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 >e
 
-Obscurest Subsector
+/^Obscurest Subsector
 
 >wordy
 Your score has just gone up by one point
@@ -191,7 +191,7 @@ Score in a scenario: 19 out of 57 total points in the current region, Towers. Lo
 >gt copse
 >w
 
-Outer Route
+/^Outer Route
 
 >revised
 
@@ -233,7 +233,7 @@ by one point
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
-Mislit Limits
+/^Mislit Limits
 
 >score
 Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 32.
@@ -247,7 +247,7 @@ Your score has just gone up by one point
 
 This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything you can?
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Towers (26/57)

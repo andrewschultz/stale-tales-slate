@@ -69,7 +69,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
 >in
-Farming Framing
+/^Farming Framing
 
 >stair
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
@@ -79,7 +79,7 @@ Score in a scenario: 8 out of 15 total points in the current region, Ordeal Relo
 
 >in
 >u
-Highest Heights
+/^Highest Heights
 
 >ramp
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
@@ -88,7 +88,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 >snib
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
@@ -115,7 +115,7 @@ Score in a scenario: 11 out of 15 total points in the current region, Ordeal Rel
 Elmo checks you for a second. "You sure you know how to use the settler?"
 You nod. "No clues counsel."
 
-Carven Cavern
+/^Carven Cavern
 
 >staple
 Your score has just gone up by one point
@@ -144,4 +144,4 @@ by one point
 Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 >in
-Strip of Profits
+/^Strip of Profits

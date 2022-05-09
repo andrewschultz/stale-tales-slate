@@ -22,7 +22,7 @@ The trade tread doesn't need to be changed. What's behind it, does.
 
 >in
 
-Undesired Underside
+/^Undesired Underside
 
 #testcase-mistake-shuffling-singers
 >singers
@@ -170,7 +170,7 @@ You can't change the hotel, but you could have another look around.
 
 >n
 
-Roarings Garrison
+/^Roarings Garrison
 
 #testcase-mistake-shuffling-isonome
 >isonome
@@ -204,7 +204,7 @@ You should probably just go north to look at the condo instead.
 #mostly skipping the garrison right now to get the tomato from the bile libe
 
 >w
-Bile Libe
+/^Bile Libe
 
 #ttc-table-of-bile-libe-nudges-bile
 >ible
@@ -245,7 +245,7 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 
 >s
 >w
-The Ol' Hotel
+/^The Ol' Hotel
 
 #testcase-mistake-shuffling-smatters
 >smatters
@@ -324,7 +324,7 @@ The mattress is in bad enough shape as it is. You got what you needed from it.
 You can't change the hotel, and you got rid of the night thing, anyway.
 
 >n
-Roarings Garrison
+/^Roarings Garrison
 
 #ttc-table-of-roarings-garrison-nudges-library
 >librayr
@@ -393,7 +393,7 @@ You thought you heard electronic beeping from the corn.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
 
 >n
-Obtains/Boastin' Bastion
+/^Obtains/Boastin' Bastion
 
 #ttc-table-of-obtains-boastin-bastion-nudges-boastin
 >boastni
@@ -555,7 +555,7 @@ The mittens are as comfortable as they're going to be.
 The mittens are as comfortable as they're going to be.
 
 >e
-Fo' Real Florae
+/^Fo' Real Florae
 
 #testcase-mistake-shuffling-loafer
 >loafer
@@ -714,7 +714,7 @@ What do you know? It works! The door slides open!
 
 >e
 #notana
-Esoteric Coteries
+/^Esoteric Coteries
 
 >score
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -738,7 +738,7 @@ You don't need to futz further with the friend finder.
 >put card on sensor
 The door is open. So you just walk east instead.
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 
@@ -753,7 +753,7 @@ You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
 >z
 >e
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 #ttc-table-of-esoteric-coteries-nudges-esoteric
 >esoterci
@@ -762,15 +762,6 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 #ttc-table-of-esoteric-coteries-nudges-coterie
 >coterei
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
-
->w
->z
->open metallic door
-
->e
-Esoteric Coteries
-You can also see a lit-up tulip here.
-The signers' ingress slides shut.
 
 #ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
@@ -827,7 +818,7 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 
 "Logical call. I go." You sneak out back west.
 
-Undesired Underside
+/^Undesired Underside
 
 #testcase-mistake-shuffling-odor-rood
 >odor
@@ -852,7 +843,7 @@ You got to the Esoteric Coteries. You don't need any tricks like that.
 You got to the Esoteric Coteries. You don't need any tricks like that.
 
 >s
-Elm Train Terminal
+/^Elm Train Terminal
 
 #ttc-table-of-elm-train-terminal-nudges-cafe
 >caef
@@ -1027,7 +1018,7 @@ You've already made nothing out of something, and instead of reversing that, you
 
 >e
 
-Bassy Abyss
+/^Bassy Abyss
 
 #ttc-table-of-bassy-abyss-nudges-aligns
 >aligsn
@@ -1102,7 +1093,7 @@ The hilt serves a purpose, and besides, there's not much to change it to.
 >attack beast
 #notana
 
-Trips Strip
+/^Trips Strip
 
 >score
 You have scored 18 out of 18 total points for the Metros region.

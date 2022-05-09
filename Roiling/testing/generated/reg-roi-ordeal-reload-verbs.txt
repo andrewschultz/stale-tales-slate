@@ -98,7 +98,7 @@ Score in a scenario: 4 out of 15 total points in the current region, Ordeal Relo
 
 #+testcase-outside-dusty-study
 >exit
-Gallery
+/^Largely All-Grey Gallery
 >undo
 
 #+testcase-exits-dusty-study
@@ -138,7 +138,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
 >in
-Farming Framing
+/^Farming Framing
 
 #testcase-outside-farming-framing
 >exit
@@ -170,7 +170,7 @@ No time for mooching around your means manse. You probably need to take that sec
 
 >in
 >u
-Highest Heights
+/^Highest Heights
 
 #ttc-table-of-ordeal-reload-nowheres-highest-heights
 >n
@@ -212,7 +212,7 @@ Score in a scenario: 9 out of 15 total points in the current region, Ordeal Relo
 You can go back IN to the study, though you don't need to, or you could try going DOWN the ramp.
 
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 #ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
 >w
@@ -263,7 +263,7 @@ You can RECAP to see your options.
 Elmo checks you for a second. "You sure you know how to use the settler?"
 You nod. "No clues counsel."
 
-Carven Cavern
+/^Carven Cavern
 
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
 >e
@@ -350,8 +350,8 @@ You can just go IN the departure to start your adventure in earnest
 
 #+testcase-outside-carven-cavern
 >exit
-Strip of Profits
+/^Strip of Profits
 >undo
 
 >in
-Strip of Profits
+/^Strip of Profits

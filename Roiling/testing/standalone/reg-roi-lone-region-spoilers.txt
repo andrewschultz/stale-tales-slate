@@ -122,7 +122,7 @@ by one point
 by one point
 >beyond
 
-Strip of Profits
+/^Strip of Profits
 
 >retry
 DEBUG INFO: retry failed since we're in Strip of Profits.
@@ -187,7 +187,7 @@ by one point
 >recant
 by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >retry
 DEBUG INFO: retry failed since we're in Strip of Profits.
@@ -258,7 +258,7 @@ This would give you the rank of Rifeness Finesser.
 >retry
 DEBUG INFO: retry failed since we're in Strip of Profits.
 
-Strip of Profits
+/^Strip of Profits
 
 #ttc-table-of-region-skip-commands-destroy
 >destroy
@@ -309,7 +309,7 @@ by one point
 >redial
 by one point
 
-Strip of Profits
+/^Strip of Profits
 
 #ttc-table-of-ranks-6
 >score
@@ -359,7 +359,7 @@ This region focuses on adjectives.
 >spectacular
 by one point
 
-Strip of Profits
+/^Strip of Profits
 
 #ttc-table-of-region-skip-commands-quickly
 >quickly
@@ -424,7 +424,7 @@ by one point
 REPOSED DEPOSER
 
 >rove over
-Strip of Profits
+/^Strip of Profits
 
 >{include} _others_score_check
 
@@ -518,7 +518,7 @@ Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser
 
 * _others_score_check
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 You need to figure how to change and get through store H.

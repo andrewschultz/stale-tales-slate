@@ -33,7 +33,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * ordeal_thru
 
-Busiest Subsite
+/^Busiest Subsite
 
 >opt in
 >poss
@@ -234,7 +234,7 @@ A voice in your head tells you that sort of mental wandering is what got you can
 You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every(wo)man.
 
 >in
-Rested Desert
+/^Rested Desert
 
 @hin
 What can the odor turn into? Your random thoughts are not so random. (+)
@@ -370,7 +370,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 by one point
 }}SCORE++
 >in
-Thickest Thickets
+/^Thickest Thickets
 }}CURMAX--
 >score
 {$SCOS}
@@ -403,7 +403,7 @@ you could've changed the bolt into a BLOT.
 !you could've changed the bulge into a BUGLE.
 \\
 >in
-Thickest Thickets
+/^Thickest Thickets
 }}CURMAX--
 >score
 {$SCOS}
@@ -451,7 +451,7 @@ You won't get anywhere with a long walk, but you should be able to go IN the doo
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
 >open door
-Thickest Thickets
+/^Thickest Thickets
 
 @min
 }}CURMAX--
@@ -569,7 +569,7 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 >deer
 by one point
 >in
-Notices Section
+/^Notices Section
 >misses
 --you could've changed the toga into a GOAT
 !--you could've changed the reed into a DEER
@@ -618,7 +618,7 @@ The goat is happy as-is. No need to go tag a ...
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
 >in
-Notices Section
+/^Notices Section
 
 @hin
 DEBUG: magenta nametag being objhinted.
@@ -1277,7 +1277,7 @@ you could've changed the bulge into a BUGLE.
 --you could've changed the static into ATTICS.
 
 >in
-Trips Strip
+/^Trips Strip
 
 @max
 #ttc-table-of-ranks-4

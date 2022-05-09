@@ -24,7 +24,7 @@ For reasons of continuity
 >undo
 
 >demo dome
-Peek Keep
+/^Peek Keep
 
 #testcase-outside-peek-keep
 >out
@@ -41,15 +41,15 @@ There are six unblocked exits: north, south, east, west, down and inside.
 
 >undo
 >demo mode
-Peek Keep
+/^Peek Keep
 
 >undo
 >dome mode
-Peek Keep
+/^Peek Keep
 
 >undo
 >demo dome mode
-Peek Keep
+/^Peek Keep
 
 #verbcase smell-demo-dome-default
 >smell
@@ -140,7 +140,7 @@ The Spy Dial Display is currently off and out of reach.
 The Spy Dial Display is currently off and out of reach.
 
 >n
-Hows Show
+/^Hows Show
 
 #testcase-outside-hows-show
 >out
@@ -267,7 +267,7 @@ You can only go south here.
 
 >s
 >w
-Ned's Dens
+/^Ned's Dens
 
 #testcase-outside-neds-dens
 >out
@@ -323,7 +323,7 @@ EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), code
 
 >e
 >in
-Intel Inlet
+/^Intel Inlet
 
 >n
 You can only go outside here.
@@ -452,7 +452,7 @@ The only way you seem to be able to go is outside to Peek Keep.
 
 >e
 
-Evoc-Cove
+/^Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
 #testcase-outside-evoc-cove
@@ -467,13 +467,13 @@ The only way you seem to be able to go is west to Peek Keep.
 
 >out
 >e
-Evoc-Cove
+/^Evoc-Cove
 
 >score
 You saw the novella here in Evoc-Cove, but you didn't examine it.
 
 >w
-Peek Keep
+/^Peek Keep
 >score
 You saw the novella in Evoc-Cove, but you didn't examine it.
 
@@ -482,7 +482,7 @@ You saw the novella in Evoc-Cove, but you didn't examine it.
 It's called Venal Ol' Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)--the lowest page you haven't read that looks comprehensible is 1. You can also speed-read with RR.
 
 >w
-Peek Keep
+/^Peek Keep
 >score
 
 You still have more of the novella (examined but not read) to look through.
@@ -688,7 +688,7 @@ in Sparse Spares.
 >undo
 
 >d
-Sparse Spares
+/^Sparse Spares
 
 #testcase-outside-sparse-spares
 >out

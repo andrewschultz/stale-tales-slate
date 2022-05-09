@@ -20,7 +20,7 @@
 Your score has just gone up by one point
 
 >enter resort
-Astral Altars
+/^Astral Altars
 
 #gadget test: tiles to islet
 >rc tiles
@@ -41,7 +41,7 @@ DEBUG INFO: Cert-text: -----.
 >islet
 Your score has just gone up by one point.
 
-Leis Isle
+/^Leis Isle
 
 #gadget test: leis to lies
 >rc leis
@@ -84,7 +84,7 @@ Your score has just gone up by one point.
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >e
-Rived Drive
+/^Rived Drive
 
 #gadget test: poles to slope
 >rc poles
@@ -144,7 +144,7 @@ You currently have 9 out of 15 total points for the Resort region. Your minimum 
 
 >e
 
-Potshot Hotspot
+/^Potshot Hotspot
 
 #ttc-table-of-unmatched-topic-responses-riot
 >ask riot about spore
@@ -228,7 +228,7 @@ Your score has just gone up by one point.
 You currently have 14 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Means Manse
+/^Means Manse
 
 >exist
 #notana

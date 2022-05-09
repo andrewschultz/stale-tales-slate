@@ -103,7 +103,7 @@ You think you're on to something, but you still feel stuck.
 >w
 by one point
 ##############################################################south 2nd, west 1st
-Rest of Forest
+/^Rest of Forest
 #ttc-table-of-rest-of-forest-nudges-rest
 >rets
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -130,7 +130,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >s
 by one point
-Self-ID Fields
+/^Self-ID Fields
 >undo
 >undo
 >undo
@@ -176,7 +176,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >e
 by one point
-Rest of Forest
+/^Rest of Forest
 \\
 #spectest for thorn
 >ornth
@@ -195,7 +195,7 @@ You think you're on to something, but you still feel stuck.
 Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
 >undo
 >n
-Self-ID Fields
+/^Self-ID Fields
 by one point
 >undo
 >undo
@@ -225,7 +225,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >n
 by one point
-Rest of Forest
+/^Rest of Forest
 #renudge for north
 >norht
 Your internal compass feels extra jumbled. You remember the thorn, but there's probably a different challenge here.
@@ -244,7 +244,7 @@ Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
 >e
 by one point
-Self-ID Fields
+/^Self-ID Fields
 >undo
 >undo
 >undo
@@ -273,7 +273,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >s
 by one point
-Rest of Forest
+/^Rest of Forest
 #renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
@@ -292,7 +292,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >w
 by one point
-Self-ID Fields
+/^Self-ID Fields
 >undo
 >undo
 >undo
@@ -347,7 +347,7 @@ DEBUG INFO: Cert-text: ----.
 
 >in
 
-Softer Forest
+/^Softer Forest
 
 @hin
 DEBUG: thorn being objhinted.
@@ -402,7 +402,7 @@ You have no time to play with leaves.
 
 >n
 by one point
-Rest of Forest
+/^Rest of Forest
 }}SCORE++
 >score
 {$SCOS}
@@ -440,7 +440,7 @@ DEBUG INFO: Cert-text: ----.
 
 >e
 by one point
-Self-ID Fields
+/^Self-ID Fields
 }}SCORE++
 
 @hin
@@ -591,7 +591,7 @@ Go east and look around a bit. There're only three rooms to start, and passing C
 >e
 
 >e
-Gnarliest Triangles
+/^Gnarliest Triangles
 
 @hin
 DEBUG: ones being objhinted.
@@ -854,7 +854,7 @@ Shotgun: gnu? Tosh!
 
 >w
 >w
-Flesh Shelf
+/^Flesh Shelf
 
 @hin
 DEBUG: sandwich being objhinted.
@@ -1082,7 +1082,7 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 Your score has just gone up by one point.
 }}SCORE++
 
-Emptiness Sepiments
+/^Emptiness Sepiments
 
 @hin
 DEBUG: liches being objhinted.
@@ -1618,7 +1618,7 @@ DEBUG: maps being objhinted.
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
 >n
-Ghouls' Slough
+/^Ghouls' Slough
 
 @min
 }}CURMIN-=2
@@ -1704,7 +1704,7 @@ UNDO
 {$SFIXMAX}
 
 >x maps
-Frost Forts
+/^Frost Forts
 
 @nud
 #ttc-table-of-frost-forts-nudges-frost
@@ -1866,7 +1866,7 @@ Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now
 Your score has just gone up by one point.
 }}SCORE++
 
-Trips Strip
+/^Trips Strip
 
 @hin
 DEBUG: Store I being objhinted.

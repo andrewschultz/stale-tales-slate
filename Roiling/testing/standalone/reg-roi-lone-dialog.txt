@@ -16,17 +16,17 @@
 
 >1
 >5
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 >3
 
-Disowned Downside
+/^Disowned Downside
 
 >1
 >3
 >3
 
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 
 >7
 No mercy, my crone!
@@ -286,7 +286,6 @@ DEBUG INFO: current quip = dio-quip.
 >undo
 >undo
 
-
 >1
 "Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
 
@@ -332,7 +331,7 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 "The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald."
 
 >3
-Strip of Profits
+/^Strip of Profits
 
 * detail-elmo-chat
 
@@ -886,7 +885,7 @@ DEBUG INFO: current quip = girls-quip.
 
 #ttc-table-of-elmo-comments-bye-elmo-quip
 >1
-Carven Cavern
+/^Carven Cavern
 
 * detail-gretta-and-elvira-chat
 
@@ -1093,7 +1092,7 @@ by one point
 >deeply
 >play whistle
 
-Strip of Profits
+/^Strip of Profits
 
 * detail-gretta-chat-special-case
 

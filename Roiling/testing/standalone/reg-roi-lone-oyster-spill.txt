@@ -18,7 +18,7 @@ Taken.
 #ttc-table-of-oyster-anagrams-stroll
 >l
 DEBUG INFO: Spilling LOLstr trolls.
-Olde Lode
+/^Olde Lode
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to STROLL past the trolls.
 HOW PILLS WERE USED: STROLL past the trolls.
 !NO PILL USE MESSAGE FOR
@@ -95,13 +95,13 @@ A single pill jumps out, tries to burrow in the ground, and pops back in the jar
 DEBUG INFO: Spilling eeks.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEEK the eeks.
 
-Lean Lane
+/^Lean Lane
 
 #ttc-table-of-oyster-anagrams-eat
 >z
 DEBUG INFO: Spilling Tea-at-a-Tee.
 MISSES will show Instead of spilling the pills, you could've tried to TUTOR Tortu the trout, then EAT the Tea-at-a-Tee.
-Anger Range
+/^Anger Range
 
 >undo
 >scam 0
@@ -118,7 +118,7 @@ HOW PILLS WERE USED: TUTOR the trout.
 
 #ttc-table-of-oyster-anagrams-trace
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 DEBUG INFO: Spilling wherever the crate is coming from.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TRACE the crate.
 
@@ -155,7 +155,7 @@ You spill out a pill, cautiously, but nothing happens. Maybe you're done here. Y
 
 #ttc-table-of-oyster-anagrams-bust
 >in
-Shuttle Hutlets
+/^Shuttle Hutlets
 DEBUG INFO: Spilling tubs.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BUST the tubs.
 HOW PILLS WERE USED: BUST the tubs.
@@ -176,7 +176,7 @@ You spill out a pill, cautiously, but nothing happens. Maybe you're done here. Y
 
 #ttc-table-of-oyster-anagrams-warp
 >w
-Sclerous Closures
+/^Sclerous Closures
 DEBUG INFO: Spilling Paw-R-Wrap.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to WARP the Paw-R-Wrap.
 HOW PILLS WERE USED: WARP the Paw-R-Wrap.
@@ -241,7 +241,7 @@ HOW PILLS WERE USED: PATROL the ol' trap.
 !NO PILL USE MESSAGE FO
 
 >in
-End Den
+/^End Den
 You look around, but this probably isn't where you're supposed to be. You can probably go back out. Or maybe you have something that could get you to the right place.
 
 DEBUG INFO: Current oyster hint/spill item = yourself/yourself.

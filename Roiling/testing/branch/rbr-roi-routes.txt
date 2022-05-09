@@ -39,7 +39,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >ts
 >routes
 >enter routes
-Same Mesa
+/^Same Mesa
 
 >score
 {$SCOS}
@@ -333,7 +333,7 @@ Your score has just gone up by one point
 #ttc-table-of-region-initial-scoring-commentary-routes-1
 Well, that was different from the standard directions. But there can't be too many other ways to go.
 
-Cleric Circle
+/^Cleric Circle
 
 @spoi
 The spoon reflects to the list-o-toils.
@@ -618,7 +618,7 @@ You add the information to your pedanto-notepad under FLIPS.
 Your score has just gone up by one point
 }}SCORE++
 
-Idle Deli
+/^Idle Deli
 
 @verbs
 #ttc-table-of-routes-nowheres-idle-deli
@@ -823,7 +823,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-opposite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go OPPOSITE.
 
-Adobe Abode
+/^Adobe Abode
 
 @verbs
 #ttc-table-of-routes-nowheres-adobe-abode
@@ -1359,7 +1359,7 @@ Your score has just gone up by one point
 }}CURMAX--
 DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 
-Harms Marsh
+/^Harms Marsh
 
 @verbs
 #ttc-table-of-routes-nowheres-harms-marsh
@@ -1531,7 +1531,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-amidst
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AMIDST.
 
-Ripe Pier
+/^Ripe Pier
 
 @verbs
 >w
@@ -1615,7 +1615,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-athwart
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
 
-Cripple Clipper
+/^Cripple Clipper
 
 @verbs
 #ttc-table-of-routes-nowheres-cripple-clipper
@@ -1704,7 +1704,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-between
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BETWEEN.
 
-Sonancy Canyons
+/^Sonancy Canyons
 
 @verbs
 #ttc-table-of-routes-nowheres-sonancy-canyons
@@ -1926,7 +1926,7 @@ Your score has just gone up by one point
 @min
 This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything you can?
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Routes ({SCORE}/{MAX})

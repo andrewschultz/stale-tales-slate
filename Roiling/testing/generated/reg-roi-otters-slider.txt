@@ -31,7 +31,7 @@ Your score has just gone up by one point
 Score in a scenario: 1 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >l
-Burnt Brunt
+/^Burnt Brunt
 
 #slider test for rescind
 >csrendi
@@ -52,7 +52,7 @@ Your score has just gone up by one point
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >w
-Disowned Downside
+/^Disowned Downside
 
 >allrand
 #slider test for angrily
@@ -238,7 +238,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 
 >n
-Loop Pool
+/^Loop Pool
 
 #slider test for because
 >ebeusac
@@ -274,7 +274,7 @@ Score in a scenario: 8 out of 37 total points in the current region, Otters. Low
 
 >s
 
-Bran Barn
+/^Bran Barn
 
 >although
 by one point
@@ -325,7 +325,7 @@ Score in a scenario: 13 out of 37 total points in the current region, Otters. Lo
 >e
 
 >n
-Shiner Shrine
+/^Shiner Shrine
 
 #slider test for brutely
 >rbtulye
@@ -350,7 +350,7 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
 >n
-Lamer Realm
+/^Lamer Realm
 
 #slider test for slow
 >lswo
@@ -394,7 +394,7 @@ Your score has just gone up by one point
 Score in a scenario: 19 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
 >l
-Blest Belts
+/^Blest Belts
 
 >garbed
 Your score has just gone up by one point
@@ -406,7 +406,7 @@ Score in a scenario: 20 out of 37 total points in the current region, Otters. Lo
 >s
 >s
 
-Clarthead Cathedral
+/^Clarthead Cathedral
 
 #slider test for loathingly
 >ollhtniyag
@@ -432,7 +432,7 @@ They find another place where rioters roister.
 Score in a scenario: 22 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >s
-Perverse Preserve
+/^Perverse Preserve
 
 >parrot
 Your score has just gone up by one point
@@ -486,7 +486,7 @@ Your score has just gone up by one point
 Score in a scenario: 26 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >l
-Uprates Pasture
+/^Uprates Pasture
 
 >snipe
 Your score has just gone up by one point
@@ -523,7 +523,7 @@ by one point
 Score in a scenario: 30 out of 37 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 37.
 
 >w
-Reclusion Inclosure
+/^Reclusion Inclosure
 
 #slider test for aside
 >sadei
@@ -568,7 +568,7 @@ by one point
 
 #this is how we get rid of Elvira
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"

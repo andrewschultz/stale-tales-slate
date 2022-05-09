@@ -11,7 +11,8 @@
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 >score
@@ -78,7 +79,7 @@ Perhaps you should've played it cool and fled, instead.
 >stroll
 by one point
 
-Olde Lode
+/^Olde Lode
 
 >thisalt
 --You could have also REMAPped the perma-amper to break the jukebox.
@@ -105,7 +106,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 >score
 Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -124,7 +125,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >boast
 Your score has just gone up by one point
 
-Fighter Freight
+/^Fighter Freight
 
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -136,7 +137,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >leap
 Your score has just gone up by one point
 
-Anger Range
+/^Anger Range
 
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -162,7 +163,7 @@ by one point
 Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 #slider test for seek
 >eske
@@ -185,7 +186,7 @@ Score in a scenario: 11 out of 44 total points in the current region, Oyster. Lo
 >seek
 Your score has just gone up by one point
 
-Lean Lane
+/^Lean Lane
 
 >score
 Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
@@ -233,7 +234,7 @@ Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lo
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 #slider test for splain
 >psalni
@@ -294,7 +295,7 @@ Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 #slider test for bust
 >ubts
@@ -355,7 +356,7 @@ Score in a scenario: 27 out of 44 total points in the current region, Oyster. Lo
 >s
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 #slider test for warp
 >awpr
@@ -393,10 +394,10 @@ Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 #slider test for bury
 >ubyr
@@ -459,7 +460,7 @@ Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 #slider test for prepay
 >rppeya
@@ -483,7 +484,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >trample
 
-Plasm Lamps
+/^Plasm Lamps
 
 >score
 Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
@@ -547,7 +548,7 @@ Score in a scenario: 43 out of 44 total points in the current region, Oyster. Th
 >redial
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Oyster (44/44)

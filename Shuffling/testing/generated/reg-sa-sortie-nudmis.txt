@@ -24,7 +24,7 @@ The posted depots doen't need to be changed. What's behind them, does.
 
 >in
 
-Trap Part
+/^Trap Part
 
 #+testcase-mistake-shuffling-turn-text
 >turn zozimus
@@ -91,7 +91,7 @@ You don't want to go back to how the Trap Part was.
 You don't need to deal with the dial, now.
 
 >n
-The Nick
+/^The Nick
 
 #ttc-table-of-readables-great-grate
 >read great grate
@@ -125,7 +125,7 @@ You might rather thin-nen to slip through the bars, but you can't.
 >kitchen
 by one point
 
-Kitchen
+/^Kitchen
 
 >open fridge
 You see some grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
@@ -160,7 +160,7 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 The spearman is what's important.
 
 >s
-Trap Part
+/^Trap Part
 A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
 
 #ttc-table-of-trap-part-nudges-aroundden
@@ -461,10 +461,10 @@ No need for fashion tweaks.
 
 >e
 
-Stiller Trellis
+/^Stiller Trellis
 
 >s
-Room
+/^Room
 
 #ttc-table-of-sortie-nudges-were
 >weer
@@ -734,7 +734,7 @@ The room sways a bit. You do some brief mental calculation. There's no third pla
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
 >n
-Stiller Trellis
+/^Stiller Trellis
 
 #+testcase-mistake-shuffling-dumdum-dum-dum-dum
 >dumdum
@@ -799,7 +799,7 @@ You currently have 19 out of 27 total points for the Sortie region. You have fou
 You already have a passage east. Don't close it.
 
 >e
-Sacred Cedars
+/^Sacred Cedars
 
 #testcase-mistake-shuffling-cadres
 >cadres
@@ -937,7 +937,7 @@ Adding similes would mean the limerick wouldn't scan. They'd be more forced than
 >moor
 "The mire, I'm there," you muse again.
 
-Moor
+/^Moor
 
 >missile
 Your score has just gone up by one point.
@@ -1081,7 +1081,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >w
 You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
 
-Crashing Archings
+/^Crashing Archings
 
 #ttc-table-of-stiller-trellis-nudges-arching
 >archign

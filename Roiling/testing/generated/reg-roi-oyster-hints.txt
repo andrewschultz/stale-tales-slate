@@ -11,7 +11,8 @@
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 >take pills
@@ -56,7 +57,7 @@ Perhaps you should've played it cool and fled, instead.
 >stroll
 by one point
 
-Olde Lode
+/^Olde Lode
 
 DEBUG INFO: clam hinting.
 
@@ -87,7 +88,7 @@ Score in a scenario: 5 out of 44 total points in the current region, Oyster. Low
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 DEBUG INFO: sabot boats hinting.
 >enter raft
@@ -110,7 +111,7 @@ Score in a scenario: 6 out of 44 total points in the current region, Oyster. Low
 >boast
 Your score has just gone up by one point
 
-Fighter Freight
+/^Fighter Freight
 
 DEBUG INFO: pale plea hinting.
 
@@ -122,7 +123,7 @@ Your score has just gone up by one point
 
 /DEBUG INFO: (pikes|carps) hinting.
 
-Anger Range
+/^Anger Range
 
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -143,7 +144,7 @@ Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lo
 You had your say about the snarled darnels.
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 DEBUG INFO: eeks hinting.
 
@@ -165,7 +166,7 @@ Score in a scenario: 11 out of 44 total points in the current region, Oyster. Lo
 >seek
 Your score has just gone up by one point
 
-Lean Lane
+/^Lean Lane
 
 DEBUG INFO: Tea-at-a-Tee hinting.
 
@@ -210,7 +211,7 @@ Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lo
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 DEBUG INFO: wherever the crate is coming from hinting.
 DEBUG INFO: crate hinting.
@@ -264,7 +265,7 @@ Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 DEBUG INFO: tubs hinting.
 
@@ -320,7 +321,7 @@ I can't give you details on how to fight, but now your lance is clean, you'll be
 >s
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 DEBUG INFO: Paw-R-Wrap hinting.
 
@@ -358,12 +359,12 @@ the general gleaner (very blurry)
 You've gotten passage north and found something important, so you're done here.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 DEBUG INFO: weaselly walleyes hinting.
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 DEBUG INFO: ruby hinting.
 
@@ -429,7 +430,7 @@ You've gotten all you need from the Use-Saga Sausage. Hero's Shore has nothing l
 
 DEBUG INFO: papery yapper hinting.
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 >reangle
 by one point
@@ -451,7 +452,7 @@ Score in a scenario: 37 out of 44 total points in the current region, Oyster. Lo
 
 >trample
 
-Plasm Lamps
+/^Plasm Lamps
 
 DEBUG INFO: natant ant hinting.
 
@@ -504,7 +505,7 @@ The lever was designed not to give extra points for pulling it too much.
 >redial
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Oyster (44/44)

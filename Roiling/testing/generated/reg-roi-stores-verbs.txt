@@ -53,7 +53,7 @@ Nestor periodically mumbles about his lost buddies.
 Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
 
 >enter steaming
-Cruelest Lectures
+/^Cruelest Lectures
 
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.

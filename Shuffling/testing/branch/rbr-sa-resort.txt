@@ -59,7 +59,7 @@ You see yourself exploring the ogled lodge you created.
 You already made passage to the ogled lodge. It's good enough. Why change it?
 
 >enter resort
-Astral Altars
+/^Astral Altars
 
 @gle
 You watch as the tiles shrink from a large land mass to a smaller one.
@@ -156,7 +156,7 @@ No, the feral flare is pretty much any which way. Looks like you'll need to do s
 Your score has just gone up by one point.
 }}SCORE++
 
-Leis Isle
+/^Leis Isle
 
 @gle
 You see yourself either swimming or flying east, but not without proper gear.
@@ -416,7 +416,7 @@ The only way to exit is east, so let's go that way.
 The only way you seem to be able to go is east.
 
 >e
-Rived Drive
+/^Rived Drive
 
 @min
 }}CURMAX-=2
@@ -738,7 +738,7 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 
 >e
 
-Potshot Hotspot
+/^Potshot Hotspot
 
 @gle
 You see the riot, happier now, discussing art and wearing dirty smocks.
@@ -1179,7 +1179,7 @@ You don't need to change the manors. You just need to be able to get there.
 But you beat Red Bull Burdell! Just go east!
 
 >e
-Means Manse
+/^Means Manse
 
 @hin
 >xx exits

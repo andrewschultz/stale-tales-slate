@@ -14,7 +14,7 @@
 >opt in
 
 >ts
-Trips Strip
+/^Trips Strip
 
 >forest
 by one point

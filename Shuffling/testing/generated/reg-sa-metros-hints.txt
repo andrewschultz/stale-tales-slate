@@ -27,7 +27,7 @@ You see yourself exploring the trade tread you created.
 
 >in
 
-Undesired Underside
+/^Undesired Underside
 
 You see yourself giving something reddish to some weird monster before it runs off.
 
@@ -59,7 +59,7 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 >n
 
-Roarings Garrison
+/^Roarings Garrison
 
 #ttc-table-of-nowheres-roarings-garrison
 >in
@@ -84,7 +84,7 @@ You have more than one way to leave: north, south, east and west. So you'll need
 There are four unblocked exits: north, south to Undesired Underside, east and west.
 
 >w
-Bile Libe
+/^Bile Libe
 
 DEBUG: motto being objhinted.
 #ttc-table-of-metros-anagrams-motto
@@ -116,7 +116,7 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 
 >s
 >w
-The Ol' Hotel
+/^The Ol' Hotel
 
 You see yourself giving something reddish to the night thing in the hotel before it runs off.
 
@@ -148,10 +148,10 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >e
 
 >n
-Roarings Garrison
+/^Roarings Garrison
 
 >n
-Obtains/Boastin' Bastion
+/^Obtains/Boastin' Bastion
 
 DEBUG: poses posse being objhinted.
 
@@ -231,7 +231,7 @@ Your vision blurs a bit, and instead you see Velcro.
 You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Fo' Real Florae
+/^Fo' Real Florae
 
 The brocade is free, whether or not you've helped the faeries. Why not take it?
 >take brocade
@@ -362,7 +362,7 @@ Just go east.
 
 >e
 #notana
-Esoteric Coteries
+/^Esoteric Coteries
 
 You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd.
 
@@ -390,23 +390,14 @@ You currently have 12 out of 18 total points for the Metros region. You have fou
 >put card on sensor
 The door is open. So you just walk east instead.
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 
 >z
 >e
 
-Esoteric Coteries
-
->w
->z
->open metallic door
-
->e
-Esoteric Coteries
-You can also see a lit-up tulip here.
-The signers' ingress slides shut.
+/^Esoteric Coteries
 
 >ask nerds about darkness
 #notana
@@ -414,7 +405,7 @@ The signers' ingress slides shut.
 
 "Logical call. I go." You sneak out back west.
 
-Undesired Underside
+/^Undesired Underside
 
 >gt coteries
 You got something from the nerds. They've probably had enough of you.
@@ -429,7 +420,7 @@ You currently have 13 out of 18 total points for the Metros region. You have fou
 #again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
-Elm Train Terminal
+/^Elm Train Terminal
 
 You see the neon pig exploding, the empty space being filled with--an ear of corn?!
 >angle
@@ -483,7 +474,7 @@ There are two unblocked exits: north to Undesired Underside and east.
 
 >e
 
-Bassy Abyss
+/^Bassy Abyss
 
 You see yourself pounding the siren, then clapping your hands and creating a swarm of dust.
 
@@ -535,7 +526,7 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 >attack beast
 #notana
 
-Trips Strip
+/^Trips Strip
 
 >score
 You have scored 18 out of 18 total points for the Metros region.

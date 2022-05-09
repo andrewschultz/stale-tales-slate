@@ -9,7 +9,7 @@
 
 * ordeal_thru
 
-Busiest Subsite
+/^Busiest Subsite
 
 >opt in
 >poss
@@ -17,7 +17,7 @@ Busiest Subsite
 >au 2
 
 >in
-Rested Desert
+/^Rested Desert
 
 #ttc-table-of-unmatched-topic-responses-yourself
 >ask me about abcd
@@ -50,7 +50,7 @@ by one point
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
 >open door
-Thickest Thickets
+/^Thickest Thickets
 
 >nest
 by one point
@@ -65,7 +65,7 @@ Your score has just gone up by one point.
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >in
-Notices Section
+/^Notices Section
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
@@ -374,5 +374,5 @@ You don't wish to dwell too much on past accomplishments. It's probably better t
 You don't wish to dwell too much on past accomplishments. It's probably better to PAD GOAT for the important information.
 
 >in
-Trips Strip
+/^Trips Strip
 

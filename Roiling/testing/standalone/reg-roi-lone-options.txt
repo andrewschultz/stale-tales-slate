@@ -21,7 +21,7 @@
 >in
 >sitar
 >d
-Basement
+/^Largely All-Grey Gallery
 
 >basement
 Well, if you want points for that, you'll need to go back to the study.

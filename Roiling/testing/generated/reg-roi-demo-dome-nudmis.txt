@@ -17,7 +17,7 @@
 >au 2
 
 >demo dome
-Peek Keep
+/^Peek Keep
 
 #testcase-mistake-roiling-singed
 >singed
@@ -175,7 +175,7 @@ This is a museum! Messing with the exhibits would be very bad form.
 This is a museum! Messing with the exhibits would be very bad form.
 
 >n
-Hows Show
+/^Hows Show
 
 #ttc-table-of-hows-show-nudges-hows
 >hosw
@@ -203,7 +203,7 @@ This is a museum! Messing with the exhibits would be very bad form.
 
 >s
 >w
-Ned's Dens
+/^Ned's Dens
 
 #testcase-mistake-roiling-send
 >send
@@ -231,7 +231,7 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 
 >e
 >in
-Intel Inlet
+/^Intel Inlet
 
 #ttc-table-of-intel-inlet-nudges-intel
 >eltin
@@ -259,7 +259,7 @@ I have full creative control over the Passe Apses, and I'm not giving it up.
 
 >e
 
-Evoc-Cove
+/^Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
 #ttc-table-of-evoc-cove-nudges-novella
@@ -287,7 +287,7 @@ You don't need to flip anything here, really. Certainly not a room.
 >w
 
 >d
-Sparse Spares
+/^Sparse Spares
 
 #testcase-mistake-roiling-spears
 >spears

@@ -12,7 +12,7 @@
 >ts
 >routes
 >enter routes
-Same Mesa
+/^Same Mesa
 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -20,7 +20,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >inside
 Your score has just gone up by one point
 
-Cleric Circle
+/^Cleric Circle
 
 >score
 Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -36,7 +36,7 @@ Precise recipes
 >past
 Your score has just gone up by one point
 
-Idle Deli
+/^Idle Deli
 
 >despite
 Your score has just gone up by one point
@@ -46,7 +46,7 @@ Your score has just gone up by one point
 >across
 Your score has just gone up by one point
 
-Adobe Abode
+/^Adobe Abode
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
@@ -92,7 +92,7 @@ Your score has just gone up by one point
 
 DEBUG INFO: Taking away a max point. Max-score now 21.
 
-Harms Marsh
+/^Harms Marsh
 
 >score
 Score in a scenario: 12 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
@@ -107,17 +107,17 @@ Your score has just gone up by one point
 >along
 Your score has just gone up by one point
 
-Ripe Pier
+/^Ripe Pier
 
 >amidst
 Your score has just gone up by one point
 
-Cripple Clipper
+/^Cripple Clipper
 
 >athwart
 Your score has just gone up by one point
 
-Sonancy Canyons
+/^Sonancy Canyons
 
 >between
 Your score has just gone up by one point
@@ -147,7 +147,7 @@ Your score has just gone up by one point
 
 This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything you can?
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Routes (20/22)

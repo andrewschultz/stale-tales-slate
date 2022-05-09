@@ -40,7 +40,7 @@ For reasons of continuity
 >undo
 
 >demo dome
-Peek Keep
+/^Peek Keep
 
 @verbs
 #testcase-outside-peek-keep
@@ -59,15 +59,15 @@ There are six unblocked exits: north, south, east, west, down and inside.
 @max
 >undo
 >demo mode
-Peek Keep
+/^Peek Keep
 \\
 >undo
 >dome mode
-Peek Keep
+/^Peek Keep
 \\
 >undo
 >demo dome mode
-Peek Keep
+/^Peek Keep
 
 @max
 #verbcase smell-demo-dome-default
@@ -324,7 +324,7 @@ The Spy Dial Display is currently off and out of reach.
 The Spy Dial Display is currently off and out of reach.
 
 >n
-Hows Show
+/^Hows Show
 
 @verbs
 #testcase-outside-hows-show
@@ -487,7 +487,7 @@ You can only go south here.
 
 >s
 >w
-Ned's Dens
+/^Ned's Dens
 
 @verbs
 #testcase-outside-neds-dens
@@ -572,7 +572,7 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 
 >e
 >in
-Intel Inlet
+/^Intel Inlet
 
 @max
 >n
@@ -732,7 +732,7 @@ The only way you seem to be able to go is outside to Peek Keep.
 
 >e
 
-Evoc-Cove
+/^Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
 @verbs
@@ -751,13 +751,13 @@ The only way you seem to be able to go is west to Peek Keep.
 \\
 >out
 >e
-Evoc-Cove
+/^Evoc-Cove
 \\
 >score
 You saw the novella here in Evoc-Cove, but you didn't examine it.
 \\
 >w
-Peek Keep
+/^Peek Keep
 >score
 You saw the novella in Evoc-Cove, but you didn't examine it.
 \\
@@ -766,7 +766,7 @@ You saw the novella in Evoc-Cove, but you didn't examine it.
 It's called Venal Ol' Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)--the lowest page you haven't read that looks comprehensible is 1. You can also speed-read with RR.
 \\
 >w
-Peek Keep
+/^Peek Keep
 >score
 \\
 You still have more of the novella (examined but not read) to look through.
@@ -997,7 +997,7 @@ You don't need to flip anything here, really. Certainly not a room.
 >w
 
 >d
-Sparse Spares
+/^Sparse Spares
 
 @verbs
 #testcase-outside-sparse-spares

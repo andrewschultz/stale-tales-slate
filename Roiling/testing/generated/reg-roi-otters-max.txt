@@ -33,7 +33,7 @@ You've used pretty much every kind of word in the dictionary to get here. You ha
 Score in a scenario: 1 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >l
-Burnt Brunt
+/^Burnt Brunt
 
 >get cinders
 They crackle with energy and possibilities as you take them. Perhaps there is more than one thing you can do with them.
@@ -56,7 +56,7 @@ Barley, reedily. Until you get your full powers back, your restriction has made 
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >w
-Disowned Downside
+/^Disowned Downside
 
 #pre-moat-atom rule
 >atom
@@ -257,7 +257,7 @@ You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a wa
 The medals can help you go QUICKLY once they are restored enough.
 
 >n
-Loop Pool
+/^Loop Pool
 
 >else
 You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
@@ -289,7 +289,7 @@ Score in a scenario: 8 out of 37 total points in the current region, Otters. Low
 
 >s
 
-Bran Barn
+/^Bran Barn
 
 #pre-ogre-ergo rule
 >ergo
@@ -348,7 +348,7 @@ Score in a scenario: 13 out of 37 total points in the current region, Otters. Lo
 >e
 
 >n
-Shiner Shrine
+/^Shiner Shrine
 
 >enragedly
 Your score has just gone up by one point
@@ -363,7 +363,7 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
 >n
-Lamer Realm
+/^Lamer Realm
 
 >slow
 Your score has just gone up by one point
@@ -394,7 +394,7 @@ Score in a scenario: 19 out of 37 total points in the current region, Otters. Lo
 You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
 
 >l
-Blest Belts
+/^Blest Belts
 
 >garbed
 Your score has just gone up by one point
@@ -406,7 +406,7 @@ Score in a scenario: 20 out of 37 total points in the current region, Otters. Lo
 >s
 >s
 
-Clarthead Cathedral
+/^Clarthead Cathedral
 
 >loathingly
 Your score has just gone up by one point
@@ -422,7 +422,7 @@ They find another place where rioters roister.
 Score in a scenario: 22 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >s
-Perverse Preserve
+/^Perverse Preserve
 
 >parrot
 Your score has just gone up by one point
@@ -449,7 +449,7 @@ Your score has just gone up by one point
 Score in a scenario: 26 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >l
-Uprates Pasture
+/^Uprates Pasture
 
 >snipe
 Your score has just gone up by one point
@@ -498,7 +498,7 @@ by one point
 Score in a scenario: 30 out of 37 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 37.
 
 >w
-Reclusion Inclosure
+/^Reclusion Inclosure
 
 >honestly
 !by one point
@@ -522,7 +522,7 @@ by one point
 >quickly
 by one point
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 >7
 "No mercy, my crone! Corny, me?"
 >play whistle
@@ -566,7 +566,7 @@ by one point
 
 #this is how we get rid of Elvira
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"

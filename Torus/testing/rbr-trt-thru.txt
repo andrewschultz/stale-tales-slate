@@ -24,6 +24,8 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 
 * trt-thru
 
+/^Ehs, Ehs
+
 >au 2
 >z
 
@@ -338,7 +340,7 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 
 >sheesh
 by one point
-Sheesh
+/^Sheesh
 
 @nud
 #+ttc-table-of-nudge-hashes-hya
@@ -461,11 +463,11 @@ Now that you have a teammate and a reason to reappear, you have a plan to brains
 @min-b
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 @!
 >reappear
 by one point
-Reappear
+/^Reappear
 
 @alt
 #+ttc-table-of-room-combos-prep-area-meta-meat
@@ -554,11 +556,11 @@ Aha! Now that you have summoned a tattletale and arraigning, the tattletale tatt
 @min-b
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 @!
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 
 @alt
 #+ttc-table-of-room-combos-grain-grain-latte-latte
@@ -619,11 +621,11 @@ The meat -- well, it's hard to describe, but it's thankfully not physical meat. 
 @min-b
 >intestines
 by one point
-Intestines
+/^Intestines
 @!
 >teammate
 by one point
-Teammate
+/^Teammate
 
 @max
 #ttc-table-of-progress-4
@@ -707,11 +709,11 @@ The Torus seems more alive now that the intestines are not just near the pechan/
 @min-b
 >teammate
 by one point
-Teammate
+/^Teammate
 @!
 >intestines
 by one point
-Intestines
+/^Intestines
 
 @alt
 #+ttc-table-of-room-combos-tines-inset-pechan-pechan
@@ -767,11 +769,11 @@ If there's a stomach here, you don't want to burst it.
 @min-b
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 @!
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 
 @alt
 #+ttc-table-of-room-combos-tines-inset-pechan-pechan
@@ -815,11 +817,11 @@ Oh, man. You don't want to even think about caffeinated beverages. Even ones wit
 @min-b
 >reappear
 by one point
-Reappear
+/^Reappear
 @!
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
@@ -959,10 +961,10 @@ seems to brighten up as you make your decision. You feel confident that if you d
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
 @!alt,min-b
-Tattletale
+/^Tattletale
 
 @min-b
-Reappear
+/^Reappear
 
 >aaa
 >aa
@@ -973,7 +975,7 @@ Reappear
 All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
-Scene Scene
+/^Scene Scene
 
 @hints
 #+ttc-table-of-center-statuses-8

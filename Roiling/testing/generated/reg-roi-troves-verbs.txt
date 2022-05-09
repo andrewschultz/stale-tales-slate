@@ -20,7 +20,7 @@
 >troves
 
 >enter tastee
-Loather Rathole
+/^Loather Rathole
 
 #ttc-table-of-troves-nowheres-loather-rathole
 >e
@@ -100,7 +100,7 @@ Score in a scenario: 3 out of 30 total points in the current region, Troves. Low
 >care
 Your score has just gone up by one point
 
-Bustle Sublet
+/^Bustle Sublet
 
 #ttc-table-of-troves-nowheres-bustle-sublet
 >e
@@ -136,7 +136,7 @@ Score in a scenario: 6 out of 30 total points in the current region, Troves. Low
 >spot
 Your score has just gone up by one point
 
-Boarded Roadbed
+/^Boarded Roadbed
 
 >score
 Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
@@ -201,7 +201,7 @@ Score in a scenario: 10 out of 30 total points in the current region, Troves. Lo
 >recall
 by one point
 
-Drain Nadir
+/^Drain Nadir
 
 #ttc-table-of-troves-nowheres-drain-nadir
 >e
@@ -254,7 +254,7 @@ Eddie C.'s song, I'd Cede, echoes. You listen closely to "I'd Cede." There is no
 >decide
 Your score has just gone up by one point
 
-Boredom Bedroom
+/^Boredom Bedroom
 
 >score
 Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
@@ -299,7 +299,7 @@ Score in a scenario: 17 out of 30 total points in the current region, Troves. Lo
 >deal
 Your score has just gone up by one point
 
-Browse Bowers
+/^Browse Bowers
 
 #ttc-table-of-troves-nowheres-browse-bowers
 >e
@@ -334,7 +334,7 @@ Your score has just gone up by one point
 
 #Econ Cone
 
-Econ-Cone
+/^Econ-Cone
 
 >score
 Score in a scenario: 20 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
@@ -398,7 +398,7 @@ Score in a scenario: 23 out of 30 total points in the current region, Troves. Lo
 >ponder
 Your score has just gone up by one point
 
-Upscale Capsule
+/^Upscale Capsule
 
 #ttc-table-of-troves-nowheres-upscale-capsule
 >e
@@ -460,7 +460,7 @@ Score in a scenario: 29 out of 30 total points in the current region, Troves. Th
 >recant
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Troves (30/30)

@@ -7,6 +7,8 @@
 
 * trt-thru
 
+/^Ehs, Ehs
+
 >au 2
 >z
 
@@ -32,43 +34,43 @@ You were glad to have the smell of hay as a clue, but let's not overdo it!
 
 >sheesh
 by one point
-Sheesh
+/^Sheesh
 
 >b
 
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 
 >b
 
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 
 >b
 
 >intestines
 by one point
-Intestines
+/^Intestines
 
 >b
 
 >teammate
 by one point
-Teammate
+/^Teammate
 
 >b
 
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 
 >b
 
 >reappear
 by one point
-Reappear
+/^Reappear
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
@@ -79,7 +81,7 @@ seems as good a place to start as any others. The ground beneath you
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
-Reappear
+/^Reappear
 
 >aaa
 >aa
@@ -90,7 +92,7 @@ Reappear
 All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
-Scene Scene
+/^Scene Scene
 
 >deeded
 You're not sure what to do, but there's a lot to do!

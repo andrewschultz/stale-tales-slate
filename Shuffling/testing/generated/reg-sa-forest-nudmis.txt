@@ -57,7 +57,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >w
 by one point
-Rest of Forest
+/^Rest of Forest
 #ttc-table-of-rest-of-forest-nudges-rest
 >rets
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -84,7 +84,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >s
 by one point
-Self-ID Fields
+/^Self-ID Fields
 >undo
 >undo
 >undo
@@ -126,7 +126,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >e
 by one point
-Rest of Forest
+/^Rest of Forest
 
 #spectest for thorn
 >ornth
@@ -145,7 +145,7 @@ You think you're on to something, but you still feel stuck.
 Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
 >undo
 >n
-Self-ID Fields
+/^Self-ID Fields
 by one point
 >undo
 >undo
@@ -172,7 +172,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >n
 by one point
-Rest of Forest
+/^Rest of Forest
 #renudge for north
 >norht
 Your internal compass feels extra jumbled. You remember the thorn, but there's probably a different challenge here.
@@ -191,7 +191,7 @@ Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
 >e
 by one point
-Self-ID Fields
+/^Self-ID Fields
 >undo
 >undo
 >undo
@@ -217,7 +217,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >s
 by one point
-Rest of Forest
+/^Rest of Forest
 #renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
@@ -236,7 +236,7 @@ You think you're on to something, but you still feel stuck.
 >undo
 >w
 by one point
-Self-ID Fields
+/^Self-ID Fields
 >undo
 >undo
 >undo
@@ -248,7 +248,7 @@ Self-ID Fields
 
 >in
 
-Softer Forest
+/^Softer Forest
 
 #these are universal to SF/RF
 #ttc-table-of-forest-nudges-forest
@@ -266,13 +266,13 @@ You have no time to play with leaves.
 
 >n
 by one point
-Rest of Forest
+/^Rest of Forest
 >score
 You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
 >e
 by one point
-Self-ID Fields
+/^Self-ID Fields
 
 #testcase-mistake-shuffling-scores
 >scores
@@ -354,7 +354,7 @@ Organic chemistry involves shuffling things around a lot, too, but ... the line 
 There's a list inside the slit, so that's not what it could become.
 
 >e
-Gnarliest Triangles
+/^Gnarliest Triangles
 
 #ttc-table-of-gnarliest-triangles-nudges-triangles
 >trianglse
@@ -536,7 +536,7 @@ Shotgun: gnu? Tosh!
 
 >w
 >w
-Flesh Shelf
+/^Flesh Shelf
 
 #ttc-table-of-flesh-shelf-nudges-shelf
 >shefl
@@ -673,7 +673,7 @@ You currently have 8 out of 17 total points for the Forest region. Your minimum 
 #notana
 Your score has just gone up by one point.
 
-Emptiness Sepiments
+/^Emptiness Sepiments
 
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
@@ -937,7 +937,7 @@ You need to SHOOT the gun, but you need to load it first.
 You need to SHOOT the gun.
 
 >n
-Ghouls' Slough
+/^Ghouls' Slough
 
 #testcase-mistake-shuffling-lucre
 >lucre
@@ -993,7 +993,7 @@ UNDO
 You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >x maps
-Frost Forts
+/^Frost Forts
 
 #ttc-table-of-frost-forts-nudges-frost
 >frots
@@ -1071,7 +1071,7 @@ They'd be much less dangerous left in a pile. Maybe you have something that can 
 #notana
 Your score has just gone up by one point.
 
-Trips Strip
+/^Trips Strip
 
 >score
 

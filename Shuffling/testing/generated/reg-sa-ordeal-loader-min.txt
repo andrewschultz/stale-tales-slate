@@ -9,7 +9,7 @@
 
 * ordeal_thru
 
-Busiest Subsite
+/^Busiest Subsite
 
 >opt in
 >poss
@@ -17,7 +17,7 @@ Busiest Subsite
 >au 2
 
 >in
-Rested Desert
+/^Rested Desert
 
 >door
 by one point
@@ -32,13 +32,13 @@ by one point
 You currently have 2 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
 >open door
-Thickest Thickets
+/^Thickest Thickets
 
 >goat
 Your score has just gone up by one point.
 
 >in
-Notices Section
+/^Notices Section
 
 >score
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 5
@@ -67,5 +67,5 @@ you could've changed the bulge into a BUGLE.
 --you could've changed the static into ATTICS.
 
 >in
-Trips Strip
+/^Trips Strip
 

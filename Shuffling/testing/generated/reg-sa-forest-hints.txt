@@ -49,7 +49,7 @@ Your vision blurs, and you see a compass rose pointed west.
 
 >in
 
-Softer Forest
+/^Softer Forest
 
 DEBUG: thorn being objhinted.
 >xx thorn
@@ -76,7 +76,7 @@ One compass direction out will move ahead. The others won't. But which does whic
 
 >n
 by one point
-Rest of Forest
+/^Rest of Forest
 >score
 You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
@@ -98,7 +98,7 @@ You can't retrace your steps.
 
 >e
 by one point
-Self-ID Fields
+/^Self-ID Fields
 
 Go east and west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
 
@@ -143,7 +143,7 @@ Go east and look around a bit. There're only three rooms to start, and passing C
 >e
 
 >e
-Gnarliest Triangles
+/^Gnarliest Triangles
 
 DEBUG: ones being objhinted.
 #ttc-table-of-forest-anagrams-ones
@@ -199,7 +199,7 @@ You currently have 5 out of 17 total points for the Forest region. Your minimum 
 
 >w
 >w
-Flesh Shelf
+/^Flesh Shelf
 
 DEBUG: sandwich being objhinted.
 
@@ -278,7 +278,7 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 #notana
 Your score has just gone up by one point.
 
-Emptiness Sepiments
+/^Emptiness Sepiments
 
 DEBUG: liches being objhinted.
 
@@ -460,7 +460,7 @@ DEBUG: maps being objhinted.
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
 >n
-Ghouls' Slough
+/^Ghouls' Slough
 
 DEBUG: maps being objhinted.
 
@@ -483,7 +483,7 @@ Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless,
 You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >x maps
-Frost Forts
+/^Frost Forts
 
 You see the vowels grow slavering teeth.
 
@@ -533,7 +533,7 @@ You currently have 16 out of 17 total points for the Forest region. You have fou
 #notana
 Your score has just gone up by one point.
 
-Trips Strip
+/^Trips Strip
 
 DEBUG: Store I being objhinted.
 

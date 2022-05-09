@@ -55,7 +55,7 @@ You can just enter the ogled lodge.
 >undo
 
 >ts
-Trips Strip
+/^Trips Strip
 
 @nud
 #ttc-table-of-stores-spechelp-acne-bit-cabinet

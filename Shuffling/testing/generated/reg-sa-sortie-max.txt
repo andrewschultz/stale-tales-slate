@@ -20,7 +20,7 @@ by one point
 
 >in
 
-Trap Part
+/^Trap Part
 
 >sixteen
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
@@ -30,12 +30,12 @@ by one point
 You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
 >n
-The Nick
+/^The Nick
 
 >kitchen
 by one point
 
-Kitchen
+/^Kitchen
 
 >x fridge
 While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. It doesn't appear locked or anything. You could just OPEN it. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
@@ -117,10 +117,10 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 >e
 
-Stiller Trellis
+/^Stiller Trellis
 
 >s
-Room
+/^Room
 
 >sack
 Your score has just gone up by one point.
@@ -207,7 +207,7 @@ You currently have 17 out of 27 total points for the Sortie region. You have fou
 "The room's smoother," you muse...
 
 >n
-Stiller Trellis
+/^Stiller Trellis
 
 >w
 
@@ -234,7 +234,7 @@ Your score has just gone up by one point.
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Sacred Cedars
+/^Sacred Cedars
 
 >pour oils
 Fluids would leak through the sack. The cask you had would be better.
@@ -278,7 +278,7 @@ smilies -> missile
 >moor
 "The mire, I'm there," you muse again.
 
-Moor
+/^Moor
 
 >missile
 Your score has just gone up by one point.
@@ -331,7 +331,7 @@ The cask is already full of oils.
 >w
 You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
 
-Crashing Archings
+/^Crashing Archings
 
 >s
 

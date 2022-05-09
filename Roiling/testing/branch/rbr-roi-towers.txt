@@ -52,7 +52,7 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 >seed 1
 >enter turrets
 
-Loftier Trefoil
+/^Loftier Trefoil
 
 @verbs
 #ttc-table-of-towers-nowheres-loftier-trefoil
@@ -744,7 +744,7 @@ DEBUG INFO: dreads adders hinting.
 @minh,mini
 }}CURMAX-=4
 
-Topside Deposit
+/^Topside Deposit
 
 @max
 #ttc-table-of-castle-approaching-narratives-1
@@ -1009,7 +1009,7 @@ A good try, but this isn't the right area. All you can do is TOAST and then EAT 
 You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
 
 >n
-Scope Copse
+/^Scope Copse
 
 @max
 #ttc-table-of-towers-progress-comments-scope-copse
@@ -1255,7 +1255,7 @@ Your score has just gone up by one point
 {$SCOS}
 >n
 \\
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 >semipro
 Your score has just gone up by one point
 }}SCORE++
@@ -1270,7 +1270,7 @@ Your score has just gone up by one point
 #notmax
 >n
 \\
-Anemic Cinema
+/^Anemic Cinema
 \\
 >married
 Your score has just gone up by one point
@@ -1280,13 +1280,13 @@ Your score has just gone up by one point
 #notmax
 >n
 \\
-Shaven Havens
+/^Shaven Havens
 \\
 >s
 >s
 >e
 \\
-Treading Gradient
+/^Treading Gradient
 \\
 >sewed
 Your score has just gone up by one point
@@ -1302,7 +1302,7 @@ Your score has just gone up by one point
 #notmax
 >e
 \\
-Artist Traits Strait
+/^Artist Traits Strait
 \\
 >marginal
 Your score has just gone up by one point
@@ -1318,7 +1318,7 @@ Your score has just gone up by one point
 #notmax
 >n
 \\
-Actionless Coastlines
+/^Actionless Coastlines
 >hastiest
 Your score has just gone up by one point
 }}SCORE++
@@ -1328,7 +1328,7 @@ Your score has just gone up by one point
 >s
 >s
 \\
-Danger Garden
+/^Danger Garden
 
 @mini
 >rinsed
@@ -1401,7 +1401,7 @@ Your score has just gone up by one point
 >s
 >e
 \\
-Danger Garden
+/^Danger Garden
 
 @nud
 #ttc-table-of-towers-spechelp-snider-diners
@@ -1491,7 +1491,7 @@ Your score has just gone up by one point
 @!minh,mini
 >n
 \\
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 
 @max
 #+ttc-table-of-castle-approaching-narratives-3
@@ -1653,7 +1653,7 @@ Your score has just gone up by one point
 @!minh,mini
 >n
 \\
-Anemic Cinema
+/^Anemic Cinema
 
 @max
 #+ttc-table-of-castle-approaching-narratives-4
@@ -1782,17 +1782,17 @@ They're already stonewalling you from going west. Whether or not you need to go 
 #nowhere else to put this. We basically verify that the trips to Dourest Detours all work.
 >gonear lost lots
 >s
-Dourest Detours
+/^Dourest Detours
 >undo
 >undo
 >gonear outer route
 >w
-Dourest Detours
+/^Dourest Detours
 >undo
 >undo
 >gonear shaven havens
 >w
-Dourest Detours
+/^Dourest Detours
 >undo
 >undo
 
@@ -1811,7 +1811,7 @@ Your score has just gone up by one point
 {$SCOS}
 >w
 \\
-Fringe Finger
+/^Fringe Finger
 
 @verbs
 #ttc-table-of-towers-nowheres-fringe-finger
@@ -1997,7 +1997,7 @@ Your score has just gone up by one point
 {$SCOS}
 >n
 \\
-Shaven Havens
+/^Shaven Havens
 
 @max
 #ttc-table-of-towers-progress-comments-shaven-havens
@@ -2051,7 +2051,7 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 >s
 >e
 \\
-Salted Deltas
+/^Salted Deltas
 
 @max
 #+ttc-table-of-castle-approaching-narratives-6
@@ -2184,7 +2184,7 @@ Your score has just gone up by one point
 {$SCOS}
 >s
 \\
-Treading Gradient
+/^Treading Gradient
 
 @verbs
 #ttc-table-of-towers-attacks-mended-mini-denim
@@ -2429,7 +2429,7 @@ Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, 
 
 @!minh,mini
 >d
-Dire and Arid Den
+/^Dire and Arid Den
 
 @verbs
 #ttc-table-of-towers-nowheres-dire-and-arid-den
@@ -2503,7 +2503,7 @@ The Nerd-Aid smells suspiciously like the very red Rind-Ade drink.
 >score
 {$SCOS}
 >dandier
-Treading Gradient
+/^Treading Gradient
 }}SCORE++
 \\
 >score
@@ -2625,7 +2625,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >n
-Actionless Coastlines
+/^Actionless Coastlines
 
 @max
 #ttc-table-of-castle-approaching-narratives-7
@@ -2729,7 +2729,7 @@ Your score has just gone up by one point
 {$SCOS}
 >w
 \\
-Leveraged Everglade
+/^Leveraged Everglade
 
 @hin
 You need a way past the bonker
@@ -2807,7 +2807,7 @@ Your score has just gone up by one point
 {$SCOS}
 >e
 >s
-Lost Lots
+/^Lost Lots
 
 @max
 #ttc-table-of-towers-progress-comments-lost-lots
@@ -2816,7 +2816,7 @@ This may've been a step away from the palace, but hooray, stuff to pick up.
 @!minh,mini
 >w
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
-Dourest Detours
+/^Dourest Detours
 }}CURMIN++
 
 @verbs
@@ -3009,7 +3009,7 @@ Any direction but back south might drive you too far from the palace.
 @!minh,mini
 >n
 \\
-Danger Garden
+/^Danger Garden
 
 @verbs
 #testcase-outside-danger-garden
@@ -3116,7 +3116,7 @@ The geese are fine as they are. They're just there for scenery, and stuff.
 
 >e
 
-Obscurest Subsector
+/^Obscurest Subsector
 
 @max
 #ttc-table-of-towers-progress-comments-obscurest-subsector
@@ -3457,7 +3457,7 @@ It's not just any duck. But it's served its purpose.
 >gt copse
 >w
 
-Outer Route
+/^Outer Route
 
 @max
 #ttc-table-of-towers-progress-comments-outer-route
@@ -4013,7 +4013,7 @@ No thanks. Once was enough.
 >robust
 by one point
 >enter boat
-Rawest Waster Waters
+/^Rawest Waster Waters
 #verbcase listen-towers-if-player-is-in-rawest-waster-waters
 >listen
 A scrawny swan cry. But not the Sawn Swan. You hope.
@@ -4096,14 +4096,14 @@ After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST
 >robust
 by one point
 >enter boat
-Rawest Waster Waters
+/^Rawest Waster Waters
 #ttc-table-of-castle-approaching-narratives-8
 #ttc-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
 #altpath
-Mislit Limits
+/^Mislit Limits
 >thisalt
 --you'd have passed Rawest Waster Waters if you'd have made the blaster STABLER.
 >undo
@@ -4113,11 +4113,11 @@ Mislit Limits
 >stabler
 Your score has just gone up by one point
 >enter boat
-Rawest Waster Waters
+/^Rawest Waster Waters
 >nearest
 #notmax
 Your score has just gone up by one point
-Mislit Limits
+/^Mislit Limits
 >thisalt
 --you'd have passed Rawest Waster Waters if you'd have made the turbos ROBUST.
 >undo
@@ -4162,7 +4162,7 @@ Your score has just gone up by one point
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
-Mislit Limits
+/^Mislit Limits
 
 }}CURMIN=SCORE
 }}CURMIN++
@@ -4408,7 +4408,7 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 @!minh,mini
 >in
 \\
-Mesprise Premises
+/^Mesprise Premises
 
 @nud
 #ttc-table-of-mesprise-premises-nudges-mesprise
@@ -4665,7 +4665,7 @@ Your score has just gone up by one point
 @minh,mini
 This will restore the Curst Palace, but you can also figure what to do with that top opt pot you got from Renato. Stay back and clean up everything you can?
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Towers ({SCORE}/{MAX})

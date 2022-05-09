@@ -9,7 +9,7 @@
 
 * ordeal_thru
 
-Busiest Subsite
+/^Busiest Subsite
 
 >opt in
 >poss
@@ -65,7 +65,7 @@ nametag -> gateman
 You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every(wo)man.
 
 >in
-Rested Desert
+/^Rested Desert
 
 >door
 by one point
@@ -79,7 +79,7 @@ You haven't solved any regions yet. You have the rank of reduced deducer.
 >blot
 by one point
 >in
-Thickest Thickets
+/^Thickest Thickets
 >score
 You currently have 2 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
 >undo
@@ -103,7 +103,7 @@ you could've changed the bolt into a BLOT.
 !you could've changed the bulge into a BUGLE.
 
 >in
-Thickest Thickets
+/^Thickest Thickets
 >score
 You currently have 2 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
 >undo
@@ -116,7 +116,7 @@ by one point
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
 >open door
-Thickest Thickets
+/^Thickest Thickets
 
 >nest
 by one point
@@ -124,7 +124,7 @@ by one point
 >deer
 by one point
 >in
-Notices Section
+/^Notices Section
 >misses
 --you could've changed the toga into a GOAT
 !--you could've changed the reed into a DEER
@@ -142,7 +142,7 @@ Your score has just gone up by one point.
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >in
-Notices Section
+/^Notices Section
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
@@ -191,7 +191,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 
 >in
-Trips Strip
+/^Trips Strip
 
 #ttc-table-of-ranks-4
 >score

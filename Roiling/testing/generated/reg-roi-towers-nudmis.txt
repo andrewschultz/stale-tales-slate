@@ -16,7 +16,7 @@
 >seed 1
 >enter turrets
 
-Loftier Trefoil
+/^Loftier Trefoil
 
 >z
 
@@ -282,7 +282,7 @@ by one point
 >yonder
 Your score has just gone up by one point
 
-Topside Deposit
+/^Topside Deposit
 
 #ttc-table-of-towers-readables-curst-palace
 >read curst palace
@@ -444,7 +444,7 @@ A good try, but this isn't the right area. All you can do is TOAST and then EAT 
 You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
 
 >n
-Scope Copse
+/^Scope Copse
 
 #+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
@@ -596,7 +596,7 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 
 #ttc-table-of-baldest-blasted-saltbed-nudges-baldest
 >baldets
@@ -662,7 +662,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Anemic Cinema
+/^Anemic Cinema
 
 #testcase-mistake-roiling-tasering
 >tasering
@@ -730,7 +730,7 @@ Your score has just gone up by one point
 Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 >w
 
-Fringe Finger
+/^Fringe Finger
 
 #testcase-mistake-roiling-rustle-rustle-strudel
 >rustle
@@ -836,7 +836,7 @@ Your score has just gone up by one point
 Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >n
 
-Shaven Havens
+/^Shaven Havens
 
 #testcase-mistake-roiling-unlocked
 >unlocked
@@ -869,7 +869,7 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 >s
 >e
 
-Salted Deltas
+/^Salted Deltas
 
 #ttc-table-of-towers-nudges-shoals
 >shoasl
@@ -926,7 +926,7 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
-Treading Gradient
+/^Treading Gradient
 
 #+ttc-table-of-towers-scannotes-curst-palace
 #palace 7 lights
@@ -1061,7 +1061,7 @@ Score in a scenario: 27 out of 57 total points in the current region, Towers. Lo
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself
 
 >d
-Dire and Arid Den
+/^Dire and Arid Den
 
 #ttc-table-of-towers-scannotes-bogus-dandier
 >scan
@@ -1099,7 +1099,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid De
 >score
 Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >dandier
-Treading Gradient
+/^Treading Gradient
 
 >score
 Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -1169,7 +1169,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
-Actionless Coastlines
+/^Actionless Coastlines
 
 >s
 >s
@@ -1220,7 +1220,7 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
-Leveraged Everglade
+/^Leveraged Everglade
 
 #ttc-table-of-leveraged-everglade-nudges-leveraged
 >leveragde
@@ -1268,11 +1268,11 @@ Your score has just gone up by one point
 Score in a scenario: 33 out of 57 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 57.
 >e
 >s
-Lost Lots
+/^Lost Lots
 
 >w
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
-Dourest Detours
+/^Dourest Detours
 
 #ttc-table-of-towers-scannotes-seismal-samiels
 >scan samiels
@@ -1362,7 +1362,7 @@ You can't change the gadflies. There are too many.
 
 >n
 
-Danger Garden
+/^Danger Garden
 
 #ttc-table-of-towers-spechelp-bonker
 >bonkre
@@ -1408,7 +1408,7 @@ The geese are fine as they are. They're just there for scenery, and stuff.
 
 >e
 
-Obscurest Subsector
+/^Obscurest Subsector
 
 #ttc-table-of-obscurest-subsector-nudges-locked
 >eckold
@@ -1594,7 +1594,7 @@ It's not just any duck. But it's served its purpose.
 >gt copse
 >w
 
-Outer Route
+/^Outer Route
 
 #testcase-mistake-roiling-pairer
 >pairer
@@ -1996,7 +1996,7 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
-Mislit Limits
+/^Mislit Limits
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
@@ -2126,7 +2126,7 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 
 >in
 
-Mesprise Premises
+/^Mesprise Premises
 
 #ttc-table-of-mesprise-premises-nudges-mesprise
 >mespries
@@ -2277,7 +2277,7 @@ Your score has just gone up by one point
 
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Towers (57/57)

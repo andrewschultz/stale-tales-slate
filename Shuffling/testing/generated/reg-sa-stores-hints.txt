@@ -35,7 +35,7 @@ You can just enter the ogled lodge.
 >undo
 
 >ts
-Trips Strip
+/^Trips Strip
 
 >gt subsite
 You already solved that area.

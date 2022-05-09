@@ -11,7 +11,8 @@
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 >talk to casper
@@ -117,7 +118,7 @@ Perhaps you should've played it cool and fled, instead.
 >stroll
 by one point
 
-Olde Lode
+/^Olde Lode
 
 >thisalt
 --You could have also REMAPped the perma-amper to break the jukebox.
@@ -140,7 +141,7 @@ Score in a scenario: 5 out of 44 total points in the current region, Oyster. Low
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 >n
 You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents.
@@ -179,7 +180,7 @@ You're a bit too winded to make a really good boast after your recent exertions,
 >boast
 Your score has just gone up by one point
 
-Fighter Freight
+/^Fighter Freight
 
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -187,7 +188,7 @@ Score in a scenario: 7 out of 44 total points in the current region, Oyster. Low
 >leap
 Your score has just gone up by one point
 
-Anger Range
+/^Anger Range
 
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -240,7 +241,7 @@ Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lo
 !you could've tried to SLANDER the snarled darnels.
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 >score
 Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 44.
@@ -264,7 +265,7 @@ by one point
 >seek
 Your score has just gone up by one point
 
-Lean Lane
+/^Lean Lane
 
 >score
 Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
@@ -320,7 +321,7 @@ Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lo
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 >warp
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
@@ -402,7 +403,7 @@ Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 >bust tubs
 by one point
@@ -491,7 +492,7 @@ It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or so
 !Nothing to unearth the haunter with.
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 #pre-search-arches rule
 >search
@@ -559,7 +560,7 @@ Your score has just gone up by one point
 Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 #pre-patrol-ol-trap rule
 >patrol
@@ -584,7 +585,7 @@ You need to figure how and where to BURY the ruby.
 >undo
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 >bury ruby
 Your score has just gone up by one
@@ -640,13 +641,13 @@ Your score has just gone up by one point
 Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >in
-End Den
+/^End Den
 >x gleaner
 You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side.
 
 Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...
 
-Tenfold
+/^Tenfold Teflon'd Den Loft
 >undo
 >undo
 
@@ -654,7 +655,7 @@ Tenfold
 
 >in
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 #pre-dialer-derail rule
 >derail
@@ -714,7 +715,7 @@ by one point
 
 >trample
 
-Plasm Lamps
+/^Plasm Lamps
 
 >score
 Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
@@ -785,7 +786,7 @@ Score in a scenario: 43 out of 44 total points in the current region, Oyster. Th
 >redial
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Oyster (44/44)

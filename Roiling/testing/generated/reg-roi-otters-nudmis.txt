@@ -68,7 +68,7 @@ Your score has just gone up by one point
 Score in a scenario: 1 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >l
-Burnt Brunt
+/^Burnt Brunt
 
 #testcase-mistake-roiling-deltaic
 >deltaic
@@ -180,7 +180,7 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >w
-Disowned Downside
+/^Disowned Downside
 
 #ttc-table-of-disowned-downside-nudges-parley
 >arpley
@@ -504,7 +504,7 @@ The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no ful
 The maples are harmless.
 
 >n
-Loop Pool
+/^Loop Pool
 
 #testcase-mistake-roiling-slee
 >slee
@@ -596,7 +596,7 @@ It's what the medals say that makes them special.
 
 >s
 
-Bran Barn
+/^Bran Barn
 
 #ttc-table-of-bran-barn-nudges-barn
 >banr
@@ -696,7 +696,7 @@ Score in a scenario: 13 out of 37 total points in the current region, Otters. Lo
 >e
 
 >n
-Shiner Shrine
+/^Shiner Shrine
 
 #testcase-mistake-roiling-implys
 >implys
@@ -784,7 +784,7 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
 >n
-Lamer Realm
+/^Lamer Realm
 
 #ttc-table-of-lamer-realm-nudges-low
 >lwo
@@ -905,7 +905,7 @@ You already changed the leopard.
 You already changed the leopard.
 
 >l
-Blest Belts
+/^Blest Belts
 
 #+ttc-table-of-lamer-realm-nudges-shades
 >shadse
@@ -941,7 +941,7 @@ The badger no longer feels second-rate, so it needs no more help.
 >s
 >s
 
-Clarthead Cathedral
+/^Clarthead Cathedral
 
 #testcase-mistake-roiling-sherwin
 >sherwin
@@ -1020,7 +1020,7 @@ They find another place where rioters roister.
 Score in a scenario: 22 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >s
-Perverse Preserve
+/^Perverse Preserve
 
 #ttc-table-of-otters-spechelp-raptor
 >raptro
@@ -1131,7 +1131,7 @@ They're more likely to shorten you with a few stings.
 No need to tweak the rac(c)oon again. It's fine as is.
 
 >l
-Uprates Pasture
+/^Uprates Pasture
 
 >snipe
 Your score has just gone up by one point
@@ -1213,7 +1213,7 @@ by one point
 Score in a scenario: 30 out of 37 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 37.
 
 >w
-Reclusion Inclosure
+/^Reclusion Inclosure
 
 #ttc-table-of-reclusion-inclosure-nudges-inclosure
 >inclosuer
@@ -1434,7 +1434,7 @@ by one point
 
 #this is how we get rid of Elvira
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"

@@ -52,7 +52,7 @@ DEBUG INFO: Cert-text: ----.
 
 >in
 
-Softer Forest
+/^Softer Forest
 
 #gadget test: thorn to north
 >rc thorn
@@ -64,7 +64,7 @@ DEBUG INFO: Cert-text: -----.
 
 >n
 by one point
-Rest of Forest
+/^Rest of Forest
 >score
 You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
@@ -80,7 +80,7 @@ DEBUG INFO: Cert-text: ----.
 
 >e
 by one point
-Self-ID Fields
+/^Self-ID Fields
 
 #ttc-table-of-unmatched-topic-responses-line-of-no-life
 >ask line of no life about anything
@@ -102,7 +102,7 @@ DEBUG INFO: Cert-text: S--T.
 You currently have 2 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
 >e
-Gnarliest Triangles
+/^Gnarliest Triangles
 
 #gadget test: dashes to shades
 >rc dashes
@@ -148,7 +148,7 @@ You currently have 5 out of 17 total points for the Forest region. Your minimum 
 
 >w
 >w
-Flesh Shelf
+/^Flesh Shelf
 
 >open sandwich
 bread from the Spam
@@ -197,7 +197,7 @@ You currently have 8 out of 17 total points for the Forest region. Your minimum 
 #notana
 Your score has just gone up by one point.
 
-Emptiness Sepiments
+/^Emptiness Sepiments
 
 #gadget test: liches to chisel
 >rc liches
@@ -333,13 +333,13 @@ You currently have 15 out of 17 total points for the Forest region. You have fou
 >put silver in shotgun
 
 >n
-Ghouls' Slough
+/^Ghouls' Slough
 
 >score
 You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >x maps
-Frost Forts
+/^Frost Forts
 
 #gadget test: vowels to wolves
 >rc vowels
@@ -363,7 +363,7 @@ Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now
 #notana
 Your score has just gone up by one point.
 
-Trips Strip
+/^Trips Strip
 
 >score
 

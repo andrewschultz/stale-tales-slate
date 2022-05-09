@@ -22,7 +22,7 @@
 >scam
 
 >enter tastee
-Loather Rathole
+/^Loather Rathole
 
 #ttc-table-of-troves-anagrams-hate
 Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
@@ -77,7 +77,7 @@ Your score has just gone up by one point
 
 DEBUG INFO: sob ever verbose hinting.
 
-Bustle Sublet
+/^Bustle Sublet
 
 #ttc-table-of-troves-anagrams-observe
 In particular, you feel the need to OBSERVE right now.
@@ -110,7 +110,7 @@ Your score has just gone up by one point
 
 /DEBUG INFO: (SNORE SO ARENA|evil bee) hinting.
 
-Boarded Roadbed
+/^Boarded Roadbed
 
 >score
 Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
@@ -152,7 +152,7 @@ by one point
 
 DEBUG INFO: box of diapers hinting.
 
-Drain Nadir
+/^Drain Nadir
 
 #ttc-table-of-troves-anagrams-despair
 In particular, you feel the need to DESPAIR right now.
@@ -189,7 +189,7 @@ Your score has just gone up by one point
 #ttc-table-of-troves-anagrams-master
 /In particular, you feel the need to (BOLSTER|MASTER) right now\.
 
-Boredom Bedroom
+/^Boredom Bedroom
 
 >score
 Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
@@ -224,7 +224,7 @@ Score in a scenario: 17 out of 30 total points in the current region, Troves. Lo
 >deal
 Your score has just gone up by one point
 
-Browse Bowers
+/^Browse Bowers
 
 DEBUG INFO: Si Reed hinting.
 !DEBUG INFO: See Dir hinting.
@@ -245,7 +245,7 @@ Your score has just gone up by one point
 
 #Econ Cone
 
-Econ-Cone
+/^Econ-Cone
 
 #ttc-table-of-troves-anagrams-aspire
 #ttc-table-of-troves-anagrams-strive
@@ -281,7 +281,7 @@ Your score has just gone up by one point
 
 DEBUG INFO: red vees hinting.
 
-Upscale Capsule
+/^Upscale Capsule
 
 #ttc-table-of-troves-anagrams-deserve
 In particular, you feel the need to DESERVE right now.
@@ -340,7 +340,7 @@ Score in a scenario: 29 out of 30 total points in the current region, Troves. Th
 >recant
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Troves (30/30)

@@ -18,7 +18,7 @@
 
 >presto
 >enter tornado
-Grey Gyre
+/^Grey Gyre
 
 >monty hints
 You haven't gotten any points yet, so you probably want to find what sort of word is used here.
@@ -28,7 +28,7 @@ You gulp the crust and can't help thinking UMPH. But you are too polite and/or r
 
 >umph
 Your score has just gone up by one point
-Austerer Treasure
+/^Austerer Treasure
 
 #ttc-table-of-presto-anagrams-pooh
 You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -57,7 +57,7 @@ The plebe grimaces as you try to eat the crust. Perhaps there's preparation you 
 DEBUG INFO: plebe hinting.
 
 >s
-Char Arch
+/^Char Arch
 
 #ttc-table-of-presto-anagrams-rats
 You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -119,7 +119,7 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly.
 
 >e
-Marines Seminar Remains
+/^Marines Seminar Remains
 
 #ttc-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -166,7 +166,7 @@ The ether turns your stomach too much to eat the crust. It's dangerous. You need
 >s
 
 >s
-Dirge Ridge
+/^Dirge Ridge
 
 #ttc-table-of-presto-anagrams-ole
 You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -263,11 +263,11 @@ DEBUG INFO: ether hinting.
 >e
 Ugh. The crust feels like army rations. Not now.
 >w
-Grey Gyre
+/^Grey Gyre
 >s
 You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
 >n
-Grey Gyre
+/^Grey Gyre
 
 >there
 Your score has just gone up by one point
@@ -281,7 +281,7 @@ You will want to get by the lawl wall.
 Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
-Saps' Pass
+/^Saps' Pass
 
 #ttc-table-of-presto-anagrams-gosh
 #ttc-table-of-presto-anagrams-syke
@@ -295,7 +295,7 @@ DEBUG INFO: lawl wall hinting.
 >syke
 Your score has just gone up by one point
 
-Phat Path
+/^Phat Path
 
 #ttc-table-of-presto-anagrams-tough
 #ttc-table-of-presto-anagrams-solong
@@ -355,7 +355,7 @@ by one point
 Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >n
-Hacks' Shack
+/^Hacks' Shack
 
 #ttc-table-of-presto-anagrams-screen
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
@@ -547,7 +547,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 Your score has just gone up by one point
 Diver time
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 

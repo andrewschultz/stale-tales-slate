@@ -16,7 +16,7 @@
 >seed 1
 >enter turrets
 
-Loftier Trefoil
+/^Loftier Trefoil
 
 >z
 
@@ -166,7 +166,7 @@ by one point
 >yonder
 Your score has just gone up by one point
 
-Topside Deposit
+/^Topside Deposit
 
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
@@ -184,7 +184,7 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 >get all
 
 >n
-Scope Copse
+/^Scope Copse
 
 #slider test for rusty
 >urtys
@@ -234,7 +234,7 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 
 #slider test for coiled
 >oclide
@@ -263,7 +263,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Anemic Cinema
+/^Anemic Cinema
 
 #slider test for angstier
 >nasgitre
@@ -284,7 +284,7 @@ Your score has just gone up by one point
 Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 >w
 
-Fringe Finger
+/^Fringe Finger
 
 #slider test for rustled
 >urtsedl
@@ -309,12 +309,12 @@ Your score has just gone up by one point
 Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >n
 
-Shaven Havens
+/^Shaven Havens
 
 >s
 >e
 
-Salted Deltas
+/^Salted Deltas
 
 #slider test for hastiest
 >ahtseits
@@ -333,7 +333,7 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
-Treading Gradient
+/^Treading Gradient
 
 #slider test for nerdiest
 >eneidrts
@@ -374,7 +374,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 57.
 
 >d
-Dire and Arid Den
+/^Dire and Arid Den
 
 #slider test for dandier
 >addneri
@@ -383,7 +383,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >score
 Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >dandier
-Treading Gradient
+/^Treading Gradient
 
 >score
 Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -409,7 +409,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
-Actionless Coastlines
+/^Actionless Coastlines
 
 >s
 >s
@@ -442,7 +442,7 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
-Leveraged Everglade
+/^Leveraged Everglade
 
 #slider test for grandiose
 >rgnaidseo
@@ -454,11 +454,11 @@ Your score has just gone up by one point
 Score in a scenario: 33 out of 57 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 57.
 >e
 >s
-Lost Lots
+/^Lost Lots
 
 >w
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
-Dourest Detours
+/^Dourest Detours
 
 #slider test for rousted
 >orsuedt
@@ -495,7 +495,7 @@ Score in a scenario: 36 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Danger Garden
+/^Danger Garden
 
 #slider test for broken
 >rbkone
@@ -519,7 +519,7 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 
 >e
 
-Obscurest Subsector
+/^Obscurest Subsector
 
 #this is faked a bit in the code and verification script. Rowdy/Wordy are not flippable things.
 #slider test for wordy
@@ -559,7 +559,7 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 >gt copse
 >w
 
-Outer Route
+/^Outer Route
 
 #slider test for revised
 >eresdvi
@@ -645,7 +645,7 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
-Mislit Limits
+/^Mislit Limits
 
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
@@ -685,7 +685,7 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 
 >in
 
-Mesprise Premises
+/^Mesprise Premises
 
 #slider test for triste
 >rtteis
@@ -720,7 +720,7 @@ Your score has just gone up by one point
 
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Towers (57/57)

@@ -7,6 +7,8 @@
 
 * trt-thru
 
+/^Ehs, Ehs
+
 >au 2
 >z
 
@@ -179,7 +181,7 @@ You were glad to have the smell of hay as a clue, but let's not overdo it!
 
 >sheesh
 by one point
-Sheesh
+/^Sheesh
 
 >verbs
 !Also, if you'd like a clue, you can enter a blank command.
@@ -199,7 +201,7 @@ There's something to maybe go inside but no way to get there.
 
 >reappear
 by one point
-Reappear
+/^Reappear
 
 #ttc-table-of-cylinder-descriptions-3
 >x cylinder
@@ -216,7 +218,7 @@ The cylinder in the center of the torus probably has something in it, but you ha
 
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 
 #ttc-table-of-cylinder-descriptions-4
 >x cylinder
@@ -233,7 +235,7 @@ You still don't have a passage to the cylinder or a way in.
 
 >teammate
 by one point
-Teammate
+/^Teammate
 
 #ttc-table-of-cylinder-descriptions-5
 >x cylinder
@@ -250,7 +252,7 @@ Even if you could make it to the cylinder, the door wouldn't seem to open.
 
 >intestines
 by one point
-Intestines
+/^Intestines
 
 #ttc-table-of-cylinder-descriptions-6
 >x cylinder
@@ -267,7 +269,7 @@ You must be close to being able to get near the cylinder.
 
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 
 #ttc-table-of-cylinder-descriptions-7
 >x cylinder
@@ -284,7 +286,7 @@ Maybe if the walkway were a bit more solid.
 
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
@@ -306,7 +308,7 @@ seems as good a place to start as any others. The ground beneath you
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
-Tattletale
+/^Tattletale
 
 >aaa
 >aa
@@ -317,7 +319,7 @@ Tattletale
 All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
-Scene Scene
+/^Scene Scene
 
 #+ttc-table-of-center-statuses-8
 The path to the cylinder is solid. The door blows open as you get there. You walk in and tumble down a slope. Around you, voices boom "RESTRAIN! RESTRAIN!" They are closing in! This is the end! But then they scatter. You pass out.

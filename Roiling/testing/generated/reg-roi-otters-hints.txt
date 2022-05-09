@@ -51,7 +51,7 @@ You pause, realizing you do not need to discern. Perhaps now is a good time to r
 Score in a scenario: 1 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >l
-Burnt Brunt
+/^Burnt Brunt
 
 >reedily
 Your score has just gone up by one point
@@ -62,7 +62,7 @@ You made a way west. You're done here.
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >w
-Disowned Downside
+/^Disowned Downside
 
 As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
 
@@ -174,7 +174,7 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say ER
 >undo
 
 >n
-Loop Pool
+/^Loop Pool
 
 #ttc-table-of-otters-anagrams-because
 As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
@@ -221,7 +221,7 @@ DEBUG INFO: atmo-moat hinting.
 
 >s
 
-Bran Barn
+/^Bran Barn
 
 #ttc-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
@@ -274,7 +274,7 @@ Score in a scenario: 13 out of 37 total points in the current region, Otters. Lo
 >e
 
 >n
-Shiner Shrine
+/^Shiner Shrine
 
 DEBUG INFO: simply sly imp hinting.
 
@@ -311,7 +311,7 @@ The path north is cleared, and you feel ready to challenge yourself there.
 Score in a scenario: 15 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
 >n
-Lamer Realm
+/^Lamer Realm
 
 #ttc-table-of-otters-anagrams-slow
 As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
@@ -362,7 +362,7 @@ DEBUG INFO: damsel medals hinting.
 Score in a scenario: 19 out of 37 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 37.
 
 >l
-Blest Belts
+/^Blest Belts
 
 >garbed
 Your score has just gone up by one point
@@ -376,7 +376,7 @@ Score in a scenario: 20 out of 37 total points in the current region, Otters. Lo
 >s
 >s
 
-Clarthead Cathedral
+/^Clarthead Cathedral
 
 DEBUG INFO: shrewin' whiners hinting.
 The whiners have a lot of energy and exercise it many different ways. (+)
@@ -410,7 +410,7 @@ The path south is cleared, and you feel ready to challenge yourself there.
 Score in a scenario: 22 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >s
-Perverse Preserve
+/^Perverse Preserve
 
 #ttc-table-of-otters-anagrams-parrot
 As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
@@ -464,7 +464,7 @@ DEBUG INFO: damsel medals hinting.
 Score in a scenario: 26 out of 37 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 37.
 
 >l
-Uprates Pasture
+/^Uprates Pasture
 
 >snipe
 Your score has just gone up by one point
@@ -497,7 +497,7 @@ by one point
 Score in a scenario: 30 out of 37 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 37.
 
 >w
-Reclusion Inclosure
+/^Reclusion Inclosure
 
 #ttc-table-of-otters-anagrams-raptor
 As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
@@ -548,7 +548,7 @@ by one point
 
 #this is how we get rid of Elvira
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"

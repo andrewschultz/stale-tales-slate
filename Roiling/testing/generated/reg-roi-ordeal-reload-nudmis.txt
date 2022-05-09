@@ -290,7 +290,7 @@ You can just go DOWN to enter the basement.
 >basemetn
 You probably just want to go DOWN to the basement.
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 #ttc-table-of-ordeal-reload-spechelp-stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.
@@ -428,7 +428,7 @@ You can just go IN to the stable.
 The settler is pretty powerful, but it can't build bridges.
 
 >in
-Farming Framing
+/^Farming Framing
 
 #ttc-table-of-ordeal-reload-spechelp-sitar
 >stari
@@ -462,7 +462,7 @@ The stair helps you get around more easily, so it doesn't need to be changed bac
 
 >in
 >u
-Highest Heights
+/^Highest Heights
 
 #ttc-table-of-highest-heights-nudges-highest
 >highets
@@ -496,7 +496,7 @@ Score in a scenario: 9 out of 15 total points in the current region, Ordeal Relo
 The ramp is useful now. Best keep it.
 
 >gt study
-Dusty Study
+/^Dusty Study
 >event mpa
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
 So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
@@ -555,7 +555,7 @@ You know what to change the steel pad back to: the pedestal. There's no third op
 The steel pad intertwines into a marginally artistic pedestal.
 
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 #ttc-table-of-largely-all-grey-gallery-nudges-gallery
 >galleyr
@@ -674,7 +674,7 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 Elmo checks you for a second. "You sure you know how to use the settler?"
 You nod. "No clues counsel."
 
-Carven Cavern
+/^Carven Cavern
 
 #ttc-table-of-ordeal-reload-spechelp-respect-specter
 >eecsprt
@@ -802,4 +802,4 @@ by one point
 Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 >in
-Strip of Profits
+/^Strip of Profits

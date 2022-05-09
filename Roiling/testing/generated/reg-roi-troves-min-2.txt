@@ -20,7 +20,7 @@
 >troves
 
 >enter tastee
-Loather Rathole
+/^Loather Rathole
 
 >score
 Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
@@ -36,7 +36,7 @@ Score in a scenario: 1 out of 30 total points in the current region, Troves. Low
 >care
 Your score has just gone up by one point
 
-Bustle Sublet
+/^Bustle Sublet
 
 >score
 Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 29.
@@ -50,7 +50,7 @@ Score in a scenario: 3 out of 30 total points in the current region, Troves. Low
 >spot
 Your score has just gone up by one point
 
-Boarded Roadbed
+/^Boarded Roadbed
 
 >score
 Score in a scenario: 4 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 28.
@@ -64,7 +64,7 @@ Score in a scenario: 5 out of 30 total points in the current region, Troves. Low
 >recall
 by one point
 
-Drain Nadir
+/^Drain Nadir
 
 #lose max point for only one of believe/reason
 #lose a point for not ignoring A Tasty Sty, Say
@@ -81,7 +81,7 @@ Score in a scenario: 7 out of 30 total points in the current region, Troves. Low
 >decide
 Your score has just gone up by one point
 
-Boredom Bedroom
+/^Boredom Bedroom
 
 >score
 Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
@@ -95,7 +95,7 @@ Score in a scenario: 9 out of 30 total points in the current region, Troves. Low
 >deal
 Your score has just gone up by one point
 
-Browse Bowers
+/^Browse Bowers
 
 #lose a point for not dealing with lager
 #lose a point for only one of BOLSTER/MASTER
@@ -111,7 +111,7 @@ Your score has just gone up by one point
 
 #Econ Cone
 
-Econ-Cone
+/^Econ-Cone
 
 >score
 Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
@@ -125,7 +125,7 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 >ponder
 Your score has just gone up by one point
 
-Upscale Capsule
+/^Upscale Capsule
 
 #lose a maximum point for only one of aspire/strive
 
@@ -151,30 +151,30 @@ Your score has just gone up by one point
 Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >misses
-Troves
+/^Troves
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
-Loather Rathole====
+/^Loather Rathole====
 --you could've tried to STARE at the tears taser.
-Boarded Roadbed====
+/^Boarded Roadbed====
 --you could've tried to STAY around A Sty: Tasty, Say.
 
 you could've tried to BELIEVE to neutralize the evil bee, too.
 !--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
-Drain Nadir====
+/^Drain Nadir====
 --you could've tried to RELAPSE around the pleaser leapers.
-Boredom Bedroom====
+/^Boredom Bedroom====
 --you could've tried to GLARE at the Lager.
 
 !--you could've tried to MASTER the ME ARTS.
 --you could've tried to BOLSTER yourself to deserve lobster.
 
-Econ-Cone====
+/^Econ-Cone====
 
 !--you could've tried to STRIVE by the statue of Trevis Vister.
 --you could've tried to ASPIRE by the praise spirea.
 
-Browse Bowers====
+/^Browse Bowers====
 --you could've tried to DISCOVER something about DIVORCES magazine.
 
 !--you could've tried to RESIST Sister Tressi.
@@ -188,7 +188,7 @@ Your score has just gone up by one point
 
 This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything you can?
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Troves (17/30)

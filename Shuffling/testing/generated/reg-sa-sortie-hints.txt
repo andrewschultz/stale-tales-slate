@@ -29,7 +29,7 @@ You see yourself flipping the dial back and forth about six or seven times. It a
 
 DEBUG: dial being objhinted.
 
-Trap Part
+/^Trap Part
 
 >xx dial
 The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
@@ -66,7 +66,7 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
 >n
-The Nick
+/^The Nick
 
 You see yourself patting your stomach.
 
@@ -97,7 +97,7 @@ The nick glows all around.
 >kitchen
 by one point
 
-Kitchen
+/^Kitchen
 
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
 
@@ -269,7 +269,7 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 >e
 
-Stiller Trellis
+/^Stiller Trellis
 
 DEBUG: warts being objhinted.
 
@@ -280,7 +280,7 @@ Mum, dud mud blocks your way west. You can only go south to Trap Part or east to
 >e
 
 >s
-Room
+/^Room
 
 #ttc-table-of-sortie-anagrams-cask
 >xx cask
@@ -448,7 +448,7 @@ You currently have 17 out of 27 total points for the Sortie region. You have fou
 Nothing more to do here, other than pass between the moor and other rooms you may need to visit.
 
 >n
-Stiller Trellis
+/^Stiller Trellis
 
 You see yourself filling up the wall here then making it disappear.
 
@@ -499,7 +499,7 @@ There are three unblocked exits: south to Room, east and west to Kitchen.
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Sacred Cedars
+/^Sacred Cedars
 
 Once you change the sack to a cask, you can FILL CASK here, to start.
 
@@ -556,7 +556,7 @@ you see the smilies flying off the page, then the poem folding and becoming a pa
 >moor
 "The mire, I'm there," you muse again.
 
-Moor
+/^Moor
 
 >missile
 Your score has just gone up by one point.
@@ -627,7 +627,7 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 >w
 You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
 
-Crashing Archings
+/^Crashing Archings
 
 #+ttc-table-of-nowheres-stiller-trellis
 >n

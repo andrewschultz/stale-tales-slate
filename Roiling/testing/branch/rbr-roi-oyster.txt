@@ -38,7 +38,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 @hin
@@ -455,7 +456,7 @@ Perhaps you should've played it cool and fled, instead.
 by one point
 }}SCORE++
 
-Olde Lode
+/^Olde Lode
 
 @hin
 DEBUG INFO: clam hinting.
@@ -597,7 +598,7 @@ Your irrational anger turns to irrational greed when you get close enough to sma
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 @hin
 DEBUG INFO: sabot boats hinting.
@@ -788,7 +789,7 @@ Your score has just gone up by one point
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
 Your score has just gone up by one point
-Anger Range
+/^Anger Range
 >score
 }}SCORE++
 {$SCOS}
@@ -832,7 +833,7 @@ You're a bit too winded to make a really good boast after your recent exertions,
 Your score has just gone up by one point
 }}SCORE++
 
-Fighter Freight
+/^Fighter Freight
 
 @hin
 DEBUG INFO: pale plea hinting.
@@ -907,7 +908,7 @@ Your score has just gone up by one point
 @hin
 /DEBUG INFO: (pikes|carps) hinting.
 
-Anger Range
+/^Anger Range
 
 @verbs
 #verbcase listen-oyster-if-noun-is-carps-or-noun-is-pikes
@@ -1149,7 +1150,7 @@ It's okay to get mad, but staying mad? No.
 As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing.
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 @hin
 DEBUG INFO: eeks hinting.
@@ -1268,7 +1269,7 @@ Your score has just gone up by one point
 #we skipped SCAN and there is no way back.
 }}CURMAX--
 
-Lean Lane
+/^Lean Lane
 
 @hin
 DEBUG INFO: Tea-at-a-Tee hinting.
@@ -1497,7 +1498,7 @@ You will need to use them all at once, and on something else
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 @hin
 DEBUG INFO: wherever the crate is coming from hinting.
@@ -1878,7 +1879,7 @@ The message was corny, but the door was a piece of cake since you figured what t
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 @hin
 DEBUG INFO: tubs hinting.
@@ -1887,7 +1888,7 @@ DEBUG INFO: tubs hinting.
 #testcase-outside-shuttle-hutlets
 >out
 !The only way to exit
-Lapsin' Plains
+/^Lapsin' Plains
 >undo
 \\
 #testcase-exits-shuttle-hutlets
@@ -2164,7 +2165,7 @@ You need to dig to some purpose, like uncovering the haunter--and not just dig. 
 You need a slightly more organized way to reveal what's under the ground with your rigged digger.
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 @hin
 DEBUG INFO: Paw-R-Wrap hinting.
@@ -2386,7 +2387,7 @@ You've gotten passage north and found something important, so you're done here.
 Hmm! There's something more to do with the gleaner. You've gotten what you need, though.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 @hin
 DEBUG INFO: weaselly walleyes hinting.
@@ -2462,7 +2463,7 @@ Just tacking one walleye won't change the crowd. They're past redemption, anyway
 The walleyes are a bad crowd, past redemption.
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 @hin
 DEBUG INFO: ruby hinting.
@@ -2687,20 +2688,20 @@ There are three unblocked exits: south to Sclerous Closures, west to Rascal Craa
 
 @max
 >in
-End Den
+/^End Den
 >x gleaner
 You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side.
 \\
 Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...
 \\
-Tenfold
+/^Tenfold Teflon'd Den Loft
 >undo
 >undo
 
 @verbs
 # prime GT END DEN for later. Oh, and poke the table of nowheres, too!
 >in
-End Den
+/^End Den
 \\
 #ttc-table-of-oyster-nowheres-end-den
 >e
@@ -2713,7 +2714,7 @@ You can go back outside to the Horned Hedron.
 #testcase-outside-end-den
 >out
 !The only way to exit is
-Horned Hedron
+/^Horned Hedron
 
 @nud
 #ttc-table-of-oyster-done-rejects-pol-art-portal
@@ -2722,7 +2723,7 @@ You discovered the portal. No need to look further.
 \\
 ##balance undos
 >in
-End Den
+/^End Den
 #testcase-mistake-roiling-ned
 \\
 >ned
@@ -2757,7 +2758,7 @@ No need to go back there.
 @hin
 DEBUG INFO: papery yapper hinting.
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 @verbs
 #testcase-outside-tenfold-teflond-den-loft
@@ -2955,7 +2956,7 @@ by one point
 }}SCORE++
 }}CURMIN+=2
 \\
-Plasm Lamps
+/^Plasm Lamps
 
 @hin
 DEBUG INFO: natant ant hinting.
@@ -3212,7 +3213,7 @@ While you can go back outside, you can just finish things here, as you've done e
 Your score has just gone up by one point
 }}SCORE++
 
-Strip of Profits
+/^Strip of Profits
 
 @min
 This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything you can?

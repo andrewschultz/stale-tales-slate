@@ -173,7 +173,7 @@ Ed Riley doesn't seem to make any noise. He just blocks you west.
 {$SCOS}
 
 >l
-Burnt Brunt
+/^Burnt Brunt
 
 @mis
 #testcase-mistake-roiling-deltaic
@@ -350,7 +350,7 @@ Barley, reedily. Until you get your full powers back, your restriction has made 
 {$SCOS}
 
 >w
-Disowned Downside
+/^Disowned Downside
 
 @spoi
 As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
@@ -1221,7 +1221,7 @@ You also feel there's something more to do here, if you want, but isn't critical
 >undo
 
 >n
-Loop Pool
+/^Loop Pool
 
 @spoi
 #ttc-table-of-otters-anagrams-because
@@ -1431,7 +1431,7 @@ It's what the medals say that makes them special.
 @!min
 >s
 \\
-Bran Barn
+/^Bran Barn
 
 @spoi
 #ttc-table-of-otters-anagrams-quickly
@@ -1649,7 +1649,7 @@ There are four unblocked exits: north to Loop Pool, south to Bran Barn, east to 
 >e
 
 >n
-Shiner Shrine
+/^Shiner Shrine
 
 @hin
 DEBUG INFO: simply sly imp hinting.
@@ -1825,7 +1825,7 @@ The path north is cleared, and you feel ready to challenge yourself there.
 --you could've made the imp act BRUTELY, and the whiners could've spoken
 
 >n
-Lamer Realm
+/^Lamer Realm
 
 @nud
 #ttc-table-of-lamer-realm-nudges-low
@@ -2088,7 +2088,7 @@ You already changed the leopard.
 You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
 
 >l
-Blest Belts
+/^Blest Belts
 
 @verbs
 #+ttc-table-of-otters-nowheres-lamer-realm
@@ -2152,7 +2152,7 @@ It's bigger than average. And the leopard would back it up.
 >s
 >s
 
-Clarthead Cathedral
+/^Clarthead Cathedral
 
 @hin
 DEBUG INFO: shrewin' whiners hinting.
@@ -2314,7 +2314,7 @@ The path south is cleared, and you feel ready to challenge yourself there.
 --you could've made the imp act BRUTELY, and the whiners could've spoken STOICALLY.
 
 >s
-Perverse Preserve
+/^Perverse Preserve
 
 @verbs
 #verbcase listen-otters-if-player-is-in-perverse-preserve
@@ -2584,7 +2584,7 @@ They're more likely to shorten you with a few stings.
 No need to tweak the rac(c)oon again. It's fine as is.
 
 >l
-Uprates Pasture
+/^Uprates Pasture
 
 @!min
 >snipe
@@ -2754,7 +2754,7 @@ by one point
 {$SCOS}
 
 >w
-Reclusion Inclosure
+/^Reclusion Inclosure
 
 @spoi
 #ttc-table-of-otters-anagrams-raptor
@@ -2994,7 +2994,7 @@ by one point
 >quickly
 by one point
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 >7
 "No mercy, my crone! Corny, me?"
 >play whistle
@@ -3127,7 +3127,7 @@ by one point
 
 #this is how we get rid of Elvira
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"

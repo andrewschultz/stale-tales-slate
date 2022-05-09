@@ -12,7 +12,7 @@
 >ts
 >routes
 >enter routes
-Same Mesa
+/^Same Mesa
 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -43,7 +43,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >inside
 Your score has just gone up by one point
 
-Cleric Circle
+/^Cleric Circle
 
 >score
 Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -82,7 +82,7 @@ Precise recipes
 >past
 Your score has just gone up by one point
 
-Idle Deli
+/^Idle Deli
 
 #ttc-table-of-routes-nowheres-idle-deli
 >n
@@ -107,7 +107,7 @@ Your score has just gone up by one point
 >across
 Your score has just gone up by one point
 
-Adobe Abode
+/^Adobe Abode
 
 #ttc-table-of-routes-nowheres-adobe-abode
 >e
@@ -218,7 +218,7 @@ It's like a dense metal or something. It's more likely it would make something e
 >beneath
 Your score has just gone up by one point
 
-Harms Marsh
+/^Harms Marsh
 
 #ttc-table-of-routes-nowheres-harms-marsh
 >n
@@ -253,7 +253,7 @@ Your score has just gone up by one point
 >along
 Your score has just gone up by one point
 
-Ripe Pier
+/^Ripe Pier
 
 >w
 #ttc-table-of-routes-nowheres-ripe-pier
@@ -286,7 +286,7 @@ Looks like you will need to figure a way to move forward without directions. You
 >amidst
 Your score has just gone up by one point
 
-Cripple Clipper
+/^Cripple Clipper
 
 #ttc-table-of-routes-nowheres-cripple-clipper
 >d
@@ -326,7 +326,7 @@ Looks like you will need to figure a way to move forward without directions. You
 >athwart
 Your score has just gone up by one point
 
-Sonancy Canyons
+/^Sonancy Canyons
 
 #ttc-table-of-routes-nowheres-sonancy-canyons
 >n
@@ -394,7 +394,7 @@ Score in a scenario: 21 out of 22 total points in the current region, Routes. Th
 >beyond
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Routes (22/22)

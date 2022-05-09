@@ -20,7 +20,7 @@ by one point
 
 >in
 
-Trap Part
+/^Trap Part
 
 #gadget test: exitsne to sixteen
 >rc dial
@@ -35,7 +35,7 @@ by one point
 You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
 >n
-The Nick
+/^The Nick
 
 #gadget test: thenick to kitchen
 >rc the nick
@@ -48,7 +48,7 @@ DEBUG INFO: Cert-text: -------.
 >kitchen
 by one point
 
-Kitchen
+/^Kitchen
 
 #gadget test: warts to straw
 >rc warts
@@ -200,10 +200,10 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 >e
 
-Stiller Trellis
+/^Stiller Trellis
 
 >s
-Room
+/^Room
 
 #gadget test: cask to sack
 >rc cask
@@ -393,7 +393,7 @@ You currently have 17 out of 27 total points for the Sortie region. You have fou
 "The room's smoother," you muse...
 
 >n
-Stiller Trellis
+/^Stiller Trellis
 
 >w
 
@@ -421,7 +421,7 @@ Your score has just gone up by one point.
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Sacred Cedars
+/^Sacred Cedars
 
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
@@ -445,7 +445,7 @@ DEBUG INFO: Cert-text: ----I--.
 >moor
 "The mire, I'm there," you muse again.
 
-Moor
+/^Moor
 
 >missile
 Your score has just gone up by one point.
@@ -511,7 +511,7 @@ A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular o
 >w
 You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
 
-Crashing Archings
+/^Crashing Archings
 
 >s
 

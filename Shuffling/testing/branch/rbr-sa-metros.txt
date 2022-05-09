@@ -57,7 +57,7 @@ You see yourself exploring the trade tread you created.
 
 >in
 
-Undesired Underside
+/^Undesired Underside
 
 @gle
 You see yourself giving something reddish to some weird monster before it runs off.
@@ -316,7 +316,7 @@ You can't change the hotel, but you could have another look around.
 
 >n
 
-Roarings Garrison
+/^Roarings Garrison
 
 @gn
 #ttc-table-of-nowheres-roarings-garrison
@@ -416,7 +416,7 @@ The deadbeat starts up some nonsense pseudo-sociological mumblings.
 "What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
 
 >w
-Bile Libe
+/^Bile Libe
 
 @hin
 DEBUG: motto being objhinted.
@@ -545,7 +545,7 @@ The fairies buzz and give superior sniffs.
 ####skip the camp again for detail testing. Let's get the
 >s
 >w
-The Ol' Hotel
+/^The Ol' Hotel
 
 @gle
 You see yourself giving something reddish to the night thing in the hotel before it runs off.
@@ -660,7 +660,7 @@ The mattress is in bad enough shape as it is. You got what you needed from it.
 You can't change the hotel, and you got rid of the night thing, anyway.
 
 >n
-Roarings Garrison
+/^Roarings Garrison
 
 @nud
 #ttc-table-of-roarings-garrison-nudges-library
@@ -737,7 +737,7 @@ The dead beat deadbeat might not beat you dead, but you'd get maligned ere leger
 In other words, you probably need to gain the deadbeat's trust before taking any stuff.
 
 >n
-Obtains/Boastin' Bastion
+/^Obtains/Boastin' Bastion
 
 @nud
 #ttc-table-of-obtains-boastin-bastion-nudges-boastin
@@ -1036,7 +1036,7 @@ The mittens are as comfortable as they're going to be.
 The mittens are as comfortable as they're going to be.
 
 >e
-Fo' Real Florae
+/^Fo' Real Florae
 
 @hin
 The brocade is free, whether or not you've helped the faeries. Why not take it?
@@ -1483,7 +1483,7 @@ Just go east.
 
 >e
 #notana
-Esoteric Coteries
+/^Esoteric Coteries
 }}SCORE++
 
 @gle
@@ -1632,7 +1632,7 @@ You don't need to futz further with the friend finder.
 >put card on sensor
 The door is open. So you just walk east instead.
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 
@@ -1649,7 +1649,7 @@ You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
 >z
 >e
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 @nud
 #ttc-table-of-esoteric-coteries-nudges-esoteric
@@ -1660,12 +1660,15 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 >coterei
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
 
+@max
 >w
 >z
+The signers' ingress slides shut.
+\\
 >open metallic door
-
+\\
 >e
-Esoteric Coteries
+/^Esoteric Coteries
 You can also see a lit-up tulip here.
 The signers' ingress slides shut.
 
@@ -1751,7 +1754,7 @@ by one point
 
 "Logical call. I go." You sneak out back west.
 
-Undesired Underside
+/^Undesired Underside
 
 @mis
 #testcase-mistake-shuffling-odor-rood
@@ -1791,7 +1794,7 @@ You got to the Esoteric Coteries. You don't need any tricks like that.
 You got to the Esoteric Coteries. You don't need any tricks like that.
 
 >s
-Elm Train Terminal
+/^Elm Train Terminal
 
 @gle
 You see the neon pig exploding, the empty space being filled with--an ear of corn?!
@@ -2039,7 +2042,7 @@ There are two unblocked exits: north to Undesired Underside and east.
 
 >e
 
-Bassy Abyss
+/^Bassy Abyss
 
 @gle
 You see yourself pounding the siren, then clapping your hands and creating a swarm of dust.
@@ -2220,7 +2223,7 @@ You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 #notana
 }}SCORE++
 
-Trips Strip
+/^Trips Strip
 
 >score
 You have scored {SCORE} out of {MAX} total points for the Metros region.

@@ -9,7 +9,7 @@
 
 * ordeal_thru
 
-Busiest Subsite
+/^Busiest Subsite
 
 >opt in
 >poss
@@ -31,7 +31,7 @@ You're not in the area where the magic happens, yet. The cardinal directions, in
 !NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
 
 >in
-Rested Desert
+/^Rested Desert
 
 What can the odor turn into? Your random thoughts are not so random. (+)
 NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
@@ -105,7 +105,7 @@ You currently have 3 out of 8 total points for the Ordeal Loader region. Your mi
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
 >open door
-Thickest Thickets
+/^Thickest Thickets
 
 /DEBUG: (reed|toga) being objhinted\.
 
@@ -155,7 +155,7 @@ Your score has just gone up by one point.
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >in
-Notices Section
+/^Notices Section
 
 DEBUG: magenta nametag being objhinted.
 >monty glean
@@ -288,5 +288,5 @@ coughs
 You reckon you can wait
 
 >in
-Trips Strip
+/^Trips Strip
 

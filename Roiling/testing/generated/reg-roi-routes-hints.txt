@@ -12,7 +12,7 @@
 >ts
 >routes
 >enter routes
-Same Mesa
+/^Same Mesa
 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -36,7 +36,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >inside
 Your score has just gone up by one point
 
-Cleric Circle
+/^Cleric Circle
 
 The spoon reflects to the list-o-toils.
 
@@ -63,7 +63,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 >past
 Your score has just gone up by one point
 
-Idle Deli
+/^Idle Deli
 
 #ttc-table-of-routes-anagrams-despite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go DESPITE.
@@ -96,7 +96,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-opposite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go OPPOSITE.
 
-Adobe Abode
+/^Adobe Abode
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
@@ -180,7 +180,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 >beneath
 Your score has just gone up by one point
 
-Harms Marsh
+/^Harms Marsh
 
 #ttc-table-of-routes-anagrams-until
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNTIL.
@@ -211,7 +211,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-amidst
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AMIDST.
 
-Ripe Pier
+/^Ripe Pier
 
 >amidst
 Your score has just gone up by one point
@@ -219,7 +219,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-athwart
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
 
-Cripple Clipper
+/^Cripple Clipper
 
 >athwart
 Your score has just gone up by one point
@@ -227,7 +227,7 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-between
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BETWEEN.
 
-Sonancy Canyons
+/^Sonancy Canyons
 
 >between
 Your score has just gone up by one point
@@ -251,7 +251,7 @@ Score in a scenario: 21 out of 22 total points in the current region, Routes. Th
 >beyond
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Routes (22/22)

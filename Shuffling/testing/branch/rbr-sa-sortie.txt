@@ -60,7 +60,7 @@ You see yourself flipping the dial back and forth about six or seven times. It a
 @hin
 DEBUG: dial being objhinted.
 
-Trap Part
+/^Trap Part
 
 @hin
 >xx dial
@@ -172,7 +172,7 @@ You don't want to go back to how the Trap Part was.
 You don't need to deal with the dial, now.
 
 >n
-The Nick
+/^The Nick
 
 @gle
 You see yourself patting your stomach.
@@ -250,7 +250,7 @@ DEBUG INFO: Cert-text: -------.
 by one point
 }}SCORE++
 
-Kitchen
+/^Kitchen
 
 @hin
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
@@ -448,7 +448,7 @@ Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
 @nud
 #####detour to check on UFR
 >s
-Trap Part
+/^Trap Part
 A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
 \\
 #ttc-table-of-trap-part-nudges-aroundden
@@ -865,7 +865,7 @@ No need for fashion tweaks.
 
 >e
 
-Stiller Trellis
+/^Stiller Trellis
 
 @hin
 DEBUG: warts being objhinted.
@@ -878,7 +878,7 @@ Mum, dud mud blocks your way west. You can only go south to Trap Part or east to
 >e
 
 >s
-Room
+/^Room
 
 @nud
 #ttc-table-of-sortie-nudges-were
@@ -1469,7 +1469,7 @@ The room sways a bit. You do some brief mental calculation. There's no third pla
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
 >n
-Stiller Trellis
+/^Stiller Trellis
 
 @gle
 You see yourself filling up the wall here then making it disappear.
@@ -1605,7 +1605,7 @@ There are three unblocked exits: south to Room, east and west to Kitchen.
 You already have a passage east. Don't close it.
 
 >e
-Sacred Cedars
+/^Sacred Cedars
 
 @hin
 Once you change the sack to a cask, you can FILL CASK here, to start.
@@ -1844,7 +1844,7 @@ you see the smilies flying off the page, then the poem folding and becoming a pa
 >moor
 "The mire, I'm there," you muse again.
 
-Moor
+/^Moor
 
 >missile
 Your score has just gone up by one point.
@@ -2094,7 +2094,7 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 >w
 You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
 
-Crashing Archings
+/^Crashing Archings
 
 @gn
 #+ttc-table-of-nowheres-stiller-trellis

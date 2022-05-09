@@ -193,7 +193,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
 >in
-Farming Framing
+/^Farming Framing
 
 # this must be saved until after we see the Dusty Study, because above I wanted to test all the pre-flips in the study, leaving nothing to scan. Roiling would default to "hey, wait, you already know that!"
 #ttc-table-of-notepad-entries-spaces
@@ -210,7 +210,7 @@ Score in a scenario: 8 out of 15 total points in the current region, Ordeal Relo
 
 >in
 >u
-Highest Heights
+/^Highest Heights
 
 >ramp
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
@@ -219,7 +219,7 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 >snib
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
@@ -286,7 +286,7 @@ Finish Fishin'.
 
 >2
 
-Carven Cavern
+/^Carven Cavern
 
 #ttc-table-of-notepad-entries-clues
 >pad clues
@@ -518,4 +518,4 @@ The Wildest Wilteds are not to be traversed lightly. People protecting their ter
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 
 >in
-Strip of Profits
+/^Strip of Profits

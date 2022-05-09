@@ -11,7 +11,8 @@
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 #ttc-table-of-oyster-nowheres-posh-hops-shop
@@ -88,7 +89,7 @@ Perhaps you should've played it cool and fled, instead.
 >stroll
 by one point
 
-Olde Lode
+/^Olde Lode
 
 #ttc-table-of-oyster-nowheres-olde-lode
 >e
@@ -135,7 +136,7 @@ Your irrational anger turns to irrational greed when you get close enough to sma
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 #ttc-table-of-oyster-nowheres-disease-seaside
 >e
@@ -182,7 +183,7 @@ Score in a scenario: 6 out of 44 total points in the current region, Oyster. Low
 >boast
 Your score has just gone up by one point
 
-Fighter Freight
+/^Fighter Freight
 
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -210,7 +211,7 @@ No sense crossing back. There's more on the other side of the shore.
 >leap
 Your score has just gone up by one point
 
-Anger Range
+/^Anger Range
 
 #verbcase listen-oyster-if-noun-is-carps-or-noun-is-pikes
 >listen
@@ -271,7 +272,7 @@ Score in a scenario: 10 out of 44 total points in the current region, Oyster. Lo
 As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing.
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 #ttc-table-of-oyster-nowheres-hardest-trashed-dearths
 >e
@@ -308,7 +309,7 @@ You hear eeks. Arcing caring. Weeps sweep. "Eek! Eek! Eek!" You must find where 
 >seek
 Your score has just gone up by one point
 
-Lean Lane
+/^Lean Lane
 
 #ttc-table-of-oyster-nowheres-lean-lane
 >e
@@ -380,7 +381,7 @@ Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lo
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 #ttc-table-of-oyster-nowheres-lapsin-plains
 >e
@@ -454,12 +455,12 @@ Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 #testcase-outside-shuttle-hutlets
 >out
 !The only way to exit
-Lapsin' Plains
+/^Lapsin' Plains
 >undo
 
 #testcase-exits-shuttle-hutlets
@@ -505,7 +506,7 @@ Score in a scenario: 27 out of 44 total points in the current region, Oyster. Lo
 >s
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 #ttc-table-of-oyster-nowheres-sclerous-closures
 >w
@@ -565,7 +566,7 @@ Your score has just gone up by one point
 Score in a scenario: 30 out of 44 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 44.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 #ttc-table-of-oyster-nowheres-horned-hedron
 >e
@@ -585,7 +586,7 @@ You have more than one way to leave: south and west. So you'll need to specify w
 There are two unblocked exits: south to Sclerous Closures and west.
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 #ttc-table-of-oyster-nowheres-rascal-craals
 >w
@@ -682,7 +683,7 @@ Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lo
 
 # prime GT END DEN for later. Oh, and poke the table of nowheres, too!
 >in
-End Den
+/^End Den
 
 #ttc-table-of-oyster-nowheres-end-den
 >e
@@ -695,7 +696,7 @@ You can go back outside to the Horned Hedron.
 #testcase-outside-end-den
 >out
 !The only way to exit is
-Horned Hedron
+/^Horned Hedron
 
 >x gleaner
 
@@ -705,7 +706,7 @@ No need to go back there.
 
 >in
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 #testcase-outside-tenfold-teflond-den-loft
 >exits
@@ -748,7 +749,7 @@ While you can go back outside, you can just finish things here, or maybe you can
 
 >trample
 
-Plasm Lamps
+/^Plasm Lamps
 
 >score
 Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
@@ -816,7 +817,7 @@ While you can go back outside, you can just finish things here, as you've done e
 >redial
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Oyster (44/44)

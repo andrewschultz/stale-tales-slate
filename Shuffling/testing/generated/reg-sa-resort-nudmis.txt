@@ -24,7 +24,7 @@ Your score has just gone up by one point
 You already made passage to the ogled lodge. It's good enough. Why change it?
 
 >enter resort
-Astral Altars
+/^Astral Altars
 
 #testcase-mistake-shuffling-lites
 >lites
@@ -66,7 +66,7 @@ While you're sort of trapped here, you don't need to do anything to the location
 >islet
 Your score has just gone up by one point.
 
-Leis Isle
+/^Leis Isle
 
 >score
 You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
@@ -180,7 +180,7 @@ You can just use either the cork or the wings to leave to the east.
 The tree sits there.
 
 >e
-Rived Drive
+/^Rived Drive
 
 #testcase-mistake-shuffling-repos
 >repos
@@ -343,7 +343,7 @@ Those are already useful.
 
 >e
 
-Potshot Hotspot
+/^Potshot Hotspot
 
 #ttc-table-of-potshot-hotspot-nudges-frust
 >fruts
@@ -600,7 +600,7 @@ You don't need to change the manors. You just need to be able to get there.
 You don't need to change the manors. You just need to be able to get there.
 
 >e
-Means Manse
+/^Means Manse
 
 #ttc-table-of-means-manse-nudges-manse
 >mesna

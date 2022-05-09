@@ -9,7 +9,7 @@
 
 * ordeal_thru
 
-Busiest Subsite
+/^Busiest Subsite
 
 >opt in
 >poss
@@ -136,7 +136,7 @@ Vandalizing the vacate caveat is probably more trouble than it's worth.
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
 >in
-Rested Desert
+/^Rested Desert
 
 #ttc-table-of-rested-desert-nudges-rested
 >restde
@@ -210,7 +210,7 @@ by one point
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
 >open door
-Thickest Thickets
+/^Thickest Thickets
 
 #testcase-mistake-shuffling-erde
 >erde
@@ -300,7 +300,7 @@ The goat is happy as-is. No need to go tag a ...
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
 >in
-Notices Section
+/^Notices Section
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
@@ -496,5 +496,5 @@ The saltine's there to help you. Changing it might work against you.
 You're the good guy, here. You don't need to steal.
 
 >in
-Trips Strip
+/^Trips Strip
 

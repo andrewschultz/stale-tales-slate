@@ -16,7 +16,7 @@
 >seed 1
 >enter turrets
 
-Loftier Trefoil
+/^Loftier Trefoil
 
 #ttc-table-of-towers-progress-comments-loftier-trefoil
 The palace--well, you couldn't even see it before you stepped in here. Maybe someone will help you, once you've sorted this mess out.
@@ -158,7 +158,7 @@ by one point
 >yonder
 Your score has just gone up by one point
 
-Topside Deposit
+/^Topside Deposit
 
 #ttc-table-of-castle-approaching-narratives-1
 #ttc-table-of-towers-progress-comments-topside-deposit
@@ -197,7 +197,7 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 >get all
 
 >n
-Scope Copse
+/^Scope Copse
 
 #ttc-table-of-towers-progress-comments-scope-copse
 #ttc-table-of-castle-approaching-narratives-2
@@ -256,7 +256,7 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 
 #+ttc-table-of-castle-approaching-narratives-3
 #ttc-table-of-towers-progress-comments-baldest-blasted-saltbed
@@ -286,7 +286,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Anemic Cinema
+/^Anemic Cinema
 
 #+ttc-table-of-castle-approaching-narratives-4
 #ttc-table-of-towers-progress-comments-anemic-cinema
@@ -295,17 +295,17 @@ The palace looks a little bigger now--but you may eventually need to cut east a 
 #nowhere else to put this. We basically verify that the trips to Dourest Detours all work.
 >gonear lost lots
 >s
-Dourest Detours
+/^Dourest Detours
 >undo
 >undo
 >gonear outer route
 >w
-Dourest Detours
+/^Dourest Detours
 >undo
 >undo
 >gonear shaven havens
 >w
-Dourest Detours
+/^Dourest Detours
 >undo
 >undo
 
@@ -316,7 +316,7 @@ Your score has just gone up by one point
 Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 >w
 
-Fringe Finger
+/^Fringe Finger
 
 #ttc-table-of-towers-progress-comments-fringe-finger
 This may've been a step away from the palace, but hooray, stuff to pick up.
@@ -355,7 +355,7 @@ Your score has just gone up by one point
 Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >n
 
-Shaven Havens
+/^Shaven Havens
 
 #ttc-table-of-towers-progress-comments-shaven-havens
 You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
@@ -368,7 +368,7 @@ You get lost in the savager ravages a bit. And it's fun for a while, until you r
 >s
 >e
 
-Salted Deltas
+/^Salted Deltas
 
 #+ttc-table-of-castle-approaching-narratives-6
 #ttc-table-of-towers-progress-comments-salted-deltas
@@ -384,7 +384,7 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
-Treading Gradient
+/^Treading Gradient
 
 >nerdiest
 Your score has just gone up by one point
@@ -415,12 +415,12 @@ Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, 
 >undo
 
 >d
-Dire and Arid Den
+/^Dire and Arid Den
 
 >score
 Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >dandier
-Treading Gradient
+/^Treading Gradient
 
 >score
 Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -439,7 +439,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
-Actionless Coastlines
+/^Actionless Coastlines
 
 #ttc-table-of-castle-approaching-narratives-7
 #ttc-table-of-towers-progress-comments-actionless-coastlines
@@ -468,7 +468,7 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
-Leveraged Everglade
+/^Leveraged Everglade
 
 >grandiose
 Your score has just gone up by one point
@@ -476,14 +476,14 @@ Your score has just gone up by one point
 Score in a scenario: 33 out of 57 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 57.
 >e
 >s
-Lost Lots
+/^Lost Lots
 
 #ttc-table-of-towers-progress-comments-lost-lots
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
 >w
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
-Dourest Detours
+/^Dourest Detours
 
 >rousted
 by one point
@@ -509,7 +509,7 @@ Score in a scenario: 36 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Danger Garden
+/^Danger Garden
 
 >broken
 Your score has just gone up by one point
@@ -525,7 +525,7 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 
 >e
 
-Obscurest Subsector
+/^Obscurest Subsector
 
 #ttc-table-of-towers-progress-comments-obscurest-subsector
 You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up.
@@ -579,7 +579,7 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 >gt copse
 >w
 
-Outer Route
+/^Outer Route
 
 #ttc-table-of-towers-progress-comments-outer-route
 The palace has receded a bit, but--well--that machine's got to be good for something.
@@ -627,14 +627,14 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 >robust
 by one point
 >enter boat
-Rawest Waster Waters
+/^Rawest Waster Waters
 #ttc-table-of-castle-approaching-narratives-8
 #ttc-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
 #altpath
-Mislit Limits
+/^Mislit Limits
 >thisalt
 --you'd have passed Rawest Waster Waters if you'd have made the blaster STABLER.
 >undo
@@ -644,11 +644,11 @@ Mislit Limits
 >stabler
 Your score has just gone up by one point
 >enter boat
-Rawest Waster Waters
+/^Rawest Waster Waters
 >nearest
 #notmax
 Your score has just gone up by one point
-Mislit Limits
+/^Mislit Limits
 >thisalt
 --you'd have passed Rawest Waster Waters if you'd have made the turbos ROBUST.
 >undo
@@ -665,7 +665,7 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
-Mislit Limits
+/^Mislit Limits
 
 #ttc-table-of-castle-approaching-narratives-9
 #ttc-table-of-towers-progress-comments-mislit-limits
@@ -700,7 +700,7 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 
 >in
 
-Mesprise Premises
+/^Mesprise Premises
 
 #pre-curst-palace-spectacular rule retry
 >spectacular
@@ -745,7 +745,7 @@ Your score has just gone up by one point
 
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Towers (57/57)

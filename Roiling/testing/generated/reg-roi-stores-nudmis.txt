@@ -12,7 +12,7 @@
 
 #testcase-mistake-roiling-throes
 >rove over
-Strip of Profits
+/^Strip of Profits
 
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
@@ -285,7 +285,7 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 The hubs bush is too sturdy. You can't escape the Strip of Profits.
 
 >enter steaming
-Cruelest Lectures
+/^Cruelest Lectures
 
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.

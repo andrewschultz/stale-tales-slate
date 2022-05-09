@@ -16,7 +16,7 @@
 >seed 1
 >enter turrets
 
-Loftier Trefoil
+/^Loftier Trefoil
 
 #ttc-table-of-towers-nowheres-loftier-trefoil
 >e
@@ -74,7 +74,7 @@ You probably aren't going anywhere until Rodney does, first.
 >yonder
 Your score has just gone up by one point
 
-Topside Deposit
+/^Topside Deposit
 
 #ttc-table-of-towers-nowheres-topside-deposit
 >e
@@ -127,7 +127,7 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 >get all
 
 >n
-Scope Copse
+/^Scope Copse
 
 #verbcase listen-towers-if-noun-is-diners
 >listen diners
@@ -204,7 +204,7 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Baldest Blasted Saltbed
+/^Baldest Blasted Saltbed
 
 >coiled
 Your score has just gone up by one point
@@ -246,7 +246,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 >n
 
-Anemic Cinema
+/^Anemic Cinema
 
 #testcase-outside-anemic-cinema
 >out
@@ -278,7 +278,7 @@ Your score has just gone up by one point
 Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
 >w
 
-Fringe Finger
+/^Fringe Finger
 
 #ttc-table-of-towers-nowheres-fringe-finger
 >d
@@ -329,7 +329,7 @@ Your score has just gone up by one point
 Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >n
 
-Shaven Havens
+/^Shaven Havens
 
 #verbcase listen-towers-if-player-is-in-shaven-havens
 >listen
@@ -342,7 +342,7 @@ Such a lost, gentle animal certainly doesn't have a clonk due. You see red for e
 >s
 >e
 
-Salted Deltas
+/^Salted Deltas
 
 #verbcase listen-towers-if-noun-is-wait-seer
 >listen sweatier
@@ -394,7 +394,7 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
 >s
 
-Treading Gradient
+/^Treading Gradient
 
 #ttc-table-of-towers-attacks-mended-mini-denim
 >attack mended mini denim
@@ -437,7 +437,7 @@ Score in a scenario: 27 out of 57 total points in the current region, Towers. Lo
 You'd expect a great din, but you don't hear one, thankfully.
 
 >d
-Dire and Arid Den
+/^Dire and Arid Den
 
 #ttc-table-of-towers-nowheres-dire-and-arid-den
 >w
@@ -462,7 +462,7 @@ The Nerd-Aid smells suspiciously like the very red Rind-Ade drink.
 >score
 Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >dandier
-Treading Gradient
+/^Treading Gradient
 
 >score
 Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -497,7 +497,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >n
-Actionless Coastlines
+/^Actionless Coastlines
 
 #ttc-table-of-towers-nowheres-actionless-coastlines
 >n
@@ -533,7 +533,7 @@ Your score has just gone up by one point
 Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
 >w
 
-Leveraged Everglade
+/^Leveraged Everglade
 
 #testcase-outside-leveraged-everglade
 >out
@@ -550,11 +550,11 @@ Your score has just gone up by one point
 Score in a scenario: 33 out of 57 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 57.
 >e
 >s
-Lost Lots
+/^Lost Lots
 
 >w
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
-Dourest Detours
+/^Dourest Detours
 
 #testcase-outside-dourest-detours
 >out
@@ -627,7 +627,7 @@ Any direction but back south might drive you too far from the palace.
 
 >n
 
-Danger Garden
+/^Danger Garden
 
 #testcase-outside-danger-garden
 >out
@@ -668,7 +668,7 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 
 >e
 
-Obscurest Subsector
+/^Obscurest Subsector
 
 #ttc-table-of-towers-nowheres-obscurest-subsector
 >e
@@ -759,7 +759,7 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 >gt copse
 >w
 
-Outer Route
+/^Outer Route
 
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
@@ -850,7 +850,7 @@ No thanks. Once was enough.
 >robust
 by one point
 >enter boat
-Rawest Waster Waters
+/^Rawest Waster Waters
 #verbcase listen-towers-if-player-is-in-rawest-waster-waters
 >listen
 A scrawny swan cry. But not the Sawn Swan. You hope.
@@ -904,7 +904,7 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
-Mislit Limits
+/^Mislit Limits
 
 #ttc-table-of-goto-sectioning--2-towers
 >gt deposit
@@ -963,7 +963,7 @@ The only way you seem to be able to go is west.
 
 >in
 
-Mesprise Premises
+/^Mesprise Premises
 
 #testcase-outside-mesprise-premises
 >out
@@ -1011,7 +1011,7 @@ Your score has just gone up by one point
 
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere!]
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Towers (57/57)

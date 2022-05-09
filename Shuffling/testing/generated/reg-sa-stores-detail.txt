@@ -14,7 +14,7 @@
 >opt in
 
 >ts
-Trips Strip
+/^Trips Strip
 
 #gadget test: store b to sorbet
 >rc store b

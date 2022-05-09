@@ -52,7 +52,7 @@ Your score has just gone up by one point
 >yonder
 Your score has just gone up by one point
 
-Topside Deposit
+/^Topside Deposit
 
 >gonear downside
 
@@ -113,7 +113,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >yonder
 Your score has just gone up by one point
-Topside Deposit
+/^Topside Deposit
 
 >gonear downside
 
@@ -168,7 +168,7 @@ Your score has just gone up by one point
 
 >yonder
 Your score has just gone up by one point
-Topside Deposit
+/^Topside Deposit
 
 >gonear downside
 >seedily
@@ -222,7 +222,7 @@ Your score has just gone up by one point
 
 >yonder
 Your score has just gone up by one point
-Topside Deposit
+/^Topside Deposit
 
 >gonear downside
 >tearily

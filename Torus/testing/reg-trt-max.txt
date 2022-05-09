@@ -7,6 +7,8 @@
 
 * trt-thru
 
+/^Ehs, Ehs
+
 >au 2
 >z
 
@@ -35,7 +37,7 @@ You were glad to have the smell of hay as a clue, but let's not overdo it!
 
 >sheesh
 by one point
-Sheesh
+/^Sheesh
 
 #ttc-table-of-progress-1
 The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too.
@@ -47,7 +49,7 @@ So close! Just one letter off. Or one too much. You probably know which one.
 
 >reappear
 by one point
-Reappear
+/^Reappear
 
 #ttc-table-of-progress-2
 The cylinder continues to straighten up. It's barely wobbling now.
@@ -56,7 +58,7 @@ The cylinder continues to straighten up. It's barely wobbling now.
 
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 
 #ttc-table-of-progress-3
 The cylinder -- well, it's almost still, but you can't make anything out there, yet.
@@ -65,7 +67,7 @@ The cylinder -- well, it's almost still, but you can't make anything out there, 
 
 >teammate
 by one point
-Teammate
+/^Teammate
 
 #ttc-table-of-progress-4
 The cylinder stops wavering. You're pretty sure you can see a door in it.
@@ -74,7 +76,7 @@ The cylinder stops wavering. You're pretty sure you can see a door in it.
 
 >intestines
 by one point
-Intestines
+/^Intestines
 
 #ttc-table-of-progress-5
 The cylinder clears up some more. Yes, that's definitely a door. And you can see a handle on it. You think!.
@@ -83,7 +85,7 @@ The cylinder clears up some more. Yes, that's definitely a door. And you can see
 
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 
 #ttc-table-of-progress-6
 Well now! A rainbow-like path appears to lead you to the center cylinder from here, as well as everywhere else you visited. But you don't trust it yet. You sense there's just a bit more to do here.
@@ -92,7 +94,7 @@ Well now! A rainbow-like path appears to lead you to the center cylinder from he
 
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
@@ -106,7 +108,7 @@ seems as good a place to start as any others. The ground beneath you
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
-Tattletale
+/^Tattletale
 
 >aaa
 >aa
@@ -117,7 +119,7 @@ Tattletale
 All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
-Scene Scene
+/^Scene Scene
 
 >in
 You already are.

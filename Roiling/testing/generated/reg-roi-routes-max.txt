@@ -12,7 +12,7 @@
 >ts
 >routes
 >enter routes
-Same Mesa
+/^Same Mesa
 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -47,7 +47,7 @@ Your score has just gone up by one point
 #ttc-table-of-region-initial-scoring-commentary-routes-1
 Well, that was different from the standard directions. But there can't be too many other ways to go.
 
-Cleric Circle
+/^Cleric Circle
 
 >score
 Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
@@ -158,7 +158,7 @@ You add the information to your pedanto-notepad under FLIPS.
 >past
 Your score has just gone up by one point
 
-Idle Deli
+/^Idle Deli
 
 >despite
 Your score has just gone up by one point
@@ -168,7 +168,7 @@ Your score has just gone up by one point
 >across
 Your score has just gone up by one point
 
-Adobe Abode
+/^Adobe Abode
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
@@ -238,7 +238,7 @@ Your score has just gone up by one point
 >beneath
 Your score has just gone up by one point
 
-Harms Marsh
+/^Harms Marsh
 
 >score
 Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
@@ -253,17 +253,17 @@ Your score has just gone up by one point
 >along
 Your score has just gone up by one point
 
-Ripe Pier
+/^Ripe Pier
 
 >amidst
 Your score has just gone up by one point
 
-Cripple Clipper
+/^Cripple Clipper
 
 >athwart
 Your score has just gone up by one point
 
-Sonancy Canyons
+/^Sonancy Canyons
 
 #pre-hurt-hog-through rule
 >through
@@ -295,7 +295,7 @@ Score in a scenario: 21 out of 22 total points in the current region, Routes. Th
 >beyond
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 Routes (22/22)

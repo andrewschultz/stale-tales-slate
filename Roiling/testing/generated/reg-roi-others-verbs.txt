@@ -14,7 +14,7 @@
 >others
 
 >in
-Rustic Citrus
+/^Rustic Citrus
 
 #ttc-table-of-others-nowheres-rustic-citrus
 >e
@@ -150,7 +150,7 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 You have 12 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
-Swell Wells
+/^Swell Wells
 
 #verbcase listen-others-if-noun-is-sorer-bogey
 >listen sorer bogey
@@ -221,7 +221,7 @@ You fiddle with the coin you got
 >n
 
 >w
-Filed Field
+/^Filed Field
 
 #ttc-table-of-others-nowheres-filed-field
 >w
@@ -325,7 +325,7 @@ Your score has just gone up by one point.
 You have 30 of 46 total points for the post-Elvira Others region, though you only need 32 to win.
 >e
 >e
-Clangier Clearing
+/^Clangier Clearing
 
 #ttc-table-of-others-nowheres-clangier-clearing
 >e
@@ -397,7 +397,7 @@ You have 39 of 46 total points for the post-Elvira Others region, though you onl
 >w
 
 >d
-Scape Space
+/^Scape Space
 
 #ttc-table-of-others-nowheres-scape-space
 >e
@@ -453,7 +453,7 @@ There are no fruits left to find or give back to Curtis.
 
 >u
 >n
-Gates Stage
+/^Gates Stage
 
 #ttc-table-of-others-nowheres-gates-stage
 >e

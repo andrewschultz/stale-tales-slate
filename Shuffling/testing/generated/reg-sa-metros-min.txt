@@ -18,7 +18,7 @@ Your score has just gone up by one point
 
 >in
 
-Undesired Underside
+/^Undesired Underside
 
 >gardenia
 by one point
@@ -28,12 +28,12 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 >n
 
-Roarings Garrison
+/^Roarings Garrison
 
 #mostly skipping the garrison right now to get the tomato from the bile libe
 
 >w
-Bile Libe
+/^Bile Libe
 
 >tomato
 Your score has just gone up by one point.
@@ -45,7 +45,7 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 
 >s
 >w
-The Ol' Hotel
+/^The Ol' Hotel
 
 >throw tomato at thing
 #notana
@@ -59,10 +59,10 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >e
 
 >n
-Roarings Garrison
+/^Roarings Garrison
 
 >n
-Obtains/Boastin' Bastion
+/^Obtains/Boastin' Bastion
 
 >switch emitter
 #notana
@@ -99,7 +99,7 @@ You currently have 6 out of 18 total points for the Metros region. Your final po
 You currently have 7 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >e
-Fo' Real Florae
+/^Fo' Real Florae
 
 >give gardenia to faeries
 
@@ -139,7 +139,7 @@ What do you know? It works! The door slides open!
 
 >e
 #notana
-Esoteric Coteries
+/^Esoteric Coteries
 
 >score
 You currently have 11 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
@@ -149,23 +149,14 @@ You currently have 11 out of 18 total points for the Metros region. Your final p
 >put card on sensor
 The door is open. So you just walk east instead.
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 
 >z
 >e
 
-Esoteric Coteries
-
->w
->z
->open metallic door
-
->e
-Esoteric Coteries
-You can also see a lit-up tulip here.
-The signers' ingress slides shut.
+/^Esoteric Coteries
 
 >ask nerds about darkness
 #notana
@@ -173,7 +164,7 @@ The signers' ingress slides shut.
 
 "Logical call. I go." You sneak out back west.
 
-Undesired Underside
+/^Undesired Underside
 
 >score
 You currently have 12 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
@@ -181,7 +172,7 @@ You currently have 12 out of 18 total points for the Metros region. Your final p
 #again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
-Elm Train Terminal
+/^Elm Train Terminal
 
 >opening
 
@@ -201,7 +192,7 @@ You currently have 14 out of 18 total points for the Metros region. Your final p
 
 >e
 
-Bassy Abyss
+/^Bassy Abyss
 
 >resin
 
@@ -222,7 +213,7 @@ You currently have 16 out of 18 total points for the Metros region. Your final p
 >attack beast
 #notana
 
-Trips Strip
+/^Trips Strip
 
 >score
 You have scored 17 out of 18 total points for the Metros region.

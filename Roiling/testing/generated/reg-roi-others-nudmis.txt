@@ -14,7 +14,7 @@
 >others
 
 >in
-Rustic Citrus
+/^Rustic Citrus
 
 >c
 >z
@@ -369,7 +369,7 @@ You have 12 of 46 total points for the post-Elvira Others region, though you onl
 There's enough credit on the token. Don't get greedy.
 
 >n
-Swell Wells
+/^Swell Wells
 
 #ttc-table-of-swell-wells-nudges-wells
 >swlle
@@ -590,7 +590,7 @@ You fiddle with the coin you got
 The singed design on the icons reads, when you look close, property of NISCO.
 
 >w
-Filed Field
+/^Filed Field
 
 #testcase-mistake-roiling-fidel
 >fidel
@@ -832,7 +832,7 @@ Your score has just gone up by one point.
 You have 30 of 46 total points for the post-Elvira Others region, though you only need 32 to win.
 >e
 >e
-Clangier Clearing
+/^Clangier Clearing
 
 #testcase-mistake-roiling-sell-sell-text
 >sell
@@ -1058,7 +1058,7 @@ The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lo
 #need to undo and not just go south as there is a test for gates-stage being (not) visited
 
 >d
-Scape Space
+/^Scape Space
 
 #ttc-table-of-others-nudges-storage
 >strogea
@@ -1236,7 +1236,7 @@ That's not the way to learn from the searcher--it's probably not that complicate
 
 >u
 >n
-Gates Stage
+/^Gates Stage
 
 #testcase-mistake-roiling-saget
 >saget

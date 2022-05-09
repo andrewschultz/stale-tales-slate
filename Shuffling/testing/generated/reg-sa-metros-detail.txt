@@ -18,7 +18,7 @@ Your score has just gone up by one point
 
 >in
 
-Undesired Underside
+/^Undesired Underside
 
 # load up A Reading
 >x reading
@@ -90,7 +90,7 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 >n
 
-Roarings Garrison
+/^Roarings Garrison
 
 #mostly skipping the garrison right now to get the tomato from the bile libe
 
@@ -134,7 +134,7 @@ The deadbeat starts up some nonsense pseudo-sociological mumblings.
 "What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
 
 >w
-Bile Libe
+/^Bile Libe
 
 #ttc-table-of-kibitzes-motto
 >rc motto
@@ -193,7 +193,7 @@ The fairies buzz and give superior sniffs.
 
 >s
 >w
-The Ol' Hotel
+/^The Ol' Hotel
 
 #ttc-table-of-unmatched-topic-responses-night-thing
 >ask night thing about abcd
@@ -211,10 +211,10 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >e
 
 >n
-Roarings Garrison
+/^Roarings Garrison
 
 >n
-Obtains/Boastin' Bastion
+/^Obtains/Boastin' Bastion
 
 #ttc-table-of-matched-thing-responses-poses-posse-dry-cake
 >ask poses posse about dry cake
@@ -300,7 +300,7 @@ You currently have 7 out of 18 total points for the Metros region. You have foun
 You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Fo' Real Florae
+/^Fo' Real Florae
 
 #gadget test: heaths to sheath
 >rc heaths
@@ -440,7 +440,7 @@ What do you know? It works! The door slides open!
 
 >e
 #notana
-Esoteric Coteries
+/^Esoteric Coteries
 
 #ttc-table-of-unmatched-thing-responses-nerds
 >ask nerds about deadbeat
@@ -545,23 +545,14 @@ You currently have 12 out of 18 total points for the Metros region. You have fou
 >put card on sensor
 The door is open. So you just walk east instead.
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 
 >z
 >e
 
-Esoteric Coteries
-
->w
->z
->open metallic door
-
->e
-Esoteric Coteries
-You can also see a lit-up tulip here.
-The signers' ingress slides shut.
+/^Esoteric Coteries
 
 #gadget test: asknerds to darkness
 >rc nerds
@@ -581,7 +572,7 @@ DEBUG INFO: Cert-text: -------S.
 
 "Logical call. I go." You sneak out back west.
 
-Undesired Underside
+/^Undesired Underside
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -589,7 +580,7 @@ You currently have 13 out of 18 total points for the Metros region. You have fou
 #again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
-Elm Train Terminal
+/^Elm Train Terminal
 
 #gadget test: neon pig to opening
 #note you have to climb up
@@ -621,7 +612,7 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 
 >e
 
-Bassy Abyss
+/^Bassy Abyss
 
 #gadget test: siren to resin
 >rc siren
@@ -658,7 +649,7 @@ It cares not for conversation, only noise.
 >attack beast
 #notana
 
-Trips Strip
+/^Trips Strip
 
 >score
 You have scored 18 out of 18 total points for the Metros region.

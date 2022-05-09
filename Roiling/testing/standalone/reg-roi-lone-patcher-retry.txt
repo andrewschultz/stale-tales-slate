@@ -26,7 +26,7 @@
 >between
 >through
 >beyond
-Strip of Profits
+/^Strip of Profits
 
 * _cheat-troves
 
@@ -35,14 +35,14 @@ Strip of Profits
 >last
 >ramble
 >recant
-Strip of Profits
+/^Strip of Profits
 
 * _cheat-presto
 
 >gonear hacks' shack
 >purloin usb
 >bus
-Strip of Profits
+/^Strip of Profits
 
 * _cheat-oyster
 
@@ -51,7 +51,7 @@ Strip of Profits
 >derail
 >spin
 >redial
-Strip of Profits
+/^Strip of Profits
 
 * _cheat-towers
 

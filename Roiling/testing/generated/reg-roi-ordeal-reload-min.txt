@@ -40,7 +40,7 @@ Your score has just gone up by two points
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 >x settler
 
@@ -56,7 +56,7 @@ Score in a scenario: 5 out of 15 total points in the current region, Ordeal Relo
 Elmo checks you for a second. "You sure you know how to use the settler?"
 You nod. "No clues counsel."
 
-Carven Cavern
+/^Carven Cavern
 
 >staple
 Your score has just gone up by one point
@@ -78,4 +78,4 @@ Score in a scenario: 7 out of 15 total points in the current region, Ordeal Relo
 Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
 
 >in
-Strip of Profits
+/^Strip of Profits

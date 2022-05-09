@@ -26,7 +26,7 @@ Your score has just gone up by one point
 Score in a scenario: 1 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 37.
 
 >l
-Burnt Brunt
+/^Burnt Brunt
 
 #NOTE: unbalanced undos are because DISCERN doesn't seem to count as a move
 >discern ed riley
@@ -44,7 +44,7 @@ Your score has just gone up by one point
 Score in a scenario: 2 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 36.
 
 >w
-Disowned Downside
+/^Disowned Downside
 
 >bossily
 Your score has just gone up by one point.
@@ -71,7 +71,7 @@ Score in a scenario: 5 out of 37 total points in the current region, Otters. Low
 >no
 
 >n
-Loop Pool
+/^Loop Pool
 
 >because
 by one point
@@ -102,7 +102,7 @@ Score in a scenario: 9 out of 37 total points in the current region, Otters. Low
 >e
 
 >n
-Shiner Shrine
+/^Shiner Shrine
 
 >enragedly
 Your score has just gone up by one point
@@ -117,7 +117,7 @@ Your score has just gone up by one point
 Score in a scenario: 11 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 36.
 
 >n
-Lamer Realm
+/^Lamer Realm
 
 >slow
 Your score has just gone up by one point
@@ -144,13 +144,13 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 36.
 
 >l
-Blest Belts
+/^Blest Belts
 
 >s
 >s
 >s
 
-Clarthead Cathedral
+/^Clarthead Cathedral
 
 >loathingly
 Your score has just gone up by one point
@@ -166,7 +166,7 @@ They find another place where rioters roister.
 Score in a scenario: 17 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 36.
 
 >s
-Perverse Preserve
+/^Perverse Preserve
 
 >parrot
 Your score has just gone up by one point
@@ -193,7 +193,7 @@ Your score has just gone up by one point
 Score in a scenario: 21 out of 37 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 36.
 
 >l
-Uprates Pasture
+/^Uprates Pasture
 
 >n
 >n
@@ -201,7 +201,7 @@ Uprates Pasture
 >w
 
 >w
-Reclusion Inclosure
+/^Reclusion Inclosure
 
 >raptor
 Your score has just gone up by one point
@@ -215,7 +215,7 @@ by one point
 
 #this is how we get rid of Elvira
 >w
-Rancho Archon Anchor
+/^Rancho Archon Anchor
 WTF FTW
 >7
 "No mercy, my crone! Corny, me?"

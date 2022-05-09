@@ -16,7 +16,7 @@
 
 >presto
 >enter tornado
-Grey Gyre
+/^Grey Gyre
 
 #this is a special "can't go that way" for Grey Gyre, since all 4 directions are viable
 >n
@@ -42,7 +42,7 @@ It smells a bit stinky here, but more pressingly, it just FEELS stinky
 
 >umph
 Your score has just gone up by one point
-Austerer Treasure
+/^Austerer Treasure
 
 #ttc-table-of-presto-nowheres-austerer-treasure
 >n
@@ -52,7 +52,7 @@ The treasure room has no secret passages, so you can only go back east.
 >out
 The only way to exit is east, so let's go that way.
 
-Grey Gyre
+/^Grey Gyre
 >undo
 
 #testcase-exits-austerer-treasure
@@ -83,7 +83,7 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >e
 
 >s
-Char Arch
+/^Char Arch
 
 #ttc-table-of-presto-nowheres-char-arch
 >e
@@ -542,7 +542,7 @@ The only way you seem to be able to go is east to another part of the maze.
 >undo
 >n
 
-Unwary Runway
+/^Unwary Runway
 
 >gt nowt town
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
@@ -563,7 +563,7 @@ There are two unblocked exits: north and south to another part of the maze.
 
 >n
 
-Grey Gyre
+/^Grey Gyre
 >gt unwary runway
 #reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
@@ -582,7 +582,7 @@ Your score has just gone up by one point
 Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >e
-Marines Seminar Remains
+/^Marines Seminar Remains
 
 #ttc-table-of-presto-nowheres-marines-seminar-remains
 >e
@@ -663,7 +663,7 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 >s
 
 >s
-Dirge Ridge
+/^Dirge Ridge
 
 #ttc-table-of-presto-nowheres-dirge-ridge
 >e
@@ -671,7 +671,7 @@ The vile veil seems to almost repel a leaper except where it opens to the north.
 
 #testcase-outside-dirge-ridge
 >out
-Char Arch
+/^Char Arch
 >undo
 
 #testcase-exits-dirge-ridge
@@ -772,7 +772,7 @@ Your score has just gone up by one point
 Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
-Saps' Pass
+/^Saps' Pass
 
 #ttc-table-of-presto-nowheres-saps-pass
 >sw
@@ -781,7 +781,7 @@ There's no way around the hogs. You need to get rid of them.
 #testcase-outside-saps-pass
 >out
 The only way to exit is south, so let's go that way.
-Grey Gyre
+/^Grey Gyre
 >undo
 
 #testcase-exits-saps-pass
@@ -805,7 +805,7 @@ If you were as strong as
 >syke
 Your score has just gone up by one point
 
-Phat Path
+/^Phat Path
 
 #+ttc-table-of-presto-nowheres-saps-pass
 >sw
@@ -852,7 +852,7 @@ You have more than one way to leave: north and south. So you'll need to specify 
 There are two unblocked exits: north and south to Grey Gyre.
 
 >n
-Hacks' Shack
+/^Hacks' Shack
 
 #verbcase swear-presto-if-hacks'-shack-is-visited
 >damn
@@ -1055,7 +1055,7 @@ Just do something simple with that USB
 Your score has just gone up by one point
 Diver time
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 

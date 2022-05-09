@@ -16,7 +16,7 @@
 
 >presto
 >enter tornado
-Grey Gyre
+/^Grey Gyre
 
 #ttc-table-of-presto-spechelp-maze-walls
 >veltamoz
@@ -78,7 +78,7 @@ You don't need to levitate the hump. You need a way to jump over it.
 
 >umph
 Your score has just gone up by one point
-Austerer Treasure
+/^Austerer Treasure
 
 >score
 Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
@@ -142,7 +142,7 @@ The earring shakes a bit more than usual, but maybe you're not in an area where 
 You search for the hump you overcame. You can't find it now. But it's not relevant.
 
 >s
-Char Arch
+/^Char Arch
 
 #testcase-mistake-roiling-tars
 >tars
@@ -310,7 +310,7 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 >undo
 
 >e
-Marines Seminar Remains
+/^Marines Seminar Remains
 
 #testcase-mistake-roiling-oppugn-text-oppugn
 >oppugn zozimus
@@ -407,7 +407,7 @@ Score in a scenario: 9 out of 41 total points in the current region, Presto. Low
 >undo
 
 >n
-Nowt Town
+/^Nowt Town
 #ttc-table-of-presto-spechelp-n-t-air
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
@@ -549,7 +549,7 @@ That's not something
 >s
 
 >s
-Dirge Ridge
+/^Dirge Ridge
 
 #testcase-mistake-roiling-evil
 >evil
@@ -741,7 +741,7 @@ The volt maze is gone. Re-forming it would not be fun.
 The ether is gone. You can just go north.
 
 >n
-Saps' Pass
+/^Saps' Pass
 
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
@@ -824,7 +824,7 @@ Despite being dangerous to walk into, Deil's Slide serves an important ecologica
 >syke
 Your score has just gone up by one point
 
-Phat Path
+/^Phat Path
 
 #testcase-mistake-roiling-ptah
 >ptah
@@ -950,7 +950,7 @@ by one point
 Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >n
-Hacks' Shack
+/^Hacks' Shack
 
 #testcase-mistake-roiling-a-elf
 >a elf
@@ -1265,7 +1265,7 @@ You may wish to decipher the scratchings, instead.
 >push skid s
 #notana
 Your score has just gone up by one point
-Hacks' Shack
+/^Hacks' Shack
 >undo
 
 >push skid n
@@ -1580,7 +1580,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a de
 Your score has just gone up by one point
 Diver time
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 

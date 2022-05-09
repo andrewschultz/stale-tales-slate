@@ -158,7 +158,7 @@ a droll dollar
 * _0_to_1
 
 >n
-Swell Wells
+/^Swell Wells
 >apricot
 by one point
 
@@ -176,7 +176,7 @@ by one point
 * _2_to_3
 
 >w
-Filed Field
+/^Filed Field
 >blackberries
 by one point
 >cranberries
@@ -186,12 +186,12 @@ by one point
 >breadfruit
 by one point
 >e
-Swell Wells
+/^Swell Wells
 
 * _3_to_4
 
 >w
-Filed Field
+/^Filed Field
 >watermelon
 by one point
 >pineapple
@@ -201,7 +201,7 @@ by one point
 >grapefruit
 by one point
 >e
-Swell Wells
+/^Swell Wells
 >s
 
 * _1_eval_back

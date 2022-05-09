@@ -62,7 +62,7 @@ Your score has just gone up by one point
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
 >enter steaming
-Cruelest Lectures
+/^Cruelest Lectures
 
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.

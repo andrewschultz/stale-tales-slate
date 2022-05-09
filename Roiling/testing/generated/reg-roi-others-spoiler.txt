@@ -16,7 +16,7 @@
 >others
 
 >in
-Rustic Citrus
+/^Rustic Citrus
 
 >c
 >z
@@ -203,7 +203,7 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 You have 12 of 46 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
-Swell Wells
+/^Swell Wells
 
 #ttc-table-of-others-anagrams-apples
 >gx elp psa
@@ -294,7 +294,7 @@ You fiddle with the coin you got
 >n
 
 >w
-Filed Field
+/^Filed Field
 
 #ttc-table-of-others-anagrams-blackberries
 >gx barber sickle
@@ -402,7 +402,7 @@ Your score has just gone up by one point.
 You have 30 of 46 total points for the post-Elvira Others region, though you only need 32 to win.
 >e
 >e
-Clangier Clearing
+/^Clangier Clearing
 
 >gx len craig
 Nothing, despite all Len Craig has to sell.
@@ -490,7 +490,7 @@ You've already changed the nectarine.
 >w
 
 >d
-Scape Space
+/^Scape Space
 
 #ttc-table-of-others-anagrams-banana
 >gx a banna'
@@ -536,7 +536,7 @@ There are no fruits left to find or give back to Curtis.
 
 >u
 >n
-Gates Stage
+/^Gates Stage
 
 >n
 PERP

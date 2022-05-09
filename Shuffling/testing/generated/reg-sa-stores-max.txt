@@ -14,7 +14,7 @@
 >opt in
 
 >ts
-Trips Strip
+/^Trips Strip
 
 #ttc-table-of-iconmaps-1
 >x tepid

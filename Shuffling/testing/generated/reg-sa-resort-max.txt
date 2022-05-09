@@ -20,12 +20,12 @@
 Your score has just gone up by one point
 
 >enter resort
-Astral Altars
+/^Astral Altars
 
 >islet
 Your score has just gone up by one point.
 
-Leis Isle
+/^Leis Isle
 
 >lies
 by one point
@@ -44,7 +44,7 @@ Your score has just gone up by one point.
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >e
-Rived Drive
+/^Rived Drive
 
 >slope
 by one point
@@ -72,7 +72,7 @@ You currently have 9 out of 15 total points for the Resort region. Your minimum 
 
 >e
 
-Potshot Hotspot
+/^Potshot Hotspot
 
 >trio
 by one point
@@ -126,7 +126,7 @@ Your score has just gone up by one point.
 You currently have 14 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Means Manse
+/^Means Manse
 
 !====RESORT
 !--you could've said LIES to expose the Leis Isle as an illusion.

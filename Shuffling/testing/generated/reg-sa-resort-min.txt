@@ -20,12 +20,12 @@
 Your score has just gone up by one point
 
 >enter resort
-Astral Altars
+/^Astral Altars
 
 >islet
 Your score has just gone up by one point.
 
-Leis Isle
+/^Leis Isle
 
 >wings
 by one point
@@ -54,7 +54,7 @@ You currently have 2 out of 15 total points for the Resort region. Your minimum 
 #while we subtract 2 after the "e" command, I'll keep this here, so in case anything is added, I don't gloss over the fact we need to deduct 2 points
 
 >e
-Rived Drive
+/^Rived Drive
 
 >score
 You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
@@ -83,7 +83,7 @@ You currently have 5 out of 15 total points for the Resort region. Your minimum 
 
 >e
 
-Potshot Hotspot
+/^Potshot Hotspot
 
 >score
 You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
@@ -119,7 +119,7 @@ Your score has just gone up by one point.
 You currently have 9 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
 
 >e
-Means Manse
+/^Means Manse
 
 >misses
 /====RESORT

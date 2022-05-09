@@ -11,7 +11,8 @@
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 >score
@@ -258,7 +259,7 @@ Perhaps you should've played it cool and fled, instead.
 >stroll
 by one point
 
-Olde Lode
+/^Olde Lode
 
 >thisalt
 --You could have also REMAPped the perma-amper to break the jukebox.
@@ -327,7 +328,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a de
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 >score
 Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -438,7 +439,7 @@ Score in a scenario: 7 out of 44 total points in the current region, Oyster. Low
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
 Your score has just gone up by one point
-Anger Range
+/^Anger Range
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
 #altpath
@@ -456,7 +457,7 @@ Score in a scenario: 8 out of 44 total points in the current region, Oyster. Low
 >boast
 Your score has just gone up by one point
 
-Fighter Freight
+/^Fighter Freight
 
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -496,7 +497,7 @@ The pale plea already sort of is. You need a stronger action than that.
 >leap
 Your score has just gone up by one point
 
-Anger Range
+/^Anger Range
 
 >score
 Score in a scenario: 8 out of 44 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 44.
@@ -605,7 +606,7 @@ You already got mad at all the snarled darnels. You need to move on.
 It's okay to get mad, but staying mad? No.
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 #ttc-table-of-oyster-readables-cans
 >read cans
@@ -665,7 +666,7 @@ Score in a scenario: 11 out of 44 total points in the current region, Oyster. Lo
 >seek
 Your score has just gone up by one point
 
-Lean Lane
+/^Lean Lane
 
 >score
 Score in a scenario: 12 out of 44 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 44.
@@ -778,7 +779,7 @@ You will need to use them all at once, and on something else
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 #testcase-mistake-roiling-tush
 >tush
@@ -1018,7 +1019,7 @@ The message was corny, but the door was a piece of cake since you figured what t
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 #testcase-mistake-roiling-auth
 >auth
@@ -1170,7 +1171,7 @@ You need to dig to some purpose, like uncovering the haunter--and not just dig. 
 You need a slightly more organized way to reveal what's under the ground with your rigged digger.
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 #testcase-mistake-roiling-rasche
 >rasche
@@ -1254,7 +1255,7 @@ All you really have to do with the gleaner is to examine it. There might be more
 Hmm! There's something more to do with the gleaner. You've gotten what you need, though.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 #testcase-mistake-roiling-part-trap-part
 >part trap
@@ -1284,7 +1285,7 @@ Just tacking one walleye won't change the crowd. They're past redemption, anyway
 The walleyes are a bad crowd, past redemption.
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 #ttc-table-of-rascal-craals-nudges-craals
 >craasl
@@ -1396,7 +1397,7 @@ Score in a scenario: 35 out of 44 total points in the current region, Oyster. Lo
 You discovered the portal. No need to look further.
 
 >in
-End Den
+/^End Den
 #testcase-mistake-roiling-ned
 
 >ned
@@ -1413,7 +1414,7 @@ You don't need to riff on any location names to win the game, unless there's not
 
 >in
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 #ttc-table-of-den-loft-nudges-tenfold
 >tenfodl
@@ -1498,7 +1499,7 @@ With so little positive information, this might be tough to bulldoze. Still, may
 
 >trample
 
-Plasm Lamps
+/^Plasm Lamps
 
 >score
 Score in a scenario: 38 out of 44 total points in the current region, Oyster. Lowest score to solve is 42. Maximum score available is 44.
@@ -1614,7 +1615,7 @@ You riff on your previous celebrations, but it doesn't feel as cool.
 >redial
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 #+testcase-mistake-roiling-fart
 >fart

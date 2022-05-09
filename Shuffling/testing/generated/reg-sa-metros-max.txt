@@ -20,7 +20,7 @@ Your score has just gone up by one point
 
 >in
 
-Undesired Underside
+/^Undesired Underside
 
 #pre-beats-beast rule
 >beast
@@ -38,12 +38,12 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 >n
 
-Roarings Garrison
+/^Roarings Garrison
 
 #mostly skipping the garrison right now to get the tomato from the bile libe
 
 >w
-Bile Libe
+/^Bile Libe
 
 #pre-words-sword rule
 >sword
@@ -62,7 +62,7 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 
 >s
 >w
-The Ol' Hotel
+/^The Ol' Hotel
 
 >throw tomato at thing
 #notana
@@ -76,7 +76,7 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >e
 
 >n
-Roarings Garrison
+/^Roarings Garrison
 
 #pre-lostcorn-controls rule
 >controls
@@ -84,7 +84,7 @@ The dead beat deadbeat might not beat you dead, but you'd get maligned ere leger
 In other words, you probably need to gain the deadbeat's trust before taking any stuff.
 
 >n
-Obtains/Boastin' Bastion
+/^Obtains/Boastin' Bastion
 
 >rentals
 Your score has just gone up by one point.
@@ -140,7 +140,7 @@ You currently have 7 out of 18 total points for the Metros region. You have foun
 You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
-Fo' Real Florae
+/^Fo' Real Florae
 
 #pre-heaths-sheath rule
 >sheath
@@ -231,7 +231,7 @@ What do you know? It works! The door slides open!
 
 >e
 #notana
-Esoteric Coteries
+/^Esoteric Coteries
 
 >score
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -241,21 +241,23 @@ You currently have 12 out of 18 total points for the Metros region. You have fou
 >put card on sensor
 The door is open. So you just walk east instead.
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 
 >z
 >e
 
-Esoteric Coteries
+/^Esoteric Coteries
 
 >w
 >z
+The signers' ingress slides shut.
+
 >open metallic door
 
 >e
-Esoteric Coteries
+/^Esoteric Coteries
 You can also see a lit-up tulip here.
 The signers' ingress slides shut.
 
@@ -274,7 +276,7 @@ by one point
 
 "Logical call. I go." You sneak out back west.
 
-Undesired Underside
+/^Undesired Underside
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -282,7 +284,7 @@ You currently have 13 out of 18 total points for the Metros region. You have fou
 #again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
-Elm Train Terminal
+/^Elm Train Terminal
 
 >opening
 
@@ -307,7 +309,7 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 
 >e
 
-Bassy Abyss
+/^Bassy Abyss
 
 #pre-beats-beast retry
 >beast
@@ -339,7 +341,7 @@ You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 >attack beast
 #notana
 
-Trips Strip
+/^Trips Strip
 
 >score
 You have scored 18 out of 18 total points for the Metros region.

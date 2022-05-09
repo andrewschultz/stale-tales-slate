@@ -7,6 +7,8 @@
 
 * trt-thru
 
+/^Ehs, Ehs
+
 >au 2
 >z
 
@@ -142,7 +144,7 @@ You don't need to deal with pronouns. Maybe a different sort of word. In a weird
 
 >sheesh
 by one point
-Sheesh
+/^Sheesh
 
 #+ttc-table-of-nudge-hashes-hya
 >ayh
@@ -205,7 +207,7 @@ You're not sure what you are prepping--a thing or an action. But once you do, th
 
 >reappear
 by one point
-Reappear
+/^Reappear
 
 #mistake retest for rapparee
 >rapparee
@@ -246,7 +248,7 @@ Grain is grain, to you. There's not much to be done with it as-is.
 
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 
 #mistake retest for ragin
 >ragin
@@ -277,7 +279,7 @@ The meat -- well, it's hard to describe, but it's thankfully not physical meat. 
 
 >teammate
 by one point
-Teammate
+/^Teammate
 
 #ttc-table-of-post-brushoffs-meta-meat-(team|mate)
 >mate ahoy
@@ -319,7 +321,7 @@ The tines aren't budging. Not in their present form. But what could they become?
 
 >intestines
 by one point
-Intestines
+/^Intestines
 
 #mistake retest for stein
 >stein
@@ -345,7 +347,7 @@ If there's a stomach here, you don't want to burst it.
 
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 
 >a
 
@@ -360,7 +362,7 @@ Oh, man. You don't want to even think about caffeinated beverages. Even ones wit
 
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
@@ -391,7 +393,7 @@ seems as good a place to start as any others. The ground beneath you
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
-Tattletale
+/^Tattletale
 
 >aaa
 >aa
@@ -402,7 +404,7 @@ Tattletale
 All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
-Scene Scene
+/^Scene Scene
 
 #ttc-table-of-nudge-hashes-cene
 >ceen

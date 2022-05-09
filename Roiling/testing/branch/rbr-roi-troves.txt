@@ -52,7 +52,7 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 >scam
 
 >enter tastee
-Loather Rathole
+/^Loather Rathole
 
 @verbs
 #ttc-table-of-troves-nowheres-loather-rathole
@@ -313,7 +313,7 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: sob ever verbose hinting.
 
-Bustle Sublet
+/^Bustle Sublet
 
 @verbs
 #ttc-table-of-troves-nowheres-bustle-sublet
@@ -489,7 +489,7 @@ Your score has just gone up by one point
 @hin
 /DEBUG INFO: (SNORE SO ARENA|evil bee) hinting.
 
-Boarded Roadbed
+/^Boarded Roadbed
 
 >score
 {$SCOS}
@@ -731,7 +731,7 @@ by one point
 @hin
 DEBUG INFO: box of diapers hinting.
 
-Drain Nadir
+/^Drain Nadir
 
 @verbs
 #ttc-table-of-troves-nowheres-drain-nadir
@@ -920,7 +920,7 @@ Your score has just gone up by one point
 #ttc-table-of-troves-anagrams-master
 /In particular, you feel the need to (BOLSTER|MASTER) right now\.
 
-Boredom Bedroom
+/^Boredom Bedroom
 
 }}SCORE++
 >score
@@ -1109,7 +1109,7 @@ However, there must be some simple way to focus and move on.
 Your score has just gone up by one point
 }}SCORE++
 
-Browse Bowers
+/^Browse Bowers
 
 @hin
 DEBUG INFO: Si Reed hinting.
@@ -1233,7 +1233,7 @@ Your score has just gone up by one point
 
 #Econ Cone
 
-Econ-Cone
+/^Econ-Cone
 
 @spoi
 #ttc-table-of-troves-anagrams-aspire
@@ -1476,7 +1476,7 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: red vees hinting.
 
-Upscale Capsule
+/^Upscale Capsule
 
 @verbs
 #ttc-table-of-troves-nowheres-upscale-capsule
@@ -1812,11 +1812,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. T
 
 @mina,minb
 >misses
-Troves
+/^Troves
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
-Loather Rathole====
+/^Loather Rathole====
 --you could've tried to STARE at the tears taser.
-Boarded Roadbed====
+/^Boarded Roadbed====
 --you could've tried to STAY around A Sty: Tasty, Say.
 
 @mina
@@ -1828,9 +1828,9 @@ you could've tried to BELIEVE to neutralize the evil bee, too.
 !--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
 @mina,minb
-Drain Nadir====
+/^Drain Nadir====
 --you could've tried to RELAPSE around the pleaser leapers.
-Boredom Bedroom====
+/^Boredom Bedroom====
 --you could've tried to GLARE at the Lager.
 
 @mina
@@ -1842,7 +1842,7 @@ Boredom Bedroom====
 --you could've tried to BOLSTER yourself to deserve lobster.
 
 @mina,minb
-Econ-Cone====
+/^Econ-Cone====
 
 @mina
 --you could've tried to STRIVE by the statue of Trevis Vister.
@@ -1853,7 +1853,7 @@ Econ-Cone====
 --you could've tried to ASPIRE by the praise spirea.
 
 @mina,minb
-Browse Bowers====
+/^Browse Bowers====
 --you could've tried to DISCOVER something about DIVORCES magazine.
 
 @mina
@@ -1876,7 +1876,7 @@ Your score has just gone up by one point
 @mina,minb
 This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything you can?
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 , Troves ({SCORE}/{MAX})

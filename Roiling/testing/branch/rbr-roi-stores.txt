@@ -41,7 +41,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 @mis
 #testcase-mistake-roiling-throes
 >rove over
-Strip of Profits
+/^Strip of Profits
 \\
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
@@ -411,7 +411,7 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 
 @!min
 >enter steaming
-Cruelest Lectures
+/^Cruelest Lectures
 \\
 }}CURMIN++
 >score

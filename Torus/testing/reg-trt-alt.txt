@@ -7,6 +7,8 @@
 
 * trt-thru
 
+/^Ehs, Ehs
+
 >au 2
 >z
 
@@ -46,7 +48,7 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 
 >sheesh
 by one point
-Sheesh
+/^Sheesh
 
 #+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
 You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
@@ -71,7 +73,7 @@ Now that you have a teammate and a reason to reappear, you have a plan to brains
 
 >reappear
 by one point
-Reappear
+/^Reappear
 
 #+ttc-table-of-room-combos-prep-area-meta-meat
 You get some practice in reappearing. Maybe soon you will have someone to reappear for.
@@ -95,7 +97,7 @@ Aha! Now that you have summoned a tattletale and arraigning, the tattletale tatt
 
 >arraigning
 by one point
-Arraigning
+/^Arraigning
 
 #+ttc-table-of-room-combos-grain-grain-latte-latte
 !You have unleashed a tattletale who knows horrible stories of horrible people. And yet, there's no way to bring said horrible people to account.
@@ -106,7 +108,7 @@ You have an area for arraigning someone bad, but you have nobody to tell you whe
 
 >teammate
 by one point
-Teammate
+/^Teammate
 
 >a
 
@@ -127,7 +129,7 @@ The Torus seems more alive now that the intestines are not just near the pechan/
 
 >intestines
 by one point
-Intestines
+/^Intestines
 
 #+ttc-table-of-room-combos-tines-inset-pechan-pechan
 !The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
@@ -138,7 +140,7 @@ Okay, so there are intestines next to a stomach. You probably need a bit of luck
 
 >happenchance
 by one point
-Happenchance
+/^Happenchance
 
 #+ttc-table-of-room-combos-tines-inset-pechan-pechan
 The Torus seems more alive now that the intestines are not just near the pechan/stomach but, by some, err, happenchance, they seem to connect and perform some vital organ function.
@@ -149,7 +151,7 @@ The Torus seems more alive now that the intestines are not just near the pechan/
 
 >tattletale
 by one point
-Tattletale
+/^Tattletale
 
 A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
@@ -249,7 +251,7 @@ All manner of whirring seems to flow around you. The cylinder in the center of t
 All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
 
 >in
-Scene Scene
+/^Scene Scene
 
 >deeded
 You're not sure what to do, but there's a lot to do!

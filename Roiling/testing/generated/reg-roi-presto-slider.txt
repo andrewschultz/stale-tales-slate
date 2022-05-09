@@ -16,7 +16,7 @@
 
 >presto
 >enter tornado
-Grey Gyre
+/^Grey Gyre
 
 >slon
 #slider test for blam
@@ -34,7 +34,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >umph
 Your score has just gone up by one point
-Austerer Treasure
+/^Austerer Treasure
 
 >score
 Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
@@ -57,7 +57,7 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >e
 
 >s
-Char Arch
+/^Char Arch
 
 #slider test for rats
 >arst
@@ -89,7 +89,7 @@ Your score has just gone up by one point
 Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >e
-Marines Seminar Remains
+/^Marines Seminar Remains
 
 #slider test for bingo
 >ibgon
@@ -127,7 +127,7 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 >s
 
 >s
-Dirge Ridge
+/^Dirge Ridge
 
 #slider test for ole
 >leo
@@ -195,7 +195,7 @@ Your score has just gone up by one point
 Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
-Saps' Pass
+/^Saps' Pass
 
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
@@ -210,7 +210,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >syke
 Your score has just gone up by one point
 
-Phat Path
+/^Phat Path
 
 #slider test for what
 >hwta
@@ -256,7 +256,7 @@ by one point
 Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >n
-Hacks' Shack
+/^Hacks' Shack
 
 #slider test for screen
 >ercsne
@@ -469,7 +469,7 @@ DOUBLE PROBLEM FOR: sub.
 Your score has just gone up by one point
 Diver time
 
-Strip of Profits
+/^Strip of Profits
 
 >score
 

@@ -29,7 +29,7 @@ Your score has just gone up by one point
 You see yourself exploring the ogled lodge you created.
 
 >enter resort
-Astral Altars
+/^Astral Altars
 
 You watch as the tiles shrink from a large land mass to a smaller one.
 >angle
@@ -66,7 +66,7 @@ No, the feral flare is pretty much any which way. Looks like you'll need to do s
 >islet
 Your score has just gone up by one point.
 
-Leis Isle
+/^Leis Isle
 
 You see yourself either swimming or flying east, but not without proper gear.
 >angle
@@ -155,7 +155,7 @@ The only way to exit is east, so let's go that way.
 The only way you seem to be able to go is east.
 
 >e
-Rived Drive
+/^Rived Drive
 
 You see the poles to the east bend at an angle.
 >angle
@@ -258,7 +258,7 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 
 >e
 
-Potshot Hotspot
+/^Potshot Hotspot
 
 You see the riot, happier now, discussing art and wearing dirty smocks.
 
@@ -364,7 +364,7 @@ You currently have 14 out of 15 total points for the Resort region. You have fou
 But you beat Red Bull Burdell! Just go east!
 
 >e
-Means Manse
+/^Means Manse
 
 >xx exits
 The X-ITES exits just seem to EXIST. Maybe you can, too.

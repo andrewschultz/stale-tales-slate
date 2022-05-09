@@ -565,7 +565,7 @@ Your score has just gone up by two points
 @verbs
 #+testcase-outside-dusty-study
 >exit
-Gallery
+/^Largely All-Grey Gallery
 >undo
 \\
 #+testcase-exits-dusty-study
@@ -580,7 +580,7 @@ You can just go DOWN to enter the basement.
 >basemetn
 You probably just want to go DOWN to the basement.
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 #ttc-table-of-ordeal-reload-spechelp-stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.
@@ -765,7 +765,7 @@ The settler is pretty powerful, but it can't build bridges.
 
 @!min
 >in
-Farming Framing
+/^Farming Framing
 
 @verbs
 #testcase-outside-farming-framing
@@ -837,7 +837,7 @@ The stair helps you get around more easily, so it doesn't need to be changed bac
 @!min
 >in
 >u
-Highest Heights
+/^Highest Heights
 
 @verbs
 #ttc-table-of-ordeal-reload-nowheres-highest-heights
@@ -918,7 +918,7 @@ The ramp is useful now. Best keep it.
 
 @nud
 >gt study
-Dusty Study
+/^Dusty Study
 ###################let's just get this error out of the way!
 >event mpa
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
@@ -980,7 +980,7 @@ You know what to change the steel pad back to: the pedestal. There's no third op
 The steel pad intertwines into a marginally artistic pedestal.
 
 >d
-Largely All-Grey Gallery
+/^Largely All-Grey Gallery
 
 @verbs
 #ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
@@ -1257,7 +1257,7 @@ You nod. "No clues counsel."
 @min
 }}CURMAX-=6
 
-Carven Cavern
+/^Carven Cavern
 
 @verbs
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
@@ -1695,7 +1695,7 @@ You can just go IN the departure to start your adventure in earnest
 \\
 #+testcase-outside-carven-cavern
 >exit
-Strip of Profits
+/^Strip of Profits
 >undo
 
 @max
@@ -1713,4 +1713,4 @@ The Wildest Wilteds are not to be traversed lightly. People protecting their ter
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 
 >in
-Strip of Profits
+/^Strip of Profits

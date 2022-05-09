@@ -11,7 +11,8 @@
 >ts
 >oyster
 >enter barnacle balancer
-Posh Hops Shop
+/^Posh Hops Shop
+
 >posf
 
 >score
@@ -25,7 +26,7 @@ Okay.
 The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
 by one point
 
-Olde Lode
+/^Olde Lode
 
 >thisalt
 are the other actions that would've annoyed Posh Hops Shop pesty types instead of SPILLing the pills.
@@ -47,7 +48,7 @@ Score in a scenario: 2 out of 44 total points in the current region, Oyster. Low
 >run
 Your score has just gone up by one point
 
-Disease Seaside
+/^Disease Seaside
 
 >score
 Score in a scenario: 3 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
@@ -56,7 +57,7 @@ Score in a scenario: 3 out of 44 total points in the current region, Oyster. Low
 >boast
 Your score has just gone up by one point
 
-Fighter Freight
+/^Fighter Freight
 
 >score
 Score in a scenario: 4 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
@@ -64,7 +65,7 @@ Score in a scenario: 4 out of 44 total points in the current region, Oyster. Low
 >leap
 Your score has just gone up by one point
 
-Anger Range
+/^Anger Range
 
 >score
 Score in a scenario: 5 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
@@ -73,7 +74,7 @@ Score in a scenario: 5 out of 44 total points in the current region, Oyster. Low
 Your score has just gone up by one
 
 >e
-Hardest Trashed Dearths
+/^Hardest Trashed Dearths
 
 >score
 Score in a scenario: 6 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 41.
@@ -83,7 +84,7 @@ Your score has just gone up by one point
 
 #we skipped SCAN and there is no way back.
 
-Lean Lane
+/^Lean Lane
 
 >score
 Score in a scenario: 7 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
@@ -106,7 +107,7 @@ Score in a scenario: 9 out of 44 total points in the current region, Oyster. Low
 
 >w
 >n
-Lapsin' Plains
+/^Lapsin' Plains
 
 >trace
 Your score has just gone up by one point
@@ -140,7 +141,7 @@ Score in a scenario: 14 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Shuttle Hutlets
+/^Shuttle Hutlets
 
 >bust
 Your score has just gone up by one point
@@ -159,7 +160,7 @@ Score in a scenario: 16 out of 44 total points in the current region, Oyster. Lo
 >s
 
 >w
-Sclerous Closures
+/^Sclerous Closures
 
 >warp
 Your score has just gone up by one point
@@ -182,10 +183,10 @@ Your score has just gone up by one point
 Score in a scenario: 19 out of 44 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
 >n
-Horned Hedron
+/^Horned Hedron
 
 >w
-Rascal Craals
+/^Rascal Craals
 
 >bury
 Your score has just gone up by one point
@@ -232,7 +233,7 @@ Score in a scenario: 24 out of 44 total points in the current region, Oyster. Lo
 
 >in
 
-Tenfold Teflon'd Den Loft
+/^Tenfold Teflon'd Den Loft
 
 >prepay
 Your score has just gone up by one point
@@ -258,7 +259,7 @@ Score in a scenario: 27 out of 44 total points in the current region, Oyster. Lo
 >redial
 Your score has just gone up by one point
 
-Strip of Profits
+/^Strip of Profits
 
 This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything you can?
 
