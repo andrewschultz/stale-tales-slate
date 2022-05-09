@@ -10284,29 +10284,34 @@ understand "store 26/twentysix" and "26/twentysix" as store z when player is in 
 
 chapter megaton magneto montage
 
-the megaton magneto montage is cluey boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it M/MM/MMM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[line break][one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]." [bold-ok]
+the megaton magneto montage is cluey boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it M/MM/MMM,) later[or]. You gloss through for what interests you[stopping]."
+
+after examining megaton magneto montage: [ the code is neater this way ]
+	say "[b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z."; [bold-ok]
+	if store b is reflexive, say "[b]FREE SAMPLES:[r] B."; [bold-ok]
+	if store c is not examined, say "[b]NO PRUDES, USED !!!!:[r] C."; [bold-ok]
+	say "[b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H."; [bold-ok]
+	say "[b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort."; [bold-ok]
+	if store k is in strip or store n is in strip, say "[b]CONDEMNED[r]: K, N."; [bold-ok]
+	say "[b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y."; [bold-ok]
+	if store t is in Strip of Profits, say "[b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T."; [bold-ok]
+	say "[line break][if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this. They might be worth examining on their own[end if].";
+	if montage-change-warn is false:
+		if number of solved regions + number of bypassed regions > 1:
+			say "[line break]It's kind of out of date since you got to work fixing things, but it'll be good enough reference in the future.";
+		now montage-change-warn is true;
+	say "[one of][line break]Also, the montage was created by Tom Egan. Of course. Can't say he was not game.[or][stopping]";
+	continue the action;
 
 this is the bore-megaton-magneto-montage rule:
 	if current action is scaning, say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
 
 understand "mmm/mm/m" as megaton magneto montage when player is in Strip of Profits.
 
-after examining montage for the first time:
-	say "Also, the montage was created by Tom Egan. Of course. Can't say he was not game.";
-	continue the action;
-
-to say engrav-note:
-	say "[if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this. They might be worth examining on their own[end if]"
-
 check examining magneto montage when roved is true:
 	say "It's not really relevant now that there's just [if store h is in Strip of Profits]Store H[else]the throes hoster." instead;
 
-change-warn is a truth state that varies.
-
-after examining magneto montage when change-warn is false:
-	if number of solved regions + number of bypassed regions > 1:
-		say "It's kind of out of date since you got to work, but it'll be good enough reference in the future.";
-		now change-warn is true;
+montage-change-warn is a truth state that varies.
 
 section engravings
 
