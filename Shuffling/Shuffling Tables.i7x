@@ -459,7 +459,7 @@ book Resort
 
 table of Resort anagrams [xxtra]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
-tiles	teleporter	"islet"	"tiles"	a rule	a rule	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	false	Leis Isle
+tiles	teleporter	"islet"	"tiles"	a rule	a rule	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you."	false	425996778	false	Leis Isle
 l2	lies	"lies"	"lies"	--	post-leis-lies rule	"'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is. Of course it was too good to be true. The final fight lies ahead!"	false	322886760 [bold-ok]
 rock	cork	"cork"	"rock"	--	post-rock-cork rule	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	--	post-swing-wings rule	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
@@ -1087,7 +1087,7 @@ outcroppings	"These clue what the toolshed can become."
 u lock	"Just there to keep you out of the toolshed. Which you can change."
 protest	"[one of]Three people are still a protest. How can you cut them down?[plus][or]They have REAL jobs. They make something, they say![plus][or]Apparently they use clay and say 'It's kiln me!'[plus][or]The people in the [b]PROTEST[r] are really [b]POTTERS[r].[minus][cycling]"
 riot	"[one of]It's a riot! Way more than three people![plus][or]How would you cut it down to three?[plus][or]Make them a [b]TRIO[r].[minus][cycling]"
-links	"[one of]The potters need something to do with their hands.[plus][or]The chain links have been dropped. Perhaps you could use them for less violent purposes.[plus][or]They can become something fragile, for a bonus point you can guess..[plus][or]They can become [b]KILNS[r].[minus][cycling]"
+links	"[one of]The potters need something to do with their hands.[plus][or]The chain links have been dropped. Perhaps you could use them for less violent purposes.[plus][or]They can become something fragile, for a bonus point you can guess.[plus][or]They can become [b]KILNS[r].[minus][cycling]"
 potters	"[if kilns are off-stage]The potters need something to work with--those chain links aren't doing much right now[else]The potters are happy with their kilns[end if]."
 kilns	"[if potters are off-stage]They need people to operate them--perhaps the ones around you can be changed[else]Just fine as they are now[end if]."
 Red Bull Burdell	"[one of]Red Bull Burdell does like yelling GET OUT.[plus][or]And changing stuff won't help you here.[plus][or]So maybe you need to change what he says?[plus][or]The gadget [if player has gadget]would be[else]was[end if] marginal help with six reds.[plus][or]He has but one weakness, blah blah blah...[plus][or][b]TUG TOE[r].[minus][cycling]"

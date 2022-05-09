@@ -2943,7 +2943,7 @@ to say what-can-flip:
 		let got-one be false;
 		repeat through table of preflip clues:
 			if pft is preflip entry:
-				say "[line break][pretodo entry]";
+				say "[line break][pretodo entry].";
 				now got-one is true;
 				break;
 		if got-one is false:
@@ -3273,7 +3273,7 @@ check examining (this is the examine-dirs rule):
 	if noun is a direction, say "[if the room noun of location of player is nowhere]That doesn't seem to lead anywhere.[else]Just try going that way instead. Don't be scared! You can always undo![end if]" instead;
 
 check going inside in Busiest Subsite:
-	say "Someone tugs you by the arm. 'Can't you read? It says NOPE! PEON! But you look at it again, and the passage seems to say OPEN. You brush that someone off, and oddly, each is wearing a NEON POPE t-shirt.[paragraph break]'Nice. Smart. Miscreant!' they snort, as you flee.[paragraph break][wfak]"; [bold-ok]
+	say "Someone tugs you by the arm. 'Can't you read? It says NOPE! PEON!'[paragraph break]But you look at it again, and the passage seems to say OPEN. You brush that someone off, and oddly, each is wearing a NEON POPE t-shirt.[paragraph break]'Nice. Smart. Miscreant!' they snort, as you flee.[paragraph break][wfak]"; [bold-ok]
 	say "The voice cuts off. The passage behind is gone. You shake off a momentary fear missing the lecture will go in your life file, or you may be charged with an if-ill fee.";
 	set the pronoun it to odor;
 	now player is in Rested Desert instead;
@@ -9493,7 +9493,7 @@ to say l-or-look-prompt:
 	if the player's command includes "to" or the player's command includes "behind" or the player's command includes "under":
 		say ". Prepositions are also not needed with looking or examining"
 
-Rule for printing a parser error when the latest parser error is the I beg your pardon error: say "[one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
+Rule for printing a parser error when the latest parser error is the I beg your pardon error: say "[one of]I beg your pardon? ... [or][stopping][one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
 
 curfloor is a number that varies.
 curtower is a number that varies.
@@ -9632,7 +9632,7 @@ after reading a command:
 				try fliptoing the-to entry;
 				the rule succeeds;
 	if player is in notices section and gateman is in notices section and cabinet-flip-try is false and hash of the player's command is 384428789:
-		say "''Kind of you to try to help the cabinet, but its wounds are too recent,' says Nat Egam.";
+		say "'Kind of you to try to help the cabinet, but its wounds are too recent,' says Nat Egam.";
 		now cabinet-flip-try is true;
 	continue the action;
 
@@ -10046,11 +10046,11 @@ a-warn is a truth state that varies.
 
 to say if-magnet:
 	if nametag is touchable and word number 2 in the player's command is "magnet":
-		say ". In particular, 'a magnet' is a good guess, but it's not what the nametag ultimately needs to be. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to consider instead of one."
+		say ". In particular, 'a magnet' is a good guess, but it's not what the nametag ultimately needs to be. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to consider instead of one"
 
 this is the a-warn rule:
 	if a-warn is false and word number 1 in the player's command is "a":
-		say "You never need to use the article 'a' when changing things up[if-magnet]. The [b]A[r] command is shorthand for [b]ASK ABOUT[r].";
+		say "You never need to use the article 'a' when changing things up[if-magnet].[paragraph break]As a note, the [b]A[r] command is shorthand for [b]ASK ABOUT[r].";
 		now a-warn is true;
 		the rule fails;
 
@@ -10498,7 +10498,7 @@ Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barri
 Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else][woodrev]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
 Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
 Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."
-Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.[stopping]"
+Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps.[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.[stopping]"
 
 chapter nowhere auxiliary stuff
 
@@ -10756,7 +10756,7 @@ carry out requesting the score:
 		say "(Only seen in debug) See the total scores possible?";
 		if the player yes-consents:
 			repeat with Q running through regions:
-				if max-score of Q > 0, say "[Q] [max-score of Q][line break]";
+				if max-score of Q > 0, say "[Q] has a maximum of [max-score of Q].";
 	the rule succeeds;
 
 book waiting
