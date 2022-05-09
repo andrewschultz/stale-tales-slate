@@ -1,99 +1,57 @@
+######################
+
 function usage()
 {
-	  echo Main quest stores are FIMR
-	  echo o = intro, s = stores/hub, l\(lone\)/x = everything else
-	  exit
-	  echo a \(alone\) = everything in this order: $FULL_TEST
-	  exit
+  echo valid tests are ...
+  for key in "${!names[@]}";
+  do
+    echo ${key} ${names[${key}]}
+  done
+  exit
 }
 
-export FULL_TEST=osfimrx
-export TEMP=$1
+# we may not need these, but I don't feel safe without them yet
+declare -A names
+declare -A chosen
 
-if [[ "$TEMP" == "" ]]
+names["f"]=forest
+names["o"]=ordeal-loader
+names["i"]=sortie
+names["l"]=lone
+names["m"]=metros
+names["r"]=resort
+names["s"]=stores
+names["x"]=lone
+
+if [[ "$1" == "" ]]
 then
+  echo No parameters received, so I\'m printing the usage.
   usage
-elif [[ "$TEMP" == "a" ]]
-then
-  export TEMP=$FULL_TEST
 fi
 
-if [[ "$TEMP" == "" ]]
+TEMP=$1
+
+BIGTESTORDER=osfimrx
+
+if [[ "$TEMP" == "a" ]]
 then
-  usage
+  TEMP=$BIGTESTORDER
 fi
 
 while [[ "$TEMP" != "" ]]
 do
   mychar=${TEMP:0:1}
-  case $mychar in
-    f)
-	  if [[ "$got_f" != "1" ]]
-	  then
-	    r1m sa-forest
-		got_f=1
-	  else
-	    echo extra f/forest skipped
-	  fi
-	  ;;
-    i)
-	  if [[ "$got_i" != "1" ]]
-	  then
-	    r1m sa-sortie
-		got_i=1
-	  else
-	    echo extra i/sortie skipped
-	  fi
-	  ;;
-    m)
-	  if [[ "$got_m" != "1" ]]
-	  then
-	    r1m sa-metros
-		got_m=1
-	  else
-	    echo extra m/metros skipped
-	  fi
-	  ;;
-    r)
-	  if [[ "$got_r" != "1" ]]
-	  then
-	    r1m sa-resort
-		got_r=1
-	  else
-	    echo extra r/resort skipped
-	  fi
-	  ;;
-    o)
-	  if [[ "$got_o" != "1" ]]
-	  then
-	    r1m sa-ordeal-loader
-		got_o=1
-	  else
-	    echo extra o/ordeal loader skipped
-	  fi
-	  ;;
-    s)
-	  if [[ "$got_s" != "1" ]]
-	  then
-	    r1m sa-stores
-		got_s=1
-	  else
-	    echo extra s/store skipped
-	  fi
-	  ;;
-    l | x)
-	  if [[ "$got_x" != "1" ]]
-	  then
-	    r1m sa-lone
-		got_x=1
-	  else
-	    echo extra lone files skipped
-	  fi
-	  ;;
-    *)
-	  echo character ${TEMP:0:1} not recognized.
-	  usage  
-  esac
+  if [[ "${names[${mychar}]}" == "" ]]
+  then
+    echo ${mychar} does not have a test name attached to it
+	usage
+  elif [[ "${chosen[${names[${mychar}]}]}" == "" ]]
+  then
+    r1m sa-${names[${mychar}]}
+	chosen[${names[${mychar}]}]=1
+	#python3 mgun.py
+  else
+    echo already tested ${mychar}/${names[${mychar}]}
+  fi
   TEMP=${TEMP:1}
 done
-

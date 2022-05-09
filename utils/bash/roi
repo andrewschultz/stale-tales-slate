@@ -1,130 +1,60 @@
+######################
+
 function usage()
 {
-	  echo Main quest stores are uvpywt
-	  echo h = Others region
-	  echo o = ordeal reload, s = stores, d = demo dome, l\(lone\)/x = everything else
-	  echo a \(alone\) = everything in this order: $FULL_TEST
-	  exit
+  echo valid tests are ...
+  for key in "${!names[@]}";
+  do
+    echo ${key} ${names[${key}]}
+  done
+  a=$BIGTESTORDER
 }
 
-export FULL_TEST=osuvpywthdx
-export TEMP=$1
+# we may not need these, but I don't feel safe without them yet
+declare -A names
+declare -A chosen
 
-if [[ "$TEMP" == "" ]]
+names["d"]=demo-dome
+names["h"]=others
+names["l"]=lone
+names["o"]=ordeal-reload
+names["s"]=stores
+names["t"]=otters
+names["u"]=routes
+names["v"]=troves
+names["w"]=towers
+names["x"]=lone
+names["y"]=oyster
+
+if [[ "$1" == "" ]]
 then
+  echo No parameters received, so I\'m printing the usage.
   usage
-elif [[ "$TEMP" == "a" ]]
+fi
+
+TEMP=$1
+
+BIGTESTORDER=osuvpywthx
+
+if [[ "$TEMP" == "a" ]]
 then
-  export TEMP=$FULL_TEST
+  TEMP=$BIGTESTORDER
 fi
 
 while [[ "$TEMP" != "" ]]
 do
   mychar=${TEMP:0:1}
-  case $mychar in
-    u)
-	  if [[ "$got_u" != "1" ]]
-	  then
-	    r1m roi-routes
-		got_u=1
-	  else
-	    echo extra u/routes skipped
-	  fi
-	  ;;
-    v)
-	  if [[ "$got_v" != "1" ]]
-	  then
-	    r1m roi-troves
-		got_v=1
-	  else
-	    echo extra v/troves skipped
-	  fi
-	  ;;
-    p)
-	  if [[ "$got_p" != "1" ]]
-	  then
-	    r1m roi-presto
-		got_p=1
-	  else
-	    echo extra p/presto skipped
-	  fi
-	  ;;
-    y)
-	  if [[ "$got_y" != "1" ]]
-	  then
-	    r1m roi-oyster
-		got_y=1
-	  else
-	    echo extra y/oyster skipped
-	  fi
-	  ;;
-    w)
-	  if [[ "$got_w" != "1" ]]
-	  then
-	    r1m roi-towers
-		got_w=1
-	  else
-	    echo extra w/towers skipped
-	  fi
-	  ;;
-    t)
-	  if [[ "$got_t" != "1" ]]
-	  then
-	    r1m roi-otters
-		got_t=1
-	  else
-	    echo extra t/otters skipped
-	  fi
-	  ;;
-    h)
-	  if [[ "$got_h" != "1" ]]
-	  then
-	    r1m roi-others
-		got_h=1
-	  else
-	    echo extra h/others skipped
-	  fi
-	  ;;
-    o)
-	  if [[ "$got_o" != "1" ]]
-	  then
-	    r1m roi-ordeal-reload
-		got_o=1
-	  else
-	    echo extra o/ordeal reload skipped
-	  fi
-	  ;;
-    s)
-	  if [[ "$got_s" != "1" ]]
-	  then
-	    r1m roi-stores
-		got_s=1
-	  else
-	    echo extra s/stores skipped
-	  fi
-	  ;;
-    d)
-	  if [[ "$got_d" != "1" ]]
-	  then
-	    r1m roi-demo
-		got_d=1
-	  else
-	    echo extra d/demo dome skipped
-	  fi
-	  ;;
-    l | x)
-	  if [[ "$got_x" != "1" ]]
-	  then
-	    r1m roi-lone
-		got_x=1
-	  else
-	    echo extra lone files skipped
-	  fi
-	  ;;
-    *)
-	  echo character ${TEMP:0:1} not recognized.
-	  usage
-  esac
+  if [[ "${names[${mychar}]}" == "" ]]
+  then
+    echo ${mychar} does not have a test name attached to it
+	usage
+  elif [[ "${chosen[${names[${mychar}]}]}" == "" ]]
+  then
+    r1m roi-${names[${mychar}]}
+	chosen[${names[${mychar}]}]=1
+	#python3 mgun.py
+  else
+    echo already tested ${mychar}/${names[${mychar}]}
+  fi
   TEMP=${TEMP:1}
 done
-
