@@ -56,7 +56,7 @@ ACCESS toggles screen reader accessibility.
 >take writing
 #ttc-table-of-notepad-entries-writing
 >pad writing
-You need to READ or EXAMINE something instead of looking at the WRITING on it.
+If something has writing on it, you need to READ or EXAMINE something instead of X WRITING.
 >undo
 >undo
 
@@ -237,7 +237,7 @@ Certify = RGRR and Rectify = RBGB.
 (You record the information about writing in your notepad.)
 
 >pad writing
-You need to READ or EXAMINE something instead of looking at the WRITING on it.
+If something has writing on it, you need to READ or EXAMINE something instead of X WRITING.
 
 >undo
 >undo
@@ -247,7 +247,7 @@ You need to READ or EXAMINE something instead of looking at the WRITING on it.
 (You record the information about writing in your notepad.)
 
 >pad writing
-You need to READ or EXAMINE something instead of looking at the WRITING on it.
+If something has writing on it, you need to READ or EXAMINE something instead of X WRITING.
 
 >undo
 >undo

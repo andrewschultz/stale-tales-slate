@@ -2888,7 +2888,7 @@ short	known	verify	topic (topic)	blurb
 "to do"	false	--	"todo" or "to do"	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."
 "verbs"	true	false	"verbs/verb"	"[verb-list]"
 "warts"	false	--	"warts"	"'No, too stupid a fad. I put soot on warts.' But what is it that's too stupid?"
-"writing"	false	--	"writing"	"If something has writing on it, you ned to [b]READ[r] or [b]EXAMINE[r] something instead of [b]X WRITING[r]."
+"writing"	false	--	"writing"	"If something has writing on it, you need to [b]READ[r] or [b]EXAMINE[r] something instead of [b]X WRITING[r]."
 "xx"	false	true	"xx"	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."
 
 pf-warn is a truth state that varies.

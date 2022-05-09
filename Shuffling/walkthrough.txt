@@ -33,8 +33,6 @@ You can also change the bulge. I'll leave that as an exercise for the reader. If
 
 > in
 
-Okay. The reed and toga seem out of place. You only need to change one to make a passage. I'll leave the reed as an exercise for the reader.
-
 > goat
 
 Now you can just walk right in! But you have a bonus point that I hope is not very hard.
@@ -571,7 +569,13 @@ What could go in the opening?
 > put controls in opening
 > d
 
-You have what you need to face the beats.
+You have what you need to face the beats. If you don't, here's a checklist.
+
+1. you need the tulip from the nerds in Esoteric Coteries behind the friend finder. (3 ways to)
+2. you need to have neutralized the words in Bile Libe, or what they become. They need a container you probably got from the faeries. (2 ways to)
+3. you need to have repaired the neon pig and put the controls in the gap, so the power source won't zap you.
+
+There are 5 alternate paths in total for getting this done (begonias allow for an extra nerds solution,) but in each case, the idea is the same. You need the words, or what they become.
 
 > e
 > resin
