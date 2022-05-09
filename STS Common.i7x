@@ -439,8 +439,9 @@ min-alert is a truth state that varies.
 
 carry out possing:
 	now possibles is whether or not possibles is false;
-	say "Switching [on-off of possibles] minimum/maximum available point notification in the status line. ";
+	say "Switching [on-off of possibles] minimum/maximum available point notification in the status line.";
 	if min-alert is false:
+		say "[line break]";
 		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop means your most recent move precluded getting an easter egg. Or watching the minimum score increase may mean you found one.";
 	else:
 		say "[line break]";
@@ -580,12 +581,33 @@ to say note-great-guesses:
 
 part hints
 
+plus-noted is a truth state that varies.
+
+plus-after is a truth state that varies.
+
+minus-noted is a truth state that varies.
+
+minus-after is a truth state that varies.
+
 to say plus:
-	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can [b]HINT[r] again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
+	say "[run paragraph on] (+)";
+	skip upcoming rulebook break;
+	now plus-after is true;
 
 to say minus:
 	if prevent-thruhint-flag is false, now cur-item is thruhinted;
-	say "[one of] (-) [bracket][i]A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[no line break][r][close bracket][or] (-)[stopping]";
+	say "[run paragraph on] (-)";
+	now minus-after is true;
+
+report objhinting:
+	if minus-after is true and minus-noted is false:
+		ital-say "a minus sign means you've reached the end of a hint loop. You can cycle through them again, though.";
+		now minus-noted is true;
+
+report objhinting:
+	if plus-after is true and plus-noted is false:
+		ital-say "the plus sign means you can [b]HINT[i] again for something more spoilery. (-) means the end of a list of hints.";
+		now plus-noted is true;
 
 prevent-thruhint-flag is a truth state that varies. [a test variable for ignoring random hints that fall through]
 
@@ -818,11 +840,13 @@ volume ending stuff
 
 this is the show ranks rule:
 	say "Here is a list of ranks achievable throughout [this-game].";
+	let my-row be 0;
 	repeat through table of ranks:
+		increment my-row;
 		if there is a show-at-end-rule entry:
 			process the show-at-end-rule entry;
 			if the rule failed, next;
-		say "[b][rank-name entry][r]: [to-achieve entry][line break]";
+		say "[my-row]: [b][rank-name entry][r]: [to-achieve entry].";
 
 volume specific items
 
