@@ -5,6 +5,7 @@
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
 
 * ordeal_thru
 
@@ -27,20 +28,20 @@ Something in the scenery will be worth entering.
 
 >monty hints
 You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go.
-!Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
+!NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
 
 >in
 Rested Desert
 
 What can the odor turn into? Your random thoughts are not so random. (+)
-Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
+NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
 >z
 The clues and distractions collapse to anagrams. (+)
 >z
 If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram? (+)
 >z
 A door. (-)
-A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
+a minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
 
 #testcase-outside-rested-desert
 >exit

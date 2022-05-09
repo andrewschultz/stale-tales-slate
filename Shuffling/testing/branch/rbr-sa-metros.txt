@@ -27,6 +27,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
 
 * metros-thru
 
