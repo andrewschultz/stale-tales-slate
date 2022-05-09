@@ -1073,15 +1073,17 @@ to place-idea (myp - a number) and (myi - a number):
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
-carry out seeding: [100 = ordering players, 200 = skip trefoil, 400 = skip Disowned Downside. Most of the time we'll just need the non hundreds.]
+carry out seeding: [100 = Balmer or Beal in Capsule, 200 = skip trefoil, 400 = skip Disowned Downside. Most of the time we'll just need the non hundreds.]
 	let temp be 0;
 	let G be Rodney;
 	let found-yet be false;
 	let act-index be the remainder after dividing number understood by 100;
 	let seedflags be number understood / 100;
-	say "[b]USAGE NOTES[r]:[line break]1=Balmer 2=Mr Beal[line break], 10 * the pod number (1..8) for the players, 1=the pod number(1..5) for the picaros.[paragraph break]Seed flags can be anything up to 4.";
+	say "[b]USAGE NOTES[r]:[line break]100=Balmer 0=Mr Beal.[line break]200=ignore Trefoil seeding.[line break]400=ignore Downside seeding.[line break]The ones digit is the pod number, which is 1-8 for the players and 1-5 for the picaros. Anything above that is bumped down to the maximum pod number for that group of people.";
+	say "10s digit = unused as of now.";
 	if act-index > 8:
-		say "[b]WARNING: this is probably out of range, but we are rounding down.[r][line break]";
+		say "[b]WARNING: this is probably out of range, but we will round down.[r][line break]";
+		now act-index is 8;
 	if act-index < 1:
 		say "Need a positive act index.";
 		the rule fails;
@@ -1093,7 +1095,7 @@ carry out seeding: [100 = ordering players, 200 = skip trefoil, 400 = skip Disow
 		else:
 			now mbb is Marble Blamer Mr Beal;
 		say "[mbb] will be in [capsule].";
-	if seedflags <= 4:
+	if seedflags < 4: [400 = skip downside]
 		if Disowned Downside is visited and gretta-score > 0: [next, seed the players' pickup lines in OTTERS]
 			say "Skipping Disowned Downside seeding because you already started wiping the players/macks out.";
 		else:
@@ -1103,7 +1105,7 @@ carry out seeding: [100 = ordering players, 200 = skip trefoil, 400 = skip Disow
 			if the remainder after dividing seedflags by 2 is 0:
 				assign-random-pickup-priority;
 			else:
-				assign-fixed-pickup-priority;
+				assign-fixed-pickup-priority; [ 200 = skip trefoil]
 	if the remainder after dividing seedflags by 4 < 2:
 		if Loftier Trefoil is visited and number of moot picaros > 0: [first, seed the start of TOWERS]
 			say "Skipping Trefoil seeding as you've already disposed of [number of moot picaros] warrior[if number of moot picaros > 1]s[end if]. Restart if you wish to re-seed.";
@@ -1229,7 +1231,7 @@ to say miss-types:
 	say "[b]MISSED[r] = all (solved) regions['] misses--not including the current region.";
 	say "[b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
 	say "[b]MISSALT[r] = show alternate mutually exclusive routes for solved regions.";
-	say "[b]THISALT[r] = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
+	say "[b]THISALT[r] = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers).";
 	say "[paragraph break]========================Real stuff below";
 
 chapter thisalting

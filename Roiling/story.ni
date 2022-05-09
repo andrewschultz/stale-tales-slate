@@ -485,6 +485,8 @@ chapter rules orderings
 
 the map outside to directions if possible rule is listed first in the check going rules.
 
+the horbert-bye rule is listed before the map outside to directions if possible rule in the check going rules.
+
 chapter portals
 
 a portal has a number called diffic.
@@ -2064,7 +2066,8 @@ check objasking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interr
 the basic RQ out of range rule is not listed in any rulebook.
 
 An RQ out of range rule for a number (called max) (this is the modified RQ out of range rule):
-	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Report Porter Perrot is touchable]Report Porter Perrot yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.' [else if players are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type [b]REPEAT[r] to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
+	say "[one of]You murmur 'Umm...urr.'[or][stopping][if Report Porter Perrot is touchable]Report Porter Perrot yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.'[else if players are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if]";
+	say "[line break][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type [b]REPEAT[r] to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
 
 pat-whine is a truth state that varies.
 
@@ -3282,6 +3285,8 @@ to decide whether (tn - a table name) is hash-found:
 			if this-item entry is touchable:
 				if this-item entry is a pickup-line and this-item entry is not playable: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
 					next;
+			else:
+				next;
 		else if there is a this-rule entry:
 			say "[run paragraph on]";
 			process the this-rule entry;
@@ -4314,7 +4319,7 @@ settler-hint-yet is a truth state that varies.
 to say next-to-see:
 	unless sad ads are examined:
 		if a random chance of 1 in 7 - stuff-found succeeds:
-			say "You can page through the sad ads.";
+			say "You can page through the sad ads";
 			continue the action;
 	unless player has pedanto notepad:
 		if a random chance of 1 in 6 - stuff-found succeeds:
@@ -8122,8 +8127,8 @@ table of quip texts (continued) [tqt-gu]
 quip	quiptext
 summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Report Porter Perrot glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Not really a compelling personal story, you have to admit! Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't many things you could anagram for the better. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Report Porter Perrot, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start PORTER text]
 powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
-necro-quip	"'No rec!' [porter] goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You [b]LIKE[r] her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' [porter] glosses over [urbfogel], and how he beat up monsters that came back anyway [']til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
-clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
+necro-quip	"'No rec!' [porter] goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You [b]LIKE[r] her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' [porter] glosses over [urbfogel], and how he beat up monsters that came back anyway [']til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!"
+clown-quip	"Scathing sigh. 'Can't.'[paragraph break]'Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
 sit-quip	"'Going personal? Sore plan! No gig!' She's not perfect but that helps us see... 'Mr. Quasi-Marquis...you have to admit, not even a reruns nurser thinks you could save Yorpwald turning stuff into stuff again. Pedants did research! So one do-rite editor rioted.'"
 gustave-quip	"'Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe.'"	[option 4-1, fork of 4]
 pouter-quip	"'Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything.'"
@@ -8136,7 +8141,7 @@ social-quip	"You complain about social forces in general. More downers than wond
 girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend finder or lovers solver found the woman for Elmo. He looks happier for having complained, though."
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
-artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
+artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. There's new ones out there. Solve a couple, and maybe you can get through things a bit quicker.'"
 leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-me-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break][porter] pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end PORTER text]
 
 to say urbfogel: say "Blue Frog Urbfogel, Bugler of Foulberg"
@@ -8914,7 +8919,7 @@ short	verify	fixed-region	type	readyet	known	topic (topic)	blurb
 "tagged gadget"	true	--	1	--	true	"tagged/gadget" or "tagged gadget"	"You wrote some notes about the Tagged Gadget from [shuf] in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."
 "talking"	false	--	2	--	false	"talking"	"[b]TALK[r]ing is the equivalent of asking someone about themselves[terse-types]."
 "the haunter"	true	oyster	1	--	false	"haunter"	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."
-"the settler"	true	--	1	--	false	"the settler" or "settler"	"c/t/cheat/teach pushes teach/cheat button[line break]la = last scan (best for vision impaired since graphic should appear in top frame) [line break]ss = switch settler or shake settler to see all transformable objects[line break]sy = scan with hints, overriding current setting (sn = without)[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."
+"the settler"	true	--	1	--	false	"the settler" or "settler"	"c/t/cheat/teach pushes teach/cheat button.[line break]la = last scan (best for vision impaired since graphic should appear in top frame).[line break]ss = switch settler or shake settler to see all transformable objects.[line break]sy = scan with hints, overriding current setting (sn = without).[line break]You don't ever need to SCAN X WITH SETTLER, just [b]SCAN X[r]."
 "the Wildest Wilteds"	true	towers	1	--	false	"wilteds/wildest" or "wildest wilteds"	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to have lost touch with."
 "verbs"	false	--	2	false	true	"verbs/verb"	"[verb-list]"
 "warp"	true	--	1	--	true	"warp"	"[i][bracket]FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"
@@ -9567,12 +9572,12 @@ table of quip texts (continued) [tqt-mo]
 quip	quiptext
 curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
 interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
-toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (not bad for boring old mathy stuff, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'There's evidence you might possibly be behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
+toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (not bad for boring old mathy stuff, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.'[paragraph break]'There's evidence you might possibly be behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
 strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. About themselves or Elvira. You'll get clues how to deal with them, even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues.'"
 clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
 gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
 trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
-shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
+shortcut-quip	"'Hm, maybe a covert vector after you solve two...'[paragraph break]Elmo pauses. 'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
 flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies [gtmn] gave me.' You note a [b]PLUG[r] of nutrients, laces, and an [b]ELMO[r] nametag." [check what's scanned]
 scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if]. [mo-data]."
 gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
@@ -9995,7 +10000,7 @@ Store H is a sto in Strip of Profits.
 
 understand "store 8/eight" and "8/eight" as store h when player is in Strip of Profits.
 
-description of Store H is "Store H appears broken-down. It sprawls a bit but is not particularly tall. A warning in bright red says:[paragraph break]'All who enter here risk exclusion. Closed for having a truly frightening red [first custom style]HOSTER[r]. Trespassers will be, [first custom style]er, shot. - E. S. Roth[r]'"
+description of Store H is "Store H appears broken-down. It sprawls a bit but is not particularly tall. Writing in bright red seems to warn you away."
 
 a-text of store h is "YRRYRR". b-text of store h is "YPRYRR". parse-text of store h is "-[sp]T[sp]x[sp]-[sp]x[sp]x".
 
@@ -10012,7 +10017,7 @@ the Throes Hoster is a not lumpable not maingame portal. understand "others" as 
 
 this is the enter-hoster rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
-	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a [b]GURU[r]!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug].";
+	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.'[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a [b]GURU[r]!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug].";
 	if arugula is not moot, pad-rec "guru";
 
 understand "mouth" as Throes Hoster.
@@ -10824,10 +10829,11 @@ after printing the locale description for Cleric Circle when Cleric Circle is un
 	say "Brother Horbert steps on something that flips up into the air and into your hands! He points at you. 'It...you...I was told...the spoon must be for you!'[paragraph break]He explains it is a snoop spoon, one that helps the right person--the one it chooses--to examine it for direction when needed. Apparently you have to tilt it right so all the rays or whatever get focused at the focal point, but you can figure that out as you go.";
 	now player has snoop spoon;
 
-check exiting in Cleric Circle (this is the horbert-bye rule):
+check going outside when player is in Cleric Circle (this is the horbert-bye rule):
 	if toils is unexamined or pews are unexamined:
 		if toils are in Cleric Circle:
-			say "You look back at the [if toils is examined]pews[else if pews are examined]list-o-toils[else]pews and list-o-toils[end if]. Perhaps closer inspection might give you [if toils is examined]the 'why'[else if pews are examined]the 'what'[else]the 'what' and 'why'[end if] for dealing with the directionless Same Mesa.[paragraph break][randbla]";
+			say "You look back at the [if toils is examined]pews[else if pews are examined]list-o-toils[else]pews and list-o-toils[end if]. Perhaps closer inspection might give you [if toils is examined]the 'why'[else if pews are examined]the 'what'[else]the 'what' and 'why'[end if] for dealing with the directionless Same Mesa.[paragraph break]";
+	say "[randbla]";
 	now player is in Same Mesa instead;
 
 chapter brother horbert
@@ -13160,7 +13166,7 @@ check taking catechism: say "It's pretty much tied to the table and not worth un
 after examining catechism for the first time:
 	d "[list of things on labs slab].";
 	d "[number of things on labs slab].";
-	say "Well, that was probably too technical. You peek at the introduction. Page 1, 'Noob-Boon: Hi-Tech Itch, Eh?' condescendingly but effectively lays out the basics:[line break]--your favorite frustration word, major or minor, doesn't make you a better programmer.[line break]--create and assemble your materials first[line break]--then and only then, get to the programming actions and stuff[if number of things on labs slab > 2].[paragraph break]Well, you already started assembling stuff. Yay[end if]. You tackle a whole droll hello world--the rest will come later. You can, of course, look for random information for fun, but you'll probably naturally use the book for reference once you get seriously programming.[line break]";
+	say "Well, that was probably too technical. You peek at the introduction. Page 1, 'Noob-Boon: Hi-Tech Itch, Eh?' condescendingly but effectively lays out the basics:[line break]--your favorite frustration word, major or minor, doesn't make you a better programmer.[line break]--create and assemble your materials first.[line break]--then and only then, get to the programming actions and stuff[if number of things on labs slab > 2].[paragraph break]Well, you already started assembling stuff. Yay[end if]. You tackle a whole droll hello world--the rest will come later. You can, of course, look for random information for fun, but you'll probably naturally use the book for reference once you get seriously programming.[line break]";
 	pad-rec "hacking";
 	the rule succeeds;
 
@@ -19002,7 +19008,7 @@ t-reactively is a pickup-line. pod-num is 6. pod-ord is 4. a-text of t-reactivel
 
 section 12 letters - pod 7
 
-t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]E[sp]x[sp]x[sp]-[sp]-[sp]x[sp]I[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their 'greatness'"
+t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]E[sp]x[sp]x[sp]-[sp]-[sp]x[sp]I[sp]x[sp]x[sp]x[sp]Y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their alleged greatness"
 
 t-indiscreetly is a pickup-line. pod-num is 7. pod-ord is 2. a-text of t-indiscreetly is "YRRYRRRYYRRO". b-text of t-indiscreetly is "GRRYRRRGYPPB". parse-text of t-indiscreetly is "I[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]E[sp]-[sp]T[sp]L[sp]Y". player-move is "The [pla-ma]s continue to babble, their clothes shining iridescently.". pickup-description is "wearing clothes shining iridescently".
 
@@ -19565,7 +19571,7 @@ check going west in Reclusion Inclosure (this is the need quick rule):
 	if hydra is in Rancho Archon Anchor:
 		if hydra-known is true, say "A little voice in your head says 'Ohnoes soon, eh?'.[paragraph break]You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of [e-n-m] first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
 		now hydra-known is true;
-		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Nemesis seems in. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra.." instead; [bold-ok]
+		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Nemesis seems in. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra." instead; [bold-ok]
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
 
 chapter two LLPs
@@ -21601,7 +21607,7 @@ this is the bore-sparse-spares rule:
 
 section artsies' satires
 
-the artsies satires are plural-named amusing boring scenery in Sparse Spares. description of artsies satires is "[one of]They seem discombobulated, as you'd expect from spares. [or][stopping]You see [one of][or]more [stopping]rough notes on [randbla].". bore-text is "The satires are just there to read.". bore-check is bore-satires rule. printed name of artsies satires is "artsies['] satires".
+the artsies satires are plural-named amusing boring scenery in Sparse Spares. description of artsies satires is "[one of]They seem discombobulated, as you'd expect from spares. [or][stopping]You see [one of][or]more [stopping]rough notes: [randbla]". bore-text is "The satires are just there to read.". bore-check is bore-satires rule. printed name of artsies satires is "artsies['] satires".
 
 this is the bore-satires rule:
 	if current action is taking, say "No, they're an exhibit. A particularly useless one, and one I couldn't incorporate into the game proper, but an exhibit." instead;
@@ -21895,16 +21901,13 @@ this is the hint certain object groups rule:
 	if noun is a room, say "There are no hints available on rooms in general. You can go to a room and [b]HINT[r], instead." instead;
 	if noun is a portal and noun is not solid idols, all-say "You can just enter [the noun]." instead;
 	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
-	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
-	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
-	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type [b]HINT[r] for the current puzzle to look at." instead;
-	if noun is realized, all-say "Nothing more for you to do with [the noun]." instead;
-	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
-	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
+	if in-hint-testing is false and location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
+	abide by the reject unknowable objects if not testing rule;
+	abide by the generic hint state rejects rule;
 	if noun is shunloc, all-say "You don't need to go back where [the noun] [is-are of the noun]." instead;
 	if noun is a badbook, all-say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is a fruit and player has noun, all-say "[frootz]" instead;
-	if noun is not a backdrop and noun is not scenery:
+	if in-hint-testing is false and noun is not a backdrop and noun is not scenery:
 		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region[if players are touchable]. If you're trying to [b]HINT[r] the [pla-ma]s['] pickup lines, ." instead;
 	if noun is a pickup-line:
 		increment hint-prog of noun;
@@ -21997,6 +22000,8 @@ carry out objhinting (this is the pick object to hint rule) :
 	if spoilit is false:
 		d "[noun] hinting.";
 	now ever-obj-hinted is true;
+	abide by the reject unknowable objects if not testing rule;
+	abide by the generic hint state rejects rule;
 	abide by the hint certain object groups rule;
 	if noun is moot, abide by the hint-moot-objects rule;
 	if noun is cluey, say "The [noun] provides clues for something else you need to flip." instead;
@@ -22669,8 +22674,9 @@ this is the towers-misses rule:
 	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from [list of moot skansnaks], which cost a style point.";
 	if keycar is off-stage, say "[2dmiss of towers]you didn't clear any location of guardians, besides edges or [coastlines], so you didn't get to see a [keycar].";
 	let xxx be unripe ur pine;
-	if number of not moot guardians > 0:
-		say "[2dmiss of towers]starting missed Towers guardians[line break]";
+	let nmg be number of not moot guardians;
+	if nmg > 1:
+		say "[2dmiss of towers]You missed the guardians listed below ([nmg] in total).";
 		repeat with gua running through not moot guardians:
 			if bad-gender-match of gua, next;
 			now xxx is gua;
@@ -22678,7 +22684,7 @@ this is the towers-misses rule:
 			choose row with the-from of xxx in table of towers anagrams;
 			let rm2 be gualoc of gua;
 			now rm2 is the room guadir of gua from rm2;
-			say "[2dmiss of towers][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else if the-from entry is site van][b]VAINEST[r] or [b]NAIVEST[r][else][b][right-word entry in upper case][r][end if].";
+			say "[2dmiss of towers][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else if the-from entry is site van][b]VAINEST[r] or [b]NAIVEST[r][else][b][right-word entry in upper case][r][end if][if nmg is 1]. It is the only one you missed[end if].";
 		if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 	if recital article is not moot, say "[2drm of trefoil]you could've made the recital article [b]TALCIER[r].";
 	if number of pinko picaros > 0:

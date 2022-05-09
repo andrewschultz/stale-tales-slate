@@ -1464,7 +1464,7 @@ chapter outer route
 table of Outer Route nudges [0 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "roeut"	495698314	--	--	"[towersloc]."
-"sway"	328755809	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful"
+"sway"	328755809	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful[if dourest detours are unvisited], though there is a bonus point for going in a 'wrong' direction."
 "camp"	166734515	--	--	"[gosh-camp]!"
 "site"	372182939	--	--	"[gosh-camp]!"
 "campiest"	538917454	--	--	"[gosh-camp]!"
@@ -2197,7 +2197,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "piep"	335730873	pipe panel	--	"[whole-item]."
 "panel"	334181233	pipe panel	--	"[whole-item]."
 "drupelet"	705460733	pryer bars	--	"[no-pryer]."
-"drupelets"	801734699	pryer bars	--	"[no-pryer]"
+"drupelets"	801734699	pryer bars	--	"[no-pryer]."
 "pryerbar"	608209452	pryer bars	--	"No, it's [i]both[r] pryer bars."
 "pryer"	502278926	pryer bars	--	"[whole-item]."
 "bars"	202204492	pryer bars	--	"[whole-item]."
@@ -2210,7 +2210,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "briars"	332521141	briar screen	--	"[whole-item]."
 "screen"	525123080	briar screen	--	"[whole-item]."
 
-to say no-pryer: say "No, it's the whole pryer bars"
+to say no-pryer: say "Not just the drupelets. The pryer bars in their entirety"
 
 to say rapt-glare: say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon"
 
@@ -2326,7 +2326,7 @@ chapter Evoc Cove
 table of Evoc Cove nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "evoc"	328329091	--	--	"[dome-rm]."
-"novella"	488046510	--	--	"[no-no]"
+"novella"	488046510	--	--	"[no-no]."
 "lol"	181980255	--	--	"[no-no]."
 "neva"	306066255	--	--	"[no-no]."
 

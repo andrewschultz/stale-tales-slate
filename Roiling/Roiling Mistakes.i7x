@@ -87,7 +87,7 @@ chapter Largely All-Grey Gallery
 
 to say sitar-here-back: say "[if sitar is moot]back[else]down here[end if]"
 
-understand "astir" as a mistake ("[if stair is touchable]You don't need a moving stair.[else]You need to change that to something else, then it'll be astir[end if].[note-great-guesses]") when stair is touchable or stria is in location of player or sitar is in location of player.
+understand "astir" as a mistake ("[if stair is touchable]You don't need a moving stair[else]You need to change that to something else, then it'll be astir[end if].[note-great-guesses]") when stair is touchable or stria is in location of player or sitar is in location of player.
 
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All Grey Gallery and meet bans are in Dusty Study.
 
@@ -95,7 +95,7 @@ understand "bsin" and "bs in" as a mistake ("Now, now! [this-game] is strictly a
 
 understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.[note-great-guesses]") when rifle is touchable.
 
-understand "sitar" as a mistake ("[if farming framing is visited]You don't need to bring the sitar [sitar-here-back]. What could it and the stria become?[else if stair is touchable]Surely a stair is more handy right now.[note-great-guesses][else]You don't need music right now. A way to get around would be better.[note-great-guesses][end if]") when player is in Largely All Grey Gallery.
+understand "sitar" as a mistake ("Surely [if stair is touchable]a stair[else]easy transport[end if] is more handy right now than music[if farming framing is visited]. You don't need to bring the sitar [sitar-here-back][end if][if farming framing is visited and stair is not touchable]. What could the sitar and stria become?[else].[end if][note-great-guesses]") when player is in Largely All Grey Gallery.
 
 section Elmo dialogue
 

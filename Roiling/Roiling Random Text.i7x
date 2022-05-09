@@ -50,7 +50,7 @@ table of mantle laments	true	false	0	30	read-pious-2 rule	routes	"Rev. Ali's hot
 table of horbert musings	false	true	0	30	horby rule	routes	"Brother Horbert's musings (Cleric Circle)"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa.[pre-brk]"	40
 table of horbert farewells	false	false	0	20	horb-bye rule	routes	"Brother Horbert's blessings (Cleric Circle)"	"Brother Horbert speaks as you leave: [i]"	"[r][pre-brk]"	"Brother Horbert's face shows neat, epic patience as you leave, again.[pre-brk]"	40
 table of missing deli foods	true	false	0	20	ask-deli rule	routes	"Non-foods at Pat's (Idle Deli)"	--	""	"'Not even spoiled old pies...'"
-table of iffy advice	false	false	0	20	read-pa-egg-pea rule	troves	"Advice from Pa, Egg, Pea (Loather Rathole or beyond)"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
+table of iffy advice	false	false	0	20	read-pa-egg-pea rule	troves	"Advice from Pa, Egg, Pea (Loather Rathole or beyond)"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r].[line break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
 table of posse bosses	true	false	0	20	in-bustle-sublet rule	troves	"Gang bosses (Bustle Sublet)"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them" [p]
 table of prestigious bums	true	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r] (Boredom Bedroom)"	--	""	"Aliver Elvira, in case anyone forgot" [p]
 table of DIVORCES articles	false	false	0	30	read-divorces rule	troves	"'Fascinating' [DIVORCES] articles (Browse Bowers)"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want." [p]
@@ -397,7 +397,7 @@ this is the horby rule:
 	the rule fails;
 
 this is the horb-bye rule:
-	if current action is exiting in Cleric Circle, the rule succeeds;
+	if current action is going outside and player is in Cleric Circle, the rule succeeds;
 	the rule fails;
 
 section TROVES random text rules
