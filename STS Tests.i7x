@@ -540,6 +540,41 @@ check montying:
 	if the topic understood matches "hint" or the topic understood matches "hints":
 		now first-hint-check is true;
 
+volume tabpunc = table punctuation
+
+chapter tabpuncing
+
+current-chatter-index is a number that varies.
+
+tabpuncing is an action applying to one number.
+
+understand the command "tp" as something new.
+
+understand "tp [number]" as tabpuncing.
+
+carry out tabpuncing:
+	if number understood < 1 or number understood > number of rows in table of megachatter, say "You need 1-[number of rows in table of megachatter]." instead;
+	spill-row number understood;
+
+to spill-row (num - a number):
+	choose row num in table of megachatter;
+	let need-period be endpunc entry;
+	let tab-to-spill be mytab entry;
+	repeat through mytab entry:
+		say "[blurb entry][if need-period is true].[else][line break][end if]";
+	say "Finished dumping [tab-to-spill].";
+	say "That's row [num], if you're counting at home. Or if you lost count.";
+	the rule succeeds;
+
+tabnexting is an action out of world.
+
+understand "tp" as tabnexting.
+
+carry out tabnexting:
+	increment current-chatter-index;
+	if current-chatter-index > number of rows in table of megachatter, now current-chatter-index is 1;
+	spill-row current-chatter-index;
+
 STS tests ends here.
 
 ---- DOCUMENTATION ----

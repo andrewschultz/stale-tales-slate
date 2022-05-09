@@ -355,8 +355,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gast"	234171504	Gast	--	"You can't change [gast] permanently. You just have to work around [him-her]."
 "tirade"	384449683	Gast	--	"[if side art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
-"anti"	219198190	--	--	"[whole-sitanag]"
-"sag"	131061486	--	--	"[whole-sitanag]"
+"anti"	219198190	--	--	"[whole-sitanag]."
+"sag"	131061486	--	--	"[whole-sitanag]."
 "die"	193828044	--	--	"[die-sin]."
 "sin"	210174320	--	--	"[die-sin]."
 "poison"	440345433	--	--	"[not-stripe]."
@@ -386,7 +386,7 @@ to say board-change: say "It's what's on the board you need[if signboard is refl
 
 to say whole-side: say "It's the whole side art you need[if side art is reflexed]ed[end if] to deal with"
 
-to say whole-sitanag: say "The whole [sit a nag]."
+to say whole-sitanag: say "The whole [sit a nag]"
 
 to say die-sin: say "[if Cleric Circle is visited]The words themselves do nothing. You found the way in[else]Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined[end if]"
 
@@ -1384,7 +1384,7 @@ to say not-singular-hp: say "Neither the singular nor the plural version of a pa
 
 to say plutry of (pg - a guardian): now pg is plurtry
 
-to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix."
+to say wait-see: say "The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix"
 
 this is the see-female-admirer rule:
 	if player is female and mardier admirer is touchable, the rule succeeds;

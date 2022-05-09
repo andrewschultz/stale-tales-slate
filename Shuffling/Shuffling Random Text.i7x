@@ -8,16 +8,16 @@ pch.pl checks punctuation.
 volume megachatter table
 
 table of megachatter [tmc]
-mytab	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (number)	done-once	table-size (number)	ent-per	end-count
-table of job searcher names	false	0	100	x-namelist rule	"Names of other job applicants (Ordeal Loader)"	""	""	"[if resort is not solved]. [end if]That's the last. Boy--you can't imagine you'll ever fit in[make-cycle][post-per-lb]"	--	--	--	5
-table of evil locations	false	0	30	reading-the-slit rule	"Evil locations in the slit (F)"	""	""	"(worst and last) Hell's Shell[post-per-lb]"	20	false	0	1	0 [p]
-table of poem codas	true	0	30	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
-table of garrison chants	true	0	30	with-hippies rule	"Roarings Garrison chants (M)"	"[one of]Emosion (sic)[or]Mo['] noise[stopping] from the noisome Moonies: "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
-table of bastion dialogue	true	0	30	talk-in-bastion rule	"[Bastion] chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
-table of psas	false	0	30	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last bit of advice[post-per-lb]"
-table of nerd natter	true	0	30	in-mensa rule	"Esoteric Coteries chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][if showtabname is true]BLANK. [end if][in random order]"	""	"For a second this anti-cool location ain't loco. Then, LO, ACTION.[line break]"
-table of riot slogans	true	0	30	protest-rant rule	"Rioters['] chants (R)"	"Voices babble[one of][or] on[stopping]. "	""	"The protesters seem out of ideas before egging to get going: 'Persons! Press on!' The swarm warms to a re-blab. Rabble.[line break]"
-table of red bull taunts	true	0	30	burdell-taunt rule	"Red Bull Burdell's taunts (R)"	"'GET OUT!!!!' yells Red Bull Burdell. "	" His boot, with his toe sticking out, swings within an inch of your chin[one of][or] again[or] yet again[or], prompting one of your finest feints[or]. But his smiting timings are just off[or]. Be neat if he got beaten[or]. You say, 'I fend, fiend!'[or]. He's stout-armed, but he can be outsmarted[or]. He's getting set-up for an upset[or]. He's on a roll, but you're rolling around ok[cycling][1-in-5]."	"Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?[line break]"
+mytab	endpunc	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (number)	done-once	table-size (number)	ent-per	end-count
+table of job searcher names	true	false	0	100	x-namelist rule	"Names of other job applicants (Ordeal Loader)"	""	""	"[if resort is not solved]. [end if]That's the last. Boy--you can't imagine you'll ever fit in[make-cycle][post-per-lb]"	--	--	--	5
+table of evil locations	true	false	0	30	reading-the-slit rule	"Evil locations in the slit (F)"	""	""	"(worst and last) Hell's Shell[post-per-lb]"	20	false	0	1	0 [p]
+table of poem codas	false	true	0	30	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
+table of garrison chants	false	true	0	30	with-hippies rule	"Roarings Garrison chants (M)"	"[one of]Emosion (sic)[or]Mo['] noise[stopping] from the noisome Moonies: "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
+table of bastion dialogue	false	true	0	30	talk-in-bastion rule	"[Bastion] chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
+table of psas	true	false	0	30	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last bit of advice[post-per-lb]"
+table of nerd natter	false	true	0	30	in-mensa rule	"Esoteric Coteries chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][if showtabname is true]BLANK. [end if][in random order]"	""	"For a second this anti-cool location ain't loco. Then, LO, ACTION.[line break]"
+table of riot slogans	false	true	0	30	protest-rant rule	"Rioters['] chants (R)"	"Voices babble[one of][or] on[stopping]. "	""	"The protesters seem out of ideas before egging to get going: 'Persons! Press on!' The swarm warms to a re-blab. Rabble.[line break]"
+table of red bull taunts	false	true	0	30	burdell-taunt rule	"Red Bull Burdell's taunts (R)"	"'GET OUT!!!!' yells Red Bull Burdell. "	" His boot, with his toe sticking out, swings within an inch of your chin[one of][or] again[or] yet again[or], prompting one of your finest feints[or]. But his smiting timings are just off[or]. Be neat if he got beaten[or]. You say, 'I fend, fiend!'[or]. He's stout-armed, but he can be outsmarted[or]. He's getting set-up for an upset[or]. He's on a roll, but you're rolling around ok[cycling][1-in-5]."	"Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?[line break]"
 
 to say make-cycle:
 	now cycled-yet is false;
@@ -1986,7 +1986,7 @@ blurb
 "Feathery, they fear the faery."
 "Feature so, safe route? Rouse fate!"
 "Feel a cup fuel pace, peaceful."
-"'Fess at a fest's safest feasts."
+"Fess at a fest's safest feasts."
 "Fest Four: Foe Turfs to suffer-effort us."
 "Fetch a fork off the rack. Hack effort!"
 "Fetid nosy fiend toys of destiny edify tons!"
@@ -3510,7 +3510,7 @@ blurb
 "'A stupid ad: it's up!'"
 "'Styrene, rent? Yes!'"
 "'Substance, sanest cub! Snub caste!'"
-"'Subverts vs. brutes!" [p]
+"'Subverts vs. brutes!'"
 "'Suck on, SunkCo!'"
 "'Sun power? Up, resown, super now!'"
 "'SuperOil? Perilous!'" []
@@ -3584,7 +3584,7 @@ blurb
 
 table of bastion dialogue [xxms2]
 blurb
-"'... filets itself. Fliest!"
+"'... filets itself. Fliest!'"
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their act: chattier, theatric."
 "'Ascot coast? Tacos? O, scat!'"
@@ -3595,7 +3595,7 @@ blurb
 "'Bub, Russ? Suburbs!'"
 "'Cadge, sir? Disgrace!'"
 "'Cake, ho! Ah, coke!'"
-"'Calkers? Slacker lackers."
+"'Calkers? Slacker lackers.'"
 "Chat! Soothe toothaches! Taste hooch!"
 "'Chatters? A stretch.'"
 "'Cheese sechée. See?' / 'Ech.'"
@@ -3633,7 +3633,7 @@ blurb
 "'Pros, eh? Posher hopers!'"
 "'Rare dim Dr. Marie: married?!'"
 "'A real toxin. Relaxation!'"
-"'Reckless clerkess!"
+"'Reckless clerkess!'"
 "'Rusted-Red Stu? Rudest duster!'"
 "'Serf! Got frets? Go! Forgets! Erg, SOFT!'"
 "Silken coo. 'Loose Nick looks nice!'"
@@ -3675,7 +3675,7 @@ blurb
 "'Art? Boo! A robot!'"
 "'Art's Tech Chatters? A stretch!'"
 "'Asocial? Us? SALACIOUS!'"
-"Bad Beth's Death BBS?'"
+"'Bad Beth's Death BBS?'"
 "'Bam! Stop, spambot!'"
 "'Ban inert banterin[']! BRAIN-NET!'"
 "'BBS? Yah, shabby.'"
@@ -3795,7 +3795,7 @@ blurb
 "'Guthrie's right-use?' Huge stir. 'Urge this!'"
 "'Ha! Orc!' / 'Roach!'"
 "'Hard coding? Dang, Orchid! Odd chagrin!'"
-"'Hardcore Card Hero?."
+"'Hardcore Card Hero?'"
 "'He slants less than SlashNet!'"
 "'His tip? Ship it!'"
 "'Hong! Axe Hax-o-Gen Hexagon!'"
@@ -3862,7 +3862,7 @@ blurb
 "'A math trick? Karmic, that!'"
 "'MatLab alt? BAM!'"
 "'Max fills? Small fix.'"
-"'Maze-Gain Magazine? I gaze, man!"
+"'Maze-Gain Magazine? I gaze, man!'"
 "'Mensa's [a-word], men!'"
 "'Mental math, hmm? A talent!'"
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
@@ -3895,7 +3895,7 @@ blurb
 "'A network! Rate/know!' / 'Weak. Torn.'"
 "'Neuromancy? NO! Numeracy!'"
 "'Neurons non-user!'"
-"'Nicest SciNet insect? Sic ten!"
+"'Nicest SciNet insect? Sic ten!'"
 "'No bail for fool-brain!'"
 "'No-Rat-a-Tron?! No-Art-a-Tron!'"
 "'No ROM, moron!'"
@@ -3956,7 +3956,7 @@ blurb
 "'Rut?' / 'Echo. Retouch our tech.'"
 "'Sad. Forget dafter gos to defrags.'"
 "'Sad purge? UPGRADES!'"
-"'Sarcastic, arctic [a-word]."
+"'Sarcastic, arctic [a-word]!'"
 "'Say, men: Sean, my MENSA-y yes-man!'"
 "Scathe-tone: 'NOT THE CASE!'"
 "'A script.' / 'Scrap it. It's [crap].'"
@@ -4011,7 +4011,7 @@ blurb
 "'Top-Ed Depot opted? Do, pet!'"
 "'TopSci Optics? To pics.'"
 "'Trendy Nerd Ty: try? END!'"
-"'TrueSonic?! Cretinous neurotics!"
+"'TrueSonic?! Cretinous neurotics!'"
 "'Two-bit-wit bot!'"
 "'U-Adept Update? Due! Tap!'"
 "'Um, I to UI, Tom? I'm out!'"
@@ -4366,7 +4366,7 @@ blurb
 "'Alien scum! Nice? MAULS!' Masculine calumnies."
 "'Apology? A ploy! Go!'"
 "'ARCH SAINT? ANARCHIST? NAH, RACIST!'"
-"'AVENGE GENEVA!"
+"'AVENGE GENEVA!'"
 "'Banish! Bash in! Ah, bins!'"
 "Bemoaning. 'BINGO! AMEN!'"
 "'CAGE OUR COURAGE? A cure: GO!'"

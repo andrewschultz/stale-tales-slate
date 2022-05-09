@@ -104,7 +104,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 
-to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
+to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]"
 
 book stores
 
@@ -216,7 +216,7 @@ to say say-which: say "You'll need to pick out a store to work with. Mall or Mal
 
 to say lotmaso: say "You need to manipulate each store as a store, not a mall or a lot"
 
-to say no-cand of (x - a thing): say "[x] seems like a good candidate to change and reveal something, but nothing happens."
+to say no-cand of (x - a thing): say "[x] seems like a good candidate to change and reveal something, but nothing happens"
 
 to say no-mb of (x - a thing): say "Nothing happens. Maybe if Yorpwald were in even more danger the future, [x] might change. But not this adventure";
 
@@ -224,7 +224,7 @@ to say no-way of (x - a thing): say "[x] remains impassive and dark, but it seem
 
 to say road-sign: say "Hmm...you get the feeling the store itself holds more adventure"
 
-to say no-store-m: say "No, it's a map of something behind Store M, it looks like."
+to say no-store-m: say "No, it's a map of something behind Store M, it looks like"
 
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Trips Strip"
 
@@ -523,7 +523,7 @@ this is the b4-cent rule:
 	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
 
-to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it."
+to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it"
 
 this is the af-cent rule:
 	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
@@ -623,7 +623,7 @@ this is the panel-in-silo rule:
 
 to say but-but: say "It's the buttons['] purposes that need[if steer button is touchable and shoot button is touchable]ed[end if] changing";
 
-to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
+to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably"
 
 to say pat-poe: say "Pat won't react kindly to modifications of his poem"
 
