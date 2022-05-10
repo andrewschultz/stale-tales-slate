@@ -30,15 +30,15 @@ The beats would drown the singers out.
 
 #testcase-mistake-shuffling-snores-snore
 >snores
-Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
+Any noise would be better than the beats, but without the sensor, you're probably not getting by the signers' ingress.
 >snore
-Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
+Any noise would be better than the beats, but without the sensor, you're probably not getting by the signers' ingress.
 
 #testcase-mistake-shuffling-resign-resigns
 >resign
-Reverse psychology won't work on the ingress, here.
+Reverse psychology won't work on the signers' ingress, here.
 >resigns
-Reverse psychology won't work on the ingress, here.
+Reverse psychology won't work on the signers' ingress, here.
 
 #ttc-table-of-undesired-underside-nudges-theol
 >hotle
@@ -76,9 +76,9 @@ You can't do much with or to the camp, here or north.
 Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.
 #testcase-mistake-shuffling-senors-senor
 >senors
-The senors you want to see are behind the door.
+The senors you want to see are behind the signers' ingress.
 >senor
-The senors you want to see are behind the door.
+The senors you want to see are behind the signers' ingress.
 
 #ttc-table-of-undesired-underside-nudges-undesired
 >undesirde
@@ -710,7 +710,7 @@ The beats shift up for a second.
 >put barcode on keycard
 
 >put card on sensor
-What do you know? It works! The door slides open!
+What do you know? It works! The signers' ingress slides open!
 
 >e
 #notana
@@ -735,25 +735,15 @@ The lit-up tulip will stay lit. No need to futz with its brand name.
 >friedn
 You don't need to futz further with the friend finder.
 
->put card on sensor
-The door is open. So you just walk east instead.
-
-/^Esoteric Coteries
-
->w
-
 #+testcase-mistake-shuffling-resign-resigns
 >resign
 The ingress already did. You got by.
 
 #renudge for special
 >specila
-You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
+You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
 
->z
 >e
-
-/^Esoteric Coteries
 
 #ttc-table-of-esoteric-coteries-nudges-esoteric
 >esoterci
@@ -822,9 +812,9 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 
 #testcase-mistake-shuffling-odor-rood
 >odor
-That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+The signers' ingress is reinforced. The nerds made sure it was protected against all sorts of crazy things.
 >rood
-That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+The signers' ingress is reinforced. The nerds made sure it was protected against all sorts of crazy things.
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

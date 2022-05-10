@@ -800,28 +800,6 @@ redness	"Redness means all the letters in a word are wrong, compared to what som
 dope tan notepad	"You will write procedural things in your notepad as you get them."
 acne bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems wounded. Maybe you can help it not be acne-bit.[plus][or]The acne-bit cabinet is a LLP and maybe a slightly tricky one, because it refers to a brand name that has become a word.[plus][or]A healing solution that has no letter slots in common with if you [b]READ[r] the cabinet will work. You could also scan the cabinet for clues, of course.[plus][or][b]BACTINE[r].[minus][cycling]"
 cratered bits	"The cratered bits make the cabinet acne-bit and clue what it can become[if Trips Strip is unvisited] once you start your main quest[end if], since they are red, and red means no letters are right."
-
-table of ordeal loader hintobjs
-hint-entry	advice-entry	parallel-entry
-name list	"The list hints what [this-game] is all about."
-vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what [this-game] is all about."
-odd side passage	"You can [b]ENTER[r] the odd side passage, or go [b]IN[r]."
-odor	"[one of]What can the odor turn into? Your random thoughts are not so random.[plus][or]The clues and distractions collapse to anagrams.[plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram?[plus][or]A door.[minus][cycling]"
-musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."
-bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door.[plus][or]The musical chord is a clue.[plus][or]You want to change the bulge into a [b]BUGLE[r].[minus][cycling]."
-bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a [b]BLOT[r].[minus][cycling]"
-blot	"The blot is there to clue [if bugle is touchable]making the bugle[else]what the bulge could become[end if] for a bonus point. It's not useful by itself, but it can't hinder you as the bolt did."
-bugle	"You [if bolt is moot]can just walk through the door. If you hadn't gotten rid of the bolt, you'd need to[else]can[end if] [b]PLAY[r] the bugle to go through the door."
-OR DO door	"You can just [b]ENTER[r] the door[if bugle-played is false and bolt is touchable] once you figure how to open it[end if]."
-toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the thickets?[plus][or]The toga can become a [b]GOAT[r].[minus][cycling]"
-reed	"[one of]The reed can become something else. Something that fits better with a less swampy area.[plus][or]What could the reed become that might eat through the thickets?[plus][or]The reed can become a [b]DEER[r].[minus][cycling]"
-shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
-brush	--	shrub
-sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not ruining anything, and they don't trap you from getting out. Still, you may see what you can do with them.[plus][or]The sent nets don't really belong in a nature area, but something spelled similarly does.[plus][or]The sent nets can become a [b]NEST[r].[minus][cycling]"
-nest	"You changed the nets to the nest, and that's enough."
-goat	"The goat's done its job."
-deer	"The deer's done its job."
-magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a [b]GATE MAN[r]. With or without the space.[minus][cycling][end if]" [bold-ok]
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
 Recent Center	"The Recent Center tracks the most recent thing you managed to [b]CERTIFY[r] or [b]RECTIFY[r]."
 blurb	"Just a riff on what's going on with the gadget."
@@ -836,6 +814,28 @@ handle	"You need some way to carry the gadget."
 s-r	"The [b]SECURE[r]/[b]RECUSE[r] button decides whether you can secure the gadget's current status and recuse yourself from one area, or if you can leave the gadget more flexible and try for both."
 arrow	"It's part of the gadget."
 tight knot	"It helps the gadget remain tagged."
+
+table of ordeal loader hintobjs
+hint-entry	advice-entry	parallel-entry
+name list	"The list hints what [this-game] is all about."
+vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what [this-game] is all about."
+odd side passage	"You can [b]ENTER[r] the odd side passage, or go [b]IN[r]."
+odor	"[one of]What can the odor turn into? Your random thoughts are not so random.[plus][or]The clues and distractions collapse to anagrams.[plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram?[plus][or]A door.[minus][cycling]"
+musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."
+bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door.[plus][or]The musical chord is a clue.[plus][or]You want to change the bulge into a [b]BUGLE[r].[minus][cycling]"
+bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a [b]BLOT[r].[minus][cycling]"
+blot	"The blot is there to clue [if bugle is touchable]making the bugle[else]what the bulge could become[end if] for a bonus point. It's not useful by itself, but it can't hinder you as the bolt did."
+bugle	"You [if bolt is moot]can just walk through the door. If you hadn't gotten rid of the bolt, you'd need to[else]can[end if] [b]PLAY[r] the bugle to go through the door."
+OR DO door	"You can just [b]ENTER[r] the door[if bugle-played is false and bolt is touchable] once you figure how to open it[end if]."
+toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the thickets?[plus][or]The toga can become a [b]GOAT[r].[minus][cycling]"
+reed	"[one of]The reed can become something else. Something that fits better with a less swampy area.[plus][or]What could the reed become that might eat through the thickets?[plus][or]The reed can become a [b]DEER[r].[minus][cycling]"
+shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
+brush	--	shrub
+sent nets	"[one of]The sent nets are a bit of an eyesore, though they're not ruining anything, and they don't trap you from getting out. Still, you may see what you can do with them.[plus][or]The sent nets don't really belong in a nature area, but something spelled similarly does.[plus][or]The sent nets can become a [b]NEST[r].[minus][cycling]"
+nest	"You changed the nets to the nest, and that's enough."
+goat	"The goat's done its job."
+deer	"The deer's done its job."
+magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a [b]GATE MAN[r]. With or without the space.[minus][cycling][end if]" [bold-ok]
 attics	"The attics can be flipped back to static, if you want."
 static	"[one of]It's optional to fix the dollhouse and static. You can use the gadget in the cabinet to figure it out.[plus][or]The dollhouse appears to be missing a top bit.[plus][or][b]ATTICS[r].[minus][cycling]"
 doll house	--	attics
@@ -859,7 +859,7 @@ marquee	--	store b
 store f	"[one of]Store F has some real earth tones.[plus][or]Trees, leaves, mud.[plus][or]There's a [b]FOREST[r] behind it.[minus][cycling]"
 roadsign	"The road sign gives a clue as to the nature of Store F."
 store i	"[one of]The outline of a trap door is what you need to get to. what word is a synonym for exit and missile launch?[plus][or]The small poem has red writing which will clear which letters don't fit where.[plus][or]You can also use both settings of the gadget to get four letter placements.[plus][or]You need to create a [b]SORTIE[r].[minus][cycling]"
-store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something.[plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if].[plus][or]You need to discover the [b]METROS[r].[minus][cycling]."[bold-ok]
+store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something.[plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if].[plus][or]You need to discover the [b]METROS[r].[minus][cycling]"[bold-ok]
 subway map	"The subway map gives a hint as to what Store M can be."
 store r	"[if you-can-advance][one of]You need to get into store R.[plus][or]The roster provides a hint. Where's a place you can rest?[plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word.[plus][or]You want to go to a [b]RESORT[r].[minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
 roster	"The roster is a bit more of a clue for Store R. If you [b]CERTIFY[r] it, it will make things a bit clearer."

@@ -88,15 +88,15 @@ The beats would drown the singers out.
 \\
 #testcase-mistake-shuffling-snores-snore
 >snores
-Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
+Any noise would be better than the beats, but without the sensor, you're probably not getting by the signers' ingress.
 >snore
-Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
+Any noise would be better than the beats, but without the sensor, you're probably not getting by the signers' ingress.
 \\
 #testcase-mistake-shuffling-resign-resigns
 >resign
-Reverse psychology won't work on the ingress, here.
+Reverse psychology won't work on the signers' ingress, here.
 >resigns
-Reverse psychology won't work on the ingress, here.
+Reverse psychology won't work on the signers' ingress, here.
 \\
 #ttc-table-of-undesired-underside-nudges-theol
 >hotle
@@ -136,9 +136,9 @@ You can't do much with or to the camp, here or north.
 Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.
 #testcase-mistake-shuffling-senors-senor
 >senors
-The senors you want to see are behind the door.
+The senors you want to see are behind the signers' ingress.
 >senor
-The senors you want to see are behind the door.
+The senors you want to see are behind the signers' ingress.
 
 @nud
 #ttc-table-of-undesired-underside-nudges-undesired
@@ -1476,7 +1476,7 @@ You see yourself putting the barcode and the keycard on the friend finder here.
 !Nothing works
 
 >put card on sensor
-What do you know? It works! The door slides open!
+What do you know? It works! The signers' ingress slides open!
 
 @hin
 Just go east.
@@ -1622,33 +1622,33 @@ The lit-up tulip is useful for providing light for all-night sessions of playing
 >utensli
 The lit-up tulip will stay lit. No need to futz with its brand name.
 
->w
-
 @nud
+>w
+\\
 #renudge for friend
 >friedn
 You don't need to futz further with the friend finder.
-
->put card on sensor
-The door is open. So you just walk east instead.
-
-/^Esoteric Coteries
-
->w
-
-@mis
+\\
 #+testcase-mistake-shuffling-resign-resigns
 >resign
 The ingress already did. You got by.
-
-@nud
+\\
 #renudge for special
 >specila
-You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
-
->z
+You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
+\\
 >e
 
+@max
+>w
+/^Undesired Underside
+\\
+>put card on sensor
+The signers' ingress slides open again.
+\\
+>put card on sensor
+The signers' ingress is open. So you just walk east instead.
+\\
 /^Esoteric Coteries
 
 @nud
@@ -1662,10 +1662,10 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 
 @max
 >w
->z
 The signers' ingress slides shut.
+>z
 \\
->open metallic door
+>open ingress
 \\
 >e
 /^Esoteric Coteries
@@ -1759,9 +1759,9 @@ by one point
 @mis
 #testcase-mistake-shuffling-odor-rood
 >odor
-That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+The signers' ingress is reinforced. The nerds made sure it was protected against all sorts of crazy things.
 >rood
-That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+The signers' ingress is reinforced. The nerds made sure it was protected against all sorts of crazy things.
 
 @gt
 >gt coteries
@@ -1770,7 +1770,7 @@ You got something from the nerds. They've probably had enough of you.
 @gn
 #ttc-table-of-nowheres-undesired-underside
 >in
-A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
+A hotel is west, a camp is north, the signers' ingress leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
 
 >score
 @min

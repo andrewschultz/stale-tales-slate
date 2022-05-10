@@ -388,17 +388,17 @@ chapter Undesired Underside
 understand "grained" as a mistake ("Good try, but we're looking for a noun. With an extra A.") when player is in Undesired Underside and a reading is in Undesired Underside.
 
 [def=nerd door w]
-understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in Undesired Underside.
+understand "odor" and "rood" as a mistake ("The [ingress] is reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in Undesired Underside.
 
 understand "refind" as a mistake ("Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.") when player is in Undesired Underside.
 
-understand "resign" and "resigns" as a mistake ("[if esoteric coteries are visited]The ingress already did. You got by[else]Reverse psychology won't work on the ingress, here[end if].") when player is in Undesired Underside.
+understand "resign" and "resigns" as a mistake ("[if esoteric coteries are visited]The ingress already did. You got by[else]Reverse psychology won't work on [the ingress], here[end if].") when player is in Undesired Underside.
 
-understand "senors" and "senor" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in Undesired Underside.
+understand "senors" and "senor" as a mistake ("The senors you [want-wanted] are behind [the ingress].") when player is in Undesired Underside.
 
 understand "singers" as a mistake ("The beats would drown the singers out.") when player is in Undesired Underside.
 
-understand "snores" and "snore" as a mistake ("[if esoteric coteries is visited]No need to put the sensor to sleep now you got what you want[else]Any noise would be better than the beats, but without the sensor, you're probably not getting by the door[end if].") when player is in Undesired Underside.
+understand "snores" and "snore" as a mistake ("[if esoteric coteries is visited]No need to put the sensor to sleep now you got what you want[else]Any noise would be better than the beats, but without the sensor, you're probably not getting by [the ingress][end if].") when player is in Undesired Underside.
 
 chapter hotel
 

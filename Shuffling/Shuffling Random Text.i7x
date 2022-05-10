@@ -3004,7 +3004,7 @@ blurb
 "To fear a forte or fate for tea."
 "To Fefe: feet of toffee."
 "To field! Do it, elf! Told! Fie!"
-"To finds! Soft din. Nod-fits.."
+"To finds! Soft din. Nod-fits."
 "To flush, flu-shot lush, oft."
 "To hiss so this is shot: Hi, toss! Hit! SOS!"
 "To Lose Les Too? Ole Sot!"

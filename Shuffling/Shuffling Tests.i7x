@@ -665,6 +665,22 @@ every turn when ettest is true: [this can be varied based on the test we wish to
 	if missile is visible:
 		try shooting the missile;
 
+chapter bcoing
+
+[ lets the player put the barcode on the keycard ]
+
+bcoing is an action out of world.
+
+understand the command "bco" as something new.
+
+understand "bco" as bcoing.
+
+carry out bcoing:
+	now player has barcode;
+	now player has keycard;
+	try putting barcode on keycard;
+	the rule succeeds;
+
 chapter foing
 
 [* this lets the player cheat through the forest. It's used in general testing commands so I can make sure I went the right way.]

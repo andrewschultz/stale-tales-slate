@@ -436,7 +436,7 @@ You currently have 11 out of 18 total points for the Metros region. You have fou
 >put barcode on keycard
 
 >put card on sensor
-What do you know? It works! The door slides open!
+What do you know? It works! The signers' ingress slides open!
 
 >e
 #notana
@@ -539,20 +539,6 @@ The nerds assure you science is better than magic.
 
 >score
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
->w
-
->put card on sensor
-The door is open. So you just walk east instead.
-
-/^Esoteric Coteries
-
->w
-
->z
->e
-
-/^Esoteric Coteries
 
 #gadget test: asknerds to darkness
 >rc nerds

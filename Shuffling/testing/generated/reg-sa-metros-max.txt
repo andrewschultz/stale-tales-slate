@@ -227,7 +227,7 @@ You currently have 11 out of 18 total points for the Metros region. You have fou
 >put barcode on keycard
 
 >put card on sensor
-What do you know? It works! The door slides open!
+What do you know? It works! The signers' ingress slides open!
 
 >e
 #notana
@@ -237,24 +237,21 @@ What do you know? It works! The door slides open!
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >w
+/^Undesired Underside
 
 >put card on sensor
-The door is open. So you just walk east instead.
+The signers' ingress slides open again.
+
+>put card on sensor
+The signers' ingress is open. So you just walk east instead.
 
 /^Esoteric Coteries
 
 >w
-
->z
->e
-
-/^Esoteric Coteries
-
->w
->z
 The signers' ingress slides shut.
+>z
 
->open metallic door
+>open ingress
 
 >e
 /^Esoteric Coteries

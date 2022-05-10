@@ -2007,7 +2007,7 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "[one of]What a mess! Hard to do anything with that[if goat is off-stage]. You'll see why[end if].[or]This sort of game, I can only make lame meta-jokes with that[if cur-score of Ordeal Loader > 0]...you should've figured that out[else], and if you knew why, that'd be sort of a spoiler[end if].[or]Testing all 29 possibilities...just to make sure...nope.[or]Testing the 119 possibilities...including duplicates...[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak].[wfak]nope. You happy now?[or]If you're looking for jokes, that's the best I can do.[stopping]";
+	say "[one of]What a mess! Hard to do anything with that[if goat is off-stage]. You'll see why[end if].[or]This sort of game, I can only make lame meta-jokes with that[if cur-score of Ordeal Loader > 0]...you should've figured that out[else], and if you knew why, that'd be sort of a spoiler[end if].[or]Testing all 29 possibilities...just to make sure...nope.[or]Testing the 119 possibilities...including duplicates...[wfak]...[wfak]...[wfak]...[wfak]...[wfak]...[wfak]...[wfak]...[wfak]...[wfak]...[wfak]nope. You happy now?[or]If you're looking for jokes, that's the best I can do.[stopping]";
 	the rule succeeds;
 
 chapter shooting
@@ -2842,7 +2842,7 @@ short	known	verify	topic (topic)	blurb
 "access"	true	false	"access"	"[b]ACCESS[r] toggles screen reader accessibility."
 "advice"	false	--	"advice"	"--Nothing over eight words. Maybe one two-word deal.[line break]--Red Bull Burdell is much bigger and stronger than you. Traditional fighting won't work."
 "angle"	false	--	"angle"	"Lets you see what can be changed."
-"board"	false	--	"broad/board"	"[if location of player is Notices Section]It's got notes on needing two simple 7-letter portmanteaux[how-many-notices][else]You're past the bit about the introductory puzzles.[end if]"
+"board"	false	--	"broad/board"	"[if location of player is Notices Section]It's got notes on needing two simple 7-letter portmanteaux[how-many-notices][else]You're past the bit about the introductory puzzles[end if]."
 "certify"	false	--	"c/cer/cert/certify"	"1 beep = 1 word, buzz = already changed, silence = nothing.[line break]red/green = right/wrong letters."
 "flips"	false	--	"flips"	"[what-can-flip]"
 "glean"	false	--	"glean"	"Lets you glimpse what you need to do."
@@ -3315,7 +3315,7 @@ to say oddo: say "[if odor is in Rested Desert]odor[else]door[end if]"
 
 chapter odor
 
-the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?[paragraph break]Well, maybe it would not[one of].[or]. There are only so many things the odor could become[stopping].". bore-check is bore-odor rule.
+the odor is boring scenery. it is in Rested Desert. description of odor is "The odor makes you yearn for adventure and new and different things. If only you had some sort of simple passage! Or would that be asking too much?[paragraph break]Well, maybe it would not[one of][or]. There are only so many things the odor could become[stopping].". bore-check is bore-odor rule.
 
 this is the bore-odor rule:
 	if current action is smelling, try examining the odor instead;
@@ -7105,7 +7105,7 @@ understand "limerick" as poem when poem is not folded.
 
 understand "paper" as poem when poem is fungible.
 
-description of poem is "'I'm just a guy who loves his work[smy][line break]Not like that poet, he's a jerk[smy][line break]He says he rhymes neater[smy][line break]And rips on my meter[smy][line break]I'd like to punch him in his smirk[smy]'[paragraph break][if missile is off-stage]Whoah, lots of smilies, there. They'd drive a grammar pedant ballistic[else]The limerick doesn't make you want to lick the mire like Woeful Pat's stuff[end if]. The paper seems creased on a few diagonals."
+description of poem is "[i]I'm just a guy who loves his work[smy][line break]Not like that poet, he's a jerk[smy][line break]He says he rhymes neater[smy][line break]And rips on my meter[smy][line break]I'd like to punch him in his smirk[smy][paragraph break][if missile is off-stage]Whoah, lots of smilies, there. They'd drive a grammar pedant ballistic[else]The limerick doesn't make you want to lick the mire like Woeful Pat's stuff[end if]. The paper seems creased on a few diagonals."
 
 check examining poem:
 	if poem is folded, say "It's a paper plane now, devoid of evidence anyone ever scrawled poetry on it." instead;
@@ -7611,7 +7611,7 @@ to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads som
 check opening the signers ingress:
 	if noun is open, say "But it already is. For now." instead;
 	if location of player is Esoteric Coteries:
-		say "The door slides open as you step near it.";
+		say "The [ingress] slides open as you step near it.";
 		now signers ingress is open;
 		the rule succeeds;
 	process the bother-nerds rule;
@@ -7672,17 +7672,17 @@ check putting keycard on friend finder:
 	if the rule failed, the rule succeeds;
 	if barcode is not part of keycard, say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
 	if signers ingress is open:
-		say "The door is open. So you just walk east instead.";
+		say "The [ingress] is open. So you just walk east instead.";
 		try going east instead;
 	if keycard-put is false:
-		say "What do you know? It works! The door slides open!";
+		say "What do you know? It works! The [ingress] slides open!";
 		now keycard-put is true;
 		now keycard is realized;
 		now friend finder is realized;
 		now signers ingress is realized;
 		now barcode is realized;
 	else:
-		say "The door slides open again.";
+		say "The [ingress] slides open again.";
 	now signers ingress is open instead;
 
 section optical beam
@@ -8454,7 +8454,8 @@ to get-tulip:
 
 after printing the locale description for Esoteric Coteries when Esoteric Coteries is unvisited:
 	reg-inc;
-	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.";
+	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.[paragraph break]";
+	close-the-ingress;
 	continue the action;
 
 nerds-unwelcome is a truth state that varies.
@@ -8470,9 +8471,16 @@ this is the bother-nerds rule:
 
 ever-shut is a truth state that varies.
 
-every turn when signers ingress was open:
-	now signers ingress is closed;
-	if signers ingress is touchable:
+after printing the locale description when ingress is open and ingress is touchable:
+	close-the-ingress;
+	continue the action;
+
+every turn when signers ingress was open (this is the close signers ingress rule):
+	close-the-ingress;
+
+to close-the-ingress:
+	if signers ingress is touchable and signers ingress is open:
+		now signers ingress is closed;
 		say "The [ingress] slides shut.";
 		if ever-shut is false:
 			now ever-shut is true;
@@ -10465,7 +10473,7 @@ roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
 Stiller Trellis	"[dmb]You can only go [can-go of west] or [can-go of south][if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis and trel-priv is not moot] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the [b]ROOM[r]."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Undesired Underside	"A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
+Undesired Underside	"A hotel is west, a camp is north, [the ingress] leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
 Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[inside-ambig]."
 Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you probably just want to go back east."
 Fo Real Florae	"The faeries wouldn't take kindly to snooping. The only safe way out is back west."
@@ -10885,7 +10893,7 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Ordeal Loader is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, DrkStarr, Jason Orendorff, Matt Weiner, Olaf Nowacki, Sean M. Shore, Stefan Scheiffele and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
+	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, DrkStarr, Jason Orendorff, Matt Weiner, Olaf Nowacki, Sean M. Shore, Stefan Scheiffele and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/.[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:

@@ -356,7 +356,7 @@ You see yourself putting the barcode and the keycard on the friend finder here.
 !Nothing works
 
 >put card on sensor
-What do you know? It works! The door slides open!
+What do you know? It works! The signers' ingress slides open!
 
 Just go east.
 
@@ -385,20 +385,6 @@ The Earliest Ateliers are not for you to visit. You're more an adventurer than a
 >score
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
->w
-
->put card on sensor
-The door is open. So you just walk east instead.
-
-/^Esoteric Coteries
-
->w
-
->z
->e
-
-/^Esoteric Coteries
-
 >ask nerds about darkness
 #notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
@@ -412,7 +398,7 @@ You got something from the nerds. They've probably had enough of you.
 
 #ttc-table-of-nowheres-undesired-underside
 >in
-A hotel is west, a camp is north, a door leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
+A hotel is west, a camp is north, the signers' ingress leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
