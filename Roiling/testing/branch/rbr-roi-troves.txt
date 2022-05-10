@@ -370,10 +370,10 @@ The sidewalk's condition can't be changed. For better or worse.
 The sidewalk's condition can't be changed. For better or worse.
 #ttc-table-of-bustle-sublet-nudges-reastier
 >reastire
-The reastier arteris cannot be changed. They cannot even change you positively if you follow them.
+The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
 #ttc-table-of-bustle-sublet-nudges-artery
 >arteyr
-The reastier arteris cannot be changed. They cannot even change you positively if you follow them.
+The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
 
 @nud
 #ttc-table-of-bustle-sublet-nudges-sob
@@ -1673,7 +1673,7 @@ The likeness was drawn up by E. R. Lamb, whose signature is in red.
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
 #testcase-mistake-roiling-able
 >able
-Fortuntaely, Marble Blamer Mr. Beal doesn't become physically able.
+Fortunately, Marble Blamer Mr. Beal doesn't become physically able.
 #testcase-mistake-roiling-bale
 >bale
 Neither you nor Marble Blamer Mr. Beal turns into hay.

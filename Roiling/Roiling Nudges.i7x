@@ -569,7 +569,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "veer"	448100841	sob ever verbose	--	"No, you'll want to zone out the whole verbose distraction."
 "laid"	122023592	--	--	"[sidewalk-oops]."
 
-to say artery-no: say "The reastier arteris cannot be changed. They cannot even change you positively if you follow them"
+to say artery-no: say "The reastier arteries cannot be changed. They cannot even change you positively if you follow them"
 
 to say boor-grub: say "You can't change a whole suburb. Better to change yourself"
 

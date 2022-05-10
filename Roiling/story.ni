@@ -179,7 +179,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint request rejects.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. matched item responses table of stores is table of stores matched item responses. readable table of stores is table of stores readables. unmatched topic responses table of stores is table of stores unmatched topic responses. ask x about x table of stores is table of stores ask x about x. misses-rule of stores is stores-misses rule. [preeftable of stores is table of stores prefigurings.] [ article-rule of stores is stores article start rule.]
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint request rejects.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. matched item responses table of stores is table of stores matched item responses. readable table of stores is table of stores readables. unmatched topic responses table of stores is table of stores unmatched topic responses. ask x about x table of stores is table of stores ask x about x. misses-rule of stores is stores-misses rule. [preeftable of stores is table of stores prefigurings.] article-rule of stores is stores article start rule.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -1023,10 +1023,6 @@ every turn when sss is true (this is the show blues rule): [this shows everythin
 
 section silly variables
 
-hint-to-file is a truth state that varies.
-
-hint-to-display is a truth state that varies.
-
 ff is a truth state that varies. [flip freeze disabled in release mode]
 
 section scam rule [referred to while scoring]
@@ -1364,21 +1360,6 @@ to say spacies of (INTE - indexed text):
 		if chtemp < chrs:
 			say " ";
 
-chapter hint-every-turn
-
-hint-to-file is a truth state that varies. hint-to-file is false.
-
-hint-to-display is a truth state that varies. hint-to-display is false.
-
-every turn (this is the hint flags checkoff rule):
-	if hint-to-file is true or hint-to-display is true:
-		d "[hint-to-file] to file [hint-to-display] to display.";
-		now auto-hint-proc is true;
-		try hinting;
-		now auto-hint-proc is false;
-
-auto-hint-proc is a truth state that varies.
-
 chapter transcripting
 
 [main code is in Trivial Niceties]
@@ -1417,8 +1398,6 @@ to say eh-eh:
 currently-rejecting is a truth state that varies.
 
 rule for deciding whether to allow undo:
-	if hint-to-file is true:
-		append "Undo: (no hint)[line break]" to the file of gamehints;
 	if undo is prevented and scams is false:
 		if undo-code is -1:
 			say "This can't be undone, but don't worry. There's no wrong way through dialogues, nothing disappears, and important stuff is recorded in your pedanto-notepad.";
@@ -3767,7 +3746,7 @@ check exitsing when mrlp is towers:
 	if player is in topside deposit and dreads adders are in topside deposit:
 		say "The dreads adders are blocking the way north, so you'd better get rid of them." instead;
 	if player is in mislit limits and serpent is in mislit limits:
-		say "You don't have to go anywhere before chainging the Curst Palace, although the serpent guards a dwelling." instead;
+		say "You don't have to go anywhere before changing the Curst Palace, although the serpent guards a dwelling." instead;
 
 chapter game-start
 
@@ -5238,6 +5217,12 @@ definition: a guardian (called gu) is plurcheck:
 section article start rules (with a preposition thrown in)
 
 [this is because A REC should be in mistakes but it only shows REC]
+
+this is the stores article start rule:
+	if player is in Cruelest Lectures:
+		if the player's command exactly matches the text "in stage":
+			change the text of the player's command to "instage";
+			the rule succeeds;
 
 this is the troves article start rule:
 	if player is in Loather Rathole:
@@ -14884,7 +14869,7 @@ carry out bonking:
 
 chapter span pans
 
-the span pans are plural-named vanishing scenery in Lapsin Plains. "They're squarish, so you can't scootch under them, and they're too sturdy to push aside directoy. However, the red writing of who created them may provide a clue.[paragraph break][if skis are in Lapsin Plains and knob is in Lapsin Plains]Skis and a knob hold the pans together[else if skis are in Lapsin Plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]." [bold-ok]
+the span pans are plural-named vanishing scenery in Lapsin Plains. "They're squarish, so you can't scootch under them, and they're too sturdy to push aside directly. However, the red writing of who created them may provide a clue.[paragraph break][if skis are in Lapsin Plains and knob is in Lapsin Plains]Skis and a knob hold the pans together[else if skis are in Lapsin Plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]." [bold-ok]
 
 check scaning span pans:
 	if knob is moot and skis are moot, continue the action;
@@ -15085,7 +15070,7 @@ chapter scenery
 
 section handsome sandhome
 
-the handsome sand home is bounding boring scenery in Sclerous Closures. description of handsome sand home is "It's definitely not mean-shod. But you probaby don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
+the handsome sand home is bounding boring scenery in Sclerous Closures. description of handsome sand home is "It's definitely not mean-shod. But you probably don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
 
 this is the bore-handsome-sand-home rule:
 	if current action is entering, try going south instead;
@@ -16413,7 +16398,7 @@ check inserting into diverse deviser:
 	if noun is toaster, say "In a different Wasteland, that would be very practical, indeed. Especially if you know the bit-flip infinite skill trick. But not here." instead;
 	if ragged dagger is moot, say "The diverse deviser machine has already given its all to create the gizmo." instead;
 	if noun is not ragged dagger, say "That's nothing like a rapier. It's not sharp, metal and pointed. You'll need to find something else." instead;
-	say "The ragged dagger is sucked into [the deviser], which gets raspier as it repairs. A couple minutes of proclaiming itself 'the sharpener that resharpens' and an alarming increase in smoke and a final wheezing choke later, you open it. Instead of a riper rapier, or a clever cleaver, it's a gizmo--bearing the label of the famed novelty company I ZOMG. Which is certainly a diverse tool indeed![paragraph break]The [deviser] still fizzles fruitlessly as a reminder of the work it once did, but the gizmo probably used up all the diversity in the deviser. But hey, if you gotta go, you might as well go right after making your masterpiece.";
+	say "The ragged dagger is sucked into [the deviser], which gets raspier as it repairs and likely, parries dangerous rear-psi. A couple minutes of proclaiming itself 'the sharpener that resharpens' and an alarming increase in smoke and a final wheezing choke later, you open it. Instead of a riper rapier, or a clever cleaver, it's a gizmo--bearing the label of the famed novelty company I ZOMG. Which is certainly a diverse tool indeed![paragraph break]The [deviser] still fizzles fruitlessly as a reminder of the work it once did, but the gizmo probably used up all the diversity in the deviser. But hey, if you gotta go, you might as well go right after making your masterpiece.";
 	now player has the I ZOMG Gizmo;
 	moot ragged dagger;
 	set the pronoun it to I ZOMG Gizmo;
@@ -21772,14 +21757,13 @@ this is the hint-toggle-warn rule:
 	if have-objhinted is true, continue the action;
 	now have-objhinted is true;
 	if player is not in Rancho Archon Anchor:
-		if hint-to-file is false and hint-to-display is false:
-			say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
-			ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather [b]HINT[i] (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
-			if the player yes-consents:
-				say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
-			else:
-				say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
-			ital-say "you can type [b]NO HINT[i] to disable hints for this session, or [b]NOTHIN[i] to disable them fully."
+		say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
+		ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather [b]HINT[i] (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
+		if the player yes-consents:
+			say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
+		else:
+			say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
+		ital-say "you can type [b]NO HINT[i] to disable hints for this session, or [b]NOTHIN[i] to disable them fully."
 
 carry out hinting:
 	[if hintblock is true, say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]

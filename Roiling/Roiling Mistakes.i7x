@@ -382,7 +382,7 @@ to decide whether mbb-in:
 	if balmer is in Upscale Capsule, yes;
 	no;
 
-understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
+understand "able" as a mistake ("Fortunately, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 
 understand "ambler" as a mistake ("You see red slightly as [mbb] fails to look away.") when mbb-in;
 
