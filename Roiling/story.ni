@@ -5095,7 +5095,7 @@ after reading a command:
 		ital-say "you probably don't need more than four words per command. The most complex ones are [b]PUT X ON Y[i] or [b]ASK X ABOUT Y[i], and a compound item like [b]GIANT PIN[i] can use [b]GIANT[i] or [b]PIN[i]. Adjectives usually aren't necessary, and [b]GET ALL[i] will never take anything harmful or lethal.";
 		now long-sent-warn is true;
 		pad-rec "long commands";
-	if word number 1 in player's command is "a":
+	if word number 1 in player's command is "a" or word number 1 in player's command is "in":
 		abide by the article-rule of mrlp;
 		if ask-warn is false:
 			say "Replacing [b]A[r] with [r]ASK ABOUT[r]. Saying [b]A[r] is not required for any puzzle.";
@@ -5398,6 +5398,7 @@ Rule for printing a parser error when the latest parser error is the only unders
 				if the player's command includes "wall", say "You think about jumping off the wall, but you wonder if that'd just be violating something sacred, and you might get zapped for that. You need a way to say, the heck with that." instead;
 				say "That's maybe not how to jump to reach Ye Hoop. Maybe you sort of need to jump a certain way to get there, and not care how." instead;
 			the rule succeeds;
+	continue the action;
 
 the jump for hoop error rule is listed before the retry first word in command error rule in the for printing a parser error rulebook.
 
@@ -10028,7 +10029,7 @@ does the player mean doing something with Store Z: it is unlikely.
 
 chapter store i
 
-the sortie is an exstore in Strip of Profits. description of sortie is "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
+the sortie is an exstore in Strip of Profits. description of sortie is "The sortie leads to the erstwhile Mean Old Mondale-Doleman's (now Amend-Lo-Mo[']-Deal'N) territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
 
 understand "store 9/nine/i" and "9/nine/i" as sortie when player is in Strip of Profits.
 
@@ -13808,7 +13809,7 @@ the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'l P'
 
 understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are fungible.
 
-a-text of Lil Ps Pills is "RRYRR". b-text of Lil Ps Pills is "RRY?R.". parse-text of lil ps pills is "S[sp]x[sp]I[sp]x[sp]x". lil ps pills is parse-spoilable.
+a-text of Lil Ps Pills is "RRYRR". b-text of Lil Ps Pills is "RRY?R". parse-text of lil ps pills is "S[sp]x[sp]I[sp]x[sp]x". lil ps pills is parse-spoilable.
 
 after printing the name of the Lil Ps pills while taking inventory:
 	if jar-empty is true, say " (empty)";
@@ -18577,6 +18578,8 @@ chapter parleys splayer players
 
 the parleys splayer players are plural-named reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
+understand "macks" as players when players are reflexed.
+
 after examining parleys splayer players for the first time:
 	say "Oh, and I couldn't resist: they're definitely not going to be yer pals. You need to get rid of them!";
 	continue the action;
@@ -18962,7 +18965,7 @@ t-blearily is a pickup-line. pod-num is 3. pod-ord is 1. a-text of t-blearily is
 
 t-coitally is a pickup-line. pod-num is 3. pod-ord is 2. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]O[sp]-[sp]x[sp]-[sp]x[sp]x[sp]Y". player-move is "The [players] discuss how nice it is to meet her in this locality.". pickup-description is "'admiring' this locality".
 
-t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]O[sp]x[sp]x[sp]A[sp]x[sp]x[sp]Y". player-move is "The [players] manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". pickup-description is "acting too formally". t-formally is parse-spoilable.
+t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]O[sp]x[sp]x[sp]A[sp]x[sp]x[sp]Y". player-move is "The [players] manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". pickup-description is "too fly/moral". t-formally is parse-spoilable.
 
 t-ribaldly is a pickup-line. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]L[sp]Y". player-move is "The [players] ask if she has been thinking bridally.". pickup-description is "talking bridally".
 
@@ -21911,7 +21914,7 @@ this is the hint certain object groups rule:
 		increment hint-prog of noun;
 		if hint-prog of noun is 3, now hint-prog of noun is 1;
 		if spoilit is false:
-			say "[if hint-prog of noun is 1]You may be able to disrupt the [pla-ma]s from [pickup-description of noun]. [plus][else]You can make the [pla-ma]s talk more [pickup-spoil of noun].[minus][end if]";
+			say "[if hint-prog of noun is 1]You may be able to disrupt the [pla-ma]s from [pickup-description of noun]. [plus][else]You can make the [pla-ma]s talk more [pickup-spoil of noun].[minus][end if][line break]";
 		else:
 			say "You can make the [pla-ma]s talk more [pickup-spoil of noun].";
 		the rule succeeds;

@@ -1691,10 +1691,10 @@ Anyway, once you turned the whole lake into kale, the kale would have no water t
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 #ttc-table-of-towers-nudges-maturation
 >maturatino
-The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway
+The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway.
 #ttc-table-of-towers-nudges-thearchy
 >thearcyh
-The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway
+The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway.
 #ttc-table-of-towers-nudges-coasting
 >coastign
 Scot Agin looks at you curiously. You probably don't need to change his name or intelligence.

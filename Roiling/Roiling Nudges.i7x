@@ -1344,8 +1344,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "duck"	198073659	lone duck	--	"It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a [b]LONE DUCK[r][end if]."
 "idtag"	203919473	ID Tag	--	"ID tag: dig at it? Gad."
 "unlocked"	522953692	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
-"maturation"	653353366	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway"
-"thearchy"	534357183	hatchery	--	"The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway"
+"maturation"	653353366	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway."
+"thearchy"	534357183	hatchery	--	"The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway."
 "coasting"	441430020	agnostic	--	"[Agnostic] looks at you curiously. You probably don't need to change [his-her] name or intelligence."
 "scot"	292742146	--	agnostic-male rule	"[smart-agnostic-no]."
 "agin"	148687874	--	agnostic-male rule	"[smart-agnostic-no]."
@@ -1464,7 +1464,7 @@ chapter outer route
 table of Outer Route nudges [0 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "roeut"	495698314	--	--	"[towersloc]."
-"sway"	328755809	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful[if dourest detours are unvisited], though there is a bonus point for going in a 'wrong' direction."
+"sway"	328755809	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful[if dourest detours are unvisited], though there is a bonus point for going in a 'wrong' direction[end if]."
 "camp"	166734515	--	--	"[gosh-camp]!"
 "site"	372182939	--	--	"[gosh-camp]!"
 "campiest"	538917454	--	--	"[gosh-camp]!"

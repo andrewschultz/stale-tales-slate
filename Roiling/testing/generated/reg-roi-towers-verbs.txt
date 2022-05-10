@@ -608,19 +608,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 36 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
->gonear shaven havens
-#ttc-table-of-towers-nowheres-shaven-havens
->e
-You wander off, but you hear hikers shriek "Shrike! Shrike!"
-Any direction but back south might drive you too far from the palace.
-
->e
-!You wander off, but you hear hikers shriek "Shrike! Shrike!"
-Any direction but back south might drive you too far from the palace.
->undo
->undo
->undo
-
 >n
 
 /^Danger Garden
@@ -728,6 +715,16 @@ The only way to exit is south, so let's go that way.
 The only way you seem to be able to go is south to Anemic Cinema.
 
 >push repeat
+
+>gonear shaven havens
+#ttc-table-of-towers-nowheres-shaven-havens
+>e
+You wander off, but you hear hikers shriek "Shrike! Shrike!"
+Any direction but back south might drive you too far from the palace.
+
+>e
+!You wander off, but you hear hikers shriek "Shrike! Shrike!"
+Any direction but back south might drive you too far from the palace.
 
 >gt subsector
 

@@ -1013,9 +1013,6 @@ Score in a scenario: 22 out of 44 total points in the current region, Oyster. Lo
 #+testcase-mistake-roiling-thus
 >thus
 Your inactive word does nothing to the huts. But you don't need to do any more, since you can walk in.
-#testcase-mistake-roiling-pone
->pone
-The message was corny, but the door was a piece of cake since you figured what to do with the knob.
 
 >in
 
