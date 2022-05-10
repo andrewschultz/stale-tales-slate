@@ -353,7 +353,7 @@ understand "hintvis" as hintvising.
 carry out hintvising:
 	repeat with vth running through all visible things:
 		if vth is vishintable:
-			all-say "Hinting [vth]: ";
+			say "Hinting [vth]: ";
 			try objhinting vth;
 	the rule succeeds;
 

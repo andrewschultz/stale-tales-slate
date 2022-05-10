@@ -354,10 +354,10 @@ carry out heing:
 		if there is a hint-entry of QXZ in hintobjstable of mrlp or QXZ is useless or QXZ is cluey:
 			do nothing;
 		else:
-			all-say "BUG: [QXZ] needs to be a hint-entry in [hintobjstable of mrlp]. Or deemed useless, cluey or amusing.";
+			say "BUG: [QXZ] needs to be a hint-entry in [hintobjstable of mrlp]. Or deemed useless, cluey or amusing.";
 			now ZXQ is true;
 	if ZXQ is false:
-		all-say "This room is all clear!";
+		say "This room is all clear!";
 	the rule succeeds;
 
 chapter iiing

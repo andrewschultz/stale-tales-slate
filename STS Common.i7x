@@ -625,18 +625,18 @@ prevent-thruhint-flag is a truth state that varies. [a test variable for ignorin
 
 this is the reject unknowable objects if not testing rule:
 	if in-hint-testing is true, continue the action;
-	if location of noun is nothing and noun is not a backdrop, all-say "You probably shouldn't know about [the noun], yet. And if you do, try asking about objects you can see." instead;
+	if location of noun is nothing and noun is not a backdrop, say "You probably shouldn't know about [the noun], yet. And if you do, try asking about objects you can see." instead;
 	if noun is not a backdrop and noun is not scenery:
-		if noun is off-stage or mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
-	if noun is moot, all-say "[noun]: [past-tense of noun] been dealt with. I'm pretty sure." instead;
+		if noun is off-stage or mrlp is not map region of location of noun, say "That doesn't seem to be in this region." instead;
+	if noun is moot, say "[noun]: [past-tense of noun] been dealt with. I'm pretty sure." instead;
 
 this is the generic hint state rejects rule:
-	if noun is location, all-say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues, and [this-game] will pick up something worth lookng at." instead;
+	if noun is location, say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues, and [this-game] will pick up something worth lookng at." instead;
 	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type [b]HINT[r] for the current puzzle to look at." instead;
-	if noun is bounding, all-say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
-	if noun is realized, all-say "[that-those-is-are of noun] no longer part of a puzzle." instead;
-	if noun is amusing, all-say "[that-those-is-are of noun] in there for general silliness." instead;
-	if noun is useless, all-say "[that-those-is-are of noun] in there for local flavor and scenery." instead;
+	if noun is bounding, say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
+	if noun is realized, say "[that-those-is-are of noun] no longer part of a puzzle." instead;
+	if noun is amusing, say "[that-those-is-are of noun] in there for general silliness." instead;
+	if noun is useless, say "[that-those-is-are of noun] in there for local flavor and scenery." instead;
 
 chapter ptfing - not for release
 

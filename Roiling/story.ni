@@ -4354,7 +4354,7 @@ this is the ordeal-reload-hinting rule:
 	if stuff-found < 3, say "[one of]You should look around and examine stuff. Someone will eventually interrupt you.[or][next-to-see].[stopping]" instead;
 	if latches are touchable:
 		if latches-warn is false:
-			all-say "You figure there must be a couple ways out, but the latches can become something--Nat Egam wouldn't have sent them to you, otherwise.";
+			say "You figure there must be a couple ways out, but the latches can become something--Nat Egam wouldn't have sent them to you, otherwise.";
 			now latches-warn is true;
 		try objhinting latches instead;
 	if location of player is study:
@@ -4363,23 +4363,23 @@ this is the ordeal-reload-hinting rule:
 		if player does not have lamp, try objhinting palm instead;
 		if settler-hint-yet is false:
 			if tables are in Dusty Study and niche is in Dusty Study and meet bans are in Dusty Study:
-				all-say "You have three ways out of the study. You may wish to [b]HINT SETTLER[r] or [b]HINT DIORAMA[r] to figure what to do with them.";
+				say "You have three ways out of the study. You may wish to [b]HINT SETTLER[r] or [b]HINT DIORAMA[r] to figure what to do with them.";
 			else:
-				all-say "You have found a way out of the study. Any way gets you to a secret passage out of the Means Manse, though along the way, you may wish to [b]HINT SETTLER[r] or [b]HINT DIORAMA[r] to figure what to do with them.";
+				say "You have found a way out of the study. Any way gets you to a secret passage out of the Means Manse, though along the way, you may wish to [b]HINT SETTLER[r] or [b]HINT DIORAMA[r] to figure what to do with them.";
 			now settler-hint-yet is true instead;
 		if tables are in Dusty Study, try objhinting tables instead;
 		if niche is in Dusty Study, try objhinting niche instead;
 		if meet bans are in Dusty Study, try objhinting meet bans instead;
-		all-say "You should move along, now, unless you want to mess with the settler and diorama to be sure of what you are doing." instead;
+		say "You should move along, now, unless you want to mess with the settler and diorama to be sure of what you are doing." instead;
 	if location of player is heights:
 		if ramp is in Highest Heights, try objhinting ramp instead;
 		if pram is in Highest Heights, try objhinting pram instead;
-		all-say "[bug-report]";
+		say "[bug-report]";
 		the rule succeeds;
 	if location of player is Farming Framing:
 		if sitar is touchable, try objhinting the sitar instead;
 		if stair is touchable, try objhinting the stair instead;
-		all-say "[bug-report]" instead;
+		say "[bug-report]" instead;
 	if player is in Carven Cavern:
 		if plates are in Carven Cavern, try objhinting plates instead;
 		if plaster is in Carven Cavern, try objhinting plaster instead;
@@ -4387,8 +4387,8 @@ this is the ordeal-reload-hinting rule:
 		if player has latches, try objhinting latches instead;
 	if player has settler and settler is not examined, say "You should probably examine the settler." instead;
 	if Elmo is touchable, say "Elmo has some hints about the settler, but you can ignore him and still solve the game with maximum points. The small talk in particular can be ignored, unless you enjoy anagrams." instead;
-	if player is in Carven Cavern, all-say "You can just go [b]IN[r] to the main hub area." instead;
-	all-say "Nothing left to do here in your manse. You should be able to go [b]IN[r] to start your adventures." instead;
+	if player is in Carven Cavern, say "You can just go [b]IN[r] to the main hub area." instead;
+	say "Nothing left to do here in your manse. You should be able to go [b]IN[r] to start your adventures." instead;
 
 book others-hinting
 
@@ -4402,7 +4402,7 @@ enuf-fruit-poke is a truth state that varies.
 
 this is the others-hinting rule:
 	if player has moss cap, try objhinting moss cap instead;
-	if player has s-i and player has storage, all-say "You probably want to put the sonic icons in the slot." instead;
+	if player has s-i and player has storage, say "You probably want to put the sonic icons in the slot." instead;
 	if player has s-c, try objhinting s-c instead;
 	if player has icons, try objhinting icons instead;
 	if player has coin, try objhinting coin instead;
@@ -4417,22 +4417,22 @@ this is the others-hinting rule:
 		now enuf-fruit-poke is true;
 		say "You have gotten enough fruits, so from here on out you'll need to hint something specific if you want to change it. You'll want to go [if player is in Gates Stage]north of the gates[else if Gates Stage is visited]back north to the Gates Stage[else]north[end if]." instead;
 	if player has passport:
-		if Gates Stage is unvisited, all-say "You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport." instead;
-		if gates-score is 2, all-say "Go north to win!" instead;
+		if Gates Stage is unvisited, say "You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport." instead;
+		if gates-score is 2, say "Go north to win!" instead;
 		if viewer-first is true and viewer is not reflexed, try objhinting viewer instead;
 		if searcher is not reflexed, try objhinting searcher instead;
 		if viewer is not reflexed, try objhinting viewer instead;
 		try objhinting passport instead;
 	if player is in Gates Stage:
 		if Scape Space is unvisited, say "Try going down from the Swell Wells." instead;
-		if passport is off-stage, all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
-		all-say "You will find ID inside the So-Great Storage in the Scape Space." instead;
+		if passport is off-stage, say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
+		say "You will find ID inside the So-Great Storage in the Scape Space." instead;
 	if player is in Scape Space:
 		if droll dollar is off-stage, say "You'll eventually want to get that So-Great Storage down the road.";
 		if So Great Storage is in Scape Space and player has droll dollar, try objhinting So Great Storage instead;
 	abide by the fruit-hint rule;
-	if player is in Rustic Citrus and ruts circuits are touchable, all-say "You can [b]EXAMINE[r] the ruts circuits to discover more things to change to fruits." instead;
-	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 4], but there are other places where you can make fruits to give to Curtis[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[end if].";
+	if player is in Rustic Citrus and ruts circuits are touchable, say "You can [b]EXAMINE[r] the ruts circuits to discover more things to change to fruits." instead;
+	say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 4], but there are other places where you can make fruits to give to Curtis[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[end if].";
 	the rule succeeds;
 
 to say fruits-to-clear: say "[if fruits-left-here is 1]is[else]are[end if] [fruits-left-here in words] fruit[if fruits-left-here > 1]s[end if]"
@@ -4485,15 +4485,15 @@ this is the fruit-hint rule:
 book stores-hinting
 
 this is the stores-hinting rule:
-	if location of player is Cruelest Lectures, all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or][b]TEDIOUS[r] is one clue.[plus][or]The Rehabs Basher will also give you [his-her] '[b]I USED TO[r]' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people [b]OUTSIDE[r].[minus][cycling]" instead;
+	if location of player is Cruelest Lectures, say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or][b]TEDIOUS[r] is one clue.[plus][or]The Rehabs Basher will also give you [his-her] '[b]I USED TO[r]' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people [b]OUTSIDE[r].[minus][cycling]" instead;
 	if roved is true:
 		if Store H is touchable, try objhinting Store H instead;
-		all-say "Go through the Throes Hoster to the [b]OTHERS[r] area." instead;
+		say "Go through the Throes Hoster to the [b]OTHERS[r] area." instead;
 	if number of game-critical stos is 0:
-		all-say "(Note: you've cleared all the stores you need to[if number of unsolved regions > 0], though you still have work to do behind them[end if].)[line break]";
+		say "(Note: you've cleared all the stores you need to[if number of unsolved regions > 0], though you still have work to do behind them[end if].)[line break]";
 		if Store K is touchable, try objhinting Store K instead;
 		if Store N is touchable, try objhinting Store N instead;
-		all-say "[if debug-state is true]DEBUG: [list of unsolved regions][end if] You have nothing more to do here. You need to [if number of unsolved regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
+		say "[if debug-state is true]DEBUG: [list of unsolved regions][end if] You have nothing more to do here. You need to [if number of unsolved regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
 	if number of portals in Strip of Profits > 0, say "While [the slickest portal in Strip of Profits] [if number of portals in Strip of Profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	if cur-hint-sto is not in Strip of Profits:
 		if Store U is in Strip of Profits:
@@ -4509,7 +4509,7 @@ this is the stores-hinting rule:
 		else if Store T is in Strip of Profits:
 			now cur-hint-sto is Store T;
 		else:
-			all-say "You don't need to change any more stores now." instead; [should not happen but just in case]
+			say "You don't need to change any more stores now." instead; [should not happen but just in case]
 	try objhinting cur-hint-sto instead;
 
 to sto-hint (stosto - a sto): say "Sto hint for [stosto].";
@@ -4518,23 +4518,23 @@ book presto-hinting
 
 check objhinting drive:
 	if disk is in Drive A:
-		if be troo e robot is reflexed, all-say "You have the disk drive working." instead;
+		if be troo e robot is reflexed, say "You have the disk drive working." instead;
 		try objhinting be troo e robot instead;
 
 to say maze-or-pass:
 	say "[if ether is moot][Saps Pass][else]the volt maze[end if]"
 
 this is the presto-hinting rule:
-	if cur-score of presto is 0 and spoilit is false, all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]The yelling and the curst crust are clues. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
+	if cur-score of presto is 0 and spoilit is false, say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]The yelling and the curst crust are clues. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
 	if hump is touchable, try objhinting hump instead;
 	if plebe is touchable:
 		if spoilit is true and player does not wear tsar star:
-			all-say "The plebe grimaces as you try to eat the crust. Perhaps there's preparation you need to do before bossing the plebe around.";
+			say "The plebe grimaces as you try to eat the crust. Perhaps there's preparation you need to do before bossing the plebe around.";
 			now spoilit is false instead;
 		try objhinting plebe instead;
 	if player is in austerer:
 		if ye hoop is in austerer, try objhinting ye hoop instead;
-		if spoilit is false, all-say "You are done here in Austerer Treasure. The earring [if earring is moot]changed into the censer[else]will change when the time is right[end if]." instead;
+		if spoilit is false, say "You are done here in Austerer Treasure. The earring [if earring is moot]changed into the censer[else]will change when the time is right[end if]." instead;
 	if tsar star is touchable and tsar star is in Char Arch, try objhinting tsar star instead;
 	if dart is touchable and dart is in cistern, try objhinting dart instead;
 	if location of player is Dirge Ridge:
@@ -4542,43 +4542,43 @@ this is the presto-hinting rule:
 		if Rand is in Dirge Ridge and Rand is fightin, try objhinting Rand instead;
 		if Rand is washed up and Leo is washed up, try objhinting wzup instead;
 		if spoilit is true, now spoilit is false;
-		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe [l-n-r]'s combined muscle could help you somewhere[end if]." instead;
+		say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe [l-n-r]'s combined muscle could help you somewhere[end if]." instead;
 	if boing is reflexive and popgun is touchable, try objhinting boing go bin instead;
 	if popgun is touchable and ether is not moot:
-		if dart is not touchable, all-say "You need to find ammo for your popgun." instead;
+		if dart is not touchable, say "You need to find ammo for your popgun." instead;
 		if dart is not in popgun and dart is not moot:
 			if spoilit is true, now spoilit is false;
 			try objhinting popgun instead;
 	if player is in Marines Seminar Remains:
 		if spoilit is true:
 			now spoilit is false;
-			all-say "Ugh. The crust feels like army rations. Not now." instead;
-		all-say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
+			say "Ugh. The crust feels like army rations. Not now." instead;
+		say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
 	if location of player is in-the-maze:
 		try objhinting n-t-air instead;
 	if player is in Grey Gyre:
 		if volt maze is in Grey Gyre, try objhinting volt maze instead;
 		if ether is not moot:
 			if spoilit is false:
-				if player does not have popgun, all-say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
-				if Rand is not eager or Leo is not eager, all-say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows south of the cistern, first.[cycling]" instead;
+				if player does not have popgun, say "[one of]You'll need a weapon to get past the ether.[or]The popgun in the Marines Seminar Remains.[cycling]" instead;
+				if Rand is not eager or Leo is not eager, say "[one of]If you've gone through the ether alone, you'll see you've been outnumbered.[or]You'll need allies to even up the numbers in the ether to the north.[or]Anyone here you seen who likes a fight?[or]Fetch the fellows south of the cistern, first.[cycling]" instead;
 			else:
-				if dart is not in popgun or boing is reflexive or Leo is not in Grey Gyre, all-say "The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through." instead;
+				if dart is not in popgun or boing is reflexive or Leo is not in Grey Gyre, say "The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through." instead;
 			try objhinting ether instead;
 	if player is in Grey Gyre or player is in Char Arch:
 		if Hacks Shack is unvisited:
-			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch]. The yak can be helped later[end if]. You will want to [if ether is not moot]figure a way past the ether to the north[else if Saps Pass is not visited]see what's north[else if lawl wall is not moot]get by the lawl wall[else if hacks shack is unvisited]enter the shack to the north[else]take care of business in the [shack][end if]." instead;
+			if spoilit is false, say "You're all done here for now[if player is in Char Arch]. The yak can be helped later[end if]. You will want to [if ether is not moot]figure a way past the ether to the north[else if Saps Pass is not visited]see what's north[else if lawl wall is not moot]get by the lawl wall[else if hacks shack is unvisited]enter the shack to the north[else]take care of business in the [shack][end if]." instead;
 	if player is in Saps Pass:
 		if lawl wall is touchable, try objhinting lawl wall instead;
 		if Hacks Shack is unvisited:
 			if harpings phrasing is touchable and shack is unvisited:
 				if Leo is touchable, try objhinting harpings phrasing instead;
-				all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's to the north[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
+				say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's to the north[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
 	if spoilit is true:
 		if Dirge Ridge is not visited or Austerer Treasure is not visited or Marines Seminar Remains is not visited:
 			now spoilit is false;
-			all-say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
-		if ye hoop is in austerer and austerer is visited, all-say "You think to [b]YE HOOP[r] you saw in Austerer Treasure." instead;
+			say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
+		if ye hoop is in austerer and austerer is visited, say "You think to [b]YE HOOP[r] you saw in Austerer Treasure." instead;
 	if Hacks Shack is visited:
 		if hump is not moot, try objhinting hump instead;
 		if censer is not moot, try objhinting censer instead;
@@ -4590,15 +4590,15 @@ this is the presto-hinting rule:
 		try objhinting drab yoke instead;
 	if Hacks Shack is visited:
 		if yak is not moot: [?! rearrange this]
-			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in [location of yak]." instead;
-			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
+			if spoilit is true, say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in [location of yak]." instead;
+			say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
 	if player is in Hacks Shack:
-		if disk is not in drive a, all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
-		if can-put-on-slab, all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
+		if disk is not in drive a, say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
+		if can-put-on-slab, say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
 		if be troo e robot is reflexive, try objhinting be troo e robot instead;
 		if Clack Ops Locs Pack is not moot, try objhinting Clack Ops Locs Pack instead;
 		if caps lock is not part of the keyboard:
-			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
+			if spoilit is true, say "You curse yourself for not putting the caps lock button in the keyboard." instead;
 			try objhinting caps lock instead;
 		if fount is touchable, try objhinting fount instead;
 		if futon is touchable and peels speel is reflexive:
@@ -4608,12 +4608,12 @@ this is the presto-hinting rule:
 		if gum is touchable, try objhinting gum instead;
 		if ALocalCo cola is touchable:
 			if spoilit is true:
-				all-say "No, you'd rather pour the cola into [if mug is touchable]the mug[else]some simple drinking container[end if]. It's slightly less nasty than the crust.";
+				say "No, you'd rather pour the cola into [if mug is touchable]the mug[else]some simple drinking container[end if]. It's slightly less nasty than the crust.";
 				now spoilit is false instead;
 			try objhinting ALocalCo cola instead;
 		if BUB DUDE EGG is reflexive, try objhinting BUB DUDE EGG instead;
 		if usb is touchable, try objhinting usb instead;
-	all-say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
+	say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
 
 to decide whether can-put-on-slab:
 	if player has keyboard and keyboard is not on slab, decide yes;
@@ -4634,8 +4634,8 @@ to say p-spo: now prep-spoil is true;
 
 check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
 	if noun is sit a nag or noun is side art or noun is WOE BOW BELL or noun is Rude N Nuder or noun is Gast:
-		if Cleric Circle is unvisited, all-say "You aren't ready to do anything with the [sit a nag] yet. The church may make you feel better about things." instead;
-		if list o toils is unexamined, all-say "You may want to look at the list-o-toils first." instead;
+		if Cleric Circle is unvisited, say "You aren't ready to do anything with the [sit a nag] yet. The church may make you feel better about things." instead;
+		if list o toils is unexamined, say "You may want to look at the list-o-toils first." instead;
 
 does the player mean objhinting Gast when mrlp is routes: it is very likely;
 
@@ -4644,11 +4644,11 @@ the hintstub rules are an object-based rulebook.
 a hintstub rule for a thing (called th) (this is the point-to-mesa rule):
 	if th is in Same Mesa:
 		if player is in Same Mesa, try objhinting th instead;
-		all-say "[if spoilit is true]The spoon reflects[else]You should go[end if] back outside.";
+		say "[if spoilit is true]The spoon reflects[else]You should go[end if] back outside.";
 		now spoilit is false instead;
 
 this is the routes-hinting rule:
-	if cur-score of routes is 0 and prep-spoil is false, all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
+	if cur-score of routes is 0 and prep-spoil is false, say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
 	abide by the point-to-mesa rule for bev o be ova;
 	abide by the point-to-mesa rule for MORF FORM;
 	abide by the point-to-mesa rule for THE BEAN;
@@ -4663,20 +4663,20 @@ this is the routes-hinting rule:
 		if Gast is in Same Mesa, try objhinting Gast instead;
 	if location of player is Cleric Circle:
 		if list o toils is unexamined:
-			all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils.";
+			say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils.";
 			now spoilit is false instead;
 		if spoilit is true:
-			all-say "The spoon reflects back outside.";
+			say "The spoon reflects back outside.";
 			now spoilit is false instead;
 		try objhinting list o toils instead;
 	if location of player is Idle Deli:
 		if seed pit is reflexed:
-			all-say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] the Idle Deli.";
+			say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] the Idle Deli.";
 			now spoilit is false instead;
 		try objhinting seed pit instead;
 	if location of player is Adobe Abode:
 		if pipe soot is in adobe, try objhinting pipe soot instead;
-		all-say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
+		say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
 		now spoilit is false instead;
 	if location of player is Harms Marsh:
 		if NULL IT unit is in Harms Marsh, try objhinting NULL IT unit instead;
@@ -4688,17 +4688,17 @@ this is the routes-hinting rule:
 		if bent ewe is reflexive, try objhinting bent ewe instead;
 		if hurt hog is reflexive, try objhinting hurt hog instead;
 		try objhinting yob den instead;
-	if list o toils is unexamined, all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
-	if player has stupor sprout and player has U NERD ENDUR REDUN and player has pipe soot, all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
+	if list o toils is unexamined, say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
+	if player has stupor sprout and player has U NERD ENDUR REDUN and player has pipe soot, say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
 	if spoilit is true:
 		now spoilit is false;
-		all-say "You can't angle the spoon productively. Maybe use it later." instead;
+		say "You can't angle the spoon productively. Maybe use it later." instead;
 	repeat with QQ running through quest-items:
 		if QQ is off-stage:
-			if QQ is stupor sprout, all-say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the stupor sprout." instead;
-			if QQ is pipe soot, all-say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
-			if QQ is U NERD ENDUR REDUN, all-say "You need to work out how to sit all over the [Gast]'s [sit a nag] to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
-	all-say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
+			if QQ is stupor sprout, say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the stupor sprout." instead;
+			if QQ is pipe soot, say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
+			if QQ is U NERD ENDUR REDUN, say "You need to work out how to sit all over the [Gast]'s [sit a nag] to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
+	say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
 
 book troves-hinting
 
@@ -4742,7 +4742,7 @@ this is the troves-hinting rule:
 	if spoilit is true:
 		say "--hmmph. Do nothing. This is a BUG, but keep the truffle[no line break]";
 		now spoilit is false instead;
-	all-say "Pa Egg Pea has no further immediately practical advice, though it probably should. [bug-report]" instead;
+	say "Pa Egg Pea has no further immediately practical advice, though it probably should. [bug-report]" instead;
 
 evil-bee-second is a truth state which varies.
 
@@ -4811,21 +4811,21 @@ to decide which thing is oyster-item:
 this is the oyster-hinting rule:
 	if verb-warned is false and cur-score of oyster is 0:
 		now verb-warned is true;
-		all-say "The Posh Hops Shop is full of action. So that gives you a clue as to the commands to use." instead;
+		say "The Posh Hops Shop is full of action. So that gives you a clue as to the commands to use." instead;
 	if oyster-item is not player, try objhinting oyster-item instead;
-	if sausage is reflexed and location of sausage is location of player, all-say "You need to show [the sausage] where the ruby is buried, now." instead;
-	if player is in Sclerous Closures and Paw R Wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
-	if player is in Anger Range and eeks are in Hardest Trashed Dearths, all-say "You may want to visit the trout to the east." instead;
-	if player is in Rascal Craals and player does not have the digger, all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
+	if sausage is reflexed and location of sausage is location of player, say "You need to show [the sausage] where the ruby is buried, now." instead;
+	if player is in Sclerous Closures and Paw R Wrap is off-stage, say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
+	if player is in Anger Range and eeks are in Hardest Trashed Dearths, say "You may want to visit the trout to the east." instead;
+	if player is in Rascal Craals and player does not have the digger, say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
 	if location of player is Rascal Craals:
-		if ruby is off-stage, all-say "This would be a good place to bury something, but you're not sure what." instead;
+		if ruby is off-stage, say "This would be a good place to bury something, but you're not sure what." instead;
 		if thin hint is off-stage, say "There's something to do here, but it's not just anagramming." instead;
-	if location of player is End Den, all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Lean Lane contain them[end if].[minus][cycling]" instead;
+	if location of player is End Den, say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Lean Lane contain them[end if].[minus][cycling]" instead;
 	if sausage is moot and ol trap is not moot:
-		all-say "You can now go further in to the Hedron." instead;
+		say "You can now go further in to the Hedron." instead;
 	repeat through table of oyster location hint checkoffs:
 		if there is no oyster-rm entry or location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points here, but a generic [b]HINT[r] will not reveal them. You must [b]HINT[r] something specific[or][stopping]." instead;
-	all-say "BUG. You should never have fallen through here in the hint code." instead;
+	say "BUG. You should never have fallen through here in the hint code." instead;
 	the rule succeeds;
 
 table of oyster location hint checkoffs
@@ -4865,43 +4865,43 @@ this is the towers-hinting rule:
 		d "Oops! A bug!";
 		any-guardian-hint instead;
 	if player is in Loftier Trefoil, try objhinting h-p instead;
-	if Scope Copse is unvisited, all-say "You can just go north[if tarts are not heated], though you can hint the tarts in the toaster if you want[end if]." instead;
-	if Treading Gradient is unvisited, all-say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Treading Gradient is accessible]go[else]make a path[end if] there." instead;
-	if raves saver is off-stage or ragged dagger is off-stage, all-say "See about the weeds in the Treading Gradient." instead;
-	if Danger Garden is unvisited, all-say "You need to work your way to the east corner of the map[seen-scope]." instead;
-	if Obscurest Subsector is unvisited, all-say "[if stinger is moot]Go east of [in-here-there of Danger Garden][else if bonker is moot]You need a way past the stinger[else]You need a way past the bonker[end if]." instead;
-	if Shaven Havens are unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit[seen-scope].[end if]" instead;
-	unless Dr Yow has been wordy, all-say "[one of]Dr. Yow can be manipulated, even behind the prison ropins.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be [b]WORDY[r].[cycling]" instead;
-	if duck is aloof, all-say "[one of]That duck [if duck is not touchable]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]The duck won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or]The raves saver you saw is useful.[or]The raves saver is a tape recorder.[or]The raves saver has two buttons, [b]RETAPE[r] and [b]REPEAT[r], and you can probably figure what does what.[or]If you [b]RETAPE[r] Dr. Yow when [he-she] is [if Dr Yow has been wordy][b]WORDY[r][else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
+	if Scope Copse is unvisited, say "You can just go north[if tarts are not heated], though you can hint the tarts in the toaster if you want[end if]." instead;
+	if Treading Gradient is unvisited, say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Treading Gradient is accessible]go[else]make a path[end if] there." instead;
+	if raves saver is off-stage or ragged dagger is off-stage, say "See about the weeds in the Treading Gradient." instead;
+	if Danger Garden is unvisited, say "You need to work your way to the east corner of the map[seen-scope]." instead;
+	if Obscurest Subsector is unvisited, say "[if stinger is moot]Go east of [in-here-there of Danger Garden][else if bonker is moot]You need a way past the stinger[else]You need a way past the bonker[end if]." instead;
+	if Shaven Havens are unvisited, say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit[seen-scope].[end if]" instead;
+	unless Dr Yow has been wordy, say "[one of]Dr. Yow can be manipulated, even behind the prison ropins.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be [b]WORDY[r].[cycling]" instead;
+	if duck is aloof, say "[one of]That duck [if duck is not touchable]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]The duck won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or]The raves saver you saw is useful.[or]The raves saver is a tape recorder.[or]The raves saver has two buttons, [b]RETAPE[r] and [b]REPEAT[r], and you can probably figure what does what.[or]If you [b]RETAPE[r] Dr. Yow when [he-she] is [if Dr Yow has been wordy][b]WORDY[r][else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
 	if luck node is not moot:
 		if player is not in Obscurest Subsector, say "You need to release Dr. Yow in the Obscurest Subsector next." instead;
 		try objhinting luck node instead;
-	if duck is not returned, all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And the name on its nametag, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or][b]UNLOCKED[r].[cycling]" instead;
-	if Actionless Coastlines is unvisited, all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of in the Actionless Coastlines before an ally will appear[end if].[cycling]" instead;
+	if duck is not returned, say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And the name on its nametag, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or][b]UNLOCKED[r].[cycling]" instead;
+	if Actionless Coastlines is unvisited, say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of in the Actionless Coastlines before an ally will appear[end if].[cycling]" instead;
 	if player is in Outer Route:
-		if weeds are in Treading Gradient, all-say "The item that fits in [the deviser] is behind the weeds in the Treading Gradient." instead;
+		if weeds are in Treading Gradient, say "The item that fits in [the deviser] is behind the weeds in the Treading Gradient." instead;
 		if gizmo is off-stage, try objhinting diverse deviser instead;
-	if agnostic is lonely, all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or][b]ASK AGNOSTIC ABOUT DOCTOR[r].[cycling]" instead;
-	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
-	unless Dr Yow has been rowdy, all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...[b]ROWDY[r].[cycling]" instead;
+	if agnostic is lonely, say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or][b]ASK AGNOSTIC ABOUT DOCTOR[r].[cycling]" instead;
+	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
+	unless Dr Yow has been rowdy, say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...[b]ROWDY[r].[cycling]" instead;
 	if dinger is touchable, try objhinting dinger instead;
-	if Outer Route is not visited, all-say "You need to visit west of the Scope Copse[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
+	if Outer Route is not visited, say "You need to visit west of the Scope Copse[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
 	if player has gizmo, try objhinting gizmo instead;
-	if Dr Yow is not moot, all-say "You need to [b]ASK AGNOSTIC ABOUT DR YOW[r], then make Dr. Yow [b]ROWDY[r]." instead; [?? flesh out]
+	if Dr Yow is not moot, say "You need to [b]ASK AGNOSTIC ABOUT DR YOW[r], then make Dr. Yow [b]ROWDY[r]." instead; [?? flesh out]
 	unless across-leak-lake:
-		if location of player is not Actionless Coastlines, all-say "You'll want to head to the coastlines to make it across the water." instead;
-		if boat-score is 1, all-say "NOTE: you don't strictly need to fix the boat entirely.[paragraph break]";
+		if location of player is not Actionless Coastlines, say "You'll want to head to the coastlines to make it across the water." instead;
+		if boat-score is 1, say "NOTE: you don't strictly need to fix the boat entirely.[paragraph break]";
 		if t-or-b is reflexive, try objhinting t-or-b instead;
 		if turbos are reflexive, try objhinting turbos instead;
 		if blaster is reflexive, try objhinting blaster instead;
-		all-say "You can enter a bot boat and go safely across Leak Lake." instead;
+		say "You can enter a bot boat and go safely across Leak Lake." instead;
 	if player is in Mesprise Premises:
 		if itster is touchable, try objhinting itster instead;
 		if anodyne is touchable, try objhinting anodyne instead;
 		if crocus is in top opt pot or player has crocus, try objhinting crocus instead;
-		if player has top opt pot, all-say "You need to put something in the top opt pot to complete this optional area." instead;
+		if player has top opt pot, say "You need to put something in the top opt pot to complete this optional area." instead;
 	if player is in Mislit Limits, try objhinting curst palace instead;
-	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything. Try moving around." instead;
+	say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything. Try moving around." instead;
 
 to decide what number is boat-score: decide on boolval of (whether or not turbos are reflexive) + boolval of (whether or not blaster is reflexive);
 
@@ -5004,22 +5004,22 @@ to say other-power-room: say "[if player is in Loop Pool]Bran Barn[else]Loop Poo
 
 this is the otters-hinting rule:
 	if player is in Loop Pool or player is in Bran Barn:
-		if gore ogre is moot and eels are moot, all-say "You found both ways to regain your powers. You don't need to do anything else." instead;
-	if player is in Shiner Shrine and imp is moot, all-say "The path north is cleared[tho-work of Lamer Realm]." instead;
-	if player is in Clarthead Cathedral and shrewin whiners are moot, all-say "The path south is cleared[tho-work of Perverse Preserve]." instead;
-	if player is in Minded Midden and Ed Riley is moot, all-say "You made a way west. You're done here." instead;
+		if gore ogre is moot and eels are moot, say "You found both ways to regain your powers. You don't need to do anything else." instead;
+	if player is in Shiner Shrine and imp is moot, say "The path north is cleared[tho-work of Lamer Realm]." instead;
+	if player is in Clarthead Cathedral and shrewin whiners are moot, say "The path south is cleared[tho-work of Perverse Preserve]." instead;
+	if player is in Minded Midden and Ed Riley is moot, say "You made a way west. You're done here." instead;
 	if player is in Disowned Downside:
-		if Gretta is moot and power-back is false, all-say "Gretta's gone. The first thing to do is to go north or south to regain your powers." instead;
+		if Gretta is moot and power-back is false, say "Gretta's gone. The first thing to do is to go north or south to regain your powers." instead;
 		if pen o nope is moot, say "Gretta's gone. [if medals-shiny is 2]Fulfill your destiny to the west[else]Go back east for help[end if]." instead;
-	if in-extra-powers, all-say "The [location of player] isn't critical since you've solved the [other-power-room], but the puzzle may still interest you.";
+	if in-extra-powers, say "The [location of player] isn't critical since you've solved the [other-power-room], but the puzzle may still interest you.";
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
 	if player is in Lamer Realm or player is in Perverse Preserve:
-		if power-back is false, all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of Burnt Brunt[end if]." instead;
-		if player is in Perverse Preserve, all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random touchable pre-animal thing][end if]." instead;
-		all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random touchable reflexive animal][end if]." instead;
-	if got-extra-powers, all-say "You got your powers back. You don't need to do anything else here." instead;
-	if player is in Reclusion Inclosure, all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight." instead;
-	all-say "It seems like you [if power-back is false]can't do anything to get your powers back here[else]did everything you needed here to defeat Elvira[end if].";
+		if power-back is false, say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of Burnt Brunt[end if]." instead;
+		if player is in Perverse Preserve, say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random touchable pre-animal thing][end if]." instead;
+		say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random touchable reflexive animal][end if]." instead;
+	if got-extra-powers, say "You got your powers back. You don't need to do anything else here." instead;
+	if player is in Reclusion Inclosure, say "Your destiny awaits west. Hopefully you will have enough allies for the big fight." instead;
+	say "It seems like you [if power-back is false]can't do anything to get your powers back here[else]did everything you needed here to defeat Elvira[end if].";
 	the rule succeeds;
 
 definition: a thing (called X) is pre-animal:
@@ -11659,7 +11659,7 @@ rivets-first is a truth state that varies.
 
 check objhinting when player is in Econ Cone:
 	if cone-points is 2:
-		if noun is Trevis Vister or noun is rivets or noun is praise spirea, all-say "You learned all you could from the statue." instead;
+		if noun is Trevis Vister or noun is rivets or noun is praise spirea, say "You learned all you could from the statue." instead;
 
 the praise spirea is reflexive scenery in Econ Cone. "The praise spirea is beautiful and inspiring and all, but you don't want to be caught staring at it just because it's pretty, or listening to it just because it sounds nice."
 
@@ -21782,36 +21782,12 @@ this is the hint-toggle-warn rule:
 			ital-say "you can type [b]NO HINT[i] to disable hints for this session, or [b]NOTHIN[i] to disable them fully."
 
 carry out hinting:
-	[if hintblock is true, all-say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
+	[if hintblock is true, say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
 	abide by the reg-hint-rule of mrlp;
-	all-say "No hints for this region yet. Sorry. I need to work on that, don't I?";
+	say "No hints for this region yet. Sorry. I need to work on that, don't I?";
 	the rule succeeds;
 
-to all-say-x (xx - indexed text):
-	if hint-to-display is true or hint-to-file is true:
-		do nothing;
-	else:
-		say "[xx]";
-
 general-hint is a truth state that varies.
-
-to all-say (xx - indexed text):
-	if auto-hint-proc is true:
-		if hint-to-file is true:
-			if number of words in the player's command > 0:
-				append "[the player's command] ([hash of the player's command]) : [xx][line break]" to the file of gamehints;
-			else:
-				append "[the player's command] (divided by periods) : [xx][line break]" to the file of gamehints;
-			if hint-to-display is false, continue the action;
-		if hint-to-display is true:
-			say "[if hint-to-file is true]This Move's Hint: [end if][xx][if hint-to-file is true] (turn hints-to-display off with [b]HD[r])[end if][line break]";
-			continue the action;
-		if hint-to-display is false:
-			say "[xx][line break]";
-			now general-hint is false;
-			continue the action;
-	else:
-		say "[xx][line break]";
 
 chapter hinting (object)
 
@@ -21898,18 +21874,18 @@ definition: a thing (called th) is shunloc:
 	no;
 
 this is the hint certain object groups rule:
-	if noun is the location, all-say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues. The room description should clue if either of the last two actions is useful." instead;
+	if noun is the location, say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues. The room description should clue if either of the last two actions is useful." instead;
 	if noun is a room, say "There are no hints available on rooms in general. You can go to a room and [b]HINT[r], instead." instead;
-	if noun is a portal and noun is not solid idols, all-say "You can just enter [the noun]." instead;
-	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
-	if in-hint-testing is false and location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
+	if noun is a portal and noun is not solid idols, say "You can just enter [the noun]." instead;
+	if noun is unimportant, say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
+	if in-hint-testing is false and location of noun is nothing and noun is not a backdrop, say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
 	abide by the reject unknowable objects if not testing rule;
 	abide by the generic hint state rejects rule;
-	if noun is shunloc, all-say "You don't need to go back where [the noun] [is-are of the noun]." instead;
-	if noun is a badbook, all-say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
-	if noun is a fruit and player has noun, all-say "[frootz]" instead;
+	if noun is shunloc, say "You don't need to go back where [the noun] [is-are of the noun]." instead;
+	if noun is a badbook, say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
+	if noun is a fruit and player has noun, say "[frootz]" instead;
 	if in-hint-testing is false and noun is not a backdrop and noun is not scenery:
-		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region[if players are touchable]. If you're trying to [b]HINT[r] the [pla-ma]s['] pickup lines, ." instead;
+		if mrlp is not map region of location of noun, say "That doesn't seem to be in this region[if players are touchable]. If you're trying to [b]HINT[r] the [pla-ma]s['] pickup lines, ." instead;
 	if noun is a pickup-line:
 		increment hint-prog of noun;
 		if hint-prog of noun is 3, now hint-prog of noun is 1;
@@ -21932,13 +21908,13 @@ to say pickup-spoil of (pl - a pickup-line):
 this is the hint-moot-objects rule:
 	if noun is disk:
 		if map region of location of skid is presto:
-			all-say "(Hinting the skid instead, though you'll need to flip the disk back.)";
+			say "(Hinting the skid instead, though you'll need to flip the disk back.)";
 			try objhinting skid instead;
 	if noun is skid:
 		if drab yoke is not off-stage:
-			all-say "(Hinting the disk instead, though you'll need to flip the skid back.)";
+			say "(Hinting the disk instead, though you'll need to flip the skid back.)";
 			try objhinting disk instead;
-	all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
+	say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
 
 this is the spoil-hints rule:
 	if spoilit is false, continue the action;
@@ -22010,7 +21986,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	if there is hint-entry of noun in hintobjstable of mrlp:
 		if noun is reflexed: [first check if it's solved already]
 			repeat through hint-done-note table of mrlp:
-				if hint-entry entry is noun, all-say "[advice-entry entry]" instead;
+				if hint-entry entry is noun, say "[advice-entry entry]" instead;
 		choose row with hint-entry of noun in hintobjstable of mrlp;
 		if there is a parallel-entry entry:
 			if parallel-entry entry is not moot, try objhinting parallel-entry entry instead;
@@ -22022,12 +21998,12 @@ carry out objhinting (this is the pick object to hint rule) :
 			now noun is cheathinted;
 		else if noun is prefigured-spoiled:
 			ital-say "these hints may lead you to something you already guessed and wrote in your notepad.";
-		all-say "[advice-entry entry]" instead;
+		say "[advice-entry entry]" instead;
 	repeat through table of general hintobjs:
 		if hint-entry entry is noun:
-			if there is an advice-entry entry, all-say "[advice-entry entry]" instead;
+			if there is an advice-entry entry, say "[advice-entry entry]" instead;
 			if there is a parallel-entry entry, try objhinting parallel-entry entry instead;
-	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
+	say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
 definition: a thing (called th) is prefigured-spoiled:
 	unless th is prefigured, no;
