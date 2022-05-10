@@ -628,7 +628,7 @@ this is the reject unknowable objects if not testing rule:
 	if noun is moot, say "[noun]: [past-tense of noun] been dealt with. I'm pretty sure." instead;
 
 this is the generic hint state rejects rule:
-	if noun is location, say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues, and [this-game] will pick up something worth lookng at." instead;
+	if noun is location, say "Occasionally you can [b]SCAN[r] or [b]SMELL[r] or [b]LISTEN[r] for clues, and [this-game] will pick up something worth looking at." instead;
 	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type [b]HINT[r] for the current puzzle to look at." instead;
 	if noun is bounding, say "[that-those-is-are of noun] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is realized, say "[that-those-is-are of noun] no longer part of a puzzle." instead;

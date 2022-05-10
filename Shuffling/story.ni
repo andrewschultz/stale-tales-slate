@@ -799,7 +799,7 @@ this is the ordeal-loader-hinting rule:
 	if player is in Notices Section:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
 		if player does not have gadget, say "You probably want to [b]TAKE GADGET[r] before entering the gate. Well, maybe even [b]TAKE ALL[r]." instead;
-		if lube-asked is false, say "You can [b]ASK GATEMAN ABOUT CABINET[r] to get some goodies in adddition to the tagged gadget." instead;
+		if lube-asked is false, say "You can [b]ASK GATEMAN ABOUT CABINET[r] to get some goodies in addition to the tagged gadget." instead;
 		say "You can just enter the getaway gateway now." instead;
 
 section stores
@@ -3429,7 +3429,7 @@ the reed is a thing in Thickest Thickets. "A large reed has grown here, even tho
 
 the lgth of reed is 4. gpos of reed is 4. rpos of reed is 1. cert-text of reed is "-[ast]E[ast]E[d1]". rect-text of reed is "D[d1][d1][ast]R". the rgtext of reed is "[rc][gc][gc][rc]".
 
-check taking the reed: say "Too big and tall and impractial. It just doesn't belong here, at least not in its current form." instead;
+check taking the reed: say "Too big and tall and impractical. It just doesn't belong here, at least not in its current form." instead;
 
 description of the reed is "It's very tall, but it doesn't belong here, you sense."
 
@@ -4956,7 +4956,7 @@ to say how-far-along:
 	if number of not unsolved regions is 1:
 		say "is almost all grey, except for a touch of red at the corners";
 	else if number of not unsolved regions is 2:
-		say "hasa thin band of red paint around the bottom";
+		say "has a thin band of red paint around the bottom";
 	else if number of not unsolved regions is 3 and gadget-secured is false:
 		say "is now about halfway red";
 	else:
@@ -6698,7 +6698,7 @@ report wearing the coat:
 	say "It's nice and warm. Not enough to make you sweat. But handy if you [if r2 is prefigured]try to poke around the moor[else]find a way outside of here. There must be one[end if].";
 	the rule succeeds;
 
-description of coat is "It's warm and fuzzy and shapeless and as multi-colored as the taco you made it from[if player is in kitchen].[paragraph break]So warm, you're remided of the phrase 'If you can't take the head, get out of tt he kitchen.' You can take the heat, but you've probably done everything strictly necessary here[end if]."
+description of coat is "It's warm and fuzzy and shapeless and as multi-colored as the taco you made it from[if player is in kitchen].[paragraph break]So warm, you're reminded of the phrase 'If you can't take the head, get out of the kitchen.' You can take the heat, but you've probably done everything strictly necessary here[end if]."
 
 check taking off the coat:
 	if player is in moor, say "Too cold." instead;
@@ -6982,7 +6982,7 @@ to say reset-goof:
 	if steer button is touchable:
 		say "You don't need to reset the steer button[if trees-is-pushed is true] like you did the trees button[end if]. It's what it's supposed to be";
 	else if reset-already is false:
-		say "Unfortunately, it's not quite as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. But rearraning it? I hope that's not too bad";
+		say "Unfortunately, it's not quite as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. But rearranging it? I hope that's not too bad";
 		now reset-already is true;
 	else:
 		say "Resetting twice won't get you anywhere. You need a new direction to change the TREES"
@@ -10815,7 +10815,7 @@ check listening:
 	if player is in Potshot Hotspot:
 		if riot is in Potshot Hotspot or protest is in Potshot Hotspot, say "The [if riot is touchable]riot[else]protest[end if] sounds like it can go on for a while, but thankfully, it's not getting violent." instead;
 		if red bull burdell is in Potshot Hotspot, say "Tenso-tones (notes?) add drama to it all." instead;
-	if location of player is Esoteric Coteries, say "The nerds are nattering about something or other[one of]. Their RPG GRP[or]. 'Vie, Red, Derive!' they chant at someone marking up scratch paper[or]. Complaining of their briefs['] fibers[or]. How to be a nerd mo['] modern[or]. Their time in the Undergrad Nerd Guard[or]. How they like to bug Sundberg[or]. How they're an IQ/clue clique[or]. How the newcomer might be a decent pretend nerd pet[or]. Stupid people who don't vote, or who vote stupid when they do[or]. Some dolt who got TOLD[or]. How text adventures are for losers stuck in the eighties[or]. How nothing's stopping dumb people from getting on the internet and building the same soundproof bunker they have[or][stopping]." instead;
+	if location of player is Esoteric Coteries, say "The nerds are nattering about something or other[one of]. Their RPG GRP[or]. 'Vie, Red, Derive!' they chant at someone marking up scratch paper[or]. Complaining of their briefs['] fibers[or]. How to be a nerd mo['] modern[or]. Their time in the Undergrad Nerd Guard[or]. How they like to bug Sundberg[or]. How they're an IQ/clue clique[or]. How the newcomer might be a decent pretend nerd pet[or]. Stupid people who don't vote, or who vote stupid when they do[or]. Some dolt who got TOLD[or]. How text adventures are for losers stuck in the eighties[or]. How nothing's stopping dumb people from getting on the Internet and building the same soundproof bunker they have[or][stopping]." instead;
 	if location of player is Abyss:
 		if beats are touchable, say "The beats are worse than ever[if siren is touchable], accompanied by that siren[end if]. The Hears-Share sound system dishes out supersonic percussion--a croupiness, if you will." instead;
 		say "The beats are gone, replaced with a beast's roaring[if siren is touchable], which clashes nastily with the siren[end if]." instead;
