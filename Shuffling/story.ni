@@ -669,9 +669,9 @@ carry out hinting:
 to say got-r: say "[if store r is prefigured]already guessed right--it's a resort[else]can still guess it. If you don't, this hint will tell you what it should be once you can advance".
 
 carry out mainhelping:
-	if hintsoff is true, all-say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
+	if hintsoff is true, say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
 	abide by the reg-hint-rule of mrlp;
-	all-say "[bug-report] Bug text. Should not appear.";
+	say "[bug-report] Bug text. Should not appear.";
 	the rule succeeds;
 
 to all-say (a - indexed text):
@@ -781,10 +781,10 @@ carry out objhinting:
 	if there is hint-entry of noun in hintobjstable of mrlp:
 		choose row with hint-entry of noun in hintobjstable of mrlp;
 		if there is a parallel-entry entry, try objhinting parallel-entry entry instead;
-		all-say "[advice-entry entry]" instead;
-	if noun is a portal, all-say "You can just enter [the noun]." instead;
-	if noun is unimportant, all-say "[noun]: that isn't needed to solve the game. It's probably just there for local flavor." instead;
-	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
+		say "[advice-entry entry]" instead;
+	if noun is a portal, say "You can just enter [the noun]." instead;
+	if noun is unimportant, say "[noun]: that isn't needed to solve the game. It's probably just there for local flavor." instead;
+	say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
 section Ordeal Loader
 
@@ -793,7 +793,7 @@ blot-first is a truth state that varies.
 toga-first is a truth state that varies.
 
 this is the ordeal-loader-hinting rule:
-	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go [b]IN[r], [b]ENTER[r], or [b]ENTER PASSAGE[r]. [minus][cycling]" instead;
+	if player is in Busiest Subsite, say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go [b]IN[r], [b]ENTER[r], or [b]ENTER PASSAGE[r]. [minus][cycling]" instead;
 	if player is in Rested Desert:
 		if odor is touchable, try objhinting odor instead;
 		if blot is moot, try objhinting OR DO door instead; [?? can enter door?]
@@ -806,36 +806,36 @@ this is the ordeal-loader-hinting rule:
 		if toga is touchable and reed is touchable:
 			if toga-first is true, try objhinting toga instead;
 			try objhinting reed instead;
-		all-say "You can just go [b]IN[r], now." instead;
+		say "You can just go [b]IN[r], now." instead;
 	if player is in Notices Section:
 		if gateman is not in Notices Section, try objhinting magenta nametag instead;
-		if player does not have gadget, all-say "You probably want to [b]TAKE GADGET[r] before entering the gate. Well, maybe even [b]TAKE ALL[r]." instead;
-		if lube-asked is false, all-say "You can [b]ASK GATEMAN ABOUT CABINET[r] to get some goodies in adddition to the tagged gadget." instead;
-		all-say "You can just enter the getaway gateway now." instead;
+		if player does not have gadget, say "You probably want to [b]TAKE GADGET[r] before entering the gate. Well, maybe even [b]TAKE ALL[r]." instead;
+		if lube-asked is false, say "You can [b]ASK GATEMAN ABOUT CABINET[r] to get some goodies in adddition to the tagged gadget." instead;
+		say "You can just enter the getaway gateway now." instead;
 
 section stores
 
 this is the stores-hinting rule:
 	if you-can-advance:
 		if store r is in Trips Strip:
-			if store r is prefigured, all-say "You already figured what this is--a resort." instead;
+			if store r is prefigured, say "You already figured what this is--a resort." instead;
 			try objhinting store r instead;
-		all-say "The way is clear. You can just enter the ogled lodge[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead; [?? specify store?]
+		say "The way is clear. You can just enter the ogled lodge[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead; [?? specify store?]
 	if scented descent is in Trips Strip or posted depots are in Trips Strip or trade tread is in Trips Strip, say "You can just enter the [list of portals in Trips Strip]. If you want or need help with a particular store, [b]HINT STORE Q[r]." instead;
 	if store f is in Trips Strip, try objhinting store f instead;
 	if store i is in Trips Strip, try objhinting store i instead;
 	if store m is in Trips Strip, try objhinting store m instead;
 	if store r is in Trips Strip, try objhinting store r instead;
-	all-say "[bug-report] I should be able to hint something for you, but I can't. I'd like to know how this happened, so I can fix it.." instead;
+	say "[bug-report] I should be able to hint something for you, but I can't. I'd like to know how this happened, so I can fix it.." instead;
 
 section forest
 
 this is the forest-hinting rule:
 	if location of player is rf or location of player is sf:
-		if number of touchable guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
+		if number of touchable guiders is not 1, say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random touchable guider instead;
-	if Gnarliest Triangles is unvisited or Flesh Shelf is unvisited, all-say "Go [if triangles is visited]west[else if shelf is visited]east[else]east and west[end if] and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, [b]HINT[r] will only give you this nag until you visit all three locations." instead;
-	if ones are off-stage or shades are off-stage and player is not in Gnarliest Triangles, all-say "You need to solve a [if ones are off-stage and shades are off-stage]couple puzzles[else]puzzle[end if] to the east." instead;
+	if Gnarliest Triangles is unvisited or Flesh Shelf is unvisited, say "Go [if triangles is visited]west[else if shelf is visited]east[else]east and west[end if] and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, [b]HINT[r] will only give you this nag until you visit all three locations." instead;
+	if ones are off-stage or shades are off-stage and player is not in Gnarliest Triangles, say "You need to solve a [if ones are off-stage and shades are off-stage]couple puzzles[else]puzzle[end if] to the east." instead;
 	if player is in Gnarliest Triangles:
 		if nose is off-stage, try objhinting ones instead;
 		if shades are off-stage, try objhinting dashes instead;
@@ -851,7 +851,7 @@ this is the forest-hinting rule:
 		if noughts are off-stage, try objhinting noughts instead;
 		if bread is part of the sandwich, try objhinting sandwich instead;
 		if beard is off-stage, try objhinting the bread instead;
-		all-say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] later. [b]PUT[r] (item) [b]ON[r] (item)[unless shades are part of beard or nose is part of beard] twice[end if] to create the full disguise." instead;
+		say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] later. [b]PUT[r] (item) [b]ON[r] (item)[unless shades are part of beard or nose is part of beard] twice[end if] to create the full disguise." instead;
 	if chisel is off-stage, try objhinting liches instead;
 	if livers are off-stage:
 		if player does not have River Ville liver and player does not have viler liver, try objhinting chisel instead;
@@ -869,11 +869,11 @@ this is the forest-hinting rule:
 	if shotgun is not loaded, try objhinting shotgun instead;
 	if player does not have maps, try objhinting spam instead;
 	if player is in Ghouls Slough, try objhinting maps instead;
-	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Emptiness Sepiments]from Emptiness Sepiments [end if]now." instead;
+	if player is not in Frost Forts, say "You should be able to go north [if player is not in Emptiness Sepiments]from Emptiness Sepiments [end if]now." instead;
 	if player is in Frost Forts:
 		if vowels are touchable, try objhinting vowels instead;
 		if wolves are touchable, try objhinting wolves instead;
-	all-say "I can't find anything more to do in the forest. This is probably a [bug-report]" instead;
+	say "I can't find anything more to do in the forest. This is probably a [bug-report]" instead;
 
 section metros
 
@@ -888,80 +888,80 @@ carry out objhinting tulip when tulip is in Esoteric Coteries: try objhinting ne
 this is the metros-hinting rule:
 	if player is in The Ol Hotel:
 		if night thing is in The Ol Hotel, try objhinting night thing instead;
-		if player has termite emitter, all-say "Your work in the ol['] hotel is done." instead;
-		all-say "Why not search the mattress? Something's in there." instead;
+		if player has termite emitter, say "Your work in the ol['] hotel is done." instead;
+		say "Why not search the mattress? Something's in there." instead;
 	if player is in Obtains Boastin Bastion:
 		if poses posse is touchable, try objhinting poses posse instead;
-		all-say "The only thing you need to do is to [if player does not have dry cake]get the dry cake and [end if]get out." instead;
+		say "The only thing you need to do is to [if player does not have dry cake]get the dry cake and [end if]get out." instead;
 	if player has heaths, try objhinting heaths instead;
 	if player has begonias, try objhinting begonias instead;
 	if player is in Undesired Underside:
 		if drainage is in Undesired Underside, try objhinting drainage instead;
-		if Fo Real Florae is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
-		if Bile Libe is not visited, all-say "You can go west from the camp to a library." instead;
-		if dry cake is in Obtains Boastin Bastion, all-say "You should try going [if Obtains Boastin Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
+		if Fo Real Florae is not visited, say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
+		if Bile Libe is not visited, say "You can go west from the camp to a library." instead;
+		if dry cake is in Obtains Boastin Bastion, say "You should try going [if Obtains Boastin Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Esoteric Coteries are not visited:
-			if keycard-put is true, all-say "Just go east." instead;
+			if keycard-put is true, say "Just go east." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			if player has brocade, try objhinting brocade instead;
 			if player has keycard:
-				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the friend finder." instead;
+				if barcode is part of the keycard, say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the friend finder." instead;
 				try objhinting keycard instead;
 			if player has barcode:
-				if dry cake is in Obtains Boastin Bastion, all-say "You need something to put the barcode on. Maybe check out [if bastion is visited]the Bastion[else]north of the Roarings Garrison[end if]." instead;
+				if dry cake is in Obtains Boastin Bastion, say "You need something to put the barcode on. Maybe check out [if bastion is visited]the Bastion[else]north of the Roarings Garrison[end if]." instead;
 			if player has dry cake, try objhinting dry cake instead;
-			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
-		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]Maybe check out the flower shop northeast[else if words are touchable or sword is touchable]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
-		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
+			say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
+		if nerds-unwelcome is true, say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]Maybe check out the flower shop northeast[else if words are touchable or sword is touchable]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
+		say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in Roarings Garrison:
-		if dry cake is in Obtains Boastin Bastion, all-say "You need to clear out the Bastion to the north to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
-		if clover is in camp, all-say "You can take the clover for later, or you can figure what it should be." instead;
-		if lost corn is in camp, all-say "The lost corn will be useful as something else." instead;
-		all-say "You've gotten everything you need here. There are no hidden puzzles." instead;
+		if dry cake is in Obtains Boastin Bastion, say "You need to clear out the Bastion to the north to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
+		if clover is in camp, say "You can take the clover for later, or you can figure what it should be." instead;
+		if lost corn is in camp, say "The lost corn will be useful as something else." instead;
+		say "You've gotten everything you need here. There are no hidden puzzles." instead;
 	if location of player is Fo Real Florae:
-		if player does not have brocade and barcode is off-stage, all-say "The brocade is free, whether or not you've helped the faeries. Why not take it?" instead;
+		if player does not have brocade and barcode is off-stage, say "The brocade is free, whether or not you've helped the faeries. Why not take it?" instead;
 		if fairy-worthy is false, try objhinting faeries instead;
 		if player has gardenia, try objhinting gardenia instead;
-		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, all-say "Take a flower. Either flower." instead;
-		if player has sheath or player has noise bag, all-say "You've transformed your flower[if words are not in Bile Libe], and you've gotten the words from the Bile Libe. So you're done here[else], but you need to use your new item in the Bile Libe[end if]." instead;
-		all-say "Take a flower. Either flower." instead;
+		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, say "Take a flower. Either flower." instead;
+		if player has sheath or player has noise bag, say "You've transformed your flower[if words are not in Bile Libe], and you've gotten the words from the Bile Libe. So you're done here[else], but you need to use your new item in the Bile Libe[end if]." instead;
+		say "Take a flower. Either flower." instead;
 	if player is in Bile Libe:
 		if motto is in Bile Libe, try objhinting motto instead;
-		if fairy-worthy is false, all-say "You need something from the flower shop to do any more here." instead;
-		if words are not in Bile Libe, all-say "You've done what you need here." instead;
+		if fairy-worthy is false, say "You need something from the flower shop to do any more here." instead;
+		if words are not in Bile Libe, say "You've done what you need here." instead;
 		if player has heaths, try objhinting heaths instead;
 		if player has sheath, try objhinting sheath instead;
 		if player has begonias, try objhinting begonias instead;
 		if player has noise bag, try objhinting noise bag instead;
-		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, all-say "Pick a reward from the faeries, then come back here." instead;
-		all-say "You don't have much to do here right now." instead;
+		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, say "Pick a reward from the faeries, then come back here." instead;
+		say "You don't have much to do here right now." instead;
 	if player is in Esoteric Coteries:
-		if player has lit up tulip, all-say "Nothing more to do here." instead;
+		if player has lit up tulip, say "Nothing more to do here." instead;
 		try objhinting nerds instead;
 	if player is in Elm Train Terminal or player is on cafe face:
-		if power-shut is true, all-say "You've done what you can here[if player does not have tulip]. You'll need a light source to go east across the rail[end if][if Esoteric Coteries are unvisited]. You haven't been behind the door east of the Underside, yet[end if]." instead;
-		if clover is in camp, all-say "You need something sticky to climb the cafe face. Go back to the camp." instead;
+		if power-shut is true, say "You've done what you can here[if player does not have tulip]. You'll need a light source to go east across the rail[end if][if Esoteric Coteries are unvisited]. You haven't been behind the door east of the Underside, yet[end if]." instead;
+		if clover is in camp, say "You need something sticky to climb the cafe face. Go back to the camp." instead;
 		if player has clover, try objhinting clover instead;
-		if player is not wearing Velcro and player is not on cafe face, all-say "You can [b]WEAR[r] the Velcro to climb the cafe face." instead;
+		if player is not wearing Velcro and player is not on cafe face, say "You can [b]WEAR[r] the Velcro to climb the cafe face." instead;
 		if neon pig is in Elm Train Terminal, try objhinting neon pig instead;
 		if controls are off-stage:
-			if bastion-evac is false, all-say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
+			if bastion-evac is false, say "You need to [if camp is unvisited]see someone up north[else]please the deadbeat[end if] to get an item to replace the neon pig in the opening." instead;
 			try objhinting lost corn instead;
 		if controls are not in gin nope opening, try objhinting gin nope opening instead;
-		all-say "You're done here. You can just go east [if tulip is in Esoteric Coteries]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
+		say "You're done here. You can just go east [if tulip is in Esoteric Coteries]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
 	if location of player is Bassy Abyss:
 		if stickyhanded is false, try objhinting siren instead;
 		if player has sword or player has sheath:
 			if beats are touchable, try objhinting beats instead;
-			all-say "[b]ATTACK BEAST[r]. You win." instead;
+			say "[b]ATTACK BEAST[r]. You win." instead;
 		if beats are touchable, try objhinting beats instead;
 		if player has noise bag, try objhinting noise bag instead;
-		all-say "[bug-report] I let you in with an item I should not have." instead;
+		say "[bug-report] I let you in with an item I should not have." instead;
 	if player is in Obtains Boastin Bastion:
-		if player has dry cake, all-say "You've got the cake. You can just leave." instead;
-		if player does not have emitter, all-say "There's something in the Ol['] Hotel that will upset the residents here, if you use it." instead;
+		if player has dry cake, say "You've got the cake. You can just leave." instead;
+		if player does not have emitter, say "There's something in the Ol['] Hotel that will upset the residents here, if you use it." instead;
 		try objhinting emitter instead;
-	all-say "[bug-report] I ran out of hints and should not have.";
+	say "[bug-report] I ran out of hints and should not have.";
 	the rule succeeds;
 
 section resort hinting
@@ -973,29 +973,29 @@ isle-clue is a truth state that varies.
 this is the resort-hinting rule:
 	if player is in Astral Altars, try objhinting tiles instead;
 	if player is in Leis Isle:
-		if cork is touchable or wings are touchable, all-say "You've found one way across the water, though you can [b]HINT[r] [if cork is off-stage][b]ROCK[r][else][b]SWING[r][end if] for another." instead;
+		if cork is touchable or wings are touchable, say "You've found one way across the water, though you can [b]HINT[r] [if cork is off-stage][b]ROCK[r][else][b]SWING[r][end if] for another." instead;
 		if isle-clue is false:
 			now isle-clue is true;
-			all-say "Either item lying around can help you across the water." instead;
+			say "Either item lying around can help you across the water." instead;
 		if rock-first is true and rock is touchable, try objhinting rock instead;
 		if swing is touchable, try objhinting swing instead;
-		all-say "You can just go east here now." instead;
+		say "You can just go east here now." instead;
 	if player is in Rived Drive:
 		if toeholds are in Rived Drive and poles are in Rived Drive, try objhinting poles instead;
 		if ropes are touchable and grips are touchable:
-			all-say "You can just go east now, up the slope." instead;
+			say "You can just go east now, up the slope." instead;
 		if spore is touchable, try objhinting spore instead;
 		if sprig is touchable, try objhinting sprig instead;
 		if poles are touchable, try objhinting poles instead;
-		all-say "You can just go east here[if toeholds are off-stage or ropes are off-stage or grips are off-stage], though you haven't gotten full points for Rived Drive yet[end if]." instead;
+		say "You can just go east here[if toeholds are off-stage or ropes are off-stage or grips are off-stage], though you haven't gotten full points for Rived Drive yet[end if]." instead;
 	if player is in Potshot Hotspot:
 		if riot is touchable, try objhinting riot instead;
 		if protest is touchable, try objhinting protest instead;
 		if potters are touchable and kilns are not touchable, try objhinting links instead;
 		if red bull burdell is touchable, try objhinting red bull burdell instead;
-		all-say "There is nothing more to do here except go east." instead;
+		say "There is nothing more to do here except go east." instead;
 	if player is in Means Manse, try objhinting X ITES exits instead;
-	all-say "Unhandled case. I need to fix this, so a transcript would be an enormous help." instead;
+	say "Unhandled case. I need to fix this, so a transcript would be an enormous help." instead;
 	the rule succeeds;
 
 ever-nerd-hint is a truth state that varies. ever-nerd-hint is usually false.
@@ -1004,72 +1004,72 @@ ingred-check is a truth state that varies. ingred-check is usually false.
 
 carry out objhinting oils when oils are in cask and player is not in moor: say "The oils need an foundation to pour them. But you're kind of inside right now." instead;
 
-carry out objhinting cask when sack is off-stage: all-say "[one of]The cask is versatile. Did you look at it? [plus][or]The tagged gadget gives it away. [plus][or]It is also a [b]SACK[r], which can carry different things. [minus][cycling]" instead;
+carry out objhinting cask when sack is off-stage: say "[one of]The cask is versatile. Did you look at it? [plus][or]The tagged gadget gives it away. [plus][or]It is also a [b]SACK[r], which can carry different things. [minus][cycling]" instead;
 
-carry out objhinting an ingredient: all-say "[The noun] can become part of a meal." instead;
+carry out objhinting an ingredient: say "[The noun] can become part of a meal." instead;
 
 this is the sortie-hinting rule:
 	if player is in Trap Part:
-		if numset of dial is 16, all-say "You don't need to do anything else here." instead;
+		if numset of dial is 16, say "You don't need to do anything else here." instead;
 		try objhinting dial instead;
 	if location of player is the nick, try objhinting great instead;
 	if taco is touchable, try objhinting taco instead;
 	if location of player is kitchen:
-		if player wears coat or player has taco, all-say "Your work in the kitchen is done[if moor is unvisited]. There's one location outside this underground area to find, and your coat should help you feel more comfortable there[end if]." instead;
+		if player wears coat or player has taco, say "Your work in the kitchen is done[if moor is unvisited]. There's one location outside this underground area to find, and your coat should help you feel more comfortable there[end if]." instead;
 		if ingred-check is false and taco is off-stage:
 			now ingred-check is true;
-			all-say "It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm." instead;
+			say "It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm." instead;
 		if number of touchable pregredients > 0:
 			repeat with pg running through kitchen-hint-list:
 				if pg is touchable, try objhinting pg instead;
-			all-say "OOPS bug. Pre-gredient was flagged as being in the kitchen, but it's not." instead;
-		all-say "You just need to combine ingredients you've already made and [b]PUT[r] them on each other." instead;
+			say "OOPS bug. Pre-gredient was flagged as being in the kitchen, but it's not." instead;
+		say "You just need to combine ingredients you've already made and [b]PUT[r] them on each other." instead;
 	if warts are touchable, try objhinting warts instead;
 	if roomroom is visited and sack is off-stage, try objhinting cask instead;
 	if player is in roomroom:
 		if hoses are in roomroom, try objhinting hoses instead;
 		if player does not have coat:
-			if kitchen is unvisited, all-say "If you're cold, look around a bit more. There's a room you haven't been to yet." instead;
-			if player does not have taco, all-say "You may want to go to the kitchen to prepare something." instead;
+			if kitchen is unvisited, say "If you're cold, look around a bit more. There's a room you haven't been to yet." instead;
+			if player does not have taco, say "You may want to go to the kitchen to prepare something." instead;
 			try objhinting taco;
 		if moor is not visited:
-			if r2 is prefigured, all-say "You are fully ready to go to the [b]MOOR[r] now, as you tried before." instead;
-			all-say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does.[plus][or]The [b]MOOR[r].[minus][cycling]" instead;
-		all-say "Nothing more to do here, other than pass between the moor and other rooms you may need to visit." instead;
+			if r2 is prefigured, say "You are fully ready to go to the [b]MOOR[r] now, as you tried before." instead;
+			say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does.[plus][or]The [b]MOOR[r].[minus][cycling]" instead;
+		say "Nothing more to do here, other than pass between the moor and other rooms you may need to visit." instead;
 	if player is in Stiller Trellis:
-		if roomroom is unvisited, all-say "You can still visit the room to the south." instead;
+		if roomroom is unvisited, say "You can still visit the room to the south." instead;
 		if crashing archings are in Stiller Trellis, say "You don't need to do anything more here. Or in Sacred Cedars." instead;
-		if scraped wall is not touchable, all-say "[if oils are in cask]You'll want to visit the moor with the oils[else]You'll probably have more to do to the east, now you opened the passage there[end if]." instead;
-		if moor is unvisited, all-say "You have visited everywhere here, but you can break away outside. There's one place you can zap to, but not from here." instead;
+		if scraped wall is not touchable, say "[if oils are in cask]You'll want to visit the moor with the oils[else]You'll probably have more to do to the east, now you opened the passage there[end if]." instead;
+		if moor is unvisited, say "You have visited everywhere here, but you can break away outside. There's one place you can zap to, but not from here." instead;
 		try objhinting scraped wall instead;
 	if player is in Sacred Cedars:
-		if caskfillings is 2, all-say "You have gotten all the oils you need here. Maybe you can pour them in the moor, again, with a different result." instead;
-		if oils are in cask, all-say "You can't pour the oils anywhere in this enclosed area. Try going back to the moor." instead;
-		if caskfillings is 0, all-say "[if sack is touchable]Once you change the sack to a cask, y[else if player does not have cask]Once you get a cask, y[else]Y[end if]ou can [b]FILL CASK[r] here, to start." instead;
-		if caskfillings is 1, all-say "You can refill the cask with oils." instead;
+		if caskfillings is 2, say "You have gotten all the oils you need here. Maybe you can pour them in the moor, again, with a different result." instead;
+		if oils are in cask, say "You can't pour the oils anywhere in this enclosed area. Try going back to the moor." instead;
+		if caskfillings is 0, say "[if sack is touchable]Once you change the sack to a cask, y[else if player does not have cask]Once you get a cask, y[else]Y[end if]ou can [b]FILL CASK[r] here, to start." instead;
+		if caskfillings is 1, say "You can refill the cask with oils." instead;
 	if player is in moor:
 		if anapest is touchable, try objhinting anapest instead;
 		if peasant is touchable, try objhinting peasant instead;
 		unless smilies are moot:
-			if poem is unexamined, all-say "You should read the poem the peasant gave you. It's not terrible, but it contains some things that don't belong in a poem." instead;
+			if poem is unexamined, say "You should read the poem the peasant gave you. It's not terrible, but it contains some things that don't belong in a poem." instead;
 			try objhinting smilies instead;
 		if soil is not touchable or silo is not touchable:
-			if Sacred Cedars is unvisited, all-say "You need to visit the room you opened east of the trellis first." instead;
-			if cask is moot, all-say "You need to change the sack into a cask to carry the oils from Sacred Cedars." instead;
-			if oils are not in cask, all-say "You need to fill the cask[if soil is in moor]. Yes, again[end if]." instead;
+			if Sacred Cedars is unvisited, say "You need to visit the room you opened east of the trellis first." instead;
+			if cask is moot, say "You need to change the sack into a cask to carry the oils from Sacred Cedars." instead;
+			if oils are not in cask, say "You need to fill the cask[if soil is in moor]. Yes, again[end if]." instead;
 			try objhinting oils;
 		if roadblock is touchable, try objhinting roadblock instead;
 		if black door is not part of the silo, try objhinting black door instead;
-		if missile is not in silo, all-say "You can PUT MISSILE IN SILO." instead;
+		if missile is not in silo, say "You can PUT MISSILE IN SILO." instead;
 		if poem is touchable:
-			if poem is folded, all-say "[one of]The plane is useless. What can it become?[plus][or]It can become a [b]PANEL[r].[minus][cycling]" instead;
+			if poem is folded, say "[one of]The plane is useless. What can it become?[plus][or]It can become a [b]PANEL[r].[minus][cycling]" instead;
 			try objhinting poem instead;
 		if panel is not part of the silo, try objhinting panel instead;
 		if hoots button is touchable, try objhinting hoots button instead;
 		if trees button is touchable, try objhinting trees button instead;
 		if steer button is touchable and missile-steered is false, try objhinting steer button instead;
 		if shoot button is touchable, try objhinting shoot button instead;
-	all-say "Oops. I did not account for this hint. This is a [bug-report], and you'll need to see the walkthrough.";
+	say "Oops. I did not account for this hint. This is a [bug-report], and you'll need to see the walkthrough.";
 	the rule succeeds;
 
 check hinting:
@@ -2321,16 +2321,16 @@ understand "rk" as angleing.
 understand "kn" as angleing.
 
 carry out angleing:
-	if phial is not touchable, all-say "[reject]" instead;
+	if phial is not touchable, say "[reject]" instead;
 	if phial is in cabinet:
 		if lube-asked is true:
 			try taking phail phial;
-			if player does not have phail phial, all-say "[bug-report] Please let me know how this happened." instead;
+			if player does not have phail phial, say "[bug-report] Please let me know how this happened." instead;
 		say "You'd need to get the phial from the cabinet first." instead;
-	if player does not have phail phial, all-say "[reject]" instead;
+	if player does not have phail phial, say "[reject]" instead;
 	if player is in sf or player is in rf:
 		if thorn is not touchable, say "There's a weird haze in each of the four directions--north, south, east and west. Perhaps something incorporeal is giving a clue." instead;
-	if player is in frost forts and wolves are in frost forts, all-say "You won't need the blue lube to inform you that the wolves need to be dealt with. Un-magically." instead;
+	if player is in frost forts and wolves are in frost forts, say "You won't need the blue lube to inform you that the wolves need to be dealt with. Un-magically." instead;
 	if player is in means manse, say "It's glowing all around here. The [x ites] are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here." instead;
 	say "You stare into the blue lube for a bit, then look around. ";
 	let ANG be the number of angleable things;
@@ -2406,7 +2406,7 @@ to h-check:
 	if the player's command matches "glean":
 		increment h-short;
 	if h-short > 4 and location of player is not Notices Section:
-		all-say "[line break]After this vision, you shake your head a bit on seeing yourself taking six foot-high letters labeled [b]ANGLE[r] and crumpling them into [b]AN[r]. Then you do the same for [b]GLEAN[r], which folds to [b]GL[r]. (Fourth wall time, to be clear--you can use four abbreviations, now.)";
+		say "[line break]After this vision, you shake your head a bit on seeing yourself taking six foot-high letters labeled [b]ANGLE[r] and crumpling them into [b]AN[r]. Then you do the same for [b]GLEAN[r], which folds to [b]GL[r]. (Fourth wall time, to be clear--you can use four abbreviations, now.)";
 		now h-short-told is true;
 		pad-rec "macros";
 
@@ -2669,7 +2669,7 @@ carry out fliptoing (this is the main flipping rule) :
 			if debug-scan is true and player has gadget, try scaning the-from entry;
 			now mything is the-from entry;
 			if ff is true:
-				all-say "Test flip: [from-msg entry][line break]";
+				say "Test flip: [from-msg entry][line break]";
 				the rule succeeds;
 			now got-yet is true;
 			say "[from-msg entry][line break]";
@@ -4089,89 +4089,89 @@ understand "glean" and "glea" and "glen" and "hanker" and "nk" and "kr" and "hnr
 
 this is the ordeal-glean rule:
 	if location of player is Notices Section:
-		if nametag is touchable, all-say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
-		if player does not have gadget, all-say "You see yourself taking the tagged gadget inside the cabinet." instead;
-		all-say "You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
+		if nametag is touchable, say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
+		if player does not have gadget, say "You see yourself taking the tagged gadget inside the cabinet." instead;
+		say "You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
 
 this is the stores-glean rule:
 	repeat with myp running through portals:
 		if myp is ogled lodge and not you-can-advance, next;
 		if myp is touchable, say "You see yourself exploring [the myp] you created." instead;
-	if store f is touchable, all-say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
-	if store i is touchable, all-say "You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch." instead;
-	if store m is touchable, all-say "You see yourself examining the map on store M. You hear a subway--or maybe just a busy city street." instead;
-	if number of solved regions < 3, all-say "You see yourself entering [the random touchable portal]." instead;
-	if store r is touchable, all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
-	all-say "You see yourself relaxing in a large home far from here." instead;
+	if store f is touchable, say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
+	if store i is touchable, say "You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch." instead;
+	if store m is touchable, say "You see yourself examining the map on store M. You hear a subway--or maybe just a busy city street." instead;
+	if number of solved regions < 3, say "You see yourself entering [the random touchable portal]." instead;
+	if store r is touchable, say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
+	say "You see yourself relaxing in a large home far from here." instead;
 
 this is the forest-glean rule:
-	if Self ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
-	if Emptiness Sepiments is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
-	if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
-	if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
-	if spread is in Emptiness Sepiments, all-say "You see the spread fluttering as if outside an open window." instead;
-	if red asp is in Emptiness Sepiments, all-say "You see a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
-	if drapes are in Emptiness Sepiments, all-say "You see yourself slashing at the drapes, which billow out." instead;
-	if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
-	if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Emptiness Sepiments]red asp[else]spread[end if] [if player is not in Emptiness Sepiments]in Emptiness Sepiments [end if]into something easier to cut with the sliver." instead;
-	unless silver is moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
+	if Self ID Fields is unvisited, say "You see yourself considering all four compass directions before picking the right one." instead;
+	if Emptiness Sepiments is unvisited, say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
+	if livers are off-stage, say "You see the liches working their way under the meats, which fall into the grinder." instead;
+	if sliver is off-stage, say "You see the livers narrowing to a sharp, semi-metallic point." instead;
+	if spread is in Emptiness Sepiments, say "You see the spread fluttering as if outside an open window." instead;
+	if red asp is in Emptiness Sepiments, say "You see a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
+	if drapes are in Emptiness Sepiments, say "You see yourself slashing at the drapes, which billow out." instead;
+	if shotgun is off-stage, say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
+	if drapes are off-stage, say "You see yourself changing the [if red asp is in Emptiness Sepiments]red asp[else]spread[end if] [if player is not in Emptiness Sepiments]in Emptiness Sepiments [end if]into something easier to cut with the sliver." instead;
+	unless silver is moot, say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
 	if Frost Forts is unvisited:
-		if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
+		if player has spam or player has maps, say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
 	if location of player is Frost Forts:
-		if vowels are in Frost Forts, all-say "You see the vowels grow slavering teeth." instead;
-		all-say "A loud blast, then gore splatters everywhere." instead;
+		if vowels are in Frost Forts, say "You see the vowels grow slavering teeth." instead;
+		say "A loud blast, then gore splatters everywhere." instead;
 
 to say in-here of (rm - a room): say "[if player is in rm]here[else]in [rm][end if]"
 
 this is the sortie-glean rule:
-	if centrifuge-stopped is false, all-say "You see yourself flipping the dial back and forth about six or seven times[sortie-end]." instead;
-	if the nick is unvisited, all-say "Things look hazy. You find yourself in a cell, which is a bit scary, but you can't stay here." instead;
-	if player is in the nick, all-say "You see yourself patting your stomach." instead;
-	if warts are part of the player, all-say "You see your face clear again, pleased you reversed the warts." instead;
-	if taco is off-stage and coat is off-stage, all-say "You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes." instead;
-	if hoses are touchable, all-say "You see yourself smiling at your feet with pride!" instead;
-	if moor is unvisited, all-say "You see yourself [if player is not in roomroom]going to the southeast room and [end if]disappearing!" instead;
-	if anapest is in moor, all-say "You see a rough but friendly fellow scaring Pat away." instead;
-	if hay is not part of scraped wall, all-say "You see yourself filling up [if stiller trellis is visited]the wall [in-here of Stiller Trellis][else]a wall you don't recognize yet[end if] then making it disappear." instead;
-	if scraped wall is not moot, all-say "You see the haywall vanishing." instead;
-	if silo is not in moor, all-say "You see yourself building a huge structure [if player is not in moor]in the moor [end if]without saying anything." instead;
-	if black door is not part of the silo or panel is not part of the silo or missile is not in silo, all-say "You see yourself assembling the silo further." instead;
-	if hoots button is touchable or trees button is touchable, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
-	all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
+	if centrifuge-stopped is false, say "You see yourself flipping the dial back and forth about six or seven times[sortie-end]." instead;
+	if the nick is unvisited, say "Things look hazy. You find yourself in a cell, which is a bit scary, but you can't stay here." instead;
+	if player is in the nick, say "You see yourself patting your stomach." instead;
+	if warts are part of the player, say "You see your face clear again, pleased you reversed the warts." instead;
+	if taco is off-stage and coat is off-stage, say "You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes." instead;
+	if hoses are touchable, say "You see yourself smiling at your feet with pride!" instead;
+	if moor is unvisited, say "You see yourself [if player is not in roomroom]going to the southeast room and [end if]disappearing!" instead;
+	if anapest is in moor, say "You see a rough but friendly fellow scaring Pat away." instead;
+	if hay is not part of scraped wall, say "You see yourself filling up [if stiller trellis is visited]the wall [in-here of Stiller Trellis][else]a wall you don't recognize yet[end if] then making it disappear." instead;
+	if scraped wall is not moot, say "You see the haywall vanishing." instead;
+	if silo is not in moor, say "You see yourself building a huge structure [if player is not in moor]in the moor [end if]without saying anything." instead;
+	if black door is not part of the silo or panel is not part of the silo or missile is not in silo, say "You see yourself assembling the silo further." instead;
+	if hoots button is touchable or trees button is touchable, say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
+	say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
 
 this is the metros-glean rule:
-	if night thing is in The Ol Hotel, all-say "You see yourself giving something reddish to [if The Ol Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
-	if dry cake is in Obtains Boastin Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
-	if brocade is in Florae, all-say "You see yourself taking a free sample of some cloth." instead;
-	if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
-	if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
-	if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, all-say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
+	if night thing is in The Ol Hotel, say "You see yourself giving something reddish to [if The Ol Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
+	if dry cake is in Obtains Boastin Bastion, say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
+	if brocade is in Florae, say "You see yourself taking a free sample of some cloth." instead;
+	if player has heaths, say "You see a weapon at your side, as if tied to a belt." instead;
+	if player has begonias, say "You are holding a bag with one hand and plugging an ear with another." instead;
+	if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
 	if Esoteric Coteries are unvisited:
 		d "dry cake: [location of dry cake].";
 		d "keycard: [location of keycard].";
-		all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the friend finder [in-here of Underside][if barcode is not part of keycard]. Nothing works until you put them together[end if]." instead;
+		say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the friend finder [in-here of Underside][if barcode is not part of keycard]. Nothing works until you put them together[end if]." instead;
 	if player does not have tulip:
-		if player has noise bag or player has begonias, all-say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
-		if termite emitter is angstgnatted, all-say "You see yourself opening the termite emitter so it swarms over the nerds." instead;
-		all-say "You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd." instead;
-	if player is not in Bassy Abyss, all-say "You see yourself (finally) walking east from Elm Train Terminal now that you have a light source." instead;
-	if siren is touchable, all-say "You see yourself pounding the siren, then clapping your hands and creating a swarm of dust." instead;
-	if beats are touchable, all-say "You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your [if player has noise bag]noise bag[else]sheath[end if], and the monster collapses before you touch it." instead;
-	if sword is touchable, all-say "A quick swordfight, and the beast is vanquished!" instead;
-	all-say "Words morph into a sword that overpowers the beast." instead;
+		if player has noise bag or player has begonias, say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
+		if termite emitter is angstgnatted, say "You see yourself opening the termite emitter so it swarms over the nerds." instead;
+		say "You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd." instead;
+	if player is not in Bassy Abyss, say "You see yourself (finally) walking east from Elm Train Terminal now that you have a light source." instead;
+	if siren is touchable, say "You see yourself pounding the siren, then clapping your hands and creating a swarm of dust." instead;
+	if beats are touchable, say "You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your [if player has noise bag]noise bag[else]sheath[end if], and the monster collapses before you touch it." instead;
+	if sword is touchable, say "A quick swordfight, and the beast is vanquished!" instead;
+	say "Words morph into a sword that overpowers the beast." instead;
 
 this is the resort-glean rule:
-	if player is in Astral Altars, all-say "You watch as the tiles shrink from a large land mass to a smaller one." instead;
-	if player is in Leis Isle, all-say "You see yourself either swimming or flying east[if cork is off-stage and wings are off-stage], but not without proper gear[end if]." instead;
+	if player is in Astral Altars, say "You watch as the tiles shrink from a large land mass to a smaller one." instead;
+	if player is in Leis Isle, say "You see yourself either swimming or flying east[if cork is off-stage and wings are off-stage], but not without proper gear[end if]." instead;
 	if player is in Rived Drive:
-		if poles are in Rived Drive, all-say "You see the poles to the east bend at an angle." instead;
-		if toeholds are touchable or (ropes are touchable and grips are touchable), all-say "You see yourself climbing east without much trouble." instead;
-		all-say "You see two visions: one, [if tool shed is not in Rived Drive]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in Rived Drive]sprig, modified[else]grips[end if] and the [if spore is in Rived Drive]spore, modified[else]ropes[end if]. In each, you climb east." instead;
+		if poles are in Rived Drive, say "You see the poles to the east bend at an angle." instead;
+		if toeholds are touchable or (ropes are touchable and grips are touchable), say "You see yourself climbing east without much trouble." instead;
+		say "You see two visions: one, [if tool shed is not in Rived Drive]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in Rived Drive]sprig, modified[else]grips[end if] and the [if spore is in Rived Drive]spore, modified[else]ropes[end if]. In each, you climb east." instead;
 	if player is in Potshot Hotspot:
-		if red bull burdell is touchable, all-say "You see yourself somehow managing to defeat Red Bull Burdell while still on the ground." instead;
-		if red bull burdell is moot, all-say "You see yourself walking east." instead;
-		all-say "You see the [if riot is in Potshot Hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
-	if player is in Means Manse, all-say "You ... well, you see lots of possibilities. Just sitting around, avoiding the exits, or making the Means Manse feel more like home." instead;
+		if red bull burdell is touchable, say "You see yourself somehow managing to defeat Red Bull Burdell while still on the ground." instead;
+		if red bull burdell is moot, say "You see yourself walking east." instead;
+		say "You see the [if riot is in Potshot Hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
+	if player is in Means Manse, say "You ... well, you see lots of possibilities. Just sitting around, avoiding the exits, or making the Means Manse feel more like home." instead;
 
 carry out gleaning:
 	if phial is not touchable, say "[reject]" instead;
@@ -4179,13 +4179,13 @@ carry out gleaning:
 		if lube-asked is true:
 			say "(taking the phial first)[paragraph break]";
 			try taking phail phial;
-			if player does not have phail phial, all-say "[bug-report] Please let me know how this happened." instead;
+			if player does not have phail phial, say "[bug-report] Please let me know how this happened." instead;
 		else:
-			all-say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe [if gateman is off-stage]find someone to ask[else]ask the gateman[end if]." instead;
-	if blue lube is not touchable, all-say "[reject]" instead;
-	all-say "You stare into the blue lube for a bit. You see a small story unfold.[line break]";
+			say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe [if gateman is off-stage]find someone to ask[else]ask the gateman[end if]." instead;
+	if blue lube is not touchable, say "[reject]" instead;
+	say "You stare into the blue lube for a bit. You see a small story unfold.[line break]";
 	abide by glean-rule of mrlp;
-	all-say "BUG. The current game state needs a story.";
+	say "BUG. The current game state needs a story.";
 	the rule succeeds;
 
 report gleaning (this is the angle-glean check rule):
@@ -9534,7 +9534,7 @@ after reading a command:
 					now ignore-transcript-nag is true;
 		if helpdebugflag is true and hintfull is false:
 			now just-print is false;
-			all-say "[the player's command]";
+			say "[the player's command]";
 			now just-print is true;
 		reject the player's command;
 	abide by the punctuation-munge rule;

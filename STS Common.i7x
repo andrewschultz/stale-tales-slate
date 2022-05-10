@@ -602,13 +602,12 @@ check objhinting:
 	now minus-after is false;
 
 to say plus:
-	say "[run paragraph on] (+)";
-	skip upcoming rulebook break;
+	say "[run paragraph on] (+)[paragraph break]";
 	now plus-after is true;
 
 to say minus:
 	if prevent-thruhint-flag is false, now cur-item is thruhinted;
-	say "[run paragraph on] (-)";
+	say "[run paragraph on] (-)[paragraph break]";
 	now minus-after is true;
 
 report objhinting:
