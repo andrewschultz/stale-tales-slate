@@ -3276,11 +3276,11 @@ to decide whether (tn - a table name) is hash-found:
 	repeat through tn:
 		if there is no hashval entry, next;
 		if cmdhash is 0, next;
-		if cmdhash is not hashval entry and firstwordhash is not hashval entry, next;
 		if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
 			say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that[if concisions are not moot]--though in the future, it does give a bonus point, for a special but odd word[end if].";
 			now doublewarn is true;
 			decide yes;
+		if cmdhash is not hashval entry and firstwordhash is not hashval entry, next;
 		if there is a this-item entry:
 			if this-item entry is touchable:
 				if this-item entry is a pickup-line and this-item entry is not playable: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
@@ -3384,7 +3384,7 @@ to say reject:
 						if firstwordhash is the hashkey entry:
 							say "[line break](In particular, your first word was on the right track.)[line break]";
 						else:
-							say "[line break](Small note: perhaps just the first word may work.You generally don't need a second word to slove a puzzle.)[line break]";
+							say "[line break](Small note: perhaps just the first word may work. You generally don't need a second word to solvve a puzzle.)[line break]";
 				continue the action;
 	if roomnud of location of player is hash-found, continue the action;
 	if regnud of mrlp is hash-found, continue the action;
@@ -8141,7 +8141,7 @@ social-quip	"You complain about social forces in general. More downers than wond
 girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend finder or lovers solver found the woman for Elmo. He looks happier for having complained, though."
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
-artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. There's new ones out there. Solve a couple, and maybe you can get through things a bit quicker.'"
+artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. There's new ones out there. Solve a couple, and allies might drop off a little something to help you get through quicker. If you want or need it, of course.'"
 leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-me-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break][porter] pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end PORTER text]
 
 to say urbfogel: say "Blue Frog Urbfogel, Bugler of Foulberg"
@@ -17555,7 +17555,7 @@ the pest accrual is auxiliary cluey scenery. "Eww! Maybe they're good for nature
 
 a-text of pest accrual is "RRYRRYRYRYR". b-text of pest accrual is "RRYRRYPYRGR". parse-text of pest accrual is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]C[sp]-[sp]x[sp]A[sp]x".
 
-the c-p is privately-named auxiliary cluey scenery. printed name of c-p is "cactus pearl.". "You're pretty sure it's not a pearl cactus. That'd be bigger."
+the c-p is privately-named auxiliary cluey scenery. printed name of c-p is "cactus pearl". "You're pretty sure it's not a pearl cactus. That'd be bigger."
 
 a-text of c-p is "RRYRRYRYRYR". b-text of c-p is "RRYRRYRYRYR". parse-text of c-p is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
 
@@ -18726,8 +18726,6 @@ understand "sample maple" and "maple" as sample maples.
 chapter OPEN puzzle
 
 rule for supplying a missing noun when opening:
-	say "1.";
-	say "2.";
 	if player is in disowned downside and Neon Pope is in disowned downside:
 		try fliptoing Pen O Nope instead;
 
@@ -22022,9 +22020,10 @@ carry out objhinting (this is the pick object to hint rule) :
 		else if noun is prefigured-spoiled:
 			ital-say "these hints may lead you to something you already guessed and wrote in your notepad.";
 		all-say "[advice-entry entry]" instead;
-	if there is hint-entry of noun in table of general hintobjs:
-		choose row with hint-entry of noun in table of general hintobjs;
-		all-say "[advice-entry entry]" instead;
+	repeat through table of general hintobjs:
+		if hint-entry entry is noun:
+			if there is an advice-entry entry, all-say "[advice-entry entry]" instead;
+			if there is a parallel-entry entry, try objhinting parallel-entry entry instead;
 	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
 definition: a thing (called th) is prefigured-spoiled:

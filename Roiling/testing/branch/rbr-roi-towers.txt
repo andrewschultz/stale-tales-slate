@@ -1225,16 +1225,21 @@ There are two unblocked exits: south to Topside Deposit and west.
 >score
 {$SCOS}
 
+@nud
+>w
+#ttc-table-of-outer-route-nudges-sway
+>swya
+You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful, though there is a bonus point for going in a "wrong" direction.
+\\
+>undo
+>undo
+
 @verbs
 >w
 #ttc-table-of-towers-nowheres-outer-route
 >w
 You get lost in the sway-ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
-#+ttc-table-of-outer-route-nudges-sway
->swya
-You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful, though there is a bonus point for going in a "wrong" direction.
 \\
->undo
 >undo
 >undo
 \\
@@ -2996,11 +3001,11 @@ You can't change the gadflies. There are too many.
 >gonear shaven havens
 #ttc-table-of-towers-nowheres-shaven-havens
 >e
-You wander off, but you hear hikers shreik "Shrike! Shrike!"
+You wander off, but you hear hikers shriek "Shrike! Shrike!"
 Any direction but back south might drive you too far from the palace.
 \\
 >e
-!You wander off, but you hear hikers shreik "Shrike! Shrike!"
+!You wander off, but you hear hikers shriek "Shrike! Shrike!"
 Any direction but back south might drive you too far from the palace.
 >undo
 >undo

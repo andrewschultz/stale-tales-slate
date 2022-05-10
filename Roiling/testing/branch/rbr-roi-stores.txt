@@ -754,12 +754,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a de
 >read store h
 The warning in bright red says:
 All who enter here risk exclusion. Closed for having a truly frightening red HOSTER. There's more.
-#ttc-table-of-stores-readables-store-h
+#+ttc-table-of-stores-readables-store-h
 >read store h
 The warning in bright red says:
 All who enter here risk exclusion. Closed for having a truly frightening red HOSTER. Trespassers will be, er, shot
 It's signed in red, too.
-#ttc-table-of-stores-readables-store-h
+#+ttc-table-of-stores-readables-store-h
 >read store h
 The warning in bright red says:
 All who enter here risk exclusion. Closed for having a truly frightening red HOSTER. Trespassers will be, er, shot

@@ -554,6 +554,14 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
 
+>w
+#ttc-table-of-outer-route-nudges-sway
+>swya
+You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful, though there is a bonus point for going in a "wrong" direction.
+
+>undo
+>undo
+
 #ttc-table-of-towers-spechelp-snider-diners
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.

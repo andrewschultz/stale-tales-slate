@@ -253,7 +253,7 @@ But the net would still block you.
 Well, if you want points for that, you'll need to go back to the study.
 #testcase-mistake-roiling-sitar
 >sitar
-You don't need music right now. A way to get around would be better.
+Surely easy transport is more handy right now than music.
 >undo
 >undo
 >undo

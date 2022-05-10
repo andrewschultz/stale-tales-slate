@@ -331,7 +331,7 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 "The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald."
 
 >3
-/^Strip of Profits
+/^Carven Cavern
 
 * detail-elmo-chat
 
@@ -791,7 +791,7 @@ DEBUG INFO: current quip = trips-quip.
 DEBUG INFO: current quip = artsy-quip.
 "Where do I look? Is there a bare min--uh, most efficient way through?"
 
-"Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
+"Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. There's new ones out there. Solve a couple, and allies might drop off a little something to help you get through quicker. If you want or need it, of course."
 
 [1] Poss. Clue? Closeups?
 [2] Jumbo, um, job. Six of 'em? Some fix!
@@ -1092,7 +1092,7 @@ by one point
 >deeply
 >play whistle
 
-/^Strip of Profits
+Congratulations! You made it through. There's a lot of meta-stuff you may find interesting listed below.
 
 * detail-gretta-chat-special-case
 
