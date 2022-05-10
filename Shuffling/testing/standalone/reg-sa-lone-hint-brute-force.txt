@@ -1,0 +1,40 @@
+# reg-roi-hint-brute-force.txt
+# tests the hints exhaustively especially the +/+/- clues for obvious errors
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
+
+* hint_brute_force_sa
+
+>au 2
+
+>hreg
+We are brute-forcing our way through the hints for table of ordeal loader hintobjs.
+!never got to a minus
+
+>ts
+>hreg
+We are brute-forcing our way through the hints for table of general hintobjs.
+We are brute-forcing our way through the hints for table of stores hintobjs.
+!never got to a minus
+
+>gonear flesh shelf
+>hreg
+We are brute-forcing our way through the hints for table of forest hintobjs.
+!never got to a minus
+
+>gonear stiller trellis
+>hreg
+We are brute-forcing our way through the hints for table of sortie hintobjs.
+!never got to a minus
+
+>gonear bile libe
+>hreg
+We are brute-forcing our way through the hints for table of metros hintobjs.
+!never got to a minus
+
+>gonear astral altars
+>hreg
+We are brute-forcing our way through the hints for table of resort hintobjs.
+!never got to a minus

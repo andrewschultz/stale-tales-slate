@@ -1,0 +1,57 @@
+# reg-roi-hint-brute-force.txt
+# tests the hints exhaustively especially the +/+/- clues for obvious errors
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+** checkclass: /home/andrew/prt/extracc.py
+
+* hint_brute_force_roi
+
+>hreg
+We are brute-forcing our way through the hints for table of ordeal reload hintobjs.
+
+>ts
+>hreg
+We are brute-forcing our way through the hints for table of general hintobjs.
+We are brute-forcing our way through the hints for table of stores hintobjs.
+!never got to a minus
+
+>gonear same mesa
+>hreg
+We are brute-forcing our way through the hints for table of routes hintobjs.
+!never got to a minus
+
+>gonear loather rathole
+>hreg
+We are brute-forcing our way through the hints for table of troves hintobjs.
+!never got to a minus
+
+>gonear grey gyre
+>hreg
+We are brute-forcing our way through the hints for table of presto hintobjs.
+!never got to a minus
+
+>gonear posh hops shop
+>hreg
+We are brute-forcing our way through the hints for table of oyster hintobjs.
+!never got to a minus
+
+>gonear loftier trefoil
+>hreg
+We are brute-forcing our way through the hints for table of towers hintobjs.
+!never got to a minus
+
+>gonear minded midden
+>hreg
+We are brute-forcing our way through the hints for table of otters hintobjs.
+!never got to a minus
+
+>gonear rustic citrus
+>hreg
+We are brute-forcing our way through the hints for table of others hintobjs.
+!never got to a minus
+
+>gonear peek keep
+>hreg
+We are brute-forcing our way through the hints for table of demo dome hintobjs.
+!never got to a minus
