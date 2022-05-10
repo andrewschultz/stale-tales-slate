@@ -115,9 +115,9 @@ every turn (this is the haha-debug rule):
 		if helpdebugflag is true:
 			let temp-haha be just-print;
 			now just-print is false;
-			all-say "DEBUG: GLEAN = [run paragraph on]"; [bold-ok]
+			say "DEBUG: GLEAN = [run paragraph on]"; [bold-ok]
 			try gleaning;
-			all-say "DEBUG: ANGLE = [run paragraph on]"; [bold-ok]
+			say "DEBUG: ANGLE = [run paragraph on]"; [bold-ok]
 			try angleing;
 			now just-print is temp-haha;
 

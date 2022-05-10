@@ -674,17 +674,6 @@ carry out mainhelping:
 	say "[bug-report] Bug text. Should not appear.";
 	the rule succeeds;
 
-to all-say (a - indexed text):
-	if just-print is true:
-		say "[a][line break]";
-		continue the action;
-	if helpdebugflag is true:
-		append "[the player's command]: [a][line break]" to the file of gamehints;
-	if hintfull is true:
-		say "[if hintfull is true]THIS MOVE'S HINT: [end if][a][if hintfull is true] (turn full hints off with HF)[end if][line break]"; [bold-ok]
-	[else:
-		say "[word number 1 in a] [word number 2 in a] [number of words in a] [number of characters in a].[line break]";]
-
 outline-print is a truth state that varies. outline-print is usually true.
 
 coe-clue is a truth state that varies. coe-clue is usually false.

@@ -227,22 +227,6 @@ carry out caping:
 	say "Capped all random table entries at [number understood].";
 	the rule succeeds;
 
-chapter hfiing
-
-[* HF allows you to export hints to roilhints.glksave ]
-
-hfiing is an action applying to nothing.
-
-understand the command "hfi" as something new.
-
-understand "hfi" as hfiing.
-
-carry out hfiing:
-	now hint-to-file is whether or not hint-to-file is false;
-	say "Hint to file is now on. Exported to [gm-short]. This is largely deprecated with HF, which displays full hints each move.";
-	append "==================[if hint-to-file is true]start[else]end[end if]ing hint debug session[paragraph break]" to the file of gamehints;
-	the rule succeeds;
-
 chapter hintalling
 
 [* HINTALL detects which items still need hinting]

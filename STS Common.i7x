@@ -241,8 +241,6 @@ section debug variables that need to be in release
 
 hintfull is a truth state that varies. hintfull is usually false.
 
-hint-to-file is a truth state that varies.
-
 part thingdefs
 
 a thing can be examined or unexamined. a thing is usually unexamined.
