@@ -408,6 +408,12 @@ chapter Roarings Garrison
 
 understand "isonome" as a mistake ("The noisome Moonies pretend to be all about nature, but as for actually understanding science? Pfft.") when player is in Roarings Garrison.
 
+understand "redesign" as a mistake ("Even though the deadbeat loves changing styles regularly, you're probably not, like, cosmically in-tune enough to redesign the reedings to the deadbeat's tastes.") when player is in roarings garrison.
+
+understand "resigned" as a mistake ("You wonder if you should imitate the deadbeat's apathy, but it'd take actual work to get things right.") when player is in roarings garrison.
+
+understand "resinged" as a mistake ("The reedings haven't been burnt in the first place, though maybe they should have been.") when player is in roarings garrison.
+
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they [if cafe-climbed is true]stuck really well on the cafe face[else]could stick really well on the right surface[end if].") when player has Velcro.
 
 understand "stent" as a mistake ("Medical procedures aren't necessary here. The noise is too distracting anyway.") when player is in Roarings Garrison.

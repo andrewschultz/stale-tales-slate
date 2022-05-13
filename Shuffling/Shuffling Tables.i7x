@@ -55,7 +55,7 @@ this is the pre-nametag-gateman rule:
 		say "[reject]" instead;
 	if Notices Section is unvisited:
 		say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.";
-		preef gateman;
+		preef-l gateman;
 		the rule succeeds;
 	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
 	if player wears the nametag:
@@ -99,12 +99,12 @@ this is the pre-storer-resort rule:
 	if you-can-advance, continue the action;
 	if store r is touchable:
 		say "That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.";
-		preef ogled lodge instead;
+		preef-l ogled lodge instead;
 
 this is the pre-cabinet-bactine rule: [ic]
 	if Trips Strip is unvisited:
 		say "[if gateman is off-stage]That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.[else]'Hey, that's a good idea,' says the gateman. 'The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work.' He pauses. 'Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox.'[end if]";
-		preef tenibac;
+		preef-l tenibac;
 		now cabinet-flip-try is true;
 		the rule fails;
 
@@ -155,7 +155,7 @@ to say process-sandwich:
 this is the pre-sliver-silver rule:
 	unless drapes are moot:
 		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
-		preef silver;
+		preef-l silver;
 		do nothing instead;
 
 this is the post-liches-chisel rule:
@@ -239,13 +239,15 @@ this is the post-hoses-shoes rule:
 this is the pre-room-moor rule: [(this is the sortie gadget checkpoint rule as well)]
 	unless shoes are moot:
 		say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
-		preef r2 instead;
+		skip upcoming rulebook break;
+		preef-l r2 instead;
 	if player carries coat and player is not wearing coat:
 		say "(wearing the coat first)[line break]";
 		now player wears the coat;
 	if player is not wearing coat:
 		say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
-		preef r2 instead;
+		skip upcoming rulebook break;
+		preef-l r2 instead;
 	if moor is unvisited:
 		if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
 			now sortie-warn is true;
@@ -288,13 +290,13 @@ this is the pre-smilies-missile rule:
 	if smilies are touchable:
 		if player is not in moor:
 			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
-			preef missile;
+			preef-l missile;
 			do nothing instead;
 
 this is the pre-haywall-hallway rule:
 	if scraped wall is not hayfilled:
 		say "Hm, that's possible, but you can't make the hallway until you add something to the wall.";
-		preef hallway;
+		preef-l hallway;
 		do nothing instead;
 
 this is the pre-oils-silo rule:
@@ -308,11 +310,12 @@ this is the pre-oils-silo rule:
 		continue the action;
 	if player is not in moor:
 		say "This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?";
-		preef silo;
+		preef-l silo;
 		do nothing instead;
 	if soil is not in moor:
-		preef silo;
-		say "The moor's ground, as is, is not stable enough. You need a foundation first." instead;
+		say "The moor's ground, as is, is not stable enough. You need a foundation first.";
+		preef-l silo;
+		do nothing instead;
 
 this is the post-oils-silo rule:
 	now oils are in Sacred Cedars;
@@ -322,17 +325,19 @@ this is the post-oils-silo rule:
 this is the pre-oils-soil rule:
 	if oils are not in cask:
 		if location of player is Sacred Cedars:
-			say "[ilb-later][if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a place that could use soil, though[end if].";
+			say "[ilb-later][if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a place that could use soil, though[end if].[no line break]";
 			preef-l soil;
 			do nothing instead;
 		if oils are touchable:
 			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type [b]UNDO[r] and send a transcript of what you did.";
 	else if player is not in moor:
 		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
-		preef soil;
+		preef-l soil;
 		do nothing instead;
+	skip upcoming rulebook break;
 
 this is the post-oils-soil rule:
+	skip upcoming rulebook break;
 	now oils are in Sacred Cedars;
 
 this is the post-hoots-shoot rule:
@@ -396,7 +401,7 @@ this is the pre-brocade-barcode rule:
 this is the pre-drycake-keycard rule:
 	if bastion-evac is false and dry cake is touchable:
 		say "[one of]The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
-		preef keycard;
+		preef-l keycard;
 		do nothing instead;
 
 this is the post-antlers-rentals rule:
@@ -415,11 +420,11 @@ this is the pre-beats-beast rule:
 			say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.";
 		else:
 			say "Why bring the beats in here, where it's quiet?";
-		preef beast;
+		preef-l beast;
 		the rule fails;
 	if siren is not moot or sword is not touchable:
 		say "You don't feel prepared to face a beast yet.";
-		preef beast;
+		preef-l beast;
 		the rule fails;
 
 this is the pre-words-sword rule:
@@ -427,10 +432,10 @@ this is the pre-words-sword rule:
 		if player does not have sheath:
 			if player has noise bag:
 				say "The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.[paragraph break]It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just [b]OPEN[r] it, though, being a noise bag.";
-				preef sword;
+				preef-l sword;
 				the rule fails;
 			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";
-			preef sword;
+			preef-l sword;
 			the rule fails;
 		continue the action;
 	if player is not in Bassy Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
@@ -861,7 +866,7 @@ roadsign	"The road sign gives a clue as to the nature of Store F."
 store i	"[one of]The outline of a trap door is what you need to get to. what word is a synonym for exit and missile launch?[plus][or]The small poem has red writing which will clear which letters don't fit where.[plus][or]You can also use both settings of the gadget to get four letter placements.[plus][or]You need to create a [b]SORTIE[r].[minus][cycling]"
 store m	"[one of]Examining the map, it is of Mt. Rose. Which is an anagram for Store M. It looks like you need to get to a subway station or something.[plus][or][if gadget is cert]The gadget tells you M----- if you scan both the store and the map of Mt. Rose[else if gadget is rect]M----S is only so helpful here, but remember a city and its transport system are being portrayed[else]A city and its transport system are being portrayed[end if].[plus][or]You need to discover the [b]METROS[r].[minus][cycling]"[bold-ok]
 subway map	"The subway map gives a hint as to what Store M can be."
-store r	"[if you-can-advance][one of]You need to get into store R.[plus][or]The roster provides a hint. Where's a place you can rest?[plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word.[plus][or]You want to go to a [b]RESORT[r].[minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r][end if]."
+store r	"[if you-can-advance][one of]You need to get into store R.[plus][or]The roster provides a hint. Where's a place you can rest?[plus][or]Certifying or Rectifying tells the first letter, R, and the next is very likely a vowel, or you get a garbage word.[plus][or]You want to go to a [b]RESORT[r].[minus][cycling][else]You won't need to get into store R until you've solved another area, at least. But you [got-r].[end if]"
 roster	"The roster is a bit more of a clue for Store R. If you [b]CERTIFY[r] it, it will make things a bit clearer."
 scented descent	"Just enter [the noun]."
 posted depots	"Just enter [the noun]."
@@ -992,7 +997,7 @@ missile	"[if silo is off-stage]You have nowhere to put the missile, yet[else if 
 spout	"[if caskfillings is 2]You've gotten all the oil you need[else if caskfillings is 1]You may be able to get more oils[else]you can [b]POUR OILS[r] into the cask from the spout[end if]."
 soil	"[if silo is off-stage]The soil is a good foundation for a structure[else]You've built a structure on the  soil[end if]."
 Woeful Pat	"Pat's poetry is useless, but its beat isn't."
-peasant	"[one of]The peasant has a bunch of hay he doesn't want. Mean Old Mondale-Doleman said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw[if straw is not touchable] back in [location of straw][end if]. [if sack is off-stage]It won't fit into a cask, but maybe it'll fit into a similar, or similary-spelled, container[else]It can fit in the sack[end if].[plus][or]GIVE STRAW TO PEASANT[if straw is not in sack], once you can transport the straw[end if].[minus][cycling]"
+peasant	"[one of]The peasant has a bunch of hay he doesn't want. Mean Old Mondale-Doleman said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw[if straw is not touchable] back in [location of straw][end if]. [if sack is off-stage]It won't fit into a cask, but maybe it'll fit into a similar, or similarly-spelled, container[else]It can fit in the sack[end if].[plus][or]GIVE STRAW TO PEASANT[if straw is not in sack], once you can transport the straw[end if].[minus][cycling]"
 black door	"[if silo is not touchable]You probably need to build a structure to attach the black door to[else if black door is not part of the silo]Just PUT BLACK DOOR ON SILO[else]The black door's okay where it is[end if]."
 dashed boundary	"You need to put some sort of door on it[if black door is off-stage], but there are no doors in the moor, yet[else], and maybe that black door will work[end if]."
 dotted rectangle	"You need to put something in the rectangle[if panel is off-stage], but nothing is the right size[else], and the panel is the right size[end if]."

@@ -726,7 +726,7 @@ to say no-hot:
 	if night thing is not in The Ol Hotel:
 		say "and you got rid of the night thing, anyway";
 	else:
-		say "but you could have a[if The Ol Hotel is visited]nother[end if] look around";
+		say "but you could have [if The Ol Hotel is visited]another[else]a[end if] look around";
 
 to say und-camp: say "You can't do much with or to the camp, here or north"
 
@@ -756,7 +756,7 @@ to say condo-visit: say "[if dry cake is in Obtains Boastin Bastion]You should p
 
 to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
 
-to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
+to say beat-man: say "The designer reedings are a general affront to good aesthetics, but you have other more important things to switch up here"
 
 chapter obtains boastin bastion
 

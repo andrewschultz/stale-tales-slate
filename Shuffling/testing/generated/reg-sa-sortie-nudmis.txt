@@ -294,7 +294,7 @@ You currently have 6 out of 27 total points for the Sortie region. You have foun
 #notmax
 by one point
 
-#testcase-mistake-shuffling-soutache
+#+testcase-mistake-shuffling-soutache
 >soutache
 The hot sauce doesn't need a decorative trimming.
 
@@ -1204,7 +1204,7 @@ You don't need to reset the steer button like you did the trees button. It's wha
 >undo
 >undo
 >reset
-Unfortunately, it's not quite as easy as just pushing a reset button, which only worked to undo the trees. But rearraning it? I hope that's not too bad.
+Unfortunately, it's not quite as easy as just pushing a reset button, which only worked to undo the trees. But rearranging it? I hope that's not too bad.
 >undo
 >undo
 >steer
@@ -1214,7 +1214,7 @@ You don't need to reset the steer button. It's what it's supposed to be.
 >undo
 >undo
 >reset
-Unfortunately, it's not quite as easy as just pushing a reset button. But rearraning it? I hope that's not too bad.
+Unfortunately, it's not quite as easy as just pushing a reset button. But rearranging it? I hope that's not too bad.
 >reset button
 Resetting twice won't get you anywhere. You need a new direction to change the TREES.
 

@@ -2539,15 +2539,22 @@ kibitz-on-scan is a truth state that varies. kibitz-on-scan is true.
 
 first-scan-okay is a truth state that varies.
 
+this is the r-rc-c umbrella check rule:
+	if gadget is not examined or ever-scan is false:
+		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
+		say "[line break]";
+		now ever-scan is true;
+	if noun is spout, say "The spout reads nothing, but [if spout is examined or caskfillings > 0]re[end if]examining it, perhaps the [b]OILS[r] it mentions have possibilities." instead;
+
 carry out cring:
 	if gadget-secured is true, say "You can't use this shortcut. Your gadget is locked." instead;
 	if player is in Potshot Hotspot and red bull is in Potshot Hotspot, try scaning red bull instead;
+	abide by the r-rc-c umbrella check rule;
 	if noun is inflexible:
 		buzz-or-no-noise noun;
 		the rule succeeds;
 	now marcos-trumped is true;
 	if noun is pig and player is not on cafe face, say "You are too far away at the moment." instead;
-	now ever-scan is true;
 	now kibitz-on-scan is false;
 	say "You get to scanning, twiddling from [if gadget is cert]certify to rectify[else]rectify to certify[end if] and back.";
 	now first-scan-okay is false;
@@ -2557,7 +2564,6 @@ carry out cring:
 	try scaning the noun;
 	gadflip;
 	now kibitz-on-scan is true;
-	say "[line break]";
 	kibitz the noun;
 	d "Rect-text: [rect-text of noun].";
 	d "Cert-text: [cert-text of noun].";
@@ -2631,10 +2637,9 @@ book fliptoing
 chapter the verb
 
 definition: a thing (called xx) is fungible:
-	if xx is held, yes;
-	[if location of xx is location of player, yes;]
-	if xx is touchable, yes;
-	if location of player is kitchen and fridge contains xx and fridge is open, yes;
+	if xx is enclosed by the player, yes;
+	if location of player is kitchen and fridge contains xx and fridge is closed, no;
+	if location of xx is location of player, yes;
 	no.
 
 definition: a thing (called xx) is available-to-flip:
@@ -3643,7 +3648,7 @@ description of cratered bits is "The acne-bit parts are very red. Interesting."
 
 check closing the acne bit cabinet: say "You don't need to hide anything in there from anyone." instead;
 
-the tenibac is boring abstract scenery. it is privately-named. printed name is "some Bactine". description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
+the tenibac is boring abstract scenery. it is privately-named. printed name is "some Bactine". description of tenibac is "The acne-bit cabinet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
 
 check putting something on cabinet: [??]
 	say "(I'll assume you meant in, not on.)";
@@ -4410,7 +4415,7 @@ this is the metros saltine check rule:
 		say "[v-b]you see an opening where the pig is.";
 		ditch-saltine instead;
 
-to check-deadbeat-corn: if noun is lost corn and bastion-evac is false, say "The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.[line break]" ;
+to check-deadbeat-corn: if noun is lost corn and bastion-evac is false, say "The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.[paragraph break]" ;
 
 this is the resort saltine check rule:
 	if noun is tiles:
@@ -7007,7 +7012,7 @@ to say flatter-pat: now pat-flattered is true;
 
 section dark clothes
 
-Woeful Pat wears the dark clothes.
+Woeful Pat wears the dark clothes. the dark clothes are plural-named.
 
 description of dark clothes is "All dark clothes start to look the same after a while."
 
@@ -7527,7 +7532,13 @@ description of sc is "They look nice and even smell nice. Serve verse veers all 
 
 chapter spout
 
-the spout is scenery in Sacred Cedars. description of spout is "It can be used to [b]FILL[r] the appropriate receptacle here.".
+the spout is scenery in Sacred Cedars. description of spout is "It's stamped [b]OILS[r]. [if caskfillings > 0]Hopefully[else]You've already found[end if] you can just [b]FILL[r] the appropriate receptacle here, if you prefer, you can [b]POUR OILS[r], with no need for an object.".
+
+the spout-put rule is listed before the can't put onto what's not a supporter rule in the check putting it on rules.
+
+this is the spout-put rule:
+	if noun is cask and second noun is spout, try pouring oils instead;
+	if second noun is cask and noun is spout, try pouring oils instead;
 
 check switching on spout:
 	if player has cask, try filling the cask instead;
@@ -7770,7 +7781,7 @@ description of deadbeat is "He's wearing designer reedings."
 
 section designer reedings
 
-the designer reedings are amusing scenery.
+the designer reedings are amusing scenery in Roarings Garrison.
 
 check taking designer reedings: say "Bad idea. The deadbeat likes no suds with the sounds." instead;
 
@@ -8205,7 +8216,7 @@ the merchandise is scenery in Fo Real Florae. "All sorts of flower-related semi-
 
 does the player mean objasking the faeries about the merchandise: it is likely.
 
-understand "flowers/seeds/flower/seed" as merchandise when merchandise is fungible.
+understand "flowers/seeds/flower/seed" as merchandise when merchandise is quickvis.
 
 chapter heaths
 
@@ -9222,7 +9233,7 @@ section THIRST t-shirt
 
 the THIRST t shirt is an amusing boring thing. printed name is "THIRST t-shirt". Red Bull Burdell wears the thirst t shirt. description of thirst t shirt is "The THIRST t-shirt doesn't provide much protection, but it establishes Red Bull Burdell as the bad guy.". bore-text is "The THIRST t-shirt is not Red Bull Burdell's weakness."
 
-the rage gear is an amusing boring thing. Red Bull Burdell wears the rage gear. description of rage gear is "It's a rare egg--impenetrable, covering almost all of Red Bull Burdell's body. It's no mere flimsy eager rag to re-garage.[paragraph break]If you're looking for a weakness of Red Bull Burdell's, it's elsewhere.". bore-text of rage gear is "No. The rage gear is sturdy. But it can't cover ALL of Red Bull Burdell.".
+some rage gear is an amusing boring thing. Red Bull Burdell wears the rage gear. description of rage gear is "It's a rare egg--impenetrable, covering almost all of Red Bull Burdell's body. It's no mere flimsy eager rag to re-garage.[paragraph break]If you're looking for a weakness of Red Bull Burdell's, it's elsewhere.". bore-text of rage gear is "No. The rage gear is sturdy. But it can't cover ALL of Red Bull Burdell.".
 
 the crass scars are an amusing boring plural-named thing. They are part of red bull burdell. description of scars is "Every villain has a few. Red Bull Burdell maxed out his useful attributes, but no amount of leveling up could improve his looks.". bore-text of scars is "He'd want to beat you up for looking at them even if he didn't already want to beat you up.".
 
@@ -9524,16 +9535,16 @@ after reading a command:
 	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^\*":
 		if currently transcripting:
 			say "Noted.";
+			reject the player's command;
 		else:
 			if ignore-transcript-nag is false:
-				say "You've made a comment-style command, but Transcript is off. Type [b]TRANSCRIPT[r] to turn it on, if you wish to make notes. Or if you want to eliminate this nag, for instance if you have an interpreter that does so independently, say yes now.";
+				say "You've made a comment-style command, but Transcript is off. Type [b]TRANSCRIPT[r] to turn it on, if you wish to make notes. Or if you want to eliminate this nag, for instance if you have an interpreter that does so independently, say yes now. Comments without transcripting may result in confusing errors, especially if they start with a period.";
 				if the player yes-consents:
 					now ignore-transcript-nag is true;
 		if helpdebugflag is true and hintfull is false:
 			now just-print is false;
 			say "[the player's command]";
 			now just-print is true;
-		reject the player's command;
 	abide by the punctuation-munge rule;
 	if period-warned is false:
 		if the player's command matches the regular expression "\.":
@@ -9924,13 +9935,11 @@ this is the basic scaning item checks rule: [ this is for things that can cross 
 
 carry out scaning:
 	d "scaning [noun].";
+	abide by the r-rc-c umbrella check rule;
 	abide by the basic scaning game state checks rule;
 	abide by the basic scaning item checks rule;
 	abide by the prescan check rule of mrlp;
 	now last-scan is noun; [DIVIDING LINE FOR SUCCESSFUL SCAN]
-	if gadget is not examined or ever-scan is false:
-		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
-		say "[line break]";
 	now first-scan-okay is true;
 	now ever-scan is true;
 	now gadget is examined;
@@ -9938,9 +9947,7 @@ carry out scaning:
 	now last-obj is noun;
 	if noun is nametag, abide by the nametag scanning rule;
 	if gadget is cert:
-		say "[if noun is begonias or noun is roadblock or noun is acne bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
-		if parse-output is true:
-			say "Hmm, that means [cert-text of noun]. ";
+		say "[if noun is begonias or noun is roadblock or noun is acne bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping][if parse-output is true]. Hmm, that means [cert-text of noun][end if].";
 		kibitz noun;
 		check-marcos instead;
 	else if gadget is rect:
@@ -9967,14 +9974,16 @@ to kibitz (sca - a thing):
 	if kibitz-on-scan is false, continue the action;
 	repeat through table of kibitzes:
 		if sca is kib entry:
+			unless current action is cring, say "[line break]";
 			say "[helpy entry][line break]";
-			the rule succeeds;
+			break;
 	note-spaces;
 
 to note-spaces:
 	if first-scan-okay is true:
 		if son-nos is false and sr-acc is false:
-			say "You can toggle spaces between the letters with [b]SPACE(S)[r], or you can set them directly with [b]SPACE(S) ON[r]/[b]NO SPACE(S)[r], or [b]SON[r]/[b]NOS[r] for short."; [bold-ok]
+			say "[line break]";
+			ital-say "You can toggle spaces between the letters with [b]SPACE(S)[r], or you can set them directly with [b]SPACE(S) ON[r]/[b]NO SPACE(S)[r], or [b]SON[r]/[b]NOS[r] for short."; [bold-ok]
 			now son-nos is true;
 			pad-rec-q "spaces";
 
@@ -11046,7 +11055,7 @@ book final question options (see what missed)
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule		final response activity
 "see what you may've [b]MISSED[r] point-wise"	true	"missed"	show what the player missed rule	--
-"see [b]ALT[r]ernate mutually exclusive ways through"	true	"alt/alts"	show alternate paths rule	--
+"see [b]ALT[r]/[b]ALTERNATE[r] mutually exclusive ways ([b]ALTS[r]) through"	true	"alt/alts"	show alternate paths rule	--
 "see [b]RANK[r]s and how to achieve them"	true	"rank/ranks"	show ranks rule	--
 
 this is the show alternate paths rule:
@@ -11211,7 +11220,7 @@ listlasting is an activity.
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"see a full [b]L[r]/[b]LIST[r] of random texts or specific ones (1-[number of rows in table of megachatter]) of random [one of] [or][stopping]NPC text, or [b]LN[r] for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
+"see a full [b]L[r]/[b]LIST[r] of random texts or specific ones (1-[number of rows in table of megachatter]) of random background text, or [b]LN[r] for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
 --	true	"l/list"	--	listlisting
 --	true	"ln"	--	listlasting
 

@@ -45,7 +45,7 @@ Please give one of the answers above.
 
 >amens
 !You bypassed
-Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALTernate mutually exclusive ways through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random  NPC text, or LN for the next one?
+Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALT/ALTERNATE mutually exclusive ways (ALTS) through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random background text, or LN for the next one?
 >alt
 There were three final commands to win the game. You chose AMENS, but there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess.
 >alt
@@ -54,7 +54,7 @@ There were three final commands to win the game. You chose AMENS, but you could 
 
 >exist
 !You bypassed
-Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALTernate mutually exclusive ways through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random  NPC text, or LN for the next one?
+Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALT/ALTERNATE mutually exclusive ways (ALTS) through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random background text, or LN for the next one?
 >alt
 There were three final commands to win the game. You chose EXIST, but there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess.
 >alt
@@ -63,7 +63,7 @@ There were three final commands to win the game. You chose EXIST, but you could 
 
 >names
 !You bypassed
-Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALTernate mutually exclusive ways through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random  NPC text, or LN for the next one?
+Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALT/ALTERNATE mutually exclusive ways (ALTS) through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random background text, or LN for the next one?
 >alt
 There were three final commands to win the game. You chose NAMES, but there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess.
 >alt
@@ -96,7 +96,7 @@ There were three final commands to win the game. You chose NAMES, but you could 
 
 >amens
 [NOTE: You bypassed some regions behind some stores, so there may be minor spoilers if you list random text. This nag will not be repeated.]
-Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALTernate mutually exclusive ways through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random  NPC text, or LN for the next one?
+Would you like to RESTART, RESTORE a saved game, see some suggestions for AMUSING things to do, QUIT, UNDO the last command, see what you may've MISSED point-wise, see ALT/ALTERNATE mutually exclusive ways (ALTS) through, see RANKs and how to achieve them or see a full L/LIST of random texts or specific ones (1-9) of random background text, or LN for the next one?
 
 >l
 !You bypassed
