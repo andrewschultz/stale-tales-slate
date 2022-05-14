@@ -1,29 +1,63 @@
 Shuffling Around Release 5 Notes
 
-Release 5 fixed one bug Sean M. Shore found that I didn't have time to fix before release, and it also fixed a bug reported in version 4 on the intfiction.org forums. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless. So there's not much new mechanically. There are other minor things, including some code cleanup and also small game text tweaks. I ran tests to make sure that cluing was effective.
+Release 5 fixed one bug Sean M. Shore found that I didn't have time to fix before release, and it also fixed a bug reported in version 4 on the intfiction.org forums. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless. I eventually did a lot of testing on the saltine with Zarf's scripts to make sure hinting in general at least avoided huge errors. My test suite took 90 minutes to run for all regions as well as miscellaneous features. I think it's not just helped with the stability of Shuffling Around but also some new features, as I just had more energy for them and felt less worried I was missing something.
 
-The big fixes are probably area names. The two flanking rooms in store F are renamed, as are several rooms in Store R. The first two room names are different. The opening room for Store I is named differently, the (now laid) dial doesn't quite disappear, and Lord Ablemiser's name was changed too. Also, there are a lot more named boundaries that provide a sillier excuse to say "You can't go that way!" Local flavor.
+The most noticeable difference (besides bug fixes) is probably how puzzles are organized in the introduction, which wasn't originally planned. Before, you had only one way to get out of the thickets, with a rather difficult LLP. Now, there are two ways, along with a much easier LLP, which hopefully gives a softer introduction. This is probably the major mechanical change, though there are now three solutions to the ending puzzle, which is clued by the final room's new name.
 
+It's not the only room that was renamed. Most others (except puzzle rooms) now conform to the rubric, so to speak. The details are in the Trizbort map, if you don't have the time to replay through. Two flanking rooms in store F are renamed, the opening room in store F, the northern rooms in Store M, and several rooms in Store R. Lord Ablemiser's name was changed. Also, there are a lot more named boundaries that provide a sillier excuse to say "You can't go that way!" Local flavor.
+
+There are also new bonus points in Store F and Store R. They're not very long, but I think they fit well.
+
+Also, the first area was renamed from the pedestrian Intro to the "Gee, I should've seen that earlier" Ordeal Reload.
+
+Here are details of other fixes:
+--hang when asking about certain items was fixed
 --bug where TAKEing a liver would seem to prevent you from PEELing it. You could actually TAKE it again, but this broke immersion, to say the least.
---new last lousy point in the third room is easier and location-appropriate than the snarled darnels
---liver in Store F is more appropriately named
---1000 poem codas and 1000 job competitor names
---hinting disambiguation is better
---over 3500 total random texts
---all random lists have at least 40 words
---tweaks to the Trizbort map
---the game loops after 30 random names or maps, unless you win.
-  --the final list-of-lists once you win is touched up too
---CERTIFY/RECTIFY usage tweaks
+--the second-last room now changes its name once solved. The only other was Stiller Trellis, once you took care of the room behind it
 --last scan now appears/stays in header until solved
 --you now have the ability to interpret gadget showings with PARSE or turn it off with SPARE
+--each liver in Store F is more appropriately named
+--text the game calls red now appears as red for interpreters that support it
+--general text formatting (bolding for commands, italics for out-of-world text)
+--hinting disambiguation is better
+--tweaks to the Trizbort map
+   -the final list-of-lists once you win is touched up too
+--CERTIFY/RECTIFY usage tweaks
 --VERB/VERBS and PAD VERBS now give general help
---final room is named differently (old name is bounding scenery,) with two new commands to win
 --inventory is now organized by general and region-specific items
+--EXITS tells you the way out of a room, and OUT/EXIT behavior is handled better
+--after scanning certain items, you get special hints. These appear both after single scans or the double-scan item you find later.--many line break issues fixed
+--1000 poem codas and 1000 job competitor names
+--over 3500 total random texts
+--all random lists have at least 40 words
+--the game loops after 30 random names or maps chosen randomly from the original list. Once you win, when you can see everything
 
-Many other bugs were fixed, too. https://github.com/andrewschultz/stale-tales-slate has the various changes, including any going forward. I doubt there will be that many. I hope there won't. I enjoyed writing this, but it's time to move on.
+Many other bugs were fixed, too. https://github.com/andrewschultz/stale-tales-slate has the various changes, including any going forward. I doubt there will be that many. I hope there won't. I enjoyed writing this, but in terms of rigorous testing, it's time to move on. I hope. I'm aware of some line break issues, but they feel very high risk/low reward.
 
-For those that've played before, the room name changes are (ROT13'd) Syrfu Furys (jrfg bs Frys-VQ Svryqf), Taneyvrfg Gevnatyrf (rnfg bs Frys-VQ Svryqf), Rfbgrevp Pbgrevrf, Nfgeny Nygnef, Yrvf Vfyr, Evirq Qevir naq Zrnaf Znafr.
+For those that've played before, here is a summary of the room changes.
+
+Store F:
+--Syrfu Furys (jrfg bs Frys-VQ Svryqf)
+--Taneyvrfg Gevnatyrf (rnfg bs Frys-VQ Svryqf)
+--Rzcgvarff Frcvzragf (jnf Pehry Barf' Rapybfher, juvpu jnf qrzbgrq gb fprarel va gur arkg ebbz)
+
+Store I:
+--Genc Cneg vf abj gur svefg ebbz
+
+Store M:
+--Ebnevatf Tneevfba (sbezreyl Penzcrq Erq Pnzc) abegu
+  --Ovyr Yvor (sbezreyl N Lryy Nyyrl) jrfg
+  --Bognvaf-Obnfgva' Onfgvba (sbezreyl Pbeqbarq Erq Pbaqb) abegu
+  --Sb Erny Sybenr Sner, Yb (sbezreyl Rys Ebj'f Sybjref) rnfg
+-- Rfbgrevp Pbgrevrf (sbezreyl Nagv-Pbby Ybpngvba) rnfg bs Haqrefvqr
+
+Store R:
+The progression is now
+-- Nfgeny Nygnef (sbezreyl Gvyrf)
+-- Yrvf Vfyr (sbezreyl Vfyrg)
+-- Evirq Qevir (vafgrnq bs Bqq Ybj Jbbqynaq)
+-- Cbgfubg Ubgfcbg vf hapunatrq, hagvy lbh jva, znxvat vg Grfgre Fgerrg
+-- Ebzna Znabe vf abj Zrnaf Znafr.
 
 The bounding sceneries (mostly new) are:
 gur fryirf irffry (Frys-VQ Svryqf)

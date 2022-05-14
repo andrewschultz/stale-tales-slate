@@ -692,7 +692,7 @@ check quitting the game when currently transcripting:
 	say "Thanks for taking a transcript. Please send it to [email] and I'll be grateful. Thanks!";
 
 report switching the story transcript on:
-	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type [b]TRANSCRIPT[r] and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
+	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type [b]TRANSCRIPT[r] and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]While [this-game]'s puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
 	continue the action;
 
 volume post-game stubs

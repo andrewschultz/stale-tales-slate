@@ -9,21 +9,24 @@ Flexible Windows.i7x
 
 are modified versions.
 
-You may have some problems with Glulx Text Effects.i7x / Glulx Text Effects - New.i7x naming and getting duplicate tables. If you are getting an already defined table, make sure other extensions all point to one of the two. This is the big hurdle to building. I may need to sort this out or update modules if there are new ones.
+You may have some problems with Glulx Text Effects.i7x / Glulx Text Effects - New.i7x naming and getting duplicate tables. If you are getting an already defined table, make sure other extensions all point to one of the two. This is the big hurdle to building. I may need to sort this out or update modules if there are new ones. I'm not sure about copyright issues and whether you can put others' Inform extensions in your repository.
 ]
 
-[Given that the total source is over 900000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some search markers repeatedly when I needed to change something in this game.
+[Given that the main source is 680000+ bytes, the headers are 380000+ bytes, and the common files this shares with A Roiling Original and, in part, Tours Roust Torus are alomst 60000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some search markers repeatedly when I needed to change something in this game. Code is roughly arranged by region, then the order rooms appear in the region.
 
-Shuffling Random Text.i7x includes all the random text. It is searchable by xx(f,m,i,r,x) -- x is introductory names, and the others are the store the region is behind.
+Shuffling Mistakes.i7x includes all the repiles for great guesses. By great guesses I mean stuff that should definitely give a coherent response, because they are words. It is probably the most fun to look at.
 
-Shuffling Nudges.i7x includes all the nudges for good guesses. By good guesses I mean trying objects that can't be anagrammed, but they're descibed prominently enough. It contains nudges listed by region and in the rough order you find the room.
+Shuffling Random Text.i7x includes all the random text. It is searchable by xx(f,m,i,r,x) -- x is introductory names, and the others are the store the region is behind. Its functionality is duplicated if you get to the end of the game, where you can see all the random tables.
 
-Shuffling Tables.i7x now contains the major tables for the game. You can search for them more easily in this file.
+Shuffling Nudges.i7x includes all the nudges for good guesses. By good guesses I mean trying objects that can't be anagrammed, but they're descibed prominently enough, and if you have the right letters in the right quantity, it tells you "no, try something else." It contains nudges listed by region and in the rough order you find the room.
 
-TOA=table of anagrams, or the big one. You can also search by store e.g. Store F = xxtfa
-TOH=table of hint objects
-TOSH=table of specialized help (for specific rejects, e.g. ELCISH for the liches)
-AIP=check if action is procedural
+Shuffling Tables.i7x now contains the major tables for the game. They are arranged by function and region. The tables were cut into regions as otherwise they got unwieldy. Some rules are also cut into regions, e.g. "the x-rule of ordeal loader is the x-ordeal-loader rule."
+
+Shuffling Beta Tests.i7x isn't very important to the end player, since the beta commands are hidden from release mode, but they may be interesting.
+
+Shuffling Tests.i7x feels antiquated since I started using Zarf's regression scripts more heavily.
+
+STS *.i7x contains reusable code. They are the common files mentioned above.
 
 Ancient note to self: there are many places to put in a SKIP UPCOMING RULEBOOK BREAK, but they're too minor to hunt down & probably dealt with better with PROCESS. Still, they'd be nice to fix, and anyone who helps me with this will get my gratitude and probably a place in the credits.
 ]
@@ -2540,11 +2543,14 @@ kibitz-on-scan is a truth state that varies. kibitz-on-scan is true.
 first-scan-okay is a truth state that varies.
 
 this is the r-rc-c umbrella check rule:
-	if gadget is not examined or ever-scan is false:
+	if gadget is not examined and ever-scan is false:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
-		say "[line break]";
 		now ever-scan is true;
+	abide by the r-rc-c general clues rule;
+
+this is the r-rc-c general clues rule:
 	if noun is spout, say "The spout reads nothing, but [if spout is examined or caskfillings > 0]re[end if]examining it, perhaps the [b]OILS[r] it mentions have possibilities." instead;
+	if noun is easel and motto is in bile libe, say "The easel reads nothing most of the time, but you pick up something near the (a) motto." instead;
 
 carry out cring:
 	if gadget-secured is true, say "You can't use this shortcut. Your gadget is locked." instead;
@@ -4612,13 +4618,10 @@ to say icon-depict:
 
 section direction redirection
 
-check going down in Trips Strip:
-	if metros is solved and sortie is solved, say "You've solved both the metros and sorties." instead;
-	if trade tread is touchable and posted depots are touchable:
-		if metros is solved, try entering posted depots instead;
-		if sortie is solved, try entering trade tread instead;
-		say "You've opened two ways down, so you'll specifically need to [b]ENTER SORTIE[r] or [b]ENTER METROS[r] instead." instead;
-	if trade tread is not touchable and posted depots are not touchable, say "You can't find any place to go down[if sortie is solved or metros is solved] that you need to any more[end if][if sortie is not solved or metros is not solved], but there's at least one to find[end if]." instead;
+this is the trips-strip-descent rule:
+	if metros is passed-up and sortie is passed-up, say "You've solved both the metros and sorties." instead;
+	if trade tread is touchable and posted depots are touchable, say "You've opened two ways down, so you'll specifically need to [b]ENTER SORTIE[r] or [b]ENTER METROS[r] instead." instead;
+	if trade tread is not touchable and posted depots are not touchable, say "You can't find any place to descend[if sortie is solved or metros is solved] that you need to any more[end if][if sortie is not solved or metros is not solved], but there's at least one to find[end if]." instead;
 	if trade tread is touchable, try entering trade tread instead;
 	if posted depots are touchable, try entering posted depots instead;
 	say "Unfortunately, there are no cool hidden passages beneath the stores. That you can see. Yet." instead;
@@ -5462,8 +5465,6 @@ chapter iciest cities
 
 the iciest cities are bounding boring scenery in Flesh Shelf. description of cities is "They are spooky and all, but thankfully, they're too far away.". bore-text is "The cities are too far away to do anything with. Or to do anything to you."
 
-check going down in Flesh Shelf: try going west instead;
-
 first-fs-yet is a truth state that varies.
 
 after choosing notable locale objects when player is in Flesh Shelf: if sandwich is in flesh shelf, set the locale priority of the sandwich to 1.
@@ -6304,9 +6305,6 @@ understand "[number]" as numming when player is in Trap Part.
 does the player mean examining a sto when player is in Trap Part: it is unlikely.
 
 check numming: try dialsetting dial to number understood instead;
-
-before going in Trap Part:
-	if centrifuge-stopped is false, say "You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.[paragraph break]Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to." instead;
 
 numset-ever-greater is a truth state that varies. numset-ever-greater is false.
 
@@ -7582,7 +7580,7 @@ the drainage is in Undesired Underside. It is fixed in place. "That drainage you
 
 check taking drainage: say "It smells too powerful to even consider taking in its present form. Looks bad, too." instead;
 
-description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 3. cert-text of drainage is "-[d1][d1][d1][d1][d1][d1][d1]". rect-text of drainage is "G[d1][d1][d1][d1][d1][d1][ast]A".
+description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again. But you probably aren't going to find any cleaning tools, so you are facing a mess of an eight-letter word.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 3. cert-text of drainage is "-[d1][d1][d1][d1][d1][d1][d1]". rect-text of drainage is "G[d1][d1][d1][d1][d1][d1][ast]A".
 
 section gardenia (from drainage)
 
@@ -7973,7 +7971,7 @@ check taking sword:
 
 chapter lease easel
 
-the lease easel is boring scenery in Bile Libe. description of lease easel is "It reads PROPERTY OF ELEAS & LEESA SEALE and gives lots of 'profitable' advice (largely on e-sale) starting 'SEE, AL...'[paragraph break][if motto is in Bile Libe]Somehow clinging to the lease easel is [b]A MOTTO[r][else]You got a motto from it, and it's pretty much bare now[end if].". bore-text is "The lease easel is part of the Bile Libe. It[if motto is in Bile Libe]'s[else]was[end if] there to hold the motto and to block you from exploring...well, anywhere else." [bold-ok]
+the lease easel is boring scenery in Bile Libe. description of lease easel is "It reads PROPERTY OF ELEAS & LEESA SEALE and gives lots of 'profitable' advice (largely on e-sale) starting 'SEE, AL...'[paragraph break][if motto is in Bile Libe]Somehow clinging to the lease easel is [b]A MOTTO[r][else]You got a motto from it, and it's pretty much bare now[end if].". bore-text is "The lease easel is part of the Bile Libe. It[if motto is in Bile Libe]'s[else] was[end if] there to hold the motto and to block you from exploring...well, anywhere else." [bold-ok]
 
 chapter motto-tomato
 
@@ -8584,8 +8582,6 @@ book Elm Train Terminal
 
 Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else.[paragraph break]You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the intimidating darkness below to the east, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if].". roomnud of Elm Train Terminal is table of Elm Train Terminal nudges. [bold-ok]
 
-check going down in Elm Train Terminal: try going east instead;
-
 check going east in Elm Train Terminal:
 	if power-shut is false, say "There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are moot]. Even those rubber shoes won't insulate you[end if]." instead;
 	if player does not have tulip, say "You go east but reach a thin ledge. It needs to be lightened before you go further. You have no item to help with that." instead;
@@ -8599,8 +8595,6 @@ to say terminal-if-piggy: say "[if neon pig is touchable]a neon pig embedded in 
 to say terminal-if-pigcon: say "[if pig is touchable] with the pig[else if controls are not in gin nope opening] and away from the opening you made[else] and away from the controls you put in[end if]".
 
 check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe you could climb it[if cafe-climbed is true] again[end if]." instead;
-
-check going up in Elm Train Terminal: try climbing the cafe face instead;
 
 power-shut is a truth state that varies. power-shut is usually false.
 
@@ -8632,6 +8626,8 @@ check climbing when player is in Elm Train Terminal:
 		try climbing cafe face instead;
 
 cafe-climbed is a truth state that varies.
+
+check taking cafe face when cafe-climbed is false: say "If you mean to [b]CLIMB[r] the cafe face, say so. But it's immovable as-is, and it's the only way up to [if neon pig is in terminal][the neon pig][else][the gin nope opening][end if]." instead;
 
 check climbing cafe face:
 	if player is on cafe face, say "You can't see anything worth getting to above the [if neon pig is touchable]neon pig[else]recess[end if]. And you're up dangerously high as is." instead;
@@ -8665,7 +8661,7 @@ after examining the neon pig:
 
 chapter gin nope opening
 
-the gin nope opening is a scenery container. description is "[if controls are in gin nope opening]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on cafe face]You can see that the opening isn't just a blank area with a 'GIN NOPE' warning, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you [b]READ[r], you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if].". the printed name of gin nope opening is "the gin-nope opening"
+the gin nope opening is a scenery container. description is "[if controls are in gin nope opening]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on cafe face]You can see that the opening isn't just a blank area with a 'GIN NOPE' warning, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical[else]You look back up at the opening you made. Seems something belongs in there[end if].". the printed name of gin nope opening is "the gin-nope opening"
 
 procedural rule while examining gin nope opening: ignore the examine containers rule.
 
@@ -10484,7 +10480,7 @@ moor	"The rime-mire all round is too dangerous, but nothing's stopping you from 
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
 Undesired Underside	"A hotel is west, a camp is north, [the ingress] leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
 Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[inside-ambig]."
-Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but you probably just want to go back east."
+Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but it and those beats would be too much at once. You probably just want to go back east."
 Fo Real Florae	"The faeries wouldn't take kindly to snooping. The only safe way out is back west."
 The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
 Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
@@ -10510,23 +10506,33 @@ book directional cleanup
 
 up-nearby is a truth state that varies.
 
-before going up:
+the force dial puzzle in trap part rule is listed first in the check going rules.
+
+the initial descent check rule is listed first in the check going rules.
+
+the initial ascent check rule is listed first in the check going rules.
+
+check going in Trap Part (this is the force dial puzzle in trap part rule):
+	if centrifuge-stopped is false, say "You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.[paragraph break]Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to." instead;
+
+check going up (this is the initial ascent check rule):
 	if player is in Rived Drive, try going east instead;
-	if player is in Elm Train Terminal or player is in Obtains Boastin Bastion or player is in Undesired Underside or player is on cafe face, continue the action;
+	if player is in Elm Train Terminal, try climbing the cafe face instead;
+	if player is in Undesired Underside or player is in Trap Part, say "There's no way back up to where you came. Looks like you'll just have to solve things here." instead;
 [	if up-nearby is true:
 		say "[if cur-score of Ordeal Loader is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
 		now up-nearby is false instead;]
 	if player has wings and player is in Leis Isle, try flying instead;
 	say "You have no boost boots for dances to ascend. And most of the time, if you need to go up, there'll be something clear to climb. Hopefully." instead;
 
-before going down in Busiest Subsite: say "You're not waiting for the elevator back down. And the only stairs are fire stairs, which will set off an alarm." instead;
-
-before going down:
-	if player is in Busiest Subsite or player is in Obtains Boastin Bastion, continue the action;
+check going down (this is the initial descent check rule):
+	if player is in Busiest Subsite, say "You're not waiting for the elevator back down. And the only stairs are fire stairs, which will set off an alarm." instead;
+	if player is in Trips Strip, abide by the trips-strip-descent rule;
+	if location of player is Flesh Shelf, try going west instead;
 	if player is on cafe face, try getting off the cafe face instead;
-	if player is in Trips Strip:
-		if posted depots are touchable or trade tread is touchable, continue the action;
-		say "You can't see any [if sortie is solved or metros is solved]other [end if]way down[if sortie is not solved or metros is not solved][else] any more[end if]." instead;
+	if player is in Elm Train Terminal:
+		say "(down east)";
+		try going east instead;
 	say "You see no clear way down. Usually there'll be stairs, if you need to." instead;
 
 book gotoing
@@ -10902,7 +10908,7 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Ordeal Loader is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, DrkStarr, Jason Orendorff, Matt Weiner, Olaf Nowacki, Sean M. Shore, Stefan Scheiffele and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/.[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
+	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Tomie Campf, DJ Hastings, Anthony Hope, Joey Jones, Paul Lee, Gavin Myers-Leman, John Nitchals, and Robert Patten. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: DrkStarr, Olaf Nowacki, Jason Orendorff, Toby Ott, Stefan Scheiffele, Sean M. Shore, Amanda W., Matt Weiner, and David Wilkins. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/.[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:
