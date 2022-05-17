@@ -26,8 +26,8 @@ files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,re
 
 ALSO-IGNORE:t,c
 
-}}MAX=46
-}}CURMAX=46
+}}MAX=47
+}}CURMAX=47
 }}SCORE=0
 }}CURMIN=25
 

@@ -152,31 +152,32 @@ Your score has just gone up by one point
 Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >misses
-/^Troves
+/^====Troves:
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
-/^Loather Rathole====
+/^====Loather Rathole====
 --you could've tried to STARE at the tears taser.
-/^Boarded Roadbed====
+/^====Boarded Roadbed====
 --you could've tried to STAY around A Sty: Tasty, Say.
 
 !you could've tried to BELIEVE to neutralize the evil bee, too.
 --you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
-/^Drain Nadir====
+/^====Drain Nadir====
 --you could've tried to RELAPSE around the pleaser leapers.
-/^Boredom Bedroom====
+/^====Boredom Bedroom====
 --you could've tried to GLARE at the Lager.
 
 --you could've tried to MASTER the ME ARTS.
 !--you could've tried to BOLSTER yourself to deserve lobster.
 
-/^Econ-Cone====
+/^====Econ-Cone====
 
 --you could've tried to STRIVE by the statue of Trevis Vister.
 !--you could've tried to ASPIRE by the praise spirea.
 
-/^Browse Bowers====
+/^====Browse Bowers====
 --you could've tried to DISCOVER something about DIVORCES magazine.
+/^====Upscale Capsule====
 
 --you could've tried to RESIST Sister Tressi.
 !--you could've tried to RAMBLE to ignore Marble Blamer Balmer.

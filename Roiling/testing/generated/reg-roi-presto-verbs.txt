@@ -563,7 +563,7 @@ There are two unblocked exits: north and south to another part of the maze.
 
 >n
 
-/^Grey Gyre
+/^Back at Grey Gyre
 >gt unwary runway
 #reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.

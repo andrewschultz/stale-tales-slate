@@ -255,19 +255,19 @@ Your score has just gone up by one point
 Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
 
 >misses
-/^Grey Gyre====
+/^====Grey Gyre====
 --you could've shouted BLAM at the lamb.
 --you could've said MAZEL TOV to get past the maze.
-/^Dirge Ridge====
+/^====Dirge Ridge====
 --you could've said GOODNESS to the Odes Song.
-/^Austerer Treasure====
+/^====Austerer Treasure====
 --you could've gotten a style point for saying PHOOEY instead of POOH.
-/^Marines Seminar Remains====
+/^====Marines Seminar Remains====
 --you could've said PROST (a German word to toast someone) to the Sport Ports.
-/^Phat Path====
+/^====Phat Path====
 --you could've said WHAT to the Hawt Thaw.
 --you could've called the starch charts TRASCH.
-/^Hacks' Shack====
+/^====Hacks' Shack====
 --the trim socks could've become ROM STICKS.
 --you could've made the TBA key a TAB key.
 --you could've made the escaroles a CASSEROLE.

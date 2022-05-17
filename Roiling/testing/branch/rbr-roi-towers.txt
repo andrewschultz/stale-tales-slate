@@ -4209,7 +4209,7 @@ The scaly clays are too treacherous. You need to find the word to restore the cu
 >undo
 #testcase-exits-mislit-limits
 >exits
-You don't have to go anywhere before chainging the Curst Palace, although the serpent guards a dwelling.
+You don't have to go anywhere before changing the Curst Palace, although the serpent guards a dwelling.
 
 >score
 {$SCOS}

@@ -985,7 +985,7 @@ There are two unblocked exits: north and south to another part of the maze.
 \\
 >n
 \\
-/^Grey Gyre
+/^Back at Grey Gyre
 >gt unwary runway
 #reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
@@ -3349,19 +3349,19 @@ The catechism would be more likely to scramble YOU up. It's way more complex tha
 
 >misses
 @min
-/^Grey Gyre====
+/^====Grey Gyre====
 --you could've shouted BLAM at the lamb.
 --you could've said MAZEL TOV to get past the maze.
-/^Dirge Ridge====
+/^====Dirge Ridge====
 --you could've said GOODNESS to the Odes Song.
-/^Austerer Treasure====
+/^====Austerer Treasure====
 --you could've gotten a style point for saying PHOOEY instead of POOH.
-/^Marines Seminar Remains====
+/^====Marines Seminar Remains====
 --you could've said PROST (a German word to toast someone) to the Sport Ports.
-/^Phat Path====
+/^====Phat Path====
 --you could've said WHAT to the Hawt Thaw.
 --you could've called the starch charts TRASCH.
-/^Hacks' Shack====
+/^====Hacks' Shack====
 --the trim socks could've become ROM STICKS.
 --you could've made the TBA key a TAB key.
 --you could've made the escaroles a CASSEROLE.

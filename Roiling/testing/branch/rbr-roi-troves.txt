@@ -1812,11 +1812,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. T
 
 @mina,minb
 >misses
-/^Troves
+/^====Troves:
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
-/^Loather Rathole====
+/^====Loather Rathole====
 --you could've tried to STARE at the tears taser.
-/^Boarded Roadbed====
+/^====Boarded Roadbed====
 --you could've tried to STAY around A Sty: Tasty, Say.
 
 @mina
@@ -1828,9 +1828,9 @@ you could've tried to BELIEVE to neutralize the evil bee, too.
 !--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
 @mina,minb
-/^Drain Nadir====
+/^====Drain Nadir====
 --you could've tried to RELAPSE around the pleaser leapers.
-/^Boredom Bedroom====
+/^====Boredom Bedroom====
 --you could've tried to GLARE at the Lager.
 
 @mina
@@ -1842,7 +1842,7 @@ you could've tried to BELIEVE to neutralize the evil bee, too.
 --you could've tried to BOLSTER yourself to deserve lobster.
 
 @mina,minb
-/^Econ-Cone====
+/^====Econ-Cone====
 
 @mina
 --you could've tried to STRIVE by the statue of Trevis Vister.
@@ -1853,8 +1853,9 @@ you could've tried to BELIEVE to neutralize the evil bee, too.
 --you could've tried to ASPIRE by the praise spirea.
 
 @mina,minb
-/^Browse Bowers====
+/^====Browse Bowers====
 --you could've tried to DISCOVER something about DIVORCES magazine.
+/^====Upscale Capsule====
 
 @mina
 --you could've tried to RESIST Sister Tressi.
