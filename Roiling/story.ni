@@ -5360,7 +5360,6 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 			if the-from entry is fungible:
 				try fliptoing the-to entry;
 				process the notify score changes rule;
-				process the hint flags checkoff rule;
 				process the scam rule instead;
 	say "[reject]";
 
@@ -6225,7 +6224,7 @@ chapter thinking
 
 thinko is a truth state that varies.
 
-understand "ponder" as thinking when END PRONER POD is not fungible.
+understand "ponder" as thinking when END PRONER POD is not in location of player.
 
 in-think is a truth state that varies.
 
@@ -10017,7 +10016,7 @@ to it-him-her (x - a thing):
 
 section throes hoster
 
-the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is fungible. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-hoster rule. go-region of Throes Hoster is Others.
+the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is in location of player. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-hoster rule. go-region of Throes Hoster is Others.
 
 this is the enter-hoster rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
@@ -13894,7 +13893,7 @@ check spilling (this is the specific game state spill reject rule):
 	if player is in Anger Range and carps are moot:
 		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if HUNTER HUNT AREA is in Anger Range:
-			if thin hint is not in Rascal Craals, say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
+			if thin hint is not in Rascal Craals, say "A single pill jumps out, and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
 	if player is in Lean Lane:
 		if Paw R Wrap is not off-stage:
 			say "That would be a rude parting gift. You've claimed your reward--the Paw-R-Wrap bubble wrap[if tea at a tee is not moot]. Though it would seem polite--and straightforward--to try something from the [tea][end if]." instead;
@@ -22268,7 +22267,7 @@ to store-h-end-adjust:
 part real options
 
 Table of Final Question Options (continued)
-final question wording	only if victorious	topic		final response rule		final response activity
+final question wording	only if victorious	topic	final response rule	final response activity
 "[b]ROVE OVER[r] to see what's behind [b]STORE H[r]"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	true	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	dummy demo dome mode activating
 "see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	the show alternate paths rule	--

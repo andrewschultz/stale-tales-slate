@@ -247,6 +247,11 @@ If you get to the end, you'll notice two rather forced ones. They both anagram o
 A door. (-)
 a minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
 
+@mis
+#testcase-mistake-shuffling-bruhs
+>bruhs
+No, you don't need to mix up the shrub and brush. That's not where you'll find passage out.
+
 @gn
 #testcase-outside-rested-desert
 >exit
@@ -321,6 +326,11 @@ by one point
 
 >score
 {$SCOS}
+
+@mis
+#+testcase-mistake-shuffling-bruhs
+>bruhs
+No, you don't need to mix up the shrub and brush. The door seems a more likely candidate.
 
 @max
 #ttc-table-of-ranks-2

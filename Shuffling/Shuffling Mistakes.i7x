@@ -86,6 +86,8 @@ understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be T
 
 chapter Rested Desert
 
+understand "bruhs" as a mistake ("No, you don't need to mix up the shrub and brush. [if OR DO door is not off-stage]The door seems a more likely candidate[else]That's not where you'll find passage out[end if].") when location of player is Rested Desert.
+
 understand "deters" as a mistake ("No! You're trying to make progress here.[note-great-guesses]") when player is in Rested Desert.
 
 [def=OR DO door]

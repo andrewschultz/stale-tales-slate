@@ -9572,7 +9572,7 @@ after reading a command:
 	if tell-flag is false and word number 1 in the player's command is "tell":
 		say "[bracket]NOTE: [this-game] uses 'ASK X ABOUT Y,' as you don't need to order NPCs around. So the parser will attempt to convert this to asking.[close bracket][line break][wfak]";
 		now tell-flag is true;
-	repeat with QQ running through available-to-flip things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip. While it gives considerable speedup (20%) on fallthrough errors, several odd bugs pop up which would require engine reorganization, so it's most efficient to have the code here for the moment. ]
+	repeat with QQ running through available-to-flip things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip. While it gives some speedup (10%) on fallthrough errors, several odd bugs pop up which would require engine reorganization, so it's most efficient to have the code here for the moment. ]
 		if QQ is a the-from listed in regana of mrlp:
 			d "candidate fungible: [QQ].";
 			if the player's command matches exact-text entry:

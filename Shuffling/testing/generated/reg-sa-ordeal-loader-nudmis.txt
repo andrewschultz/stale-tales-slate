@@ -138,6 +138,10 @@ A voice in your head tells you that sort of mental wandering is what got you can
 >in
 /^Rested Desert
 
+#testcase-mistake-shuffling-bruhs
+>bruhs
+No, you don't need to mix up the shrub and brush. That's not where you'll find passage out.
+
 #ttc-table-of-rested-desert-nudges-rested
 >restde
 You may need to change a room later, but you'll have a hint device to do so.
@@ -166,6 +170,10 @@ by one point
 
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
+
+#+testcase-mistake-shuffling-bruhs
+>bruhs
+No, you don't need to mix up the shrub and brush. The door seems a more likely candidate.
 
 #+testcase-mistake-shuffling-rood
 >rood
