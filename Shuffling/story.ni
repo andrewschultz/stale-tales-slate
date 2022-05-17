@@ -188,22 +188,24 @@ a region has a rule called saltine-check-rule.
 
 a region has a rule called prescan check rule.
 
- Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.] saltine-check-rule of ordeal loader is ordeal loader saltine check rule. prescan check rule of ordeal loader is ordeal-loader-scan-check rule.
+a region has a rule called parse-rule.
+
+ Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 8. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule. [altrule of ordeal loader is ordeal loader-alt rule.] saltine-check-rule of ordeal loader is ordeal loader saltine check rule. prescan check rule of ordeal loader is ordeal-loader-scan-check rule. parse-rule of ordeal loader is ordeal-loader-parse rule.
 [LLP(s): both bulge/blot, both deer/goat, sent nets, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.] [saltine-check-rule of stores is stores saltine check rule.] prescan check rule of stores is stores-scan-check rule.
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule. [altrule of stores is stores-alt rule.] [saltine-check-rule of stores is stores saltine check rule.] prescan check rule of stores is stores-scan-check rule. parse-rule of stores is stores-parse rule.
 [LLP(s): cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule. saltine-check-rule of forest is forest saltine check rule. prescan check rule of forest is forest-scan-check rule.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule. altrule of forest is forest-alt rule. saltine-check-rule of forest is forest saltine check rule. prescan check rule of forest is forest-scan-check rule. parse-rule of forest is forest-parse rule.
 [LLP(s): slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.] saltine-check-rule of sortie is sortie saltine check rule. prescan check rule of sortie is sortie-scan-check rule.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule. [altrule of sortie is sortie-alt rule.] saltine-check-rule of sortie is sortie saltine check rule. prescan check rule of sortie is sortie-scan-check rule. parse-rule of sortie is sortie-parse rule.
 [LLP(s): cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule. saltine-check-rule of metros is metros saltine check rule. prescan check rule of metros is metros-scan-check rule.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule. altrule of metros is metros-alt rule. saltine-check-rule of metros is metros saltine check rule. prescan check rule of metros is metros-scan-check rule. parse-rule of metros is metros-parse rule.
 [LLP(s): antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule. saltine-check-rule of resort is resort saltine check rule. prescan check rule of resort is resort-scan-check rule.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule. altrule of resort is resort-alt rule. saltine-check-rule of resort is resort saltine check rule. prescan check rule of resort is resort-scan-check rule. [parse-rule of resort is resort-parse rule.]
 [LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 Resort is not autosavable.
@@ -9549,75 +9551,23 @@ after reading a command:
 	let XX be indexed text;
 	let XX be the player's command in lower case;
 	change the text of the player's command to XX;
-	if the viler liver is touchable or the River Ville liver is touchable or livers are touchable or Spam is touchable:
-		if the player's command matches the regular expression "\bmeats\b", case insensitively:
-			say "What kind of meats they are is important. As are their physical characteristics. So you'll need to be specific.";
-			reject the player's command;
 [	if Trips Strip is unvisited:
 		if the player's command matches "\b?i<mfr>\b":
 			say "[reject]";
 			reject the player's command;]
-	if player is in Trap Part and centrifuge-stopped is false:
-		if the player's command matches the regular expression "^<0-9>+$":
-			say "(turning the dial)[line break]";
-	if location of player is Trips Strip:
-		repeat through table of warpcmds:
-			if the player's command matches the regular expression "[warp-cmd entry]":
-				if myreg entry is solved or myreg entry is bypassed:
-					say "Your utterance falls on deaf ears. You've already passed through [mystore entry] and beyond.";
-					reject the player's command;
-				d "[number of unsolved regions] currently left.";
-				if number of unsolved regions is 6 and button-locked is false and player has gadget and cheat-lock-warn is false: [this has to be 6: 3 unsolved stores, roster, Meta Team (blank area) and STORES itself.]
-					now cheat-lock-warn is true;
-					say "The [b]SECURE[r]/[b]RECUSE[r] button starts blinking. You may need to make sure the gadget's setting is as you want it. Currently, it [if gadget-secured is false]has [b]SECURE[r]/[b]RECUSE[r] off, so you'll need to pick off the remaining store[else if gadget is cert]is set to [b]CERTIFY[r] with [b]SECURE[r]/[b]RECUSE[r] on, and you can skip the final store[else]is set to [b]RECTIFY[r] with [b]SECURE[r]/[b]RECUSE[r] on, and you can skip the final store[end if]. Is this okay?";
-					if the player yes-consents:
-						do nothing;
-					else:
-						say "Okay, take time to adjust the gadget as you need. The above warning won't appear again.";
-						reject the player's command;
-				if number of unsolved regions is 6:
-					if button-locked is false:
-						say "The [b]SECURE[r]/[b]RECUSE[r] button locks in place as you say the magic word.";
-					now button-locked is true;
-				say "[warp-result entry][paragraph break]";
-				say "You watch [if mystore entry is touchable][mystore entry][else if myport entry is touchable]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
-				now myreg entry is bypassed;
-				if mystore entry is touchable, reg-inc;
-				process the notify score changes rule;
-				reject the player's command;
-	if the player's command matches the regular expression "\bdoor\b":
-		if odor is touchable:
-			if number of words in the player's command > 1:
-				ital-say "Just the one word will usually be sufficient in the future. But something happens when you focus: door.";
-				change the text of the player's command to "door";
-	if the player's command matches the regular expression "^(summon|say|think|shout|speak|yell) ":
+	abide by parse-rule of mrlp;
+	if say-flag is false and the player's command matches the regular expression "^(summon|say|think|shout|speak|yell) ":
 		if the player's command includes " to ":
 			do nothing;
 		else:
 			say "(I[one of]n the future, i[or][stopping]f you want to [b]SAY[r] something, you can just say the single word. To talk to someone, [b]ASK[r] someone [b]ABOUT[r] something.)";
 			replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
 			change the text of the player's command to XX;
-	if panel is touchable and panel is part of silo:
-		if the player's command matches the regular expression "buttons", say "One button at a time, please." instead;
-	if goat is touchable:
-		if the player's command matches the regular expression "\bgoat\b":
-			say "[one of]The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
-			reject the player's command;
-	if deer is touchable:
-		if the player's command matches the regular expression "\deer\b":
-			say "[one of]The deer is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
-			reject the player's command;
-	if player is in Fo Real Florae:
-		if the player's command matches the text "fairies":
-			say "[one of]Something you did or thought causes the freesia faeries to buzz...I guess they're magical enough to detect your misspellings. You feel a tingling, but it passes[or]They can see in your eyes you're spelling things wrong, but they'll have to deal.[or][run paragraph on][stopping]";
-	if word number 1 in the player's command is "chisel" and player has chisel:
-		replace the regular expression "^chisel" in XX with "scrape";
-		change the text of the player's command to XX;
-	if word number 1 in the player's command is "tell":
-		if tell-flag is false:
-			say "[bracket]NOTE: [this-game] uses 'ASK X ABOUT Y,' as you don't need to order NPCs around. So the parser will attempt to convert this to asking.[close bracket][line break][wfak]";
-			now tell-flag is true;
-	repeat with QQ running through available-to-flip things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
+			now say-flag is true;
+	if tell-flag is false and word number 1 in the player's command is "tell":
+		say "[bracket]NOTE: [this-game] uses 'ASK X ABOUT Y,' as you don't need to order NPCs around. So the parser will attempt to convert this to asking.[close bracket][line break][wfak]";
+		now tell-flag is true;
+	repeat with QQ running through available-to-flip things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip. While it gives considerable speedup (20%) on fallthrough errors, several odd bugs pop up which would require engine reorganization, so it's most efficient to have the code here for the moment. ]
 		if QQ is a the-from listed in regana of mrlp:
 			d "candidate fungible: [QQ].";
 			if the player's command matches exact-text entry:
@@ -9625,10 +9575,11 @@ after reading a command:
 				d "To = [the-to entry].";
 				try fliptoing the-to entry;
 				the rule succeeds;
-	if player is in notices section and gateman is in notices section and cabinet-flip-try is false and hash of the player's command is 384428789:
-		say "'Kind of you to try to help the cabinet, but its wounds are too recent,' says Nat Egam.";
-		now cabinet-flip-try is true;
 	continue the action;
+
+say-flag is a truth state that varies.
+
+tell-flag is a truth state that varies.
 
 cabinet-flip-try is a truth state that varies.
 
@@ -9639,8 +9590,6 @@ to reject-msg (rejitm - a thing):
 			continue the action;
 	d "[rejitm] could use a message in [done reject table of mrlp].";
 	say "Nothing at all seems to happen this time. You've probably done what you can.";
-
-tell-flag is a truth state that varies.
 
 table of warpcmds
 warp-cmd (indexed text)	mystore	myport	myreg	warp-result
@@ -9657,6 +9606,76 @@ definition: a thing (called x) is takeable:
 	if x is the player, decide no;
 	if x is fixed in place, decide no;
 	decide yes;
+
+section region specific parsing rules
+
+[this won't speed things up much, but yay organization and nice incremental stuff]
+
+this is the ordeal-loader-parse rule:
+	if location of player is rested desert:
+		if odor is in location of player and the player's command matches the regular expression "\bdoor\b":
+			if number of words in the player's command > 1:
+				ital-say "Just the one word will usually be sufficient in the future. But something happens when you focus: door.";
+				change the text of the player's command to "door";
+	else if location of player is thickest thickets:
+		if goat is in location of player and the player's command matches the regular expression "\bgoat\b":
+			say "[one of]The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
+			reject the player's command;
+		if deer is in location of player and the player's command matches the regular expression "\bdeer\b":
+			say "[one of]The deer is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
+			reject the player's command;
+	else if player is in notices section and gateman is in notices section and cabinet-flip-try is false and hash of the player's command is 384428789:
+		say "'Kind of you to try to help the cabinet, but its wounds are too recent,' says Nat Egam.";
+		now cabinet-flip-try is true;
+
+this is the stores-parse rule:
+	repeat through table of warpcmds:
+		if the player's command matches the regular expression "[warp-cmd entry]":
+			if myreg entry is solved or myreg entry is bypassed:
+				say "Your utterance falls on deaf ears. You've already passed through [mystore entry] and beyond.";
+				reject the player's command;
+			d "[number of unsolved regions] currently left.";
+			if number of unsolved regions is 6 and button-locked is false and player has gadget and cheat-lock-warn is false: [this has to be 6: 3 unsolved stores, roster, Meta Team (blank area) and STORES itself.]
+				now cheat-lock-warn is true;
+				say "The [b]SECURE[r]/[b]RECUSE[r] button starts blinking. You may need to make sure the gadget's setting is as you want it. Currently, it [if gadget-secured is false]has [b]SECURE[r]/[b]RECUSE[r] off, so you'll need to pick off the remaining store[else if gadget is cert]is set to [b]CERTIFY[r] with [b]SECURE[r]/[b]RECUSE[r] on, and you can skip the final store[else]is set to [b]RECTIFY[r] with [b]SECURE[r]/[b]RECUSE[r] on, and you can skip the final store[end if]. Is this okay?";
+				if the player yes-consents:
+					do nothing;
+				else:
+					say "Okay, take time to adjust the gadget as you need. The above warning won't appear again.";
+					reject the player's command;
+			if number of unsolved regions is 6:
+				if button-locked is false:
+					say "The [b]SECURE[r]/[b]RECUSE[r] button locks in place as you say the magic word.";
+				now button-locked is true;
+			say "[warp-result entry][paragraph break]";
+			say "You watch [if mystore entry is touchable][mystore entry][else if myport entry is touchable]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
+			now myreg entry is bypassed;
+			if mystore entry is touchable, reg-inc;
+			process the notify score changes rule;
+			reject the player's command;
+
+this is the forest-parse rule:
+	if player has chisel and word number 1 in the player's command is "chisel":
+		let XX be indexed text;
+		let XX be the player's command in lower case;
+		replace the regular expression "^chisel" in XX with "scrape";
+		change the text of the player's command to XX;
+	if the viler liver is fungible or the River Ville liver is fungible or livers are fungible or Spam is fungible:
+		if the player's command matches the regular expression "\bmeat(s)?\b", case insensitively:
+			say "There are several kinds of meats here. You'll need to be specific.";
+			reject the player's command;
+
+this is the sortie-parse rule:
+	if location of player is Trap Part:
+		if centrifuge-stopped is false and the player's command matches the regular expression "^<0-9>+$":
+			say "(turning the dial)[line break]";
+	if location of player is moor and panel is part of silo:
+		if the player's command matches the regular expression "buttons", say "One button at a time, please." instead;
+
+this is the metros-parse rule:
+	if player is in Fo Real Florae:
+		if the player's command matches the text "fairies":
+			say "[one of]Something you did or thought causes the freesia faeries to buzz...I guess they're magical enough to detect your misspellings. You feel a tingling, but it passes[or]They can see in your eyes you're spelling things wrong, but they'll have to deal.[or][run paragraph on][stopping]";
 
 volume jumpaheads from Roiling
 

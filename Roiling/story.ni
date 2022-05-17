@@ -174,6 +174,7 @@ Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal 
 6/14=snib
 7/15=scepter]
 [non-anagram = staple apertured departure]
+[1+1 for basement]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
@@ -217,7 +218,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 2/30=ye hoop vs hoop
 3/31=odes song
 4/32=sport ports
-5/34=Mazel Tov unhinted vs Won't
+6/34=Mazel Tov unhinted vs Won't
 7/35=hawt thaw
 8/36=starch charts
 9/37=drive a
@@ -225,10 +226,13 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 11/39=TBA key
 12/40=ROM stick
 13/41=escaroles
-NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
+NON ANAGRAM: 4 total
+1 for however you get rid of the yak
+1+1 for ye hoop
+1+2 for Mazel Tov unclued
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 44. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint request rejects. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. matched item responses table of oyster is table of oyster matched item responses. readable table of oyster is table of oyster readables. unmatched topic responses table of oyster is table of oyster unmatched topic responses. ask x about x table of oyster is table of oyster ask x about x. misses-rule of oyster is oyster-misses rule. preeftable of oyster is table of oyster prefigurings. article-rule of oyster is oyster article start rule. altroutes of oyster is the oyster-alt rule.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 45. min-score of oyster is 29. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint request rejects. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. matched item responses table of oyster is table of oyster matched item responses. readable table of oyster is table of oyster readables. unmatched topic responses table of oyster is table of oyster unmatched topic responses. ask x about x table of oyster is table of oyster ask x about x. misses-rule of oyster is oyster-misses rule. preeftable of oyster is table of oyster prefigurings. article-rule of oyster is oyster article start rule. altroutes of oyster is the oyster-alt rule.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=SLANDER snarled darnels
@@ -247,7 +251,7 @@ There are actually 31 points overall if you don't use the pills. You can "lose" 
 Special spill rules:
 you get -3 if you use the pills right away in the shop.
 you get -1 if you use the pills on Tortu before EAT.
-NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
+NON ANAGRAM: +1 ASK SAUSAGE ABOUT RUBY and go to the Rascal Craals
 ]
 
 Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 57. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint request rejects. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. matched item responses table of towers is table of towers matched item responses. readable table of towers is table of towers readables. unmatched topic responses table of towers is table of towers unmatched topic responses. ask x about x table of towers is table of towers ask x about x. misses-rule of towers is towers-misses rule. preeftable of towers is table of towers prefigurings. article-rule of towers is towers article start rule. altroutes of towers is the towers-alt rule.
@@ -286,8 +290,13 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=24 for rewired (bot-boat)
 1=25 for giving Tetris Sitter the top opt pot NON-ANAGRAM
 5=30 for unripe ur-pine/serpent/antsier/triste/annoyed in Mislit Limits/Mesprise Premises
-1=31 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+1=31 for not using x-ray vision to clear every guardian]
 [towers-min-adj must be changed if we fix something beyond Mislit Limits]
+[NON-ANAGRAM 3 total
+1=no-cheat bonus
+1=put dagger in deviser
+1=give pot to sitter
+]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 37. min-score of otters is 25. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings. [article-rule of otters is otters article start rule.] altroutes of otters is the otters-alt rule.
 [LLP list:
@@ -302,18 +311,20 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 10=35 for SABLE at the blase bales after all animals are helped
 11=36 for ASIDE around Elmer/Merle
 12=37 for HONESTLY after ASIDE
-NON ANAGRAM: PLAY WHISTLE
+NON ANAGRAM: +1 PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 46. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.] article-rule of others is others article start rule. altroutes of others is the others-alt rule.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 47. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.] article-rule of others is others article start rule. altroutes of others is the others-alt rule.
 [There are so many possibilities for a minimum solution--about 39 choose 20, or 68.9 billion--I won't go through them all. Well, technically, take away 10c3*29c17 + 10c2*29c18 + 10c1*29c19 + 10c0*29c20 to get 68.4 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits. Best score is # of fruits (39) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.
-7 non fruit points, so max - 7 = total
-1 = compass
-2 = sonic icons
-1 = put coin in slot
-2 = passport
-1 = bonus for not using arugula
+8 non fruit points, so max - 8 = total
+1 = compass (anagram)
+2 = sonic icons (anagram)
+1 = put coin in slot (non anagram)
+2 = passport (anagram)
+1 = bonus for not using arugula (non anagram)
+1 = sonic icons LLP (anagram)
+NON-ANAGRAM=+2, for no arugula (optional) + put coin in slot (always)
 ]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint request rejects.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [matched item responses table of demo dome is table of demo dome matched item responses.] [readable table of demo dome is table of demo dome readables.] [unmatched topic responses table of demo dome is table of demo dome unmatched topic responses.] [ask x about x table of demo dome is table of demo dome ask x about x.] [misses-rule of demo dome is demo dome-misses rule.] [preeftable of demo dome is table of demo dome prefigurings.] [article-rule of demo dome is demo dome article start rule.]
@@ -370,7 +381,8 @@ a thing can be rayed. a thing is usually not rayed.
 definition: a thing (called xx) is fungible:
 	if xx is held, yes;
 	if xx is palm and xx is in Dusty Study, yes; [you'd think this would qualify as touchable, but it doesn't]
-	if xx is touchable, yes;
+	if xx is enclosed by location of player, yes;
+	if xx is a backdrop and xx is in location of player, yes;
 	no.
 
 a thing can be spacy. a thing is usually not spacy.
@@ -2015,7 +2027,7 @@ check objasking it about (This is the check for object information rule):
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
 definition: a thing (called th) is to-gen-blather:
-	if th is bonker or th is grin set stinger or th is fluster self rut or th is natant ant or th is dreads adders or th is lone duck or th is serpent, yes;
+	if th is bonker or th is grin set stinger or th is fluster self rut or th is pest pets or th is natant ant or th is dreads adders or th is lone duck or th is serpent, yes;
 	no;
 
 check asking about (This is the check for specific topics rule):
@@ -3944,6 +3956,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Hardest Trashed Dearths:
 			if cans are in Hardest Trashed Dearths:
 				now noun is cans;
+			else if pest pets are in Hardest Trashed Dearths:
+				now noun is pest pets;
 			else:
 				now noun is eeks;
 			continue the action;
@@ -4759,7 +4773,10 @@ to decide which thing is oyster-item:
 		if skis are in Lapsin Plains, decide on skis;
 		if knob is touchable, decide on knob;
 		if pans are touchable, decide on pans;
-	if player is in Hardest Trashed Dearths, decide on eeks;
+	if player is in Hardest Trashed Dearths:
+		if pets are in Hardest Trashed Dearths:
+			decide on pest pets;
+		decide on eeks;
 	if player is in Shuttle Hutlets:
 		if tubs are in Shuttle Hutlets, decide on tubs;
 		if prod is touchable, decide on prod;
@@ -6272,7 +6289,7 @@ listen-list of troves is { sob ever verbose, SNORE SO ARENA, Id Cede, praise spi
 
 listen-list of presto is { odes song, rand, leo }.
 
-listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer }.
+listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, pest pets, eeks, papery yapper, dialer }.
 
 listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese, ancients' canniest instance }.
 
@@ -6379,6 +6396,7 @@ this is the listen-oyster rule:
 	if noun is carps or noun is pikes, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
 	if noun is trout, say "[if trout is reflexive]Whimpering slightly[else]Not whimpering any more[end if]." instead;
 	if player is in Anger Range and carps are moot and sausage is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
+	if noun is pest pets, say "If you listen right, it's weird, but they seem to be calling 'PSST! PETE!' It makes you see red." instead;
 	if noun is eeks, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!' You must find where the eeks are coming from." instead;
 	if noun is aunt tuna, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
 	if player is in Sclerous Closures, say "Silence[if sardine is in sclerous closures]--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU[end if]." instead;
@@ -13898,6 +13916,7 @@ flip-spill-flag is a truth state that varies.
 
 after fliptoing when flip-spill-flag is true:
 	now flip-spill-flag is false;
+	continue the action;
 
 spill-block is a truth state that varies.
 
@@ -14421,19 +14440,23 @@ book Hardest Trashed Dearths
 Hardest Trashed Dearths is a room in oyster. Hardest Trashed Dearths is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him. With all the crackling and general blurriness, you suspect you are surrounded by potentially lethal spark parks, with no quick directional way out.[paragraph break]You do hear something, though[if cans are touchable], and the ground is littered with cans[end if].". roomnud of Hardest Trashed Dearths is table of Hardest Trashed Dearths nudges.
 
 check going west in Hardest Trashed Dearths:
-	say "The eeks shouldn't be too hard to find. Still go back west?";
+	say "The [if pets are in dearths]pets can't be too hard to evade[else]eeks shouldn't be too hard to find[end if]. Still go back west?";
 	if the player yes-consents:
 		continue the action;
 	else:
-		say "Yes, you'll work through it and discover where to go.";
+		say "Yes, you'll work through things and discover where to go.";
 
 section spark parks
 
 the spark parks are plural-named boring bounding scenery in Hardest Trashed Dearths. description is "You can't clearly see or feel the spark parks, and it might hurt if you got close. But you know they're there.". bore-text is "You don't want to do anything with the spark parks, as they might do something to you. You need to find a safe way out.".
 
 after looking in Hardest Trashed Dearths:
-	set the pronoun them to eeks;
-	if cans are in Hardest Trashed Dearths, set the pronoun them to cans;
+	if cans are in Hardest Trashed Dearths:
+		set the pronoun them to cans;
+	else if eeks are in dearths:
+		set the pronoun them to eeks;
+	else:
+		set the pronoun them to pest pets;
 	continue the action;
 
 section cans
@@ -14449,9 +14472,15 @@ check scaning the cans (this is the bonus point rule) :
 	if the player's command includes "scan", try fliptoing cans instead;
 	say "You're over-thinking this one." instead;
 
+section pest pets
+
+the pest pets are vanishing animals in Hardest Trashed Dearths. "Pest pets seem to jump around and block you from going anywhere except the way you came.". description of pest pets is "They're bright red, and more surprisingly, they have a brand name written on them in entirely different bright red.".
+
+a-text of pest pets is "RRYR". b-text of pest pets is "RRYR". parse-text of pest pets is "x[sp]x[sp]e[sp]p".
+
 section eeks
 
-the eeks are plural-named boring vanishing scenery in Hardest Trashed Dearths. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.". bore-check of eeks is bore-eeks rule.
+the eeks are plural-named boring vanishing scenery. description is "If you listen or look the right way, you could figure where the eeks are coming from.". bore-text of eeks is "Can't do much more than listen to the eeks, or--something else, to find how to follow them.". bore-check of eeks is bore-eeks rule.
 
 a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "UNIQUE". eeks are any-spoilable.
 

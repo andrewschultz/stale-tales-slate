@@ -868,6 +868,7 @@ carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-scrap-ca
 pikes	pikes	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-spike-pikes rule	"[spike-and-scrap]."	"[carp-pike-pill]."
 snarled darnels	snarled darnels	false	455342132	--	"slander"	"slander darnels/snarled" or "slander snarled darnels"	--	--	"You take some cheap shots at the darnels, pretending they're out to get you, and you feel clever. They're as forbidding as ever, but [if sausage is not moot]if you can't get angry somewhere like Anger Range, where can you?[else]then again, at [anger range], everything should be perfectly tidy, and people should be upset when it isn't![end if]"
 cans	cans	false	186374877	--	"scan"	"scan"	--	--	"You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet or ultra-red rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths."
+pest pets	pest pets	false	408656052	--	"step"	"step"	--	post-step-pest-pets rule	"The pets do seem to follow you if you just walk aimlessly or with a purpose. So you mix it up a bit. A dance step here, a shimmy there. They start crying! They're supposed to be the ones that are pests to follow! It's all very upsetting. But don't worry. They won't be upset for long. They'll find someone else to cling to."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-seek-eeks rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."	"The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna shakes her head but invites you up."
 dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
 tea	tea	false	233103945	--	"eat"	"eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tee-details].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"	"You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the [tea], too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel and don't know how. Not too much. Anyway, once you left, she kept muttering how she wanted to get rid of this Paw-R-Wrap to somebody before I popped it. So I snuck it for you.'"
@@ -965,6 +966,9 @@ this is the post-spike-pikes rule:
 	now spikes is true;
 	process the post-scrap-carps rule;
 
+this is the post-step-pest-pets rule:
+	move eeks to Hardest Trashed Dearths;
+
 this is the post-seek-eeks rule:
 	now Hardest Trashed Dearths is shunned;
 	now Anger Range is mapped west of Lean Lane;
@@ -976,7 +980,7 @@ this is the post-tend-dent rule:
 
 this is the post-eat-tea rule:
 	if flip-spill-flag is true:
-		if dent is not moot, poss-d; [can't fix dent again]
+		if dent is not moot, poss-d; [can't fix dent once you're kicked out]
 		if wipes are in Lean Lane, decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
 		now player has Paw R Wrap;
 		now aunt-tuna-cross is true;
@@ -2353,6 +2357,7 @@ stein	"The stein reads [first custom style]TIENS[r] in red, trying to be foreign
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always [first custom style]tunes[r], in red, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 tips pits	"[first custom style]IT'S P[r] is written in red on the bottom."
 HUNTER HUNT AREA	"[first custom style]Etahn Ru. Near-Hut Haunter[r]."
+pest pets	"You notice [first custom style]PEP-TESTS[r] as the brand name, once you have a look."
 cans	"You squint. [first custom style]NASC[r] is the name of the company that produced these cans, written in red."
 span pans	"Red writing indicates the pans were made by [first custom style]Nan's Apps[r]."
 gleaner	"The gleaner was made by [first custom style]Al Green[r], written in red."
@@ -2462,7 +2467,7 @@ after going north in Char Arch when Leo is eager:
 
 book oyster
 
-table of oyster unmatched topic responses [delete this]
+table of oyster unmatched topic responses
 askee	dialogue-text
 pesty types	"The pesty types would probably think YOU were drunk if you told them why you were here or asked questions." [begin OYSTER]
 trolls	"Talking wouldn't distract them from [if silly-acts is 3]eventually beating you up[else]keeping you in the Posh Hops Shop[end if]. They'd just win the argument. They're trolls, after all."
@@ -2472,6 +2477,7 @@ scary crays	"They chuckle a bit. You're not going to be able to talk your way ou
 trout	"[if trout is reflexive]He needs a pep talk. Guidance. Even if it's not 100% correct[else]He shrugs. The outside world is intimidating to him[end if]."
 carps	"They snot nots. Tons. Brusque, queer BS. You need to take action, instead."
 pikes	"They snot nots. Tons. Brusque, queer BS. You need to take action, instead."
+pest pets	"They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something."
 aunt tuna	"'There is not much to say, with the haunter lurking under Anger Range, and the Horned Hedron assailing innocent people!' Looks like you won't nyet-a-yenta."
 sandier sardine	"He flashes a snider look as he reads in to your talk. 'Ear dins. Wish I worked at Adrien's.'"
 weaselly walleyes	"They snicker menacingly and whisper loudly that you're probably scared of lots of things like ghosts. They aren't. Not even the haunter!"
@@ -4197,6 +4203,7 @@ X1	"[in-ded-hint]."
 X2	"[in-ded-hint]."
 X3	"[in-ded-hint]."
 X4	"[in-ded-hint]."
+X5	"[in-ded-hint]."
 
 to say in-ded-hint: say "Inducted Deductin and its sub-pages are just there to examine, to help you understand how to reason when the settler's cheat mode gives ambiguous readings"
 
@@ -4525,6 +4532,7 @@ bogus-plains	"[one of]You can talk about how great you are, to all who would hea
 waste	"[one of]The waste puzzle is optional.[plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or][b]SWEAT[r].[minus][cycling][stopping]"	--	"[b]SWEAT[r] by the waste"
 lance	"[lance-hints]"	--	"[b]CLEAN[r] the lance"
 heaps	"[one of]The heaps are malleable, but they might be a pain to sift through.[plus][or]If you [b]SHAPE[r] the heaps, you get a Keep Yorpwald Beautiful Last Lousy Point.[minus][cycling]"	--	"[b]SHAPE[r] the heaps"
+pest pets	"[one of]You need to walk around them, or dance, or run, or something. Some sort of generic motion with your feet should do.[plus][or]You need to [b]STEP[r].[minus][cycling]"	--	"[b]STEP[r] by the pest pets"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[plus][or]They are [b]EEKS[r]. That leaves twelve choices.[plus][or]Two, if you use the settler.[plus][or][b]SEEK[r].[minus][cycling]"	--	"[b]SEEK[r] the eeks"
 aunt tuna	"Aunt Tuna may have some good information[if trout is reflexive]. However, it's more important to help Tortu the trout[end if][if tea at a tee is not moot]. Her food is also edible. You'll want to enjoy her hospitality[end if][if trout is reflexed and tea at a tee is moot]. She's given you all she has, though[end if]."
 dent	"[one of]The dent can be dealt with if you know how to futz with it, but it's a last lousy point.[plus][or]No, not futz, another four-letter word.[plus][or]You need to [b]TEND[r] the dent.[minus][cycling]"	--
