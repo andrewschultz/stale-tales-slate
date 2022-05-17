@@ -152,11 +152,11 @@ a region has a rule called randomization rule.
 
 a region has a rule called misses-rule.
 
-a region has a rule called article-rule.
-
 a region has a rule called altroutes.
 
- a region can be miss-point-warned. a region is usually not miss-point-warned.
+a region has a rule called parse-rule.
+
+a region can be miss-point-warned. a region is usually not miss-point-warned.
 
 a region has text called warn-left-text.
 
@@ -164,7 +164,7 @@ chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint request rejects.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. matched item responses table of ordeal reload is table of ordeal reload matched item responses. readable table of ordeal reload is table of ordeal reload readables. unmatched topic responses table of ordeal reload is table of ordeal reload unmatched topic responses. ask x about x table of ordeal reload is table of ordeal reload ask x about x. misses-rule of ordeal reload is ordeal-reload-misses rule. preeftable of ordeal reload is table of ordeal reload prefigurings. [article-rule of ordeal reload is ordeal reload article start rule.] altroutes of Ordeal Reload is the ordeal-reload-alt rule.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint request rejects.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. matched item responses table of ordeal reload is table of ordeal reload matched item responses. readable table of ordeal reload is table of ordeal reload readables. unmatched topic responses table of ordeal reload is table of ordeal reload unmatched topic responses. ask x about x table of ordeal reload is table of ordeal reload ask x about x. misses-rule of ordeal reload is ordeal-reload-misses rule. preeftable of ordeal reload is table of ordeal reload prefigurings. altroutes of Ordeal Reload is the ordeal-reload-alt rule. parse-rule of ordeal reload is ordeal-reload-parse rule.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -180,7 +180,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint request rejects.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. matched item responses table of stores is table of stores matched item responses. readable table of stores is table of stores readables. unmatched topic responses table of stores is table of stores unmatched topic responses. ask x about x table of stores is table of stores ask x about x. misses-rule of stores is stores-misses rule. [preeftable of stores is table of stores prefigurings.] article-rule of stores is stores article start rule.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint request rejects.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. matched item responses table of stores is table of stores matched item responses. readable table of stores is table of stores readables. unmatched topic responses table of stores is table of stores unmatched topic responses. ask x about x table of stores is table of stores ask x about x. misses-rule of stores is stores-misses rule. [preeftable of stores is table of stores prefigurings.] parse-rule of stores is stores-parse rule.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -189,7 +189,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 30. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint request rejects. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. matched item responses table of troves is table of troves matched item responses. readable table of troves is table of troves readables. unmatched topic responses table of troves is table of troves unmatched topic responses. ask x about x table of troves is table of troves ask x about x. misses-rule of troves is troves-misses rule. preeftable of troves is table of troves prefigurings. article-rule of troves is troves article start rule. altroutes of troves is the troves-alt rule.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 30. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint request rejects. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. matched item responses table of troves is table of troves matched item responses. readable table of troves is table of troves readables. unmatched topic responses table of troves is table of troves unmatched topic responses. ask x about x table of troves is table of troves ask x about x. misses-rule of troves is troves-misses rule. preeftable of troves is table of troves prefigurings. altroutes of troves is the troves-alt rule. parse-rule of troves is troves-parse rule.
 [LLP list:
 1/18=Pa Egg Pea
 2/19=tears taser
@@ -206,13 +206,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 13/30=Creationism Reactionism
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of routes scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint request rejects. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. matched item responses table of routes is table of routes matched item responses. readable table of routes is table of routes readables. unmatched topic responses table of routes is table of routes unmatched topic responses. ask x about x table of routes is table of routes ask x about x. misses-rule of routes is routes-misses rule. preeftable of routes is table of routes prefigurings. [article-rule of routes is routes article start rule.] altroutes of routes is the routes-alt rule.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of routes scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint request rejects. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. matched item responses table of routes is table of routes matched item responses. readable table of routes is table of routes readables. unmatched topic responses table of routes is table of routes unmatched topic responses. ask x about x table of routes is table of routes ask x about x. misses-rule of routes is routes-misses rule. preeftable of routes is table of routes prefigurings. altroutes of routes is the routes-alt rule. parse-rule of routes is routes-parse rule.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint request rejects. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. matched item responses table of presto is table of presto matched item responses. readable table of presto is table of presto readables. unmatched topic responses table of presto is table of presto unmatched topic responses. ask x about x table of presto is table of presto ask x about x. misses-rule of presto is presto-misses rule. preeftable of presto is table of presto prefigurings. article-rule of presto is presto article start rule. altroutes of presto is the presto-alt rule.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint request rejects. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. matched item responses table of presto is table of presto matched item responses. readable table of presto is table of presto readables. unmatched topic responses table of presto is table of presto unmatched topic responses. ask x about x table of presto is table of presto ask x about x. misses-rule of presto is presto-misses rule. preeftable of presto is table of presto prefigurings. altroutes of presto is the presto-alt rule. parse-rule of presto is presto-parse rule.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -232,7 +232,7 @@ NON ANAGRAM: 4 total
 1+2 for Mazel Tov unclued
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 45. min-score of oyster is 29. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint request rejects. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. matched item responses table of oyster is table of oyster matched item responses. readable table of oyster is table of oyster readables. unmatched topic responses table of oyster is table of oyster unmatched topic responses. ask x about x table of oyster is table of oyster ask x about x. misses-rule of oyster is oyster-misses rule. preeftable of oyster is table of oyster prefigurings. article-rule of oyster is oyster article start rule. altroutes of oyster is the oyster-alt rule.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 45. min-score of oyster is 29. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint request rejects. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. matched item responses table of oyster is table of oyster matched item responses. readable table of oyster is table of oyster readables. unmatched topic responses table of oyster is table of oyster unmatched topic responses. ask x about x table of oyster is table of oyster ask x about x. misses-rule of oyster is oyster-misses rule. preeftable of oyster is table of oyster prefigurings. altroutes of oyster is the oyster-alt rule. parse-rule of oyster is oyster-parse rule.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=SLANDER snarled darnels
@@ -254,7 +254,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: +1 ASK SAUSAGE ABOUT RUBY and go to the Rascal Craals
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 57. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint request rejects. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. matched item responses table of towers is table of towers matched item responses. readable table of towers is table of towers readables. unmatched topic responses table of towers is table of towers unmatched topic responses. ask x about x table of towers is table of towers ask x about x. misses-rule of towers is towers-misses rule. preeftable of towers is table of towers prefigurings. article-rule of towers is towers article start rule. altroutes of towers is the towers-alt rule.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 57. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint request rejects. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. matched item responses table of towers is table of towers matched item responses. readable table of towers is table of towers readables. unmatched topic responses table of towers is table of towers unmatched topic responses. ask x about x table of towers is table of towers ask x about x. misses-rule of towers is towers-misses rule. preeftable of towers is table of towers prefigurings. altroutes of towers is the towers-alt rule. parse-rule of towers is towers-parse rule.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -298,7 +298,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=give pot to sitter
 ]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 37. min-score of otters is 25. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings. [article-rule of otters is otters article start rule.] altroutes of otters is the otters-alt rule.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 37. min-score of otters is 25. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings. altroutes of otters is the otters-alt rule. parse-rule of otters is otters-parse rule.
 [LLP list:
 1=26 for RESCIND
 2=27 for ACTUALLY
@@ -314,7 +314,7 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: +1 PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 47. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.] article-rule of others is others article start rule. altroutes of others is the others-alt rule.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 47. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.] altroutes of others is the others-alt rule. parse-rule of others is others-parse rule.
 [There are so many possibilities for a minimum solution--about 39 choose 20, or 68.9 billion--I won't go through them all. Well, technically, take away 10c3*29c17 + 10c2*29c18 + 10c1*29c19 + 10c0*29c20 to get 68.4 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits. Best score is # of fruits (39) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.
 8 non fruit points, so max - 8 = total
@@ -327,7 +327,7 @@ only need 20 fruits. Best score is # of fruits (39) + compass + icons/sonic + pa
 NON-ANAGRAM=+2, for no arugula (optional) + put coin in slot (always)
 ]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint request rejects.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [matched item responses table of demo dome is table of demo dome matched item responses.] [readable table of demo dome is table of demo dome readables.] [unmatched topic responses table of demo dome is table of demo dome unmatched topic responses.] [ask x about x table of demo dome is table of demo dome ask x about x.] [misses-rule of demo dome is demo dome-misses rule.] [preeftable of demo dome is table of demo dome prefigurings.] [article-rule of demo dome is demo dome article start rule.]
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint request rejects.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [matched item responses table of demo dome is table of demo dome matched item responses.] [readable table of demo dome is table of demo dome readables.] [unmatched topic responses table of demo dome is table of demo dome unmatched topic responses.] [ask x about x table of demo dome is table of demo dome ask x about x.] [misses-rule of demo dome is demo dome-misses rule.] [preeftable of demo dome is table of demo dome prefigurings.] parse-rule of demo dome is demo-dome-parse rule.
 
 Otters is not autosavable. Others is not autosavable.
 
@@ -5091,95 +5091,24 @@ after reading a command:
 		ital-say "you probably don't need more than four words per command. The most complex ones are [b]PUT X ON Y[i] or [b]ASK X ABOUT Y[i], and a compound item like [b]GIANT PIN[i] can use [b]GIANT[i] or [b]PIN[i]. Adjectives usually aren't necessary, and [b]GET ALL[i] will never take anything harmful or lethal.";
 		now long-sent-warn is true;
 		pad-rec "long commands";
-	if word number 1 in player's command is "a" or word number 1 in player's command is "in":
-		abide by the article-rule of mrlp;
+	abide by the parse-rule of mrlp;
+	if word number 1 in player's command is "a":
 		if ask-warn is false:
 			say "Replacing [b]A[r] with [r]ASK ABOUT[r]. Saying [b]A[r] is not required for any puzzle.";
 			now ask-warn is true;
 		replace the regular expression "^a " in XX with "ask about ";
 		change the text of the player's command to XX;
 		d "Changing text to [XX].";
-	if mrlp is routes:
-		if word number 1 in player's command is "go":
-			unless word number 2 in player's command is "to":
-				if go-warned is false:
-					ital-say "you don't need to start a command with go in Routes. One word should be fine.";
-					now go-warned is true;
-				let XX be the player's command;
-				replace the regular expression "^go " in XX with "";
-				change the text of the player's command to XX;
-	if player is in Posh Hops Shop:
-		if the player's command includes "tunes" and tunes are moot, say "The tunes are gone, now that you messed with the jukebox." instead;
-	if player is in Olde Lode and urn is in Olde Lode:
-		if word number 1 in player's command is "run":
-			if number of words in player's command > 1:
-				say "You have a route planned out, but you panic and run just any which way...[paragraph break]";
-			try fliptoing urn instead;
-	repeat with QQ running through fungible things:
+	if the player's command includes "smell" and word number 1 in the player's command is not "smell":
+		say "You can just type [b]SMELL[r].";
+		reject the player's command;
+	repeat with QQ running through fungible things: [being able to get rid of this code would result in a 5% speedup overall. However, it's here to subvert the default behaviors of, say, OUTSIDE or STAPLE without having to do much code-munging. For OUTSIDE, we'd need a check rule, and for STAPLE, we'd need "rule for supplying a missing noun when stapleing." The OYSTER section might have all kinds of problems. So perhaps we could sluff this off into the oyster parse-rule, then focus on the other odd cases, but it'd require a lot of testing, which might not be worth it. Also, I'd have to sort out an extra line break problem.]
 		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches right-cmd entry:
 				try fliptoing the-to entry;
 				process the notify score changes rule;
 				[save-present-input;]
-				process the hint flags checkoff rule;
 				process the scam rule instead;
-	if Report Porter Perrot is off-stage and the player's command includes "perrot", say "[if stuff-found < 3]Who?[else]Report Porter Perrot's outside, but to interact meaningfully, you should [b]OPEN[r] the liaison.[end if]" instead;
-	if the player's command includes "tickle" and Elmo is in Largely All Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
-	if player is in Clangier Clearing and melon is in Clangier Clearing:
-		if the player's command includes "len" and the player's command includes "mo", try fliptoing melon instead;
-	if player is in Evoc Cove and the player's command includes "page":
-		let XX be the player's command;
-		replace the regular expression "page" in XX with "";
-		ital-say "you don't need to say [b]PAGE[i] when reading a particular page. A number will do fine.";
-		change the text of the player's command to XX;
-	if the player's command includes "under":
-		if number of words in the player's command > 1:
-			if Gast is touchable:
-				if Rude N Nuder is touchable:
-					say "Truncating to one word.";
-					change the text of the player's command to "under";
-	if player is in Rascal Craals and ruby is moot:
-		if the player's command includes "ruby":
-			say "Don't worry about the ruby any more[if sausage is moot], or [the sausage][else]. It's someone else's worry. Or someTHING's[end if].";
-			reject the player's command;
-	if the player is in Strip of Profits:
-		repeat through table of region skip commands:
-			if word number 1 in the player's command is "[lastcmd entry]":
-				if storedest entry is touchable or portdest entry is touchable:
-					if storedest entry is store t:
-						say "That was the command to win the original release, but there's another command to see the region beyond Elvira. If you want to restart, go back to the Dusty Study and [b]ROVE OVER[r], that will work.";
-						reject the player's command;
-					if old-rel entry > 0:
-						say "The region for this final command ([go-region of portdest entry]) may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Thus, significantly new stuff may've been added since then. Go ahead anyway?";
-						if the player dir-consents:
-							say "Okay.";
-						else:
-							say "Enjoy the new content!";
-							reject the player's command;
-					say "You declare cleared [go-region of portdest entry] and watch [if portdest entry is touchable][portdest entry][else][storedest entry][end if] dissolve.";
-					if storedest entry is touchable, reg-inc;
-					moot storedest entry;
-					moot portdest entry;
-					now go-region of portdest entry is shortcircuited;
-					see-about-patcher;
-					reject the player's command;
-				say "You already took care of [go-region of portdest entry].";
-				reject the player's command;
-	if the player is in Shuttle Hutlets and digger is off-stage:
-		if the player's command includes "shovel":
-			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
-			reject the player's command;
-	if hydra-known is true and player is in Reclusion Inclosure and player does not have whistle:
-		if the player's command includes "hardy" or the player's command includes "hydra":
-			say "You don't want to [b]THINK[r] about taking on the hydra by yourself. You need something much bigger.";
-			reject the player's command;
-	if mrlp is towers, towers-plurcheck;
-	if mrlp is otters, otters-plurcheck;
-	if the player's command includes "smell" and word number 1 in the player's command is not "smell":
-		say "You can just type [b]SMELL[r].";
-		reject the player's command;
-	if player is in Carven Cavern and Respect Specter is touchable:
-		if the player's command includes "spectre", say "The Respect Specter winces slightly and opens its mouth as if to say 'Er...'[paragraph break]";
 
 instance-plur is a truth state that varies.
 
@@ -5231,33 +5160,83 @@ definition: a guardian (called gu) is plurcheck:
 	if gu is touchable, yes;
 	no;
 
-section article start rules (with a preposition thrown in)
+section parse rules by region
 
-[this is because A REC should be in mistakes but it only shows REC]
+this is the ordeal-reload-parse rule:
+	if player is in dusty study:
+		if Report Porter Perrot is off-stage and the player's command includes "perrot", say "[if stuff-found < 3]Who?[else]Report Porter Perrot's outside, but to interact meaningfully, you should [b]OPEN[r] the liaison.[end if]" instead;
+	else if player is in largely all grey gallery:
+		if elmo is in largely all grey gallery and the player's command includes "tickle", say "Really. This is a juvenile computer game, not a juvenile toy." instead;
+	else if player is in Carven Cavern and Respect Specter is in Carven Cavern:
+		if the player's command includes "spectre", say "The Respect Specter winces slightly and opens its mouth as if to say 'Er...'[paragraph break]";
 
-this is the stores article start rule:
+this is the stores-parse rule:
 	if player is in Cruelest Lectures:
 		if the player's command exactly matches the text "in stage":
 			change the text of the player's command to "instage";
-			the rule succeeds;
+	else if the player is in Strip of Profits:
+		repeat through table of region skip commands:
+			if word number 1 in the player's command is "[lastcmd entry]":
+				if storedest entry is touchable or portdest entry is touchable:
+					if storedest entry is store t:
+						say "That was the command to win the original release, but there's another command to see the region beyond Elvira. If you want to restart, go back to the Dusty Study and [b]ROVE OVER[r], that will work.";
+						reject the player's command;
+					if old-rel entry > 0:
+						say "The region for this final command ([go-region of portdest entry]) may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Thus, significantly new stuff may've been added since then. Go ahead anyway?";
+						if the player dir-consents:
+							say "Okay.";
+						else:
+							say "Enjoy the new content!";
+							reject the player's command;
+					say "You declare cleared [go-region of portdest entry] and watch [if portdest entry is touchable][portdest entry][else][storedest entry][end if] dissolve.";
+					if storedest entry is touchable, reg-inc;
+					moot storedest entry;
+					moot portdest entry;
+					now go-region of portdest entry is shortcircuited;
+					see-about-patcher;
+					reject the player's command;
+				say "You already took care of [go-region of portdest entry].";
+				reject the player's command;
 
-this is the troves article start rule:
+this is the routes-parse rule:
+	if gast is in location of player and rude n nuder is enclosed by location of player:
+		if the player's command includes "under":
+			if number of words in the player's command > 1:
+				say "Truncating to one word.";
+				change the text of the player's command to "under";
+	if word number 1 in player's command is "go":
+		unless word number 2 in player's command is "to":
+			if go-warned is false:
+				ital-say "you don't need to start a command with go in Routes. One word should be fine.";
+				now go-warned is true;
+			let XX be the player's command;
+			replace the regular expression "^go " in XX with "";
+			change the text of the player's command to XX;
+
+this is the troves-parse rule:
 	if player is in Loather Rathole:
 		if the player's command exactly matches the text "a rec":
 			say "You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.";
 			the rule succeeds;
 
-this is the presto article start rule:
+this is the presto-parse rule:
 	if player is in Char Arch and the player's command exactly matches the text "a gps":
 		say "A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.";
 		the rule succeeds;
-	else if flea is touchable or leaf is touchable:
+	else if flea is enclosed by location of player or leaf is enclosed by location of player:
 		if the player's command exactly matches the text "a elf":
 			say "You don't need any D&D character to magick things the rest of the way here.";
 			the rule succeeds;
 
-this is the oyster article start rule:
-	if player is in Disease Seaside:
+this is the oyster-parse rule:
+	if player is in Posh Hops Shop:
+		if tunes are moot and the player's command includes "tunes", say "The tunes are gone, now that you messed with the jukebox." instead;
+	else if player is in Olde Lode:
+		if urn is in Olde Lode and word number 1 in player's command is "run":
+			if number of words in player's command > 1:
+				say "You have a route planned out, but you panic and run just any which way...[paragraph break]";
+			try fliptoing urn instead;
+	else if player is in Disease Seaside:
 		if the player's command exactly matches the text "a cone":
 			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.";
 			the rule succeeds;
@@ -5265,21 +5244,46 @@ this is the oyster article start rule:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
 			the rule succeeds;
+	else if player is in Rascal Craals:
+		if ruby is moot and the player's command includes "ruby":
+			say "Don't worry about the ruby any more[if sausage is moot], or [the sausage][else]. It's someone else's worry. Or someTHING's[end if].";
+			reject the player's command;
+	else if the player is in Shuttle Hutlets:
+		if digger is off-stage and the player's command includes "shovel":
+			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
+			reject the player's command;
 
-this is the towers article start rule:
+this is the towers-parse rule:
+	towers-plurcheck;
 	if player is not in Loftier Trefoil:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
 			the rule succeeds;
-	if nastier stainer retinas are touchable and the player's command exactly matches the text "in tears":
+	else if nastier stainer retinas are in location of player and the player's command exactly matches the text "in tears":
 		say "Clever, but maybe you can make [the retinas] so they feel a need to be in tears.";
 		the rule succeeds;
 
-this is the others article start rule:
-	if Dr Lola Ollard is touchable:
+this is the otters-parse rule:
+	otters-plurcheck;
+	if hydra-known is true and player is in Reclusion Inclosure and player does not have whistle:
+		if the player's command includes "hardy" or the player's command includes "hydra":
+			say "You don't want to [b]THINK[r] about taking on the hydra by yourself. You need something much bigger.";
+			reject the player's command;
+
+this is the others-parse rule:
+	if player is in Clangier Clearing:
+		if melon is in Clangier Clearing and  the player's command includes "len" and the player's command includes "mo", try fliptoing melon instead;
+	else if Dr Lola Ollard is enclosed by the player:
 		if the player's command exactly matches the text "a lol":
 			say "You laugh at how silly Dr. Lola Ollard looks on the fake currency.";
 			the rule succeeds;
+
+this is the demo-dome-parse rule:
+	if player is in Evoc Cove and the player's command includes "page":
+		let XX be the player's command;
+		replace the regular expression "page" in XX with "";
+		ital-say "you don't need to say [b]PAGE[i] when reading a particular page. A number will do fine.";
+		change the text of the player's command to XX;
 
 section command reader booleans
 
