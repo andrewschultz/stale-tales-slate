@@ -404,7 +404,7 @@ to decide whether (nt - a table name) is hash-found:
 					say "[this-clue entry][line break][note-good-guesses]";
 					decide yes;
 			else if there is a this-item entry:
-				if this-item entry is touchable:
+				if this-item entry is fungible:
 					say "[this-clue entry][line break][note-good-guesses]";
 					decide yes;
 			else:
@@ -417,7 +417,7 @@ to say reject:
 	now firstword is the hash of word number 1 in the player's command;
 	d "The hash of the command is [fullcmd]. The hash of word #1 is [firstword].";
 	repeat through regana of mrlp:
-		if the-from entry is touchable:
+		if the-from entry is fungible:
 			if firstword is the hashkey entry or fullcmd is the hashkey entry:
 				say "[spec-help of the-from entry]";
 				if last-hash is fullcmd or last-hash is firstword:
@@ -2647,13 +2647,18 @@ chapter the verb
 definition: a thing (called xx) is fungible:
 	if xx is enclosed by the player, yes;
 	if location of player is kitchen and fridge contains xx and fridge is closed, no;
-	if location of xx is location of player, yes;
+	if xx is a backdrop:
+		if xx is in location of player, yes;
+	else:
+		if location of xx is location of player, yes;
 	no.
 
 definition: a thing (called xx) is available-to-flip:
 	if xx is held, yes;
 	[if location of xx is location of player, yes;]
-	if xx is touchable, yes;
+	if xx is enclosed by location of player, yes;
+	if xx is a backdrop:
+		if xx is in location of player, yes;
 	if xx is words and xx is in noise bag, yes;
 	if location of player is kitchen and fridge contains xx, yes;
 	no.
