@@ -90,9 +90,16 @@ HOW PILLS WERE USED: LEAP by the plea.
 DEBUG INFO: Current oyster hint/spill item = HUNTER HUNT AREA/HUNTER HUNT AREA.
 A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument.
 
-#ttc-table-of-oyster-anagrams-seek
+#ttc-table-of-oyster-anagrams-step
 >e
+DEBUG INFO: Spilling pest pets.
+The pills fall out of the bottle, attracting the attention of the pest pets. The bouncing pills bounce in place for a while before going off to a corner of the Dearths, taking the pets with them.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to STEP by the pest pets.
+
+#ttc-table-of-oyster-anagrams-seek
+>z
 DEBUG INFO: Spilling eeks.
+The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna shakes her head but invites you in.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEEK the eeks.
 
 /^Lean Lane

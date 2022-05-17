@@ -14,10 +14,10 @@ files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,re
 ~	hints,hin	t4
 ~	verbs	verbs
 
-}}MAX=44
-}}CURMAX=44
+}}MAX=45
+}}CURMAX=45
 }}SCORE=0
-}}CURMIN=28
+}}CURMIN=29
 
 }$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
@@ -1153,7 +1153,14 @@ As you kick at the area, a vision of a red hate urn, replete with frowns and sco
 /^Hardest Trashed Dearths
 
 @hin
-DEBUG INFO: eeks hinting.
+DEBUG INFO: pest pets hinting.
+
+>step
+by one point
+}}SCORE++
+
+>score
+{$SCOS}
 
 @verbs
 #ttc-table-of-oyster-nowheres-hardest-trashed-dearths
@@ -1230,7 +1237,9 @@ There are no clothing stores around, nor is there anything physical to lead you 
 @hints
 #ttc-table-of-settler-shake-descriptions-eeks
 >ss
-A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible.
+A couple things: some cartoony representation of EEKS and the cans (very blurry) are visible.
+# I'm having problems with item order with the exact match above. It's not what's important, so if it happens, the regex below should fix things to avoid false positives.
+#/A couple things: (the cans \(very blurry\) and some cartoony representation of EEKS|some cartoony representation of EEKS and the cans \(very blurry\)) are visible.
 
 @max
 >scan cans
