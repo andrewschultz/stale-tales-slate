@@ -8,7 +8,7 @@ book Ordeal Loader
 
 table of Ordeal Loader anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
-bulge	bugle	"bugle"	"bulge"	a rule	post-bulge-bugle rule	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is touchable]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	nowhere
+bulge	bugle	"bugle"	"bulge"	a rule	post-bulge-bugle rule	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is in Rested Desert]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	nowhere
 odor	OR DO door	"door"	"odor"	--	post-odor-door rule	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start Ordeal Loader anagrams]
 bolt	blot	"blot"	"bolt"	--	post-bolt-blot rule	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339
 reed	deer	"deer"	"reed"	--	post-reed-deer rule	"The reed shudders and slowly pulls down into the ground, making legs and so forth. And it becomes a deer. The deer sees the delicious thickets and brambles and walks over.[paragraph break][goat-deer-eat]."	false	361965110
@@ -24,9 +24,10 @@ this is the post-bulge-bugle rule:
 
 this is the post-odor-door rule:
 	if min-alert is false, poss-display;
+	move bulge to location of player;
+	move bolt to location of player;
 
 this is the post-bolt-blot rule:
-	now blot is part of OR DO door;
 	if bulge is moot, min-up;
 
 this is the post-reed-deer rule:
@@ -829,9 +830,9 @@ odor	"[one of]What can the odor turn into? Your random thoughts are not so rando
 musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."
 bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door.[plus][or]The musical chord is a clue.[plus][or]You want to change the bulge into a [b]BUGLE[r].[minus][cycling]"
 bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a [b]BLOT[r].[minus][cycling]"
-blot	"The blot is there to clue [if bugle is touchable]making the bugle[else]what the bulge could become[end if] for a bonus point. It's not useful by itself, but it can't hinder you as the bolt did."
+blot	"The blot is there to clue [if player has bugle]making the bugle[else]what the bulge could become[end if] for a bonus point. It's not useful by itself, but it can't hinder you as the bolt did."
 bugle	"You [if bolt is moot]can just walk through the door. If you hadn't gotten rid of the bolt, you'd need to[else]can[end if] [b]PLAY[r] the bugle to go through the door."
-OR DO door	"You can just [b]ENTER[r] the door[if bugle-played is false and bolt is touchable] once you figure how to open it[end if]."
+OR DO door	"You can just [b]ENTER[r] the door[if bugle-played is false and bolt is in rested desert] once you figure how to open it[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the thickets?[plus][or]The toga can become a [b]GOAT[r].[minus][cycling]"
 reed	"[one of]The reed can become something else. Something that fits better with a less swampy area.[plus][or]What could the reed become that might eat through the thickets?[plus][or]The reed can become a [b]DEER[r].[minus][cycling]"
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."

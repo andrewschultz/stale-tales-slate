@@ -791,10 +791,10 @@ this is the ordeal-loader-hinting rule:
 	if player is in Rested Desert:
 		if odor is touchable, try objhinting odor instead;
 		if blot is moot, try objhinting OR DO door instead; [?? can enter door?]
-		if bolt is touchable and bulge is touchable:
+		if bolt is in location of player and bulge is in location of player:
 			if blot-first is true, try objhinting bolt instead;
 			try objhinting bulge instead;
-		if bugle is touchable and bugle-played is false, try objhinting bugle instead;
+		if player has bugle and bugle-played is false, try objhinting bugle instead;
 		try objhinting OR DO door instead;
 	if player is in Thickest Thickets:
 		if toga is touchable and reed is touchable:
@@ -1962,7 +1962,7 @@ carry out knocking:
 	if noun is a portal, say "Better just to try to enter." instead;
 	if noun is cabinet, say "That's potentially an act of violence." instead;
 	if noun is black door, say "[if black door is part of silo]Nobody answers, unsurprisingly[else]How polite! And ineffective[end if]." instead;
-	if noun is OR DO door, say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
+	if noun is OR DO door, say "[if ordo-opened]You don't need to. You can just go in[else if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You aren't sure where to knock. The bulge and bolt get in the way. Maybe you can get rid of one of them[end if]." instead;
 	if noun is signers ingress, say "[if player has tulip]You don't need to go back[else if Esoteric Coteries are visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
 	if noun is Corses Crosse, say "A good way to scrape your knuckles, seeing how quickly it turns." instead;
 	say "Knock, knock. Who's there? Conkk, conkk." instead;
@@ -3300,7 +3300,7 @@ book Rested Desert
 Rested Desert is a room in Ordeal Loader. roomnud of Rested Desert is table of Rested Desert nudges.
 
 to decide which number is door-score:
-	decide on (boolval of whether or not blot is touchable) + boolval of bugle-played;
+	decide on (boolval of whether or not location of blot is rested desert) + boolval of bugle-played;
 
 exits-text of Rested Desert is "You won't get anywhere with a long walk[if door-score > 0], but you should be able to go [b]IN[r] the door[else if or do door is in desert], but there's got to be a way to get through that door[end if]."
 
@@ -3344,18 +3344,12 @@ lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-
 understand "smell" and "breeze" as odor.
 
 to say bul-blo:
-	if bulge is part of the OR DO door and blot is part of the OR DO door:
-		say "bulge and a blot";
-	else if bulge is part of the OR DO door:
-		say "bulge and a bolt";
-	else if blot is part of the OR DO door:
-		say "blot";
-	else:
-		say "bolt"
+	if bulge is in rested desert, say "bulge and a ";
+	say "[if blot is in rested desert]blot[else]bolt[end if]"
 
 chapter OR DO door
 
-the OR DO door is a fixed in place thing. description is "It has OR DO written on it, with musical chords interspersed above [if bulge is touchable]a bulge which doesn't seem to belong on the door[else]where the bulge was[end if]. [if bolt is touchable]A bolt's sticking out, too, not locked into anything[else]It's covered by a blot, too[end if]. You have no clue where the door could lead [if blot is touchable or bugle-played is true]now you've opened it[else]even if you figure how to open it[end if][can-enter-ordo]."
+the OR DO door is a fixed in place thing. description is "It has OR DO written on it, with musical chords interspersed above [if bulge is in rested desert]a bulge which doesn't seem to belong on the door[else]where the bulge was[end if]. [if bolt is in rested desert]A bolt's sticking out, too, not locked into anything[else]It's covered by a blot, too[end if]. You have no clue where the door could lead [if ordo-opened]now you've opened it[else]even if you figure how to open it[end if][can-enter-ordo]."
 
 check taking OR DO door: say "Now it's appeared, you'll want to [if door-score is 0]find a way to [end if]enter it." instead;
 
@@ -3375,15 +3369,20 @@ to say can-enter-ordo:
 
 initial appearance of OR DO door is "That door you summoned, with OR DO on the front, is here. It has a [bul-blo] on it."
 
+to decide whether ordo-opened:
+	if bolt is moot, yes;
+	if bugle-played is true, yes;
+	no;
+
 section chord (part of door)
 
-the musical chord is part of the OR DO door. description is "[if bugle-played is true]It was probably just to clue the bugle[else if bulge is part of the OR DO door]It seems to suggest music would be a good idea. Hmm[else]You can't tell what note it is, but maybe it's just a clue to play anything on your bugle[end if]."
+the musical chord is part of the OR DO door. description is "[if bugle-played is true]It was probably just to clue the bugle[else if bulge is in rested desert]It seems to suggest music would be a good idea. Hmm[else]You can't tell what note it is, but maybe it's just a clue to play anything on your bugle[end if]."
 
 check taking the musical chord: say "It's engraved in the door." instead;
 
 section bolt
 
-the bolt is part of the OR DO door. description is "It sticks out from the door."
+the bolt is scenery. description is "It seems [if bugle-played is true]to stick out uselessly now that you played the bugle[else]to hold the OR DO door in place[end if]."
 
 check taking bolt: say "It's like there's an invisible force field around the bolt." instead;
 
@@ -3391,17 +3390,15 @@ lgth of bolt is 4. gpos of bolt is 1. rpos of bolt is 4. cert-text of bolt is "[
 
 section blot
 
-the blot is a thing. description of blot is "It almost looks like a musical chord[if bulge is touchable]. It stands out by the bulge[end if].". understand "music" as blot.
+the blot is a thing. description of blot is "It almost looks like a musical chord[if bulge is in rested desert]. It stands out by the bulge[end if].". understand "music" as blot.
 
 check taking the blot: say "It's pretty much bled into the door." instead;
 
 section bulge
 
-the bulge is part of the OR DO door.
+the bulge is scenery. description of the bulge is "It's shaped like a narrow rectangle with rounded corners. Very unnatural! There's no way to pry or pull it from the door, given its shape. [run paragraph on][bugle-clue]."
 
 lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5. cert-text of bulge is "B[ast]U[d1][d1][ast]E". rect-text of bulge is "B[d1][d1][d1][ast]E". rgtext of bulge is "[gcn][gc][rc][rc][gc]".
-
-description of the bulge is "It's shaped like a narrow rectangle with rounded corners. Very unnatural! There's no way to pry or pull it from the door, given its shape. [run paragraph on][bugle-clue]."
 
 to say bugle-clue: say "[one of]You give it a few taps, but it's wedged in[or]Maybe it could become some sort of instrument to get rid of the door[or]It's stuck to the door proper, like a tattoo[or]You guess it's your charge to open the door with it[or]You've got no reveilleation, err, revelation, what it should be, yet[or]You pay closer attention--it's early on, and surely you don't have to mix letters too much[cycling]"
 
@@ -3418,14 +3415,14 @@ understand "horn" as bugle when bugle is fungible.
 understand "doorway" as OR DO door when OR DO door is fungible.
 
 check opening OR DO door:
-	if bugle-played is false and bolt is touchable, say "There's no real handle to grab[if bulge is part of the OR DO door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
+	if bugle-played is false and bolt is in Rested Desert, say "There's no real handle to grab[if bulge is in rested desert]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
 	say "You already unlocked it. Would you like to walk through?";
 	if the player yes-consents, try entering OR DO door instead;
 	say "There's nowhere else to go, though." instead;
 
 check entering OR DO door:
 	if player has bugle and bugle-played is false and bolt is not moot, say "The door won't budge. The bolt makes a jarring noise. Hm, maybe that bugle could help." instead;
-	if blot is off-stage and bugle-played is false, say "The door seems stuck by an invisible force[if bolt is touchable]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
+	if blot is off-stage and bugle-played is false, say "The door seems stuck by an invisible force[if bolt is in rested desert]. The bolt seems to shake a bit, too, and make a jarring noise[end if]." instead;
 	say "[if bugle-played is true]The door swings open as you approach. [else if blot is part of OR DO door]Without the bolt, the door swings open easily. [end if]";
 	say "You can't see what's behind, but fortunately it's just a small tumble[if player has bugle], though the bugle gets caught on an outgrowth on the way down[end if]...[wfak]";
 	if player has bugle, moot bugle;

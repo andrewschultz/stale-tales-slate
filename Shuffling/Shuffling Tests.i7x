@@ -298,7 +298,7 @@ carry out yacking:
 
 chapter unsolve
 
-[ * this tries to reset the game to go through twice. It probably has holes, though.]
+[ * this tries to reset the game to go through twice. It probably has holes, though. I didn't use it much. You should probably just reset.]
 
 to unsolve-resort:
 	now cur-score of resort is 0;
@@ -461,8 +461,19 @@ to unsolve-forest:
 
 to unsolve-ordeal-loader:
 	now odor is off-stage;
-	now bulge is part of OR DO door;
+	now bulge is off-stage;
 	now bugle is off-stage;
+	now goat is off-stage;
+	now toga is off-stage;
+	now deer is off-stage;
+	now reed is off-stage;
+	now nest is in thickest thickets;
+	now static is in notices section;
+	now attics are off-stage;
+	now player wears nametag;
+	now gateman is off-stage;
+	now gadget is in cabinet;
+	now phial is in cabinet;
 	now cur-score of ordeal loader is 0;
 
 chapter uaing
@@ -476,6 +487,7 @@ understand the command "ua [number]" as something new.
 understand "ua [number]" as uaing.
 
 carry out uaing:
+	say "Note that resetting a region may cause problems, and it's better probably to [b]RESTART[r] and use [b]TS[r].";
 	if Trips Strip is not visited, say "You need to visit the Trips Strip before using this." instead;
 	if the number understood is 4:
 		say "Resetting resort.";
