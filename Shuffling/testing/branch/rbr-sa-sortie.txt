@@ -1748,7 +1748,7 @@ That's inadvisable. The oils would leak out.
 Lois is silent. You must figure what to pour, where.
 #renudge for lois
 >oisl
-The oils need a purpose--to build something great. You don't want to waste them.
+The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space.
 
 @max
 #pre-oils-soil rule
@@ -1948,7 +1948,8 @@ You mope, but you imagine no poem.
 #ttc-table-of-sortie-done-rejects-panel
 >panle
 The panel bleeps a "stop that" sort of warning.
-#ttc-table-of-sortie-spechelp-oils
+\\
+#ttc-table-of-sortie-spechelp-oils2
 >soli
 The oils could change the moor into something more fertile, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
@@ -1965,7 +1966,7 @@ DEBUG INFO: Cert-text: ----.
 @max
 #pre-oils-silo rule retry
 >silo
-The moor's ground, as is, is not stable enough. You need a foundation first.
+The moor's ground is not stable enough as-is. You need a foundation first.
 
 >soil
 Your score has just gone up by one point.
@@ -2138,15 +2139,15 @@ You can't go back there.
 @nud
 you muse once again
 
+@nud
+#+ttc-table-of-sortie-spechelp-oils2
+>soli
+The soil is right as-is, but maybe something can go on it.
+
 @hin
 #+ttc-table-of-sortie-anagrams-oils
 >xx oils
 Your vision blurs a bit, and instead you see a silo.
-
-@nud
-#renudge for lois
->olsi
-No, that wouldn't need the soil as a foundation.
 
 @scan
 #gadget test: oils to silo
@@ -2178,9 +2179,9 @@ You see yourself assembling the silo further.
 Lois may not hear you out here--she has left you to your own devices, but you must be close.
 >moor
 ###skip test checking
-#ttc-table-of-sortie-done-rejects-silo
+#+ttc-table-of-sortie-done-rejects-soil
 >siol
-That silo was pretty big. You probably have little more to do with the oils.
+The silo is quite an accomplishment. You wouldn't want to ruin it.
 
 >put panel in silo
 The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.

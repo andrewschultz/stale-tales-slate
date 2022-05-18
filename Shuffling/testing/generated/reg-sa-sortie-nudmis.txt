@@ -895,7 +895,7 @@ Gainly laying the cask under the spout, you pour in some oils.
 Lois is silent. You must figure what to pour, where.
 #renudge for lois
 >oisl
-The oils need a purpose--to build something great. You don't want to waste them.
+The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space.
 
 #ttc-table-of-sortie-nudges-oil
 >lio
@@ -995,7 +995,8 @@ You mope, but you imagine no poem.
 #ttc-table-of-sortie-done-rejects-panel
 >panle
 The panel bleeps a "stop that" sort of warning.
-#ttc-table-of-sortie-spechelp-oils
+
+#ttc-table-of-sortie-spechelp-oils2
 >soli
 The oils could change the moor into something more fertile, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
@@ -1105,9 +1106,9 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 
 you muse once again
 
-#renudge for lois
->olsi
-No, that wouldn't need the soil as a foundation.
+#+ttc-table-of-sortie-spechelp-oils2
+>soli
+The soil is right as-is, but maybe something can go on it.
 
 >silo
 Your score has just gone up by one point.
@@ -1120,9 +1121,9 @@ You currently have 24 out of 27 total points for the Sortie region. You have fou
 >lois
 Lois may not hear you out here--she has left you to your own devices, but you must be close.
 >moor
-#ttc-table-of-sortie-done-rejects-silo
+#+ttc-table-of-sortie-done-rejects-soil
 >siol
-That silo was pretty big. You probably have little more to do with the oils.
+The silo is quite an accomplishment. You wouldn't want to ruin it.
 
 >put panel in silo
 The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.

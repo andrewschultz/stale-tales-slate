@@ -133,7 +133,11 @@ understand "dater" as a mistake ("This is not a romance game.[note-great-guesses
 
 understand "despot" as a mistake ("[one of]Summoning Red Bull Burdell would be unwise. Best not try it again.[or]Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak]So [']dept.[stopping][note-great-guesses]") when player is in Trips Strip and posted depots are in Trips Strip.
 
+understand "despot" as a mistake ("You can only counter the despot behind [the depots] by entering them.") when posted depots are in location of player.
+
 understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.[note-great-guesses]") when player is in Trips Strip.
+
+understand "dopest" as a mistake ("It's your job to make things more dope behind [the depots], and it's going to take more than one word.") when posted depots are in location of player.
 
 understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.[note-great-guesses]") when player is in Trips Strip.
 

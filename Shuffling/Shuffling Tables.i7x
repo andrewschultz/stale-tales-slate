@@ -189,8 +189,8 @@ roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	--	
 poem	panel	"panel"	--	pre-plane-panel rule	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
 smilies	missile	"missile"	"smilies"	pre-smilies-missile rule	--	"The smilies on the poem seem to waver. But they sever from the verse, grow, and clump together to form a big yellow missile! You reread the poem. You didn't think it would change much without the smilies, but it's snappier now, pointed, warlike--a restrained, plain-language indictment of not just bad poetry but nastiness and elitism in general!"	false	528228725
 scraped wall	hallway	"hallway"	"haywall"	pre-haywall-hallway rule	--	"Of course! The hay wall you made collapses into a hallway leading east. One you won't even have to duck through!"	false	379579638
+oils2	soil	"soil"	--	pre-oils-soil rule	post-oils-soil rule	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
 oils	silo	"silo"	--	pre-oils-silo rule	post-oils-silo rule	"You empty the cask again. The oils seep into the moor, and you drop the cask as the silo appears much quicker than you imagined possible. The cask breaks and seeps into the ground."	false	269433228 [this is kludgey code, as this line must come first even though the silo flip comes second.]
-oils	soil	"soil"	--	pre-oils-soil rule	post-oils-soil rule	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
 hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	--	post-hoots-shoot rule	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
 trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	--	post-trees-steer rule	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
 
@@ -314,7 +314,7 @@ this is the pre-oils-silo rule:
 		preef-l silo;
 		do nothing instead;
 	if soil is not in moor:
-		say "The moor's ground, as is, is not stable enough. You need a foundation first.";
+		say "The moor's ground is not stable enough as-is. You need a foundation first.";
 		preef-l silo;
 		do nothing instead;
 
@@ -339,6 +339,7 @@ this is the pre-oils-soil rule:
 
 this is the post-oils-soil rule:
 	skip upcoming rulebook break;
+	now soil is in moor;
 	now oils are in Sacred Cedars;
 
 this is the post-hoots-shoot rule:
@@ -638,7 +639,10 @@ anapest	"You think you had the right idea, but your execution was poor. Maybe be
 smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish."
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
-oils	"[if player is not in moor]The oils need a purpose--to build something great. You don't want to waste them[else if soil is touchable]No, that wouldn't need the soil as a foundation[else]The oils could change the moor into something more fertile, but not that[end if]."
+oils2	"[if player is not in moor][oils-need-purpose][else]The oils could change the moor into something more fertile, but not that[end if]."
+oils	"[if player is not in moor][oils-need-purpose][else if soil is touchable]No, that wouldn't need the soil as a foundation[else]The oils could change the moor into something more fertile, but not that[end if]."
+
+to say oils-need-purpose: say "The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space"
 
 table of metros spechelp
 xtrhelp	helptxt
@@ -764,8 +768,7 @@ black door	"The black door just sits there."
 missile	"The missile emits an almost giggly sound but doesn't actually change."
 panel	"The panel bleeps a 'stop that' sort of warning."
 hallway	"You already have a passage east. Don't close it."
-silo	"That silo was pretty big. You probably have little more to do with the oils."
-soil	"The soil is right as-is, but maybe something can go on it."
+soil	"[if silo is in location of player]The silo is quite an accomplishment. You wouldn't want to ruin it[else]The soil is right as-is, but maybe something can go on it[end if]."
 steer button	"No, the steer button [b]HAS[r] to be right."
 shoot button	"No, the shoot button [b]HAS[r] to be right."
 

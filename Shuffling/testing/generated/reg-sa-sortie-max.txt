@@ -302,7 +302,7 @@ You currently have 21 out of 27 total points for the Sortie region. You have fou
 
 #pre-oils-silo rule retry
 >silo
-The moor's ground, as is, is not stable enough. You need a foundation first.
+The moor's ground is not stable enough as-is. You need a foundation first.
 
 >soil
 Your score has just gone up by one point.

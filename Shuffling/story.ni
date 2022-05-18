@@ -1592,6 +1592,7 @@ check taking inventory:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
 		if player carries Mean Old Mondale Doleman, now Mean Old Mondale Doleman is unmarked for listing;
+		if player carries oils2, now oils2 are unmarked for listing;
 		say "In this region you have found:[line break]";
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
@@ -1787,8 +1788,12 @@ carry out filling:
 		now cert-text of oils is "-[ast]I[ast]L[d1]";
 		now rect-text of oils is "S[d1][d1][ast]O";
 		now rgtext of oils is "[rcn][gc][gc][rc]";
+	else if caskfillings is 1:
+		now player has oils2;
 	now oils are in cask;
 	the rule succeeds;
+
+the oils2 are a privately-named thing. printed name of oils2 is "oils". description is "You shouldn't see this description of a dummy item."
 
 section switching
 
@@ -2384,6 +2389,7 @@ definition: a thing (called cand) is angleable:
 	if cand is m2, decide no;
 	if cand is t-n, decide no;
 	if cand is warts, decide no;
+	if cand is oils2, no;
 	if cand is oils and oils are in Sacred Cedars, decide no;
 	if cand is heaths:
 		if player has begonias or player has noise bag, decide no;
@@ -2549,6 +2555,7 @@ this is the r-rc-c umbrella check rule:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
 		now ever-scan is true;
 	abide by the r-rc-c general clues rule;
+	if noun is oils and player has oils2, now noun is oils;
 
 this is the r-rc-c general clues rule:
 	if noun is spout, say "The spout reads nothing, but [if spout is examined or caskfillings > 0]re[end if]examining it, perhaps the [b]OILS[r] it mentions have possibilities." instead;
@@ -7488,10 +7495,6 @@ the oils are a plural-named thing in Sacred Cedars.
 
 lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L". rgtext of oils is "[rcn][rc][rc][rc]".
 
-[keep this for logsync
-lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O". rgtext of oils2 is "[rcn][gc][gc][rc]".
-]
-
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
 understand "oil" as oils when oils are fungible.
@@ -7499,6 +7502,12 @@ understand "oil" as oils when oils are fungible.
 check taking oils: say "They'd go through your fingers[if player has cask]. You can pour the oils, or fill the cask, instead[end if]." instead;
 
 rule for printing a locale paragraph about the oils: now oils are mentioned.
+
+section oils2 (dummy item)
+
+the oils2 are a privately-named thing.
+
+lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O". rgtext of oils2 is "[rcn][gc][gc][rc]".
 
 chapter lois
 
