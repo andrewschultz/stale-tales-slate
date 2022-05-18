@@ -6731,9 +6731,9 @@ understand "fig/red/figred fridge" and "fig red fridge" as fridge when fridge-sc
 
 the griefd fridge is an opaque openable closed container.
 
-check examining fridge: ignore examine containers rule.
+check inserting into fridge: say "You don't need to store anything for later. The fridge is, well, optional." instead;
 
-rule for printing room description details of fridge: omit contents in listing.
+check examining fridge: ignore examine containers rule.
 
 to decide which number is fridge-score:
 	let temp be 0;
@@ -6741,20 +6741,29 @@ to decide which number is fridge-score:
 	if cake pan is moot, increment temp;
 	decide on temp;
 
-description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [a list of things in fridge][else]. It doesn't appear locked or anything. You could just [b]OPEN[r] it[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if grist is not off-stage]. You remember [whats-in-fridge], too[else]. It doesn't appear locked or anything. It may or may not be useful, but it looks easy to [b]OPEN[r][end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
 
 after examining griefd fridge:
 	pad-rec "warts";
 	continue the action;
 
-check closing griefd fridge:
-	if fridge is closed, say "It already is." instead;
-	if fridge is open, say "You closed it right after opening it. You know what's in there." instead;
+check closing griefd fridge: say "It already is[if grist is not off-stage]You saw what was in there when you first opened it[else], but maybe opening it will reveal something[end if]." instead;
 
 check opening griefd fridge:
-	now fridge is open;
-	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in griefd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping].";
+	if grist is off-stage:
+		say "In the fridge, you see some grist and a cake pan. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.";
+	else:
+		say "You reopen and peer on: [whats-in-fridge].";
 	the rule succeeds;
+
+to say whats-in-fridge:
+	if fridge-score is 2:
+		say "nothing's left";
+	else if fridge-score is 1:
+		say "only [if grist is in kitchen]the grist[else]the cake pan[end if] remains";
+	else:
+		say "the grist and cake pan are still";
+	say " in the fridge";
 
 to say guards-say-hi: say ". [if fridge-score is 0]They smile and apologize awkwardly, and you say no problem[else if fridge-score is 1]They thank you for leaving enough food to tide them over but not too much. They needed room for a feast[else]They thank you for leaving them so much food even after they--well. They were too lazy when they woke up[end if]";
 

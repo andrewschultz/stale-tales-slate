@@ -255,7 +255,7 @@ understand the command "dc" as something new.
 
 understand "dc" as dcing.
 
-carry out dcing: say "[b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break][b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. [b]SR NE[r] puts them N and E, [b]SR E[r] puts them E and W, and [b]RS[r] reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break][b]SK 1-4[r] solves a region with 1=f 2=i 3=m and 4=r.[line break][b]DISAS[r] disassembles the disguise if you want to try to break that.[paragraph break]Also extra fun is [b]XC[r], which gets you [if saltine is not in cabinet]a hint item that can only be used once in release mode[else]unlimited uses of the saltine[end if].[line break][b]COOK[r] solves a big puzzle behind Store I, north of the initial room."
+carry out dcing: say "[b]TS[r] skips the Ordeal Loader and gets you near the stores.[line break][b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. [b]SR NE[r] puts them N and E, [b]SR E[r] puts them E and W, and [b]RS[r] reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break][b]SK 1-4[r] solves a region with 1=f 2=i 3=m and 4=r.[line break][b]DISAS[r] disassembles the disguise if you want to try to break that.[paragraph break]Also extra fun is [b]XC[r], which gets you [if saltine is not in cabinet]a hint item that can only be used once in release mode[else]unlimited uses of the saltine[end if].[line break][b]COOK[r] solves a big puzzle behind Store I, north of the initial room. It can be used in the intro, hub or room proper."
 
 chapter cooking
 
@@ -266,12 +266,20 @@ understand the command "cook" as something new.
 understand "cook" as cooking.
 
 carry out cooking:
-	if player is not in kitchen, say "You're in the wrong room!" instead;
-	if coat is not off-stage, say "You got the coat!" instead;
+	if coat is not off-stage, say "You got the coat! You'll have to restart to test this." instead;
+	if mrlp is ordeal loader, try tsing 0;
+	if mrlp is stores:
+		try fliptoing posted depots;
+		try entering posted depots;
+		try dialsetting dial to 16;
+		try going north;
+		try fliptoing teleporter;
+	if player is not in kitchen, say "You are in the wrong room, and unless you're in the intro or hub sectors, I can't jump you there!" instead;
 	try fliptoing steak;
 	try fliptoing parmesan;
 	try fliptoing hotsauce;
 	try fliptoing lettuce;
+	try fliptoing tortilla;
 	try putting steak on tortilla;
 	try putting parmesan on tortilla;
 	try putting hotsauce on tortilla;
