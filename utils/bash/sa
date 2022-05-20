@@ -1,33 +1,14 @@
+#!/bin/bash
+
 ######################
 
 BIGTESTORDER=osfimrx
 
-function show_stuff()
-{
-  echo ========================================
-  for key in "${!names[@]}"
-  do
-    if [[ ${#key} == $1 ]]
-	then
-      echo "${key}" "${names[${key}]}"
-    fi
-  done
-}
+THIS_PROJECT=sa
 
-function usage()
-{
-  echo valid tests are ...
-  show_stuff 2
-  show_stuff 1
-  echo test order is $BIGTESTORDER. Note a runs them all.
-  exit
-}
+TEMP=$1
 
-# we may not need these, but I don't feel safe without them yet
 declare -A names
-declare -A chosen
-declare -A namerev
-declare -A failures
 
 names["de"]="*-detail"
 names["hi"]="*-hints"
@@ -44,62 +25,4 @@ names["s"]=stores
 names["x"]=lone
 names["l"]=lone
 
-for key in "${!names[@]}";
-do
-  namerev[${names[${key}]}]=${namerev[${names[${key}]}]}${key}/
-done
-
-for key in "${!namerev[@]}";
-do
-  namerev[${key}]=${namerev[${key}]::-1}
-done
-
-if [[ "$1" == "" ]]
-then
-  echo No parameters received, so I\'m printing the usage.
-  usage
-fi
-
-TEMP=$1
-
-if [[ "$TEMP" == "a" ]]
-then
-  TEMP=$BIGTESTORDER
-fi
-
-while [[ "$TEMP" != "" ]]
-do
-  mychar=${TEMP:0:1}
-  mychar2=${TEMP:0:2}
-  if [[ -v "names[${mychar2}]" ]]
-  then
-    r1m sa-${names[${mychar2}]}
-    chosen[${names[${mychar2}]}]=1
-    TEMP=${TEMP:2}
-  elif [[ ! -v "names[${mychar}]" ]]
-  then
-    failures[${mychar}]=1
-    failures[${mychar2}]=1
-    TEMP=${TEMP:1}
-  elif [[ "${chosen[${names[${mychar}]}]}" == "" ]]
-  then
-    r1m sa-${names[${mychar}]}
-	chosen[${names[${mychar}]}]=1
-	#python3 mgun.py
-    TEMP=${TEMP:1}
-  else
-    echo already tested ${mychar}/${names[${mychar}]}
-    TEMP=${TEMP:1}
-  fi
-done
-
-if [[ "${#failures[@]}" != "" ]]
-then
-  for key in "${!failures[@]}"
-  do
-    csvfail=${csvfail},${key}
-  done
-  csvfail=${csvfail:1}
-  echo These potential tests failed: $csvfail
-  usage
-fi
+. ./sts
