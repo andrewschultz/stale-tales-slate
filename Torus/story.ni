@@ -39,7 +39,7 @@ include Old School Verb Total Carnage by Andrew Schultz.
 volume globals and such
 
 report undoing an action:
-	say "Undoing. [if solved-heptagon is true]Now you opened up the center of the torus, there's no need to undo anything[else]A random dunno-duo walks by, belying their name by mentioning that, while there's no way to get in an unwinnable state, [b]UNDO[r] may save you a few moves [when-undo-helps].";
+	say "Undoing. [if solved-heptagon is true]Now you opened up the center of the torus, there's no need to undo anything[else]A random dunno-duo walks by, belying their name by mentioning that, while there's no way to get in an unwinnable state, [b]UNDO[r] may save you a few moves [when-undo-helps][end if].";
 
 to say when-undo-helps:
 	say "[if ever-heptagon-puzzle is true]if you go the wrong way after [b]ON[r][else]if you slip up in a later puzzle and don't want to restart[end if]"
@@ -220,7 +220,7 @@ after going when in-heptagon-puzzle is true:
 		now in-heptagon-puzzle is false;
 		say "As you go back to the [location of player] section, the glow emanating from it disappears. The whole torus dims. That must have been a wrong step, revisiting [location of player]. But there seems to be nothing to stop you from going [b]ON[r] and trying again.";
 		if leg-jump-warning is false:
-			say "Your legs feel less jumpy now, too. You can go [b]A[r] and [b]B[r] if you want to plot things out, or whatever.";
+			say "[line break]Your legs feel less jumpy now, too. You can go [b]A[r] and [b]B[r] if you want to plot things out, or whatever.";
 			now leg-jump-warning is true;
 		continue the action;
 	now location of player is hep-traversed;
@@ -660,7 +660,7 @@ ever-voice is a truth state that varies.
 to say sestet: say "'Sestet! Set! SET!!!'"
 
 definition: a thing (called th) is end-bonus-hear:
-	unless th is touchable, no;
+	unless th is in location of player, no;
 	unless th is flippable, no;
 	unless th is audible, no;
 	yes;
@@ -757,12 +757,14 @@ chapter no/yes
 the block saying no rule is not listed in any rulebook.
 the block saying yes rule is not listed in any rulebook.
 
+to say noon-no: say "'Noon? No! No!'"
+
 check saying no:
 	if solved-initials is true and player is not in scene scene:
 		if in-heptagon-puzzle is true:
 			say "You can't reverse that way. You don't need to. Worse case, you do-over and start again.";
 		else:
-			say "[if ever-heptagon-puzzle is true]Thinking [b]ON[r] was enough of a reverse of 'Noon? No! No!'[else]Just the opposite. And I don't mean saying yes.[end if]";
+			say "[if ever-heptagon-puzzle is true]Thinking [b]ON[r] was enough of a reverse of [noon-no][else]Just the opposite. And I don't mean saying yes.[end if]";
 		the rule succeeds;
 	say "No need for negativity[if player is in scene scene], especially now you've found somewhere nice.[else]. You'll need the opposite to get to the center of the torus![end if]" instead;
 
@@ -788,7 +790,8 @@ understand "release" as releaseing.
 
 carry out releaseing:
 	say "Release 1 of [trt] was for Spring Thing in April 2022. It was updates everal times during the competition.";
-	say "Release 2 of [trt] incorporated many bug fixes and special hint cases overlooked in the original release, along with additional responses to clever anagrams. Some narrative enhancement was added, including voices around the map.";
+	say "[line break]Release 2 of [trt] incorporated many bug fixes and special hint cases overlooked in the original release, along with additional responses to clever anagrams. Some narrative enhancement was added, including voices around the map.";
+	say "[line break]Any future releases will probably be for minimal bug fixes. There aren't really any puzzles to add, but there's a strong possibility I've missed some test cases.";
 	the rule succeeds;
 
 chapter stating
@@ -946,7 +949,7 @@ after reading a command:
 			say "Weird! You felt halfway there, thinking that. But you froze up at the wrong moment.";
 			reject the player's command;
 	if location of player is scene scene:
-		repeat with F running through touchable flippables:
+		repeat with F running through flippables in location of player:
 			if cmd-lo exactly matches the text "[word-to-include of F]":
 				now F is off-stage;
 				now F is flipped;
@@ -1075,7 +1078,7 @@ to say how-many-right of (myit - indexed text):
 			increment count;
 	if tat-cheat-regular:
 		say "The stat tats show two numbers: [count] of [number of characters in x1].";
-	else if tat-cheat-extra:
+	if tat-cheat-extra: [ no ELSE IF here, as we want to test both with CHEATY. ]
 		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1].";
 	if tats-stat >= 2 and brainy-warn is false:
 		say "[line break]Whoah! You wonder if you're brainy enough to figure this out!";
@@ -1126,7 +1129,7 @@ to say reject:
 		else if tats-stat is 0:
 			say "This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.";
 		else:
-			say "[how-many-right of the player's command].";
+			say "[how-many-right of the player's command]";
 		check-for-spaces;
 		continue the action;
 	repeat through table of nudge hashes:
