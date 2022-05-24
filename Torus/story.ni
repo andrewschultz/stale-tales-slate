@@ -778,6 +778,19 @@ check saying yes:
 
 understand "yes yes" and "yesyes" as saying yes.
 
+chapter releaseing
+
+releaseing is an action out of world.
+
+understand the command "release" as something new.
+
+understand "release" as releaseing.
+
+carry out releaseing:
+	say "Release 1 of [trt] was for Spring Thing in April 2022. It was updates everal times during the competition.";
+	say "Release 2 of [trt] incorporated many bug fixes and special hint cases overlooked in the original release, along with additional responses to clever anagrams. Some narrative enhancement was added, including voices around the map.";
+	the rule succeeds;
+
 chapter stating
 
 stating is an action out of world.
