@@ -22,11 +22,17 @@ understand "testes" as a mistake ("Really! This isn't that sort of game.") when 
 
 understand "hah" and "yah" and "ayy" as a mistake ("You were glad to have the smell of hay as a clue, but let's not overdo it!") when hay-smell-known is true.
 
+understand "off" as a mistake ("You can't turn things off. Just try to dance around as you can.") when in-heptagon-puzzle is true.
+
+understand "a0" and "0a" and "b0" and "0b" as a mistake ("You look around the torus, deciding where to go next, but you can't quite make a move.").
+
 book Ehs Ehs
 
 understand "he" and "hes" and "she" as a mistake ("[no-pron][if ehs ehs is not solved]. Maybe a different sort of word[extra-she][else][besides][end if].") when player is in Ehs Ehs.
 
 book Grain Grain
+
+understand "arranging" as a mistake ("Almost. Just one more I to arrange, there.") when player is in Grain Grain and Grain Grain is not solved.
 
 understand "ragin" as a mistake ("Getting mad won't help[besides].") when player is in Grain Grain.
 
@@ -56,7 +62,7 @@ understand "pear" as a mistake ("You already got fruits for Curtis in Rustic Cit
 
 understand "reap" as a mistake ("Perhaps there is something to reap once you figure what to do here[besides][half-solved].") when player is in prep area.
 
-understand "reap pear" as a mistake ("You are very, very, very close indeed. Everything is in the right order.") when player is in prep area and prep area is unsolved.
+understand "reap pear" as a mistake ("You think you've got it, but for some reason you feel a little ... spacy.[paragraph break]Besides, you already did this for Curtis after you defeated Elvira in [roi].") when player is in prep area and prep area is unsolved.
 
 understand "rape" as a mistake ("[one of][this-game] is about light-hearted jokes, and there's nothing light-hearted about that. So, yeah, don't try it again.[or][end-game][stopping]") when player is in prep area.
 
@@ -70,7 +76,13 @@ understand "retrain" and "retrains" as a mistake ("It's too late for that now, b
 
 understand "senescense" as a mistake ("Almost, but I'm going to play spelling cop, here.") when player is in Scene Scene.
 
+understand "science sin" and "sin science" as a mistake ("Hey, now. You are the good guy, here. But you're actually very close.") when player is in scene scene and Since Since is in Scene Scene.
+
 book Tines Inset
+
+understand "sit intense" and "intense sit" as a mistake ("This is as good a place for rigorous thought as any other, I suppose.") when player is in Tines Inset.
+
+understand "nineties st" as a mistake ("You don't want to think about your own nineties, but yeah, the nineties were a great time for text adventures, weren't they?") when player is in Tines Inset.
 
 understand "nites" as a mistake ("You're too old for the nightlife. Or bad spelling[besides].") when player is in Tines Inset.
 
