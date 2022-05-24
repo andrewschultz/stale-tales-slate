@@ -78,6 +78,8 @@ the player carries the Tas T Tats. description of tats is "[tat-desc]."
 
 printed name of Tas T Tats is "Tas-T-Tats"
 
+understand "stat/tat/tast" and "stat tat" as tas t tats.
+
 to say tat-desc:
 	if location of player is solved:
 		say "The tats are blank. Well, you don't need them. You figured what to do here";
@@ -113,6 +115,7 @@ on-start-room is a dubroom that varies.
 
 to decide which number is cur-on-index of (dr - a dubroom):
 	let x be (cycle-index of dr) - (cycle-index of on-start-room);
+	if init-hept-dir is counterclockwise, now x is 0 - x;
 	if x < 0, increase x by 7;
 	increase x by on-base;
 	decide on x;
@@ -362,7 +365,7 @@ item time is an audible flippable. it is scenery. "'Item time ... item time ...'
 
 book some emos
 
-emos are an audible plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "The voices of some emos protest. This can't be what they need to study! But somehow, you manage to convince them it's what they were meant to. The conversation changes, and they give a reasonable showing of the scientific method.". description is "It seems to be in its own little cell--well, mentally speaking, at least. Some emos, indeed!". word-to-include is "mesosome". sts-hash of emos is 725015610. uniq-hash of emos is 282640. printed name of emos is "some emos".
+emos are an audible plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "The voices of some emos protest. This can't be what they need to study! But somehow, you manage to convince them it's what they were meant to. The conversation changes, and they give a reasonable showing of the scientific method.". description is "They seem to be in their own little cell--well, mentally speaking, at least. Some emos, indeed!". word-to-include is "mesosome". sts-hash of emos is 725015610. uniq-hash of emos is 282640. printed name of emos is "some emos".
 
 understand "some emos" and "some" as emos.
 
@@ -477,7 +480,13 @@ to decide which number is hep-prog:
 	decide on number of hep-traversed dubrooms;
 
 after printing the locale description when in-heptagon-puzzle is true and hep-prog > 1:
-	say "The torus is now [entry hep-prog of litness] lit. You have covered [list of hep-traversed dubrooms].";
+	let lht be the list of hep-traversed dubrooms;
+	if init-hept-dir is counterclockwise, reverse lht;
+	let count be 0;
+	while count < number of entries in lht and entry 1 of lht is not on-start-room:
+		rotate lht;
+		increment count;
+	say "The torus is now [entry hep-prog of litness] lit. You have covered [lht].";
 	continue the action;
 
 litness is a list of text variable. litness is { "barely", "somewhat", "moderately", "slightly more than half", "very", "almost fully", "completely" }.
@@ -498,7 +507,7 @@ carry out oning:
 	if in-heptagon-puzzle is false:
 		say "[b]NOON NO NO[r] is simple and devastating, but you found an even simpler retort to stop feeling paralyzed by it.[paragraph break]";
 		now in-heptagon-puzzle is true;
-	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping].";
+	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping]. The area around you starts to glow.";
 	now ever-heptagon-puzzle is true;
 	now all dubrooms are not hep-traversed;
 	now location of player is hep-traversed;
@@ -506,7 +515,7 @@ carry out oning:
 	now init-hept-dir is up;
 	now on-start-room is location of player;
 	if zero-one-warn is false:
-		ital-say "since the map of Tours Roust Torus is circular, you can use the verbs [b]0[i] and [b]1[i] to track the rooms as numbers to make things a bit easier, here.";
+		ital-say-lb "since the map of Tours Roust Torus is circular, you can use the verbs [b]0[i] and [b]1[i] to track the rooms as numbers to make things a bit easier, here.";
 		now zero-one-warn is true;
 	the rule succeeds;
 
@@ -606,7 +615,7 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "[this-game] is installment 3 in [tsts]. It was originally published for Spring Thing 2022. Number one in the series was [shuf], published for IFComp 2012, and number two was [aro], published for Spring Thing 2013. These should all be on itch.io.";
+	say "[this-game] is installment 3 in [tsts]. It was originally published for Spring Thing 2022. Number one in the series was [shuf], published for IFComp 2012, and number two was [aro], published for Spring Thing 2013. As of May 2022, [shuf] is on itch.io (release 5) and [roi] will soon have release 4 out.";
 	say "[line break]";
 	if big-details is false:
 		say "[b]CREDITS[r] will give thanks to people who helped in [this-game]. This includes cover art, testing and those who keep the community active and those who give general resources.";
@@ -630,8 +639,9 @@ carry out creditsing:
 	say "Direct thanks:[paragraph break]";
 	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now. I'm worried I'll miss a few names, but there were bg, David Welbourn, Jacqueline, MoyTW, pinkunz, and Roger, among others.";
 	say "Thanks to individuals for some late testing. I appreciate it. Their names*: Dee Cooke, Olaf Nowacki, A Numb Scan Down.";
-	say "Thanks to J. J. Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments. I bet if you like [this-game], you'll like some of the games featured there, too.";
-	say "* [i]Thanks to one of them for offering an additional just-for-fun anagram puzzle here in the credits. If you need a hint, they've written XYZZY-nominated stuff before[r].";
+	say "Thanks to J. J. Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments. I bet if you like [this-game], you'll like some of the games featured there, too. [trt] was nominated for Best Cover Art, and that's his work!";
+	say "Thanks to people who submitted very useful transcripts to make for a (relatively) quick post-comp release: A. DiBianca and Mike Russo.";
+	say "[line break]* [i]Thanks to one of them for offering an additional just-for-fun anagram puzzle here in the credits. If you need a hint, they've written XYZZY-nominated stuff before[r].";
 	say "[line break]General thanks:";
 	say "[line break]Thanks to Amanda Walker for starting the blurb thread on intfiction.org which helped me with ideas in general.";
 	say "Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
@@ -818,7 +828,8 @@ check verbing when player is in scene scene:
 	the rule succeeds;
 
 carry out verbing:
-	say "Compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are [b]A[r] and [b]B[r] to move clockwise and counterclockwise around the torus.";
+	say "[trt] uses a stripped-down parser. Special verbs such as [b]SMELL[r] or [b]LISTEN[r] will be ";
+	say "The most important  thing: compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are [b]A[r] and [b]B[r] to move clockwise and counterclockwise around the torus.";
 	say "[line break]You can also skip over adjacent torus areas with [b]AA[r], [b]AAA[r], [b]BB[r], or [b]BBB[r]. [b]B3[r] and [b]3A[r] and so on also work. Note anything more than three letters is accepted but impractical, as [b]AAA[r] and [b]BBBB[r] are equivalent.";
 	stat-mention;
 	if zero-one-warn is true:
@@ -1044,14 +1055,16 @@ to say how-many-right of (myit - indexed text):
 			increment count;
 	if tat-cheat-regular:
 		say "The stat tats show two numbers: [count] of [number of characters in x1]";
+	else if tat-cheat-extra:
+		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1]";
+	if count is number of characters in x1:
+		say ". Fourth wall note: you don't need spaces in any word";
 	if tats-stat >= 2 and brainy-warn is false:
 		say ". Whoah! You wonder if you're brainy enough to figure this out";
 		now brainy-warn is true;
 	if tats-stat is 3:
 		say ".[paragraph break]CHEAT RELOAD[paragraph break]";
-	if tat-cheat-extra:
-		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1]";
-	if last-clue-thing is not yourself, say ".[paragraph break]The stat tats must refer to [the last-clue-thing]";
+	if current action is examining and last-clue-thing is not yourself, say ".[paragraph break]The stat tats must be referring to [the last-clue-thing]";
 	if debug-state is true, say ".[paragraph break]DEBUG NOTE: Comparing [x1] vs [word-to-include of q]";
 
 to decide which number is exp-1 of (n - a number):
@@ -1110,7 +1123,7 @@ to say reject:
 			say "No, no half-measures here.";
 			continue the action;
 		else if cmdhash is itmhash:
-			say "Hmm, [the itm] seems to waver a bit. You must be on the right track to change [the itm], here.";
+			say "Hmm, [the itm] seem[if itm is not plural-named]s[end if] to waver a bit. You must be on the right track to change [the itm], here.";
 			continue the action;
 		if rufhash is uniq-hash of itm or ruffirst is uniq-hash of itm:
 			say "Man! You had all the right letters for [the itm], you think, but they didn't come together.";
@@ -1132,7 +1145,7 @@ to say reject:
 			else if ons is 2:
 				say "Hmm. Somehow, some way, you're overthinking things here. Well, that's your gut feeling.";
 				the rule succeeds;
-	say "[this-game] doesn't have a deep bench of standard verbs, though in each room, you need to find something special to do or say or think. For a general list of verbs, type [b]VERBS[r].";
+	say "[this-game] doesn't have a deep bench of standard verbs, though in each area of the torus, you need to find one specific word (no spaces) to do or say or think. For a general list of verbs, type [b]VERBS[r].";
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:
 	say "[reject]";

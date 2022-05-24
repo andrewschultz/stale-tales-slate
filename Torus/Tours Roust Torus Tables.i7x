@@ -53,9 +53,9 @@ Tines Inset	Pechan Pechan	"The Torus seems more alive now that the intestines ar
 to say room-visit-eh: say "[if number of visited rooms is 1]reckon this [i]had[r] to be the easiest area to figure[else]have seen [rest-of-tor] of the rest of the torus[end if]"
 
 to say rest-of-tor:
-	if number of visited rooms <= 4:
+	if number of visited perimeter dubrooms < 4:
 		say "some";
-	else if number of unvisited rooms > 0:
+	else if number of unvisited perimeter dubrooms > 0:
 		say "most";
 	else:
 		say "all"
@@ -123,7 +123,7 @@ this is the bye-dude rule:
 		wfak;
 		say "For many years, you are the only one to catch the sourtrouts at a special ceremony, but with your teaching, others get closer. One day an eager youth manages to catch one. You are happy for them, and proud. You are also glad people will not have to rely on you for any future anagram-related disasters. And yet you feel in no way obsolete. It seems once a week you find the true name of some curiosity of nature in [the strainer terrains]. It's nice to be able to, with no pressure.";
 	else:
-		say "You get closer than anyone else, but it's so tricky, trickier even than clearing the torus[if deededed is true] and figuring what to do with everything else here[end if]. Maybe you'll find how to do so some day. Still, the celebration goes well. You're comfortable here.";
+		say "[line break]You get closer than anyone else, but it's so tricky, trickier even than clearing the torus[if deededed is true] and figuring what to do with everything else here[end if]. Maybe you'll find how to do so some day. Still, the celebration goes well. You're comfortable here.";
 	end the story finally saying "Feats! Fates-Feast! Taffetases!";
 	if maxed-it and ever-voice is true:
 		choose row with final response rule of the show what you missed rule in Table of Final Question Options;
