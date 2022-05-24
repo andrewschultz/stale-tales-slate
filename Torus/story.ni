@@ -163,6 +163,13 @@ understand "aaaa" and "bbb" and "a4" as b3.
 understand "aaaaa" and "bb" and "a5" as b2.
 understand "aaaaaa" and "b" and "a6" as b1.
 
+understand "6b" and "1a" as a1.
+understand "5b" and "2a" as a2.
+understand "4b" and "3a" as a3.
+understand "3b" and "4a" as b3.
+understand "2b" and "5a" as b2.
+understand "1b" and "6a" as b1.
+
 init-hept-dir is a direction that varies.
 
 to decide which number is dist of (x - a direction):
