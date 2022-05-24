@@ -50,16 +50,18 @@ solved-initials is a truth state that varies.
 
 in-heptagon-puzzle is a truth state that varies.
 
-ever-heptagon-puzzle is a truth state that varies.
+heptagon-varies-this-time is a truth state that varies.
 
-every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false (this is the clue ON rule):
-	say "[one of]A voice[or]That voice once again[stopping] booms 'Noon? No! No!' It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
+ever-heptagon-puzzle is a truth state that varies.
 
 solved-heptagon is a truth state that varies.
 
 heptagon-path is a list of numbers variable. heptagon-path is {}.
 
 to decide which number is heptcount: decide on number of solved dubrooms; [note: this is mostly equivalent to the score, but just in case...]
+
+every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false (this is the clue ON rule):
+	say "[one of]A voice[or]That voice once again[stopping] booms '[noon-no][line break]It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
 
 section defaults
 
@@ -209,11 +211,29 @@ check going when in-heptagon-puzzle is true:
 	if noun is hep-illegal, say "You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you." instead;
 	if number of hep-traversed rooms is 1:
 		say "You race around a bit. You notice [skipped-room of location of player and noun] light up as you run past [if dist of noun is 3]them[else]it[end if].";
+	add dist of noun to heptagon-path;
+	if heptagon-path-varies:
+		if heptagon-varies-this-time is false:
+			say "The voice in the background switches from a constant 'Buh ...' to 'Uhh, Hubbub!' in a more excited tone";
+			now heptagon-varies-this-time is true;
+		else:
+			say "The 'Uhh, hubbub!' continues, relatively lively. Or is it 'Huh, hubbub?'";
+	else:
+		say "'";
+		let count be 0;
+		while count < number of entries in heptagon-path:
+			say "Buh... ";
+			increment count;
+		say "Buh...!' you hear, as you run.";
 	if init-hept-dir is up:
 		now init-hept-dir is noun;
 		continue the action;
 
 leg-jump-warning is a truth state that varies.
+
+to decide whether heptagon-path-varies:
+	if 2 is not listed in heptagon-path or 3 is not listed in heptagon-path, no;
+	yes;
 
 after going when in-heptagon-puzzle is true:
 	if location of player is hep-traversed:
@@ -224,13 +244,12 @@ after going when in-heptagon-puzzle is true:
 			now leg-jump-warning is true;
 		continue the action;
 	now location of player is hep-traversed;
-	add dist of noun to heptagon-path;
 	if number of hep-traversed rooms is 7:
-		if 2 is not listed in heptagon-path or 3 is not listed in heptagon-path:
-			say "The interior of the Torus shudders, but nothing conclusive happens. Perhaps you [one of][or]again [or]once again [stopping]took an easy way to touch all the rooms. The whole torus dims. But there seems to be nothing to stop you from going [b]ON[r] and trying again.";
-		else:
-			say "All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.[paragraph break]There doesn't seem to be anything else to do. Now's probably a good time to go [b]INSIDE[r].";
+		if heptagon-path-varies:
+			say "The voice changes from 'Uhh hubbub' to a crescendo. 'Hub! HUB! [b]HUB!!!!![r]'[paragraph break]Then it cuts off. You A disorienting light flashes through the center of the torus, leaving the door flapping open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.[paragraph break]There doesn't seem to be anything else to do. Now's probably a good time to go [b]INSIDE[r].";
 			now solved-heptagon is true;
+		else:
+			say "The interior of the Torus shudders, but nothing conclusive happens. The voice in the background mumbling 'Buh ... buh ... buh ...' dies out. Perhaps it is somehow bored with you running the same distance each time. But there seems to be nothing to stop you from going [b]ON[r] and trying again.";
 		now in-heptagon-puzzle is false;
 	continue the action;
 
@@ -508,7 +527,9 @@ carry out oning:
 		say "[b]NOON NO NO[r] is simple and devastating, but you found an even simpler retort to stop feeling paralyzed by it.[paragraph break]";
 		now in-heptagon-puzzle is true;
 	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping]. The area around you starts to glow.";
+	say "[line break]In addition, a droning chant of 'Buh!' starts up[one of][or] again[stopping].";
 	now ever-heptagon-puzzle is true;
+	now heptagon-varies-this-time is false;
 	now all dubrooms are not hep-traversed;
 	now location of player is hep-traversed;
 	now heptagon-path is {};
@@ -683,6 +704,7 @@ check listening:
 	let ebh be number of end-bonus-hear things;
 	if ebh  > 0, say "You hear [if ebh is 1]one last voices[else]various voices[end if] focusing on a specific word: [list of end-bonus-hear things]. You can probably [b]EXAMINE[r] one for more details." instead;
 	say "[one of]Ugh. You sometimes have to listen twice, to make sure you heard stuff right.[paragraph break][or][stopping]";
+	if in-heptagon-puzzle is true, say "The [if heptagon-path-varies]'[one of]Uhh[or]Huh[at random], hubbub'[else]'Buh' chant echoes faintly now you've stopped to catch your breath[end if]." instead;
 	if cheat-voice is false and ever-voice is false, say "Nothing... yet... funny, you almost expected something by ABBA." instead;
 	if score is 0:
 		say "[one of]A voice whispers [sestet][line break]That's odd! You counted seven locations, which would make a [i]heptet[r]. But maybe it's one of those deals where they're saying something slightly wrong to draw your attention to something else. Maybe that will help a bit, you think. But where is the voice coming from? You can't see anyone, or anything.[paragraph break]Wait. That's it. It's got to be something small. A tsetse fly! Of course![or]The tsetse fly again: [sestet][stopping]";
