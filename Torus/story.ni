@@ -1174,23 +1174,6 @@ to say reject:
 		if rufhash is uniq-hash of itm or ruffirst is uniq-hash of itm:
 			say "Man! You had all the right letters for [the itm], you think, but they didn't come together.";
 			continue the action;
-	if solved-initials is true and player is not in scene scene:
-		let temp-hash be 0;
-		if the remainder after dividing cmdhash by 143260085 is 0:
-			now temp-hash is cmdhash;
-		else if the remainder after dividing firstwordhash by 143260085 is 0:
-			now temp-hash is cmdhash;
-		if temp-hash > 0:
-			if in-heptagon-puzzle is true:
-				say "You already started going [b]ON[r]. No need to overdo things.";
-				continue the action;
-			let ons be cmdhash / 143260085;
-			if ons > 2:
-				say "Your thoughts were racing too much. Simplify things.";
-				the rule succeeds;
-			else if ons is 2:
-				say "Hmm. Somehow, some way, you're overthinking things here. Well, that's your gut feeling.";
-				the rule succeeds;
 	say "[this-game] doesn't have a deep bench of standard verbs, though in each area of the torus, you need to find one specific word (no spaces) to do or say or think. For a general list of verbs, type [b]VERBS[r].";
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error or the latest parser error is the didn't understand error:

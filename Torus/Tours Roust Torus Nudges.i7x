@@ -69,10 +69,10 @@ book general roughhash nudges
 table of rough hashes
 cmd-val (text)	cmd-hash (number)	cmd-loc	cmd-rule	nudge-text
 "ed"	24	--	deeded-listened rule	"You don't need to do anything fancy with [b]DEEDED[r]."
-"on"	24576	--	noon-known rule	"[if ever-heptagon-puzzle is true]You don't need to do anything fancy. Going [b]ON[r] was enough."
+"on"	24576	--	noon-known rule	"[if in-heptagon-puzzle is true]You don't need to do anything fancy. Going [b]ON[r] was enough[else if ever-heptagon-puzzle is true]There's no extra option. Just [b]ON[r][else]You may be overthinking things, here. There's a more direct refutation to 'NOON, No, No[end if]."
 "hay"	16777345	--	--	"You can't really do anything with the hay."
 "yes"	17039376	--	sys-eye-known rule	"You can't really manipulate the SYS-EYE."
-"buh"	1048706	--	--	"You have to figure how to keep the hubbub going."
+"buh"	1048706	--	buh-known rule	"[if solved-heptagon is true]You dealt with the, uhh, hubbub.[else]You have to figure how to work with the 'Buh.'"
 
 this is the deeded-listened rule:
 	if heard-deeded is true, the rule succeeds;
@@ -89,6 +89,11 @@ this is the noon-known rule:
 
 this is the sys-eye-known rule:
 	if sys-eye-yes is true, the rule succeeds;
+	the rule fails;
+
+this is the buh-known rule:
+	if player is in scene scene, the rule fails;
+	if ever-heptagon-puzzle is true, the rule succeeds;
 	the rule fails;
 
 book auxiliary
