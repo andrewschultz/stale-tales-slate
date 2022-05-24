@@ -2,6 +2,9 @@ Version 1/220314 of Tours Roust Torus Mistakes by Andrew Schultz begins here.
 
 "A trivial list of mistake commands from reasonable guesses"
 
+[ttc has replaced mist.py to harvest test case checks]
+[malf.py alphabetizes mistakes by section]
+
 volume mistakes by room
 
 to say besides: if location of player is solved, say ". Besides, you already did what you needed, here"
@@ -16,15 +19,17 @@ to say end-game:
 to say extra-she:
 	if word number 1 in the player's command is "she", say "[half-solved]"
 
-book general
+book a general
 
-understand "testes" as a mistake ("Really! This isn't that sort of game.") when tsetse fly is not off-stage.
+understand "a0" and "0a" and "b0" and "0b" as a mistake ("You look around the torus, deciding where to go next, but you can't quite make a move.").
 
 understand "hah" and "yah" and "ayy" as a mistake ("You were glad to have the smell of hay as a clue, but let's not overdo it!") when hay-smell-known is true.
 
+understand "non" as a mistake ("No need for foreign languages. [if in-heptagon-puzzle is true]You can't turn things off. Just try to dance around as you can[else if ever-heptagon-puzzle is false]Even simpler than that[else]You can only start the traversal with [b]ON[r] again[end if].") when ever-heptagon-puzzle is true and solved-initials is false.
+
 understand "off" as a mistake ("You can't turn things off. Just try to dance around as you can.") when in-heptagon-puzzle is true.
 
-understand "a0" and "0a" and "b0" and "0b" as a mistake ("You look around the torus, deciding where to go next, but you can't quite make a move.").
+understand "testes" as a mistake ("Really! This isn't that sort of game.") when tsetse fly is not off-stage.
 
 book Ehs Ehs
 
@@ -54,37 +59,37 @@ understand "happen chance" as a mistake ("You are very, very, very close indeed.
 
 book Prep Area
 
-understand "rapparee" as a mistake ("You don't need to consort with thieves[besides].") when player is in prep area.
-
-understand "perp" as a mistake ("That doesn't take care of the whole area.") when player is in prep area and prep area is not solved.
+understand "earp" as a mistake ("No daredevil gunman appears to help you out[besides][half-solved].") when player is in prep area.
 
 understand "pear" as a mistake ("You already got fruits for Curtis in Rustic Citrus long ago[besides][half-solved].") when player is in prep area.
 
-understand "reap" as a mistake ("Perhaps there is something to reap once you figure what to do here[besides][half-solved].") when player is in prep area.
-
-understand "reap pear" as a mistake ("You think you've got it, but for some reason you feel a little ... spacy.[paragraph break]Besides, you already did this for Curtis after you defeated Elvira in [roi].") when player is in prep area and prep area is unsolved.
+understand "perp" as a mistake ("That doesn't take care of the whole area.") when player is in prep area and prep area is not solved.
 
 understand "rape" as a mistake ("[one of][this-game] is about light-hearted jokes, and there's nothing light-hearted about that. So, yeah, don't try it again.[or][end-game][stopping]") when player is in prep area.
 
-understand "earp" as a mistake ("No daredevil gunman appears to help you out[besides][half-solved].") when player is in prep area.
+understand "rapparee" as a mistake ("You don't need to consort with thieves[besides].") when player is in prep area.
+
+understand "reap pear" as a mistake ("You think you've got it, but for some reason you feel a little ... spacy.[paragraph break]Besides, you already did this for Curtis after you defeated Elvira in [roi].") when player is in prep area and prep area is unsolved.
+
+understand "reap" as a mistake ("Perhaps there is something to reap once you figure what to do here[besides][half-solved].") when player is in prep area.
 
 book Scene Scene
 
-understand "trainer" as a mistake ("You're on your own here. If almost three games aren't enough to whip you in shape, I don't know what is.") when player is in scene scene.
-
 understand "retrain" and "retrains" as a mistake ("It's too late for that now, but you should be able to push through as needed.") when player is in scene scene.
-
-understand "senescense" as a mistake ("Almost, but I'm going to play spelling cop, here.") when player is in Scene Scene.
 
 understand "science sin" and "sin science" as a mistake ("Hey, now. You are the good guy, here. But you're actually very close.") when player is in scene scene and Since Since is in Scene Scene.
 
-book Tines Inset
+understand "senescense" as a mistake ("Almost, but I'm going to play spelling cop, here.") when player is in Scene Scene.
 
-understand "sit intense" and "intense sit" as a mistake ("This is as good a place for rigorous thought as any other, I suppose.") when player is in Tines Inset.
+understand "trainer" as a mistake ("You're on your own here. If almost three games aren't enough to whip you in shape, I don't know what is.") when player is in scene scene.
+
+book Tines Inset
 
 understand "nineties st" as a mistake ("You don't want to think about your own nineties, but yeah, the nineties were a great time for text adventures, weren't they?") when player is in Tines Inset.
 
 understand "nites" as a mistake ("You're too old for the nightlife. Or bad spelling[besides].") when player is in Tines Inset.
+
+understand "sit intense" and "intense sit" as a mistake ("This is as good a place for rigorous thought as any other, I suppose.") when player is in Tines Inset.
 
 understand "stein" as a mistake ("You have nothing to drink, so you do not need a drink container[besides].") when player is in Tines Inset.
 
