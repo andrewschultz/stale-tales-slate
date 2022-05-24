@@ -65,14 +65,35 @@ to decide whether is-roiling:
 	if sts-sequence is 2, yes;
 	no;
 
-to say sts: say "Stale Tales Slate";
+to say sts: say "[i]Stale Tales Slate[r]";
 
 to say tsts: say "the [sts]";
 
 to say aro: say "[i]A Roiling Original[r]"
 
+to say roi: say "[i]A Roiling Original[r]"
+
 to say shuf: say "[i]Shuffling Around[r]"
 
 to say trt: say "[i]Tours Roust Torus[r]"
+
+volume STS
+
+chapter stsing
+
+stsing is an action out of world.
+
+understand the command "sts" as something new.
+
+understand "sts" as stsing.
+
+carry out stsing:
+	say "The [sts] consists of three games.[line break]";
+	say "[shuf] was conceived in April 2012 and entered in IFComp 2012. The fifth release, which likely had the final puzzle assortment, was published in May 2022. It placed seventh of twenty-six entries. It is on itch.io at https://andrewschultz.itch.io/shuffling-around.";
+	say "[roi] was conceived along with [shuf], but it was too big for IFComp, so it was pushed to Spring Thing 2013. It placed second of three entries. The fourth release will hopefully occur in June 2022. It will be on itch.io at https://andrewschultz.itch.io/shuffling-around.";
+	say "[trt] was conceived in October 2022 and planned for Spring Thing 2022. The post-comp release was in May 2022.";
+	say "[line break]Note that this may not be up-to-date in every game, only ones which have a significant release. As before, my itch.io site should have the details.";
+	say "[line break]Also, https://github.com/andrewschultz/stale-tales-slate/ will have development information, source code, etc.";
+	the rule succeeds;
 
 STS Universal ends here.

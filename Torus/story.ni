@@ -615,12 +615,13 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "[this-game] is installment 3 in [tsts]. It was originally published for Spring Thing 2022. Number one in the series was [shuf], published for IFComp 2012, and number two was [aro], published for Spring Thing 2013. As of May 2022, [shuf] is on itch.io (release 5) and [roi] will soon have release 4 out.";
+	say "[this-game] is installment 3 in [tsts].";
 	say "[line break]";
 	if big-details is false:
 		say "[b]CREDITS[r] will give thanks to people who helped in [this-game]. This includes cover art, testing and those who keep the community active and those who give general resources.";
+		say "[line break]For information about the whole series, say [b]STS[r].";
 	else:
-		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro]. It's much smaller, and it is [b]POLITE[r] on the Zarfian Cruelty scale, but it does sweep up some things I wanted to, and I wanted a good-bye from the other games beyond 'I hope I fixed all the bugs and added all the features I could!' I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus, for a circular map--but what was left? After all, the remaining 'good' ones got bled into Roiling. I needed some relatively long words, but I didn't want them to be long for their own sake.[paragraph break]Saying more would spoil things for Spring Thing, but the post-comp version of this game should come with a postmortem.";
+		say "[this-game] isn't meant to be as challenging or as long as [shuf] or [aro]. It's much smaller, and it is [b]POLITE[r] on the Zarfian Cruelty scale, but it does sweep up some things I wanted to, and I wanted a good-bye from the other games beyond 'I hope I fixed all the bugs and added all the features I could!' I always had the sense I could fit one more game in, but I wanted it to be relatively small. And I wanted some sort of theme. I couldn't find one until I almost stumbled on it by accident. I had an idea where it would take place--a Tours Torus, for a circular map--but what was left? After all, the remaining 'good' ones got bled into [roi]. I needed some relatively long words, but I didn't want them to be long for their own sake.[paragraph break]Saying more would spoil things for Spring Thing, but the post-comp version of this game should come with a postmortem.";
 		say "[line break]I also wanted to fit in a non-anagram puzzle based on something I'd always wondered about.";
 		say "[line break]Source code for [this-game] is at https://github.com/andrewschultz/stale-tales-slate/tree/main/Tours.";
 	now big-details is whether or not big-details is false;
