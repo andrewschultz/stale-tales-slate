@@ -516,15 +516,26 @@ after printing the name of a room (called rm) when in-heptagon-puzzle is true an
 	say " ([cur-on-index of rm])";
 	continue the action;
 
+chapter specific numbers in commands
+
+[ I can't put understand "number" in the code, as this rejects everything with "I didn't understand that number." ]
+
 section zerobasing
 
 zerobasing is an action out of world.
 
 understand the command "0" as something new.
 
-understand "0" as zerobasing when zero-one-warn is true.
+understand "0" as zerobasing.
+
+this is the post traversal number reject rule:
+	if solved-heptagon is true, say "You no longer need to worry about zero- or one-basing room numbers, since you successfully navigated the heptagon." instead;
 
 carry out zerobasing:
+	abide by the post traversal number reject rule instead;
+	if zero-one-warn is false:
+		say "(waiting...)";
+		try waiting instead;
 	if on-base is 0:
 		say "No longer mapping rooms to numbers.";
 		now on-base is -1;
@@ -541,9 +552,13 @@ onebasing is an action out of world.
 
 understand the command "1" as something new.
 
-understand "1" as onebasing when zero-one-warn is true.
+understand "1" as onebasing.
 
 carry out onebasing:
+	abide by the post traversal number reject rule instead;
+	if zero-one-warn is false:
+		say "[a-b-errnote].";
+		the rule succeeds;
 	if on-base is 1:
 		say "No longer mapping rooms to numbers.";
 		now on-base is -1;
@@ -979,6 +994,17 @@ Rule for amusing a victorious player:
 	say "[line break]The Nudges file (replace Mistakes with Nudges) shows rejects for when you try certain anagrams."
 
 volume parser errors
+
+to say a-b-errnote: say "No room is more than 3 A or B away from another, and you have to specify the direction"
+
+rule for printing a parser error (this is the first custom parser error checks rule):
+	if the player's command matches the regular expression "^<0-9>+":
+		if the player's command matches the regular expression "^<123>+":
+			say "[a-b-errnote].";
+		else:
+			say "No room is more than 3 A or B away from another, and you have to specify the direction.";
+		the rule succeeds;
+	continue the action;
 
 murmur-yet is a truth state that varies.
 
