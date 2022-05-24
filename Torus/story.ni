@@ -1052,24 +1052,22 @@ to say how-many-right of (myit - indexed text):
 	let binary be 0;
 	let q be location of player;
 	if last-clue-thing is not the player, now q is last-clue-thing;
+	if debug-state is true, say "DEBUG NOTE: Comparing [x1] vs [word-to-include of q].[line break]";
 	repeat with y running from 1 to number of characters in x1:
 		now binary is 2 * binary;
 		if character number y in x1 is character number y in word-to-include of q:
 			increment binary;
 			increment count;
 	if tat-cheat-regular:
-		say "The stat tats show two numbers: [count] of [number of characters in x1]";
+		say "The stat tats show two numbers: [count] of [number of characters in x1].";
 	else if tat-cheat-extra:
-		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1]";
-	if count is number of characters in x1:
-		say ". Fourth wall note: you don't need spaces in any word";
+		say "The stat tats show two numbers: [binary] of [exp-1 of number of characters in x1].";
 	if tats-stat >= 2 and brainy-warn is false:
-		say ". Whoah! You wonder if you're brainy enough to figure this out";
+		say "[line break]Whoah! You wonder if you're brainy enough to figure this out!";
 		now brainy-warn is true;
-	if tats-stat is 3:
-		say ".[paragraph break]CHEAT RELOAD[paragraph break]";
-	if current action is examining and last-clue-thing is not yourself, say ".[paragraph break]The stat tats must be referring to [the last-clue-thing]";
-	if debug-state is true, say ".[paragraph break]DEBUG NOTE: Comparing [x1] vs [word-to-include of q]";
+	else if tats-stat is 3:
+		say "[line break]CHEAT RELOAD![paragraph break]";
+	if current action is examining and last-clue-thing is not yourself, say "[line break]The stat tats must be referring to [the last-clue-thing].";
 
 to decide which number is exp-1 of (n - a number):
 	let temp be 0;
@@ -1126,18 +1124,23 @@ to say reject:
 				process the cmd-rule entry;
 				if the rule failed, next;
 			say "[nudge-text entry][line break]";
+			check-for-spaces;
 			continue the action;
 	if rufhash is uniq-hash of location of player or ruffirst is uniq-hash of location of player:
 		say "You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.";
 		continue the action;
 	let itmhash be 0;
-	repeat with itm running through touchable flippables:
+	repeat with itm running through flippables in location of player:
 		now itmhash is the hash of the printed name of itm;
 		if cmdhash is itmhash / 2:
 			say "No, no half-measures here.";
 			continue the action;
 		else if cmdhash is itmhash:
-			say "Hmm, [the itm] seem[if itm is not plural-named]s[end if] to waver a bit. You must be on the right track to change [the itm], here.";
+			if tats-stat > 0:
+				now last-clue-thing is itm;
+				say "[how-many-right of the player's command]";
+			else:
+				say "Hmm, [the itm] seem[if itm is not plural-named]s[end if] to waver a bit. You must be on the right track to change [the itm], here.";
 			continue the action;
 		if rufhash is uniq-hash of itm or ruffirst is uniq-hash of itm:
 			say "Man! You had all the right letters for [the itm], you think, but they didn't come together.";
