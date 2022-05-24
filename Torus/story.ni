@@ -1046,6 +1046,8 @@ to decide whether tat-cheat-extra:
 
 brainy-warn is a truth state that varies.
 
+space-warn is a truth state that varies.
+
 to say how-many-right of (myit - indexed text):
 	let x1 be filtered name of myit;
 	let count be 0;
@@ -1068,6 +1070,13 @@ to say how-many-right of (myit - indexed text):
 	else if tats-stat is 3:
 		say "[line break]CHEAT RELOAD![paragraph break]";
 	if current action is examining and last-clue-thing is not yourself, say "[line break]The stat tats must be referring to [the last-clue-thing].";
+	check-for-spaces;
+
+to check-for-spaces:
+	if space-warn is false:
+		if number of words in the player's command > 1:
+			ital-say-lb "you don't need spaces in any of the magic words you need to discover.";
+			now space-warn is true;
 
 to decide which number is exp-1 of (n - a number):
 	let temp be 0;
@@ -1096,6 +1105,7 @@ to say reject:
 			say "You already figured what to do here.";
 		else:
 			say "[if tats-stat > 0]The stat tats seem to halfway make something, but no[else]You felt like whatever you just did or thought wasn't enough. Somehow you have to do more[end if].";
+		check-for-spaces;
 		continue the action;
 	if cmdhash is dubhash or firstwordhash is dubhash:
 		if location is solved:
@@ -1104,6 +1114,7 @@ to say reject:
 			say "This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.";
 		else:
 			say "[how-many-right of the player's command].";
+		check-for-spaces;
 		continue the action;
 	repeat through table of nudge hashes:
 		if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
@@ -1114,6 +1125,7 @@ to say reject:
 				process the cmd-rule entry;
 				if the rule failed, next;
 			say "[nudge-text entry][line break]";
+			check-for-spaces;
 			continue the action;
 	repeat through table of rough hashes:
 		if cmd-hash entry is ruffirst or cmd-hash entry is ruffirst:
@@ -1141,6 +1153,7 @@ to say reject:
 				say "[how-many-right of the player's command]";
 			else:
 				say "Hmm, [the itm] seem[if itm is not plural-named]s[end if] to waver a bit. You must be on the right track to change [the itm], here.";
+			check-for-spaces;
 			continue the action;
 		if rufhash is uniq-hash of itm or ruffirst is uniq-hash of itm:
 			say "Man! You had all the right letters for [the itm], you think, but they didn't come together.";
