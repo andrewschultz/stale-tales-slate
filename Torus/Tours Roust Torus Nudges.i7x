@@ -64,6 +64,33 @@ to say tsetse-ok: say "The tsetse fly can't really be changed"
 
 to say sys-eye-clue: say "[if score > 0]The SYS-EYE seems less prominent now that you've figured something to do[else]You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere[end if]"
 
+book general roughhash nudges
+
+table of rough hashes
+cmd-val (text)	cmd-hash (number)	cmd-loc	cmd-rule	nudge-text
+"ed"	24	--	deeded-listened rule	"You don't need to do anything fancy with [b]DEEDED[r]."
+"on"	24576	--	noon-known rule	"[if ever-heptagon-puzzle is true]You don't need to do anything fancy. Going [b]ON[r] was enough."
+"hay"	16777345	--	--	"You can't really do anything with the hay."
+"yes"	17039376	--	sys-eye-known rule	"You can't really manipulate the SYS-EYE."
+"buh"	1048706	--	--	"You have to figure how to keep the hubbub going."
+
+this is the deeded-listened rule:
+	if heard-deeded is true, the rule succeeds;
+	if deededed is true, the rule succeeds;
+	the rule fails;
+
+this is the hay-known rule:
+	if hay-smell-available is true, the rule succeeds;
+	the rule fails;
+
+this is the noon-known rule:
+	if solved-initials is true, the rule succeeds;
+	the rule fails;
+
+this is the sys-eye-known rule:
+	if sys-eye-yes is true, the rule succeeds;
+	the rule fails;
+
 book auxiliary
 
 to say just-stat: say "So you can just use [b]STAT[r] and [b]TATS[r]"

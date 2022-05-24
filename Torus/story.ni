@@ -672,9 +672,12 @@ before printing the name of a flippable (called fl) when listening:
 	say "'";
 	continue the action;
 
+heard-deeded is a truth state that varies.
+
 check listening:
 	if deededed is false and location of player is Scene Scene:
 		say "A voice whispers [b]DEEDED[r] ... [b]DEEDED[r] ... you're torn between just figuring what to do here and moving on, because 'deeded' would probably involve signing a lot of boring contracts, or just figuring how to settle in quickly.";
+		now heard-deeded is true;
 		the rule succeeds;
 	let ebh be number of end-bonus-hear things;
 	if ebh  > 0, say "You hear [if ebh is 1]one last voices[else]various voices[end if] focusing on a specific word: [list of end-bonus-hear things]. You can probably [b]EXAMINE[r] one for more details." instead;
@@ -1105,6 +1108,16 @@ to say reject:
 		continue the action;
 	repeat through table of nudge hashes:
 		if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
+			if there is a cmd-loc entry:
+				if location of player is not cmd-loc entry, next;
+				if location of player is solved, next;
+			if there is a cmd-rule entry:
+				process the cmd-rule entry;
+				if the rule failed, next;
+			say "[nudge-text entry][line break]";
+			continue the action;
+	repeat through table of rough hashes:
+		if cmd-hash entry is ruffirst or cmd-hash entry is ruffirst:
 			if there is a cmd-loc entry:
 				if location of player is not cmd-loc entry, next;
 				if location of player is solved, next;
