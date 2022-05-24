@@ -6315,7 +6315,9 @@ understand "[number]" as numming when player is in Trap Part.
 
 does the player mean examining a sto when player is in Trap Part: it is unlikely.
 
-check numming: try dialsetting dial to number understood instead;
+check numming:
+	if dial is moot, say "You don't need to rehash your dizzying introduction, here." instead;
+	try dialsetting dial to number understood instead;
 
 numset-ever-greater is a truth state that varies. numset-ever-greater is false.
 
