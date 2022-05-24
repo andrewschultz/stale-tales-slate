@@ -12,31 +12,44 @@
 >au 2
 >z
 
->a
->a
->a
->a
->a
->a
->a
->smell
-You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
+>sheesh
+#ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+!BUG
+>undo
 
-#testcase-mistake-tours-roust-torus-hah-yah-ayy
->hah
-You were glad to have the smell of hay as a clue, but let's not overdo it!
+>a
+>b
+>sheesh
+You have seen some of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+>undo
+>undo
+>undo
+>aa
+>aa
+>aa
+>a
+>sheesh
+You have seen most of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+>undo
+>undo
+>undo
+>undo
+>undo
 
->yah
-You were glad to have the smell of hay as a clue, but let's not overdo it!
-
->ayy
-You were glad to have the smell of hay as a clue, but let's not overdo it!
+>a
+>a
+>a
+>a
+>a
+>a
+>a
 
 >a
 >reappear
 by one point
 >b
-#ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+#+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
 >sheesh
 by one point
 Your immediate reaction is to feel a bit silly figuring this area just now, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but "Sheesh?"
@@ -50,9 +63,7 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 by one point
 /^Sheesh
 
-#+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
-You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
-!BUG
+You have seen all of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
 
 >a
 
@@ -79,6 +90,11 @@ by one point
 You get some practice in reappearing. Maybe soon you will have someone to reappear for.
 
 >a
+
+#testcase-mistake-tours-roust-torus-arranging
+>arranging
+Almost. Just one more I to arrange, there.
+!Besides
 
 #ttc-table-of-room-combos-grain-grain-latte-latte
 >bbb

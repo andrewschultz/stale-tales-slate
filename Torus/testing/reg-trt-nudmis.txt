@@ -106,6 +106,8 @@ general list of verbs
 >a
 >a
 >a
+
+# done above but we need to prep the hay nudges
 >smell
 You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
 
@@ -189,7 +191,8 @@ No daredevil gunman appears to help you out.
 
 #testcase-mistake-tours-roust-torus-reap-pear
 >reap pear
-You are very, very, very close indeed. Everything is in the right order.
+You think you've got it, but for some reason you feel a little ... spacy.
+Besides, you already did this for Curtis after you defeated Elvira in A Roiling Original.
 
 #ttc-table-of-nudge-hashes-prep
 >prpe
@@ -240,6 +243,11 @@ Getting mad won't help.
 #testcase-mistake-tours-roust-torus-raging-rain
 >raging rain
 You don't need to battle the weather as well.
+!Besides
+
+#testcase-mistake-tours-roust-torus-arranging
+>arranging
+Almost. Just one more I to arrange, there.
 !Besides
 
 #ttc-table-of-pre-brushoffs-grain-grain-grain
@@ -390,10 +398,12 @@ NOTE: you have the right idea, simplifying "Noon," but no need for a foreign lan
 
 Yes, you decide it's time to start going ON.
 seems as good a place to start as any others. The ground beneath you
+# "in tattletale" and "in reappear" are checked below, but here we want to make sure things pass in general
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
-/^Tattletale
+!/^Tattletale
+Tattletale seems as good
 
 >aaa
 >aa

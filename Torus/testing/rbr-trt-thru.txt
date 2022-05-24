@@ -29,6 +29,32 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 >au 2
 >z
 
+@alt
+>sheesh
+#ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+!BUG
+>undo
+\\
+>a
+>b
+>sheesh
+You have seen some of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+>undo
+>undo
+>undo
+>aa
+>aa
+>aa
+>a
+>sheesh
+You have seen most of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+>undo
+>undo
+>undo
+>undo
+>undo
+
 @hin
 >verbs
 !Also, if you'd like a clue, you can enter a blank command.
@@ -285,9 +311,12 @@ general list of verbs
 >a
 >a
 >a
+
+@mis
+# done above but we need to prep the hay nudges
 >smell
 You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
-
+\\
 #testcase-mistake-tours-roust-torus-hah-yah-ayy
 >hah
 You were glad to have the smell of hay as a clue, but let's not overdo it!
@@ -328,7 +357,7 @@ You don't need to deal with pronouns. Maybe a different sort of word. In a weird
 >reappear
 by one point
 >b
-#ttc-table-of-room-combos-ehs-ehs-ehs-ehs
+#+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
 >sheesh
 by one point
 Your immediate reaction is to feel a bit silly figuring this area just now, after you already got a few harder ones. But then you feel smart that you weren't scared of the potentially tougher errors. What else can you say to that but "Sheesh?"
@@ -342,6 +371,9 @@ Your immediate reaction is to feel a bit silly figuring this area just now, afte
 by one point
 /^Sheesh
 
+@alt
+You have seen all of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
+
 @nud
 #+ttc-table-of-nudge-hashes-hya
 >ayh
@@ -350,11 +382,6 @@ While lots of snappy noises come to mind, you can't do anything with the smell o
 @hin
 >verbs
 !Also, if you'd like a clue, you can enter a blank command.
-
-@alt
-#+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
-You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
-!BUG
 
 @max
 #ttc-table-of-progress-1
@@ -426,7 +453,8 @@ No daredevil gunman appears to help you out.
 \\
 #testcase-mistake-tours-roust-torus-reap-pear
 >reap pear
-You are very, very, very close indeed. Everything is in the right order.
+You think you've got it, but for some reason you feel a little ... spacy.
+Besides, you already did this for Curtis after you defeated Elvira in A Roiling Original.
 
 @nud
 #ttc-table-of-nudge-hashes-prep
@@ -530,6 +558,12 @@ Getting mad won't help.
 #testcase-mistake-tours-roust-torus-raging-rain
 >raging rain
 You don't need to battle the weather as well.
+!Besides
+\\
+
+#testcase-mistake-tours-roust-torus-arranging
+>arranging
+Almost. Just one more I to arrange, there.
 !Besides
 
 @nud
@@ -957,14 +991,17 @@ All manner of whirring seems to flow around you. The cylinder in the center of t
 @!alt
 Yes, you decide it's time to start going ON.
 seems as good a place to start as any others. The ground beneath you
+# "in tattletale" and "in reappear" are checked below, but here we want to make sure things pass in general
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
 @!alt,min-b
-/^Tattletale
+!/^Tattletale
+Tattletale seems as good
 
 @min-b
-/^Reappear
+!/^Reappear
+Reappear seems as good
 
 >aaa
 >aa

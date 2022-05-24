@@ -19,18 +19,6 @@
 >a
 >a
 >a
->smell
-You smell hay, and you can't help theatrically exclaiming "Ahh! Yay! Hay!" as you recall trading the straw for hay way back when.
-
-#testcase-mistake-tours-roust-torus-hah-yah-ayy
->hah
-You were glad to have the smell of hay as a clue, but let's not overdo it!
-
->yah
-You were glad to have the smell of hay as a clue, but let's not overdo it!
-
->ayy
-You were glad to have the smell of hay as a clue, but let's not overdo it!
 
 >sheesh
 by one point
@@ -43,6 +31,11 @@ by one point
 /^Reappear
 
 >a
+
+#testcase-mistake-tours-roust-torus-arranging
+>arranging
+Almost. Just one more I to arrange, there.
+!Besides
 
 >arraigning
 by one point
@@ -78,10 +71,12 @@ A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself 
 
 Yes, you decide it's time to start going ON.
 seems as good a place to start as any others. The ground beneath you
+# "in tattletale" and "in reappear" are checked below, but here we want to make sure things pass in general
 seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try.
 [NOTE: since the map of Tours Roust Torus is circular, you can use the verbs 0 and 1 to track the rooms as numbers to make things a bit easier, here.]
 
-/^Tattletale
+!/^Tattletale
+Tattletale seems as good
 
 >aaa
 >aa
