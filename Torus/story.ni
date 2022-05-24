@@ -188,15 +188,6 @@ check examining a direction when location of player is perimeter:
 	if noun is rotational, say "The torus [if number of unvisited perimeter rooms is 0]only has seven areas, as you've found from walking around[else]isn't too big around. It seems sturdy enough, though you haven't been all around it yet." instead;
 	say "You can't go in any of the staidard directions."
 
-book basic going
-
-definition: a direction (called d) is hep-illegal:
-	if init-hept-dir is up, no;
-	let r1 be whether or not d is clockwise;
-	let r2 be whether or not init-hept-dir is counterclockwise;
-	if r1 is r2, yes;
-	no;
-
 to say skipped-room of (rm - a room) and (d - a direction):
 	if d is a2:
 		say "[the room a1 of rm] doesn't";
@@ -211,8 +202,8 @@ to say skipped-room of (rm - a room) and (d - a direction):
 
 check going when in-heptagon-puzzle is true:
 	if noun is not rotational, continue the action;
-	if noun is a1 or noun is b1, say "Odd. You can't move that slowly. Moving one section over isn't really moving [b]ON[r], I guess. So going [b]A[r] or [b]B[r] is out." instead;
-	if noun is hep-illegal, say "You can't reverse direction on the torus like that." instead;
+	if noun is a1 or noun is b1, say "You feel too full of nervous energy now that you are [b]ON[r]. You feel completely unable to move over one section of the torus at a time. So going [b]A[r] or [b]B[r] is out." instead;
+	if noun is hep-illegal, say "You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you." instead;
 	if number of hep-traversed rooms is 1:
 		say "You race around a bit. You notice [skipped-room of location of player and noun] light up as you run past [if dist of noun is 3]them[else]it[end if].";
 	if init-hept-dir is up:
@@ -563,6 +554,19 @@ carry out onebasing:
 	now zero-one-warn is true;
 	the rule succeeds;
 
+section can-base definition
+
+to decide whether can-base:
+	if zero-one-warn is true and solved-heptagon is false, yes;
+	no;
+
+definition: a direction (called d) is hep-illegal:
+	if init-hept-dir is up, no;
+	let r1 be whether or not d is clockwise;
+	let r2 be whether or not init-hept-dir is counterclockwise;
+	if r1 is r2, yes;
+	no;
+
 section failure
 
 to fail-heptagon:
@@ -612,7 +616,7 @@ carry out creditsing:
 	say "Thanks to ClubFloyd for Beta Testing a version of this game. They worked through some parts that are much better hinted and described now. I'm worried I'll miss a few names, but there were bg, David Welbourn, Jacqueline, MoyTW, pinkunz, and Roger, among others.";
 	say "Thanks to individuals for some late testing. I appreciate it. Their names*: Dee Cooke, Olaf Nowacki, A Numb Scan Down.";
 	say "Thanks to J. J. Guest for the cover art. He's done a lot of other cool cover art, too. https://ifdb.org/viewlist?id=6qv507dlg1j4klk8 has his complete works with editorial comments. I bet if you like [this-game], you'll like some of the games featured there, too.";
-	say "* [i]Thanks to one of them for an additional anagram puzzle. If you need a hint, they've written XYZZY-nominated stuff before[r].";
+	say "* [i]Thanks to one of them for offering an additional just-for-fun anagram puzzle here in the credits. If you need a hint, they've written XYZZY-nominated stuff before[r].";
 	say "[line break]General thanks:";
 	say "[line break]Thanks to Amanda Walker for starting the blurb thread on intfiction.org which helped me with ideas in general.";
 	say "Thanks to Greg Boettcher for starting the Spring Thing competition and giving me a bit of a mulligan when I entered [aro]. Thanks to Aaron Reed for continuing to hold the Spring Thing competition.";
@@ -677,14 +681,31 @@ check requesting the score:
 		say "You've gotten inside the torus. You still have to figure how to sit back and get on with your life[if deededed is false], though you can listen to the voice to try for one last pile of things to set straight[else if number of unflipped flippables is 0], especially now you've straightened out the challenges you were [b]DEEDED[r][else if number of flipped flippables is 0], and you can do so even without tackling what you were [b]DEEDED[r][else], though you've still got some stuff you were [b]DEEDED[r] to clean up, if you want[end if].";
 		say "You have figured [number of flipped flippables] of [number of flippables] things here in [scene scene].";
 		the rule succeeds;
-	say "You've figured [score] of [maximum score] areas of the Torus. [if number of unvisited rooms is 1 and score < 7][one of]Why, yes, there is a way to the center[or][stopping][else if number of unvisited rooms > 1]You may wish to explore the whole torus to see what you might be able to do[else if hams are off-stage]You can just go ahead and figure how to end your journey, but there are bonus puzzles if you [b]LISTEN[r] and do as the voice says[end if].";
-	the rule succeeds;
+	say "You've transfigured [score] of [maximum score] areas of the Torus[score-what-next].";
+
+to say score-what-next:
+	if location of player is scene scene:
+		say ". You can just go ahead and figure how to end your journey, but there are bonus puzzles if you [b]LISTEN[r] and do as the voice says";
+	else if solved-heptagon is true:
+		say ". You don't have anywhere to go but [b]IN[r], really";
+	else if in-heptagon-puzzle is true:
+		say ". Currently, you're on a dance around the torus. There can only be so many ways to do it, you think. You hope.";
+	else if ever-heptagon-puzzle is true:
+		say ". You may wish to try dancing around the torus again";
+	if number of unvisited perimeter rooms > 0:
+		say ". You may wish to explore the whole torus to get a feel for what needs to be done";
+	else if score < 7:
+		say "[one of]. And, yes, there is an eighth location in the center[or][stopping]";
+
+chapter think
+
+the block thinking rule is not listed in any rulebook.
+
+check thinking: say "[b]SCORE[r] tells what to do next, roughly." instead;
 
 chapter smelling
 
 the block smelling rule is not listed in any rulebook.
-
-every turn: say "[hay-smell-known].";
 
 check smelling:
 	if player is in scene scene, say "It smells nice here." instead;
@@ -783,7 +804,7 @@ check verbing when player is in scene scene:
 
 carry out verbing:
 	say "Compass directions aren't really viable, here. You may try to go [b]IN[r] or [b]OUT[r], but the main directions are [b]A[r] and [b]B[r] to move clockwise and counterclockwise around the torus.";
-	say "[line break]You can also skip over adjacent torus areas with [b]AA[r], [b]AAA[r], [b]BB[r], or [b]BBB[r]. Note anything more than that is accepted but impractical, as [b]AAA[r] and [b]BBBB[r] are equivalent.";
+	say "[line break]You can also skip over adjacent torus areas with [b]AA[r], [b]AAA[r], [b]BB[r], or [b]BBB[r]. [b]B3[r] and [b]3A[r] and so on also work. Note anything more than three letters is accepted but impractical, as [b]AAA[r] and [b]BBBB[r] are equivalent.";
 	stat-mention;
 	if zero-one-warn is true:
 		say "[line break]You also have the option of referring to areas of the torus as numbers after you've gone [b]ON[r]. This can be done with [b]0[r] or [b]1[r]. Typing the same number twice removes the numerical reference. Currently numerical referencing is [if on-base is -1]off[else][on-base in words]-based[end if].";
@@ -1028,6 +1049,7 @@ to say reject:
 	now firstwordhash is the hash of word number 1 in the player's command;
 	now ruffirst is the rough-hash of word number 1 in the player's command;
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash]. Location hash is [sts-hash of location of player].[line break]";
+	d "The rough-hash of the command is [rufhash]. Hash of word 1 is [ruffirst].[line break]";
 	if cmdhash is onehash or firstwordhash is onehash:
 		if location is solved:
 			say "You already figured what to do here.";
@@ -1038,7 +1060,7 @@ to say reject:
 		if location is solved:
 			say "You already figured what to do here.";
 		else if tats-stat is 0:
-			say "This area of the torus sways slightly. You must have done something, but not everything, right.";
+			say "This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.";
 		else:
 			say "[how-many-right of the player's command].";
 		continue the action;
@@ -1053,7 +1075,7 @@ to say reject:
 			say "[nudge-text entry][line break]";
 			continue the action;
 	if rufhash is uniq-hash of location of player or ruffirst is uniq-hash of location of player:
-		say "Man! You had all the right letters, you think, but they didn't come together.";
+		say "You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.";
 		continue the action;
 	let itmhash be 0;
 	repeat with itm running through touchable flippables:
