@@ -25,7 +25,7 @@ understand "a0" and "0a" and "b0" and "0b" as a mistake ("You look around the to
 
 understand "hah" and "yah" and "ayy" as a mistake ("You were glad to have the smell of hay as a clue, but let's not overdo it!") when hay-smell-known is true.
 
-understand "non" as a mistake ("No need for foreign languages. [if in-heptagon-puzzle is true]You can't turn things off. Just try to dance around as you can[else if ever-heptagon-puzzle is false]Even simpler than that[else]You can only start the traversal with [b]ON[r] again[end if].") when ever-heptagon-puzzle is true and solved-initials is false.
+understand "non" as a mistake ("No need for foreign languages. [if in-heptagon-puzzle is true]You can't turn things off. Just try to dance around as you can[else if ever-heptagon-puzzle is false]Even simpler than that[else]You can only start the traversal with [b]ON[r] again[end if].") when solved-heptagon is false and solved-initials is true.
 
 understand "off" as a mistake ("You can't turn things off. Just try to dance around as you can.") when in-heptagon-puzzle is true.
 

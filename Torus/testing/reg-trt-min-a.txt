@@ -32,11 +32,6 @@ by one point
 
 >a
 
-#testcase-mistake-tours-roust-torus-arranging
->arranging
-Almost. Just one more I to arrange, there.
-!Besides
-
 >arraigning
 by one point
 /^Arraigning
@@ -65,7 +60,8 @@ by one point
 by one point
 /^Tattletale
 
-A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+A voice booms "Noon? No! No!"
+It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
 >on
 
@@ -84,7 +80,8 @@ Tattletale seems as good
 >aaa
 >aa
 >aaa
-All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+The "Uhh, hubbub!" continues, relatively lively. Or is it "Huh, hubbub?"
+The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
 
 >in
 /^Scene Scene

@@ -161,7 +161,6 @@ table of one time warnings
 my-topic	warned-yet	should-i-print
 "voice"	false	voice-note rule
 "door"	false	door-appears rule
-"non"	false	on-puzzle rule
 "sys/eye"	false	sys-eye-yet rule
 
 this is the voice-note rule:
@@ -171,12 +170,6 @@ this is the voice-note rule:
 this is the door-appears rule:
 	if score < 4, the rule fails;
 	ital-say "the door is just part of the torus. There's nothing special about it. You'll just walk through it when the time comes. Anything you try to do with the door goes to the torus.";
-	the rule succeeds;
-
-this is the on-puzzle rule:
-	if score is not 7, the rule fails;
-	ital-say "you [if ever-heptagon-puzzle is true]did the right thing with [b]ON[i]. No need to read further into the 'Noon' message[else]have the right idea, simplifying 'Noon,' but no need for a foreign language[end if].";
-	reject the player's command;
 	the rule succeeds;
 
 this is the sys-eye-yet rule:

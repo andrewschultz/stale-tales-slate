@@ -61,7 +61,7 @@ heptagon-path is a list of numbers variable. heptagon-path is {}.
 to decide which number is heptcount: decide on number of solved dubrooms; [note: this is mostly equivalent to the score, but just in case...]
 
 every turn when solved-initials is true and in-heptagon-puzzle is false and ever-heptagon-puzzle is false and solved-heptagon is false (this is the clue ON rule):
-	say "[one of]A voice[or]That voice once again[stopping] booms '[noon-no][line break]It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
+	say "[one of]A voice[or]That voice once again[stopping] booms [noon-no][line break]It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!"
 
 section defaults
 
@@ -246,7 +246,7 @@ after going when in-heptagon-puzzle is true:
 	now location of player is hep-traversed;
 	if number of hep-traversed rooms is 7:
 		if heptagon-path-varies:
-			say "The voice changes from 'Uhh hubbub' to a crescendo. 'Hub! HUB! [b]HUB!!!!![r]'[paragraph break]Then it cuts off. You A disorienting light flashes through the center of the torus, leaving the door flapping open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.[paragraph break]There doesn't seem to be anything else to do. Now's probably a good time to go [b]INSIDE[r].";
+			say "The voice changes from 'Uhh hubbub' to a crescendo. 'Hub! HUB! [b]HUB!!!!![no line break][r]'[paragraph break]Then it cuts off. You A disorienting light flashes through the center of the torus, leaving the door flapping open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.[paragraph break]There doesn't seem to be anything else to do. Now's probably a good time to go [b]INSIDE[r].";
 			now solved-heptagon is true;
 		else:
 			say "The interior of the Torus shudders, but nothing conclusive happens. The voice in the background mumbling 'Buh ... buh ... buh ...' dies out. Perhaps it is somehow bored with you running the same distance each time. But there seems to be nothing to stop you from going [b]ON[r] and trying again.";

@@ -12,9 +12,26 @@
 >au 2
 >z
 
+#testcase-mistake-tours-roust-torus-a0-0a-b0-0b
+>a0
+You look around the torus, deciding where to go next, but you can't quite make a move.
+
+>0a
+You look around the torus, deciding where to go next, but you can't quite make a move.
+
+>b0
+You look around the torus, deciding where to go next, but you can't quite make a move.
+
+>0b
+You look around the torus, deciding where to go next, but you can't quite make a move.
+
 #ttc-table-of-one-time-warnings-sys-eye
 >yes
 Out of nowhere, a SYS-EYE pops up and whirrs around. You're not sure where it's gone. It's a bit worried you're being surveilled like that. But maybe the SYS-EYE can help you in its own weird way.
+
+#ttc-table-of-rough-hashes-yes
+>eyes
+You can't really manipulate the SYS-EYE.
 
 >yes
 The SYS-EYE does not reveal itself. Perhaps it is just there as bizarre help, in its own way.
@@ -121,6 +138,10 @@ You were glad to have the smell of hay as a clue, but let's not overdo it!
 >ayy
 You were glad to have the smell of hay as a clue, but let's not overdo it!
 
+#ttc-table-of-rough-hashes-hay
+>hyah
+You can't really do anything with the hay.
+
 #+ttc-table-of-nudge-hashes-hya
 >ayh
 While lots of snappy noises come to mind, you can't do anything with the smell of hay. It was there, and it gave you a boost you'll cash in on, you're sure.
@@ -222,7 +243,7 @@ Perhaps there is something to reap once you figure what to do here. Besides, you
 
 #mistake retest for perp
 >perp
-Tours Roust Torus doesn't have a deep bench of standard verbs, though in each room, you need to find something special to do or say or think. For a general list of verbs, type VERBS.
+Tours Roust Torus doesn't have a deep bench of standard verbs, though in each area of the torus, you need to find one specific word (no spaces) to do or say or think. For a general list of verbs, type VERBS.
 #PREP AREA is now nothing, so we get the standard response, but it's worth testing
 
 #mistake retest for pear
@@ -327,9 +348,21 @@ The tines aren't budging. Not in their present form. But what could they become?
 >inset insults
 The tines aren't budging. Not in their present form. But what could they become?
 
+#testcase-mistake-tours-roust-torus-nineties-st
+>nineties st
+You don't want to think about your own nineties, but yeah, the nineties were a great time for text adventures, weren't they?
+
 >intestines
 by one point
 /^Intestines
+
+#testcase-mistake-tours-roust-torus-sit-intense-intense-sit
+>sit intense
+
+This is as good a place for rigorous thought as any other, I suppose.
+
+>intense sit
+This is as good a place for rigorous thought as any other, I suppose.
 
 #mistake retest for stein
 >stein
@@ -372,7 +405,8 @@ Oh, man. You don't want to even think about caffeinated beverages. Even ones wit
 by one point
 /^Tattletale
 
-A voice booms "Noon? No! No!" It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
+A voice booms "Noon? No! No!"
+It's quite direct, and it makes you lose yourself in mazy thinking. But there must be a simple, effective way to push back!
 
 #ttc-table-of-post-brushoffs-latte-latte-(tattle|tale)
 >tattle it
@@ -390,9 +424,13 @@ Besides
 >x door
 NOTE: the door is just part of the torus. There's nothing special about it. You'll just walk through it when the time comes. Anything you try to do with the door goes to the torus.
 
-#ttc-table-of-one-time-warnings-non
+#testcase-mistake-tours-roust-torus-non
 >non
-NOTE: you have the right idea, simplifying "Noon," but no need for a foreign language.
+No need for foreign languages. Even simpler than that.
+
+#ttc-table-of-rough-hashes-on
+>nnoo
+You may be overthinking things, here. There's a more direct refutation to "Noon? No! No!"
 
 >on
 
@@ -405,13 +443,45 @@ seems to brighten up as you make your decision. You feel confident that if you d
 !/^Tattletale
 Tattletale seems as good
 
+#testcase-mistake-tours-roust-torus-off
+>off
+You can't turn things off. Just try to dance around as you can.
+
+#+testcase-mistake-tours-roust-torus-non
+>non
+No need for foreign languages. You can't turn things off. Just try to dance around as you can.
+
+>aaa
+>aa
+>aa
+#+ttc-table-of-rough-hashes-on
+>nnoo
+There's no extra option to restart. Just ON.
+>undo
+>undo
+>undo
+>undo
+
+#ttc-table-of-rough-hashes-buh
+>bhuh
+The content of the "Buh" is not so important. It may provide a clue if you are on the right track.
+
+#+ttc-table-of-rough-hashes-on
+>nnoo
+You don't need to do anything fancy. Going ON was enough to get started.
+
 >aaa
 >aa
 >aaa
 >aaa
 >aa
 >aaa
-All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+The "Uhh, hubbub!" continues, relatively lively. Or is it "Huh, hubbub?"
+The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
+
+#+ttc-table-of-rough-hashes-buh
+>bhuh
+You dealt with the, uhh, hubbub.
 
 >in
 /^Scene Scene
@@ -438,9 +508,27 @@ It's too late for that now, but you should be able to push through as needed.
 >retrains
 It's too late for that now, but you should be able to push through as needed.
 
+>listen
+A voice whispers DEEDED ... DEEDED ... you're torn between just figuring what to do here and moving on, because "deeded" would probably involve signing a lot of boring contracts, or just figuring how to settle in quickly.
+
+#ttc-table-of-rough-hashes-ed
+>eded
+You don't need to provide any variant on DEEDED. Just saying it will get you extra puzzles.
+
 >deeded
 You're not sure what to do, but there's a lot to do!
 !You already took on an additional challenge.
+
+#+ttc-table-of-rough-hashes-ed
+>eded
+You don't need to provide any variant on DEEDED. It got you extra puzzles.
+
+#testcase-mistake-tours-roust-torus-science-sin-sin-science
+>science sin
+Hey, now. You are the good guy, here. But you're actually very close.
+
+>sin science
+Hey, now. You are the good guy, here. But you're actually very close.
 
 >shammash
 by one point
