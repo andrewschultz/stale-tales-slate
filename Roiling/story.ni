@@ -813,23 +813,6 @@ use DICT_WORD_SIZE of 12
 
 [We need all 12 letters. For instance, some adverbs get to 12 and, okay, those, you can count the last two letters. But BLACKBERRIES is 12.]
 
-section debug on - not for release
-
-[needs to be near the top--well, could place it before all other when play begins rules]
-
-when play begins (this is the debug by default when debugging rule) :
-	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
-	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
-	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
-
-section test extensions - not for release
-
-Include Direction Response Testing by Andrew Schultz.
-
-[include Property Checking by Emily Short.]
-
-include Object Response Tests by Juhana Leinonen.
-
 section screenreading and censoring
 
 when play begins (this is the screenread gender swears and precursor rule) :
@@ -3685,48 +3668,6 @@ definition: a region is markable:
 	if it is mrlp, no;
 	if it is solved, yes;
 	no;
-
-section scafing - not for release
-
-scafing is an action out of world.
-
-understand the command "scaf" as something new.
-
-understand "scaf" as scafing.
-
-carry out scafing:
-	now score-after is whether or not score-after is false;
-	say "Printing score after gaining a point is now [on-off of score-after].";
-	the rule succeeds;
-
-scaying is an action out of world.
-
-understand the command "scay" as something new.
-
-understand "scay" as scaying.
-
-carry out scaying:
-	say "Printing score after gaining a point [if score-after is true]was already[else]is now[end if] on.";
-	now score-after is true;
-	the rule succeeds;
-
-report possing:
-	pad-rec-q "poss";
-	continue the action;
-
-section posfing - not for release
-
-posfing is an action out of world.
-
-understand the command "posf" as something new.
-
-understand "posf" as posfing.
-
-carry out posfing:
-	say "Forcing possible point notification on[if possibles is true], though it already is[end if].";
-	now possibles is true;
-	pad-rec-q "poss";
-	the rule succeeds;
 
 chapter exitsing special by-region rules (not quite enough to make this part of a region)
 
@@ -7634,12 +7575,6 @@ after fliptoing (this is the fruit cue rule):
 	continue the action;
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
-
-section monty rules - not for release
-
-after fliptoing (this is the monty after flipping rule):
-	process the full monty test rule;
-	continue the action;
 
 volume Ordeal Reload
 
@@ -18788,34 +18723,6 @@ the Pen O Nope is vanishing scenery. description is "It's blocking you right now
 
 a-text of Pen O Nope is "YRYR". b-text of Pen O Nope is "YRYR". parse-text of Pen O Nope is "-[sp]x[sp]-[sp]x".
 
-chapter booting - not for release
-
-[ * boot can tell the game to help Gretta ]
-
-booting is an action applying to nothing.
-
-understand the command "boot" as something new.
-
-understand "boot" as booting.
-
-definition: a pickup-line (called mi) is smackable:
-	if mi is not in Disowned Downside, no;
-	if mi is not reflexive, no;
-	yes;
-
-carry out booting:
-	unless player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "Need the parleys splayer players around." instead;
-	let count be 0;
-	let SI be number of smackable pickup-lines;
-	while parleys splayer players are in Disowned Downside and count < 5:
-		let rmi be a random smackable pickup-line in Disowned Downside;
-		try fliptoing rmi;
-		increment count;
-	if count is 5:
-		say "Uh-oh! The test command to boot a random pickup line failed.";
-		say "[SI] before, [number of smackable pickup-lines] after.";
-	the rule succeeds;
-
 chapter smacking
 
 [ a stub that gives a SMACK MACKS reject ]
@@ -19088,66 +18995,6 @@ every turn when player is in Disowned Downside and parleys splayer players are i
 check scaning parleys splayer players when parleys splayer players are reflexed:
 	say "You already dealt with the players in general, so you focus on their current method.";
 	try scaning current-idea instead;
-
-section testing synonyms - not for release
-
-understand "tbossily" as t-bossily.
-
-understand "tcattily" as t-cattily.
-
-understand "tseedily" as t-seedily.
-
-understand "ttearily/tirately/treality" as t-tearily-irately.
-
-understand "tnastily" as t-nastily.
-
-understand "tshadily" as t-shadily.
-
-understand "tsnidely" as t-snidely.
-
-understand "tstarkly" as t-starkly.
-
-understand "tblearily" as t-blearily.
-
-understand "tcoitally" as t-coitally.
-
-understand "tformally" as t-formally.
-
-understand "tribaldly" as t-ribaldly.
-
-understand "tshabbily" as t-shabbily.
-
-understand "tshoddily" as t-shoddily.
-
-understand "tsilently" as t-silently.
-
-understand "tsuddenly" as t-suddenly.
-
-understand "tmodestly" as t-modestly.
-
-understand "tsteamily" as t-steamily.
-
-understand "tstupidly" as t-stupidly.
-
-understand "tmartially" as t-martially.
-
-understand "tsincerely" as t-sincerely.
-
-understand "tsobbingly" as t-sobbingly.
-
-understand "ttediously" as t-tediously.
-
-understand "twearingly" as t-wearingly.
-
-understand "tdesperately" as t-desperately.
-
-understand "tdrawlingly" as t-drawlingly.
-
-understand "temotionally" as t-emotionally.
-
-understand "tdespairingly" as t-despairingly.
-
-understand "tindiscreetly" as t-indiscreetly.
 
 book Bran Barn
 

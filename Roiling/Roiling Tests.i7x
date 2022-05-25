@@ -4,6 +4,23 @@ Version 1/190606 of Roiling Tests by Andrew Schultz begins here.
 
 volume testing - not for release
 
+section debug flags at game start
+
+[needs to be near the top--well, could place it before all other when play begins rules]
+
+when play begins (this is the debug by default when debugging rule) :
+	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
+	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
+	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
+
+section monty rules
+
+after fliptoing (this is the monty after flipping rule):
+	process the full monty test rule;
+	continue the action;
+
+the monty after flipping rule is listed last in the after rules.
+
 book basic tests
 
 [these are largely superseded by what I test with Zarf's scripts. However, they contain paths to reach critical junctures that are most likely to require manual testing.]
@@ -214,6 +231,34 @@ carry out spamobjing:
 
 volume verbs
 
+chapter booting - not for release
+
+[ * boot can tell the game to help Gretta ]
+
+booting is an action applying to nothing.
+
+understand the command "boot" as something new.
+
+understand "boot" as booting.
+
+definition: a pickup-line (called mi) is smackable:
+	if mi is not in Disowned Downside, no;
+	if mi is not reflexive, no;
+	yes;
+
+carry out booting:
+	unless player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "Need the parleys splayer players around." instead;
+	let count be 0;
+	let SI be number of smackable pickup-lines;
+	while parleys splayer players are in Disowned Downside and count < 5:
+		let rmi be a random smackable pickup-line in Disowned Downside;
+		try fliptoing rmi;
+		increment count;
+	if count is 5:
+		say "Uh-oh! The test command to boot a random pickup line failed.";
+		say "[SI] before, [number of smackable pickup-lines] after.";
+	the rule succeeds;
+
 chapter coffing
 
 [* COFF 1 tests if you are in the Strip of Profits, handy if you want to test if something's solved, and forces you to the strip so you can do another test. It logs things, too.]
@@ -398,6 +443,52 @@ every turn when cuss-every-turn is true and mrlp is presto (this is the cheat an
 	if curst crust is moot:
 		now player has curst crust;
 	try eating curst crust;
+
+section scafing - not for release
+
+[ score after forcing/toggling ]
+
+scafing is an action out of world.
+
+understand the command "scaf" as something new.
+
+understand "scaf" as scafing.
+
+carry out scafing:
+	now score-after is whether or not score-after is false;
+	say "Printing score after gaining a point is now [on-off of score-after].";
+	the rule succeeds;
+
+scaying is an action out of world.
+
+understand the command "scay" as something new.
+
+understand "scay" as scaying.
+
+carry out scaying:
+	say "Printing score after gaining a point [if score-after is true]was already[else]is now[end if] on.";
+	now score-after is true;
+	the rule succeeds;
+
+report possing:
+	pad-rec-q "poss";
+	continue the action;
+
+section posfing - not for release
+
+[force possible point notification on]
+
+posfing is an action out of world.
+
+understand the command "posf" as something new.
+
+understand "posf" as posfing.
+
+carry out posfing:
+	say "Forcing possible point notification on[if possibles is true], though it already is[end if].";
+	now possibles is true;
+	pad-rec-q "poss";
+	the rule succeeds;
 
 chapter whiing
 
@@ -1767,6 +1858,66 @@ carry out xtuing:
 	now xtra-trax is false;
 	now xtra-trax-warn is false;
 	the rule succeeds;
+
+volume synonyms for players actions
+
+understand "tbossily" as t-bossily.
+
+understand "tcattily" as t-cattily.
+
+understand "tseedily" as t-seedily.
+
+understand "ttearily/tirately/treality" as t-tearily-irately.
+
+understand "tnastily" as t-nastily.
+
+understand "tshadily" as t-shadily.
+
+understand "tsnidely" as t-snidely.
+
+understand "tstarkly" as t-starkly.
+
+understand "tblearily" as t-blearily.
+
+understand "tcoitally" as t-coitally.
+
+understand "tformally" as t-formally.
+
+understand "tribaldly" as t-ribaldly.
+
+understand "tshabbily" as t-shabbily.
+
+understand "tshoddily" as t-shoddily.
+
+understand "tsilently" as t-silently.
+
+understand "tsuddenly" as t-suddenly.
+
+understand "tmodestly" as t-modestly.
+
+understand "tsteamily" as t-steamily.
+
+understand "tstupidly" as t-stupidly.
+
+understand "tmartially" as t-martially.
+
+understand "tsincerely" as t-sincerely.
+
+understand "tsobbingly" as t-sobbingly.
+
+understand "ttediously" as t-tediously.
+
+understand "twearingly" as t-wearingly.
+
+understand "tdesperately" as t-desperately.
+
+understand "tdrawlingly" as t-drawlingly.
+
+understand "temotionally" as t-emotionally.
+
+understand "tdespairingly" as t-despairingly.
+
+understand "tindiscreetly" as t-indiscreetly.
 
 Roiling Tests ends here.
 

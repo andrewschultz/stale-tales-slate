@@ -2738,12 +2738,6 @@ after fliptoing (this is the set pronouns rule) :
 		if noun provides the property female and noun is female, set the pronoun her to noun;
 	continue the action;
 
-section monty testing - not for release
-
-after fliptoing (this is the monty after flipping rule):
-	process the full monty test rule;
-	continue the action;
-
 chapter special cases
 
 check fliptoing when player is in kitchen (this is the tortilla check rule):
