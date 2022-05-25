@@ -146,14 +146,6 @@ section beta testing module - not for release
 
 include Shuffling Beta Testing by Andrew Schultz
 
-book debug modules - not for release
-
-include Object Response Tests by Juhana Leinonen.
-
-[include Property Checking by Emily Short.]
-
-include Direction Response Testing by Andrew Schultz.
-
 section default to true debug - not for release
 
 when play begins (this is the debug version info that should not be in the release rule):

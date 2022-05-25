@@ -4,6 +4,13 @@ Version 1/190606 of Shuffling Tests by Andrew Schultz begins here.
 
 volume testing commands - not for release
 
+section start-of-play stuff
+
+when play begins (this is the debug version info that should not be in the release rule):
+	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
+	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
+	now debug-print is true;
+
 [be sure to do stuff when you're not in the right room. This is CRITICAL to testing.]
 
 part quick checks
@@ -70,16 +77,6 @@ test q32 with "test ordeal-loader/secure/sk 3/sk 2/test resort" in subsite.
 test recuse-metros with "test ordeal-loader/secure/test forest/test sortie/recuse/test resort" in subsite.
 test recuse-sortie with "test ordeal-loader/secure/test forest/test metros/recuse/test resort" in subsite.
 test recuse-forest with "test ordeal-loader/secure/test sortie/test metros/recuse/test resort" in subsite.
-
-section talk-testing
-
-[* all sorts of testing subjects. Individual commands may work better.]
-
-test gman with "in/goat/in/gateman/ask about abc/ask about him" in subsite.
-
-test alltalk with "ask about me/ask about xyz/in/door/blot/in/goat/in/ask about me/ask about xyz/north/ask about me/ask about xyz/gateman/ask about me/ask about xyz/gonear deadbeat/ask about me/ask about xyz/gonear faeries/ask about me/ask about xyz/gonear night thing/ask about me/ask about xyz/gonear nerds/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz/ask about xyz/peasant/ask about me/ask about xyz/gonear talkers/ask about me/ask about xyz/gonear Astral Altars/islet/cork/e/grips/ropes/slope/u/ask about me/ask about xyz/trio/ask about me/ask about xyz/potters/kilns/ask about me/ask about xyz/gonear Frost Forts/ask about me/ask about xyz/gonear Frost Forts/wolves/ask about me/ask about xyz/gonear crosse/ask about me/ask about xyz/gonear liches/ask about me/ask about xyz/" in subsite.
-
-test default-talk with "gonear red bull/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz" in subsite.
 
 section rm-testing
 
