@@ -207,7 +207,7 @@ to say skipped-room of (rm - a room) and (d - a direction):
 
 check going when in-heptagon-puzzle is true:
 	if noun is not rotational, continue the action;
-	if noun is a1 or noun is b1, say "You feel too full of nervous energy now that you are [b]ON[r]. You feel completely unable to move over one section of the torus at a time. So going [b]A[r] or [b]B[r] is out." instead;
+	if noun is a1 or noun is b1, say "You feel too full of nervous energy now that you are [b]ON[r]. You feel completely unable to move over one section of the torus at a time. So going one square over with [b]A[r] or [b]B[r] is out." instead;
 	if noun is hep-illegal, say "You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you." instead;
 	if number of hep-traversed rooms is 1:
 		say "You race around a bit. You notice [skipped-room of location of player and noun] light up as you run past [if dist of noun is 3]them[else]it[end if].";
@@ -491,6 +491,7 @@ carry out deededing:
 	now deededed is true;
 	now maximum score is number of dubrooms + number of flippables;
 	now the right hand status line is "[score]/[maximum score]";
+	ital-say "these final optional puzzles are meant to be difficult, and the words are a bit obscure. [if tats-stat is 0]If you prefer a more moderate challenge, now's a good time to use the [b]TATS[i][else]If you want a full challenge, you may wish to type [b]STAT[i] so there will be less trial and error[end if].";
 	the rule succeeds;
 
 chapter oning
@@ -526,7 +527,7 @@ carry out oning:
 	if in-heptagon-puzzle is false:
 		say "[b]NOON NO NO[r] is simple and devastating, but you found an even simpler retort to stop feeling paralyzed by it.[paragraph break]";
 		now in-heptagon-puzzle is true;
-	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping]. The area around you starts to glow.";
+	say "Yes, you decide it's time to start going [b]ON[r][one of]. [location of player] seems as good a place to start as any others. The ground beneath you in [location of player] seems to brighten up as you make your decision. You feel confident that if you don't do things right, you'll have another try[or] again. Maybe you'll find the right way through this time[stopping]. The area around you starts to glow. [one of]For the first time in a long while[or]Again[stopping], you feel an urge to move quickly. Not just that: you feel the ability and a duty.";
 	say "[line break]In addition, a droning chant of 'Buh!' starts up[one of][or] again[stopping].";
 	now ever-heptagon-puzzle is true;
 	now heptagon-varies-this-time is false;

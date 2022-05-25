@@ -321,6 +321,8 @@ When you wake up and take stock, things are different. You feel you've seen this
 You're not sure what to do, but there's a lot to do!
 !You already took on an additional challenge.
 
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
+
 >shammash
 by one point
 >insciences

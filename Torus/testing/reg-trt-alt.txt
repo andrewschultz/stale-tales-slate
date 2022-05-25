@@ -177,16 +177,16 @@ Yes, you decide it's time to start going ON. Tattletale seems as good a place to
 >on
 You're already in the process of going on.
 >a
-Odd. You can't move that slowly. Moving one section over isn't really moving ON, I guess. So going A or B is out.
+You feel too full of nervous energy now that you are ON. You feel completely unable to move over one section of the torus at a time. So going one square over with A or B is out.
 >b
-Odd. You can't move that slowly. Moving one section over isn't really moving ON, I guess. So going A or B is out.
+You feel too full of nervous energy now that you are ON. You feel completely unable to move over one section of the torus at a time. So going one square over with A or B is out.
 >aa
 >aa
 >aa
 >aa
 >aa
 >aa
-The interior of the Torus shudders, but nothing conclusive happens. Perhaps you took an easy way to touch all the rooms.
+The interior of the Torus shudders, but nothing conclusive happens. The voice in the background mumbling "Buh ... buh ... buh ..." dies out. Perhaps it is somehow bored with you running the same distance each time. But there seems to be nothing to stop you from going ON and trying again.
 
 >on
 Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
@@ -196,7 +196,7 @@ Yes, you decide it's time to start going ON again. Maybe you'll find the right w
 >aaa
 >aaa
 >aaa
-The interior of the Torus shudders, but nothing conclusive happens. Perhaps you again took an easy way to touch all the rooms.
+The interior of the Torus shudders, but nothing conclusive happens. The voice in the background mumbling "Buh ... buh ... buh ..." dies out. Perhaps it is somehow bored with you running the same distance each time. But there seems to be nothing to stop you from going ON and trying again.
 
 >on
 Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
@@ -206,7 +206,7 @@ Yes, you decide it's time to start going ON again. Maybe you'll find the right w
 >bb
 >bb
 >bb
-The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
+The interior of the Torus shudders, but nothing conclusive happens. The voice in the background mumbling "Buh ... buh ... buh ..." dies out. Perhaps it is somehow bored with you running the same distance each time. But there seems to be nothing to stop you from going ON and trying again.
 
 >on
 Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
@@ -216,16 +216,16 @@ Yes, you decide it's time to start going ON again. Maybe you'll find the right w
 >bbb
 >bbb
 >bbb
-The interior of the Torus shudders, but nothing conclusive happens. Perhaps you once again took an easy way to touch all the rooms.
+The interior of the Torus shudders, but nothing conclusive happens. The voice in the background mumbling "Buh ... buh ... buh ..." dies out. Perhaps it is somehow bored with you running the same distance each time. But there seems to be nothing to stop you from going ON and trying again.
 
 # test reversal from b
 >on
 Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >bb
 >aa
-You can't reverse direction on the torus like that.
+You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you.
 >aaa
-You can't reverse direction on the torus like that.
+You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you.
 >bbb
 >bb
 
@@ -234,9 +234,9 @@ You can't reverse direction on the torus like that.
 Yes, you decide it's time to start going ON again. Maybe you'll find the right way through this time.
 >aa
 >bb
-You can't reverse direction on the torus like that.
+You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you.
 >bbb
-You can't reverse direction on the torus like that.
+You feel compelled to continue going around the same way you start. You try to push back, but an invisible force stops you.
 >aaa
 >aa
 # test alternate path through
@@ -248,7 +248,13 @@ Yes, you decide it's time to start going ON again. Maybe you'll find the right w
 >bbb
 >bb
 >bbb
-All manner of whirring seems to flow around you. The cylinder in the center of the torus lights up further. The door inside ... wherever ... flips open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+The "Uhh, hubbub!" continues, relatively lively. Or is it "Huh, hubbub?"
+The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
+Then it cuts off. You A disorienting light flashes through the center of the torus, leaving the door flapping open and closed. The path to the center looks much more solid. You take a tentative step inward on it, and this time, you're not bounced.
+There doesn't seem to be anything else to do. Now's probably a good time to go INSIDE.
+
+#Here we reset to go back to the main path now that we've verified the alternate/counterclockwise branch works.
+
 >undo
 >bb
 
@@ -269,6 +275,8 @@ The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
 >deeded
 You're not sure what to do, but there's a lot to do!
 !You already took on an additional challenge.
+
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
 
 >shammash
 by one point
