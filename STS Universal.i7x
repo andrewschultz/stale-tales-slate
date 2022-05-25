@@ -97,7 +97,7 @@ carry out stsing:
 	say "[line break]Rough metrics on size, from smallest to largest:[line break]";
 	say "[trt] has a minimum of eight anagram puzzles to solve and a maximum of thirteen.";
 	say "[shuf] has a minimum of 62 anagram puzzles to solve and a maximum of 78. If you use an area-skip device, the minimum drops to 41.";
-	say "[roi] has a minimum of 148 anagram puzzles to solve and a maximum of 247. There is an additional area with 23/45. If you use an area-skip device, there is a minimum of 69.";
+	say "[roi]'s main part has a minimum of 150 anagram puzzles to solve and a maximum of 248. There is an additional area with 23/45. If you use an area-skip device, there is a minimum of 70.";
 	say "[line break]Details for a specific game may be found with the [b]RELEASE[r] command.";
 	the rule succeeds;
 

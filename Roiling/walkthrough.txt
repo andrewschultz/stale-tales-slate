@@ -1791,13 +1791,13 @@ You may need to use those medals before visiting Elvira. Hm, IQ + Lucky = ...
 
 > W
 
-The repartee is just there for your amusement. Now, Elvira won't kill you ASAP, since you deflected her atack. Unless you wait helplessly, and she regains confidence. You just need to make sure you have enough backup. If you didn't fix the whistle, you can retreat and do so.
+The repartee is just there for your amusement. Now, Elvira won't kill you ASAP, since you deflected her attack. Unless you wait helplessly, and she regains confidence. You just need to make sure you have enough backup. If you didn't fix the whistle, you can retreat and do so.
 
 > 7
 
 > PLAY WHISTLE
 
-And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even...enough to play the epilogue.
+And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even...enough to play the epilogue in Store H
 
 
 
@@ -1845,15 +1845,20 @@ And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even..
 
 STORE H
 
-This is a sort of catch-all area that I hope is still entertaining. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. I tried to write up the easier ones for expedience.
+This is a sort of catch-all area that I hope is still entertaining. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. I tried for ease of play while changing a few fruits in each room.
 
-You can actually win Store H/Others without visiting the Clangier Clearing, if you plan right, but I figure I'd give the whole panoramic view.
+You can actually win Store H/Others without visiting the Clangier Clearing or Filed Field, if you plan right, but I figure I'd give the whole panoramic view.
 
 If you've already completed the game, you can
 
 > ROVE OVER
 
 > OTHERS
+
+--put in LLPs: POMEGRANATE
+--put in LLPs: STRAWBERRIES
+--put in LLPs: BLACKBERRIES
+--put in LLPs: CONCISIONS
 
 > X STAND
 > PEARS
@@ -1879,9 +1884,9 @@ Some goofy puzzles here. You probably figured the general theme.
 Yay, a tekno-token for money.
 
 > GRAPES
-> POMEGRANATE
-> CANTALOUPE
+> CHERRIES
 > PERSIMMON
+> CANTALOUPE
 
 And now a coin! It can be changed now or later.
 
@@ -1891,7 +1896,7 @@ And now a coin! It can be changed now or later.
 
 > E
 
-You can do a lot of things here in the Clangier Clearing.
+You can do a lot of things here in the Clangier Clearing. Some are very similar indeed.
 
 > SOLEMN
 > MO LEN
@@ -1905,9 +1910,9 @@ You could return for another coin, but let's get all Curtis has to offer and als
 > W
 
 > PINEAPPLE
-> STRAWBERRIES
-> BLACKBERRIES
 > RASPBERRY
+> GRAPEFRUIT
+> WATERMELON
 
 There's a lot more to do here and elsewhere, and you can probably guess a lot of the other fruits, but you have the minimum you need, now.
 
@@ -2099,21 +2104,21 @@ Store U has a minimum of 120 and a maximum of 134. The last lousy points give yo
 
 Store P has a minimum of 131 and a maximum of 198. You can gain or lose a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 4 letters in the maze. How you deal with Ye Hoop also means a shift of two letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack. But then the necessary things to change are often simple.
 
-Store Y has a minimum of 130 and a maximum of 216. You may guess this is the store with the smallest words, and you'd be right. The five-command side quest makes a big swing between minimum and maximum. Spilling the pills right away knocks 14 off the minimum as well, as you avoid puzzles of length 4/4/5/6, at least. Without the pills, there's three letters of wiggle room for alternate puzzles in the Posh Hops Shop, and crossing the river via the boats and not the raft gets a letter. A raft of LLPs raise the maximum above Store P.
+Store Y has a minimum of 134 and a maximum of 220. You may guess this is the store with the smallest words, and you'd be right. The five-command side quest accounts for the majority of the big swing between minimum and maximum. Spilling the pills right away knocks 14 off the minimum as well, as you avoid puzzles of length 4/4/5/6, at least. Without the pills, there's three letters of wiggle room for alternate puzzles in the Posh Hops Shop, and crossing the river via the boats and not the raft tacks on an additional letter of difficulty. A raft (ha!) of LLPs raises the maximum above Store P.
 
-Store W has a minimum of 164-168 and a maximum of 363-367, subjected to some randomness. Both the "H" and "I" paths through the guardians have 36 letters total in the anagrams you need to use. The proof is a bit tricky, but you'll note that guardians with 6 letters guard squares 1N and 1E of Scope Copse. Guardians with 7 letters guard squares 2 away from Scope Copse, and guardians with 8 letters guard squares 3 away. You must pass one guardian with 8 letters, clearly, but trying to avoid passing two (except for the hostile/atheists) means you have to pass six. The basic idea below is that, if you only defeated one eight-letter guardian, you would need to defeat four guardians to link up the six rooms in the southwest diagonal, but that's impossible, since each guardian would only open up one new room as you went through.
+Store W has a minimum of 164-168 and a maximum of 363-367. The randomness is due to the picaros in the Trefoil. Roiling pulls one prosaic picaro from six pods to avoid egregious swinginess. In two of them, all picaros have the same length. In the other four, there may be a different letter. As for the guardians in the main area, both the "H" and "I" paths through the guardians have 36 letters total for the anagrams of the five optional guardians. "Hostile" and the atheists are not. You'll note that guardians with 6 letters guard squares 1N and 1E of Scope Copse. Guardians with 7 letters guard squares 2 away from Scope Copse, and guardians with 8 letters guard squares 3 away. You must pass one guardian with 8 letters, clearly, but trying to avoid passing two (except for the hostile/atheists) means you have to pass six all total. The basic idea below is that, if you only defeated one eight-letter guardian, you would need to defeat four guardians to link up the six rooms in the southwest diagonal, but that's impossible, since each guardian would only open up one new room as you went through.
 
-You can save keystrokes with other alternate puzzles, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two based on randomness since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why the totals are not exact: the prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip too much to list here. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
+You can save keystrokes with other alternate puzzles, too. Fussier vs. unlocked to rescue Dr. Yow is one. You can skip too much to list here. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map and adjectives being tougher to visualize than verbs, you can see why this is the toughest region.
 
-Store T has a minimum of 146 and a maximum of 244. The bran barn path forces you to use one more letter than the loop pool, and you can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (21) vs the minimum (17) or decide whether to pick the long option for the imp (19 vs. 16). The players' solutions in letters also can swing from 20 (the players, Yer All a Yell'r and their two seven-letter descriptions) to 31 (though randomness may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 207. (Only three of the LLPs end in LY.)
+Store T has a minimum of 146 and a maximum of 251. The Loop Pool way to get your powers back saves a letter over the Bran Barn. You can LLP Elmer and Merle twice, pick off the vow here/sullenness and final animal in the preserve and realm, get rid of the cinders and destroy the Educers, Us Creed. Also, in the two-of-three puzzles north and south of the Minded Midden, you can go with the shorter words. For the shrewin' whiners, it's 17 vs. 21, and for the sly imp, it's 16 vs. 19. The players' solutions in letters also can swing from 20 (the players, Yer All a Yell'r and their two seven-letter descriptions) to 31 (though randomness on any individual playthrough may give a 10-letter word instead of 11, capping it at 10.) Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable, besides the one pod with words of length 10 and 11. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 126 to 223. (Only three of the LLPs end in LY.)
 
-Store H has a minimum of 133 and a maximum of 350. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet. The last two points are intentionally close to trivial, as well. Walking through the gates gives an even easier optional puzzle to end.
+Store H has a minimum of 133 and a maximum of 350. But its theme is easy enough, I think, that it probably isn't as tough as store P or Y. The four starting flips are 20 letters, you need the COMPASS, and then you can look around to find 20 short flips. The Clearing is the best bet, and the Filed Field can be avoided. The last two points are intentionally close to trivial, as well. Walking north through the gates before you're really ready gives an even easier optional puzzle to end.
 
 LAST LOUSY POINTS
 
-Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven picaros in the Trefoil alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, don't progress the story, but I hope they provide interesting detail. Often they will seem superfluous or even slightly hidden, or the word to solve them may be obscure. (That's why they're not in the main walkthrough.)
+Note that I'm not going to address cases where you need to find two of three anagrams or just one of two. Or all the guardians in Towers, where you can leave three of the seven picaros in the Trefoil alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, don't progress the story, but I hope they provide interesting detail. Often they will seem superfluous or even slightly hidden, or the word to solve them may be obscure. (That's why they're not in the main walkthrough.)
 
-Hints are in ROT13. If you aren't sure what ROT13 is, it means moving a letter 13 forward or back in the alphabet. If you don't want to do the translation in your head, and I don't blame you, it can be translated at ROT13.com. I take no responsibility for your being able to figure ROT13 innately and thus have answers spoiled if you get too good at reading ROT13 clues. If that happens, take time to feel smart. You deserve to.
+Hints are in ROT13. If you aren't sure what ROT13 is, it means moving a letter 13 forward or back in the alphabet. If you don't want to do the translation in your head, I don't blame you, but I wanted to keep them obscure enough you couldn't do so by accident. (If you can, I tip my hat to you! After many years of using it, I still can't.) You can translate text at ROT13.com.
 
 ORDEAL RELOAD:
 
@@ -2131,11 +2136,13 @@ FBEORG from Store B. This is also in Shuffling around. Note that the side trip t
 
 PRESTO:
 
+There are two anagrams that give extra points. They are discussed in the main walkthrough.
+
 OYNZ scares the lamb in the Grey Gyre. But only enough to send it safely home!
 
-You can say TBBQARFF to the sods gone odes song.
+You can say TBBQARFF to the sods gone odes song in Dirge Ridge
 
-You can say CEBFG to the sport ports.
+You can say CEBFG to the sport ports in Marines Seminar Remains.
 
 JUNG gets rid of the hawt thaw in Phat Path. (Neat ROT13, eh?)
 
@@ -2157,9 +2164,9 @@ You can also be JVGUBHG the raptest patters any time in the Sonancy Canyons.
 
 TROVES:
 
-There is an on-its-own LLP in each room. Also note there are a few puzzles where you only need one anagram of two.
+There are 13 total potential LLPs here. There are four either-or LLPs, in Bustle Sublet, Boredom Bedroom, Econ Cone and Upscale Capsule. One is from the book you receive at the beginning and can be discovered at any time. There is one absolute LLP in each room, and we'll list them in order. In general, they get harder as you go along, ending in what may be the toughest anagram in the game.
 
-TNCR at Simple Impels by Peg A. Page can be done at any time.
+TNCR at Pa, Egg, Pea by Peg A. Page can be done at any time.
 
 FGNER at the tears taser in Loather Rathole.
 
@@ -2177,13 +2184,11 @@ NFPREGNVA around Sectarian Craniates in the Econ-Cone.
 
 EBZNAGVPVFR about Creationism, Reactionism.
 
-Note that Troves has a few 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them. There's no penalty for solving one and no special reward for solving both. For instance, you only need to deal with one of Sister Tressi and the Marble Blamer to solve the final puzzle. All these pairs are listed in the walkthrough.
-
-Which are they? The evil bee/SNORE SO ARENA in Boarded Roadbed, the lobster/stream in Boredom Bedroom, the praise spirea/rivets in Econ-Cone, Marble Blamer and Sister Tressi in Upscale Capsule.
+You can look back in the walkthrough for the either-or LLPs. They are, in order of progress: the evil bee/SNORE SO ARENA in Boarded Roadbed, the BORTLES lobster/ME ARTS stream in Boredom Bedroom, the praise spirea/rivets in Econ-Cone, and Marble Blamer and Sister Tressi in Upscale Capsule.
 
 TOWERS:
 
-Note that five of the guardians can be left alone. They aren't covered below. Similarly, three of the prosaic picaros can be left alone.
+Note that you can leave five guardians alone and still potentially be able to explore all the squares you need to. Similarly, three of the prosaic picaros can be left alone. These are not covered below.
 
 In the Loftier Trefoil:
 The recital article can become GNYPVRE.
@@ -2204,6 +2209,7 @@ In Danger Garden:
 The natives' site van guarding the way south can be INVARFG or ANVIRFG.
 
 Some of the dead-end rooms hint that there is further adventure if you explore the bounding scenery. Outer Route, Shaven Havens and Lost Lots all allow you to a semi-secret room below. That is Dourest Detours.
+
 EBHFGRQ helps you get refocused and returns you where you meant to go.
 You can also, before you leave, make the seismal samiels NVZYRFF.
 
@@ -2219,7 +2225,7 @@ The replay player can become CRNEYL.
 
 Below the Treading Gradient, you also have the Dire and Arid Den. There, you need to feel QNAQVRE.
 
-Once you've cleared everything in one of the main square, a keycar appears. It can become PERNXL.
+Once you've cleared everything in one of the main squares, a keycar appears. It can become PERNXL.
 
 The Coasting Agnostic can also be made NGGRAGVIR in the Subsector.
 
@@ -2231,13 +2237,13 @@ You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N C
 
 OYSTER:
 
+FYNAQRE the snarled darnels in Anger Range.
+
 FPNA the cans in Hardest Trashed Dearths. Once you leave to Lean Lane, this LLP will not be available.
 
 GRAQ the dent in Lean Lane.
 
 FCYNVA in the Lapsin' Plains.
-
-FYNAQRE the snarled darnels in Anger Range.
 
 Side quest:
 * FJVCR wipes in Lean Lane.
@@ -2248,13 +2254,13 @@ Side quest:
 * CFNYZ by the Plasm Lamps.
 * GNA ant. (Once in Plasm Lamps, this isn't optional. It's the only way to get out.)
 
-Also, before disposing of the papery yapper, you can ERNATYR.
+Also, before disposing of the papery yapper, you can ERNATYR the General Gleaner.
 
 Finally, ERIRY by the lever in the Den Loft.
 
 OTTERS:
 
-As in Troves and Towers, multiple passages through mean that solving one way makes other puzzles LLPs. There are two ways to get your powers back, which get two points, and you have an extra animal in Lamer Realm and Perverse Preserve. That makes four of the seven LLPs.
+As in Troves and Towers, multiple passages through mean that solving one way makes other puzzles LLPs. There are two ways to get your powers back, which get two points, and you have an extra animal in Lamer Realm and Perverse Preserve. Those are discussed in the walkthrough.
 
 You can ERFPVAQ the cinders instead of using them for a clue with DISCERN.
 
@@ -2273,13 +2279,15 @@ Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR. This g
 
 After the holy nest appears, UBARFGYL is in tune with the area's earlier theme, an -LY adverb.
 
+Finally, you'll want to QRPHEFR to take care of the Educers Us Creed.
+
 OTHERS:
 
 Resisting the temptation to use the arugula to "guru" any item successfully nets a bonus point once you solve this area.
 
 Fruits not covered in walkthrough:
 
-First, the ones you can't directly name or see.
+First, the ones where you don't directly name a fruit. Sometimes the fruit is there, and sometim
 
 SCAPE SPACE
 
@@ -2310,14 +2318,23 @@ Now for the fruits that can be directly named.
 
 RUSTIC CITRUS
 
-Harmonicas:
-> ZNENFPUVAB
-
 Hire Recs Re: Riches:
 > PUREEVRF
 
 Id-Mantra Mad Train:
 > GNZNEVAQ
+
+Omen Prism:
+> CREFVZZBA
+
+Harmonicas:
+> ZNENFPUVAB
+
+Peanut Cola:
+> PNAGNYBHCR
+
+Magenta Rope:
+> CBZRTENANGR
 
 Eerie blurbs:
 > OYHROREEVRF
@@ -2335,14 +2352,14 @@ FILED FIELD
 Barren cries:
 > PENAOREEVRF
 
-Breadfruit:
+Buried Raft:
 > OERNQSEHVG
 
-Mean trowel:
-> JNGREZRYBA
+Barber Sickle:
+> OYNPXOREEVRF
 
-Rapt figure:
-> TENCRSEHVG
+Barriers West:
+> FGENJOREEVRF
 
 SCAPE SPACE
 
