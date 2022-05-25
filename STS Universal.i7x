@@ -10,7 +10,7 @@ volume command hashing -- thanks to Uncle David
 
 part hash codes and values
 
-book hashcodes
+book hashcodes for words
 
 [ This is so the computer can determine if we have an anagram without doing crazy string manipulations. The precise numbers aren't important. It's been verified that only 16 word-pairs have overlapping hash values, and none of them appear in puzzles. Hashes are much faster than manipulating and sorting a string with regexes, so the tradeoff is worth it. ]
 
@@ -53,6 +53,48 @@ to decide what number is the hash of (t - a value of kind K):
 	let hash be 0;
 	repeat with c running from 1 to the number of characters in s:
 		increase hash by the Code corresponding to a Letter of character number c in s in the Table of Hashcodes;
+	decide on hash;
+
+book hashcodes for present letters
+
+volume presentness hash tables
+
+table of presentness hashes
+Letter (indexed text)	Code
+"a"	1
+"b"	2
+"c"	4
+"d"	8
+"e"	16
+"f"	32
+"g"	64
+"h"	128
+"i"	256
+"j"	512
+"k"	1024
+"l"	2048
+"m"	4096
+"n"	8192
+"o"	16384
+"p"	32768
+"q"	65536
+"r"	131072
+"s"	262144
+"t"	524288
+"u"	1048576
+"v"	2097152
+"w"	4194304
+"x"	8388608
+"y"	16777216
+"z"	33554432
+
+to decide which number is the rough-hash of (t - a value of kind K):
+	let s be indexed text;
+	now s is the filtered name of t;
+	let hash be 0;
+	repeat through table of presentness hashes:
+		if S matches the text "[Letter entry]":
+			increase hash by Code entry;
 	decide on hash;
 
 volume game order/name abbreviation stubs

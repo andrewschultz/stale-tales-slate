@@ -13,6 +13,16 @@ when play begins (this is the debug version info that should not be in the relea
 
 [be sure to do stuff when you're not in the right room. This is CRITICAL to testing.]
 
+part monty commands
+
+section monty testing - not for release
+
+after fliptoing (this is the monty after flipping rule):
+	process the full monty test rule;
+	continue the action;
+
+the monty after flipping rule is listed last in the after rules.
+
 part quick checks
 
 test newkit with "ts/sortie/in/16/n/kitchen/l/lettuce/l/parmesan/l/straw/hotsauce/l/steak/l/tortilla/l/put steak on tortilla/l/put lettuce on tortilla/l/put parmesan on tortilla/l/put hotsauce on tortilla/l"

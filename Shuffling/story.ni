@@ -146,24 +146,6 @@ section beta testing module - not for release
 
 include Shuffling Beta Testing by Andrew Schultz
 
-section default to true debug - not for release
-
-when play begins (this is the debug version info that should not be in the release rule):
-	[repeat with X running through things:
-		if X is not scenery and x is not fixed in place:
-			say "[X] is [if X is not fixed in place]not [end if]fixed in place[if number of things containing X is 1]--it's part of something[end if].";
-	repeat with X running through warpable things:
-		say "[X] is warpable.";
-	repeat with X running through things:
-		if X is a person:
-			say "[X] is a person.";]
-	[end temporary tests]
-	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
-	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
-	now debug-print is true;
-	repeat with Q running through things:
-		if Q is abstract, next;
-
 book regional stubs and definitions (put near the top for administrative purposes)
 
 a sto is a kind of thing. a sto is usually undescribed. a sto is usually fixed in place.
@@ -410,7 +392,7 @@ to say reject:
 	d "The hash of the command is [fullcmd]. The hash of word #1 is [firstword].";
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
-			if firstword is the hashkey entry or fullcmd is the hashkey entry:
+			if firstword is the fullhash entry or fullcmd is the fullhash entry:
 				say "[spec-help of the-from entry]";
 				if last-hash is fullcmd or last-hash is firstword:
 					increment num-in-row;
@@ -419,12 +401,13 @@ to say reject:
 						now num-in-row is 0;
 						if cur-ceil < 6:
 							increment cur-ceil;
-				now last-hash is hashkey entry;
+				now last-hash is fullhash entry;
 				continue the action;
 	now num-in-row is 0;
 	if roomnud of location of player is hash-found, continue the action;
 	if regnud of mrlp is hash-found, continue the action;
 	if table of general nudges is hash-found, continue the action;
+	if found-misspelled-anagram, continue the action;
 	say "[verb-cue][warn-inc]."
 
 to say verb-cue: say "That's not something you can say, do or see here. For a list of common verbs, type [b]VERBS[r]"
@@ -6740,6 +6723,8 @@ check closing griefd fridge: say "It already is[if grist is not off-stage]You sa
 check opening griefd fridge:
 	if grist is off-stage:
 		say "In the fridge, you see some grist and a cake pan. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.";
+		move grist to kitchen;
+		move cake pan to kitchen;
 	else:
 		say "You reopen and peer on: [whats-in-fridge].";
 	the rule succeeds;
@@ -6761,7 +6746,7 @@ the manila animal is an amusing boring thing. it is part of the griefd fridge. u
 
 section grist and grits
 
-the grist is in the fridge. it is LLPish. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S". indefinite article of grist is "some".
+the grist is an LLPish thing. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S". indefinite article of grist is "some".
 
 description of grist is "It's a heapin['] helpin['] of the stuff, haphazardly lumped at the bottom of the fridge."
 
@@ -6781,7 +6766,7 @@ description of grits is "They look more edible than the grist, but you're not TH
 
 section cake pan and pancake
 
-a cake pan is in the fridge. the cake pan is LLPish. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
+a cake pan is an LLPish thing. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
 
 understand "cakepan" as cake pan.
 
@@ -9394,7 +9379,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 	let myh be the hash of the player's command;
 	let myh2 be the hash of word number 1 in the player's command;
 	repeat through regana of mrlp:	[this code vacuums up the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
-		if myh is hashkey entry or myh2 is hashkey entry:
+		if myh is fullhash entry or myh2 is fullhash entry:
 			[d "[myh] [the-from entry] [the-to entry] try.";]
 			if the-from entry is available-to-flip:
 				[d "the-from [myh] [the-from entry] visible.";]
