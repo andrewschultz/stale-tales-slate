@@ -812,9 +812,9 @@ understand the command "release" as something new.
 understand "release" as releaseing.
 
 carry out releaseing:
-	say "Release 1 of [trt] was for Spring Thing in April 2022. It was updates everal times during the competition.";
-	say "[line break]Release 2 of [trt] incorporated many bug fixes and special hint cases overlooked in the original release, along with additional responses to clever anagrams. Some narrative enhancement was added, including voices around the map.";
-	say "[line break]Any future releases will probably be for minimal bug fixes. There aren't really any puzzles to add, but there's a strong possibility I've missed some test cases.";
+	say "Release 1 of [trt] was for Spring Thing in April 5, 2022. It was updates everal times during the competition.";
+	say "[line break]Release 2 of [trt] incorporated many bug fixes and special hint cases overlooked in the original release, along with additional responses to clever anagrams. Some narrative enhancement was added, including voices around the map. It was sent to springthing.net for publication on May 27, 2022, which is about when it was posted to itch.io.";
+	say "[line break]Any future releases will probably be for minimal bug fixes. There aren't really any puzzles to add, but there's a strong possibility I've missed some test cases or an opportunity for a clue.";
 	the rule succeeds;
 
 chapter stating
