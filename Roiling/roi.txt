@@ -285,23 +285,27 @@ Some sort of food. It looks sort of misty--cold misty.
 Look around. There are quite a few exclamations.
 Many of the things you need to get are relatively short words, so maybe you can figure it out by accident.
 Interjections are what work here.
+#testcase-invisiclues-table-of-presto-anagrams-blam
 ?Poor lamb! What can I do?
 Maybe you can scare him off without being mean.
 Turning him into balm won't give him balm.
 You _can_, however, make a scary noise.
 <b>BLAM</b>.
+#testcase-invisiclues-table-of-presto-anagrams-umph
 ?How to get over the hump?
 You're grunting wrong.
 <b>UMPH</b>.
 ?Do I have to tackle that maze to the north?
 You don't even have to set foot in it, if you figure the right word. It's a tricky one, but there are a lot of clues. You may even wish to eat the crust once you've cleared everything else.
 See the Volt Maze section below.
+#testcase-invisiclues-table-of-presto-anagrams-bleep
 ?The plebe won't let me by!
 Just saying a word isn't enough, but it gets you started.
 It's a generic word.
 <b>BLEEP</b>.
 You don't have the authority.
 Once you get the star from Char Arch, you will.
+#testcase-invisiclues-table-of-presto-anagrams-there
 ?The maze is gone now. Why can't I go north?
 The ether hides enemies. If only you could point them out...
 ...saying <b>THERE</b>.
@@ -310,18 +314,23 @@ Don't continue until you've fixed the popgun.
 Also, did you find the dart?
 PUT DART IN POPGUN.
 >>AUSTERER TREASURE
+#testcase-invisiclues-table-of-presto-anagrams-phooey
+#testcase-invisiclues-table-of-presto-anagrams-pooh
 ?How do I reach YE HOOP?
 If you try to take it, your possessions weigh you down. You can't find the right way to ditch your possessions for a second.
 Say <b>POOH</b>...
 ...or, to really do the job, say <b>PHOOEY</b>.
+#testcase-invisiclues-table-of-presto-anagrams-screen
 ?What can the N-E-Recs censer be?
 Recs and Rec are too short to make a word.
 The green semi-text on black may be a clue.
 The censer becomes a <b>SCREEN</b>.
 >>CHAR ARCH
+#testcase-invisiclues-table-of-presto-anagrams-drat
 ?What's in the cretins' cistern?
 A dart. It's frustrating to get. You'll probably get it as soon as you give up.
 Or say <b>DRAT</b>.
+#testcase-invisiclues-table-of-presto-anagrams-rats
 ?How do I get the star?
 Again, you'll probably get it as soon as you give up. But you can't just give up on purpose. You must be legitimately frustrated.
 Say <b>RATS</b>.
@@ -340,10 +349,12 @@ Second, if you flipped the escaroles, they become good food for Leo and Rand. Yo
 Third, you can take the bad book from the shack and give it to the yak, who gets indigestion.
 You may or may not know what to do with the drab yoke. The exciting conclusion is in the Shack section.
 >>MARINES SEMINAR REMAINS
+#testcase-invisiclues-table-of-presto-anagrams-bingo
 ?What do I do with the pop-gun?
 It's PG-on-up, but twiddling that does nothing.
 The boing-go bin could use a moment of discovery.
 So say <b>BINGO</b> to get it working.
+#testcase-invisiclues-table-of-presto-anagrams-prost
 ?Are the Sport Ports important?
 To get all the points in the area, yes.
 To complete the game, no.
@@ -351,19 +362,23 @@ This is a slightly obscure word, but it is a toast in German.
 The settler's clue (plus STROP giving red) may tell what it is.
 <b>PROST</b>.
 >>DIRGE RIDGE
+#testcase-invisiclues-table-of-presto-anagrams-ole
 ?Who's this Leo and how can I avoid him?
 He's too clumsy to get you, but maybe you can get him good.
 He does bull at you.
 <b>OLE</b>.
+#testcase-invisiclues-table-of-presto-anagrams-darn
 ?Oh no! Rand joined in!
 He doesn't look too smart, like he can be fooled by a feint.
 If you say <b>DARN</b>, it will get him.
+#testcase-invisiclues-table-of-presto-anagrams-whassup
 ?Oh no! I hurt their feelings!
 They do talk about how they're washups. Their dialogue also cues other words.
 Say <b>WHASSUP</b> to get in their good graces.
 ?Are they going to follow me everywhere?
 Well, until you get close to the end.
 And not into the volt maze. You have to go there yourself.
+#testcase-invisiclues-table-of-presto-anagrams-goodness
 ?Can I do anything with the Sods-Gone Odes Song?
 It's not critical, but a light interjection will help you deal.
 Say <b>GOODNESS</b>.
@@ -374,11 +389,13 @@ You need to get a few points and figure out what's going on.
 No. You need to figure a word or phrase. There are two. The easy and hard way.
 The maze entry zany meter should give some clues.
 The zany-1 is the easiest, at four letters, but the harder one is eight.
+#testcase-invisiclues-table-of-presto-anagrams-wont
 ?What's the easy way?
 Nowt Town can be dispelled with a specific word.
 It's not strictly a common interjection, but interjections are used to show intense emotion. Many interjections were once one word, or two words squashed together.
 In this case, you don't want to go through the maze, and you're not going to.
 <b>WONT</b>.
+#testcase-invisiclues-table-of-presto-anagrams-mazeltov
 ?What's the hard way?
 This is a tricky one, but there are a lot of clues.
 Touching the walls or reading E-Z Ol' Av will give a clue.
@@ -394,6 +411,8 @@ You scanned a fellow in the Unwary Runway for an additional clue.
 You don't. You need a magic word.
 ?What are these guys doing?
 They're clues, if you scan them.
+#testcase-invisiclues-table-of-presto-anagrams-gosh
+#testcase-invisiclues-table-of-presto-anagrams-syke
 >>SAPS' PASS
 ?How do I deal with the hogs?
 You can annoy them or get their keys.
@@ -401,6 +420,9 @@ The hogs look up for heavy duty swears, and they'll probably be annoyed by mild 
 You can pretend you don't really want the keys by saying <b>SYKE</b>...
 ...or you can bug the hogs by saying <b>GOSH</b>.
 Either way, the hogs get mad at you, tire themselves out chasing you, and leave the keys open for Rand and Leo.
+#testcase-invisiclues-table-of-presto-anagrams-later
+#testcase-invisiclues-table-of-presto-anagrams-solong
+#testcase-invisiclues-table-of-presto-anagrams-tough
 >>PHAT PATH
 ?What are the harpings phrasings for?
 They're in all caps, not letting you get in.
@@ -411,11 +433,13 @@ You only need two of these three to move on.
 <b>TOUGH</b>...
 ...<b>LATER</b>...
 ...<b>SO LONG</b>.
+#testcase-invisiclues-table-of-presto-anagrams-what
 ?Is the hawt thaw significant?
 Not strictly. It's only necessary to get maximum points.
 It's really weird, though. It barely makes any sense at all!
 It's a last lousy point, based on a puzzle that really didn't work in the first version.
 If you take a good hard look at it, you may want to say <b>WHAT</b>.
+#testcase-invisiclues-table-of-presto-anagrams-trasch
 ?Are the starch charts significant?
 Not strictly. They're only necessary to get maximum points. They also signal a switch from interjections to something new for the final bit.
 They can be labeled <b>TRASCH</b>.
@@ -423,44 +447,55 @@ They can be labeled <b>TRASCH</b>.
 ?There's a lot to do here! What's my ultimate goal?
 Write a computer program.
 Note that you can change stuff to stuff since it is out of the scope of SHATTER-THREATS.
+#testcase-invisiclues-table-of-presto-anagrams-capslock
 ?What's the Clack-Ops Locs Pack for?
 It's in UPPER CASE LETTERS ALL THE WAY. It makes typing quieter, though you're not sure how.
 There are no actual sunglasses, nor locators.
 It makes a <b>CAPS LOCK</b> key.
 Once you have a keyboard, you can PUT CAPS LOCK IN KEYBOARD.
+#testcase-invisiclues-table-of-presto-anagrams-mug
 ?The gum?
 Aw, c'mon. If you got here, this is a gimme!
 Ugg, umm...
 It becomes a <b>MUG</b>.
+#testcase-invisiclues-table-of-presto-anagrams-leaf
 ?The flea?
 Something else organic.
 Make it a <b>LEAF</b>.
+#testcase-invisiclues-table-of-presto-anagrams-cola
 ?The pile of coal?
 A good source of energy. Dirty and short term, but hey.
 More important it's coal than a pile...
 ...so it's <b>COLA</b>.
 Once you've got the bottle of ALocalCo Cola, POUR COLA IN MUG for an endless supply.
+#testcase-invisiclues-table-of-presto-anagrams-disk
+#testcase-invisiclues-table-of-presto-anagrams-skid
 ?The disk?
 Well, it has portability etc.
 It can become a <b>SKID</b>...
 ...then you can flip back to a <b>DISK</b> later, once your work area is set.
 You'll need to move the skid around, unsurprisingly. Use the PUSH command.
 However, once you've gotten rid of the yak, you'll want to flip the skid back to the disk for good.
-?The slab?
+?The labs slab?
 Not important by itself, but you can put computer components on it as you find them.
 The screen and the keyboard, in particular.
+#testcase-invisiclues-table-of-presto-anagrams-futon
 ?The fount?
 It's dry but restful.
 <b>FUTON</b>.
+#testcase-invisiclues-table-of-presto-anagrams-rom-stick
+#testcase-invisiclues-table-of-presto-anagrams-rom-sticks
 ?The trim socks?
 These aren't critical, but if you figure them, good job.
 They help the computer run a bit faster.
 <b>ROM STICKS</b>.
+#testcase-invisiclues-table-of-presto-anagrams-casserole
 ?The escaroles?
 They are not critical to the game, though they provide a slightly easier alternate solution.
 Make 'em into something more workmanlike, less froufrou. More nourishing.
 <b>CASSEROLE</b>.
 There is too much for you to eat. Maybe a friend or friends can.
+#testcase-invisiclues-table-of-presto-anagrams-compile
 ?The I'm Le Cop polemic?
 You can't do anything right away, but the signature is another clue.
 Mel Copi will teach you how to build the code...
@@ -468,12 +503,14 @@ Mel Copi will teach you how to build the code...
 ?The schematic catechism?
 It's not useful til you need to program, then you'll use it automatically.
 So, yeah, it's mostly for amusement.
+#testcase-invisiclues-table-of-presto-anagrams-keyboard
 ?The horrible book? (Note: there are five possible titles)
 It's an alternate solution.
 It also clues that you need to make a KEYBOARD.
 If you've got the yak on the skid...
 ...you can GIVE BOOK TO YAK, and the yak reacts with indigestion and runs away. Click ahead for all five book names.
 <i>Day Broke</i> by Rob Adkey, <i>eBay Dork</i> by Kary Bode, <i>Bred Okay</i> by Bad Korey, <i>Dear Koby</i> by Yoda Berk, and <i>Yo, Be Dark</i> by Dr. Bo Kaye.
+#testcase-invisiclues-table-of-presto-anagrams-reboot
 ?How do I work Drive A?
 Well, you can change it, but that's a last lousy point.
 You really need to just connect a bunch of things to it.
@@ -482,10 +519,12 @@ You also need to have put the screen on the slab.
 Switch the skid back to the disk, too, and you're ready--but there's a stupid error.
 The Be-Troo E-Robot can do something for you. But what?
 Once the disk is in, and the keyboard's attached, <b>REBOOT</b> or PUSH REBOOT.
+#testcase-invisiclues-table-of-presto-anagrams-avider
 ?How do I change Drive A to be more efficient?
 A DRIVE, DRIVE A, VARIED.
 It seems sluggish, almost unwilling.
 <b>AVIDER</b>.
+#testcase-invisiclues-table-of-presto-anagrams-derive
 ?How do I fix Drive E? Do I need to?
 It's a Last Lousy Point.
 You can reverse engineer things...
@@ -503,17 +542,21 @@ You still have more to do, but this is a start.
 ?Why am I trapped in here?
 You're far enough along, you don't need to go outside to solve the Presto Area.
 You may be cut off from getting maximum points (for instance, if you didn't help the lamb), but I wanted to ensure the player they were close to the end.
+#testcase-invisiclues-table-of-presto-anagrams-tab
 ?What's the TBA key?
 TBA is not just TBA.
 It's a <b>TAB</b> key. It helps with programming and formatting, but it's not critical.
+#testcase-invisiclues-table-of-presto-anagrams-sleep
 ?Help! I can't work the polemic!
 First, you need to COMPILE, but you're too tired to get it to work. You're annoyed by the Speel, slipping on peels.
 The cola won't help. You need to crash.
 Or <b>SLEEP</b>.
+#testcase-invisiclues-table-of-presto-anagrams-debug
 ?I have an error message saying BUB DUDE EGG!
 Of course. Code never works at first. Even simple code.
 Random actions leave you saying "BUDGE! BUDGE!"
 Now you're awake, you've got the energy to <b>DEBUG</b>.
+#testcase-invisiclues-table-of-presto-anagrams-sub
 ?What do I need to do with the USB?
 It'd be nice to have transport out. And you have two options! Lucky you.
 There are only five possibilities. So you have a forty percent chance with a random first guess.
@@ -533,16 +576,22 @@ DIE SIN.
 You can switch them to make SIN DIE. Which helps, if you use the settler.
 Going IN is simply not enough.
 You need to go <b>INSIDE</b>.
+#testcase-invisiclues-table-of-routes-anagrams-across
+#testcase-invisiclues-table-of-routes-anagrams-past
 ?How do I get into the restaurant or the store?
 Hmm, Pat's and Oscar's.
 If you haven't scored a point yet, you might not know what to do with these.
 If you have, you know this area relies on prepositions.
 Pat's--you need to go <b>PAST</b>.
 Oscar's--you need to go <b>ACROSS</b>.
+#testcase-invisiclues-table-of-routes-anagrams-against
 ?What is the ant-sag sit-a-nag for?
 It's <i>a giant's</i>. It's for sitting.
 The anagramming suggests you can lean <b>AGAINST</b> it.
 But you need to have visited the cleric circle and seen the reagent list first.
+#testcase-invisiclues-table-of-routes-anagrams-astride
+#testcase-invisiclues-table-of-routes-anagrams-below
+#testcase-invisiclues-table-of-routes-anagrams-under
 ?Gast is here. How do I deal?
 Gast blocks trying anything else that moves the story forward.
 You can't climb directly on the sit-a-nag, but you have a different way to listen to Gast.
@@ -553,6 +602,8 @@ Now you need to avoid the WOE BOW BELL.
 You need to go <b>BELOW</b>.
 Next, Gast pulls out a copy of Rude 'N Nuder.
 You need to hide <b>UNDER</b>, and Gast will give up and leave it behind.
+#testcase-invisiclues-table-of-routes-anagrams-above
+#testcase-invisiclues-table-of-routes-anagrams-from
 ?I helped Brother Horbert and came back, but what is A Bev O' Be Ova'?
 You need to look elsewhere than down.
 Look <b>ABOVE</b>.
@@ -560,6 +611,7 @@ Okay, what's that MORF-FORM doing?
 Changing all the time, threatening to arrive.
 Get rid of the threat arriving.
 Make it <b>FROM</b>, and it will come crashing down.
+#testcase-invisiclues-table-of-routes-anagrams-beneath
 ?What's with a drama armada?
 They're all staring at the bean. What clue can it hide? Where?
 You need a good first word to tell the crowd what to do.
@@ -574,6 +626,7 @@ Come back once you have all three items.
 >>IDLE DELI
 ?What should I say to Pat?
 Not much. Well, just one word. It's the seed pit that's important.
+#testcase-invisiclues-table-of-routes-anagrams-despite
 ?What to do with the seed pit?
 It's where PETS DIE.
 Pat discourages you from entering the seed pit. IT'S DEEP.
@@ -583,11 +636,13 @@ Now you have the stupor sprout--another third of the reagents Brother Horbert ne
 >>ADOBE ABODE
 ?What should I say to Oscar?
 Not much. It's the pipe soot that's important.
+#testcase-invisiclues-table-of-routes-anagrams-opposite
 ?What about a trashy ashtray?
 It's holding pipe soot! But you can't just up and steal it.
 It's on the other side of Oscar.
 Position yourself <b>OPPOSITE</b>, and you can take it behind your back without him looking.
 >>HARMS MARSH
+#testcase-invisiclues-table-of-routes-anagrams-until
 ?What do I do with the sheol-holes?
 Not fall into them.
 Directions don't help, so you need to be more circumspect.
@@ -596,25 +651,31 @@ You have no light, and your lamp was broken a long time ago.
 The unit is keeping things dark, as they were.
 You can say it was dark and <i>unlit</i>, before...
 ...I mean, <b>UNTIL</b>.
+#testcase-invisiclues-table-of-routes-anagrams-around
 ?Where do I go? How do I find a trail with the odd run-on aura?
 Chop it up until you see the six lettes: ADNORU.
 So you need to look <b>AROUND</b>, and you'll find an un-road.
+#testcase-invisiclues-table-of-routes-anagrams-along
 ?The All-Noon Gag still darkens things!
 Remember, you were told you need to NAG OL' NO-LAG LOGAN. There's an UN-ROAD you need to use to get there.
 You're on your way to finding him, now.
 Just go <b>ALONG</b>.
 >>RIPE PIER
+#testcase-invisiclues-table-of-routes-anagrams-amidst
 ?What's with the mist?
 Well, it's also DA MIST, if you listen to Sad Tim. Some of his babbling leaves you red-eyed.
 One is thinking of DA MIST helps you feel more familiar, and you can go...
 <b>AMIDST</b>.
 >>CRIPPLE CLIPPER
+#testcase-invisiclues-table-of-routes-anagrams-athwart
 ?How do I need to go?
 Logan's poem will give you some clues.
 It's a weird preposition, a nautical preposition.
 THAT WAR, etc.
 You need to go <b>ATHWART</b>.
 >>SONANCY CANYONS
+#testcase-invisiclues-table-of-routes-anagrams-between
+#testcase-invisiclues-table-of-routes-anagrams-through
 ?How do I get past those two animals?
 The order matters.
 The bent ewe comes first.
@@ -623,6 +684,7 @@ Guard it from the hurt hog.
 Then the hurt hog.
 You can leave it now.
 Go <b>THROUGH</b>.
+#testcase-invisiclues-table-of-routes-anagrams-beyond
 ?Should I enter the yob den?
 No. It's a final last distraction. However, you can sort of do something with it. You need to, to win this scenario.
 You want to go <b>BEYOND</b>.
@@ -637,55 +699,68 @@ Peg A. Page's self-help book tells you IT IS A WAY TO THINK.
 Standard actions don't work.
 You need to think straight.
 Spoiloplis is about passive verbs.
+#testcase-invisiclues-table-of-troves-anagrams-hate
 ?How do I get a replacement for heat?
 You were thrown out of Eh, At Heat.
 Burning anger may be literal and figurative.
 Or burning <b>HATE</b>.
+#testcase-invisiclues-table-of-troves-anagrams-care
 ?I'm not emotionally invested enough to visit the Race Acre!
 All that hate drained you. You need a new approach.
 You need to <b>CARE</b>.
 The game then mentions that emotion alone won't do it. Time to get more analytical.
+#testcase-invisiclues-table-of-troves-anagrams-gape
 ?What do I do with Pa, Egg, Pea?
 You don't have to do anything.
 It's by Peg A. Page. It's about Peg A. Page. It profited Peg A. Page when sold.
 Okay, I think I beat this into the ground.
 <b>GAPE</b> at it.
+#testcase-invisiclues-table-of-troves-anagrams-stare
 ?What's the deal with the tears taser?
 Showing it no fear gets a bonus point.
 <b>STARE</b> at it.
 >>BUSTLE SUBLET
+#testcase-invisiclues-table-of-troves-anagrams-spot
 ?What's the stop post for?
 It can't turn into POTS or TOPS. Or expand your OPTS.
 It will help you <b>SPOT</b>. But you need to get rid of the sob ever verbose.
+#testcase-invisiclues-table-of-troves-anagrams-observe
 ?What do I do to ignore/dispel the sob ever verbose?
 You can listen to it for clues. Lots of reds.
 <b>OBSERVE</b>.
+#testcase-invisiclues-table-of-troves-anagrams-surmise
 ?Is the mussier misuser important?
 Not to get through, but they will give a point.
 <b>SURMISE</b>.
 >>BOARDED ROADBED
+#testcase-invisiclues-table-of-troves-anagrams-stay
 ?A Sty, Tasty, Say. Is it worthwhile?
 To get full points, yes. But it's optional.
 Three y's in twelve letters. Arithmetic says you need a passive verb with four letters.
 <b>STAY</b>.
+#testcase-invisiclues-table-of-troves-anagrams-believe
 ?This stupid evil bee is so near!
 There are two ways to look at it: as so near, or an evil bee. Let's go with the bee itself.
 It's an evil bee. It feeds on your doubt.
 <b>BELIEVE</b>.
+#testcase-invisiclues-table-of-troves-anagrams-reason
 ?Should I do anything with the SNORE-SO ARENA?
 You don't have to. But you'll get an extra point.
 It is still SO NEAR. It is a senora. It has no ears.
 <b>REASON</b> that it cannot possibly exist.
+#testcase-invisiclues-table-of-troves-anagrams-recall
 ?Why does the bee turn from evil to vile to live?
 Silly anagrams. Plus, you can see how much it resists you.
 ?Oh no! Can I do anything to find L'Clear Cellar?
 You can't quite remember, but fortunately...
 With some thinking, you can <b>RECALL</b>.
 >>DRAIN NADIR
+#testcase-invisiclues-table-of-troves-anagrams-despair
 ?A spider, Ires Pad, diapers...
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 <b>DESPAIR</b>.
+#testcase-invisiclues-table-of-troves-anagrams-glare
 ?I may or may not want to drink the lager!
 Turns out you don't.
 It is upsetting to find it there. Such productivity lost!
@@ -693,27 +768,33 @@ This is a last lousy point.
 The settler's cheat mode breaks it open since it scans "REGAL LAGER" as red. That makes the first letter clear. Then four possibilities are left.
 You can cut them down further reading the red text about Ergal Agler.
 Or you can <b>GLARE</b> at it right away.
+#testcase-invisiclues-table-of-troves-anagrams-decide
 ?What is this song trying to say to me?
 You need to move on from your despair.
 Eddie C, CDEDE ... I
 <b>DECIDE</b>.
 >>BOREDOM BEDROOM
+#testcase-invisiclues-table-of-troves-anagrams-bolster
 ?Why can't I eat the Bortles Lobster yet?
 You need to feel you can, you deserve it.
 The settler in cheat mode throws a bunch of questions, but actually, that means a lot of things you can clean up.
 <b>BOLSTER</b>.
+#testcase-invisiclues-table-of-troves-anagrams-master
 ?Why don't I understand the motivational picture of the stream?
 You aren't on top of things yet. The stream should refocus you...
 ...if you <b>MASTER</b> things.
+#testcase-invisiclues-table-of-troves-anagrams-relapse
 ?What are the pleaser leapers for?
 They're an optional puzzle.
 You must do something close to despair. It's something that can follow despair or cause it.
 <b>RELAPSE</b>.
+#testcase-invisiclues-table-of-troves-anagrams-deal
 ?How do I lead?
 Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
 You need to learn to <b>DEAL</b>.
 Though, first, if you haven't dealt with the lobster or ME ARTS, you won't have the guts or endurance. Taking care of both only gets you closer to maximum points.
 >>BROWSE BOWERS
+#testcase-invisiclues-table-of-troves-anagrams-desire
 ?What does Si Reed have to offer?
 The See Dir has a list of places to reside.
 It should make you want to reside.
@@ -722,59 +803,71 @@ Want can become <b>DESIRE</b>.
 It is just scenery, to give the Browse Bowers a feeling of isolation.
 The rotunda is a reference to the Browse Bowers' old name.
 The Miser Emirs' Mires are the new scenery to stay.
+#testcase-invisiclues-table-of-troves-anagrams-discover
 ?DIVORCES magazine. Is it useful?
 It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
 You need to realize something...
 ...there's an actual magazine called the word you need...
 ...<b>DISCOVER</b> why the magazine is rubbish.
 >>ECON-CONE
+#testcase-invisiclues-table-of-troves-anagrams-strive
 ?Who is the statue? What should I do with him/it?
 The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS back in Boredom Bedroom.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
 <b>STRIVE</b>.
+#testcase-invisiclues-table-of-troves-anagrams-aspire
 ?What about the praise floating around?
 This is the other of the two things.
 Re-scan the rivets spelling praise.
 <b>ASPIRE</b>!
+#testcase-invisiclues-table-of-troves-anagrams-ponder
 ?What is the END PRONER POD for?
 You need to think your way around it.
 Its title is in red, and if you read it, there's red writing too.
 DENORP is what the letters are in alphabetical order.
 So have a think on what they could be.
 <b>PONDER</b>.
+#testcase-invisiclues-table-of-troves-anagrams-ascertain
 ?What's with Sectarian Craniates?
 It's optional.
 But you can get something from it.
 <b>ASCERTAIN</b>.
 >>UPSCALE CAPSULE
+#testcase-invisiclues-table-of-troves-anagrams-deserve
 ?What should I do with the red vees?
 Don't overthink it or get too abstract.
 Believe you can and should.
 The names of the creators are Ed Evers and Erv Dees, in red.
 <b>DESERVE</b> it.
+#testcase-invisiclues-table-of-troves-anagrams-last
 ?I'm not worth my salt!
 You will be, with time.
 If you haven't dealt with the lobster or the stream, you need to.
 Then, you need to <b>LAST</b>.
+#testcase-invisiclues-table-of-troves-anagrams-recant
 ?What do I do with the Trance Nectar?
 It's time to turn your back on all this.
 But first, you must dispose of the Marble Blamer or the Sister Tressi Siters.
 <b>RECANT</b>.
+#testcase-invisiclues-table-of-troves-anagrams-ramble
 ?Is the Marble Blamer relevant?
 Yes.
 It focuses you on grueling work that drains your soul.
 Unless you <b>RAMBLE</b>.
+#testcase-invisiclues-table-of-troves-anagrams-resist
 ?Are the Sister Tressi Siters relevant?
 Yes.
 She looks down at you as if you think you're a failure. Or if you think you aren't, because you're lying to yourself.
 You can <b>RESIST</b>.
+#testcase-invisiclues-table-of-troves-anagrams-romanticise
 ?Is <i>Creationism, Reactionism</i> important?
 It's TERRIBLY important for society, I'm sure. But not necessarily to you.
 You can daydream one last time to ignore it.
 <b>ROMANTICISE</b>.
 >STORE W
 >>LOFTIER TREFOIL
+#testcase-invisiclues-table-of-towers-anagrams-yonder
 ?How do I get out?
 Get rid of Rodney and his followers.
 They're not really dedicated to him. Get rid of three--any three--of the six, and he can't resist. You can get rid of all six for maximum points.
@@ -793,82 +886,108 @@ Andres, Andrew, Marcel, Marlon.
 Cedrick, Demitri, Leander, Preston, Terrance.
 Incidentally, there are more y's than on average in the game. That's good news if you're using your settler. The probability of getting a Y is 1-(3/4*1/2*1/4)=55/64~90.6%. The expected number of Y's is 1.5.
 Andrew has a particularly silly description.
+#testcase-invisiclues-table-of-towers-anagrams-snared
 ?Andres
 Roaming freely in his territory...
 ...until <b>SNARED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-warned
 ?Andrew
 A careless looking fellow. Needs some direction.
 <b>WARNED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-achier
 ?Archie
 Free of pain.
 <b>ACHIER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-nearby
 ?Barney
 Don't have to make him flee too far.
 <b>NEARBY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-bleak
 ?Blake
 A positive looking chap.
 But he can be made <b>BLEAK</b>.
+#testcase-invisiclues-table-of-towers-anagrams-bored
 ?Bredo
 Very interested.
 Til he is <b>BORED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-cricked
 ?Cedrick
 No visible injuries.
 <b>CRICKED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-lardy
 ?Daryl
 He is in shape for the job. Fix that.
 <b>LARDY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-timider
 ?Demitri
 Stiffest upper lip here.
 <b>TIMIDER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-weedy
 ?Dewey
 He is muscular.
 Not when you make him <b>WEEDY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-wined
 ?Edwin
 An anti-alcohol guy?
 A swig might turn him.
 <b>WINED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-olden
 ?Eldon
 Full of boundless youth.
 Until he is <b>OLDEN</b>.
+#testcase-invisiclues-table-of-towers-anagrams-tenser
 ?Ernest
 Very relaxed.
 Make him <b>TENSER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-gone
 ?Geno
 Just sort of there. What if her were not?
 <b>GONE</b>.
+#testcase-invisiclues-table-of-towers-anagrams-godly
 ?Goldy
 Not very holy.
 <b>GODLY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-learned
 ?Leander
 Seems kind of dumb. Give him book-smarts.
 <b>LEARNED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-calmer
 ?Marcel
 Very animated.
 <b>CALMER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-normal
 ?Marlon
 Thinks he's a cut above?
 <b>NORMAL</b>.
+#testcase-invisiclues-table-of-towers-anagrams-pronest
 ?Preston
 The best placed for defense?
 Not when <b>PRONEST</b>.
+#testcase-invisiclues-table-of-towers-anagrams-eggier
 ?Reggie
 Smells and looks spotless.
 Make him <b>EGGIER</b> so he must go freshen up.
+#testcase-invisiclues-table-of-towers-anagrams-coyer
 ?Royce
 Not shy.
 Unless <b>COYER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-ashen
 ?Shane
 A ruddy complexion.
 Til he is <b>ASHEN</b>.
+#testcase-invisiclues-table-of-towers-anagrams-recreant
 ?Terrance
 He is not shirking.
 <b>RECREANT</b>.
+#testcase-invisiclues-table-of-towers-anagrams-stony
 ?Tyson
 Many emotions...
 ...unless he's <b>STONY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-awed
 ?Wade
 Confident and poised, but sensible enough to know if he might be overmatched.
 Til he's <b>AWED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-talcier
 ?Can I deal with the recital article?
 It is sturdy, but you can make it less so.
 Make it <b>TALCIER</b>.
@@ -887,6 +1006,7 @@ The loaves are from the agnostic after you help them stop reading their book.
 The strudel is in Fringe Finger.
 The eclairs are in Treading Gradient, beneath the denim.
 Budget as you need to.
+#testcase-invisiclues-table-of-towers-anagrams-sadder
 ?Is there any functional difference between the pastries I find? And how many are there?
 No. They are all the same.
 ?What are the dreads adders for? How can I get by?
@@ -926,51 +1046,64 @@ Trying to walk past, attack or talk to them may give clues.
 Of course, you can x-ray them.
 The agnostic and Dr. Yow also give one clue.
 >>>Specific internal guardians (alphabetical order)
+#testcase-invisiclues-table-of-towers-anagrams-marginal
 ?Alarming Grailman
 You can't be a grailman unless you are a cut above.
 He can't imagine being worse than average.
 <b>MARGINAL</b>.
+#testcase-invisiclues-table-of-towers-anagrams-hastiest
 ?Asset-Hit Atheists
 They're patient and willing to explain their views.
 Could you make them hurry up so they give up?
 Yes, make them <b>HASTIEST</b>.
+#testcase-invisiclues-table-of-towers-anagrams-released
 ?(Deal Seer) Lars Eede/Elsa Erde
 The deal seer hits the Reed's Ale quite hard!
 They feel trapped in their life and can't stop drinking.
 You can help them get <b>RELEASED</b>.
 The Reed's ale can also become RESEALED.
+#testcase-invisiclues-table-of-towers-anagrams-reined
 ?Denier Nereid
 They're too far from shore. They need to be pulled back in.
 Make them <b>REINED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-restful
 ?The fluster-self rut
 It is agitated, and it agitates you.
 How can you calm things down?
 Make everything more <b>RESTFUL</b>.
+#testcase-invisiclues-table-of-towers-anagrams-holiest
 ?Hostile-is-He Lot/Lois the Hostile
 They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
 Make them feel differently.
 Make them the <b>HOLIEST</b>.
+#testcase-invisiclues-table-of-towers-anagrams-semipro
 ?Promise Imposer
 He's good at what he does.
 So smooth. Doesn't do things by half-measures.
 <b>SEMIPRO</b>.
+#testcase-invisiclues-table-of-towers-anagrams-saltier
 ?Realist tailers
 They're not nasty enough to reject outright.
 Maybe you can feel better ditching them, or maybe they will fight each other, if they become ...
 ... <b>SALTIER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-nerdiest
 ?Resident Trendies
 Make them far less cool.
 They could become <b>NERDIEST</b>.
+#testcase-invisiclues-table-of-towers-anagrams-rinsed
 ?Snider diners
 They have dry wit.
 Until they're <b>RINSED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-weariest
 ?Sweatier wait-seer
 He doesn't seem to get tired of blocking you.
 Make him <b>WEARIEST</b>.
+#testcase-invisiclues-table-of-towers-anagrams-pastier
 ?Traipse Pirates
 They have impressive tans they're proud of.
 How to make the pirates lose them?
 Make them <b>PASTIER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-creaky
 ?Hey! What's this yacker keycar doing?
 It appears the first time you clear an area of all the guardians.
 It's pretty easy to dispose of as an LLP.
@@ -980,30 +1113,37 @@ It's active and has no mechanical damage...
 ?What's the scope for?
 It shows you where you need to go.
 It also creates a map in the upper window that lasts until you cross the lake.
+#testcase-invisiclues-table-of-towers-anagrams-rusty
 ?What are the try-us yurts doing? How can I get rid of them?
 They're quite eco-friendly, or seem to be. They seem well built enough.
 Unless, or until, they're <b>RUSTY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-subtler
 ?How do I get rid of the Bluster Butlers?
 Making them more circumspect could help them move up in the world and away from this not-so-posh place.
 They can become <b>SUBTLER</b>.
 >>ANEMIC CINEMA
+#testcase-invisiclues-table-of-towers-anagrams-married
 ?Do I need to deal with the mardier admirer?
 (S)he'd find you less a part of his/her life...
 ...if (s)he were <b>MARRIED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-angstier
 ?Do I need to deal with the angriest ingrates?
 Only if you want a perfect score.
 If the madness became whining...
 ...they could be <b>ANGSTIER</b>.
 >>DANGER GARDEN
+#testcase-invisiclues-table-of-towers-anagrams-broken
 ?Do I need to get rid of the bonker?
 Yes, it guards something important.
 It works perfectly.
 Well, until it's <b>BROKEN</b>.
 Oh, look, something else! They must be guarding something REALLY important.
+#testcase-invisiclues-table-of-towers-anagrams-resting
 ?Hey, something replaced the bonker!
 The stinger sure is vigilant.
 How to lower its energy?
 Make it <b>RESTING</b>.
+#testcase-invisiclues-table-of-towers-anagrams-naivest
 ?Do I need to get rid of the natives' site van?
 Only for maximum points.
 These guys could be one thing, or the other.
@@ -1018,11 +1158,13 @@ Danger Garden and Anemic Cinema have guardians you need to pass, but there's not
 Baldest Blasted Saltbed and Leveraged Everglade have scenery that gives LLPs. Strictly speaking, you don't have to visit both of them, but you have to visit one to get to the edges.
 Fringe Finger and Lost Lots have pastries and an LLP each, but nothing critical.
 >>BALDEST BLASTED SALTBED
+#testcase-invisiclues-table-of-towers-anagrams-coiled
 ?What's the docile old ice for?
 An LLP.
 You can change it to something more interesting.
 Make it <b>COILED</b>.
 >>LEVERAGED EVERGLADE
+#testcase-invisiclues-table-of-towers-anagrams-grandiose
 ?What are the organised ego drains doing?
 You can't actually dispel them so you can get past them, but you can still hit them up for a Last Lousy Point.
 They make you feel like you can't do anything, and they're very reasonable and not overdone.
@@ -1031,6 +1173,7 @@ You can laugh at them if they become <b>GRANDIOSE</b>.
 ?What's the campiest campsite for?
 To hold the diverse deviser.
 Campiest Campsite was once the name of a room, but it was a bit too obvious. Or implement a full campsite. But I didn't want to remove it completely.
+#testcase-invisiclues-table-of-towers-anagrams-revised
 ?How do I get the diverse deviser to work?
 It needs an upgrade. Or to be described as upgraded.
 It needs to be REVISED.
@@ -1043,9 +1186,11 @@ PUT DAGGER IN REPAIR.
 ?What are the sway-ways for?
 They are scenery to "help" you "decide" to go back east.
 >>TREADING GRADIENT
+#testcase-invisiclues-table-of-towers-anagrams-sewed
 ?Do I need to get rid of the weeds?
 No, but you can (and need to) make them immobile.
 Make them <b>SEWED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-pearly
 ?What's a raves saver?
 A tape recorder.
 Note it can RETAPE or REPEAT.
@@ -1053,6 +1198,7 @@ You'll need to use both to get through.
 If you notice its brand name, you can get an LLP.
 It's a replay player.
 So it can be <b>PEARLY</b>, too.
+#testcase-invisiclues-table-of-towers-anagrams-mined
 ?What's the denim for?
 You can't cut at it with anything normal.
 It can, however, be <b>MINED</b>.
@@ -1062,6 +1208,7 @@ You'll find something for that in the Campiest Campsite.
 PUT DAGGER IN REPAIR.
 The gizmo is handy later.
 >>DIRE AND ARID DEN
+#testcase-invisiclues-table-of-towers-anagrams-dandier
 ?Help! How did I get down here?
 You looked around after poking at everything in Treading Gradient.
 You are feeling drained, but you'll need a pick-me-up.
@@ -1074,11 +1221,13 @@ Dr. Yow is locked up in the subsector.
 You can't move Dr. Yow to the Shaven Havens, but you can move Dr. Yow's voice.
 The duck might trust that.
 >>FRINGE FINGER
+#testcase-invisiclues-table-of-towers-anagrams-rustled
 ?What can I do about the strudel?
 You can just take it. Or you can take it with style.
 Doing so is a last lousy point.
 It can be <b>RUSTLED</b>.
 >>LOST LOTS
+#testcase-invisiclues-table-of-towers-anagrams-prosiest
 ?What are the sporties' ripostes for?
 An LLP.
 You can make them less incisive.
@@ -1088,6 +1237,7 @@ So change them to the <b>PROSIEST</b> you've heard.
 Well, you don't need to.
 And you can't.
 >>OBSCUREST SUBSECTOR
+#testcase-invisiclues-table-of-towers-anagrams-unlocked
 ?How do I undo the prison ropins?
 Read them for a clue.
 If only they could be <b>UNLOCKED</b>. But you can't just say so.
@@ -1101,6 +1251,7 @@ But the duck probably doesn't need Dr. Yow yelling.
 ?Is a log-gaol important?
 Yes, to make the subsector obscurest.
 It wouldn't be very obscure if it had more than one exit, would it?
+#testcase-invisiclues-table-of-towers-anagrams-fussier
 ?Is the fissure important?
 Try making it <b>FUSSIER</b>.
 Nothing happens--with just you there.
@@ -1121,6 +1272,7 @@ Playing the raves saver isn't enough.
 ?How should Dr. Yow lecture the agnostic?
 <b>WORDY</b> has been done. This is an exciting lecture. Or it needs to be. The agnostic still is shaking off the effects of time wasted by the Actionless Coastlines.
 <b>ROWDY</b>.
+#testcase-invisiclues-table-of-towers-anagrams-attentive
 ?The agnostic looks tentative. Can I change that?
 This is an LLP. It was part of the main puzzle before I felt it was a bit arbitrary. The word was too long, and it was too easy in cheat mode.
 TENTATIVE can become...
@@ -1130,8 +1282,9 @@ TENTATIVE can become...
 They are convenient places for the atheists and hostile person/people to go once you've neutralized them.
 There's no way to enter.
 ?Somebody seems to be hiding. What gives?
-The hastiest atheists and Lois the Hostile, or the Hostile-is-He Lot, are hard to hang with.
+The asset-hit atheists and Lois the Hostile, or the Hostile-is-He Lot, are hard to hang with.
 You need to get rid of them both. When they do, someone new will appear.
+#testcase-invisiclues-table-of-towers-anagrams-grained
 ?Does the agnostic really like that book so much?
 No. It's something to do, something he/she guesses smart people do.
 Maybe if it were less enthralling to look at.
@@ -1143,12 +1296,15 @@ ASK AGNOSTIC ABOUT DOCTOR once you rescued the doctor.
 ?The agnostic needs a tool. What's a good one?
 The gizmo will be useful. It baffles you--and, well, me, to be honest. I just sort of take the best anagrams available.
 GIVE GIZMO TO AGNOSTIC.
+#testcase-invisiclues-table-of-towers-anagrams-robust
+#testcase-invisiclues-table-of-towers-anagrams-stabler
 ?Is the, uh, a bot-boat safe?
 Not even close, to start.
 The turbos and blaster are broken.
 You need to fix one, preferably both.
 The turbos can be more <b>ROBUST</b>.
 The blaster can be <b>STABLER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-rewired
 ?Is the weirder red wire good/bad for anything?
 It's not critical to the game.
 It doesn't replace fixing the turbos or blaster.
@@ -1156,6 +1312,7 @@ But it is a Last Lousy Point.
 It can be reorganized...
 ...or <b>REWIRED</b>.
 >>RAWEST WATERS
+#testcase-invisiclues-table-of-towers-anagrams-nearest
 ?I need help from the Earnest Eastern Neaters!
 If only they were a bit closer...
 What can be done to get closer to them?
@@ -1175,24 +1332,29 @@ Oh, and before a location people might think was a joke, too. Minor spoiler!
 Well, not a total joke. It's there, but it's a bit floating.
 You can enter it from some of the dead-end palces. Outer Route, Lost Lots or Shaven Havens. Fringe Finger has a cliff below, Obscurest Subsector is a prison, and Topside Deposit would be too confusing to start.
 Once you've been through once, you can't return.
+#testcase-invisiclues-table-of-towers-anagrams-rousted
 ?Am I trapped?
 No. You need an anagram for dourest and detours.
 You need something that will wake you up, get you going.
 <b>ROUSTED</b>.
+#testcase-invisiclues-table-of-towers-anagrams-aimless
 ?Can I take care of the seismal semials?
 Yes, but you don't need to.
 They can become <b>AIMLESS</b>.
 >>MISLIT LIMITS
+#testcase-invisiclues-table-of-towers-anagrams-present
 ?What can I do about the Repents Serpent serpent?
 You don't need to get rid of it, strictly. Unless you want to complete the top opt pot side quest for maximum points.
 You can't make it go away.
 But you can neutralize it so it gets bored and goes off on its own.
 It'll be calmer if it's just <b>PRESENT</b>.
+#testcase-invisiclues-table-of-towers-anagrams-punier
 ?What's with the unripe ur-pine?
 It's not critical to solving this area, but it'll help with Renato's quest.
 It's too big, and it's covering something up.
 Maybe if it were smaller...
 ...or <b>PUNIER</b>.
+#testcase-invisiclues-table-of-towers-anagrams-antsier
 ?And with what's behind it?
 The Nastier Stainer Retinas may be a bit too nasty for their own security.
 Because Nastier has the last three letters in common with ...
@@ -1201,6 +1363,7 @@ Oh, look! A succor crocus.
 ?There aren't many hints here for the curst palace!
 If you opened the premise(s), you can return, talk to the person inside once you gained their trust, and come back. There'll be new clues.
 Scan them all and eventually you can narrow it down.
+#testcase-invisiclues-table-of-towers-anagrams-spectacular
 ?Eleven letters for the curst palace? Really?
 It is a big castle. And it's a final puzzle.
 St. Teri seems to indicate it inspires generic superlatives.
@@ -1210,10 +1373,12 @@ Like fantastic, incredible...
 >>MESPRISE PREMISES
 ?Do I actually need to be here?
 Only if you want full points.
+#testcase-invisiclues-table-of-towers-anagrams-triste
 ?The Tetris Sitter seems happy as-is!
 Not really. Just wasting time, guessing she is happy.
 Maybe you could get her back to real emotions ...
 ... by making her <b>TRISTE</b>.
+#testcase-invisiclues-table-of-towers-anagrams-annoyed
 ?Wait! She has a new name, but she still isn't fully happy and/or motivated!
 Well, that Done-Any Anodyne is still on her mind.
 You need to put her in a mood that might reject anodyne.
@@ -1229,28 +1394,35 @@ They're dangerous.
 Dangerously addictive, because they allow a free pass through some puzzles here.
 If you <b>SPILL</b> the PILLS, in various places, they do different things. But you only get one use.
 Okay, more, if you save before using. Or you have a debug version of the binary I used to test the feature. Which was fun.
+#testcase-invisiclues-table-of-oyster-anagrams-stroll
 ?What do I need to do to get by the LOLstr trolls?
 Well, you need to be all cool.
 <b>STROLL</b>.
 That won't work right away, though. You need to do a few things to be a more undesirable patron.
+#testcase-invisiclues-table-of-oyster-anagrams-sing
 ?What's the gins sign for?
 It should suggest a standard Inform verb when you examine it--or by its letters.
 <b>SING</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-remap
 ?What's the perma-amper for?
 You can fiddle with it if you know the technical terms.
 <b>REMAP</b> it. This means you can't deal with the tunes for a point.
+#testcase-invisiclues-table-of-oyster-anagrams-unset
 ?Can I get rid of the tunes?
 Sure.
 Just <b>UNSET</b> them. This means you can't deal with the amper for a point.
+#testcase-invisiclues-table-of-oyster-anagrams-spit
 ?What are the tips pits for?
 Well, you can put something else in there.
 Do something even ruder than not tipping.
 <b>SPIT</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-scrape
 ?Can/should I bug Casper?
 He has good general information.
 But you can also do something to irritate him.
 Casper Spacer, Capers Recaps...
 <b>SCRAPE</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-inset
 ?What do I do with the stein?
 Well, there are tines.
 You can't quite INSERT...
@@ -1258,19 +1430,24 @@ You can't quite INSERT...
 ?Why can't I do more than three annoying things here?
 The trolls would get too upset and would have an excuse to give you the business.
 >>OLDE LODE
+#testcase-invisiclues-table-of-oyster-anagrams-calm
 ?What's the clam doing?
 It's agitated.
 Perhaps you can <b>CALM</b> it.
+#testcase-invisiclues-table-of-oyster-anagrams-run
 ?What's this urn? Why can't I walk away?
 Taking it kills you.
 You need to do something faster than walk.
 You need to <b>RUN</b>.
 >>DISEASE SEASIDE
+#testcase-invisiclues-table-of-oyster-anagrams-boast
 ?What're the boats for?
 You can make some noise to get their attention.
 If you SOB AT them, they're not interested.
 You need to <b>BOAST</b>.
-That gets you to the Fighter Frigate.
+That gets you to the Fighter Freight.
+#testcase-invisiclues-table-of-oyster-anagrams-fart
+#testcase-invisiclues-table-of-oyster-anagrams-soar
 ?Can I cross on the frat raft?
 Yes, and you get an extra point for doing so.
 The oars on the raft are odd.
@@ -1284,18 +1461,23 @@ You can turn it into an ocean...
 ...but that's counterproductive.
 It's just a dumb joke/Monty Python reference. You can undo the silly death.
 >>FIGHTER FREIGHT
+#testcase-invisiclues-table-of-oyster-anagrams-leap
 ?How do I get out of here?
-Once you're on the fighter frigate, your next action should be pretty clear.
+Once you're on the Fighter Freight, your next action should be pretty clear.
 The scary crays aren't going to help, but the pale plea might.
 You need to <b>LEAP</b>.
 ?I didn't get here. How do you?
 BOAST instead of using the raft at Disease Seaside.
 >>ANGER RANGE
+#testcase-invisiclues-table-of-oyster-anagrams-scrap
+#testcase-invisiclues-table-of-oyster-anagrams-spike
 ?How to stop the bullies?
 Hmm. Carps and Pikes.
 You can <b>SCRAP</b> with the carps...
 ...or you can <b>SPIKE</b> the pikes.
 Either way, you take care of them all.
+#testcase-invisiclues-table-of-oyster-anagrams-unearth
+#testcase-invisiclues-table-of-oyster-anagrams-bury
 ?How do I release the haunter?
 Etahn Ru is its name. Lots of red letters!
 You need to <b>UNEARTH</b> it.
@@ -1312,9 +1494,11 @@ The haunter lies beneath.
 You must release him to make him less angry.
 You need to <b>UNEARTH</b> him once you have a shovel. Or, well, something like it.
 Say, a rigged digger.
-?How do I calm the ghost down once he's here?
+#testcase-invisiclues-table-of-oyster-anagrams-assuage
+?How do I calm the ghost down once they're here?
 The haunter is a Use-Saga Sausage.
-<b>ASSUAGE</b> him.
+<b>ASSUAGE</b> it.
+#testcase-invisiclues-table-of-oyster-anagrams-slander
 ?What's with the snarled darnels?
 They won't stop you, but if you're a completionist, they're fun.
 You can do something relatively active or forceful to show they're kind of irking you.
@@ -1325,32 +1509,43 @@ Also, Hero's Shore is the old name of the Disease Seaside.
 So I moved it over.
 I did a lot of this, even after the first release. Most of the time, I wonder why I didn't do things this way in the first place.
 >>HARDEST TRASHED DEARTHS
+#testcase-invisiclues-table-of-oyster-anagrams-scan
 ?What do I do with the cans?
 You don't have to do anything.
 This is maybe the second-easiest LLP in the game to Peg A. Page's revolting book.
 Easier, since it's a verb you probably already used.
 <b>SCAN</b> the cans.
+#testcase-invisiclues-table-of-oyster-anagrams-step
+?How do I get rid of the pest pets?
+You need some fancy footwork.
+<b>STEP</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-seek
 ?No one's here but I hear something.
 They're EEKS.
 Try to <b>SEEK</b> them.
 >>LEAN LANE
+#testcase-invisiclues-table-of-oyster-anagrams-tutor
 ?What does Aunt Tuna want me to do?
 She informs you her nephew the trout's name is Tortu. He hates bullies.
 He needs to be taught.
 You can <b>TUTOR</b> him.
 Then you get what's in the raw red drawer.
+#testcase-invisiclues-table-of-oyster-anagrams-eat
 ?What do I do with the tea?
 It's not the sort of tea you can drink, and with five anagram possibilities, you can use process of elimination, here.
 You <b>EAT</b> it.
 The paler pearl is useful later.
+#testcase-invisiclues-table-of-oyster-anagrams-swipe
 ?Are the wipes usable/takeable?
 Yes and yes.
 First, let's figure how to take them.
 We need to take them quickly.
 <b>SWIPE</b> them.
+#testcase-invisiclues-table-of-oyster-anagrams-tend
 ?Is the dent in the desk useful?
 No, except for getting one more point.
 It's a rather easy point. Let's just say if you scan it in cheat mode, it falls out.
+#testcase-invisiclues-table-of-oyster-anagrams-warp
 ?What do I do with the Paw-R-Wrap?
 You <b>WARP</b> it.
 Well, not in front of Aunt Tuna. But someone else will deserve and loathe it more.
@@ -1364,6 +1559,9 @@ Yes and no. You can't FIX it. That's only three letters...
 ?Can I go back to the Hardest Trashed Dearths?
 No, but you don't need to.
 >>LAPSIN' PLAINS
+#testcase-invisiclues-table-of-oyster-anagrams-kiss
+#testcase-invisiclues-table-of-oyster-anagrams-bonk
+#testcase-invisiclues-table-of-oyster-anagrams-snap
 ?How do I unlock the span pans?
 Three parts to this one, but they're all relatively short.
 The skis and knob are in the way.
@@ -1372,6 +1570,8 @@ The knob is also stuck.
 <b>BONK</b> the knob.
 Then you should be able to <b>SNAP</b> to get rid of the pans.
 But wait! A crate.
+#testcase-invisiclues-table-of-oyster-anagrams-trace
+#testcase-invisiclues-table-of-oyster-anagrams-react
 ?How do I avoid being hit by a crate?
 This is another two-parter.
 They're too broken to cater with.
@@ -1379,6 +1579,7 @@ You need to figure where it's coming from.
 <b>TRACE</b> it.
 But that's not enough. You need to avoid it.
 <b>REACT</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-splain
 ?Anything else I can do?
 You can talk to nobody in general for a last lousy point.
 What is the location's name?
@@ -1386,22 +1587,27 @@ PLAINS.
 You can do something with that. It's a bit slangy, but...
 ...you can <b>SPLAIN</b> your goals and dreams and wishes.
 >>SHUTTLE HUTLETS
+#testcase-invisiclues-table-of-oyster-anagrams-bust
 ?What do I do with the tubs?
 Maybe there is something inside.
 You need to break them open.
 Or <b>BUST</b> them.
+#testcase-invisiclues-table-of-oyster-anagrams-drop
 ?What the heck can I do with a prod?
 The way to open it is simple yet annoyingly weird.
 <b>DROP</b> the prod.
+#testcase-invisiclues-table-of-oyster-anagrams-sweat
 ?Does the waste need clearing?
 Not if you don't want ALL the points.
 It's work to clear.
 <b>SWEAT</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-shape
 ?Can I do anything with the heaps I left?
 Yes, but you don't have to.
 They're lumped inartistically.
 This is a last lousy point.
 <b>SHAPE</b> the heaps.
+#testcase-invisiclues-table-of-oyster-anagrams-clean
 ?What do I do with a dirty lance?
 You need the wipes from Lean Lane.
 Then you can <b>CLEAN</b> the lance.
@@ -1424,6 +1630,7 @@ I bet a nuts bot could.
 You could make it respect you if you told it tut, snob...
 ...And if there actually was a nuts bot in the game. Or, well, buttons. Or a plane.
 >>SCLEROUS CLOSURES
+#testcase-invisiclues-table-of-oyster-anagrams-search
 ?Do the arches hide anything?
 Yes. Examining's not enough.
 You have to <b>SEARCH</b>. But the sardine will block you.
@@ -1440,6 +1647,7 @@ Also as a memorial for Lean Lane's previous name.
 They're not scared of much.
 The ghost might scare them.
 If the ghost passed by them to find a ruby, they'd be scared.
+#testcase-invisiclues-table-of-oyster-anagrams-patrol
 ?How do I disable the ol' trap?
 Well, first, you need to get rid of the walleyes.
 It would be nice as a portal.
@@ -1459,12 +1667,14 @@ Then dig the haunter up and lead it by.
 ?I can't visit the craals after doing something. Is this okay?
 Yes. The craals served their purpose. And besides, the residents might recognize you.
 >>END DEN
+#testcase-invisiclues-table-of-oyster-anagrams-enlarge
 ?Is this where I want to be?
 No. You got here because you don't have a map to the Horned Hedron, yet.
 Did you find a pearl yet?
 Once you get two, they make a general gleaner.
 It's not big enough to see into clearly.
 <b>ENLARGE</b> it.
+#testcase-invisiclues-table-of-oyster-anagrams-reangle
 ?Wait! I can do something else with the general gleaner! What do I need to do?
 Nothing you need to do, but you can try for an extra point.
 There's a new way to look at the general gleaner.
@@ -1478,6 +1688,8 @@ No, it's a small side quest.
 You need something from the Shuttle Hutlets.
 The lance. If you have it, and you've done what you need with it, something will pop up in the Den Loft.
 You will need to figure what to do with the Templar Ramplet. It's part of the puzzle.
+#testcase-invisiclues-table-of-oyster-anagrams-tan
+#testcase-invisiclues-table-of-oyster-anagrams-psalm
 ?What do I do with the natant ant?
 It should be easy. There are only five possibilities.
 You need to attack it a certain way.
@@ -1490,55 +1702,66 @@ A templar is a religious fighter. Maybe you can do a religious thing?
 This word is better known as a noun, but it can also function as a verb.
 You can <b>PSALM</b> while in Plasm Lamps for a bonus point on top of getting rid of the natant ant.
 >>TENFOLD TEFLON'D DEN LOFT
+#testcase-invisiclues-table-of-oyster-anagrams-prepay
 ?Stupid papery yapper!
 The papery yapper wants to be bribed, but use a different word, maybe?
 A synonym for quid pro quo?
 <b>PREPAY</b> the yapper.
 You lose the general gleaner, but you know the way by now, anywayy.
+#testcase-invisiclues-table-of-oyster-anagrams-revel
 ?What do I do with the lever?
 It's an optional point.
 Have fun knowing you found it.
 <b>REVEL</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-trample
 ?Can I walk down the Templar Ramplet?
 Well, not quite walk.
 Also, you need the lance from the Shuttle Hutlets.
 Once you do, you can walk in quite aggressively. It leads to a new location.
 <b>TRAMPLE</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-derail
 ?What do I do with the dialer?
 There's also a clump of letters that can be relaid.
 DIALER may become something else.
 <b>DERAIL</b>.
+#testcase-invisiclues-table-of-oyster-anagrams-spin
 ?Oh no! Pins are blocking the dialer!
 Two solutions here.
 They aren't lethal, but they are annoying.
 You may notice SNIPping them doesn't work, but that's very close.
 <b>SPIN</b> them.
+#testcase-invisiclues-table-of-oyster-anagrams-redial
 ?What else do I do with the dialer?
 Well, you can DERAIL again...
 ...or you can find another way to call back.
 <b>REDIAL</b>.
 >STORE T
 >>MINDED MIDDEN
+#testcase-invisiclues-table-of-otters-anagrams-barely
 ?Help! I lost my powers! What do I do?
 You're severely weakened.
 What's the least powerful type of word in the English language?
 The adverb.
 The bleary barley covers everything...
 ...<b>BARELY</b>.
+#testcase-invisiclues-table-of-otters-anagrams-reedily
 ?Ed Riley won't let me by!
 He's not a YIELDER.
 He won't even share his DELI RYE.
 His voice sure booms.
 Not if he speaks <b>REEDILY</b>.
+#testcase-invisiclues-table-of-otters-anagrams-rescind
 ?Cinders? What for?
 You can use them to <b>DISCERN</b> what word to use.
 Showing you don't need them gets another point.
 You can also <b>RESCIND</b> them.
+#testcase-invisiclues-table-of-otters-anagrams-basically
 ?What are the asyllabic lilac bays for?
 They're a bonus point.
 One last l-y. A truly meaningless one, in conversation.
 BASICALLY.
-?What are that blase bales for?
+#testcase-invisiclues-table-of-otters-anagrams-sable
+?What are those blase bales for?
 A bonus point.
 They only appear if you rescued all the animals to the north and south.
 They make one more animal.
@@ -1547,6 +1770,7 @@ You can make a SABLE.
 ?Why can't I go west?
 First, you need to help Gretta Garett-Tatger, whom Elmo told you about.
 Then, you need your powers back to dispose of the moat.
+#testcase-invisiclues-table-of-otters-anagrams-sparely
 ?How do I disperse the parleys splayer players?
 They're talking total rubbish.
 But they have enough style points, they can't be caalled on it yet.
@@ -1554,27 +1778,78 @@ You can only use adverbs to take them down, so look for words with L and Y in th
 There're many possibilities, but you only need three before they lose their mojo. You don't have to respond right away to how they talk, either.
 There's also one word that's available no matter how they talk.
 They can talk <b>SPARELY</b>. That's always available, until you figure it.
-They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long. There are seven pods of words, and I ch
+They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long. There are seven pods of words, and the game chooses one word from each.
 There are other shorter ones, too. Below is an explanation of the pods I choose the adverbs from. The easy ones come first.
+#testcase-invisiclues-table-of-otters-anagrams-bossily
+#testcase-invisiclues-table-of-otters-anagrams-cattily
+#testcase-invisiclues-table-of-otters-anagrams-irately
+#testcase-invisiclues-table-of-otters-anagrams-seedily
+#testcase-invisiclues-table-of-otters-anagrams-tersely
 Pod 1 is seven letters, with some repeating. <b>BOSSILY</b>, <b>CATTILY</b>, <b>SEEDILY</b>, <b>TEARILY</b> (or <b>IRATELY</b>) and <b>TERSELY</b> are in Pod 1.
+#testcase-invisiclues-table-of-otters-anagrams-angrily
+#testcase-invisiclues-table-of-otters-anagrams-nastily
+#testcase-invisiclues-table-of-otters-anagrams-shadily
+#testcase-invisiclues-table-of-otters-anagrams-snidely
+#testcase-invisiclues-table-of-otters-anagrams-starkly
 Pod 2 is seven letters, non-repeating. So you always have two seven-letter words. <b>ANGRILY</b>, <b>NASTILY</b>, <b>SHADILY</b>, <b>SNIDELY</b> and <b>STARKLY</b> are in Pod 2.
-Pod 3 is eight letters, repeating. <b>BLEARILY</b>, <b>RIBALDLY</b>, <b>FORMALLY</b>, <b>COITALLY</b>, <b>SHABBILY</b>, <b>SHODDILY</b>, <b>SILENTLY</b> and <b>SUDDENLY</b> are in Pod 3.
+#testcase-invisiclues-table-of-otters-anagrams-blearily
+#testcase-invisiclues-table-of-otters-anagrams-coitally
+#testcase-invisiclues-table-of-otters-anagrams-formally
+#testcase-invisiclues-table-of-otters-anagrams-ribaldly
+#testcase-invisiclues-table-of-otters-anagrams-shabbily
+#testcase-invisiclues-table-of-otters-anagrams-shoddily
+#testcase-invisiclues-table-of-otters-anagrams-silently
+#testcase-invisiclues-table-of-otters-anagrams-suddenly
+Pod 3 is eight letters, repeating. <b>BLEARILY</b>, <b>COITALLY</b>, <b>FORMALLY</b>, <b>RIBALDLY</b>, <b>SHABBILY</b>, <b>SHODDILY</b>, <b>SILENTLY</b> and <b>SUDDENLY</b> are in Pod 3.
+#testcase-invisiclues-table-of-otters-anagrams-modestly
+#testcase-invisiclues-table-of-otters-anagrams-steamily
+#testcase-invisiclues-table-of-otters-anagrams-stupidly
 Pod 4 is eight letters, non-repeating. So you always have two eight-letter words. <b>MODESTLY</b>, <b>STEAMILY</b> and <b>STUPIDLY</b> are in Pod 4.
+#testcase-invisiclues-table-of-otters-anagrams-martially
+#testcase-invisiclues-table-of-otters-anagrams-sincerely
+#testcase-invisiclues-table-of-otters-anagrams-sobbingly
+#testcase-invisiclues-table-of-otters-anagrams-tediously
+#testcase-invisiclues-table-of-otters-anagrams-wearingly
 Pod 5 is nine letters. <b>MARTIALLY</b>, <b>SINCERELY</b>, <b>SOBBINGLY</b>, <b>TEDIOUSLY</b> and <b>WEARINGLY</b>are in Pod 5.
+#testcase-invisiclues-table-of-otters-anagrams-desperately
+#testcase-invisiclues-table-of-otters-anagrams-drawlingly
+#testcase-invisiclues-table-of-otters-anagrams-emotionally
+#testcase-invisiclues-table-of-otters-anagrams-reactively
 Pod 6 is ten to eleven letters. <b>DESPERATELY</b>, <b>DRAWLINGLY</b>, <b>EMOTIONALLY</b> and <b>REACTIVELY</b> are in Pod 6.
+#testcase-invisiclues-table-of-otters-anagrams-despairingly
+#testcase-invisiclues-table-of-otters-anagrams-indiscreetly
 Pod 7 is twelve letters. <b>DESPAIRINGLY</b> and <b>INDISCREETLY</b> are in Pod 7.
 The pods give you slightly more average letters to deal with than if I just picked seven adverbs from the whole list (thirty-two at last count,) but I felt it might be too confusing to have thirty-two possible adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
+#testcase-invisiclues-table-of-otters-anagrams-really
+?What is the music in the background?
+Yer All a Yell'r provides "energy."
+It's not a very good song, and it's easy to disrupt.
+Say <b>REALLY</b>?
 ?What good are Gretta's medals?
 Not very good, right now. They're tarnished. You need to fix that.
 Since they say IQ and LUCKY, you may be able to guess what they become. But if you figure them now, you haven't done enough good, yet.
 Incidentally, they're roughly inspired by the medals worn by the protagonist of Saki's <i>The Storyteller</i>.
+#testcase-invisiclues-table-of-otters-anagrams-atom
 ?How do I dispose of the moat?
 You have to get your powers back.
 Then, you can make it something much smaller.
 An <b>ATOM</b>.
+#testcase-invisiclues-table-of-otters-anagrams-open
+?How do I pass the Nope-O-Pen and Neon Pope and Nope Peon?
+One simple word.
+It's actually a standard verb.
+<b>OPEN</b>.
 ?Where do I go first, north or south?
 You only need to go one of north or south from the Disowned Downside. The Loop Pool is a bit easier. But going both ways gets you all the points.
+#testcase-invisiclues-table-of-otters-anagrams-actually
+?Is the Cult Laya' important?
+For full points, yes.
+You can reason around it, sort of.
+<b>ACTUALLY</b>.
 >>SHINER SHRINE
+#testcase-invisiclues-table-of-otters-anagrams-brutely
+#testcase-invisiclues-table-of-otters-anagrams-enragedly
+#testcase-invisiclues-table-of-otters-anagrams-remotely
 ?The sly imp simply blocks me!
 LY-words again can get around it. Make it less sly.
 With LEGENDARY patience, BUTLERY and MOTLEYER.
@@ -1586,6 +1861,9 @@ You only need two of three. Make it lose its cool.
 The message is what this room--or the cathedral--was called in previous releases.
 The camo just stops you from going west or east.
 >>CLARTHEAD CATHEDRAL
+#testcase-invisiclues-table-of-otters-anagrams-joltily
+#testcase-invisiclues-table-of-otters-anagrams-loathingly
+#testcase-invisiclues-table-of-otters-anagrams-stoically
 ?The shrewin' whiners block me noisily!
 Their TALLYHOING, CALLOSITY and JOLLITY get in the way.
 Tune their volume down. Disrupt them. Make them take a break.
@@ -1594,31 +1872,38 @@ You need two of three.
 <b>STOICALLY</b> is next.
 <b>LOATHINGLY</b> is the longest solution.
 >>LOOP POOL
+#testcase-invisiclues-table-of-otters-anagrams-because
 ?The sea cube...
 You can't waste words.
 But no adverbs seem to work.
 What word is meaningless by itself?
 A conjunction.
 <b>BECAUSE</b>.
+#testcase-invisiclues-table-of-otters-anagrams-else
 ?The eels aren't convinced...
 Tell them 'Or...
 ...<b>ELSE</b>.'
+#testcase-invisiclues-table-of-otters-anagrams-unless
 ?Is "Sullenness, Us" important?
 It appears when you have your powers back. It's just another bonus point.
 To get rid of it, say <b>UNLESS</b>.
 >>BRAN BARN
+#testcase-invisiclues-table-of-otters-anagrams-although
 ?Mr. Lee says 'Hola Thug!' as he wears a ghoul hat.
 You have one word to grab his attention...
 ...a word meaningless by itself...
 A conjunction.
 <b>ALTHOUGH</b>.
+#testcase-invisiclues-table-of-otters-anagrams-ergo
 ?The gore ogre is now in the way!
 You can outfox it with a clever conjunction.
 <b>ERGO</b>.
+#testcase-invisiclues-table-of-otters-anagrams-however
 ?Is the vow here important?
 It appears when you have your powers back. It's just another bonus point.
 To get rid of it, say <b>HOWEVER</b>.
 >>LAMER REALM
+#testcase-invisiclues-table-of-otters-anagrams-slow
 ?Owls attack me!
 You need your powers back. If you don't have them, come back again.
 They kill you if you stay for one move. They're quick!
@@ -1627,6 +1912,10 @@ Unless they are <b>SLOW</b>.
 You need your powers back first.
 Visit the Disowned Downside, if you haven't.
 Then clear an area to the north or south.
+#testcase-invisiclues-table-of-otters-anagrams-artsy
+#testcase-invisiclues-table-of-otters-anagrams-coolest
+#testcase-invisiclues-table-of-otters-anagrams-garbed
+#testcase-invisiclues-table-of-otters-anagrams-paroled
 ?What of the other animals?
 In order of possible combinations...
 The satyr can be <b>ARTSY</b>.
@@ -1636,6 +1925,7 @@ The leopard can be <b>PAROLED</b>.
 ?Help! Why did the room name change?
 Because you did enough to make it a nice place.
 >>PERVERSE PRESERVE
+#testcase-invisiclues-table-of-otters-anagrams-parrot
 ?Whoah! A raptor!
 Brute force won't work.
 Make it a <b>PARROT</b>.
@@ -1643,32 +1933,46 @@ Make it a <b>PARROT</b>.
 You need your powers back first.
 Visit the Disowned Downside, if you haven't.
 Then clear an area to the north or south.
+#testcase-invisiclues-table-of-otters-anagrams-snail
 ?Nails?
 Nothing's slain.
 Just an ex-<b>SNAIL</b>.
+#testcase-invisiclues-table-of-otters-anagrams-snipe
 ?Pines aren't an animal!
 They have no spine...
 They're not a <b>SNIPE</b>.
+#testcase-invisiclues-table-of-otters-anagrams-racoon
 ?The corona is spooky!
 It can be a <b>RACOON</b>.
+#testcase-invisiclues-table-of-otters-anagrams-hornets
 ?Thrones?
 Buzzing noises? Sting if you sit on it?
 <b>HORNETS</b>.
 ?Help! Why did the room name change?
 Because you did enough to make it a nice place.
 >>RECLUSION INCLOSURE
+#testcase-invisiclues-table-of-otters-anagrams-honestly
 ?Why are Elmer and Merle doing things on the sly?
 You can get the truth out of them.
 It's a last lousy point but not a trivial one. Plus they have silly things to say if you trigger it.
 You can make them talk <b>HONESTLY</b>.
+#testcase-invisiclues-table-of-otters-anagrams-aside
 ?Is it significant that Elmer and Merle are ideas aides?
 For full points, yes.
 You can momentarily push them <b>ASIDE</b> to let them know who they're dealing with. Er, with whom they're dealing.
+#testcase-invisiclues-table-of-otters-anagrams-raptor
 ?How do I go west?
 You need something that can beat a hydra. Seen an animal?
 The raptor.
 Your friend the ex-ex-parrot will help you...
 ...once it's a <b>RAPTOR</b> again.
+#testcase-invisiclues-table-of-otters-anagrams-decurse
+?An Educers Us Creed fell out. Is it important?
+For posterity, yes.
+It has a lot of anagrams of RECUSED, but you want a small neologism.
+Get rid of something with a DE- prefix.
+<b>DECURSE</b>.
+#testcase-invisiclues-table-of-otters-anagrams-deeply
 ?What do I do with the whistle?
 Practice when nobody's around.
 It sounds like someone yelped, but you need to make it less piercing.
@@ -1678,6 +1982,7 @@ That will help summon animal friends later.
 ?Does the conversation with Elvira matter?
 No.
 But she has to say something, doesn't she?
+#testcase-invisiclues-table-of-otters-anagrams-quickly
 ?Elvira is too fast for me!
 The whistle on its own doesn't work. Especially if you haven't "adjusted" it.
 You may need to retreat and come back to do so.
@@ -1702,6 +2007,10 @@ This clue is just a buffer so people who viewed this accidentally won't find the
 The right command is referenced when you defeat Elvira.
 ROVE OVER.
 >>RUSTIC CITRUS
+#testcase-invisiclues-table-of-others-anagrams-grapes
+#testcase-invisiclues-table-of-others-anagrams-limes
+#testcase-invisiclues-table-of-others-anagrams-pears
+#testcase-invisiclues-table-of-others-anagrams-plums
 ?What do I need to do for Curtis?
 For starters, get 4 fruits. A few are easy.
 The Spear will be <b>PEARS</b>.
@@ -1712,6 +2021,7 @@ There are more potential fruits, which you may be able to guess, but you only ne
 ?What's the augural arugula for?
 Well, it's a cheat item. You can EAT it, then GURU something, and if it can become a fruit, there you go.
 But you lose a last lousy point at the end if you GURU something. So it's double-edged, for all you perfectionists out there.
+#testcase-invisiclues-table-of-others-anagrams-compass
 ?What's this stupid moss cap for?
 The moss cap is supposed to help you with directions.
 It doesn't work so well in its present state.
@@ -1726,43 +2036,58 @@ A coin (13 points, 8 more fruits),
 Another coin (17 points, 12 more fruits),
 And a droll dollar (21 points, 16 more fruits).
 Beyond that, he just takes stuff. But you don't need any one specific fruit for any quest.
+#testcase-invisiclues-table-of-others-anagrams-dates
 ?Is the sated stead useful?
 Yes.
 It can become <b>DATES</b>.
+#testcase-invisiclues-table-of-others-anagrams-tamarind
 ?Id-Mantra Mad Train?
 <b>TAMARIND</b>.
+#testcase-invisiclues-table-of-others-anagrams-cherries
 ?Hire Recs Re: Riches?
 <b>CHERRIES</b>.
+#testcase-invisiclues-table-of-others-anagrams-cantaloupe
 ?Peanut Cola?
 Some clues on the can.
 <b>CANTALOUPE</b>.
+#testcase-invisiclues-table-of-others-anagrams-persimmon
 ?What's the omen prism for?
 All in red. Clues for a fruit.
 You can READ the omen prism to find various red text.
 For instance, "Nope, Mr. Sim" sounds almost like...
 <b>PERSIMMON</b>.
+#testcase-invisiclues-table-of-others-anagrams-maraschino
 ?Harmonicas?
 <b>MARASCHINO</b> (cherry).
+#testcase-invisiclues-table-of-others-anagrams-blueberries
 ?Eerie Blurbs?
 Painted blue-purple.
 <b>BLUEBERRIES</b>.
+#testcase-invisiclues-table-of-others-anagrams-cranberries
 ?Barren cries?
 <b>CRANBERRIES</b>.
+#testcase-invisiclues-table-of-others-anagrams-pomegranate
 ?Mopeage rant and other writings?
 They're real pips.
 <b>POMEGRANATE</b>.
 >>SWELL WELLS
+#testcase-invisiclues-table-of-others-anagrams-apples
 ?'Elp PSA?
 Six letter fruit.
 <b>APPLES</b>.
+#testcase-invisiclues-table-of-others-anagrams-apricot
 ?What about the riot cap?
 An <b>APRICOT</b>.
+#testcase-invisiclues-table-of-others-anagrams-coconuts
 ?ScoutCon on Stucco?
 <b>COCONUTS</b>.
+#testcase-invisiclues-table-of-others-anagrams-gooseberry
 ?And the sorer bogey?
 <b>GOOSEBERRY</b>.
+#testcase-invisiclues-table-of-others-anagrams-tangerines
 ?And the green stain?
 <b>TANGERINES</b>.
+#testcase-invisiclues-table-of-others-anagrams-mulberries
 ?And the miser ruble?
 <b>MULBERRIES</b>.
 >>FILED FIELD
@@ -1770,19 +2095,26 @@ An <b>APRICOT</b>.
 No.
 ?Where is Fidel?
 "I fled." He's not coming back.
+#testcase-invisiclues-table-of-others-anagrams-pineapple
 ?Pipe Panel lie pen app?
 <b>PINEAPPLE</b>.
+#testcase-invisiclues-table-of-others-anagrams-raspberry
 ?Pryer Bars?
 <b>RASPBERRY</b>.
+#testcase-invisiclues-table-of-others-anagrams-breadfruit
 ?The buried raft?
 Philip Larkin would figure this out, whatever it is.
 <b>BREADFRUIT</b>.
+#testcase-invisiclues-table-of-others-anagrams-watermelon
 ?The mean trowel?
 <b>WATERMELON</b>.
+#testcase-invisiclues-table-of-others-anagrams-strawberries
 ?Barriers West?
 <b>STRAWBERRIES</b>.
+#testcase-invisiclues-table-of-others-anagrams-blackberries
 ?Barber Sickle?
 <b>BLACKBERRIES</b>.
+#testcase-invisiclues-table-of-others-anagrams-grapefruit
 ?The rapt figure?
 White and pink with a weird spoon.
 <b>GRAPEFRUIT</b>.
@@ -1795,13 +2127,16 @@ Like, after you give Curtis twenty fruits, ...
 ...the (well, a) droll dollar.
 ?Do I need any of the fruits down here?
 No, and in fact, they're meant to be a bit tricky. To give completionists a real sense of accomplishment.
+#testcase-invisiclues-table-of-others-anagrams-banana
 ?What to do with the/a banna'?
 The message NAA-NA-B gives you the letters you need. The colors may be a giveaway.
 Get a <b>BANANA</b>.
+#testcase-invisiclues-table-of-others-anagrams-go-near
 ?I can't take the orange!
 You're being too direct about it.
 Perhaps if you get close...
 ...or <b>GO NEAR</b>...
+#testcase-invisiclues-table-of-others-anagrams-rhubarb
 ?What about the brr hub?
 Well, it is actually *a* brr hub, for the purposes of the puzzle.
 Attack and poke at it to get seeing-red clues.
@@ -1809,6 +2144,7 @@ Look at it--it wants you to attack it.
 Odd things happen. You say odd things.
 Burr, Bah, etc.
 <b>RHUBARB</b>.
+#testcase-invisiclues-table-of-others-anagrams-reversed
 ?What's the RESERVED for DR. SEVERE sign for?
 It can be <b>REVERSED</b> for a fruit.
 A guava, again, something hard to anagram.
@@ -1824,30 +2160,39 @@ You don't really need to do anything here to win, but it may be easier than othe
 ?Is there any theme, beyond the obvious?
 Not really. This is a sort of runoff area.
 Though there are a lot of adjectives.
+#testcase-invisiclues-table-of-others-anagrams-among
 ?Why should I listen?
 A voice says 'go, man.'
 MANGO isn't quite it.
 You need to get <b>AMONG</b>.
+#testcase-invisiclues-table-of-others-anagrams-mo-len
 ?The melon?
 That's not the only one Len Craig has.
 <b>MO LEN<b> or <b>LEN MO</b> should work.
+#testcase-invisiclues-table-of-others-anagrams-cheap
 ?The peach?
 <b>CHEAP</b>.
+#testcase-invisiclues-table-of-others-anagrams-cinque
 ?The quince needs something in Italian!
 A price, or a number,
 Uno, duo, tre, quattre, ...
 <b>CINQUE</b>.
+#testcase-invisiclues-table-of-others-anagrams-solemn
 ?Lemons?
 <b>SOLEMN</b>.
+#testcase-invisiclues-table-of-others-anagrams-olives
 ?The I-Solve Voiles?
 <b>OLIVES</b>.
+#testcase-invisiclues-table-of-others-anagrams-cripes
 ?The prices precis?
 An error makes you want to lash out at the prices precis.
 <b>CRIPES</b>!
 The kumquat is just a random fruit that was hard to anagram.
+#testcase-invisiclues-table-of-others-anagrams-papayas
 ?The auction caution?
 Says PAY ASAP.
 <b>PAPAYAS</b>.
+#testcase-invisiclues-table-of-others-anagrams-ancienter
 ?Nectarine?
 Needs to be older.
 <b>ANCIENTER</b>.
@@ -1862,17 +2207,22 @@ Examining it mentions a lost slot.
 You can't see it because it is lost.
 You need something to put in the slot.
 But not a coin.
+#testcase-invisiclues-table-of-others-anagrams-icon
 ?What do I put in the slot?
 Coins don't seem to work. Neither does a coin.
 The thing doesn't like money--maybe more a token?
 Perhaps an <b>ICON</b> would be more your thing.
 Or, if you have two coins, they can be <b>ICONS</b>.
+#testcase-invisiclues-table-of-others-anagrams-sonic-icons
 ?Why does the storage spit my offer out with a hum?
 A weird hum. Like sound waves.
 You need something to counteract that.
 Once you have two coins, you can make them <b>SONIC</b>.
 Similarly, ICONS can become <b>SONIC</b>, too.
 You can adjust the coins in any order you please to get <b>SONIC ICONS</b>. Well, you can't make a coin SONIC, but you get the idea.
+#testcase-invisiclues-table-of-others-anagrams-prep
+#testcase-invisiclues-table-of-others-anagrams-research
+#testcase-invisiclues-table-of-others-anagrams-review
 ?What do I do with the final item?
 It can take you pretty much anywhere.
 But you need to pay attention to it.
