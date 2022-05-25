@@ -15,8 +15,8 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ~	hints,hin,spoi	t5
 ~	verbs	t6
 
-}}MAX=37
-}}CURMAX=37
+}}MAX=38
+}}CURMAX=38
 }}SCORE=0
 }}CURMIN=25
 
@@ -1626,6 +1626,11 @@ by one point
 >read pen
 The Pen O' NOPE reads NONE, PEPO'.
 
+@mis
+#testcase-mistake-roiling-pone
+>pone
+You're not going to bribe the folks blocking the way west with food. Or, well, with anything.
+
 >open
 Your score has just gone up by one point
 }}SCORE++
@@ -3014,7 +3019,7 @@ DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
 >score
-{$SCOMAX}
+{$SCOS}
 
 @nud
 #ttc-table-of-otters-nudges-cinders
@@ -3052,6 +3057,11 @@ The parrot can be changed back into a raptor, but not into anything new.
 Your score has just gone up by one point
 }}SCORE++
 
+@sli
+#slider test for decurse
+>edersuc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
 #ttc-table-of-reclusion-inclosure-nudges-hidings
 >hidinsg
@@ -3071,6 +3081,12 @@ DEBUG INFO: weltish whistle hinting.
 @min
 }}CURMAX-=2
 
+>score
+@min
+{$SCOS}
+@!
+{$SCOS}
+
 @verbs
 #+testcase-outside-reclusion-inclosure
 >out
@@ -3081,10 +3097,71 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 >exits
 There are two unblocked exits: east to Disowned Downside and west.
 
+@mis
+#testcase-mistake-roiling-cue-reds
+>cue reds
+Yup, you see red. Hooray for clues!
+\\
+#testcase-mistake-roiling-rec-dues-recs-due-due-recs-dues-rec
+>rec dues recs due due recs dues rec
+No, you do not have to give Elvira credit for audacity!
+\\
+#testcase-mistake-roiling-red-cues
+>red cues
+You do not get any additional red writing clues. Not even for old times' sake.
+\\
+#testcase-mistake-roiling-reduces
+>reduces
+You're not sure whom that would reduce. You may not need to take chances, now you have allies to help in your fight.
+\\
+#testcase-mistake-roiling-see-crud
+>see crud
+Yep, it's pretty lousy, all right.
+\\
+#testcase-mistake-roiling-sucered
+>sucered
+Clever, but misspelt. You just want an odd word, maybe not one regularly in the dictionary, but sensible enough to refute the Us Creed.
+\\
+#testcase-mistake-roiling-ceder
+>ceder
+No, Elvira won't surrender that easily. Neither should you!
+\\
+#testcase-mistake-roiling-suceder
+>suceder
+It's not a misspelling you need, but a logical neologism. Also, it's not clear who the succeeder would be. You should be able to defeat her now you have allies.
+
+@verbs
+#ttc-table-of-otters-attacks-educers-us-creed
+>attack us creed
+It'd hurt to bang your firsts on the Us Creed, so you resort to seeing red and whispering "'Cused-er and 'cused-er!"
+
+@nudmis
+#ttc-table-of-otters-readables-educers-us-creed
+>read us creed
+RESCUED! RECUSED-SEDUCER-SECURED!
+For all Elvira's bashing of you as a pedantic anagrammist, she sure liked appropriating the skill at just the right moment to impress people. What a hypocrite!
+\\
+#ttc-table-of-otters-scannotes-educers-us-creed
+>scan us creed
+This one's all over the place. You notice nothing registers over the US CREED text, only the four words in the main bit.
+\\
+#ttc-table-of-otters-spechelp-educers-us-creed
+>ceredus
+The Us Creed seems to crumble so very slightly.
+
+@sli
+#slider test for decurse
+>edersuc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!min
+>decurse
+The US CREED crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
+First, though, to make her history.
+}}SCORE++
+}}CURMIN++
+\\
 >score
-@min
-{$SCOS}
-@!
 {$SCOMAX}
 
 @max
@@ -3124,6 +3201,9 @@ As you gaze into the cinders, they blow away, leaving you feeling the medals can
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 }}SCORE++
+
+>score
+{$SCOMAX}
 
 #this is how we get rid of Elvira
 >w
