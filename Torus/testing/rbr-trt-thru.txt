@@ -33,6 +33,43 @@ TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## 
 @tats
 >cheaty
 Setting tats stat to 3. Unset this with TATS.
+\\
+>eehhss
+The stat tats show two numbers: 1 of 6.
+The stat tats show two numbers: 2 of 63.
+Whoah! You wonder if you're brainy enough to figure this out!
+\\
+>hhssee
+\\
+The stat tats show two numbers: 1 of 6.
+The stat tats show two numbers: 16 of 63.
+!Whoah!
+\\
+>sseehh
+The stat tats show two numbers: 4 of 6.
+The stat tats show two numbers: 45 of 63.
+!Whoah!
+\\
+>x tats
+The stat tats show two numbers: 2 of 6.
+The stat tats show two numbers: 20 of 63.
+\\
+>hesh es
+The stat tats show two numbers: 0 of 6.
+The stat tats show two numbers: 0 of 63.
+[NOTE: you don't need spaces in any of the magic words you need to discover.]
+\\
+>hesh es
+The stat tats show two numbers: 0 of 6.
+The stat tats show two numbers: 0 of 63.
+!need spaces
+
+@nudmis
+>sshhee
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>ehseh
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
 
 @mis
 #testcase-mistake-tours-roust-torus-a0-0a-b0-0b
@@ -401,6 +438,18 @@ by one point
 @alt
 You have seen all of the rest of the torus. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
 
+@max
+#ttc-table-of-progress-1
+The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too.
+
+@max,tats
+>sshhee
+You already figured what to do here.
+
+@tats
+>x tats
+The tats are blank. Well, you don't need them. You figured what to do here.
+
 @nud
 #+ttc-table-of-nudge-hashes-hya
 >ayh
@@ -409,10 +458,6 @@ While lots of snappy noises come to mind, you can't do anything with the smell o
 @hin
 >verbs
 !Also, if you'd like a clue, you can enter a blank command.
-
-@max
-#ttc-table-of-progress-1
-The cylinder in the center of the torus contracts. No, it stops wobbling so much, so it only seems narrower. But that's good, too.
 
 @max
 >xyzzy
@@ -515,6 +560,30 @@ Now that you have a teammate and a reason to reappear, you have a plan to brains
 >undo
 >undo
 
+@tats
+>aaeerrpp
+The stat tats show two numbers: 0 of 8.
+The stat tats show two numbers: 0 of 255.
+\\
+>eerrppaa
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 74 of 255.
+\\
+>rrppaaee
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 144 of 255.
+\\
+>ppaaeerr
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 37 of 255.
+
+@nud
+>aaeerrpp
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>aaeerrrp
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 @min-b
 >tattletale
 by one point
@@ -613,6 +682,34 @@ Aha! Now that you have summoned a tattletale and arraigning, the tattletale tatt
 >undo
 >undo
 
+@tats
+>aaiirrnngg
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 521 of 1023.
+\\
+>iirrnnggaa
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 128 of 1023.
+\\
+>rrnnggaaii
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 272 of 1023.
+\\
+>nnggaaiirr
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 4 of 1023.
+\\
+>ggaaiirrnn
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 98 of 1023.
+
+@nud
+>aaiirrnngg
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>aaiirrnggg
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 @min-b
 >happenchance
 by one point
@@ -677,6 +774,30 @@ You sort of need a pal, and you sort of need a bit more.
 The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?
 >meat up
 The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?
+
+@nudmis
+>aaeemmtt
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>aaeemttt
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
+@tats
+>aaeemmtt
+\\
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 10 of 255.
+>eemmttaa
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 80 of 255.
+\\
+>mmttaaee
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 5 of 255.
+\\
+>ttaaeemm
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 160 of 255.
 
 @min-b
 >intestines
@@ -771,6 +892,34 @@ The Torus seems more alive now that the intestines are not just near the pechan/
 >undo
 >undo
 
+@tats
+>iinntteess
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 529 of 1023.
+\\
+>nntteessii
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 384 of 1023.
+\\
+>tteessiinn
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 104 of 1023.
+\\
+>eessiinntt
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 4 of 1023.
+\\
+>ssiinnttee
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 2 of 1023.
+
+@nudmis
+>iinntteess
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>iinnttesss
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 @min-b
 >teammate
 by one point
@@ -840,6 +989,38 @@ You are very, very, very close indeed. Everything is in the right order.
 >what is a pechan
 If there's a stomach here, you don't want to burst it.
 
+@nudmis
+>ppeecchhaann
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>ppeecchhannn
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
+@tats
+>ppeecchhaann
+The stat tats show two numbers: 2 of 12.
+The stat tats show two numbers: 24 of 4095.
+\\
+>eecchhaannpp
+The stat tats show two numbers: 1 of 12.
+The stat tats show two numbers: 4 of 4095.
+\\
+>cchhaannppee
+The stat tats show two numbers: 1 of 12.
+The stat tats show two numbers: 1 of 4095.
+\\
+>hhaannppeecc
+The stat tats show two numbers: 3 of 12.
+The stat tats show two numbers: 2114 of 4095.
+\\
+>aannppeecchh
+The stat tats show two numbers: 1 of 12.
+The stat tats show two numbers: 1024 of 4095.
+\\
+>nnppeecchhaa
+The stat tats show two numbers: 4 of 12.
+The stat tats show two numbers: 928 of 4095.
+
 @min-b
 >arraigning
 by one point
@@ -887,6 +1068,34 @@ You don't need permission to be let at anything.
 #ttc-table-of-pre-brushoffs-latte-latte-latte
 >latte et al
 Oh, man. You don't want to even think about caffeinated beverages. Even ones with milk in. These days you don't even go in for caffeinated pop. Perhaps the latte can become something less consumable?
+
+@tats
+>aaeelltttt
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 296 of 1023.
+\\
+>eellttttaa
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 8 of 1023.
+\\
+>llttttaaee
+The stat tats show two numbers: 4 of 10.
+The stat tats show two numbers: 197 of 1023.
+\\
+>ttttaaeell
+The stat tats show two numbers: 4 of 10.
+The stat tats show two numbers: 706 of 1023.
+\\
+>ttaaeelltt
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 528 of 1023.
+
+@nud
+>aaeelltttt
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>aaeelttttt
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
 
 @min-b
 >reappear
@@ -1107,6 +1316,39 @@ You dealt with the, uhh, hubbub.
 The path to the cylinder is solid. The door blows open as you get there. You walk in and tumble down a slope. Around you, voices boom "RESTRAIN! RESTRAIN!" They are closing in! This is the end! But then they scatter. You pass out.
 When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying "RESTRAIN!" out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.
 
+@tats
+>x tats
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 513 of 1023.
+\\
+>sscceennee
+\\
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 517 of 1023.
+>cceenneess
+\\
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 72 of 1023.
+>eenneesscc
+\\
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 386 of 1023.
+>nneessccee
+\\
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 97 of 1023.
+>eesscceenn
+\\
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 280 of 1023.
+
+@nud
+>sscceennee
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+\\
+>sccceennee
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 @max
 >in
 You already are.
@@ -1172,6 +1414,146 @@ Hey, now. You are the good guy, here. But you're actually very close.
 \\
 >sin science
 Hey, now. You are the good guy, here. But you're actually very close.
+
+@max
+>aahhmmss
+Hmm, the hams, hams seem to waver a bit. You must be on the right track to change the hams, hams, here.
+\\
+>aahhmsss
+Man! You had all the right letters for the hams, hams, you think, but they didn't come together.
+\\
+>eemmooss
+Hmm, some emos seem to waver a bit. You must be on the right track to change some emos, here.
+\\
+>eemmooos
+Man! You had all the right letters for some emos, you think, but they didn't come together.
+\\
+>rreeppss
+Hmm, reps reps seems to waver a bit. You must be on the right track to change reps reps, here.
+\\
+>rreepsss
+Man! You had all the right letters for reps reps, you think, but they didn't come together.
+\\
+>ssiinnccee
+Hmm, since since seems to waver a bit. You must be on the right track to change since since, here.
+\\
+>ssiinnccce
+Man! You had all the right letters for since since, you think, but they didn't come together.
+\\
+>iitteemm
+Hmm, item time seems to waver a bit. You must be on the right track to change item time, here.
+\\
+>iitteeem
+Man! You had all the right letters for item time, you think, but they didn't come together.
+
+@tats
+>aahhmmss
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 10 of 255.
+\\
+>hhmmssaa
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 80 of 255.
+\\
+>mmssaahh
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 5 of 255.
+\\
+>ssaahhmm
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 160 of 255.
+\\
+>x tats
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 4 of 255.
+The stat tats must be referring to the hams, hams.
+\\
+>iitteemm
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 64 of 255.
+\\
+>tteemmii
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 16 of 255.
+\\
+>eemmiitt
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 38 of 255.
+\\
+>mmiittee
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 137 of 255.
+>x tats
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 13 of 255.
+The stat tats must be referring to item time.
+\\
+>ssoommee
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 17 of 255.
+\\
+>oommeess
+The stat tats show two numbers: 0 of 8.
+The stat tats show two numbers: 0 of 255.
+\\
+>mmeessoo
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 136 of 255.
+\\
+>eessoomm
+The stat tats show two numbers: 4 of 8.
+The stat tats show two numbers: 102 of 255.
+\\
+>x tats
+The stat tats show two numbers: 0 of 8.
+The stat tats show two numbers: 0 of 255.
+The stat tats must be referring to some emos.
+\\
+>rreeppss
+The stat tats show two numbers: 4 of 8.
+The stat tats show two numbers: 99 of 255.
+\\
+>eeppssrr
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 16 of 255.
+\\
+>ppssrree
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 136 of 255.
+\\
+>ssrreepp
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 4 of 255.
+\\
+>x tats
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 13 of 255.
+The stat tats must be referring to reps reps.
+\\
+>ssiinnccee
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 6 of 1023.
+\\
+>iinncceess
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 513 of 1023.
+\\
+>nncceessii
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 336 of 1023.
+\\
+>cceessiinn
+The stat tats show two numbers: 0 of 10.
+The stat tats show two numbers: 0 of 1023.
+\\
+>eessiinncc
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 168 of 1023.
+\\
+>x tats
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 64 of 1023.
+The stat tats must be referring to since since.
 
 @!min-a,min-b
 >shammash

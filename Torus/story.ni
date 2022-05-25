@@ -76,7 +76,7 @@ tats-stat is a number that varies.
 check taking inventory:
 	say "You're traveling light. You aren't actually carrying anything. You were given some tats that [if tats-stat is 0]may give you a stat as you guess what to anagram, where[else]you can get a [b]STAT[r] from, if you want[end if][one of]. Being out of practice, it's nice to have the choice between using assistance and showing you've still 'got it,' whatever 'it' is[or][stopping]." instead;
 
-the player carries the Tas T Tats. description of tats is "[tat-desc]."
+the player carries the Tas T Tats. description of tats is "[tat-desc][run paragraph on]"
 
 printed name of Tas T Tats is "Tas-T-Tats"
 
@@ -84,7 +84,7 @@ understand "stat/tat/tast" and "stat tat" as tas t tats.
 
 to say tat-desc:
 	if location of player is solved:
-		say "The tats are blank. Well, you don't need them. You figured what to do here";
+		say "The tats are blank. Well, you don't need them. You figured what to do here.";
 		continue the action;
 	if last-clue-thing is not yourself:
 		say "[how-many-right of printed name of last-clue-thing]";
@@ -96,8 +96,8 @@ after examining a flippable:
 	continue the action;
 
 instead of doing something with the tats:
-	say "The tats will change as you make guesses. You don't even have to examine them. You can [if tats-stat > 0]deactivate them with the [b]TATS[r][else]activate them with the [b]STAT[r][end if] command.";
 	if current action is examining and tats-stat > 0, continue the action;
+	say "The tats will change as you make guesses. You don't even have to examine them, though that gives you clues about the room name. You can [if tats-stat > 0]deactivate them with the [b]TATS[r][else]activate them with the [b]STAT[r][end if] command.";
 
 volume dubroom definitions
 
@@ -384,7 +384,7 @@ item time is an audible flippable. it is scenery. "'Item time ... item time ...'
 
 book some emos
 
-emos are an audible plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "The voices of some emos protest. This can't be what they need to study! But somehow, you manage to convince them it's what they were meant to. The conversation changes, and they give a reasonable showing of the scientific method.". description is "They seem to be in their own little cell--well, mentally speaking, at least. Some emos, indeed!". word-to-include is "mesosome". sts-hash of emos is 725015610. uniq-hash of emos is 282640. printed name of emos is "some emos".
+emos are a plural-named flippable. "Some emos hang around here, disappointed they have nothing to study.". guess-right-text is "The voices of some emos protest. This can't be what they need to study! But somehow, you manage to convince them it's what they were meant to. The conversation changes, and they give a reasonable showing of the scientific method.". description is "They seem to be in their own little cell--well, mentally speaking, at least. Some emos, indeed!". word-to-include is "mesosome". sts-hash of emos is 725015610. uniq-hash of emos is 282640. printed name of emos is "some emos".
 
 understand "some emos" and "some" as emos.
 
@@ -1107,13 +1107,13 @@ to say how-many-right of (myit - indexed text):
 		say "[line break]Whoah! You wonder if you're brainy enough to figure this out!";
 		now brainy-warn is true;
 	else if tats-stat is 3:
-		say "[line break]CHEAT RELOAD![paragraph break]";
+		say "[line break]CHEAT RELOAD![line break]";
 	if current action is examining and last-clue-thing is not yourself, say "[line break]The stat tats must be referring to [the last-clue-thing].";
 	check-for-spaces;
 
 to check-for-spaces:
 	if space-warn is false:
-		if number of words in the player's command > 1:
+		if number of words in the player's command > 1 and the player's command does not include "tats":
 			ital-say-lb "you don't need spaces in any of the magic words you need to discover.";
 			now space-warn is true;
 

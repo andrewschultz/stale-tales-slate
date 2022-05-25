@@ -12,6 +12,12 @@
 >au 2
 >z
 
+>sshhee
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>ehseh
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 #testcase-mistake-tours-roust-torus-a0-0a-b0-0b
 >a0
 You look around the torus, deciding where to go next, but you can't quite make a move.
@@ -229,6 +235,12 @@ You're not sure what you are prepping--a thing or an action. But once you do, th
 >scan area
 You're not sure what you are prepping--a thing or an action. But once you do, things will become clearer.
 
+>aaeerrpp
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>aaeerrrp
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 >reappear
 by one point
 /^Reappear
@@ -275,6 +287,12 @@ Almost. Just one more I to arrange, there.
 >grain gain rain
 Grain is grain, to you. There's not much to be done with it as-is.
 
+>aaiirrnngg
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>aaiirrnggg
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 >arraigning
 by one point
 /^Arraigning
@@ -305,6 +323,12 @@ You sort of need a pal, and you sort of need a bit more.
 The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?
 >meat up
 The meat -- well, it's hard to describe, but it's thankfully not physical meat. Because it's been here a while. But it's meaty enough to be something important, or to become something important. What?
+
+>aaeemmtt
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>aaeemttt
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
 
 >teammate
 by one point
@@ -352,6 +376,12 @@ The tines aren't budging. Not in their present form. But what could they become?
 >nineties st
 You don't want to think about your own nineties, but yeah, the nineties were a great time for text adventures, weren't they?
 
+>iinntteess
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>iinnttesss
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 >intestines
 by one point
 /^Intestines
@@ -386,6 +416,12 @@ You are very, very, very close indeed. Everything is in the right order.
 >what is a pechan
 If there's a stomach here, you don't want to burst it.
 
+>ppeecchhaann
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>ppeecchhannn
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
+
 >happenchance
 by one point
 /^Happenchance
@@ -400,6 +436,12 @@ You don't need permission to be let at anything.
 #ttc-table-of-pre-brushoffs-latte-latte-latte
 >latte et al
 Oh, man. You don't want to even think about caffeinated beverages. Even ones with milk in. These days you don't even go in for caffeinated pop. Perhaps the latte can become something less consumable?
+
+>aaeelltttt
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>aaeelttttt
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
 
 >tattletale
 by one point
@@ -485,6 +527,12 @@ You dealt with the, uhh, hubbub.
 
 >in
 /^Scene Scene
+
+>sscceennee
+This area of the torus sways slightly. You have to be in the ballpark, here. But you haven't done everything right, yet.
+
+>sccceennee
+You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.
 
 #ttc-table-of-nudge-hashes-cene
 >ceen

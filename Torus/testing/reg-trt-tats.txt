@@ -15,6 +15,36 @@
 >cheaty
 Setting tats stat to 3. Unset this with TATS.
 
+>eehhss
+The stat tats show two numbers: 1 of 6.
+The stat tats show two numbers: 2 of 63.
+Whoah! You wonder if you're brainy enough to figure this out!
+
+>hhssee
+
+The stat tats show two numbers: 1 of 6.
+The stat tats show two numbers: 16 of 63.
+!Whoah!
+
+>sseehh
+The stat tats show two numbers: 4 of 6.
+The stat tats show two numbers: 45 of 63.
+!Whoah!
+
+>x tats
+The stat tats show two numbers: 2 of 6.
+The stat tats show two numbers: 20 of 63.
+
+>hesh es
+The stat tats show two numbers: 0 of 6.
+The stat tats show two numbers: 0 of 63.
+[NOTE: you don't need spaces in any of the magic words you need to discover.]
+
+>hesh es
+The stat tats show two numbers: 0 of 6.
+The stat tats show two numbers: 0 of 63.
+!need spaces
+
 >a
 >a
 >a
@@ -27,7 +57,29 @@ Setting tats stat to 3. Unset this with TATS.
 by one point
 /^Sheesh
 
+>sshhee
+You already figured what to do here.
+
+>x tats
+The tats are blank. Well, you don't need them. You figured what to do here.
+
 >a
+
+>aaeerrpp
+The stat tats show two numbers: 0 of 8.
+The stat tats show two numbers: 0 of 255.
+
+>eerrppaa
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 74 of 255.
+
+>rrppaaee
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 144 of 255.
+
+>ppaaeerr
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 37 of 255.
 
 >reappear
 by one point
@@ -35,11 +87,47 @@ by one point
 
 >a
 
+>aaiirrnngg
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 521 of 1023.
+
+>iirrnnggaa
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 128 of 1023.
+
+>rrnnggaaii
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 272 of 1023.
+
+>nnggaaiirr
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 4 of 1023.
+
+>ggaaiirrnn
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 98 of 1023.
+
 >arraigning
 by one point
 /^Arraigning
 
 >a
+
+>aaeemmtt
+
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 10 of 255.
+>eemmttaa
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 80 of 255.
+
+>mmttaaee
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 5 of 255.
+
+>ttaaeemm
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 160 of 255.
 
 >teammate
 by one point
@@ -47,17 +135,81 @@ by one point
 
 >a
 
+>iinntteess
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 529 of 1023.
+
+>nntteessii
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 384 of 1023.
+
+>tteessiinn
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 104 of 1023.
+
+>eessiinntt
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 4 of 1023.
+
+>ssiinnttee
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 2 of 1023.
+
 >intestines
 by one point
 /^Intestines
 
 >a
 
+>ppeecchhaann
+The stat tats show two numbers: 2 of 12.
+The stat tats show two numbers: 24 of 4095.
+
+>eecchhaannpp
+The stat tats show two numbers: 1 of 12.
+The stat tats show two numbers: 4 of 4095.
+
+>cchhaannppee
+The stat tats show two numbers: 1 of 12.
+The stat tats show two numbers: 1 of 4095.
+
+>hhaannppeecc
+The stat tats show two numbers: 3 of 12.
+The stat tats show two numbers: 2114 of 4095.
+
+>aannppeecchh
+The stat tats show two numbers: 1 of 12.
+The stat tats show two numbers: 1024 of 4095.
+
+>nnppeecchhaa
+The stat tats show two numbers: 4 of 12.
+The stat tats show two numbers: 928 of 4095.
+
 >happenchance
 by one point
 /^Happenchance
 
 >a
+
+>aaeelltttt
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 296 of 1023.
+
+>eellttttaa
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 8 of 1023.
+
+>llttttaaee
+The stat tats show two numbers: 4 of 10.
+The stat tats show two numbers: 197 of 1023.
+
+>ttttaaeell
+The stat tats show two numbers: 4 of 10.
+The stat tats show two numbers: 706 of 1023.
+
+>ttaaeelltt
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 528 of 1023.
 
 >tattletale
 by one point
@@ -89,11 +241,144 @@ The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
 >in
 /^Scene Scene
 
+>x tats
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 513 of 1023.
+
+>sscceennee
+
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 517 of 1023.
+>cceenneess
+
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 72 of 1023.
+>eenneesscc
+
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 386 of 1023.
+>nneessccee
+
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 97 of 1023.
+>eesscceenn
+
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 280 of 1023.
+
 >deeded
 You're not sure what to do, but there's a lot to do!
 !You already took on an additional challenge.
 
 [NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you want a full challenge, you may wish to type STAT so there will be less trial and error.]
+
+>aahhmmss
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 10 of 255.
+
+>hhmmssaa
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 80 of 255.
+
+>mmssaahh
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 5 of 255.
+
+>ssaahhmm
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 160 of 255.
+
+>x tats
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 4 of 255.
+The stat tats must be referring to the hams, hams.
+
+>iitteemm
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 64 of 255.
+
+>tteemmii
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 16 of 255.
+
+>eemmiitt
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 38 of 255.
+
+>mmiittee
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 137 of 255.
+>x tats
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 13 of 255.
+The stat tats must be referring to item time.
+
+>ssoommee
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 17 of 255.
+
+>oommeess
+The stat tats show two numbers: 0 of 8.
+The stat tats show two numbers: 0 of 255.
+
+>mmeessoo
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 136 of 255.
+
+>eessoomm
+The stat tats show two numbers: 4 of 8.
+The stat tats show two numbers: 102 of 255.
+
+>x tats
+The stat tats show two numbers: 0 of 8.
+The stat tats show two numbers: 0 of 255.
+The stat tats must be referring to some emos.
+
+>rreeppss
+The stat tats show two numbers: 4 of 8.
+The stat tats show two numbers: 99 of 255.
+
+>eeppssrr
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 16 of 255.
+
+>ppssrree
+The stat tats show two numbers: 2 of 8.
+The stat tats show two numbers: 136 of 255.
+
+>ssrreepp
+The stat tats show two numbers: 1 of 8.
+The stat tats show two numbers: 4 of 255.
+
+>x tats
+The stat tats show two numbers: 3 of 8.
+The stat tats show two numbers: 13 of 255.
+The stat tats must be referring to reps reps.
+
+>ssiinnccee
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 6 of 1023.
+
+>iinncceess
+The stat tats show two numbers: 2 of 10.
+The stat tats show two numbers: 513 of 1023.
+
+>nncceessii
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 336 of 1023.
+
+>cceessiinn
+The stat tats show two numbers: 0 of 10.
+The stat tats show two numbers: 0 of 1023.
+
+>eessiinncc
+The stat tats show two numbers: 3 of 10.
+The stat tats show two numbers: 168 of 1023.
+
+>x tats
+The stat tats show two numbers: 1 of 10.
+The stat tats show two numbers: 64 of 1023.
+The stat tats must be referring to since since.
 
 >shammash
 by one point
