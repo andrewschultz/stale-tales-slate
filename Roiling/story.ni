@@ -298,7 +298,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=give pot to sitter
 ]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 37. min-score of otters is 25. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings. altroutes of otters is the otters-alt rule. parse-rule of otters is otters-parse rule.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 38. min-score of otters is 25. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint request rejects. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. matched item responses table of otters is table of otters matched item responses. readable table of otters is table of otters readables. unmatched topic responses table of otters is table of otters unmatched topic responses. ask x about x table of otters is table of otters ask x about x. misses-rule of otters is otters-misses rule. preeftable of otters is table of otters prefigurings. altroutes of otters is the otters-alt rule. parse-rule of otters is otters-parse rule.
 [LLP list:
 1=26 for RESCIND
 2=27 for ACTUALLY
@@ -3555,7 +3555,7 @@ carry out requesting the score:
 		check-guru;
 		the rule succeeds;
 	else:
-		d "# of turns = [turn count].";
+		[d "# of turns = [turn count].";]
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp][if number of prefigured things in mrlp > 0], with [number of prefigured things] thing[plur of number of prefigured things] you figured before you were ready[end if]";
 		if cur-score of mrlp is poss-score of mrlp:
 			if mrlp is Ordeal Reload:
@@ -3589,7 +3589,6 @@ carry out requesting the score:
 	else:
 		say "[line break]You haven't solved any regions yet.";
 	show-rank;
-	d "[rank-index].";
 	if mrlp is others:
 		eval-fruits;
 		check-guru;
@@ -5808,7 +5807,11 @@ check waiting:
 	if mrlp is troves, say "[if cur-score of troves is 0]That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping][else]You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say[end if]." instead;
 	if carps are touchable, try listening instead; [oyster]
 	if player is in Dourest Detours, say "You see red and feel like a true sod." instead; [towers]
+	if player is in Reclusion Inclosure, abide by the creed-swear rule;
 	say "[randbla][line break]" instead;
+
+this is the creed-swear rule:
+	if player is in Reclusion Inclosure, say "You take a rude sec['] to curse under your breath and see red at [the educers us creed]. Maybe that was just cathartic, or maybe it will actually help." instead;
 
 chapter drinking
 
@@ -6675,7 +6678,9 @@ this is the swear-towers rule:
 this is the swear-otters rule:
 	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead;
 	if power-back is false, say "At the moment, even your profanities lack power." instead;
-	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "[e-n-m] sniff faux-piously." instead;
+	if player is in Reclusion Inclosure:
+		if elmer is in Reclusion Inclosure, say "[e-n-m] sniff faux-piously." instead;
+		abide by the creed-swear rule;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
 
 this is the swear-others rule:
@@ -18731,7 +18736,11 @@ smacking is an action applying to one thing.
 
 understand the command "smack" as something new.
 
+understand "smack " as smacking.
 understand "smack [thing]" as smacking.
+
+rule for supplying a missing noun when smacking:
+	if parleys splayer players are in location of player, decide on parleys splayer players;
 
 does the player mean smacking the parleys splayer players: it is likely.
 
@@ -19417,6 +19426,14 @@ section parrot-flees
 [this is a bogus item -- it is simply something to flip to that can't be the parrot, as the raptor already flips to the parrot!]
 
 the parrot-flees is an abstract thing. description is "BUG."
+
+chapter Us Creed
+
+the Educers Us Creed is a boring LLPish vanishing thing. description is "You can't really miss the [creed] at the top, but there's more below. Sneaky, sneaky Elvira, appropriating your anagramming skill for the final creed to bring her own form of unity to Yorpwald.[paragraph break]You figure you can just close the deal to the west, but this would be a nice detail to take care of. It's probably not any super-easy word. Maybe it's an uncommon one, or it's one that logically makes sense, but people never thought of it. I mean, as a general safety precaution, she probably wouldn't make it too obvious for you to rip apart. And she also wouldn't make it, like, where she stored her soul."
+
+printed name of Educers Us Creed is "[b]EDUCERS, US creed[r]".
+
+a-text of Educers Us Creed is "RYRYRRY". b-text of Educers Us Creed is "RG???RY". parse-text of Educers Us Creed is "x[sp]e[sp]x[sp]?[sp]?[sp]x[sp]e".
 
 book Reclusion Inclosure
 
@@ -22589,6 +22606,7 @@ this is the otters-misses rule:
 		say "[2drm of reclusion inclosure]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them [b]ASIDE[r], opening another LLP.";
 	else if holy nest is not reflexed:
 		say "[2drm of reclusion inclosure]you could've been all '[b]HONESTLY[r]?' at the holy nest.";
+	if educers us creed is not moot, say "[2drm of reclusion inclosure]you could've tried to [b]DECURSE[r] the [us creed].";
 
 this is the others-misses rule:
 	if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become [b]LIMES[r].";

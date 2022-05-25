@@ -1506,7 +1506,8 @@ Cut Ya All Cult Laya	Cut Ya All Cult Laya	false	461583976	--	"actually"	"actuall
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	parrot-flees	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]As you contemplate a new name for the Reclusion Inclosure, you realize that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	parrot-flees	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]Some sort of creed breaks off from part of the citadel and crashes to the ground, but before you can really inspect it, you hear the raptor groaning. The whistle around its neck has gotten stuck! You quickly change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]As you contemplate a new name for the Reclusion Inclosure, you realize that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+educers us creed	educers us creed	false	582350468	--	"decurse"	"de curse" or "decurse"	--	--	"The [educers us creed] crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.[paragraph break]First, though, to make her history."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	post-perverse-preserve-flip rule	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	post-perverse-preserve-flip rule	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	post-perverse-preserve-flip rule	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -1681,6 +1682,8 @@ this is the post-parrot-raptor rule:
 	if holy nest is not moot, poss-d;
 	moot aside-llp;
 	moot holy nest;
+	moot parrot-flees;
+	move educers us creed to location of player;
 
 this is the post-perverse-preserve-flip rule:
 	increment nounsolve;
@@ -2282,6 +2285,7 @@ raptor	"You'll need a bit of magic, not force, to tame the raptor."
 sea cube	"Bounce no cube."
 Elmer	"[att-elm]"
 Merle	"[att-elm]"
+educers us creed	"It'd hurt to bang your firsts on the [educers], so you resort to seeing red and whispering '[']Cused-er and [']cused-er!'"
 
 to say nice-to-animals: say "You didn't rescue [the noun] just to do that";
 
@@ -2392,6 +2396,7 @@ sullenness us	"You focus on the voices swirling around, and a despairing bit of 
 holy nest	"Scrawled in red on the holy nest is [first custom style][one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order][r]"
 stray satyr	"You see [first custom style]TSYRA[r] branded in red under the stray satyr's shoulder."
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if][first custom style]Ed Plye[r], apparently, made the whistle."
+educers us creed	"RESCUED! RECUSED-SEDUCER-SECURED![paragraph break]For all Elvira's bashing of you as a pedantic anagrammist, she sure liked appropriating the skill at just the right moment to impress people. What a hypocrite!"
 
 table of others readables
 to-read	what-read	alt-read
@@ -3523,6 +3528,7 @@ sullenness us	true	false	false	false	"The voices seem bummed at your settler's a
 blase bales	true	true	false	false	"The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters."
+educers us creed	true	true	false	false	"This one's all over the place. You notice nothing registers over [the educers us creed]'s text, only the four words in the main bit."
 
 book others
 
@@ -3848,6 +3854,7 @@ aside-llp	"[e-n-m] rock back and forth a bit."
 parleys splayer players	"The [players] slip for a moment but quickly resume their incessant dialogue."
 Yer All a Yell'r	"[yer all] changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track."
 holy nest	"The holy nest flutters silently."
+educers us creed	"The [educers us creed] seems to crumble so very slightly."
 atmo moat	"Hm, that's not it, but it must be elemental. No, elementary."
 pen o nope	"The way west remains blocked, but you feel there has to be a simple way past."
 sea cube	"The sea cube shakes a bit."
@@ -4798,6 +4805,7 @@ medals	"[if medals-shiny < 2][medal-help].[else][one of]The medals are thanks fo
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look Kool	"You can't do much but admire them."
+educers us creed	"[one of]This final LLP is meant to be a bit tricky, as it's a neologism that makes sense but isn't in the dictionary.[plus][or]RESCUED! RECUSED-SEDUCER-SECURED! says a lot. You need to say something or think something that will show you can repel Elvira's false charisma.[plus][or]The prefix is DE-, for undoing something.[plus][or]DECURSE.[minus][cycling]"
 Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to get [if Rancho Archon Anchor is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed][b]PLAY[r] the whistle by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped.[plus][or]You need to play it [b]DEEPLY[r].[minus][cycling][end if]"	--	"you can play the whistle [b]DEEPLY[r]"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a [b]RAPTOR[r].[plus][or]Don't summon the raptor before the Reclusion Inclosure.[minus][cycling][end if]"

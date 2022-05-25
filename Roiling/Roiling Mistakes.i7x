@@ -963,7 +963,7 @@ understand "nepo" as a mistake ("No past or current world chess champion challen
 
 understand "parsley" as a mistake ("Despite your best efforts, they remain meatheads.") when parleys splayer players are touchable.
 
-understand "pone" as a mistake ("You're not going to bribe the folks blocking the way west with food. Or, well, with anything") when neon pope is touchable.
+understand "pone" as a mistake ("You're not going to bribe the folks blocking the way west with food. Or, well, with anything.") when neon pope is touchable.
 
 understand "slap em" as a mistake ("[if parleys splayer players are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
 
@@ -1025,6 +1025,10 @@ understand "spine" as a mistake ("You don't need to grow a spine. You've gotten 
 
 chapter Reclusion Inclosure
 
+to say once-medalworthy: say "[if medals-worthy]now[else]once[end if]"
+
+understand "ceder" as a mistake ("No, Elvira won't surrender that easily. Neither should you!") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
 understand "coins lure" as a mistake ("[if elmer is moot]You're not after loot right now[else]Elmer and Merle look around greedily for a second[end if].") when player is in Reclusion Inclosure.
 
 understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
@@ -1036,6 +1040,20 @@ understand "edisa" and "sadie" as a mistake ("On the one hand, hooray for trying
 understand "nicer soul" as a mistake ("[if elmer is in Reclusion Inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
 
 understand "rule scion" as a mistake ("That's what you're trying to stop, here[if elmer is in Reclusion Inclosure]. Besides, Elmer and Merle wouldn't trust your word, anyway[end if].") when player is in Reclusion Inclosure.
+
+understand "see crud" as a mistake ("Yep, it's pretty lousy, all right.") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
+understand "reduces" as a mistake ("You're not sure whom that would reduce. You may not need to take chances, [once-medalworthy] you have allies to help in your fight.") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
+understand "rec dues" and "recs due" and "due recs" and "dues rec" as a mistake ("No, you do not have to give Elvira credit for audacity!") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
+understand "suceder" as a mistake ("It's not a misspelling you need, but a logical neologism. Also, it's not clear who the succeeder would be. You should be able to defeat her [once-medalworthy] you have allies.") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
+understand "sucered" as a mistake ("Clever, but misspelt. You just want an odd word, maybe not one regularly in the dictionary, but sensible enough to refute the Us Creed.") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
+understand "red cues" as a mistake ("You do not get any additional red writing clues. Not even for old times['] sake.") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
+
+understand "cue reds" as a mistake ("Yup, you see red. Hooray for clues!") when player is in Reclusion Inclosure and Educers Us Creed is in Reclusion Inclosure.
 
 chapter Rancho Archon Anchor
 
