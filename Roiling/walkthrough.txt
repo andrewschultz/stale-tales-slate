@@ -1781,7 +1781,9 @@ But hmm, what could beat a hydra? Something you already saw! Something like...wh
 
 > RAPTOR
 
-Hmm, the whistle is interesting. Sounds like it yelped.
+The Educers, Us Creed is a final LLP. It's meant to be a bit tricky, and you need to think of something that should be a word if you wish to counter it, but you don't have to. I wanted to include the whole anagram bundle somewhere, and I think it makes a decent odd final puzzle.
+
+But if you want to be more practical, the whistle is interesting. It sounds like it yelped, and Ed Plye created it, in red.
 
 > DEEPLY
 
@@ -2033,7 +2035,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
-  * release 4: I added yet a few more ways the players were annoying, because it was fun for me. Added another LLP to irritate Elmer and Merle as well as a further one for clearing both north and south of the Downside. The Inclosure is now where Elmer and Merle are, and the Rancho is now the final room. Two ways to dispel the animal guardians were replaced with more thematic words and moved to the Downside. Blase bales appear, too.
+  * release 4: I added yet a few more ways the players were annoying, because it was fun for me. Added another LLP to irritate Elmer and Merle as well as a further one for clearing both north and south of the Downside. The Inclosure is now where Elmer and Merle are, and the Rancho is now the final room. Two ways to dispel the animal guardians were replaced with more thematic words and moved to the Downside. Blase bales appear, too, along with an Educers, Us Creed.
 8 OTHERS was an added area for release 2, so there are really no comparisons from release 1 to release 2. Other than that I hid it for release 1 a week before the deadline because I realized it wasn't a good introduction, and I wanted to put it somewhere, but I didn't know where.
  * release 3: added persimmon and breadfruit. I forget if Curtis gave you the token right away in release 2, or you had to wait.
  * release 4: added coconuts and other fruits. New puzzle for tangerine, and melons/lemon each have their own word now.
@@ -2279,7 +2281,7 @@ Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR. This g
 
 After the holy nest appears, UBARFGYL is in tune with the area's earlier theme, an -LY adverb.
 
-Finally, you'll want to QRPHEFR to take care of the Educers Us Creed.
+Finally, you'll want to QRPHEFR to take care of the Educers, Us Creed.
 
 OTHERS:
 

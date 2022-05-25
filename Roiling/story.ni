@@ -311,6 +311,7 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 10=35 for SABLE at the blase bales after all animals are helped
 11=36 for ASIDE around Elmer/Merle
 12=37 for HONESTLY after ASIDE
+13=38 for DECURSE around the Educers Us Creed
 NON ANAGRAM: +1 PLAY WHISTLE
 ]
 
@@ -18736,11 +18737,11 @@ smacking is an action applying to one thing.
 
 understand the command "smack" as something new.
 
-understand "smack " as smacking.
+understand "smack" as smacking.
 understand "smack [thing]" as smacking.
 
 rule for supplying a missing noun when smacking:
-	if parleys splayer players are in location of player, decide on parleys splayer players;
+	if parleys splayer players are in location of player, now noun is parleys splayer players;
 
 does the player mean smacking the parleys splayer players: it is likely.
 
@@ -19431,7 +19432,7 @@ chapter Us Creed
 
 the Educers Us Creed is a boring LLPish vanishing thing. description is "You can't really miss the [creed] at the top, but there's more below. Sneaky, sneaky Elvira, appropriating your anagramming skill for the final creed to bring her own form of unity to Yorpwald.[paragraph break]You figure you can just close the deal to the west, but this would be a nice detail to take care of. It's probably not any super-easy word. Maybe it's an uncommon one, or it's one that logically makes sense, but people never thought of it. I mean, as a general safety precaution, she probably wouldn't make it too obvious for you to rip apart. And she also wouldn't make it, like, where she stored her soul."
 
-printed name of Educers Us Creed is "[b]EDUCERS, US creed[r]".
+printed name of Educers Us Creed is "[i]EDUCERS, US[r] creed".
 
 a-text of Educers Us Creed is "RYRYRRY". b-text of Educers Us Creed is "RG???RY". parse-text of Educers Us Creed is "x[sp]e[sp]x[sp]?[sp]?[sp]x[sp]e".
 
@@ -20183,7 +20184,7 @@ a sated stead is boring vanishing scenery. description is "It seems like it's do
 
 a-text of sated stead is "RYRYR". b-text of sated stead is "R???R". parse-text of sated stead is "x[sp]?[sp]?[sp]?[sp]x". sated stead is parse-spoilable.
 
-the dates are a plural-named fruit. description is "They're dates. They're edible.". frroom of dates is Rustic Citrus.
+the dates are a plural-named fruit. description is "They're dates. They're edible.".
 
 chapter Hire Recs Re Riches
 
@@ -20726,7 +20727,7 @@ the I Solve Voiles are plural-named vanishing scenery in Clangier Clearing. "The
 
 a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "-[sp]x[sp]?[sp]x[sp]?[sp]?". i solve voiles is parse-spoilable.
 
-the jar of olives is a fruit. "Some green (with and without pimentos,) some black.". bore-text of olives is "You can put olives on your fingers or whatever once you're done with this little exploit. You'll have all the olives you want. For now, you're doing stuff for Curtis.". frroom of olives is clangier clearing.
+the jar of olives is a fruit. "Some green (with and without pimentos,) some black.". bore-text of olives is "You can put olives on your fingers or whatever once you're done with this little exploit. You'll have all the olives you want. For now, you're doing stuff for Curtis.".
 
 chapter prices precis
 
@@ -20987,7 +20988,7 @@ to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gestu
 to say greedy-s: say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
 
 to say gree-app:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping]--[he-she]'s sort of hold onto a box labeled So-Great Storage"
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping]--[he-she]'s sort of holding onto a box labeled So-Great Storage"
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
@@ -21016,6 +21017,7 @@ check giving something to greedy-person:
 		moot Dr Tera;
 		moot Red Rat;
 		move Dr Severe to Scape Space;
+		now frroom of guava is Scape Space;
 		if player has s-i:
 			say "[line break]";
 			slot-appear;
@@ -21041,15 +21043,17 @@ grapes are not hintable. pineapple is not hintable. dates are not hintable. oliv
 chapter fruits by room
 
 frroom of grapes is Rustic Citrus.
-frroom of maraschino is Rustic Citrus.
 frroom of pears is Rustic Citrus.
 frroom of plums is Rustic Citrus.
 frroom of limes is Rustic Citrus.
+frroom of dates is Rustic Citrus.
+frroom of cherries is Rustic Citrus.
 frroom of tamarind is Rustic Citrus.
 frroom of blueberries is Rustic Citrus.
 frroom of cantaloupe is Rustic Citrus.
 frroom of persimmon is Rustic Citrus.
 frroom of pomegranate is Rustic Citrus.
+frroom of maraschino is Rustic Citrus.
 
 frroom of coconuts is Swell Wells.
 frroom of tangerines is Swell Wells.
@@ -21058,6 +21062,7 @@ frroom of gooseberry is Swell Wells.
 frroom of apricot is Swell Wells.
 frroom of apples is Swell Wells.
 
+frroom of olives is Clangier Clearing.
 frroom of lemons is Clangier Clearing.
 frroom of melon is Clangier Clearing.
 frroom of nectarine is Clangier Clearing.
@@ -21077,7 +21082,7 @@ frroom of strawberries is Filed Field.
 frroom of basket of blackberries is Filed Field.
 
 frroom of ENGARO orange is Scape Space.
-frroom of guava is Scape Space.
+frroom of guava is Strip of Profits. [ note: this is a special case! Dr. Severe won't appear until you trade, but we want to say 'hey, nothing you can do right now.' ]
 frroom of rhubarb is Scape Space.
 frroom of small yellow banana is Scape Space.
 
