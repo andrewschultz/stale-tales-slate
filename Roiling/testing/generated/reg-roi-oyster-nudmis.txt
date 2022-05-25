@@ -608,6 +608,14 @@ It's okay to get mad, but staying mad? No.
 >e
 /^Hardest Trashed Dearths
 
+#ttc-table-of-oyster-readables-pest-pets
+>read pest pets
+You notice PEP-TESTS as the brand name, once you have a look.
+
+#ttc-table-of-oyster-spechelp-pest-pets
+>epst
+The pest pets seem less persistent for a moment.
+
 >step
 by one point
 

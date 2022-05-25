@@ -715,7 +715,7 @@ def check_scannotes():
     last_scannotes = table_start
     for my_idx in range(0, len(source_logic_approximate_order)):
         x = source_logic_approximate_order[my_idx]
-        if table_shorten(x) not in in_scannotes.keys():# and x not in abbrevs.keys():
+        if table_shorten(x) not in in_scannotes.keys() and x not in noscan.keys():
             print("May need {} in scannotes table {}. Best guess: line {}.".format(x, scannotes_start, max(last_scannotes, table_start + 2))) # this is inaccurate as we don't check WHICH table to look into, but it might be too much work for too little results now
             mt.add_postopen(r_src, last_scannotes + 1)
             mayneedscannote += 1

@@ -319,6 +319,7 @@ snarled darnels>slander
 ####hardest trashed dearths
 cans>scan
 eeks>seek
+pest pets>step
 ####Lean Lane
 trout>tutor
 tea at a tee>eat
@@ -556,6 +557,7 @@ aside-llp~ideas aides>aside
 whistle~yelped>deeply
 >IGNORE=macks
 medals~iqluckyluckyiq>quickly
+educers us creed~rescued recused seducer secured>decurse
 ########REGION=others
 ####rustic citrus
 pagers>grapes

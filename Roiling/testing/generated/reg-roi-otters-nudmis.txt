@@ -1453,18 +1453,26 @@ No, Elvira won't surrender that easily. Neither should you!
 >suceder
 It's not a misspelling you need, but a logical neologism. Also, it's not clear who the succeeder would be. You should be able to defeat her now you have allies.
 
-#ttc-table-of-otters-readables-us-creed
+#ttc-table-of-otters-readables-educers-us-creed
 >read us creed
 RESCUED! RECUSED-SEDUCER-SECURED!
 For all Elvira's bashing of you as a pedantic anagrammist, she sure liked appropriating the skill at just the right moment to impress people. What a hypocrite!
 
-#ttc-table-of-otters-scannotes-us-creed
+#ttc-table-of-otters-scannotes-educers-us-creed
 >scan us creed
 This one's all over the place. You notice nothing registers over the US CREED text, only the four words in the main bit.
 
-#ttc-table-of-otters-spechelp-us-creed
+#ttc-table-of-otters-spechelp-educers-us-creed
 >ceredus
 The Us Creed seems to crumble so very slightly.
+
+#ttc-table-of-reclusion-inclosure-nudges-creed
+>edrec
+It's an Us Creed, not just a creed.
+
+#ttc-table-of-reclusion-inclosure-nudges-educer
+>educre
+It's for many educers, not just one.
 
 >decurse
 The US CREED crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.

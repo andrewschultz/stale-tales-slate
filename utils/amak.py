@@ -39,6 +39,7 @@ def usage(header="Usage for amak.py"):
     print("e  = edit the amak.txt text/cfg file")
     print("ts = process output for CSV oif tests")
     print("as = add suggestions (default), nas/asn = turn them off")
+    print("Use a number if you need first X anagrams, e.g. if the given anagram is flagged as a mistake command.")
     print("otherwise, words are changed to anagrams, or if they are regions, all words in the region are anagrammed.")
     exit()
 
@@ -224,6 +225,8 @@ def show_results(q, result_string = "{0} has this anagram with no letters in com
         temp = find_nomatch_anagram(q)
     if not temp: return
     print(result_string.format(q, temp))
+    if unmatches_to_find == 0:
+        print("Put a number on the command line if you need more.")
 
 def assign_stuff(x, line_count):
     x = re.sub(" *[\\\/] *$", "", x)

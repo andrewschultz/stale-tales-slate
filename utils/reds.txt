@@ -453,14 +453,15 @@ however,eehrowv,veerhow,revhowe,whereov
 #qver of stray satyr
 artsy,tsyra
 artsy,YR?R?=stray=satyr
-#coevals alcoves
+#reclusion inclosure
 #qver of ideas aides
 aside,?RYRY=aides=ideas
 honestly,lhenyost,elsynoth,sthoylen,ethylsno,shytolen,......LY
+#qver of rescued recused seducer secured
+decurse,RG???RY=rescued=recused=seducer=secured
 #perverse preserve
 hornets,shorten
-#girding ridging
-#gloathuh/hotlaugh work but don't give red
+##########anywhere
 deeply,edplye,....L.
 #################others
 #rustic citrus

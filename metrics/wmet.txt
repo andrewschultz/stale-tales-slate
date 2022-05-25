@@ -52,6 +52,7 @@ Ordeal Reload (min)
 lamp/satchel
 basement
 flier/staple/stapler
+# extra points: staple on aperture, 1+1 for basement
 Ordeal Reload (max)
 lamp/satchel
 basement/stable/chimney/ramp/painting/stair/snib
@@ -87,6 +88,7 @@ towards/without
 Presto (min)
 wont
 umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/tough/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
+# extra points: 1+2 for maze
 Presto (max)
 mazeltov/
 umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/there/gosh/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
@@ -96,7 +98,7 @@ Oyster (min)
 #we use the pills at the start
 spill
 calm/run/fart/soar
-spike/seek/eat/tutor
+spike/step/seek/eat/tutor
 trace/react/kiss/bonk/snap
 bust/drop
 warp/bury/unearth/assuage
@@ -106,7 +108,7 @@ Oyster (max)
 #remap could've been chosen too but it has as many possibilities as unset
 unset/inset/scrape/stroll
 calm/run/boast/leap
-scrap/scan/seek/eat/tutor/tend/swipe
+scrap/scan/step/seek/eat/tutor/tend/swipe
 trace/react/kiss/bonk/snap/splain
 bust/drop/sweat/clean/shape
 warp/bury/unearth/assuage/slander
@@ -140,7 +142,7 @@ punier/antsier/present/triste/annoyed
 Otters adjusted (min)
 bare/reedi
 seedi/steami/spare
-because/else/atom
+because/else/atom/open
 brute/remote
 slow/coolest/artsy/garbed
 stoical/jolti
@@ -149,7 +151,7 @@ raptor/deep/quick
 Otters (min)
 barely/reedily
 seedily/sparely/really
-because/else/atom
+because/else/atom/open
 brutely/remotely
 slow/coolest/artsy/garbed
 stoically/joltily
@@ -165,7 +167,8 @@ slow/paroled/coolest/artsy/garbed
 loathing/stoical
 parrot/snail/hornets/snipe/racoon
 actual/basical/sable
-honest/aside/raptor/deep/quick
+honest/aside/raptor/decurse
+deep/quick
 # non anagram point = play whistle
 Otters (max)
 barely/rescind/reedily
@@ -176,7 +179,8 @@ slow/paroled/coolest/artsy/garbed
 loathingly/stoically
 parrot/snail/hornets/snipe/racoon
 actually/basically/sable
-honestly/aside/raptor/deeply/quickly
+honestly/aside/raptor/decurse
+deeply/quickly
 Others (min)
 #now sorted in absolute easiest to hardest
 prep

@@ -3148,6 +3148,14 @@ This one's all over the place. You notice nothing registers over the US CREED te
 #ttc-table-of-otters-spechelp-educers-us-creed
 >ceredus
 The Us Creed seems to crumble so very slightly.
+\\
+#ttc-table-of-reclusion-inclosure-nudges-creed
+>edrec
+It's an Us Creed, not just a creed.
+\\
+#ttc-table-of-reclusion-inclosure-nudges-educer
+>educre
+It's for many educers, not just one.
 
 @sli
 #slider test for decurse

@@ -165,6 +165,10 @@ Score in a scenario: 10 out of 45 total points in the current region, Oyster. Lo
 >e
 /^Hardest Trashed Dearths
 
+#slider test for step
+>tspe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >step
 by one point
 

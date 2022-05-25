@@ -619,7 +619,7 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 >exits
 There are two unblocked exits: east to Disowned Downside and west.
 
-#ttc-table-of-otters-attacks-us-creed
+#ttc-table-of-otters-attacks-educers-us-creed
 >attack us creed
 It'd hurt to bang your firsts on the Us Creed, so you resort to seeing red and whispering "'Cused-er and 'cused-er!"
 

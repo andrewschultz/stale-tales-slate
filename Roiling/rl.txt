@@ -896,6 +896,14 @@ ARTSY it is.
 Yes. ?RYRY leaves us with (IA)/S/(AI)/(SD)/(AIE).
 That gives us (AI)S(AI)DE.
 ISADE doesn't work, so, ASIDE.
+# logic for rescued recused seducer secured
+?What can I do with the Us Creed?
+It has four words: RESCUED RECUSED SEDUCER SECURED. These are what make your settler go funny.
+(CD)E(CDS)(UC)(USCR)(CRDS)(EU) are the possibilities. Note slot 7 must, then, be E as you need somewhere to put the second E.
+(CD)E(CDS)(UC)(USCR)(CRDS)E is what's left. Now if the U is in slot 4, things fall to DESU(CR/RC)E. Neither is a word.
+(CD)E(CDS)U(SCR)(CRDS)E is what's left, and this requires some guessing.
+D in slot 3 gives CEDU(RS)(RS)E.  D in slot 6 gives CESURDE. So it is in slot 1. DE(CS)U(SCR)(SCR)E. But DESUCRE/DESURCE doesn't work. So C is in slot 3.
+That leaves DECUSRE and DECURSE. DECURSE it is.
 >STORE H
 >>RUSTIC CITRUS
 # logic for sated stead

@@ -1155,6 +1155,20 @@ As you kick at the area, a vision of a red hate urn, replete with frowns and sco
 @hin
 DEBUG INFO: pest pets hinting.
 
+@nudmis
+#ttc-table-of-oyster-readables-pest-pets
+>read pest pets
+You notice PEP-TESTS as the brand name, once you have a look.
+\\
+#ttc-table-of-oyster-spechelp-pest-pets
+>epst
+The pest pets seem less persistent for a moment.
+
+@sli
+#slider test for step
+>tspe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >step
 by one point
 }}SCORE++

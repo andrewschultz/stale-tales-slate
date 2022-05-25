@@ -1124,6 +1124,16 @@ They snot nots. Tons. Brusque, queer BS. You need to take action, instead.
 Your score has just gone up by one point
 
 >e
+#ttc-table-of-oyster-unmatched-topic-responses-pest-pets
+>ask pets about abcd
+They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something.
+\\
+>ask pets about elvira
+They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something.
+
+>step
+Your score has just gone up by one point
+
 >seek
 Your score has just gone up by one point
 

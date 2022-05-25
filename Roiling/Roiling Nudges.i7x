@@ -2007,6 +2007,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "forec"	333002970	--	--	"[fresc]."
 "hidings"	346078256	--	hidings-dishing rule	"[locname]."
 "hiding"	249804290	--	hidings-dishing rule	"[locname]."
+"creed"	380970695	educers us creed	--	"It's an Us Creed, not just a creed."
+"educer"	486076502	educers us creed	--	"It's for many educers, not just one."
 
 to say whole-citadel of (citplur - a number):
 	say "It'll take more to destroy the whole citadel and not just the alcove[plur of citplur] or coeval[plur of citplur]"
