@@ -640,7 +640,7 @@ smilies	"The smilies momentarily grow eyebrows that point aggressively, then van
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
 oils2	"[if player is not in moor][oils-need-purpose][else]The oils could change the moor into something more fertile, but not that[end if]."
-oils	"[if player is not in moor][oils-need-purpose][else if soil is touchable]No, that wouldn't need the soil as a foundation[else]The oils could change the moor into something more fertile, but not that[end if]."
+oils	"[if player is not in moor][oils-need-purpose][else]The soil is there to support something, but not quite that[end if]." [ this is for the edge case where someone types SSOIL or something. ]
 
 to say oils-need-purpose: say "The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space"
 
@@ -768,7 +768,7 @@ black door	"The black door just sits there."
 missile	"The missile emits an almost giggly sound but doesn't actually change."
 panel	"The panel bleeps a 'stop that' sort of warning."
 hallway	"You already have a passage east. Don't close it."
-soil	"[if silo is in location of player]The silo is quite an accomplishment. You wouldn't want to ruin it[else]The soil is right as-is, but maybe something can go on it[end if]."
+soil	"[if silo is in location of player]The silo is quite an accomplishment. You wouldn't want to ruin it[else]The soil is there to support something, but not quite that[end if]."
 steer button	"No, the steer button [b]HAS[r] to be right."
 shoot button	"No, the shoot button [b]HAS[r] to be right."
 

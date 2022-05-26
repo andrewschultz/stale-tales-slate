@@ -6726,16 +6726,16 @@ check opening griefd fridge:
 		move grist to kitchen;
 		move cake pan to kitchen;
 	else:
-		say "You reopen and peer on: [whats-in-fridge].";
+		say "You reopen and peer on. [whats-in-fridge].";
 	the rule succeeds;
 
 to say whats-in-fridge:
 	if fridge-score is 2:
-		say "nothing's left";
+		say "Nothing's left";
 	else if fridge-score is 1:
-		say "only [if grist is in kitchen]the grist[else]the cake pan[end if] remains";
+		say "Only [if grist is in kitchen]the grist[else]the cake pan[end if] remains";
 	else:
-		say "the grist and cake pan are still";
+		say "The grist and cake pan are still";
 	say " in the fridge";
 
 to say guards-say-hi: say ". [if fridge-score is 0]They smile and apologize awkwardly, and you say no problem[else if fridge-score is 1]They thank you for leaving enough food to tide them over but not too much. They needed room for a feast[else]They thank you for leaving them so much food even after they--well. They were too lazy when they woke up[end if]";
