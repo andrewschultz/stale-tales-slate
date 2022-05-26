@@ -392,6 +392,7 @@ to say reject:
 	d "The hash of the command is [fullcmd]. The hash of word #1 is [firstword].";
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
+			d "[the-from entry] fungible.";
 			if firstword is the fullhash entry or fullcmd is the fullhash entry:
 				say "[spec-help of the-from entry]";
 				if last-hash is fullcmd or last-hash is firstword:
@@ -409,6 +410,19 @@ to say reject:
 	if table of general nudges is hash-found, continue the action;
 	if found-misspelled-anagram, continue the action;
 	say "[verb-cue][warn-inc]."
+
+to decide whether found-misspelled-anagram:
+	let quickcmd be the rough-hash of the player's command;
+	let quickfirstword be the rough-hash of word number 1 in the player's command;
+	d "[quickcmd] / [quickfirstword] for binary hash.";
+	repeat through regana of mrlp:
+		if the-from entry is fungible:
+			d "[the-from entry] fungible.";
+			if quickcmd is binhash entry or quickfirstword is binhash entry:
+				say "[spec-help of the-from entry]";
+				ital-say-lb "you may have misspelled things, though. Too many or few of one letter.";
+				decide yes;
+	decide no;
 
 to say verb-cue: say "That's not something you can say, do or see here. For a list of common verbs, type [b]VERBS[r]"
 
@@ -6712,7 +6726,7 @@ to decide which number is fridge-score:
 	if cake pan is moot, increment temp;
 	decide on temp;
 
-description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if grist is not off-stage]. You remember [whats-in-fridge], too[else]. It doesn't appear locked or anything. It may or may not be useful, but it looks easy to [b]OPEN[r][end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if grist is not off-stage]. [whats-in-fridge], too, you remember[else]. It doesn't appear locked or anything. It may or may not be useful, but it looks easy to [b]OPEN[r][end if][one of]. Written in dust (which you rub off and copy to your notepad) you see [second custom style]NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[r][or][stopping]."
 
 after examining griefd fridge:
 	pad-rec "warts";
@@ -9392,7 +9406,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					try fliptoing the-from entry;
 					the rule succeeds;
 				if the-from entry is sliver, break;
-				if the-from entry is oils and the-to entry is silo and soil is touchable, break;
+				if the-from entry is oils and the-to entry is silo and soil is in location of player, break;
 			if the-to entry is touchable and the-to entry is not reversible:
 				reject-msg the-to entry;
 				do nothing instead;
