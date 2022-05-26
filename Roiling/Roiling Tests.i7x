@@ -347,8 +347,8 @@ carry out hashchecking:
 		if QQ is not demo dome:
 			repeat through regana of QQ:
 				now this-hash is the hash of right-word entry;
-				 if hashkey entry is not this-hash:
-					say "Bad flip hash for [the-from entry]/[right-word entry]: [hashkey entry] should be [this-hash].";
+				 if fullhash entry is not this-hash:
+					say "Bad flip hash for [the-from entry]/[right-word entry]: [fullhash entry] should be [this-hash].";
 					now my-bool is true;
 	if my-bool is false:
 		say "Hooray! No bad hashes in tables of anagrams.";

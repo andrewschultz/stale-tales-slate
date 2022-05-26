@@ -1367,9 +1367,9 @@ when play begins (this is the intro-hashes rule):
 			repeat through regana of QQ:
 				if the-from entry is uncluing:
 					now the-from entry is flippable;
-				if there is no hashkey entry or hashkey entry is 0:
-					now hashkey entry is the hash of the printed name of the-from entry;
-					d "full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [hashkey entry].[line break]";
+				if there is no fullhash entry or fullhash entry is 0:
+					now fullhash entry is the hash of the printed name of the-from entry;
+					d "full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [fullhash entry].[line break]";
 
 chapter undo allows
 
@@ -3301,11 +3301,11 @@ to say reject:
 	now firstwordhash is the hash of word number 1 in the player's command;
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
-		if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
-			if the-to entry is not the-from entry and the-to entry is touchable and the-to entry is final-flipped:
+		if cmdhash is the fullhash entry or firstwordhash is the fullhash entry:
+			if the-to entry is not the-from entry and the-to entry is final-flipped and the-to entry is fungible:
 				say "[good-enuf of the-to entry][line break]";
 				continue the action;
-			if the-from entry is reflexed and the-from entry is touchable and the-from entry is final-flipped:
+			if the-from entry is reflexed and the-from entry is final-flipped and the-from entry is enclosed by location of player:
 				say "[good-enuf of the-from entry][line break]";
 				continue the action;
 			if the-from entry is fungible:
@@ -3327,7 +3327,7 @@ to say reject:
 						say "You don't know if you want to put the Respect Specter or yourself through that right now. The Respect Specter is there to help you with the cheat function, not the slider.";
 						continue the action;
 					let old-headaches be headaches;
-					if cmdhash is hashkey entry:
+					if cmdhash is fullhash entry:
 						match-process the player's command and the right-word entry;
 					else:
 						match-process word number 1 in the player's command and the right-word entry;
@@ -3355,8 +3355,8 @@ to say reject:
 					if rq is active:
 						say "With that conversation, you can't concentrate on much...";
 						continue the action;
-					if cmdhash is not the hashkey entry:
-						if firstwordhash is the hashkey entry:
+					if cmdhash is not the fullhash entry:
+						if firstwordhash is the fullhash entry:
 							say "[line break](In particular, your first word was on the right track.)[line break]";
 						else:
 							say "[line break](Small note: perhaps just the first word may work. You generally don't need a second word to solvve a puzzle.)[line break]";
@@ -3369,6 +3369,7 @@ to say reject:
 			say "It looks like you may be trying to do things with the settler. This game uses the simplified [b]SCAN[r] ([b]OBJECT[r]).";
 			now settler-try is true;
 			the rule succeeds;
+	if found-misspelled-anagram, continue the action;
 	if mrlp is otters:
 		if the player's command matches the regular expression "^<a-z>+ly\b":
 			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else][ly-ish].";
@@ -3382,11 +3383,29 @@ to say reject:
 		else if hash of the player's command is 291640279 and pins are reflexive:
 			do nothing;
 		else:
-			say "The only thing required here is muck with the dialer right.";
+			say "The only thing required here is to muck with the dialer right.";
 			continue the action;
 	say "[generic-reject]";
 	if Elmo is touchable, process the sign-imminent rule;
 
+to decide whether found-misspelled-anagram:
+	let quickcmd be the rough-hash of the player's command;
+	let quickfirstword be the rough-hash of word number 1 in the player's command;
+	d "[quickcmd] / [quickfirstword] for binary hash.";
+	repeat through regana of mrlp:
+		if the-from entry is fungible:
+			if quickcmd is binhash entry or quickfirstword is binhash entry:
+				if (the-from entry is disk or the-from entry is skid) and disk is not off-stage:
+					say "[sk2dsk].";
+				else if the-from entry is part of the diorama and the the-to entry is ever-study:
+					say "You know what to change [the the-from entry] back to: [the the-to entry]. There's no third option.";
+				else if the-from entry is concisions and s-c is touchable:
+					next;
+				else:
+					say "[spec-help of the-from entry]";
+				ital-say-lb "you may have misspelled things, though. Too many or few of one letter.";
+				decide yes;
+	decide no;
 to say generic-reject:
 	say "That's not something you can say, do or see here. For a general list of verbs, type [b]VERBS[r], or for options, type [b]OPTIONS[r]. ";
 	unless qbc_litany is Table of No Conversation:
@@ -5200,9 +5219,10 @@ this is the towers-parse rule:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
 			the rule succeeds;
-	else if nastier stainer retinas are in location of player and the player's command exactly matches the text "in tears":
-		say "Clever, but maybe you can make [the retinas] so they feel a need to be in tears.";
-		the rule succeeds;
+	if nastier stainer retinas are in location of player:
+		if the player's command exactly matches the text "in tears":
+			say "Clever, but maybe you can make [the retinas] so they feel a need to be in tears.";
+			reject the player's command;
 
 this is the otters-parse rule:
 	otters-plurcheck;
@@ -7463,7 +7483,7 @@ check fliptoing (this is the check off preconditions before flipping rule):
 		if noun is the-to entry and the-from entry is cromulent:
 			if the-from entry is reflexed and noun is not gast-affected, say "[reject]" instead;
 			if there is a pre-rule entry and flip-spill-flag is false:
-				if the hash of the player's command is hashkey entry or hash of word number 1 in the player's command is hashkey entry:
+				if the hash of the player's command is fullhash entry or hash of word number 1 in the player's command is fullhash entry:
 					abide by the pre-rule entry;
 
 carry out fliptoing (this is the main fliptoing rule):
@@ -8114,6 +8134,8 @@ after scaning when player is in Dusty Study (this is the pad-diorama rule) :
 		pad-rec "diorama";
 	continue the action;
 
+ a dio-part is a kind of thing. a dio-part can be ever-study. a dio-part is usually not ever-study. a dio-part is usually hinthelpy.
+
 does the player mean examining the steel pad: it is unlikely.
 
 to say dior-scan:
@@ -8198,7 +8220,7 @@ before going up in Dusty Study:
 	now highest heights is visited;
 	move closets backdrop to all visited rooms;
 
-check entering chimney:	try going up instead;
+check entering chimney: try going up instead;
 
 check reading diorama: try examining the notice instead;
 
@@ -8217,11 +8239,11 @@ before taking (this is the dumb take jokes rule) :
 
 section pavement / event map
 
-the pavement is part of the diorama. the pavement is spacy. the pavement is hinthelpy. description is "It's sidewalk pavement. It seems like something has been written on it, but it's too bumpy to read, especially since the pavement is so small."
+the pavement is an ever-study dio-part. it is part of the diorama. the pavement is spacy. the pavement is hinthelpy. description is "It's sidewalk pavement. It seems like something has been written on it, but it's too bumpy to read, especially since the pavement is so small."
 
 a-text of pavement is "YRYRR*RYR". b-text of pavement is "YRYRR*RYR". parse-text of pavement is "-[sp]x[sp]-[sp]x[sp]x[sp] [sp]x[sp]-[sp]x".
 
-the event map is a thing in Adorb Bardo. it is hinthelpy. description of event map is "You can read it from here--maybe because you remember it, but you can."
+the event map is a dio-part in Adorb Bardo. it is hinthelpy. description of event map is "You can read it from here--maybe because you remember it, but you can."
 
 after examining event map:
 	let bluh be false;
@@ -8251,17 +8273,17 @@ a-text of event map is "RYRYRYRR". b-text of event map is "RYRYRYRR". parse-text
 
 section platform / farm plot
 
-the platform is part of the diorama. it is hinthelpy. the platform is spacy. description is "It's one of those speaking platforms that people would stand behind. If it weren't so small."
+the platform is an ever-study dio-part. it is part of the diorama. the platform is spacy. description is "It's one of those speaking platforms that people would stand behind. If it weren't so small."
 
 a-text of platform is "RYRR*RRYR". b-text of platform is "RYRR*RRYR". parse-text of platform is "x[sp]-[sp]x[sp]x[sp] [sp]x[sp]x[sp]-[sp]x".
 
-the farm plot is a thing in Adorb Bardo. it is hinthelpy. description is "It doesn't actually have any dirt on it or it'd have crumbled long ago. If the words [b]FARM PLOT[r] weren't traced in it, in fact, you'd probably think it was just a dirt road. Hooray for helpful documentation."
+the farm plot is a dio-part in Adorb Bardo. description is "It doesn't actually have any dirt on it or it'd have crumbled long ago. If the words [b]FARM PLOT[r] weren't traced in it, in fact, you'd probably think it was just a dirt road. Hooray for helpful documentation."
 
 a-text of farm plot is "RRYRRYRR". b-text of farm plot is "RRYRRYRR". parse-text of farm plot is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 section pedestal / steel pad
 
-the pedestal is part of the diorama. the pedestal is hinthelpy and spacy. description is "Too small to put anything on, but it's a good size for instructional purposes."
+the pedestal is an ever-study dio-part. it is part of the diorama. it is spacy. description is "Too small to put anything on, but it's a good size for instructional purposes."
 
 a-text of pedestal is "RRYYR*RYR". b-text of pedestal is "RRYGR*RGR". parse-text of pedestal is "x[sp]x[sp]E[sp]E[sp]x[sp] [sp]x[sp]A[sp]x".
 
@@ -8273,13 +8295,13 @@ a-text of steel pad is "RYRYRRYR". b-text of steel pad is "RYRGRRGR". parse-text
 
 section brass crag / crabgrass
 
-some crabgrass is part of the diorama. the crabgrass is hinthelpy and spacy and singular-named. description is "It might be fake, seeing as how it hasn't died after all these years."
+some crabgrass is an ever-study dio-part. it is part of the diorama. it is spacy and singular-named. description is "It might be fake, seeing as how it hasn't died after all these years."
 
 indefinite article of crabgrass is "some".
 
 a-text of crabgrass is "RRYRR*RRYR". b-text of crabgrass is "RPGRR*RRYR". parse-text of crabgrass is "x[sp]R[sp]A[sp]x[sp]x[sp] [sp]x[sp]x[sp]A[sp]x".
 
-the brass crag is a hinthelpy thing in Adorb Bardo. description is "It would be majestic if it weren't so miniature. You think. Well, it wasn't meant as scenery."
+the brass crag is a dio-part in Adorb Bardo. description is "It would be majestic if it weren't so miniature. You think. Well, it wasn't meant as scenery."
 
 a-text of brass crag is "RRYRRRYRR". b-text of brass crag is "RPGRRRYRR". parse-text of brass crag is "x[sp]R[sp]A[sp]x[sp]x[sp]x[sp]A[sp]x[sp]x".
 
@@ -16024,7 +16046,7 @@ rodyon is a truth state that varies.
 
 after fliptoing a picaro (this is the loftier trefoil exit rule):
 	if noun is Rodney, continue the action;
-	d "[list of picaros in Loftier Trefoil].";
+	d "picaro flip-check: [here-picaros] [list of picaros in Loftier Trefoil].";
 	if here-picaros < 4:
 		min-up;
 	else if here-picaros is 4:
@@ -19432,7 +19454,7 @@ chapter Us Creed
 
 the Educers Us Creed is a boring LLPish vanishing thing. description is "You can't really miss the [creed] at the top, but there's more below. Sneaky, sneaky Elvira, appropriating your anagramming skill for the final creed to bring her own form of unity to Yorpwald.[paragraph break]You figure you can just close the deal to the west, but this would be a nice detail to take care of. It's probably not any super-easy word. Maybe it's an uncommon one, or it's one that logically makes sense, but people never thought of it. I mean, as a general safety precaution, she probably wouldn't make it too obvious for you to rip apart. And she also wouldn't make it, like, where she stored her soul."
 
-printed name of Educers Us Creed is "[i]EDUCERS, US[r] creed".
+printed name of Educers Us Creed is "[i]EDUCERS, US[r] Creed".
 
 a-text of Educers Us Creed is "RYRYRRY". b-text of Educers Us Creed is "RG???RY". parse-text of Educers Us Creed is "x[sp]e[sp]x[sp]?[sp]?[sp]x[sp]e".
 
@@ -20588,7 +20610,7 @@ section concisions
 to say s-i-c:
 	say "[if player has s-i][s-i][else if player has s-c][s-c][else]BUG coin related item should show[end if]"
 
-the concisions are a privately-named LLPish reflexive thing. printed name of concisions is "weird glow around the [s-i-c]". description is "(you shouldn't be able to see this.)"
+a concisions is a privately-named LLPish singular-named reflexive thing. printed name of concisions is "weird glow around the [s-i-c]". description is "(you shouldn't be able to see this.)"
 
 understand "concisions" as concisions when debug-state is true.
 

@@ -893,17 +893,4 @@ check going nowhere in hub-room:
 
 to say if-bush: say "[if hubs bush is in location of player]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]"
 
-volume checking for misspellings/character frequency in anagram candidates
-
-to decide whether found-misspelled-anagram:
-	let quickcmd be the rough-hash of the player's command;
-	let quickfirstword be the rough-hash of word number 1 in the player's command;
-	repeat through regana of mrlp:
-		if the-from entry is fungible:
-			if quickcmd is binhash entry or quickfirstword is binhash entry:
-				say "[spec-help of the-from entry]";
-				ital-say-lb "you may have misspelled things, though. Too many or few of one letter.";
-				decide yes;
-	decide no;
-
 STS Common ends here.
