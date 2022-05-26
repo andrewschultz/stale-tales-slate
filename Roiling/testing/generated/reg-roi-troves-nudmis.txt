@@ -26,45 +26,59 @@
 #testcase-mistake-roiling-real-hot
 >real hot
 But what emotion would provide heat?
+
 #ttc-table-of-loather-rathole-nudges-hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
+
 #ttc-table-of-loather-rathole-nudges-hurts
 >hurst
 No way you could change even one hurt thru on your own. You just need to get by.
+
 #ttc-table-of-loather-rathole-nudges-rathole
 >reahlot
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+
 #ttc-table-of-troves-nudges-poverty
 >pevtryo
 There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details.
+
 #ttc-table-of-troves-nudges-troev
 >tevro
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #ttc-table-of-troves-nudges-storev
 >tevros
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #ttc-table-of-troves-nudges-spoil
 >spilo
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
+
 #ttc-table-of-troves-nudges-spoiloplis
 >spilospilo
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
+
 #ttc-table-of-loather-rathole-nudges-potholes
 >potholes
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
+
 #ttc-table-of-loather-rathole-nudges-pothole
 >pothole
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
+
 #ttc-table-of-troves-nudges-pagepage
 >pegagepa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+
 #ttc-table-of-troves-nudges-peg
 >gep
 You pause, then note the author's middle initial, which seems annoyingly important.
+
 #ttc-table-of-troves-nudges-egg
 >geg
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+
 #ttc-table-of-troves-nudges-pea
 >epa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
@@ -76,6 +90,13 @@ Score in a scenario: 0 out of 30 total points in the current region, Troves. Low
 >gaep
 You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-pa-egg-pea
+>ggaep
+You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-pa-egg-pea
 >scan pa egg pea
 Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out.
@@ -94,12 +115,20 @@ You probably did what you could. Or not-did.
 #ttc-table-of-troves-spechelp-tears-taser
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
+
+#testcase-misspellings-table-of-troves-spechelp-tears-taser
+>sstaer
+The tears taser makes an odd noise, as if it is recalibrating.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-tears-taser
 >scan taser
 The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
+
 #ttc-table-of-loather-rathole-nudges-tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
+
 #ttc-table-of-troves-readables-tears-taser
 >read tears taser
 RATES is written on the tears taser, in red.
@@ -114,6 +143,13 @@ Score in a scenario: 2 out of 30 total points in the current region, Troves. Low
 >haet
 You feel slightly less cold but mad at yourself for not doing better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-eh-at-heat
+>hhaet
+You feel slightly less cold but mad at yourself for not doing better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-eh-at-heat
 >scan heat
 Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
@@ -128,16 +164,26 @@ Score in a scenario: 3 out of 30 total points in the current region, Troves. Low
 #+testcase-mistake-roiling-real-hot
 >real hot
 You already got hot. Now you need to summon a different emotion.
+
 #ttc-table-of-troves-done-rejects-heat
 >haet
 Don't need to overheat, or overhate.
+
 #ttc-table-of-troves-spechelp-race-acre
 >caer
 For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-race-acre
+>ccaer
+For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-race-acre
 >scan race acre
 Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT.
+
 #testcase-mistake-roiling-a-rec
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
@@ -199,10 +245,23 @@ No, you'll want to zone out the whole verbose distraction.
 #ttc-table-of-troves-spechelp-mussier-misuser
 >sumirse
 The mussier misuser looks around a bit, worried someone might be out-thinking them.
+
+#testcase-misspellings-table-of-troves-spechelp-mussier-misuser
+>sumirre
+The mussier misuser looks around a bit, worried someone might be out-thinking them.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-spechelp-sob-ever-verbose
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-sob-ever-verbose
+>observo
+The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-sob-ever-verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
@@ -228,6 +287,13 @@ Score in a scenario: 5 out of 30 total points in the current region, Troves. Low
 >stpo
 The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-stop-post
+>sstpo
+The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-bustle-sublet-nudges-observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
@@ -264,6 +330,13 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-a-sty-tasty-say
+>yayts
+No. You pause. That can't be it. You need to do something, or nothing, differently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-readables-a-sty-tasty-say
 >read sty
 YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
@@ -290,14 +363,29 @@ The bee's gender is only relevant to the point of knowing it's a senora.
 #ttc-table-of-boarded-roadbed-nudges-stop
 >stpo
 The stop post is in the past. No need to p.s. tweaking it.
+
 #ttc-table-of-troves-spechelp-evil-bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-evil-bee
+>belieiv
+The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-spechelp-snore-so-arena
 >reasno
 The SNORE SO ARENA flashes weirdly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-snore-so-arena
+>rreasno
+The SNORE SO ARENA flashes weirdly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-boarded-roadbed-nudges-roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -354,6 +442,12 @@ Drowning something without reason further in reason is unreasonable.
 It's...hmm...you remember all the clues, but what order to place them in, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That's a decent omen.
 
+#testcase-misspellings-table-of-troves-spechelp-l-clear-cellar
+>recaal
+It's...hmm...you remember all the clues, but what order to place them in, now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >recall
 by one point
 
@@ -381,6 +475,13 @@ You would like to be, but you can't just want others to. Change comes from withi
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-diapers
+>ddespari
+Staring again at the diapers, you are depressed you couldn't even get being depressed right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-drain-nadir-nudges-ires
 >irse
 It's an IRES PAD, not just ires.
@@ -398,6 +499,13 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-large-regal-lager
+>gglaer
+No...that is not quite the way to fight the temptation of the wicked brew.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-large-regal-lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
@@ -441,6 +549,12 @@ It's the full song name--I'd Cede.
 You try to groove to I'd Cede, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a decent omen.
 
+#testcase-misspellings-table-of-troves-spechelp-id-cede
+>dicide
+You try to groove to I'd Cede, but that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >decide
 Your score has just gone up by one point
 
@@ -469,6 +583,13 @@ Getting drunk will not solve your problems. Besides, you missed your "chance" wi
 >bolstre
 That's not quite the way to deserve that lobster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-lobster
+>bbolstre
+That's not quite the way to deserve that lobster.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-bortles-lobster
 >scan bortles lobster
 Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
@@ -497,8 +618,13 @@ SAP-LEER is the "ironic" name of the company that produced this monstrosity. The
 >scan pleaser leapers
 You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
 #ttc-table-of-troves-spechelp-pleaser-leapers
->pleaser leapers
+>pleasre
 The leapers almost seem to dance around for a bit.
+
+#testcase-misspellings-table-of-troves-spechelp-pleaser-leapers
+>leapars
+The leapers almost seem to dance around for a bit.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >relapse
 Your score has just gone up by one point
@@ -518,6 +644,13 @@ The lobster nourished you physically. Time to move on, though you could poke at 
 >mastre
 That's not quite the way to focus on the ME ARTS.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-me-arts
+>mmastre
+That's not quite the way to focus on the ME ARTS.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-me-arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
@@ -543,6 +676,13 @@ The ME ARTS nourished you spiritually. The lobster nourished you physically. Tim
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
 DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-lead
+>ddela
+You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
+DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
@@ -569,6 +709,13 @@ It's not just any magazine. It's DIVORCES!
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
 DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-divorces
+>ddivorcse
+DIVORCES suddenly seems more alluring and more rubbish at once.
+DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-readables-divorces
 >read divorces
 All sorts of articles that make you see red. This one's about
@@ -614,6 +761,13 @@ The Miser Emirs' Mires are, well, mired. You need to focus on something else, or
 >desier
 Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
 DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-si-reed
+>disire
+Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
+DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-readables-See-Dir
 >read see dir
 Nothing catches your eye except an article on RIDEES, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out.
@@ -660,6 +814,13 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-praise-spirea
+>aaspier
+That's not quite the way to look forward to praise. But it may be a start.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-praise-spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
@@ -688,6 +849,13 @@ You're wanting praise too much, now.
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-rivets
+>sstriev
+Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-readables-rivets
 >read rivets
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
@@ -725,6 +893,11 @@ Wow. You have even more to think about, now! It's certainly a thoughtful piece o
 #ttc-table-of-troves-spechelp-sectarian-craniates
 >sectarian craniates
 Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet.
+
+#testcase-misspellings-table-of-troves-spechelp-sectarian-craniates
+>creniates
+Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >ascertain
 >score
@@ -765,6 +938,12 @@ The card's writing is more important.
 The END PRONER POD seems to pulse slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the END PRONER POD. That's a decent omen.
 
+#testcase-misspellings-table-of-troves-spechelp-end-proner-pod
+>eerpdon
+The END PRONER POD seems to pulse slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the END PRONER POD. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >ponder
 Your score has just gone up by one point
 
@@ -784,6 +963,13 @@ You don't need to riff on any location names to win the game, unless there's not
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-red-vees
+>desserv
+The red vees seem like they should link together somehow, but you don't have things right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-readables-red-vees
 >read red vees
 /Etched into the vees in red are the names of this motivational device's inventors\. One is (Ed Evers|Erv Dees)\.
@@ -843,6 +1029,13 @@ The votes vetos stove is just symbolic. The real voter suppression happens in th
 >lats
 You don't quite draw inspiration from the salt, but there can't be that many alts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-salt
+>llats
+You don't quite draw inspiration from the salt, but there can't be that many alts.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-salt
 >scan salt
 Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
@@ -879,6 +1072,13 @@ Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, yo
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-marble-blamer-balmer
+>rrambel
+seems slightly taken aback
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >mbb 2
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
@@ -898,6 +1098,13 @@ Neither you nor Marble Blamer Mr. Beal turns into hay.
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-marble-blamer-mr-beal
+>rrambel
+seems slightly taken aback
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-marble-blamer-mr-beal
 >scan marble blamer mr beal
 Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
@@ -907,6 +1114,13 @@ Wow! Three names. You don't know if, say, Balmer would be easier but, well, you 
 >resits
 Sister Tressi seems a bit more upset than usual.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-sister-tressi-siters
+>resitt
+Sister Tressi seems a bit more upset than usual.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-troves-scannotes-sister-tressi-siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't 100% as you'd expect, maybe you'd better learn to think your way around it.
@@ -922,6 +1136,11 @@ Well, it's a big book, so you probably can't figure out everything you need to d
 #ttc-table-of-troves-spechelp-creationism-reactionism
 >reactionims
 You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, figuring Creationism, Reactionism is the toughest optional puzzle in the game.
+
+#testcase-misspellings-table-of-troves-spechelp-creationism-reactionism
+>reactionasm
+You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, figuring Creationism, Reactionism is the toughest optional puzzle in the game.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >ramble
 Your score has just gone up by one point
@@ -949,6 +1168,12 @@ The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting 
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. That's a decent omen.
+
+#testcase-misspellings-table-of-troves-spechelp-trance-nectar
+>rrecatn
+Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >recant
 Your score has just gone up by one point

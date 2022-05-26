@@ -72,9 +72,11 @@ You think you're on to something, but no--you can't find anything to focus on, t
 It's not that easy. Find what to mend.
 >mend id
 It's not that easy. Find what to mend.
+\\
 #testcase-mistake-roiling-dim-den
 >dim den
 You remain outside in (relative) light.
+\\
 #testcase-mistake-roiling-dim-end-end-dim
 >dim end
 Okay, if you say so...
@@ -84,22 +86,34 @@ NOTE: this joke death was an easter egg. I hope it amused you. The death message
 Okay, if you say so...
 NOTE: this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.
 >undo
+\\
 #ttc-table-of-minded-midden-nudges-midden
 >middne
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-otters-nudges-ottre
 >otter
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+\\
 #ttc-table-of-otters-nudges-storet
 >storte
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+\\
 #ttc-table-of-minded-midden-nudges-bare
 >baer
 No, you need a couple more letters. Ones that make a word weak enough to control.
+\\
 #ttc-table-of-otters-spechelp-bleary-barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-bleary-barley
+>bbareyl
+The barley rustles in an imaginary wind--but hardly at all.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-scannotes-bleary-barley
 >scan bleary barley
 That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess.
@@ -231,6 +245,13 @@ No, you need a couple more letters, but not the usual ones. Ones that make a wor
 >cindesr
 The cinders glow and even warm up for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-cinders
+>ccindesr
+The cinders glow and even warm up for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-readables-cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
@@ -260,6 +281,13 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-ed-riley
+>riedily
+Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
+DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-lied-2
 >lied
 You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
@@ -917,6 +945,11 @@ The players certainly do dance around a lot with their talk, so it's no surprise
 >sarpley
 The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
 \\
+#testcase-misspellings-table-of-otters-spechelp-parleys-splayer-players
+>ssarpley
+The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-scannotes-yer-all-a-yellr
 >scan yer all
 Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very.
@@ -924,6 +957,11 @@ Well, you've got to figure that decoding the ambiguous settings will be as compl
 #ttc-table-of-otters-spechelp-yer-all-a-yellr
 >erlaly
 Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
+\\
+#testcase-misspellings-table-of-otters-spechelp-yer-all-a-yellr
+>realyy
+Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-disowned-downside-nudges-real
 >elra
@@ -1119,6 +1157,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-otters-spechelp-cut-ya-all-cult-laya
 >actualyl
 The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
+\\
+#testcase-misspellings-table-of-otters-spechelp-cut-ya-all-cult-laya
+>actuualy
+The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-scannotes-cut-ya-all-cult-laya
 >scan laya
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
@@ -1282,6 +1326,16 @@ The sea cube is unmoved. You may need to concentrate on the whole thing.
 >sea cueb
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: while some words are rather long, you probably see how to guess a letter or two even when you've got your powers back.
+>beecaus
+The sea cube shakes a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-sea-cube
+>bacause
+The sea cube shakes a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >seacueb
 The sea cube shakes a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
@@ -1289,6 +1343,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's
 >eesl
 The eels swim a bit faster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-eels
+>ells
+The eels swim a bit faster.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >else
@@ -1464,14 +1524,29 @@ The only way you seem to be able to go is north to Disowned Downside.
 #ttc-table-of-bran-barn-nudges-barn
 >banr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-otters-spechelp-ghoul-hat
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-ghoul-hat
+>althougg
+Mr. Lee shakes his head and adjusts the ghoul hat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-gore-ogre
 >erog
 The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-gore-ogre
+>eerog
+The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-bran-barn-nudges-infidel
 >infidle
 The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing.
@@ -1526,6 +1601,12 @@ Be nice. He's on your side.
 >howevre
 The vow here quiets down for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-vow-here
+>howevor
+The vow here quiets down for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for however
@@ -1559,6 +1640,13 @@ DEBUG INFO: min-up codepath
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-atmo-moat
+>mmota
+Hm, that's not it, but it must be elemental. No, elementary.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-scannotes-atmo-moat
 >scan atmo moat
 You feel sheepish having used the settler, but it's been a long journey.
@@ -1594,6 +1682,11 @@ You kind of hide the settler from the guardians, because you wonder if you shoul
 #ttc-table-of-otters-spechelp-pen-o-nope
 >epno
 The way west remains blocked, but you feel there has to be a simple way past.
+\\
+#testcase-misspellings-table-of-otters-spechelp-pen-o-nope
+>eepno
+The way west remains blocked, but you feel there has to be a simple way past.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for pen o nope
@@ -1766,15 +1859,33 @@ No, you need a couple more letters. Even with your powers back, you still need t
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-legendary
+>anragedly
+The imp looks slightly annoyed for a second. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-motleyer
 >remoteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-motleyer
+>romotely
+The imp looks slightly annoyed for a second. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-butlery
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-butlery
+>bbruteyl
+The imp looks slightly annoyed for a second. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #NOTE: the sly imp is not in the scannotes table because they are rerouted to their properties, but I still want a test.
 >scan sly imp
@@ -1840,6 +1951,13 @@ You probably want the owls not to swoop low. And you'll want to take care of the
 >owsl
 Hmm. The owls still swarm and swirl too fast.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-owls
+>oowsl
+Hmm. The owls still swarm and swirl too fast.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-lows
 >lows
 Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.
@@ -1943,20 +2061,44 @@ The ocelots would still be awkward even if they lost the clip-ons.
 The ocelots squint at you through their clip-ons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-ocelots
+>ocelets
+The ocelots squint at you through their clip-ons.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-leopard
 >leopadr
 The leopard almost seems to un-cuff its hands.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-leopard
+>lleopadr
+The leopard almost seems to un-cuff its hands.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-otters-spechelp-badger
 >badgre
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-badger
+>bbadgre
+The badger flexes imaginary suit lapels, then quickly goes back to brooding.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-satyr
 >satry
 The satyr puts a hand on its chin as if pondering deeper things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-satyr
+>ssatry
+The satyr puts a hand on its chin as if pondering deeper things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #testcase-mistake-roiling-ratsy
 >ratsy
@@ -2254,15 +2396,33 @@ The coma camo remains as-is. It's probably made by A-COM, and all their products
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-tallyhoing
+>loathingyy
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-callosity
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-callosity
+>stoicalyy
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-jollity
 >joltiyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-jollity
+>jolityy
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #NOTE: the whiners are not in the scannotes table because they are rerouted to their properties, but I still want a test.
 >scan whiners
@@ -2340,6 +2500,12 @@ The only way you seem to be able to go is north to Clarthead Cathedral.
 >raptro
 The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-raptor
+>raptot
+The raptor recoils slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @spoi
 #ttc-table-of-otters-anagrams-parrot
@@ -2407,6 +2573,13 @@ You can't do anything to the whistle until you have it.
 >epelyd
 Probably best to have the whistle before changing it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-weltish-whistle
+>depply
+Probably best to have the whistle before changing it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-perverse-preserve-nudges-preserve
 >preserev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -2433,9 +2606,21 @@ There's more than one throne, but it doesn't matter, really, for what you need t
 The thrones seem to buzz a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-thrones
+>tthronse
+The thrones seem to buzz a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-nails
 >naisl
 One of the nails seems to bend a bit.
+\\
+#testcase-misspellings-table-of-otters-spechelp-nails
+>nnaisl
+Another one of the nails seems to bend a bit.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >naisl
 Another one of the nails seems to bend a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nails. That's a decent omen.
@@ -2445,10 +2630,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the nails. That's a 
 The pines rustle as if an animal climbed through them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
 \\
+#testcase-misspellings-table-of-otters-spechelp-pines
+>ppinse
+The pines rustle as if an animal climbed through them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-spechelp-corona
 >coroan
 The corona scurries about for a bit before settling down again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-corona
+>ocrana
+The corona scurries about for a bit before settling down again.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-slain-as-nil
 >slain
 The nails are already dead as a doornail.
@@ -2655,6 +2853,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-otters-spechelp-asyllabic-lilac-bays
 >basicalyl
 You almost hear music as the lilac bays rustle.
+\\
+#testcase-misspellings-table-of-otters-spechelp-asyllabic-lilac-bays
+>basicalyy
+You almost hear music as the lilac bays rustle.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @verbs
 #verbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
@@ -2695,6 +2898,11 @@ The bales may be blase, but you don't think you'll mind this solution being blas
 #ttc-table-of-otters-spechelp-blase-bales
 >elsab
 The blase bales seem to darken and shake a bit.
+\\
+#testcase-misspellings-table-of-otters-spechelp-blase-bales
+>eelsab
+The blase bales seem to darken and shake a bit.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for sable
@@ -2918,6 +3126,12 @@ Hmm. The two yellows can't mean something like LREME. So it must be they are ide
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Elmer and Merle|Merle and Elmer). That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-aside-llp
+>aaseid
+/(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
+/DEBUG ONLY: You feel a slight psychic push-pull coming from between (Elmer and Merle|Merle and Elmer). That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >honestly
@@ -2964,6 +3178,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >honestyl
 The holy nest flutters silently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-holy-nest
+>hhonestyl
+The holy nest flutters silently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #+ttc-table-of-otters-nudges-hydra
 >w
 >hydar
@@ -3103,7 +3324,16 @@ There are two unblocked exits: east to Disowned Downside and west.
 Yup, you see red. Hooray for clues!
 \\
 #testcase-mistake-roiling-rec-dues-recs-due-due-recs-dues-rec
->rec dues recs due due recs dues rec
+>rec dues
+No, you do not have to give Elvira credit for audacity!
+\\
+>recs due
+No, you do not have to give Elvira credit for audacity!
+\\
+>due recs
+No, you do not have to give Elvira credit for audacity!
+\\
+>dues rec
 No, you do not have to give Elvira credit for audacity!
 \\
 #testcase-mistake-roiling-red-cues
@@ -3143,11 +3373,16 @@ For all Elvira's bashing of you as a pedantic anagrammist, she sure liked approp
 \\
 #ttc-table-of-otters-scannotes-educers-us-creed
 >scan us creed
-This one's all over the place. You notice nothing registers over the US CREED text, only the four words in the main bit.
+This one's all over the place. You notice nothing registers over the EDUCERS, US Creed's text, only the four words in the main bit.
 \\
 #ttc-table-of-otters-spechelp-educers-us-creed
 >ceredus
-The Us Creed seems to crumble so very slightly.
+The EDUCERS, US Creed seems to crumble so very slightly.
+\\
+#testcase-misspellings-table-of-otters-spechelp-educers-us-creed
+>ducurse
+The EDUCERS, US Creed seems to crumble so very slightly.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-reclusion-inclosure-nudges-creed
 >edrec
@@ -3164,7 +3399,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
 >decurse
-The US CREED crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
+The EDUCERS, US Creed crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
 First, though, to make her history.
 }}SCORE++
 }}CURMIN++
@@ -3192,6 +3427,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
+\\
+#testcase-misspellings-table-of-otters-spechelp-medals
+>qquickyl
+The medals waver noiselessly. Hm, that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-otters-scannotes-medals
 >scan medals
 The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
@@ -3294,6 +3536,13 @@ You don't see anything happen. Then you note red writing on the whistle which mi
 >deepyl
 The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
+\\
+#+testcase-misspellings-table-of-otters-spechelp-weltish-whistle
+>depply
+The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >read whistle
 Ed Plye, apparently, made the whistle.
 

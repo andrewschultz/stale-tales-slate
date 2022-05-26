@@ -539,7 +539,7 @@ DEBUG INFO: weltish whistle hinting.
 Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
 
 >decurse
-The US CREED crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
+The EDUCERS, US Creed crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
 First, though, to make her history.
 
 >score

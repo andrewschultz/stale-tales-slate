@@ -22,6 +22,7 @@
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
+
 #ttc-table-of-presto-prefigurings-plebe
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.

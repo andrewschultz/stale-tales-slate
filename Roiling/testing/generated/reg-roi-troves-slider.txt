@@ -114,6 +114,7 @@ Score in a scenario: 8 out of 30 total points in the current region, Troves. Low
 #slider test for reason
 >ersano
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 #slider test for believe
 >ebevlei
 Your settler begins to make noises: a low hum, but nothing really piercing.

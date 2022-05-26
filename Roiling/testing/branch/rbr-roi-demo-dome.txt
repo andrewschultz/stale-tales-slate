@@ -343,6 +343,7 @@ The only way you seem to be able to go is south to Peek Keep.
 #ttc-table-of-demo-dome-exhibit-tester-street-text-1
 >x tester street
 Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
+\\
 #ttc-table-of-demo-dome-exhibit-tester-street-text-2
 >g
 More on testing.

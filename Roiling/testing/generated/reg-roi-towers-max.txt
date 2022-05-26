@@ -43,72 +43,99 @@ Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 >gone
 Your score has just gone up by one point
 >undo
->wined
-Your score has just gone up by one point
->undo
->bleak
-Your score has just gone up by one point
->undo
->tenser
-Your score has just gone up by one point
->undo
->snared
-Your score has just gone up by one point
->undo
->cricked
-Your score has just gone up by one point
->undo
->ashen
-Your score has just gone up by one point
->undo
->olden
-Your score has just gone up by one point
->undo
->bored
-Your score has just gone up by one point
->undo
->calmer
-Your score has just gone up by one point
->undo
->warned
-Your score has just gone up by one point
->undo
->timider
-Your score has just gone up by one point
->undo
->stony
-Your score has just gone up by one point
->undo
->godly
-Your score has just gone up by one point
->undo
->lardy
-Your score has just gone up by one point
->undo
->normal
-Your score has just gone up by one point
->undo
->achier
-Your score has just gone up by one point
->undo
->learned
-Your score has just gone up by one point
->undo
->awed
-Your score has just gone up by one point
->undo
+
 >coyer
 Your score has just gone up by one point
 >undo
+
+>stony
+Your score has just gone up by one point
+>undo
+
+>awed
+Your score has just gone up by one point
+>undo
+
+>lardy
+Your score has just gone up by one point
+>undo
+
 >weedy
 Your score has just gone up by one point
 >undo
->eggier
+
+>godly
 Your score has just gone up by one point
 >undo
+
+>ashen
+Your score has just gone up by one point
+>undo
+
+>bleak
+Your score has just gone up by one point
+>undo
+
+>bored
+Your score has just gone up by one point
+>undo
+
+>wined
+Your score has just gone up by one point
+>undo
+
+>olden
+Your score has just gone up by one point
+>undo
+
+>achier
+Your score has just gone up by one point
+>undo
+
 >nearby
 Your score has just gone up by one point
 >undo
+
+>tenser
+Your score has just gone up by one point
+>undo
+
+>eggier
+Your score has just gone up by one point
+>undo
+
+>snared
+Your score has just gone up by one point
+>undo
+
+>warned
+Your score has just gone up by one point
+>undo
+
+>calmer
+Your score has just gone up by one point
+>undo
+
+>normal
+Your score has just gone up by one point
+>undo
+
+>cricked
+Your score has just gone up by one point
+>undo
+
+>timider
+Your score has just gone up by one point
+>undo
+
+>learned
+Your score has just gone up by one point
+>undo
+
+>pronest
+Your score has just gone up by one point
+>undo
+
 >recreant
 Your score has just gone up by one point
 >undo

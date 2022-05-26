@@ -21,6 +21,7 @@
 #ttc-table-of-notepad-entries-die-thou
 >pad die thou
 If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them.
+
 #ttc-table-of-notepad-entries-the-haunter
 >pad haunter
 The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it.

@@ -918,6 +918,7 @@ Posh Hops Shop
 
 >ask casper about elvira
 Before you can pull a bar seat abreast... "Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad." He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says "Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back."
+
 #ttc-table-of-oyster-ask-x-about-x-casper
 >ask casper about casper
 Once he starts talking about himself, he won't stop. All sorts of random stuff:

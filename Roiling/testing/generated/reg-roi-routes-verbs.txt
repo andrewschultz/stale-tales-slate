@@ -24,6 +24,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 #ttc-table-of-routes-attacks-scripture-picturers
 >attack scripture picturers
 A shameful attempt at vandalism.
+
 #ttc-table-of-routes-nowheres-same-mesa
 >n
 You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the south, after several minutes.

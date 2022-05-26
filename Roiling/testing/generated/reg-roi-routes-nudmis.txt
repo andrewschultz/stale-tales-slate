@@ -145,14 +145,29 @@ The church's name is not as important as its mission.
 #ttc-table-of-routes-scannotes-anti-sag-sit-a-nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
+
 #ttc-table-of-routes-spechelp-anti-sag-sit-a-nag
 >agastni
 You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-anti-sag-sit-a-nag
+>agistni
+You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-spechelp-side-art
 >astried
 There's something in the side art, but you're not sure if you need to figure it out just right now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-side-art
+>aastried
+There's something in the side art, but you're not sure if you need to figure it out just right now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-scannotes-lairage-regalia
 >scan lairage regalia
 OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic.
@@ -164,6 +179,13 @@ While signboard is nine letters, the text on it suggests a four-letter solution.
 >towarsd
 The ad seems slightly nearer, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-worst-ad
+>ttowarsd
+The ad seems slightly nearer, for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-readables-worst-ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
@@ -178,6 +200,13 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not precisely like that. Your thoughts are close, but jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-scripture-picturers
+>insede
+You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not precisely like that. Your thoughts are close, but jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-roiling-indies
 >indies
 You don't need to worry about art, here.
@@ -333,6 +362,12 @@ Perhaps it's better and simpler to focus on the proper names instead.
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signboard. That's a decent omen.
 
+#testcase-misspellings-table-of-routes-spechelp-adsorbing-signboard
+>ppats
+You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signboard. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >past
 Your score has just gone up by one point
 
@@ -406,6 +441,13 @@ Pat's is a local small business, not nameless, faceless real estate.
 >despiet
 The seed pit seems to bubble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-seed-pit
+>dispite
+The seed pit seems to bubble slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-readables-cravings-carvings
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
@@ -459,6 +501,13 @@ You did well enough to focus on the proper names instead.
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-lairage-regalia
+>acroos
+You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-same-mesa-nudges-sos
 >sso
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
@@ -511,6 +560,12 @@ This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, w
 >opposiet
 The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-pipe-soot
+>ooposite
+The soot smells a bit stronger than before for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #ttc-table-of-routes-readables-trashy-ashtray
 >read ashtray
@@ -651,6 +706,12 @@ The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
 
+#testcase-misspellings-table-of-routes-spechelp-woe-bow-bell
+>bbelwo
+You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-same-mesa-nudges-woe
 >weo
 It seems best to deal with the whole WOE BOW BELL.
@@ -696,6 +757,13 @@ Nia Gast is too old and set in her ways. You may just need to listen to her from
 >undre
 The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-rude-n-nuder
+>uundre
+The pages of Rude 'N Nuder flutter a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-scannotes-rude-n-nuder
 >scan rude n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
@@ -775,6 +843,12 @@ Well, you shouldn't be surprised the settler gives weird readings for something 
 The MORF-FORM rocks in the air, as if it's about to fall.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That's a decent omen.
 
+#testcase-misspellings-table-of-routes-spechelp-morf-form
+>ffrmo
+The MORF-FORM rocks in the air, as if it's about to fall.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >from
 Your score has just gone up by one point
 
@@ -791,6 +865,13 @@ THE BEAN has too much gravitas to be just a bean.
 >beneaht
 THE BEAN rolls back and forth a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from THE BEAN. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-the-bean
+>baneath
+THE BEAN rolls back and forth a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from THE BEAN. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-roiling-bane
 >bane
 You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.
@@ -846,6 +927,12 @@ The NULL-IT unit seems to leave things double-unlit. But with one ambiguous read
 You feel it's quite near the right time for the NULL-IT unit to shut down, for the darkness to lift. And you must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. That's a decent omen.
 
+#testcase-misspellings-table-of-routes-spechelp-null-it-unit
+>llitun
+You feel it's quite near the right time for the NULL-IT unit to shut down, for the darkness to lift. And you must be on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-roiling-around
 >around
 You can't see an un-road yet, or anything that might lead to it.
@@ -882,6 +969,12 @@ not something you
 You thought you saw an un-road for a second, but ... not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura. That's a decent omen.
 
+#testcase-misspellings-table-of-routes-spechelp-odd-run-on-aura
+>aaroudn
+You thought you saw an un-road for a second, but ... not quite.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >around
 Your score has just gone up by one point
 
@@ -892,11 +985,19 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 
-#ttc-table-of-routes-spechelp-noon-gag
 #remember "all" bugs the Inform compiler
+
+#ttc-table-of-routes-spechelp-noon-gag
 >alogn
 You think of how to find a way to No-Lag Logan's boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-noon-gag
+>alogng
+You think of how to find a way to No-Lag Logan's boat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-scannotes-noon-gag
 >scan noon gag
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
@@ -929,6 +1030,13 @@ You'll have to deal with the whole data-dim mists.
 >amidts
 Hmm, you almost see a way past the data-dim mists.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-data-dim-mists
+>aamidts
+Hmm, you almost see a way past the data-dim mists.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-scannotes-admits-mist-ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
@@ -980,6 +1088,13 @@ No need to alter them. Worth looking at, though.
 >athwatr
 Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-thickness-sketchins
+>athwahr
+Your craft rocks and makes negligible forward progress. Still, it's a start.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-routes-scannotes-thickness-sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all.
@@ -993,6 +1108,12 @@ Your score has just gone up by one point
 >throuhg
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-hurt-hog
+>througt
+The hog grunts.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #testcase-mistake-roiling-thru
 >thru
@@ -1019,6 +1140,13 @@ It's more the content of the patters that you could deal with, if you wanted.
 >betwene
 The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-bent-ewe
+>betwent
+The bent ewe stretches a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-sonancy-canyons-nudges-spheric
 >spherci
 The ciphers cannot be dispelled.
@@ -1032,6 +1160,13 @@ That could work later, but the hog and ewe don't trust you to go by yet.
 #+ttc-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+
+#+testcase-misspellings-table-of-routes-spechelp-hurt-hog
+>tthrouhg
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+!The hog grunts.
+
 >undo
 >undo
 
@@ -1050,6 +1185,12 @@ Your score has just gone up by one point
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters. That's a decent omen.
 
+#testcase-misspellings-table-of-routes-spechelp-raptest-patters
+>withouh
+The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >without
 Your score has just gone up by one point
 
@@ -1067,6 +1208,12 @@ Score in a scenario: 21 out of 22 total points in the current region, Routes. Th
 >beyodn
 Some different noises from the yob den.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's a decent omen.
+
+#testcase-misspellings-table-of-routes-spechelp-yob-den
+>bbeyodn
+Some different noises from the yob den.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >beyond
 Your score has just gone up by one point

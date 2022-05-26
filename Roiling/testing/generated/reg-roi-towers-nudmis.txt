@@ -36,15 +36,19 @@ This version was written by some lovely chap named ALTERIC.
 #ttc-table-of-loftier-trefoil-nudges-trefoil
 >trefoli
 Yes, this location needs changing, but that won't happen until the Curst Palace across Leak Lake is changed.
+
 #ttc-table-of-loftier-trefoil-nudges-picaro
 >picaor
 One at a time, by name. Each has his own weakness.
+
 #ttc-table-of-loftier-trefoil-nudges-picaros
 >picarso
 One at a time, by name. Each has his own weakness.
+
 #ttc-table-of-towers-nudges-storew
 >storwe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #ttc-table-of-towers-nudges-torew
 >torwe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -91,133 +95,354 @@ Now that would be too radical. Maybe go with something that makes him feel bad t
 >undo
 
 >allrand
+
 #ttc-table-of-towers-spechelp-geno
 >geon
 Geno looks around, as if he's about to bolt.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Geno. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-geno
+>ggeon
+Geno looks around, as if he's about to bolt.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Geno. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-edwin
 >edwni
 Edwin hiccups.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Edwin. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-edwin
+>eedwni
+Edwin hiccups.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Edwin. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-blake
 >blaek
 Blake looks a bit unhappier.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Blake. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-blake
+>blaeke
+Blake looks a bit unhappier.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Blake. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-ernest
 >ernets
 Ernest seizes up.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ernest. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-ernest
+>ernst
+Ernest seizes up.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Ernest. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-andres
 >andrse
 Andres looks a bit more tied up at the moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Andres. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-andres
+>andrses
+Andres looks a bit more tied up at the moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Andres. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-cedrick
 >cedrikc
 Cedrick cringes slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Cedrick. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-cedrick
+>cerdki
+Cedrick cringes slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Cedrick. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-shane
 >ashne
 Some color drains from Shane's face.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Shane. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-shane
+>ashnen
+Some color drains from Shane's face.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Shane. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-eldon
 >eldno
 Eldon looks slightly wrinkled for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eldon. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-eldon
+>eeldno
+Eldon looks slightly wrinkled for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Eldon. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-bredo
 >breod
 Bredo yawns.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Bredo. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-bredo
+>breodd
+Bredo yawns.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Bredo. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-marcel
 >marcle
 Marcel breathes slower for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marcel. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-marcel
+>mmarcle
+Marcel breathes slower for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marcel. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-andrew
 >andrwe
 Andrew suddenly looks as if he's been told he did something wrong.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Andrew. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-andrew
+>andrwee
+Andrew suddenly looks as if he's been told he did something wrong.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Andrew. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-demitri
 >demitir
 Demitri shivers a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Demitri. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-demitri
+>demetri
+Demitri shivers a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Demitri. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-tyson
 >tysno
 Tyson looks slightly less emotional.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Tyson. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-tyson
+>tysnon
+Tyson looks slightly less emotional.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Tyson. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-goldy
 >golyd
 Goldy starts to fold his hands in prayer but thinks better of it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Goldy. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-goldy
+>ggolyd
+Goldy starts to fold his hands in prayer but thinks better of it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Goldy. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-daryl
 >darly
 Daryl pinches his sides and shakes his head.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Daryl. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-daryl
+>darlyl
+Daryl pinches his sides and shakes his head.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Daryl. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-marlon
 >marlno
 Marlon looks a little less weird for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marlon. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-marlon
+>mmarlno
+Marlon looks a little less weird for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marlon. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-archie
 >archei
 Archie looks a bit pained.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Archie. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-archie
+>archeie
+Archie looks a bit pained.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Archie. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-leander
 >leanerd
 Leander makes an a-ha gesture--no, only for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Leander. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-leander
+>learnad
+Leander makes an a-ha gesture--no, only for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Leander. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-wade
 >waed
 Wade's eyes get bigger for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Wade. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-wade
+>wwaed
+Wade's eyes get bigger for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Wade. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-royce
 >royec
 Royce looks a bit less aggressive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Royce. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-royce
+>rroyec
+Royce looks a bit less aggressive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Royce. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-dewey
 >dewye
 Dewey seems momentarily less muscular.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Dewey. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-dewey
+>dewyy
+Dewey seems momentarily less muscular.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Dewey. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-reggie
 >reggei
 Reggie sniffs the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reggie. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-reggie
+>riggie
+Reggie sniffs the air.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Reggie. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-barney
 >barnye
 Barney looks around a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Barney. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-barney
+>bbarnye
+Barney looks around a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Barney. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
+>undo
+
 #ttc-table-of-towers-spechelp-preston
 >prestno
 Preston almost slips for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a decent omen.
->pronest
-Your score has just gone up by one point
+
+#testcase-misspellings-table-of-towers-spechelp-preston
+>pprestno
+Preston almost slips for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
 >undo
 #ttc-table-of-towers-spechelp-terrance
 >terranec
 Terrance looks around as if he wants to run off.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-terrance
+>racreant
+Terrance looks around as if he wants to run off.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
+>undo
 >undo
 >undo
 
@@ -240,6 +465,13 @@ Score in a scenario: 3 out of 57 total points in the current region, Towers. Low
 >rodnye
 Rodney looks around, as if he is sick of this place.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Yo-Rend-Or-Deny Rodney. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-rodney
+>rrodnye
+Rodney looks around, as if he is sick of this place.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Yo-Rend-Or-Deny Rodney. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #+ttc-table-of-loftier-trefoil-nudges-picaros
 >picarso
 You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name
@@ -260,6 +492,7 @@ Score in a scenario: 6 out of 57 total points in the current region, Towers. Low
 #+ttc-table-of-loftier-trefoil-nudges-picaros
 >picarso
 There's only one picaro left, and his name is Rodney.
+
 #ttc-table-of-towers-scannotes-yo-rend-or-deny-rodney
 >scan rodney
 --hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
@@ -297,6 +530,14 @@ Score in a scenario: 8 out of 57 total points in the current region, Towers. Low
 >unleckdo
 You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-luck-node
+>uunleckdo
+You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
+>undo
 >undo
 >undo
 
@@ -325,6 +566,12 @@ It probably needs less crust, not more. The whole curst palace.
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: one final word will work here, to make things as they should be. It is eleven letters long, but everything else is shorter--most are from six to eight letters, though optional ones may be from five to nine.
 !Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
+
+#testcase-misspellings-table-of-towers-spechelp-curst-palace
+>spectaculer
+Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Curst Palace. That's a decent omen.
@@ -396,6 +643,13 @@ The Shout-So Hut is built to resist words. You aren't getting through, or past, 
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-dreads-adders
+>saders
+The adders look downcast for a minute before resuming a threatening pose.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-dreads-adders
 >scan dreads adders
 Your settler registers RY?RYR.
@@ -490,6 +744,13 @@ There's more than one yurt there.
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Try Us Yurts. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-try-us-yurts
+>yyurst
+The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Try Us Yurts. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-bluster-butlers
 >scan bluster butlers
 Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out.
@@ -548,6 +809,12 @@ The pastry is for eating, not for changing.
 The bluster butlers cough slightly and look around furtively.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers. That's a decent omen.
 
+#testcase-misspellings-table-of-towers-spechelp-bluster-butlers
+>bbutlesr
+The bluster butlers cough slightly and look around furtively.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >subtler
 Your score has just gone up by one point
 
@@ -566,10 +833,23 @@ You don't need to change the sway-ways. They are dangerous enough, and they don'
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the snider diners. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-snider-diners
+>dinesrd
+The diners glare at you, then look up at the sky, slightly worried.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the snider diners. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-spechelp-denier-nereid
 >dieren
 The denier nereid seems to be pulled away towards Leak Lake for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the denier nereid. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-denier-nereid
+>nireid
+The denier nereid seems to be pulled away towards Leak Lake for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the denier nereid. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >reined
 Your score has just gone up by one point
@@ -595,6 +875,12 @@ has a refresher,
 >creayk
 The keycar sputters momentarily.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-keycar
+>ccreayk
+The keycar sputters momentarily.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >creaky
 Your score has just gone up by one point
@@ -629,6 +915,12 @@ Changing just one pirate would not, you sense, do much. It might even ostracize 
 The old ice seems to glimmer a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
 
+#testcase-misspellings-table-of-towers-spechelp-docile-old-ice
+>docdile
+The old ice seems to glimmer a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-docile-old-ice
 >scan docile old ice
 Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
@@ -647,6 +939,11 @@ Score in a scenario: 15 out of 57 total points in the current region, Towers. Lo
 >semprio
 The promise imposer seems a little less intimidating.
 
+#testcase-misspellings-table-of-towers-spechelp-promise-imposer
+>ssemprio
+The promise imposer seems a little less intimidating.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >semipro
 Your score has just gone up by one point
 >score
@@ -659,6 +956,13 @@ Twist the ice too much, it might not look right.
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the traipse pirates. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-pirates
+>ppiratse
+The pirates blanch a bit but quickly regain their swagger.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the traipse pirates. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-traipse-pirates
 >scan traipse pirates
 Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though.
@@ -719,6 +1023,13 @@ There's more than one ingrate blocking you.
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the angriest ingrates. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-ingrates
+>iingratse
+The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the angriest ingrates. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-angriest-ingrates
 >scan angriest ingrates
 Hmm, there are some matches, and maybe one of the two variable settings will work itself out.
@@ -763,6 +1074,13 @@ Work on the whole sled rut.
 >strudle
 You almost expect the strudel to hop up into your arms, but the moment passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the strudel. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-strudel
+>sstrudle
+You almost expect the strudel to hop up into your arms, but the moment passes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the strudel. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >take strudel
 You take it from the rut with no problem. Maybe you could've done it fancier, but eh, well.
 >strudle
@@ -800,6 +1118,13 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 >reedsael
 Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-reeds-ale
+>readsale
+Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-nudges-lars
 >lasr
 No, Lars's full name. Lars Eede. With Reed's Ale.
@@ -830,6 +1155,13 @@ You'd have to drop the strudel on the ground and get it germy to try that again.
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mardier admirer. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-mardier-admirer
+>mardied
+The mardier admirer looks askance, then returns to evaluating you some more.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mardier admirer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >e
 #testcase-mistake-roiling-slated
 >slated
@@ -893,6 +1225,13 @@ Changing only one atheist would only help you so long. The rest would shortly re
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the asset-hit atheists. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-asset-hit-atheists
+>asheists
+The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the asset-hit atheists. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-asset-hit-atheists
 >scan asset hit atheists
 Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
@@ -901,6 +1240,13 @@ Those question marks could be annoying, but with two t's and two s's, that restr
 >waitsere
 The wait-seer looks bored and distracted for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sweatier wait-seer. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-sweatier-wait-seer
+>waitserr
+The wait-seer looks bored and distracted for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sweatier wait-seer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-sweatier-wait-seer
 >scan sweatier wait seer
 The letters blink from red/yellow to purple/green and back.
@@ -948,6 +1294,12 @@ Your settler registers RRYR?YR****.
 The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
 
+#testcase-misspellings-table-of-towers-spechelp-realist-tailers
+>sstailer
+The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-resident-trendies
 >scan resident trendies
 The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
@@ -955,6 +1307,12 @@ The trendies point and laugh at your settler and how it has apparently malfuncti
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-resident-trendies
+>nirdiest
+The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #testcase-mistake-roiling-inserted
 >inserted
@@ -1005,6 +1363,13 @@ Gumming up one weed wouldn't get the others.
 >weesd
 The weeds almost seem to shrug.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weeds. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-weeds
+>sweds
+The weeds almost seem to shrug.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weeds. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-roiling-swede
 >swede
 That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
@@ -1044,6 +1409,13 @@ You feel no energy from the dagger. Perhaps it needs to be repaired mechanically
 >denmi
 The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini-denim. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-mended-mini-denim
+>ddenmi
+The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini-denim. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-mended-mini-denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
@@ -1085,6 +1457,12 @@ The ad must be helpful in its own way. But of course it is just aid and not an o
 #ttc-table-of-towers-spechelp-bogus-dandier
 >adderin
 You feel slightly less depressed you tried something. You can't be too far off.
+
+#testcase-misspellings-table-of-towers-spechelp-bogus-dandier
+>danrier
+You feel slightly less depressed you tried something. You can't be too far off.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-dire-and-arid-den-nudges-nerd
 >nedr
 Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
@@ -1136,6 +1514,13 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 >alarmign
 The grailman seems almost average for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailman. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-alarming-grailman
+>ilarming
+The grailman seems almost average for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailman. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-alarming-grailman
 >scan alarming grailman
 The one letter blinks between green and yellow.
@@ -1148,6 +1533,13 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lot. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-hostile-is-he-lot
+>histoile
+The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lot. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-he-lot
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
@@ -1156,6 +1548,13 @@ Well, this is tricky. Their sort of double name affords a couple interpretations
 >loisthe
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Lois the Hostile. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-lois-the-hostile
+>lloisthe
+Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Lois the Hostile. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-lois-the-hostile
 >scan lois the hostile
 Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
@@ -1189,6 +1588,13 @@ You focus and see that the brand is TRU-SELF. Which would make you see red on ge
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-fluster-self-rut
+>sselfrtu
+You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-fluster-self-rut
 >scan fluster self rut
 You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
@@ -1213,6 +1619,12 @@ You get the feeling the natives can be swayed more than one way, here.
 >nativse
 The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the natives' site van. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-natives-site-van
+>nnativse
+The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the natives' site van. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >vainest
 Your score has just gone up by one point
@@ -1262,6 +1674,13 @@ Nothing seems to happen. Then you remember organized can be spelled with an s an
 >organisde
 The drains sizzle slightly but go back to menacing quiet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego drains. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-organised-ego-drains
+>oorganisde
+The drains sizzle slightly but go back to menacing quiet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego drains. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-organised-ego-drains
 >scan organised ego drains
 With nine letters, it was never going to be easy. (Fourth wall note: this is the hardest ambiguous reading in the game. That's why it's optional.) Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
@@ -1292,6 +1711,13 @@ There is more than one samiel to deal with, here.
 >samiesl
 The seismal samiels change intensity for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-seismal-samiels
+>lamiels
+The seismal samiels change intensity for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-bogus-rousted
 >scan
 You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
@@ -1302,6 +1728,12 @@ This may technically be a detour, but since the area name is "detours," you need
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-bogus-rousted
+>rroustde
+You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >rousted
 by one point
@@ -1342,6 +1774,13 @@ You may find it easier to deal with all the ripostes at once.
 >prosiets
 The ripostes seem less cutting for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sporties' ripostes. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-sporties-ripostes
+>propiest
+The ripostes seem less cutting for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sporties' ripostes. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-sporties-ripostes
 >scan sporties' ripostes
 You might have to read through a lot of possibilities even if you can quickly figure what the third letter is.
@@ -1376,6 +1815,13 @@ You can't change the gadflies. There are too many.
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-bonker
+>bbonkre
+"TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
+DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-readables-bonker
 >read bonker
 The bonker was created by KB RENO.
@@ -1394,6 +1840,13 @@ Score in a scenario: 37 out of 57 total points in the current region, Towers. Lo
 >restign
 The stinger fizzles a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the grin-set stinger. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-stinger
+>rrestign
+The stinger fizzles a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the grin-set stinger. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-readables-stinger
 >read stinger
 The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess.
@@ -1519,6 +1972,12 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, and you wonder who or what could tinker with it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
 
+#testcase-misspellings-table-of-towers-spechelp-fissure
+>fisurre
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, and you wonder who or what could tinker with it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >push retape
 
 >gt duck
@@ -1531,6 +1990,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
+
+#+testcase-misspellings-table-of-towers-spechelp-fissure
+>fisurre
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >undo
 #ttc-table-of-towers-readables-prison-ropins
 >read prison
@@ -1637,6 +2103,12 @@ The sway-ways shake for a moment. But at least they do not carry a highly contag
 #ttc-table-of-towers-spechelp-diverse-deviser
 >revisde
 You thought you heard a brief hum from the diverse deviser for a moment there.
+
+#testcase-misspellings-table-of-towers-spechelp-diverse-deviser
+>rivised
+You thought you heard a brief hum from the diverse deviser for a moment there.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-readables-diverse-deviser
 >read deviser
 I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
@@ -1774,6 +2246,13 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don'
 >grainde
 Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
 DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-dinger
+>grainedd
+Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
+DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-reading-a-dinger
 >scan reading a dinger
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
@@ -1805,6 +2284,13 @@ Neither the singular nor the plural version of a pastry can change it. They're f
 >pearyl
 The "replay player" letters brighten for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-raves-saver
+>ppearyl
+The "replay player" letters brighten for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #+ttc-table-of-towers-nudges-save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
@@ -1813,11 +2299,25 @@ The saver is hopelessly no-frills. It'll never be anything better. But you might
 >attentiev
 Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-atblock
+>attentiva
+Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >gs
 #+ttc-table-of-towers-spechelp-atblock
 >attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.
+
+#+testcase-misspellings-table-of-towers-spechelp-atblock
+>attentiva
+Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >gs
 #ttc-table-of-towers-scannotes-raves-saver
 >scan raves saver
@@ -1958,6 +2458,14 @@ You fixed the blaster, so maybe you can tackle the turbos.
 >eastenr
 You feel less split from everyone else for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-earnest-eastern-neaters
+>eastarn
+You feel less split from everyone else for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+>undo
+
 >undo
 >undo
 
@@ -1965,10 +2473,24 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern 
 >turbso
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the turbos. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-turbos
+>turbsos
+Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the turbos. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-spechelp-blaster
 >blastre
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the blaster. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-blaster
+>bblastre
+Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the blaster. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-readables-blaster
 >read blaster
 ALBERT'S.
@@ -1986,6 +2508,13 @@ You already dealt with both turbos.
 >rewirde
 You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-weirder-red-wire
+>dewired
+You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-weirder-red-wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you see any extra red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
@@ -2047,10 +2576,22 @@ You're not sure if the serpent's ever been spent, so you can't quite make it re-
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. That's a decent omen.
 
+#testcase-misspellings-table-of-towers-spechelp-ur-pine
+>uurpien
+The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-spechelp-repents-serpent
 >presetn
 The serpent calms down for a split-second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repents serpent. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-repents-serpent
+>prespnt
+The serpent calms down for a split-second, again.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the repents serpent. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >presetn
 The serpent calms down for a split-second, again.
@@ -2107,6 +2648,12 @@ You're probably better of dispelling all the things to repent about at once, not
 The nastier stainer retinas seem to blink a bit and look around uneasily.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nastier stainer retinas.
 
+#testcase-misspellings-table-of-towers-spechelp-nastier-stainer-retinas
+>nnasteri
+The nastier stainer retinas seem to blink a bit and look around uneasily.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the nastier stainer retinas.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-roiling-in-tears
 >in tears
 Clever, but maybe you can make the nastier stainer retinas so they feel a need to be in tears.
@@ -2146,6 +2693,13 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a decent omen.
+
+#testcase-misspellings-table-of-towers-spechelp-itster
+>trisse
+The Tetris Sitter breaks her glassy smile for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-towers-scannotes-tetris-sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
@@ -2178,6 +2732,11 @@ For a moment you guess you've, err, done enough, and you don't have to get rid o
 #ttc-table-of-towers-spechelp-done-any-anodyne
 >annyedo
 The Done-Any Anodyne rattles.
+
+#testcase-misspellings-table-of-towers-spechelp-done-any-anodyne
+>anodyae
+The Done-Any Anodyne rattles.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #ttc-table-of-towers-readables-done-any-anodyne
 >read anodyne

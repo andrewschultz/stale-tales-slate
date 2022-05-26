@@ -26,15 +26,19 @@
 You don't want to change. Well, not in that way.
 >gx curtis
 If Curtis had any materials, he wouldn't hide them from you.
+
 #ttc-table-of-others-anagrams-grapes
 >gx pagers
 You have a vision of fruit: GRAPES. The aftertaste of arugula finally dissipates.
+
 #ttc-table-of-others-anagrams-limes
 >gx slime
 You have a vision of fruit: LIMES. The aftertaste of arugula finally dissipates.
+
 #ttc-table-of-others-anagrams-pears
 >gx spear
 You have a vision of fruit: PEARS. The aftertaste of arugula finally dissipates.
+
 #ttc-table-of-others-anagrams-plums
 >gx lumps
 You have a vision of fruit: PLUMS. The aftertaste of arugula finally dissipates.

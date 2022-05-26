@@ -205,6 +205,12 @@ The shells don't move. Perhaps they are just a clue of what Store Y can become.
 The smell from Store B becomes fruitier and more delicious.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a decent omen.
 
+#testcase-misspellings-table-of-stores-spechelp-store-b
+>ssorbte
+The smell from Store B becomes fruitier and more delicious.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #(we need ts to set autosave-known to true)
 #testcase-mistake-roiling-reaves
 >reaves
@@ -232,6 +238,13 @@ You don't need people oohing and ahing at your skill.
 >nestro
 "Dude, you like must be close!" you hear from Store N.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store N. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-store-n
+>nnestro
+"Dude, you like must be close!" you hear from Store N.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store N. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >tokers
 by one point
 #ttc-table-of-strip-of-profits-nudges-toker
@@ -260,6 +273,12 @@ You rescued him, and that's enough.
 >tokesr
 An odd sweet smell from Store K, for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-store-k
+>ttokesr
+An odd sweet smell from Store K, for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >tokers
 Your score has just gone up by one point
@@ -330,6 +349,13 @@ You can't see the way high highway any more. You're stuck dealing with the Rehab
 >outsied
 That tune in the background, Suit Ode: Douse It, takes an odd turn. But it doesn't quite shut down.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Suit Ode: Douse It. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-suit-ode-douse-it
+>ooutsied
+That tune in the background, Suit Ode: Douse It, takes an odd turn. But it doesn't quite shut down.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Suit Ode: Douse It. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-roiling-easting
 >easting
 Compass directions aren't relevant here. You need to upset everything, somehow.
@@ -401,6 +427,12 @@ There's no time for food! Especially fatty, non-brain food!
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a decent omen.
 
+#testcase-misspellings-table-of-stores-spechelp-store-u
+>rroutse
+Store U seems to light up with lines and curves for a second, but no, that's not quite right...
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >routes
 Your score has just gone up by one point
 
@@ -425,6 +457,12 @@ You don't need to do anything with an individual route. Just go in.
 A single paper currency flutters off from Store V, lost forever.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a decent omen.
 
+#testcase-misspellings-table-of-stores-spechelp-store-v
+>ttrovse
+A single paper currency flutters off from Store V, lost forever.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >troves
 Your score has just gone up by one point
 
@@ -445,6 +483,13 @@ The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store W. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-store-w
+>ttowesr
+Store W seems to push up from the ground and go narrower for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store W. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-stores-readables-store-w
 >read store w
 WESTOR is the name of the company that built this. There's more, about what method they used
@@ -477,6 +522,12 @@ You don't need to adjust the truster turrets further. They're, well, big enough 
 You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a decent omen.
 
+#testcase-misspellings-table-of-stores-spechelp-store-y
+>ooystre
+You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >oyster
 Your score has just gone up by one point
 
@@ -491,6 +542,13 @@ You should just enter the balancer barnacle. No need or way to seal it back up.
 >othesr
 Store H looks totally different for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-store-h
+>oothesr
+Store H looks totally different for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-stores-readables-store-h
 >read store h
 The warning in bright red says:
@@ -519,6 +577,13 @@ You should just enter the Throes Hoster. No need or way to seal it back up.
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store P. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-store-p
+>ppresot
+You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store P. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-stores-scannotes-tropes-poster
 >scan tropes poster
 I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
@@ -538,6 +603,12 @@ You should just enter the odorant tornado. No need or way to seal it back up.
 >ottesr
 You hear various unrecognizable animal noises.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store T. That's a decent omen.
+
+#testcase-misspellings-table-of-stores-spechelp-store-t
+>oottesr
+You hear various unrecognizable animal noises.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store T. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >otters
 Your score has just gone up by one point

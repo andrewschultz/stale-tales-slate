@@ -108,15 +108,19 @@ But you're not even sure which way is out!
 You don't want to change. Well, not in that way.
 >gx curtis
 If Curtis had any materials, he wouldn't hide them from you.
+\\
 #ttc-table-of-others-anagrams-grapes
 >gx pagers
 You have a vision of fruit: GRAPES. The aftertaste of arugula finally dissipates.
+\\
 #ttc-table-of-others-anagrams-limes
 >gx slime
 You have a vision of fruit: LIMES. The aftertaste of arugula finally dissipates.
+\\
 #ttc-table-of-others-anagrams-pears
 >gx spear
 You have a vision of fruit: PEARS. The aftertaste of arugula finally dissipates.
+\\
 #ttc-table-of-others-anagrams-plums
 >gx lumps
 You have a vision of fruit: PLUMS. The aftertaste of arugula finally dissipates.
@@ -213,22 +217,50 @@ You're trying to make things MORE organic, not less.
 #ttc-table-of-rustic-citrus-nudges-lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
+\\
 #ttc-table-of-others-spechelp-lumps
 >lumsp
 The lumps seem almost ready to burst.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lumps. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-lumps
+>lumsps
+The lumps seem almost ready to burst.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lumps. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-pagers
 >pagesr
 The pagers light up slightly. Maybe give it another go.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pagers. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-pagers
+>pagesrr
+The pagers light up slightly. Maybe give it another go.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pagers. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-slime
 >sliem
 The slime shifts about slightly, but not enough--yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-slime
+>sliemm
+The slime shifts about slightly, but not enough--yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-spear
+>sspera
+The spear stays as-is. But it can't be that hard to change.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-roiling-parse
@@ -368,6 +400,12 @@ Nothing happens. Perhaps it's the whole item that's important.
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-moss-cap
+>compaas
+The cap itches for a bit, then seems to try to spin you around.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for compass
@@ -520,6 +558,11 @@ Three of five letters is a lot of ambiguity, but you are pretty sure what sort o
 #ttc-table-of-others-spechelp-sated-stead
 >estad
 The sated stead bubbles slightly.
+\\
+#testcase-misspellings-table-of-others-spechelp-sated-stead
+>eestad
+The sated stead bubbles slightly.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-others-scannotes-hire-recs-re-riches
@@ -529,6 +572,11 @@ As Hire Recs Re: Riches recommended hiring out the tricky technical parts, so to
 #ttc-table-of-others-spechelp-hire-recs-re-riches
 >cherreis
 The pages of Hire Recs Re: Riches flutter briefly.
+\\
+#testcase-misspellings-table-of-others-spechelp-hire-recs-re-riches
+>cheeries
+The pages of Hire Recs Re: Riches flutter briefly.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-others-readables-hire-recs-re-riches
 >read riches
@@ -541,6 +589,13 @@ The name of the train's creator is in red: DR. NIMATA.
 >madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the id-mantra mad train. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-mad-train
+>midtrain
+The train emits some fake smoke and seems ready to blow up--but no.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the id-mantra mad train. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-id-mantra-mad-train
 >scan mad train
 The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention.
@@ -570,6 +625,12 @@ You found enough in the ruts circuits. No need to bring them back.
 >maraschion
 The harmonicas whistle, as if something happened.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-harmonicas
+>marischino
+The harmonicas whistle, as if something happened.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-rustic-citrus-nudges-harmonica
 >harmonica
@@ -623,25 +684,55 @@ Nothing happens. Perhaps it's the whole item that's important.
 >read eerie blurbs
 #OK-APOSTROPHE
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
+\\
 #ttc-table-of-others-spechelp-eerie-blurbs
 >eerieblursb
 The blurbs turn a few shades of purple before settling again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-eerie-blurbs
+>ierieblursb
+The blurbs turn a few shades of purple before settling again.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-peanut-cola
 >peanutcoal
 The peanut cola smells slightly fruity for a minute.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-peanut-cola
+>peenutcola
+The peanut cola smells slightly fruity for a minute.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-readables-peanut-cola
 >read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
+\\
 #ttc-table-of-others-spechelp-magenta-rope
 >magentaroep
 The magenta rope and other items you uncovered briefly seem as one.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-magenta-rope
+>magenteroep
+The magenta rope and other items you uncovered briefly seem as one.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-omen-prism
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-omen-prism
+>persimoon
+You must be on the right track--but nothing happens. Yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-rustic-citrus-nudges-omen
 >omne
 Not just omen, or prism. It's an omen prism.
@@ -912,30 +1003,72 @@ It says Pal! ESP! in red. Not very good advice, but maybe it will help in its ow
 #ttc-table-of-others-readables-riot-cap
 >read riot cap
 /It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
+\\
 #ttc-table-of-others-spechelp-PSA-Elp
 >applse
 You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the PSA 'Elp. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-PSA-Elp
+>apllse
+You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the PSA 'Elp. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-riot-cap
 >apricto
 Nothing happens. Your magic skills feel like the pits for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the riot cap. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-riot-cap
+>aprictot
+Nothing happens. Your magic skills feel like the pits for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the riot cap. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-miser-ruble
 >mulberrise
 The miser ruble turns a bit purpler.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-miser-ruble
+>mulberiise
+The miser ruble turns a bit purpler.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-sorer-bogey
 >gooseberyr
 The sorer bogey's tone changes slightly for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-sorer-bogey
+>gosseberyr
+The sorer bogey's tone changes slightly for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-stucco
 >stucocno
 The stucco looks almost hairy for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stucco. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-stucco
+>stucccno
+The stucco looks almost hairy for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stucco. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-green-stain
 >tangerinse
 Parts of the green stain turn orange-ish but is too small to be oranges.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-green-stain
+>tangarines
+Parts of the green stain turn orange-ish but is too small to be oranges.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >apricot
 Your score has just gone up by one point.
@@ -1036,6 +1169,12 @@ The design is sort of glommed onto the coin. So you should figure what to do, th
 >coni
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-coin
+>cconi
+The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-roiling-sonic
@@ -1101,6 +1240,14 @@ Hmm. You could probably do something with just one coin, or you could do somethi
 >cisno
 The coins jingle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-coins
+>ccisno
+The coins jingle promisingly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+>undo
+\\
 >sonic
 by one point
 #ttc-table-of-others-scannotes-s-c
@@ -1111,6 +1258,14 @@ You're a pro at all this, now, so two question marks don't bother you. Yes... th
 >sonci
 The sonic coins hum almost questioningly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sonic coins. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-s-c
+>ssonci
+The sonic coins hum almost questioningly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sonic coins. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+>undo
+\\
 >undo
 >icons
 by one point
@@ -1373,37 +1528,94 @@ It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moa
 >barren crise
 The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barren cries. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-barren-cries
+>barbencrise
+The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
+DEBUG ONLY: You feel a slight psychic push-pull coming from the barren cries. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-barber-sickle
 >barber sickel
 The barber sickle darkens a bit. You must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barber sickle. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-barber-sickle
+>barrersickel
+The barber sickle darkens a bit. You must be on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the barber sickle. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-mean-trowel
 >meantrowle
 You had the seed of an idea there, you thought.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mean trowel. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-mean-trowel
+>meantrowla
+You had the seed of an idea there, you thought.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mean trowel. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-pryer-bars
 >pryer basr
 The pryer bars briefly turn very red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pryer bars. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-pryer-bars
+>pryesbasr
+The pryer bars briefly turn very red.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pryer bars. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-rapt-figure
 >rapt figuer
 The rapt figure frowns as if it's eaten something sour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-rapt-figure
+>raptfiguee
+The rapt figure frowns as if it's eaten something sour.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-pipe-panel-lie-pen-app
 >pineappel
 The pipe panel lie pen app rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-pipe-panel-lie-pen-app
+>pineaplle
+The pipe panel lie pen app rattles slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-pipe-panel-lie-pen-app
 >scan pipe panel lie pen app
 Hmm. There are a lot of P's. Maybe that helps.
+\\
 #ttc-table-of-others-spechelp-barriers-west
 >strawberrise
 You feel the barriers west pulling towards you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-barriers-west
+>strawberiise
+You feel the barriers west pulling towards you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-buried-raft
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-buried-raft
+>bfeadfruit
+You loaf a bit after thinking that, hoping for something to happen. It doesn't.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-readables-pipe-panel-lie-pen-app
 >read lie pen app
 There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
@@ -1487,6 +1699,13 @@ Money, or something like it, should not be the guide of you.
 >icosn
 The icons rattle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the icons. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-icons
+>iicosn
+The icons rattle promisingly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the icons. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #+testcase-mistake-roiling-scion
 >scion
 Money, or something like it, should not be the guide of you.
@@ -1691,6 +1910,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-others-spechelp-i-solve-voiles
 >evliso
 The I-Solve Voiles rustle slightly.
+\\
+#testcase-misspellings-table-of-others-spechelp-i-solve-voiles
+>eevliso
+The I-Solve Voiles rustle slightly.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-i-solve-voiles
 >scan i solve voiles
 You make sure it's not just the I-Solve Voiles fluttering about that give such an ambiguous reading. No, it is not.
@@ -1735,14 +1960,29 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 #ttc-table-of-clangier-clearing-nudges-banner
 >abnner
 You're probably over-thinking it--just pay attention to what it says, instead.
+\\
 #ttc-table-of-others-spechelp-quince
 >quinec
 That certainly sounds foreign--but it doesn't seem to sway Len.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-quince
+>quinece
+That certainly sounds foreign--but it doesn't seem to sway Len.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-auction-caution
 >papaysa
 Everyone promises quick payment, but what are you promising to pay quickly for? Hmm...
 DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-auction-caution
+>payayas
+Everyone promises quick payment, but what are you promising to pay quickly for? Hmm...
+DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-auction-caution
 >scan auction caution
 Hm, that certainly cuts things down a ton, or it should, once you read that sign--caution has four vowels, but the settler indicates three.
@@ -1758,6 +1998,12 @@ Hm, that certainly cuts things down a ton. Just three possibilities.
 >peahc
 The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-peach
+>ppeahc
+The peach still looks too expensive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @verbs
 #ttc-table-of-others-nowheres-clangier-clearing
@@ -1815,22 +2061,33 @@ Your score has just gone up by one point.
 #testcase-mistake-roiling-mango
 >mango
 That's the fruit you need to find. You see red wondering where or how.
+\\
 #testcase-mistake-roiling-go-man
 >go man
 That's the right idea but the wrong sorts of words.
+\\
 #testcase-mistake-roiling-nag-mo
 >nag mo
 You get all red faced asking people how to trade for a mango, and asking, and asking.
+\\
 #testcase-mistake-roiling-an-omg
 >an omg
 Lashing out that way leaves you feeling you must be close to the right way to get a mango.
+\\
 #ttc-table-of-others-scannotes-ammo-gang
 >scan ammo gang
 The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
+\\
 #ttc-table-of-others-spechelp-ammo-gang
 >amogn
 You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-ammo-gang
+>aamogn
+You must not be mingling right with the No Ammo Gang.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @!min
 #not a mistake
@@ -1852,21 +2109,50 @@ Selly yells:
 >lemosn
 Len frowns at the lemons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-lemons
+>lemosns
+Len frowns at the lemons.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-melon
 >melno
 Hm, there must be a better melon than that, but how to ask Len, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-melon
+>mmelno
+Hm, there must be a better melon than that, but how to ask Len, now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-melon
 >scan melon
 Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
+\\
 #ttc-table-of-others-spechelp-nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-nectarine
+>nectariee
+The nectarine seems a little less shiny and new. But not enough.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-prices-precis
 >cripse
 Something glints off the prices precis.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-prices-precis
+>ccripse
+Something glints off the prices precis.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-prices-precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
@@ -2131,17 +2417,39 @@ It's a banna'. The puzzle here is criminally corny, but it's not criminal like D
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the brr-hub. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-a-brr-hub
+>rhubabb
+The (a) brr hub seems to swirl closed for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the brr-hub. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-a-brr-hub
 >scan a brr hub
 Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so.
+\\
 #ttc-table-of-others-spechelp-orange
 >oraneg
 The orange seems a bit closer for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-orange
+>oranege
+The orange seems a bit closer for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-a-banna
 >nabaan
 The (a) banna' flutters about for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-a-banna
+>banaba
+The (a) banna' flutters about for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-a-banna
 >scan a banna
 The message on the/a banna' must be interfering with the/a banna' itself.
@@ -2149,6 +2457,13 @@ The message on the/a banna' must be interfering with the/a banna' itself.
 >reservde
 You seem to see a mirror image of Dr. Severe for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-Reserved-Deserver-Dr-Severe
+>resesved
+You seem to see a mirror image of Dr. Severe for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-scannotes-reserved-deserver-Dr-Severe
 >scan dr severe
 Dr. Severe rolls his eyes. "My arguments certainly merit analysis, but there is no quick way to grokking them."
@@ -2336,15 +2651,33 @@ You can't shake the fleeing feeling, and it's not just a general one. It says to
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
 \\
+#testcase-misspellings-table-of-others-spechelp-viewer
+>riview
+That's not the way to learn from the viewer--it's probably not that complicated. You hope.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-searcher
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
 \\
+#testcase-misspellings-table-of-others-spechelp-searcher
+>rasearch
+That's not the way to learn from the searcher--it's probably not that complicated. You hope.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-others-spechelp-fleeing-feeling
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.
+\\
+#testcase-misspellings-table-of-others-spechelp-fleeing-feeling
+>pree
+It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hints
 #ttc-table-of-settler-shake-descriptions-fleeing-feeling

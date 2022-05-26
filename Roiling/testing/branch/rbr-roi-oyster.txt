@@ -68,6 +68,7 @@ You can't just sneak past the LOLstr trolls. But there is a way.
 #ttc-table-of-notepad-entries-die-thou
 >pad die thou
 If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them.
+\\
 #ttc-table-of-notepad-entries-the-haunter
 >pad haunter
 The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it.
@@ -296,30 +297,66 @@ IT'S P is written in red on the bottom.
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Capers Recaps. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-capers-recaps
+>sscraep
+You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Capers Recaps. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-gins-sign
 >igns
 Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gins sign. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-gins-sign
+>iigns
+Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the gins sign. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-oyster-spechelp-tips-pits
 >spti
 The tips pits rattle a bit as you try to do ... something ... to them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-tips-pits
+>sspti
+The tips pits rattle a bit as you try to do ... something ... to them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-tines
 >inste
 Hmm. There must be some way to destroy the stein, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-tines
+>iinste
+Hmm. There must be some way to destroy the stein, but that's not it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-oyster-spechelp-tunes
 >unste
 The tunes grow slightly less annoying, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-tunes
+>uunste
+The tunes grow slightly less annoying, for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-trolls
 >strlol
 The trolls laugh at you a bit, but nervously.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-trolls
+>trolss
+The trolls laugh at you a bit, but nervously.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-oyster-scannotes-gins-sign
 >scan gins sign
@@ -374,6 +411,13 @@ You can't work on the jukebox as a whole, but maybe you could meddle with its tw
 >rempa
 You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-perma-amper
+>rrempa
+You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #+ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 The tunes grow slightly less annoying, for a moment.
@@ -536,6 +580,12 @@ The baser braes can't be changed. There is enough to do in the Olde Lode.
 >caml
 The clam still seems enraged.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-clam
+>ccaml
+The clam still seems enraged.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for calm
@@ -584,6 +634,12 @@ Odd! Now, you feel a need to panic and flee after calming the clam.
 >rnu
 The urn sits there, daring you to walk away.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-urn
+>rrnu
+The urn sits there, daring you to walk away.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for run
@@ -685,15 +741,33 @@ Easier said than done. Perhaps a river craft could help you across. Like the raf
 The frat raft rocks slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-frat-raft
+>rratf
+The frat raft rocks slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-oars
 >oasr
 The oars splash around in the water, briefly rising out, as if they don't belong there.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oars. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-oars
+>ooasr
+The oars splash around in the water, briefly rising out, as if they don't belong there.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oars. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-sabot-boats
 >bosat
 Perhaps if you were louder and more confident, the sabot boats would hear you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-sabot-boats
+>bbosat
+Perhaps if you were louder and more confident, the sabot boats would hear you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-disease-seaside-nudges-seaside
 >seasied
@@ -874,6 +948,13 @@ No way. You're not changing the crays--and if you changed one, the others would 
 >lepa
 Yes, the pale plea is calling and warning you to leave. But how?
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pale plea. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-pale-plea
+>llepa
+Yes, the pale plea is calling and warning you to leave. But how?
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pale plea. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >scan crays
 The crays are still slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.
 !You worry what will happen to you, or the settler, if you pull it out again. You remember seeing RYYR from the pale plea.
@@ -990,15 +1071,34 @@ You need to deal with all the bullies at once, somehow, not just one at a time.
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the carps. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-carps
+>ccarsp
+The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the carps. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-pikes
 >pikse
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-pikes
+>ppikse
+The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-trout
 >trotu
 The best way to help the trout at the moment is to deal with the carps and pikes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the trout. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-trout
+>trour
+The best way to help the trout at the moment is to deal with the carps and pikes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the trout. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-kepis
 >kepis
 If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
@@ -1068,6 +1168,12 @@ You can UNEARTH the HAUNTER (from under the HUNTER HUNT AREA) with the right equ
 >unearht
 You need a slightly more organized way to reveal what's under the ground, and you don't have a digging instrument, either.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-HUNTER-HUNT-AREA
+>uunearht
+You need a slightly more organized way to reveal what's under the ground, and you don't have a digging instrument, either.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-oyster-scannotes-HUNTER-HUNT-AREA
@@ -1092,6 +1198,11 @@ So very tangled! No vowels showed up for certain, which makes it tougher ... or 
 #ttc-table-of-oyster-spechelp-snarled-darnels
 >snadrel
 The snarled darnels rustle a bit.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-snarled-darnels
+>ssnadrel
+The snarled darnels rustle a bit.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-roiling-landers
@@ -1163,6 +1274,11 @@ You notice PEP-TESTS as the brand name, once you have a look.
 #ttc-table-of-oyster-spechelp-pest-pets
 >epst
 The pest pets seem less persistent for a moment.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-pest-pets
+>eepst
+The pest pets seem less persistent for a moment.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for step
@@ -1207,6 +1323,13 @@ You squint. NASC is the name of the company that produced these cans, written in
 >eesk
 You guess the eeks must be there--no, there!
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-eeks
+>skesk
+You guess the eeks must be there--no, there!
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-hardest-trashed-dearths-nudges-hardest
 >hardets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1237,6 +1360,13 @@ You try to eke out an eek, but you only have one data point, and that's not enou
 >scna
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cans. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-cans
+>sscna
+You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cans. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-hatred-hatreds
 >hatred
 There's enough of that going around.
@@ -1364,14 +1494,28 @@ You would upset countless people named Lena or Neal.
 #ttc-table-of-lean-lane-nudges-reward
 >rewadr
 Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
+\\
 #ttc-table-of-oyster-spechelp-dent
 >detn
 Fixing the dent is a tricky business. Get two things out of order, and it might get worse. But you must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-dent
+>detnt
+Fixing the dent is a tricky business. Get two things out of order, and it might get worse. But you must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-tea
 >tae
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-tea
+>ttae
+You anticipate Aunt Tuna telling you to stop playing with your food, already.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-lean-lane-nudges-tuna
@@ -1481,6 +1625,13 @@ Retutor? Torture. Rot. True!
 >wrpa
 That's not quite the way to pop the Paw-R-Wrap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-wrap
+>wwrpa
+That's not quite the way to pop the Paw-R-Wrap.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-nudges-bubble
 >bubbel
 It's just wrap, really.
@@ -1499,6 +1650,12 @@ The pearl is too jagged to change easily, but it seems like it was roughly cut i
 >wipse
 You try to take the wipes, but you worry you're not fast enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-wipes
+>wwipse
+You try to take the wipes, but you worry you're not fast enough.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >swipe wipes
@@ -1655,30 +1812,66 @@ It's just a knob. Which thankfully cuts down the possibilities.
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-trace
+>ttraec
+The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-crate
 >reatc
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-crate
+>rreatc
+The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-oyster-spechelp-knob
 >knbo
 The knob rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the knob. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-knob
+>kknbo
+The knob rattles slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the knob. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-skis
 >sksi
 The skis momentarily seem more polished.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the skis. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-skis
+>kiks
+The skis momentarily seem more polished.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the skis. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-oyster-spechelp-span-pans
 >pasn
 The pans wobble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That's a decent omen.
 \\
+#testcase-misspellings-table-of-oyster-spechelp-span-pans
+>ppasn
+The pans wobble slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-bogus-plains
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-plains
+>ssplani
+You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-oyster-scannotes-bogus-plains
 >scan
@@ -1801,6 +1994,12 @@ Hmm, no, it's only one crate at a time.
 >craet
 The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
+\\
+#+testcase-misspellings-table-of-oyster-spechelp-crate
+>ccraet
+The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >react
 Your score has just gone up by one point
@@ -1946,6 +2145,12 @@ Clear ALL the tubs!
 >tusb
 Hm. The tubs shake slightly. Maybe if you were more forceful.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-tubs
+>ttusb
+Hm. The tubs shake slightly. Maybe if you were more forceful.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for bust
@@ -1977,6 +2182,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >prdo
 You juggle the prod a bit, but it doesn't change into anything new.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-prod
+>pprdo
+You juggle the prod a bit, but it doesn't change into anything new.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >drop prod
@@ -2022,6 +2233,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >waset
 You make an effort to clean the waste but feel you could do better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-waste
+>wwaset
+You make an effort to clean the waste but feel you could do better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-roiling-sweat-text
@@ -2046,6 +2263,13 @@ DEBUG INFO: min-up codepath
 >lanec
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-lance
+>llanec
+The lance glimmers slightly. It has potential to be shiny.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-shuttle-hutlets-nudges-waste
 >waset
 The heaps are still technically waste, but you cleaned them up enough.
@@ -2053,6 +2277,13 @@ The heaps are still technically waste, but you cleaned them up enough.
 >heasp
 The heaps still look ugly as ever.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-heaps
+>hheasp
+The heaps still look ugly as ever.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-shuttle-hutlets-nudges-heap
 >hepa
 Change ALL the heaps!
@@ -2097,11 +2328,26 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+\\
+#+testcase-misspellings-table-of-oyster-spechelp-lance
+>cclena
+The lance glimmers slightly. It has potential to be shiny.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >abstract wipes to lean lane
 #+ttc-table-of-oyster-spechelp-lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+\\
+#+testcase-misspellings-table-of-oyster-spechelp-lance
+>cclena
+The lance glimmers slightly. It has potential to be shiny.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
+>undo
 >undo
 >undo
 
@@ -2243,6 +2489,13 @@ The sardine gives you a weird look, as if you need to stop mumbling. You're not 
 >searhc
 Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-achers-chaser-arches
+>ssearhc
+Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-scannotes-achers-chaser-arches
 >scan achers chaser arches
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
@@ -2341,6 +2594,13 @@ Further searching proves fruitless.
 >gleanre
 The gleaner remains too small to read.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-enlarge
+>gleanar
+The gleaner remains too small to read.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
@@ -2395,6 +2655,11 @@ the general gleaner (very blurry)
 #ttc-table-of-oyster-spechelp-bogus-reangle
 >gleanre
 All you really have to do with the gleaner is to examine it. There might be more in the gleaner, but trying that gives nothing.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-reangle
+>gleanar
+All you really have to do with the gleaner is to examine it. There might be more in the gleaner, but trying that gives nothing.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hints
 #ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
@@ -2518,6 +2783,12 @@ You don't need to riff on any location names to win the game, unless there's not
 >ruyb
 No, that's not quite it. The ruby dulls as if covered by dirt.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-ruby
+>rruyb
+No, that's not quite it. The ruby dulls as if covered by dirt.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for bury
@@ -2563,6 +2834,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #respechelp test for HUNTER HUNT AREA
 >hauntre
 You need a slightly more organized way to reveal what's under the ground with your rigged digger.
+\\
+#respechelp test for HUNTER HUNT AREA
+>hhauntre
+You need a slightly more organized way to reveal what's under the ground with your rigged digger.
 
 ##>unearth haunter
 
@@ -2591,6 +2866,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >assuaeg
 You're a bit tongue-tied, but that seems close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-use-saga-sausage
+>assuege
+You're a bit tongue-tied, but that seems close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-nudges-howler
 >howlre
 A howler or haunter is not specific enough. This is a big ol' SAUSAGE, here.
@@ -2663,6 +2945,13 @@ It's sort of appropriate now that you're in the north, but it's disrespectful to
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-ol-trap
+>ppatrlo
+Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >s
 >e
 #ttc-table-of-anger-range-nudges-hoser
@@ -2825,6 +3114,13 @@ The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe w
 >yappre
 "Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-papery-yapper
+>payery
+"Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
+DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >derali
 The yapper might alert its cronies if you try anything. Even something not quite right, like that
 #ttc-table-of-oyster-scannotes-papery-yapper
@@ -2933,6 +3229,13 @@ Someone named LAMPERT carved their name in red in the templar ramplet.
 >trampel
 There has to be a way to storm down the templar ramplet. But not that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-templar-ramplet
+>ttrampel
+There has to be a way to storm down the templar ramplet. But not that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-scannotes-templar-ramplet
 >scan templar ramplet
 With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
@@ -3006,6 +3309,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-mistake-roiling-nat
 >nat
 You don't need to name the ant. It's not a pet.
+\\
 #testcase-mistake-roiling-splam
 >splam
 There's a simpler way to attack the ant.
@@ -3014,20 +3318,37 @@ There's a simpler way to attack the ant.
 #ttc-table-of-oyster-scannotes-bogus-psalm
 >scan
 Perhaps finding where the vowel is would be a good start.
+\\
 #ttc-table-of-oyster-scannotes-natant-ant
 >scan natant ant
 You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic.
+\\
 #ttc-table-of-oyster-spechelp-natant-ant
 >tna
 There must be a simple way to take down the ant. You haven't quite got it right yet, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-natant-ant
+>tnat
+There must be a simple way to take down the ant. You haven't quite got it right yet, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-oyster-spechelp-bogus-psalm
 >psaml
 The plasm lamps flicker slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-psalm
+>ppsaml
+The plasm lamps flicker slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-atn
 >atn
 You've already got the ant's attention. You'll need to take care of it, now.
+\\
 #ttc-table-of-plasm-lamps-nudges-plam
 >plma
 Maybe riff on ALL the lamps. But only for fun.
@@ -3099,6 +3420,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >levre
 You look at the lever, wishing it would be a little more fun to pull.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-lever
+>lervl
+You look at the lever, wishing it would be a little more fun to pull.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 >dilrae
@@ -3147,6 +3474,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-pins
+>sspni
+You look at the pins. They're in the way, but they don't look particularly sturdy.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #testcase-mistake-roiling-nips
@@ -3187,6 +3520,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >redila
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-redial
+>rredila
+The dialer must have another setting, but that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-den-loft-nudges-spin
 >spni
 You don't need to bring the pins back.
@@ -3219,6 +3559,16 @@ The lever was designed not to give extra points for pulling it too much.
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
 #ttc-table-of-oyster-spechelp-bogus-derail
+\\
+>drilea
+The dialer must have another setting, but that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
+\\
+#testcase-misspellings-table-of-oyster-spechelp-bogus-derail
+>drileaa
+The dialer must have another setting, but that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @verbs
 #+ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft

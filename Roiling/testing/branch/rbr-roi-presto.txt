@@ -81,6 +81,7 @@ It smells a bit stinky here, but more pressingly, it just FEELS stinky
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
+\\
 #ttc-table-of-presto-prefigurings-plebe
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.
@@ -116,6 +117,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the volt maze. That'
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lamb. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-lamb
+>bblma
+The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lamb. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-balm
 >balm
 Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
@@ -161,6 +169,13 @@ It's the maze you need to change, not the zany meter.
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hump. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-hump
+>uumhp
+The hump suddenly looks a bit smaller. But not enough.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the hump. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-hm-up-up-hm
 >hm up
 You don't need to levitate the hump. You need a way to jump over it.
@@ -230,10 +245,22 @@ You don't need to riff on any location names to win the game, unless there's not
 >phooye
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
+#testcase-misspellings-table-of-presto-spechelp-ye-hoop
+>phoyye
+The hoop dips a bit as if to taunt you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #+ttc-table-of-presto-spechelp-ye-hoop
 >poho
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
+\\
+#+testcase-misspellings-table-of-presto-spechelp-ye-hoop
+>pohop
+The hoop dips a bit as if to taunt you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for phooey
@@ -418,6 +445,13 @@ You take a peek in--to see a dart in there.
 >drta
 The dart seems a bit closer, but...dang! Not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-dart
+>ddrta
+The dart seems a bit closer, but...dang! Not quite.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-readables-drab-yoke
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
@@ -444,6 +478,13 @@ You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 >rast
 The tsar star seems to wiggle a bit, but not enough to pull it out.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-tsar-star
+>rrast
+The tsar star seems to wiggle a bit, but not enough to pull it out.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-char-arch-nudges-tar
 >tra
 The tars remain heterogeneous. And very sticky. And the same size.
@@ -526,6 +567,13 @@ You gulp the crust and can't help thinking BLEEP. But you are too polite and/or 
 >blepe
 The plebe looks confused, as if you garbled what you said.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-plebe
+>blepp
+The plebe looks confused, as if you garbled what you said.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-readables-volt-maze
 >read volt maze
 #OK-APOSTROPHE
@@ -1026,6 +1074,14 @@ DEBUG INFO: volt maze hinting.
 >mazeltvo
 The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-maze-walls
+>mmazeltvo
+The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+>undo
+\\
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 >undo
@@ -1106,6 +1162,13 @@ The number's got more numerals than letters.
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-boing
+>bbinog
+You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-scannotes-boing-go-bin
 >scan boing go bin
 Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!
@@ -1140,6 +1203,13 @@ You gulp the crust and can't help thinking BINGO. But you are too polite and/or 
 >prots
 The sport ports seem even shinier for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-sport-ports
+>pprots
+The sport ports seem even shinier for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-readables-sport-ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
@@ -1225,6 +1295,12 @@ Brute force is ineffective. So, too, are all the swears often used with said bru
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-n-t-air
+>wwotn
+You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #ttc-table-of-presto-scannotes-n-t-air
 >scan
@@ -1481,6 +1557,13 @@ The vile veil is impassive. It--kind of protects you, actually.
 >oel
 There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Leo. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-leo
+>ooel
+There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Leo. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-elo
 >elo
 Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.
@@ -1525,17 +1608,33 @@ Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. T
 #ttc-table-of-presto-done-rejects-leo
 >loe
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
+\\
 #ttc-table-of-presto-nudges-leonard
 >leonadr
 You don't need to face double the strength.
+\\
 #ttc-table-of-presto-spechelp-rand
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-rand
+>danrr
+There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-odes-song
 >nessgood
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-odes-song
+>godenees
+The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-scannotes-sods-gone-odes-song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
@@ -1609,6 +1708,13 @@ Maybe something like that'd work with just one washup. But there are two.
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Rand and Leo|Leo and Rand). That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-wzup
+>whusapp
+You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
+/DEBUG ONLY: You feel a slight psychic push-pull coming from between (Rand and Leo|Leo and Rand). That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-whasup-whasups
 >whasup
 That feels almost right, but you remember that that word has 2 s's in a row.
@@ -1819,6 +1925,12 @@ DEBUG INFO: ether hinting.
 >theer
 The ether pulsates, but you still can't see through it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-ether
+>treth
+The ether pulsates, but you still can't see through it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for there
@@ -1957,10 +2069,23 @@ You aren't sure which key would work, so you need a plan to get them all.
 >gohs
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-hogs
+>shogh
+The hogs snicker a bit, but they seem a little nervous, too.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-keys
 >syek
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-keys
+>ssyek
+The hogs snicker a bit, but they seem a little nervous, too.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @verbs
 #verbcase swear-presto-if-hogs-are-touchable
@@ -2049,6 +2174,13 @@ Vandalism! For shame!
 >whta
 The hawt thaw crackles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-hawt-thaw
+>wwhta
+The hawt thaw crackles slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-scannotes-hawt-thaw
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
@@ -2113,14 +2245,35 @@ Concentrate on the words of the harpings phrasing.
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alert letters. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-alert-letters
+>latrer
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
+DEBUG ONLY: You feel a slight psychic push-pull coming from the alert letters. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-log-ons-letters
 >sologn
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the log ons letters. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-log-ons-letters
+>solsgn
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the log ons letters. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-ought-letters
 >touhg
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-ought-letters
+>ttouhg
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-scannotes-alert
 >scan alert
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
@@ -2270,6 +2423,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-starch-charts
+>ttrashc
+The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-scannotes-starch-charts
 >scan starch charts
 Starch is calorically and consonantally (if that's a word) heavy. This must help.
@@ -2358,6 +2518,12 @@ It's the censer that's important, not the brand name.
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-n-e-recs-censer
+>sscrene
+That feels right, but it's not enough yet. You don't need anything grumbly, here.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for screen
@@ -2534,14 +2700,30 @@ They're not just socks, or trim. They're trim socks.
 #ttc-table-of-hacks'-shack-nudges-trimsock
 >trimsokc
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
+\\
 #ttc-table-of-presto-spechelp-disk
 >skdi
 The disk seems to want to expand, but not quite into that. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-disk
+#note here this case is different from the skid spechelp as we haven't discovered skid and disk yet, so we don't say "no third way"
+>skdki
+The disk seems to want to expand, but not quite into that. You must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-clack-ops-locs-pack
 >capslokc
 NO, REARRANGE AND TRY AGAIN, you think.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-clack-ops-locs-pack
+>capslokk
+NO, REARRANGE AND TRY AGAIN, you think.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-readables-clack-ops-locs-pack
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
@@ -2579,6 +2761,13 @@ You need to deal with the full Clack Ops Locs Pack.
 >lefa
 The flea makes a crinkly noise but still seems quite dead.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-flea
+>llefa
+The flea makes a crinkly noise but still seems quite dead.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-idks
 >idks
 You'll need to figure stuff out with the disk, but right now, yeah, you're all "I don't know."
@@ -2659,6 +2848,13 @@ Nobody else seems to own the oper rope or the skid.
 >diks
 No, skid <=> disk is about it. There's no tricky third way.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the skid. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-skid
+>ddiks
+No, skid <=> disk is about it. There's no tricky third way.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from the skid. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >disk
 ###skip test checking
 >skdi
@@ -2671,14 +2867,29 @@ You don't need to do anything tricky with the skid's rope.
 #ttc-table-of-hacks'-shack-nudges-fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
+\\
 #ttc-table-of-presto-spechelp-coal
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-coal
+>cloaa
+Microscopic bubbles seem to form on the coal and burst in the air.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-gum
 >gmu
 Ugg... umm... you stare at the gum. Not many ways to stretch it, really.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-gum
+>ggmu
+Ugg... umm... you stare at the gum. Not many ways to stretch it, really.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
@@ -2705,6 +2916,13 @@ You may need sleep later, but not now. Besides, you have nowhere to sleep.
 >futno
 Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-fount
+>ffutno
+Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-done-rejects-leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
@@ -2715,6 +2933,12 @@ The screen is less ancient than the censer, but you can't do any better. It work
 >casseroel
 The escaroles seem slightly meatier.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-escaroles
+>cassarole
+The escaroles seem slightly meatier.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @!min
 >casserole
@@ -2800,6 +3024,12 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 >keyboadr
 It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-drab-yoke
+>kkeyboadr
+It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for keyboard
@@ -2854,6 +3084,12 @@ You need to fix the program in the computer.
 >reboto
 The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command like that must work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-be-troo-e-robot
+>rebbot
+The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command like that must work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-roiling-to-be-or
@@ -3024,6 +3260,12 @@ Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 >epsel
 Whatever you thought seemed a bit of a tired mess.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-peels-speel
+>spelp
+Whatever you thought seemed a bit of a tired mess.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >compile
@@ -3065,6 +3307,12 @@ You've had enough comforts from cots to do the programming you need. You might r
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polemic. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-im-le-cop-polemic
+>ccompiel
+Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polemic. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for compile
@@ -3162,6 +3410,18 @@ After compiling, you often need to make small tweaks, but not like that.
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
+\\
+#+ttc-table-of-presto-spechelp-trim-socks
+>romstikc
+You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-trim-socks
+>romstickr
+You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: VARIED
@@ -3174,16 +3434,36 @@ It's alternately referred to as Drive E and E Drive. I'D VEER, someone has writt
 >abt
 The TBA key rattles within the keyboard a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-tba-key
+>aabt
+The TBA key rattles within the keyboard a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-presto-spechelp-drive-a
 >drivea
 Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-drive-a
+>driveaa
+Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-presto-spechelp-drive-e
 >drivee
 Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-drive-e
+>dirive
+Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-roiling-redive
 >redive
 But you've figured nothing about Drive E yet. Not that you strictly need to.
@@ -3270,6 +3550,12 @@ No, the TAB key is what it should be.
 >debgu
 Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-bub-dude-egg
+>ddebgu
+Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
+DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
 #slider test for debug
@@ -3379,6 +3665,12 @@ Hm, USB seems pretty straightforward. Maybe there are two solutions, each equall
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a decent omen.
+\\
+#testcase-misspellings-table-of-presto-spechelp-usb
+>uubs
+Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >bus

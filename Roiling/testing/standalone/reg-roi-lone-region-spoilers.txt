@@ -131,10 +131,12 @@ DEBUG INFO: retry failed since we're in Strip of Profits.
 >decide
 The region for this final command (Troves) may've changed since you last played, which is probably release 1. Thus, significantly new stuff may've been added since then. Go ahead anyway?
 Enjoy the new content!
+
 #ttc-table-of-region-skip-commands-resign
 >resign
 The region for this final command (Troves) may've changed since you last played, which is probably release 3 or earlier. Thus, significantly new stuff may've been added since then. Go ahead anyway?
 Enjoy the new content!
+
 #ttc-table-of-region-skip-commands-recant
 >recant
 You declare cleared Troves and watch Store V dissolve.
@@ -263,6 +265,7 @@ DEBUG INFO: retry failed since we're in Strip of Profits.
 #ttc-table-of-region-skip-commands-destroy
 >destroy
 The region for this final command (Oyster) may've changed since you last played, which is probably release 1. Thus, significantly new stuff may've been added since then. Go ahead anyway?
+
 #ttc-table-of-region-skip-commands-redial
 >redial
 You declare cleared Oyster and watch Store Y dissolve.
