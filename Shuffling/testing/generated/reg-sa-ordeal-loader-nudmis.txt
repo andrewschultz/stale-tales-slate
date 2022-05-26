@@ -161,6 +161,12 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 The odor doesn't seem too complex. You pause. You can figure what it should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
 
+#testcase-misspellings-table-of-ordeal-loader-anagrams-odor
+>drdo
+The odor doesn't seem too complex. You pause. You can figure what it should be.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-shuffling-rood
 >rood
 This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
@@ -196,6 +202,12 @@ It's a pretty complex chord.
 The bulge swells and makes a squeal, like it's trying to make music.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
 
+#testcase-misspellings-table-of-ordeal-loader-anagrams-bulge
+>blulge
+The bulge swells and makes a squeal, like it's trying to make music.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >bugle
 Your score has just gone up by one point.
 
@@ -210,6 +222,12 @@ No, the bugle is a bugle, not just a horn. It's been changed enough.
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
+
+#testcase-misspellings-table-of-ordeal-loader-anagrams-bolt
+>blolt
+You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >blot
 by one point
@@ -250,6 +268,11 @@ There's something you can do with all the nets, if you think about it.
 >etns
 The sent nets rustle slightly.
 
+#testcase-misspellings-table-of-ordeal-loader-anagrams-sent-nets
+>stent
+The sent nets rustle slightly.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >nest
 by one point
 
@@ -271,10 +294,22 @@ The shrub and brush waver, then point towards the toga.
 >eder
 The reed blows in an unseen breeze.
 
+#testcase-misspellings-table-of-ordeal-loader-anagrams-reed
+>redd
+The reed blows in an unseen breeze.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-ordeal-loader-spechelp-toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
+
+#testcase-misspellings-table-of-ordeal-loader-anagrams-toga
+>goota
+The toga blows in an unseen breeze, exposing what's written on it a bit more.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
@@ -349,6 +384,12 @@ You don't need to change this place, though the cabinet holds a hint device to t
 You think a bit, and the static seems like a bad extension to the doll house.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
 
+#testcase-misspellings-table-of-ordeal-loader-anagrams-static
+>stasic
+You think a bit, and the static seems like a bad extension to the doll house.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
@@ -366,6 +407,12 @@ Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
+
+#testcase-misspellings-table-of-ordeal-loader-anagrams-attics
+>aticcs
+Hm, you can't think of anything to do with the attics but change them back.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #ttc-table-of-notices-section-nudges-doll
 >dlol
@@ -399,6 +446,12 @@ You will have to change the new land one item at a time.
 >gatemna
 The nametag peels infinitesimally.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+
+#testcase-misspellings-table-of-ordeal-loader-anagrams-nametag
+>meatgen
+The nametag peels infinitesimally.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #testcase-mistake-shuffling-get-a-man
 >get a man
@@ -465,6 +518,13 @@ The cabinet deserves a better fate than THAT.
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
+
+#testcase-misspellings-table-of-ordeal-loader-anagrams-acne-bit-cabinet
+>cabinett
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+The cabinet wobbles a bit.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
+
 #ttc-table-of-readables-acne-bit-cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:

@@ -177,6 +177,12 @@ You can't change the hotel,
 >gardenai
 The drainage bubbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the drainage. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-drainage
+>gardenii
+The drainage bubbles a bit.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the drainage. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 >w
@@ -483,6 +489,12 @@ The author twisted words enough. Perhaps you could concentrate on the motto.
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the motto. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-motto
+>totama
+Hm, you maybe could bend the/a motto a bit differently.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the motto. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gle
 >angle
@@ -741,6 +753,12 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 >controsl
 You thought you heard electronic beeping from the corn.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-lost-corn
+>contrlss
+You thought you heard electronic beeping from the corn.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 #pre-lostcorn-controls rule
@@ -785,6 +803,12 @@ One antler seems to twitch a bit and pull towards you. Curious--it doesn't look 
 >rentlas
 You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the antlers. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-antlers
+>rentlars
+You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the antlers. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 DEBUG: poses posse being objhinted.
@@ -974,6 +998,12 @@ You've already changed the lost corn into the controls, and you don't need to do
 >keycadr
 You feel like you can almost identify what the cake can become.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-dry-cake
+>crydeeka
+You feel like you can almost identify what the cake can become.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-metros-anagrams-dry-cake
@@ -1007,6 +1037,12 @@ The fuzziness seems to be part of the clover. It might be, even if you're able t
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-clover
+>cloover
+The clover seems overcome with fuzz for a moment--but no, you missed a little something.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-metros-anagrams-clover
@@ -1237,6 +1273,13 @@ You should take the heaths if you want to work on them.
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the begonias. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-begonias
+>beggonias
+The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the begonias. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >noise bag
 by one point
 #altpath
@@ -1320,6 +1363,12 @@ They are multiple heaths--so you should try to change just one.
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the heaths. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-heaths
+>heatts
+You stare at the heaths, picturing them in the circle and wondering which is the "starter."
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the heaths. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #+ttc-table-of-metros-anagrams-begonias
@@ -1407,6 +1456,12 @@ You'd need to do something to all the words.
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the words. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-words
+>wordss
+The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the words. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-metros-anagrams-words
@@ -1434,6 +1489,12 @@ Meddling with the sword right now, you're worried it might poke you.
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the brocade. Keep at it.
+\\
+>bardcode
+#testcase-misspellings-table-of-metros-anagrams-brocade
+The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the brocade. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-metros-anagrams-brocade
@@ -1939,6 +2000,12 @@ Apparently the neon pig is a creation of one INPENGO.
 >openign
 The neon pig blinks as if in last-ditch defiance.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-neon-pig
+>opeging
+The neon pig blinks as if in last-ditch defiance.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-metros-anagrams-neon-pig
@@ -2117,6 +2184,12 @@ This racket isn't just one beat.
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the siren. Keep at it.
+\\
+>sirren
+#testcase-misspellings-table-of-metros-anagrams-siren
+The siren continues to blind you--like it's throwing dust in your eyes.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the siren. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-metros-anagrams-siren
@@ -2178,6 +2251,12 @@ The dust is dust now.
 >betsa
 The beats shift up for a second.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the beats. Keep at it.
+\\
+#testcase-misspellings-table-of-metros-anagrams-beats
+>bastes
+The beats shift up for a second.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the beats. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >beast
 }}SCORE++

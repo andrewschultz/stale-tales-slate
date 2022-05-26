@@ -20,6 +20,11 @@
 >bactein
 The cabinet wobbles a bit.
 
+#testcase-misspellings-table-of-stores-anagrams-acne-bit-cabinet
+>bacteein
+The cabinet wobbles a bit.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-stores-nudges-trips
 >trisp
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -306,6 +311,17 @@ Grand, but unfortunately, not in English.
 >tresor
 Grand, but unfortunately, not in English.
 
+#ttc-table-of-stores-spechelp-store-f
+>fretso
+That seemed right but not quite natural.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
+
+#testcase-misspellings-table-of-stores-anagrams-store-f
+>stoffer
+That seemed right but not quite natural.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >forest
 by one point
 
@@ -323,6 +339,12 @@ RISE TO TIES OR RITES, O!
 Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
 
+#testcase-misspellings-table-of-stores-anagrams-store-i
+>stoirer
+Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #testcase-mistake-shuffling-reaves
 >reaves
 You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
@@ -338,15 +360,29 @@ by one point
 >strebo
 You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store B. Keep at it.
+
+#testcase-misspellings-table-of-stores-anagrams-store-b
+>stobber
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store B. Keep at it.
+
 #ttc-table-of-stores-nudges-depot
 >depto
 You can't do anything to the depots besides ENTER them.
+
 #ttc-table-of-stores-nudges-depots
 >depost
 You can't do anything to the depots besides ENTER them.
+
+#testcase-mistake-shuffling-dopest
+>dopest
+It's your job to make things more dope behind the posted depots, and it's going to take more than one word.
+
 #testcase-mistake-shuffling-despot
 >despot
 Summoning Red Bull Burdell would be unwise. Best not try it again.
+
 >despot
 Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ...
 So 'dept.
@@ -364,10 +400,22 @@ No, it's a map of something behind Store M, it looks like.
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
 
+#testcase-misspellings-table-of-stores-anagrams-store-m
+>stormer
+Store M shudders slightly. You wonder what sort of rapid transit is behind it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 #ttc-table-of-stores-spechelp-store-r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
+
+>resoste
+#testcase-misspellings-table-of-stores-anagrams-store-r
+Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >metros
 by one point

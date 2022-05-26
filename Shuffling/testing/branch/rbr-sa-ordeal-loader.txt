@@ -301,6 +301,12 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-odor
+>drdo
+The odor doesn't seem too complex. You pause. You can figure what it should be.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-rood
@@ -374,6 +380,12 @@ It's a pretty complex chord.
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-bulge
+>blulge
+The bulge swells and makes a squeal, like it's trying to make music.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 >blot
@@ -434,6 +446,12 @@ No, the bugle is a bugle, not just a horn. It's been changed enough.
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-bolt
+>blolt
+You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >blot
 by one point
@@ -519,6 +537,11 @@ There's something you can do with all the nets, if you think about it.
 #ttc-table-of-ordeal-loader-spechelp-sent-nets
 >etns
 The sent nets rustle slightly.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-sent-nets
+>stent
+The sent nets rustle slightly.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gn
 #testcase-outside-thickest-thickets
@@ -557,12 +580,24 @@ The shrub and brush waver, then point towards the toga.
 #ttc-table-of-ordeal-loader-spechelp-reed
 >eder
 The reed blows in an unseen breeze.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-reed
+>redd
+The reed blows in an unseen breeze.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-ordeal-loader-spechelp-toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-toga
+>goota
+The toga blows in an unseen breeze, exposing what's written on it a bit more.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
@@ -720,6 +755,12 @@ You hear tectonic noises, then an evil voice whispering "Once it's..." You sense
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-static
+>stasic
+You think a bit, and the static seems like a bad extension to the doll house.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @scan
 #gadget test: static to attics
@@ -776,6 +817,12 @@ Hmm. You thought the attics would be more appropriate for the doll house, but ma
 Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
 \\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-attics
+>aticcs
+Hm, you can't think of anything to do with the attics but change them back.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-notices-section-nudges-doll
 >dlol
 The attics shake slightly.
@@ -808,6 +855,12 @@ You will have to change the new land one item at a time.
 >gatemna
 The nametag peels infinitesimally.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-nametag
+>meatgen
+The nametag peels infinitesimally.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-get-a-man
@@ -984,6 +1037,13 @@ The cabinet deserves a better fate than THAT.
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
+\\
+#testcase-misspellings-table-of-ordeal-loader-anagrams-acne-bit-cabinet
+>cabinett
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+The cabinet wobbles a bit.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
+\\
 #ttc-table-of-readables-acne-bit-cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:

@@ -227,6 +227,12 @@ You don't need to re-stop the centrifuge.
 >kitchne
 The nick blurs a little but snaps back to normal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-t-n
+>kitcheen
+The nick blurs a little but snaps back to normal.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-thicken
@@ -286,11 +292,16 @@ The gadget beeps once. A series of lights comes across: RRGRR.
 DEBUG INFO: Rect-text: S---W.
 DEBUG INFO: Cert-text: --R--.
 
+@max
+>x fridge
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see some grist and a cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+>undo
+
 @!min
 >open fridge
-You see some grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
+In the fridge, you see some grist and a cake pan. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
 >open fridge
-You reopen and peer on. You see some grist and a cake pan inside.
+You reopen and peer on. The grist and cake pan are still in the fridge.
 
 @hints
 >xx
@@ -473,7 +484,7 @@ Nothing happens. Well, you didn't really want to go back to the nick, and there'
 @!min
 #######dumb stuff
 >x fridge
-While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see some grist and a cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. The grist and cake pan are still in the fridge, too, you remember. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 
 @hin
 /DEBUG: (skate|bottle of CATHOUSE perfume|cheesy spearman|cult tee|tall trio) being objhinted.
@@ -499,6 +510,12 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 >grtis
 The grist looks a bit less bland.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the grist. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-grist
+>gritts
+The grist looks a bit less bland.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the grist. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gle
 >angle
@@ -525,6 +542,12 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 >pancaek
 It's a cake pan, backwards and forwards.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-cake-pan
+>panceek
+It's a cake pan, backwards and forwards.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @!min
 >pancake
@@ -547,6 +570,13 @@ Best not to get too crazy with food preparation.
 >tortilal
 The tall trio seem to look interested for a minute.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-tall-trio
+>torlilal
+The tall trio seem to look interested for a minute.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-readables-tall-trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
@@ -600,6 +630,13 @@ The CATHOUSE doesn't need a decorative trimming.
 >hotsauec
 The bottle of CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-cathouse
+>hotsauece
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+The bottle of CATHOUSE perfume suddenly smells a bit spicier.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
+\\
 #testcase-mistake-shuffling-sauce
 >sauce
 Close, but you need the whole name of the sauce.
@@ -667,6 +704,12 @@ There are three additional bits of writing that may help you, too.
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-spearman
+>permesan
+The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >parmesan
 Your score has just gone up by one point.
@@ -691,6 +734,12 @@ Best not to get too crazy with food preparation.
 >steka
 You thought you smelled meat there, for a minute. Hm.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the skate. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-skate
+>statke
+You thought you smelled meat there, for a minute. Hm.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the skate. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-stake
@@ -744,6 +793,12 @@ The steak's just right as is.
 @nud
 #ttc-table-of-sortie-spechelp-cult-tee
 >lettuec
+The cult tee seems to vegetate there. Change things around and it may become something.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-cult-tee
+>luttuec
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 The cult tee seems to vegetate there. Change things around and it may become something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
 \\
@@ -806,6 +861,12 @@ You don't need to change the red inn. It supported your cooking efforts.
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the taco. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-taco
+>cotta
+Weird. The taco almost seemed to grow arms, or even sleeves.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the taco. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-cato
@@ -889,6 +950,12 @@ The cask is changeable, but not like that. WERE-EWER just clues it can be change
 >cska
 Nothing happens. Maybe you are trying to do too much to change the cask.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cask. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-cask
+>cskaa
+Nothing happens. Maybe you are trying to do too much to change the cask.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cask. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-sortie-anagrams-cask
@@ -947,6 +1014,12 @@ After some thought, that seems like it'd be a waste, since you know what it was.
 You doubt the sack/cask has a triple purpose.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sack. Keep at it.
 \\
+#testcase-misspellings-table-of-sortie-anagrams-sack
+>cskak
+You doubt the sack/cask has a triple purpose.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sack. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-sortie-nudges-burlap
 >burlpa
 The sack itself seems pliable, but its individual fibers aren't.
@@ -964,6 +1037,12 @@ Why zap just one wart? Go for all of them!
 >strwa
 The warts itch slightly.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the warts. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-warts
+>straws
+The warts itch slightly.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the warts. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gle
 You see your face clear again, pleased you reversed the warts.
@@ -1019,6 +1098,12 @@ You need more than one shoe.
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-hoses
+>shoee
+Something leaks out of the hoses. Hm. What else can be rubber, now.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-hoes
@@ -1088,6 +1173,12 @@ But you're wearing the shoes. That might cause problems.
 >romo
 You almost feel something picking you up for a second. You must have been close.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-r2
+>romm
+You almost feel something picking you up for a second. You must have been close.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-sortie-anagrams-m2
@@ -1329,6 +1420,12 @@ Shooting things up is not the answer
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the anapest. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-anapest
+>peasetn
+You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the anapest. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >peasant
 Your score has just gone up by one point.
@@ -1452,6 +1549,12 @@ No, the full roadblock.
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-m2
+>mror
+The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >room
 "The room's smoother," you muse...
@@ -1563,6 +1666,13 @@ Mum, dud mud blocks your way north. You can only go west to Kitchen or south to 
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-scraped-wall
+>hawlwya
+Hm, yes, a haywall might become something more passable, if you muddle it right.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #+ttc-table-of-readables-spearman
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
@@ -1801,6 +1911,12 @@ Things aren't THAT bad.
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
+\\
+>misliel
+#testcase-misspellings-table-of-sortie-anagrams-smilies
+The smilies momentarily grow eyebrows that point aggressively, then vanish.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #+testcase-mistake-shuffling-mope
@@ -1910,6 +2026,12 @@ It's a plane, now, for sure.
 >panle
 The plane can probably become something else, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-poem
+>pellan
+The plane can probably become something else, but not that.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-nepal
@@ -1949,10 +2071,16 @@ You mope, but you imagine no poem.
 >panle
 The panel bleeps a "stop that" sort of warning.
 \\
-#ttc-table-of-sortie-spechelp-oils2
+#ttc-table-of-sortie-spechelp-oils
 >soli
 The oils could change the moor into something more fertile, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-oils
+>solis
+The oils could change the moor into something more fertile, but not that.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @scan
 #gadget test: oils to soil
@@ -1981,7 +2109,7 @@ Your score has just gone up by one point.
 @nud
 #ttc-table-of-sortie-done-rejects-soil
 >soli
-The soil is right as-is, but maybe something can go on it.
+The soil is there to support something, but not quite that.
 \\
 #renudge for were
 >weer
@@ -1991,6 +2119,12 @@ There's no other way to change the cask than to and from the sack. WERE-EWER jus
 >black doro
 The roadblock changes all the colors of the rainbow, but none seem appropriate.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-roadblock
+>raadblock
+The roadblock changes all the colors of the rainbow, but none seem appropriate.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-black-rood-rood-blackrood
@@ -2140,9 +2274,14 @@ You can't go back there.
 you muse once again
 
 @nud
-#+ttc-table-of-sortie-spechelp-oils2
+#ttc-table-of-sortie-spechelp-oils2
 >soli
-The soil is right as-is, but maybe something can go on it.
+The soil is there to support something, but not quite that.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-oils2
+>solis
+The soil is there to support something, but not quite that.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #+ttc-table-of-sortie-anagrams-oils
@@ -2170,6 +2309,11 @@ You see yourself assembling the silo further.
 {$SCOS}
 @!
 {$SFIXMAX}
+
+@nud
+#+ttc-table-of-sortie-done-rejects-soil
+>soli
+The silo is quite an accomplishment. You wouldn't want to ruin it
 
 @nud
 >room
@@ -2255,6 +2399,12 @@ No, you're overthinking it. Just the text.
 Hmm, that doesn't work, but you bet you can bull your way through things.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
 \\
+>sterr
+#testcase-misspellings-table-of-sortie-anagrams-trees-button
+Hmm, that doesn't work, but you bet you can bull your way through things.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #testcase-mistake-shuffling-stere
 >stere
 Units of measurements are abstract. We need something concrete.
@@ -2327,6 +2477,12 @@ Already good.
 >shoto
 You suppress a few minor swears as you realize that can't be right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
+\\
+#testcase-misspellings-table-of-sortie-anagrams-hoots-button
+>shoth
+You suppress a few minor swears as you realize that can't be right.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-sooth

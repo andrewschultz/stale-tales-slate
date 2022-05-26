@@ -61,6 +61,11 @@ You can just enter the ogled lodge.
 #ttc-table-of-stores-spechelp-acne-bit-cabinet
 >bactein
 The cabinet wobbles a bit.
+\\
+#testcase-misspellings-table-of-stores-anagrams-acne-bit-cabinet
+>bacteein
+The cabinet wobbles a bit.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
 #ttc-table-of-iconmaps-1
@@ -505,6 +510,18 @@ The stores are where it's at. You can go IN once you've found what they can beco
 >exits
 The stores are where it's at. You can go IN once you've found what they can become.
 
+@nud
+#ttc-table-of-stores-spechelp-store-f
+>fretso
+That seemed right but not quite natural.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
+\\
+#testcase-misspellings-table-of-stores-anagrams-store-f
+>stoffer
+That seemed right but not quite natural.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
 >forest
 by one point
 
@@ -537,6 +554,12 @@ RISE TO TIES OR RITES, O!
 >sortei
 Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
+\\
+#testcase-misspellings-table-of-stores-anagrams-store-i
+>stoirer
+Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-reaves
@@ -556,15 +579,30 @@ by one point
 >strebo
 You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store B. Keep at it.
+\\
+#testcase-misspellings-table-of-stores-anagrams-store-b
+>stobber
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store B. Keep at it.
+
+@nud
 #ttc-table-of-stores-nudges-depot
 >depto
 You can't do anything to the depots besides ENTER them.
+\\
 #ttc-table-of-stores-nudges-depots
 >depost
 You can't do anything to the depots besides ENTER them.
+\\
+#testcase-mistake-shuffling-dopest
+>dopest
+It's your job to make things more dope behind the posted depots, and it's going to take more than one word.
+\\
 #testcase-mistake-shuffling-despot
 >despot
 Summoning Red Bull Burdell would be unwise. Best not try it again.
+\\
 >despot
 Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ...
 So 'dept.
@@ -583,12 +621,24 @@ No, it's a map of something behind Store M, it looks like.
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
+\\
+#testcase-misspellings-table-of-stores-anagrams-store-m
+>stormer
+Store M shudders slightly. You wonder what sort of rapid transit is behind it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-stores-spechelp-store-r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
+\\
+>resoste
+#testcase-misspellings-table-of-stores-anagrams-store-r
+Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gn
 #+testcase-outside-trips-strip

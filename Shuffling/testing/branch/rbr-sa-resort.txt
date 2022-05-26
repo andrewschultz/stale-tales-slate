@@ -98,6 +98,13 @@ The feral flare crackles menacingly. You doubt you can change it for the better.
 >islte
 The tiles rattle as if to shift but settle down.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-tiles
+>titles
+The tiles rattle as if to shift but settle down.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-readables-tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
@@ -237,6 +244,12 @@ The sand and sands and sands are just--well, sand. They won't help you get off t
 You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
 \\
+#testcase-misspellings-table-of-resort-anagrams-l2
+>siles
+You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-leis-isle-nudges-lie
 >eil
 Perhaps you can deal with the leis, or maybe you can use something else to escape the isle.
@@ -259,6 +272,12 @@ You notice writing on the rock and swing similar to what you just said. Or tried
 \\
 #ttc-table-of-resort-spechelp-rock
 >crko
+Hmm, a rock, but only so much you can do with it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the rock. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-rock
+>crock
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 Hmm, a rock, but only so much you can do with it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the rock. Keep at it.
 
@@ -358,6 +377,12 @@ You have a way off this island to the east, though you can make the other for fu
 >winsg
 The swing goes slightly airborne.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-swing
+>swnings
+The swing goes slightly airborne.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #+ttc-table-of-resort-anagrams-swing
@@ -497,6 +522,12 @@ Only changing one pole would still leave a vertical barrier.
 >polse
 The poles start to bend at an angle--or maybe that's the light.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-poles
+>ploses
+The poles start to bend at an angle--or maybe that's the light.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-prose
@@ -595,6 +626,13 @@ You wonder if YOU are the poser, for not being able to figure what to do.
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-tool-shed
+>teeholds
+You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 #ttc-table-of-readables-u-lock
 >read u lock
 Red writing shows the U-Lock brand is OLD THOSE.
@@ -666,6 +704,12 @@ The toeholds could be handy for getting up and out of here.
 >respo
 You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spore. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-spore
+>respos
+You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spore. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @!min
 >ropes
@@ -703,6 +747,12 @@ Those are already useful.
 >grisp
 The sprig seems to grow less fragile for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-sprig
+>grisps
+The sprig seems to grow less fragile for a moment.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-prigs
@@ -822,6 +872,12 @@ No, the clay is a clue to what the protest really wants to do.
 >troi
 The riot's still a crowd, and a big one, too.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-riot
+>rorti
+The riot's still a crowd, and a big one, too.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-i-rot
@@ -886,6 +942,12 @@ They're not bad people. But even bad people don't deserve to vanish like that! M
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-protest
+>porters
+The protesters mumble at you for trying to exert mind control. You've struck a nerve.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-roister
@@ -953,6 +1015,12 @@ You're overthinking it. Or you hope you are. It's both a chain, and links.
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
+\\
+#testcase-misspellings-table-of-resort-anagrams-chain-links
+>aincha
+The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @mis
 #testcase-mistake-shuffling-achin

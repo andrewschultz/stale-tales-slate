@@ -53,14 +53,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >monty glean
 You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
-@nud
-#ttc-table-of-stores-spechelp-store-f
->fretso
-That seemed right but not quite natural.
-DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
-
-@gle
-
 >forest
 #notmax
 Your score has just gone up by one point.
@@ -748,6 +740,12 @@ No, you can't afford to wait that long.
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the ones. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-ones
+>neons
+The ones rattle a bit. Maybe you can sense out what they should be.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the ones. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gn
 #testcase-outside-gnarliest-triangles
@@ -801,12 +799,24 @@ You need something more tangible than that. Something that could make a gunshot,
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-noughts
+>shotgunn
+Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @nud
 #ttc-table-of-forest-spechelp-dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dashes. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-dashes
+>shadee
+The dashes seemed to rattle a bit, but you feel slightly uncool.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dashes. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >shades
 Your score has just gone up by one point.
@@ -998,6 +1008,12 @@ You are trying to save a magic world, not start a garage band. Besides, there's 
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the Spam. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-spam
+>pamps
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the Spam. Keep at it.
 
 >maps
 Your score has just gone up by one point.
@@ -1020,6 +1036,12 @@ It's kind of cold a lot of places here. Keep your clothes on.
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bread. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-bread
+>barded
+A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bread. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >beard
 Your score has just gone up by one point.
@@ -1057,6 +1079,12 @@ You should be able to walk NORTH from Self-ID Fields now with your disguise.
 >ilst
 The slit waxes and wanes a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the slit. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-slit
+>tilts
+The slit waxes and wanes a bit.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the slit. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-forest-anagrams-slit
@@ -1161,6 +1189,12 @@ You can just read the spread instead. The messages here aren't cryptic enough to
 >hasbene
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-banshee
+>hasbane
+The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
 #ttc-table-of-forest-anagrams-banshee
@@ -1172,6 +1206,12 @@ The banshee seems to howl about becoming a has-been.
 @nud
 #ttc-table-of-forest-spechelp-liches
 >chisle
+The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the liches. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-liches
+>chellis
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the liches. Keep at it.
 
@@ -1348,6 +1388,12 @@ You smirk at the grinder you trashed.
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-livers
+>slivler
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+The livers seem to prick you for a moment, as if to say you're not quite right.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
 
 @nud
 #testcase-mistake-shuffling-silver
@@ -1435,6 +1481,14 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #ttc-table-of-emptiness-sepiments-nudges-cloth
 >cloht
 No, the material of the spread isn't important, here.
+\\
+#testcase-misspellings-table-of-forest-anagrams-spread
+>drepesa
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spread. Keep at it.
+\\
+>undo
 
 @scan
 #gadget test: spread to drapes
@@ -1475,6 +1529,13 @@ That is too passive, to ask to be spared.
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the red asp. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-red-asp
+>drepesa
+The red asp strikes at something you can't see, unaware it's you that's trying to change it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the red asp. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
 >drapes
 Your score has just gone up by one point.
 
@@ -1554,6 +1615,12 @@ You see yourself molding the sliver into something more compact and glowing and 
 >silvre
 The sliver seems to bend, but it snaps back.
 !As if it's impatient
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sliver. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-sliver
+>silvrer
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+The sliver seems to bend, but it snaps back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sliver. Keep at it.
 
 >silver
@@ -1741,6 +1808,12 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 @nud
 #ttc-table-of-forest-spechelp-vowels
 >wolvse
+The vowels continue to howl in defiance. OU...AIE...like a wild animal.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the vowels. Keep at it.
+\\
+#testcase-misspellings-table-of-forest-anagrams-vowels
+>welvsov
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the vowels. Keep at it.
 
