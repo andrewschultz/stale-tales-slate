@@ -124,7 +124,6 @@ You can only go back out to the Same Mesa.
 >smell pipe soot
 The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong, so the pipe soot probably won't burn your hands if you can take it.
 
-#not a mistake ("opposite" by List o Toils is)
 >opposite
 Your score has just gone up by one point
 
@@ -165,7 +164,6 @@ You can't hear Ian Gast over the WOE BOW BELL.
 >listen bell
 Through the WOE BOW BELL's resonance, you think you could hear something if you listen carefully.
 
-#not a mistake (mistake code is for general preposition reject)
 >below
 Your score has just gone up by one point
 
@@ -176,7 +174,6 @@ Ian Gast is banging on about Rude 'N Nuder, now.
 >listen
 Ian Gast is banging on about Rude 'N Nuder, now.
 
-#not a mistake (mistake code is for general preposition reject once you are under)
 >under
 Your score has just gone up by one point
 
@@ -220,7 +217,6 @@ You hear people far away crying "The Bean has landed!"
 >attack the bean
 It's like a dense metal or something. It's more likely it would make something else crack.
 
-#not a mistake (mistake code is for general preposition reject)
 >beneath
 Your score has just gone up by one point
 

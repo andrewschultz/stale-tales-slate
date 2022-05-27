@@ -1791,6 +1791,8 @@ You may need to use those medals before visiting Elvira. Hm, IQ + Lucky = ...
 
 > QUICKLY
 
+This won't work if you haven't helped the animals enough.
+
 > W
 
 The repartee is just there for your amusement. Now, Elvira won't kill you ASAP, since you deflected her attack. Unless you wait helplessly, and she regains confidence. You just need to make sure you have enough backup. If you didn't fix the whistle, you can retreat and do so.
@@ -1799,7 +1801,7 @@ The repartee is just there for your amusement. Now, Elvira won't kill you ASAP, 
 
 > PLAY WHISTLE
 
-And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even...enough to play the epilogue in Store H
+And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even...enough to play the epilogue in Store H!
 
 
 
@@ -1847,7 +1849,9 @@ And you have rescued Yorpwald from Elvira! I hope you enjoyed this. Maybe even..
 
 STORE H
 
-This is a sort of catch-all area that I hope is still entertaining. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. I tried for ease of play while changing a few fruits in each room.
+This is a sort of catch-all area with a clear theme. It's meant to be low-pressure. Some of the puzzles are a bit obscure, but they're intended to be, since you only need to "get" 20 basic ones, and you can probably guess the category. It should be scalable to how hard you want to make it, as many of the fruits have relatively small anagrams.
+
+For this walkthrough, I tried for relative ease of play combined with visiting every room. There are 68.4 billion ways to get the 20 needed of 39 total fruits, so you obviously can go your own way. Some are clearly more easy than others.
 
 You can actually win Store H/Others without visiting the Clangier Clearing or Filed Field, if you plan right, but I figure I'd give the whole panoramic view.
 
@@ -1856,11 +1860,6 @@ If you've already completed the game, you can
 > ROVE OVER
 
 > OTHERS
-
---put in LLPs: POMEGRANATE
---put in LLPs: STRAWBERRIES
---put in LLPs: BLACKBERRIES
---put in LLPs: CONCISIONS
 
 > X STAND
 > PEARS
@@ -2335,7 +2334,7 @@ Harmonicas:
 Peanut Cola:
 > PNAGNYBHCR
 
-Magenta Rope:
+Magenta Rope/Mopeage Rant/Rampage Note/Megaton Pear:
 > CBZRTENANGR
 
 Eerie blurbs:

@@ -3395,7 +3395,9 @@ to decide whether found-misspelled-anagram:
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
 			if quickcmd is binhash entry or quickfirstword is binhash entry:
-				if (the-from entry is disk or the-from entry is skid) and disk is not off-stage:
+				if the-from entry is prefigured:
+					say "You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, [b]PAD FLIPS[r] will remind you.";
+				else if (the-from entry is disk or the-from entry is skid) and skid is not off-stage:
 					say "[sk2dsk].";
 				else if the-from entry is part of the diorama and the the-to entry is ever-study:
 					say "You know what to change [the the-from entry] back to: [the the-to entry]. There's no third option.";
@@ -3406,6 +3408,7 @@ to decide whether found-misspelled-anagram:
 				ital-say-lb "you may have misspelled things, though. Too many or few of one letter.";
 				decide yes;
 	decide no;
+
 to say generic-reject:
 	say "That's not something you can say, do or see here. For a general list of verbs, type [b]VERBS[r], or for options, type [b]OPTIONS[r]. ";
 	unless qbc_litany is Table of No Conversation:

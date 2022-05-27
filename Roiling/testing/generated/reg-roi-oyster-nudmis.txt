@@ -286,7 +286,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. Tha
 >unste
 The tunes grow slightly less annoying, for a moment.
 
-#not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
 >unset
 by one point
 >unset
@@ -313,12 +312,10 @@ The jukebox is already temporarily out of commission.
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
-#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
-#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -574,7 +571,6 @@ It can't be too hard to get the boats' attention. Something brute-force must wor
 
 >enter raft
 You get onto the frat raft.
-#not a mistake
 >fart
 Your score has just gone up by one point
 >score
@@ -599,7 +595,6 @@ Score in a scenario: 8 out of 45 total points in the current region, Oyster. Low
 >undo
 >undo
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -2153,7 +2148,6 @@ The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 

@@ -101,7 +101,6 @@ You have more than one way to leave: north and south. So you'll need to specify 
 >exits
 There are two unblocked exits: north to Grey Gyre and south.
 
-#not a mistake
 >rats
 Your score has just gone up by one point
 
@@ -580,7 +579,6 @@ GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's 
 Zo Mavelt waves frantically at you NOT to touch the east and west walls. They may be extra shocking here!
 >n
 
-#not a mistake
 >bleep
 Your score has just gone up by one point
 
@@ -728,7 +726,6 @@ small talk is not very deep or aggressive, and they don't seem to resent you for
 >undo
 >undo
 
-#not a mistake
 >whassup
 Your score has just gone up by one point
 

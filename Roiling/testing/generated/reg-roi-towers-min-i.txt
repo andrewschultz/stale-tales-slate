@@ -170,7 +170,6 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 
 >gt subsector
 
-#not a mistake
 >unlocked
 by one point
 

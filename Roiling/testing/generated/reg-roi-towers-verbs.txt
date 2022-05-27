@@ -739,7 +739,6 @@ Any direction but back south might drive you too far from the palace.
 #verbcase goto-towers-if-duck-is-touchable-and-duck-is-friendly
 (The duck follows, with quick-nag quacking, though you're walking pretty fast.)
 
-#not a mistake
 >unlocked
 by one point
 

@@ -56,12 +56,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
-#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
-#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -131,7 +129,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >obsta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -574,7 +571,6 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 44 out of 45 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 45 points.
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 

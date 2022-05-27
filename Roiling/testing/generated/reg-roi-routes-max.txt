@@ -176,7 +176,6 @@ Your score has just gone up by one point
 
 /^Adobe Abode
 
-#not a mistake ("opposite" by List o Toils is)
 >opposite
 Your score has just gone up by one point
 
@@ -213,11 +212,9 @@ You can sit ASTRIDE the anti-sag sit-a-nag now you have a reason to.
 >astride
 Your score has just gone up by one point
 
-#not a mistake (mistake code is for general preposition reject)
 >below
 Your score has just gone up by one point
 
-#not a mistake (mistake code is for general preposition reject once you are under)
 >under
 Your score has just gone up by one point
 
@@ -245,7 +242,6 @@ Score in a scenario: 11 out of 22 total points in the current region, Routes. Lo
 >from
 Your score has just gone up by one point
 
-#not a mistake (mistake code is for general preposition reject)
 >beneath
 Your score has just gone up by one point
 

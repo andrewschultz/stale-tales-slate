@@ -1104,7 +1104,6 @@ Money, or something like it, should not be the guide of you.
 >undo
 >undo
 
-#not a mistake
 >sonic
 by one point
 Blam!
@@ -1343,7 +1342,6 @@ You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#not a mistake
 >among
 Your score has just gone up by one point.
 

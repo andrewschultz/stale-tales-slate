@@ -55,7 +55,6 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
-#not a mistake
 >hate
 Your score has just gone up by one point
 
@@ -66,7 +65,6 @@ Score in a scenario: 3 out of 30 total points in the current region, Troves. Low
 >acer
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake
 >care
 Your score has just gone up by one point
 

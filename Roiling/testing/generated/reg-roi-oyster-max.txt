@@ -96,12 +96,10 @@ by one point
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
-#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
-#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -172,7 +170,6 @@ Like a butterfly's wings in China, your fart causes the frat raft to waver. Mayb
 You can get on the frat raft and FART.
 >enter raft
 You get onto the frat raft.
-#not a mistake
 >fart
 by one point
 #pre-boats-boast rule
@@ -187,7 +184,6 @@ You're a bit too winded to make a really good boast after your recent exertions,
 >undo
 >undo
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -810,7 +806,6 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 44 out of 45 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 45 points.
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 

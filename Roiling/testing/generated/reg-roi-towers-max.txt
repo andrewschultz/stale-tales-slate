@@ -600,7 +600,6 @@ Score in a scenario: 39 out of 57 total points in the current region, Towers. Lo
 by one point
 >undo
 
-#not a mistake
 >unlocked
 by one point
 

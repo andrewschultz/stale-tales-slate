@@ -709,7 +709,6 @@ The duck won't follow you. It doesn't trust your voice.
 
 >gt subsector
 
-#not a mistake
 >unlocked
 by one point
 

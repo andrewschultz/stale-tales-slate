@@ -25,14 +25,12 @@
 >score
 Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
 
-#not a mistake
 >hate
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
 
-#not a mistake
 >care
 Your score has just gone up by one point
 

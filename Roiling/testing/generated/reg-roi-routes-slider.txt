@@ -48,7 +48,8 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 
 >astride
 !by one point
-#slider retest for astride
+
+#+testcase-slider-table-of-routes-anagrams-astride
 >sartdei
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 >undo
@@ -56,7 +57,8 @@ Wait, wait. You've already figured what to do, but it wasn't the right time. You
 
 >against
 !by one point
-#slider retest for against
+
+#+testcase-slider-table-of-routes-anagrams-against
 >gaiastn
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 >undo
@@ -101,7 +103,6 @@ Your score has just gone up by one point
 >poopiset
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake ("opposite" by List o Toils is)
 >opposite
 Your score has just gone up by one point
 
@@ -120,7 +121,6 @@ Your score has just gone up by one point
 >ebowl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake (mistake code is for general preposition reject)
 >below
 Your score has just gone up by one point
 
@@ -128,7 +128,6 @@ Your score has just gone up by one point
 >nuerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake (mistake code is for general preposition reject once you are under)
 >under
 Your score has just gone up by one point
 
@@ -164,7 +163,6 @@ Your score has just gone up by one point
 >ebentha
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake (mistake code is for general preposition reject)
 >beneath
 Your score has just gone up by one point
 
@@ -226,7 +224,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-slider-table-of-routes-anagrams-between
 >ebentwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider retest for through
+
+#+testcase-slider-table-of-routes-anagrams-through
 >through
 !by one point
 >hthugor

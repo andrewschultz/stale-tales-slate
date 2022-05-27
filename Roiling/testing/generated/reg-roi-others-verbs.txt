@@ -281,7 +281,6 @@ Your score has just gone up by one point.
 >score
 You have 24 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
 
-#not a mistake
 >sonic
 by one point
 Blam!
@@ -365,7 +364,6 @@ Your score has just gone up by one point.
 >score
 You have 34 of 47 total points for the post-Elvira Others region, though you only need 36 to win.
 
-#not a mistake
 >among
 Your score has just gone up by one point.
 

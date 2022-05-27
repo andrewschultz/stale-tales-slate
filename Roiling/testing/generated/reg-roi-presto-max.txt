@@ -67,7 +67,6 @@ Perhaps it would be an act of kindness to move the yak from bored to sleepy. A b
 >pf
 You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
-#not a mistake
 >rats
 Your score has just gone up by one point
 
@@ -82,7 +81,6 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 
 >n
 
-#not a mistake
 >bleep
 Your score has just gone up by one point
 
@@ -159,7 +157,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-#not a mistake
 >whassup
 Your score has just gone up by one point
 

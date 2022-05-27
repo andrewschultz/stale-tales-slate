@@ -385,7 +385,8 @@ You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more pur
 @sli
 >astride
 !by one point
-#slider retest for astride
+\\
+#+testcase-slider-table-of-routes-anagrams-astride
 >sartdei
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 >undo
@@ -398,7 +399,8 @@ Something blocks you. Perhaps you were a bit too glib about entering and need to
 @sli
 >against
 !by one point
-#slider retest for against
+\\
+#+testcase-slider-table-of-routes-anagrams-against
 >gaiastn
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 >undo
@@ -1065,7 +1067,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That'
 >smell pipe soot
 The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong, so the pipe soot probably won't burn your hands if you can take it.
 
-#not a mistake ("opposite" by List o Toils is)
 >opposite
 }}SCORE++
 Your score has just gone up by one point
@@ -1347,7 +1348,6 @@ You can't hear Ian Gast over the WOE BOW BELL.
 >listen bell
 Through the WOE BOW BELL's resonance, you think you could hear something if you listen carefully.
 
-#not a mistake (mistake code is for general preposition reject)
 >below
 }}SCORE++
 Your score has just gone up by one point
@@ -1408,7 +1408,6 @@ That's not quite the book's whole title.
 >listen
 Ian Gast is banging on about Rude 'N Nuder, now.
 
-#not a mistake (mistake code is for general preposition reject once you are under)
 >under
 }}SCORE++
 Your score has just gone up by one point
@@ -1602,7 +1601,6 @@ joke death
 >attack the bean
 It's like a dense metal or something. It's more likely it would make something else crack.
 
-#not a mistake (mistake code is for general preposition reject)
 >beneath
 }}SCORE++
 Your score has just gone up by one point
@@ -2156,7 +2154,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-slider-table-of-routes-anagrams-between
 >ebentwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider retest for through
+\\
+#+testcase-slider-table-of-routes-anagrams-through
 >through
 !by one point
 >hthugor

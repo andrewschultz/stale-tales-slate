@@ -58,12 +58,10 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
-#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
-#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -183,7 +181,6 @@ Yet again, no directions here. You need to get on or past the boats, and swimmin
 >score
 Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -826,7 +823,6 @@ Score in a scenario: 44 out of 45 total points in the current region, Oyster. Th
 >e
 While you can go back outside, you can just finish things here, as you've done everything else you can.
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 

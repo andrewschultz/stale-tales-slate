@@ -480,7 +480,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. Tha
 >unste
 The tunes grow slightly less annoying, for a moment.
 \\
-#not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
 ###balance undos
 >unset
 by one point
@@ -519,12 +518,10 @@ by one point
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
-#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
-#not a mistake
 >unset
 Your score has just gone up by one point
 }}SCORE++
@@ -732,7 +729,6 @@ Your score has just gone up by one point
 DEBUG INFO: sabot boats hinting.
 >enter raft
 DEBUG INFO: frat raft hinting.
-#not a mistake
 >fart
 DEBUG INFO: interlocking oars hinting.
 \\
@@ -946,7 +942,6 @@ It can't be too hard to get the boats' attention. Something brute-force must wor
 @nud
 >enter raft
 You get onto the frat raft.
-#not a mistake
 >fart
 Your score has just gone up by one point
 }}SCORE++
@@ -984,7 +979,6 @@ Like a butterfly's wings in China, your fart causes the frat raft to waver. Mayb
 You can get on the frat raft and FART.
 >enter raft
 You get onto the frat raft.
-#not a mistake
 >fart
 by one point
 #pre-boats-boast rule
@@ -999,7 +993,6 @@ You're a bit too winded to make a really good boast after your recent exertions,
 >undo
 >undo
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 }}SCORE++
@@ -3809,7 +3802,6 @@ While you can go back outside, you can just finish things here, as you've done e
 @min
 >au 0
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 }}SCORE++

@@ -299,7 +299,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's 
 >scan heat
 Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
 
-#not a mistake
 >hate
 Your score has just gone up by one point
 }}SCORE++
@@ -353,7 +352,6 @@ Eh, two question marks in just four letters? You feel bummed you were given a se
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
 
-#not a mistake
 >care
 Your score has just gone up by one point
 }}SCORE++

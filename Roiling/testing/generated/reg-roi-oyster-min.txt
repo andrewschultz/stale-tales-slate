@@ -53,7 +53,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -261,7 +260,6 @@ Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lo
 
 >au 0
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 

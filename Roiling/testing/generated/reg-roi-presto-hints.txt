@@ -64,7 +64,6 @@ You gulp the crust and can't help thinking RATS. But you are too polite and/or r
 
 DEBUG INFO: tsar star hinting.
 
-#not a mistake
 >rats
 Your score has just gone up by one point
 
@@ -95,7 +94,6 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 #ttc-table-of-presto-anagrams-bleep
 You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
-#not a mistake
 >bleep
 Your score has just gone up by one point
 
@@ -199,7 +197,6 @@ Score in a scenario: 13 out of 41 total points in the current region, Presto. Lo
 >ss
 /A few things: the sods gone odes song \(very blurry\), a pair of hands patting (Leo and Rand|Rand and Leo) on the back and the boing-go bin are visible\.
 
-#not a mistake
 >whassup
 Your score has just gone up by one point
 

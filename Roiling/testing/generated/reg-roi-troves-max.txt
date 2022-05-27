@@ -49,14 +49,12 @@ Going inside your mind has gotten you somewhere, you think. Staring and gaping w
 >score
 Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
-#not a mistake
 >hate
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 3 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
-#not a mistake
 >care
 Your score has just gone up by one point
 

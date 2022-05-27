@@ -4175,7 +4175,6 @@ The luck node can and should be defeated nonviolently.
 >nuke cold
 The luck node can and should be defeated nonviolently.
 
-#not a mistake
 >unlocked
 by one point
 }}SCORE++

@@ -557,7 +557,6 @@ You don't feel dumb after doing this, so there's really no need to use that word
 >tard
 You are just trolling now. No further clues for you.
 
-#not a mistake
 >rats
 Your score has just gone up by one point
 }}SCORE++
@@ -1106,7 +1105,6 @@ GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's 
 Zo Mavelt waves frantically at you NOT to touch the east and west walls. They may be extra shocking here!
 >n
 
-#not a mistake
 >bleep
 Your score has just gone up by one point
 }}SCORE++
@@ -1880,7 +1878,6 @@ small talk is not very deep or aggressive, and they don't seem to resent you for
 >ss
 /A few things: the sods gone odes song \(very blurry\), a pair of hands patting (Leo and Rand|Rand and Leo) on the back and the boing-go bin are visible\.
 
-#not a mistake
 >whassup
 Your score has just gone up by one point
 }}SCORE++

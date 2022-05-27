@@ -738,7 +738,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
 >gonear gallery
-#slider retest for stair
+\\
+#+testcase-slider-table-of-ordeal-reload-anagrams-stair
 >tsira
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo

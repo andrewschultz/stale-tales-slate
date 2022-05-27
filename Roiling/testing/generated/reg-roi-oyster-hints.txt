@@ -26,12 +26,10 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
-#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
-#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -93,7 +91,6 @@ Your score has just gone up by one point
 DEBUG INFO: sabot boats hinting.
 >enter raft
 DEBUG INFO: frat raft hinting.
-#not a mistake
 >fart
 DEBUG INFO: interlocking oars hinting.
 
@@ -107,7 +104,6 @@ Now you've charged up the frat raft, you need to find a way to use the oars.
 >score
 Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -510,7 +506,6 @@ Score in a scenario: 44 out of 45 total points in the current region, Oyster. Th
 >hint lever
 The lever was designed not to give extra points for pulling it too much.
 
-#not a mistake
 >redial
 Your score has just gone up by one point
 

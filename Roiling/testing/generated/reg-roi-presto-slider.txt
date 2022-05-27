@@ -72,7 +72,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rdta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake
 >rats
 Your score has just gone up by one point
 
@@ -87,7 +86,6 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 
 >n
 
-#not a mistake
 >bleep
 Your score has just gone up by one point
 
@@ -164,7 +162,6 @@ Score in a scenario: 13 out of 41 total points in the current region, Presto. Lo
 >sahwups
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#not a mistake
 >whassup
 Your score has just gone up by one point
 

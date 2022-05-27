@@ -683,7 +683,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That'
 >read ashtray
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side again if you want\.
 
-#not a mistake ("opposite" by List o Toils is)
 >opposite
 Your score has just gone up by one point
 
@@ -866,7 +865,6 @@ The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find 
 >elbows
 The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
 
-#not a mistake (mistake code is for general preposition reject)
 >below
 Your score has just gone up by one point
 
@@ -905,7 +903,6 @@ Only one inconclusive clue, and you have some direct hits. This shouldn't be too
 >urde
 That's not quite the book's whole title.
 
-#not a mistake (mistake code is for general preposition reject once you are under)
 >under
 Your score has just gone up by one point
 
@@ -1026,7 +1023,6 @@ You fill yourself with fear for no reason. It's really easy to do! You add to th
 joke death
 >undo
 
-#not a mistake (mistake code is for general preposition reject)
 >beneath
 Your score has just gone up by one point
 

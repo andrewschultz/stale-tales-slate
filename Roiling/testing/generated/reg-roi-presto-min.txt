@@ -39,7 +39,6 @@ Score in a scenario: 2 out of 41 total points in the current region, Presto. Low
 >s
 /^Char Arch
 
-#not a mistake
 >rats
 Your score has just gone up by one point
 
@@ -54,7 +53,6 @@ Score in a scenario: 4 out of 41 total points in the current region, Presto. Low
 
 >n
 
-#not a mistake
 >bleep
 Your score has just gone up by one point
 
@@ -95,7 +93,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
 
-#not a mistake
 >whassup
 Your score has just gone up by one point
 
