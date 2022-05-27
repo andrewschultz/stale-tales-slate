@@ -169,7 +169,7 @@ It's not any old niche. It's your niche. And by your niche, I mean you see it as
 Good choice taking the notepad. It'll help you tame lots that's meta, mate.
 Taking the pedanto-notepad uncovered some sad ads on the chair.
 \\
-#mistake retest for consult [text]
+#+testcase-mistake-roiling-consult-text
 >consult zozimus
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 \\
@@ -239,17 +239,19 @@ You haven't made a way outside the Dusty Study. But one does exist. More than on
 You haven't made a way out yet.
 
 @nud
-#mistake retest for [text] stable-text-stable-text-[text] stable
+#+testcase-mistake-roiling-text-stable-text-stable-text-text-stable
 >zozimus stable zozimus
 You can just change the tables by saying STABLE.
 >stable zozimus
 You can just change the tables by saying STABLE.
 >zozimus stable
 You can just change the tables by saying STABLE.
-#mistake retest for odor
+\\
+#+testcase-mistake-roiling-odor
 >odor
 No, you need a light source, not a way out.
-#mistake retest for rood
+\\
+#+testcase-mistake-roiling-rood
 >rood
 You need a light source.
 \\
@@ -545,10 +547,12 @@ Maybe you could, but you will need the light. You won't need the landscaping.
 #ttc-table-of-ordeal-reload-done-rejects-lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
-#mistake retest for odor
+\\
+#+testcase-mistake-roiling-odor
 >odor
 The smell would gag you before the shouty youths.
-#mistake retest for rood
+\\
+#+testcase-mistake-roiling-rood
 >rood
 It'd be your own crucifix if you let the shouty youths outside in.
 \\
@@ -637,7 +641,7 @@ Your score has just gone up by two points
 The only way you seem to be able to go is down.
 
 @nud
-#mistake retest for basement-text-[text] basement-text-[text] basement
+#+testcase-mistake-roiling-basement-text-text-basement-text-text-basement
 >basement zozimus
 You can just go DOWN to enter the basement.
 \\
@@ -829,13 +833,14 @@ That is probably overthinking the painting's abstract-ness. It's really just goo
 #ttc-table-of-ordeal-reload-done-rejects-painting
 >paintign
 The painting really goes better with the study than the giant pin.
-#mistake retest for chalets
+\\
+#+testcase-mistake-roiling-chalets
 >chalets
 You don't need a safe home, right now. You need adventure.
 !Oh, and you don't have to switch that many letters, either.
 
 @nud
-#mistake retest for chalets
+#+testcase-mistake-roiling-chalets
 >chalets
 You don't need a safe home, right now. You need adventure.
 !that many letters
@@ -870,7 +875,7 @@ The space capes are already abstract and bizarre enough. They work, and you prob
 >paces
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
 \\
-#mistake retest for [text] stable-text-stable-text-[text] stable
+#+testcase-mistake-roiling-text-stable-text-stable-text-text-stable
 >zozimus stable zozimus
 You can just go IN to the stable.
 >stable zozimus
@@ -956,7 +961,7 @@ To put spaces in letters settler readings, type SPACEON or SON. NOSPACE or NOS r
 No time for mooching around your means manse. You probably need to take that secret passage in, or down.
 
 @nud
-#mistake retest for astir
+#+testcase-mistake-roiling-astir
 >astir
 You don't need a moving stair.
 \\
@@ -1260,7 +1265,8 @@ The evac-cave is your way out. It'd be a bad idea to change it.
 #ttc-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 No, all the bins.
-#mistake retest for sitar
+\\
+#+testcase-mistake-roiling-sitar
 >sitar
 Surely a stair is more handy right now than music.
 !What could it
@@ -1319,7 +1325,8 @@ You already fixed the bins.
 #ttc-table-of-ordeal-reload-done-rejects-ISBN-bins
 >snbi
 The ISBN bins are secure. Best not tinker.
-#mistake retest for bsin/bs in
+\\
+#+testcase-mistake-roiling-bsin-bs-in
 >bsin
 Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 \\
@@ -1451,7 +1458,8 @@ Changing Elmo won't work. It's his rifle that needed changing.
 #ttc-table-of-largely-all-grey-gallery-nudges-flier
 >flire
 Better to pump Elmo for information.
-#mistake retest for mole
+\\
+#+testcase-mistake-roiling-mole
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. He already seems to be a different sort of mole.
 
@@ -1656,7 +1664,8 @@ That's already been done, and quite well, by Alan Garner in The Owl Service. If 
 #testcase-mistake-roiling-pleats
 >pleats
 You are a text adventurer, not a fashion designer.
-#mistake retest for trainer
+\\
+#+testcase-mistake-roiling-trainer
 >stapler
 by one point
 >trainer
@@ -1720,7 +1729,8 @@ Nothing happens. You probably don't need to anagram the apertured departure, whi
 #ttc-table-of-ordeal-reload-done-rejects-stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
-#mistake retest for trainer
+\\
+#+testcase-mistake-roiling-trainer
 >trainer
 You're on your own. Perhaps you'd be better off making use of the staple to get on with things.
 
