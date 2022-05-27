@@ -87,6 +87,7 @@ You look around the torus, deciding where to go next, but you can't quite make a
 
 @alt
 >sheesh
+\\
 #ttc-table-of-room-combos-ehs-ehs-ehs-ehs
 You reckon this had to be the easiest area to figure. Everything else will probably be tougher. But sometimes a mild interjection can steel you for what's ahead.
 !BUG
@@ -139,6 +140,7 @@ You doubt you can do something with the sys-eye beyond thinking yes. But maybe t
 >yee
 \\
 You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+\\
 #ttc-table-of-nudge-hashes-yes
 >sey
 You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
@@ -172,6 +174,7 @@ That snarky "Ah-ah" then "Ha-ha" again! You'll need to do something special to g
 
 @hints
 >l
+\\
 #ttc-table-of-center-statuses-1
 Looking inward, you see a cylinder at the center of the torus. It's very poorly defined, though.
 \\
@@ -200,6 +203,7 @@ You don't need to act on the whole torus, here.
 #ttc-table-of-nudge-hashes-tas
 >sta
 There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
+\\
 #ttc-table-of-nudge-hashes-tast
 >ttsa
 There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
@@ -210,6 +214,7 @@ There's no tricky command to manipulate the tats further. So you can just use ST
 >a
 >a
 >a
+\\
 #ttc-table-of-times-around-1
 >a
 You think you hear a small voice echoing throughout the torus. You sort of want to figure out what's going on on your own, but if you really want to, you might be able to LISTEN.
@@ -223,6 +228,7 @@ Also, if you'd like a clue, you can enter a blank command.
 >a
 >a
 >a
+\\
 #ttc-table-of-times-around-2
 >a
 That's funny. First you thought you heard something, and now you feel like there's something to SMELL.
@@ -233,6 +239,7 @@ That's funny. First you thought you heard something, and now you feel like there
 >a
 >a
 >a
+\\
 #ttc-table-of-times-around-3
 You start feeling bummed you haven't gotten anywhere. A voice in your head says to think positive. Flip those no's around. But surely it can't just be easy as saying YES, can it?
 >a
@@ -246,12 +253,14 @@ You start feeling bummed you haven't gotten anywhere. A voice in your head says 
 >
 You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
 >a
+\\
 #ttc-table-of-times-around-5
 /(Ugh\. Tricky\.|What sort of ant was it|)
 !murmur
 >undo
 >undo
 >a
+\\
 #ttc-table-of-times-around-4
 >a
 You murmur "Umm, urr...," which somehow feels very appropriate and not at all rum.
@@ -261,6 +270,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 >a
 >a
+\\
 #+ttc-table-of-times-around-5
 >a
 /(Ugh\. Tricky\.|What sort of ant was it|)
@@ -270,6 +280,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 >a
 >a
+\\
 #+ttc-table-of-times-around-5
 >a
 /(NATANT ant|CONCISIONS!)
@@ -279,6 +290,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 >a
 >a
+\\
 #ttc-table-of-times-around-6
 >a
 /(Ugh\. Tricky\.|What sort of ant was it|)
@@ -288,6 +300,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 >a
 >a
+\\
 #+ttc-table-of-times-around-6
 >a
 /(NATANT ant|CONCISIONS!)
@@ -297,6 +310,7 @@ You murmur "Umm, urr...," which somehow feels very appropriate and not at all ru
 >a
 >a
 >a
+\\
 #ttc-table-of-times-around-7
 >a
 Tan ant, natant. Sonic coins, concisions.
@@ -306,6 +320,7 @@ Tan ant, natant. Sonic coins, concisions.
 >a
 >a
 >a
+\\
 #ttc-table-of-times-around-8
 >a
 You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
@@ -315,6 +330,7 @@ You feel hounded by the laughs of many LOLs-tots. How many? Lots! Lots! It gives
 >a
 >a
 >a
+\\
 #+ttc-table-of-times-around-8
 >a
 You feel hounded once again by the laughs of many LOLs-tots. How many? Lots! Lots! It gives you a toss-toll, whatever that is.
@@ -421,6 +437,7 @@ You don't need to deal with pronouns. Maybe a different sort of word. In a weird
 >reappear
 by one point
 >b
+\\
 #+ttc-table-of-room-combos-ehs-ehs-ehs-ehs
 >sheesh
 by one point
@@ -472,6 +489,7 @@ Oh dear! The cylinder's not as wide as you thought, now it's started wobbling a 
 #ttc-table-of-center-statuses-2
 >l
 The cylinder in the center seems less blurry and wobbly than when you started
+\\
 #+ttc-table-of-center-statuses-2
 >in
 There's something to maybe go inside but no way to get there.
@@ -480,8 +498,10 @@ There's something to maybe go inside but no way to get there.
 #mistake retest for he/hes/she
 >he
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
+\\
 >hes
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
+\\
 >she
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
 !halfway
@@ -547,10 +567,12 @@ You're not sure what you are prepping--a thing or an action. But once you do, th
 @alt
 >aa
 >teammate
+\\
 #ttc-table-of-room-combos-prep-area-meta-meat
 You meet (hah) up with a teammate! It's good to have one on this forbidding torus. After some talk, they admit they're out of ideas. But maybe when you come back at the right time, you'll have something to think up. You can only hope.
 !Now that you have a teammate and a reason to reappear
 >bb
+\\
 #+ttc-table-of-room-combos-prep-area-meta-meat
 >reappear
 Now that you have a teammate and a reason to reappear, you have a plan to brainstorm separately and then together. You figure a lot of things that make the Torus a lot more alive. It glows significantly.
@@ -610,6 +632,7 @@ The cylinder's not wobbling as badly as it did, but you don't see any way in.
 #ttc-table-of-center-statuses-3
 >l
 The cylinder at the center of the torus has almost completely stopped wobbling
+\\
 #+ttc-table-of-center-statuses-3
 >in
 The cylinder in the center of the torus probably has something in it, but you have no way to get there or get in.
@@ -738,6 +761,7 @@ The cylinder's almost stopped wavering, but you still can't see anything more.
 #ttc-table-of-center-statuses-4
 >l
 The cylinder at the center of the torus looks much more real now, but there's no entry
+\\
 #+ttc-table-of-center-statuses-4
 >in
 You still don't have a passage to the cylinder or a way in.
@@ -821,6 +845,7 @@ Now that the cylinder's stopped wavering so much, you think you see the outline 
 #ttc-table-of-center-statuses-5
 >l
 The cylinder now has a fuzzy outline of a door in it.
+\\
 #+ttc-table-of-center-statuses-5
 >in
 Even if you could make it to the cylinder, the door wouldn't seem to open.
@@ -957,6 +982,7 @@ The door on the cylinder seems to have a handle. You're not sure.
 #ttc-table-of-center-statuses-6
 >l
 The door to the cylinder at the center of the torus is better defined now
+\\
 #+ttc-table-of-center-statuses-6
 >in
 You must be close to being able to get near the cylinder.
@@ -1049,6 +1075,7 @@ You can see almost half a path--the sort you'd fall through--leading to the cyli
 #ttc-table-of-center-statuses-7
 >l
 The cylinder at the center of the torus now seems to have doors with handles. But there is no way to approach it
+\\
 #+ttc-table-of-center-statuses-7
 >in
 Maybe if the walkway were a bit more solid.
@@ -1128,6 +1155,7 @@ The cylinder looks very solid. You have a path there. And it seems to have a doo
 #ttc-table-of-center-statuses-8
 >l
 You can see a door swinging in and out, which would allow you into the cylinder at the center of the torus. There doesn't seem to be much to do here, so maybe you'll just want to go IN, or figure a way to
+\\
 #+ttc-table-of-center-statuses-8
 >in
 The "Noon, No, no" routine pushes you back with surprising force.
@@ -1277,6 +1305,7 @@ No need for foreign languages. You can't turn things off. Just try to dance arou
 >aaa
 >aa
 >aa
+\\
 #+ttc-table-of-rough-hashes-on
 >nnoo
 There's no extra option to restart. Just ON.

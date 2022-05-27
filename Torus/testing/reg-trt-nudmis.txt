@@ -50,6 +50,7 @@ You doubt you can do something with the sys-eye beyond thinking yes. But maybe t
 >yee
 
 You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
+
 #ttc-table-of-nudge-hashes-yes
 >sey
 You doubt you can do something with the sys-eye beyond thinking yes. But maybe this is a clue what to do elsewhere
@@ -77,6 +78,7 @@ You don't need to act on the whole torus, here.
 #ttc-table-of-nudge-hashes-tas
 >sta
 There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
+
 #ttc-table-of-nudge-hashes-tast
 >ttsa
 There's no tricky command to manipulate the tats further. So you can just use STAT and TATS.
@@ -182,8 +184,10 @@ While lots of snappy noises come to mind, you can't do anything with the smell o
 #mistake retest for he/hes/she
 >he
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
+
 >hes
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
+
 >she
 You don't need to deal with pronouns. Besides, you already did what you needed, here.
 !halfway
@@ -496,6 +500,7 @@ No need for foreign languages. You can't turn things off. Just try to dance arou
 >aaa
 >aa
 >aa
+
 #+ttc-table-of-rough-hashes-on
 >nnoo
 There's no extra option to restart. Just ON.
