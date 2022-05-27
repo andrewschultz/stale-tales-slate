@@ -2158,9 +2158,11 @@ DEBUG INFO: Lars Eede hinting.
 #verbcase listen-towers-if-noun-is-angriest-ingrates
 >listen ingrates
 The ingrates go red from
+\\
 #verbcase listen-towers-if-noun-is-mardier-admirer
 >listen admirer
 The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy.
+\\
 #verbcase listen-towers-if-noun-is-lars-eede-or-noun-is-elsa-erde
 >listen lars
 Lars Eede mutters and moans how
@@ -2608,6 +2610,7 @@ Now that you're at the shores of Leak Lake, it's too far to swim. You may need s
 #verbcase listen-towers-if-noun-is-wait-seer
 >listen sweatier
 The wait-seer is so serene, you almost can't waste ire on being blocked. Almost. Maybe even saying random stuff might help a hint slip.
+\\
 #verbcase listen-towers-if-noun-is-asset-hit-atheists
 >listen atheists
 The atheists are really spelling out their logical arguments against any sort of God. In light of this, the wait-seer doesn't seem to be the least tired. Maybe you could learn more details talking to the atheists.
@@ -4075,6 +4078,7 @@ The duck won't follow you. It doesn't trust your voice.
 >z
 >z
 >z
+\\
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
 >listen
 Dr. Yow is silent once again.
@@ -4181,6 +4185,7 @@ Hm, the agnostic at the coastlines seems technically inclined but restless.
 
 @verbs
 >rowdy
+\\
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-rowdy
 ###skip test checking
 >listen yow
@@ -4318,8 +4323,8 @@ After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 >smell
 You smell something generically nice from the campsite nearby and say "Ahhhh! Nature!" a bit too loud. Ugg. You won't do that again.
 \\
->listen
 #verbcase listen-towers-if-player-is-in-outer-route
+>listen
 The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
 \\
 #+ttc-table-of-towers-nowheres-outer-route
@@ -4918,15 +4923,19 @@ No thanks. Once was enough.
 by one point
 >enter boat
 /^Rawest Waster Waters
+\\
 #verbcase listen-towers-if-player-is-in-rawest-waster-waters
 >listen
 A scrawny swan cry. But not the Sawn Swan. You hope.
+\\
 #verbcase swear-towers-if-player-is-in-rawest-waster-waters
 >bother
 Trying to cross languages and make this Swears-Wasser does no good.
+\\
 #verbcase goto-towers-if-location-of-player-is-rawest-waster-waters
 >gt coastlines
 Progress isn't easy when you're flailing in water.
+\\
 >nearest
 Your score has just gone up by one point
 \\

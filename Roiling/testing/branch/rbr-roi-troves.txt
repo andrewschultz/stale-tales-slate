@@ -124,6 +124,7 @@ Random dialogue off.
 You have shut off the random gritty dialogue with HUSH.
 >uhhs
 Random dialogue on again.
+\\
 #verbcase smell-troves-if-can-hear-gritty
 >smell
 Eew-gas sewage. Skint-stink.
@@ -644,17 +645,20 @@ You figured how to get the LLP for ignoring A Sty: Tasty, Say.
 You can't over-stay your staying power, or something.
 
 @verbs
-#reverbcase goto-troves-default
+#+verbcase goto-troves-default
 >gt rathole
 Going back would be a dereliction of your destiny.
+\\
 #verbcase listen-troves-if-player-is-in-boarded-roadbed
 >listen pa egg pea
 Nothing from Pa, Egg, Pea, but the SNORE SO ARENA is making noise.
 !A snore arises
+\\
 #verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-evil-bee-if-snore-so-arena-is-reflexive
 >listen bee
 Nothing unusual from the bee. But the arena...
 A snore arises from the arena. You see red. There's more, if you can deal with it.
+\\
 #verbcase listen-troves-if-player-is-in-boarded-roadbed-else-if-noun-is-snore-so-arena
 >listen arena
 "NO EARS! NO EARS!" you hear, seeing red, because that's obviously wrong.
@@ -800,12 +804,14 @@ Your score has just gone up by one point
 }}CURMIN++
 
 @verbs
-#reverbcase listen-troves-if-player-is-in-boarded-roadbed
+#+verbcase listen-troves-if-player-is-in-boarded-roadbed
 >listen pa egg pea
 Nothing from Pa, Egg, Pea. Relative quiet now you dealt with the SNORE SO ARENA.
+\\
 #verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-evil-bee
 >listen bee
 The live bee is silent. So is the SNORE SO ARENA beneath it.
+\\
 #verbcase listen-troves-if-player-is-in-boarded-roadbed-else-if-noun-is-snore-so-arena-if-snore-so-arena-is-reflexed
 >listen arena
 Nothing now that you reasoned your way around the arena's distractions.
@@ -1578,6 +1584,7 @@ Your score has just gone up by one point
 @verbs
 >listen
 Actually, you can't help but hear posh dialogue. Anyway, no more badgering beggar din.
+\\
 #verbcase listen-troves-if-can-hear-posh
 >listen praise spirea
 The praise spirea is beautiful and inspiring and all, but you don't want to be caught staring at it just because it's pretty, or listening to it just because it sounds nice.
@@ -1789,6 +1796,7 @@ In particular, you feel the need to DESERVE right now.
 #verbcase sleep-troves-if-player-is-in-upscale-capsule
 >sleep
 You got here by doing nothing while conscious, not doing nothing while unconscious.
+\\
 #verbcase listen-troves-if-player-is-in-upscale-capsule
 >listen
 White noise, it is on. Whee.

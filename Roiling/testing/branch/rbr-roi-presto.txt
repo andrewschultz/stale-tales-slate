@@ -70,8 +70,10 @@ You haven't gotten any points yet, so you probably want to find what sort of wor
 #verbcase swear-presto-if-cur-score-of-presto-is-0
 >damn
 That's too strong for here. But you have the right idea.
+\\
 >bother
 Well, maybe one or two mild swears would work somewhere around here.
+\\
 #verbcase smell-presto-default
 >smell
 It smells a bit stinky here, but more pressingly, it just FEELS stinky
@@ -237,9 +239,10 @@ You gulp the crust and can't help thinking POOH. But you are too polite and/or r
 DEBUG INFO: Ye Hoop hinting.
 
 @verbs
-#reverbcase smell-presto-default
+#+verbcase smell-presto-default
 >smell
 You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing
+\\
 #verbcase listen-presto-default
 >listen
 "This ... this ... this..." you hear, faintly. It feels profane.
@@ -1071,6 +1074,7 @@ The only way you seem to be able to go is east to another part of the maze.
 /^Unwary Runway
 \\
 >gt nowt town
+\\
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
 \\
@@ -1090,8 +1094,9 @@ There are two unblocked exits: north and south to another part of the maze.
 >n
 \\
 /^Back at Grey Gyre
+\\
+#+verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 >gt unwary runway
-#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
 \\
 >gonear runway
@@ -1547,10 +1552,12 @@ by three points
 ###skip test checking
 >whassup
 ###skip test checking
+\\
+#+verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 >gt nowt town
-#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 Anyway, it'd make poor
 >gt grey gyre
+\\
 #verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager
 following.)
 >undo
@@ -1583,9 +1590,11 @@ Your score has just gone up by one point
 #verbcase smell-presto-if-noun-is-ether
 >smell ether
 The ether is nontoxic but still potentially dangerous, if someone's hiding there.
+\\
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway-if-volt-maze-is-moot
 >gt runway
 You don't want to, and can't, go back to or through the volt maze you solved.
+\\
 >gt nowt town
 You don't want to, and can't, go back to or through the volt maze you solved.
 
@@ -1781,6 +1790,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #verbcase listen-presto-if-noun-is-odes-song
 >listen odes song
 The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain.
+\\
 #verbcase swear-presto-default
 >damn
 No, that's too strong for here. You've been doing quite well with the tame stuff.
@@ -1929,8 +1939,10 @@ You don't need to combine them physically, but their physical strengths combined
 
 @verbs
 >gt dirge ridge
+\\
 #verbcase goto-presto-if-noun-is-dirge-ridge
 "I don't wanna go back dere, boss. I wants adventureses. Fightses." says
+\\
 >s
 "I don't wanna go back dere, boss. I wants adventureses. Fightses." says
 
@@ -2655,6 +2667,7 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 #verbcase swear-presto-if-hacks'-shack-is-visited
 >damn
 While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is mostly over.
+\\
 #verbcase listen-presto-if-player-is-in-hacks'-shack
 >listen
 Classic techno music from the Baleets: "Be Stale."
@@ -3197,6 +3210,7 @@ The casserole is mixed up enough.
 >smell casserole
 That casserole smells ... well, sturdy. Not for the sophisticated.
 >s
+\\
 #verbcase sleep-presto-if-hacks'-shack-is-visited-and-peels-speel-is-reflexive
 >sleep
 Only the shack seems to be a safe place to sleep, here.
@@ -3880,8 +3894,8 @@ The mug is already somehow generating infinite cola. Don't want to mess with tha
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to DEBUG the code you compiled.
 
 @verbs
->gt phat path
 #verbcase goto-presto-if-player-is-in-hacks'-shack
+>gt phat path
 You can't budge until you fix this program, here.
 
 >debug
@@ -3966,7 +3980,7 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 DOUBLE PROBLEM FOR: sub.
 
 @verbs
-#reverbcase goto-presto-if-player-is-in-hacks'-shack
+#+verbcase goto-presto-if-player-is-in-hacks'-shack
 >gt phat path
 Just do something simple with that USB
 

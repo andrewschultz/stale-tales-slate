@@ -472,9 +472,11 @@ Your score has just gone up by one point
 #verbcase listen-stores-if-noun-is-tokers
 >listen tokers
 Conversation from the tokers you don't want to listen TOO closely to.
+\\
 #verbcase listen-stores-if-noun-is-nestor
 >listen nestor
 Nestor periodically mumbles about his lost buddies.
+\\
 #verbcase smell-stores-if-noun-is-mangiest-steaming
 >smell steaming
 Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
@@ -524,8 +526,8 @@ It smells depressingly antiseptic here.
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
 \\
->listen
 #verbcase listen-stores-if-noun-is-suit-ode
+>listen
 You listen for anything at all besides the blabber babbler. You pick up some background music--why, yes, it is the the horrendous self-helpy song Suit Ode: Douse It.
 \\
 #testcase-outside-cruelest-lectures
@@ -881,7 +883,7 @@ Your score has just gone up by one point
 }}CURMIN++
 
 @verbs
-#reverbcase smell-stores-if-noun-is-store-y-or-noun-is-barnacle-balancer
+#+verbcase smell-stores-if-noun-is-store-y-or-noun-is-barnacle-balancer
 >smell balancer
 Seawater scents from the balancer barnacle.
 
@@ -986,6 +988,7 @@ With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, a
 #verbcase listen-stores-if-noun-is-odorant-tornado
 >listen tornado
 A roar of angry undefinable words swirls from the odorant tornado.
+\\
 #verbcase smell-stores-if-noun-is-odorant-tornado
 >smell tornado
 The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good.

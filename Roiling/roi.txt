@@ -48,6 +48,7 @@ Someone to see you. You can find out if you open it, or you can wait a few turns
 ?What should I talk to Report Porter Perrot about?
 The first discussion is the main one. Everything after that is babble.
 You'll discover the latches after you wake up if you didn't already.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-lamp
 ?It's dark! Where can I get light?
 The palm soaked up light during the day.
 Wait and stumble around a bit.
@@ -63,6 +64,7 @@ A better question is, what isn't it terrible for?
 It's a bit longer than most op-eds.
 It's pretty much propaganda, by Elvira, for Elvira.
 Hopefully it is good for a few laughs.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-satchel
 ?What are the latches for?
 The list that comes with them is a clue.
 Do you notice how the words are similar?
@@ -71,12 +73,16 @@ So, latches can become...
 <b>SATCHEL</b>.
 ?What does seeing red mean?
 It means that all the letters in the current object or its description are wrong compared to what they should be.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-basement
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-chimney
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-stable
 ?How do I get out of here?
 The tables and the ten beams hide ways out. So is "my niche" on the ceiling.
 What are other rooms in a mansion? And what is something that leads up
 The TABLES become a <b>STABLE</b> you can enter, but it's intermediary...
 ...and so is the <b>CHIMNEY</b>...
 ...because you can just bypass them and go directly to the <b>BASEMENT</b>, which is a longer/harder puzzle to find.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-painting
 ?What is the giant pin for?
 It's an optional last lousy point.
 If you use the settler on it, in cheat mode, it may be obvious what it is.
@@ -87,6 +93,14 @@ There are only twenty-three possibilities.
 In fact, with the settler on cheat mode, there is only one. Without it, there are four.
 But wait! Your dusty study doesn't need a sofa...
 ...which is okay since there are no oafs, anyway. However, if you wish to play a game with oafs in it, my IFComp 2014 game Ugly Oafs has lots of them!
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-brass-crag
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-crabgrass
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-event-map
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-pavement
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-farm-plot
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-platform
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-pedestal
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-steel-pad
 ?What do I do with the diorama?
 There are four pairs to change back and forth. You don't get any points for it.
 It familiarizes you with anagramming, the settler in general, and the possibilities of spaces.
@@ -95,12 +109,14 @@ It familiarizes you with anagramming, the settler in general, and the possibilit
 <b>FARM PLOT</b> and <b>PLATFORM</b>.
 <b>STEEL PAD</b> and <b>PEDESTAL</b>.
 >>FARMING FRAMING
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-stair
 ?What's the sitar for?
 It could be sitars...
 Or rather <b>STAIR</b> or stairs.
 ?Can I build the stable/framing back up again?
 No.
 >>HIGHEST HEIGHTS
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-ramp
 ?What is this pram doing?
 It gives you a slow sinking feeling.
 What else is slowly sinking with the letters P-R-A-M?
@@ -110,11 +126,13 @@ The pram can become a <b>RAMP</b>.
 Enter them to go back to the study. You'll see them everywhere in your manor once you know where to look.
 Or if in you're the study, you go to the heights.
 >>LARGELY ALL-GREY GALLERY
+#+testcase-invisiclues-table-of-ordeal-reload-anagrams-stair
 ?Hey! Why isn't this a basement?
 Well, "basement" was just a puzzle. I wanted to make all my location titles anagram-y. This was floating around, and I didn't know where to put it.
 ?Stria?!
 Above you...an odd word, but another way to walk around.
 <b>STAIR</b>.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-snib
 ?What are the ISBN bins for?
 Well, you can ignore them and still win. They don't add anything.
 Except a last lousy point for an odd word.
@@ -123,6 +141,7 @@ Make a <b>SNIB</b>.
 ?Anything remaining to do in the largely all-grey gallery?
 Figure how the letters settler works, though you don't have to, as you'll get a tutorial.
 Then go IN.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-flier
 ?Help! There's a guy with a gun!
 Well, it's not just any gun. It's a RIFLE.
 You won't make it to the rifle in time, and he doesn't seem too enthusiastic to shoot it, so maybe you can use some magic?
@@ -134,6 +153,7 @@ Now that you've shown your powers, your former (apparent) antagonist will be mor
 You can solve the game without Elmo, but he can tell you how to use the settler if you're not sure. It's a de facto tutorial about the settler
 You can also ask Elmo about the areas ahead.
 >>CARVEN CAVERN
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-scepter
 ?Why is the Respect Specter here? Is it useful?
 You can complete the game without figuring what it has for you.
 You can immediately figure what it has for you and be none the wiser about why it is there.
@@ -143,11 +163,13 @@ The specter will help you decipher what this means without too many complication
 In this case, almost all letter entries are ambiguous, because they match up with RESPECT or SPECTER.
 You can scan the specter a lot to figure things out.
 And whenever you want, you can get the <b>SCEPTER</b> for the bonus point.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-staple
 ?What's with the plates?
 They appear to be embedded in the plaster.
 They are sort of square, with metal trim around them.
 What is metal and looks like half a square?
 <b>STAPLE</b>.
+#testcase-invisiclues-table-of-ordeal-reload-anagrams-stapler
 ?What's with the plaster?
 You need to get rid of it, somehow.
 If you did something with the plates, it'll be a bit easier to know what to do with the plaster.
@@ -214,35 +236,42 @@ K and N are optional. P, U, V, T, W and Y are useful.
 Of the stores you can enter right away, U is easiest, then V, then P, then Y, then W.
 Y's individual puzzles may be the easiest, but it's got quite a few.
 T is not so tough, due to its theme, but it's last. H is hopefully cake once you've got T. H has its own theme, which will be kind of obvious.
+#testcase-invisiclues-table-of-stores-anagrams-others
 ?What does store H become?
 You can't do anything with it until after you solved the game.
 The "extra good ending" is behind it, but the hoster won't let you in.
 You may've guessed it was <b>OTHERS</b>.
+#testcase-invisiclues-table-of-stores-anagrams-presto
 ?What does store P become?
 Well, it becomes a sort of vortex, but you need a magic word, according to the poster.
 Store P, Poster...
 P-E--O with the settler on cheat mode. And you can eliminate others to get...
 ...<b>PRESTO</b>!
+#testcase-invisiclues-table-of-stores-anagrams-otters
 ?What does store T become?
 Some kind of water animal.
 <b>OTTERS</b>.
 ?Why can't I enter store T right away?
 It's the final scenario, where Elvira waits.
 Well, one store has to be.
+#testcase-invisiclues-table-of-stores-anagrams-routes
 ?What does store U become?
 The settler, with cheat mode on, solves the vowels.
 Roads, but with signs.
 <b>ROUTES</b>.
+#testcase-invisiclues-table-of-stores-anagrams-troves
 ?What does store V become?
 The settler, with cheat mode on, solves the vowels.
 Something valuable and glittering.
 <b>TROVES</b>.
+#testcase-invisiclues-table-of-stores-anagrams-towers
 ?What does store W become?
 The settler, with cheat mode on, isn't much help.
 If you look at it right, it seems taller than the others. It's not just an optical illusion.
 It also seems to split in two.
 What's tall and plural?
 <b>TOWERS</b>.
+#testcase-invisiclues-table-of-stores-anagrams-oyster
 ?What does store Y become?
 The settler, with cheat mode on, solves the vowels. And the letter Y.
 It's something seawatery.
@@ -250,10 +279,12 @@ It's something seawatery.
 >>>STORES K AND N
 ?Why are K and N smaller than the others?
 They're a totally optional subquest.
+#testcase-invisiclues-table-of-stores-anagrams-tokers
 ?What's store K?
 This is a bit of slang. I let it go for a reason. Suspicious smelling smoke.
 KT Rose is a clue and it should be enough, abstractly...
 ...to get <b>TOKERS</b>.
+#testcase-invisiclues-table-of-stores-anagrams-nestor
 ?What's store N?
 You need to figure the guy's name.
 Again the settler logics this one, but clues like underwater and Tintin may help.
@@ -268,6 +299,7 @@ It is TEASING seating, after all.
 ?What's the pamphlet good for?
 Well, it has a clue.
 I USED TO jibes with other things the blabber babbler says.
+#testcase-invisiclues-table-of-stores-anagrams-outside
 ?What's with the tedious lecture and studio E and "I used to?"
 They're clues to how to disrupt this whole joint. Ha ha. Joint, geddit?
 This is a wild card word.
@@ -276,6 +308,7 @@ Studio E also gives you a huge clue if you scan it.
 <b>OUTSIDE</b>.
 ?What's with the munchies now I'm back in the strip?
 They aren't an actual game item, but they will help you use the slider on the settler more often.
+#testcase-invisiclues-table-of-stores-anagrams-sorbet
 ?What's in Store B?
 Some sort of food. It looks sort of misty--cold misty.
 <b>SORBET</b>.
@@ -564,11 +597,13 @@ You have no particular reason to visit Boise State University, the Universal Ban
 You can take a <b>SUB</b> or <b>BUS</b> out for slightly different alternate endings.
 >STORE U
 >>SAME MESA
+#testcase-invisiclues-table-of-routes-anagrams-towards
 ?Is the worst ad good for anything?
 It's bad for society in every way. Err, I mean, it's a last lousy point.
 You can pick it off as long as the giant or the bean aren't present. If you get it first, you get a clue to the area. You may not need the clue, but it's there.
 RADWOST or WORST AD shuffled gives...
 <b>TOWARDS</b>.
+#testcase-invisiclues-table-of-routes-anagrams-inside
 ?How do I get into the church?
 Going IN is not formal enough.
 Read the scripture picturers.
@@ -688,6 +723,7 @@ Go <b>THROUGH</b>.
 ?Should I enter the yob den?
 No. It's a final last distraction. However, you can sort of do something with it. You need to, to win this scenario.
 You want to go <b>BEYOND</b>.
+#testcase-invisiclues-table-of-routes-anagrams-without
 ?Are the raptest patters important?
 If you want a full score, yes.
 Actually, they're best ignored. Aggressively.
@@ -2208,11 +2244,13 @@ You can't see it because it is lost.
 You need something to put in the slot.
 But not a coin.
 #testcase-invisiclues-table-of-others-anagrams-icon
+#testcase-invisiclues-table-of-others-anagrams-icons
 ?What do I put in the slot?
 Coins don't seem to work. Neither does a coin.
 The thing doesn't like money--maybe more a token?
 Perhaps an <b>ICON</b> would be more your thing.
 Or, if you have two coins, they can be <b>ICONS</b>.
+#testcase-invisiclues-table-of-others-anagrams-sonic
 #testcase-invisiclues-table-of-others-anagrams-sonic-icons
 ?Why does the storage spit my offer out with a hum?
 A weird hum. Like sound waves.
@@ -2232,6 +2270,7 @@ You're also called a PERP if you try to go to the Valence Enclave.
 In that case you could <b>PREP</b> a bit.
 You only need to to two of three actions. They were meant to be easy, to emphasize looking stuff up can be easier than abstruse word puzzles.
 Just go through the gates for the finale.
+#testcase-invisiclues-table-of-others-anagrams-concisions
 ?I got the bonus point at the end, but there's still one more! What gives?
 Well, the last one is very tricky.
 You need to scan the sonic icons for a clue.

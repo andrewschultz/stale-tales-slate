@@ -77,6 +77,7 @@ Bangish bashing
 #verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
 >sleep
 But you just woke up!
+\\
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-stuff-found-<-3
 >listen
 Peace and quiet. No adventure. Yet.
@@ -209,6 +210,7 @@ That's not a way to sneak around and avoid the knock at the door.
 #verbcase sleep-ordeal-reload-if-report-porter-knocks
 >sleep
 Not with that knocking.
+\\
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-report-porter-knocks
 >listen
 Nothing, except... (knock, knock, knock.)
@@ -226,6 +228,7 @@ You're in a conversation. Your turn to speak.
 
 @verbs
 >sleep
+\\
 #verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
@@ -1596,16 +1599,20 @@ You can use the command XTRA TRAX (or XTRA or TRAX) to toggle tracking the right
 
 @verbs
 >sleep
+\\
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
 \\
 #ttc-table-of-goto-sectioning--1-ordeal-reload
 >gt study
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+\\
 >gt gallery
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+\\
 >gt highest
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+\\
 >gt framing farming
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 

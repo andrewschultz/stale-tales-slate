@@ -703,12 +703,14 @@ That feels right, but it also feels like you're getting way ahead of yourself, t
 #verbcase swear-otters-if-player-is-in-disowned-downside-and-parleys-splayer-players-are-in-disowned-downside
 >bother
 The conversation is horrid enough.
+\\
 #verbcase smell-otters-if-player-is-in-disowned-downside
 >smell
 You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
+\\
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
->listen
 #verbcase listen-otters-if-noun-is-yer-all-a-yell'r
+>listen
 Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out.
 Sadly, now, with songs like Yeah, Hey, A Yeeha, Yah, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
 
@@ -1289,7 +1291,7 @@ The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
 
 @verbs
-#reverbcase smell-otters-if-player-is-in-disowned-downside
+#+verbcase smell-otters-if-player-is-in-disowned-downside
 >smell
 You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
 
@@ -3079,7 +3081,7 @@ by one point
 The asyllabic lilac bays are quite nice as-is after your brilliant plant-whispering.
 
 @verbs
-#reverbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
+#+verbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
 >listen
 You can't hear anything from the bays now
 !/(Silly Cab A|Clay Blais)
