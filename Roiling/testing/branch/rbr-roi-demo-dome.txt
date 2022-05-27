@@ -773,6 +773,7 @@ It's called Venal Ol' Novella, by Evan Oll. That's probably a pseudonym. It's go
 You still have more of the novella (examined but not read) to look through.
 \\
 >e
+\\
 #ttc-table-of-demo-dome-exhibit-novella-text-1
 >read
 The next page (1) makes enough sense, you guess.
@@ -1124,6 +1125,7 @@ This is a museum! Messing with the exhibits would be very bad form.
 #ttc-table-of-sparse-spares-nudges-sparse
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
+\\
 #ttc-table-of-sparse-spares-nudges-spare
 \\
 #testcase-mistake-roiling-clasp

@@ -24,16 +24,19 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >astride
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
+
 #ttc-table-of-routes-prefigurings-side-art
 #ttc-table-of-notepad-entries-flips
 >pad flips
 [NOTE: you can abbreviate this with PF in the future.]
 You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
+
 #pre-sitanag-against rule
 >against
 !by one point
 You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
 You add the information to your pedanto-notepad under FLIPS.
+
 #ttc-table-of-routes-prefigurings-sit-a-nag
 >pf
 You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
@@ -101,10 +104,13 @@ by one point
 >towards
 !by one point
 >pf
+
 #ttc-table-of-routes-prefigurings-worst-ad
 You can go TOWARDS the worst ad once things are a bit more settled.
+
 #ttc-table-of-routes-prefigurings-lairage-regalia
 You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
+
 #ttc-table-of-routes-prefigurings-adsorbing-signboard
 You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
 >undo
@@ -269,6 +275,7 @@ Your score has just gone up by one point
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
+
 #ttc-table-of-routes-prefigurings-hurt-hog
 >pf
 You can go THROUGH once you've managed to deal with the bent ewe.

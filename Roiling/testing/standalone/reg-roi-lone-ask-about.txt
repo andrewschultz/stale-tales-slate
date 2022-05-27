@@ -524,6 +524,7 @@ Your score has just gone up by one point
 You cut down the vile bee's buzzing when you managed to REASON. You could tackle the bee's essence if you want.
 
 >believe
+
 #+ttc-table-of-troves-unmatched-topic-responses-evil-bee
 >ask bee about xyzzy
 You cut down the live bee's buzzing when you managed to REASON. You also tackled the bee's essence. You can move on from it now.
@@ -1125,10 +1126,11 @@ They snot nots. Tons. Brusque, queer BS. You need to take action, instead.
 Your score has just gone up by one point
 
 >e
+
 #ttc-table-of-oyster-unmatched-topic-responses-pest-pets
 >ask pets about abcd
 They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something.
-\\
+
 >ask pets about elvira
 They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something.
 
@@ -1503,6 +1505,7 @@ You probably won't be able to start dissent that way. Better to pick off Rodney'
 You wouldn't expect to hear any secrets. Rodney's got Geno scared.
 
 >allrand
+
 #ttc-table-of-towers-unmatched-topic-responses-andres
 >ask andres about xxx
 Rodney silences Andres from answering.
@@ -3094,12 +3097,11 @@ Len Craig's knowledge extends to business transactions. He doesn't have, or make
 "I'm glad to let them hang around. Well, not quite around."
 
 #ttc-table-of-others-matched-item-responses-ammo-gang-mango
-
 >ask gang about mango
 "Yes, we sell them. Come join our conversation the right way." You turn red, briefly, thinking it can't be too hard to figure how to get a mango.
 
->ask gang about gang
 #ttc-table-of-others-ask-x-about-x-ammo-gang
+>ask gang about gang
 They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around.
 
 #ttc-table-of-others-matched-item-responses-ammo-gang-len-craig

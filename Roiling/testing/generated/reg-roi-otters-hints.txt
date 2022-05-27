@@ -167,6 +167,7 @@ DEBUG INFO: damsel medals hinting.
 #ttc-table-of-otters-anagrams-although
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+
 #ttc-table-of-otters-anagrams-ergo
 >although
 As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.

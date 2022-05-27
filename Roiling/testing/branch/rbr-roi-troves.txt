@@ -142,6 +142,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >au 2
+\\
 #testcase-mistake-roiling-real-hot
 >real hot
 But what emotion would provide heat?
@@ -369,8 +370,8 @@ The reastier arteries lead nowhere good. You still have a lot to look for.
 #testcase-outside-bustle-sublet
 >out
 The reastier arteries lead nowhere good. You still have a lot to look for.
-#testcase-exits-bustle-sublet
 \\
+#testcase-exits-bustle-sublet
 >exits
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
@@ -390,33 +391,43 @@ You can't see what you would do with a bunch of pots.
 #ttc-table-of-bustle-sublet-nudges-bustle
 >subelt
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
 #ttc-table-of-troves-nudges-truffle
 >tuffler
 You can't change the truffle. It can help you change things, though. Or how you see things.
+\\
 #ttc-table-of-bustle-sublet-nudges-boor
 >broo
 You can't change a whole suburb. Better to change yourself.
+\\
 #ttc-table-of-bustle-sublet-nudges-grub
 >gurb
 You can't change a whole suburb. Better to change yourself.
+\\
 #ttc-table-of-bustle-sublet-nudges-messhole
 >messhoel
 A messhole is a messhole. You need to concentrate on thinking your way out.
+\\
 #ttc-table-of-bustle-sublet-nudges-asidewalk
 >asidewalk
 The sidewalk's condition can't be changed. For better or worse.
+\\
 #ttc-table-of-bustle-sublet-nudges-sidewalk
 >sidewakl
 The sidewalk's condition can't be changed. For better or worse.
+\\
 #ttc-table-of-bustle-sublet-nudges-laid
 >lida
 The sidewalk's condition can't be changed. For better or worse.
+\\
 #ttc-table-of-bustle-sublet-nudges-askew
 >weska
 The sidewalk's condition can't be changed. For better or worse.
+\\
 #ttc-table-of-bustle-sublet-nudges-reastier
 >reastire
 The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
+\\
 #ttc-table-of-bustle-sublet-nudges-artery
 >arteyr
 The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
@@ -425,6 +436,7 @@ The reastier arteries cannot be changed. They cannot even change you positively 
 #ttc-table-of-bustle-sublet-nudges-sob
 >sbo
 No, you'll want to zone out the whole verbose distraction.
+\\
 #ttc-table-of-bustle-sublet-nudges-veer
 >vere
 No, you'll want to zone out the whole verbose distraction.
@@ -454,6 +466,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 The question marks ... hmm. Oh, you get it now.
+\\
 #ttc-table-of-troves-readables-stop-post
 >read stop post
 POP'S TOTS is written in red on the stop post.
@@ -461,6 +474,7 @@ POP'S TOTS is written in red on the stop post.
 >scan sob ever verbose
 Your settler registers YRR?RR?.
 !The question marks ... hmm. Oh, you get it now.
+\\
 #testcase-mistake-roiling-obverse
 >obverse
 You can't just make things obverse by wanting them to be. But if change comes within, perhaps things are closer to obverse than you think.
@@ -470,6 +484,7 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 >spot
 !by one point
 That should work, but you--your eyes are wandering now. You're not taking it all in. Around the post, the sob ever verbose echoes aid distracts you. You must deal with it first!
+\\
 #ttc-table-of-troves-prefigurings-stop-post
 >pf
 You should SPOT once you're able to focus better.
@@ -517,6 +532,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That'
 #ttc-table-of-bustle-sublet-nudges-observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
+\\
 #ttc-table-of-troves-scannotes-stop-post
 >scan stop post
 !Nothing happens until you move the settler away from the post and towards the sob ever verbose.
@@ -570,6 +586,7 @@ A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar m
 >out
 A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think.
 !Nevertheless, on your brief walk, you saw
+\\
 #testcase-exits-boarded-roadbed
 \\
 >exits
@@ -588,6 +605,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >scan sty
 !Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >c
+\\
 #ttc-table-of-troves-spechelp-a-sty-tasty-say
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
@@ -641,9 +659,11 @@ A snore arises from the arena. You see red. There's more, if you can deal with i
 #testcase-mistake-roiling-norse
 >norse
 The bee or arena's nationality is not relevant, and besides, it is a snore.
+\\
 #testcase-mistake-roiling-noser
 >noser
 A small orange blob with big eyes, short legs, and no arms falls off to the side, emitting garbled pseudo-profanity.
+\\
 #testcase-mistake-roiling-senor
 >senor
 The bee's gender is only relevant to the point of knowing it's a senora.
@@ -687,15 +707,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. 
 #ttc-table-of-boarded-roadbed-nudges-roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-boarded-roadbed-nudges-live
 >liev
 The bee's description isn't important. It's how you see the bee that matters.
+\\
 #ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's an evil bee!
+\\
 #ttc-table-of-boarded-roadbed-nudges-snore
 >snoer
 Hmm. Nothing at all. It must be a snore.
+\\
 #ttc-table-of-boarded-roadbed-nudges-arena
 >arena
 Nothing happens. You may need to look at the full SNORE SO ARENA.
@@ -731,6 +755,7 @@ In particular, you feel the need to RECALL right now.
 >recall
 Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.
 !by one point
+\\
 #ttc-table-of-troves-prefigurings-l-clear-cellar
 >pf
 You can RECALL the cellar once you're a little less distracted.
@@ -752,6 +777,7 @@ There's a chance you might wind up in ruts: Rustin' Ruin St.!
 #+ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a vile bee!
+\\
 #ttc-table-of-troves-scannotes-l-clear-cellar
 >scan l clear cellar
 That question mark is perhaps, um, clear if you think about it.
@@ -792,18 +818,23 @@ The bee or arena's nationality is not relevant, and besides, it was a snore.
 #+ttc-table-of-boarded-roadbed-nudges-snore
 >snoer
 You already managed to REASON with a snore. Nothing else to do.
+\\
 #+ttc-table-of-boarded-roadbed-nudges-arena
 >arena
 You already managed to REASON your way around the SNORE SO ARENA.
+\\
 #+ttc-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
+\\
 #ttc-table-of-troves-done-rejects-evil-bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
+\\
 #ttc-table-of-troves-done-rejects-snore-so-arena
 >reasno
 Drowning something without reason further in reason is unreasonable.
+\\
 #ttc-table-of-troves-spechelp-l-clear-cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
@@ -836,8 +867,8 @@ No. You're so low, you might just walk off to SAD PIER and end it all, maybe aft
 #testcase-outside-drain-nadir
 >out
 No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
-#testcase-exits-drain-nadir
 \\
+#testcase-exits-drain-nadir
 >exits
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
@@ -857,15 +888,19 @@ In particular, you feel the need to DESPAIR right now.
 @nud
 >reclla
 That's not something you can say, do or see here.
+\\
 #ttc-table-of-drain-nadir-nudges-nadir
 >nadri
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-drain-nadir-nudges-spider
 >spidre
 The diapers, the Ires Pad--the spider only fits in as *a* spider.
+\\
 #testcase-mistake-roiling-aspired
 >aspired
 Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!
+\\
 #testcase-mistake-roiling-praised
 >praised
 You would like to be, but you can't just want others to. Change comes from within.
@@ -885,6 +920,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. 
 #ttc-table-of-drain-nadir-nudges-ires
 >irse
 It's an IRES PAD, not just ires.
+\\
 #ttc-table-of-drain-nadir-nudges-pad
 >pda
 It's an IRES PAD, not just a pad.
@@ -938,9 +974,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Reg
 #ttc-table-of-troves-scannotes-large-regal-lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
+\\
 #testcase-mistake-roiling-alger
 >alger
 What would an Alger hero DO to such foul spirits as the lager, though?
+\\
 #ttc-table-of-troves-readables-large-regal-lager
 >read lager
 The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago, in red. I'll spare the details, because the story would kill almost as many brain cells as actually drinking the stuff.
@@ -974,6 +1012,7 @@ You stare into space some more but get distracted.
 #testcase-mistake-roiling-snog
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
+\\
 #ttc-table-of-drain-nadir-nudges-diapers
 >despari
 You already twisted yourself into and out of knots from despair. Time to move on!
@@ -982,9 +1021,11 @@ You already twisted yourself into and out of knots from despair. Time to move on
 #ttc-table-of-drain-nadir-nudges-song
 >sogn
 It's the full song name--I'd Cede.
+\\
 #ttc-table-of-drain-nadir-nudges-eddie
 >eddei
 It's the full song name--I'd Cede.
+\\
 #ttc-table-of-drain-nadir-nudges-cede
 >ceed
 It's the full song name--I'd Cede.
@@ -1057,8 +1098,8 @@ You don't have time to dream of titanium golf clubs or overpriced alcohol or all
 #testcase-outside-boredom-bedroom
 >out
 Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better.
-#testcase-exits-boredom-bedroom
 \\
+#testcase-exits-boredom-bedroom
 >exits
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
@@ -1066,15 +1107,19 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 #ttc-table-of-boredom-bedroom-nudges-shmoe
 >shmeo
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
+\\
 #ttc-table-of-boredom-bedroom-nudges-home
 >hoem
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
+\\
 #ttc-table-of-boredom-bedroom-nudges-bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #testcase-mistake-roiling-broomed
 >broomed
 You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.
+\\
 #testcase-mistake-roiling-aled
 >aled
 Getting drunk will not solve your problems. Besides, you missed your "chance" with the lager in Drain Nadir. You see red at yourself for such thoughts.
@@ -1110,6 +1155,7 @@ Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the match
 #### test altpath nudge for MASTER before BOLSTER
 >master
 by one point
+\\
 #ttc-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. Time to move on, though you could poke at the lobster.
@@ -1127,12 +1173,15 @@ That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEA
 #ttc-table-of-boredom-bedroom-nudges-leaper
 >leapre
 You'll probably want to deal with all the pleaser leapers at once.
+\\
 #ttc-table-of-troves-readables-pleaser-leapers
 >read leapers
 SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
+\\
 #ttc-table-of-troves-scannotes-pleaser-leapers
 >scan pleaser leapers
 You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
+\\
 #ttc-table-of-troves-spechelp-pleaser-leapers
 >pleasre
 The leapers almost seem to dance around for a bit.
@@ -1160,6 +1209,7 @@ Your score has just gone up by one point
 >deal
 That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.
 !by one point
+\\
 #ttc-table-of-troves-prefigurings-lead
 >pf
 You can DEAL once you've gotten an emotional boost.
@@ -1189,6 +1239,7 @@ DEBUG INFO: LEAD, All: a Deed hinting.
 #ttc-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The lobster nourished you physically. Time to move on, though you could poke at the ME ARTS.
+\\
 #ttc-table-of-troves-spechelp-me-arts
 >mastre
 That's not quite the way to focus on the ME ARTS.
@@ -1203,6 +1254,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's 
 #ttc-table-of-troves-scannotes-me-arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
+\\
 #testcase-mistake-roiling-maters-tamers
 >maters
 Perhaps they know their trade, well, but you need to, too.
@@ -1224,9 +1276,11 @@ Your score has just gone up by one point
 #+ttc-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
+\\
 #+ttc-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
+\\
 #ttc-table-of-troves-spechelp-lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
@@ -1241,6 +1295,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. T
 #ttc-table-of-troves-scannotes-lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
+\\
 #ttc-table-of-troves-readables-lead
 >read lead
 You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: "What a yutz! He needs to learn to, like...!" They always acted as if it was so simple.
@@ -1281,8 +1336,8 @@ In a public place? Worse, in an upscale public place? How shocking!
 #testcase-outside-browse-bowers
 >out
 You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more right here.
-#testcase-exits-browse-bowers
 \\
+#testcase-exits-browse-bowers
 >exits
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move further ahead in the world.
 
@@ -1293,9 +1348,11 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 #ttc-table-of-browse-bowers-nudges-divorce
 >divorec
 If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
+\\
 #ttc-table-of-browse-bowers-nudges-magazine
 >magazien
 It's not just any magazine. It's DIVORCES!
+\\
 #ttc-table-of-troves-spechelp-divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
@@ -1331,30 +1388,39 @@ by one point
 #testcase-mistake-roiling-bowser
 >bowser
 A Roiling Original is pretty old school, but it has enough obstacles.
+\\
 #testcase-mistake-roiling-eiders
 >eiders
 But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
+\\
 #ttc-table-of-browse-bowers-nudges-eder
 >edre
 It's Si Reed's full name.
+\\
 #ttc-table-of-browse-bowers-nudges-bower
 >obwer
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
 #ttc-table-of-browse-bowers-nudges-bowers
 >obwers
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
 #ttc-table-of-browse-bowers-nudges-rotunda
 >ratundo
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
+\\
 #ttc-table-of-browse-bowers-nudges-dour
 >duro
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
+\\
 #ttc-table-of-browse-bowers-nudges-tan
 >nta
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
+\\
 #ttc-table-of-browse-bowers-nudges-mire
 >mier
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
+\\
 #ttc-table-of-browse-bowers-nudges-mires
 >mirse
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
@@ -1424,6 +1490,7 @@ The praise spirea seems to turn red as you hear: "Spare, I ape SIR! I reaps, I r
 #testcase-outside-econ-cone
 >out
 The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!
+\\
 #testcase-exits-econ-cone
 \\
 >exits
@@ -1433,27 +1500,35 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 #testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! But you're nowhere near enthused enough.
+\\
 #ttc-table-of-econ-cone-nudges-cone
 >coen
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
+\\
 #ttc-table-of-econ-cone-nudges-ave
 >aev
 No sense changing the Save Aves. You must change yourself.
+\\
 #ttc-table-of-econ-cone-nudges-aves
 >avse
 No sense changing the Save Aves. You must change yourself.
+\\
 #ttc-table-of-econ-cone-nudges-recent
 >recetn
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
+\\
 #ttc-table-of-econ-cone-nudges-skyline
 >skylien
 You don't want to mess with the skyline. You want to get in the godlings' lodgings!
+\\
 #ttc-table-of-econ-cone-nudges-godling
 >godlign
 The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
+\\
 #ttc-table-of-econ-cone-nudges-godlings
 >godlinsg
 The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
+\\
 #ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
@@ -1473,6 +1548,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. T
 #ttc-table-of-troves-scannotes-praise-spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
+\\
 #testcase-mistake-roiling-persia
 >persia
 You redden at the thought of mystical lands that aren't relevant to the here and now.
@@ -1512,15 +1588,19 @@ Random dialogue on again.
 #testcase-mistake-roiling-penrod
 >penrod
 Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!
+\\
 #testcase-mistake-roiling-pernod
 >pernod
 There will be time for ritzy, overpriced alcohol once you have made it to the top. But until then, you need to keep focused.
+\\
 #+testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! You're enthused enough, but you need to strategize.
+\\
 #ttc-table-of-troves-done-rejects-praise-spirea
 >aspier
 You're wanting praise too much, now.
+\\
 #ttc-table-of-troves-spechelp-rivets
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
@@ -1537,6 +1617,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 >read rivets
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
+\\
 #ttc-table-of-troves-scannotes-rivets
 >scan rivets
 Hmm, along with the information for scanning Trevis, you might really have something here.
@@ -1564,6 +1645,7 @@ DEBUG INFO: END PRONER POD hinting.
 #+testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! You're more than enthused enough, but you need to strategize.
+\\
 #+ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
@@ -1572,15 +1654,19 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #ttc-table-of-troves-done-rejects-rivets
 >striev
 You're striving too hard, now.
+\\
 #ttc-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates.
+\\
 #ttc-table-of-troves-readables-sectarian-craniates
 >read sectarian craniates
 /You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
+\\
 #ttc-table-of-troves-scannotes-sectarian-craniates
 >scan sectarian craniates
 Wow. You have even more to think about, now! It's certainly a thoughtful piece of art, whatever it is. You are sure the reading provides you with a good deal of concrete and subjective thoughts to analyze.
+\\
 #ttc-table-of-troves-spechelp-sectarian-craniates
 >sectarian craniates
 Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet.
@@ -1606,34 +1692,43 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-troves-done-rejects-sectarian-craniates
 >craniatse
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
+\\
 #+ttc-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates. But you knew that, since you already "appreciated" it.
+\\
 #ttc-table-of-econ-cone-nudges-edn
 >end
 You must deal with the full END PRONER POD.
+\\
 #ttc-table-of-econ-cone-nudges-proner
 >pronre
 You must deal with the full END PRONER POD.
+\\
 #ttc-table-of-econ-cone-nudges-pod
 >pdo
 You must deal with the full END PRONER POD.
+\\
 #ttc-table-of-troves-readables-end-proner-pod
 >read end proner pod
 It is, apparently, produced by N-E-PROD corporation.
 >x end proner pod
 ###skip test checking
+\\
 #ttc-table-of-troves-readables-r-cad-card
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
+\\
 #ttc-table-of-econ-cone-nudges-card
 >cadr
 The card's writing is more important.
+\\
 #ttc-table-of-econ-cone-nudges-cad
 >cda
 The card's writing is more important.
+\\
 #ttc-table-of-troves-spechelp-end-proner-pod
 >erpdon
 The END PRONER POD seems to pulse slightly.
@@ -1666,8 +1761,8 @@ You couldn't just run out on your company and your responsibilities like that! Y
 #testcase-outside-upscale-capsule
 >out
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
-#testcase-exits-upscale-capsule
 \\
+#testcase-exits-upscale-capsule
 >exits
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move even further ahead in the world.
 
@@ -1695,6 +1790,7 @@ White noise, it is on. Whee.
 #testcase-mistake-roiling-fren
 >fren
 No dog walks along dragging Sebastian in their mouth.
+\\
 #ttc-table-of-upscale-capsule-nudges-upscale
 >upscael
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1746,42 +1842,55 @@ DEBUG INFO: St. Al Salt hinting.
 >lsat
 #OK-APOSTROPHE
 Oh dear. Is a standardized lawyers' aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.
+\\
 #testcase-mistake-roiling-slat
 >slat
 You're not in the window making business.
+\\
 #testcase-mistake-roiling-wogan
 >wogan
 You don't need Terry Wogan announcing your progress like it's Eurovision.
+\\
 #testcase-mistake-roiling-gwano
 >gwano
 Enough with the (redacted) spelling.
+\\
 #ttc-table-of-upscale-capsule-nudges-shaker
 >shakre
 It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
+\\
 #ttc-table-of-upscale-capsule-nudges-fern
 >fenr
 The fern is mentally, if not physically, unmalleable.
+\\
 #ttc-table-of-upscale-capsule-nudges-wagon
 >wagno
 You really don't need to rearrange the wonga wagon.
+\\
 #ttc-table-of-upscale-capsule-nudges-cark
 >cakr
 The cark rack is built to be sturdy. No need to change it.
+\\
 #ttc-table-of-upscale-capsule-nudges-sked
 >skde
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
+\\
 #ttc-table-of-upscale-capsule-nudges-likeness
 >likeness
 It's whoever's in the likeness that matters--Sister Tressi and Marble Blamer Balmer, here.
+\\
 #ttc-table-of-upscale-capsule-nudges-phasor
 >phasro
 You need all that light for late-night work sessions.
+\\
 #ttc-table-of-upscale-capsule-nudges-pharo
 >phaor
 You need all that light for late-night work sessions.
+\\
 #ttc-table-of-upscale-capsule-nudges-vote
 >ovet
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
+\\
 #ttc-table-of-upscale-capsule-nudges-vetos
 >ovets
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
@@ -1845,13 +1954,16 @@ You've lasted long enough. There are new things to look at, now.
 You see red slightly as Marble Blamer Balmer fails to look away.
 >x blamer balmer
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Mr. Beal. You can READ who created this marble.
+\\
 #ttc-table-of-troves-readables-blamer-balmer
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
+\\
 #ttc-table-of-troves-scannotes-marble-blamer-balmer
 >scan marble blamer balmer
 Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, you do what you can
+\\
 #ttc-table-of-troves-spechelp-marble-blamer-balmer
 >rambel
 seems slightly taken aback
@@ -1866,18 +1978,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer
 >mbb 2
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
+\\
 #ttc-table-of-troves-readables-blamer-mr-beal
 >read mr beal
 The likeness was drawn up by E. R. Lamb, whose signature is in red.
+\\
 #ttc-table-of-upscale-capsule-nudges-beal
 >bela
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
+\\
 #testcase-mistake-roiling-able
 >able
 Fortunately, Marble Blamer Mr. Beal doesn't become physically able.
+\\
 #testcase-mistake-roiling-bale
 >bale
 Neither you nor Marble Blamer Mr. Beal turns into hay.
+\\
 #ttc-table-of-troves-spechelp-marble-blamer-mr-beal
 >rambel
 seems slightly taken aback
@@ -1909,15 +2026,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Si
 #ttc-table-of-troves-scannotes-sister-tressi-siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't 100% as you'd expect, maybe you'd better learn to think your way around it.
+\\
 #ttc-table-of-troves-scannotes-trance-nectar
 >scan trance nectar
 Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
+\\
 #ttc-table-of-upscale-capsule-nudges-siter
 >sitre
 All the siters.
+\\
 #ttc-table-of-troves-scannotes-creationism-reactionism
 >scan creationism reactionism
 Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic.
+\\
 #ttc-table-of-troves-spechelp-creationism-reactionism
 >reactionims
 You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, figuring Creationism, Reactionism is the toughest optional puzzle in the game.
@@ -1947,6 +2068,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >recant
 !by one point
 It ... you know you should drink the Trance Nectar, for the good of society and the economy, but something nags at you. You've come to loathe the Trance Nectar, and yet you can't quite break free of it. With
+\\
 #ttc-table-of-troves-prefigurings-trance-nectar
 >pf
 You can RECANT once you feel less watched.
@@ -2020,6 +2142,7 @@ This will escape Upscale Capsule, but you could do a bit more if you want. Stay 
 #ttc-table-of-upscale-capsule-nudges-marble
 >marbel
 You already stopped thinking too much about Marble Blamer Balmer. If you try too hard to keep ignoring Marble Blamer Balmer, you'll start thinking about Marble Blamer Balmer, again.
+\\
 #ttc-table-of-upscale-capsule-nudges-siters
 >sitesr
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.

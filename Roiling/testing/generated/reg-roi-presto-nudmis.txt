@@ -22,6 +22,7 @@
 >veltamoz
 The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the volt maze. That's a decent omen.
+
 #ttc-table-of-presto-spechelp-lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
@@ -36,39 +37,52 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lamb. That's a d
 #testcase-mistake-roiling-balm
 >balm
 Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
+
 #testcase-mistake-roiling-enemy-tzar-tzar-enemy
 >enemy tzar
 You hear a rumbling. Then Elvira appears from the maze! "Oh, dear, this will be easy," she says. And it is.
 joke death
+
 >undo
+
 >tzar enemy
 You hear a rumbling. Then Elvira appears from the maze! "Oh, dear, this will be easy," she says. And it is.
 joke death
+
 >undo
+
 #ttc-table-of-grey-gyre-nudges-volt
 >votl
 That can't be it. It's more than a volt: a VOLT MAZE.
+
 #ttc-table-of-grey-gyre-nudges-maze
 >maez
 That can't be it. It's more than a maze: a VOLT MAZE.
+
 #ttc-table-of-presto-nudges-storep
 >storpe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #ttc-table-of-presto-nudges-crust
 >cruts
 You shouldn't play with your food. Yes, even if it is less traumatic to play with than to eat.
+
 #ttc-table-of-grey-gyre-nudges-grye
 >grey
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-grey-gyre-nudges-entry
 >entyr
 It's the maze you need to change, not the zany meter.
+
 #ttc-table-of-grey-gyre-nudges-mazeentry
 >mazeentyr
 It's the maze you need to change, not the zany meter.
+
 #ttc-table-of-grey-gyre-nudges-zany
 >zayn
 It's the maze you need to change, not the zany meter.
+
 #ttc-table-of-grey-gyre-nudges-meter
 >metre
 It's the maze you need to change, not the zany meter.
@@ -102,16 +116,20 @@ Score in a scenario: 1 out of 41 total points in the current region, Presto. Low
 That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
 >phoo
 That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
+
 #testcase-mistake-roiling-pheyoo
 >pheyoo
 But nothing really smells in here. Perhaps you need something more straightforward and universal.
+
 #ttc-table-of-austerer-treasure-nudges-austerer
 >austerre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-presto-spechelp-ye-hoop
 >phooye
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
+
 #testcase-misspellings-table-of-presto-spechelp-ye-hoop
 >phoyye
 The hoop dips a bit as if to taunt you.
@@ -132,9 +150,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a de
 #testcase-mistake-roiling-bleep
 >bleep
 I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.
+
 #testcase-mistake-roiling-rats
 >rats
 Boy! It'd be neat to have something that made you more authoritative.
+
 #testcase-mistake-roiling-whassup
 >whassup
 You probably want to TALK to people instead. Well, most of the time.
@@ -173,74 +193,96 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 #testcase-mistake-roiling-tars
 >tars
 !But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
+
 #testcase-mistake-roiling-a-gps
 >a gps
 A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
+
 #testcase-mistake-roiling-cafe
 >cafe
 You don't need caffeine or food here.
+
 #testcase-mistake-roiling-gpa-gpas
 >gpa
 You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
 >gpas
 You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
+
 #testcase-mistake-roiling-kay
 >kay
 You try to nag the yak with a "kay?" but without the "mm" it's just not Lumberghian enough to work.
+
 #testcase-mistake-roiling-kya
 >kya
 The yak is unimpressed with your karate noises.
+
 #testcase-mistake-roiling-mad
 >mad
 How can you feel mad, looking at such a beautiful work of nature?
+
 #testcase-mistake-roiling-okey
 >okey
 You try to make things okey (sic) but you aren't enough of a bard to.
+
 #testcase-mistake-roiling-spag
 >spag
 You don't have time to read text-adventuring magazines right now. You're too busy living them.
+
 #testcase-mistake-roiling-srat
 >srat
 The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.
+
 #testcase-mistake-roiling-pga-pgas
 >pga
 No golfers appear.
 >pgas
 No golfers appear.
+
 #ttc-table-of-char-arch-nudges-char
 >chra
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-char-arch-nudges-cretin
 >cretni
 You won't change the cistern, but maybe you can track down the dart.
+
 #ttc-table-of-char-arch-nudges-cistern
 >cistenr
 You won't change the cistern, but maybe you can track down the dart.
+
 #ttc-table-of-char-arch-nudges-mad
 >mda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
+
 #ttc-table-of-char-arch-nudges-maddam
 >maddma
 It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that--though in the future, it does give a bonus point, for a special but odd word.
 !Here in the
+
 >maddma
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 !It looks like
+
 #ttc-table-of-char-arch-nudges-amaddam
 >amaddma
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
+
 #ttc-table-of-char-arch-nudges-amad
 >amda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
+
 #ttc-table-of-char-arch-nudges-themad
 >themda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
+
 #ttc-table-of-char-arch-nudges-gasp
 >gaps
 You try, but fail, to make something out of nothing.
+
 #ttc-table-of-char-arch-nudges-gpa
 >pag
 You try, but fail, to make something out of nothing.
+
 >x cistern
 You take a peek in--to see a dart in there.
 
@@ -273,16 +315,20 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That'
 #ttc-table-of-char-arch-nudges-tar
 >tra
 The tars remain heterogeneous. And very sticky. And the same size.
+
 #testcase-mistake-roiling-arts
 >arts
 Being an arts tsar won't help. You need a word that shows anger.
+
 #testcase-mistake-roiling-tard
 >tard
 Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! A Roiling Original doesn't want to be THAT sort of juvenile.
 You see red at your slight indiscretion
+
 >tard
 Instead of using that word again, you think back to why you saw red after thinking it, beyond being embarrassed. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
 You don't feel dumb after doing this, so there's really no need to use that word again. Not that there ever was.
+
 >tard
 You are just trolling now. No further clues for you.
 
@@ -305,12 +351,15 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 
 >x cistern
 !You take a peek in--to see a dart in there.
+
 #+ttc-table-of-char-arch-nudges-cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
+
 #ttc-table-of-presto-done-rejects-tsar-star
 >tsra
 No need for additional arts.
+
 #ttc-table-of-presto-done-rejects-dart
 >drta
 The dart's just fine as-is.
@@ -345,6 +394,7 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 
 >n
 >w
+
 #+ttc-table-of-presto-spechelp-maze-walls
 >mazeltvo
 The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
@@ -372,35 +422,45 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
 >oppugn
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
+
 #testcase-mistake-roiling-nobig-no-big
 >nobig
 Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
 >no big
 Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
+
 #testcase-mistake-roiling-pilots
 >pilots
 You don't need to fly anywhere. Besides, it's a popgun, not a pistol.
+
 #testcase-mistake-roiling-smearin
 >smearin
 That may've happened during the seminar, but you don't need that sort of violence here and now.
+
 #testcase-mistake-roiling-strop
 >strop
 That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.
+
 #ttc-table-of-marines-seminar-remains-nudges-marines
 >marinse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-marines-seminar-remains-nudges-marine
 >marien
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-presto-nudges-popgun
 >popgnu
 Hmm. It's not the popgun itself that's cracked but the boing-go bin inside.
+
 #ttc-table-of-presto-nudges-spoilt
 >spoitl
 Hmm. It's not the popgun itself that's cracked but the boing-go bin inside.
+
 #ttc-table-of-presto-nudges-serial
 >serila
 The number's got more numerals than letters.
+
 #ttc-table-of-presto-nudges-number
 >numbre
 The number's got more numerals than letters.
@@ -419,6 +479,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. Th
 #ttc-table-of-presto-scannotes-boing-go-bin
 >scan boing go bin
 Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!
+
 #ttc-table-of-presto-scannotes-sport-ports
 >scan sport ports
 Maybe you can find where the vowel is. That could help.
@@ -439,6 +500,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. Tha
 #ttc-table-of-presto-readables-sport-ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
+
 #ttc-table-of-marines-seminar-remains-nudges-port
 >potr
 But there is more than one port.
@@ -453,6 +515,7 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 #+ttc-table-of-marines-seminar-remains-nudges-port
 >potr
 You already observed all the ports. No need to try to single one out.
+
 #ttc-table-of-presto-done-rejects-sport-ports
 >prots
 You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
@@ -477,6 +540,7 @@ Score in a scenario: 9 out of 41 total points in the current region, Presto. Low
 
 >n
 /^Nowt Town
+
 #ttc-table-of-presto-spechelp-n-t-air
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
@@ -495,27 +559,34 @@ Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too 
 #ttc-table-of-presto-scannotes-maze-walls
 >scan maze walls
 Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe.
+
 #ttc-table-of-presto-nudges-mazeroom
 >mazeromo
 This is just the entry. You may want to tackle the whole maze.
+
 #ttc-table-of-nowt-town-nudges-bigl
 >bilg
 The big L may be some sort of clue, but you can't do anything with it.
+
 #testcase-mistake-roiling-glib
 >glib
 You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
 >w
+
 #ttc-table-of-r10-nudges-bigm
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
+
 #+ttc-table-of-presto-nudges-mazeroom
 >mazeromo
 You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
+
 #ttc-table-of-presto-nudges-floor
 >floro
 You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
 >w
 >w
+
 #testcase-mistake-roiling-lawls-lawl
 >lawls
 You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
@@ -531,47 +602,59 @@ by one point
 You already did that, and with 25% more word power, too.
 >undo
 >undo
+
 #ttc-table-of-r00-nudges-bign
 >bgin
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
+
 #ttc-table-of-r01-nudges-bigo
 >biog
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
+
 #ttc-table-of-r02-nudges-bigp
 >bipg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >e
+
 #ttc-table-of-r12-nudges-bigq
 >biqg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >e
+
 #ttc-table-of-r22-nudges-bigr
 >birg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
+
 #testcase-mistake-roiling-brig
 >brig
 There, there. This maze is much less hard to get out of than a prison.
 >e
+
 #ttc-table-of-r32-nudges-bigs
 >bisg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
+
 #ttc-table-of-r33-nudges-bigt
 >bitg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >w
+
 #ttc-table-of-r23-nudges-bigu
 >biug
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
+
 #ttc-table-of-unwary-runway-nudges-unwary
 >unwayr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-unwary-runway-nudges-bigv
 >bivg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
+
 #ttc-table-of-presto-nudges-dreidl
 >n
 >dreild
@@ -581,9 +664,11 @@ You won't be able to do anything to the dreidl to see it, but it'll be so horrif
 
 #separate semi-forcing stuff
 >abstract tom avlez to runway
+
 #ttc-table-of-unwary-runway-nudges-avlez
 >avlze
 No, his full name is the clue, here.
+
 #ttc-table-of-unwary-runway-nudges-tom
 >tmo
 No, his full name is the clue, here.
@@ -591,15 +676,19 @@ No, his full name is the clue, here.
 >undo
 >undo
 >abstract zo mavelt to runway
+
 #ttc-table-of-unwary-runway-nudges-mavelt
 >mavetl
+
 No, his full name is the clue, here.
 >undo
 >undo
 >abstract lev tzoma to runway
+
 #ttc-table-of-unwary-runway-nudges-lev
 >lve
 No, his full name is the clue, here.
+
 #ttc-table-of-unwary-runway-nudges-tzoma
 >tzoam
 No, his full name is the clue, here.
@@ -630,12 +719,15 @@ That's not something
 >evil
 There's no sense in making the vile veil worse than it is and even less sense in turning Leo evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
 !That'd be mean.
+
 #ttc-table-of-dirge-ridge-nudges-dirge
 >direg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-dirge-ridge-nudges-liev
 >live
 The vile veil is impassive. It--kind of protects you, actually.
+
 #ttc-table-of-presto-spechelp-leo
 >oel
 There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
@@ -650,12 +742,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Leo. That's a decent
 #testcase-mistake-roiling-elo
 >elo
 Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.
+
 #testcase-mistake-roiling-eol
 >eol
 Somehow, you doubt Leo is into computers.
+
 #testcase-mistake-roiling-asswhup-whupass
 >asswhup
 No chance.
+
 >whupass
 No chance.
 
@@ -698,18 +793,24 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes s
 #ttc-table-of-presto-scannotes-sods-gone-odes-song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
+
 #+testcase-mistake-roiling-evil
 >evil
 There's no sense in making the vile veil worse than it is and even less sense in turning Rand evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
+
 #testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+
 >renaldo
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+
 >leandro
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+
 >rolande
 /That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+
 #testcase-mistake-roiling-rondale
 >rondale
 /Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
@@ -723,9 +824,11 @@ Score in a scenario: 13 out of 41 total points in the current region, Presto. Lo
 #+testcase-mistake-roiling-evil
 >evil
 There's no sense in making the vile veil worse than it is.
+
 #ttc-table-of-presto-done-rejects-rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
+
 #+ttc-table-of-presto-nudges-leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
@@ -733,6 +836,7 @@ You need to concentrate on them being washups. Combining them would mean they co
 #ttc-table-of-dirge-ridge-nudges-whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
+
 #ttc-table-of-presto-spechelp-wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
@@ -749,12 +853,15 @@ You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 That feels almost right, but you remember that that word has 2 s's in a row.
 >whasups
 That feels almost right, but you remember that that word has 2 s's in a row.
+
 #+testcase-mistake-roiling-asswhup-whupass
 >asswhup
 It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins' cistern.
+
 #+testcase-mistake-roiling-tard
 >tard
 /You pause before saying/thinking that, especially with (Rand and Leo|Leo and Rand) around. They may've heard that, before.
+
 #+testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
 You need to find a way to cheer them up.
@@ -774,12 +881,15 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 #+testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
 You wouldn't want that, now they're your friends.
+
 #+testcase-mistake-roiling-asswhup-whupass
 >asswhup
 They're on your side. They will fight when they need to.
+
 #ttc-table-of-presto-done-rejects-wzup
 >asshuwp
 /You don't need to greet (Rand and Leo|Leo and Rand) again.
+
 #+ttc-table-of-presto-nudges-leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
@@ -802,24 +912,31 @@ Score in a scenario: 16 out of 41 total points in the current region, Presto. Lo
 Hey, now, that's just humblebragging.
 >nobig
 Hey, now, that's just humblebragging.
+
 #testcase-mistake-roiling-fire-text
 >fire zozimus
 SHOOT something with the gun instead.
+
 #testcase-mistake-roiling-shoot-text-with-text
 >shoot zozimus with zozimus
 Just say what you want to shoot.
+
 #ttc-table-of-presto-done-rejects-boing-go-bin
 >binog
 You can't force another revelation, but you don't need to.
+
 #+ttc-table-of-presto-nudges-popgun
 >popgnu
 The popgun is just fine.
+
 #+ttc-table-of-presto-nudges-spoilt
 >spoitl
 The popgun is just fine.
+
 #+ttc-table-of-presto-nudges-serial
 >serila
 You got the boing-go bin working.
+
 #+ttc-table-of-presto-nudges-number
 >numbre
 You got the boing-go bin working.
@@ -847,6 +964,7 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 #ttc-table-of-presto-nudges-mazeltov
 >mazeltvo
 The volt maze is gone. Re-forming it would not be fun.
+
 #ttc-table-of-presto-nudges-ether
 >ethre
 The ether is gone. You can just go north.
@@ -860,22 +978,27 @@ The ether is gone. You can just go north.
 #testcase-mistake-roiling-delis
 >delis
 You don't need food. And the food would probably be pretty evil, anyway.
+
 #testcase-mistake-roiling-idles
 >idles
 Deil's Slide can out-wait you. So you'll want to get on with things.
+
 #testcase-mistake-roiling-sidle
 >sidle
 You don't need to sneak up Deil's Slide.
+
 #testcase-mistake-roiling-asp-asps
 >asp
 Saps' Pass is dangerous enough.
 >asps
 Saps' Pass is dangerous enough.
+
 #testcase-mistake-roiling-psa-psas
 >psa
 Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
 >psas
 Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
+
 #testcase-mistake-roiling-spa-spas
 >spa
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
@@ -883,6 +1006,7 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 
 >s
+
 #+ttc-table-of-presto-nudges-ether
 >ethre
 The ether is gone. You can just go back north.
@@ -891,21 +1015,27 @@ The ether is gone. You can just go back north.
 #ttc-table-of-saps'-pass-nudges-lawl
 >lalw
 The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on.
+
 #ttc-table-of-saps'-pass-nudges-ssap
 >sspa
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-saps'-pass-nudges-mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
+
 #ttc-table-of-saps'-pass-nudges-deil
 >deli
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
+
 #ttc-table-of-saps'-pass-nudges-deils
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
+
 #ttc-table-of-saps'-pass-nudges-hog
 >hgo
 The three hogs are pretty indistinguishable, but they're still, well, more than one. Deal with them all.
+
 #ttc-table-of-saps'-pass-nudges-key
 >kye
 You aren't sure which key would work, so you need a plan to get them all.
@@ -935,12 +1065,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a d
 #+testcase-mistake-roiling-rats
 >rats
 Boy! You miss that tsar star.
+
 #+ttc-table-of-saps'-pass-nudges-mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
+
 #+ttc-table-of-saps'-pass-nudges-deil
 >deli
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
+
 #+ttc-table-of-saps'-pass-nudges-deils
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
@@ -953,9 +1086,11 @@ Your score has just gone up by one point
 #testcase-mistake-roiling-ptah
 >ptah
 No Egyptian deity comes to your rescue. Or needs to.
+
 #ttc-table-of-saps'-pass-nudges-phat
 >phta
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-saps'-pass-nudges-clump
 >clupm
 No, it's not just any clump, but hawt thaw.
@@ -963,9 +1098,11 @@ No, it's not just any clump, but hawt thaw.
 #testcase-mistake-roiling-alter
 >alter
 Vandalism! For shame!
+
 #testcase-mistake-roiling-slog-on
 >slog on
 /You need (Rand and Leo|Leo and Rand) to go away, for now, before you can slog on.
+
 #ttc-table-of-presto-spechelp-hawt-thaw
 >whta
 The hawt thaw crackles slightly.
@@ -991,16 +1128,20 @@ Score in a scenario: 19 out of 41 total points in the current region, Presto. Lo
 #+ttc-table-of-presto-nudges-leonard
 >leonadr
 /(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
+
 #ttc-table-of-saps'-pass-nudges-harpings
 >harpinsg
 Concentrate on the words of the harpings phrasing.
+
 #ttc-table-of-saps'-pass-nudges-harping
 >harpign
 Concentrate on the words of the harpings phrasing.
+
 #ttc-table-of-saps'-pass-nudges-yrnet
 >n
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. But it won't let you by until (Rand and Leo|Leo and Rand) are gone.
+
 #ttc-table-of-presto-spechelp-alert-letters
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
@@ -1037,6 +1178,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. T
 #ttc-table-of-presto-scannotes-alert
 >scan alert
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
+
 #testcase-mistake-roiling-artel
 >artel
 /You, (Rand and Leo|Leo and Rand) have already engaged in a collective effort.
@@ -1044,6 +1186,7 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 #first, test each done-reject individually
 >later
 by one point
+
 #ttc-table-of-presto-done-rejects-alert
 >aletr
 That'd be an awkward rehash. You need another way to say good-bye.
@@ -1051,6 +1194,7 @@ That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >so long
 by one point
+
 #ttc-table-of-presto-done-rejects-log-ons
 >sloong
 That'd be an awkward rehash. You need another way to say good-bye.
@@ -1058,6 +1202,7 @@ That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >tough
 by one point
+
 #ttc-table-of-presto-done-rejects-ought
 >ughot
 That'd be an awkward rehash. You need another way to say good-bye.
@@ -1096,9 +1241,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. T
 #ttc-table-of-presto-scannotes-starch-charts
 >scan starch charts
 Starch is calorically and consonantally (if that's a word) heavy. This must help.
+
 #ttc-table-of-saps'-pass-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go north to do what you need, in peace and quiet.
+
 #ttc-table-of-saps'-pass-nudges-chart
 >chatr
 But there is more than one chart to twiddle.
@@ -1122,12 +1269,15 @@ You recite the Hebrew alphabet, proving to yourself you could perform the whole 
 #ttc-table-of-presto-scannotes-n-e-recs-censer
 >scan n e recs censer
 This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
+
 #ttc-table-of-hacks'-shack-nudges-recs
 >resc
 It's the censer that's important, not the brand name.
+
 #ttc-table-of-hacks'-shack-nudges-rec
 >rce
 It's the censer that's important, not the brand name.
+
 #ttc-table-of-presto-spechelp-n-e-recs-censer
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
@@ -1148,16 +1298,20 @@ Score in a scenario: 23 out of 41 total points in the current region, Presto. Lo
 
 >rom sticks
 by one point
+
 #ttc-table-of-presto-done-rejects-rom-sticks
 # this needs to be tested BEFORE we assemble the computer and the e-robot automatically disappears them
 >trimsocsk
 Man, it would be too easy to mess the rom sticks up. Better not tinker like that.
+
 #ttc-table-of-hacks'-shack-nudges-sticks
 >sticsk
 You'll know what to do with the sticks when you're ready to program
+
 #ttc-table-of-hacks'-shack-nudges-rom
 >rmo
 You'll know what to do with the sticks when you're ready to program
+
 #ttc-table-of-hacks'-shack-nudges-stick
 >banish gum
 >stikc
@@ -1170,6 +1324,7 @@ You'll know what to do with the sticks when you're ready to program
 >undo
 
 >s
+
 #+ttc-table-of-saps'-pass-nudges-yrnet
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
@@ -1178,103 +1333,138 @@ The YrNet entry is secure. You wouldn't know where to start hacking it. Besides,
 #testcase-mistake-roiling-rived
 >rived
 You don't need to do that sort of hacking.
+
 #testcase-mistake-roiling-diver
 >diver
 It's you that'll need to dive into some code.
+
 #testcase-mistake-roiling-feal
 >feal
 Nobody needs allegiance, here.
+
 #testcase-mistake-roiling-clock-sap-cock-slap-slap-cock
 >clock sap
 The locs aren't that gangsta, and neither are you. And that's a good thing.
+
 >cock slap
 The locs aren't that gangsta, and neither are you. And that's a good thing.
+
 >slap cock
 The locs aren't that gangsta, and neither are you. And that's a good thing.
+
 >s
+
 #+ttc-table-of-saps'-pass-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
+
 >n
+
 #ttc-table-of-hacks'-shack-nudges-boredyak
 >boredyka
 The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing.
+
 >keyboard
 The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. That seems like a decent idea for later, though.
 That seems like a decent idea for later, though
 >undo
+
 #ttc-table-of-hacks'-shack-nudges-dongle
 >dongel
 It's built to be sturdy. You don't want to mess with it.
+
 #ttc-table-of-hacks'-shack-nudges-pile
 >piel
 It's not just any pile--it's a pile of coal.
+
 #ttc-table-of-hacks'-shack-nudges-stikc
 >stick
 It's just gum.
+
 #ttc-table-of-hacks'-shack-nudges-stickofgum
 >stickofgmu
 It's just gum.
+
 #ttc-table-of-hacks'-shack-nudges-catechism
 >catechims
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
+
 #ttc-table-of-hacks'-shack-nudges-textbook
 >textboko
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
+
 #ttc-table-of-hacks'-shack-nudges-bkoo
 >bkoo
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
+
 #ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You could tweak each individually if you wanted, though.
+
 #ttc-table-of-hacks'-shack-nudges-shakc
 >shack
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-hacks'-shack-nudges-hack
 >hakc
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-hacks'-shack-nudges-algorithm
 >algoritmh
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
+
 #ttc-table-of-hacks'-shack-nudges-algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
+
 #ttc-table-of-hacks'-shack-nudges-labs
 >lasb
 The labs slab remains sturdy. Technology 1, Wordplay Magic 0.
+
 #ttc-table-of-hacks'-shack-nudges-alb
 >abl
 The labs slab remains sturdy. Technology 2, Wordplay Magic 0.
+
 #ttc-table-of-hacks'-shack-nudges-dead
 >deda
 There must be a more eco-friendly way to reincarnate the flea.
+
 #ttc-table-of-hacks'-shack-nudges-rebuff
 >rebuff
 The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise.
+
 #ttc-table-of-hacks'-shack-nudges-magnetic
 >magnetci
 The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise.
+
 #ttc-table-of-hacks'-shack-nudges-computer
 >computre
 You need to fix the program in the computer, well, once you get it running.
+
 #ttc-table-of-hacks'-shack-nudges-button
 >buttno
 There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
+
 #ttc-table-of-hacks'-shack-nudges-buttons
 >buttosn
 There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
+
 #ttc-table-of-hacks'-shack-nudges-escarole
 >escaroel
 All the escaroles.
+
 #ttc-table-of-hacks'-shack-nudges-trim
 >trmi
 They're not just socks, or trim. They're trim socks.
+
 #ttc-table-of-hacks'-shack-nudges-sock
 >sokc
 They're not just socks, or trim. They're trim socks.
+
 #ttc-table-of-hacks'-shack-nudges-socks
 >socsk
 They're not just socks, or trim. They're trim socks.
+
 #ttc-table-of-hacks'-shack-nudges-trimsock
 >trimsokc
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
@@ -1305,17 +1495,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs P
 #ttc-table-of-presto-readables-clack-ops-locs-pack
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
+
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
+
 #ttc-table-of-presto-scannotes-clack-ops-locs-pack
 >scan clack ops locs pack
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
+
 #ttc-table-of-presto-scannotes-im-le-cop-polemic
 >scan i'm le cop polemic
 Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues.
+
 #ttc-table-of-presto-scannotes-drive-e
 >scan drive e
 Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it.
+
 #ttc-table-of-presto-scannotes-drive-a
 >scan drive a
 It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be what's causing the whole jumble.
@@ -1323,18 +1518,23 @@ It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be
 It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a golden dongle you don't want to mess with. You can also READ it for its status.
 >scan drive a
 It's DRIVE A, A DRIVE and VARIED, which may be what's causing the whole jumble.
+
 #ttc-table-of-hacks'-shack-nudges-clack
 >clakc
 You need to deal with the full Clack Ops Locs Pack.
+
 #ttc-table-of-hacks'-shack-nudges-ops
 >osp
 You need to deal with the full Clack Ops Locs Pack.
+
 #ttc-table-of-hacks'-shack-nudges-locs
 >losc
 You need to deal with the full Clack Ops Locs Pack.
+
 #ttc-table-of-hacks'-shack-nudges-pack
 >pakc
 You need to deal with the full Clack Ops Locs Pack.
+
 #ttc-table-of-presto-spechelp-flea
 >lefa
 The flea makes a crinkly noise but still seems quite dead.
@@ -1349,6 +1549,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea.
 #testcase-mistake-roiling-idks
 >idks
 You'll need to figure stuff out with the disk, but right now, yeah, you're all "I don't know."
+
 #testcase-mistake-roiling-kids
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with programming, anyway.
@@ -1370,9 +1571,11 @@ Score in a scenario: 25 out of 41 total points in the current region, Presto. Lo
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with pushing the skid, anyway.
 !that's a plus
+
 #testcase-mistake-roiling-repo
 >repo
 Nobody else seems to own the oper rope or the skid.
+
 #ttc-table-of-presto-spechelp-skid
 >diks
 No, skid <=> disk is about it. There's no tricky third way.
@@ -1388,9 +1591,11 @@ No, skid <=> disk is about it. There's no tricky third way.
 >skdi
 No, skid <=> disk is about it. There's no tricky third way.
 >skid
+
 #ttc-table-of-hacks'-shack-nudges-rope
 >roep
 You don't need to do anything tricky with the skid's rope.
+
 #ttc-table-of-hacks'-shack-nudges-fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
@@ -1420,6 +1625,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a de
 #testcase-mistake-roiling-alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
+
 #testcase-mistake-roiling-loca
 >loca
 What you want needs to help programming more than water or French champagne or dancing in the rain.
@@ -1438,9 +1644,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a 
 #ttc-table-of-presto-done-rejects-leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
+
 #ttc-table-of-presto-done-rejects-screen
 >screne
 The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
+
 #ttc-table-of-presto-spechelp-escaroles
 >casseroel
 The escaroles seem slightly meatier.
@@ -1472,15 +1680,19 @@ The casserole is mixed up enough.
 #ttc-table-of-char-arch-nudges-yak
 >yka
 The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help.
+
 #ttc-table-of-char-arch-nudges-yoke
 >yoek
 It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak.
+
 #ttc-table-of-char-arch-nudges-drab
 >drba
 It's not just drab. It's a drab yoke. On the bored yak.
+
 #ttc-table-of-char-arch-nudges-scratchings
 >scratchinsg
 You may wish to decipher the scratchings, instead.
+
 #ttc-table-of-char-arch-nudges-scratching
 >scratchign
 You may wish to decipher the scratchings, instead.
@@ -1521,12 +1733,15 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 #testcase-mistake-roiling-bat
 >bat
 You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
+
 #ttc-table-of-presto-done-rejects-keyboard
 >keyboadr
 You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
+
 #ttc-table-of-hacks'-shack-nudges-tbakey
 >tbakye
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
+
 #ttc-table-of-hacks'-shack-nudges-yke
 >yek
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
@@ -1557,6 +1772,7 @@ The Be-Troo E-Robot isn't interested in monologues.
 #ttc-table-of-presto-readables-be-troo-e-robot
 >read robot
 OBERTO, in red. That's its name.
+
 #ttc-table-of-presto-scannotes-be-troo-e-robot
 >scan robot
 You wonder if you need a step back to take a new look at the ambiguous clues.
@@ -1576,9 +1792,11 @@ fits in perfectly
 #ttc-table-of-presto-done-rejects-caps-lock
 >capslokc
 YOU HAVE WHAT YOU NEED.
+
 #ttc-table-of-hacks'-shack-nudges-caps
 >casp
 It'd sort of stink if a caps lock button broke in real life, so, no.
+
 #ttc-table-of-hacks'-shack-nudges-lock
 >lokc
 It'd sort of stink if a caps lock button broke in real life, so, no.
@@ -1592,15 +1810,19 @@ Score in a scenario: 31 out of 41 total points in the current region, Presto. Lo
 #ttc-table-of-presto-done-rejects-futon
 >futno
 The futon could be a little less lumpy, sure, but that's beyond your magic powers.
+
 #ttc-table-of-presto-done-rejects-be-troo-e-robot
 >toober
 No need to reboot twice.
+
 #ttc-table-of-presto-scannotes-peels-speel
 >scan peels speel
 Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue...
+
 #ttc-table-of-presto-readables-peels-speel
 >read peels speel
 Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
+
 #ttc-table-of-presto-spechelp-peels-speel
 >epsel
 Whatever you thought seemed a bit of a tired mess.
@@ -1621,6 +1843,7 @@ Score in a scenario: 32 out of 41 total points in the current region, Presto. Lo
 #ttc-table-of-presto-done-rejects-peels-speel
 >epsle
 You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
+
 #ttc-table-of-presto-spechelp-im-le-cop-polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
@@ -1651,22 +1874,26 @@ What you have helps programming more than water or French champagne or dancing i
 #ttc-table-of-presto-done-rejects-alocalco-cola
 >aloc
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
+
 #ttc-table-of-hacks'-shack-nudges-soda
 >soad
 It's cola, not soda or pop. And you can just drink it.
+
 #ttc-table-of-hacks'-shack-nudges-pop
 >ppo
 It's cola, not soda or pop. And you can just drink it.
+
 #+testcase-mistake-roiling-alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
+
 #testcase-mistake-roiling-pop
 >pop
 It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
+
 #testcase-mistake-roiling-soda
 >soda
 It's cola. It has to be. Soda could make you into a sod, of course.
-#+testcase-mistake-roiling-feal
 
 >mug
 Your score has just gone up by one point
@@ -1676,9 +1903,11 @@ Score in a scenario: 35 out of 41 total points in the current region, Presto. Lo
 #ttc-table-of-presto-done-rejects-mug
 >mgu
 The mug is no longer manipulable.
+
 #ttc-table-of-presto-done-rejects-im-le-cop-polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
+
 #ttc-table-of-presto-spechelp-trim-socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
@@ -1698,11 +1927,14 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim soc
 #ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: VARIED
+
 #ttc-table-of-presto-readables-drive-e
 >read drive e
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
+
 >read drive e
 It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
+
 #ttc-table-of-presto-spechelp-tba-key
 >abt
 The TBA key rattles within the keyboard a bit.
@@ -1775,18 +2007,23 @@ Score in a scenario: 39 out of 41 total points in the current region, Presto. Th
 #+ttc-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
+
 #+testcase-mistake-roiling-redive
 >redive
 Deriving was tricky enough.
+
 #+ttc-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
+
 #+ttc-table-of-hacks'-shack-nudges-tbakey
 >tbakye
 You already did enough with the TAB key.
+
 #+ttc-table-of-hacks'-shack-nudges-yke
 >yek
 You already did enough with the TAB key.
+
 #ttc-table-of-presto-done-rejects-tba-key
 >bta
 No, the TAB key is what it should be.
@@ -1809,18 +2046,23 @@ Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Wel
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
 !by one point
+
 #+ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad.
+
 #ttc-table-of-hacks'-shack-nudges-bub
 >bbu
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
+
 #ttc-table-of-hacks'-shack-nudges-dude
 >dued
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
+
 #ttc-table-of-hacks'-shack-nudges-geg
 >egg
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
+
 #ttc-table-of-hacks'-shack-nudges-local
 >locla
 The cola has already been reprocessed enough. You'll drink it when the time comes.
@@ -1832,6 +2074,7 @@ The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably beca
 #+ttc-table-of-presto-done-rejects-mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
+
 #ttc-table-of-presto-nudges-lcao
 >lcoa
 The mug is already somehow generating infinite cola. Don't want to mess with that.
@@ -1845,6 +2088,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 #ttc-table-of-presto-done-rejects-bub-dude-egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
+
 #+ttc-table-of-hacks'-shack-nudges-algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.

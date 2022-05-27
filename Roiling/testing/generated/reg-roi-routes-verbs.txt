@@ -190,6 +190,7 @@ DEBUG INFO: General LLPish min-up for worst ad.
 #+testcase-outside-same-mesa
 >out
 There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go.
+
 #+testcase-exits-same-mesa
 >exits
 You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, maybe that's where the adventure is.
@@ -257,6 +258,7 @@ Your score has just gone up by one point
 /^Ripe Pier
 
 >w
+
 #ttc-table-of-routes-nowheres-ripe-pier
 You've lost all sense of direction here, but you still somehow need to figure how to get on that boat.
 

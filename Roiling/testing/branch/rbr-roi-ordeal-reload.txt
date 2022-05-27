@@ -114,33 +114,41 @@ The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or 
 #testcase-mistake-roiling-consult-text
 >consult zozimus
 It looks like you tried to consult your notepad about something. The proper syntax is CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
+\\
 #testcase-mistake-roiling-knock-text
 >undo
 \\
 >knock zozimus
 Just KNOCK instead.
+\\
 #testcase-mistake-roiling-hug-text-hug
 >hug zozimus
 Hug? Ugh. Guh.
 >hug
 Hug? Ugh. Guh.
+\\
 #testcase-mistake-roiling-embrace-text-embrace
 >embrace zozimus
 Hug? Ugh. Guh.
 >embrace
 Hug? Ugh. Guh.
+\\
 #ttc-table-of-dusty-study-nudges-study
 >stuyd
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
 #testcase-mistake-roiling-nip
 >nip
 Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.
+\\
 #testcase-mistake-roiling-odor
 >odor
 You'd stink as a host, trying that.
+\\
 #testcase-mistake-roiling-rood
 >rood
 No need to surprise a guest like that. Just open the door.
+\\
 #ttc-table-of-ordeal-reload-nudges-manse
 >manes
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -168,11 +176,14 @@ You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 #ttc-table-of-dusty-study-nudges-sad
 >sda
 The ads have probably gone through enough word-twisting.
+\\
 #testcase-mistake-roiling-text-stable-text-stable-text-text-stable
 >zozimus stable zozimus
 You can just change the tables by saying STABLE--well, once you've had an introductory dialogue with an NPC.
+\\
 >stable zozimus
 You can just change the tables by saying STABLE--well, once you've had an introductory dialogue with an NPC.
+\\
 >zozimus stable
 You can just change the tables by saying STABLE--well, once you've had an introductory dialogue with an NPC.
 \\
@@ -241,6 +252,7 @@ No, you need a light source, not a way out.
 #mistake retest for rood
 >rood
 You need a light source.
+\\
 #testcase-mistake-roiling-laredo
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
@@ -251,12 +263,15 @@ If you want a Western game situated on the US/Mexico border, this isn't for you.
 You punch your fist as you realize DARK has no anagrams...right into the palm.
 >dakr
 Oh no, not again. Concentrate on the palm.
+\\
 #ttc-table-of-dusty-study-nudges-darkness
 >darkness
 Oh no, not again. Concentrate on the palm.
+\\
 #+ttc-table-of-dusty-study-nudges-rove
 >roev
 That's not a way to sneak around and avoid any future knock at the door.
+\\
 #ttc-table-of-ordeal-reload-spechelp-palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
@@ -272,6 +287,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a d
 #verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-study-is-dark
 >smell
 That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.
+\\
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-dusty-study-is-not-lit
 >listen
 Nobody's going to whisper a hint to you in the dark.
@@ -309,6 +325,7 @@ You can GT/GO TO/GOTO a location or thing if it's a bit far away but in the regi
 #ttc-table-of-notepad-entries-old-warpy
 >pad old warpy
 Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble.
+\\
 #ttc-table-of-notepad-entries-options
 >pad options
 --Typing SCR or SCREEN toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently off.
@@ -360,6 +377,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's 
 #testcase-mistake-roiling-chalets
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
+\\
 #ttc-table-of-dusty-study-nudges-latch
 >lathc
 Not one latch. All of them.
@@ -384,6 +402,7 @@ PARSE
 PARSE processes the settler's data for you, but SPARE hides it.
 >c
 !PARSE
+\\
 #ttc-table-of-notepad-entries-elvira
 >pad elvira
 Apparently, appreciating her is what separates us from the animals. Well, according to Report Porter Perrot.
@@ -391,6 +410,7 @@ Apparently, appreciating her is what separates us from the animals. Well, accord
 >scan platform
 [NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
 DEBUG: platform being scanned.
+\\
 #ttc-table-of-notepad-entries-diorama
 >pad diorama
 R=red Y=yellow P=purple G=green.
@@ -418,6 +438,7 @@ RPGRR*RRYR RPGRRRYRR
 (You record the information about long commands in your notepad.)
 >pad long commands
 Commands over 4 words long aren't necessary. You can say TAKE or GET ALL, eliminate THE, or use half an open compound word without repercussions.
+\\
 #ttc-table-of-notepad-entries-poss
 >pad poss
 POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too.
@@ -440,37 +461,47 @@ Shortcut command to turn slider on.
 #ttc-table-of-dusty-study-nudges-notice
 >notiec
 You can flip everything on the diorama except the notice.
+\\
 #ttc-table-of-dusty-study-nudges-diorama
 >dioraam
 Gateman Nat Egam assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
 >x dope
 The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin' inquest, MoneyCo and Economy, Shatter-Threats, I Trash His Art, and By Li'l Billy.
+\\
 #ttc-table-of-dusty-study-nudges-gape
 >gaep
 You feel like you physically want to crumple up the page, but you just stare blankly at it.
+\\
 #ttc-table-of-dusty-study-nudges-nitro
 >nitor
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+\\
 #ttc-table-of-dusty-study-nudges-questin
 >questni
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+\\
 #ttc-table-of-dusty-study-nudges-moneyco
 >moneyoc
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+\\
 #ttc-table-of-dusty-study-nudges-shatter
 >shattre
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+\\
 #ttc-table-of-dusty-study-nudges-itrash
 >itrahs
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+\\
 #ttc-table-of-dusty-study-nudges-herarts
 >gs
 >herarst
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 >gs
+\\
 #ttc-table-of-dusty-study-nudges-billy
 >bilyl
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+\\
 #ttc-table-of-dusty-study-nudges-oped
 >opde
 You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald.
@@ -494,18 +525,23 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-ordeal-reload-scannotes-tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
+\\
 #ttc-table-of-ordeal-reload-scannotes-niche
 >scan niche
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
+\\
 #ttc-table-of-ordeal-reload-scannotes-beams
 >scan beams
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
+\\
 #ttc-table-of-ordeal-reload-scannotes-meet-bans
 >scan meet bans
 You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
+\\
 #testcase-mistake-roiling-palm
 >palm
 Maybe you could, but you will need the light. You won't need the landscaping.
+\\
 #ttc-table-of-ordeal-reload-done-rejects-lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
@@ -515,9 +551,11 @@ The smell would gag you before the shouty youths.
 #mistake retest for rood
 >rood
 It'd be your own crucifix if you let the shouty youths outside in.
+\\
 #testcase-mistake-roiling-pedo
 >pedo
 Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her "clever" games.
+\\
 >pedo
 Don't dwell on it. It's lies.
 
@@ -540,10 +578,12 @@ But the net would still block you.
 But the net would still block you.
 >beams net
 But the net would still block you.
+\\
 #testcase-mistake-roiling-basement
 >gonear largely gallery
 >basement
 Well, if you want points for that, you'll need to go back to the study.
+\\
 #testcase-mistake-roiling-sitar
 >sitar
 Surely easy transport is more handy right now than music.
@@ -551,6 +591,7 @@ Surely easy transport is more handy right now than music.
 >undo
 >undo
 #!these previous mistake tests are a cheap cheat to pick off an obscure mistake
+\\
 #testcase-mistake-roiling-basement-text-text-basement-text-text-basement
 >basement zozimus
 You can just change the ten beams by saying BASEMENT.
@@ -558,14 +599,17 @@ You can just change the ten beams by saying BASEMENT.
 You can just change the ten beams by saying BASEMENT.
 >zozimus basement
 You can just change the ten beams by saying BASEMENT.
+\\
 #testcase-mistake-roiling-best-name-bestname
 >best name
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
 >bestname
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
+\\
 #ttc-table-of-dusty-study-nudges-beams
 >beasm
 Not even one of the beams rattles. You count them up again--there are ten.
+\\
 #ttc-table-of-dusty-study-nudges-ten
 >tne
 You change neither the number nor the makeup of the ten beams.
@@ -596,11 +640,13 @@ The only way you seem to be able to go is down.
 #mistake retest for basement-text-[text] basement-text-[text] basement
 >basement zozimus
 You can just go DOWN to enter the basement.
+\\
 #ttc-table-of-dusty-study-nudges-tenbeams
 >basemetn
 You probably just want to go DOWN to the basement.
 >d
 /^Largely All-Grey Gallery
+\\
 #ttc-table-of-ordeal-reload-spechelp-stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.
@@ -638,6 +684,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tables. That's a
 #ttc-table-of-dusty-study-nudges-table
 >tabel
 A bleat: "tableS!"
+\\
 #ttc-table-of-dusty-study-nudges-subpoena
 >subpoean
 Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
@@ -707,6 +754,7 @@ There are three unblocked exits: up, down and inside.
 #+ttc-table-of-dusty-study-nudges-ceiling
 >ceilign
 You already built the chimney. If the ceiling caved, you'd be buried.
+\\
 #ttc-table-of-ordeal-reload-done-rejects-chimney
 >chimnye
 You probably just want to go UP the chimney.
@@ -715,12 +763,15 @@ You probably just want to go UP the chimney.
 #ttc-table-of-dusty-study-nudges-isolani
 >isolain
 You don't need to rearrange the isolani liaison. It's all that protects you from the outside world.
+\\
 #ttc-table-of-dusty-study-nudges-pin
 >pni
 It's one big giant pin.
+\\
 #ttc-table-of-dusty-study-nudges-giant
 >giatn
 It's one big giant pin.
+\\
 #ttc-table-of-ordeal-reload-spechelp-giant-pin
 >paintign
 The pin wobbles.
@@ -735,21 +786,27 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That'
 #ttc-table-of-ordeal-reload-readables-giant-pin
 >read giant pin
 GNAT. I NIP is nonsensically written in red on the giant pin.
+\\
 #ttc-table-of-dusty-study-nudges-bowling
 >bowlign
 It's more that it's a giant pin and not, like, a safety pin.
+\\
 #ttc-table-of-dusty-study-nudges-bowlingpin
 >bowlingpni
 It's more that it's a giant pin and not, like, a safety pin.
+\\
 #ttc-table-of-dusty-study-nudges-bookshelf
 >bookshefl
 The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway.
+\\
 #ttc-table-of-dusty-study-nudges-books
 >boosk
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+\\
 #ttc-table-of-dusty-study-nudges-book
 >boko
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+\\
 #ttc-table-of-dusty-study-nudges-shelf
 >shefl
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
@@ -768,6 +825,7 @@ The books could use some changing. But you're better off making Yorpwald itself 
 #ttc-table-of-dusty-study-nudges-abstract
 >abstratc
 That is probably overthinking the painting's abstract-ness. It's really just good for examining.
+\\
 #ttc-table-of-ordeal-reload-done-rejects-painting
 >paintign
 The painting really goes better with the study than the giant pin.
@@ -781,26 +839,37 @@ You don't need a safe home, right now. You need adventure.
 >chalets
 You don't need a safe home, right now. You need adventure.
 !that many letters
+\\
 #ttc-table-of-ordeal-reload-done-rejects-letters-settler
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
+\\
 #testcase-mistake-roiling-cheat-on-off-teach-on-off
 >c
+\\
 >cheat on
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
+\\
 >cheat off
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
+\\
 >t
+\\
 >teach on
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
+\\
 >teach off
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
+\\
 >c
+\\
 #testcase-mistake-roiling-pace-paces
 >pace
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
+\\
 >paces
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
+\\
 #mistake retest for [text] stable-text-stable-text-[text] stable
 >zozimus stable zozimus
 You can just go IN to the stable.
@@ -808,6 +877,7 @@ You can just go IN to the stable.
 You can just go IN to the stable.
 >zozimus stable
 You can just go IN to the stable.
+\\
 #testcase-mistake-roiling-trestle
 >trestle
 The settler is pretty powerful, but it can't build bridges.
@@ -858,6 +928,7 @@ You need to change that to something else, then it'll be astir.
 #ttc-table-of-farming-framing-nudges-framing
 >framign
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-farming-framing-nudges-ridging
 >ridgign
 If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you.
@@ -915,6 +986,7 @@ You go back down to the closets, not able to figure the pram yet.
 >undo
 >ramp
 by one point
+\\
 #+testcase-exits-highest-heights
 >exits
 There are two unblocked exits: down and inside to Dusty Study.
@@ -932,12 +1004,15 @@ You have more than one way to leave: down and inside. So you'll need to specify 
 #ttc-table-of-highest-heights-nudges-highest
 >highets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-highest-heights-nudges-height
 >heigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-ordeal-reload-nudges-closets
 >closest
 The closets are there to warp space a bit. You don't need to mess with them.
+\\
 #ttc-table-of-ordeal-reload-nudges-closet
 >closte
 The closets are there to warp space a bit. You don't need to mess with them.
@@ -951,6 +1026,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-ordeal-reload-scannotes-pram
 >scan pram
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
+\\
 #ttc-table-of-ordeal-reload-spechelp-pram
 >rapm
 The pram creaks back and forth slightly.
@@ -988,6 +1064,7 @@ The ramp is useful now. Best keep it.
 >event mpa
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
 So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
+\\
 #ttc-table-of-ordeal-reload-spechelp-pavement
 >event mpa
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
@@ -1001,6 +1078,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pavement. That's
 \\
 >event map
 The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald.
+\\
 #ttc-table-of-ordeal-reload-spechelp-platform
 >farm plto
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
@@ -1014,6 +1092,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the platform. That's
 \\
 >farm plot
 The platform becomes a farm plot.
+\\
 #ttc-table-of-ordeal-reload-spechelp-pedestal
 >steel pda
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
@@ -1027,6 +1106,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pedestal. That's
 \\
 >steel pad
 The pedestal becomes a steel pad.
+\\
 #ttc-table-of-ordeal-reload-spechelp-crabgrass
 >brass crga
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
@@ -1042,6 +1122,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the crabgrass. That'
 ###skip test checking
 >brass crga
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can reexamine the diorama.
+\\
 >brass crag
 The crabgrass dries out and becomes a brass crag.
 
@@ -1059,6 +1140,7 @@ You know what to change the event map back to: the pavement. There's no third op
 \\
 >pavement
 The event map folds back into a thoroughly more dull pavement. Reading the notice briefly, you see that things won't be this flexible out in the real world.
+\\
 #ttc-table-of-ordeal-reload-spechelp-brass-crag
 >crabgrssa
 You know what to change the brass crag back to: the crabgrass. There's no third option.
@@ -1073,6 +1155,7 @@ You know what to change the brass crag back to: the crabgrass. There's no third 
 >crabgrass
 The brass crag becomes slightly less lifeless crabgrass, again.
 !Reading the notice briefly, you see that things won't be this flexible out in the real world.
+\\
 #ttc-table-of-ordeal-reload-spechelp-farm-plot
 >platfomr
 You know what to change the farm plot back to: the platform. There's no third option.
@@ -1086,6 +1169,7 @@ You know what to change the farm plot back to: the platform. There's no third op
 \\
 >platform
 The farm plot switches back to a platform.
+\\
 #ttc-table-of-ordeal-reload-spechelp-steel-pad
 >pedestla
 You know what to change the steel pad back to: the pedestal. There's no third option.
@@ -1160,15 +1244,19 @@ You already got some data from the slider on the diorama. You may want to save i
 #ttc-table-of-largely-all-grey-gallery-nudges-gallery
 >galleyr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-all
 >all
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-grey
 >grye
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-evac
 >evca
 The evac-cave is your way out. It'd be a bad idea to change it.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 No, all the bins.
@@ -1176,6 +1264,7 @@ No, all the bins.
 >sitar
 Surely a stair is more handy right now than music.
 !What could it
+\\
 #ttc-table-of-ordeal-reload-spechelp-ISBN-bins
 >snbi
 The ISBN bins creak slightly.
@@ -1226,12 +1315,14 @@ Nothing left to do here in your manse. You should be able to go IN to start your
 #+ttc-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 You already fixed the bins.
+\\
 #ttc-table-of-ordeal-reload-done-rejects-ISBN-bins
 >snbi
 The ISBN bins are secure. Best not tinker.
 #mistake retest for bsin/bs in
 >bsin
 Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
+\\
 >bs in
 Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 
@@ -1277,42 +1368,54 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a 
 #ttc-table-of-ordeal-reload-readables-rifle
 >read rifle
 It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
+\\
 #testcase-mistake-roiling-filer
 >filer
 You can't just give Elmo a desk job. Though maybe some paperwork would help.
+\\
 #testcase-mistake-roiling-lifer
 >lifer
 You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.
+\\
 #testcase-mistake-roiling-mole
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
+\\
 >x elmo
 ###skip test checking
 >z
 >z
 >z
 >z
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-high
 >hihg
 The high sign is a clue. Bad idea to change it.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-highsign
 >highsing
 The high sign is a clue. Bad idea to change it.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-sign
 >sgin
 The high sign is a clue. Bad idea to change it.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-arifle
 >arifel
 Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-hostage
 >hostaeg
 It's not you that needs changing but the rifle.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
 Changing Elmo won't work. It's his rifle.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-ugn
 >ung
 It's not a gun but a rifle.
+\\
 #testcase-mistake-roiling-gnu
 >gnu
 It's a rifle, not a gun. Besides, you don't need a gnu-sance.
@@ -1344,6 +1447,7 @@ You can RECAP to see your options.
 #+ttc-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
 Changing Elmo won't work. It's his rifle that needed changing.
+\\
 #ttc-table-of-largely-all-grey-gallery-nudges-flier
 >flire
 Better to pump Elmo for information.
@@ -1411,6 +1515,7 @@ Nothing yet. You need to use your powers to reveal the exit.
 #ttc-table-of-notepad-entries-clues
 >pad clues
 You can LISTEN, ASK people about random stuff, or X/EXAMINE them to figure how to change them.
+\\
 #ttc-table-of-notepad-entries-gretta
 \\
 >pad gretta
@@ -1504,21 +1609,27 @@ There's too much of it, and it's too hardened.
 #ttc-table-of-carven-cavern-nudges-cavern
 >cavenr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
 #ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and palest pastel plates probably hold the key to leaving.
+\\
 #ttc-table-of-carven-cavern-nudges-plate
 >plaet
 You have no idea which plate to focus on, so maybe you should focus on the plates.
+\\
 #ttc-table-of-carven-cavern-nudges-tapler
 >taplre
 What you need is singular, but you sense it's all the plaster that matters.
+\\
 #testcase-mistake-roiling-craven
 >craven
 Ok, the Carven Cavern IS pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
+\\
 #testcase-mistake-roiling-trainer
 >trainer
 You're on your own. Perhaps you'd be better off scanning the plaster and twiddling the plates to get on with things.
+\\
 #ttc-table-of-ordeal-reload-spechelp-plates
 >stapel
 The plates shine slightly and rattle.
@@ -1533,12 +1644,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel pl
 #ttc-table-of-ordeal-reload-readables-pastel-plates
 >read pastel plates
 EPSTAL is written as an author's signature.
+\\
 #ttc-table-of-ordeal-reload-scannotes-palest-pastel-plates
 >scan plates
 Hmm, maybe the question mark isn't as vague as you're worried it is.
+\\
 #testcase-mistake-roiling-petals
 >petals
 That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.
+\\
 #testcase-mistake-roiling-pleats
 >pleats
 You are a text adventurer, not a fashion designer.
@@ -1561,6 +1675,7 @@ Your score has just gone up by one point
 #+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and staple probably hold the key to leaving.
+\\
 #ttc-table-of-ordeal-reload-done-rejects-staple
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
@@ -1593,12 +1708,15 @@ It's still too thick, even though some of the plaster is peeled away.
 #+ttc-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The stapler and staple probably hold the key to leaving.
+\\
 #ttc-table-of-carven-cavern-nudges-aperture
 >apertuer
 Nothing happens. You probably don't need to anagram the apertured departure, which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works.
+\\
 #ttc-table-of-carven-cavern-nudges-apertured
 >apertuerd
 Nothing happens. You probably don't need to anagram the apertured departure, which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works.
+\\
 #ttc-table-of-ordeal-reload-done-rejects-stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
@@ -1647,6 +1765,7 @@ You will want to ASK others about themselves a lot. Elvira, too, maybe.
 \\
 >talk to specter
 [NOTE: ASK (PERSON) ABOUT (PERSON/THING) or A (THING) is what A Roiling Original uses for detailed conversation. However, TALK is a shortcut to asking an NPC about themselves, which often has clues.]
+\\
 #ttc-table-of-notepad-entries-talking
 >pad talking
 TALKing is the equivalent of asking someone about themselves.
@@ -1673,6 +1792,7 @@ TALKing is the equivalent of asking someone about themselves.
 >spectre
 "Spelling matters, here. If I were a spectre, I'd give a different cheat reading. Slots six and seven would turn yellow and red, respectfully. Err, respectively," says the Respect Specter.
 You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.
+\\
 #testcase-mistake-roiling-sceptre
 >sceptre
 "Spelling matters, here. If it were a spectre, I'd give a different cheat reading. Slots six and seven would turn red and yellow, respectfully. Err, respectively," says the Respect Specter.
@@ -1689,6 +1809,7 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 ###skip test checking (this avoids getting a point ... for now)
 "Thank you for respecting my presence and purpose here."
 !by one point
+\\
 #ttc-table-of-ordeal-reload-prefigurings-respect-specter
 >pf
 You can get a SCEPTER from the respect specter at any time.

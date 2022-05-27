@@ -408,6 +408,7 @@ One look at the warding drawing disabuses you of any notion of going anywhere ex
 The only way to exit is up, so let's go that way.
 
 >undo
+
 #testcase-exits-scape-space
 >exits
 The only way you seem to be able to go is up to Swell Wells.
@@ -416,6 +417,7 @@ The only way you seem to be able to go is up to Swell Wells.
 >attack red rat art erd
 If anyone deserves it, he does. But even he still doesn't. He's already had enough physical abuse, anyway.
 >gs
+
 #ttc-table-of-others-attacks-dr-tera-darter
 >attack dr tera darter
 If anyone deserves it, she does. But even she still doesn't. She's already had enough physical abuse, anyway.

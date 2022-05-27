@@ -66,6 +66,7 @@ You can GT/GO TO/GOTO a location or thing if it's a bit far away but in the regi
 #ttc-table-of-notepad-entries-old-warpy
 >pad old warpy
 Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble.
+
 #ttc-table-of-notepad-entries-options
 >pad options
 --Typing SCR or SCREEN toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently off.
@@ -116,6 +117,7 @@ PARSE
 PARSE processes the settler's data for you, but SPARE hides it.
 >c
 !PARSE
+
 #ttc-table-of-notepad-entries-elvira
 >pad elvira
 Apparently, appreciating her is what separates us from the animals. Well, according to Report Porter Perrot.
@@ -123,6 +125,7 @@ Apparently, appreciating her is what separates us from the animals. Well, accord
 >scan platform
 [NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
 DEBUG: platform being scanned.
+
 #ttc-table-of-notepad-entries-diorama
 >pad diorama
 R=red Y=yellow P=purple G=green.
@@ -149,6 +152,7 @@ RPGRR*RRYR RPGRRRYRR
 (You record the information about long commands in your notepad.)
 >pad long commands
 Commands over 4 words long aren't necessary. You can say TAKE or GET ALL, eliminate THE, or use half an open compound word without repercussions.
+
 #ttc-table-of-notepad-entries-poss
 >pad poss
 POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too.
@@ -291,6 +295,7 @@ Finish Fishin'.
 #ttc-table-of-notepad-entries-clues
 >pad clues
 You can LISTEN, ASK people about random stuff, or X/EXAMINE them to figure how to change them.
+
 #ttc-table-of-notepad-entries-gretta
 
 >pad gretta
@@ -359,6 +364,7 @@ You will want to ASK others about themselves a lot. Elvira, too, maybe.
 
 >talk to specter
 [NOTE: ASK (PERSON) ABOUT (PERSON/THING) or A (THING) is what A Roiling Original uses for detailed conversation. However, TALK is a shortcut to asking an NPC about themselves, which often has clues.]
+
 #ttc-table-of-notepad-entries-talking
 >pad talking
 TALKing is the equivalent of asking someone about themselves.
@@ -374,6 +380,7 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 >no
 "Thank you for respecting my presence and purpose here."
 !by one point
+
 #ttc-table-of-ordeal-reload-prefigurings-respect-specter
 >pf
 You can get a SCEPTER from the respect specter at any time.

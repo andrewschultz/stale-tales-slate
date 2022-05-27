@@ -190,9 +190,11 @@ Your score has just gone up by one point
 #ttc-table-of-castle-approaching-narratives-1
 #ttc-table-of-towers-progress-comments-topside-deposit
 The palace is barely visible now.
+
 #ttc-table-of-notepad-entries-curst-palace
 >pad curst palace
 You apparently can't scan the curst palace fully with the settler 'til you're all the way there. But maybe you can guess.
+
 #ttc-table-of-notepad-entries-the-wildest-wilteds
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
@@ -204,6 +206,7 @@ Score in a scenario: 8 out of 57 total points in the current region, Towers. Low
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
+
 #ttc-table-of-towers-prefigurings-curst-palace
 >pf
 You can make the Curst Palace SPECTACULAR once you're near it.
@@ -254,18 +257,21 @@ Your score has just gone up by one point
 Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 57.
 
 >e
+
 #ttc-table-of-castle-approaching-narratives-3
 #ttc-table-of-towers-progress-comments-leveraged-everglade
 You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 >restful
 by one point
 >e
+
 #ttc-table-of-castle-approaching-narratives-4
 #ttc-table-of-towers-progress-comments-danger-garden
 The palace looks a little bigger now--but you may eventually need to cut north a bit to get to it. It looks like there're dead ends south and east, and you still aren't sure how to cross Leak Lake.
 >marginal
 by one point
 >n
+
 #ttc-table-of-castle-approaching-narratives-6
 #ttc-table-of-towers-progress-comments-artist-traits-strait
 Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
@@ -434,6 +440,7 @@ Score in a scenario: 27 out of 57 total points in the current region, Towers. Lo
 
 >gs
 >e
+
 #ttc-table-of-guardian-specific-taunts-lois-the-hostile-grailman
 >marginal
 Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
@@ -561,6 +568,7 @@ You're going side-to-side to see the Curst Palace, but hooray to seeing some oth
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
+
 #ttc-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
@@ -568,6 +576,7 @@ The Fries-Us Fissure can be made FUSSIER to some effect once there's something i
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
+
 #ttc-table-of-towers-prefigurings-luck-node
 >pf
 The luck node needs to be UNLOCKED, but what you had before didn't work.
@@ -655,6 +664,7 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 by one point
 >enter boat
 /^Rawest Waster Waters
+
 #ttc-table-of-castle-approaching-narratives-8
 #ttc-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.

@@ -428,6 +428,7 @@ Score in a scenario: 36 out of 45 total points in the current region, Oyster. Lo
 EXAMINE the general gleaner, now you've enlarged it.
 
 >gt anger range
+
 #ttc-table-of-oyster-location-hint-checkoffs-anger-range
 You've gotten all you need from the Use-Saga Sausage. Hero's Shore has nothing left to offer you.
 >undo

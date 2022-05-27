@@ -112,6 +112,7 @@ Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
 @nud
 >c
+\\
 #ttc-table-of-loftier-trefoil-nudges-trefoil
 >trefoli
 Yes, this location needs changing, but that won't happen until the Curst Palace across Leak Lake is changed.
@@ -254,102 +255,127 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 >xr rodney #trefoil boss
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-gone
 >xr geno #picaro-1
 Boy! Geno might be less oppressive if he were GONE.
 >undo
+\\
 #ttc-table-of-towers-anagrams-ashen
 >xr shane #picaro-2
 Boy! Shane might be less oppressive if he were ASHEN.
 >undo
+\\
 #ttc-table-of-towers-anagrams-stony
 >xr tyson #picaro-3
 Boy! Tyson might be less oppressive if he were STONY.
 >undo
+\\
 #ttc-table-of-towers-anagrams-awed
 >xr wade #picaro-4
 Boy! Wade might be less oppressive if he were AWED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-wined
 >xr edwin #picaro-5
 Boy! Edwin might be less oppressive if he were WINED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-olden
 >xr eldon #picaro-6
 Boy! Eldon might be less oppressive if he were OLDEN.
 >undo
+\\
 #ttc-table-of-towers-anagrams-godly
 >xr goldy #picaro-7
 Boy! Goldy might be less oppressive if he were GODLY.
 >undo
+\\
 #ttc-table-of-towers-anagrams-coyer
 >xr royce #picaro-8
 Boy! Royce might be less oppressive if he were COYER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-bleak
 >xr blake #picaro-9
 Boy! Blake might be less oppressive if he were BLEAK.
 >undo
+\\
 #ttc-table-of-towers-anagrams-bored
 >xr bredo #picaro-10
 Boy! Bredo might be less oppressive if he were BORED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-lardy
 >xr daryl #picaro-11
 Boy! Daryl might be less oppressive if he were LARDY.
 >undo
+\\
 #ttc-table-of-towers-anagrams-weedy
 >xr dewey #picaro-12
 Boy! Dewey might be less oppressive if he were WEEDY.
 >undo
+\\
 #ttc-table-of-towers-anagrams-tenser
 >xr ernest #picaro-13
 Boy! Ernest might be less oppressive if he were TENSER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-calmer
 >xr marcel #picaro-14
 Boy! Marcel might be less oppressive if he were CALMER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-normal
 >xr marlon #picaro-15
 Boy! Marlon might be less oppressive if he were NORMAL.
 >undo
+\\
 #ttc-table-of-towers-anagrams-eggier
 >xr reggie #picaro-16
 Boy! Reggie might be less oppressive if he were EGGIER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-snared
 >xr andres #picaro-17
 Boy! Andres might be less oppressive if he were SNARED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-warned
 >xr andrew #picaro-18
 Boy! Andrew might be less oppressive if he were WARNED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-achier
 >xr archie #picaro-19
 Boy! Archie might be less oppressive if he were ACHIER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-nearby
 >xr barney #picaro-20
 Boy! Barney might be less oppressive if he were NEARBY.
 >undo
+\\
 #ttc-table-of-towers-anagrams-cricked
 >xr cedrick #picaro-21
 Boy! Cedrick might be less oppressive if he were CRICKED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-timider
 >xr demitri #picaro-22
 Boy! Demitri might be less oppressive if he were TIMIDER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-learned
 >xr leander #picaro-23
 Boy! Leander might be less oppressive if he were LEARNED.
 >undo
+\\
 #ttc-table-of-towers-anagrams-pronest
 >xr preston #picaro-24
 Boy! Preston might be less oppressive if he were PRONEST.
 >undo
+\\
 #ttc-table-of-towers-anagrams-recreant
 >xr terrance #picaro-25
 Boy! Terrance might be less oppressive if he were RECREANT.
@@ -359,18 +385,22 @@ Boy! Terrance might be less oppressive if he were RECREANT.
 @mis
 ##balance undos
 >allrand
+\\
 #testcase-mistake-roiling-enters
 >enters
 You'll need a few exits, here, really.
 >undo
+\\
 #testcase-mistake-roiling-new-id
 >new id
 You need to make sure Edwin's new ID is something negative.
 >undo
+\\
 #testcase-mistake-roiling-radly
 >radly
 Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.
 >undo
+\\
 #testcase-mistake-roiling-recalm-recalm-marcel
 >recalm
 Right idea, but it might work better in another area.
@@ -378,18 +408,22 @@ Right idea, but it might work better in another area.
 Right idea, but it might work better in another area.
 >undo
 >undo
+\\
 #testcase-mistake-roiling-resent
 >resent
 But how could you make Ernest feel so he'd resent his position?
 >undo
+\\
 #testcase-mistake-roiling-wander
 >wander
 A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead.
 >undo
+\\
 #testcase-mistake-roiling-warden
 >warden
 Andrew doesn't look like he has the leadership qualities necessary to become the main warden over Rodney.
 >undo
+\\
 #testcase-mistake-roiling-wendi-widen
 >wendi
 Now that would be too radical. Maybe go with something that makes him feel bad the next morning, but nothing too drastic.
@@ -960,6 +994,7 @@ Now, now. Maybe Rodney dishes out insults like that without a shred of self-awar
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
 >yo nerd
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
+\\
 #testcase-mistake-roiling-clear-it
 >clear it
 The recital article stays in place. You see red, upset the brute-force magic didn't work.
@@ -992,6 +1027,7 @@ Taverns are generally meant to make you forget compass directions, among other t
 >out
 Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
 >undo
+\\
 #testcase-exits-loftier-trefoil
 >exits
 You probably aren't going anywhere until Rodney does, first.
@@ -1012,9 +1048,11 @@ DEBUG INFO: dreads adders hinting.
 #ttc-table-of-castle-approaching-narratives-1
 #ttc-table-of-towers-progress-comments-topside-deposit
 The palace is barely visible now.
+\\
 #ttc-table-of-notepad-entries-curst-palace
 >pad curst palace
 You apparently can't scan the curst palace fully with the settler 'til you're all the way there. But maybe you can guess.
+\\
 #ttc-table-of-notepad-entries-the-wildest-wilteds
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
@@ -1052,6 +1090,7 @@ You can't read the Curst Palace's name, even though Ornate Atoner Renato told it
 @nud
 # this is out of order, because the main code path unlocks (ahem) UNLOCKED quite early
 >gonear obscurest subsector
+\\
 #ttc-table-of-towers-spechelp-luck-node
 >unleckdo
 You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
@@ -1072,6 +1111,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That'
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
+\\
 #ttc-table-of-towers-prefigurings-curst-palace
 >pf
 You can make the Curst Palace SPECTACULAR once you're near it.
@@ -1082,21 +1122,27 @@ You can make the Curst Palace SPECTACULAR once you're near it.
 Editorializing about the Wildest Wilteds won't help.
 >its lewd
 Editorializing about the Wildest Wilteds won't help.
+\\
 #testcase-mistake-roiling-stop-die
 >stop die
 The voice you heard no longer echoes. You'll find a way north to the Wildest Wilteds.
+\\
 #testcase-mistake-roiling-posited
 >posited
 You formulate a proof that the place you are in does actually exist.
+\\
 #testcase-mistake-roiling-cleats
 >cleats
 The castle is run-down and unromantic enough. Changing it to cleats would be even worse.
+\\
 #testcase-mistake-roiling-a-place
 >a place
 It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.
+\\
 #testcase-mistake-roiling-crust
 >crust
 It probably needs less crust, not more. The whole curst palace.
+\\
 #ttc-table-of-towers-spechelp-curst-palace
 >curst palaec
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
@@ -1111,66 +1157,87 @@ Hmm...that's good practice, and a good guess, but even if it were right, you don
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Curst Palace. That's a decent omen.
+\\
 #ttc-table-of-topside-deposit-nudges-deposit
 >deposti
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-topside-deposit-nudges-fire
 >fier
 The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
+\\
 #ttc-table-of-topside-deposit-nudges-torn
 >tonr
 The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
+\\
 #ttc-table-of-topside-deposit-nudges-frontier
 >frontire
 The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
+\\
 #ttc-table-of-towers-nudges-pot
 >tpo
 The best--well, the only--way to change the top opt pot is to put something in it, but you haven't seen anything suitable yet.
+\\
 #ttc-table-of-topside-deposit-nudges-adder
 >addre
 You need to take care of all the adders.
+\\
 #ttc-table-of-towers-nudges-renato
 >renaot
 You don't have time to think about, or change, Renato. You haven't yet found anyone who might want the top opt pot, anyway.
+\\
 #ttc-table-of-towers-nudges-curst
 >curts
 It's not just that it's curst, it's a CURST PALACE.
+\\
 #ttc-table-of-towers-nudges-palace
 >palaec
 It's not just that it's a palace, it's a CURST PALACE.
+\\
 #ttc-table-of-towers-nudges-castle
 >castel
 /Not just any castle\. Castle (Arc Up|Up Arc)\.
+\\
 #ttc-table-of-towers-nudges-acpru
 >acpru
 It's not just the castle name but the full title you need to work with.
+\\
 #ttc-table-of-towers-nudges-start
 >statr
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-nudges-tart
 >tatr
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+\\
 #ttc-table-of-towers-nudges-pastry
 >pastyr
 You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed.
+\\
 #ttc-table-of-towers-nudges-lake
 >laek
 You can't see Leak Lake from here, and you couldn't do anything with it, anyway.
+\\
 #ttc-table-of-towers-nudges-toaster
 >toastre
 It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
+\\
 #ttc-table-of-towers-nudges-blub
 >blbu
 Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new.
+\\
 #ttc-table-of-towers-nudges-wildest
 >wildets
 The Wildest Wilteds can't be changed on their own. They must be trekked through.
+\\
 #ttc-table-of-towers-nudges-wilted
 >wiltde
 The Wildest Wilteds can't be changed on their own. They must be trekked through.
+\\
 #ttc-table-of-topside-deposit-nudges-htu
 >htu
 The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
+\\
 #ttc-table-of-topside-deposit-nudges-south
 >souht
 The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
@@ -1196,6 +1263,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. T
 >scan dreads adders
 Your settler registers RY?RYR.
 Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
+\\
 #testcase-mistake-roiling-dopiest
 >dopiest
 You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
@@ -1227,6 +1295,7 @@ Ooh! A couple more lights, now.
 @spoi
 >xr me
 Even if you could, you might expose yourself to harmful rays and stuff.
+\\
 #ttc-table-of-towers-anagrams-sadder
 >xr adders #initial guardian
 Hmm. You bet you could get past if the dreads adders were SADDER.
@@ -1287,6 +1356,7 @@ The only way you seem to be able to go is north.
 A good try, but this isn't the right area. All you can do is TOAST and then EAT a skan snak once you have it.
 >retoast zozimus
 A good try, but this isn't the right area. All you can do is TOAST and then EAT a skan snak once you have it.
+\\
 #+testcase-mistake-roiling-dopiest
 >dopiest
 You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
@@ -1325,30 +1395,39 @@ Wow, lots of blank data. You may want to get closer to get fuller clues about ho
 You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
 >undo
 >undo
+\\
 #testcase-mistake-roiling-copes
 >copes
 You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.
+\\
 #testcase-mistake-roiling-pecos
 >pecos
 A Roiling Original ain't a dadgum Western.
+\\
 #testcase-mistake-roiling-bustler
 >bustler
 The butlers are plural, and anyway, they're bustling plenty as-is.
+\\
 #ttc-table-of-scope-copse-nudges-copse
 >cepos
 The copse and the Spec-O-Scope are both fine as-is, though maybe you can do something about the yurts.
+\\
 #ttc-table-of-scope-copse-nudges-spec
 >spce
 The copse and the Spec-O-Scope are both fine as-is, though maybe you can do something about the yurts.
+\\
 #ttc-table-of-scope-copse-nudges-butler
 >butlre
 You need to deal with all the butlers. Not just one.
+\\
 #ttc-table-of-towers-nudges-diner
 >dinre
 There's more than one diner blocking you.
+\\
 #ttc-table-of-scope-copse-nudges-yurt
 >yutr
 There's more than one yurt there.
+\\
 #ttc-table-of-towers-spechelp-try-us-yurts
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
@@ -1363,18 +1442,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Try Us Yurts. Th
 #ttc-table-of-towers-scannotes-bluster-butlers
 >scan bluster butlers
 Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out.
+\\
 #ttc-table-of-towers-scannotes-snider-diners
 >scan snider diners
 The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. "What's this? Such distracting noise!" They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work.
+\\
 #ttc-table-of-towers-scannotes-try-us-yurts
 >scan try us yurts
 Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
+\\
 #ttc-table-of-towers-scannotes-denier-nereid
 >scan denier nereid
 You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
+\\
 #testcase-mistake-roiling-ursty-ur-sty
 >ursty
 You're trying to destroy the yurts, not build them up.
+\\
 >ur sty
 You're trying to destroy the yurts, not build them up.
 
@@ -1408,9 +1492,11 @@ Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
+\\
 #ttc-table-of-towers-anagrams-reined
 >xr nereid #00n
 Hmm. You bet you could get past if the denier nereid were REINED.
+\\
 #ttc-table-of-towers-anagrams-rinsed
 >xr diners #00e
 Hmm. You bet you could get past if the snider diners were RINSED.
@@ -1462,24 +1548,31 @@ Hmm. You bet you could get past if the denier nereid were REINED.
 You don't see any new information about the curst palace this time.
 Your settler registers RRYR?******.
 Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
+\\
 #+ttc-table-of-scope-copse-nudges-copse
 >cepos
 The copse and the Spec-O-Scope are both fine as-is.
+\\
 #testcase-mistake-roiling-worse
 >worse
 The brownies don't need to taste any worse.
+\\
 #ttc-table-of-towers-nudges-brownie
 >brownei
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+\\
 #ttc-table-of-towers-nudges-brownies
 >brownise
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-nudges-owers
 >owesr
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-nudges-bin
 >bni
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-spechelp-bluster-butlers
 >butlesr
 The bluster butlers cough slightly and look around furtively.
@@ -1523,6 +1616,7 @@ There are two unblocked exits: south to Topside Deposit and west.
 
 @nud
 >w
+\\
 #ttc-table-of-outer-route-nudges-sway
 >swya
 You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful, though there is a bonus point for going in a "wrong" direction.
@@ -1532,6 +1626,7 @@ You don't need to change the sway-ways. They are dangerous enough, and they don'
 
 @verbs
 >w
+\\
 #ttc-table-of-towers-nowheres-outer-route
 >w
 You get lost in the sway-ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
@@ -1540,6 +1635,7 @@ You get lost in the sway-ways a bit. And it's fun for a while, until you realize
 >undo
 \\
 >s
+\\
 #+ttc-table-of-towers-nowheres-topside-deposit
 >e
 The Wildest Wilteds are too dangerous any way but back north.
@@ -1746,18 +1842,21 @@ Your score has just gone up by one point
 
 @max
 >e
+\\
 #ttc-table-of-castle-approaching-narratives-3
 #ttc-table-of-towers-progress-comments-leveraged-everglade
 You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 >restful
 by one point
 >e
+\\
 #ttc-table-of-castle-approaching-narratives-4
 #ttc-table-of-towers-progress-comments-danger-garden
 The palace looks a little bigger now--but you may eventually need to cut north a bit to get to it. It looks like there're dead ends south and east, and you still aren't sure how to cross Leak Lake.
 >marginal
 by one point
 >n
+\\
 #ttc-table-of-castle-approaching-narratives-6
 #ttc-table-of-towers-progress-comments-artist-traits-strait
 Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
@@ -1843,21 +1942,27 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-baldest-blasted-saltbed-nudges-baldest
 >baldets
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-baldest-blasted-saltbed-nudges-twes
 >twse
 You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future.
+\\
 #ttc-table-of-baldest-blasted-saltbed-nudges-twe
 >tew
 You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future.
+\\
 #ttc-table-of-baldest-blasted-saltbed-nudges-old
 >odl
 No, all the old ice.
+\\
 #ttc-table-of-baldest-blasted-saltbed-nudges-ice
 >iec
 No, all the old ice.
+\\
 #ttc-table-of-towers-nudges-pirate
 >piraet
 Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s.
+\\
 #ttc-table-of-towers-spechelp-docile-old-ice
 >old iec
 The old ice seems to glimmer a bit.
@@ -1873,6 +1978,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. 
 #ttc-table-of-towers-scannotes-docile-old-ice
 >scan docile old ice
 Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
+\\
 #+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 6 lights
@@ -1885,6 +1991,7 @@ Your settler registers RRYR?Y*****.
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
+\\
 #ttc-table-of-towers-anagrams-semipro
 >xr imposer #01e
 Hmm. You bet you could get past if the promise imposer were SEMIPRO.
@@ -1966,6 +2073,7 @@ DEBUG: guardian hint choice is alarming grailman from alarming grailman.
 #ttc-table-of-towers-done-rejects-old-ice
 >oldiec
 Twist the ice too much, it might not look right.
+\\
 #ttc-table-of-towers-spechelp-pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
@@ -2030,12 +2138,15 @@ Lars Eede mutters and moans how
 >xr lars eede #11e
 Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
 >gs
+\\
 >xr elsa erde
 Hmm. You bet you could get past if Elsa Erde were RELEASED or RESEALED.
 >gs
+\\
 #ttc-table-of-towers-anagrams-married
 >xr admirer #02n
 Hmm. You bet you could get past if the mardier admirer were MARRIED.
+\\
 #ttc-table-of-towers-anagrams-angstier
 >xr ingrates #02w
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -2059,6 +2170,7 @@ DOUBLE PROBLEM FOR: released.
 #testcase-mistake-roiling-tasering
 >tasering
 You don't want to make the ingrates even angrier.
+\\
 #testcase-mistake-roiling-ice-man-iceman
 >ice man
 The iceman cometh, and your life passeth.
@@ -2072,9 +2184,11 @@ joke death
 @nud
 #+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
+\\
 #palace 7 lights
 Ooh! Another light, now.
 Your settler registers RRYR?YR****.
+\\
 #+ttc-table-of-towers-scannotes-curst-palace
 >t
 >scan palace
@@ -2082,20 +2196,25 @@ Even if the reds and yellows were all in place, there'd still be a lot of possib
 >scan palace
 !Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
 >c
+\\
 #ttc-table-of-anemic-cinema-nudges-cinema
 >cineam
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-anemic-cinema-nudges-theater
 >theatre
 You don't need to go looking for screens to stare at right now. You have a world to save.
+\\
 #ttc-table-of-towers-nudges-rampant
 >rampatn
 No, just a mardier admirer, really.
 >gs
+\\
 #ttc-table-of-towers-nudges-womantrap
 >womantrpa
 No, just a mardier admirer, really.
 >gs
+\\
 #ttc-table-of-anemic-cinema-nudges-ingrate
 >ingraet
 There's more than one ingrate blocking you.
@@ -2114,12 +2233,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the angriest ingrate
 #ttc-table-of-towers-scannotes-angriest-ingrates
 >scan angriest ingrates
 Hmm, there are some matches, and maybe one of the two variable settings will work itself out.
+\\
 #ttc-table-of-towers-scannotes-mardier-admirer
 >scan mardier admirer
 Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants.
+\\
 #testcase-mistake-roiling-granites-granite
 >granites
 They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
+\\
 >granite
 They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
 
@@ -2200,12 +2322,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-mistake-roiling-refing
 >refing
 You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.
+\\
 #ttc-table-of-fringe-finger-nudges-finger
 >fingre
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-fringe-finger-nudges-sled
 >slde
 Work on the whole sled rut.
+\\
 #ttc-table-of-fringe-finger-nudges-rut
 >rtu
 Work on the whole sled rut.
@@ -2226,6 +2351,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the strudel. That's 
 You take it from the rut with no problem. Maybe you could've done it fancier, but eh, well.
 >strudle
 You almost expect the strudel to hop up, but the moment passes.
+\\
 #ttc-table-of-towers-readables-strudel
 >read strudel
 DR. ELTUS recommends this strudel!
@@ -2262,21 +2388,27 @@ Your score has just gone up by one point
 #ttc-table-of-towers-nudges-reeds
 >reesd
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-reed
 >rede
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-ale
 >ael
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-reedale
 >reedael
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-sere
 >seer
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-deal
 >dela
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+\\
 #ttc-table-of-towers-spechelp-reeds-ale
 >reedsael
 Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
@@ -2291,15 +2423,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That
 #ttc-table-of-towers-nudges-lars
 >lasr
 No, Lars's full name. Lars Eede. With Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-eede
 >eeed
 No, Lars's full name. Lars Eede. With Reed's Ale.
+\\
 >gs
 >reedsael
 Elsa Erde listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
+\\
 #ttc-table-of-towers-nudges-elsa
 >elas
 No, Elsa's full name. Elsa Erde. With Reed's Ale.
+\\
 #ttc-table-of-towers-nudges-erde
 >ered
 No, Elsa's full name. Elsa Erde. With Reed's Ale.
@@ -2326,6 +2462,7 @@ Your score has just gone up by one point
 #ttc-table-of-towers-done-rejects-strudel
 >strudle
 You'd have to drop the strudel on the ground and get it germy to try that again. Eww.
+\\
 #ttc-table-of-towers-spechelp-mardier-admirer
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
@@ -2338,6 +2475,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the mardier admirer.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 >e
+\\
 #testcase-mistake-roiling-slated
 >slated
 You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research.
@@ -2388,27 +2526,35 @@ Such a lost, gentle animal certainly doesn't have a clonk due. You see red for e
 #testcase-mistake-roiling-unlocked
 >unlocked
 There's nothing here to unlock. Maybe someone's imprisoned somewhere. And besides, the duck doesn't seem cooperative, yet. Still, that's an idea.
+\\
 #ttc-table-of-shaven-havens-nudges-shaven
 >shavne
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-shaven-havens-nudges-haven
 >havne
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-towers-nudges-lone
 >loen
 It's not just any lone animal. It's a LONE DUCK.
+\\
 #ttc-table-of-towers-nudges-duck
 >dukc
 It's not just any duck. It's a LONE DUCK.
+\\
 #ttc-table-of-towers-nudges-idtag
 >idtga
 ID tag: dig at it? Gad.
+\\
 #ttc-table-of-towers-nudges-unlocked
 >unlockde
 The lone duck looks around for something to do but can't find anything. Well, not here. And not like that.
+\\
 #ttc-table-of-shaven-havens-nudges-ravages
 >ravagse
 The ravages are chaotic enough. Changing them is a fight you'd lose.
+\\
 #ttc-table-of-shaven-havens-nudges-ravage
 >ravaeg
 The ravages are chaotic enough. Changing them is a fight you'd lose.
@@ -2440,9 +2586,11 @@ DEBUG: guardian hint choice is asset-hit atheists from asset-hit atheists.
 #ttc-table-of-towers-nudges-shoals
 >shoasl
 That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
+\\
 #ttc-table-of-towers-nudges-shoal
 >shola
 That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
+\\
 #ttc-table-of-towers-nudges-atheist
 >atheits
 Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways.
@@ -2497,6 +2645,7 @@ You waste sweat and ire thinking what to do.
 #ttc-table-of-towers-nudges-wait
 >wati
 The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
+\\
 #ttc-table-of-towers-nudges-seer
 >sere
 The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
@@ -2509,6 +2658,7 @@ Ooh! Another light, now.
 #ttc-table-of-towers-anagrams-hastiest
 >xr atheists #12e
 Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
+\\
 #ttc-table-of-towers-anagrams-weariest
 >xr sweatier #11n
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
@@ -2616,6 +2766,7 @@ Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 #ttc-table-of-towers-scannotes-resident-trendies
 >scan resident trendies
 The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
+\\
 #ttc-table-of-towers-spechelp-resident-trendies
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
@@ -2654,15 +2805,18 @@ Creative, but ineffective, positive colloquialism.
 #ttc-table-of-towers-anagrams-sewed
 >xr weeds #get replay player
 After a thoughtful gaze, you reckon the weeds could be SEWED.
+\\
 #ttc-table-of-towers-anagrams-mined
 >xr denim #tarts LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+\\
 >y
 After a thoughtful gaze, you reckon the mended mini-denim could be MINED.
 
 @nud
 >sewed
 by one point
+\\
 #ttc-table-of-treading-gradient-nudges-gradient
 >gradietn
 You can't change the treading gradient, but maybe you can get
@@ -2679,9 +2833,11 @@ Hmm. You bet you could get past if the realist tailers were SALTIER.
 #ttc-table-of-towers-scannotes-realist-tailers
 >scan realist tailers
 The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools.
+\\
 #ttc-table-of-towers-nudges-tailer
 >talier
 No, you need to deal with all the tailers.
+\\
 #testcase-mistake-roiling-retail-retails
 >retail
 The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
@@ -2708,9 +2864,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #+ttc-table-of-treading-gradient-nudges-gradient
 >gradietn
 While you can't change the Treading Gradient, perhaps you can deal with the weeds.
+\\
 #ttc-table-of-treading-gradient-nudges-weed
 >wede
 Gumming up one weed wouldn't get the others.
+\\
 #ttc-table-of-towers-spechelp-weeds
 >weesd
 The weeds almost seem to shrug.
@@ -2751,24 +2909,31 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-towers-nudges-save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
+\\
 #ttc-table-of-towers-nudges-saver
 >savre
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
+\\
 #ttc-table-of-towers-nudges-recorder
 >recordre
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
+\\
 #ttc-table-of-towers-nudges-tape
 >taep
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
+\\
 #ttc-table-of-towers-nudges-buttosn
 >buttons
 The raves saver's minimal capabilities are enough...just...
+\\
 #ttc-table-of-towers-nudges-buttno
 >button
 The raves saver's minimal capabilities are enough...just...
+\\
 #ttc-table-of-towers-nudges-retape
 >retaep
 The raves saver has limited functionality, alas.
+\\
 #ttc-table-of-towers-nudges-dagger
 >daggre
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
@@ -2788,15 +2953,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini-deni
 #ttc-table-of-towers-scannotes-mended-mini-denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
+\\
 #ttc-table-of-treading-gradient-nudges-mended
 >mendde
 You look at the denim and it's probably the denim you want to deal with, not its properties.
+\\
 #ttc-table-of-treading-gradient-nudges-mini
 >miin
 You look at the denim and it's probably the denim you want to deal with, not its properties.
+\\
 #testcase-mistake-roiling-i-mend
 >i mend
 You're more interested in doing the opposite--seeing what's behind.
+\\
 #+ttc-table-of-treading-gradient-nudges-gradient
 >gradietn
 The gradient itself can't be changed, but you can change the last thing that's here: the denim
@@ -2826,6 +2995,7 @@ You'd expect a great din, but you don't hear one, thankfully.
 @max
 >gs
 >e
+\\
 #ttc-table-of-guardian-specific-taunts-lois-the-hostile-grailman
 >marginal
 Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
@@ -2859,13 +3029,16 @@ You aren't thinking positively enough to find a way out at the moment.
 >scan
 Your settler registers ?YR?Y?R.
 You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
+\\
 #ttc-table-of-towers-scannotes-drained-dreadin
 >scan drained dreadin
 Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.
 Your settler registers PYRRY?R.
+\\
 #ttc-table-of-towers-scannotes-nerd-aid-diner-ad
 >scan nerd aid diner ad
 The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.
+\\
 #ttc-table-of-towers-spechelp-bogus-dandier
 >adderin
 You feel slightly less depressed you tried something. You can't be too far off.
@@ -2878,9 +3051,11 @@ You feel slightly less depressed you tried something. You can't be too far off.
 #ttc-table-of-dire-and-arid-den-nudges-nerd
 >nedr
 Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
+\\
 #ttc-table-of-dire-and-arid-den-nudges-aid
 >adi
 Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
+\\
 #ttc-table-of-dire-and-arid-den-nudges-bottles
 >bottlse
 They're not just bottles! They're bottles of NERD-AID!
@@ -2927,6 +3102,7 @@ The Nerd-Aid smells suspiciously like the very red Rind-Ade drink.
 >xr hostile #21n
 Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 >gs
+\\
 #+ttc-table-of-towers-anagrams-holiest
 >xr hostile
 Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
@@ -2936,12 +3112,15 @@ Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
 #ttc-table-of-towers-nudges-scalier
 >scalire
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-nudges-eclair
 >eclari
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+\\
 #ttc-table-of-towers-nudges-liam
 >lima
 His full name, Liam Garn.
+\\
 #ttc-table-of-towers-nudges-garn
 >ganr
 His full name, Liam Garn.
@@ -2954,6 +3133,7 @@ His full name, Liam Garn.
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself.
 >undo
 >undo
+\\
 #ttc-table-of-towers-spechelp-alarming-grailman
 >alarmign
 The grailman seems almost average for a moment.
@@ -2974,6 +3154,7 @@ The one letter blinks between green and yellow.
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 !Nice, but you don't need clues any more.
+\\
 #ttc-table-of-towers-spechelp-hostile-is-he-lot
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
@@ -2989,6 +3170,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lo
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
 >gs
+\\
 #ttc-table-of-towers-spechelp-lois-the-hostile
 >loisthe
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
@@ -3094,6 +3276,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-towers-readables-fluster-self-rut
 >read fluster self rut
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles.
+\\
 #ttc-table-of-towers-spechelp-fluster-self-rut
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
@@ -3108,6 +3291,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut
 #ttc-table-of-towers-scannotes-fluster-self-rut
 >scan fluster self rut
 You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
+\\
 #testcase-mistake-roiling-fluters
 >fluters
 A Roiling Original has no soundtrack, and if I made one, it wouldn't be very good.
@@ -3125,6 +3309,7 @@ Your score has just gone up by one point
 #ttc-table-of-danger-garden-nudges-native
 >natiev
 You'll need to deal with more than one native to make your way south.
+\\
 #ttc-table-of-towers-scannotes-natives-site-van
 >scan site van
 You get the feeling the natives can be swayed more than one way, here.
@@ -3194,27 +3379,35 @@ There are three unblocked exits: north to Treading Gradient, east to Danger Gard
 #ttc-table-of-leveraged-everglade-nudges-leveraged
 >leveragde
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-leveraged-everglade-nudges-leverage
 >leveraeg
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-leveraged-everglade-nudges-screech
 >screehc
 You can't change the screech creches. Well, not until you defeat Elvira.
+\\
 #ttc-table-of-leveraged-everglade-nudges-creech
 >creehc
 You can't change the screech creches. Well, not until you defeat Elvira.
+\\
 #ttc-table-of-leveraged-everglade-nudges-ego
 >eog
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
+\\
 #ttc-table-of-leveraged-everglade-nudges-drains
 >draisn
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them. Plus, if they were boring old drains, you could just step around them.
+\\
 #ttc-table-of-leveraged-everglade-nudges-egodrain
 >egodrani
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
+\\
 #ttc-table-of-leveraged-everglade-nudges-drain
 >drani
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them. Plus, if it was a boring old drain, you could just step around.
+\\
 #ttc-table-of-leveraged-everglade-nudges-organized
 >organizde
 Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
@@ -3303,9 +3496,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-towers-scannotes-seismal-samiels
 >scan samiels
 You're almost worried it will be too easy to figure things out, now. Too hard, too easy, too normal ... everything leaves you in the dumps.
+\\
 #ttc-table-of-dourest-detours-nudges-samiel
 >samile
 There is more than one samiel to deal with, here.
+\\
 #ttc-table-of-towers-spechelp-seismal-samiels
 >samiesl
 The seismal samiels change intensity for a bit.
@@ -3320,9 +3515,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels.
 #ttc-table-of-towers-scannotes-bogus-rousted
 >scan
 You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
+\\
 #ttc-table-of-dourest-detours-nudges-detour
 >detoru
 This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
+\\
 #ttc-table-of-towers-spechelp-bogus-rousted
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
@@ -3394,20 +3591,25 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You can't just push the ripostes aside. There must be a way to change them.
 >reposits
 You can't just push the ripostes aside. There must be a way to change them.
+\\
 #testcase-mistake-roiling-prosties
 >prosties
 Not that sort of game. There's some suggestive stuff, but nothing like that.
+\\
 #testcase-mistake-roiling-slot
 >slot
 If you made it, you might fall in the slot and never get out.
+\\
 #testcase-mistake-roiling-tripose-triposes
 >tripose
 No organic chemistry, please.
 >triposes
 No organic chemistry, please.
+\\
 #ttc-table-of-lost-lots-nudges-riposte
 >riposet
 You may find it easier to deal with all the ripostes at once.
+\\
 #ttc-table-of-towers-spechelp-sporties-ripostes
 >prosiets
 The ripostes seem less cutting for a moment.
@@ -3452,15 +3654,19 @@ Your score has just gone up by one point
 #ttc-table-of-lost-lots-nudges-lost
 >ltso
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-lost-lots-nudges-lot
 >lto
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-lost-lots-nudges-gasfield
 >gasfiedl
 You can't change the gadflies. There are too many.
+\\
 #ttc-table-of-lost-lots-nudges-gadfly
 >gadfyl
 You can't change the gadflies. There are too many.
+\\
 #ttc-table-of-lost-lots-nudges-gadflie
 >gadflei
 You can't change the gadflies. There are too many.
@@ -3580,9 +3786,11 @@ Honk, honk.
 #testcase-mistake-roiling-ranged
 >ranged
 The garden does not get any bigger.
+\\
 #ttc-table-of-danger-garden-nudges-geese
 >geees
 The geese are fine as they are. They're just there for scenery, and stuff.
+\\
 #ttc-table-of-danger-garden-nudges-gander
 >gandre
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
@@ -3625,6 +3833,7 @@ The fissure's jabbering may provide an alternate way to free Dr. Yow from operat
 #ttc-table-of-towers-anagrams-fussier
 >xr fissure #fussier/unlocked
 After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
+\\
 #ttc-table-of-towers-anagrams-unlocked
 >xr luck node #fussier/unlocked
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
@@ -3646,15 +3855,19 @@ You can't reach in, and it's a bad idea anyway.
 #testcase-mistake-roiling-fires
 >fires
 Fries, fires, it'll still hurt anyone who goes poking at it. Maybe there's a way to make it seem less of a trap?
+\\
 #testcase-mistake-roiling-goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
+\\
 #testcase-mistake-roiling-dowry
 >dowry
 Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
+\\
 #testcase-mistake-roiling-delock
 >delock
 No, this is the wrong area for pure action.
+\\
 #testcase-mistake-roiling-olga
 >olga
 Even if the goal could become a person, they'd be kind of wooden.
@@ -3665,27 +3878,35 @@ Even if the goal could become a person, they'd be kind of wooden.
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
 >lockde
 Nothing needs to be locked here, certainly not the gaol which already is.
+\\
 #ttc-table-of-obscurest-subsector-nudges-gol
 >glo
 The gaol is too sturdy to defeated by a three-word combination. Or a four-word one.
+\\
 #ttc-table-of-obscurest-subsector-nudges-gaol
 >galo
 The gaol can't be changed, but maybe you could solve the luck node.
+\\
 #ttc-table-of-obscurest-subsector-nudges-loggaol
 >loggalo
 Nah, you're pretty sure you're overthinking things now. You may want to open the prison.
+\\
 #ttc-table-of-obscurest-subsector-nudges-jail
 >jali
 It's not just any jail--but prison ropins.
+\\
 #ttc-table-of-obscurest-subsector-nudges-ropin
 >ropni
 The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+\\
 #ttc-table-of-obscurest-subsector-nudges-ropins
 >ropisn
 The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+\\
 #ttc-table-of-obscurest-subsector-nudges-yow
 >ywo
 He's a doctor! Have some respect when you try to scramble him up.
+\\
 #ttc-table-of-obscurest-subsector-nudges-doctor
 >doctro
 That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
@@ -3695,6 +3916,7 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
+\\
 #ttc-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
@@ -3702,6 +3924,7 @@ The Fries-Us Fissure can be made FUSSIER to some effect once there's something i
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
+\\
 #ttc-table-of-towers-prefigurings-luck-node
 >pf
 The luck node needs to be UNLOCKED, but what you had before didn't work.
@@ -3726,6 +3949,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-obscurest-subsector-nudges-wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--he can't break out of his shell
+\\
 #ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions.
@@ -3734,14 +3958,17 @@ The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it re
 ##balance undo
 >rowdy
 by one point
+\\
 #+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 >wordy
 by one point
+\\
 #+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again.
+\\
 #+ttc-table-of-obscurest-subsector-nudges-wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions.
@@ -3776,9 +4003,11 @@ Dr. Yow is talking slowly and soothingly.
 >wordy
 You recharge Dr. Yow's wordiness.
 !by one point
+\\
 #+ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
+\\
 #+ttc-table-of-obscurest-subsector-nudges-wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
@@ -3825,6 +4054,7 @@ The only way you seem to be able to go is south to Anemic Cinema.
 
 @verbs
 >gonear shaven havens
+\\
 #ttc-table-of-towers-nowheres-shaven-havens
 >e
 You wander off, but you hear hikers shriek "Shrike! Shrike!"
@@ -3853,11 +4083,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 >undo
+\\
 #ttc-table-of-towers-readables-prison-ropins
 >read prison
 /Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK|Violators have a CLONK DUE). There're four other bits to read\.
 >read prison
 /Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK|Violators have a CLONK DUE). There're four other bits to read\.
+\\
 #ttc-table-of-towers-readables-luck-node
 >read luck node
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
@@ -3865,13 +4097,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
 >scan prison ropins
 Nothing happens until you scan the luck node.
+\\
 #testcase-mistake-roiling-locked
 >locked
 No, the opposite...
+\\
 #+testcase-mistake-roiling-dowry
 >dowry
 Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
 >gs
+\\
 >dowry
 Dr. Yow is an intellectual. She needs a breakout, not material things or romance.
 >gs
@@ -3923,24 +4158,31 @@ You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see fu
 #+testcase-mistake-roiling-delock
 >delock
 Unlocked worked better, here.
+\\
 #+testcase-mistake-roiling-locked
 >locked
 You don't need to fiddle with the lock now.
+\\
 #+testcase-mistake-roiling-goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
+\\
 #+ttc-table-of-obscurest-subsector-nudges-ropins
 >ropisn
 No need to mess with the ropins any more.
+\\
 #+ttc-table-of-obscurest-subsector-nudges-loggaol
 >loggalo
 Nah, you're pretty sure you're overthinking things now. You opened the prison.
+\\
 #+ttc-table-of-obscurest-subsector-nudges-gol
 >glo
 You opened the gaol, and there's not much else to do with it.
+\\
 #+ttc-table-of-obscurest-subsector-nudges-locked
 >lockde
 Nothing needs to be locked here, certainly not the gaol which you unlocked.
+\\
 #+ttc-table-of-towers-nudges-duck
 >dukc
 It's not just any duck. But it's served its purpose.
@@ -3967,9 +4209,11 @@ DEBUG INFO: diverse deviser hinting.
 #testcase-mistake-roiling-pairer
 >pairer
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
+\\
 #ttc-table-of-outer-route-nudges-roeut
 >roetu
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #+ttc-table-of-outer-route-nudges-sway
 >swya
 You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere ultimately useful.
@@ -3977,15 +4221,19 @@ You don't need to change the sway-ways. They are dangerous enough, and they don'
 #ttc-table-of-outer-route-nudges-camp
 >capm
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+\\
 #ttc-table-of-outer-route-nudges-site
 >siet
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+\\
 #ttc-table-of-outer-route-nudges-campiest
 >campiets
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+\\
 #ttc-table-of-outer-route-nudges-machine
 >machien
 The diverse deviser is complicated enough. You probably just need to figure what to put in it.
+\\
 #ttc-table-of-outer-route-nudges-repair
 >repari
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
@@ -4013,6 +4261,7 @@ You thought you heard a brief hum from the diverse deviser for a moment there.
 #ttc-table-of-towers-readables-diverse-deviser
 >read deviser
 I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
+\\
 #ttc-table-of-towers-scannotes-diverse-deviser
 >scan deviser
 You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Turn that frown upside-down! Gosh, those ambiguous clues might be even more interesting and useful than the usual!"
@@ -4087,15 +4336,19 @@ You already broke the diverse deviser!
 #ttc-table-of-towers-done-rejects-diverse-deviser
 >revised
 You already repaired the diverse deviser and got what you needed.
+\\
 #ttc-table-of-towers-nudges-gizmo
 >gizom
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
+\\
 #ttc-table-of-towers-nudges-zomg
 >zogm
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
+\\
 #+testcase-mistake-roiling-pairer
 >pairer
 The diverse deviser is in no shape to do any more work.
+\\
 #+ttc-table-of-outer-route-nudges-repair
 >repira
 The diverse deviser is complicated enough. You already got something from it, and it's too broken to fix.
@@ -4107,36 +4360,46 @@ The diverse deviser is complicated enough. You already got something from it, an
 >kale
 "More kale, dear?" / "Did I ASK for more kale, dear?"
 Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
+\\
 #ttc-table-of-actionless-coastlines-nudges-actionless
 >actionless
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-actionless-coastlines-nudges-coastline
 >coastlien
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-towers-nudges-maturation
 >maturatino
 The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway.
+\\
 #ttc-table-of-towers-nudges-thearchy
 >thearcyh
 The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway.
+\\
 #ttc-table-of-towers-nudges-coasting
 >coastign
 Scot Agin looks at you curiously. You probably don't need to change his name or intelligence.
+\\
 #ttc-table-of-towers-nudges-scot
 >scto
 Scot looks at you curiously. You probably don't need to change his name or intelligence.
+\\
 #ttc-table-of-towers-nudges-agin
 >agni
 Scot looks at you curiously. You probably don't need to change his name or intelligence.
 >l
 ###skip test checking, delete
 >gs
+\\
 #+ttc-table-of-towers-nudges-coasting
 >coatgins
 Staci Ong looks at you curiously. You probably don't need to change her name or intelligence.
+\\
 #ttc-table-of-towers-nudges-staci
 >staic
 Staci looks at you curiously. You probably don't need to change her name or intelligence.
+\\
 #ttc-table-of-towers-nudges-ong
 >ogn
 Staci looks at you curiously. You probably don't need to change her name or intelligence.
@@ -4148,35 +4411,45 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 
 @nud
 >s
+\\
 #ttc-table-of-artist-traits-strait-nudges-strati
 >strait
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-artist-traits-strait-nudges-trait
 >trati
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
+\\
 #ttc-table-of-artist-traits-strait-nudges-could
 >coudl
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
+\\
 #ttc-table-of-artist-traits-strait-nudges-coulds
 >coulsd
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 >n
 >w
+\\
 #+testcase-mistake-roiling-slated
 >slated
 You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research. You've gotten rid of all nuisances here, anyway.
+\\
 #testcase-mistake-roiling-lasted
 >lasted
 The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway.
+\\
 #ttc-table-of-salted-deltas-nudges-salted
 >saltde
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #ttc-table-of-salted-deltas-nudges-delta
 >delat
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace across Leak Lake, is changed.
+\\
 #+ttc-table-of-towers-nudges-lake
 >laek
 You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
+\\
 #+ttc-table-of-towers-scannotes-curst-palace
 #palace 8 lights
 >scan palace
@@ -4195,15 +4468,19 @@ After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 #palace 9 lights
 >scan palace
 Your settler registers RRYR?YRYR**.
+\\
 #testcase-mistake-roiling-coatings
 >coatings
 No, Scot Agin doesn't need to change like THAT.
+\\
 #ttc-table-of-towers-readables-dinger
 >read dinger
 You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red.
+\\
 #+ttc-table-of-towers-readables-thearchy-hatchery
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don't need clues any more.
+\\
 #ttc-table-of-towers-spechelp-dinger
 >grainde
 Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
@@ -4252,12 +4529,15 @@ Dr. Yow is versatile. You need him to be exciting around the agnostic.
 #ttc-table-of-towers-nudges-solve
 >solev
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-nudges-loaves
 >loavse
 The pastry is for eating, not for changing.
+\\
 #ttc-table-of-towers-nudges-loaf
 >lofa
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+\\
 #ttc-table-of-towers-spechelp-raves-saver
 >pearyl
 The "replay player" letters brighten for a second.
@@ -4291,6 +4571,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a 
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 >gs
+\\
 #+ttc-table-of-towers-spechelp-atblock
 >attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
@@ -4303,6 +4584,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a 
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 >gs
+\\
 #ttc-table-of-towers-scannotes-raves-saver
 >scan raves saver
 Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about.
@@ -4355,12 +4637,15 @@ The raves saver/replay player has already been parleyed into something shinier.
 #+ttc-table-of-towers-nudges-save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
+\\
 #ttc-table-of-towers-done-rejects-raves-saver
 >pearyl
 The raves saver is as glitzed-up as it'll get.
+\\
 #+ttc-table-of-towers-nudges-save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
+\\
 #ttc-table-of-obscurest-subsector-nudges-tentative
 >tentatiev
 Scot is fully attentive. Don't ruin a good thing!
@@ -4392,9 +4677,11 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 >y
 #towers anagrams for weirder red wire
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
+\\
 #ttc-table-of-towers-anagrams-robust
 >xr turbos #2-of-3 over lake
 After a thoughtful gaze, you reckon the turbos could be ROBUST.
+\\
 #ttc-table-of-towers-anagrams-stabler
 >xr blaster #2-of-3 over lake
 After a thoughtful gaze, you reckon the blaster could be STABLER.
@@ -4419,6 +4706,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-actionless-coastlines-nudges-instance
 >instanec
 You should probably act on what the instances are saying. You don't need to change anything back here any more.
+\\
 #ttc-table-of-actionless-coastlines-nudges-instances
 >instanecs
 You should probably act on what the instances are saying. You don't need to change anything back here any more.
@@ -4426,38 +4714,47 @@ You should probably act on what the instances are saying. You don't need to chan
 @nud
 ##balance undos
 >gonear rawest waters
+\\
 #ttc-table-of-towers-scannotes-earnest-eastern-neaters
 >scan earnest eastern neaters
 That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!
+\\
 #+ttc-table-of-towers-scannotes-curst-palace
 #palace 10 lights
 >scan palace
 Your settler registers RRYR?YRYRY*.
 >undo
+\\
 #ttc-table-of-rawest-waster-waters-nudges-waster
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. The Earnest Eastern Neaters still seem to want to help you, though.
 >undo
+\\
 #+ttc-table-of-towers-nudges-lake
 >laek
 Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
 >undo
+\\
 #ttc-table-of-rawest-waster-waters-nudges-spray
 >sprya
 The spray will still drown you if you don't figure a way to move somewhere.
 >undo
+\\
 #ttc-table-of-rawest-waster-waters-nudges-water
 >watre
 The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the Earnest Eastern Neaters?
 >undo
+\\
 #testcase-mistake-roiling-earnest
 >earnest
 The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.
 >undo
+\\
 #testcase-mistake-roiling-prays
 >prays
 Too late to be a prayers sprayer.
 >undo
+\\
 #ttc-table-of-rawest-waster-waters-nudges-neater
 >neatre
 You need more than one Neater to help you.
@@ -4469,18 +4766,23 @@ You need more than one Neater to help you.
 #ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
+\\
 #ttc-table-of-actionless-coastlines-nudges-baot
 >bato
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
+\\
 #ttc-table-of-actionless-coastlines-nudges-boatbot
 >boatbto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
+\\
 #ttc-table-of-actionless-coastlines-nudges-wire
 >wier
 Each wire is okay. They're just all organized WEIRDER.
+\\
 #ttc-table-of-actionless-coastlines-nudges-wires
 >wirse
 The wires are okay. They're just all organized WEIRDER.
+\\
 #ttc-table-of-actionless-coastlines-nudges-turbo
 >turob
 You need to deal with both turbos.
@@ -4491,9 +4793,11 @@ ALBERT'S.
 ##balance undo
 >robust
 by one point
+\\
 #ttc-table-of-towers-done-rejects-turbos
 >turbso
 The turbos are working. Best not tinker.
+\\
 #+ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 You fixed the turbos, so maybe you can tackle the blaster.
@@ -4502,9 +4806,11 @@ You fixed the turbos, so maybe you can tackle the blaster.
 >undo
 >stabler
 by one point
+\\
 #ttc-table-of-towers-done-rejects-blaster
 >blastre
 The blaster is working. Best not tinker.
+\\
 #+ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 You fixed the blaster, so maybe you can tackle the turbos.
@@ -4512,6 +4818,7 @@ You fixed the blaster, so maybe you can tackle the turbos.
 >undo
 >undo
 >gonear rawest
+\\
 #ttc-table-of-towers-spechelp-earnest-eastern-neaters
 >eastenr
 You feel less split from everyone else for a second.
@@ -4578,6 +4885,7 @@ Trying to cross languages and make this Swears-Wasser does no good.
 Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
+\\
 #ttc-table-of-goto-sectioning-rawest-waster-waters-3--
 >gt waters
 The Rawest Waster Waters of Leak Lake would probably be even less fun the second time around.
@@ -4586,11 +4894,13 @@ The Rawest Waster Waters of Leak Lake would probably be even less fun the second
 >undo
 >undo
 >undo
+\\
 #ttc-table-of-towers-nowheres-rawest-waster-waters
 >e
 You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
 >n
 That'd only make the Earnest Eastern Neaters further away.
+\\
 #testcase-outside-rawest-waster-waters
 >out
 You know you need to exit, but you need to change things so an exit's more accessible.
@@ -4609,6 +4919,7 @@ The Earnest Eastern Neaters will help you leave. But you need to help them align
 @hints
 >stabler
 by one point
+\\
 #ttc-table-of-towers-hint-request-rejects-blaster
 >hint blaster
 You fixed the blaster. Now maybe try the turbos.
@@ -4639,6 +4950,7 @@ You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 
 @spoi
 >gonear waters
+\\
 #ttc-table-of-towers-anagrams-nearest
 >xr eastern #2-of-3 over lake
 After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.
@@ -4650,6 +4962,7 @@ After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST
 by one point
 >enter boat
 /^Rawest Waster Waters
+\\
 #ttc-table-of-castle-approaching-narratives-8
 #ttc-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
@@ -4690,6 +5003,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #+ttc-table-of-actionless-coastlines-nudges-turbo
 >turob
 You already dealt with both turbos.
+\\
 #ttc-table-of-towers-spechelp-weirder-red-wire
 >rewirde
 You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
@@ -4704,9 +5018,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire
 #ttc-table-of-towers-scannotes-weirder-red-wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you see any extra red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
+\\
 #testcase-mistake-roiling-were-rid
 >were rid
 No, you can't just yank the red wire out.
+\\
 #+ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 You fixed what you can of the boat.
@@ -4765,6 +5081,7 @@ The scaly clays are too treacherous. You need to find the word to restore the cu
 >out
 The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
 >undo
+\\
 #testcase-exits-mislit-limits
 >exits
 You don't have to go anywhere before changing the Curst Palace, although the serpent guards a dwelling.
@@ -4781,12 +5098,15 @@ Both Castle Up Arc and Castle Arc Up are in red.
 #ttc-table-of-mislit-limits-nudges-mislit
 >mislti
 The Curst Palace is right here! You should focus on it instead.
+\\
 #ttc-table-of-mislit-limits-nudges-clays
 >clasy
 Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead.
+\\
 #ttc-table-of-mislit-limits-nudges-caly
 >cayl
 Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead.
+\\
 #ttc-table-of-mislit-limits-nudges-enip
 >enpi
 It's officially an ur-pine, not a pine.
@@ -4881,20 +5201,26 @@ Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though ac
 The retinas care not for physical proximity. They will just stare.
 >sit near
 The retinas care not for physical proximity. They will just stare.
+\\
 #testcase-mistake-roiling-ranties
 >ranties
 Oh, no. Their icy gazes are quite enough.
+\\
 #testcase-mistake-roiling-restain
 >restain
 The retinas haven't stained you yet. You don't want to be stained, much less re-stained. You see red at the thought.
+\\
 #testcase-mistake-roiling-retain-retains
 >retain
 Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.
+\\
 >retains
 Just the opposite. You'd like to see a lot less retaining, here. Besides, that's a verb, not an adjective.
+\\
 #testcase-mistake-roiling-stearin
 >stearin
 The retinas are probably full of all kinds of indescribable weird organic compounds. But there may be a practical way to describe them better.
+\\
 #testcase-mistake-roiling-taserin
 >taserin
 The retinas are more likely to zap you.
@@ -4976,9 +5302,11 @@ The only way you seem to be able to go is west.
 #ttc-table-of-mislit-limits-nudges-present
 >pretnes
 The serpent is taken care of.
+\\
 #testcase-mistake-roiling-occurs
 >occurs
 You need to make something occur.
+\\
 #ttc-table-of-towers-nudges-occurs
 >occusr
 Changing the blub bulb to a succor crocus was good enough. Why risk more?
@@ -4992,9 +5320,11 @@ Changing the blub bulb to a succor crocus was good enough. Why risk more?
 #ttc-table-of-mesprise-premises-nudges-mesprise
 >mespries
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace nearby, is changed.
+\\
 #ttc-table-of-mesprise-premises-nudges-emprise
 >empries
 /Yes, this location needs changing, but that won't happen until Castle (Arc Up|Up Arc), the Curst Palace nearby, is changed.
+\\
 #ttc-table-of-towers-spechelp-itster
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
@@ -5009,9 +5339,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the itster. That's a
 #ttc-table-of-towers-scannotes-tetris-sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
+\\
 #testcase-mistake-roiling-titres-titers
 >titres
 No physical sciences are necessary here.
+\\
 >titers
 No physical sciences are necessary here.
 
@@ -5074,6 +5406,7 @@ No, deal with the entire Done-Any Anodyne.
 #ttc-table-of-mesprise-premises-nudges-any
 >ayn
 No, deal with the entire Done-Any Anodyne.
+\\
 #ttc-table-of-towers-scannotes-done-any-anodyne
 >scan anodyne
 For a moment you guess you've, err, done enough, and you don't have to get rid of the anodyne for Teri. But you also figure, what's one more logic puzzle after all you've been through?
@@ -5090,6 +5423,7 @@ The Done-Any Anodyne rattles.
 #ttc-table-of-towers-readables-done-any-anodyne
 >read anodyne
 The Done-Any Anodyne has the signature of its inventor, Dyan Eno, in red.
+\\
 #ttc-table-of-towers-done-rejects-done-any-anodyne
 >tretis
 You helped St. Teri directly. Now you need to deal with the Done-Any Anodyne.
@@ -5166,59 +5500,78 @@ St. Teri told you to look for
 #ttc-table-of-mislit-limits-nudges-accurst
 >accurts
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-leap
 >lepa
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-clear
 >clera
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-catsup
 >catspu
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-pest
 >pets
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-accrual
 >accrula
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-cactus
 >cactsu
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-pealr
 >pearl
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-capsule
 >capsuel
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-cart
 >catr
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-accu
 >acuc
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-plaster
 >plastre
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-last
 >lats
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-race
 >raec
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-cup
 >cpu
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-talc
 >tacl
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-aps
 >asp
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 #ttc-table-of-mislit-limits-nudges-cure
 >cuer
 That might help you figure what to do with the curst palace, but it can't be important by itself.
+\\
 >curst palaec
 Hmm...only faint rumbling from the curst palace. Big words have all sorts of possibilities.
+\\
 #+ttc-table-of-towers-scannotes-curst-palace
 >scan palace
 #palace 11 lights
@@ -5226,6 +5579,7 @@ The entire settler lights up, finally!
 Your settler registers RRYR?YRYRY?.
 The final entry blinks alternately with the fifth--neither is purple at the same time. The settler usually isn't this slow, but maybe you can take advantage of it having so much data to process
 !Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
+\\
 >scan palace
 !The entire settler lights up, finally!
 

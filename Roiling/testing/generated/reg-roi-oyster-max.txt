@@ -30,6 +30,7 @@ The haunter is beneath Anger Range, but it is only part of what is making everyo
 >spit tips
 by one point
 You've started to get some action in.
+
 #ttc-table-of-region-initial-scoring-commentary-oyster-2
 >inset tines
 Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too.
@@ -59,24 +60,31 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 >stroll
 The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
+
 #ttc-table-of-oyster-prefigurings-lolstr-trolls
 >pf
 You can STROLL past the LOLstr trolls once you're not worth stopping.
+
 >sing
 by one point
+
 >stroll
 The LOLstr trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now. They act sore to scare, sure you stole a coaster. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
+
 >spit
 "Job perks: bop jerks," say the LOLstr trolls. The pesty types have formed a half-circle around you now.
 by one point
+
 >stroll
 The LOLstr trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 Maybe one more disruption, and you won't be worth bothering with.
 !by one point
+
 >remap
 The LOLstr trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
 by one point
+
 >undo
 >undo
 >undo
@@ -158,6 +166,7 @@ The oars have no gas, or whatever they might run on
 #pre-raft-fart rule
 >fart
 Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
+
 #ttc-table-of-oyster-prefigurings-frat-raft
 >pf
 You can get on the frat raft and FART.
@@ -170,6 +179,7 @@ by one point
 >boast
 You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
 !by one point
+
 #+ttc-table-of-oyster-prefigurings-frat-raft
 >pf
 !FART
@@ -198,6 +208,7 @@ Score in a scenario: 8 out of 45 total points in the current region, Oyster. Low
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
 !by one point
+
 #ttc-table-of-oyster-prefigurings-trout
 >pf
 You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
@@ -225,6 +236,7 @@ Your score has just gone up by one
 >unearth
 !by one point
 Nothing to unearth a haunter with.
+
 #ttc-table-of-oyster-prefigurings-hunter-hunt-area
 >pf
 You can UNEARTH the HAUNTER (from under the HUNTER HUNT AREA) with the right equipment.
@@ -343,18 +355,21 @@ Score in a scenario: 18 out of 45 total points in the current region, Oyster. Lo
 #pre-crate-react rule
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
+
 #ttc-table-of-oyster-prefigurings-crate
 >pf
 You can REACT to the crate better once you have more data.
 #pre-kiss-skis rule
 >kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
+
 #ttc-table-of-oyster-prefigurings-skis
 >pf
 You can KISS the skis once you are less distracted.
 #pre-snap-span-pans rule
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
+
 #ttc-table-of-oyster-prefigurings-span-pans
 >pf
 You can SNAP to clear the span pans once everything else is out of the way.
@@ -504,6 +519,7 @@ It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or so
 #pre-search-arches rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
+
 #ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
 You can SEARCH the arches once you've chased the sandier sardine away.
@@ -544,6 +560,7 @@ You hope to have peered deeper for a vision, but it's too small. All you can mak
 
 >reangle
 You might be able to REANGLE after doing something more necessary with the gleaner.
+
 #ttc-table-of-oyster-prefigurings-bogus-reangle
 >pf
 You can REANGLE the general gleaner once you've figured how to see something more basic in it.
@@ -581,6 +598,7 @@ You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 #pre-bury-ruby rule
 >bury
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
+
 #ttc-table-of-oyster-prefigurings-ruby
 >pf
 You need to figure how and where to BURY the ruby.
@@ -668,6 +686,7 @@ Oh! So that's how the map looks! And that's where you are now! You trace around 
 >derail
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
 !by one point
+
 #ttc-table-of-oyster-prefigurings-bogus-derail
 >pf
 You can use the dialer to DERAIL once the papery yapper is gone.
@@ -707,6 +726,7 @@ You'd think your lance would make you worthy of climbing the templar ramplet, bu
 >banish lance
 >trample
 You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
+
 #ttc-table-of-oyster-prefigurings-templar-ramplet
 >pf
 You can TRAMPLE the templar ramplet now you have a shiny worthy weapon.
@@ -761,6 +781,7 @@ Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lo
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
+
 #+ttc-table-of-oyster-prefigurings-bogus-redial
 >pf
 You can REDIAL the dialer once the pins are not in your way.

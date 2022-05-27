@@ -344,6 +344,7 @@ This is a museum! Messing with the exhibits would be very bad form.
 #ttc-table-of-sparse-spares-nudges-sparse
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
+
 #ttc-table-of-sparse-spares-nudges-spare
 
 #testcase-mistake-roiling-clasp

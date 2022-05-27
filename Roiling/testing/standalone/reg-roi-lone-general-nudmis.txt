@@ -220,6 +220,7 @@ The treatise is there as help to discover the satchel. It has only sentimental v
 The treatise was there as help to discover the satchel. It has only sentimental value, now.
 
 >purloin gird grid
+
 #ttc-table-of-general-nudges-gird
 >drig
 The grid already contains pretty much everything Elmo was able to find out.
@@ -355,6 +356,7 @@ Meta-commands don't have any easter eggs, sadly.
 SOMETHING never anagrams to anything, so you'll want to tinker with whatever that SOMETHING is on or near or supporting.
 
 >ts
+
 #+ttc-table-of-general-nudges-terry
 >ryter
 You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.

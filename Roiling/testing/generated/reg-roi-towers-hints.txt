@@ -37,102 +37,127 @@ Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >xr rodney
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
+
 #ttc-table-of-towers-anagrams-gone
 >xr geno
 Boy! Geno might be less oppressive if he were GONE.
 >undo
+
 #ttc-table-of-towers-anagrams-ashen
 >xr shane
 Boy! Shane might be less oppressive if he were ASHEN.
 >undo
+
 #ttc-table-of-towers-anagrams-stony
 >xr tyson
 Boy! Tyson might be less oppressive if he were STONY.
 >undo
+
 #ttc-table-of-towers-anagrams-awed
 >xr wade
 Boy! Wade might be less oppressive if he were AWED.
 >undo
+
 #ttc-table-of-towers-anagrams-wined
 >xr edwin
 Boy! Edwin might be less oppressive if he were WINED.
 >undo
+
 #ttc-table-of-towers-anagrams-olden
 >xr eldon
 Boy! Eldon might be less oppressive if he were OLDEN.
 >undo
+
 #ttc-table-of-towers-anagrams-godly
 >xr goldy
 Boy! Goldy might be less oppressive if he were GODLY.
 >undo
+
 #ttc-table-of-towers-anagrams-coyer
 >xr royce
 Boy! Royce might be less oppressive if he were COYER.
 >undo
+
 #ttc-table-of-towers-anagrams-bleak
 >xr blake
 Boy! Blake might be less oppressive if he were BLEAK.
 >undo
+
 #ttc-table-of-towers-anagrams-bored
 >xr bredo
 Boy! Bredo might be less oppressive if he were BORED.
 >undo
+
 #ttc-table-of-towers-anagrams-lardy
 >xr daryl
 Boy! Daryl might be less oppressive if he were LARDY.
 >undo
+
 #ttc-table-of-towers-anagrams-weedy
 >xr dewey
 Boy! Dewey might be less oppressive if he were WEEDY.
 >undo
+
 #ttc-table-of-towers-anagrams-tenser
 >xr ernest
 Boy! Ernest might be less oppressive if he were TENSER.
 >undo
+
 #ttc-table-of-towers-anagrams-calmer
 >xr marcel
 Boy! Marcel might be less oppressive if he were CALMER.
 >undo
+
 #ttc-table-of-towers-anagrams-normal
 >xr marlon
 Boy! Marlon might be less oppressive if he were NORMAL.
 >undo
+
 #ttc-table-of-towers-anagrams-eggier
 >xr reggie
 Boy! Reggie might be less oppressive if he were EGGIER.
 >undo
+
 #ttc-table-of-towers-anagrams-snared
 >xr andres
 Boy! Andres might be less oppressive if he were SNARED.
 >undo
+
 #ttc-table-of-towers-anagrams-warned
 >xr andrew
 Boy! Andrew might be less oppressive if he were WARNED.
 >undo
+
 #ttc-table-of-towers-anagrams-achier
 >xr archie
 Boy! Archie might be less oppressive if he were ACHIER.
 >undo
+
 #ttc-table-of-towers-anagrams-nearby
 >xr barney
 Boy! Barney might be less oppressive if he were NEARBY.
 >undo
+
 #ttc-table-of-towers-anagrams-cricked
 >xr cedrick
 Boy! Cedrick might be less oppressive if he were CRICKED.
 >undo
+
 #ttc-table-of-towers-anagrams-timider
 >xr demitri
 Boy! Demitri might be less oppressive if he were TIMIDER.
 >undo
+
 #ttc-table-of-towers-anagrams-learned
 >xr leander
 Boy! Leander might be less oppressive if he were LEARNED.
 >undo
+
 #ttc-table-of-towers-anagrams-pronest
 >xr preston
 Boy! Preston might be less oppressive if he were PRONEST.
 >undo
+
 #ttc-table-of-towers-anagrams-recreant
 >xr terrance
 Boy! Terrance might be less oppressive if he were RECREANT.
@@ -198,6 +223,7 @@ Score in a scenario: 8 out of 57 total points in the current region, Towers. Low
 
 >xr me
 Even if you could, you might expose yourself to harmful rays and stuff.
+
 #ttc-table-of-towers-anagrams-sadder
 >xr adders
 Hmm. You bet you could get past if the dreads adders were SADDER.
@@ -238,9 +264,11 @@ Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
+
 #ttc-table-of-towers-anagrams-reined
 >xr nereid
 Hmm. You bet you could get past if the denier nereid were REINED.
+
 #ttc-table-of-towers-anagrams-rinsed
 >xr diners
 Hmm. You bet you could get past if the snider diners were RINSED.
@@ -306,6 +334,7 @@ After a thoughtful gaze, you reckon the docile old ice could be COILED.
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
+
 #ttc-table-of-towers-anagrams-semipro
 >xr imposer
 Hmm. You bet you could get past if the promise imposer were SEMIPRO.
@@ -350,12 +379,15 @@ DEBUG INFO: Lars Eede hinting.
 >xr lars eede
 Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
 >gs
+
 >xr elsa erde
 Hmm. You bet you could get past if Elsa Erde were RELEASED or RESEALED.
 >gs
+
 #ttc-table-of-towers-anagrams-married
 >xr admirer
 Hmm. You bet you could get past if the mardier admirer were MARRIED.
+
 #ttc-table-of-towers-anagrams-angstier
 >xr ingrates
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -409,6 +441,7 @@ DEBUG: guardian hint choice is asset-hit atheists from asset-hit atheists.
 #ttc-table-of-towers-anagrams-hastiest
 >xr atheists
 Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
+
 #ttc-table-of-towers-anagrams-weariest
 >xr sweatier
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
@@ -440,9 +473,11 @@ Score in a scenario: 24 out of 57 total points in the current region, Towers. Lo
 #ttc-table-of-towers-anagrams-sewed
 >xr weeds
 After a thoughtful gaze, you reckon the weeds could be SEWED.
+
 #ttc-table-of-towers-anagrams-mined
 >xr denim
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+
 >y
 After a thoughtful gaze, you reckon the mended mini-denim could be MINED.
 
@@ -491,6 +526,7 @@ Score in a scenario: 28 out of 57 total points in the current region, Towers. Lo
 >xr hostile
 Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 >gs
+
 #+ttc-table-of-towers-anagrams-holiest
 >xr hostile
 Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
@@ -650,6 +686,7 @@ Dr. Yow can be manipulated, even behind the prison ropins.
 #ttc-table-of-towers-anagrams-fussier
 >xr fissure
 After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
+
 #ttc-table-of-towers-anagrams-unlocked
 >xr luck node
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
@@ -766,15 +803,18 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 >y
 #towers anagrams for weirder red wire
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
+
 #ttc-table-of-towers-anagrams-robust
 >xr turbos
 After a thoughtful gaze, you reckon the turbos could be ROBUST.
+
 #ttc-table-of-towers-anagrams-stabler
 >xr blaster
 After a thoughtful gaze, you reckon the blaster could be STABLER.
 
 >stabler
 by one point
+
 #ttc-table-of-towers-hint-request-rejects-blaster
 >hint blaster
 You fixed the blaster. Now maybe try the turbos.
@@ -800,6 +840,7 @@ You fixed the turbos. The blaster, too. You can just ENTER BOAT.
 You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 
 >gonear waters
+
 #ttc-table-of-towers-anagrams-nearest
 >xr eastern
 After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.

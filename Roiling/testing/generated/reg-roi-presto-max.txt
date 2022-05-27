@@ -62,6 +62,7 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >keyboard
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
+
 #ttc-table-of-presto-prefigurings-drab-yoke
 >pf
 You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
@@ -136,6 +137,7 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 #pre-ether-there rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
+
 #ttc-table-of-presto-prefigurings-ether
 >pf
 You can shout THERE once you have the force to win the fight in the ether.
@@ -359,6 +361,7 @@ You take it. You don't need to, but it'd be nice to have handy.
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
 You add the information to your pedanto-notepad under FLIPS.
+
 #ttc-table-of-presto-prefigurings-im-le-cop-polemic
 >pf
 You can COMPILE once you've started coding.
@@ -386,6 +389,7 @@ Score in a scenario: 25 out of 41 total points in the current region, Presto. Lo
 #pre-reboot rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
+
 #ttc-table-of-presto-prefigurings-be-troo-e-robot
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
@@ -479,6 +483,7 @@ The disk is where it needs to be, and the skid has served its purpose. Changing 
 
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
+
 #ttc-table-of-notepad-entries-sleep
 >pad sleep
 SLEEP is only advisable in a protected area.
@@ -509,6 +514,7 @@ fits in perfectly
 >sleep
 You haven't yet made anywhere comfortable to sleep.
 You add the information to your pedanto-notepad under FLIPS.
+
 #ttc-table-of-presto-prefigurings-peels-speel
 >pf
 You can SLEEP once you've gotten a good start on your coding task.
@@ -546,6 +552,7 @@ by one point
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
+
 #ttc-table-of-presto-prefigurings-bub-dude-egg
 >pf
 You weren't ready to DEBUG yet.

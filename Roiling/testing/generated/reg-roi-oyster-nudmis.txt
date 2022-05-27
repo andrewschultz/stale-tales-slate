@@ -20,9 +20,11 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 
 >remap
 by one point
+
 #ttc-table-of-posh-hops-shop-nudges-remap
 >rempa
 You already got a temporary escape from the bad music. You can't really do any more, there.
+
 #ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
@@ -35,46 +37,59 @@ You already got a temporary escape from the bad music. You can't really do any m
 Almost, but with the stein, there.
 >insert stein
 It almost fits when you try to insert it. About five-sixths of the way. Perhaps you could find some other way to do things.
+
 #testcase-mistake-roiling-insert
 >insert
 Almost, with the stein, there.
+
 #testcase-mistake-roiling-inset-text
 >inset zozimus zozimus zozimus
 You may want to INSERT X IN Y instead.
 >inset zozimus
 You may not be using an object in the game, and you may wish to inseRt, instead.
+
 #testcase-mistake-roiling-nites
 >nites
 Misspellings don't work, here.
+
 #testcase-mistake-roiling-pacers
 >pacers
 Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.
+
 #testcase-mistake-roiling-parsec
 >parsec
 Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.
+
 #testcase-mistake-roiling-phos
 >phos
 The bar fails to change into an ethnic restaurant.
+
 #testcase-mistake-roiling-spyte
 >spyte
 The pesty types probably spell it that way, but I'm not letting YOU do so.
+
 #ttc-table-of-posh-hops-shop-nudges-pti
 >pti
 You can't pick out which pit to do something to. Maybe there's an action to apply to all of them.
+
 #ttc-table-of-posh-hops-shop-nudges-vets
 >vest
 Focus on the trolls, not their clothes.
+
 #ttc-table-of-posh-hops-shop-nudges-vet
 >vte
 Focus on the trolls, not their clothes.
+
 #ttc-table-of-posh-hops-shop-nudges-pesty
 >pesyt
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
+
 #ttc-table-of-posh-hops-shop-nudges-type
 >tyep
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
 >inset
 by one point
+
 #ttc-table-of-oyster-done-rejects-tines
 >tinse
 You destroyed the stein, and that's enough.
@@ -82,9 +97,11 @@ You destroyed the stein, and that's enough.
 >undo
 >spit
 by one point
+
 #ttc-table-of-oyster-done-rejects-tips-pits
 >spti
 You can't and don't want to do anything else to the tips pits.
+
 #+ttc-table-of-posh-hops-shop-nudges-pti
 >pti
 You already dealt with the tips pits.
@@ -93,6 +110,7 @@ You already dealt with the tips pits.
 >undo
 >scrape
 by one point
+
 #ttc-table-of-oyster-done-rejects-capers-recaps
 >scapre
 Casper has suffered enough indignities. You should annoy someone else.
@@ -100,6 +118,7 @@ Casper has suffered enough indignities. You should annoy someone else.
 >undo
 >sing
 by one point
+
 #ttc-table-of-oyster-done-rejects-gins-sign
 >igsn
 There's no other way to disobey the sign.
@@ -109,16 +128,21 @@ There's no other way to disobey the sign.
 #ttc-table-of-oyster-readables-stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
+
 #ttc-table-of-oyster-readables-jukebox
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo.
+
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Reset, set.
+
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo, set, reset? Hm.
+
 #ttc-table-of-oyster-readables-tips-pits
 >read tips pits
 IT'S P is written in red on the bottom.
+
 #ttc-table-of-oyster-spechelp-capers-recaps
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
@@ -188,20 +212,25 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. T
 #ttc-table-of-oyster-scannotes-gins-sign
 >scan gins sign
 Hmm. Whatever the variable colors are, you think you can do something with the fixed ones.
+
 #ttc-table-of-oyster-scannotes-capers-recaps
 >scan capers recaps
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
 Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
+
 #ttc-table-of-oyster-scannotes-casper-spacer
 >scan casper spacer
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
 !Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
+
 #ttc-table-of-oyster-scannotes-perma-amper
 >scan perma amper
 It's a perma-amper, so that might account for the twitchy light.
+
 #ttc-table-of-oyster-scannotes-lil-ps-pills
 >scan li'l p's pills
 The pills can't be that fidgety. The particular brand must be a clue, too.
+
 #ttc-table-of-oyster-scannotes-lolstr-trolls
 >scan lolstr trolls
 Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
@@ -209,30 +238,39 @@ Well, of course it's not perfectly straightforward with trolls. And yet, as with
 #ttc-table-of-oyster-nudges-storey
 >storye
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+
 #ttc-table-of-posh-hops-shop-nudges-posh
 >pohs
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+
 #ttc-table-of-posh-hops-shop-nudges-tine
 >tien
 Just one tine doesn't seem up to much.
+
 #ttc-table-of-posh-hops-shop-nudges-troll
 >troll
 Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take 'em all, somehow.
+
 #ttc-table-of-posh-hops-shop-nudges-recap
 >recpa
 Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You need to deal with them all.
+
 #ttc-table-of-posh-hops-shop-nudges-tune
 >tuen
 Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of 'em all.
+
 #ttc-table-of-oyster-nudges-jar
 >jra
 You suspect it's what's in the jar that's important.
+
 #ttc-table-of-oyster-nudges-spill
 >splil
 You seem to be fumbling what to do with the pills.
+
 #ttc-table-of-posh-hops-shop-nudges-jukebox
 >jukebxo
 You can't work on the jukebox as a whole, but maybe you could meddle with its two main parts: the tunes and perma-amper
+
 #ttc-table-of-oyster-spechelp-perma-amper
 >rempa
 You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
@@ -247,18 +285,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. Tha
 #+ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 The tunes grow slightly less annoying, for a moment.
+
 #not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
 >unset
 by one point
 >unset
 !(tunes)
 You already dealt with the tunes and perma-amper.
+
 #+ttc-table-of-posh-hops-shop-nudges-unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
+
 #+ttc-table-of-posh-hops-shop-nudges-remap
 >rempa
 You already got a temporary escape from the bad music. You can't really do any more, there.
+
 #+ttc-table-of-posh-hops-shop-nudges-jukebox
 >jukebxo
 The jukebox is already temporarily out of commission.
@@ -317,6 +359,7 @@ Score in a scenario: 4 out of 45 total points in the current region, Oyster. Low
 No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
 >stroll
 No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
+
 #testcase-mistake-roiling-bare-bares
 >bare
 A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
@@ -324,31 +367,39 @@ Really, what did you expect?
 >bares
 A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
 Really, what did you expect?
+
 #testcase-mistake-roiling-bear-bears
 >bear
 You don't need any predators chasing you.
 >bears
 You don't need any predators chasing you.
+
 #testcase-mistake-roiling-dole
 >dole
 Alas, no unemployment check, pineapple or former Republican presidential candidate arrives.
+
 #testcase-mistake-roiling-saber-sabre
 >saber
 A weapon won't do much good here. You need action!
 >sabre
 A weapon won't do much good here. You need action!
+
 #testcase-mistake-roiling-el-doodle
 >el doodle
 That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.
+
 #ttc-table-of-olde-lode-nudges-lode
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-olde-lode-nudges-braes
 >brase
 The baser braes can't be changed. There is enough to do in the Olde Lode.
+
 #ttc-table-of-olde-lode-nudges-brae
 >brea
 The baser braes can't be changed. There is enough to do in the Olde Lode.
+
 #ttc-table-of-oyster-spechelp-clam
 >caml
 The clam still seems enraged.
@@ -369,6 +420,7 @@ Score in a scenario: 5 out of 45 total points in the current region, Oyster. Low
 #ttc-table-of-olde-lode-nudges-calm
 >clma
 Odd! Now, you feel a need to panic and flee after calming the clam.
+
 #ttc-table-of-oyster-spechelp-urn
 >rnu
 The urn sits there, daring you to walk away.
@@ -391,9 +443,11 @@ Score in a scenario: 6 out of 45 total points in the current region, Oyster. Low
 #testcase-mistake-roiling-rosa
 >rosa
 Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for A Roiling Original.
+
 #testcase-mistake-roiling-arrive
 >arrive
 Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
+
 #ttc-table-of-oyster-spechelp-frat-raft
 >ratf
 The frat raft rocks slightly.
@@ -430,18 +484,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. Tha
 #ttc-table-of-disease-seaside-nudges-seaside
 >seasied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-disease-seaside-nudges-streamlet
 >streamlte
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
+
 #ttc-table-of-disease-seaside-nudges-streamlets
 >streamlest
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
+
 #testcase-mistake-roiling-a-cone
 >a cone
 That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.
+
 #ttc-table-of-disease-seaside-nudges-canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
+
 #testcase-mistake-roiling-ocean
 >ocean
 As you seek to change the canoe, you hear a rush of water, quickly examine the canoe, and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
@@ -452,45 +511,59 @@ The canoe is all red and has a fish carved into it. The fish seems to be trying 
 >ocean
 As you seek to change the canoe, you hear a rush of water and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
 >undo
+
 #ttc-table-of-disease-seaside-nudges-soak
 >soka
 No, best concentrate on what the raft is.
+
 #ttc-table-of-disease-seaside-nudges-oak
 >oka
 No, best concentrate on what the raft is.
+
 #ttc-table-of-disease-seaside-nudges-fish
 >fihs
 T'fish won't shift nowt.
+
 #ttc-table-of-disease-seaside-nudges-herring
 >herrign
 Nothing doing. It is, after all, a RED herring. Ba dum bum.
+
 #ttc-table-of-disease-seaside-nudges-sculpture
 >sculptuer
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
+
 #ttc-table-of-disease-seaside-nudges-cult
 >cutl
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
+
 #ttc-table-of-disease-seaside-nudges-super
 >supre
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
+
 #ttc-table-of-disease-seaside-nudges-river
 >rivre
 That would cause serious injury to people and property, even if it could work.
+
 #ttc-table-of-disease-seaside-nudges-rivera
 >rivear
 That would cause serious injury to people and property, even if it could work.
+
 #ttc-table-of-disease-seaside-nudges-saccade
 >saccaed
 That would cause serious injury to people and property, even if it could work.
+
 #ttc-table-of-disease-seaside-nudges-oar
 >ora
 If you looked at just one oar, the raft would do no better than go in circles.
+
 #ttc-table-of-disease-seaside-nudges-boat
 >bota
 No one boat seems better than the others. Maybe you should widen your focus to all the boats.
+
 #ttc-table-of-disease-seaside-nudges-interlocking
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
+
 #ttc-table-of-oyster-scannotes-frat-raft
 >scan frat raft
 You're pretty sure you can get this one quickly. I mean, you've been given one of the letters.
@@ -538,21 +611,27 @@ Score in a scenario: 7 out of 45 total points in the current region, Oyster. Low
 #testcase-mistake-roiling-refight
 >refight
 That's not very good English, and you haven't gotten in a fight yet. Soon, though.
+
 #ttc-table-of-fighter-freight-nudges-freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-fighter-freight-nudges-bota
 >boat
 Destroying the boat would be a bad idea. You need to escape it.
+
 #ttc-table-of-fighter-freight-nudges-boats
 >basto
 Destroying the boat would be a bad idea. You need to escape it.
+
 #ttc-table-of-fighter-freight-nudges-crays
 >crasy
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
+
 #ttc-table-of-fighter-freight-nudges-cray
 >crya
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
+
 #ttc-table-of-oyster-spechelp-pale-plea
 >lepa
 Yes, the pale plea is calling and warning you to leave. But how?
@@ -568,8 +647,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pale plea. That'
 The crays are still slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.
 !You worry what will happen to you, or the settler, if you pull it out again. You remember seeing RYYR from the pale plea.
 Your settler registers RYYR.
+
 >scan crays
 You worry what will happen to you, or the settler, if you pull it out again. You remember seeing RYYR from the pale plea.
+
 #testcase-mistake-roiling-peal
 >peal
 The pale plea already sort of is. You need a stronger action than that.
@@ -593,15 +674,19 @@ Gag! Ass-gas.
 #testcase-mistake-roiling-craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
+
 #ttc-table-of-anger-range-nudges-anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-anger-range-nudges-pike
 >piek
 You need to deal with all the bullies at once, somehow, not just one at a time.
+
 #ttc-table-of-anger-range-nudges-carp
 >capr
 You need to deal with all the bullies at once, somehow, not just one at a time.
+
 #ttc-table-of-oyster-spechelp-carps
 >carsp
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
@@ -638,12 +723,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the trout. That's a 
 #testcase-mistake-roiling-kepis
 >kepis
 If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
+
 #testcase-mistake-roiling-scarp
 >scarp
 Don't flee! Help the poor trout.
+
 #testcase-mistake-roiling-unheart
 >unheart
 Silly Internet slang isn't active enough, here.
+
 #testcase-mistake-roiling-renga
 >renga
 Now is not the time for poetry.
@@ -669,6 +757,7 @@ You feel mad the letters settler isn't giving you information RIGHT NOW. Then yo
 #ttc-table-of-oyster-readables-HUNTER-HUNT-AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
+
 #ttc-table-of-anger-range-nudges-scrawl
 >scralw
 It's a HUNTER HUNT AREA, which seems more important.
@@ -676,9 +765,11 @@ It's a HUNTER HUNT AREA, which seems more important.
 #ttc-table-of-anger-range-nudges-darnel
 >darnle
 If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
+
 #ttc-table-of-oyster-scannotes-snarled-darnels
 >scan snarled darnels
 So very tangled! No vowels showed up for certain, which makes it tougher ... or does it?
+
 #ttc-table-of-oyster-spechelp-snarled-darnels
 >snadrel
 The snarled darnels rustle a bit.
@@ -691,6 +782,7 @@ The snarled darnels rustle a bit.
 #testcase-mistake-roiling-landers
 >landers
 Anger Range won't be helped by an advice column or columnist.
+
 #testcase-mistake-roiling-sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Though another try actually gets a point here. You're really close.
@@ -704,6 +796,7 @@ Score in a scenario: 10 out of 45 total points in the current region, Oyster. Lo
 #+testcase-mistake-roiling-landers
 >landers
 Anger Range won't be helped further by an advice column or columnist.
+
 #+testcase-mistake-roiling-sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
@@ -711,6 +804,7 @@ I award you zero points for that anagramming try, and may God have mercy on your
 #+ttc-table-of-anger-range-nudges-darnel
 >darnle
 You already got mad at all the snarled darnels. You need to move on.
+
 #ttc-table-of-oyster-done-rejects-snarled-darnels
 >snarled darnels
 It's okay to get mad, but staying mad? No.
@@ -740,6 +834,7 @@ Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lo
 #ttc-table-of-oyster-readables-cans
 >read cans
 You squint. NASC is the name of the company that produced these cans, written in red.
+
 #ttc-table-of-oyster-spechelp-eeks
 >eesk
 You guess the eeks must be there--no, there!
@@ -754,21 +849,27 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a d
 #ttc-table-of-hardest-trashed-dearths-nudges-hardest
 >hardets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-hardest-trashed-dearths-nudges-hardet
 >hardte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-hardest-trashed-dearths-nudges-spark
 >spakr
 You don't need or want to destabilize the spark parks.
+
 #ttc-table-of-hardest-trashed-dearths-nudges-park
 >pakr
 You don't need or want to destabilize the spark parks.
+
 #ttc-table-of-hardest-trashed-dearths-nudges-can
 >cna
 Getting rid of one can would still leave a mess. Maybe you can deal with them all.
+
 #ttc-table-of-hardest-trashed-dearths-nudges-cans
 >casn
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
+
 #ttc-table-of-hardest-trashed-dearths-nudges-eek
 >eke
 You try to eke out an eek, but you only have one data point, and that's not enough.
@@ -792,9 +893,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the cans. That's a d
 There's enough of that going around.
 >hatreds
 There's enough of that going around.
+
 #testcase-mistake-roiling-thread-threads
 >thread
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
+
 >threads
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
@@ -817,27 +920,35 @@ Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lo
 #testcase-mistake-roiling-a-nut
 >a nut
 That's not nice. You are a guest.
+
 #testcase-mistake-roiling-redraw
 >redraw
 Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.
+
 #testcase-mistake-roiling-aet
 >aet
 Oh, this region won't go into extra time unless you want to do the side quest.
+
 #testcase-mistake-roiling-ate
 >ate
 You're getting ahead of yourself here.
+
 #testcase-mistake-roiling-elan
 >elan
 Lean Lane will never be pretty, and it doesn't need to be.
+
 #testcase-mistake-roiling-eta
 >eta
 ETA's one move later now that you went fishing for this anagram.
+
 #testcase-mistake-roiling-neal
 >neal
 It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.
+
 #ttc-table-of-lean-lane-nudges-lean
 >elna
 You would upset countless people named Lena or Neal.
+
 #ttc-table-of-lean-lane-nudges-reward
 >rewadr
 Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
@@ -896,12 +1007,15 @@ Score in a scenario: 16 out of 45 total points in the current region, Oyster. Lo
 #testcase-mistake-roiling-wrap-text
 >wrap zozimus
 The bubble wrap is already covering something.
+
 #+ttc-table-of-lean-lane-nudges-reward
 >rewadr
 There's nothing else in the drawer and no way to get in by yourself.
+
 #ttc-table-of-oyster-done-rejects-trout
 >trotu
 Retutor? Torture. Rot. True!
+
 #ttc-table-of-oyster-spechelp-wrap
 >wrpa
 That's not quite the way to pop the Paw-R-Wrap.
@@ -916,6 +1030,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That
 #ttc-table-of-oyster-nudges-bubble
 >bubbel
 It's just wrap, really.
+
 #ttc-table-of-oyster-nudges-bubblewrap
 >bubblewrpa
 It's just wrap, really.
@@ -923,9 +1038,11 @@ It's just wrap, really.
 #ttc-table-of-lean-lane-nudges-wipe
 >wiep
 It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
+
 #ttc-table-of-oyster-nudges-pearl
 >pealr
 The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
+
 #ttc-table-of-oyster-spechelp-wipes
 >wipse
 You try to take the wipes, but you worry you're not fast enough.
@@ -1046,6 +1163,7 @@ You're a bit worried anything you did to unstabilize the polyps would make the p
 #ttc-table-of-lapsin'-plains-nudges-pna
 >pan
 There are two pans.
+
 #ttc-table-of-lapsin'-plains-nudges-isk
 >iks
 But you need to remove both skis.
@@ -1138,6 +1256,7 @@ Score in a scenario: 18 out of 45 total points in the current region, Oyster. Lo
 #ttc-table-of-oyster-done-rejects-bogus-plains
 >splani
 You start up a grand lecture again, but you feel something spinal and think "I...plans." Time to move on.
+
 #+ttc-table-of-lapsin'-plains-nudges-plain
 >plani
 You had your say.
@@ -1145,6 +1264,7 @@ You had your say.
 #+testcase-mistake-roiling-thus
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
+
 #+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
@@ -1158,6 +1278,7 @@ Score in a scenario: 19 out of 45 total points in the current region, Oyster. Lo
 #+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
+
 #+ttc-table-of-oyster-spechelp-crate
 >craet
 The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
@@ -1178,15 +1299,19 @@ Score in a scenario: 20 out of 45 total points in the current region, Oyster. Lo
 #+ttc-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
+
 #+testcase-mistake-roiling-caret
 >caret
 You needed to shift letters and not sixes, here.
+
 #ttc-table-of-oyster-done-rejects-crate
 >craet
 Besides identifying it as a rect, you can't do much else with the crate.
+
 #+ttc-table-of-lapsin'-plains-nudges-fragments
 >fragmenst
 Not worth messing with the fragments any more.
+
 #+ttc-table-of-lapsin'-plains-nudges-fragment
 >fragmetn
 Not worth messing with the fragments any more.
@@ -1233,24 +1358,31 @@ Your inactive word does nothing to the huts. But you don't need to do any more, 
 #testcase-mistake-roiling-auth
 >auth
 Sorry! I'm too busy to cameo in my own game at the moment.
+
 #testcase-mistake-roiling-buts
 >buts
 You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
+
 #testcase-mistake-roiling-stub
 >stub
 You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.
+
 #testcase-mistake-roiling-utah
 >utah
 The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
+
 #ttc-table-of-shuttle-hutlets-nudges-hutlet
 >hutlte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-shuttle-hutlets-nudges-hutlets
 >hutlest
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-shuttle-hutlets-nudges-shadier
 >airshde
 The Shadier Airshed is immovable and unchangeable.
+
 #ttc-table-of-shuttle-hutlets-nudges-ubt
 >utb
 Clear ALL the tubs!
@@ -1296,12 +1428,14 @@ It's already been, err, rigged, enough.
 #testcase-mistake-roiling-bury-text
 >bury zozimus
 Nothing worth burying.
+
 #testcase-mistake-roiling-dig-dig-text
 >dig
 You need to dig to some purpose, though maybe somewhere else--and not just dig.
 >dig zozimus
 You need to dig to some purpose, though maybe somewhere else--and not just dig.
 #?? try other places
+
 #ttc-table-of-oyster-done-rejects-rigged-digger
 >drpo
 You managed to get a digger from a prod, and that's good enough.
@@ -1320,6 +1454,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a 
 #testcase-mistake-roiling-sweat-text
 >sweat zozimus
 Don't sweat the extra words. Just sweat.
+
 #testcase-mistake-roiling-tawse
 >tawse
 You don't need that sort of weapon.
@@ -1345,6 +1480,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 #ttc-table-of-shuttle-hutlets-nudges-waste
 >waset
 The heaps are still technically waste, but you cleaned them up enough.
+
 #ttc-table-of-oyster-spechelp-heaps
 >heasp
 The heaps still look ugly as ever.
@@ -1383,6 +1519,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >abstract wipes to lean lane
+
 #+ttc-table-of-oyster-spechelp-lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
@@ -1409,6 +1546,7 @@ Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lo
 #ttc-table-of-oyster-done-rejects-heaps
 >heasp
 You figure the heaps are at a point where you can't change them for the better.
+
 #ttc-table-of-oyster-done-rejects-lance
 >lanec
 It's clean enough. You can't, like, make it sharper or anything.
@@ -1436,24 +1574,31 @@ Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm do
 #ttc-table-of-oyster-scannotes-paw-r-wrap
 >scan paw r wrap
 Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay.
+
 #ttc-table-of-sclerous-closures-nudges-closure
 >closuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-sclerous-closures-nudges-closures
 >closurse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-sclerous-closures-nudges-hedron
 >hedrno
 You'll probably need to destroy the hedron from within.
+
 #ttc-table-of-sclerous-closures-nudges-arch
 >arhc
 There's not just one arch, there's two. And they've made more than one person ache.
+
 #ttc-table-of-sclerous-closures-nudges-acher
 >achre
 There's not just one arch, there's two. And they've made more than one person ache.
+
 #ttc-table-of-sclerous-closures-nudges-sardine
 >sardien
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
+
 #ttc-table-of-oyster-spechelp-achers-chaser-arches
 >searhc
 Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
@@ -1484,12 +1629,15 @@ Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lo
 #+ttc-table-of-sclerous-closures-nudges-arch
 >arhc
 You already dealt with both arches--no need to deal with one.
+
 #+ttc-table-of-sclerous-closures-nudges-acher
 >achre
 You already dealt with both arches--no need to deal with one.
+
 #ttc-table-of-oyster-done-rejects-achers-chaser-arches
 >srecha
 Further searching proves fruitless.
+
 #ttc-table-of-oyster-spechelp-bogus-enlarge
 >gleanre
 The gleaner remains too small to read.
@@ -1504,6 +1652,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner.
 #ttc-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
+
 #ttc-table-of-oyster-scannotes-bogus-enlarge
 >scan general gleaner
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
@@ -1537,24 +1686,31 @@ Hmm! There's something more to do with the gleaner. You've gotten what you need,
 The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
 >part
 The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
+
 #testcase-mistake-roiling-tarp
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
+
 #ttc-table-of-horned-hedron-nudges-hedrno
 >hedron
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-horned-hedron-nudges-theses
 >thesse
 The hedron's spirit will remain intact even if you meddle there. You must go into its heart.
+
 #ttc-table-of-horned-hedron-nudges-these
 >thees
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
+
 #ttc-table-of-horned-hedron-nudges-tarp
 >tapr
 You think of changing the trap--maybe even a tarp! But what if the tarp enfolded you and became a trap that way? Scary! No, thinking of it as an ol' trap would make it less intimidating.
+
 #ttc-table-of-horned-hedron-nudges-walleye
 >walleey
 Just tacking one walleye won't change the crowd. They're past redemption, anyway.
+
 #ttc-table-of-horned-hedron-nudges-walleyes
 >walleyse
 The walleyes are a bad crowd, past redemption.
@@ -1565,9 +1721,11 @@ The walleyes are a bad crowd, past redemption.
 #ttc-table-of-rascal-craals-nudges-craals
 >craasl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-rascal-craals-nudges-craal
 >crala
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-oyster-spechelp-ruby
 >ruyb
 No, that's not quite it. The ruby dulls as if covered by dirt.
@@ -1588,6 +1746,7 @@ Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lo
 #ttc-table-of-rascal-craals-nudges-hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
+
 #ttc-table-of-oyster-done-rejects-thin-hint
 >yurb
 It was enough to bury the ruby.
@@ -1627,6 +1786,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage
 #ttc-table-of-oyster-nudges-howler
 >howlre
 A howler or haunter is not specific enough. This is a big ol' SAUSAGE, here.
+
 #ttc-table-of-oyster-scannotes-use-saga-sausage
 >scan use saga sausage
 The Use-Saga Sausage's moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it.
@@ -1652,15 +1812,18 @@ orned Hedron
 Score in a scenario: 35 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
 >gonear anger range
+
 #testcase-mistake-roiling-horse
 >horse
 A horse won't help you explore the Hedron.
+
 #testcase-mistake-roiling-hoser
 >hoser
 It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.
 >undo
 >undo
 >undo
+
 #ttc-table-of-oyster-spechelp-ol-trap
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
@@ -1674,9 +1837,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's
 
 >s
 >e
+
 #ttc-table-of-anger-range-nudges-hoser
 >hosre
 You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better.
+
 #ttc-table-of-anger-range-nudges-hero
 >heor
 You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better.
@@ -1697,10 +1862,11 @@ You discovered the portal. No need to look further.
 
 >in
 /^End Den
-#testcase-mistake-roiling-ned
 
+#testcase-mistake-roiling-ned
 >ned
 That was my pen name in Shuffling Around.
+
 #ttc-table-of-end-den-nudges-end
 
 >edn
@@ -1718,30 +1884,39 @@ You don't need to riff on any location names to win the game, unless there's not
 #ttc-table-of-den-loft-nudges-tenfold
 >tenfodl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 #ttc-table-of-den-loft-nudges-loft
 >lotf
 You should never need to riff on part of a location name, so that's one less thing to worry about, I hope.
+
 #ttc-table-of-den-loft-nudges-den
 >dne
 You should never need to riff on part of a location name.
+
 #ttc-table-of-den-loft-nudges-jumble
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess. Well, once the yapper's out of the way.
+
 #ttc-table-of-den-loft-nudges-stupid
 >stupdi
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
+
 #ttc-table-of-den-loft-nudges-papre
 >paper
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
+
 #ttc-table-of-den-loft-nudges-necklace
 >necklaec
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
+
 #ttc-table-of-den-loft-nudges-intercom
 >intercmo
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
+
 #ttc-table-of-den-loft-nudges-not
 >nto
 Changing the intercom to a ton-crime intercom would be the opposite of what you want to do.
+
 #ttc-table-of-den-loft-nudges-crime
 >criem
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
@@ -1759,9 +1934,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. T
 
 >derali
 The yapper might alert its cronies if you try anything. Even something not quite right, like that
+
 #ttc-table-of-oyster-scannotes-papery-yapper
 >scan papery yapper
 Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully.
+
 #testcase-mistake-roiling-redial
 >redial
 You can't even dial with the yapper around.
@@ -1792,9 +1969,11 @@ You need use the dialer meaningfully first.
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess.
 !yapper
+
 #ttc-table-of-oyster-readables-templar-ramplet
 >read ramplet
 Someone named LAMPERT carved their name in red in the templar ramplet.
+
 #ttc-table-of-oyster-spechelp-templar-ramplet
 >trampel
 There has to be a way to storm down the templar ramplet. But not that.
@@ -1894,6 +2073,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a 
 >dilrae
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
+
 #ttc-table-of-oyster-readables-dialer
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
@@ -1918,9 +2098,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a d
 #testcase-mistake-roiling-nips
 >nips
 You see red at the thought of voluntarily pricking yourself with pins.
+
 #testcase-mistake-roiling-snip-snip-pins
 >snip
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
+
 >snip pins
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
 #pre-dialer-redial rule retry
@@ -1959,8 +2141,8 @@ Score in a scenario: 44 out of 45 total points in the current region, Oyster. Th
 #ttc-table-of-oyster-done-rejects-lever
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
-#ttc-table-of-oyster-spechelp-bogus-derail
 
+#ttc-table-of-oyster-spechelp-bogus-derail
 >drilea
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.

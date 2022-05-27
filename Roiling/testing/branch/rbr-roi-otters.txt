@@ -67,6 +67,7 @@ DEBUG INFO: bleary barley hinting.
 You think you're on to something, but no--you can't find anything to focus on, thinking that.
 >stuflyf
 !You think you're on to something, but no--you can't find anything to focus on, thinking that.
+\\
 #testcase-mistake-roiling-id-mend-mend-id
 >id mend
 It's not that easy. Find what to mend.
@@ -198,17 +199,21 @@ Reorganizing the geography around the Edictal Citadel won't help.
 #ttc-table-of-otters-nudges-citadel
 >citadle
 Transform the whole Citadel? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there, with help and your powers back. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
+\\
 #testcase-mistake-roiling-end-u
 >end u
 No, end *U*!
 joke death
 >undo
+\\
 #testcase-mistake-roiling-dialect
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
+\\
 #ttc-table-of-otters-done-rejects-nude-dune
 >blarey
 You've dealt with the barley. You can move around a lot more, now.
+\\
 #ttc-table-of-otters-nudges-ly
 >yl
 Yup, that's the idea here in Otters.
@@ -223,24 +228,31 @@ DOUBLE PROBLEM FOR: rescind.
 #testcase-mistake-roiling-increds
 >increds
 You marvel at the possible power of the cinders and even see red at the thought of giving them up.
+\\
 #ttc-table-of-minded-midden-nudges-burtn
 >butnr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-minded-midden-nudges-dune
 >duen
 You can't really shift the dune, but you don't need to.
+\\
 #ttc-table-of-otters-nudges-cinder
 >cindre
 You'll need to change more than one cinder.
+\\
 #ttc-table-of-minded-midden-nudges-lyier
 >lyire
 Ed's full name, please!
+\\
 #ttc-table-of-minded-midden-nudges-reedi
 >reeid
 No, you need a couple more letters. Ones that make a word weak enough to control.
+\\
 #ttc-table-of-minded-midden-nudges-reedy
 >reeyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
+\\
 #ttc-table-of-otters-spechelp-cinders
 >cindesr
 The cinders glow and even warm up for a bit.
@@ -255,6 +267,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's 
 #ttc-table-of-otters-readables-cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
+\\
 #ttc-table-of-otters-scannotes-cinders
 >scan cinders
 Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely.
@@ -263,15 +276,19 @@ Hm, that's weird. Your sci-nerd side says perhaps there are two things you can d
 #ttc-table-of-minded-midden-nudges-steward
 >stewadr
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
+\\
 #ttc-table-of-minded-midden-nudges-asteward
 >astewadr
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
+\\
 #ttc-table-of-minded-midden-nudges-rye
 >rey
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
+\\
 #ttc-table-of-minded-midden-nudges-lied
 >lide
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
+\\
 #ttc-table-of-minded-midden-nudges-sandwich
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
@@ -291,12 +308,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a d
 #testcase-mistake-roiling-lied-2
 >lied
 You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
+\\
 #testcase-mistake-roiling-reedy
 >reedy
 No, the adverb.
+\\
 #testcase-mistake-roiling-yer
 >yer
 Yup! It's Ed's!
+\\
 #testcase-mistake-roiling-idle
 >idle
 Ed Riley looks pleased he's pressured you into laziness.
@@ -333,6 +353,7 @@ The deli rye smells good, but Ed won't share.
 @max
 >rescind
 by one point
+\\
 #ttc-table-of-region-initial-scoring-commentary-otters-2
 >reedily
 Barley, reedily. The cinders are probably the exception to the rule. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now.
@@ -358,12 +379,14 @@ There are three unblocked exits: north, south and west.
 
 @nud
 >n
+\\
 #ttc-table-of-shiner-shrine-nudges-remote
 >remoet
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 >s
+\\
 #ttc-table-of-clarthead-cathedral-nudges-jolti
 >ojlti
 No, you need a couple more letters. Ones that make a word weak enough to control.
@@ -415,6 +438,7 @@ Being outnumbered, maybe you can attack their arguments instead.
 @mis
 ##balance undos
 >allrand
+\\
 #testcase-mistake-roiling-indiscretely
 >indiscretely
 Yes, yes, I am being pedantic here. But discreet and discrete are different enough.
@@ -424,174 +448,217 @@ Yes, yes, I am being pedantic here. But discreet and discrete are different enou
 @nud
 ##balance undos
 >allrand
+\\
 #ttc-table-of-disowned-downside-nudges-angri
 >angir
 No, you need a couple more letters. Ones that make a word weak enough to control.
+\\
 #ttc-table-of-disowned-downside-nudges-angry
 >angyr
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-bossi
 >bosis
 No, you need a couple more letters. Ones that make a word weak enough to control.
+\\
 #ttc-table-of-disowned-downside-nudges-bossy
 >bosys
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-nasti
 >nasit
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-nasty
 >nasyt
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-seedi
 >seeid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-seedy
 >seeyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-shadi
 >shaid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-shady
 >shayd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-snide
 >snied
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-stark
 >stakr
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-terse
 >teres
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-tacit
 >tacti
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-catty
 >catyt
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-teari
 >teair
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-teary
 >teayr
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-bleari
 >bleair
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-bleayr
 >bleary
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-ribald
 >ribadl
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-formal
 >formla
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-coital
 >coitla
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-modest
 >modets
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-shabbi
 >shabib
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-shabby
 >shabyb
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-shoddi
 >shodid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-shoddy
 >shodyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-silent
 >siletn
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-steami
 >steaim
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-steamy
 >steaym
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-sudden
 >suddne
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-stupdi
 >stupid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-martial
 >martila
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-sincere
 >sinceer
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-sobbing
 >sobbign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-tedious
 >tediosu
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-wearing
 >wearign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-desperate
 >desperaet
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-drawling
 >drawlign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-emotional
 >emotionla
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-reactive
 >reactiev
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-despairing
 >despairign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
+\\
 #ttc-table-of-disowned-downside-nudges-indiscreet
 >indiscrete
 No, you need a couple more letters. Ones that make a word weak enough to control.
@@ -608,6 +675,7 @@ Your powers aren't back yet, but if they were, that'd definitely tip the players
 >although
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
 !by one point
+\\
 #ttc-table-of-otters-prefigurings-ghoul-hat
 >pf
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
@@ -620,6 +688,7 @@ That feels right, but it also feels like you're getting way ahead of yourself, t
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
 !by one point
+\\
 #ttc-table-of-otters-prefigurings-sea-cube
 >pf
 You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
@@ -656,29 +725,38 @@ Ick, man. Mackin'. You really don't want to pay attention to the details, but yo
 #testcase-mistake-roiling-slap-em
 >slap em
 Violence is not the answer! Be clever, here.
+\\
 #testcase-mistake-roiling-slap-me
 >slap me
 That's kind of a silly way to motivate yourself.
+\\
 #ttc-table-of-disowned-downside-nudges-downside
 >downsied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-disowned-downside-nudges-sample
 >sampel
 No need to change the maples. They are the least dreary part of the Downside.
+\\
 #ttc-table-of-disowned-downside-nudges-maple
 >mapel
 No need to change the maples. They are the least dreary part of the Downside.
+\\
 #ttc-table-of-otters-readables-sample-maples
 >read sample maples
 On one, you read: "Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage."
+\\
 #ttc-table-of-disowned-downside-nudges-gretta
 >gretat
 Enough people are trying to manipulate Gretta. Deal with them directly.
+\\
 ###############generic rejects. Most mack ideas should give this.
 >bossiyl
 You feel you're on the right track to expose the players. But that's not quite it.
+\\
 >angriyl
 You feel you're on the right track to expose the players. But that's not quite it.
+\\
 >bleariyl
 You feel you're on the right track to expose the players. But that's not quite it.
 
@@ -824,17 +902,21 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #here is where we test all the possible mack ideas with ambiguous cheat-scans
 ##balance undos
 >allrand
+\\
 #ttc-table-of-otters-scannotes-t-tearily-irately
 >scan ttearily
 Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways.
+\\
 #ttc-table-of-otters-scannotes-t-formally
 >undo
 >scan tformally
 Two question marks in nine letters--well, seven--might be a little sticky. The parleys splayer players said two things.
+\\
 #ttc-table-of-otters-scannotes-t-silently
 >undo
 >scan tsilently
 Wow! Three things to consider here. This might be tricky.
+\\
 #ttc-table-of-otters-scannotes-t-steamily
 >undo
 >scan tsteamily
@@ -980,15 +1062,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 ##balance undos
 >sparely
 by one point
+\\
 #ttc-table-of-otters-done-rejects-parleys-splayer-players
 >sparely
 You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
+\\
 #ttc-table-of-disowned-downside-nudges-amcks
 >macsk
 Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
+\\
 #ttc-table-of-disowned-downside-nudges-amck
 >makc
 If you messed with one mack, the others would gang up on you. Work on the argument, instead.
+\\
 #+ttc-table-of-disowned-downside-nudges-parley
 >arpley
 You needed to deal with all the players to knock them back a peg.
@@ -1005,6 +1091,7 @@ You needed to deal with all the players to knock them back a peg.
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
 #brackets ok
 ![You add the information to your pedanto-notepad under FLIPS.]
+\\
 #ttc-table-of-otters-prefigurings-eels
 >pf
 You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
@@ -1016,6 +1103,7 @@ You can tell the eels in the sea cube BECAUSE once you have material evidence yo
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
 #brackets ok
 ![You add the information to your pedanto-notepad under FLIPS.]
+\\
 #+ttc-table-of-otters-prefigurings-ghoul-hat
 >pf
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
@@ -1154,6 +1242,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >read laya
 #OK-APOSTROPHE
 /One of the two designers' names is (Clay Laut|Lucy Lata)\.
+\\
 #ttc-table-of-otters-spechelp-cut-ya-all-cult-laya
 >actualyl
 The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
@@ -1182,6 +1271,7 @@ The maples are harmless.
 >atom
 That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.
 !by one point
+\\
 #ttc-table-of-otters-prefigurings-atmo-moat
 >pf
 You can collapse the atmo moat to an ATOM once you have the power.
@@ -1190,6 +1280,7 @@ You can collapse the atmo moat to an ATOM once you have the power.
 #pre-medals-quickly rule
 >quickly
 You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
+\\
 #ttc-table-of-otters-prefigurings-medals
 >pf
 The medals can help you go QUICKLY once they are restored enough.
@@ -1210,6 +1301,7 @@ DEBUG INFO: damsel medals hinting.
 #ttc-table-of-otters-anagrams-although
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+\\
 #ttc-table-of-otters-anagrams-ergo
 >although
 As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
@@ -1301,31 +1393,40 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-mistake-roiling-slee
 >slee
 The eels aren't what needs to be reduced to rubble, here.
+\\
 #testcase-mistake-roiling-lees
 >lees
 The eels would be insulted to be referred to as dregs.
+\\
 #testcase-mistake-roiling-polo
 >polo
 No time for games! You don't have your powers back, anyway. Rather than change the water, change what's in it.
+\\
 #ttc-table-of-loop-pool-nudges-pool
 >ploo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-loop-pool-nudges-allot
 >allto
 You don't need to change it, and the eels might not like it if you did.
+\\
 #ttc-table-of-loop-pool-nudges-wier
 >wire
 The wire weir doesn't need to be changed.
+\\
 #ttc-table-of-loop-pool-nudges-sea
 >eas
 The sea cube is unmoved. You may need to concentrate on the whole thing.
+\\
 #ttc-table-of-loop-pool-nudges-cube
 >cueb
 The sea cube is unmoved. You may need to concentrate on the whole thing.
+\\
 #ttc-table-of-otters-spechelp-sea-cube
 >sea cueb
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: while some words are rather long, you probably see how to guess a letter or two even when you've got your powers back.
+\\
 >beecaus
 The sea cube shakes a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
@@ -1339,6 +1440,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's
 >seacueb
 The sea cube shakes a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
+\\
 #ttc-table-of-otters-spechelp-eels
 >eesl
 The eels swim a bit faster.
@@ -1354,6 +1456,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a d
 >else
 You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
 !by one point
+\\
 #+ttc-table-of-otters-prefigurings-eels
 >pf
 You can tell the eels ELSE once you've made progress with the sea cube.
@@ -1411,6 +1514,7 @@ Be nice. They're on your side.
 #ttc-table-of-otters-done-rejects-eels
 >eesl
 The eels have done enough.
+\\
 #+ttc-table-of-loop-pool-nudges-allot
 >allto
 You already made it there, and you don't need to go back.
@@ -1446,6 +1550,7 @@ min-up
 #ttc-table-of-otters-scannotes-sullenness-us
 >scan sullenness us
 The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier.
+\\
 #ttc-table-of-otters-readables-sullenness-us
 >read sullenness us
 You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN.
@@ -1478,12 +1583,15 @@ Yup, that's the idea here in Otters, even with your powers back.
 #ttc-table-of-otters-nudges-iq
 >qi
 No, it's a combination of what's on both medals.
+\\
 #ttc-table-of-otters-nudges-lucky
 >lucyk
 No, it's a combination of what's on both medals.
+\\
 #ttc-table-of-otters-nudges-medal
 >medla
 It's what the medals say that makes them special.
+\\
 #ttc-table-of-otters-nudges-medals
 >medasl
 It's what the medals say that makes them special.
@@ -1591,6 +1699,7 @@ DEBUG INFO: min-up codepath
 #verbcase listen-otters-if-vow-here-is-touchable
 >listen
 You see red as you hear some nonsense repeated: "Eeh, row V!"
+\\
 #+ttc-table-of-otters-attacks-mr-lee
 >attack mr lee
 Be nice. He's on your side.
@@ -1617,9 +1726,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-otters-nudges-vow
 >vwo
 The whole vow here.
+\\
 #ttc-table-of-otters-nudges-here
 >heer
 The whole vow here.
+\\
 #testcase-mistake-roiling-whoever
 >whoever
 You wonder whoever could be saying the vow here. You suspect you are very close and very far at once.
@@ -1806,9 +1917,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-mistake-roiling-implys
 >implys
 You will have to be subtle here, but you'll want to work on actions, instead.
+\\
 #testcase-mistake-roiling-rhines
 >rhines
 You don't need a river or two impeding your progress.
+\\
 #testcase-mistake-roiling-green-lady
 >green lady
 You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.
@@ -1947,6 +2060,7 @@ The path north is cleared, and you feel ready to challenge yourself there.
 #ttc-table-of-lamer-realm-nudges-low
 >lwo
 You probably want the owls not to swoop low. And you'll want to take care of them all.
+\\
 #ttc-table-of-otters-spechelp-owls
 >owsl
 Hmm. The owls still swarm and swirl too fast.
@@ -2041,21 +2155,27 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-lamer-realm-nudges-lamer
 >lamre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-lamer-realm-nudges-ocelot
 >ocelto
 The ocelots are sticking together. You don't want or need to pick one off.
+\\
 #ttc-table-of-lamer-realm-nudges-saturnic
 >saturnci
 The curtains are too solid to change.
+\\
 #ttc-table-of-lamer-realm-nudges-aturnic
 >aturnci
 Even one curtain is too solid to change.
+\\
 #ttc-table-of-lamer-realm-nudges-shades
 >shadse
 You're not here to mess with fashion. Plus, the shades were last game.
+\\
 #ttc-table-of-lamer-realm-nudges-clipons
 >cliposn
 The ocelots would still be awkward even if they lost the clip-ons.
+\\
 #ttc-table-of-otters-spechelp-ocelots
 >ocelost
 The ocelots squint at you through their clip-ons.
@@ -2103,19 +2223,25 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. Tha
 #testcase-mistake-roiling-ratsy
 >ratsy
 You don't want a rat on your side. Or someone who says rats too much.
+\\
 #testcase-mistake-roiling-stary
 >stary
 What good would the satyr be, staring all the time?
+\\
 #testcase-mistake-roiling-ape-lord-apelord
 >ape lord
 You can't change what the leopard is, but you need to release it from its captivity.
+\\
 >apelord
 You can't change what the leopard is, but you need to release it from its captivity.
+\\
 #testcase-mistake-roiling-preload-pre-load-pre-load
 >preload
 The leopard is plenty powerful as-is, but you need to get it on your side.
+\\
 >pre load
 The leopard is plenty powerful as-is, but you need to get it on your side.
+\\
 >pre load
 The leopard is plenty powerful as-is, but you need to get it on your side.
 
@@ -2191,6 +2317,7 @@ Your score has just gone up by one point
 #ttc-table-of-otters-scannotes-stray-satyr
 >scan stray satyr
 The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
+\\
 #ttc-table-of-otters-readables-stray-satyr
 >read stray satyr
 You see TSYRA branded in red under the stray satyr's shoulder.
@@ -2217,15 +2344,19 @@ The leopard is plenty powerful as-is, and it's already on your side.
 The leopard is plenty powerful as-is, and it's already on your side.
 >pre load
 The leopard is plenty powerful as-is, and it's already on your side.
+\\
 #testcase-mistake-roiling-barged
 >barged
 You don't want the badger to have barged into you. Clothed or not.
+\\
 #testcase-mistake-roiling-trays
 >trays
 You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)
+\\
 #+testcase-mistake-roiling-ape-lord-apelord
 >ape lord
 You already changed the leopard.
+\\
 >apelord
 You already changed the leopard.
 
@@ -2246,18 +2377,23 @@ You can only go back south. The Blest Belts are private to animals and those who
 #+ttc-table-of-lamer-realm-nudges-shades
 >shadse
 You're not here to mess with fashion. Plus, the shades were last game.
+\\
 #ttc-table-of-lamer-realm-nudges-kool
 >kolo
 You're not here to mess with fashion.
+\\
 #ttc-table-of-lamer-realm-nudges-blest
 >blets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-lamer-realm-nudges-belt
 >betl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #testcase-mistake-roiling-b-grade-bgrade
 >b grade
 The badger already feels second-rate, so you need another way to help it.
+\\
 >bgrade
 The badger already feels second-rate, so you need another way to help it.
 
@@ -2545,12 +2681,15 @@ You feel jolted as you go that way. You may not be able to see it, but you know 
 #testcase-mistake-roiling-penis
 >penis
 Huh huh huh, Beavis. That was cool.
+\\
 #+testcase-mistake-roiling-penis
 >penis
 Dammit, Beavis. You like have a game to solve.
+\\
 #testcase-mistake-roiling-spine
 >spine
 You don't need to grow a spine. You've gotten this far.
+\\
 #testcase-mistake-roiling-shorten
 >shorten
 Well--not shorten, but break it down...you see red from the effort.
@@ -2566,9 +2705,11 @@ The parrot can be changed back into a raptor, but not into anything new.
 #ttc-table-of-otters-readables-whistle
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
+\\
 #ttc-table-of-otters-nudges-weltish
 >witlesh
 You can't do anything to the whistle until you have it.
+\\
 #ttc-table-of-otters-spechelp-weltish-whistle
 >epelyd
 Probably best to have the whistle before changing it.
@@ -2583,24 +2724,31 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle.
 #ttc-table-of-perverse-preserve-nudges-preserve
 >preserev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-perverse-preserve-nudges-pine
 >pien
 So many pines, hard to pick one. Might as well take care of them all.
+\\
 #ttc-table-of-perverse-preserve-nudges-nail
 >nali
 So many nails, hard to pick one. Might as well take care of them all.
+\\
 #ttc-table-of-perverse-preserve-nudges-critters
 >crittesr
 The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
+\\
 #ttc-table-of-perverse-preserve-nudges-critter
 >crittre
 The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
+\\
 #ttc-table-of-perverse-preserve-nudges-raccoon
 >raccono
 The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn't really important.
+\\
 #ttc-table-of-perverse-preserve-nudges-throne
 >throen
 There's more than one throne, but it doesn't matter, really, for what you need to do.
+\\
 #ttc-table-of-otters-spechelp-thrones
 >thronse
 The thrones seem to buzz a bit.
@@ -2779,9 +2927,11 @@ DEBUG INFO: damsel medals hinting.
 #+testcase-mistake-roiling-slain-as-nil
 >as nil
 Not the way to save the animals, surprisingly.
+\\
 #+testcase-mistake-roiling-shorten
 >shorten
 They're more likely to shorten you with a few stings.
+\\
 #+ttc-table-of-perverse-preserve-nudges-raccoon
 >raccono
 No need to tweak the rac(c)oon again. It's fine as is.
@@ -2824,12 +2974,15 @@ No. The parrot's here to help.
 #ttc-table-of-perverse-preserve-nudges-uprate
 >upraet
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-perverse-preserve-nudges-uprates
 >upratse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-perverse-preserve-nudges-lit
 >lti
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
+\\
 #ttc-table-of-perverse-preserve-nudges-tail
 >tali
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
@@ -2948,12 +3101,14 @@ You can change the parrot back to a RAPTOR to defeat a formidable foe.
 #pre-whistle-deeply rule
 >deeply
 !by one point
+\\
 #ttc-table-of-otters-prefigurings-whistle
 >pf
 You can play the whistle DEEPLY once the parrot has given it to you.
 #pre-whistle-deeply rule retry
 >deeply
 The parrot still has the whistle. You can't play the whistle until it's yours.
+\\
 #+ttc-table-of-otters-prefigurings-whistle
 >pf
 You can play the whistle DEEPLY once the parrot has given it to you.
@@ -2995,24 +3150,31 @@ The only way you seem to be able to go is east to Disowned Downside.
 #ttc-table-of-reclusion-inclosure-nudges-inclosure
 >inclosuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-enclosure
 >enclosuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
 #testcase-mistake-roiling-drobe
 >drobe
 That's pretty much their whole drobe. You're not here to talk fashion, anyway.
+\\
 #testcase-mistake-roiling-cornelius
 >cornelius
 You don't know if someone named Cornelius would help or hurt you.
+\\
 #testcase-mistake-roiling-coins-lure
 >coins lure
 /(Elmer and Merle|Merle and Elmer) look around greedily for a second.
+\\
 #testcase-mistake-roiling-nicer-soul
 >nicer soul
 /(Elmer and Merle|Merle and Elmer) are beyond redemption.
+\\
 #testcase-mistake-roiling-rule-scion
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
+\\
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 
@@ -3060,58 +3222,73 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-reclusion-inclosure-nudges-monstery
 >monsteyr
 You can't change the inclosure. It's what's to the west that needs changing.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-monastery
 >monasteyr
 You can't change the inclosure. It's what's to the west that needs changing.
+\\
 #ttc-table-of-otters-nudges-eelmr
 >eelrm
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-sober
 >sobre
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
+\\
 #ttc-table-of-reclusion-inclosure-nudges-bored
 >borde
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
+\\
 #ttc-table-of-reclusion-inclosure-nudges-bore
 >boer
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
+\\
 #ttc-table-of-reclusion-inclosure-nudges-scowl
 >scolw
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
+\\
 #ttc-table-of-reclusion-inclosure-nudges-cowl
 >colw
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
+\\
 #ttc-table-of-reclusion-inclosure-nudges-alcoves
 >alcovse
 It'll take more to destroy the whole citadel and not just the alcoves or coevals.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-alcove
 >alcoev
 It'll take more to destroy the whole citadel and not just the alcove or coeval.
+\\
 #ttc-table-of-otters-nudges-hydra
 >hydar
 !You try, but that doesn't do anything with, or to, the hydra to the west.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-laminas
 >laminsa
 You can't change them, and even if you could, Elvira would probably be alerted.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-lamina
 >lamian
 You can't change them, and even if you could, Elvira would probably be alerted.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-forces
 >forcse
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-forec
 >forec
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
+\\
 #ttc-table-of-reclusion-inclosure-nudges-idea
 >idae
 You might be able to disrupt both of them, not just one.
@@ -3122,6 +3299,7 @@ You might be able to disrupt both of them, not just one.
 Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
 >scan merle
 !Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+\\
 #ttc-table-of-otters-spechelp-aside-llp
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
@@ -3174,6 +3352,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 >read holy nest
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
+\\
 #ttc-table-of-otters-spechelp-holy-nest
 >honestyl
 The holy nest flutters silently.
@@ -3189,11 +3368,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That'
 >w
 >hydar
 You try, but that doesn't do anything with, or to, the hydra to the west.
+\\
 #+ttc-table-of-reclusion-inclosure-nudges-bored
 >brode
 That's just focusing on the trappings of
 being ideas aides
 and anyway, you pushed
+\\
 #ttc-table-of-reclusion-inclosure-nudges-ideas
 >edsia
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. Maybe there's another way to pull their chain, though.
@@ -3261,9 +3442,11 @@ The cinders are gone for good.
 #+ttc-table-of-reclusion-inclosure-nudges-idea
 >idae
 You already pushed them aside.
+\\
 #ttc-table-of-otters-done-rejects-parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
+\\
 #+ttc-table-of-reclusion-inclosure-nudges-ideas
 >aseid
 /(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
@@ -3506,15 +3689,18 @@ The only way you seem to be able to go is east to Hidings Dishing Shindig.
 #+testcase-mistake-roiling-coins-lure
 >coins lure
 You're not after loot right now.
+\\
 #+testcase-mistake-roiling-nicer-soul
 >nicer soul
 Yes, you are. But you need to be a braver soul and go west.
+\\
 #+testcase-mistake-roiling-rule-scion
 >rule scion
 That's what you're trying to stop, here.
 !Besides,
 !wouldn't trust your word, anyway.
 #!Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
+\\
 #+ttc-table-of-otters-nudges-hydra
 >hydar
 The hydra's toast. Elvira is not. Deal with her.
@@ -3532,6 +3718,7 @@ Elvira summons her monsters to attack as you learn to play the whistle. "Sorries
 #+ttc-table-of-otters-nudges-weltish
 >whistel
 You don't see anything happen. Then you note red writing on the whistle which might tell more about it.
+\\
 #+ttc-table-of-otters-spechelp-weltish-whistle
 >deepyl
 The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
@@ -3555,6 +3742,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-mistake-roiling-aliver
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
+\\
 #ttc-table-of-otters-done-rejects-medals
 >ickqlyu
 You already got a boost from the medals.
@@ -3583,78 +3771,101 @@ Just PLAY THE WHISTLE to defeat her.
 #+ttc-table-of-otters-nudges-weltish
 >iswelth
 You already figured how to play the whistle.
+\\
 #ttc-table-of-otters-done-rejects-whistle
 >deepyl
 The whistle's already in tune.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-crone
 >croen
 You can't do much with Elvira's "real" name. Or her ex-hydra's. You need to act.
+\\
 #+testcase-mistake-roiling-aliver
 >aliver
 For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.
 QUIT, or UNDO the last command.
 >undo
+\\
 #testcase-mistake-roiling-drop-it
 >drop it
 For whatever reason, you just decide to give up. Elvira cackles. "I knew you'd see it my way." You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.
 joke death
 >undo
+\\
 #testcase-mistake-roiling-prod-it
 >prod it
 You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.
 joke death
 >undo
+\\
 #testcase-mistake-roiling-sherpa
 >sherpa
 You don't need someone to help you climb. You need help fighting Elvira.
+\\
 #testcase-mistake-roiling-charon
 >charon
 The Rancho won't change to the river of the dead just like that, but on the other hand, if you wait around, you'll get to see the river of the dead once Elvira takes action.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-archon
 >rancoh
 It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-tripod
 >tripdo
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-becharm
 >bechamr
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-nacht
 >nacth
 It's annoying and unswayable, like most chants.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-stocked
 >stockde
 You can't release any prisoners from the stockade THAT easily. You'd need an army.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-vats
 >vast
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-vat
 >vta
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-moisture
 >moistuer
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-pyre
 >pyer
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-stockade
 >stockaed
 You can't release any prisoners from the stockade THAT easily. You'd need an army.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-warship
 >warshpi
 You have enough to think about without one more of Elvira's machines.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-amulet
 >amulte
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-ultimate
 >ultimaet
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-shaper
 >shapre
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-purple
 >purpel
 You have enough to think about without one more of Elvira's machines.
+\\
 #ttc-table-of-rancho-archon-anchor-nudges-oranger
 >orangre
 You have enough to think about without one more of Elvira's machines.

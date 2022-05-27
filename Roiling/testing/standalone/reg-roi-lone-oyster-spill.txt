@@ -78,6 +78,7 @@ HOW PILLS WERE USED: LEAP by the plea.
 !NO PILL USE MESSAGE FO
 
 >z
+
 #ttc-table-of-oyster-anagrams-spike
 #ttc-table-of-oyster-anagrams-scrap
 /DEBUG INFO: Spilling (pikes|carps).
@@ -115,6 +116,7 @@ MISSES will show Instead of spilling the pills, you could've tried to TUTOR Tort
 >eat
 by one point
 >scam 2
+
 #ttc-table-of-oyster-anagrams-tutor
 DEBUG INFO: Spilling trout.
 DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TUTOR the trout.

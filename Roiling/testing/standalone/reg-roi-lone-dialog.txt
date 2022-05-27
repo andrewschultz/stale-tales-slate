@@ -403,6 +403,7 @@ You examine the backside of the settler and note how Yorpwald lines up with Word
 [2] Finish Fishin'.
 
 >undo
+
 #ttc-table-of-elmo-comments-trial-trail-quip
 >2
 DEBUG INFO: trial-trail-quip enabled.

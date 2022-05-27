@@ -67,6 +67,7 @@ Taverns are generally meant to make you forget compass directions, among other t
 >out
 Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out.
 >undo
+
 #testcase-exits-loftier-trefoil
 >exits
 You probably aren't going anywhere until Rodney does, first.
@@ -165,6 +166,7 @@ There are two unblocked exits: south to Topside Deposit and west.
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
 
 >w
+
 #ttc-table-of-towers-nowheres-outer-route
 >w
 You get lost in the sway-ways a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
@@ -173,6 +175,7 @@ You get lost in the sway-ways a bit. And it's fun for a while, until you realize
 >undo
 
 >s
+
 #+ttc-table-of-towers-nowheres-topside-deposit
 >e
 The Wildest Wilteds are too dangerous any way but back north.
@@ -717,6 +720,7 @@ The only way you seem to be able to go is south to Anemic Cinema.
 >push repeat
 
 >gonear shaven havens
+
 #ttc-table-of-towers-nowheres-shaven-havens
 >e
 You wander off, but you hear hikers shriek "Shrike! Shrike!"
@@ -855,6 +859,7 @@ Trying to cross languages and make this Swears-Wasser does no good.
 Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
+
 #ttc-table-of-goto-sectioning-rawest-waster-waters-3--
 >gt waters
 The Rawest Waster Waters of Leak Lake would probably be even less fun the second time around.
@@ -863,11 +868,13 @@ The Rawest Waster Waters of Leak Lake would probably be even less fun the second
 >undo
 >undo
 >undo
+
 #ttc-table-of-towers-nowheres-rawest-waster-waters
 >e
 You'll never reach the Earnest Eastern Neaters with physical exertion. A bit of magic.
 >n
 That'd only make the Earnest Eastern Neaters further away.
+
 #testcase-outside-rawest-waster-waters
 >out
 You know you need to exit, but you need to change things so an exit's more accessible.
@@ -915,6 +922,7 @@ The scaly clays are too treacherous. You need to find the word to restore the cu
 >out
 The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
 >undo
+
 #testcase-exits-mislit-limits
 >exits
 You don't have to go anywhere before changing the Curst Palace, although the serpent guards a dwelling.

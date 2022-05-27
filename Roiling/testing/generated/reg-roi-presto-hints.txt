@@ -104,6 +104,7 @@ You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and
 >n
 DEBUG INFO: Nowt Town hinting.
 !DEBUG INFO: volt maze.
+
 #ttc-table-of-presto-anagrams-wont
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
@@ -129,6 +130,7 @@ DEBUG INFO: boing-go bin hinting.
 >get popgun
 
 DEBUG INFO: boing-go bin hinting.
+
 #+ttc-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
@@ -313,6 +315,7 @@ Score in a scenario: 19 out of 41 total points in the current region, Presto. Lo
 
 >so long
 by one point
+
 #ttc-table-of-presto-hint-request-rejects-log-ons-letters
 >hint log ons letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.

@@ -70,6 +70,7 @@ You have 4 of 47 total points for the post-Elvira Others region, though you only
 
 >son 1
 Giving you the coin.
+
 #ttc-table-of-others-anagrams-icon
 >gx coin
 You see the coin could become an ICON. The aftertaste of arugula finally dissipates.
@@ -83,6 +84,7 @@ Nothing happens. Maybe try to see through something else.
 >undo
 >son 3
 Giving you the coins.
+
 #ttc-table-of-others-anagrams-sonic-icons
 >gx coins
 You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.

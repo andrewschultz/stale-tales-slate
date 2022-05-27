@@ -110,6 +110,7 @@ Okay. I'll ask again in a few moves, if you haven't figured anything yet.
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-routes
 >n
 This region focuses on prepositions.
@@ -173,6 +174,7 @@ So here is a one-time general guideline on what to do in this area: one word wil
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-troves
 >n
 This region focuses on passive verbs.
@@ -243,6 +245,7 @@ So here is a one-time general guideline on what to do in this area: one word of 
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-presto
 >n
 This region focuses on interjections.
@@ -297,6 +300,7 @@ So here is a one-time general guideline on what to do in this area: one word wil
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-oyster
 >n
 This region focuses on active verbs.
@@ -353,6 +357,7 @@ So here is a one-time general guideline on what to do in this area: one final wo
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-towers
 >n
 This region focuses on adjectives.
@@ -401,6 +406,7 @@ So here is a one-time general guideline on what to do in this area: while some w
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-otters
 >n
 This region focuses on adverbs (weakest, due to lost powers).
@@ -423,6 +429,7 @@ by one point
 >play whistle
 >au 0
 >play whistle
+
 #ttc-table-of-ranks-9
 REPOSED DEPOSER
 
@@ -452,6 +459,7 @@ So here is a one-time general guideline on what to do in this area: you may need
 >n
 
 >au 2
+
 #ttc-table-of-region-spoilers-others
 >n
 This region focuses on anagrammable fruits.
@@ -538,6 +546,7 @@ Enter the Throes Hoster for the final region.
 rank of Errantries Restrainer
 
 >purloin droll dollar
+
 #+ttc-table-of-ranks-11
 >score
 rank of Procured Producer

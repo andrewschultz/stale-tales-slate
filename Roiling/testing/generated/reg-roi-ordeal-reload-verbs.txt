@@ -69,6 +69,7 @@ You haven't made a way out yet.
 #verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-study-is-dark
 >smell
 That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.
+
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-dusty-study-is-not-lit
 >listen
 Nobody's going to whisper a hint to you in the dark.
@@ -188,6 +189,7 @@ You go back down to the closets, not able to figure the pram yet.
 >undo
 >ramp
 by one point
+
 #+testcase-exits-highest-heights
 >exits
 There are two unblocked exits: down and inside to Dusty Study.

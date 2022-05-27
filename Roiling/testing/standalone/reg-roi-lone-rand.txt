@@ -47,6 +47,7 @@ Another book you won't read. (table of random books)
 
 >x chair
 >get notepad
+
 #ttc-table-of-megachatter-table-of-ad-slogans
 >x ads
 (table of ad slogans)
@@ -67,25 +68,32 @@ Another book you won't read. (table of random books)
 >lamp
 
 >x trash
+
 #ttc-table-of-megachatter-table-of-lame-computer-games
 >g
 (table of lame computer games)
+
 #ttc-table-of-megachatter-table-of-bad-rappers
 >g
 (table of bad rappers)
+
 #ttc-table-of-megachatter-table-of-lousy-hit-songs
 >g
 (table of lousy hit songs)
+
 #ttc-table-of-megachatter-table-of-oldies-singers
 >g
 (table of oldies singers)
 >g
+
 #ttc-table-of-megachatter-table-of-comedians
 >g
 (table of comedians)
+
 #ttc-table-of-megachatter-table-of-lame-movies
 >g
 (table of lame movies)
+
 #ttc-table-of-megachatter-table-of-lame-tv-shows
 >g
 (table of lame tv shows)
@@ -140,6 +148,7 @@ And the rubbish biopics, good
 
 >1
 >1
+
 #ttc-table-of-megachatter-table-of-elmo-emo
 >1
 You listen about (table of elmo emo)
@@ -348,6 +357,7 @@ Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can
 >ramble
 
 >au 0
+
 #ttc-table-of-megachatter-table-of-songs-you-could-write
 >recant
 Your condensed rise to the top of this business business makes you efficient at doing enough nothing. Well, nothing profitable. You write wistful songs that someone has to like, surely: (table of songs you could write)
@@ -554,6 +564,7 @@ GO HUNT A HANGOUT
 >yonder
 
 >purloin gizmo
+
 #ttc-table-of-megachatter-table-of-gizmo-parts
 >x gizmo
 the (table of gizmo parts)
@@ -645,6 +656,7 @@ or (table of gizmo parts)
 >quickly
 >w
 >7
+
 #ttc-table-of-megachatter-table-of-elvira-taunts
 >e
 Elvira mocks you, but makes no attack: (table of Elvira taunts)
@@ -652,6 +664,7 @@ Elvira mocks you, but makes no attack: (table of Elvira taunts)
 >w
 
 >au 0
+
 #ttc-table-of-megachatter-table-of-elvira-battle-cries
 #ttc-table-of-megachatter-table-of-elvira-machines
 #ttc-table-of-megachatter-table-of-animal-friends
@@ -709,6 +722,7 @@ Selly yells:
 >undo
 
 >gonear sparse spares
+
 #ttc-table-of-megachatter-table-of-three-way-anagrams
 >x satires
 You see rough notes: (table of three way anagrams)
