@@ -56,11 +56,13 @@ Yorpwald's already got a St. Lip-Split.
 #verbcase swear-routes-if-location-of-player-is-cleric-circle
 >bother
 Only, uh, unholy. You can curse anywhere else except here without repercussion.
+
 #verbcase swear-routes-if-location-of-player-is-cleric-circle-if-curse-warned-is-false
 >bother
 A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!
 UNDO
 >undo
+
 #verbcase listen-routes-if-player-is-in-cleric-circle
 >listen
 Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
@@ -137,6 +139,7 @@ Your score has just gone up by one point
 #verbcase goto-routes-if-gast-is-in-same-mesa 3
 >gt adobe
 You can't run from Ian Gast!
+
 #verbcase listen-routes-if-player-is-in-same-mesa-if-gast-is-touchable
 #verbcase listen-routes-if-noun-is-gast
 #verbcase listen-routes-if-noun-is-tirades
@@ -157,6 +160,7 @@ Your score has just gone up by one point
 #verbcase listen-routes-if-noun-is-gast-if-woe-bow-bell-is-touchable
 >listen gast
 You can't hear Ian Gast over the WOE BOW BELL.
+
 #verbcase listen-routes-if-noun-is-woe-bow-bell
 >listen bell
 Through the WOE BOW BELL's resonance, you think you could hear something if you listen carefully.
@@ -361,6 +365,7 @@ Looks like you will need to figure a way to move forward without directions. You
 
 >without
 It's always tough to figure how to ignore stuff.
+
 #verbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hog and the ewe.
@@ -374,7 +379,8 @@ Your score has just gone up by one point
 Less noisy now you've been peacemaking a bit.
 >without
 It's always tough to figure how to ignore stuff.
-#reverbcase listen-routes-if-player-is-in-sonancy-canyons
+
+#+verbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hurt hog.
 >undo
@@ -386,7 +392,7 @@ Your score has just gone up by one point
 >without
 Your score has just gone up by one point
 
-#reverbcase listen-routes-if-player-is-in-sonancy-canyons
+#+verbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the final step.
 

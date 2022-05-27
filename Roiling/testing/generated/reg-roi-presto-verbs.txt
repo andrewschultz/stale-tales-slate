@@ -34,8 +34,10 @@ There are four unblocked exits: north, south, east and west.
 #verbcase swear-presto-if-cur-score-of-presto-is-0
 >damn
 That's too strong for here. But you have the right idea.
+
 >bother
 Well, maybe one or two mild swears would work somewhere around here.
+
 #verbcase smell-presto-default
 >smell
 It smells a bit stinky here, but more pressingly, it just FEELS stinky
@@ -59,9 +61,10 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east to Grey Gyre.
 
-#reverbcase smell-presto-default
+#+verbcase smell-presto-default
 >smell
 You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing
+
 #verbcase listen-presto-default
 >listen
 "This ... this ... this..." you hear, faintly. It feels profane.
@@ -545,6 +548,7 @@ The only way you seem to be able to go is east to another part of the maze.
 /^Unwary Runway
 
 >gt nowt town
+
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
 
@@ -564,8 +568,9 @@ There are two unblocked exits: north and south to another part of the maze.
 >n
 
 /^Back at Grey Gyre
+
+#+verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 >gt unwary runway
-#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
 
 >gonear runway
@@ -623,10 +628,12 @@ Brute force is ineffective. So, too, are all the swears often used with said bru
 >ole
 >darn
 >whassup
+
+#+verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 >gt nowt town
-#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 Anyway, it'd make poor
 >gt grey gyre
+
 #verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager
 following.)
 >undo
@@ -652,9 +659,11 @@ Your score has just gone up by one point
 #verbcase smell-presto-if-noun-is-ether
 >smell ether
 The ether is nontoxic but still potentially dangerous, if someone's hiding there.
+
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway-if-volt-maze-is-moot
 >gt runway
 You don't want to, and can't, go back to or through the volt maze you solved.
+
 >gt nowt town
 You don't want to, and can't, go back to or through the volt maze you solved.
 
@@ -696,6 +705,7 @@ Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. T
 #verbcase listen-presto-if-noun-is-odes-song
 >listen odes song
 The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain.
+
 #verbcase swear-presto-default
 >damn
 No, that's too strong for here. You've been doing quite well with the tame stuff.
@@ -737,8 +747,10 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 >n
 
 >gt dirge ridge
+
 #verbcase goto-presto-if-noun-is-dirge-ridge
 "I don't wanna go back dere, boss. I wants adventureses. Fightses." says
+
 >s
 "I don't wanna go back dere, boss. I wants adventureses. Fightses." says
 
@@ -858,6 +870,7 @@ There are two unblocked exits: north and south to Grey Gyre.
 #verbcase swear-presto-if-hacks'-shack-is-visited
 >damn
 While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is mostly over.
+
 #verbcase listen-presto-if-player-is-in-hacks'-shack
 >listen
 Classic techno music from the Baleets: "Be Stale."
@@ -901,6 +914,7 @@ Score in a scenario: 26 out of 41 total points in the current region, Presto. Lo
 >smell casserole
 That casserole smells ... well, sturdy. Not for the sophisticated.
 >s
+
 #verbcase sleep-presto-if-hacks'-shack-is-visited-and-peels-speel-is-reflexive
 >sleep
 Only the shack seems to be a safe place to sleep, here.
@@ -1035,8 +1049,8 @@ Score in a scenario: 39 out of 41 total points in the current region, Presto. Th
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
->gt phat path
 #verbcase goto-presto-if-player-is-in-hacks'-shack
+>gt phat path
 You can't budge until you fix this program, here.
 
 >debug
@@ -1048,7 +1062,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 >misses
 !presto
 
-#reverbcase goto-presto-if-player-is-in-hacks'-shack
+#+verbcase goto-presto-if-player-is-in-hacks'-shack
 >gt phat path
 Just do something simple with that USB
 

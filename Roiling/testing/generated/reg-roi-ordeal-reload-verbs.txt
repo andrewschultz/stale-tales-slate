@@ -18,6 +18,7 @@ You're just in the mood for quiet time, now, just looking around
 #verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
 >sleep
 But you just woke up!
+
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-stuff-found-<-3
 >listen
 Peace and quiet. No adventure. Yet.
@@ -40,6 +41,7 @@ Whoah! Bangish bashing at the isolani liaison!
 #verbcase sleep-ordeal-reload-if-report-porter-knocks
 >sleep
 Not with that knocking.
+
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-report-porter-knocks
 >listen
 Nothing, except... (knock, knock, knock.)
@@ -55,6 +57,7 @@ You're in a conversation. Your turn to speak.
 >5
 
 >sleep
+
 #verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
@@ -280,16 +283,20 @@ There's something behind the psalter.
 Nothing yet. You need to use your powers to reveal the exit.
 
 >sleep
+
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
 
 #ttc-table-of-goto-sectioning--1-ordeal-reload
 >gt study
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+
 >gt gallery
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+
 >gt highest
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+
 >gt framing farming
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 

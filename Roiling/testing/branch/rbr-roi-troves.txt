@@ -519,6 +519,15 @@ In particular, you feel the need to SPOT right now.
 @hin
 DEBUG INFO: stop post hinting.
 
+@max
+>sppto
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
+>spto
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!NOTE:
+
 >score
 {$SCOS}
 

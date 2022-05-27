@@ -185,8 +185,13 @@ Your score has just gone up by one point
 #+ttc-table-of-routes-prefigurings-sit-a-nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!NOTE: you may have misspelled
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the sit a nag. That's a decent omen. ??
+
+>agiints
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >pf
 You can lean AGAINST the anti-sag sit-a-nag now you feel less fear and more purpose.

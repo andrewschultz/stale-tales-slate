@@ -103,12 +103,14 @@ Being outnumbered, maybe you can attack their arguments instead.
 #verbcase swear-otters-if-player-is-in-disowned-downside-and-parleys-splayer-players-are-in-disowned-downside
 >bother
 The conversation is horrid enough.
+
 #verbcase smell-otters-if-player-is-in-disowned-downside
 >smell
 You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
+
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
->listen
 #verbcase listen-otters-if-noun-is-yer-all-a-yell'r
+>listen
 Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out.
 Sadly, now, with songs like Yeah, Hey, A Yeeha, Yah, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
 
@@ -144,7 +146,7 @@ Score in a scenario: 5 out of 38 total points in the current region, Otters. Low
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
-#reverbcase smell-otters-if-player-is-in-disowned-downside
+#+verbcase smell-otters-if-player-is-in-disowned-downside
 >smell
 You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
 
@@ -536,7 +538,7 @@ by one point
 >score
 Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 38.
 
-#reverbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
+#+verbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
 >listen
 You can't hear anything from the bays now
 !/(Silly Cab A|Clay Blais)

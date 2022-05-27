@@ -77,6 +77,14 @@ You should SPOT once you're able to focus better.
 >observe
 Your score has just gone up by one point
 
+>sppto
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
+>spto
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!NOTE:
+
 >score
 Score in a scenario: 5 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 

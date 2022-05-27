@@ -54,6 +54,7 @@ There are six unblocked exits: north, south, east, west, down and inside.
 #verbcase smell-demo-dome-default
 >smell
 Thankfully, nothing unusual like, say, a Med-O-Dome.
+
 #verbcase listen-demo-dome-default
 >listen
 It's nice and quiet. As you'd expect from a museum.

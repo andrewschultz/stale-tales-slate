@@ -30,15 +30,19 @@ You can't just sneak past the LOLstr trolls. But there is a way.
 #verbcase swear-oyster-if-player-is-in-posh-hops-shop
 >bother
 This is the place for it, but you can't bring yourself to be heard.
+
 #verbcase smell-oyster-if-player-is-in-posh-hops-shop
 >smell
 You catch a whiff: 'k, some mokes' smoke.
+
 #verbcase sleep-oyster-default
 >sleep
 You feel too inclined towards action for that.
+
 #verbcase listen-oyster-if-noun-is-tunes
 >listen tunes
 The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
+
 #verbcase listen-oyster-if-player-is-in-posh-hops-shop
 >listen
 !Silence. Awkward silence. An occasional cough.
@@ -75,7 +79,7 @@ by one point
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#reverbcase listen-oyster-if-player-is-in-posh-hops-shop
+#+verbcase listen-oyster-if-player-is-in-posh-hops-shop
 >listen
 Silence. Awkward silence. An occasional cough.
 
@@ -308,6 +312,7 @@ Score in a scenario: 12 out of 45 total points in the current region, Oyster. Lo
 #verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
 You've lost the way back, but the eeks are calling you on.
+
 #verbcase listen-oyster-if-noun-is-eeks
 >listen
 You hear eeks. Arcing caring. Weeps sweep. "Eek! Eek! Eek!" You must find where the eeks are coming from.
@@ -542,7 +547,7 @@ Your score has just gone up by one point
 >w
 You can only go north to the Horned Hedron or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 
-#reverbcase listen-oyster-if-player-is-in-sclerous-closures
+#+verbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence.
 
@@ -725,6 +730,7 @@ While you can go back outside, you can just finish things here, or maybe you can
 #verbcase listen-oyster-if-noun-is-papery-yapper
 >listen yapper
 Mindless babble about mutually favorable transactions. Perhaps you can find one here and now.
+
 #verbcase listen-oyster-if-noun-is-dialer
 >listen dialer
 You hear a hum from the dialer.
@@ -788,6 +794,7 @@ Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lo
 #verbcase goto-oyster-if-noun-is-plasm-lamps
 >gt plasm lamps
 You got rid of the ant. Nothing more to do there.
+
 #verbcase smell-oyster-if-player-is-in-tenfold-teflond-den-loft
 >smell
 Old heat. Loathed hot lead.
@@ -795,7 +802,7 @@ Old heat. Loathed hot lead.
 >derail
 Your score has just gone up by one point
 
-#reverbcase listen-oyster-if-noun-is-dialer
+#+verbcase listen-oyster-if-noun-is-dialer
 >listen dialer
 The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 

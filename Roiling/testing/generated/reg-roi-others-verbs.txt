@@ -89,7 +89,7 @@ Your score has just gone up by one point.
 >e
 The compass will help point you north. You should go that way.
 
-#reverbcase listen-others-if-noun-is-rustic-citrus
+#+verbcase listen-others-if-noun-is-rustic-citrus
 >listen
 Curtis continues to sing and hum the tidiest dietist ditties.
 
