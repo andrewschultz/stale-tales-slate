@@ -1,0 +1,25 @@
+Shuffling Around release 6 contains no new puzzles. Most is just code optimization, which sounds boring, but in practical terms, it means the game runs a lot faster now.
+
+--Shuffling Around now runs much faster, especially when you type in a command the parser doesn't recognize. Some code said "touchable" instead of my own custom definition "fungible." My definition isn't better, per se, but it fits the bill. In fact, it's less thorough, and it checks for a lot less: namely, if something is in the location of the player, or if you carry it, or if it's a backdrop, you can see it around. I also shuffled some things that were part of other objects or inside containers to be scenery, to simplify the "fungible" code. This caused speedup by a factor of 2.5 or more in my test files.
+--Another cause of speedup was breaking "after reading a command" if-statements into rules-by-region. Inform is slow with REGEX, so when I had (not the precise code, but enough to give the idea):
+
+	if the player's command matches the regular expression "^<0-9>+$" and location of player is Trap Part and centrifuge-stopped is false:
+		say "(turning the dial)[line break]";
+	if the player's command matches the regular expression "buttons":
+		if <redacted spoiler>, say "One button at a time, please." instead;
+
+In "after reading a command," I converted this to
+	abide by the custom-parse rule of map region of location of player;
+
+this is the behind-store-i-parse rule:
+	if location of player is Trap Part:
+		if centrifuge-stopped is false and the player's command matches the regular expression "^<0-9>+$":
+			say "(turning the dial)[line break]";
+	if location of player is moor and panel is part of silo:
+		if the player's command matches the regular expression "buttons", say "One button at a time, please." instead;
+
+My initial instinct was to put the text condition first so I knew what did what, but when I put the easiest-to-check conditions first, things ran faster. It turns out once I sorted things into by-store rules, they were small and readable enough, I could indent the regex rules.
+
+I also added a few mistakes and such and text flavor. Nothing too critical. My test suites of 1100 cases all passed before uploading this release.
+
+Thanks to A. DiBianca for poking me with a transcript and a note the web version ran slow. Thanks to Olaf Nowacki for transcripts.

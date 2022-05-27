@@ -39,7 +39,7 @@ the story genre is "Humor/wordplay"
 
 [release along with a solution.]
 
-the release number is 5.
+the release number is 6.
 
 release along with cover art. [and a website?]
 
