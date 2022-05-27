@@ -32,6 +32,7 @@ You see yourself exploring the trade tread you created.
 You see yourself giving something reddish to some weird monster before it runs off.
 
 DEBUG: drainage being objhinted.
+
 #ttc-table-of-metros-anagrams-drainage
 >xx drainage
 Your vision blurs a bit, and instead you see a gardenia.
@@ -44,6 +45,7 @@ Your vision blurs a bit, and instead you see a beast.
 >exit
 You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
 >undo
+
 #testcase-exits-undesired-underside
 >exits
 There are four unblocked exits: north, south, east and west.
@@ -79,6 +81,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >exit
 You have more than one way to leave: north, south, east and west. So you'll need to specify which one.
 >undo
+
 #testcase-exits-roarings-garrison
 >exits
 There are four unblocked exits: north, south to Undesired Underside, east and west.
@@ -87,6 +90,7 @@ There are four unblocked exits: north, south to Undesired Underside, east and we
 /^Bile Libe
 
 DEBUG: motto being objhinted.
+
 #ttc-table-of-metros-anagrams-motto
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
@@ -102,6 +106,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+
 #testcase-exits-bile-libe
 >exits
 The only way you seem to be able to go is east to Roarings Garrison.
@@ -126,6 +131,7 @@ DEBUG: Night Thing being objhinted.
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+
 #testcase-exits-the-ol-hotel
 >exits
 The only way you seem to be able to go is east to Undesired Underside.
@@ -159,6 +165,7 @@ DEBUG: poses posse being objhinted.
 >exit
 The only way to exit is south, so let's go that way.
 >undo
+
 #testcase-exits-obtains-boastin-bastion
 >exits
 The only way you seem to be able to go is south to Roarings Garrison.
@@ -246,6 +253,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+
 #testcase-exits-fo-real-florae
 >exits
 The only way you seem to be able to go is west to Roarings Garrison.
@@ -374,6 +382,7 @@ You suddenly feel darkness, along with an urge to ask the nerds about it.
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+
 #testcase-exits-esoteric-coteries
 >exits
 The only way you seem to be able to go is west to Undesired Underside.
@@ -416,6 +425,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 >exit
 The only way to exit is north, so let's go that way.
 >undo
+
 #testcase-exits-elm-train-terminal
 >exits
 The only way you seem to be able to go is north to Undesired Underside.
@@ -454,6 +464,7 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 >exit
 You have more than one way to leave: north and east. So you'll need to specify which one.
 >undo
+
 #+testcase-exits-elm-train-terminal
 >exits
 There are two unblocked exits: north to Undesired Underside and east.
@@ -481,6 +492,7 @@ You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp
 >exit
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's that aligns signal, again. It turns you back to face the beats.
 >undo
+
 #testcase-exits-bassy-abyss
 >exits
 There's no way out or back. But you should have what you need to defeat the beats.

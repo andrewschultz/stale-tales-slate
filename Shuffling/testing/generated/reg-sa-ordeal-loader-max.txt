@@ -35,6 +35,7 @@ Your eye catches the side passage, which looks more interesting than the standar
 >n
 That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
 !Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
+
 #ttc-table-of-busiest-subsite-rejects-3
 >s
 You already spent too much time in the overlate elevator.

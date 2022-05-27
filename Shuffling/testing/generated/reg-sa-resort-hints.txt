@@ -86,6 +86,7 @@ Gotta keep going forward.
 >exit
 You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 >undo
+
 #testcase-exits-leis-isle
 >exits
 You can't leave the Leis Isle without transport.
@@ -119,6 +120,7 @@ No, you already saw the woodland was faked.
 
 >wings
 by one point
+
 #+ttc-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
@@ -190,6 +192,7 @@ Your vision blurs a bit, and instead you see toeholds.
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+
 #testcase-exits-rived-drive
 >exits
 The only way you seem to be able to go is east.
@@ -216,6 +219,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 by one point
 >ropes
 by one point
+
 #+ttc-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
@@ -281,6 +285,7 @@ That rabble seems mad at you. You'd better disperse them first.
 >exit
 That rabble seems mad at you. You'd better disperse them first.
 >undo
+
 #testcase-exits-potshot-hotspot
 >exits
 The only way you seem to be able to go is east.
@@ -388,6 +393,7 @@ Sit, ex-adventurer.
 Where would you go? Texis, perhaps
 >n
 Seeing exits just makes you want to...
+
 #+ttc-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
@@ -396,6 +402,7 @@ Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher o
 >exit
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 >undo
+
 #testcase-exits-means-manse
 >exits
 There's nowhere else you want to be.

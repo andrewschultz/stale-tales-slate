@@ -64,6 +64,7 @@ Dude! They're clearly busy bringing sexy back. You text adventurers don't know h
 
 #first, take care of stuff that breaks our test pattern e.g. clue the drainage
 >gonear florae
+
 #ttc-table-of-unmatched-topic-responses-faeries
 >ask faeries about xyzzy
 "You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
@@ -74,6 +75,7 @@ Dude! They're clearly busy bringing sexy back. You text adventurers don't know h
 >undo
 >undo
 >banish gardenia
+
 #ttc-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 You don't have a gardenia, yet. But you can find or make one.
@@ -167,6 +169,7 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 >e
 
 >e
+
 #ttc-table-of-matched-thing-responses-faeries-tomato
 >ask faeries about tomato
 "Such a putrid plant! Keep it away from us!"

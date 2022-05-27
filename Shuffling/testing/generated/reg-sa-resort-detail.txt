@@ -178,6 +178,7 @@ DEBUG INFO: Cert-text: P--TE--.
 
 >kilns
 by one point
+
 #ttc-table-of-matched-thing-responses-protest-kilns
 >ask protest about kilns
 "If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."

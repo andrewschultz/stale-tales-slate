@@ -55,6 +55,7 @@ ACCESS toggles screen reader accessibility.
 
 # detour to look at writing. There are other ways to activate it later.
 >take writing
+
 #ttc-table-of-notepad-entries-writing
 >pad writing
 If something has writing on it, you need to READ or EXAMINE something instead of X WRITING.

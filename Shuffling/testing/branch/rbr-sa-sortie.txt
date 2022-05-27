@@ -72,6 +72,7 @@ The number sixteen takes prominence on the dial for a moment. You shake your hea
 You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
 Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
 >undo
+\\
 #testcase-exits-trap-part
 >exits
 There are two unblocked exits: north and east.
@@ -93,33 +94,43 @@ You can probably TURN the dial to a number, e.g. 99.
 #ttc-table-of-trap-part-nudges-part
 >patr
 You need to manipulate something in the room to stop the spinning.
+\\
 #ttc-table-of-trap-part-nudges-sortie
 >tosrie
 You don't want to change a region drastically while you're in it.
+\\
 #ttc-table-of-trap-part-nudges-centrifuge
 >centrifueg
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
+\\
 #ttc-table-of-trap-part-nudges-frenetic
 >frenetic
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
+\\
 #ttc-table-of-trap-part-nudges-exitsnw
 >xeitsnw
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
+\\
 #ttc-table-of-trap-part-nudges-exitssw
 >xeitssw
 The room seems to spin faster, as if you are totally on the wrong track.
+\\
 #ttc-table-of-trap-part-nudges-exitsse
 >xeitsse
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
+\\
 #ttc-table-of-trap-part-nudges-exits
 >extis
 You can't do much to the exits when you don't even know which way they are.
+\\
 #ttc-table-of-trap-part-nudges-dial
 >dila
 Messing up the dial would leave you trapped here.
+\\
 #ttc-table-of-trap-part-nudges-sextien
 >esxtien
 The spinning seems to slow a bit.
+\\
 #ttc-table-of-sortie-nudges-mud
 >mdu
 The mud is just there. You can't change it.
@@ -167,6 +178,7 @@ You can probably just SWITCH something with two text settings.
 #renudge for part
 >patr
 You don't want to go back to how the Trap Part was.
+\\
 #+testcase-mistake-shuffling-a-lid
 >a lid
 You don't need to deal with the dial, now.
@@ -194,6 +206,7 @@ You're trapped. If only the nick could be changed to something more to your tast
 >exit
 You're trapped. If only the nick could be changed to something more to your taste.
 >undo
+\\
 #testcase-exits-the-nick
 >exits
 You can't just walk out of the nick, but there's a way to think yourself out.
@@ -266,6 +279,7 @@ It's a kitchen. You need to make something. But there are no ingredients around-
 >exit
 You have more than one way to leave: south and east. So you'll need to specify which one.
 >undo
+\\
 #testcase-exits-kitchen
 >exits
 There are two unblocked exits: south to Trap Part and east.
@@ -306,6 +320,7 @@ You reopen and peer on. The grist and cake pan are still in the fridge.
 @hints
 >xx
 Nothing really sticks out. You may have to XX something specific.
+\\
 #ttc-table-of-sortie-anagrams-grist
 >xx grist
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
@@ -430,15 +445,19 @@ I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't
 #ttc-table-of-kitchen-nudges-rendin
 >rendni
 You don't need to change the red inn. It will support your cooking efforts.
+\\
 #+testcase-mistake-shuffling-thicken
 >thicken
 This would be the place, but you're not hungry for anything TOO fatty right now
+\\
 #ttc-table-of-kitchen-nudges-ditties
 >dittise
 Don't let the songs distract you from your mission.
+\\
 #ttc-table-of-kitchen-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
+\\
 #ttc-table-of-kitchen-nudges-spear
 >spera
 The spearman is what's important.
@@ -450,6 +469,7 @@ Mum, dud mud blocks your way west. You can only go south to Trap Part or east
 !to Stiller Trellis.
 #trap part has no test case
 >s
+\\
 #+ttc-table-of-nowheres-trap-part
 >w
 Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
@@ -561,6 +581,7 @@ Your score has just gone up by one point.
 #renudge for grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better.
+\\
 #ttc-table-of-sortie-done-rejects-pancake
 >pancaek
 Best not to get too crazy with food preparation.
@@ -745,12 +766,15 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #testcase-mistake-shuffling-stake
 >stake
 A stake would have no use here. So that might be a miskate. Err...
+\\
 #testcase-mistake-shuffling-takes
 >takes
 You do a take, then a double take, at how odd this all is.
+\\
 #testcase-mistake-shuffling-teaks
 >teaks
 Hm. An indoor forest. That would be neat to see. But this is a kitchen.
+\\
 #testcase-mistake-shuffling-keats
 >keats
 This is wordplay, not poetry. But the skate does glow red.
@@ -857,6 +881,7 @@ DEBUG: taco being objhinted.
 #renudge for rendin
 >rendni
 You don't need to change the red inn. It supported your cooking efforts.
+\\
 #ttc-table-of-sortie-spechelp-taco
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
@@ -982,6 +1007,7 @@ Your score has just gone up by one point.
 @hin
 >cask
 !by one point
+\\
 #+ttc-table-of-sortie-anagrams-cask
 >xx cask
 You already changed the cask to a sack, and if you need to do so again, you won't forget.
@@ -1131,6 +1157,7 @@ DEBUG INFO: Cert-text: ---ES.
 #pre-room-moor rule
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
+\\
 #ttc-table-of-preflip-clues-r2
 >pf
 room -> moor
@@ -1204,11 +1231,13 @@ You see a flash and get a glimpse of a moor, but it is just too cold. You blink 
 >exit
 You have more than one way to leave: north and west. So you'll need to specify which one.
 >undo
+\\
 #testcase-exits-room
 >exits
 There are two unblocked exits: north to Stiller Trellis and west to Trap Part.
 >undo
 >w
+\\
 #+testcase-outside-trap-part
 >exit
 You have more than one way to leave: north and east. So you'll need to specify which one.
@@ -1238,6 +1267,7 @@ Your vision blurs a bit, and instead you see a peasant.
 >exit
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 >undo
+\\
 #testcase-exits-moor
 >exits
 You don't need to walk anywhere else. You can only go back to the ROOM.
@@ -1625,6 +1655,7 @@ HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 #pre-haywall-hallway rule
 >hallway
 Hm, that's possible, but you can't make the hallway until you add something to the wall.
+\\
 #ttc-table-of-preflip-clues-hallway
 >pf
 WALL -> haywall -> hallway
@@ -1699,6 +1730,7 @@ Mum, dud mud blocks your way north. You can only go west to Kitchen or south to 
 >exit
 You have more than one way to leave: south, east and west. So you'll need to specify which one.
 >undo
+\\
 #testcase-exits-stiller-trellis
 >exits
 There are three unblocked exits: south to Room, east and west to Kitchen.
@@ -1725,6 +1757,7 @@ Once you change the sack to a cask, you can FILL CASK here, to start.
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+\\
 #testcase-exits-sacred-cedars
 >exits
 The only way you seem to be able to go is west to Stiller Trellis.
@@ -1738,21 +1771,27 @@ There is no other way except back west. Anyway, you might find scared cadres you
 #testcase-mistake-shuffling-cadres
 >cadres
 You must do this on your own.
+\\
 #testcase-mistake-shuffling-ecards
 >ecards
 Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
+\\
 #testcase-mistake-shuffling-lois
 >lois
 You suddenly feel discontent at your container of choice.
+\\
 #testcase-mistake-shuffling-potus
 >potus
 This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.
+\\
 #testcase-mistake-shuffling-pray
 >pray
 It's been so long, you only mouth a "Yarp!"
+\\
 #testcase-mistake-shuffling-serve
 >serve
 You must serve by going forth on your mission of warlikeness and love.
+\\
 #testcase-mistake-shuffling-sever
 >sever
 Violence or vandalism in such a holy place? For shame.
@@ -1867,6 +1906,7 @@ This is not a good place to put soil. Somewhere more wide open, where you can po
 #pre-oils-silo rule
 >silo
 This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?
+\\
 #ttc-table-of-preflip-clues-soil
 #ttc-table-of-preflip-clues-silo
 >pf
@@ -1913,6 +1953,7 @@ The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
 \\
 >misliel
+\\
 #testcase-misspellings-table-of-sortie-anagrams-smilies
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
@@ -1931,6 +1972,7 @@ Adding similes would mean the limerick wouldn't scan. They'd be more forced than
 #pre-smilies-missile rule
 >missile
 Good idea, but not in here. There'd be more room for that outside where you found the poem.
+\\
 #ttc-table-of-preflip-clues-missile
 >pf
 smilies -> missile
@@ -1939,6 +1981,7 @@ smilies -> missile
 #ttc-table-of-sortie-anagrams-oils
 >xx oils
 Your vision blurs a bit, and instead you see soil, then a silo.
+\\
 #ttc-table-of-sortie-anagrams-smilies
 >xx smilies
 Your vision blurs a bit, and instead you see a missile.
@@ -2258,6 +2301,7 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 >exit
 You have more than one way to leave: south and west. So you'll need to specify which one.
 >undo
+\\
 #+testcase-exits-stiller-trellis
 >exits
 There are two unblocked exits: south to Room and west to Kitchen.
@@ -2400,6 +2444,7 @@ Hmm, that doesn't work, but you bet you can bull your way through things.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
 \\
 >sterr
+\\
 #testcase-misspellings-table-of-sortie-anagrams-trees-button
 Hmm, that doesn't work, but you bet you can bull your way through things.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.

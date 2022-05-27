@@ -72,6 +72,7 @@ The scented descent to the forest doesn't need to be changed.
 >whfif
 No, that's not the essence of the whiff of stew.
 >undo
+\\
 #testcase-mistake-shuffling-wets
 >wets
 Getting lost in a swamp would be even worse than getting lost in a forest.
@@ -84,6 +85,7 @@ You think you're on to something, but you still feel stuck.
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
+\\
 #ttc-table-of-forest-nudges-west
 >twes
 Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
@@ -96,10 +98,12 @@ You think you're on to something, but you still feel stuck.
 by one point
 ##############################################################south 2nd, west 1st
 /^Rest of Forest
+\\
 #ttc-table-of-rest-of-forest-nudges-rest
 >rets
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 >undo
+\\
 #ttc-table-of-forest-nudges-rambling
 >ramblign
 No, that's not the essence of the rambling shout.
@@ -108,6 +112,7 @@ No, that's not the essence of the rambling shout.
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
+\\
 #ttc-table-of-forest-nudges-south
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
@@ -142,18 +147,22 @@ No, that's not the essence of the aroma of teas.
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
+\\
 #ttc-table-of-forest-nudges-eat
 >eta
 The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
+\\
 #testcase-mistake-shuffling-sate
 >sate
 There's nothing around you have to sate, thankfully.
 >undo
+\\
 #testcase-mistake-shuffling-seat
 >seat
 You need the opposite of a seat, here. But at the same time, you're also very close.
 >undo
+\\
 #testcase-mistake-shuffling-tase
 >tase
 This game is nonviolent--well, except for a few puns.
@@ -162,6 +171,7 @@ This game is nonviolent--well, except for a few puns.
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
+\\
 #ttc-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
@@ -182,6 +192,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
+\\
 #ttc-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
@@ -356,6 +367,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 >exit
 Hmm, that's the question. Which way to exit?
 >undo
+\\
 #testcase-exits-softer-forest
 >exits
 One compass direction out will move ahead. The others won't. But which does which?
@@ -374,12 +386,15 @@ DEBUG INFO: Cert-text: -----.
 #ttc-table-of-forest-nudges-forest
 >forets
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-forest-nudges-conifer
 >conifre
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
+\\
 #ttc-table-of-forest-nudges-conifers
 >conifesr
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
+\\
 #ttc-table-of-forest-nudges-leaves
 >leavse
 You have no time to play with leaves.
@@ -411,6 +426,7 @@ You see yourself considering all four compass directions before picking the righ
 >exit
 Hmm, that's the question. Which way to exit?
 >undo
+\\
 #testcase-exits-rest-of-forest
 >exits
 One compass direction out will move ahead. The others won't. But which does which?
@@ -506,45 +522,59 @@ It is too late to help the line of no life by showing love.
 #renudge for forest
 >forets
 You don't want to change a region drastically while you're in it
+\\
 #ttc-table-of-self-id-fields-nudges-selfid
 >selfdi
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-self-id-fields-nudges-self
 >sefl
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-self-id-fields-nudges-field
 >ifdle
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-self-id-fields-nudges-selves
 >selvse
 The selves vessel is much too sturdy to manipulate.
+\\
 #ttc-table-of-self-id-fields-nudges-vesel
 >vesle
 The selves vessel is much too sturdy to manipulate.
+\\
 #ttc-table-of-self-id-fields-nudges-line
 >inle
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
+\\
 #ttc-table-of-self-id-fields-nudges-life
 >ilef
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
+\\
 #ttc-table-of-self-id-fields-nudges-lineof
 >linefo
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
+\\
 #ttc-table-of-self-id-fields-nudges-undead
 >undeda
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
+\\
 #ttc-table-of-self-id-fields-nudges-undeads
 >undeasd
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
+\\
 #ttc-table-of-self-id-fields-nudges-crosse
 >croses
 Whatever you could do to Corses Crosse, it might do worse to you.
+\\
 #ttc-table-of-self-id-fields-nudges-cross
 >crsos
 Whatever you could do to Corses Crosse, it might do worse to you.
+\\
 #ttc-table-of-self-id-fields-nudges-crose
 >croes
 Whatever you could do to Corses Crosse, it might do worse to you.
+\\
 #testcase-mistake-shuffling-scorse
 >scorse
 You can't trade with the dead.
@@ -587,6 +617,7 @@ Go east and look around a bit. There're only three rooms to start, and passing C
 
 @hin
 DEBUG: ones being objhinted.
+\\
 #ttc-table-of-forest-anagrams-ones
 >xx ones
 Your vision blurs a bit, and instead you see a nose.
@@ -632,63 +663,83 @@ DEBUG INFO: Cert-text: -------.
 #ttc-table-of-gnarliest-triangles-nudges-triangles
 >trianglse
 The triangles need no alterings.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-triangle
 >triangel
 No triangle needs altering.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-shell
 >shlel
 It doesn't rattle, but the dashes seem to.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-bucket
 >buckte
 It doesn't rattle, but the ones seem to.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-bubble
 >bubbel
 It doesn't rattle, but the noughts seem to.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-elegy
 >eleyg
 The elegy doesn't need to be twisted any more.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-tacks
 >tacsk
 No need to try to turn the stack into a heap. Ho ho ho.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-tack
 >takc
 No need to try to turn the stack into a heap. Ho ho ho.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-notes
 >notse
 The notes stone is just for reading.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-note
 >noet
 The notes stone is just for reading.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-stick
 >stikc
 Don't vandalize the art, man.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-figure
 >figuer
 Don't vandalize the art, man.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-figures
 >figurse
 Don't vandalize the art, man.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-zeros
 >zerso
 They're noughts, not zeros.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-zeroes
 >zerose
 They're noughts, not zeroes.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-eon
 >eno
 They're ones, not a one.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-naught
 >naugth
 The naughts, err, noughts seem zero-y enough to contain an o.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-naughts
 >naughst
 The naughts, err, noughts seem zero-y enough to contain an o.
+\\
 #ttc-table-of-gnarliest-triangles-nudges-nought
 >nougth
 There's more than one nought.
+\\
 #testcase-mistake-shuffling-integral-integrals
 >integral
 I think this game is hard enough without bringing Calculus into it.
+\\
 >integrals
 I think this game is hard enough without bringing Calculus into it.
 
@@ -704,18 +755,21 @@ This isn't really a game about emotional connections.
 #testcase-mistake-shuffling-alerting-alertings
 >alerting
 There's nobody to alert here.
+\\
 >alertings
 There's nobody to alert here.
 \\
 #testcase-mistake-shuffling-altering-alterings
 >altering
 No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
+\\
 >alterings
 No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
 \\
 #testcase-mistake-shuffling-teraglin-teraglins
 >teraglin
 But where would the fish go?
+\\
 >teraglins
 But where would the fish go?
 \\
@@ -726,12 +780,14 @@ Things are mixed up enough!
 #testcase-mistake-shuffling-tone-tones
 >tone
 You aren't sure you need a booming voice telling you what you can EXAMINE.
+\\
 >tones
 You aren't sure you need a booming voice telling you what you can EXAMINE.
 \\
 #testcase-mistake-shuffling-eon-eons
 >eon
 No, you can't afford to wait that long.
+\\
 >eons
 No, you can't afford to wait that long.
 
@@ -752,6 +808,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+\\
 #testcase-exits-gnarliest-triangles
 >exits
 The only way you seem to be able to go is west to Self-ID Fields.
@@ -790,6 +847,7 @@ Don't get that nose bent out of shape.
 #testcase-mistake-shuffling-gat
 >gat
 Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
+\\
 #testcase-mistake-shuffling-gunshot
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
@@ -847,6 +905,7 @@ DEBUG: bearded men being objhinted.
 #ttc-table-of-forest-nudges-muzzle
 >muzzel
 You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
+\\
 #ttc-table-of-forest-done-rejects-shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
@@ -855,9 +914,11 @@ Anything you do might violate firearm safety rules, or something.
 #+testcase-mistake-shuffling-gunshot
 >gunshot
 You need to SHOOT the gun, but you don't have a bullet yet.
+\\
 #+testcase-mistake-shuffling-gat
 >gat
 Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
+\\
 #testcase-mistake-shuffling-gnu
 >gnu
 Shotgun: gnu? Tosh!
@@ -878,6 +939,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+\\
 #testcase-exits-flesh-shelf
 >exits
 The only way you seem to be able to go is east to Self-ID Fields.
@@ -891,30 +953,39 @@ It's too steep down every way except back east.
 #ttc-table-of-flesh-shelf-nudges-shelf
 >shefl
 The shelf is frozen that way. Ba dum bum.
+\\
 #ttc-table-of-flesh-shelf-nudges-skin
 >skni
 The skin sink is frozen that way. Ba dum bum.
+\\
 #ttc-table-of-flesh-shelf-nudges-ink
 >ikn
 The skin sink is frozen that way. Ba dum bum.
+\\
 #ttc-table-of-flesh-shelf-nudges-cities
 >citise
 Taking care of the main menace may change the iciest cities
+\\
 #ttc-table-of-flesh-shelf-nudges-city
 >ciyt
 Taking care of the main menace may change the iciest cities
+\\
 #ttc-table-of-forest-nudges-sandwich
 >sandwihc
 Hmm. That's a lot of letters. You wonder if pulling the sandwich apart might break it into smaller, more manageable (or anagrammable) pieces.
+\\
 #ttc-table-of-flesh-shelf-nudges-canister
 >canistre
 The canister just sits there. Perhaps it has a more mundane purpose or fate.
+\\
 #ttc-table-of-flesh-shelf-nudges-grinder
 >grindre
 The grinder just sits there. Perhaps it has a more mundane purpose or fate.
+\\
 #ttc-table-of-flesh-shelf-nudges-grin
 >grni
 The ring does not bend.
+\\
 #ttc-table-of-flesh-shelf-nudges-hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
@@ -930,13 +1001,13 @@ The skin sink bleeds no color.
 While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
 >helfs
 While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
+\\
 #testcase-mistake-shuffling-kin-kins
 >kin
-Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
-ers .
+Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers.
+\\
 >kins
-Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
-ers .
+Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers.
 
 @nud
 #testcase-mistake-shuffling-debar
@@ -947,12 +1018,15 @@ If there are any lawyers here, they've already been debarred.
 #ttc-table-of-flesh-shelf-nudges-bleads
 >bleasd
 The blades, buried in the grinder, remain lifeless.
+\\
 #ttc-table-of-forest-nudges-meat
 >meta
 You'll need to be more specific about the meat to poke at.
+\\
 #ttc-table-of-forest-nudges-meats
 >meast
 You'll need to be more specific about the meat to poke at.
+\\
 #ttc-table-of-forest-nudges-liver
 >livre
 The one liver seems inactive by itself.
@@ -1139,6 +1213,7 @@ DEBUG INFO: Cert-text: ----E-.
 >exit
 The only way to exit is south, so let's go that way.
 >undo
+\\
 #testcase-exits-emptiness-sepiments
 >exits
 The only way you seem to be able to go is south to Self-ID Fields.
@@ -1166,6 +1241,7 @@ You know the scoffer coffers and scoffin' coffins can't be changed, and the more
 #ttc-table-of-emptiness-sepiments-nudges-coffer
 >coffre
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
+\\
 #ttc-table-of-emptiness-sepiments-nudges-coffers
 >coffesr
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
@@ -1174,12 +1250,15 @@ You know the scoffer coffers and scoffin' coffins can't be changed, and the more
 #testcase-mistake-shuffling-padres
 >padres
 Bringing holy men down here would probably kill them.
+\\
 #testcase-mistake-shuffling-rasped
 >rasped
 The spread makes a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.
+\\
 #testcase-mistake-shuffling-spader
 >spader
 James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.
+\\
 #testcase-mistake-shuffling-parsed
 >parsed
 You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
@@ -1304,6 +1383,7 @@ Cr-r-r-r-k.
 #ttc-table-of-forest-nudges-ville
 >vilel
 It's just a liver. No need to parse the brand name.
+\\
 #ttc-table-of-forest-nudges-river
 >rivre
 It's just a liver. No need to parse the brand name.
@@ -1342,6 +1422,7 @@ LIVERS.
 
 @hin
 DEBUG: livers being objhinted.
+\\
 #ttc-table-of-forest-anagrams-livers
 >xx livers
 Your vision blurs a bit, and instead you see a silver sliver.
@@ -1451,6 +1532,7 @@ You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 ##balance undos
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
+\\
 #ttc-table-of-preflip-clues-drapes
 >pf
 spread -> drapes
@@ -1478,6 +1560,7 @@ Your vision blurs a bit, and instead drapes seem to flutter in front of the red 
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spread. Keep at it.
 >undo
+\\
 #ttc-table-of-emptiness-sepiments-nudges-cloth
 >cloht
 No, the material of the spread isn't important, here.
@@ -1522,9 +1605,11 @@ Your score has just gone up by one point.
 >undo
 >n
 red asp!
+\\
 #testcase-mistake-shuffling-spared
 >spared
 That is too passive, to ask to be spared.
+\\
 #ttc-table-of-forest-spechelp-red-asp
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
@@ -1550,6 +1635,7 @@ Your score has just gone up by one point.
 #renudge for cloth
 >cloht
 No, the material of the drapes isn't important, here.
+\\
 #ttc-table-of-forest-done-rejects-drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
@@ -1561,6 +1647,7 @@ The drapes are too thick.
 #pre-sliver-silver rule
 >silver
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
+\\
 #ttc-table-of-preflip-clues-silver
 >pf
 sliver -> SILVER
@@ -1698,6 +1785,7 @@ DEBUG: maps being objhinted.
 >exit
 Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog. Hey, those maps might be useful to look at, though.
 >undo
+\\
 #testcase-exits-ghouls-slough
 >exits
 You might get lost going in any direction without help. Hmm.
@@ -1715,6 +1803,7 @@ Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless,
 #testcase-mistake-shuffling-lucre
 >lucre
 If there were any treasure here, it'd probably do something terrible to you once you took it.
+\\
 #testcase-mistake-shuffling-cluer
 >cluer
 This place is too stark to offer clues, and if it did, they'd probably be wrong anyway.
@@ -1723,21 +1812,27 @@ This place is too stark to offer clues, and if it did, they'd probably be wrong 
 #ttc-table-of-ghouls-slough-nudges-slough
 >slouhg
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-ghouls-slough-nudges-lough
 >louhg
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-ghouls-slough-nudges-cruel
 >crule
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+\\
 #ttc-table-of-ghouls-slough-nudges-ones
 >onse
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+\\
 #ttc-table-of-ghouls-slough-nudges-enclosure
 >enclosuer
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+\\
 #ttc-table-of-ghouls-slough-nudges-marsh
 >marhs
 The marsh and lake are symptoms of--whatever evil is beyond here.
+\\
 #ttc-table-of-ghouls-slough-nudges-lake
 >laek
 The marsh and lake are symptoms of--whatever evil is beyond here.
@@ -1777,30 +1872,39 @@ UNDO
 #ttc-table-of-frost-forts-nudges-frost
 >frots
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #ttc-table-of-frost-forts-nudges-snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
 #ttc-table-of-frost-forts-nudges-capital
 >capitla
 You need to deal with all the capitals. And they're specific letters.
+\\
 #ttc-table-of-frost-forts-nudges-capitals
 >capitasl
 They aren't just any capitals. They're specific letters.
+\\
 #ttc-table-of-frost-forts-nudges-icecap
 >icecpa
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
 #ttc-table-of-frost-forts-nudges-iced
 >icde
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
 #ttc-table-of-frost-forts-nudges-ice
 >iec
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
 #ttc-table-of-frost-forts-nudges-sleet
 >slete
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
 #ttc-table-of-frost-forts-nudges-bumps
 >bumsp
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
 #ttc-table-of-frost-forts-nudges-bmup
 >bmup
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
@@ -1834,6 +1938,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 >exit
 The gnash hangs would, err, shnag you.
 >undo
+\\
 #testcase-exits-frost-forts
 >exits
 You're stuck here. This is the final battle!
@@ -1888,6 +1993,7 @@ The werewolves will catch you easily.
 #ttc-table-of-frost-forts-nudges-werewolves
 >werewolvse
 They won't be changed with magic. Thankfully, you've got something more direct.
+\\
 #ttc-table-of-frost-forts-nudges-lupine
 >lupien
 They are the lupine lineup from your notes, but for your purpose, they're wolves.
@@ -1903,6 +2009,7 @@ The scenery here's mostly frozen that way. Ha ha ha.
 >icde
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.
+\\
 #ttc-table-of-forest-done-rejects-wolves
 >wolvse
 You can't change them back. But maybe you can get rid of them. You do have a weapon.

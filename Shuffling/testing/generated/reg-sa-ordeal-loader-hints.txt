@@ -20,6 +20,7 @@
 >exit
 There are many ways out. You may want to be more specific or have somewhere interesting or unusual in mind.
 >undo
+
 #testcase-exits-busiest-subsite
 >exits
 Something in the scenery will be worth entering.
@@ -127,6 +128,7 @@ The door from Rested Desert was one-way. You can't even see it now.
 # this is 2nd in a list of one ... or ...
 You're feeling negative to vegetation, so you can't see a way through.
 >undo
+
 #testcase-exits-thickest-thickets
 >exits
 You need some way to cut through the vegetation to find a passage.
@@ -167,6 +169,7 @@ You need to take the phial for that to happen. The cabinet may not want to relin
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 >undo
+
 #testcase-exits-notices-section
 >exits
 Sooner or later, you're probably going to want to ENTER the getaway gateway.
@@ -260,6 +263,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 >exit
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway.
 >undo
+
 #+testcase-exits-notices-section
 >exits
 Sooner or later, you're probably going to want to ENTER the getaway gateway.

@@ -29,6 +29,7 @@ You already made passage to the ogled lodge. It's good enough. Why change it?
 #testcase-mistake-shuffling-lites
 >lites
 Light isn't the problem here. It's not having anywhere to go.
+
 #testcase-mistake-shuffling-slite
 >slite
 That's bad spelling, and it won't shrink your problems.
@@ -36,22 +37,28 @@ That's bad spelling, and it won't shrink your problems.
 #ttc-table-of-astral-altars-nudges-astral
 >astrla
 While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
+
 #ttc-table-of-astral-altars-nudges-altar
 >altra
 While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
+
 #ttc-table-of-resort-nudges-resort
 >resotr
 You don't want to change a region drastically while you're in it.
+
 #ttc-table-of-leis-isle-nudges-islet
 >tilse
 The tiles rattle as if to shift but settle down.
+
 #ttc-table-of-astral-altars-nudges-tile
 >tiel
 You need to deal with all the tiles.
+
 #ttc-table-of-astral-altars-nudges-flare
 >s
 >flaer
 The feral flare crackles menacingly. You doubt you can change it for the better.
+
 #ttc-table-of-resort-spechelp-tiles
 >islte
 The tiles rattle as if to shift but settle down.
@@ -101,6 +108,7 @@ The sand and sands and sands are just--well, sand. They won't help you get off t
 #ttc-table-of-leis-isle-nudges-sands
 >sansd
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
+
 #ttc-table-of-resort-spechelp-l2
 >lesi
 You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
@@ -152,6 +160,7 @@ You currently have 2 out of 15 total points for the Resort region. Your minimum 
 #ttc-table-of-leis-isle-nudges-leis
 >isel
 You already noticed the leis. Use something on the isle to escape it.
+
 #+ttc-table-of-leis-isle-nudges-lie
 >iel
 You already noticed the leis. Use something on the isle to escape it.
@@ -398,30 +407,39 @@ Those are already useful.
 #ttc-table-of-potshot-hotspot-nudges-frust
 >fruts
 The frust turfs are unchangeable.
+
 #ttc-table-of-potshot-hotspot-nudges-turf
 >tufr
 The frust turfs are unchangeable.
+
 #ttc-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Placating the people here is your best bet for making this place less of a hotspot.
+
 #ttc-table-of-potshot-hotspot-nudges-rioters
 >riotesr
 Perhaps it's best to keep it simple and cut down the riot.
+
 #ttc-table-of-potshot-hotspot-nudges-rioter
 >riotre
 Perhaps it's best to keep it simple and cut down the riot.
+
 #ttc-table-of-potshot-hotspot-nudges-people
 >peopel
 Perhaps it's best to keep it simple and cut down the riot.
+
 #ttc-table-of-potshot-hotspot-nudges-horde
 >hored
 Perhaps it's best to keep it simple and cut down the riot.
+
 #ttc-table-of-potshot-hotspot-nudges-uprisers
 >uprisesr
 Perhaps it's best to keep it simple and cut down the riot.
+
 #ttc-table-of-potshot-hotspot-nudges-clay
 >clya
 No, the clay is a clue to what the protest really wants to do.
+
 #ttc-table-of-resort-spechelp-riot
 >troi
 The riot's still a crowd, and a big one, too.
@@ -569,6 +587,7 @@ You don't know him that well. No riffing on his initials!
 #renudge for hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
+
 #ttc-table-of-potshot-hotspot-nudges-red
 >rde
 Burdell's laugh echoes. "You think you can change ME?!"
@@ -660,9 +679,11 @@ You don't want to make this place a hotspot again.
 #ttc-table-of-potshot-hotspot-nudges-setter
 >settre
 It's Setter Street now. Seems like an appropriate tribute to a hero like you.
+
 #ttc-table-of-potshot-hotspot-nudges-manor
 >romna
 You don't need to change the manors. You just need to be able to get there.
+
 #ttc-table-of-potshot-hotspot-nudges-ransom
 >ransmo
 You don't need to change the manors. You just need to be able to get there.
@@ -673,15 +694,19 @@ You don't need to change the manors. You just need to be able to get there.
 #ttc-table-of-means-manse-nudges-manse
 >mesna
 You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits.
+
 #ttc-table-of-means-manse-nudges-extis
 >extis
 That's not quite the right sort of nothing.
+
 #ttc-table-of-means-manse-nudges-marble
 >marbel
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
+
 #ttc-table-of-means-manse-nudges-spire
 >spier
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
+
 #ttc-table-of-means-manse-nudges-toaster
 >toastre
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
@@ -691,13 +716,16 @@ No more fancy anagrams. Well, maybe one more, based on the whole big picture her
 I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
 >name
 I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
+
 #testcase-mistake-shuffling-blamer
 >blamer
 No, we know who's to blame. He's done with. Time to move on.
+
 #testcase-mistake-shuffling-mensa
 >mensa
 No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant or character-developing or literary enough. Sheesh.
 Even if they wouldn't, well, the Means Manse is for you and you alone. You earned it.
+
 #testcase-mistake-shuffling-sex-it
 >sex it
 You're not even up for THAT, now. You just want to BE.

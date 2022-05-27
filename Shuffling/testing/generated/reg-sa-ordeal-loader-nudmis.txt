@@ -23,26 +23,34 @@ If you want a Western game situated on the US/Mexico border, this isn't for you.
 #ttc-table-of-ordeal-loader-nudges-ordeal
 >ordela
 You don't want to change a region drastically while you're in it.
+
 #ttc-table-of-busiest-subsite-nudges-oafs
 >oasf
 The Oafs' Sofa is there, and there's nothing you can do about it.
+
 #ttc-table-of-busiest-subsite-nudges-oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
+
 #testcase-mistake-shuffling-magnet
 >magnet
 Your magenta nametag is on securely enough. Not that you actually like having it on, but you'd get scolded for not having it.
+
 >a magnet
 You never need to use the article "a" when changing things up. In particular, "a magnet" is a good guess, but it's not what the nametag ultimately needs to be. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to consider instead of one.
+
 #testcase-mistake-shuffling-afos
 >afos
 You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
+
 #testcase-mistake-shuffling-faso
 >faso
 There are even further-away places to explore in this game than Burkina Faso.
+
 #testcase-mistake-shuffling-salt-mine-saltmine
 >salt mine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
+
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
@@ -66,37 +74,48 @@ The passage looks unblocked already, so you don't need to look for any other pos
 #testcase-mistake-shuffling-use-text
 >use zozimus
 Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
+
 #testcase-mistake-shuffling-turn-text
 >turn zozimus
 You can probably just SWITCH something with two text settings.
 # stuff to test before you get settler
+
 #testcase-mistake-shuffling-scan
 >scan
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-scan-text
 >scan xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-c
 >c
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-c-text
 >c xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-r
 >r
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-r-text
 >r xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-cr
 >cr
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-cr-text
 >cr xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-rc
 >rc
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
 #testcase-mistake-shuffling-rc-text
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
@@ -104,33 +123,43 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 #ttc-table-of-busiest-subsite-nudges-busiest
 >busiets
 You may need to change a room later, but you'll have a hint device to do so.
+
 #ttc-table-of-busiest-subsite-nudges-noentry
 >noentyr
 You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
+
 #ttc-table-of-busiest-subsite-nudges-slim
 >slmi
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
+
 #ttc-table-of-busiest-subsite-nudges-neat
 >neta
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
+
 #ttc-table-of-busiest-subsite-nudges-name
 >naem
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
+
 #ttc-table-of-busiest-subsite-nudges-list
 >lits
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
+
 #ttc-table-of-busiest-subsite-nudges-elevator
 >elevatro
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
+
 #ttc-table-of-busiest-subsite-nudges-terraces
 >terracse
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
+
 #ttc-table-of-busiest-subsite-nudges-terrace
 >terraec
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
+
 #ttc-table-of-busiest-subsite-nudges-caveat
 >acevta
 Vandalizing the vacate caveat is probably more trouble than it's worth.
+
 #ttc-table-of-busiest-subsite-nudges-banner
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
@@ -145,6 +174,7 @@ No, you don't need to mix up the shrub and brush. That's not where you'll find p
 #ttc-table-of-rested-desert-nudges-rested
 >restde
 You may need to change a room later, but you'll have a hint device to do so.
+
 #testcase-mistake-shuffling-deters
 >deters
 No! You're trying to make progress here.
@@ -152,6 +182,7 @@ No! You're trying to make progress here.
 #ttc-table-of-rested-desert-nudges-breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
+
 #ttc-table-of-rested-desert-nudges-smlel
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
@@ -214,6 +245,7 @@ Your score has just gone up by one point.
 #ttc-table-of-ordeal-loader-done-rejects-bugle
 >bugel
 The bugle emits a sad "don't change me back" noise.
+
 #ttc-table-of-rested-desert-nudges-horn
 >honr
 No, the bugle is a bugle, not just a horn. It's been changed enough.
@@ -317,6 +349,7 @@ A GOT-TA GO ... hmm, not the very best ever.
 #testcase-mistake-shuffling-believe
 >believe
 Yes, but what do you believe you can do or change?
+
 #testcase-mistake-shuffling-gato
 >gato
 Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
@@ -474,21 +507,27 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 #ttc-table-of-ordeal-loader-done-rejects-gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
+
 #ttc-table-of-notices-section-nudges-warpy
 >waryp
 You can't change Old Warpy. You have to just trust it.
+
 #ttc-table-of-notices-section-nudges-old
 >odl
 You can't change Old Warpy. You have to just trust it.
+
 #ttc-table-of-notices-section-nudges-oldman
 >oldmna
 He's too old to change. At least, in his present form.
+
 #ttc-table-of-notices-section-nudges-dollhouse
 >dollhoues
 Thinking that doesn't do much, but the attics seem to glow a bit.
+
 #ttc-table-of-notices-section-nudges-attic
 >attci
 You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
+
 #ttc-table-of-notices-section-nudges-warmup
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.

@@ -35,6 +35,7 @@
 #pre-storer-resort rule
 >resort
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
+
 #ttc-table-of-preflip-clues-ogled-lodge
 >pf
 Store R -> Resort

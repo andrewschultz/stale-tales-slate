@@ -63,6 +63,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 >exit
 Hmm, that's the question. Which way to exit?
 >undo
+
 #testcase-exits-softer-forest
 >exits
 One compass direction out will move ahead. The others won't. But which does which?
@@ -89,6 +90,7 @@ You see yourself considering all four compass directions before picking the righ
 >exit
 Hmm, that's the question. Which way to exit?
 >undo
+
 #testcase-exits-rest-of-forest
 >exits
 One compass direction out will move ahead. The others won't. But which does which?
@@ -146,6 +148,7 @@ Go east and look around a bit. There're only three rooms to start, and passing C
 /^Gnarliest Triangles
 
 DEBUG: ones being objhinted.
+
 #ttc-table-of-forest-anagrams-ones
 >xx ones
 Your vision blurs a bit, and instead you see a nose.
@@ -165,6 +168,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >exit
 The only way to exit is west, so let's go that way.
 >undo
+
 #testcase-exits-gnarliest-triangles
 >exits
 The only way you seem to be able to go is west to Self-ID Fields.
@@ -210,6 +214,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 >exit
 The only way to exit is east, so let's go that way.
 >undo
+
 #testcase-exits-flesh-shelf
 >exits
 The only way you seem to be able to go is east to Self-ID Fields.
@@ -294,6 +299,7 @@ The scoffer coffers and scoffin' coffins are impenetrable. But even if they were
 >exit
 The only way to exit is south, so let's go that way.
 >undo
+
 #testcase-exits-emptiness-sepiments
 >exits
 The only way you seem to be able to go is south to Self-ID Fields.
@@ -351,6 +357,7 @@ Your score has just gone up by one point.
 LIVERS.
 
 DEBUG: livers being objhinted.
+
 #ttc-table-of-forest-anagrams-livers
 >xx livers
 Your vision blurs a bit, and instead you see a silver sliver.
@@ -468,6 +475,7 @@ DEBUG: maps being objhinted.
 >exit
 Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog. Hey, those maps might be useful to look at, though.
 >undo
+
 #testcase-exits-ghouls-slough
 >exits
 You might get lost going in any direction without help. Hmm.
@@ -498,6 +506,7 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 >exit
 The gnash hangs would, err, shnag you.
 >undo
+
 #testcase-exits-frost-forts
 >exits
 You're stuck here. This is the final battle!
