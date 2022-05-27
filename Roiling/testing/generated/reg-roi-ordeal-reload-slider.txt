@@ -37,16 +37,20 @@ Your score has just gone up by one point.
 #note that satchel and lamp can't have slider tests.
 
 #note no slider test needed for satchel since it is settler's precursor
-#slider test for painting
+
+#testcase-slider-table-of-ordeal-reload-anagrams-painting
 >apnignit
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for basement
+
+#testcase-slider-table-of-ordeal-reload-anagrams-basement
 >esabemtn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for chimney
+
+#testcase-slider-table-of-ordeal-reload-anagrams-chimney
 >hcmieyn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stable
+
+#testcase-slider-table-of-ordeal-reload-anagrams-stable
 >tsbael
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -69,7 +73,8 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
 
 >in
-#slider test for stair
+
+#testcase-slider-table-of-ordeal-reload-anagrams-stair
 >tsira
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
@@ -106,7 +111,7 @@ Score in a scenario: 8 out of 15 total points in the current region, Ordeal Relo
 >u
 /^Highest Heights
 
-#slider test for ramp
+#testcase-slider-table-of-ordeal-reload-anagrams-ramp
 >arpm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -119,28 +124,35 @@ Score in a scenario: 9 out of 15 total points in the current region, Ordeal Relo
 >d
 /^Largely All-Grey Gallery
 
-#slider test for pavement
+#testcase-slider-table-of-ordeal-reload-anagrams-pavement
 >venemtpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for platform
+
+#testcase-slider-table-of-ordeal-reload-anagrams-platform
 >afmrlpto
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pedestal
+
+#testcase-slider-table-of-ordeal-reload-anagrams-pedestal
 >eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for crabgrass
+
+#testcase-slider-table-of-ordeal-reload-anagrams-crabgrass
 >sarbcgars
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for event map
+
+#testcase-slider-table-of-ordeal-reload-anagrams-event-map
 >venemtpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for brass crag
+
+#testcase-slider-table-of-ordeal-reload-anagrams-brass-crag
 >sarbcgars
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for farm plot
+
+#testcase-slider-table-of-ordeal-reload-anagrams-farm-plot
 >afmrlpto
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for steel pad
+
+#testcase-slider-table-of-ordeal-reload-anagrams-steel-pad
 >eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >slaeepdt
@@ -153,7 +165,7 @@ Since the diorama has instructions on what changes to what, and it is only a tea
 You already got some data from the slider on the diorama. You may want to save it for other things down the road.
 !Your settler throws out a bunch of beeps
 
-#slider test for snib
+#testcase-slider-table-of-ordeal-reload-anagrams-snib
 >nsbi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -167,7 +179,7 @@ Score in a scenario: 10 out of 15 total points in the current region, Ordeal Rel
 
 >in
 
-#slider test for flier
+#testcase-slider-table-of-ordeal-reload-anagrams-flier
 >lferi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -183,13 +195,15 @@ You nod. "No clues counsel."
 
 /^Carven Cavern
 
-#slider test for staple
+#testcase-slider-table-of-ordeal-reload-anagrams-staple
 >tspael
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stapler
+
+#testcase-slider-table-of-ordeal-reload-anagrams-stapler
 >tspaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scepter
+
+#testcase-slider-table-of-ordeal-reload-anagrams-scepter
 >eestrcp
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

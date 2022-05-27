@@ -19,16 +19,20 @@
 /^Grey Gyre
 
 >slon
-#slider test for blam
+
+#testcase-slider-table-of-presto-anagrams-blam
 >lbma
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mazeltov
+
+#testcase-slider-table-of-presto-anagrams-mazeltov
 >ameztlvo
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for umph
+
+#testcase-slider-table-of-presto-anagrams-umph
 >muhp
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bleep
+
+#testcase-slider-table-of-presto-anagrams-bleep
 >eebpl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -39,10 +43,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
 
-#slider test for phooey
+#testcase-slider-table-of-presto-anagrams-phooey
 >oophye
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pooh
+
+#testcase-slider-table-of-presto-anagrams-pooh
 >opho
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -59,10 +64,11 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >s
 /^Char Arch
 
-#slider test for rats
+#testcase-slider-table-of-presto-anagrams-rats
 >arst
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for drat
+
+#testcase-slider-table-of-presto-anagrams-drat
 >rdta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -91,10 +97,11 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 >e
 /^Marines Seminar Remains
 
-#slider test for bingo
+#testcase-slider-table-of-presto-anagrams-bingo
 >ibgon
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for prost
+
+#testcase-slider-table-of-presto-anagrams-prost
 >rpsto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -109,7 +116,7 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 
 >w
 
-#slider test for wont
+#testcase-slider-table-of-presto-anagrams-wont
 >owtn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -129,7 +136,7 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 >s
 /^Dirge Ridge
 
-#slider test for ole
+#testcase-slider-table-of-presto-anagrams-ole
 >leo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -139,10 +146,11 @@ by one point
 >score
 Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-#slider test for darn
+#testcase-slider-table-of-presto-anagrams-darn
 >adnr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for goodness
+
+#testcase-slider-table-of-presto-anagrams-goodness
 >osgndsoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -152,7 +160,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-#slider test for whassup
+#testcase-slider-table-of-presto-anagrams-whassup
 >sahwups
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -184,7 +192,7 @@ Score in a scenario: 16 out of 41 total points in the current region, Presto. Lo
 >load gun with dart
 You put the dart into the PG-on-up popgun.
 
-#slider test for there
+#testcase-slider-table-of-presto-anagrams-there
 >eethr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -200,10 +208,11 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
-#slider test for gosh
+#testcase-slider-table-of-presto-anagrams-gosh
 >oghs
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for syke
+
+#testcase-slider-table-of-presto-anagrams-syke
 >ysek
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -212,16 +221,19 @@ Your score has just gone up by one point
 
 /^Phat Path
 
-#slider test for what
+#testcase-slider-table-of-presto-anagrams-what
 >hwta
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for solong
+
+#testcase-slider-table-of-presto-anagrams-solong
 >osolgn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for later
+
+#testcase-slider-table-of-presto-anagrams-later
 >alert
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tough
+
+#testcase-slider-table-of-presto-anagrams-tough
 >otghu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -246,7 +258,7 @@ Dat was a good dust-up
 >score
 Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
-#slider test for trasch
+#testcase-slider-table-of-presto-anagrams-trasch
 >rtsahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -258,7 +270,7 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 /^Hacks' Shack
 
-#slider test for screen
+#testcase-slider-table-of-presto-anagrams-screen
 >ercsne
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -269,37 +281,47 @@ Only one more piece of hardware is needed, and the computer will work.
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
-#slider test for skid
+#testcase-slider-table-of-presto-anagrams-skid
 >ksdi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cola
+
+#testcase-slider-table-of-presto-anagrams-cola
 >ocal
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mug
+
+#testcase-slider-table-of-presto-anagrams-mug
 >ugm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for leaf
+
+#testcase-slider-table-of-presto-anagrams-leaf
 >elfa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for futon
+
+#testcase-slider-table-of-presto-anagrams-futon
 >ufont
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for casserole
+
+#testcase-slider-table-of-presto-anagrams-casserole
 >aceesolrs
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rom stick
+
+#testcase-slider-table-of-presto-anagrams-rom-stick
 >orsmitkc
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rom sticks
+
+#testcase-slider-table-of-presto-anagrams-rom-sticks
 >smorsckit
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for avider
+
+#testcase-slider-table-of-presto-anagrams-avider
 >vadire
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for derive
+
+#testcase-slider-table-of-presto-anagrams-derive
 >edevir
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for capslock
+
+#testcase-slider-table-of-presto-anagrams-capslock
 >acclskpo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -316,7 +338,7 @@ Your score has just gone up by one point
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 #note the regular code path is usurped to remind the player of what they already know
-#slider test for disk
+#testcase-slider-table-of-presto-anagrams-disk
 >ikds
 No, skid <=> disk is about it. There's no tricky third way.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -343,7 +365,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#slider test for keyboard
+#testcase-slider-table-of-presto-anagrams-keyboard
 >ekbyaodr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -354,7 +376,7 @@ You can now do computery things unimpeded! Hooray!
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#slider test for tab
+#testcase-slider-table-of-presto-anagrams-tab
 >abt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -362,7 +384,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >put disk in drive a
 
-#slider test for reboot
+#testcase-slider-table-of-presto-anagrams-reboot
 >obreto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -384,7 +406,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#slider test for sleep
+#testcase-slider-table-of-presto-anagrams-sleep
 >eespl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -394,7 +416,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-#slider test for compile
+#testcase-slider-table-of-presto-anagrams-compile
 >ocpmlei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -443,7 +465,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
-#slider test for debug
+#testcase-slider-table-of-presto-anagrams-debug
 >edugb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -460,7 +482,7 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 >misses
 !presto
 
-#slider test for sub
+#testcase-slider-table-of-presto-anagrams-sub
 >usb
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: sub.

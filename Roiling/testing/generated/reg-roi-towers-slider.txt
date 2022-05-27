@@ -22,111 +22,138 @@
 
 >slon
 >z
-#slider test for talcier
+
+#testcase-slider-table-of-towers-anagrams-talcier
 >atcleri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >allrand
-#slider test for snared
+
+#testcase-slider-table-of-towers-anagrams-snared
 >nsrade
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for warned
+
+#testcase-slider-table-of-towers-anagrams-warned
 >awnrde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for achier
+
+#testcase-slider-table-of-towers-anagrams-achier
 >caihre
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for nearby
+
+#testcase-slider-table-of-towers-anagrams-nearby
 >enrayb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for bleak
+
+#testcase-slider-table-of-towers-anagrams-bleak
 >lbake
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for bored
+
+#testcase-slider-table-of-towers-anagrams-bored
 >obedr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for cricked
+
+#testcase-slider-table-of-towers-anagrams-cricked
 >rcciedk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for lardy
+
+#testcase-slider-table-of-towers-anagrams-lardy
 >aldyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for timider
+
+#testcase-slider-table-of-towers-anagrams-timider
 >itimerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for weedy
+
+#testcase-slider-table-of-towers-anagrams-weedy
 >ewdye
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for wined
+
+#testcase-slider-table-of-towers-anagrams-wined
 >iwedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for olden
+
+#testcase-slider-table-of-towers-anagrams-olden
 >loend
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for tenser
+
+#testcase-slider-table-of-towers-anagrams-tenser
 >eterns
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for gone
+
+#testcase-slider-table-of-towers-anagrams-gone
 >ogen
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for godly
+
+#testcase-slider-table-of-towers-anagrams-godly
 >oglyd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for learned
+
+#testcase-slider-table-of-towers-anagrams-learned
 >elendar
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for calmer
+
+#testcase-slider-table-of-towers-anagrams-calmer
 >acmlre
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for normal
+
+#testcase-slider-table-of-towers-anagrams-normal
 >onmrla
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for pronest
+
+#testcase-slider-table-of-towers-anagrams-pronest
 >rpnoste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for eggier
+
+#testcase-slider-table-of-towers-anagrams-eggier
 >geergi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for coyer
+
+#testcase-slider-table-of-towers-anagrams-coyer
 >ocery
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for ashen
+
+#testcase-slider-table-of-towers-anagrams-ashen
 >saenh
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for recreant
+
+#testcase-slider-table-of-towers-anagrams-recreant
 >eraerctn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for stony
+
+#testcase-slider-table-of-towers-anagrams-stony
 >tsnyo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for awed
+
+#testcase-slider-table-of-towers-anagrams-awed
 >wade
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for yonder
+
+#testcase-slider-table-of-towers-anagrams-yonder
 >oydnre
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 >undo
@@ -171,7 +198,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
 
-#slider test for sadder
+#testcase-slider-table-of-towers-anagrams-sadder
 >ddsare
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -186,16 +213,19 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 >n
 /^Scope Copse
 
-#slider test for rusty
+#testcase-slider-table-of-towers-anagrams-rusty
 >urtys
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rinsed
+
+#testcase-slider-table-of-towers-anagrams-rinsed
 >irsnde
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for subtler
+
+#testcase-slider-table-of-towers-anagrams-subtler
 >ustberl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for reined
+
+#testcase-slider-table-of-towers-anagrams-reined
 >eredin
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -222,7 +252,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 57.
 
-#slider test for creaky
+#testcase-slider-table-of-towers-anagrams-creaky
 >rcaeyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -236,13 +266,15 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 /^Baldest Blasted Saltbed
 
-#slider test for coiled
+#testcase-slider-table-of-towers-anagrams-coiled
 >oclide
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pastier
+
+#testcase-slider-table-of-towers-anagrams-pastier
 >aptseri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for semipro
+
+#testcase-slider-table-of-towers-anagrams-semipro
 >esimrop
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -265,13 +297,15 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 
 /^Anemic Cinema
 
-#slider test for angstier
+#testcase-slider-table-of-towers-anagrams-angstier
 >nasgitre
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for married
+
+#testcase-slider-table-of-towers-anagrams-married
 >rrmaedi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for released
+
+#testcase-slider-table-of-towers-anagrams-released
 >ereledas
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: released.
@@ -286,7 +320,7 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 
 /^Fringe Finger
 
-#slider test for rustled
+#testcase-slider-table-of-towers-anagrams-rustled
 >urtsedl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -316,10 +350,11 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 
 /^Salted Deltas
 
-#slider test for hastiest
+#testcase-slider-table-of-towers-anagrams-hastiest
 >ahtseits
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for weariest
+
+#testcase-slider-table-of-towers-anagrams-weariest
 >eweirats
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -335,7 +370,7 @@ Score in a scenario: 23 out of 57 total points in the current region, Towers. Lo
 
 /^Treading Gradient
 
-#slider test for nerdiest
+#testcase-slider-table-of-towers-anagrams-nerdiest
 >eneidrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -344,7 +379,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 24 out of 57 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 57.
 
-#slider test for saltier
+#testcase-slider-table-of-towers-anagrams-saltier
 >astleri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -353,10 +388,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
 
-#slider test for sewed
+#testcase-slider-table-of-towers-anagrams-sewed
 >esdwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mined
+
+#testcase-slider-table-of-towers-anagrams-mined
 >imedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -365,7 +401,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
 
-#slider test for pearly
+#testcase-slider-table-of-towers-anagrams-pearly
 >eprayl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -376,7 +412,7 @@ Score in a scenario: 27 out of 57 total points in the current region, Towers. Lo
 >d
 /^Dire and Arid Den
 
-#slider test for dandier
+#testcase-slider-table-of-towers-anagrams-dandier
 >addneri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -389,11 +425,11 @@ Score in a scenario: 27 out of 57 total points in the current region, Towers. Lo
 Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >e
 
-#slider test for holiest
+#testcase-slider-table-of-towers-anagrams-holiest
 >ohilste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#slider test for marginal
+#testcase-slider-table-of-towers-anagrams-marginal
 >amaiglrn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -414,7 +450,7 @@ Score in a scenario: 30 out of 57 total points in the current region, Towers. Lo
 >s
 >s
 
-#slider test for restful
+#testcase-slider-table-of-towers-anagrams-restful
 >ertsulf
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -424,7 +460,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 57 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 57.
 
-#slider test for naivest
+#testcase-slider-table-of-towers-anagrams-naivest
 >anviste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -444,7 +480,7 @@ Score in a scenario: 32 out of 57 total points in the current region, Towers. Lo
 
 /^Leveraged Everglade
 
-#slider test for grandiose
+#testcase-slider-table-of-towers-anagrams-grandiose
 >rgnaidseo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -460,10 +496,11 @@ Score in a scenario: 33 out of 57 total points in the current region, Towers. Lo
 You get lost in the gadflies' gasfield a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
 /^Dourest Detours
 
-#slider test for rousted
+#testcase-slider-table-of-towers-anagrams-rousted
 >orsuedt
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for aimless
+
+#testcase-slider-table-of-towers-anagrams-aimless
 >smiesal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -483,7 +520,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 57 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 57.
 
-#slider test for prosiest
+#testcase-slider-table-of-towers-anagrams-prosiest
 >sorpstie
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -497,7 +534,7 @@ Score in a scenario: 36 out of 57 total points in the current region, Towers. Lo
 
 /^Danger Garden
 
-#slider test for broken
+#testcase-slider-table-of-towers-anagrams-broken
 >rbkone
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -507,7 +544,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 37 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
-#slider test for resting
+#testcase-slider-table-of-towers-anagrams-resting
 >ertsngi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -522,16 +559,21 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 /^Obscurest Subsector
 
 #this is faked a bit in the code and verification script. Rowdy/Wordy are not flippable things.
-#slider test for wordy
+
+#These are usually in the "slider" section,
+#so we don't have an official test case, but we still need to check it
+# "obscurest-subsector wordy" would be it, but it'd conflict with my test case harvester/checker
 >owdyr
 The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
-#slider test for rowdy
+
 >ordyw
 The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
-#slider test for fussier
+
+#testcase-slider-table-of-towers-anagrams-fussier
 >ssfueri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for unlocked
+
+#testcase-slider-table-of-towers-anagrams-unlocked
 >nuolkcde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -561,7 +603,7 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 
 /^Outer Route
 
-#slider test for revised
+#testcase-slider-table-of-towers-anagrams-revised
 >eresdvi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -576,7 +618,7 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 
-#slider test for grained
+#testcase-slider-table-of-towers-anagrams-grained
 >rgiaedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -590,7 +632,7 @@ Score in a scenario: 43 out of 57 total points in the current region, Towers. Lo
 #notana
 !Your score has just gone up by one point
 
-#slider test for attentive
+#testcase-slider-table-of-towers-anagrams-attentive
 >teatievnt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -613,15 +655,17 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 >gt coastlines
 >give gizmo to agnostic
 
-#slider test for robust
+#testcase-slider-table-of-towers-anagrams-robust
 >orubts
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stabler
+
+#testcase-slider-table-of-towers-anagrams-stabler
 >tsbaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >gonear rawest waster waters
-#slider test for nearest
+
+#testcase-slider-table-of-towers-anagrams-nearest
 >enesatr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
@@ -633,7 +677,7 @@ by one point
 >stabler
 by one point
 
-#slider test for rewired
+#testcase-slider-table-of-towers-anagrams-rewired
 >eriderw
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -650,13 +694,15 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 >score
 Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
-#slider test for punier
+#testcase-slider-table-of-towers-anagrams-punier
 >upinre
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spectacular
+
+#testcase-slider-table-of-towers-anagrams-spectacular
 >pscaacelrtu
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for present
+
+#testcase-slider-table-of-towers-anagrams-present
 >eepnrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -668,7 +714,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
-#slider test for antsier
+#testcase-slider-table-of-towers-anagrams-antsier
 >nasteri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -687,7 +733,7 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 
 /^Mesprise Premises
 
-#slider test for triste
+#testcase-slider-table-of-towers-anagrams-triste
 >rtteis
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -696,7 +742,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
 
-#slider test for annoyed
+#testcase-slider-table-of-towers-anagrams-annoyed
 >naonedy
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

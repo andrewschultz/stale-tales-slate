@@ -130,13 +130,16 @@ Eew-gas sewage. Skint-stink.
 
 @sli
 >slon
-#slider test for hate
+\\
+#testcase-slider-table-of-troves-anagrams-hate
 >ahet
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for gape
+\\
+#testcase-slider-table-of-troves-anagrams-gape
 >agep
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stare
+\\
+#testcase-slider-table-of-troves-anagrams-stare
 >tsrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -317,7 +320,7 @@ DEBUG INFO: Race Acre hinting.
 {$SCOS}
 
 @sli
-#slider test for care
+#testcase-slider-table-of-troves-anagrams-care
 >acer
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -490,10 +493,11 @@ That should work, but you--your eyes are wandering now. You're not taking it all
 You should SPOT once you're able to focus better.
 
 @sli
-#slider test for observe
+#testcase-slider-table-of-troves-anagrams-observe
 >esbover
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for surmise
+\\
+#testcase-slider-table-of-troves-anagrams-surmise
 >ussierm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -539,7 +543,7 @@ You're already observing by reflex now. No need to tweak things.
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
 
 @sli
-#slider test for spot
+#testcase-slider-table-of-troves-anagrams-spot
 >psto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -593,7 +597,7 @@ A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar m
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 @sli
-#slider test for stay
+#testcase-slider-table-of-troves-anagrams-stay
 >tsya
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -669,11 +673,11 @@ A small orange blob with big eyes, short legs, and no arms falls off to the side
 The bee's gender is only relevant to the point of knowing it's a senora.
 
 @sli
-#slider test for reason
+#testcase-slider-table-of-troves-anagrams-reason
 >ersano
 Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
-#slider test for believe
+#testcase-slider-table-of-troves-anagrams-believe
 >ebevlei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -783,7 +787,7 @@ But it's not just any bee. It's a vile bee!
 That question mark is perhaps, um, clear if you think about it.
 
 @sli
-#slider test for recall
+#testcase-slider-table-of-troves-anagrams-recall
 >lcelra
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -926,7 +930,7 @@ It's an IRES PAD, not just ires.
 It's an IRES PAD, not just a pad.
 
 @sli
-#slider test for despair
+#testcase-slider-table-of-troves-anagrams-despair
 >edpsira
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -950,7 +954,7 @@ DEBUG INFO: I'd Cede hinting.
 {$SCOS}
 
 @sli
-#slider test for glare
+#testcase-slider-table-of-troves-anagrams-glare
 >lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1043,7 +1047,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a d
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for decide
+#testcase-slider-table-of-troves-anagrams-decide
 >ediced
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1125,13 +1129,15 @@ You are not rich and consequential enough to snap your fingers and watch your ow
 Getting drunk will not solve your problems. Besides, you missed your "chance" with the lager in Drain Nadir. You see red at yourself for such thoughts.
 
 @sli
-#slider test for master
+#testcase-slider-table-of-troves-anagrams-master
 >amtsre
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bolster
+\\
+#testcase-slider-table-of-troves-anagrams-bolster
 >obslert
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for deal
+\\
+#testcase-slider-table-of-troves-anagrams-deal
 >edla
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1192,7 +1198,7 @@ The leapers almost seem to dance around for a bit.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for relapse
+#testcase-slider-table-of-troves-anagrams-relapse
 >erepsal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1370,7 +1376,7 @@ All sorts of articles that make you see red. This one's about
 /(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
 
 @sli
-#slider test for discover
+#testcase-slider-table-of-troves-anagrams-discover
 >idcsvore
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1442,7 +1448,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a de
 Nothing catches your eye except an article on RIDEES, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out.
 
 @sli
-#slider test for desire
+#testcase-slider-table-of-troves-anagrams-desire
 >ederis
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1554,10 +1560,11 @@ Odd readings. Maybe the words from the praise spirea will help you in a differen
 You redden at the thought of mystical lands that aren't relevant to the here and now.
 
 @sli
-#slider test for aspire
+#testcase-slider-table-of-troves-anagrams-aspire
 >saiper
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for strive
+\\
+#testcase-slider-table-of-troves-anagrams-strive
 >tsirev
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1677,7 +1684,7 @@ Ideas flash through your mind. Wow! That's what art can do! But ... nothing conc
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for ascertain
+#testcase-slider-table-of-troves-anagrams-ascertain
 >saareicnt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1741,7 +1748,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the END PRONER POD. 
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for ponder
+#testcase-slider-table-of-troves-anagrams-ponder
 >opdnre
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1814,7 +1821,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's
 /Etched into the vees in red are the names of this motivational device's inventors\. One is (Ed Evers|Erv Dees)\.
 
 @sli
-#slider test for deserve
+#testcase-slider-table-of-troves-anagrams-deserve
 >edesver
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1912,7 +1919,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. Tha
 Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
 
 @sli
-#slider test for last
+#testcase-slider-table-of-troves-anagrams-last
 >alts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2049,16 +2056,19 @@ You seem to need to force yourself to be more whimsical. Which seems contradicto
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for ramble
+#testcase-slider-table-of-troves-anagrams-ramble
 >arbmel
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for resist
+\\
+#testcase-slider-table-of-troves-anagrams-resist
 >ssrtei
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for recant
+\\
+#testcase-slider-table-of-troves-anagrams-recant
 >eractn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for romanticise
+\\
+#testcase-slider-table-of-troves-anagrams-romanticise
 >imonairstec
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

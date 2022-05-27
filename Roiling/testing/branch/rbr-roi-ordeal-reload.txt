@@ -510,16 +510,20 @@ You're not going to change this--deed. Or Elvira's opinion. Better to change Yor
 
 @sli
 #note no slider test needed for satchel since it is settler's precursor
-#slider test for painting
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-painting
 >apnignit
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for basement
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-basement
 >esabemtn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for chimney
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-chimney
 >hcmieyn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stable
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-stable
 >tsbael
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -724,7 +728,8 @@ You wouldn't want to collapse the whole ceiling, but maybe the words MY NICHE co
 
 @sli
 >in
-#slider test for stair
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-stair
 >tsira
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
@@ -1023,7 +1028,7 @@ The closets are there to warp space a bit. You don't need to mess with them.
 The closets are there to warp space a bit. You don't need to mess with them.
 
 @sli
-#slider test for ramp
+#testcase-slider-table-of-ordeal-reload-anagrams-ramp
 >arpm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1210,28 +1215,35 @@ There are two unblocked exits: up to Dusty Study and inside.
 You have more than one way to leave: up and inside. So you'll need to specify which one.
 
 @sli
-#slider test for pavement
+#testcase-slider-table-of-ordeal-reload-anagrams-pavement
 >venemtpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for platform
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-platform
 >afmrlpto
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pedestal
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-pedestal
 >eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for crabgrass
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-crabgrass
 >sarbcgars
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for event map
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-event-map
 >venemtpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for brass crag
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-brass-crag
 >sarbcgars
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for farm plot
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-farm-plot
 >afmrlpto
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for steel pad
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-steel-pad
 >eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
 ###################here we test a special case: if you use the slider on part of the diorama, then you figure what it's for, and the game doesn't let you do it again.
@@ -1289,7 +1301,7 @@ Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you 
 Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 
 @sli
-#slider test for snib
+#testcase-slider-table-of-ordeal-reload-anagrams-snib
 >nsbi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1356,7 +1368,7 @@ You don't ever need to SCAN X WITH SETTLER, just SCAN X.
 >in
 
 @sli
-#slider test for flier
+#testcase-slider-table-of-ordeal-reload-anagrams-flier
 >lferi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1598,13 +1610,15 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
 @sli
-#slider test for staple
+#testcase-slider-table-of-ordeal-reload-anagrams-staple
 >tspael
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stapler
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-stapler
 >tspaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scepter
+\\
+#testcase-slider-table-of-ordeal-reload-anagrams-scepter
 >eestrcp
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

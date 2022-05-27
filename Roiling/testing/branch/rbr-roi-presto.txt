@@ -95,16 +95,20 @@ You're not messing around! You see the best way to destroy the maze, and you're 
 
 @sli
 >slon
-#slider test for blam
+\\
+#testcase-slider-table-of-presto-anagrams-blam
 >lbma
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mazeltov
+\\
+#testcase-slider-table-of-presto-anagrams-mazeltov
 >ameztlvo
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for umph
+\\
+#testcase-slider-table-of-presto-anagrams-umph
 >muhp
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bleep
+\\
+#testcase-slider-table-of-presto-anagrams-bleep
 >eebpl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -281,10 +285,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a de
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for phooey
+#testcase-slider-table-of-presto-anagrams-phooey
 >oophye
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pooh
+\\
+#testcase-slider-table-of-presto-anagrams-pooh
 >opho
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -499,10 +504,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a d
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
 @sli
-#slider test for rats
+#testcase-slider-table-of-presto-anagrams-rats
 >arst
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for drat
+\\
+#testcase-slider-table-of-presto-anagrams-drat
 >rdta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1241,10 +1247,11 @@ Well! No matches, but the name is short enough, you might be able to eliminate t
 Maybe you can find where the vowel is. That could help.
 
 @sli
-#slider test for bingo
+#testcase-slider-table-of-presto-anagrams-bingo
 >ibgon
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for prost
+\\
+#testcase-slider-table-of-presto-anagrams-prost
 >rpsto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1375,7 +1382,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze. You know, for style points.
 
 @sli
-#slider test for wont
+#testcase-slider-table-of-presto-anagrams-wont
 >owtn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1632,7 +1639,7 @@ The vile veil seems to almost repel a leaper except where it opens to the north.
 The only way you seem to be able to go is north to Char Arch.
 
 @sli
-#slider test for ole
+#testcase-slider-table-of-presto-anagrams-ole
 >leo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1762,10 +1769,11 @@ There's no sense in making the vile veil worse than it is and even less sense in
 /Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
 
 @sli
-#slider test for darn
+#testcase-slider-table-of-presto-anagrams-darn
 >adnr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for goodness
+\\
+#testcase-slider-table-of-presto-anagrams-goodness
 >osgndsoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1843,7 +1851,7 @@ It's time for something more cordial than whupass. Besides, you have no can to p
 You need to find a way to cheer them up.
 
 @sli
-#slider test for whassup
+#testcase-slider-table-of-presto-anagrams-whassup
 >sahwups
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2055,7 +2063,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a 
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for there
+#testcase-slider-table-of-presto-anagrams-there
 >eethr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2164,10 +2172,11 @@ The ether is gone. You can just go back north.
 >n
 
 @sli
-#slider test for gosh
+#testcase-slider-table-of-presto-anagrams-gosh
 >oghs
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for syke
+\\
+#testcase-slider-table-of-presto-anagrams-syke
 >ysek
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2328,16 +2337,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt th
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
 
 @sli
-#slider test for what
+#testcase-slider-table-of-presto-anagrams-what
 >hwta
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for solong
+\\
+#testcase-slider-table-of-presto-anagrams-solong
 >osolgn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for later
+\\
+#testcase-slider-table-of-presto-anagrams-later
 >alert
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tough
+\\
+#testcase-slider-table-of-presto-anagrams-tough
 >otghu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2565,7 +2577,7 @@ Maybe if
 /The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
 @sli
-#slider test for trasch
+#testcase-slider-table-of-presto-anagrams-trasch
 >rtsahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2682,7 +2694,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for screen
+#testcase-slider-table-of-presto-anagrams-screen
 >ercsne
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2985,37 +2997,47 @@ Kids don't need to listen to the words you've used so far! They wouldn't help wi
 However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus.
 
 @sli
-#slider test for skid
+#testcase-slider-table-of-presto-anagrams-skid
 >ksdi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cola
+\\
+#testcase-slider-table-of-presto-anagrams-cola
 >ocal
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mug
+\\
+#testcase-slider-table-of-presto-anagrams-mug
 >ugm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for leaf
+\\
+#testcase-slider-table-of-presto-anagrams-leaf
 >elfa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for futon
+\\
+#testcase-slider-table-of-presto-anagrams-futon
 >ufont
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for casserole
+\\
+#testcase-slider-table-of-presto-anagrams-casserole
 >aceesolrs
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rom stick
+\\
+#testcase-slider-table-of-presto-anagrams-rom-stick
 >orsmitkc
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rom sticks
+\\
+#testcase-slider-table-of-presto-anagrams-rom-sticks
 >smorsckit
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for avider
+\\
+#testcase-slider-table-of-presto-anagrams-avider
 >vadire
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for derive
+\\
+#testcase-slider-table-of-presto-anagrams-derive
 >edevir
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for capslock
+\\
+#testcase-slider-table-of-presto-anagrams-capslock
 >acclskpo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3039,7 +3061,7 @@ Your score has just gone up by one point
 
 @sli
 #note the regular code path is usurped to remind the player of what they already know
-#slider test for disk
+#testcase-slider-table-of-presto-anagrams-disk
 >ikds
 No, skid <=> disk is about it. There's no tricky third way.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -3252,7 +3274,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That'
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for keyboard
+#testcase-slider-table-of-presto-anagrams-keyboard
 >ekbyaodr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3269,7 +3291,7 @@ You would rather change the skid back to the disk, then put the disk in the disk
 {$SCOS}
 
 @sli
-#slider test for tab
+#testcase-slider-table-of-presto-anagrams-tab
 >abt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3346,7 +3368,7 @@ You add the information to your pedanto-notepad under FLIPS.
 >undo
 
 @sli
-#slider test for reboot
+#testcase-slider-table-of-presto-anagrams-reboot
 >obreto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3512,7 +3534,7 @@ That stupid NEED IF-DEFINE and that peels speel, still.
 >undo
 
 @sli
-#slider test for sleep
+#testcase-slider-table-of-presto-anagrams-sleep
 >eespl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3548,7 +3570,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polem
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for compile
+#testcase-slider-table-of-presto-anagrams-compile
 >ocpmlei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3806,7 +3828,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for debug
+#testcase-slider-table-of-presto-anagrams-debug
 >edugb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3938,7 +3960,7 @@ You could also have made the USB into a SUB.
 >undo
 
 @sli
-#slider test for sub
+#testcase-slider-table-of-presto-anagrams-sub
 >usb
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: sub.

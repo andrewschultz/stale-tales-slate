@@ -294,16 +294,20 @@ You've parsed the spelling of quite a few words so far. Just a bit more, now.
 
 @sli
 >slon
-#slider test for grapes
+\\
+#testcase-slider-table-of-others-anagrams-grapes
 >rgpase
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for limes
+\\
+#testcase-slider-table-of-others-anagrams-limes
 >ilesm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pears
+\\
+#testcase-slider-table-of-others-anagrams-pears
 >eprsa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for plums
+\\
+#testcase-slider-table-of-others-anagrams-plums
 >lpmsu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -436,7 +440,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for compass
+#testcase-slider-table-of-others-anagrams-compass
 >smoascp
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -566,19 +570,19 @@ You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissi
 You have a vision of fruit: TAMARIND. The aftertaste of arugula finally dissipates.
 
 @sli
-#slider test for dates
+#testcase-slider-table-of-others-anagrams-dates
 >adest
 Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
-#slider test for cherries
+#testcase-slider-table-of-others-anagrams-cherries
 >hcreesri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
-#slider test for tamarind
+#testcase-slider-table-of-others-anagrams-tamarind
 >atamirdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
-#slider test for maraschino
+#testcase-slider-table-of-others-anagrams-maraschino
 >amarcsihon
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -801,16 +805,19 @@ Not just omen, or prism. It's an omen prism.
 {$SCOS}
 
 @sli
-#slider test for blueberries
+#testcase-slider-table-of-others-anagrams-blueberries
 >ebeblreisur
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cantaloupe
+\\
+#testcase-slider-table-of-others-anagrams-cantaloupe
 >acalntuoep
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for persimmon
+\\
+#testcase-slider-table-of-others-anagrams-persimmon
 >mreisponm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pomegranate
+\\
+#testcase-slider-table-of-others-anagrams-pomegranate
 >opeargetnam
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -976,22 +983,27 @@ You have a vision of fruit: TANGERINES. The aftertaste of arugula finally dissip
 Nothing happens. Maybe try to see through something else.
 
 @sli
-#slider test for apricot
+#testcase-slider-table-of-others-anagrams-apricot
 >pairotc
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for apples
+\\
+#testcase-slider-table-of-others-anagrams-apples
 >palpse
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for coconuts
+\\
+#testcase-slider-table-of-others-anagrams-coconuts
 >ococunst
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for gooseberry
+\\
+#testcase-slider-table-of-others-anagrams-gooseberry
 >resooebgyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mulberries
+\\
+#testcase-slider-table-of-others-anagrams-mulberries
 >umblreesri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tangerines
+\\
+#testcase-slider-table-of-others-anagrams-tangerines
 >atennesgri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1251,17 +1263,19 @@ Maybe if you had more than one coin.
 @sli
 #balance undos
 #detour for slider testing misses for "icon" and "icons"
-#slider test for icon
+#testcase-slider-table-of-others-anagrams-icon
 >cino
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for sonic icons
+\\
+#testcase-slider-table-of-others-anagrams-sonic-icons
 >purloin coins
 >ocsin
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: sonic.
 >undo
 >undo
-#slider test for icons
+\\
+#testcase-slider-table-of-others-anagrams-icons
 >purloin icons
 >cisno
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1474,28 +1488,35 @@ You have a vision of fruit: WATERMELON. The aftertaste of arugula finally dissip
 /DEBUG INFO: (barber sickle|barren cries|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
 @sli
-#slider test for blackberries
+#testcase-slider-table-of-others-anagrams-blackberries
 >ealkcrbbesri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for breadfruit
+\\
+#testcase-slider-table-of-others-anagrams-breadfruit
 >rbrdauefti
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cranberries
+\\
+#testcase-slider-table-of-others-anagrams-cranberries
 >rerbnrcasie
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for grapefruit
+\\
+#testcase-slider-table-of-others-anagrams-grapefruit
 >rgrepuafti
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pineapple
+\\
+#testcase-slider-table-of-others-anagrams-pineapple
 >eppplinea
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for raspberry
+\\
+#testcase-slider-table-of-others-anagrams-raspberry
 >arrreyspb
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for strawberries
+\\
+#testcase-slider-table-of-others-anagrams-strawberries
 >rssrbwreaeit
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for watermelon
+\\
+#testcase-slider-table-of-others-anagrams-watermelon
 >etawelrmno
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1823,7 +1844,7 @@ Money, or something like it, should not be the guide of you.
 
 @sli
 #there are more possible tests here but let's worry about this...
-#slider test for sonic
+#testcase-slider-table-of-others-anagrams-sonic
 >osicn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1856,7 +1877,7 @@ The sonic icons seem right. No use meddling.
 Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do.
 
 @sli
-#slider test for concisions
+#testcase-slider-table-of-others-anagrams-concisions
 >ocisncsnoi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1990,31 +2011,39 @@ Yes, there are probably disproportionately many people with a first name of Lyle
 Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.
 
 @sli
-#slider test for olives
+#testcase-slider-table-of-others-anagrams-olives
 >lovise
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for among
+\\
+#testcase-slider-table-of-others-anagrams-among
 >magon
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for ancienter
+\\
+#testcase-slider-table-of-others-anagrams-ancienter
 >neicnarte
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cheap
+\\
+#testcase-slider-table-of-others-anagrams-cheap
 >hcape
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cinque
+\\
+#testcase-slider-table-of-others-anagrams-cinque
 >icqneu
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cripes
+\\
+#testcase-slider-table-of-others-anagrams-cripes
 >rcpise
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mo len
+\\
+#testcase-slider-table-of-others-anagrams-mo-len
 >onelm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for papayas
+\\
+#testcase-slider-table-of-others-anagrams-papayas
 >apapsya
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for solemn
+\\
+#testcase-slider-table-of-others-anagrams-solemn
 >oselnm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2637,16 +2666,19 @@ You don't need to riff on any location names to win the game, unless there's not
 You need to change Dr. Severe, title and all.
 
 @sli
-#slider test for banana
+#testcase-slider-table-of-others-anagrams-banana
 >anaban
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for go near
+\\
+#testcase-slider-table-of-others-anagrams-go-near
 >ogenra
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rhubarb
+\\
+#testcase-slider-table-of-others-anagrams-rhubarb
 >brbruha
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for reversed
+\\
+#testcase-slider-table-of-others-anagrams-reversed
 >ereredvs
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2862,13 +2894,15 @@ You don't want to bring back that fleeing feeling whispering "PERP." Not in any 
 >undo
 
 @sli
-#slider test for research
+#testcase-slider-table-of-others-anagrams-research
 >erarsehc
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for review
+\\
+#testcase-slider-table-of-others-anagrams-review
 >erewvi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for prep
+\\
+#testcase-slider-table-of-others-anagrams-prep
 >rppe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

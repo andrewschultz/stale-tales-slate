@@ -14,34 +14,44 @@
 >c
 
 >slon
-#slider test for sorbet
+
+#testcase-slider-table-of-stores-anagrams-sorbet
 >osbrte
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for routes
+
+#testcase-slider-table-of-stores-anagrams-routes
 >ortuse
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for troves
+
+#testcase-slider-table-of-stores-anagrams-troves
 >rtvose
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for presto
+
+#testcase-slider-table-of-stores-anagrams-presto
 >rpseot
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for oyster
+
+#testcase-slider-table-of-stores-anagrams-oyster
 >yotsre
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for towers
+
+#testcase-slider-table-of-stores-anagrams-towers
 >otewsr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for others
+
+#testcase-slider-table-of-stores-anagrams-others
 >toehsr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for otters
+
+#testcase-slider-table-of-stores-anagrams-otters
 >toetsr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tokers
+
+#testcase-slider-table-of-stores-anagrams-tokers
 >oteksr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for nestor
+
+#testcase-slider-table-of-stores-anagrams-nestor
 >entsro
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -67,7 +77,7 @@ Score in a scenario: 3 out of 11 total points in the current region, Stores. Low
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
-#slider test for outside
+#testcase-slider-table-of-stores-anagrams-outside
 >uostdei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

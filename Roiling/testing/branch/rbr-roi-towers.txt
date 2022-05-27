@@ -137,112 +137,139 @@ Trying to change the current region you're in all at once would be risky, or use
 >slon
 ################################this tests all the possible picaros' changes. We simply dump all the "items" in the downside, then test and undo them one by one.
 >z
-#slider test for talcier
+\\
+#testcase-slider-table-of-towers-anagrams-talcier
 >atcleri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 ##balance undos
 >allrand
-#slider test for snared
+\\
+#testcase-slider-table-of-towers-anagrams-snared
 >nsrade
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for warned
+\\
+#testcase-slider-table-of-towers-anagrams-warned
 >awnrde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for achier
+\\
+#testcase-slider-table-of-towers-anagrams-achier
 >caihre
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for nearby
+\\
+#testcase-slider-table-of-towers-anagrams-nearby
 >enrayb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for bleak
+\\
+#testcase-slider-table-of-towers-anagrams-bleak
 >lbake
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for bored
+\\
+#testcase-slider-table-of-towers-anagrams-bored
 >obedr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for cricked
+\\
+#testcase-slider-table-of-towers-anagrams-cricked
 >rcciedk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for lardy
+\\
+#testcase-slider-table-of-towers-anagrams-lardy
 >aldyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for timider
+\\
+#testcase-slider-table-of-towers-anagrams-timider
 >itimerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for weedy
+\\
+#testcase-slider-table-of-towers-anagrams-weedy
 >ewdye
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for wined
+\\
+#testcase-slider-table-of-towers-anagrams-wined
 >iwedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for olden
+\\
+#testcase-slider-table-of-towers-anagrams-olden
 >loend
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for tenser
+\\
+#testcase-slider-table-of-towers-anagrams-tenser
 >eterns
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for gone
+\\
+#testcase-slider-table-of-towers-anagrams-gone
 >ogen
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for godly
+\\
+#testcase-slider-table-of-towers-anagrams-godly
 >oglyd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for learned
+\\
+#testcase-slider-table-of-towers-anagrams-learned
 >elendar
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for calmer
+\\
+#testcase-slider-table-of-towers-anagrams-calmer
 >acmlre
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for normal
+\\
+#testcase-slider-table-of-towers-anagrams-normal
 >onmrla
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for pronest
+\\
+#testcase-slider-table-of-towers-anagrams-pronest
 >rpnoste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for eggier
+\\
+#testcase-slider-table-of-towers-anagrams-eggier
 >geergi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for coyer
+\\
+#testcase-slider-table-of-towers-anagrams-coyer
 >ocery
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for ashen
+\\
+#testcase-slider-table-of-towers-anagrams-ashen
 >saenh
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for recreant
+\\
+#testcase-slider-table-of-towers-anagrams-recreant
 >eraerctn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for stony
+\\
+#testcase-slider-table-of-towers-anagrams-stony
 >tsnyo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for awed
+\\
+#testcase-slider-table-of-towers-anagrams-awed
 >wade
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for yonder
+\\
+#testcase-slider-table-of-towers-anagrams-yonder
 >oydnre
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 >undo
@@ -1243,7 +1270,7 @@ The Shout-So Hut is built to resist words. You aren't getting through, or past, 
 The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
 
 @sli
-#slider test for sadder
+#testcase-slider-table-of-towers-anagrams-sadder
 >ddsare
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1463,16 +1490,19 @@ You're trying to destroy the yurts, not build them up.
 You're trying to destroy the yurts, not build them up.
 
 @sli
-#slider test for rusty
+#testcase-slider-table-of-towers-anagrams-rusty
 >urtys
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rinsed
+\\
+#testcase-slider-table-of-towers-anagrams-rinsed
 >irsnde
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for subtler
+\\
+#testcase-slider-table-of-towers-anagrams-subtler
 >ustberl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for reined
+\\
+#testcase-slider-table-of-towers-anagrams-reined
 >eredin
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1867,7 +1897,7 @@ Now that you're at the shores of Leak Lake, it's too far to swim. You may need s
 >undo
 
 @sli
-#slider test for creaky
+#testcase-slider-table-of-towers-anagrams-creaky
 >rcaeyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1928,13 +1958,15 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 After a thoughtful gaze, you reckon the docile old ice could be COILED.
 
 @sli
-#slider test for coiled
+#testcase-slider-table-of-towers-anagrams-coiled
 >oclide
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pastier
+\\
+#testcase-slider-table-of-towers-anagrams-pastier
 >aptseri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for semipro
+\\
+#testcase-slider-table-of-towers-anagrams-semipro
 >esimrop
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2154,13 +2186,15 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 Hmm. You bet you could get past if the angriest ingrates were ANGSTIER.
 
 @sli
-#slider test for angstier
+#testcase-slider-table-of-towers-anagrams-angstier
 >nasgitre
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for married
+\\
+#testcase-slider-table-of-towers-anagrams-married
 >rrmaedi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for released
+\\
+#testcase-slider-table-of-towers-anagrams-released
 >ereledas
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: released.
@@ -2314,7 +2348,7 @@ Wrong type of word, and you're missing a d.
 Wrong type of word, and you're missing a d.
 
 @sli
-#slider test for rustled
+#testcase-slider-table-of-towers-anagrams-rustled
 >urtsedl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2596,10 +2630,11 @@ That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways.
 
 @sli
-#slider test for hastiest
+#testcase-slider-table-of-towers-anagrams-hastiest
 >ahtseits
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for weariest
+\\
+#testcase-slider-table-of-towers-anagrams-weariest
 >eweirats
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2750,7 +2785,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for nerdiest
+#testcase-slider-table-of-towers-anagrams-nerdiest
 >eneidrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2792,7 +2827,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @sli
-#slider test for saltier
+#testcase-slider-table-of-towers-anagrams-saltier
 >astleri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2853,10 +2888,11 @@ Your score has just gone up by one point
 {$SCOS}
 
 @sli
-#slider test for sewed
+#testcase-slider-table-of-towers-anagrams-sewed
 >esdwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mined
+\\
+#testcase-slider-table-of-towers-anagrams-mined
 >imedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2901,7 +2937,7 @@ You blink
 After a thoughtful gaze, you reckon the raves saver could be PEARLY.
 
 @sli
-#slider test for pearly
+#testcase-slider-table-of-towers-anagrams-pearly
 >eprayl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3061,7 +3097,7 @@ Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
 They're not just bottles! They're bottles of NERD-AID!
 
 @sli
-#slider test for dandier
+#testcase-slider-table-of-towers-anagrams-dandier
 >addneri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3188,11 +3224,11 @@ Well, this is tricky. There's her name, and it's probably interacting with itsel
 >gs
 
 @sli
-#slider test for holiest
+#testcase-slider-table-of-towers-anagrams-holiest
 >ohilste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
-#slider test for marginal
+#testcase-slider-table-of-towers-anagrams-marginal
 >amaiglrn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3268,7 +3304,7 @@ DEBUG INFO: REB-NOK bonker hinting.
 Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 
 @sli
-#slider test for restful
+#testcase-slider-table-of-towers-anagrams-restful
 >ertsulf
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3327,7 +3363,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the natives' site va
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for naivest
+#testcase-slider-table-of-towers-anagrams-naivest
 >anviste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3428,7 +3464,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego dr
 With nine letters, it was never going to be easy. (Fourth wall note: this is the hardest ambiguous reading in the game. That's why it's optional.) Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
 
 @sli
-#slider test for grandiose
+#testcase-slider-table-of-towers-anagrams-grandiose
 >rgnaidseo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3485,10 +3521,11 @@ After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
 >undo
 
 @sli
-#slider test for rousted
+#testcase-slider-table-of-towers-anagrams-rousted
 >orsuedt
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for aimless
+\\
+#testcase-slider-table-of-towers-anagrams-aimless
 >smiesal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3581,7 +3618,7 @@ The only way to exit is north, so let's go that way.
 The only way you seem to be able to go is north to Danger Garden.
 
 @sli
-#slider test for prosiest
+#testcase-slider-table-of-towers-anagrams-prosiest
 >sorpstie
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3687,7 +3724,7 @@ You have more than one way to leave: north, south and west. So you'll need to sp
 There are three unblocked exits: north to Artist Traits Strait, south to Lost Lots and west to Leveraged Everglade.
 
 @sli
-#slider test for broken
+#testcase-slider-table-of-towers-anagrams-broken
 >rbkone
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3758,7 +3795,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the grin-set stinger
 The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess.
 
 @sli
-#slider test for resting
+#testcase-slider-table-of-towers-anagrams-resting
 >ertsngi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3932,16 +3969,21 @@ The Fries-Us Fissure can be made FUSSIER to some effect once there's something i
 
 @sli
 #this is faked a bit in the code and verification script. Rowdy/Wordy are not flippable things.
-#slider test for wordy
+\\
+#These are usually in the "slider" section,
+#so we don't have an official test case, but we still need to check it
+# "obscurest-subsector wordy" would be it, but it'd conflict with my test case harvester/checker
 >owdyr
 The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
-#slider test for rowdy
+\\
 >ordyw
 The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
-#slider test for fussier
+\\
+#testcase-slider-table-of-towers-anagrams-fussier
 >ssfueri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for unlocked
+\\
+#testcase-slider-table-of-towers-anagrams-unlocked
 >nuolkcde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -4239,7 +4281,7 @@ The diverse deviser is complicated enough. You probably just need to figure what
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 @sli
-#slider test for revised
+#testcase-slider-table-of-towers-anagrams-revised
 >eresdvi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -4497,7 +4539,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. T
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
 
 @sli
-#slider test for grained
+#testcase-slider-table-of-towers-anagrams-grained
 >rgiaedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -4554,7 +4596,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. Tha
 The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
 
 @sli
-#slider test for attentive
+#testcase-slider-table-of-towers-anagrams-attentive
 >teatievnt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -4687,16 +4729,18 @@ After a thoughtful gaze, you reckon the turbos could be ROBUST.
 After a thoughtful gaze, you reckon the blaster could be STABLER.
 
 @sli
-#slider test for robust
+#testcase-slider-table-of-towers-anagrams-robust
 >orubts
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stabler
+\\
+#testcase-slider-table-of-towers-anagrams-stabler
 >tsbaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @sli
 >gonear rawest waster waters
-#slider test for nearest
+\\
+#testcase-slider-table-of-towers-anagrams-nearest
 >enesatr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
@@ -4995,7 +5039,7 @@ Your score has just gone up by one point
 }}SCORE+=2
 
 @sli
-#slider test for rewired
+#testcase-slider-table-of-towers-anagrams-rewired
 >eriderw
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -5112,13 +5156,15 @@ Changing the clays would cause the curst palace to come tumbling down, since it'
 It's officially an ur-pine, not a pine.
 
 @sli
-#slider test for punier
+#testcase-slider-table-of-towers-anagrams-punier
 >upinre
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spectacular
+\\
+#testcase-slider-table-of-towers-anagrams-spectacular
 >pscaacelrtu
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for present
+\\
+#testcase-slider-table-of-towers-anagrams-present
 >eepnrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -5238,7 +5284,7 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 After a thoughtful gaze, you reckon the nastier stainer retinas could be ANTSIER.
 
 @sli
-#slider test for antsier
+#testcase-slider-table-of-towers-anagrams-antsier
 >nasteri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -5348,7 +5394,7 @@ No physical sciences are necessary here.
 No physical sciences are necessary here.
 
 @sli
-#slider test for triste
+#testcase-slider-table-of-towers-anagrams-triste
 >rtteis
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -5439,7 +5485,7 @@ After a thoughtful gaze, you reckon the Done-Any Anodyne could leave St. Teri AN
 You already remember the word ANNOYED--which seems right, just a matter of getting other things right first. Maybe they already are.
 
 @sli
-#slider test for annoyed
+#testcase-slider-table-of-towers-anagrams-annoyed
 >naonedy
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

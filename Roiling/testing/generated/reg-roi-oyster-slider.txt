@@ -19,29 +19,37 @@
 Score in a scenario: 0 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 45.
 
 >slon
-#slider test for sing
+
+#testcase-slider-table-of-oyster-anagrams-sing
 >isgn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spit
+
+#testcase-slider-table-of-oyster-anagrams-spit
 >psti
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scrape
+
+#testcase-slider-table-of-oyster-anagrams-scrape
 >csarep
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spill
+
+#not quite a test case we can access from a table: SPILL isn't anything you can quite flip with how the program is written, and it might be too much to rewrite it for full elegance or whatever.
 >lilsp
 You seem to be fumbling what to do with the pills.
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for inset
+
+#testcase-slider-table-of-oyster-anagrams-inset
 >niets
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for remap
+
+#testcase-slider-table-of-oyster-anagrams-remap
 >erapm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for unset
+
+#testcase-slider-table-of-oyster-anagrams-unset
 >nuets
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stroll
+
+#testcase-slider-table-of-oyster-anagrams-stroll
 >lrtlso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -89,7 +97,7 @@ INSET
 >score
 Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#slider test for calm
+#testcase-slider-table-of-oyster-anagrams-calm
 >acml
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -99,7 +107,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#slider test for run
+#testcase-slider-table-of-oyster-anagrams-run
 >nru
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -111,13 +119,15 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#slider test for fart
+#testcase-slider-table-of-oyster-anagrams-fart
 >aftr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for soar
+
+#testcase-slider-table-of-oyster-anagrams-soar
 >osra
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for boast
+
+#testcase-slider-table-of-oyster-anagrams-boast
 >obsta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -130,7 +140,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#slider test for leap
+#testcase-slider-table-of-oyster-anagrams-leap
 >elpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -142,17 +152,18 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#slider test for spike
+#testcase-slider-table-of-oyster-anagrams-spike
 >pskei
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scrap
+
+#testcase-slider-table-of-oyster-anagrams-scrap
 >csapr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >scrap
 Your score has just gone up by one
 
-#slider test for slander
+#testcase-slider-table-of-oyster-anagrams-slander
 >lsnaerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -165,7 +176,7 @@ Score in a scenario: 10 out of 45 total points in the current region, Oyster. Lo
 >e
 /^Hardest Trashed Dearths
 
-#slider test for step
+#testcase-slider-table-of-oyster-anagrams-step
 >tspe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -175,10 +186,11 @@ by one point
 >score
 Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
 
-#slider test for seek
+#testcase-slider-table-of-oyster-anagrams-seek
 >eske
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scan
+
+#testcase-slider-table-of-oyster-anagrams-scan
 >csna
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -201,10 +213,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
 
-#slider test for tend
+#testcase-slider-table-of-oyster-anagrams-tend
 >etdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for eat
+
+#testcase-slider-table-of-oyster-anagrams-eat
 >tea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -223,10 +236,11 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 15 out of 45 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 45.
 
-#slider test for tutor
+#testcase-slider-table-of-oyster-anagrams-tutor
 >utort
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for swipe
+
+#testcase-slider-table-of-oyster-anagrams-swipe
 >wspei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -246,19 +260,23 @@ Score in a scenario: 17 out of 45 total points in the current region, Oyster. Lo
 >n
 /^Lapsin' Plains
 
-#slider test for splain
+#testcase-slider-table-of-oyster-anagrams-splain
 >psalni
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for trace
+
+#testcase-slider-table-of-oyster-anagrams-trace
 >rtcea
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for kiss
+
+#testcase-slider-table-of-oyster-anagrams-kiss
 >sski
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bonk
+
+#testcase-slider-table-of-oyster-anagrams-bonk
 >obkn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snap
+
+#testcase-slider-table-of-oyster-anagrams-snap
 >nspa
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -275,7 +293,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 19 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
 
-#slider test for react
+#testcase-slider-table-of-oyster-anagrams-react
 >ercta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -307,7 +325,7 @@ Score in a scenario: 23 out of 45 total points in the current region, Oyster. Lo
 
 /^Shuttle Hutlets
 
-#slider test for bust
+#testcase-slider-table-of-oyster-anagrams-bust
 >ubts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -317,7 +335,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 24 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
 
-#slider test for drop
+#testcase-slider-table-of-oyster-anagrams-drop
 >rdpo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -327,7 +345,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
 
-#slider test for sweat
+#testcase-slider-table-of-oyster-anagrams-sweat
 >wsate
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -338,7 +356,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 45 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 45.
 
-#slider test for shape
+#testcase-slider-table-of-oyster-anagrams-shape
 >hspea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -349,7 +367,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 45.
 
-#slider test for clean
+#testcase-slider-table-of-oyster-anagrams-clean
 >lcane
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -368,10 +386,11 @@ Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lo
 >w
 /^Sclerous Closures
 
-#slider test for warp
+#testcase-slider-table-of-oyster-anagrams-warp
 >awpr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for search
+
+#testcase-slider-table-of-oyster-anagrams-search
 >esrahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -387,7 +406,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
-#slider test for enlarge
+#testcase-slider-table-of-oyster-anagrams-enlarge
 >neergal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -399,7 +418,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
-#slider test for reangle
+#testcase-slider-table-of-oyster-anagrams-reangle
 >ereglna
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -409,7 +428,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >w
 /^Rascal Craals
 
-#slider test for bury
+#testcase-slider-table-of-oyster-anagrams-bury
 >ubyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -424,7 +443,7 @@ Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lo
 >s
 >e
 
-#slider test for unearth
+#testcase-slider-table-of-oyster-anagrams-unearth
 >nuaethr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -436,7 +455,7 @@ by one point
 >score
 Score in a scenario: 33 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
-#slider test for assuage
+#testcase-slider-table-of-oyster-anagrams-assuage
 >saagseu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -456,7 +475,7 @@ orned Hedron
 >score
 Score in a scenario: 35 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
-#slider test for patrol
+#testcase-slider-table-of-oyster-anagrams-patrol
 >aprtlo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -472,7 +491,7 @@ Score in a scenario: 36 out of 45 total points in the current region, Oyster. Lo
 
 /^Tenfold Teflon'd Den Loft
 
-#slider test for prepay
+#testcase-slider-table-of-oyster-anagrams-prepay
 >rppeya
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -488,7 +507,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 38 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 45.
 
-#slider test for trample
+#testcase-slider-table-of-oyster-anagrams-trample
 >rtmalep
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -499,10 +518,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >score
 Score in a scenario: 39 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 45.
 
-#slider test for psalm
+#testcase-slider-table-of-oyster-anagrams-psalm
 >splma
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tan
+
+#testcase-slider-table-of-oyster-anagrams-tan
 >nta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -519,11 +539,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
-#slider test for revel
+#testcase-slider-table-of-oyster-anagrams-revel
 >erlve
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#slider test for derail
+#testcase-slider-table-of-oyster-anagrams-derail
 >edarli
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -533,7 +553,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
-#slider test for spin
+#testcase-slider-table-of-oyster-anagrams-spin
 >psni
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -543,7 +563,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 43 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
-#slider test for redial
+#testcase-slider-table-of-oyster-anagrams-redial
 >eridla
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

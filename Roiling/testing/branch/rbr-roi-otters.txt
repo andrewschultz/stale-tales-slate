@@ -121,7 +121,8 @@ That is a lot of matching for six letters. And you haven't seen anything like th
 
 @sli
 >slon
-#slider test for barely
+\\
+#testcase-slider-table-of-otters-anagrams-barely
 >aberyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -219,7 +220,7 @@ You've dealt with the barley. You can move around a lot more, now.
 Yup, that's the idea here in Otters.
 
 @sli
-#slider test for rescind
+#testcase-slider-table-of-otters-anagrams-rescind
 >csrendi
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: rescind.
@@ -322,7 +323,7 @@ Yup! It's Ed's!
 Ed Riley looks pleased he's pressured you into laziness.
 
 @sli
-#slider test for reedily
+#testcase-slider-table-of-otters-anagrams-reedily
 >erdelyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -765,134 +766,165 @@ You feel you're on the right track to expose the players. But that's not quite i
 ##balance undos
 >allrand
 ############now on to all the adverbs
-#slider test for angrily
+#testcase-slider-table-of-otters-anagrams-angrily
 >narglyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for bossily
+\\
+#testcase-slider-table-of-otters-anagrams-bossily
 >ssbolyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for seedily
+\\
+#testcase-slider-table-of-otters-anagrams-seedily
 >esdelyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for tersely
+\\
+#testcase-slider-table-of-otters-anagrams-tersely
 >etelrys
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for shadily
+\\
+#testcase-slider-table-of-otters-anagrams-shadily
 >hsdalyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for nastily
+\\
+#testcase-slider-table-of-otters-anagrams-nastily
 >antslyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for snidely
+\\
+#testcase-slider-table-of-otters-anagrams-snidely
 >nsdilye
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for starkly
+\\
+#testcase-slider-table-of-otters-anagrams-starkly
 >tsralyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for cattily
+\\
+#testcase-slider-table-of-otters-anagrams-cattily
 >ttcalyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for irately
+\\
+#testcase-slider-table-of-otters-anagrams-irately
 #note that tearily is not covered here. This is just an arbitrary choice I made in the table to make IRATELY the #1 choice.
 #elsewhere I defined t-tearily-irately as multiple-solutions.
 >ritalye
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: irately.
 >undo
-#slider test for blearily
+\\
+#testcase-slider-table-of-otters-anagrams-blearily
 >lblrayei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for ribaldly
+\\
+#testcase-slider-table-of-otters-anagrams-ribaldly
 >lbilryad
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for formally
+\\
+#testcase-slider-table-of-otters-anagrams-formally
 >lroamfyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for coitally
+\\
+#testcase-slider-table-of-otters-anagrams-coitally
 >lioatcyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for modestly
+\\
+#testcase-slider-table-of-otters-anagrams-modestly
 >omedtsyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for shabbily
+\\
+#testcase-slider-table-of-otters-anagrams-shabbily
 >bahsibyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for shoddily
+\\
+#testcase-slider-table-of-otters-anagrams-shoddily
 >dohsidyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for silently
+\\
+#testcase-slider-table-of-otters-anagrams-silently
 >llsneyit
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for steamily
+\\
+#testcase-slider-table-of-otters-anagrams-steamily
 >tsaeimyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for suddenly
+\\
+#testcase-slider-table-of-otters-anagrams-suddenly
 >ddsuneyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for stupidly
+\\
+#testcase-slider-table-of-otters-anagrams-stupidly
 >tspudiyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for martially
+\\
+#testcase-slider-table-of-otters-anagrams-martially
 >altrlmayi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for sincerely
+\\
+#testcase-slider-table-of-otters-anagrams-sincerely
 >enieslcyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for sobbingly
+\\
+#testcase-slider-table-of-otters-anagrams-sobbingly
 >bbsonilyg
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for tediously
+\\
+#testcase-slider-table-of-otters-anagrams-tediously
 >etiduolys
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for wearingly
+\\
+#testcase-slider-table-of-otters-anagrams-wearingly
 >ewranilyg
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for drawlingly
+\\
+#testcase-slider-table-of-otters-anagrams-drawlingly
 >larldniywg
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for emotionally
+\\
+#testcase-slider-table-of-otters-anagrams-emotionally
 >melontiloya
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for desperately
+\\
+#testcase-slider-table-of-otters-anagrams-desperately
 >edeesarlpyt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for reactively
+\\
+#testcase-slider-table-of-otters-anagrams-reactively
 >eretcviayl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for despairingly
+\\
+#testcase-slider-table-of-otters-anagrams-despairingly
 >iseapdirgnyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for indiscreetly
+\\
+#testcase-slider-table-of-otters-anagrams-indiscreetly
 >eisndrciteyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
@@ -1050,11 +1082,11 @@ Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the origin
 No, you need a couple more letters. Ones that make a word weak enough to control.
 
 @sli
-#slider test for really
+#testcase-slider-table-of-otters-anagrams-really
 >laeryl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 \\
-#slider test for sparely
+#testcase-slider-table-of-otters-anagrams-sparely
 >psralye
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1233,7 +1265,7 @@ You're not able to discern anything right here and now. Maybe move somewhere wit
 Gretta's gone. The first thing to do is to go north or south to regain your powers.
 
 @sli
-#slider test for actually
+#testcase-slider-table-of-otters-anagrams-actually
 >lautcayl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1310,12 +1342,14 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say ER
 
 @sli
 >s
-#slider test for although
+\\
+#testcase-slider-table-of-otters-anagrams-although
 >htlahguo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >although
 ###skip test checking
-#slider test for ergo
+\\
+#testcase-slider-table-of-otters-anagrams-ergo
 >reog
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
@@ -1382,10 +1416,11 @@ The only way to exit is south, so let's go that way.
 The only way you seem to be able to go is south to Disowned Downside.
 
 @sli
-#slider test for because
+#testcase-slider-table-of-otters-anagrams-because
 >ebeusac
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for else
+\\
+#testcase-slider-table-of-otters-anagrams-else
 >seel
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1520,7 +1555,7 @@ The eels have done enough.
 You already made it there, and you don't need to go back.
 
 @sli
-#slider test for unless
+#testcase-slider-table-of-otters-anagrams-unless
 >slnsue
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1718,7 +1753,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for however
+#testcase-slider-table-of-otters-anagrams-however
 >ewohrve
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1763,7 +1798,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That'
 You feel sheepish having used the settler, but it's been a long journey.
 
 @sli
-#slider test for atom
+#testcase-slider-table-of-otters-anagrams-atom
 >tamo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1800,7 +1835,7 @@ The way west remains blocked, but you feel there has to be a simple way past.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for pen o nope
+#testcase-slider-table-of-otters-anagrams-open
 >pnoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1903,13 +1938,15 @@ The imp's really messing with your mind. You think you hear it whizzing about or
 The imp jumps out of reach, streakily, satyrlike.
 
 @sli
-#slider test for brutely
+#testcase-slider-table-of-otters-anagrams-brutely
 >rbtulye
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for remotely
+\\
+#testcase-slider-table-of-otters-anagrams-remotely
 >erometyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for enragedly
+\\
+#testcase-slider-table-of-otters-anagrams-enragedly
 >neegarlyd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2077,7 +2114,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a d
 Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.
 
 @sli
-#slider test for slow
+#testcase-slider-table-of-otters-anagrams-slow
 >lswo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2138,16 +2175,19 @@ He's bigger than average. And the leopard would back him up.
 It's bigger than average. And the leopard would back it up.
 
 @sli
-#slider test for paroled
+#testcase-slider-table-of-otters-anagrams-paroled
 >aporedl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for artsy
+\\
+#testcase-slider-table-of-otters-anagrams-artsy
 >rasyt
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for coolest
+\\
+#testcase-slider-table-of-otters-anagrams-coolest
 >ocloste
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for garbed
+\\
+#testcase-slider-table-of-otters-anagrams-garbed
 >agbrde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2480,13 +2520,15 @@ That idea is banefully unflyable.
 No cryptozookeeper appears.
 
 @sli
-#slider test for loathingly
+#testcase-slider-table-of-otters-anagrams-loathingly
 >ollhtniyag
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stoically
+\\
+#testcase-slider-table-of-otters-anagrams-stoically
 >lotcilsya
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for joltily
+\\
+#testcase-slider-table-of-otters-anagrams-joltily
 >lljotyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2695,7 +2737,7 @@ You don't need to grow a spine. You've gotten this far.
 Well--not shorten, but break it down...you see red from the effort.
 
 @sli
-#slider test for parrot
+#testcase-slider-table-of-otters-anagrams-parrot
 >rrpato
 # this is a special case, similar to disk <=> skid, since the game wants to make it clear about parrot <=> raptor
 !Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -2800,24 +2842,29 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a
 The nails are already dead as a doornail.
 
 @sli
-#slider test for raptor
+#testcase-slider-table-of-otters-anagrams-raptor
 >arrotp
 #here we're not telling the player anything shocking or new, so we might as well clue them we should reverse things.
 The parrot can be changed back into a raptor, but not into anything new.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snail
+\\
+#testcase-slider-table-of-otters-anagrams-snail
 >nsila
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snipe
+\\
+#testcase-slider-table-of-otters-anagrams-snipe
 >nspei
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for racoon
+\\
+#NOTE we also have to cover an additional test case, "raccoon," for the alternate spelling. It appears in the nudges.
+#testcase-slider-table-of-otters-anagrams-racoon
 >ocarno
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for raccoon
+\\
 >aroocnc
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for hornets
+\\
+#testcase-slider-table-of-otters-anagrams-hornets
 >ohnrtse
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2998,7 +3045,7 @@ Microbes aren't the problem in Yorpwald.
 >n
 
 @sli
-#slider test for basically
+#testcase-slider-table-of-otters-anagrams-basically
 >alislbayc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3058,7 +3105,7 @@ The blase bales seem to darken and shake a bit.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for sable
+#testcase-slider-table-of-otters-anagrams-sable
 >asleb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3214,7 +3261,7 @@ by one point
 >undo
 
 @sli
-#slider test for aside
+#testcase-slider-table-of-otters-anagrams-aside
 >sadei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3334,7 +3381,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @sli
-#slider test for honestly
+#testcase-slider-table-of-otters-anagrams-honestly
 >ohentsyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3462,7 +3509,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @sli
-#slider test for decurse
+#testcase-slider-table-of-otters-anagrams-decurse
 >edersuc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3575,11 +3622,6 @@ It's an Us Creed, not just a creed.
 >educre
 It's for many educers, not just one.
 
-@sli
-#slider test for decurse
->edersuc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 @!min
 >decurse
 The EDUCERS, US Creed crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
@@ -3601,7 +3643,7 @@ There's nothing you really need to attack or avoid quickly here or nearby.
 >w
 
 @sli
-#slider test for quickly
+#testcase-slider-table-of-otters-anagrams-quickly
 >uqcilyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3734,7 +3776,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle.
 Ed Plye, apparently, made the whistle.
 
 @sli
-#slider test for deeply
+#testcase-slider-table-of-otters-anagrams-deeply
 >edpeyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

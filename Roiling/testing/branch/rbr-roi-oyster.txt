@@ -125,29 +125,37 @@ The jukebox notches technos (though a mere six remixes) with an anti-bore iron b
 
 @sli
 >slon
-#slider test for sing
+\\
+#testcase-slider-table-of-oyster-anagrams-sing
 >isgn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spit
+\\
+#testcase-slider-table-of-oyster-anagrams-spit
 >psti
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scrape
+\\
+#testcase-slider-table-of-oyster-anagrams-scrape
 >csarep
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spill
+\\
+#not quite a test case we can access from a table: SPILL isn't anything you can quite flip with how the program is written, and it might be too much to rewrite it for full elegance or whatever.
 >lilsp
 You seem to be fumbling what to do with the pills.
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for inset
+\\
+#testcase-slider-table-of-oyster-anagrams-inset
 >niets
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for remap
+\\
+#testcase-slider-table-of-oyster-anagrams-remap
 >erapm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for unset
+\\
+#testcase-slider-table-of-oyster-anagrams-unset
 >nuets
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stroll
+\\
+#testcase-slider-table-of-oyster-anagrams-stroll
 >lrtlso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -647,7 +655,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a d
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for calm
+#testcase-slider-table-of-oyster-anagrams-calm
 >acml
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -702,7 +710,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a de
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for run
+#testcase-slider-table-of-oyster-anagrams-run
 >nru
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -779,13 +787,15 @@ Yet again, no directions here. You need to get on or past the boats, and swimmin
 {$SCOS}
 
 @sli
-#slider test for fart
+#testcase-slider-table-of-oyster-anagrams-fart
 >aftr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for soar
+\\
+#testcase-slider-table-of-oyster-anagrams-soar
 >osra
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for boast
+\\
+#testcase-slider-table-of-oyster-anagrams-boast
 >obsta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1004,7 +1014,7 @@ DEBUG INFO: pale plea hinting.
 Directions aren't what matters here. You just need some sort of action to get off the boat.
 
 @sli
-#slider test for leap
+#testcase-slider-table-of-oyster-anagrams-leap
 >elpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1138,10 +1148,11 @@ You should be able to TUTOR the trout, wherever he went, with the carps and pike
 Gag! Ass-gas.
 
 @sli
-#slider test for spike
+#testcase-slider-table-of-oyster-anagrams-spike
 >pskei
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scrap
+\\
+#testcase-slider-table-of-oyster-anagrams-scrap
 >csapr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1317,7 +1328,7 @@ Anger Range won't be helped by an advice column or columnist.
 I award you zero points for that anagramming try, and may God have mercy on your soul. Though another try actually gets a point here. You're really close.
 
 @sli
-#slider test for slander
+#testcase-slider-table-of-oyster-anagrams-slander
 >lsnaerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1387,7 +1398,7 @@ The pest pets seem less persistent for a moment.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for step
+#testcase-slider-table-of-oyster-anagrams-step
 >tspe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1414,10 +1425,11 @@ The eeks shouldn't be too hard to find. Still go back west?
 The only way you seem to be able to go is west to Anger Range.
 
 @sli
-#slider test for seek
+#testcase-slider-table-of-oyster-anagrams-seek
 >eske
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scan
+\\
+#testcase-slider-table-of-oyster-anagrams-scan
 >csna
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1646,10 +1658,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. Th
 She is a bit fussy, but she is more than okay as she is.
 
 @sli
-#slider test for tend
+#testcase-slider-table-of-oyster-anagrams-tend
 >etdn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for eat
+\\
+#testcase-slider-table-of-oyster-anagrams-eat
 >tea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1691,10 +1704,11 @@ DEBUG INFO: min-up codepath
 You already fixed the dent. It's gone.
 
 @sli
-#slider test for tutor
+#testcase-slider-table-of-oyster-anagrams-tutor
 >utort
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for swipe
+\\
+#testcase-slider-table-of-oyster-anagrams-swipe
 >wspei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2012,19 +2026,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 Your settler appears to register this all across the plains.
 
 @sli
-#slider test for splain
+#testcase-slider-table-of-oyster-anagrams-splain
 >psalni
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for trace
+\\
+#testcase-slider-table-of-oyster-anagrams-trace
 >rtcea
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for kiss
+\\
+#testcase-slider-table-of-oyster-anagrams-kiss
 >sski
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bonk
+\\
+#testcase-slider-table-of-oyster-anagrams-bonk
 >obkn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snap
+\\
+#testcase-slider-table-of-oyster-anagrams-snap
 >nspa
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2117,7 +2135,7 @@ You would, but you would probably get hit with the crate. You need to anticipate
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 
 @sli
-#slider test for react
+#testcase-slider-table-of-oyster-anagrams-react
 >ercta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2300,7 +2318,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a d
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for bust
+#testcase-slider-table-of-oyster-anagrams-bust
 >ubts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2320,7 +2338,7 @@ DEBUG INFO: prod hinting.
 {$SCOS}
 
 @sli
-#slider test for drop
+#testcase-slider-table-of-oyster-anagrams-drop
 >rdpo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2373,7 +2391,7 @@ You need to dig to some purpose, though maybe somewhere else--and not just dig.
 You managed to get a digger from a prod, and that's good enough.
 
 @sli
-#slider test for sweat
+#testcase-slider-table-of-oyster-anagrams-sweat
 >wsate
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2440,7 +2458,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a 
 Change ALL the heaps!
 
 @sli
-#slider test for shape
+#testcase-slider-table-of-oyster-anagrams-shape
 >hspea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2470,7 +2488,7 @@ I can't give any artistic advice. They're--good enough, I guess. Better than bef
 You don't need or want to futz with one heap to make things super-extra-perfect.
 
 @sli
-#slider test for clean
+#testcase-slider-table-of-oyster-anagrams-clean
 >lcane
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2661,10 +2679,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser A
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
 
 @sli
-#slider test for warp
+#testcase-slider-table-of-oyster-anagrams-warp
 >awpr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for search
+\\
+#testcase-slider-table-of-oyster-anagrams-search
 >esrahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2774,7 +2793,7 @@ The gleaner was made by Al Green, written in red.
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 
 @sli
-#slider test for enlarge
+#testcase-slider-table-of-oyster-anagrams-enlarge
 >neergal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2807,7 +2826,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @sli
-#slider test for reangle
+#testcase-slider-table-of-oyster-anagrams-reangle
 >ereglna
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2967,7 +2986,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a d
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for bury
+#testcase-slider-table-of-oyster-anagrams-bury
 >ubyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3003,7 +3022,7 @@ The main exit is south, though you can go back west to the Rascal Craals. You ca
 >e
 
 @sli
-#slider test for unearth
+#testcase-slider-table-of-oyster-anagrams-unearth
 >nuaethr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3034,7 +3053,7 @@ DEBUG INFO: Use-Saga Sausage hinting.
 {$SCOS}
 
 @sli
-#slider test for assuage
+#testcase-slider-table-of-oyster-anagrams-assuage
 >saagseu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3104,7 +3123,7 @@ You have more than one way to leave: south and west. So you'll need to specify w
 There are two unblocked exits: south to Sclerous Closures and west to Rascal Craals.
 
 @sli
-#slider test for patrol
+#testcase-slider-table-of-oyster-anagrams-patrol
 >aprtlo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3328,7 +3347,7 @@ You can't even dial with the yapper around.
 >undo
 
 @sli
-#slider test for prepay
+#testcase-slider-table-of-oyster-anagrams-prepay
 >rppeya
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3440,7 +3459,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet.
 With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
 
 @sli
-#slider test for trample
+#testcase-slider-table-of-oyster-anagrams-trample
 >rtmalep
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3498,10 +3517,11 @@ It's you against the ant! There's no running, but it can't be too hard to defeat
 Aw, c'mon, the ant should be no problem.
 
 @sli
-#slider test for psalm
+#testcase-slider-table-of-oyster-anagrams-psalm
 >splma
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tan
+\\
+#testcase-slider-table-of-oyster-anagrams-tan
 >nta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3611,7 +3631,7 @@ You got rid of the ant. Nothing more to do there.
 Old heat. Loathed hot lead.
 
 @sli
-#slider test for revel
+#testcase-slider-table-of-oyster-anagrams-revel
 >erlve
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3637,7 +3657,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 
 @sli
-#slider test for derail
+#testcase-slider-table-of-oyster-anagrams-derail
 >edarli
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3667,7 +3687,7 @@ Maybe in a bit, but the pins are in the way at the moment. They can't be too har
 You can REDIAL the dialer once the pins are not in your way.
 
 @sli
-#slider test for spin
+#testcase-slider-table-of-oyster-anagrams-spin
 >psni
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -3715,7 +3735,7 @@ DEBUG INFO: repaired dialer hinting.
 {$SCOS}
 
 @sli
-#slider test for redial
+#testcase-slider-table-of-oyster-anagrams-redial
 >eridla
 Your settler begins to make noises: a low hum, but nothing really piercing.
 

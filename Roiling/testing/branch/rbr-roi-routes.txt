@@ -53,22 +53,28 @@ You maybe haven't figured out what sort of word is needed in this zone yet. Osca
 
 @sli
 >slon
-#slider test for towards
+\\
+#testcase-slider-table-of-routes-anagrams-towards
 >otawdsr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for inside
+\\
+#testcase-slider-table-of-routes-anagrams-inside
 >niised
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for past
+\\
+#testcase-slider-table-of-routes-anagrams-past
 >tpas
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for across
+\\
+#testcase-slider-table-of-routes-anagrams-across
 >srcsao
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for against
+\\
+#testcase-slider-table-of-routes-anagrams-against
 >gaiastn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for astride
+\\
+#testcase-slider-table-of-routes-anagrams-astride
 >sartdei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -849,7 +855,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
 
 @sli
-#slider test for despite
+#testcase-slider-table-of-routes-anagrams-despite
 >edeitps
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1023,7 +1029,7 @@ Brother Horbert will work his magic with that.
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
 @sli
-#slider test for opposite
+#testcase-slider-table-of-routes-anagrams-opposite
 >poopiset
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1283,7 +1289,7 @@ You've sort of dealt with the (first) tirades, but there's still more than one, 
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
 @sli
-#slider test for below
+#testcase-slider-table-of-routes-anagrams-below
 >ebowl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1364,7 +1370,7 @@ Nia Gast is too old and set in her ways. You may just need to listen to her from
 >gs
 
 @sli
-#slider test for under
+#testcase-slider-table-of-routes-anagrams-under
 >nuerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1484,7 +1490,7 @@ The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at
 You suspect you have a little way to go before finding clues of No-Lag Logan.
 
 @sli
-#slider test for above
+#testcase-slider-table-of-routes-anagrams-above
 >baveo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1525,7 +1531,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That'
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for from
+#testcase-slider-table-of-routes-anagrams-from
 >rfmo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1548,7 +1554,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 You hear people far away crying "The Bean has landed!"
 
 @sli
-#slider test for beneath
+#testcase-slider-table-of-routes-anagrams-beneath
 >ebentha
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1682,7 +1688,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. Th
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for until
+#testcase-slider-table-of-routes-anagrams-until
 >nuilt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1753,7 +1759,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @sli
-#slider test for around
+#testcase-slider-table-of-routes-anagrams-around
 >rauodn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1793,7 +1799,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. Th
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
 
 @sli
-#slider test for along
+#testcase-slider-table-of-routes-anagrams-along
 >lango
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1891,7 +1897,7 @@ This is the wrong region for that sort of flash of insight.
 This is the wrong region for that sort of flash of insight.
 
 @sli
-#slider test for amidst
+#testcase-slider-table-of-routes-anagrams-amidst
 >madits
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1997,7 +2003,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketch
 Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all.
 
 @sli
-#slider test for athwart
+#testcase-slider-table-of-routes-anagrams-athwart
 >tawrtha
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2041,7 +2047,7 @@ You might run into the spheric ciphers. You still don't have your sense of direc
 Looks like you will need to figure a way to move forward without directions. You've got to be really close.
 
 @sli
-#slider test for through
+#testcase-slider-table-of-routes-anagrams-through
 >hthugor
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -2134,10 +2140,11 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 >undo
 
 @sli
-#slider test for without
+#testcase-slider-table-of-routes-anagrams-without
 >ttwouhi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for between
+\\
+#testcase-slider-table-of-routes-anagrams-between
 >ebentwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider retest for through
@@ -2235,7 +2242,7 @@ you missed some extra stuff you can't go back for
 >undo
 
 @sli
-#slider test for beyond
+#testcase-slider-table-of-routes-anagrams-beyond
 >eboydn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
