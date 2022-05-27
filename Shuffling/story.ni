@@ -394,7 +394,10 @@ to say reject:
 		if the-from entry is fungible:
 			d "[the-from entry] fungible.";
 			if firstword is the fullhash entry or fullcmd is the fullhash entry:
-				say "[spec-help of the-from entry]";
+				if the-to entry is prefigured:
+					say "You already figured what to do here. [b]PAD FLIPS[r] for a refresher.";
+				else:
+					say "[spec-help of the-from entry]";
 				if last-hash is fullcmd or last-hash is firstword:
 					increment num-in-row;
 					if point is false and num-in-row is cur-ceil:
@@ -417,9 +420,11 @@ to decide whether found-misspelled-anagram:
 	d "[quickcmd] / [quickfirstword] for binary hash.";
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
-			d "[the-from entry] fungible.";
 			if quickcmd is binhash entry or quickfirstword is binhash entry:
-				say "[spec-help of the-from entry]";
+				if the-to entry is prefigured:
+					say "You already figured what to do here. [b]PAD FLIPS[r] for a refresher.";
+				else:
+					say "[spec-help of the-from entry]";
 				ital-say-lb "you may have misspelled things, though. Too many or few of one letter.";
 				decide yes;
 	decide no;

@@ -516,6 +516,14 @@ That seems like it should work, but you sense you have not done enough yet. But 
 #ttc-table-of-preflip-clues-ogled-lodge
 >pf
 Store R -> Resort
+\\
+>resotr
+You already figured what to do here. PAD FLIPS for a refresher.
+!NOTE:
+\\
+>resotrr
+You already figured what to do here. PAD FLIPS for a refresher.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @gn
 ####### no test case here since it is in the common files

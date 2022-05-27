@@ -2328,7 +2328,7 @@ The soil is there to support something, but not quite that.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#+ttc-table-of-sortie-anagrams-oils
+#ttc-table-of-sortie-anagrams-oils2
 >xx oils
 Your vision blurs a bit, and instead you see a silo.
 
