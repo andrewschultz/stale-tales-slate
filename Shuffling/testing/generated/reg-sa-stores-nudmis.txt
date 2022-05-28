@@ -9,9 +9,10 @@
 
 * stores-thru
 
-# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+# the Z is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
 >opt in
+>poss
 
 >ts
 /^Trips Strip
@@ -408,6 +409,9 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >forest
 by one point
 
+>score
+You currently have 1 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
+
 #ttc-table-of-stores-nudges-scented
 >scentde
 No way. It's your way down to ENTER the forest.
@@ -502,6 +506,9 @@ Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacatio
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
+>score
+You currently have 2 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
+
 >metros
 by one point
 
@@ -540,6 +547,9 @@ It's going to get evil enough even without a high-ranking COBRA officer.
 #testcase-mistake-shuffling-doters
 >doters
 You don't need people oohing and ahing at your skill.
+
+>score
+You currently have 3 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
 
 #testcase-mistake-shuffling-presto
 >presto
@@ -585,6 +595,9 @@ You don't need to change the marquee, but maybe it'd be fun to see what's inside
 >sorbet
 by one point
 
+>score
+You currently have 4 out of 6 total points for the Stores region. Your minimum possible score on solving is 5, and the maximum is 6
+
 #+testcase-mistake-shuffling-strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
@@ -601,3 +614,4 @@ by one point
 #ttc-table-of-stores-nudges-lodge
 >lodeg
 The lodge is as good as it can be. Better ENTER it.
+

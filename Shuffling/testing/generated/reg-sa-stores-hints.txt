@@ -9,9 +9,10 @@
 
 * stores-thru
 
-# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+# the Z is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
 >opt in
+>poss
 
 >au 2
 >monty hints
@@ -108,6 +109,9 @@ You can just enter the scented descent. If you want or need help with a particul
 
 You see yourself exploring the scented descent you created.
 
+>score
+You currently have 1 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
+
 >n
 As you try to flee the Trips Strip, a voice booms "Run off for fun? Urff, no!"
 Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
@@ -127,8 +131,14 @@ That's ambiguous--you can currently enter the posted depots and the scented desc
 >exits
 The stores are where it's at. You can go IN to the posted depots and the scented descent.
 
+>score
+You currently have 2 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
+
 >metros
 by one point
+
+>score
+You currently have 3 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
 
 >n
 hubs bush
@@ -144,4 +154,7 @@ The stores are where it's at. You can go IN to the trade tread, the posted depot
 
 >sorbet
 by one point
+
+>score
+You currently have 4 out of 6 total points for the Stores region. Your minimum possible score on solving is 5, and the maximum is 6
 

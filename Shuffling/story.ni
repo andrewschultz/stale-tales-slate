@@ -9660,7 +9660,7 @@ this is the stores-parse rule:
 					say "The [b]SECURE[r]/[b]RECUSE[r] button locks in place as you say the magic word.";
 				now button-locked is true;
 			say "[warp-result entry][paragraph break]";
-			say "You watch [if mystore entry is touchable][mystore entry][else if myport entry is touchable]the [myport entry][end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
+			say "You watch [if mystore entry is in location of player][mystore entry][else if myport entry is in location of player]the [myport entry][else]BUG[end if] crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!";
 			now myreg entry is bypassed;
 			if mystore entry is touchable, reg-inc;
 			process the notify score changes rule;

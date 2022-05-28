@@ -19,6 +19,15 @@ files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt,reg-s
 ## *FILE
 ## *FORK
 
+}}MAX=6
+}}CURMAX=6
+}}SCORE=0
+}}CURMIN=4
+
+}$SCOS=You currently have {SCORE} out of {MAX} total points for the Stores region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
+}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Stores region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+}$SCOMAX=You currently have {SCORE} out of {MAX} total points for the Stores region. You don't really have anything critical remaining to do here.
+
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
@@ -27,9 +36,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * stores-thru
 
-# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+# the Z is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
 >opt in
+>poss
 
 @hin
 >au 2
@@ -509,7 +519,7 @@ Grand, but unfortunately, not in English.
 Grand, but unfortunately, not in English.
 
 @max
-#pre-storer-resort rule
+#testcase-prerule-table-of-stores-anagrams-pre-storer-resort-rule
 >resort
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
 \\
@@ -617,12 +627,16 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 >forest
 by one point
+}}SCORE++
 
 @hin
 You can just enter the scented descent. If you want or need help with a particular store, HINT STORE Q.
 
 @gle
 You see yourself exploring the scented descent you created.
+
+>score
+{$SCOS}
 
 @gn
 >n
@@ -667,6 +681,7 @@ You say to yourself, "Self, what I could really use right now is a German-Swiss 
 
 >sortie
 by one point
+}}SCORE++
 
 @nud
 #ttc-table-of-stores-spechelp-store-b
@@ -745,8 +760,12 @@ That's ambiguous--you can currently enter the posted depots and the scented desc
 >exits
 The stores are where it's at. You can go IN to the posted depots and the scented descent.
 
+>score
+{$SCOS}
+
 >metros
 by one point
+}}SCORE++
 
 @nud
 #ttc-table-of-stores-nudges-trade
@@ -784,6 +803,9 @@ It's going to get evil enough even without a high-ranking COBRA officer.
 #testcase-mistake-shuffling-doters
 >doters
 You don't need people oohing and ahing at your skill.
+
+>score
+{$SCOS}
 
 @max,mis
 {--mis}#testcase-mistake-shuffling-presto
@@ -847,6 +869,16 @@ The stores are where it's at. You can go IN to the trade tread, the posted depot
 @!min
 >sorbet
 by one point
+}}CURMIN++
+}}SCORE++
+\\
+>score
+{$SCOS}
+
+@max
+#testcase-postrule-table-of-stores-anagrams-post-storeb-sorbet-rule
+>x sorbet
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @mis
 #+testcase-mistake-shuffling-strobe
@@ -859,9 +891,18 @@ You're briefly assaulted by the colors of every single colored Starburst and Ski
 You don't need to change the marquee now that you figured what it means.
 
 @max
-#pre-cabinet-bactine rule
+#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
 >bactine
 by one point
+}}CURMIN++
+}}SCORE++
+\\
+>score
+{$SFIXMAX}
+\\
+#testcase-postrule-table-of-stores-anagrams-post-cabinet-bactine-rule
+>x bits
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @max
 #ttc-table-of-warpcmds-logoi
@@ -898,12 +939,18 @@ You have the rank of new hero now here.
 >undo
 >undo
 
-@nud
+@nud,max
 >tsf
 WARNING
 >resort
 by one point
-\\
+}}SCORE++
+
+@nud
 #ttc-table-of-stores-nudges-lodge
 >lodeg
 The lodge is as good as it can be. Better ENTER it.
+
+@max
+>score
+{$SCOMAX}

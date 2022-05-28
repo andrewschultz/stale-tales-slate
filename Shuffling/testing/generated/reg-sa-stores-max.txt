@@ -9,9 +9,10 @@
 
 * stores-thru
 
-# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+# the Z is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
 >opt in
+>poss
 
 >ts
 /^Trips Strip
@@ -32,7 +33,7 @@
 >x tepid
 /Near Store (F|I|M|R),
 
-#pre-storer-resort rule
+#testcase-prerule-table-of-stores-anagrams-pre-storer-resort-rule
 >resort
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
 
@@ -51,11 +52,20 @@ You already figured what to do here. PAD FLIPS for a refresher.
 >forest
 by one point
 
+>score
+You currently have 1 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
+
 >sortie
 by one point
 
+>score
+You currently have 2 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
+
 >metros
 by one point
+
+>score
+You currently have 3 out of 6 total points for the Stores region. Your minimum possible score on solving is 4, and the maximum is 6
 
 >presto
 Your magic is not advanced enough to change Store P! Well, not this game!
@@ -89,9 +99,23 @@ hubs bush
 >sorbet
 by one point
 
-#pre-cabinet-bactine rule
+>score
+You currently have 4 out of 6 total points for the Stores region. Your minimum possible score on solving is 5, and the maximum is 6
+
+#testcase-postrule-table-of-stores-anagrams-post-storeb-sorbet-rule
+>x sorbet
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
+#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
 >bactine
 by one point
+
+>score
+You currently have 5 out of 6 total points for the Stores region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#testcase-postrule-table-of-stores-anagrams-post-cabinet-bactine-rule
+>x bits
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 #ttc-table-of-warpcmds-logoi
 >logoi
@@ -127,3 +151,10 @@ You have the rank of new hero now here.
 >undo
 >undo
 
+>tsf
+WARNING
+>resort
+by one point
+
+>score
+You currently have 6 out of 6 total points for the Stores region. You don't really have anything critical remaining to do here.
