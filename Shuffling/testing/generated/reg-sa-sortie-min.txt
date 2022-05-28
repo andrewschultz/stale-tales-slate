@@ -273,12 +273,6 @@ Your score has just gone up by one point.
 >score
 You currently have 24 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
->purloin missile
->push steer
-!AMUSING
->undo
->undo
-
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
 

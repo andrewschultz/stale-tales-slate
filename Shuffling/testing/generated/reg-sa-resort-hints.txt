@@ -12,9 +12,10 @@
 >ts
 >tsf
 
->au 2
 >monty hints
 >xc
+
+>au 2
 
 >opt in
 >poss
@@ -141,6 +142,7 @@ Some aftertaste from the saltine doesn't feel great. You wonder if this is the b
 
 >wings
 Your score has just gone up by one point.
+
 >score
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
@@ -318,9 +320,9 @@ You currently have 11 out of 15 total points for the Resort region. Your minimum
 Your vision blurs a bit, and instead you see some china and also kilns, to bake clay in, or something.
 
 >china
-#notana
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 

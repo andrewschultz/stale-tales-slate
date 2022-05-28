@@ -234,6 +234,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 >grits
 Your score has just gone up by one point.
+
 >score
 You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 26, and the maximum is 27
 
@@ -257,6 +258,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 >pancake
 Your score has just gone up by one point.
+
 >score
 You currently have 4 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -1441,12 +1443,6 @@ No, the steer button HAS to be right.
 #ttc-table-of-sortie-done-rejects-shoot-button
 >shtoo
 No, the shoot button HAS to be right.
-
->purloin missile
->push steer
-!AMUSING
->undo
->undo
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.

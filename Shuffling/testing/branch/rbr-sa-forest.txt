@@ -42,10 +42,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
->au 2
 
 @hin,max
 >xc
+>au 2
 
 >opt in
 
@@ -835,6 +835,11 @@ A certain deputy sheriff from Hazzard County would be more than willing to help,
 >e
 You don't need an alert sign to know running into the walls any direction but west would cause a real sting.
 
+@max
+#testcase-postrule-table-of-forest-anagrams-post-ones-nose-rule
+>hint bucket
+That is no longer part of a puzzle.
+
 >score
 {$SCOS}
 
@@ -883,6 +888,11 @@ Your score has just gone up by one point.
 @hin
 DEBUG: noughts being objhinted.
 
+@max
+#testcase-postrule-table-of-forest-anagrams-post-dashes-shades-rule
+>hint shell
+That is no longer part of a puzzle.
+
 >score
 {$SCOS}
 
@@ -897,6 +907,11 @@ Your score has just gone up by one point.
 
 @hin
 DEBUG: bearded men being objhinted.
+
+@max
+#testcase-postrule-table-of-forest-anagrams-post-noughts-shotgun-rule
+>hint bubble
+That is no longer part of a puzzle.
 
 >score
 {$SCOS}
@@ -1175,6 +1190,11 @@ by one point
 >score
 {$SCOS}
 
+@max
+#testcase-postrule-table-of-forest-anagrams-post-slit-silt-rule
+>x silt
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 @gle
 >angle
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
@@ -1321,6 +1341,11 @@ Your score has just gone up by one point.
 @hin
 DEBUG: chisel being objhinted.
 
+@max
+#testcase-postrule-table-of-forest-anagrams-post-liches-chisel-rule
+>x spread
+!can't see anything like that
+
 >score
 {$SCOS}
 
@@ -1349,6 +1374,11 @@ Your score has just gone up by one point.
 \\
 >score
 {$SFIXMAX}
+
+@max
+#testcase-postrule-table-of-forest-anagrams-post-banshee-hasbeen-rule
+>x has been
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @nud
 #ttc-table-of-forest-done-rejects-chisel
@@ -1644,7 +1674,7 @@ They look forbidding, but you might turn them into something worse. Maybe you ca
 The drapes are too thick.
 
 @max
-#pre-sliver-silver rule
+#testcase-prerule-table-of-forest-anagrams-pre-sliver-silver-rule
 >silver
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 \\

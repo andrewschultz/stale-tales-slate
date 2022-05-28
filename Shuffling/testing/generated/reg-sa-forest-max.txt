@@ -15,6 +15,7 @@
 >poss
 
 >xc
+>au 2
 
 >opt in
 
@@ -49,17 +50,29 @@ You currently have 2 out of 17 total points for the Forest region. Your minimum 
 >nose
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-forest-anagrams-post-ones-nose-rule
+>hint bucket
+That is no longer part of a puzzle.
+
 >score
 You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
 >shades
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-forest-anagrams-post-dashes-shades-rule
+>hint shell
+That is no longer part of a puzzle.
+
 >score
 You currently have 4 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
 >shotgun
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-forest-anagrams-post-noughts-shotgun-rule
+>hint bubble
+That is no longer part of a puzzle.
 
 >score
 You currently have 5 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
@@ -96,6 +109,10 @@ by one point
 >score
 You currently have 8 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
+#testcase-postrule-table-of-forest-anagrams-post-slit-silt-rule
+>x silt
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 >n
 #notana
 Your score has just gone up by one point.
@@ -108,6 +125,10 @@ You currently have 9 out of 17 total points for the Forest region. Your minimum 
 >chisel
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-forest-anagrams-post-liches-chisel-rule
+>x spread
+!can't see anything like that
+
 >score
 You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
@@ -116,6 +137,10 @@ Your score has just gone up by one point.
 
 >score
 You currently have 11 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#testcase-postrule-table-of-forest-anagrams-post-banshee-hasbeen-rule
+>x has been
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 >s
 >w
@@ -166,7 +191,7 @@ You currently have 14 out of 17 total points for the Forest region. You have fou
 >n
 The drapes are too thick.
 
-#pre-sliver-silver rule
+#testcase-prerule-table-of-forest-anagrams-pre-sliver-silver-rule
 >silver
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 

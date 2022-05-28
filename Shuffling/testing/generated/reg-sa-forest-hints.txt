@@ -15,9 +15,9 @@
 >poss
 
 >monty hints
->au 2
 
 >xc
+>au 2
 
 >opt in
 

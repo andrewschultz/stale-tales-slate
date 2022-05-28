@@ -53,7 +53,7 @@ The standard, usual directions don't seem to cut it. But there has to be somewhe
 The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
 !The standard, usual directions don't seem to cut it. But there has to be somewhere else.
 
-#pre-nametag-gateman rule
+#testcase-prerule-table-of-ordeal-loader-anagrams-pre-nametag-gateman-rule
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 (That's worth noting in your notepad for later, so you do, under FLIPS.)
@@ -71,6 +71,13 @@ You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every
 >door
 by one point
 
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-odor-door-rule
+>x bulge
+It's shaped like a narrow rectangle with rounded corners. Very unnatural! There's no way to pry or pull it from the door, given its shape. You give it a few taps, but it's wedged in.
+
+>x bolt
+It seems to hold the OR DO door in place.
+
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
@@ -79,6 +86,15 @@ You haven't solved any regions yet. You have the rank of reduced deducer.
 
 >blot
 by one point
+
+>bugle
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-bulge-bugle-rule
+>score
+You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
+
+>undo
+>undo
+
 >in
 /^Thickest Thickets
 >score
@@ -113,6 +129,8 @@ You currently have 2 out of 8 total points for the Ordeal Loader region. Your mi
 >blot
 by one point
 
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-bolt-blot-rule
+
 >score
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
@@ -122,6 +140,7 @@ You currently have 3 out of 8 total points for the Ordeal Loader region. Your mi
 >nest
 by one point
 
+## balance undos
 >deer
 by one point
 >in
@@ -131,6 +150,16 @@ by one point
 !--you could've changed the reed into a DEER
 >undo
 >undo
+
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-toga-goat-rule
+>goat
+by one point
+
+>score
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+
+>undo
+>undo
 >undo
 
 >goat
@@ -138,6 +167,8 @@ Your score has just gone up by one point.
 
 >deer
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-reed-deer-rule
 
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
@@ -151,6 +182,9 @@ You currently have 6 out of 8 total points for the Ordeal Loader region. Your mi
 #ttc-table-of-ranks-3
 You haven't solved any regions yet. You have the rank of stunted student.
 
+>enter gateway
+mega-ant
+
 >score
 You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
@@ -163,6 +197,11 @@ You currently have 7 out of 8 total points for the Ordeal Loader region. You hav
 >gateman
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-nametag-gateman-rule
+The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. "There. Should be able to walk in now. I mean, after you ask me for all the help you want."
+The gateman pauses again, then asks if you had that bugle. It's something he'd been meaning to take up, but he wanted to give you more than one way to get here. You explain you lost it rolling down a hill to get here.
+"No worries. I'll get it when you're gone. You probably won't want to be around when I start practising, anyway. This time, I will. Being a nametag for a bit--or just replaced by one--gives a fellow motivation to do those things he's put off."
+
 >score
 You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
@@ -170,6 +209,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 You have nothing else you figured in advance.
 !Stuff you figured, but you couldn't use it right away:
 !nametag -> gateman
+
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 (That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
@@ -187,7 +227,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 
 >ask gateman about cabinet
 
-#pre-cabinet-bactine rule
+#testcase-prerule-table-of-ordeal-loader-anagrams-pre-cabinet-bactine-rule
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 

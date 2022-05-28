@@ -155,7 +155,7 @@ The meals here are much more highfalutin' than that!
 The passage looks unblocked already, so you don't need to look for any other possibilities.
 
 @max
-#pre-nametag-gateman rule
+#testcase-prerule-table-of-ordeal-loader-anagrams-pre-nametag-gateman-rule
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 (That's worth noting in your notepad for later, so you do, under FLIPS.)
@@ -363,6 +363,14 @@ by one point
 @hin
 /DEBUG: (bolt|bulge) being objhinted\.
 
+@max
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-odor-door-rule
+>x bulge
+It's shaped like a narrow rectangle with rounded corners. Very unnatural! There's no way to pry or pull it from the door, given its shape. You give it a few taps, but it's wedged in.
+\\
+>x bolt
+It seems to hold the OR DO door in place.
+
 >score
 {$SCOS}
 
@@ -424,6 +432,19 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >blot
 by one point
 }}SCORE++
+\\
+>bugle
+}}SCORE++
+}}CURMIN++
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-bulge-bugle-rule
+>score
+{$SCOS}
+\\
+>undo
+>undo
+}}SCORE--
+}}CURMIN--
+\\
 >in
 /^Thickest Thickets
 }}CURMAX--
@@ -490,6 +511,9 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >blot
 by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-bolt-blot-rule
 
 @!min
 }}CURMIN++
@@ -647,13 +671,29 @@ Yes, but what do you believe you can do or change?
 Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
 
 @max
+## balance undos
 >deer
 by one point
+}}SCORE++
 >in
 /^Notices Section
 >misses
 --you could've changed the toga into a GOAT
 !--you could've changed the reed into a DEER
+>undo
+>undo
+\\
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-toga-goat-rule
+>goat
+by one point
+}}CURMIN++
+}}SCORE++
+\\
+>score
+{$SCOS}
+}}CURMIN--
+}}SCORE-=2
+\\
 >undo
 >undo
 >undo
@@ -681,7 +721,11 @@ you can go IN--there are no specific directions here
 Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
-\\
+
+@max
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-reed-deer-rule
+
+@!min
 >score
 {$SCOS}
 
@@ -749,8 +793,12 @@ There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nic
 OUR NEEDS ENDURE SO!
 >read board
 Canny Nancy
+
+@nud,max
 >enter gateway
 mega-ant
+
+@nud
 >read gateway
 The red text is just like A TAN GEM and such on the broad board
 !There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice
@@ -940,6 +988,12 @@ You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE
 >n
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway.
 
+@max
+#testcase-postrule-table-of-ordeal-loader-anagrams-post-nametag-gateman-rule
+The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. "There. Should be able to walk in now. I mean, after you ask me for all the help you want."
+The gateman pauses again, then asks if you had that bugle. It's something he'd been meaning to take up, but he wanted to give you more than one way to get here. You explain you lost it rolling down a hill to get here.
+"No worries. I'll get it when you're gone. You probably won't want to be around when I start practising, anyway. This time, I will. Being a nametag for a bit--or just replaced by one--gives a fellow motivation to do those things he's put off."
+
 @!min
 >score
 You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
@@ -955,6 +1009,7 @@ Your vision blurs a bit, and instead you see some Bactine.
 You have nothing else you figured in advance.
 !Stuff you figured, but you couldn't use it right away:
 !nametag -> gateman
+\\
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 #brackets ok
@@ -1128,7 +1183,7 @@ The saltine's there to help you. Changing it might work against you.
 You're the good guy, here. You don't need to steal.
 
 @max
-#pre-cabinet-bactine rule
+#testcase-prerule-table-of-ordeal-loader-anagrams-pre-cabinet-bactine-rule
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 

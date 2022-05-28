@@ -12,6 +12,8 @@
 >ts
 >tsf
 
+>au 2
+
 >opt in
 >poss
 
@@ -27,30 +29,107 @@ Your score has just gone up by one point.
 
 /^Leis Isle
 
+>wings
+by one point
+The wings will get you out of here, but there's a bit more to clean up, if you want.
+!There's still something weird
+
+#testcase-postrule-table-of-resort-anagrams-post-rock-cork-rule
+>cork
+by one point
+!will get you out
+There's still something weird about this isle you can't put your finger on. It's not critical, but maybe there's more to do, in addition to finding multiple ways of transport out.
+
+>score
+You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
+
+>undo
+>undo
+>undo
+
 >lies
 by one point
 >score
 You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
+#testcase-postrule-table-of-resort-anagrams-post-leis-lies-rule
+>x liespriv
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 >cork
 Your score has just gone up by one point.
+
+!There's something weird
 
 >score
 You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
 >wings
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-resort-anagrams-post-swing-wings-rule
+
 >score
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >e
 /^Rived Drive
 
+>grips
+by one point
+
+>ropes
+by one point
+
+>slope
+by one point
+
+#testcase-postrule-table-of-resort-anagrams-post-poles-slope-rule
+>hint slope
+That is no longer part of a puzzle.
+
+>undo
+>undo
+>undo
+
+>slope
+by one point
+
+>ropes
+by one point
+
+#testcase-postrule-table-of-resort-anagrams-post-ropes-grips-rule
+>hint ropes
+Those are no longer part of a puzzle.
+
+>undo
+>undo
+>undo
+>undo
+
 >slope
 by one point
 
 >score
 You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+
+>ropes
+by one point
+
+>grips
+by one point
+
+#testcase-postrule-table-of-resort-anagrams-post-toolshed-toeholds-rule
+>toeholds
+by two points
+
+>score
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+
+>undo
+>undo
+>undo
+>undo
 
 >toeholds
 Your score has just gone up by two points.
@@ -70,6 +149,10 @@ Your score has just gone up by one point.
 >score
 You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
+#+testcase-postrule-table-of-resort-anagrams-post-ropes-grips-rule
+>hint ropes
+Those are no longer part of a puzzle.
+
 >e
 
 /^Potshot Hotspot
@@ -79,6 +162,8 @@ by one point
 >kilns
 by one point
 >potters
+
+#testcase-postrule-table-of-resort-anagrams-post-protest-potters-rule
 I am RED BULL BURDELL!
 >undo
 >undo
@@ -86,6 +171,10 @@ I am RED BULL BURDELL!
 
 >trio
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-resort-anagrams-post-riot-protest-rule
+>x links
+A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin'. But they're still more violent things than you'd like, this near the Means Manse.
 
 >score
 You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
@@ -97,18 +186,21 @@ Your score has just gone up by one point.
 You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 >china
-#notana
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#pre-chain-china rule
+#testcase-prerule-table-of-resort-anagrams-pre-chain-china-rule
 >china
 You already shook that out of the links. You need to concentrate on the links, now.
 
 >kilns
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-resort-anagrams-post-links-kilns-rule
+RED BULL BURDELL
 
 >score
 You currently have 13 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

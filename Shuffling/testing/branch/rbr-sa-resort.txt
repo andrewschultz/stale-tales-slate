@@ -35,9 +35,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >tsf
 
 @hin
->au 2
 >monty hints
 >xc
+
+@hin,max
+>au 2
 
 >opt in
 >poss
@@ -315,6 +317,30 @@ The gadget beeps once. A series of lights comes across: RRRRR.
 DEBUG INFO: Rect-text: W---S.
 DEBUG INFO: Cert-text: -----.
 
+@max
+##balance undos
+>wings
+by one point
+The wings will get you out of here, but there's a bit more to clean up, if you want.
+!There's still something weird
+\\
+#testcase-postrule-table-of-resort-anagrams-post-rock-cork-rule
+>cork
+by one point
+!will get you out
+There's still something weird about this isle you can't put your finger on. It's not critical, but maybe there's more to do, in addition to finding multiple ways of transport out.
+\\
+}}SCORE+=2
+}}CURMIN+=1
+>score
+{$SCOS}
+\\
+}}SCORE-=2
+}}CURMIN-=1
+>undo
+>undo
+>undo
+
 @!min
 >lies
 by one point
@@ -322,6 +348,11 @@ by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@max
+#testcase-postrule-table-of-resort-anagrams-post-leis-lies-rule
+>x liespriv
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @gn
 #+ttc-table-of-nowheres-leis-isle
@@ -372,6 +403,9 @@ Your score has just gone up by one point.
 @gle
 You see yourself either swimming or flying east.
 
+@max
+!There's something weird
+
 >score
 {$SCOS}
 
@@ -405,6 +439,11 @@ Some aftertaste from the saltine doesn't feel great. You wonder if this is the b
 Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
+
+@max
+#testcase-postrule-table-of-resort-anagrams-post-swing-wings-rule
+
+@!min
 >score
 {$SCOS}
 
@@ -605,6 +644,40 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east.
 
+@max
+##balance undos
+>grips
+by one point
+\\
+>ropes
+by one point
+\\
+>slope
+by one point
+\\
+#testcase-postrule-table-of-resort-anagrams-post-poles-slope-rule
+>hint slope
+That is no longer part of a puzzle.
+\\
+>undo
+>undo
+>undo
+\\
+>slope
+by one point
+\\
+>ropes
+by one point
+\\
+#testcase-postrule-table-of-resort-anagrams-post-ropes-grips-rule
+>hint ropes
+Those are no longer part of a puzzle.
+\\
+>undo
+>undo
+>undo
+>undo
+
 >slope
 by one point
 }}SCORE++
@@ -683,6 +756,29 @@ by one point
 #+ttc-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
+>undo
+>undo
+>undo
+
+@max
+>ropes
+by one point
+\\
+>grips
+by one point
+\\
+#testcase-postrule-table-of-resort-anagrams-post-toolshed-toeholds-rule
+>toeholds
+by two points
+}}SCORE+=4
+}}CURMIN+=2
+\\
+>score
+{$SCOS}
+\\
+}}SCORE-=4
+}}CURMIN-=2
+>undo
 >undo
 >undo
 >undo
@@ -781,6 +877,11 @@ Your score has just gone up by one point.
 >score
 {$SCOS}
 
+@max
+#+testcase-postrule-table-of-resort-anagrams-post-ropes-grips-rule
+>hint ropes
+Those are no longer part of a puzzle.
+
 @mis
 #+testcase-mistake-shuffling-prigs
 >prigs
@@ -844,6 +945,8 @@ by one point
 >kilns
 by one point
 >potters
+\\
+#testcase-postrule-table-of-resort-anagrams-post-protest-potters-rule
 I am RED BULL BURDELL!
 >undo
 >undo
@@ -933,6 +1036,11 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 #ttc-table-of-unmatched-topic-responses-protest
 >ask protest about abcde
 You're not going to reason with them. Maybe reason about them, though.
+
+@max
+#testcase-postrule-table-of-resort-anagrams-post-riot-protest-rule
+>x links
+A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin'. But they're still more violent things than you'd like, this near the Means Manse.
 
 >score
 {$SCOS}
@@ -1058,11 +1166,11 @@ Your vision blurs a bit, and instead you see some china and also kilns, to bake 
 
 @!min
 >china
-#notana
 Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
 \\
+#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 {$SFIXMAX}
 
@@ -1072,7 +1180,7 @@ Your score has just gone up by one point.
 Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
 
 @max
-#pre-chain-china rule
+#testcase-prerule-table-of-resort-anagrams-pre-chain-china-rule
 >china
 You already shook that out of the links. You need to concentrate on the links, now.
 
@@ -1119,6 +1227,10 @@ You stare into the blue lube for a bit, then look around. You notice a weird haz
 
 @min
 }}CURMAX--
+
+@max
+#testcase-postrule-table-of-resort-anagrams-post-links-kilns-rule
+RED BULL BURDELL
 
 >score
 @min

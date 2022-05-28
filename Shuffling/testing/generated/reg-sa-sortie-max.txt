@@ -13,6 +13,8 @@
 >ts
 >xc
 
+>au 2
+
 >sortie
 by one point
 
@@ -38,15 +40,11 @@ by one point
 /^Kitchen
 
 >x fridge
-While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. It doesn't appear locked or anything. You could just OPEN it. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. It doesn't appear locked or anything. It may or may not be useful, but it looks easy to OPEN. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 # later we examine it and "i put soot on warts" is gone
 >x fridge
 !in dust
 >undo
->undo
-
->x fridge
-While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see some grist and a cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 >undo
 
 >open fridge
@@ -62,11 +60,21 @@ While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it
 
 >grits
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-sortie-anagrams-post-fridgey-flip-rule
+!I suppose you could also say you fig'red the fridge, too, now.
+Bam! A
+
 >score
 You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 26, and the maximum is 27
 
 >pancake
 Your score has just gone up by one point.
+
+#+testcase-postrule-table-of-sortie-anagrams-post-fridgey-flip-rule
+I suppose you could also say you fig'red the fridge, too, now.
+Bam! Another
+
 >score
 You currently have 4 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -132,20 +140,31 @@ Your score has just gone up by one point.
 >score
 You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>pad warts
+"No, too stupid a fad. I put soot on warts." But what is it that's too stupid?
+
 >straw
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-sortie-anagrams-post-warts-straw-rule
+>pad warts
+!STUPID A FAD
 
 >score
 You currently have 13 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >put straw in sack
 
-#pre-sack-cask rule
+#testcase-prerule-table-of-sortie-anagrams-pre-sack-cask-rule
 >cask
 As the sack changes, the straw falls out.
+
+#testcase-postrule-table-of-sortie-anagrams-post-sack-cask-rule
+Thankfully, the dispossessed straw fell into a pretty tidy heap, so it can be collected easily again.
+
 >undo
 
-#pre-room-moor rule
+#testcase-prerule-table-of-sortie-anagrams-pre-room-moor-rule
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
 
@@ -156,10 +175,14 @@ room -> moor
 >shoes
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-sortie-anagrams-post-hoses-shoes-rule
+>x shoes
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 >score
 You currently have 14 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#pre-room-moor rule retry
+#+testcase-prerule-table-of-sortie-anagrams-pre-room-moor-rule
 >banish coat
 >moor
 You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes.
@@ -168,6 +191,10 @@ You see a flash and get a glimpse of a moor, but it is just too cold. You blink 
 
 >moor
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-sortie-anagrams-post-room-moor-rule
+>hint coat
+That is no longer part of a puzzle.
 
 >score
 You currently have 15 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -198,6 +225,10 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >peasant
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-sortie-anagrams-post-anapest-peasant-rule
+>x pat
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 >score
 You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -218,7 +249,7 @@ You currently have 17 out of 27 total points for the Sortie region. You have fou
 
 >e
 
-#pre-haywall-hallway rule
+#testcase-prerule-table-of-sortie-anagrams-pre-haywall-hallway-rule
 >hallway
 Hm, that's possible, but you can't make the hallway until you add something to the wall.
 
@@ -252,14 +283,15 @@ The sack stiffens, rises and becomes less blobby. It's the cask again, nice and 
 Gainly laying the cask under the spout, you pour in some oils.
 !A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
 
-#pre-cask-sack rule
+#testcase-prerule-table-of-sortie-anagrams-pre-cask-sack-rule
 >sack
 That's inadvisable. The oils would leak out.
 
-#pre-oils-soil rule
+#testcase-prerule-table-of-sortie-anagrams-pre-oils-soil-rule
 >soil
 This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?
-#pre-oils-silo rule
+
+#testcase-prerule-table-of-sortie-anagrams-pre-oils-silo-rule
 >silo
 This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?
 
@@ -275,7 +307,7 @@ The cask is already full of oils.
 
 >s
 
-#pre-smilies-missile rule
+#testcase-prerule-table-of-sortie-anagrams-pre-smilies-missile-rule
 >missile
 Good idea, but not in here. There'd be more room for that outside where you found the poem.
 
@@ -294,7 +326,7 @@ Your score has just gone up by one point.
 >score
 You currently have 20 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#pre-plane-panel rule
+#testcase-prerule-table-of-sortie-anagrams-pre-plane-panel-rule
 >panel
 You'd need to fold the poem into a plane, first.
 
@@ -308,12 +340,17 @@ Your score has just gone up by one point.
 >score
 You currently have 21 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#pre-oils-silo rule retry
+#+testcase-prerule-table-of-sortie-anagrams-pre-oils-silo-rule
 >silo
 The moor's ground is not stable enough as-is. You need a foundation first.
 
 >soil
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-sortie-anagrams-post-oils-soil-rule
+>x soil
+!You can't see
+It's a rich foundation for a big, big place, you're sure. Stronger and denser than the usual mush on this moor.
 
 >score
 You currently have 22 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -348,6 +385,10 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 >silo
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-sortie-anagrams-post-oils-silo-rule
+>x cask
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 >score
 You currently have 24 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -377,6 +418,14 @@ You currently have 26 out of 27 total points for the Sortie region. You have fou
 !AMUSING
 >undo
 >undo
+
+#testcase-postrule-table-of-sortie-anagrams-post-hoots-shoot-rule
+>get shoot
+That seems to be a part of the panel.
+
+#testcase-postrule-table-of-sortie-anagrams-post-trees-steer-rule
+>get steer
+That seems to be a part of the panel.
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.

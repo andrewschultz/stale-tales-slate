@@ -390,8 +390,10 @@ There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nic
 OUR NEEDS ENDURE SO!
 >read board
 Canny Nancy
+
 >enter gateway
 mega-ant
+
 >read gateway
 The red text is just like A TAN GEM and such on the broad board
 !There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice

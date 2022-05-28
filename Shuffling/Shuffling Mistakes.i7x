@@ -557,8 +557,8 @@ volume unsorted
 
 to say mistake-clue of (my-sto - a sto):
 	say "[paragraph break]";
+	now ignore-line-break is true;
 	preef my-sto;
-	say "[run paragraph on]";
 
 Shuffling Mistakes ends here.
 

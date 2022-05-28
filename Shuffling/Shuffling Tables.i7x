@@ -68,9 +68,7 @@ this is the post-nametag-gateman rule:
 	if mega ant is in Notices Section:
 		say "The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. 'There. Should be able to walk in now. I mean, after you ask me for all the help you want.'";
 		moot mega ant;
-	if the player has the bugle:
-		say "The gateman [if ant is moot]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
-		moot bugle;
+	follow the bugle-moot rule;
 
 to say check-plur:
 	if player's command does not include "attics":
@@ -168,8 +166,8 @@ book Sortie
 
 table of Sortie anagrams [xxtia]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	fullhash	binhash	vanish	to-room
-t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	533908	--	kitchen
-warts	straw	"straw"	"warts"	--	post-warts-straw rule	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378	5111809
+t-n	teleporter	"kitchen"	"the nick"	--	--	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	533908	--	kitchen
+warts	straw	"straw"	"warts"	--	post-warts-straw rule	"The warts quickly peel off and lengthen into straw."	false	394830378	5111809
 skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089	787473
 cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shreds before turning into a light green head of lettuce."	false	639757485	1574932
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134	438289
@@ -195,14 +193,14 @@ trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	--
 
 to say closed-note: if fridge is closed, say "you didn't even open yet "
 
-this is the post-thenick-kitchen rule:
-	if straw is in the nick, now straw is in kitchen;
-
 this is the post-warts-straw rule:
 	pad-del "warts";
+	if player carries sack:
+		say "You drop the straw into the sack before it falls out of your arms.";
+	else:
+		say "The straw is too heavy to carry. You drop it.";
 
 to say drop-straw:
-	say ", which [if player carries sack]you drop into the sack before it falls out of your arms[else]is too heavy to carry. You drop it[end if]";
 	if "warts" is padded:
 		say ". You run a big line through your entry on warts in your dope tan notepad";
 		pad-del "warts";
@@ -211,13 +209,8 @@ to say drop-straw:
 		move straw to location of the player;
 
 this is the post-fridgey-flip rule:
-	if noun is pancake or noun is grits:
-		now noun is in fridge;
-		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
-		if fridge is closed:
-			say "[line break]You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
-			now fridge is open;
-		if fridge-score is 2, say "[line break]I suppose you could also say you fig'red the fridge, too, now.";
+	say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
+	if fridge-score is 2, say "[line break]I suppose you could also say you fig'red the fridge, too, now.";
 
 this is the pre-cask-sack rule:
 	if cask is touchable and oils are in cask, say "That's inadvisable. The oils would leak out." instead;
@@ -400,7 +393,7 @@ this is the pre-brocade-barcode rule:
 		say "[modest-around-faeries].[line break]";
 
 this is the pre-drycake-keycard rule:
-	if bastion-evac is false and dry cake is touchable:
+	if bastion-evac is false and dry cake is in location of player:
 		say "[one of]The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
 		preef-l keycard;
 		do nothing instead;
@@ -409,7 +402,7 @@ this is the post-antlers-rentals rule:
 	moot rentals;
 
 this is the post-siren-resin rule:
-	if resin is touchable:
+	if resin is in location of player:
 		moot resin;
 		now stickyhanded is true;
 
@@ -543,7 +536,7 @@ this is the post-links-kilns rule:
 	process the post-protest-potters rule;
 
 this is the realize-rived-drive rule:
-	if grips are in Rived Drive and ropes are in Rived Drive and slope is in Rived Drive:
+	if player carries grips and player carries ropes and slope is in Rived Drive:
 		now slope is realized;
 		now grips are realized;
 		now ropes are realized;
@@ -551,6 +544,11 @@ this is the realize-rived-drive rule:
 book auxiliary text and rules
 
 section ordeal loader auxiliary
+
+this is the bugle-moot rule:
+	if bugle is moot:
+		say "The gateman [if ant is moot]pauses again, then [end if]asks if you had that bugle. It's something he'd been meaning to take up, but he wanted to give you more than one way to get here. You explain you lost it rolling down a hill to get here.[paragraph break]'No worries. I'll get it when you're gone. You probably won't want to be around when I start practising, anyway. This time, I will. Being a nametag for a bit--or just replaced by one--gives a fellow motivation to do those things he's put off.'";
+		moot bugle;
 
 section forest auxiliary
 
@@ -566,7 +564,7 @@ to note-isle-left:
 		say "The [noun] will get you out of here, but there's a bit more to clean up, if you want.";
 		continue the action;
 	if l2 is not moot:
-		say "There's something weird about this isle you can't put your finger on. It's not critical, but maybe there's more to do, in addition to finding multiple ways of transport out."
+		say "There's still something weird about this isle you can't put your finger on. It's not critical, but maybe there's more to do, in addition to finding multiple ways of transport out."
 
 book general auxiliary rules
 

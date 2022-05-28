@@ -194,11 +194,12 @@ The drainage bubbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the drainage. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-@nud
+@nud,max
 >w
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
-\\
+
+@nud
 #ttc-table-of-undesired-underside-nudges-reading
 >readign
 It's *A* reading you need to worry about.
@@ -280,7 +281,7 @@ DEBUG INFO: Cert-text: --------.
 >undo
 
 @max
-#pre-beats-beast rule
+#testcase-prerule-table-of-metros-anagrams-pre-beats-beast-rule
 >beast
 That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
 \\
@@ -321,6 +322,10 @@ You don't have a gardenia, yet. But you can find or make one.
 >gardenia
 by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-metros-anagrams-post-drainage-gardenia-rule
+The/a reading blows away once the gardenias appear.
 
 >score
 {$SCOS}
@@ -537,7 +542,7 @@ DEBUG INFO: Rect-text: S---D.
 DEBUG INFO: Cert-text: -----.
 
 @max
-#pre-words-sword rule
+#testcase-prerule-table-of-metros-anagrams-pre-words-sword-rule
 >sword
 The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
 \\
@@ -793,7 +798,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
-#pre-lostcorn-controls rule
+#testcase-prerule-table-of-metros-anagrams-pre-lostcorn-controls-rule
 >controls
 The dead beat deadbeat might not beat you dead, but you'd get maligned ere legerdemain.
 In other words, you probably need to gain the deadbeat's trust before taking any stuff.
@@ -904,6 +909,11 @@ Your score has just gone up by one point.
 >score
 {$SFIXMAX}
 
+@max
+#testcase-postrule-table-of-metros-anagrams-post-antlers-rentals-rule
+>x antlers
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
 @nud
 #renudge for rental
 >rentla
@@ -930,7 +940,7 @@ It isn't just any cake. It's dry cake.
 It isn't just any cake. It's dry cake.
 
 @max
-#pre-drycake-keycard rule
+#testcase-prerule-table-of-metros-anagrams-pre-drycake-keycard-rule
 >keycard
 The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.
 So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til they're gone.
@@ -1294,10 +1304,11 @@ The torn cue is just there to direct you to the brocade.
 The faeries wouldn't take kindly to snooping. The only safe way out is back west.
 
 @max
-#pre-heaths-sheath rule
+#testcase-prerule-table-of-metros-anagrams-pre-heaths-sheath-rule
 >sheath
 The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
-#pre-begonias-noisebag rule
+\\
+#testcase-prerule-table-of-metros-anagrams-pre-begonias-noisebag-rule
 >noise bag
 The begonias are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
 
@@ -1357,7 +1368,7 @@ by one point
 >open noise bag
 You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it.
 >sword
-#pre-words-sword rule retry
+#+testcase-prerule-table-of-metros-anagrams-pre-words-sword-rule
 The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.
 It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPEN it, though, being a noise bag.
 >undo
@@ -1377,7 +1388,7 @@ You are holding a bag with one hand and plugging an ear with another.
 DEBUG: begonias being objhinted.
 
 @max
-#pre-heaths-sheath rule retry
+#+testcase-prerule-table-of-metros-anagrams-pre-heaths-sheath-rule
 >sheath
 You already got the begonias--don't mess with the merchandise.
 \\
@@ -1438,7 +1449,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Your vision blurs a bit, and instead you see a sheath.
 
 @max
-#pre-begonias-noisebag rule retry
+#+testcase-prerule-table-of-metros-anagrams-pre-begonias-noisebag-rule
 >noise bag
 You already got the heaths--don't mess with the merchandise.
 
@@ -1456,6 +1467,11 @@ You've transformed your flower, but you need to use your new item in the Bile Li
 #ttc-table-of-metros-done-rejects-sheath
 >sheaht
 The sheath remains still.
+
+@max
+#testcase-postrule-table-of-metros-anagrams-post-heaths-sheath-rule
+>i
+You are also wearing a sheath.
 
 @ask
 #ttc-table-of-matched-thing-responses-faeries-begonias
@@ -1496,7 +1512,7 @@ by one point
 
 @max
 #this is done/undone so that we can verify the brocade/barcode is hinted later.
-#pre-brocade-barcode rule
+#testcase-prerule-table-of-metros-anagrams-pre-brocade-barcode-rule
 >barcode
 You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is
 >undo
@@ -2318,7 +2334,7 @@ DEBUG INFO: Rect-text: B---T.
 DEBUG INFO: Cert-text: BEA--.
 
 @max
-#pre-beats-beast retry
+#+testcase-prerule-table-of-metros-anagrams-pre-beats-beast-rule
 >beast
 You don't feel prepared to face a beast yet.
 
@@ -2330,6 +2346,11 @@ You see a crooked musical chord replaced with a monster worse than the night thi
 
 @hin
 DEBUG: beats being objhinted.
+
+@max
+#testcase-postrule-table-of-metros-anagrams-post-siren-resin-rule
+>x resin
+You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 >score
 @min

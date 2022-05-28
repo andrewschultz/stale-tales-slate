@@ -80,6 +80,7 @@ You currently have 3 out of 15 total points for the Resort region. Your minimum 
 
 >wings
 Your score has just gone up by one point.
+
 >score
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
@@ -192,9 +193,9 @@ Your score has just gone up by one point.
 You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 >china
-#notana
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 

@@ -13,8 +13,9 @@
 >ts
 >xc
 
->au 2
 >monty hints
+
+>au 2
 
 >sortie
 by one point
@@ -190,11 +191,13 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 
 >grits
 Your score has just gone up by one point.
+
 >score
 You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 26, and the maximum is 27
 
 >pancake
 Your score has just gone up by one point.
+
 >score
 You currently have 4 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -706,12 +709,6 @@ Your score has just gone up by one point.
 
 >score
 You currently have 26 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
->purloin missile
->push steer
-!AMUSING
->undo
->undo
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.

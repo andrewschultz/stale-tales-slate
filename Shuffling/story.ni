@@ -6765,16 +6765,14 @@ the manila animal is an amusing boring thing. it is part of the griefd fridge. u
 
 section grist and grits
 
-the grist is an LLPish thing. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S". indefinite article of grist is "some".
+the grist is LLPish scenery. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S". indefinite article of grist is "some".
 
 description of grist is "It's a heapin['] helpin['] of the stuff, haphazardly lumped at the bottom of the fridge."
 
 understand "heapin helpin" and "heapin/helpin" as grist when grist is fungible and fridge is open.
 understand "heapin helpin" and "heapin/helpin" as grits when grits are fungible and fridge is open.
 
-the grits are a plural-named thing.
-
-rule for deciding whether all includes a thing in fridge: it does not.
+the grits are plural-named scenery.
 
 rule for deciding whether all includes grist: it does not.
 rule for deciding whether all includes grits: it does not.
@@ -6785,15 +6783,13 @@ description of grits is "They look more edible than the grist, but you're not TH
 
 section cake pan and pancake
 
-a cake pan is an LLPish thing. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
+a cake pan is LLPish scenery. "It's empty, and you wonder what it's doing in the fridge.".
+
+lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
 
 understand "cakepan" as cake pan.
 
-description of cake pan is "It's empty, and you wonder what it's doing in the fridge."
-
-the pancake is a thing.
-
-description of pancake is "It's too plain to eat. And probably too cold."
+the pancake is scenery. "It's too plain to eat. And probably too cold."
 
 book ROOM / roomroom
 
@@ -8849,7 +8845,7 @@ the l2 are privately-named plural-named LLPish scenery in Leis Isle. "Looking at
 
 gpos of l2 is 1. rpos of l2 is 4. lgth of l2 is 4. the rgtext of l2 is "[gc][rc][rc][gc]". cert-text of l2 is "L[d1][d1][ast]S". rect-text of l2 is "L[d1][d1][ast]S".
 
-the lies are a privately-named thing. description of lies is "You should not see the actual lies."
+the lies are a privately-named thing. description of lies is "You should not see the actual lies.". understand "liespriv" as lies when debug-state is true.
 
 understand "leis" as l2 when l2 are in Leis Isle.
 
@@ -9412,7 +9408,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					the rule succeeds;
 				if the-from entry is sliver, break;
 				if the-from entry is oils and the-to entry is silo and soil is in location of player, break;
-			if the-to entry is touchable and the-to entry is not reversible:
+			if the-to entry is in location of player and the-to entry is not reversible:
 				reject-msg the-to entry;
 				do nothing instead;
 			d "[myh] [the-from entry] [the-to entry] failed.";
