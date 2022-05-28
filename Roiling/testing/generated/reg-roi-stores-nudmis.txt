@@ -486,7 +486,6 @@ The speaker parkees aren't what, or who, you need to change, here. It'll still b
 >scan suit ode
 Well, that's a lot of question marks, but if you're sharp, maybe you can figure it out from this or find other clues.
 
-#pre-babbler-outside rule
 >outside
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
@@ -656,6 +655,8 @@ E. S. Roth.
 Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
+
+#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
 
 #ttc-table-of-stores-done-rejects-throes-hoster
 >othesr

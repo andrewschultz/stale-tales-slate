@@ -89,7 +89,6 @@ this is the post-my-niche-chimney rule:
 		min-up;
 
 this is the pre-meet-bans-basement rule:
-	moot beams;
 	now Largely All Grey Gallery is mapped below study;
 	now study is mapped above Largely All Grey Gallery;
 	reg-inc-q;
@@ -228,11 +227,11 @@ seed pit	stupor sprout	true	602484096	819480	--	"despite"	"despite"	--	post-seed
 be ova	MORF FORM	false	329930229	2113555	--	"above"	"above"	--	--	"You look up. There is a giant [morf form]! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with [the morf form]."
 MORF FORM	THE BEAN	false	250266429	151584	--	"from"	"from"	--	--	"The [morf form] suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled [the bean].[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'" [bold-ok]
 THE BEAN	THE BEAN	false	485518766	532627	Harms Marsh	"beneath"	"beneath"	--	post-the-bean-beneath rule	"You push [the bean] and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear [the bean] roll back into place..."
-NULL IT unit	odd run on aura	false	375930018	1583360	--	"until"	"until"	pre-unlit-until rule	--	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The [null it unit] fizzles a bit and pops, and light returns to Harms Marsh ... in the form of an odd run on aura![paragraph break]So while the marsh isn't exactly glowing now, you can definitely notice things better. The sheol holes in particular, though some will still ambush you. But which way to go? Compass directions are still out."
+NULL IT unit	odd run on aura	false	375930018	1583360	--	"until"	"until"	--	post-unlit-until rule	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The [null it unit] fizzles a bit and pops, and light returns to Harms Marsh ... in the form of an odd run on aura![paragraph break]So while the marsh isn't exactly glowing now, you can definitely notice things better. The sheol holes in particular, though some will still ambush you. But which way to go? Compass directions are still out."
 odd run on aura	un road	false	356906602	1204233	--	"around"	"around"	--	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise. They're almost too bright. You find an all noon gag that helps deflect the shiniest bits, but perhaps it can help you even more."
 noon gag	noon gag	false	231861444	26689	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water behind the admits mist ad over there."
 data dim mists	data dim mists	false	331668890	790793	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
-thickness sketchins	thickness sketchins	false	441136547	4849793	Sonancy Canyons	"athwart"	"athwart"	--	post-athwart rule	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. You suddenly feel enveloped with all manner of navigational knowledge, and the mess-up spumes popping up everywhere? Well, they are no problem. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think to yourself, scan yon... so canny... and you wind up somewhere different."
+thickness sketchins	thickness sketchins	false	441136547	4849793	Sonancy Canyons	"athwart"	"athwart"	--	--	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. You suddenly feel enveloped with all manner of navigational knowledge, and the mess-up spumes popping up everywhere? Well, they are no problem. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think to yourself, scan yon... so canny... and you wind up somewhere different."
 bent ewe	bent ewe	false	681789531	4726802	--	"between"	"between"	--	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	5783936	--	"without"	"without"	--	--	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
 hurt hog	hurt hog	false	475056505	1720512	--	"through"	"through"	pre-hurt-hog-through rule	post-hurt-hog-through rule	"You realize it's time to move on. So you do. It feels a bit ritualistic and all, but the hurt hog and bent ewe, no longer hurt or bent, move on physically as well. You come upon a yob den nearby. Only your wisdom, or abstract anagram-solving skills, can help you determine whether to visit for a while, or not."
@@ -304,16 +303,13 @@ this is the post-seedpit-despite rule:
 this is the post-the-bean-beneath rule:
 	if worst ad is not moot, poss-d;
 
-this is the pre-unlit-until rule:
+this is the post-unlit-until rule:
 	moot darkness;
 
 this is the post-around-unroad rule:
 	now noon gag is in Harms Marsh;
 	now stripey pyrites are in Harms Marsh;
 	now un road is in Harms Marsh;
-
-this is the post-athwart rule:
-	moot bad oar;
 
 this is the pre-hurt-hog-through rule:
 	if bent ewe is reflexive:
@@ -385,7 +381,7 @@ this is the post-race-acre-care rule:
 	if tears taser is not moot, poss-d;
 
 this is the pre-spot-stop-post rule:
-	if sob ever verbose is touchable:
+	if sob ever verbose is in location of player:
 		say "That should work, but you--your eyes are wandering now. You're not taking it all in. Around the post, the sob ever verbose echoes aid distracts you. You must deal with it first!";
 		preef stop post;
 		do nothing instead;
@@ -398,7 +394,7 @@ this is the post-spot-stop-post rule:
 
 this is the bee-less-active rule:
 	if bee-score is 2:
-		say "You're now able to focus perfectly on L'Clear Cellar and how to get into it[if cellar is prefigured]. Not much else to do here than [b]RECALL[r][end if].";
+		say "You're now able to focus perfectly on L'Clear Cellar and how to get into it[if cellar is prefigured]. Not much else to do here other than [b]RECALL[r][end if].";
 		min-up;
 	else:
 		say "You're able to focus on L'Clear Cellar and how to get into it, now[if cellar is prefigured]. Maybe you could focus perfectly if you wanted, or you could just [b]RECALL[r] now[end if].";
@@ -727,7 +723,7 @@ this is the pre-disk-skid rule:
 
 this is the post-disk-skid rule:
 	if skid is off-stage:
-		say "[line break]You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a [b]SKID[r], as long as it's physically possible.";
+		say "[line break]You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a [b]SKID[r], as long as the disk isn't in a disk drive.";
 	move skid to location of player;
 
 this is the pre-reboot rule:

@@ -314,6 +314,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's
 #ttc-table-of-routes-readables-worst-ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
+\\
 #ttc-table-of-routes-scannotes-worst-ad
 >scan worst ad
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
@@ -361,7 +362,7 @@ It's the whole side art you need to deal with.
 It's the whole side art you need to deal with.
 
 @max
-#pre-side-art-astride rule
+#testcase-prerule-table-of-routes-anagrams-pre-side-art-astride-rule
 >astride
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
@@ -372,7 +373,7 @@ You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobo
 [NOTE: you can abbreviate this with PF in the future.]
 You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 \\
-#pre-sitanag-against rule
+#testcase-prerule-table-of-routes-anagrams-pre-sitanag-against-rule
 >against
 !by one point
 You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
@@ -631,15 +632,18 @@ The scripture picturers helped you get in, but they're just there to help other 
 ##balance undos
 >against
 by one point
-#pre-mesa-dir-flip rule
+\\
+#testcase-prerule-table-of-routes-anagrams-pre-mesa-dir-flip-rule
 >past
 !by one point
 !Idle Deli
-#pre-mesa-dir-flip rule retry
+\\
+#+testcase-prerule-table-of-routes-anagrams-pre-mesa-dir-flip-rule
 >across
 !by one point
 !Adobe Abode
-#pre-mesa-dir-flip rule retry
+\\
+#+testcase-prerule-table-of-routes-anagrams-pre-mesa-dir-flip-rule
 >towards
 !by one point
 >pf
@@ -933,6 +937,11 @@ You don't need to do anything with Pat, especially now you got the stupor sprout
 #testcase-outside-idle-deli
 !The only way to exit is
 
+@max
+#testcase-postrule-table-of-routes-anagrams-post-past-rule
+>scan resto store
+You read what the settler says--and you realize you already took care of the resto store or something closely related.
+
 @spoi
 #ttc-table-of-routes-anagrams-across
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
@@ -1074,6 +1083,18 @@ Your score has just gone up by one point
 @spoi
 The spoon points you out of Oscar's.
 
+@max
+#testcase-postrule-table-of-routes-anagrams-post-pipesoot-opposite-rule
+>retry
+###skip test checking
+>enter course source
+###skip test checking
+>i
+pipe soot
+>undo
+>undo
+>undo
+
 @nud
 #+testcase-mistake-roiling-orcas
 >orcas
@@ -1085,6 +1106,11 @@ Besides, you got the pipe soot
 Brother Horbert will work his magic with that.
 
 >out
+
+@max
+#testcase-postrule-table-of-routes-anagrams-post-across-rule
+>scan uhh tut hut
+You read what the settler says--and you realize you already took care of the Uhh Tut Hut or something closely related.
 
 @verbs
 #testcase-outside-cleric-circle
@@ -1167,6 +1193,11 @@ Your score has just gone up by one point
 @spoi
 #ttc-table-of-routes-anagrams-astride
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ASTRIDE.
+
+@max
+#testcase-postrule-table-of-routes-anagrams-post-sitanag-against-rule
+>x tirades
+They're not very good tirades, but maybe you could position yourself better to listen to them.
 
 @hints
 #ttc-table-of-routes-hint-request-rejects-sit-a-nag
@@ -1264,6 +1295,11 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-below
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BELOW.
 
+@max
+#testcase-postrule-table-of-routes-anagrams-post-side-art-astride-rule
+>x bell
+You can only hear it. You can't help hearing it. But maybe if you LISTEN, it could provide a clue.
+
 @hints
 #ttc-table-of-routes-hint-request-rejects-side-art
 >hint side art
@@ -1356,6 +1392,11 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-under
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNDER.
 
+@max
+#testcase-postrule-table-of-routes-anagrams-post-below-rule
+>x nuder
+You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of "work," whether extolling freedom of speech or saying how tasteless it is.
+
 @verbs
 >listen gast
 Ian Gast is banging on about Rude 'N Nuder, now.
@@ -1414,6 +1455,14 @@ Your score has just gone up by one point
 
 @spoi
 The spoon points to the Cleric Circle now you have all the items.
+
+@max
+#testcase-postrule-table-of-routes-anagrams-post-under-rule
+>x gast
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x tirades
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @nud
 #ttc-table-of-routes-done-rejects-anti-sag-sit-a-nag
@@ -1606,6 +1655,7 @@ It's like a dense metal or something. It's more likely it would make something e
 Your score has just gone up by one point
 
 @min
+#Note: because there are so many MAX test cases above, and ABSTRACT X TO Y hacks give their own problems, this will count as the test case #testcase-postrule-table-of-routes-anagrams-post-the-bean-beneath-rule
 }}CURMAX--
 DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 
@@ -1709,10 +1759,14 @@ A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blu
 >around
 You can't see an un-road yet, or anything that might lead to it.
 
-#pre-unlit-until rule
 >until
 }}SCORE++
 Your score has just gone up by one point
+
+@max
+#testcase-postrule-table-of-routes-anagrams-post-unlit-until-rule
+>x darkness
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
 #+ttc-table-of-routes-nowheres-harms-marsh
@@ -1777,6 +1831,17 @@ Your score has just gone up by one point
 @spoi
 #ttc-table-of-routes-anagrams-along
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ALONG.
+
+@max
+#testcase-postrule-table-of-routes-anagrams-post-around-unroad-rule
+>x noon gag
+It seems to absorb light a bit. You don't want to take it, but maybe it can be useful.
+\\
+>x stripey pyrites
+The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Lag Logan.
+\\
+>x un road
+The un-road must lead to No-Lag Logan. But how to follow it?
 
 @nud
 #+ttc-table-of-harms-marsh-nudges-pyrites
@@ -1969,10 +2034,10 @@ The mess-up spumes are too chaotic. You'll need to work your way around them ano
 \\
 #testcase-mistake-roiling-abroad-aboard
 >abroad
-Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
+Now you found the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
 \\
 >aboard
-Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
+Now you found the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
 \\
 #testcase-mistake-roiling-feer
 >feer
@@ -2071,7 +2136,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @max
-#pre-hurt-hog-through rule
+#testcase-prerule-table-of-routes-anagrams-pre-hurt-hog-through-rule
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
@@ -2184,6 +2249,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 @verbs
 >listen hog
 Less noisy now you've been peacemaking a bit.
+\\
 >without
 It's always tough to figure how to ignore stuff.
 \\
@@ -2207,7 +2273,18 @@ Your score has just gone up by one point
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BEYOND.
 
 @max
+#testcase-postrule-table-of-routes-anagrams-post-hurt-hog-through-rule
+>x ewe
+Nothing (significant) like that is in the immediate vicinity or region.
+>x hog
+Nothing (significant) like that is in the immediate vicinity or region.
+>x den
+You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?
+
+@max
 >au 0
+\\
+#testcase-prerule-table-of-routes-anagrams-pre-yob-den-beyond-rule
 >beyond
 This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything?
 >undo

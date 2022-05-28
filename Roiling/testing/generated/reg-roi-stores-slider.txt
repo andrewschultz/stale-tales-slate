@@ -81,7 +81,6 @@ Score in a scenario: 3 out of 11 total points in the current region, Stores. Low
 >uostdei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#pre-babbler-outside rule
 >outside
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
@@ -117,6 +116,8 @@ Score in a scenario: 8 out of 11 total points in the current region, Stores. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
+
+#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
 
 >presto
 >score

@@ -228,6 +228,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's
 #ttc-table-of-routes-readables-worst-ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
+
 #ttc-table-of-routes-scannotes-worst-ad
 >scan worst ad
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
@@ -1091,7 +1092,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. Th
 >around
 You can't see an un-road yet, or anything that might lead to it.
 
-#pre-unlit-until rule
 >until
 Your score has just gone up by one point
 
@@ -1236,10 +1236,10 @@ The mess-up spumes are too chaotic. You'll need to work your way around them ano
 
 #testcase-mistake-roiling-abroad-aboard
 >abroad
-Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
+Now you found the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
 
 >aboard
-Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
+Now you found the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
 
 #testcase-mistake-roiling-feer
 >feer

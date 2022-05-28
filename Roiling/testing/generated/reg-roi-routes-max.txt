@@ -20,7 +20,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-#pre-side-art-astride rule
+#testcase-prerule-table-of-routes-anagrams-pre-side-art-astride-rule
 >astride
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
@@ -31,7 +31,7 @@ You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobo
 [NOTE: you can abbreviate this with PF in the future.]
 You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 
-#pre-sitanag-against rule
+#testcase-prerule-table-of-routes-anagrams-pre-sitanag-against-rule
 >against
 !by one point
 You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
@@ -92,15 +92,18 @@ Precise recipes
 
 >against
 by one point
-#pre-mesa-dir-flip rule
+
+#testcase-prerule-table-of-routes-anagrams-pre-mesa-dir-flip-rule
 >past
 !by one point
 !Idle Deli
-#pre-mesa-dir-flip rule retry
+
+#+testcase-prerule-table-of-routes-anagrams-pre-mesa-dir-flip-rule
 >across
 !by one point
 !Adobe Abode
-#pre-mesa-dir-flip rule retry
+
+#+testcase-prerule-table-of-routes-anagrams-pre-mesa-dir-flip-rule
 >towards
 !by one point
 >pf
@@ -171,6 +174,10 @@ Your score has just gone up by one point
 
 >out
 
+#testcase-postrule-table-of-routes-anagrams-post-past-rule
+>scan resto store
+You read what the settler says--and you realize you already took care of the resto store or something closely related.
+
 >across
 Your score has just gone up by one point
 
@@ -179,7 +186,20 @@ Your score has just gone up by one point
 >opposite
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-pipesoot-opposite-rule
+>retry
+>enter course source
+>i
+pipe soot
+>undo
+>undo
+>undo
+
 >out
+
+#testcase-postrule-table-of-routes-anagrams-post-across-rule
+>scan uhh tut hut
+You read what the settler says--and you realize you already took care of the Uhh Tut Hut or something closely related.
 
 #+ttc-table-of-routes-prefigurings-sit-a-nag
 >againts
@@ -198,6 +218,10 @@ You can lean AGAINST the anti-sag sit-a-nag now you feel less fear and more purp
 >against
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-sitanag-against-rule
+>x tirades
+They're not very good tirades, but maybe you could position yourself better to listen to them.
+
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
@@ -212,11 +236,26 @@ You can sit ASTRIDE the anti-sag sit-a-nag now you have a reason to.
 >astride
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-side-art-astride-rule
+>x bell
+You can only hear it. You can't help hearing it. But maybe if you LISTEN, it could provide a clue.
+
 >below
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-below-rule
+>x nuder
+You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of "work," whether extolling freedom of speech or saying how tasteless it is.
+
 >under
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-routes-anagrams-post-under-rule
+>x gast
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>x tirades
+Nothing (significant) like that is in the immediate vicinity or region.
 
 ##No-Lag needs a line break ??
 
@@ -250,12 +289,25 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
-#pre-unlit-until rule
 >until
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-unlit-until-rule
+>x darkness
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >around
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-routes-anagrams-post-around-unroad-rule
+>x noon gag
+It seems to absorb light a bit. You don't want to take it, but maybe it can be useful.
+
+>x stripey pyrites
+The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Lag Logan.
+
+>x un road
+The un-road must lead to No-Lag Logan. But how to follow it?
 
 >along
 Your score has just gone up by one point
@@ -272,7 +324,7 @@ Your score has just gone up by one point
 
 /^Sonancy Canyons
 
-#pre-hurt-hog-through rule
+#testcase-prerule-table-of-routes-anagrams-pre-hurt-hog-through-rule
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
@@ -287,7 +339,17 @@ Your score has just gone up by one point
 >through
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-hurt-hog-through-rule
+>x ewe
+Nothing (significant) like that is in the immediate vicinity or region.
+>x hog
+Nothing (significant) like that is in the immediate vicinity or region.
+>x den
+You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?
+
 >au 0
+
+#testcase-prerule-table-of-routes-anagrams-pre-yob-den-beyond-rule
 >beyond
 This will dispel the poison stripe. However, the raptest patters can be dealt with, if you'd like one more puzzle. Stay back and clean up everything?
 >undo

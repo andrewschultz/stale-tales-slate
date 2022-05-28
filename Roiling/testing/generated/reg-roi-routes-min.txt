@@ -86,6 +86,7 @@ Your score has just gone up by one point
 >beneath
 Your score has just gone up by one point
 
+#Note: because there are so many MAX test cases above, and ABSTRACT X TO Y hacks give their own problems, this will count as the test case #testcase-postrule-table-of-routes-anagrams-post-the-bean-beneath-rule
 DEBUG INFO: Taking away a max point. Max-score now 21.
 
 /^Harms Marsh
@@ -93,7 +94,6 @@ DEBUG INFO: Taking away a max point. Max-score now 21.
 >score
 Score in a scenario: 12 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
 
-#pre-unlit-until rule
 >until
 Your score has just gone up by one point
 

@@ -85,7 +85,6 @@ There must be a general way to leave, but that's not quite it.
 >exits
 You can't make it to any exits right now. You need to disrupt things. Listen or talk to the Rehabs Basher for clues.
 
-#pre-babbler-outside rule
 >outside
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
@@ -155,6 +154,8 @@ Score in a scenario: 8 out of 11 total points in the current region, Stores. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
+
+#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
 
 #verbcase smell-stores-if-noun-is-throes-hoster
 >smell throes hoster

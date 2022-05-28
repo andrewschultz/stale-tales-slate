@@ -2977,6 +2977,7 @@ Curtis is curt. "Yeah, great job saving Yorpwald and all, what about my fruit?"
 #ttc-table-of-others-matched-item-responses-curtis-rampage-note
 >ask curtis about rampage note
 "What note? You can't pin that on me."
+
 #ttc-table-of-others-matched-item-responses-curtis-mopeage-rant
 >ask curtis about mopeage rant
 "What note? You can't pin that on me."
@@ -2992,6 +2993,7 @@ Curtis breathes deeply and gives a look of contempt and shakes his head. Curtis 
 #ttc-table-of-others-matched-item-responses-curtis-elvira
 >ask curtis about elvira
 "She was terrible for business and innovation. Things are picking up again now, though."
+
 #ttc-table-of-others-ask-x-about-x-curtis
 >ask curtis about curtis
 "The more fruits, the better, for my biotech business. Unfortunately, those disgusting yorpberries Elvira made folks plant elsewhere aren't good for much."
@@ -3078,6 +3080,7 @@ Len snorts and shakes his head. "What a weasel."
 #ttc-table-of-others-matched-item-responses-len-craig-elvira
 >ask len about elvira
 "Less said, the better."
+
 #ttc-table-of-others-ask-x-about-x-len-craig
 >ask len about len
 "I'm a businessman. A trader. All kinds of goods to swap. Let's haggle."

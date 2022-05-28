@@ -303,6 +303,17 @@ Well, it's only four letters, and you're not sure whether to feel glad things st
 Your score has just gone up by one point
 }}SCORE++
 
+@max
+#testcase-postrule-table-of-troves-anagrams-post-heat-hate-rule
+>i
+All you have is Pa, Egg, Pea and your pedanto-notepad and your settler. You still need to get your super purse back.
+\\
+>x heat
+Eh, At Heat is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could actually do so.
+\\
+>x race acre
+You look over at Race Acre (and what's an acre doing in a big city?) but you're too worn out from hate to follow whoever stole your super purse. You need a different emotion.
+
 @verbs
 #+ttc-table-of-troves-nowheres-loather-rathole
 >e
@@ -363,6 +374,11 @@ Your score has just gone up by one point
 DEBUG INFO: sob ever verbose hinting.
 
 /^Bustle Sublet
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-race-acre-care-rule
+>x truffle
+It's probably a character-building experience to eat it. You may learn something about how to think or what to do.
 
 @verbs
 #ttc-table-of-troves-nowheres-bustle-sublet
@@ -482,7 +498,7 @@ Your settler registers YRR?RR?.
 You can't just make things obverse by wanting them to be. But if change comes within, perhaps things are closer to obverse than you think.
 
 @max
-#pre-spot-stop-post rule
+#testcase-prerule-table-of-troves-anagrams-pre-spot-stop-post-rule
 >spot
 !by one point
 That should work, but you--your eyes are wandering now. You're not taking it all in. Around the post, the sob ever verbose echoes aid distracts you. You must deal with it first!
@@ -584,6 +600,11 @@ Your score has just gone up by one point
 /DEBUG INFO: (SNORE SO ARENA|evil bee) hinting.
 
 /^Boarded Roadbed
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-spot-stop-post-rule
+>i
+Other things in your super purse include (toggle with IV):
 
 >score
 {$SCOS}
@@ -766,7 +787,7 @@ In particular, you feel the need to RECALL right now.
 >undo
 
 @max
-#pre-cellar-recall rule
+#testcase-prerule-table-of-troves-anagrams-pre-cellar-recall-rule
 >recall
 Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.
 !by one point
@@ -782,6 +803,24 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: L'Clear Cellar hinting.
+
+@max
+###balance undos
+#testcase-postrule-table-of-troves-anagrams-bee-less-active-rule
+You're able to focus on L'Clear Cellar and how to get into it, now.
+Maybe you could focus perfectly if you wanted, or you could just RECALL now.
+\\
+#testcase-postrule-table-of-troves-anagrams-post-cellar-recall-rule
+>recall
+}}SCORE++
+}}CURMAX--
+\\
+>score
+{$SCOS}
+}}SCORE--
+}}CURMAX++
+>undo
+>undo
 
 @verbs
 #+ttc-table-of-troves-nowheres-boarded-roadbed
@@ -809,6 +848,10 @@ Your score has just gone up by one point
 
 @!mina,minb
 }}CURMIN++
+
+@max
+#+testcase-postrule-table-of-troves-anagrams-bee-less-active-rule
+You're now able to focus perfectly on L'Clear Cellar and how to get into it. Not much else to do here other than RECALL.
 
 @verbs
 #+verbcase listen-troves-if-player-is-in-boarded-roadbed
@@ -950,6 +993,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >despair
 Your score has just gone up by one point
 
+@max
+#testcase-postrule-table-of-troves-anagrams-post-diapers-despair-rule
+>x ires
+Nothing (significant) like that is in the immediate vicinity or region.
+>x spider
+Nothing (significant) like that is in the immediate vicinity or region.
+
 @verbs
 #+ttc-table-of-troves-nowheres-drain-nadir
 >e
@@ -1002,6 +1052,19 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 >read lager
 Your eyes gloss over all but the red name, ERGAL AGLER.
 
+#testcase-postrule-table-of-troves-anagrams-post-decide-rule
+>decide
+}}SCORE++
+}}CURMAX--
+\\
+>score
+{$SCOS}
+\\
+>undo
+}}SCORE--
+}}CURMAX++
+>undo
+
 @!mina,minb
 >glare
 Your score has just gone up by one point
@@ -1014,6 +1077,11 @@ Your score has just gone up by one point
 #ttc-table-of-settler-shake-descriptions-id-cede
 >ss
 musical notes pulsing with the beat of I'd Cede
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-lager-glare-rule
+>pronouns
+At the moment, "it" means LEAD, All: a Deed, "him" means the live bee, "her" means the live bee and "them" means the potholes.
 
 @verbs
 #verbcase smell-troves-if-player-is-in-drain-nadir
@@ -1224,7 +1292,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @max
-#pre-deal rule
+#testcase-prerule-table-of-troves-anagrams-pre-deal-rule
 >deal
 That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.
 !by one point
@@ -1249,6 +1317,10 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: LEAD, All: a Deed hinting.
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-master-or-bolster-rule
+!You feel your arch-greed recharged.
 
 @!minb
 >score
@@ -1287,6 +1359,10 @@ Your score has just gone up by one point
 
 @!mina,minb
 }}CURMIN++
+
+@max
+#+testcase-postrule-table-of-troves-anagrams-post-master-or-bolster-rule
+You feel your arch-greed recharged. You're even more up to grokking LEAD, All: a Deed, now.
 
 >score
 {$SCOS}
@@ -1331,9 +1407,14 @@ DEBUG INFO: Si Reed hinting.
 !DEBUG INFO: See Dir hinting.
 
 @mina,minb
-#lose a point for not dealing with lager
+#lose a point for not dealing with pleaser leapers
 #lose a point for only one of BOLSTER/MASTER
 }}CURMAX-=2
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-deal-rule
+>pronouns
+At the moment, "it" means LEAD, All: a Deed, "him" means Si Reed, "her" means the live bee and "them" means Browse Bowers.
 
 @spoi
 #ttc-table-of-troves-anagrams-desire
@@ -1392,6 +1473,19 @@ All sorts of articles that make you see red. This one's about
 #testcase-slider-table-of-troves-anagrams-discover
 >idcsvore
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#testcase-postrule-table-of-troves-anagrams-post-desire-rule
+>desire
+}}SCORE++
+}}CURMAX--
+\\
+>score
+{$SCOS}
+\\
+>undo
+>undo
+}}SCORE--
+}}CURMAX++
 
 @!mina,minb
 >discover
@@ -1585,6 +1679,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >aspire
 Your score has just gone up by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-spirea-aspire-rule
+Your concentration is broken by a scuffle! When you turn around, you notice the person who originally gave you the Peg A. Page book. They have been escorted out of their godlings' lodgings by security.
+
+@!minb
 >score
 {$SCOS}
 
@@ -1643,13 +1743,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a
 >scan rivets
 Hmm, along with the information for scanning Trevis, you might really have something here.
 
-@!mina,minb
-}}CURMIN++
-
 @!mina
 >strive
 Your score has just gone up by one point
 }}SCORE++
+
+@!mina,minb
+}}CURMIN++
 
 @spoi
 #ttc-table-of-troves-anagrams-ponder
@@ -1657,6 +1757,10 @@ In particular, you feel the need to PONDER right now.
 
 @hin
 DEBUG INFO: END PRONER POD hinting.
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-rivets-strive-rule
+Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the END PRONER POD. You haven't fully balanced fear of winding up there with focusing on your goals.
 
 @!mina
 >score
@@ -1701,6 +1805,21 @@ Ideas flash through your mind. Wow! That's what art can do! But ... nothing conc
 #testcase-slider-table-of-troves-anagrams-ascertain
 >saareicnt
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-pod-ponder-rule
+>ponder
+by one point
+}}CURMAX--
+}}SCORE++
+\\
+>score
+{$SCOS}
+}}CURMAX++
+}}SCORE--
+\\
+>undo
+>undo
 
 @!mina,minb
 >ascertain
@@ -1843,6 +1962,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >deserve
 Your score has just gone up by one point
 
+@max
+#testcase-postrule-table-of-troves-anagrams-post-redvees-deserve-rule
+>x wonga
+The wonga wagon is utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!
+\\
+>x nerf
+It saves time, since you don't have to water it. But you can't see how it gives any new ideas.
+
 @verbs
 #+ttc-table-of-troves-nowheres-upscale-capsule
 >e
@@ -1940,6 +2067,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >last
 Your score has just gone up by one point
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-salt-last-rule
+>x salt
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x nectar
+It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But ... you're sick of that. And of achieving and so forth. Maybe there's some way to break free.
 
 @verbs
 #+ttc-table-of-troves-nowheres-upscale-capsule
@@ -2089,7 +2224,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
 ##balance undos
-#pre-nectar-recant rule
+#testcase-prerule-table-of-troves-anagrams-pre-nectar-recant-rule
 >recant
 !by one point
 It ... you know you should drink the Trance Nectar, for the good of society and the economy, but something nags at you. You've come to loathe the Trance Nectar, and yet you can't quite break free of it. With
@@ -2127,6 +2262,12 @@ In particular, you feel the need to RECANT right now.
 >ramble
 Your score has just gone up by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-mbb-ramble-rule
+You look over to Sister Tressi. Maybe there's a way to get rid of her, too, or maybe there's not, but either way, you feel progress and prestige don't weigh quite so heavily on you, now.
+
+@!minb
 >score
 {$SCOS}
 
@@ -2137,6 +2278,11 @@ Your score has just gone up by one point
 >resist
 Your score has just gone up by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-troves-anagrams-post-tressi-resist-rule
+Well! You feel very relaxed now, with both
+and Sister Tressi gone. You feel more in touch with yourself, less obliged to do what society requires...
 
 @hin
 DEBUG INFO: Trance Nectar hinting.
@@ -2151,6 +2297,8 @@ DEBUG INFO: Trance Nectar hinting.
 
 @max
 >au 0
+\\
+#testcase-postrule-table-of-troves-anagrams-post-nectar-recant-rule
 >recant
 This will escape Upscale Capsule, but you could do a bit more if you want. Stay back and clean up everything?
 >undo

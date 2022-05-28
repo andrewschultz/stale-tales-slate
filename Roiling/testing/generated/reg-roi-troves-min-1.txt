@@ -76,6 +76,15 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
 
+#testcase-postrule-table-of-troves-anagrams-post-decide-rule
+>decide
+
+>score
+Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+
+>undo
+>undo
+
 >decide
 Your score has just gone up by one point
 
@@ -98,11 +107,20 @@ Your score has just gone up by one point
 
 /^Browse Bowers
 
-#lose a point for not dealing with lager
+#lose a point for not dealing with pleaser leapers
 #lose a point for only one of BOLSTER/MASTER
 
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
+
+#testcase-postrule-table-of-troves-anagrams-post-desire-rule
+>desire
+
+>score
+Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
+
+>undo
+>undo
 
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
@@ -119,6 +137,7 @@ Score in a scenario: 11 out of 30 total points in the current region, Troves. Lo
 
 >aspire
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
 
@@ -146,6 +165,7 @@ Score in a scenario: 15 out of 30 total points in the current region, Troves. Lo
 
 >ramble
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 

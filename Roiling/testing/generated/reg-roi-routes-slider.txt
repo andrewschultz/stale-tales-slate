@@ -175,7 +175,6 @@ Score in a scenario: 13 out of 22 total points in the current region, Routes. Lo
 >nuilt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-#pre-unlit-until rule
 >until
 Your score has just gone up by one point
 

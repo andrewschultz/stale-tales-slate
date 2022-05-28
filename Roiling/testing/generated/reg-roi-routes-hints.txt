@@ -188,7 +188,6 @@ Score in a scenario: 13 out of 22 total points in the current region, Routes. Lo
 >ss
 A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blurry) are visible.
 
-#pre-unlit-until rule
 >until
 Your score has just gone up by one point
 

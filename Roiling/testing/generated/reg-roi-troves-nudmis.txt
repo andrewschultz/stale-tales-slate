@@ -551,6 +551,15 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 >read lager
 Your eyes gloss over all but the red name, ERGAL AGLER.
 
+#testcase-postrule-table-of-troves-anagrams-post-decide-rule
+>decide
+
+>score
+Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
+
+>undo
+>undo
+
 >glare
 Your score has just gone up by one point
 >score
@@ -772,6 +781,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. T
 All sorts of articles that make you see red. This one's about
 /(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
 
+#testcase-postrule-table-of-troves-anagrams-post-desire-rule
+>desire
+
+>score
+Score in a scenario: 19 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 29.
+
+>undo
+>undo
+
 >discover
 by one point
 
@@ -899,6 +917,7 @@ You redden at the thought of mystical lands that aren't relevant to the here and
 
 >aspire
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 21 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
 
@@ -1258,6 +1277,7 @@ You seem to need to force yourself to be more whimsical. Which seems contradicto
 
 >ramble
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
 

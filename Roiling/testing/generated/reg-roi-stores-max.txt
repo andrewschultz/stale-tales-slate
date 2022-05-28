@@ -49,13 +49,20 @@ Score in a scenario: 3 out of 11 total points in the current region, Stores. Low
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
-#pre-babbler-outside rule
 >outside
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
 >score
 Score in a scenario: 4 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+
+#testcase-prerule-table-of-stores-anagrams-pre-babbler-outside-rule
+>x steaming
+Nothing (significant) like that is in the immediate vicinity or region.
+
+#testcase-postrule-table-of-stores-anagrams-post-babbler-outside-rule
+>x slider
+The slider, which is red (a nice touch--slider and idlers not having any letters that match up,) is currently switched off, with a number 20 next to it. You'd guess that is the number of charges left, or something.
 
 >routes
 Your score has just gone up by one point
@@ -85,6 +92,12 @@ Score in a scenario: 8 out of 11 total points in the current region, Stores. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
+
+#testcase-postrule-table-of-stores-anagrams-post-storeh-hoster-rule
+>pronouns
+At the moment, "it" means the Throes Hoster, "him" means the Throes Hoster, "her" means the Throes Hoster and "them" means the truster turrets.
+
+#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
 
 >presto
 >score

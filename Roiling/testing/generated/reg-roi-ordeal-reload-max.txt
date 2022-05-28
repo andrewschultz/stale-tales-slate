@@ -46,7 +46,11 @@ Bangish bashing
 >lamp
 Your score has just gone up by one point.
 
-#Okay, first, let's take care of everything that's here by default. Let's put it in alphabetical order as well.
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-palm-lamp-rule
+>x dope op ed
+The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin' inquest, MoneyCo and Economy, Shatter-Threats, I Trash His Art, and By Li'l Billy.
+
+#Okay, now, let's take care of everything that's here by default. Let's put it in alphabetical order as well.
 #ttc-table-of-notepad-entries-access
 >pad access
 Typing SCR or SCREEN toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently off.
@@ -104,6 +108,11 @@ Your score has just gone up by one point.
 
 #ttc-table-of-region-initial-scoring-commentary-ordeal-reload-2
 Yay! You're still changing things to other things, just like in Shuffling Around. For now. But you're on home turf, now. If you get out in the world, maybe it'll be trickier.
+
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-latches-satchel-rule
+>i
+a teariest treatise
+super purse
 
 #ttc-table-of-notepad-entries-opt-in-no-tip
 >pad no tip
@@ -172,6 +181,11 @@ Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
+#testcase-prerule-table-of-ordeal-reload-anagrams-pre-meet-bans-basement-rule
+>d
+/^Largely All-Grey Gallery
+>undo
+
 >d
 >stair
 by one point
@@ -184,11 +198,21 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
 
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-tables-stable-rule
+>in
+Farming Framing
+>undo
+
 >chimney
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
 
 >score
 Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
+
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-my-niche-chimney-rule
+>u
+/^Highest Heights
+>undo
 
 >painting
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
@@ -222,11 +246,21 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >score
 Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-pram-ramp-rule
+>in
+/^Dusty Study
+>undo
+
 >d
 /^Largely All-Grey Gallery
 
 >snib
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
+
+#need to check snib was moved
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-bins-snib-rule
+>x snib
+The snib is holding your bins together. That might make it snibs, but let's just pretend it sort of links all the bins together so even if they can't be broken into, someone would have to move them all at once.
 
 >in
 You look at your settler and realize you didn't really EXAMINE it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas.
@@ -256,6 +290,9 @@ You don't ever need to SCAN X WITH SETTLER, just SCAN X.
 
 >flier
 by one point
+
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-rifle-flier-rule
+Lo, a guide! Dialogue!
 
 >score
 Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
@@ -351,6 +388,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-psalter-stapler-rule
+>x departure
+The apertured departure is currently not wide enough to enter.
+
 >put staple in stapler
 
 >staple aperture
@@ -373,7 +414,7 @@ TALKing is the equivalent of asking someone about themselves.
 >au 1
 
 # first basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
-#pre-specter-scepter rule
+#testcase-prerule-table-of-ordeal-reload-anagrams-pre-specter-scepter-rule
 >scepter
 The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
 ##nobalance
@@ -398,13 +439,17 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 by one point
 >undo
 
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-specter-scepter-rule
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
 "Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
+
 >scan specter
 Your settler registers ?R?????
 "Six ambiguous readings may seem like a lot, but you can maybe stop to think if any need to be vowels or consonants. You can SCAN again if you want more hints."
+
+#+testcase-postrule-table-of-ordeal-reload-anagrams-post-specter-scepter-rule
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
 "Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
