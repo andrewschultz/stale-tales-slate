@@ -80,7 +80,7 @@ table of Thickest Thickets nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "thickets"	584514019	--	--	"[loc-rej]."
 "thicket"	488240053	--	--	"[loc-rej]."
-"shrub"	342404780	--	--	"The [if goat is touchable]remains of the [end if]shrub and brush waver, then point towards the [if toga is touchable]toga[else]opening in the thickets[end if]."
+"shrub"	342404780	--	--	"The [if goat is fungible]remains of the [end if]shrub and brush waver, then point towards the [if toga is fungible]toga[else]opening in the thickets[end if]."
 "net"	299823635	sent nets	--	"There's something you can do with all the nets, if you think about it."
 
 chapter Notices Section
@@ -99,12 +99,12 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "warmup"	446093313	--	--	"You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you."
 "gateway"	498185490	--	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
 "oldman"	284365984	gateman	--	"He's too old to change. At least, in his present form."
-"dollhouse"	643830102	doll house	--	"Thinking that doesn't do much, but the [if static is touchable]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
+"dollhouse"	643830102	doll house	--	"Thinking that doesn't do much, but the [if static is fungible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
 
 to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 
-to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]"
+to say stat-at: say "[if static is fungible]The static crackles[else]The attics shake slightly[end if]"
 
 book stores
 
@@ -249,7 +249,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "sandwich"	397613884	sandwich	--	"Hmm. That's a lot of letters. You wonder if pulling the sandwich apart might break it into smaller, more manageable (or anagrammable) pieces."
 "meat"	297179098	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon. You put one liver where it needs to be. No need to futz with the remaining liver[else if River Ville liver is not touchable or viler liver is not touchable]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon. You put one liver where it needs to be. No need to futz with the remaining liver[else if River Ville liver is not fungible or viler liver is not fungible]Your thoughts go to the other liver[else][bothlivers][end if]."
 "ville"	387591453	river ville liver	--	"[rivliv]."
 "river"	450611381	river ville liver	--	"[rivliv]."
 "cylinder"	543238031	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
@@ -268,7 +268,7 @@ this is the forest-south rule:
 	if location of shout is visited, the rule succeeds;
 	the rule fails;
 
-to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is touchable]. [badana of x][else if x is in sf]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
+to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is fungible]. [badana of x][else if x is in sf]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
 
 this is the forest-north rule:
 	if self id fields is visited, the rule fails;
@@ -286,7 +286,7 @@ this is the forest-east rule:
 	the rule fails;
 
 this is the see-meats rule:
-	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
+	if River Ville is fungible or Spam is fungible or viler liver is fungible or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
 
 to say spec-meat: say "You'll need to be more specific about the meat to poke at"
@@ -393,7 +393,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "coffers"	455791832	--	--	"[scof-no]."
 "scoffin"	356562274	--	--	"[scof-no]."
 "coffin"	260288308	--	--	"[scof-no]."
-"cloth"	287564318	--	spread-drapes rule	"No, the material of the [if spread is touchable]spread[else]drapes[end if] isn't important, here."
+"cloth"	287564318	--	spread-drapes rule	"No, the material of the [if spread is fungible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	dimness	--	"[dimness-unchangeable]."
 "dimness"	519358637	dimness	--	"[dimness-unchangeable]."
 "mis"	205341965	dimness	--	"[dimness-unchangeable]."
@@ -444,7 +444,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "werewolves"	1016216878	wolves	--	"They won't be changed with magic. Thankfully, you've got something more direct."
 "lupine"	482092068	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
 
-to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
+to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are fungible]. Except those vowels[end if]";
 
 book sortie nudges
 
@@ -459,8 +459,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "wart"	298556412	warts	--	"Why zap just one wart? Go for all of them!"
 "shoe"	335714951	hoses	--	"There's more than one hose here."
 "pair"	213970426	hoses	--	"Many things can be a pair, but these hoses--well, a pair of [b]HOSES[r] is kind of odd."
-"sheo"	335714951	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
-"shoes"	431988917	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
+"sheo"	335714951	--	got-shoes rule	"[pass-good-guess-note]But you're wearing the shoes. That might cause problems."
+"shoes"	431988917	--	got-shoes rule	"[pass-good-guess-note]But you're wearing the shoes. That might cause problems."
 "room"	298104110	--	rm-or-moor rule	"You almost feel something picking you up and pulling you somewhere else[if moor is visited and player is in roomroom]--you got here and can figure how to get back[else if moor is unvisited]--there are only so many ways to figure a new place[else]--you've been there and back, though, so you should know what to do[end if]."
 "expo"	396392726	expo flier	--	"[expo-or-anapest]."
 "expoflier"	734844219	expo flier	--	"[expo-or-anapest]."
@@ -621,7 +621,7 @@ this is the panel-in-silo rule:
 	if player is in moor and panel is part of the silo, the rule succeeds;
 	the rule fails;
 
-to say but-but: say "It's the buttons['] purposes that need[if steer button is touchable and shoot button is touchable]ed[end if] changing";
+to say but-but: say "It's the buttons['] purposes that need[if steer button is fungible and shoot button is fungible]ed[end if] changing";
 
 to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably"
 
@@ -771,7 +771,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "pose"	379898611	Poses Posse	--	"[no-poses]."
 "caek"	201932690	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	dry cake	--	"It isn't just any cake. It's dry cake."
-"rental"	441149095	--	--	"[if antlers are in Obtains Boastin Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
+"rental"	441149095	--	--	"[if antlers are in Obtains Boastin Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else][pass-good-guess-note]No point bringing those tacky antlers back, or thinking about them any more[end if]."
 
 to say no-poses: say "You can't change who they are. They probably can't, either. It's sad"
 
@@ -783,7 +783,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "bottel"	480611466	--	--	"[no-ketch]."
 "ketchup"	526708955	--	--	"[no-ketch]."
 "catsup"	407149153	--	--	"You think of how to make the ketchup slightly classier. [no-ketch]."
-"mattress"	678160851	--	--	"Nothing to change the mattress to[if night thing is touchable], even if you could move the night thing off[else if emitter is off-stage], but something might be inside it[else], and you already looted it[end if]."
+"mattress"	678160851	--	--	"Nothing to change the mattress to[if night thing is fungible], even if you could move the night thing off[else if emitter is off-stage], but something might be inside it[else], and you already looted it[end if]."
 "thing"	286892373	night thing	--	"The night thing is twisted beyond redemption."
 "potato"	438578967	night thing	--	"The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it."
 "lucre"	391055143	ulcer	--	"You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway."
@@ -915,7 +915,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "flare"	295646465	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
 "tile"	329722812	--	--	"You need to deal with all the tiles."
 
-to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful"
+to say astral-nudge: say "While [if feral flare is fungible]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful"
 
 chapter Leis Isle
 
@@ -928,8 +928,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "and"	92124415	--	--	"[the-sand]."
 "sands"	284672347	--	--	"[the-sand]."
 "islet"	425996778	--	--	"That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave."
-"eter"	444046039	--	--	"The tree sits there[if swing is touchable], but the swing rocks a bit[end if]."
-"oflat"	259979148	--	--	"[if cork is touchable and wings are touchable]You can just use either the cork or the wings to leave to the east[else if cork is touchable or wings are touchable]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
+"eter"	444046039	--	--	"The tree sits there[if swing is fungible], but the swing rocks a bit[end if]."
+"oflat"	259979148	--	--	"[if cork is fungible and wings are fungible]You can just use either the cork or the wings to leave to the east[else if cork is fungible or wings are fungible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
 
 to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
 
@@ -967,7 +967,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "uprisers"	722566259	riot	--	"[simple-riot]."
 "protesters"	980846328	protest	--	"They're just a simple protest."
 "potter"	575168484	potters	--	"Picking one person out of a crowd never works."
-"clay"	197366494	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is touchable]protest[else]trio[end if] really wants to do."
+"clay"	197366494	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is fungible]protest[else]trio[end if] really wants to do."
 "three"	481328338	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in Potshot Hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
 "tugtoe"	546084231	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
@@ -987,7 +987,7 @@ to say no-hotspot:
 	if red bull burdell is moot:
 		say "You don't want to make this place a hotspot again";
 	else:
-		say "[if red bull burdell is touchable]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
+		say "[if red bull burdell is fungible]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
 
 this is the bull-moot rule:
 	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;
@@ -1013,8 +1013,8 @@ chapter Means Manse
 
 table of Means Manse nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"manse"	359250554	--	--	"You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits."
-"extis"	484951020	--	--	"That's not quite the right sort of nothing."
+"manse"	359250554	--	--	"[pass-good-guess-note]You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits."
+"extis"	484951020	--	--	"[pass-good-guess-note]That's not quite the right sort of nothing."
 "marble"	351625627	--	--	"[ennui]."
 "spire"	435862683	--	--	"[ennui]."
 "toaster"	592164309	--	--	"[ennui]."

@@ -566,11 +566,18 @@ volume hinting stuff
 
 part nudges for good/great guesses
 
+pass-good-guess-note is a truth state that varies.
+
 good-guesses-noted is a truth state that varies.
 
 great-guesses-noted is a truth state that varies.
 
+to say skip-guess-note: now pass-good-guess-note is true;
+
 to say note-good-guesses:
+	if pass-good-guess-note is true:
+		now pass-good-guess-note is false;
+		continue the action;
 	if good-guesses-noted is true, continue the action;
 	say "[line break]";
 	ital-say "this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.";

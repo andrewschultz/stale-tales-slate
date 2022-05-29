@@ -70,8 +70,7 @@ this is the post-pram-ramp rule:
 
 this is the post-sitar-or-stria-to-stair rule:
 	now Largely All Grey Gallery is mapped below Farming Framing;
-	if the room below study is nothing:
-		now Farming Framing is mapped above Largely All Grey Gallery;
+	now Farming Framing is mapped above Largely All Grey Gallery;
 	if meet bans are moot:
 		min-up;
 	else if niche is moot and pram is moot:
@@ -898,7 +897,7 @@ lever	lever	false	501914680	2230288	--	"revel"	"revel"	--	--	"Yeah. Why not feel
 templar ramplet	templar ramplet	false	517782699	694289	Plasm Lamps	"trample"	"trample"	pre-trample-ramplet rule	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
 natant ant	natant ant	false	174205344	532481	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks and evaporates in the process. Well, it was kind of bulky, anyway."
 bogus-psalm	bogus-psalm	false	297816735	301057	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
-pins	pins	false	291640279	303360	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."	"The pills get caught up in the dialer, and they hook on the pins. Just the right chemical reaction dissolves the pins, and the dialer is operational again."
+pins	pins	false	291640279	303360	--	"spin"	"spin" or "spin pins"	--	--	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."	"The pills get caught up in the dialer, and they hook on the pins. Just the right chemical reaction dissolves the pins, and the dialer is operational again."
 bogus-derail	bogus-derail	false	335153504	133401	--	"derail"	"derail" or "derail dialer"	pre-dialer-derail rule	post-dialer-derail rule	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the Horned Hedron! Another one of your pranks? Ha ha ha!'[paragraph break]Then her voice turns less saccharine. 'Not one of your best. So don't repeat it. I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins."	"You spill the pills on the dialer, and they change [b]DIALER[r] to enough of the 720 possibilities that they settle on [b]DERAIL[r]."
 bogus-redial	bogus-redial	false	335153504	133401	Strip of Profits	"redial"	"redial" or "redial dialer"	pre-dialer-redial rule	post-dialer-redial rule	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I WILL SEND A CHARGE BACK THROUGH THAT YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think."	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop. But you figure you'd better get going before the Horned Hedron crumbles." [bold-ok]
 
@@ -1152,9 +1151,6 @@ this is the post-tan-ant rule:
 	moot lance;
 	now Plasm Lamps is shunned;
 
-this is the post-spin-pins rule:
-	now bogus-redial is in Tenfold Teflond Den Loft;
-
 this is the pre-dialer-derail rule:
 	if yapper is touchable:
 		say "The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.";
@@ -1173,7 +1169,7 @@ this is the pre-dialer-redial rule:
 	abide by the region-done-check rule;
 
 this is the post-dialer-redial rule:
-	say "[line break]Luckily, you find an evac-cave that lets you out safely.You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
+	say "[line break]Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this [if player is female]heroine[else]hero[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 
 section oyster auxiliary
 
@@ -1502,7 +1498,7 @@ t-reactively	t-reactively	false	793570199	19532053	--	"reactively"	"reactively"	
 t-despairingly	t-despairingly	false	781752737	17213785	--	"despairingly"	"despairingly"	--	--	"The [pla-ma]s become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the [pla-ma]s." [begin DOWNSIDE 12]
 t-indiscreetly	t-indiscreetly	false	915420970	17705244	--	"indiscreetly"	"indiscreetly"	--	--	"The [pla-ma]s let their wild clothes get the best of them, asking a bit too closely for Gretta's approval. She rejects them out of hand."
 Cut Ya All Cult Laya	Cut Ya All Cult Laya	false	461583976	18352133	--	"actually"	"actually"	--	--	"Surprisingly, arguing with the [laya] seems to work! You've been actually'ed yourself, first, but now that you handled the [players], it's cathartic, for a bit, to explore the ways the [laya] is full of rubbish.[paragraph break]The [laya] seems to warp and slow down as you articulate its thoughts. It fizzles and explodes impressively, leaving no trace. I suppose that's what effective gaslighting machines do--erase all trace they were there, success or failure.[paragraph break]You reflect that it's also a move you couldn't have pulled with the [players] around, because they'd just outnumber you and badger you into agreement, no matter how much logic was on your side."
-holy nest	holy nest	false	683905568	17590416	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
+holy nest	holy nest	false	683905568	17590416	--	"honestly"	"honestly"	--	--	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	262425	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	704513	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
 parrot	parrot-flees	false	431763978	704513	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]Some sort of creed breaks off from part of the citadel and crashes to the ground, but before you can really inspect it, you hear the raptor groaning. The whistle around its neck has gotten stuck! You quickly change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]As you contemplate a new name for the Reclusion Inclosure, you realize that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
@@ -1547,7 +1543,7 @@ this is the post-imp-flip rule:
 
 this is the post-whiners-flip rule:
 	if whiner-score is 2:
-		say "[line break]As they sulk away from the Clarthead Cathedral, the whiners let loose a final complaint about that bum Ed Riley who got a more exciting post--kissing up to Elvira so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
+		say "[line break]As they sulk and skulk away from the Clarthead Cathedral, the whiners let loose a final complaint about that bum Ed Riley who got a more exciting post--kissing up to Elvira so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
 		now all block-concepts in Clarthead Cathedral are forcemooted;
 		moot callosity;
@@ -1652,11 +1648,7 @@ this is the post-gretta-help rule:
 		continue the action;
 	continue the action;
 
-this is the post-holy-nest-honestly rule:
-	now holy nest is reflexed;
-
 this is the post-ideas-aides-aside rule:
-	now aside-llp is reflexed;
 	move holy nest to Reclusion Inclosure;
 
 this is the post-raptor-parrot rule:
@@ -4058,7 +4050,7 @@ table of otters done rejects
 specdone	spectalk
 nude dune	"You've dealt with the barley. You can move around a lot more, now."
 asyllabic lilac bays	"The [lilac bays] are quite nice as-is after your brilliant plant-whispering."
-parleys splayer players	"You've already made the macks/players talk a bit slower. Now you need to deal with their arguments."
+parleys splayer players	"You've already made the [players] talk a bit slower. Now you need to deal with their arguments."
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
