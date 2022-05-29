@@ -23,22 +23,6 @@ The palace--well, you couldn't even see it before you stepped in here. Maybe som
 
 >z
 
-#pre-rodney rule
->yonder
-Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
-!by one point
-#preefcheck rodney
-#ttc-table-of-towers-prefigurings-rodney
->pf
-Rodney can be sent YONDER once he's lost enough followers.
->droney
-Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
-!by one point
-#preefcheck rodney retry
-#+ttc-table-of-towers-prefigurings-rodney
->pf
-Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
-
 >allrand
 >gone
 Your score has just gone up by one point
@@ -157,6 +141,58 @@ Most of these fellows seem short-named and not too complex. I mean, if they got 
 >score
 Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
 
+#testcase-prerule-table-of-towers-anagrams-pre-rodney-rule
+>droney
+Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
+
+#ttc-table-of-towers-prefigurings-rodney
+>pf
+Rodney can be made DRONEY once he's lost enough followers.
+
+>yonder
+Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
+
+#+ttc-table-of-towers-prefigurings-rodney
+>pf
+Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
+
+>cricked
+by one point
+
+>yonder
+by one point
+
+>thisalt
+--you managed to find both solutions for Rodney by trying to get rid of him before enough picaros were gone and after. Well done!
+
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>cricked
+by one point
+
+>droney
+by one point
+
+>thisalt
+--you could also have sent Rodney YONDER.
+
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>yonder
+!by one point
+
+#+ttc-table-of-towers-prefigurings-rodney
+>pf
+Rodney can be sent YONDER once he's lost enough followers.
+
 >bleak
 
 >score
@@ -170,14 +206,11 @@ Score in a scenario: 4 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+
 >cricked
 Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 57.
-
->droney
-Your score has just gone up by one point
->undo
 
 >talcier
 by one point
@@ -199,10 +232,37 @@ You apparently can't scan the curst palace fully with the settler 'til you're al
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
 
+#testcase-postrule-table-of-towers-anagrams-post-rodney-rule
+>thisalt
+--you could also have made Rodney DRONEY.
+
+>gonear deltas
+>e
+
+#testcase-postrule-table-of-towers-anagrams-post-agnostic-blocker-rule
+>hastiest
+to someone you can't see
+
+>holiest
+Someone comes ... coasting into view with the atheists and
+
+>undo
+>undo
+
+>holiest
+to someone you can't see
+
+>hastiest
+Someone comes ... coasting into view with the atheists and
+>undo
+>undo
+>undo
+>undo
+
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
 
-#pre-curst-palace-spectacular rule
+#testcase-prerule-table-of-towers-anagrams-pre-curst-palace-spectacular-rule
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
@@ -355,7 +415,8 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
 >take strudel
-#pre-strudel-rustled rule
+
+#testcase-prerule-table-of-towers-anagrams-pre-strudel-rustled-rule
 >rustled
 (Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)
 by one point
@@ -367,12 +428,32 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 19 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 
+#testcase-postrule-table-of-towers-anagrams-post-strudel-rustled-rule
+>x sled rut
+Nothing (significant) like that is in the immediate vicinity or region.
+>i
+strudel
+
 >e
 
 >resealed
 Your score has just gone up by one point
 >thisalt
 --you could've also RELEASED Lars Eede to give him a new outlook on life.
+>x lars eede
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>undo
+>undo
+>undo
+
+>released
+Your score has just gone up by one point
+>thisalt
+--you could've also RESEALED Lars Eede to give him a new outlook on life.
+>x elsa erde
+Nothing (significant) like that is in the immediate vicinity or region.
+>undo
 >undo
 >undo
 
@@ -409,6 +490,7 @@ Now that you're at the shores of Leak Lake, it's too far to swim. You may need s
 
 >hastiest
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >weariest
@@ -433,6 +515,11 @@ Score in a scenario: 25 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
+
+#testcase-postrule-table-of-towers-anagrams-post-weeds-sewed-rule
+>x raves saver
+It has an inscription REPLAY PLAYER, which is a violation of copyright law--those have video--but nobody's going to sue or care. But it also has a REPEAT button and a RETAPE button.
+It doesn't even have a socket for Hears-Share earphones.
 
 >mined
 >score
@@ -521,6 +608,10 @@ You get lost in the gadflies' gasfield a bit. And it's fun for a while, until yo
 
 >rousted
 by one point
+
+#testcase-postrule-table-of-towers-anagrams-post-detours-rousted-rule
+/^Lost Lots
+
 >score
 Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
 >undo
@@ -548,11 +639,19 @@ Score in a scenario: 36 out of 57 total points in the current region, Towers. Lo
 >broken
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-towers-anagrams-post-bonker-broken-rule
+>x stinger
+It's certainly active. Maybe if it calmed down, you could get past it.
+
 >score
 Score in a scenario: 37 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
 >resting
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-towers-anagrams-post-stinger-resting-rule
+>x geese
+You can't get a glimpse of the gander for all their noise.
 
 >score
 Score in a scenario: 38 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
@@ -564,7 +663,7 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 #ttc-table-of-towers-progress-comments-obscurest-subsector
 You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up.
 
-#pre-fussier rule
+#testcase-prerule-table-of-towers-anagrams-pre-fussier-rule
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
@@ -572,7 +671,8 @@ The fissure squirms a bit but settles back down. When it was open, maybe somethi
 #ttc-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
-#pre-unlocked rule
+
+#testcase-prerule-table-of-towers-anagrams-pre-unlocked-rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
@@ -602,6 +702,16 @@ by one point
 
 >unlocked
 by one point
+
+#testcase-postrule-table-of-towers-anagrams-post-yow-free-rule
+>x luck node
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>x prison ropins
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>x fussier fissure
+Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
 Score in a scenario: 40 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
@@ -636,9 +746,17 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 43 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
+#testcase-postrule-table-of-towers-anagrams-post-dinger-grained-rule
+>x loaves
+Inscribed with "lo, save," they are not huge loaves and could probably fit in a small oven, like your toaster.
+
 >ask agnostic about doctor yow
 #notana
 !Your score has just gone up by one point
+
+#testcase-postrule-table-of-towers-anagrams-post-tentative-attentive-rule
+>misses
+--you could've made Scot Agin ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.
 
 >pearly
 Your score has just gone up by one point
@@ -649,6 +767,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 45 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 57.
 
+#+testcase-postrule-table-of-towers-anagrams-post-tentative-attentive-rule
+>misses
+!--you could've made Scot Agin ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.
+
 >rowdy
 #notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
@@ -658,6 +780,11 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 
 >gt coastlines
 >give gizmo to agnostic
+
+#testcase-postrule-table-of-towers-anagrams-post-dandier-rule
+
+>gt arid den
+No thanks. Once was enough.
 
 >robust
 by one point
@@ -728,6 +855,10 @@ by one point
 >score
 Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
 
+#testcase-postrule-table-of-towers-anagrams-post-retinas-antsier-rule
+>x succor crocus
+It looks much better than the blub bulb it was.
+
 >present
 Your score has just gone up by one point
 # add minimum point here
@@ -738,7 +869,7 @@ Score in a scenario: 52 out of 57 total points in the current region, Towers. Lo
 
 /^Mesprise Premises
 
-#pre-curst-palace-spectacular rule retry
+#+testcase-prerule-table-of-towers-anagrams-pre-curst-palace-spectacular-rule
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
 !by one point
@@ -750,6 +881,10 @@ She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to 
 Your score has just gone up by one point
 >score
 Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
+
+#testcase-postrule-table-of-towers-anagrams-post-itster-triste-rule
+>x st teri
+Still more distant than she should be.
 
 >give pot to sitter
 St. Teri seems interested, but her hands reflexively grasp the Done-Any Anodyne. How could you dispose of it?
@@ -774,11 +909,10 @@ It can be something super special.
 >pad scenery
 St. Teri told you to look for
 
->misses
-
 >spectacular
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-towers-anagrams-post-curstpalace-spectacular-rule
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 /^Strip of Profits

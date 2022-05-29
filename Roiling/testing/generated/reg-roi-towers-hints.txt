@@ -33,7 +33,7 @@ Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
 
 >allrand
-#towers anagrams for rodney
+
 >xr rodney
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
@@ -195,6 +195,7 @@ Your score has just gone up by one point
 DEBUG INFO: Cedrick hinting.
 >score
 Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+
 >cricked
 Your score has just gone up by one point
 DEBUG INFO: Yo-Rend-Or-Deny Rodney hinting.
@@ -258,7 +259,7 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 #ttc-table-of-towers-anagrams-subtler
 >xr butlers
 Hmm. You bet you could get past if the bluster butlers were SUBTLER.
-#towers anagrams for try us yurts
+
 #ttc-table-of-towers-anagrams-rusty
 >xr yurts
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -329,7 +330,6 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 >y
 After a thoughtful gaze, you reckon the docile old ice could be COILED.
 
-#towers anagrams for pirates
 #ttc-table-of-towers-anagrams-pastier
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
@@ -449,6 +449,7 @@ Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 >hastiest
 Your score has just gone up by one point
 DEBUG INFO: sweatier wait-seer hinting.
+
 >score
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >weariest
@@ -623,6 +624,7 @@ After a thoughtful gaze, you reckon the seismal samiels could be AIMLESS.
 
 >rousted
 by one point
+
 >score
 Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
 >undo
@@ -800,7 +802,6 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 >xr weirder
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-#towers anagrams for weirder red wire
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
 
 #ttc-table-of-towers-anagrams-robust
@@ -935,8 +936,6 @@ Your score has just gone up by one point
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
-
->misses
 
 >spectacular
 Your score has just gone up by one point

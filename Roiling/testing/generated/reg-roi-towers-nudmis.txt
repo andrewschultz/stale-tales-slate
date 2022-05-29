@@ -440,6 +440,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a de
 
 >undo
 >undo
+
 #ttc-table-of-towers-spechelp-terrance
 >terranec
 Terrance looks around as if he wants to run off.
@@ -493,6 +494,7 @@ Score in a scenario: 4 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+
 >cricked
 Your score has just gone up by one point
 >score
@@ -1380,6 +1382,7 @@ Ooh! Another light, now.
 
 >hastiest
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >weariest
@@ -1638,6 +1641,7 @@ His full name, Liam Garn.
 His full name, Liam Garn.
 
 >gt gradient
+
 #+ttc-table-of-treading-gradient-nudges-gradient
 >gradinet
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself.
@@ -1888,6 +1892,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 
 >rousted
 by one point
+
 >score
 Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
 >undo
@@ -3044,8 +3049,6 @@ He-he. Eh?" You got no concrete clues, but St. Teri's observations were a boost 
 You notice something you wouldn't have seen without St. Teri's help.
 >palclu
 Moving all palace clue items to Mislit Limits:
-
->misses
 
 #ttc-table-of-mislit-limits-nudges-accurst
 >accurts

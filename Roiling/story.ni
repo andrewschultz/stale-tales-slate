@@ -19208,18 +19208,15 @@ understand "blest/belts" and "blest belts" as Lamer Realm when adjsolve >= 3.
 
 the saturnic curtains are plural-named bounding boring scenery in Lamer Realm. description of the saturnic curtains is "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if].". bore-text is "Saturnic means infected with lead poisoning, not just dark or ethereal, so you don't want to do too much with them."
 
-for printing a locale paragraph about a reflexive puzanimal (called th) in Lamer Realm:
-	if th is mentioned, continue the action;
-	let X be number of reflexive puzanimals in Lamer Realm; [?? can this be adjsolve?]
-	if X < 4, say "[line break]";
-	say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of touchable reflexive puzanimals].";
-	now all touchable reflexive puzanimals are mentioned;
-
 for printing a locale paragraph about a reflexed puzanimal (called th) in Lamer Realm:
 	if th is mentioned, continue the action;
-	let X be number of reflexed puzanimals in Lamer Realm;
-	say "Just seeing the animal[if X > 1]s[end if] you helped ([list of touchable reflexed puzanimals]) leaves a peaceful feeling--you have allies nearby against Elvira.";
-	now all touchable reflexed puzanimals are mentioned;
+	let X be number of fungible reflexed puzanimals;
+	let Y be number of fungible reflexive puzanimals;
+	if x > 0, say "Just seeing the animal[if X > 1]s[end if] you helped leaves a peaceful feeling--you have allies nearby against Elvira. You note [list of fungible reflexed puzanimals].";
+	if y > 0 and x > 0, say "[line break]";
+	if y > 0, say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of fungible reflexive puzanimals].";
+	now all puzanimals in Lamer Realm are mentioned;
+	now all puzanimals in Lamer Realm are mentioned;
 
 after choosing notable locale objects when player is in Lamer Realm (this is the group animals in lamer realm rule):
 	repeat with X running through all reflexive puzanimals in Perverse Preserve:
@@ -22319,10 +22316,12 @@ this is the towers-alt rule:
 		say "[2drm of Loftier Trefoil]Bredo could've also become [if bredo-bored is true][b]ROBED[r][else][b]BORED[r][instead].";
 	else if towers is not solved and Bredo is in Loftier Trefoil:
 		say "[2drm of Loftier Trefoil]Bredo had two solutions.";
-	if rodyon is false and roddro is false:
-		say "[2drm of Loftier Trefoil]You managed to find both solutions for Rodney by trying to get rid of him before enough picaros were gone and after. Well done!";
+	if rodyon is true and roddro is true:
+		say "[2drm of Loftier Trefoil]you managed to find both solutions for Rodney by trying to get rid of him before enough picaros were gone and after. Well done!";
+	else if rodyon is false and roddro is false:
+		say "[2drm of Loftier Trefoil]somehow, it seems you managed to get by Rodney without making him [b]YONDER[r] or [b]DRONEY[r]. This is probably a bug.";
 	else:
-		say "[2drm of Loftier Trefoil]you could also have made Rodney [b][if roddro is true]YONDER[else]DRONEY[end if][r].";
+		say "[2drm of Loftier Trefoil]you could also have [if roddro is true]sent Rodney [b]YONDER[r][else]made Rodney [b]DRONEY[r][end if].";
 	if Reeds Ale is moot:
 		say "[2da]you could've also [if rese is true][b]RELEASED[r][else][b]RESEALED[r][end if] [el-la-full] to give [him-her] a new outlook on life.";
 	else:

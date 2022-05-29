@@ -51,6 +51,7 @@ Score in a scenario: 4 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+
 >cricked
 Your score has just gone up by one point
 >score
@@ -388,6 +389,7 @@ The only way you seem to be able to go is west to Salted Deltas.
 
 >hastiest
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >weariest
@@ -577,6 +579,7 @@ You hear something that makes you see red.
 
 >rousted
 by one point
+
 >score
 Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
 >undo
@@ -845,6 +848,7 @@ Score in a scenario: 46 out of 57 total points in the current region, Towers. Lo
 #verbcase goto-towers-if-noun-is-dourest-detours-or-noun-is-arid-den
 >gt detours
 No thanks. Once was enough.
+
 >gt arid den
 No thanks. Once was enough.
 
@@ -1007,8 +1011,6 @@ Score in a scenario: 55 out of 57 total points in the current region, Towers. Lo
 >out
 
 The only way to exit is east, so let's go that way.
-
->misses
 
 #+ttc-table-of-towers-nowheres-mislit-limits
 >sw

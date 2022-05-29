@@ -22,12 +22,21 @@
 >pad powers
 You need to figure a way to get your powers back. They were drained when you passed by the solid idols.
 
-#forceignore
 >barely
 Your score has just gone up by one point
 
 #ttc-table-of-region-initial-scoring-commentary-otters-1
 You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!
+
+#testcase-postrule-table-of-otters-anagrams-post-barley-barely-rule
+>x ed riley
+"Er, yield idly 'ere!" Ed Riley booms at regular intervals. For all this bluster, you get the feeling his loud voice hides an insecurity.
+
+>x citadel
+It takes up a huge chunk of space to the west.
+
+>x cinders
+You feel a wave of power as you get close to them. Nothing dangerous, but power to see how to do something, if you think right. But also power to believe you can do it all on your own. You could READ them if you were willing to suffer a headache to learn what to do with them.
 
 >score
 Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
@@ -44,6 +53,11 @@ by one point
 #ttc-table-of-region-initial-scoring-commentary-otters-2
 >reedily
 Barley, reedily. The cinders are probably the exception to the rule. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now.
+
+#testcase-postrule-table-of-otters-anagrams-post-rescind-cinders-rule
+>missed
+!RESCIND
+>undo
 >undo
 >undo
 
@@ -59,11 +73,12 @@ Score in a scenario: 2 out of 38 total points in the current region, Otters. Low
 >w
 /^Disowned Downside
 
-#pre-moat-atom rule
+#testcase-prerule-table-of-otters-anagrams-pre-moat-atom-rule
 >atom
 Your powers aren't back yet, but if they were, that'd definitely tip the players off to who you were. They'd let Elvira know quickly.
 !by one point
-#pre-ghoul-hat-although rule
+
+#testcase-prerule-table-of-otters-anagrams-pre-ghoul-hat-although-rule
 >s
 >although
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
@@ -77,7 +92,8 @@ That feels right, but it also feels like you're getting way ahead of yourself, t
 !by one point
 >n
 >n
-#pre-seacube-because rule
+
+#testcase-prerule-table-of-otters-anagrams-pre-seacube-because-rule
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
 !by one point
@@ -85,7 +101,8 @@ You try to argue that you're that person who saved Yorpwald in the first place, 
 #ttc-table-of-otters-prefigurings-sea-cube
 >pf
 You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
-#pre-eels-else rule
+
+#testcase-prerule-table-of-otters-anagrams-pre-eels-else-rule
 >else
 That feels right, but it also feels like you're getting way ahead of yourself, there.
 !by one point
@@ -205,15 +222,24 @@ You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidenc
 
 >bossily
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-otters-anagrams-post-gretta-help-rule
+Gretta looks a bit unsure but less engaged than before, and the parleys splayer players seem off-stride and unenthusiastic for a moment.
+
 >score
 Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 >sparely
 by one point
 
+#+testcase-postrule-table-of-otters-anagrams-post-gretta-help-rule
+Gretta nods, able to reject the worst of the parleys splayer players' bragging, but she still listens, likely out of cognitive dissonance. Strike two for the parleys splayer players.
+
 >really
 by one point
 
+#+testcase-postrule-table-of-otters-anagrams-post-gretta-help-rule
+Suddenly, Gretta realizes zeal is, er, SLEAZIER.
 Boy, those players
 >undo
 >undo
@@ -246,6 +272,10 @@ Score in a scenario: 5 out of 38 total points in the current region, Otters. Low
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
+>x medals
+You remember Gretta said something about good deeds restoring the medals. Also, you remember a most improper story (by Kasi Saik? Isak? Hmm... I ask...) about medals clinking together when someone good hid from a vicious animal, but ... you'll take your chances.
+They're roped together and spin about as you look at them. The larger, extremely tarnished, says LUCKY. The smaller, extremely oxidized, says IQ.
+
 #again pre-moat-atom rule
 >atom
 That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.
@@ -255,13 +285,33 @@ That seems like it should work, but you just can't summon the power. Someone aro
 >pf
 You can collapse the atmo moat to an ATOM once you have the power.
 
-#pre-medals-quickly rule
+#testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
 >quickly
 You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
 
 #ttc-table-of-otters-prefigurings-medals
 >pf
 The medals can help you go QUICKLY once they are restored enough.
+
+#testcase-postrule-table-of-otters-anagrams-post-seacube-because-rule
+>s
+>although
+by one point
+>ergo
+by one point
+>n
+>n
+>because
+min-up
+>else
+min-up
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >n
 /^Loop Pool
@@ -280,8 +330,17 @@ by one point
 >score
 Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
+>i
+You also DON'T have your full powers.
+
 >else
 by one point
+
+#testcase-postrule-table-of-otters-anagrams-post-eels-else-rule
+>x sullenness
+You hear voices call "Sullenness, us? Sullenness! Us!" as if they are getting tired of being sullen, but what else can they do? Or maybe they wish they could maybe not be quite so sullen, but they don't deserve it. Whatever, they could use a helping hand if you have the time. And it's weird ... you think you see red writing you could read, if you stare and listen hard enough.
+>i
+!You also DON'T have your full powers.
 
 >score
 Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
@@ -299,7 +358,7 @@ Score in a scenario: 8 out of 38 total points in the current region, Otters. Low
 
 /^Bran Barn
 
-#pre-ogre-ergo rule
+#testcase-prerule-table-of-otters-anagrams-pre-ogre-ergo-rule
 >ergo
 Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
 !by one point
@@ -312,12 +371,19 @@ DEBUG INFO: min-up codepath
 >pf
 You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 
+#the only thing in the rule is that we process a min-up, so we place this before the score check we were going to do anyway
+#testcase-postrule-table-of-otters-anagrams-post-ghoul-hat-although-rule
+
 >score
 Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 38.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
+
+#testcase-postrule-table-of-otters-anagrams-post-ogre-ergo-rule
+>x vow here
+You could probably LISTEN to hear the vow better. It doesn't make you see red if you don't hear the details.
 
 >score
 Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 38.
@@ -332,6 +398,16 @@ Score in a scenario: 11 out of 38 total points in the current region, Otters. Lo
 
 >atom
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-otters-anagrams-post-moat-atom-rule
+>x neon pope
+A glowing exemplar of all things pro-Elvira, the Neon Pope encapsulates the "respect authority" side of why Elvira is so great.
+
+>x nope peon
+A smarmy Uriah Heep type, one of many who like to convince others that, despite Elivra wielding most of the power in Yorpawld these days, it's still rebellious and edgy to think she needs even more power, and any arguments against her gaining more power deserve a big fat, well, nope.
+
+>x pen o nope
+It's blocking you right now. It's constructed relatively simply, though. Perhaps its purpose is symbolic, or perhaps it's the sort of thing Elvira's followers use to make dissidents feel, geez, if something wimpy like that blocks me, what the heck good can I do?
 
 >score
 Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
@@ -367,6 +443,9 @@ Score in a scenario: 14 out of 38 total points in the current region, Otters. Lo
 >remotely
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-otters-anagrams-post-imp-flip-rule
+The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.
+
 >score
 Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
@@ -376,11 +455,21 @@ Score in a scenario: 15 out of 38 total points in the current region, Otters. Lo
 >slow
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-otters-anagrams-post-owls-slow-rule
+With the owls dispersed, you notice other, calmer animals. Calmer, but unhappy: a stray satyr, a leopard, a badger, and ocelots.
+
 >score
 Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >coolest
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-otters-anagrams-post-lamer-realm-flip-rule
+The LUCKY medal you're wearing clanks against the IQ medal. It looks a bit clearer, now.
+
+>x medals
+They're roped together and spin about as you look at them. The larger, very tarnished, says LUCKY. The smaller, extremely oxidized, says IQ.
+!You remember Gretta said something
 
 >score
 Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
@@ -388,11 +477,27 @@ Score in a scenario: 17 out of 38 total points in the current region, Otters. Lo
 >paroled
 Your score has just gone up by one point
 
+#+testcase-postrule-table-of-otters-anagrams-post-lamer-realm-flip-rule
+>x medal
+
+[NOTE: There are a lot of ways to refer to the medals, but they are identical except for their writing. So IQ, MEDAL and LUCKY are all ways to shorten doing something with the medals in the future.]
+They're roped together and spin about as you look at them. The larger, somewhat tarnished, says LUCKY. The smaller, extremely oxidized, says IQ.
+
 >score
 Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >artsy
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-otters-anagrams-post-ocelots-coolest-rule
+>x kool
+Man! You couldn't wear them, or tell why they rout the cheap Ok-Ol'-Look knockoffs, but the coolest ocelots can.
+
+#+testcase-postrule-table-of-otters-anagrams-post-lamer-realm-flip-rule
+>x medal
+!There are a lot of ways to refer to the medals
+
+They're roped together and spin about as you look at them. The larger, barely tarnished, says LUCKY. The smaller, extremely oxidized, says IQ.
 
 >score
 Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
@@ -410,6 +515,10 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
+#+testcase-postrule-table-of-otters-anagrams-post-lamer-realm-flip-rule
+>x medal
+They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, extremely oxidized, says IQ.
+
 >s
 >s
 >s
@@ -419,12 +528,18 @@ Score in a scenario: 20 out of 38 total points in the current region, Otters. Lo
 >loathingly
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-otters-anagrams-post-whiners-flip-rule
+!As they sulk and skulk away from the Clarthead Cathedral
+
 >score
 Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
+
+#+testcase-postrule-table-of-otters-anagrams-post-whiners-flip-rule
+As they sulk and skulk away from the Clarthead Cathedral, the whiners let loose a final complaint about that bum Ed Riley who got a more exciting post
 
 >score
 Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
@@ -435,11 +550,25 @@ Score in a scenario: 22 out of 38 total points in the current region, Otters. Lo
 >parrot
 Your score has just gone up by one point
 
+>l
+
+#testcase-postrule-table-of-otters-anagrams-post-raptor-parrot-rule
+nails
+corona
+thrones
+pines
+
 >score
 Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >snail
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.
+
+>x medal
+They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, very oxidized, says IQ.
 
 >score
 Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
@@ -447,11 +576,23 @@ Score in a scenario: 24 out of 38 total points in the current region, Otters. Lo
 >hornets
 Your score has just gone up by one point
 
++#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+!The IQ medal you're wearing clanks against the LUCKY medal.
+
+>x medal
+They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, somewhat oxidized, says IQ.
+
 >score
 Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >racoon
 Your score has just gone up by one point
+
++#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+/^The (snail|hornets|racoon), (snail|hornets|racoon) and (snail|hornets|racoon) swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the pines\. Your IQ medal looks very shiny now\.$
+
+>x medal
+They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, barely oxidized, says IQ.
 
 >score
 Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
@@ -462,6 +603,11 @@ Score in a scenario: 26 out of 38 total points in the current region, Otters. Lo
 >snipe
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
+
++#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+>x medal
+They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, unoxidized, says IQ.
+
 >score
 Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
 
@@ -480,21 +626,24 @@ Score in a scenario: 29 out of 38 total points in the current region, Otters. Lo
 
 >w
 
-#pre-parrot-raptor rule
+#testcase-prerule-table-of-otters-anagrams-pre-parrot-raptor-rule
 >raptor
 !by one point
 "Awk! I'd just kill you in that form. Try that around some bad guys."
+
 #ttc-table-of-otters-prefigurings-parrot
 >pf
 You can change the parrot back to a RAPTOR to defeat a formidable foe.
-#pre-whistle-deeply rule
+
+#testcase-prerule-table-of-otters-anagrams-pre-whistle-deeply-rule
 >deeply
 !by one point
 
 #ttc-table-of-otters-prefigurings-whistle
 >pf
 You can play the whistle DEEPLY once the parrot has given it to you.
-#pre-whistle-deeply rule retry
+
+#+testcase-prerule-table-of-otters-anagrams-pre-whistle-deeply-rule
 >deeply
 The parrot still has the whistle. You can't play the whistle until it's yours.
 
@@ -518,6 +667,9 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is 35. Maximum score available is 38.
+
+>x holy nest
+It's only nominally holy. It's covered with writing you could sneak a look at.
 
 >honestly
 Your score has just gone up by one point
@@ -558,6 +710,12 @@ Score in a scenario: 33 out of 38 total points in the current region, Otters. Lo
 >raptor
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-otters-anagrams-post-parrot-raptor-rule
+>x educers
+You can't really miss the EDUCERS, US Creed at the top, but there's more below. Sneaky, sneaky Elvira, appropriating your anagramming skill for the final creed to bring her own form of unity to Yorpwald.
+>x whistle
+It's ugly, that's for sure, but you can probably PLAY it and practice to figure how to use it. It reads DISCOURAGE-SCOURGE AID. WHISTLES: SHE WILTS. Red writing indicates who crafted it.
+
 >score
 Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
 
@@ -594,7 +752,8 @@ WTF FTW
 >e
 
 >w
-#pre-whistle-deeply rule retry
+
+#+testcase-prerule-table-of-otters-anagrams-pre-whistle-deeply-rule
 >deeply
 Elvira summons her monsters to attack as you learn to play the whistle. "Sorriest resistor! Apt end, pedant." is the last you hear. Maybe you should've practiced somewhere else.
 !by one point

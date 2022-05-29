@@ -93,23 +93,6 @@ This version was written by some lovely chap named ALTERIC.
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
 
-@max
-#pre-rodney rule
->yonder
-Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
-!by one point
-#preefcheck rodney
-#ttc-table-of-towers-prefigurings-rodney
->pf
-Rodney can be sent YONDER once he's lost enough followers.
->droney
-Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
-!by one point
-#preefcheck rodney retry
-#+ttc-table-of-towers-prefigurings-rodney
->pf
-Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
-
 @nud
 >c
 \\
@@ -278,7 +261,7 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 @spoi
 ##balance undos
 >allrand
-#towers anagrams for rodney
+\\
 >xr rodney #trefoil boss
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
@@ -913,6 +896,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a de
 \\
 >undo
 >undo
+\\
 ##################################seed 5
 #ttc-table-of-towers-spechelp-terrance
 >terranec
@@ -955,6 +939,61 @@ Most of these fellows seem short-named and not too complex. I mean, if they got 
 >score
 {$SCOS}
 
+@max
+##balance undos
+#testcase-prerule-table-of-towers-anagrams-pre-rodney-rule
+>droney
+Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
+\\
+#ttc-table-of-towers-prefigurings-rodney
+>pf
+Rodney can be made DRONEY once he's lost enough followers.
+\\
+>yonder
+Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
+\\
+#+ttc-table-of-towers-prefigurings-rodney
+>pf
+Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
+\\
+>cricked
+by one point
+\\
+>yonder
+by one point
+\\
+>thisalt
+--you managed to find both solutions for Rodney by trying to get rid of him before enough picaros were gone and after. Well done!
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+\\
+>cricked
+by one point
+\\
+>droney
+by one point
+\\
+>thisalt
+--you could also have sent Rodney YONDER.
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+
+@max
+>yonder
+!by one point
+\\
+#+ttc-table-of-towers-prefigurings-rodney
+>pf
+Rodney can be sent YONDER once he's lost enough followers.
+
 >bleak
 }}SCORE++
 
@@ -995,6 +1034,8 @@ Your score has just gone up by one point
 {--hin}DEBUG INFO: Cedrick hinting.
 >score
 {$SCOS}
+
+@!minh,mini
 >cricked
 Your score has just gone up by one point
 }}SCORE++
@@ -1025,11 +1066,6 @@ Now, now. Maybe Rodney dishes out insults like that without a shred of self-awar
 #testcase-mistake-roiling-clear-it
 >clear it
 The recital article stays in place. You see red, upset the brute-force magic didn't work.
-
-@max
->droney
-Your score has just gone up by one point
->undo
 
 @spoi
 #ttc-table-of-towers-anagrams-talcier
@@ -1084,6 +1120,36 @@ You apparently can't scan the curst palace fully with the settler 'til you're al
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
 
+@max
+#testcase-postrule-table-of-towers-anagrams-post-rodney-rule
+>thisalt
+--you could also have made Rodney DRONEY.
+
+@max
+##balance undos
+>gonear deltas
+>e
+\\
+#testcase-postrule-table-of-towers-anagrams-post-agnostic-blocker-rule
+>hastiest
+to someone you can't see
+\\
+>holiest
+Someone comes ... coasting into view with the atheists and
+\\
+>undo
+>undo
+\\
+>holiest
+to someone you can't see
+\\
+>hastiest
+Someone comes ... coasting into view with the atheists and
+>undo
+>undo
+>undo
+>undo
+
 @verbs
 #ttc-table-of-towers-nowheres-topside-deposit
 >e
@@ -1134,7 +1200,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That'
 >undo
 
 @max
-#pre-curst-palace-spectacular rule
+#testcase-prerule-table-of-towers-anagrams-pre-curst-palace-spectacular-rule
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
@@ -1516,7 +1582,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #ttc-table-of-towers-anagrams-subtler
 >xr butlers #00w
 Hmm. You bet you could get past if the bluster butlers were SUBTLER.
-#towers anagrams for try us yurts
+\\
 #ttc-table-of-towers-anagrams-rusty
 >xr yurts #pastry LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -2018,7 +2084,6 @@ Ooh! Another light, now.
 Your settler registers RRYR?Y*****.
 
 @spoi
-#towers anagrams for pirates
 #ttc-table-of-towers-anagrams-pastier
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
@@ -2401,8 +2466,9 @@ After a thoughtful gaze, you reckon the strudel could be RUSTLED.
 
 @max
 >take strudel
+\\
 ###skip test checking
-#pre-strudel-rustled rule
+#testcase-prerule-table-of-towers-anagrams-pre-strudel-rustled-rule
 >rustled
 (Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)
 by one point
@@ -2416,6 +2482,13 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-strudel-rustled-rule
+>x sled rut
+Nothing (significant) like that is in the immediate vicinity or region.
+>i
+strudel
 
 @!minh,mini
 >e
@@ -2483,6 +2556,22 @@ No, Elsa's full name. Elsa Erde. With Reed's Ale.
 Your score has just gone up by one point
 >thisalt
 --you could've also RELEASED Lars Eede to give him a new outlook on life.
+\\
+#testcase-postrule-table-of-towers-anagrams-post-reeds-ale-rule
+>x lars eede
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>undo
+>undo
+>undo
+\\
+>released
+Your score has just gone up by one point
+>thisalt
+--you could've also RESEALED Lars Eede to give him a new outlook on life.
+>x elsa erde
+Nothing (significant) like that is in the immediate vicinity or region.
+>undo
 >undo
 >undo
 
@@ -2742,6 +2831,7 @@ The only way you seem to be able to go is west to Salted Deltas.
 Your score has just gone up by one point
 }}SCORE++
 {--hin}DEBUG INFO: sweatier wait-seer hinting.
+\\
 >score
 {$SCOS}
 >weariest
@@ -2931,6 +3021,12 @@ Your score has just gone up by one point
 {--hin}You need to work your way to the east corner of the map.
 >score
 {$SCOS}
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-weeds-sewed-rule
+>x raves saver
+It has an inscription REPLAY PLAYER, which is a violation of copyright law--those have video--but nobody's going to sue or care. But it also has a REPEAT button and a RETAPE button.
+It doesn't even have a socket for Hears-Share earphones.
 
 @spoi
 #ttc-table-of-towers-anagrams-pearly
@@ -3167,6 +3263,7 @@ His full name, Liam Garn.
 @nud
 >gt gradient
 ###skip test checking
+\\
 #+ttc-table-of-treading-gradient-nudges-gradient
 >gradinet
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself.
@@ -3590,6 +3687,12 @@ You hear something that makes you see red.
 @!minh,mini
 >rousted
 by one point
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-detours-rousted-rule
+/^Lost Lots
+
+@!minh,mini
 >score
 }}SCORE++
 }}CURMAX--
@@ -3773,6 +3876,11 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: grin-set stinger hinting.
 
+@max
+#testcase-postrule-table-of-towers-anagrams-post-bonker-broken-rule
+>x stinger
+It's certainly active. Maybe if it calmed down, you could get past it.
+
 @spoi
 #ttc-table-of-towers-anagrams-resting
 >xr stinger #20e
@@ -3813,6 +3921,11 @@ Your score has just gone up by one point
 
 @hin
 Go east of here.
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-stinger-resting-rule
+>x geese
+You can't get a glimpse of the gander for all their noise.
 
 @verbs
 #verbcase listen-towers-if-noun-is-geese
@@ -3952,7 +4065,7 @@ He's a doctor! Have some respect when you try to scramble him up.
 That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
 
 @max
-#pre-fussier rule
+#testcase-prerule-table-of-towers-anagrams-pre-fussier-rule
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
@@ -3960,7 +4073,8 @@ The fissure squirms a bit but settles back down. When it was open, maybe somethi
 #ttc-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
-#pre-unlocked rule
+\\
+#testcase-prerule-table-of-towers-anagrams-pre-unlocked-rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
@@ -4181,6 +4295,17 @@ by one point
 
 @hin
 Hm, the agnostic at the coastlines seems technically inclined but restless.
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-yow-free-rule
+>x luck node
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x prison ropins
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x fussier fissure
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
 >rowdy
@@ -4564,6 +4689,11 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@max
+#testcase-postrule-table-of-towers-anagrams-post-dinger-grained-rule
+>x loaves
+Inscribed with "lo, save," they are not huge loaves and could probably fit in a small oven, like your toaster.
+
 >ask agnostic about doctor yow
 #notana
 !Your score has just gone up by one point
@@ -4660,6 +4790,11 @@ After a thoughtful gaze, you reckon Staci Ong could be ATTENTIVE.
 >ss
 an aura of tentativeness about Scot
 
+@max
+#testcase-postrule-table-of-towers-anagrams-post-tentative-attentive-rule
+>misses
+--you could've made Scot Agin ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.
+
 @!minh,mini
 >pearly
 Your score has just gone up by one point
@@ -4673,6 +4808,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@max
+#+testcase-postrule-table-of-towers-anagrams-post-tentative-attentive-rule
+>misses
+!--you could've made Scot Agin ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.
 
 @mis
 #+testcase-mistake-roiling-parley
@@ -4721,7 +4861,6 @@ DEBUG INFO: I ZOMG Gizmo hinting.
 >xr weirder #LLP
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-#towers anagrams for weirder red wire
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
 \\
 #ttc-table-of-towers-anagrams-robust
@@ -4913,6 +5052,11 @@ ALBERT'S.
 #verbcase goto-towers-if-noun-is-dourest-detours-or-noun-is-arid-den
 >gt detours
 No thanks. Once was enough.
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-dandier-rule
+
+@verbs,max
 >gt arid den
 No thanks. Once was enough.
 
@@ -5321,6 +5465,11 @@ by one point
 >score
 {$SCOS}
 
+@max
+#testcase-postrule-table-of-towers-anagrams-post-retinas-antsier-rule
+>x succor crocus
+It looks much better than the blub bulb it was.
+
 @spoi
 #ttc-table-of-towers-anagrams-present
 >xr serpent #end bonus
@@ -5407,7 +5556,7 @@ No physical sciences are necessary here.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
-#pre-curst-palace-spectacular rule retry
+#+testcase-prerule-table-of-towers-anagrams-pre-curst-palace-spectacular-rule
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
 !by one point
@@ -5447,6 +5596,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@max
+#testcase-postrule-table-of-towers-anagrams-post-itster-triste-rule
+>x st teri
+Still more distant than she should be.
 
 @nud
 #ttc-table-of-mesprise-premises-nudges-teri
@@ -5547,8 +5701,6 @@ Moving all palace clue items to Mislit Limits:
 #ttc-table-of-notepad-entries-scenery
 >pad scenery
 St. Teri told you to look for
-
->misses
 
 @nud
 #ttc-table-of-mislit-limits-nudges-accurst
@@ -5655,6 +5807,7 @@ Your score has just gone up by one point
 }}SCORE+=2
 
 @max
+#testcase-postrule-table-of-towers-anagrams-post-curstpalace-spectacular-rule
 [NOTE: You get the final bonus point for not using the toaster/pastries' x-ray vision anywhere! And congratulations on resisting temptation after eating the pack of start tarts, too.]
 
 @!minh,mini,max

@@ -30,7 +30,6 @@ As you gaze into the cinders, they blow away, leaving you feeling the barley can
 
 DEBUG INFO: bleary barley hinting.
 
-#forceignore
 >barely
 Your score has just gone up by one point
 
@@ -120,6 +119,7 @@ by one point
 
 >bossily
 Your score has just gone up by one point.
+
 >score
 Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
@@ -472,6 +472,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
 !You also feel there's something more to do here, if you want, but isn't critical.
+
 >score
 Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
 

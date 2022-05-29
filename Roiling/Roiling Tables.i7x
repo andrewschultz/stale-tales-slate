@@ -1404,21 +1404,20 @@ to say bored-robed:
 		now bredo-bored is false;
 
 this is the pre-rodney rule:
+	let thisyond be whether or not the player's command includes "yonder";
+	if thisyond is true:
+		now rodyon is true;
+	else:
+		now roddro is true;
 	if here-picaros > 4:
-		if the player's command includes "yonder":
+		if thisyond is true:
 			say "Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
-			now rodyon is true;
 		else:
 			say "Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?";
-			now roddro is true;
 		preef Rodney;
 		the rule fails;
 
 this is the post-rodney rule:
-	if the player's command includes "yonder":
-		now rodyon is true;
-	else:
-		now roddro is true;
 	now all picaros in Loftier Trefoil are pinko;
 	if here-picaros > 0, decrease poss-score of towers by here-picaros;
 	if recital article is not moot, poss-d;
@@ -1687,12 +1686,14 @@ this is the post-parrot-raptor rule:
 
 this is the post-perverse-preserve-flip rule:
 	increment nounsolve;
-	let temp be number of touchable southy puzanimals;
-	if temp is 1:
+	if nounsolve is 1:
 		say "The [b]IQ[r] medal you're wearing clanks against the [b]LUCKY[r] medal. It looks a bit clearer, now.";
-	else if temp is 3:
+	else if nounsolve is 3:
+		move noun to location of player;
 		say "[line break]The [list of touchable southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your [b]IQ[r] medal looks very shiny now.";
-		now random not touchable southy puzanimal is llpish;
+		now random southy puzanimal not in perverse preserve is llpish;
+		d "[list of southy puzanimals not in perverse preserve].";
+		d "[random southy puzanimal not in perverse preserve] is now LLPish.";
 	move asyllabic lilac bays to minded midden;
 
 to say extra-c:
@@ -1711,14 +1712,15 @@ this is the post-ocelots-coolest rule:
 	process the post-lamer-realm-flip rule;
 
 this is the post-lamer-realm-flip rule:
-	let temp be number of touchable reflexed animals;
 	increment adjsolve;
 	now noun is realized;
-	if temp is 1:
+	if adjsolve is 1:
 		say "The [b]LUCKY[r] medal you're wearing clanks against the [b]IQ[r] medal. It looks a bit clearer, now.";
-	else if temp is 3:
+	else if adjsolve is 3:
+		move noun to location of player;
 		say "The [list of touchable reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of touchable reflexive animals] and shrug a bit, as if it can come along if it wants to. Your [b]LUCKY[r] medal looks very shiny now.";
-		now random touchable reflexive animal is llpish;
+		d "choosing llpish animal from [list of reflexive animals in lamer realm].";
+		now random reflexive animal in lamer realm is llpish;
 	move asyllabic lilac bays to minded midden;
 
 this is the pre-whistle-deeply rule:

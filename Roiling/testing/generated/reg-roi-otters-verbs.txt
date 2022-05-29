@@ -31,7 +31,6 @@ There's no way out until the bleary barley is gone.
 >exits
 Maybe you'll see some exits if you get rid of the barley.
 
-#forceignore
 >barely
 Your score has just gone up by one point
 
@@ -124,6 +123,7 @@ Ick, man. Mackin'. You really don't want to pay attention to the details, but yo
 
 >bossily
 Your score has just gone up by one point.
+
 >score
 Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
@@ -502,6 +502,7 @@ Score in a scenario: 26 out of 38 total points in the current region, Otters. Lo
 >snipe
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
 

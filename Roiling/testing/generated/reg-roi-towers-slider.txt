@@ -182,6 +182,7 @@ Score in a scenario: 4 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+
 >cricked
 Your score has just gone up by one point
 >score
@@ -360,6 +361,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >hastiest
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
 >weariest
@@ -506,6 +508,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >rousted
 by one point
+
 >score
 Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
 >undo
@@ -757,8 +760,6 @@ Your score has just gone up by one point
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
-
->misses
 
 >spectacular
 Your score has just gone up by one point
