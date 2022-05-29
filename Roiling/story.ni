@@ -4239,9 +4239,9 @@ section special parser errors
 rule for printing a parser error when the latest parser error is the didn't understand error and the number of words in the player's command > 1:
 	if cur-score of mrlp < 10 and mrlp is not parsewrned:
 		choose row with thisreg of mrlp in table of region long command messages;
-		if there is a check-this entry:
-			process the check-this entry;
-			unless the rule succeeded, continue the action;
+		if there is a skip-warn-rule entry:
+			process the skip-warn-rule entry;
+			if the rule succeeded, continue the action;
 		say "[specwarn entry][line break]";
 		now mrlp is parsewrned;
 		the rule succeeds;
@@ -4254,7 +4254,7 @@ to say pars-trub:
 	say "The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something[one of], in which case, one word (or a compound word) usually works[if player is in dusty study], though some of the diorama's contrived examples have spaces[end if][or][stopping].[paragraph break]So here is a one-time general guideline on what to do in this area: ";
 
 table of region long command messages
-thisreg	check-this	specwarn
+thisreg	skip-warn-rule	specwarn
 Ordeal Reload	perrot-moot rule	"[pars-trub]You need to change certain things to other things."
 stores	--	"[pars-trub]you need to change the stores, here, like you changed the palm, rifle, plates and plaster psalter, and you just need one word."
 presto	--	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
@@ -4263,8 +4263,12 @@ troves	--	"[pars-trub]one word will work here, and you won't need to specify det
 towers	--	"[pars-trub]one final word will work here, to make things as they should be. It is eleven letters long, but everything else is shorter--most are from six to eight letters, though optional ones may be from five to nine."
 oyster	--	"[pars-trub]one word will work here, though this game should accept fuller sentences. The longest words are seven letters, but many are four. There's a lot to do, but no one word should be too long."
 otters	--	"[pars-trub]while some words are rather long, you [if cur-score of otters is 0]will[else]probably[end if] see how to guess a letter or two even [if power-back is false]when[else]now[end if] you've got your powers back."
-others	--	"[pars-trub]you may need a variety of tricks, here. One word is twelve letters long, but some are as short as five. You can even overlook twenty puzzles."
+others	others-skip-spacing rule	"[pars-trub]you may need a variety of tricks, here. One word is twelve letters long, but some are as short as five. You can even overlook twenty puzzles[if s-i are off-stage]. For one non-thematic item, you can do two anagrams at once with [b]<adjective> <noun>[r][end if]."
 demo dome	--	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
+
+this is the others-skip-spacing rule:
+	if s-i is not off-stage or coins are not off-stage or coin is not off-stage or icon is not off-stage or icons are not off-stage or s-c are not off-stage, the rule succeeds;
+	the rule fails;
 
 book ordeal-reload-hinting
 
@@ -20443,7 +20447,7 @@ perp-check is a truth state that varies.
 
 to say two-of-three: say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-the fleeing feeling is a reflexive boring thing. description of fleeing feeling is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the fleeing feeling whispering '[b]PERP[r]' in your head.". bore-check is bore-perp rule.
+the fleeing feeling is a vanishing boring thing. description of fleeing feeling is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the fleeing feeling whispering '[b]PERP[r]' in your head.". bore-check is bore-perp rule.
 
 this is the bore-perp rule:
 	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the fleeing feeling whispering '[b]PERP[r]!' Maybe there's a simple way to shift things around." instead;
@@ -20585,10 +20589,15 @@ understand "icon" and "sonic icon" as s-i when player has s-i.
 
 sonicing is an action applying to nothing.
 
-to slot-appear:
-	if lost slot is not part of So Great Storage:
-		say "The So-Great Storage begins to rattle by your [if player has s-i]icons[else if player has s-c]coins[else][bug-report][end if], and a lost slot appears in it.";
-		now lost slot is part of So Great Storage.
+this is the make-slot-appear rule:
+	say "checking if you have s-i or s-c... [whether or not player has s-i]. [whether or not player has s-c].";
+	unless player has s-i or player has s-c, continue the action;
+	say "checking if you have the storage yet. [whether or not player has so great storage].";
+	if player does not have So Great Storage, continue the action;
+	say "checking if slot is part of storage yet. [whether or not lost slot is part of so great storage].";
+	if lost slot is part of So Great Storage, continue the action;
+	say "The So-Great Storage begins to rattle by your [if player has s-i]icons[else if player has s-c]coins[else][bug-report][end if], and a lost slot appears in it.";
+	now lost slot is part of So Great Storage.
 
 check inserting into So Great Storage:
 	if lost slot is part of So Great Storage, say "The box has a slot, so I assume you meant that.";
@@ -20651,7 +20660,7 @@ a-text of searcher is "RYRYYRRR". b-text of searcher is "RGRYYRRR". parse-text o
 chapter passport stuff
 
 to decide which number is gates-score: [ synonyms: gate-level gates-level gate-score gates-points gate-points ]
-	let temp be (boolval of whether or not viewer is reflexed) + (boolval of whether or not searcher is reflexed) + (boolval of whether or not fleeing feeling is reflexed);
+	let temp be (boolval of whether or not viewer is reflexed) + (boolval of whether or not searcher is reflexed) + (boolval of whether or not fleeing feeling is reflexed); [ while fleeing feeling is vanishing, checking if it is moot doesn't work because it is also mooted if we REVIEW and RESEARCH]
 	if temp > 2:
 		if debug-state is true, say " (DEBUG: all 3 passport points are registered, defaulting to just two)";
 		decide on 2;
@@ -20661,7 +20670,7 @@ book Clangier Clearing
 
 check going east in swell wells:
 	if tekno token is off-stage, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
-	if tekno token is moot, say "You bartered for everything you could in the Clangier Clearing." instead
+	if tekno token is moot, say "You bartered for everything you could in the Clangier Clearing." instead;
 
 Clangier Clearing is a sideroom. it is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION[if voiles are in Clangier Clearing]. I-Solve Voiles advertise a free prize to anyone who guesses what is behind them[end if].[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you [b]LISTEN[r], you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges. missed-text of Clangier Clearing is "a sales area east of Swell Wells with a lot of fruits"
 
@@ -21043,12 +21052,11 @@ check giving something to greedy-person:
 		moot Red Rat;
 		move Dr Severe to Scape Space;
 		now frroom of guava is Scape Space;
-		if player has s-i:
-			say "[line break]";
-			slot-appear;
-		now player has storage instead;
+		now player has storage;
+		consider the make-slot-appear rule;
+		do nothing instead;
 	if noun is tekno token, say "Traceable. Be real, cat." instead;
-	say "'An empty payment.' He's not interested in that. Just money." instead;
+	say "'An empty payment.' [he-she-c]'s not interested in that. Just money." instead;
 
 check opening slot: say "It will fit if you give it the right thing." instead;
 

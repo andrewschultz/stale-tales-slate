@@ -1873,7 +1873,7 @@ coin	icon	false	207258516	24836	--	"icon"	"icon"	--	post-iconic-flip rule	"You v
 coins	s-c	false	303532482	286980	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip rule	"Blam! The coins begin to rattle gently and don't stop."
 icons	s-i	false	303532482	286980	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
 coins	icons	false	303532482	286980	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
-coins	s-i	false	607064964	286980	--	"sonic icons"	"sonic icons" or "icons sonic"	pre-sonic-icons-double-flip rule		post-sonic-icons-double-flip rule	"You can't decide whether the coins should become sonic or icons first, but you know what? It doesn't matter. You just hope you've got enough brainpower, or whatever, to get a twofer. And you do!"
+coins	s-i	false	607064964	286980	--	"sonic icons"	"sonic icons" or "icons sonic"	pre-sonic-icons-double-flip rule	post-sonic-icons-double-flip rule	"You can't decide whether the coins should become sonic or icons first, but you know what? It doesn't matter. You just hope you've got enough brainpower, or whatever, to get a twofer. And you do!"
 s-c	s-i	false	303532482	286980	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
 viewer	viewer	false	601028460	6422800	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	393365	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
@@ -1896,25 +1896,27 @@ this is the post-cranberries rule:
 	moot barren cries;
 
 this is the post-iconic-flip rule:
-	concisions-check;
+	process the concisions-check rule;
 
 this is the post-sonic-flip rule:
-	if player has So Great Storage, slot-appear;
-	if noun is s-i, process the force-others-guru-point rule;
-	concisions-check;
+	process the make-slot-appear rule;
+	if noun is s-i:
+		process the force-others-guru-point rule;
+	process the concisions-check rule;
 
-this is the pre-sonic-icons-double-flip rule: [coins -> sonic icons = 2 points]
-	min-and-q;
+this is the pre-sonic-icons-double-flip rule:
+	reg-inc-q;
 
 this is the post-sonic-icons-double-flip rule:
+	process the make-slot-appear rule;
 	process the force-others-guru-point rule;
-	concisions-check;
+	process the concisions-check rule;
 
 this is the pre-gates-stage-flip rule:
 	if gates-score is 2, say "No need to over-study or over-think. Through the gates!" instead;
 
 this is the post-gates-stage-flip rule:
-	say "[line break]";
+	say "[gates-score] is current gates score.[line break]";
 	if gates-score is 2:
 		say "Man! Another simple reflection gives serious results[if noun is not fleeing feeling]. Hey, you don't have to do everything. There are people who make technology that makes things easier for others, and that's (wait for it) a sort of magic on its own[end if]. After all your struggles, you feel almost guilty the last bit was straightforward, but it passes. A tidy conclusion is, well, tidy.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others - 1]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 		if player has fleeing feeling:
@@ -1926,11 +1928,11 @@ this is the post-gates-stage-flip rule:
 	[an edge case bothered me here, so I want to write it out in case it ever bothers me again: if did-guru is false, we cannot min-up, because you may just use the arugula and then go win anyway. That'd be a bit silly on the player's part, but it's possible.]
 
 this is the post-perp-prep rule:
-	moot fleeing feeling;
+	now fleeing feeling is reflexed;
 
 section others auxiliary
 
-to concisions-check:
+this is the concisions-check rule:
 	now singed design is part of the noun;
 	if player has s-i or player has s-c:
 		if concisions are off-stage:

@@ -10,7 +10,147 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
 
-* 01234
+* all-slot-and-coins
+
+# the logic here is that the lost slot appears by anything sonic e.g. sonic coins or sonic icons.
+
+>rove over
+>others
+>in
+
+>purloin dollar
+>gonear scape space
+
+################################starting stuff above
+
+###########################################coins first
+>purloin coins
+
+>give dollar
+You take the So-Great Storage
+
+>sonic icons
+by two points
+slot appears
+
+>undo
+>undo
+
+>sonic icons
+by two points
+
+>give dollar
+You take the So-Great Storage
+slot appears
+
+>undo
+>undo
+
+>undo
+
+##########################################icons next
+
+>purloin icons
+
+>give dollar
+You take the So-Great Storage
+
+>sonic
+slot appears
+
+>undo
+>undo
+
+>sonic
+
+>give dollar
+You take the So-Great Storage
+slot appears
+
+>undo
+>undo
+
+>undo
+
+#sonic coins next
+##balance undos
+>purloin sonic coins
+
+>give dollar
+You take the So-Great Storage
+slot appears
+
+>sonic icons
+!slot appears
+>undo
+>icons
+!slot appears
+
+>undo
+>undo
+
+>sonic icons
+
+>give dollar
+You take the So-Great Storage
+slot appears
+
+>undo
+>undo
+
+>undo
+
+######################################
+
+>purloin coin
+
+>icon
+by one point
+
+>undo
+>undo
+
+>purloin coins
+
+>icons
+by one point
+>undo
+
+>sonic
+by one point
+>undo
+
+>sonic icons
+by two points
+>undo
+
+>sonic coins
+by one point
+>undo
+
+>undo
+>purloin sonic coins
+
+>icons
+by one point
+>undo
+
+>sonic icons
+by one point
+>undo
+
+>undo
+>purloin icons
+
+>sonic icons
+by one point
+>undo
+
+>sonic
+by one point
+>undo
+
+* _01234
 
 >{include} _intro
 >{include} _0_to_1
@@ -30,7 +170,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 >{include} _3_to_4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* 01204
+* _01204
 
 >{include} _intro
 >{include} _0_to_1
@@ -46,7 +186,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul. "Do sail!" he exhorts you.
 Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
 
-* 01034
+* _01034
 
 >{include} _intro
 >{include} _0_to_1
@@ -61,7 +201,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 >{include} _3_to_4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* 01004
+* _01004
 
 >{include} _intro
 >{include} _0_to_1
@@ -73,7 +213,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 #ttc-table-of-curtis-rewards-1-4
 "Spurtin' turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with." Curtis, looking very pleased, hands you two coins and some sort of dollar.
 
-* 00234
+* _00234
 
 >{include} _intro
 >{include} _0_to_1
@@ -91,7 +231,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 >{include} _3_to_4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* 00204
+* _00204
 
 >{include} _intro
 >{include} _0_to_1
@@ -105,7 +245,7 @@ A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit c
 Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul.
 Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
 
-* 00034
+* _00034
 
 >{include} _intro
 >{include} _0_to_1
@@ -122,7 +262,7 @@ A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit c
 #ttc-table-of-curtis-rewards-3-4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* 00004
+* _00004
 
 >{include} _intro
 >{include} _0_to_1
