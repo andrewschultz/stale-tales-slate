@@ -309,44 +309,28 @@ The jukebox is already temporarily out of commission.
 >undo
 >undo
 
->remap
-#notana 'nudge for remap'
-Your score has just gone up by one point
->unset
-!Your score has just gone up by one point
->undo
->undo
->unset
-Your score has just gone up by one point
->remap
-!Your score has just gone up by one point
->score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
 >sing
 by one point
+
+>score
+Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+
+>spit
+by one point
+
 >score
 Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
->scrape
+
+>unset
 by one point
+
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
-
->inset
-Perhaps you should've played it cool and fled, instead.
->undo
->spit
-Perhaps you should've played it cool and fled, instead.
->undo
 
 >stroll
 by one point
 
 /^Olde Lode
-
->thisalt
---You could have also REMAPped the perma-amper to break the jukebox.
-SPIT
-INSET
 
 >score
 Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
@@ -975,7 +959,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. Th
 She is a bit fussy, but she is more than okay as she is.
 
 >eat
-#notana 'nudge for eat'
 Your score has just gone up by one point
 
 >score
@@ -1655,8 +1638,6 @@ You step back, mentally. Having a big-picture view may mean the ambiguous readin
 >enlarge
 Your score has just gone up by one point
 
-!You may wish to re-examine the gleaner now it's changed.
-
 >score
 Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
@@ -2100,10 +2081,6 @@ You don't have anything with a small enough blade to cut the pins. And even then
 
 >snip pins
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
-#pre-dialer-redial rule retry
->redial
-Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
->undo
 
 >spin
 Your score has just gone up by one point

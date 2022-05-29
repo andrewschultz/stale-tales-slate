@@ -470,6 +470,11 @@ The compass will help point you north. You should go that way.
 Curtis continues to sing and hum the tidiest dietist ditties.
 \\
 #+testcase-exits-rustic-citrus
+
+@max
+#testcase-postrule-table-of-others-anagrams-post-moss-cap-compass-rule
+
+@verbs,max
 >exits
 The only way you seem to be able to go is north.
 
@@ -874,7 +879,7 @@ Your score has just gone up by one point.
 /DEBUG INFO: (sated stead|harmonicas|magenta rope|Hire Recs Re: Riches) hinting\.
 
 @max
-# test cherry flips either way
+#testcase-postrule-table-of-others-anagrams-post-either-cherry-rule
 >maraschino
 by one point
 !You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
@@ -889,6 +894,9 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 {$SCOS}
 >maraschino
 Your score has just gone up by one point.
+
+@max
+#+testcase-postrule-table-of-others-anagrams-post-either-cherry-rule
 !You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 @hin
@@ -897,11 +905,23 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
+
 >pomegranate
 Your score has just gone up by one point.
 
 @hin
 /DEBUG INFO: (sated stead|Hire Recs Re: Riches) hinting.
+
+@max
+#testcase-postrule-table-of-others-anagrams-post-pomegranate-rule
+>x megaton pear
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x rampage note
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x moot mopeage rant
+Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
 }}SCORE++
@@ -1368,12 +1388,23 @@ by one point
 >undo
 >undo
 
+@max
 >icon
 Your score has just gone up by one point.
 {--hin}/DEBUG INFO: (stucco|green stain) hinting\.
+\\
 >score
 }}SCORE++
 {$SCOS}
+\\
+#testcase-postrule-table-of-others-anagrams-post-iconic-flip-rule
+>x singed design
+The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.
+\\
+}}SCORE--
+>undo
+>undo
+>undo
 
 >coconuts
 Your score has just gone up by one point.
@@ -1406,7 +1437,17 @@ Nothing specific to do here, but there are other places where you can make fruit
 }}SCORE++
 {$SCOS}
 
+@!max
+>icons
+by one point
+}}SCORE++
+
+>score
+{$SCOS}
+
 >s
+
+@!max
 You fiddle with the coin you got
 
 @hin
@@ -1755,6 +1796,13 @@ Your score has just gone up by one point.
 @hin
 /DEBUG INFO: (barber sickle|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
 
+@max
+#testcase-postrule-table-of-others-anagrams-post-cranberries-rule
+>x briar screen
+Nothing (significant) like that is in the immediate vicinity or region.
+>x barren cries
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 }}SCORE++
 {$SCOS}
@@ -1820,10 +1868,40 @@ That doesn't really describe the Tekno-Token
 >scion
 Money, or something like it, should not be the guide of you.
 
+>score
+
+@max
+##balance undos
+>purloin so great storage
+\\
+#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+>sonic icons
+The So-Great Storage begins to rattle by your icons, and a lost slot appears in it.
+>undo
+\\
++#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+>sonic
+The So-Great Storage begins to rattle by your coins, and a lost slot appears in it.
+by one point
+\\
+>icons
+by one point
+!The So-Great Storage begins to rattle
+>undo
+>undo
+\\
++#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+>icons
+!The So-Great Storage begins to rattle
+>undo
+>undo
+
+>score
+
 @nud
-###skip test checking
 >icons
 ###skip test checking
+\\
 #ttc-table-of-others-spechelp-icons
 >icosn
 The icons rattle promisingly.
@@ -1848,13 +1926,40 @@ Money, or something like it, should not be the guide of you.
 >osicn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@!hin
+@!max
+>icons
+by one point
+WRONG
+\\
+>score
+}}SCORE++
+{$SCOS}
+
+@!hin,max
+#hints were already done above, to test hinting code paths above
 >sonic
 by one point
 Blam!
 \\
 >score
 }}SCORE++
+{$SCOS}
+
+@max
+#testcase-postrule-table-of-others-anagrams-post-sonic-icons-double-flip-rule
+>purloin storage
+>sonic icons
+slot appears
+>undo
+>undo
+\\
+#testcase-prerule-table-of-others-anagrams-pre-sonic-icons-double-flip-rule
+>sonic icons
+by two points
+You have a feeling the sonic icons have a hidden use, one you don't need, but one that may give personal growth, a way to find a different sort of word manipulation.
+\\
+>score
+}}SCORE+=2
 {$SCOS}
 
 @verbs
@@ -2904,12 +3009,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rppe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@min
+@max
+#testcase-postrule-table-of-others-anagrams-post-perp-prep-rule
 >prep
+Well! That was simpler than
 by one point
+\\
+#testcase-postrule-table-of-others-anagrams-post-gates-stage-flip-rule
 >research
+Man! Another simple reflection gives serious results
 by one point
-#pre-gates-stage-flip rule
+\\
+#testcase-prerule-table-of-others-anagrams-pre-gates-stage-flip-rule
 >review
 No need to over-study or over-think. Through the gates!
 >thisalt
@@ -2919,7 +3030,8 @@ No need to over-study or over-think. Through the gates!
 >undo
 >review
 by one point
-#pre-gates-stage-flip rule retry
+\\
+#+testcase-prerule-table-of-others-anagrams-pre-gates-stage-flip-rule
 >research
 No need to over-study or over-think. Through the gates!
 >thisalt
@@ -2974,8 +3086,8 @@ You can't get the maximum score, since you used the arugula and missed a chance 
 @!
 {$SCOVERYLAST}
 
-@min
-#pre-gates-stage-flip rule retry
+@max
+#+testcase-prerule-table-of-others-anagrams-pre-gates-stage-flip-rule
 >prep
 !No need to over-study or over-think. Through the gates!
 >thisalt

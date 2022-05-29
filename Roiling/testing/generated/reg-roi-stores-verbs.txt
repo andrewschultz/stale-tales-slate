@@ -155,8 +155,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
-#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
-
 #verbcase smell-stores-if-noun-is-throes-hoster
 >smell throes hoster
 A mix of surprisingly nice smells from the Throes Hoster where Store H was.

@@ -23,34 +23,23 @@ Taken.
 >score
 Score in a scenario: 0 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 45.
 
->remap
-#notana 'nudge for remap'
-Your score has just gone up by one point
->unset
-!Your score has just gone up by one point
->undo
->undo
->unset
-Your score has just gone up by one point
->remap
-!Your score has just gone up by one point
->score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
 >sing
 by one point
+
+>score
+Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+
+>spit
+by one point
+
 >score
 Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
->scrape
+
+>unset
 by one point
+
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
-
->inset
-Perhaps you should've played it cool and fled, instead.
->undo
->spit
-Perhaps you should've played it cool and fled, instead.
->undo
 
 >stroll
 by one point
@@ -58,11 +47,6 @@ by one point
 /^Olde Lode
 
 DEBUG INFO: clam hinting.
-
->thisalt
---You could have also REMAPped the perma-amper to break the jukebox.
-SPIT
-INSET
 
 >score
 Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
@@ -178,7 +162,6 @@ DEBUG INFO: Tea-at-a-Tee hinting.
 Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
 
 >eat
-#notana 'nudge for eat'
 Your score has just gone up by one point
 
 DEBUG INFO: trout hinting.
@@ -347,8 +330,6 @@ Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lo
 
 >enlarge
 Your score has just gone up by one point
-
-!You may wish to re-examine the gleaner now it's changed.
 
 >score
 Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.

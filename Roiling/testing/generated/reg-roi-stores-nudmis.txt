@@ -656,8 +656,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
-#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
-
 #ttc-table-of-stores-done-rejects-throes-hoster
 >othesr
 You should just enter the Throes Hoster. No need or way to seal it back up.

@@ -76,7 +76,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
 
-#testcase-postrule-table-of-troves-anagrams-post-decide-rule
 >decide
 
 >score
@@ -113,7 +112,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
 
-#testcase-postrule-table-of-troves-anagrams-post-desire-rule
 >desire
 
 >score

@@ -1052,7 +1052,9 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 >read lager
 Your eyes gloss over all but the red name, ERGAL AGLER.
 
+@max
 #testcase-postrule-table-of-troves-anagrams-post-decide-rule
+
 >decide
 }}SCORE++
 }}CURMAX--
@@ -1474,7 +1476,9 @@ All sorts of articles that make you see red. This one's about
 >idcsvore
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
 #testcase-postrule-table-of-troves-anagrams-post-desire-rule
+
 >desire
 }}SCORE++
 }}CURMAX--

@@ -90,10 +90,10 @@ Your score has just gone up by one point.
 You have 9 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 >maraschino
 Your score has just gone up by one point.
-!You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 >score
 You have 10 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+
 >pomegranate
 Your score has just gone up by one point.
 
@@ -138,24 +138,26 @@ scru-it
 
 >n
 
->icon
-Your score has just gone up by one point.
->score
-You have 17 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
-
 >coconuts
 Your score has just gone up by one point.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 17 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >tangerines
 Your score has just gone up by one point.
 
 >score
+You have 18 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>icons
+by one point
+
+>score
 You have 19 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >s
+
 You fiddle with the coin you got
 
 >n
@@ -185,12 +187,24 @@ Nice going.
 
 droll dollar
 
+>score
+
+>score
+
+>icons
+by one point
+WRONG
+
+>score
+You have 23 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#hints were already done above, to test hinting code paths above
 >sonic
 by one point
 Blam!
 
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 24 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >n
 
@@ -207,7 +221,7 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 
 # with the icons in the slot, you can no longer get CONCISIONS
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 24 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
@@ -215,7 +229,7 @@ Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourse
 >guru dr severe
 One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 24 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 You can't get the maximum score, since you used the arugula
 
 >u
@@ -225,35 +239,11 @@ You can't get the maximum score, since you used the arugula
 >n
 PERP
 
->prep
-by one point
->research
-by one point
-#pre-gates-stage-flip rule
->review
-No need to over-study or over-think. Through the gates!
->thisalt
---you only needed two ways to work the passport. The other was to REVIEW the viewer.
->undo
->undo
->undo
->review
-by one point
-#pre-gates-stage-flip rule retry
->research
-No need to over-study or over-think. Through the gates!
->thisalt
---you only needed two ways to work the passport. The other was to RESEARCH the searcher.
->undo
->undo
->undo
->undo
-
 >research
 by one point
 >score
 
-You have 24 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 25 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >review
 by one point
@@ -261,19 +251,13 @@ by one point
 >score
 
 # let's check "here/valence enclave" conditional text in the score
-You have 25 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
+You have 26 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
 You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >s
 >score
-You have 25 of 47 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win.
+You have 26 of 47 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win.
 You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >n
-
-#pre-gates-stage-flip rule retry
->prep
-!No need to over-study or over-think. Through the gates!
->thisalt
---you only needed two ways to work the passport. The other was to PREP after you are called a perp.
 
 >au 0
 

@@ -18,7 +18,7 @@
 >enter tornado
 /^Grey Gyre
 
-#pre-plebe-bleep rule
+#testcase-prerule-table-of-presto-anagrams-pre-plebe-bleep-rule
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
@@ -27,9 +27,32 @@ You try and cuss, but the plebe is not intimidated by your civilian clothes. Per
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.
 
-#pre-solve-maze rule
+#testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
 >mazeltov
 You're not messing around! You see the best way to destroy the maze, and you're going for it.
+>undo
+>undo
+
+>s
+>s
+>ole
+by one point
+>darn
+by one point
+>whassup
+by one point
+>gt gyre
+Grey Gyre
+>umph
+by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-hump-umph-rule
+/^You don't need to ham up "Hup, ma!" to get over a hump, because it's enough just to try umph\. The hump vanishes once you get over it. (Leo and Rand|Rand and Leo) follow, jumping unnecessarily\.$
+>undo
+>undo
+>undo
+>undo
+>undo
 >undo
 >undo
 
@@ -58,7 +81,7 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >s
 /^Char Arch
 
-#pre-yak-keyboard rule
+#testcase-prerule-table-of-presto-anagrams-pre-yak-keyboard-rule
 >keyboard
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
@@ -69,6 +92,10 @@ You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
 >rats
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-tsar-star-rule
+>i
+You are also wearing a tsar star.
 
 >score
 Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
@@ -91,7 +118,8 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 /^Marines Seminar Remains
 
 >bingo
-#pre-boing-bingo rule
+
+#testcase-prerule-table-of-presto-anagrams-pre-boing-bingo-rule
 (taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 >undo
@@ -107,13 +135,27 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 
 >w
 
+>n
+>w
+
+#testcase-postrule-table-of-presto-anagrams-post-nowt-town-wont-rule
+>wont
+You figure it would be a very good idea to move out of Nowt Town before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
+!/^Grey Gyre
+>l
+Grey Gyre
+>undo
+>undo
+>undo
+>undo
+
 >mazeltov
 !You're not messing around! You see the best way to destroy the maze, and you're going for it.
 No point actually going through the maze when you can destroy it.
 by three points
 >undo
 
-#pre-solve-maze rule retry
+#+testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
 >n
 >mazeltov
 You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
@@ -121,7 +163,8 @@ by three points
 >undo
 >undo
 
-#pre-solve-maze rule retry
+#+testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
+
 >mazeltov
 Your score has just gone up by three points
 >score
@@ -129,10 +172,16 @@ Score in a scenario: 10 out of 41 total points in the current region, Presto. Lo
 >blam
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-presto-anagrams-post-mazeltov-rule
+>x ether
+It's trickier to see through than moist-o-mist. Anyone or anything could be waiting.
+>x zany meter
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-#pre-ether-there rule
+#testcase-prerule-table-of-presto-anagrams-pre-ether-there-rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
 
@@ -148,17 +197,36 @@ You can shout THERE once you have the force to win the fight in the ether.
 >ole
 by one point
 
+>x rand
+Rand is Leo's mirror image, loutish and muscular and taller than you. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle.
+
+#testcase-postrule-table-of-presto-anagrams-post-leo-ole-rule
+>x rand
+Rand is Leo's mirror image, loutish and muscular and taller than you.
+
 >score
 Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 >darn
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-presto-anagrams-post-rand-darn-rule
+>pronouns
+/^At the moment, "it" means Rand, "him" means Rand, "her" means the lamb and "them" means both (Leo and Rand|Rand and Leo)\.$
+
 >score
 Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 >whassup
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-wzup-rule
+>x rand
+!He seems upset. For all their macho talk, he and Leo might just need someone to chat with.
+Rand is Leo's mirror image, loutish and muscular and taller than you.
+>x leo
+!He seems upset. For all their macho talk, he and Leo might just need someone to chat with.
+Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt
 
 >score
 Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
@@ -201,10 +269,11 @@ THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
 
 >bingo
-#pre-boing-bingo rule retry
+Your score has just gone up by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-boing-bingo-rule
 !You realize you can load the dart into the popgun now, so you do.
 !(taking the popgun first while you mess with the boing-go bin)
-Your score has just gone up by one point
 
 >score
 Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
@@ -214,6 +283,10 @@ You put the dart into the PG-on-up popgun.
 
 >there
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-ether-there-rule
+>x dart
+Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
 Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
@@ -229,7 +302,8 @@ Your score has just gone up by one point
 /^Phat Path
 >score
 Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-#pre-hogs-not-keys rule
+
+#testcase-prerule-table-of-presto-anagrams-pre-hogs-not-keys-rule
 >thisalt
 SYKE was another way around the hogs to get the keys.
 >undo
@@ -241,6 +315,10 @@ Your score has just gone up by one point
 
 /^Phat Path
 
+#testcase-postrule-table-of-presto-anagrams-post-hogs-or-keys-rule
+>x mutism summit
+The mutism looks quiet and inviting. You won't need interjections once you're in there.
+
 >what
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
@@ -251,11 +329,19 @@ Score in a scenario: 19 out of 41 total points in the current region, Presto. Lo
 # all 6 combos to get through
 >tough
 by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-harpings-flip-rule
+>x ought letters
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>undo
+
 >so long
 by one point
 !Hut! Go!
 Dat was a good dust-up
-#pre-harpings-flip rule
+
+#testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >later
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
@@ -264,7 +350,8 @@ Dat was a good dust-up
 by one point
 !Hut! Go!
 Dat was a good dust-up
-#pre-harpings-flip rule retry
+
+#+testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >so long
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
@@ -331,6 +418,16 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 /^Hacks' Shack
 
+#testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
+>romsticks
+by one point
+
+>x rom sticks
+You imagine it can't be too hard to open up the disk drive and put them in.
+
+>undo
+>undo
+
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
 
@@ -346,6 +443,9 @@ A reminder that cussing won't make a computer work any better, and you need to g
 by one point
 Only one more piece of hardware is needed, and the computer will work.
 
+#testcase-postrule-table-of-presto-anagrams-post-censer-screen-rule
+You realize you might trip over the screen if you leave on the floor. Fortunately, the labs slab is just the place to hoist the computer screen so it's useful! And you do.
+
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
@@ -353,7 +453,8 @@ Score in a scenario: 23 out of 41 total points in the current region, Presto. Lo
 You take it. You don't need to, but it'd be nice to have handy.
 !Taken.
 >s
-#pre-polemic-compile rule
+
+#testcase-prerule-table-of-presto-anagrams-pre-polemic-compile-rule
 >compile
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
@@ -374,6 +475,9 @@ You add the information to your pedanto-notepad under FLIPS.
 >skid
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-presto-anagrams-post-disk-skid-rule
+You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a SKID, as long as the disk isn't in a disk drive.
+
 >score
 Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
@@ -383,7 +487,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
-#pre-reboot rule
+#testcase-prerule-table-of-presto-anagrams-pre-reboot-rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
 
@@ -391,7 +495,7 @@ You have nothing to type with, so it doesn't do much good.
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
-#pre-peels-speel-sleep rule retry
+#testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 #futon not made yet
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
@@ -430,6 +534,10 @@ Score in a scenario: 27 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
 
+#testcase-postrule-table-of-presto-anagrams-post-yak-keyboard-rule
+>x leaf
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
@@ -462,7 +570,7 @@ You add the information to your pedanto-notepad under FLIPS.
 >undo
 
 #balance undo
-#pre-peels-speel-sleep rule
+#+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 !Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
@@ -475,6 +583,7 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >undo
 >undo
 
+#testcase-prerule-table-of-presto-anagrams-pre-disk-skid-rule
 >skid
 The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
 
@@ -487,6 +596,10 @@ SLEEP is only advisable in a protected area.
 
 >reboot
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-presto-anagrams-post-reboot-rule
+>x robot
+You check where it's hidden. It looks to be sleeping after helping you reboot.
 
 >score
 Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
@@ -507,7 +620,7 @@ You need to get rid of that uppercase to successfully compile your code.
 >put lock on keyboard
 fits in perfectly
 
-#pre-peels-speel-sleep rule
+#+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 You haven't yet made anywhere comfortable to sleep.
 You add the information to your pedanto-notepad under FLIPS.
@@ -542,10 +655,15 @@ Score in a scenario: 32 out of 41 total points in the current region, Presto. Lo
 >compile
 by one point
 
+#testcase-postrule-table-of-presto-anagrams-post-polemic-compile-rule
+>x bub dude egg
+Ugh! There must be something wrong with the code you compiled, if you're seeing such a defiant message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!
+
 >abstract cola to phat path
 >purloin coal
 >abstract mug to phat path
-#pre-bub-dude-egg rule
+
+#testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
@@ -587,27 +705,20 @@ That will provide transport from Hacks' Shack, but you could set more straight h
 >undo
 >undo
 
->derive
-by one point
-DEBUG INFO: min-up codepath
->score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 >rom sticks
 DEBUG INFO: min-up codepath
+
+#+testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
+>x rom sticks
+You imagine it can't be too hard to open up the disk drive and put them in.
+
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
->undo
->undo
->romsticks
-by one point
-DEBUG INFO: min-up codepath
->score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
->tab
-by one point
-DEBUG INFO: min-up codepath
->score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+
+#+testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
+>debug
+The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
+!by one point
 
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
@@ -616,11 +727,39 @@ The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably beca
 >debug
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-presto-anagrams-post-bub-dude-egg-rule
+>x usb
+It's an ordinary USB. Or it would be, around anyone but you.
+
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 
 >misses
 !presto
+
+#testcase-prerule-table-of-presto-anagrams-pre-usb-sub-bus-rule
+>bus
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
+>undo
+
+#+testcase-prerule-table-of-presto-anagrams-pre-usb-sub-bus-rule
+>sub
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
+>undo
+
+#testcase-postrule-table-of-presto-anagrams-post-drive-flip-rule
+>derive
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
+
+>tab
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
 >bus
 Your score has just gone up by one point

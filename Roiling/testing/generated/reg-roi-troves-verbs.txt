@@ -237,7 +237,6 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 >smell lager
 A faint rye-be-beery odor.
 
-#testcase-postrule-table-of-troves-anagrams-post-decide-rule
 >decide
 
 >score
@@ -338,7 +337,6 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 >score
 Score in a scenario: 18 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
 
-#testcase-postrule-table-of-troves-anagrams-post-desire-rule
 >desire
 
 >score

@@ -169,7 +169,6 @@ DEBUG INFO: I'd Cede hinting.
 >score
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
 
-#testcase-postrule-table-of-troves-anagrams-post-decide-rule
 >decide
 
 >score
@@ -242,7 +241,6 @@ In particular, you feel the need to DESIRE right now.
 >score
 Score in a scenario: 18 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
 
-#testcase-postrule-table-of-troves-anagrams-post-desire-rule
 >desire
 
 >score

@@ -5,6 +5,8 @@
 #--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
+################need to flip drive etc. AFTER max
+
 files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,reg-roi-presto-slider.txt,reg-roi-presto-hints.txt,reg-roi-presto-verbs.txt
 
 ~	min	min
@@ -79,7 +81,7 @@ Well, maybe one or two mild swears would work somewhere around here.
 It smells a bit stinky here, but more pressingly, it just FEELS stinky
 
 @max
-#pre-plebe-bleep rule
+#testcase-prerule-table-of-presto-anagrams-pre-plebe-bleep-rule
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
@@ -89,7 +91,7 @@ You try and cuss, but the plebe is not intimidated by your civilian clothes. Per
 You can shout BLEEP at the plebe once you look more authoritative.
 
 @max
-#pre-solve-maze rule
+#testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
 >mazeltov
 You're not messing around! You see the best way to destroy the maze, and you're going for it.
 >undo
@@ -205,6 +207,31 @@ You don't need to levitate the hump. You need a way to jump over it.
 @spoi
 #ttc-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+@max
+##balance undos
+>s
+>s
+>ole
+by one point
+>darn
+by one point
+>whassup
+by one point
+>gt gyre
+Grey Gyre
+>umph
+by one point
+\\
+#testcase-postrule-table-of-presto-anagrams-post-hump-umph-rule
+/^You don't need to ham up "Hup, ma!" to get over a hump, because it's enough just to try umph\. The hump vanishes once you get over it. (Leo and Rand|Rand and Leo) follow, jumping unnecessarily\.$
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >umph
 }}SCORE++
@@ -516,7 +543,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
-#pre-yak-keyboard rule
+#testcase-prerule-table-of-presto-anagrams-pre-yak-keyboard-rule
 >keyboard
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
@@ -567,6 +594,11 @@ You gulp the crust and can't help thinking DRAT. But you are too polite and/or r
 
 @hin
 DEBUG INFO: dart hinting.
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-tsar-star-rule
+>i
+You are also wearing a tsar star.
 
 @nud
 #+testcase-mistake-roiling-tars
@@ -1260,7 +1292,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
 >bingo
-#pre-boing-bingo rule
+\\
+#testcase-prerule-table-of-presto-anagrams-pre-boing-bingo-rule
 (taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 >undo
@@ -1318,6 +1351,21 @@ You already observed all the ports. No need to try to single one out.
 You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
 
 >w
+
+@max
+>n
+>w
+\\
+#testcase-postrule-table-of-presto-anagrams-post-nowt-town-wont-rule
+>wont
+You figure it would be a very good idea to move out of Nowt Town before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
+!/^Grey Gyre
+>l
+Grey Gyre
+>undo
+>undo
+>undo
+>undo
 
 @max
 >mazeltov
@@ -1532,7 +1580,7 @@ No, his full name is the clue, here.
 >undo
 
 @max
-#pre-solve-maze rule retry
+#+testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
 >n
 >mazeltov
 You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
@@ -1571,8 +1619,10 @@ following.)
 >attack lamb
 Meanie. There's a better way to help it flee home.
 
+@max
+#+testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
+
 @!min
-#pre-solve-maze rule retry
 >mazeltov
 Your score has just gone up by three points
 }}SCORE+=3
@@ -1583,6 +1633,13 @@ Your score has just gone up by three points
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-mazeltov-rule
+>x ether
+It's trickier to see through than moist-o-mist. Anyone or anything could be waiting.
+>x zany meter
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
 #verbcase smell-presto-if-noun-is-ether
@@ -1605,7 +1662,7 @@ You gulp the crust and can't help thinking BINGO. But you are too polite and/or 
 {$SCOS}
 
 @max
-#pre-ether-there rule
+#testcase-prerule-table-of-presto-anagrams-pre-ether-there-rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
 \\
@@ -1710,6 +1767,14 @@ by one point
 #ttc-table-of-presto-anagrams-darn
 You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
+@max
+>x rand
+Rand is Leo's mirror image, loutish and muscular and taller than you. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle.
+\\
+#testcase-postrule-table-of-presto-anagrams-post-leo-ole-rule
+>x rand
+Rand is Leo's mirror image, loutish and muscular and taller than you.
+
 >score
 {$SCOS}
 
@@ -1804,6 +1869,11 @@ You gulp the crust and can't help thinking WHASSUP. But you are too polite and/o
 @hin
 /DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
 
+@max
+#testcase-postrule-table-of-presto-anagrams-post-rand-darn-rule
+>pronouns
+/^At the moment, "it" means Rand, "him" means Rand, "her" means the lamb and "them" means both (Leo and Rand|Rand and Leo)\.$
+
 >score
 {$SCOS}
 
@@ -1888,6 +1958,15 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 @hin
 #OK-APOSTROPHE
 /You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-wzup-rule
+>x rand
+!He seems upset. For all their macho talk, he and Leo might just need someone to chat with.
+Rand is Leo's mirror image, loutish and muscular and taller than you.
+>x leo
+!He seems upset. For all their macho talk, he and Leo might just need someone to chat with.
+Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt
 
 @hints
 #+ttc-table-of-presto-hint-request-rejects-tsar-star
@@ -1985,11 +2064,13 @@ You wince and prepare to take a bite...
 >undo
 
 >bingo
-#pre-boing-bingo rule retry
-!You realize you can load the dart into the popgun now, so you do.
-!(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-boing-bingo-rule
+!You realize you can load the dart into the popgun now, so you do.
+!(taking the popgun first while you mess with the boing-go bin)
 
 @hin
 You can just put the dart in the popgun.
@@ -2102,6 +2183,11 @@ You will want to see what's north.
 >n
 >s
 You will want to get by the lawl wall.
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-ether-there-rule
+>x dart
+Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
 {$SCOS}
@@ -2261,7 +2347,8 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 }}SCORE--
-#pre-hogs-not-keys rule
+\\
+#testcase-prerule-table-of-presto-anagrams-pre-hogs-not-keys-rule
 >thisalt
 SYKE was another way around the hogs to get the keys.
 >undo
@@ -2302,6 +2389,11 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: harpings phrasing hinting.
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-hogs-or-keys-rule
+>x mutism summit
+The mutism looks quiet and inviting. You won't need interjections once you're in there.
 
 @verbs
 #+ttc-table-of-presto-nowheres-saps-pass
@@ -2386,6 +2478,7 @@ by one point
 #ttc-table-of-presto-hint-request-rejects-ought-letters
 >tough
 by one point
+\\
 >hint ought letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
 >undo
@@ -2484,11 +2577,19 @@ That'd be an awkward rehash. You need another way to say good-bye.
 #######T S L below
 >tough
 by one point
+\\
+#testcase-postrule-table-of-presto-anagrams-post-harpings-flip-rule
+>x ought letters
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>undo
+\\
 >so long
 by one point
 !Hut! Go!
 Dat was a good dust-up
-#pre-harpings-flip rule
+\\
+#testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >later
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
@@ -2498,7 +2599,8 @@ Dat was a good dust-up
 by one point
 !Hut! Go!
 Dat was a good dust-up
-#pre-harpings-flip rule retry
+\\
+#+testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >so long
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
@@ -2636,6 +2738,17 @@ There are two unblocked exits: north and south to Grey Gyre.
 /^Hacks' Shack
 
 @max
+#testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
+>romsticks
+by one point
+\\
+>x rom sticks
+You imagine it can't be too hard to open up the disk drive and put them in.
+\\
+>undo
+>undo
+
+@max
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
 \\
@@ -2713,6 +2826,10 @@ by one point
 }}SCORE++
 Only one more piece of hardware is needed, and the computer will work.
 
+@max
+#testcase-postrule-table-of-presto-anagrams-post-censer-screen-rule
+You realize you might trip over the screen if you leave on the floor. Fortunately, the labs slab is just the place to hoist the computer screen so it's useful! And you do.
+
 @spoi
 #ttc-table-of-presto-anagrams-skid
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
@@ -2762,7 +2879,8 @@ The YrNet entry is secure. You wouldn't know where to start hacking it. Besides,
 You take it. You don't need to, but it'd be nice to have handy.
 !Taken.
 >s
-#pre-polemic-compile rule
+\\
+#testcase-prerule-table-of-presto-anagrams-pre-polemic-compile-rule
 >compile
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
@@ -3059,6 +3177,10 @@ Your score has just gone up by one point
 #ttc-table-of-presto-anagrams-leaf
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a LEAF.
 
+@max
+#testcase-postrule-table-of-presto-anagrams-post-disk-skid-rule
+You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a SKID, as long as the disk isn't in a disk drive.
+
 >score
 {$SCOS}
 
@@ -3143,7 +3265,7 @@ Alcohol doesn't work as well as caffeine in this situation.
 What you want needs to help programming more than water or French champagne or dancing in the rain.
 
 @max
-#pre-reboot rule
+#testcase-prerule-table-of-presto-anagrams-pre-reboot-rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
 \\
@@ -3152,7 +3274,7 @@ You have nothing to type with, so it doesn't do much good.
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
 @max
-#pre-peels-speel-sleep rule retry
+#testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 #futon not made yet
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
@@ -3298,6 +3420,11 @@ You can now do computery things unimpeded! Hooray!
 #ttc-table-of-presto-anagrams-disk
 You would rather change the skid back to the disk, then put the disk in the disk drive.
 
+@max
+#testcase-postrule-table-of-presto-anagrams-post-yak-keyboard-rule
+>x leaf
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 {$SCOS}
 
@@ -3397,9 +3524,9 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
-@max,verbs
+@max
 #balance undo
-#pre-peels-speel-sleep rule
+#+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 !Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
@@ -3413,6 +3540,7 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >undo
 
 @max
+#testcase-prerule-table-of-presto-anagrams-pre-disk-skid-rule
 >skid
 The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
 
@@ -3435,6 +3563,11 @@ Your score has just gone up by one point
 @spoi
 #ttc-table-of-presto-anagrams-capslock
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-reboot-rule
+>x robot
+You check where it's hidden. It looks to be sleeping after helping you reboot.
 
 @verbs
 #+testcase-outside-hacks-shack
@@ -3484,7 +3617,7 @@ It'd sort of stink if a caps lock button broke in real life, so, no.
 It'd sort of stink if a caps lock button broke in real life, so, no.
 
 @max
-#pre-peels-speel-sleep rule
+#+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 You haven't yet made anywhere comfortable to sleep.
 You add the information to your pedanto-notepad under FLIPS.
@@ -3593,6 +3726,11 @@ by one point
 #ttc-table-of-presto-anagrams-cola
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
+@max
+#testcase-postrule-table-of-presto-anagrams-post-polemic-compile-rule
+>x bub dude egg
+Ugh! There must be something wrong with the code you compiled, if you're seeing such a defiant message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!
+
 @hints
 #ttc-table-of-presto-hint-request-rejects-im-le-cop-polemic
 >hint im le cop polemic
@@ -3603,7 +3741,8 @@ You got things compiling. No more worries there.
 >abstract cola to phat path
 >purloin coal
 >abstract mug to phat path
-#pre-bub-dude-egg rule
+\\
+#testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
@@ -3767,7 +3906,7 @@ That will provide transport from Hacks' Shack, but you could set more straight h
 >undo
 >undo
 
-@!min
+@!min,max
 >derive
 by one point
 DEBUG INFO: min-up codepath
@@ -3775,19 +3914,29 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOS}
+
+@max
 >rom sticks
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
->undo
->undo
+\\
+#+testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
+>x rom sticks
+You imagine it can't be too hard to open up the disk drive and put them in.
+
+@!min,max
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 >score
 {$SCOS}
+
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
+@!min,max
+# we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath
@@ -3843,14 +3992,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's
 >edugb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+#+testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
+>debug
+The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
+!by one point
+
 @nud
 #ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
-#pre-bub-dude-egg rule retry
->debug
-The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
-!by one point
 \\
 #+ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
@@ -3902,12 +4053,17 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: USB hinting.
 
+@max
+#testcase-postrule-table-of-presto-anagrams-post-bub-dude-egg-rule
+>x usb
+It's an ordinary USB. Or it would be, around anyone but you.
+
 @spoi
 #ttc-table-of-presto-anagrams-sub
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a BUS or SUB.
 
 >score
-@min
+@min,max
 {$SCOS}
 @!
 {$SCOMAX}
@@ -3959,6 +4115,37 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a de
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
+
+@max
+#testcase-prerule-table-of-presto-anagrams-pre-usb-sub-bus-rule
+>bus
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
+>undo
+\\
+#+testcase-prerule-table-of-presto-anagrams-pre-usb-sub-bus-rule
+>sub
+That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
+>undo
+
+@max
+#testcase-postrule-table-of-presto-anagrams-post-drive-flip-rule
+>derive
+by one point
+DEBUG INFO: min-up codepath
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOMAX}
+Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
+
+@max
+>tab
+by one point
+DEBUG INFO: min-up codepath
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOMAX}
 
 @max
 >bus

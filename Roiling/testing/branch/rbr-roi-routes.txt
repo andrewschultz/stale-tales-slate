@@ -938,8 +938,12 @@ You don't need to do anything with Pat, especially now you got the stupor sprout
 !The only way to exit is
 
 @max
-#testcase-postrule-table-of-routes-anagrams-post-past-rule
+#testcase-postrule-table-of-routes-anagrams-post-seedpit-despite-rule
 >scan resto store
+You read what the settler says--and you realize you already took care of the resto store or something closely related.
+\\
+#testcase-postrule-table-of-routes-anagrams-post-past-rule
+>scan cravings carvings
 You read what the settler says--and you realize you already took care of the resto store or something closely related.
 
 @spoi

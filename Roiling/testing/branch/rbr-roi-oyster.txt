@@ -186,7 +186,7 @@ You already got a temporary escape from the bad music. You can't really do any m
 
 @max
 ##balance undos
-#pre-trolls-stroll rule
+#testcase-prerule-table-of-oyster-anagrams-pre-trolls-stroll-rule
 >stroll
 The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
@@ -214,6 +214,9 @@ Maybe one more disruption, and you won't be worth bothering with.
 >remap
 The LOLstr trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
 by one point
+\\
+#testcase-postrule-table-of-oyster-anagrams-post-amper-remap-rule
+The perma-amper makes a pop and sparks and flames out. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect.
 \\
 >undo
 >undo
@@ -504,7 +507,7 @@ The jukebox is already temporarily out of commission.
 >undo
 >undo
 
-@min
+@min,max
 >get pills
 Taken.
 >spill pills
@@ -514,31 +517,76 @@ The pills scatter all over the bar, leaving everyone to slip and fall. You make 
 by one point
 }}SCORE++
 }}CURMAX-=3
-==!
->remap
-#notana 'nudge for remap'
-Your score has just gone up by one point
->unset
-!Your score has just gone up by one point
->undo
->undo
->unset
-Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
->remap
-!Your score has just gone up by one point
+
+@min,max
 >score
 {$SCOS}
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-trolls-stroll-rule
+}}SCORE--
+}}CURMAX+=3
+>undo
+>undo
+
+@max
+#balance undos
+>unset
+Your score has just gone up by one point
+\\
+>remap
+!Your score has just gone up by one point
+\\
+>undo
+>undo
+\\
+>remap
+Your score has just gone up by one point
+\\
+>unset
+!Your score has just gone up by one point
+\\
+>inset
+Your score has just gone up by one point
+\\
+>scrape
+Your score has just gone up by one point
+\\
+>stroll
+Your score has just gone up by one point
+\\
+>thisalt
+/--(SING and SPIT|SPIT and SING) are the other actions that would've annoyed Posh Hops Shop pesty types, as you only needed three of the five possible\.
+--Another way to break the jukebox was to UNSET the tunes.
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+@!min
 >sing
 by one point
 }}SCORE++
 }}CURMIN++
+\\
 >score
 {$SCOS}
->scrape
+\\
+>spit
+by one point
+}}CURMIN++
+}}SCORE++
+\\
+>score
+{$SCOS}
+\\
+>unset
 by one point
 }}SCORE++
+\\
 >score
 {$SCOS}
 
@@ -547,14 +595,18 @@ by one point
 >listen
 Silence. Awkward silence. An occasional cough.
 
-@!min
+@max
+#general death cases
 >inset
 Perhaps you should've played it cool and fled, instead.
->undo
->spit
-Perhaps you should've played it cool and fled, instead.
+\\
 >undo
 \\
+>spit
+Perhaps you should've played it cool and fled, instead.
+\\
+>undo
+
 >stroll
 by one point
 }}SCORE++
@@ -563,6 +615,12 @@ by one point
 
 @hin
 DEBUG INFO: clam hinting.
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-tunes-unset-rule
+>thisalt
+/--(INSET and SCRAPE|SCRAPE and INSET) are the other actions that would've annoyed Posh Hops Shop pesty types, as you only needed three of the five possible\.
+--Another way to break the jukebox was to REMAP the perma-amper.
 
 @verbs
 #ttc-table-of-oyster-nowheres-olde-lode
@@ -581,18 +639,14 @@ Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't
 >exits
 As in the Posh Hops Shop, it's not about any one direction but getting past an obstacle.
 
->thisalt
 @min
+>thisalt
 are the other actions that would've annoyed Posh Hops Shop pesty types instead of SPILLing the pills.
 SING
 INSET
 SPIT
 SCRAPE
 UNSET/REMAP
-@!
---You could have also REMAPped the perma-amper to break the jukebox.
-SPIT
-INSET
 
 >score
 {$SCOS}
@@ -684,6 +738,11 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: urn hinting.
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-calm-clam-rule
+>x urn
+It's--well, beautiful, like you could take it and forget all about this quest.
 
 >score
 }}SCORE++
@@ -929,7 +988,7 @@ Whoah, they're just oars. Think simpler. Much simpler.
 You're pretty sure you can get this one quickly. I mean, you've been given one of the letters.
 
 @max
-#pre-oars-soar rule
+#testcase-prerule-table-of-oyster-anagrams-pre-oars-soar-rule
 >soar
 !by one point
 The oars have no gas, or whatever they might run on
@@ -970,7 +1029,7 @@ Your score has just gone up by one point
 }}SCORE-=2
 
 @max
-#pre-raft-fart rule
+#testcase-prerule-table-of-oyster-anagrams-pre-raft-fart-rule
 >fart
 Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
 \\
@@ -981,7 +1040,8 @@ You can get on the frat raft and FART.
 You get onto the frat raft.
 >fart
 by one point
-#pre-boats-boast rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-sabot-boats-boast-rule
 >boast
 You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
 !by one point
@@ -1130,7 +1190,7 @@ There are three unblocked exits: north, east and west.
 Batso.
 
 @max
-#pre-tutor-trout rule
+#testcase-prerule-table-of-oyster-anagrams-pre-tutor-trout-rule
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
 !by one point
@@ -1235,8 +1295,12 @@ by one point
 >spike pikes
 by one point
 >undo
+\\
+#testcase-postrule-table-of-oyster-anagrams-post-spike-pikes-rule
 >spike
 Your score has just gone up by one point
+\\
+#testcase-postrule-table-of-oyster-anagrams-post-scrap-carps-rule
 >thisalt
 --you could've tried to SCRAP with the carps to rescue Tortu.
 !--you could've tried to SPIKE the pikes to rescue Tortu.
@@ -1262,7 +1326,7 @@ A cry. "Eh ... a runt..." you turn red on hearing it.
 DEBUG INFO: HUNTER HUNT AREA hinting.
 
 @max
-#pre-unearth-haunter rule
+#testcase-prerule-table-of-oyster-anagrams-pre-unearth-haunter-rule
 >unearth
 !by one point
 Nothing to unearth a haunter with.
@@ -1402,6 +1466,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >step
 by one point
 }}SCORE++
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-step-pest-pets-rule
+>x eeks
+If you listen or look the right way, you could figure where the eeks are coming from.
 
 >score
 {$SCOS}
@@ -1547,6 +1616,12 @@ Your score has just gone up by one point
 #we skipped SCAN and there is no way back.
 }}CURMAX--
 
+@max
+>w
+\\
+#testcase-postrule-table-of-oyster-anagrams-post-seek-eeks-rule
+>e
+
 /^Lean Lane
 
 @hin
@@ -1670,12 +1745,16 @@ by one point
 >undo
 
 >eat
-#notana 'nudge for eat'
 Your score has just gone up by one point
 }}SCORE++
 
 @hin
 DEBUG INFO: trout hinting.
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-eat-tea-rule
+>x paler pearl
+It might be valuable if it weren't cut jaggedly in half. Where could the other half be?
 
 >score
 {$SCOS}
@@ -1692,6 +1771,11 @@ Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-tend-dent-rule
+>pronouns
+At the moment, "it" means the raw red drawer, "him" means the trout, "her" means Aunt Tuna and "them" means the wipes.
 
 >score
 {$SCOS}
@@ -1722,6 +1806,12 @@ Your score has just gone up by one point
 @!min
 }}CURMIN++
 
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-tutor-trout-rule
+>x wrap
+Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two demographics with its alternate interpretations: "Power" wrap, for the practical, and "Paw 'er," for those who just love the noise it makes.
+As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.
+
 @hin
 #ttc-table-of-oyster-location-hint-checkoffs-lean-lane
 You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points here, but a generic HINT will not reveal them.
@@ -1740,7 +1830,7 @@ You helped Tortu and got a paler pearl. That's all you need to do here.
 Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 
 @max
-#pre-warp-wrap rule
+#testcase-prerule-table-of-oyster-anagrams-pre-warp-wrap-rule
 >warp
 "Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
 Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
@@ -2064,21 +2154,23 @@ You start up a grand lecture again, but you feel something spinal and think "I..
 You had your say.
 
 @max
-#pre-crate-react rule
+#testcase-prerule-table-of-oyster-anagrams-pre-crate-react-rule
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
 \\
 #ttc-table-of-oyster-prefigurings-crate
 >pf
 You can REACT to the crate better once you have more data.
-#pre-kiss-skis rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-kiss-skis-rule
 >kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
 \\
 #ttc-table-of-oyster-prefigurings-skis
 >pf
 You can KISS the skis once you are less distracted.
-#pre-snap-span-pans rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-snap-span-pans-rule
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
 \\
@@ -2125,10 +2217,11 @@ You give them a whack, and it hurts much more than it should. You wonder if love
 Well, you need to do something to the pans.
 
 @max
-#pre-kiss-skis rule retry
+#+testcase-prerule-table-of-oyster-anagrams-pre-kiss-skis-rule
 >kiss
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
-#pre-bonk-knob rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-bonk-knob-rule
 >bonk
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 
@@ -2332,6 +2425,14 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: prod hinting.
 
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-bust-tubs-rule
+>x waste
+It'd take strength and effort to move or pick through.
+\\
+>x tubs
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 {$SCOS}
 
@@ -2423,6 +2524,14 @@ DEBUG INFO: min-up codepath
 \\
 >score
 {$SCOS}
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-sweat-waste-rule
+>x heaps
+They are just a mess. You're not obligated to beautify Yorpwald, but maybe something could be done to them.
+\\
+>x lance
+Too grimy and dirty.
 
 @nud
 #ttc-table-of-oyster-spechelp-lance
@@ -2522,7 +2631,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 @max
 ##balance undos
 >abstract wipes to lean lane
-#pre-clean-lance rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-clean-lance-rule
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
 FLIPS
@@ -2550,7 +2660,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
-\\
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-clean-lance-rule
+>x wipes
+Nothing (significant) like that is in the immediate vicinity or region.
+
+@!min
 >score
 {$SCOS}
 
@@ -2686,7 +2802,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
-#pre-search-arches rule
+#testcase-prerule-table-of-oyster-anagrams-pre-search-arches-rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
 \\
@@ -2705,6 +2821,11 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: Achers' Chaser Arches hinting.
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-warp-wrap-rule
+>x sardine
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
 #+ttc-table-of-oyster-nowheres-sclerous-closures
@@ -2743,6 +2864,12 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: general gleaner hinting.
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-search-arches-rule
+>x gleaner
+You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of here, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
+>undo
 
 >score
 {$SCOS}
@@ -2796,6 +2923,7 @@ You step back, mentally. Having a big-picture view may mean the ambiguous readin
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
+#testcase-prerule-table-of-oyster-anagrams-pre-reangle-gleaner-rule
 >reangle
 You might be able to REANGLE after doing something more necessary with the gleaner.
 \\
@@ -2804,11 +2932,15 @@ You might be able to REANGLE after doing something more necessary with the glean
 You can REANGLE the general gleaner once you've figured how to see something more basic in it.
 
 @max
+#testcase-postrule-table-of-oyster-anagrams-post-enlarge-gleaner-rule
 >enlarge gleaner
 by one point
+!You may wish to re-examine the gleaner now it's changed.
 >undo
 >x gleaner
 You hope to have peered deeper for a vision, but it's too small.
+\\
+#!testcase-postrule-table-of-oyster-anagrams-post-enlarge-gleaner-rule
 >enlarge
 You may wish to re-examine the gleaner now it's changed.
 >undo
@@ -2817,8 +2949,6 @@ You may wish to re-examine the gleaner now it's changed.
 >enlarge
 Your score has just gone up by one point
 }}SCORE++
-
-!You may wish to re-examine the gleaner now it's changed.
 
 >score
 {$SCOS}
@@ -2880,16 +3010,18 @@ There are two unblocked exits: south to Sclerous Closures and west.
 
 @max
 ##balance undos
-#pre-patrol-ol-trap rule
+#testcase-prerule-table-of-oyster-anagrams-pre-patrol-ol-trap-rule
 >patrol
 Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
+\\
 #detour to test burying ruby without digger
 #ttc-table-of-oyster-prefigurings-ol-trap
 >pf
 You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 >w
 >banish digger
-#pre-bury-ruby rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-bury-ruby-rule
 >bury
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
 \\
@@ -3047,6 +3179,14 @@ by one point
 @hin
 DEBUG INFO: Use-Saga Sausage hinting.
 
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-unearth-haunter-rule
+>x sausage
+It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon. It looks very put-upon, and it's probably up to you to fix that.
+\\
+>pronouns
+At the moment, "it" means the Use-Saga Sausage, "him" means the Use-Saga Sausage, "her" means the Use-Saga Sausage and "them" means the weaselly walleyes.
+
 >score
 {$SCOS}
 
@@ -3177,6 +3317,11 @@ Your score has just gone up by one point
 @hin
 #ttc-table-of-oyster-location-hint-checkoffs-horned-hedron
 You've found a way further in, and that's all you need here
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-patrol-ol-trap-rule
+>x rigged digger
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
 #+ttc-table-of-oyster-nowheres-horned-hedron
@@ -3350,7 +3495,7 @@ You can't even dial with the yapper around.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
-#pre-dialer-derail rule
+#testcase-prerule-table-of-oyster-anagrams-pre-dialer-derail-rule
 >derail
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
 !by one point
@@ -3412,11 +3557,23 @@ You've done what you needed with the gleaner. The gleaner is useful narratively 
 Your score has just gone up by one point
 }}SCORE++
 
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-yapper-prepay-rule
+As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.
+
 @min
 }}CURMAX--
 
 @hin
 DEBUG INFO: dialer hinting.
+
+@max
+#+testcase-postrule-table-of-oyster-anagrams-post-yapper-prepay-rule
+>x gleaner
+Nothing (significant) like that is in the immediate vicinity or region.
+\\
+>x lever
+You're quite glad you found it, even if you're not sure how or why to pull it, yet.
 
 >score
 {$SCOS}
@@ -3466,7 +3623,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 ##balance undos
 # note: the code says "if wipes are not moot" so you might think BANISH LANCE is more sensible, but in this case, I just want to make sure the code paths work.
 >banish wipes
-#pre-trample-ramplet rule
+\\
+#testcase-prerule-table-of-oyster-anagrams-pre-trample-ramplet-rule
 >trample
 You'd think your lance would make you worthy of climbing the templar ramplet, but not in its current form. It's too dirty.
 >banish lance
@@ -3501,6 +3659,9 @@ by one point
 
 @hin
 DEBUG INFO: natant ant hinting.
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-trample-ramplet-rule
 
 @!min
 >score
@@ -3574,9 +3735,13 @@ Maybe riff on ALL the lamps. But only for fun.
 
 @max
 #let's test the special case where we TAN without PSALMing.
+#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
 >tan
 }}SCORE++
 }}CURMAX--
+\\
+And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.
+\\
 >score
 {$SCOS}
 >undo
@@ -3616,6 +3781,11 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: dialer hinting.
+
+@max
++#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
+>x lance
+Nothing (significant) like that is in the immediate vicinity or region.
 
 @!min
 >score
@@ -3668,6 +3838,15 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: pins hinting.
 
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-dialer-derail-rule
+>x pins
+The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...
+PS'in.
+\\
+>ss
+repaired dialer
+
 @verbs
 #+verbcase listen-oyster-if-noun-is-dialer
 >listen dialer
@@ -3677,7 +3856,7 @@ The dialer is quiet. Your orders to DERAIL must've put it out of commission. May
 {$SCOS}
 
 @max
-#pre-dialer-redial rule
+#testcase-prerule-table-of-oyster-anagrams-pre-dialer-redial-rule
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
@@ -3714,12 +3893,13 @@ You don't have anything with a small enough blade to cut the pins. And even then
 \\
 >snip pins
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
-#pre-dialer-redial rule retry
+
+@max
+#+testcase-prerule-table-of-oyster-anagrams-pre-dialer-redial-rule
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 >undo
-
-@max
+\\
 >spin pins
 Your score has just gone up by one
 >undo
@@ -3810,6 +3990,11 @@ Your score has just gone up by one point
 
 @min
 This will cause Elvira to (mistakenly) destroy the Horned Hedron, but there is even more action here. Stay back and clean up everything you can?
+
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-dialer-redial-rule
+Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.
+Casper Spacer himself shakes your hand. "No hunter! On the run! None hurt!" He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. "Get this hero a glider girdle!" You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits.
 
 @nud
 #+testcase-mistake-roiling-fart

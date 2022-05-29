@@ -694,7 +694,6 @@ No, his full name is the clue, here.
 >undo
 >undo
 
-#pre-solve-maze rule retry
 >mazeltov
 Your score has just gone up by three points
 >score
@@ -896,9 +895,6 @@ You don't need to combine them physically, but their physical strengths combined
 >n
 
 >bingo
-#pre-boing-bingo rule retry
-!You realize you can load the dart into the popgun now, so you do.
-!(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 
 >score
@@ -1984,17 +1980,17 @@ by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
->rom sticks
-DEBUG INFO: min-up codepath
->score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
->undo
->undo
+
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 >score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+
+>score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+
+# we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath
@@ -2039,10 +2035,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's
 #ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
-#pre-bub-dude-egg rule retry
->debug
-The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
-!by one point
 
 #+ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg

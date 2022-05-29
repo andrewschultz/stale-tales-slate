@@ -141,7 +141,6 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 
 >w
 
-#pre-solve-maze rule retry
 >mazeltov
 Your score has just gone up by three points
 >score
@@ -230,9 +229,6 @@ You wince and prepare to take a bite...
 >undo
 
 >bingo
-#pre-boing-bingo rule retry
-!You realize you can load the dart into the popgun now, so you do.
-!(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 
 You can just put the dart in the popgun.
@@ -322,6 +318,7 @@ by one point
 #ttc-table-of-presto-hint-request-rejects-ought-letters
 >tough
 by one point
+
 >hint ought letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
 >undo
@@ -501,17 +498,17 @@ by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
->rom sticks
-DEBUG INFO: min-up codepath
->score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
->undo
->undo
+
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 >score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+
+>score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+
+# we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath

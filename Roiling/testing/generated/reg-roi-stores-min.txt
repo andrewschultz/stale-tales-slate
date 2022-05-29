@@ -58,8 +58,6 @@ You point the patcher at Store Y. It disintegrates. Hopefully, you somehow made 
 >score
 Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
 
-#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
-
 >patch course source
 You point the patcher at the course source you created. It disintegrates. Hopefully, you somehow made everything okay behind the course source once you're finished here, or maybe it can be saved until after you defeat Elvira.
 # check synonyms

@@ -57,6 +57,11 @@ You have 4 of 47 total points for the post-Elvira Others region, though you only
 >compass
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-others-anagrams-post-moss-cap-compass-rule
+
+>exits
+The only way you seem to be able to go is north.
+
 # we can go north, but let's look for a few more points first.
 
 >x ruts circuits
@@ -86,7 +91,7 @@ You have 8 of 47 total points for the post-Elvira Others region, though you only
 Take on a token
 Your score has just gone up by one point.
 
-# test cherry flips either way
+#testcase-postrule-table-of-others-anagrams-post-either-cherry-rule
 >maraschino
 by one point
 !You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
@@ -100,12 +105,25 @@ You worry Curtis won't give you credit for both plain old cherries and maraschin
 You have 9 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 >maraschino
 Your score has just gone up by one point.
+
+#+testcase-postrule-table-of-others-anagrams-post-either-cherry-rule
 !You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 >score
 You have 10 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+
 >pomegranate
 Your score has just gone up by one point.
+
+#testcase-postrule-table-of-others-anagrams-post-pomegranate-rule
+>x megaton pear
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>x rampage note
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>x moot mopeage rant
+Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
 You have 11 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
@@ -150,23 +168,34 @@ scru-it
 
 >icon
 Your score has just gone up by one point.
+
 >score
 You have 17 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#testcase-postrule-table-of-others-anagrams-post-iconic-flip-rule
+>x singed design
+The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.
+
+>undo
+>undo
+>undo
 
 >coconuts
 Your score has just gone up by one point.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 17 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >tangerines
 Your score has just gone up by one point.
 
 >score
-You have 19 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 18 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>score
+You have 18 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >s
-You fiddle with the coin you got
 
 >n
 
@@ -176,25 +205,31 @@ You fiddle with the coin you got
 >cranberries
 Your score has just gone up by one point.
 
+#testcase-postrule-table-of-others-anagrams-post-cranberries-rule
+>x briar screen
+Nothing (significant) like that is in the immediate vicinity or region.
+>x barren cries
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
-You have 20 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 19 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 21 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 20 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 >watermelon
 Your score has just gone up by one point.
 
 >score
-You have 22 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
+You have 21 of 47 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >pineapple
 Your score has just gone up by one point.
 min-up
 
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 22 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >e
 >s
@@ -205,11 +240,47 @@ droll dollar
 >dates
 Your score has just gone up by one point.
 >score
-You have 24 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
+You have 23 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
 
+>score
+
+>purloin so great storage
+
+#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+>sonic icons
+The So-Great Storage begins to rattle by your icons, and a lost slot appears in it.
+>undo
+
++#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >sonic
+The So-Great Storage begins to rattle by your coins, and a lost slot appears in it.
 by one point
-Blam!
+
+>icons
+by one point
+!The So-Great Storage begins to rattle
+>undo
+>undo
+
++#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+>icons
+!The So-Great Storage begins to rattle
+>undo
+>undo
+
+>score
+
+#testcase-postrule-table-of-others-anagrams-post-sonic-icons-double-flip-rule
+>purloin storage
+>sonic icons
+slot appears
+>undo
+>undo
+
+#testcase-prerule-table-of-others-anagrams-pre-sonic-icons-double-flip-rule
+>sonic icons
+by two points
+You have a feeling the sonic icons have a hidden use, one you don't need, but one that may give personal growth, a way to find a different sort of word manipulation.
 
 >score
 You have 25 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
@@ -321,6 +392,37 @@ There are no fruits left to find or give back to Curtis.
 >n
 PERP
 
+#testcase-postrule-table-of-others-anagrams-post-gates-stage-flip-rule
+>prep
+Well! That was simpler than
+by one point
+
+#+testcase-postrule-table-of-others-anagrams-post-gates-stage-flip-rule
+>research
+Man! Another simple reflection gives serious results
+by one point
+
+#testcase-prerule-table-of-others-anagrams-pre-gates-stage-flip-rule
+>review
+No need to over-study or over-think. Through the gates!
+>thisalt
+--you only needed two ways to work the passport. The other was to REVIEW the viewer.
+>undo
+>undo
+>undo
+>review
+by one point
+
+#+testcase-prerule-table-of-others-anagrams-pre-gates-stage-flip-rule
+>research
+No need to over-study or over-think. Through the gates!
+>thisalt
+--you only needed two ways to work the passport. The other was to RESEARCH the searcher.
+>undo
+>undo
+>undo
+>undo
+
 >research
 by one point
 >score
@@ -334,6 +436,12 @@ by one point
 >score
 
 You have 45 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+
+#+testcase-prerule-table-of-others-anagrams-pre-gates-stage-flip-rule
+>prep
+!No need to over-study or over-think. Through the gates!
+>thisalt
+--you only needed two ways to work the passport. The other was to PREP after you are called a perp.
 
 >n
 #notana

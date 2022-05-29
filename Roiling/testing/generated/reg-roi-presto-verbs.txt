@@ -646,7 +646,6 @@ following.)
 >attack lamb
 Meanie. There's a better way to help it flee home.
 
-#pre-solve-maze rule retry
 >mazeltov
 Your score has just gone up by three points
 >score
@@ -754,9 +753,6 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 >n
 
 >bingo
-#pre-boing-bingo rule retry
-!You realize you can load the dart into the popgun now, so you do.
-!(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 
 >score
@@ -948,20 +944,6 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
-#balance undo
-#pre-peels-speel-sleep rule
->sleep
-!Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
-You may need sleep later, but not now. Besides, you have nowhere to sleep.
->futon
-by one point
->sleep
-Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
-!You may need sleep later, but not now. Besides, you have nowhere to sleep.
->undo
->undo
->undo
-
 >reboot
 Your score has just gone up by one point
 
@@ -1025,17 +1007,17 @@ by one point
 DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
->rom sticks
-DEBUG INFO: min-up codepath
->score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
->undo
->undo
+
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 >score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+
+>score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+
+# we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath

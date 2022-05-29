@@ -56,7 +56,7 @@ by one point
 >score
 Score in a scenario: 0 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 45.
 
-#pre-trolls-stroll rule
+#testcase-prerule-table-of-oyster-anagrams-pre-trolls-stroll-rule
 >stroll
 The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
@@ -85,6 +85,9 @@ Maybe one more disruption, and you won't be worth bothering with.
 The LOLstr trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
 by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-amper-remap-rule
+The perma-amper makes a pop and sparks and flames out. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect.
+
 >undo
 >undo
 >undo
@@ -93,33 +96,84 @@ by one point
 >undo
 >undo
 
->remap
-#notana 'nudge for remap'
-Your score has just gone up by one point
->unset
-!Your score has just gone up by one point
->undo
->undo
->unset
-Your score has just gone up by one point
->remap
-!Your score has just gone up by one point
+>get pills
+Taken.
+>spill pills
+You briefly wonder if the pill jar might be better saved for later. Release the pills anyway?
+Okay.
+The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
+by one point
+
 >score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
+
+#testcase-postrule-table-of-oyster-anagrams-post-trolls-stroll-rule
+>undo
+>undo
+
+#balance undos
+>unset
+Your score has just gone up by one point
+
+>remap
+!Your score has just gone up by one point
+
+>undo
+>undo
+
+>remap
+Your score has just gone up by one point
+
+>unset
+!Your score has just gone up by one point
+
+>inset
+Your score has just gone up by one point
+
+>scrape
+Your score has just gone up by one point
+
+>stroll
+Your score has just gone up by one point
+
+>thisalt
+/--(SING and SPIT|SPIT and SING) are the other actions that would've annoyed Posh Hops Shop pesty types, as you only needed three of the five possible\.
+--Another way to break the jukebox was to UNSET the tunes.
+
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
 >sing
 by one point
+
+>score
+Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+
+>spit
+by one point
+
 >score
 Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
->scrape
+
+>unset
 by one point
+
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
+#general death cases
 >inset
 Perhaps you should've played it cool and fled, instead.
+
 >undo
+
 >spit
 Perhaps you should've played it cool and fled, instead.
+
 >undo
 
 >stroll
@@ -127,10 +181,10 @@ by one point
 
 /^Olde Lode
 
+#testcase-postrule-table-of-oyster-anagrams-post-tunes-unset-rule
 >thisalt
---You could have also REMAPped the perma-amper to break the jukebox.
-SPIT
-INSET
+/--(INSET and SCRAPE|SCRAPE and INSET) are the other actions that would've annoyed Posh Hops Shop pesty types, as you only needed three of the five possible\.
+--Another way to break the jukebox was to REMAP the perma-amper.
 
 >score
 Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
@@ -141,6 +195,10 @@ by one point
 
 >calm
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-oyster-anagrams-post-calm-clam-rule
+>x urn
+It's--well, beautiful, like you could take it and forget all about this quest.
 
 >score
 Score in a scenario: 5 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
@@ -156,12 +214,12 @@ You can't cross Saccade Cascade on your own. One of the sabot boats would hit yo
 >score
 Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#pre-oars-soar rule
+#testcase-prerule-table-of-oyster-anagrams-pre-oars-soar-rule
 >soar
 !by one point
 The oars have no gas, or whatever they might run on
 
-#pre-raft-fart rule
+#testcase-prerule-table-of-oyster-anagrams-pre-raft-fart-rule
 >fart
 Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
 
@@ -172,7 +230,8 @@ You can get on the frat raft and FART.
 You get onto the frat raft.
 >fart
 by one point
-#pre-boats-boast rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-sabot-boats-boast-rule
 >boast
 You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
 !by one point
@@ -200,7 +259,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
-#pre-tutor-trout rule
+#testcase-prerule-table-of-oyster-anagrams-pre-tutor-trout-rule
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
 !by one point
@@ -215,8 +274,12 @@ by one point
 >spike pikes
 by one point
 >undo
+
+#testcase-postrule-table-of-oyster-anagrams-post-spike-pikes-rule
 >spike
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-oyster-anagrams-post-scrap-carps-rule
 >thisalt
 --you could've tried to SCRAP with the carps to rescue Tortu.
 !--you could've tried to SPIKE the pikes to rescue Tortu.
@@ -228,7 +291,7 @@ Your score has just gone up by one
 !--you could've tried to SCRAP with the carps to rescue Tortu.
 --you could've tried to SPIKE the pikes to rescue Tortu.
 
-#pre-unearth-haunter rule
+#testcase-prerule-table-of-oyster-anagrams-pre-unearth-haunter-rule
 >unearth
 !by one point
 Nothing to unearth a haunter with.
@@ -255,6 +318,10 @@ Score in a scenario: 10 out of 45 total points in the current region, Oyster. Lo
 >step
 by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-step-pest-pets-rule
+>x eeks
+If you listen or look the right way, you could figure where the eeks are coming from.
+
 >score
 Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
 
@@ -280,6 +347,11 @@ by one point
 >seek
 Your score has just gone up by one point
 
+>w
+
+#testcase-postrule-table-of-oyster-anagrams-post-seek-eeks-rule
+>e
+
 /^Lean Lane
 
 >score
@@ -290,8 +362,11 @@ by one point
 >undo
 
 >eat
-#notana 'nudge for eat'
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-oyster-anagrams-post-eat-tea-rule
+>x paler pearl
+It might be valuable if it weren't cut jaggedly in half. Where could the other half be?
 
 >score
 Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
@@ -305,6 +380,10 @@ by one point
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
+#testcase-postrule-table-of-oyster-anagrams-post-tend-dent-rule
+>pronouns
+At the moment, "it" means the raw red drawer, "him" means the trout, "her" means Aunt Tuna and "them" means the wipes.
+
 >score
 Score in a scenario: 15 out of 45 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 45.
 
@@ -315,10 +394,15 @@ by one point
 >tutor
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-tutor-trout-rule
+>x wrap
+Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two demographics with its alternate interpretations: "Power" wrap, for the practical, and "Paw 'er," for those who just love the noise it makes.
+As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.
+
 >score
 Score in a scenario: 16 out of 45 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 45.
 
-#pre-warp-wrap rule
+#testcase-prerule-table-of-oyster-anagrams-pre-warp-wrap-rule
 >warp
 "Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
 Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
@@ -348,21 +432,23 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 18 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
 
-#pre-crate-react rule
+#testcase-prerule-table-of-oyster-anagrams-pre-crate-react-rule
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
 
 #ttc-table-of-oyster-prefigurings-crate
 >pf
 You can REACT to the crate better once you have more data.
-#pre-kiss-skis rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-kiss-skis-rule
 >kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
 
 #ttc-table-of-oyster-prefigurings-skis
 >pf
 You can KISS the skis once you are less distracted.
-#pre-snap-span-pans rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-snap-span-pans-rule
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
 
@@ -380,10 +466,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 19 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
 
-#pre-kiss-skis rule retry
+#+testcase-prerule-table-of-oyster-anagrams-pre-kiss-skis-rule
 >kiss
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
-#pre-bonk-knob rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-bonk-knob-rule
 >bonk
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 
@@ -430,6 +517,13 @@ by one point
 >bust
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-bust-tubs-rule
+>x waste
+It'd take strength and effort to move or pick through.
+
+>x tubs
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 Score in a scenario: 24 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
 
@@ -450,6 +544,13 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 26 out of 45 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 45.
 
+#testcase-postrule-table-of-oyster-anagrams-post-sweat-waste-rule
+>x heaps
+They are just a mess. You're not obligated to beautify Yorpwald, but maybe something could be done to them.
+
+>x lance
+Too grimy and dirty.
+
 >shape heaps
 by one point
 >undo
@@ -462,7 +563,8 @@ DEBUG INFO: min-up codepath
 Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 45.
 
 >abstract wipes to lean lane
-#pre-clean-lance rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-clean-lance-rule
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
 FLIPS
@@ -486,6 +588,10 @@ by one point
 #notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
+
+#testcase-postrule-table-of-oyster-anagrams-post-clean-lance-rule
+>x wipes
+Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
 Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
@@ -512,7 +618,7 @@ It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or so
 >w
 /^Sclerous Closures
 
-#pre-search-arches rule
+#testcase-prerule-table-of-oyster-anagrams-pre-search-arches-rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
 
@@ -526,6 +632,10 @@ by one point
 
 >warp
 Your score has just gone up by one point
+
+#testcase-postrule-table-of-oyster-anagrams-post-warp-wrap-rule
+>x sardine
+Nothing (significant) like that is in the immediate vicinity or region.
 
 #+ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
@@ -541,6 +651,11 @@ by one point
 >search
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-search-arches-rule
+>x gleaner
+You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of here, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
+>undo
+
 >score
 Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
@@ -554,6 +669,7 @@ You hope to have peered deeper for a vision, but it's too small. All you can mak
 >undo
 >undo
 
+#testcase-prerule-table-of-oyster-anagrams-pre-reangle-gleaner-rule
 >reangle
 You might be able to REANGLE after doing something more necessary with the gleaner.
 
@@ -561,11 +677,15 @@ You might be able to REANGLE after doing something more necessary with the glean
 >pf
 You can REANGLE the general gleaner once you've figured how to see something more basic in it.
 
+#testcase-postrule-table-of-oyster-anagrams-post-enlarge-gleaner-rule
 >enlarge gleaner
 by one point
+!You may wish to re-examine the gleaner now it's changed.
 >undo
 >x gleaner
 You hope to have peered deeper for a vision, but it's too small.
+
+#!testcase-postrule-table-of-oyster-anagrams-post-enlarge-gleaner-rule
 >enlarge
 You may wish to re-examine the gleaner now it's changed.
 >undo
@@ -574,24 +694,24 @@ You may wish to re-examine the gleaner now it's changed.
 >enlarge
 Your score has just gone up by one point
 
-!You may wish to re-examine the gleaner now it's changed.
-
 >score
 Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
 >n
 /^Horned Hedron
 
-#pre-patrol-ol-trap rule
+#testcase-prerule-table-of-oyster-anagrams-pre-patrol-ol-trap-rule
 >patrol
 Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
+
 #detour to test burying ruby without digger
 #ttc-table-of-oyster-prefigurings-ol-trap
 >pf
 You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 >w
 >banish digger
-#pre-bury-ruby rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-bury-ruby-rule
 >bury
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
 
@@ -632,6 +752,13 @@ by one point
 >unearth
 by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-unearth-haunter-rule
+>x sausage
+It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon. It looks very put-upon, and it's probably up to you to fix that.
+
+>pronouns
+At the moment, "it" means the Use-Saga Sausage, "him" means the Use-Saga Sausage, "her" means the Use-Saga Sausage and "them" means the weaselly walleyes.
+
 >score
 Score in a scenario: 33 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
@@ -658,6 +785,10 @@ Score in a scenario: 35 out of 45 total points in the current region, Oyster. Lo
 >patrol
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-patrol-ol-trap-rule
+>x rigged digger
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 Score in a scenario: 36 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
@@ -678,7 +809,7 @@ Oh! So that's how the map looks! And that's where you are now! You trace around 
 
 /^Tenfold Teflon'd Den Loft
 
-#pre-dialer-derail rule
+#testcase-prerule-table-of-oyster-anagrams-pre-dialer-derail-rule
 >derail
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
 !by one point
@@ -711,12 +842,23 @@ Score in a scenario: 37 out of 45 total points in the current region, Oyster. Lo
 >prepay
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-yapper-prepay-rule
+As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.
+
+#+testcase-postrule-table-of-oyster-anagrams-post-yapper-prepay-rule
+>x gleaner
+Nothing (significant) like that is in the immediate vicinity or region.
+
+>x lever
+You're quite glad you found it, even if you're not sure how or why to pull it, yet.
+
 >score
 Score in a scenario: 38 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 45.
 
 # note: the code says "if wipes are not moot" so you might think BANISH LANCE is more sensible, but in this case, I just want to make sure the code paths work.
 >banish wipes
-#pre-trample-ramplet rule
+
+#testcase-prerule-table-of-oyster-anagrams-pre-trample-ramplet-rule
 >trample
 You'd think your lance would make you worthy of climbing the templar ramplet, but not in its current form. It's too dirty.
 >banish lance
@@ -740,11 +882,17 @@ by one point
 
 /^Plasm Lamps
 
+#testcase-postrule-table-of-oyster-anagrams-post-trample-ramplet-rule
+
 >score
 Score in a scenario: 39 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 45.
 
 #let's test the special case where we TAN without PSALMing.
+#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
 >tan
+
+And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.
+
 >score
 Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 44.
 >undo
@@ -764,16 +912,28 @@ by one point
 #notana 'nudge for ant'
 Your score has just gone up by one point
 
++#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
+>x lance
+Nothing (significant) like that is in the immediate vicinity or region.
+
 >score
 Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
 >derail
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-dialer-derail-rule
+>x pins
+The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...
+PS'in.
+
+>ss
+repaired dialer
+
 >score
 Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
-#pre-dialer-redial rule
+#testcase-prerule-table-of-oyster-anagrams-pre-dialer-redial-rule
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
@@ -781,6 +941,11 @@ Maybe in a bit, but the pins are in the way at the moment. They can't be too har
 #+ttc-table-of-oyster-prefigurings-bogus-redial
 >pf
 You can REDIAL the dialer once the pins are not in your way.
+
+#+testcase-prerule-table-of-oyster-anagrams-pre-dialer-redial-rule
+>redial
+Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
+>undo
 
 >spin pins
 Your score has just gone up by one
@@ -810,6 +975,10 @@ Score in a scenario: 44 out of 45 total points in the current region, Oyster. Th
 Your score has just gone up by one point
 
 /^Strip of Profits
+
+#testcase-postrule-table-of-oyster-anagrams-post-dialer-redial-rule
+Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.
+Casper Spacer himself shakes your hand. "No hunter! On the run! None hurt!" He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. "Get this hero a glider girdle!" You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits.
 
 >score
 Oyster (45/45)

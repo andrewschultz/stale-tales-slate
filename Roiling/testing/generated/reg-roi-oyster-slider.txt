@@ -53,44 +53,28 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >lrtlso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->remap
-#notana 'nudge for remap'
-Your score has just gone up by one point
->unset
-!Your score has just gone up by one point
->undo
->undo
->unset
-Your score has just gone up by one point
->remap
-!Your score has just gone up by one point
->score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
 >sing
 by one point
+
+>score
+Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+
+>spit
+by one point
+
 >score
 Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
->scrape
+
+>unset
 by one point
+
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
-
->inset
-Perhaps you should've played it cool and fled, instead.
->undo
->spit
-Perhaps you should've played it cool and fled, instead.
->undo
 
 >stroll
 by one point
 
 /^Olde Lode
-
->thisalt
---You could have also REMAPped the perma-amper to break the jukebox.
-SPIT
-INSET
 
 >score
 Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
@@ -219,7 +203,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >eat
-#notana 'nudge for eat'
 Your score has just gone up by one point
 
 >score
@@ -409,8 +392,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >enlarge
 Your score has just gone up by one point
-
-!You may wish to re-examine the gleaner now it's changed.
 
 >score
 Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.

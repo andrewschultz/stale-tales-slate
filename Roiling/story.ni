@@ -2041,7 +2041,7 @@ check objasking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interr
 the basic RQ out of range rule is not listed in any rulebook.
 
 An RQ out of range rule for a number (called max) (this is the modified RQ out of range rule):
-	say "[one of]You murmur 'Umm...urr.'[or][stopping][if Report Porter Perrot is touchable]Report Porter Perrot yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.'[else if players are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if]";
+	say "[one of]You murmur 'Umm...urr.'[or][stopping][if Report Porter Perrot is touchable]Report Porter Perrot yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.'[else if players are fungible]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if]";
 	say "[line break][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type [b]REPEAT[r] to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
 
 pat-whine is a truth state that varies.
@@ -2584,7 +2584,7 @@ before doing something when Elmo is touchable:
 		say "[convoforce].";
 		reject the player's command;
 
-before doing something when Gretta is touchable and parleys splayer players are moot (this is the Gretta forces initial convo rule):
+before doing something when Gretta is fungible and parleys splayer players are moot (this is the Gretta forces initial convo rule):
 	if current action is fliptoing, say "Magic can wait. You're getting information now." instead;
 	if action is procedural, continue the action;
 	if current action is not talking to Gretta and current action is not QBC responding with:
@@ -7541,7 +7541,7 @@ carry out fliptoing (this is the main fliptoing rule):
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
 				process the Report Porter Perrot Knocks rule;
-			else if the-to entry is not touchable:	[components aren't broken off]
+			else if the-to entry is not fungible:	[components aren't broken off]
 				if the-to entry is not the-from entry and the-to entry is not a backdrop, move the-to entry to location of player;
 			if the-to entry is not the-from entry and the-from entry is not reflexed:
 				if to-bardo is true:
@@ -11266,7 +11266,7 @@ a-text of Race Acre is "RYRY". b-text of Race Acre is "R??G". parse-text of Race
 
 chapter fretful truffle
 
-the fretful truffle is a thing. description is "It's probably a character building experience to eat it. You may learn something about how to think or what to do."
+the fretful truffle is a thing. description is "It's probably a character-building experience to eat it. You may learn something about how to think or what to do."
 
 truf-warn is a truth state that varies.
 
@@ -11742,7 +11742,7 @@ to report-glarers:
 	if mbb is moot and tressi is moot:
 		say "Well! You feel very relaxed now, with both [mbb] and Sister Tressi gone. You feel more in touch with yourself, less obliged to do what society requires...";
 	else:
-		say "You look over to [if mbb is moot]Sister Tressi[else][mbb][end if]. Maybe there's a way to get rid of [if mbb is moot]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
+		say "You look over to [if mbb is moot]Sister Tressi[else][mbb][end if]. Maybe there's a way to get rid of [if mbb is moot]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weigh quite so heavily on you, now."
 
 section Sister Tressi
 
@@ -11782,7 +11782,7 @@ does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing. "Some Trance Nectar lies here. It's totally different from the Large Regal Lager, which keeps you from being productive, but you now realize both will leave you equally miserable. There must be a way to break free from its influence!". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
+the Trance Nectar is a vanishing thing. "Some Trance Nectar lies here. It's totally different from the Large Regal Lager, which keeps you from being productive, but you now realize both will leave you equally miserable. There must be a way to break free from its influence!". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But ... you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x". trance nectar is parse-spoilable.
 
@@ -11883,7 +11883,7 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 				move Leo to location of player;
 				move Rand to location of player;
 				move wzup to location of player;
-				if hogs are not touchable, set the pronoun them to wzup
+				if hogs are not in location of player, set the pronoun them to wzup;
 
 book presto specific verbs
 
@@ -12340,7 +12340,7 @@ chapter Leo
 
 check scaning Leo when Rand is in Dirge Ridge and Rand is fightin: say "It's Rand you need to deal with, now." instead;
 
-Leo is a reflexive bruiser. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to talk to[end if]."
+Leo is a reflexive bruiser. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset. For all their macho talk, he and Rand might just need someone to chat with[end if]."
 
 a-text of Leo is "YRY". b-text of Leo is "YRY". parse-text of leo is "UNIQUE". leo is any-spoilable.
 
@@ -12356,7 +12356,7 @@ initial appearance of Rand is "[bug-report]".
 
 chapter whassuping
 
-the wzup is privately-named proper-named reflexive boring scenery. printed name of wzup is "between [l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
+the wzup is privately-named proper-named reflexive boring scenery. printed name of wzup is "both [l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "W[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -12970,8 +12970,8 @@ understand "a drive" as drive a.
 
 a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "-[sp]V[sp]-[sp]D[sp]-[sp]R". drive a is parse-spoilable.
 
-does the player mean inserting the disk into Drive A: it is very likely.
-does the player mean inserting the disk into Drive E: it is likely.
+does the player mean inserting it into Drive A: it is very likely.
+does the player mean inserting it into Drive E: it is likely.
 
 does the player mean doing something with Drive A: it is very likely.
 does the player mean doing something with Drive E: it is likely.
@@ -13240,7 +13240,7 @@ understand "polemic" as Im Le Cop polemic.
 
 chapter BUB DUDE EGG
 
-BUB DUDE EGG is proper-named reflexive boring scenery. description of Bub Dude Egg is "Ugh! There must be something wrong with the code you compiled, to print such a defiant message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!". bore-text is "You can really only examine it--other actions leave you seeing red, thinking '[first custom style]BUDGE[r]! [first custom style]BUDGE[r]!'".
+BUB DUDE EGG is proper-named reflexive boring scenery. description of Bub Dude Egg is "Ugh! There must be something wrong with the code you compiled, if you're seeing such a defiant message. If only there was a way or action to fix code that's compiled but still doesn't do what you want!". bore-text is "You can really only examine it--other actions leave you seeing red, thinking '[first custom style]BUDGE[r]! [first custom style]BUDGE[r]!'".
 
 a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text of BUB DUDE EGG is "?[sp]?[sp]?[sp]-[sp]?". bub dude egg is parse-spoilable.
 
@@ -18573,9 +18573,7 @@ after examining parleys splayer players for the first time:
 	say "Oh, and I couldn't resist: they're definitely not going to be yer pals. You need to get rid of them!";
 	continue the action;
 
-printed name of parleys splayer players is "[if parleys splayer players are reflexed]macks[else]parleys splayer players[end if]"
-
-to say players-c: say "[if parleys splayer players are reflexed]Macks[else]Parleys splayer players[end if]"
+to say players-c: say "Parleys splayer players"
 
 to say pla-ma: say "[if parleys splayer players are reflexed]mack[else]player[end if]"
 
@@ -19534,7 +19532,7 @@ Elmer is an aide in Reclusion Inclosure.
 Merle is an aide in Reclusion Inclosure. The chum of Merle is Elmer.
 
 to decide which number is elmer-merle-bonus:
-	decide on boolval of (whether or not aside-llp is reflexed) + boolval of (whether or not holy nest is reflexed);
+	decide on boolval of (whether or not aside-llp is in Reclusion Inclosure) + boolval of (whether or not holy nest is in Reclusion Inclosure);
 
 check scaning an aide:
 	if aside-llp is touchable:
@@ -22291,7 +22289,7 @@ this is the oyster-alt rule:
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to [b]SPILL[r] them to bypass a puzzle.";
 	if Olde Lode is visited:
 		say "[2da][remaining-actions of 0] are the other actions that would've annoyed Posh Hops Shop pesty types[if spill-target is trolls] instead of SPILLing the pills[else], as you only needed three of the five possible[end if].";
-		if tunes are moot, say "[2da]You could have also [if remapped is true][b]UNSET[r] the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
+		if tunes are moot, say "[2da]Another way to break the jukebox was to [if remapped is true][b]UNSET[r] the tunes[else][b]REMAP[r] the perma-amper[end if].";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";
 	if Anger Range is unvisited:
@@ -22406,18 +22404,13 @@ to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	if capers is not reflexed, add "[b]SCRAPE[r]" to poshact;
 	if gins sign is not reflexed, add "[b]SING[r]" to poshact;
 	if tunes are not moot, add "[b]UNSET[r]/[b]REMAP[r]" to poshact;
-	if tunes are reflexed:
-		if remapped is true:
-			add "[b]UNSET[r] (instead of [b]REMAP[r] to break the jukebox)" to poshact;
-		else:
-			add "[b]REMAP[r] (instead of [b]UNSET[r] to break the jukebox)" to poshact;
 	sort poshact in random order;
 	if fd > 0:
 		while number of entries in poshact > fd:
 			remove entry fd from poshact, if present;
 	repeat with mytemp running from 1 to number of entries in poshact:
 		if mytemp is number of entries in poshact:
-			say "or [entry mytemp in poshact]";
+			say "and [entry mytemp in poshact]";
 		else:
 			say "[entry mytemp in poshact][if mytemp is not number of entries in poshact - 1],[end if] ";
 

@@ -55,38 +55,27 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 >attack lolstr trolls
 "I'd beat..." you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down.
 
->remap
-#notana 'nudge for remap'
-Your score has just gone up by one point
->unset
-!Your score has just gone up by one point
->undo
->undo
->unset
-Your score has just gone up by one point
->remap
-!Your score has just gone up by one point
->score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
 >sing
 by one point
+
+>score
+Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+
+>spit
+by one point
+
 >score
 Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
->scrape
+
+>unset
 by one point
+
 >score
 Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
 
 #+verbcase listen-oyster-if-player-is-in-posh-hops-shop
 >listen
 Silence. Awkward silence. An occasional cough.
-
->inset
-Perhaps you should've played it cool and fled, instead.
->undo
->spit
-Perhaps you should've played it cool and fled, instead.
->undo
 
 >stroll
 by one point
@@ -108,11 +97,6 @@ Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't
 #testcase-exits-olde-lode
 >exits
 As in the Posh Hops Shop, it's not about any one direction but getting past an obstacle.
-
->thisalt
---You could have also REMAPped the perma-amper to break the jukebox.
-SPIT
-INSET
 
 >score
 Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
@@ -357,7 +341,6 @@ Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lo
 Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to.
 
 >eat
-#notana 'nudge for eat'
 Your score has just gone up by one point
 
 >score
@@ -567,8 +550,6 @@ Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lo
 
 >enlarge
 Your score has just gone up by one point
-
-!You may wish to re-examine the gleaner now it's changed.
 
 >score
 Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
