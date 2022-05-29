@@ -6435,7 +6435,7 @@ this is the listen-others rule:
 	if noun is selly yells, say "[selyel]" instead;
 	if player is in Clangier Clearing, say "[selyel]" instead;
 	if noun is brr hub, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
-	if noun is s-i or noun is s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
+	if noun is s-i or noun is s-c, say "A low buzzing from your [my-cinos]--odd. What could they do, or buy?" instead;
 
 to say selyel:
 	say "Selly yells[one of], important to those yelling them but not you[or][stopping]: [randbla][line break]";
@@ -19811,7 +19811,84 @@ a start-pre-fruit is a kind of thing. a start-pre-fruit has text called locale-t
 
 a generic-rut-pre is a kind of thing.
 
+a cinos is a kind of thing.
+
+definition: a thing (called th) is final-puz:
+	if th is a cinos, yes;
+	if th is tekno token, yes;
+	no;
+
 check taking a start-pre-fruit: say "Maybe [the noun] would be more useful and easier to carry in some other form." instead;
+
+check giving a final-puz thing to when mrlp is others:
+	if second noun is storage, try inserting noun into second noun instead;
+	if second noun is curtis:
+		if noun is tekno token, say "Curtis declines. 'Once you're all done, I trust you to give it back to me.'" instead;
+		say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
+	if second noun is len craig, say "[if noun is tekno token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
+	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter, say "[second noun] is probably interested in something much more obviously valuable." instead;
+	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
+
+chapter all the cinoses
+
+[the numbers here are arbitrary]
+
+to say my-cinos:
+	let nc be number of cinoses carried by player;
+	say "[list of cinoses carried by player]";
+	if nc is not 1, say " (BUG: should have exactly one CIONS item)";
+
+section coin (1)
+
+a coin is a cinos. description is "The coin really looks more omen-y than money. Perhaps its value is only symbolic, and it could help you with the stuff money can't buy. There's a singed design on it, which is signed."
+
+a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "UNIQUE". coin is any-spoilable.
+
+section coins (2)
+
+the coins are plural-named cinoses. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
+
+a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?". coins are any-spoilable.
+
+section icon (3)
+
+an icon is a cinos. description is "The icon is designed to be too interesting to pitch but not important looking enough to be currency. There's a singed design on it, which is signed."
+
+section icons (4)
+
+the icons are plural-named cinoses. description is "The icons are designed to be too interesting to pitch but not important looking enough to be currency. Instead of someone important, they each have shattered musical notes on them. Each has a singed design, signed."
+
+a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "x[sp]-[sp]x[sp]-[sp]x".
+
+section sonic coins (5)
+
+the s-c are privately-named plural-named cinoses. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "sonic coins".
+
+understand "coin" and "sonic coin" as s-c when player has s-c.
+
+a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text of s-c is "I[sp]x[sp]O[sp]x[sp]x". s-c is parse-spoilable.
+
+section sonic icons (6)
+
+the s-i are privately-named plural-named cinoses. description of s-i is "The icons vibrate from the sound they make. They may have some hidden power. Or some trivial one.". understand "sonic/icons" and "sonic icons" as s-i. printed name of s-i is "sonic icons".
+
+understand "icon" and "sonic icon" as s-i when player has s-i.
+
+section singed design (not a cinos but part of whichever you're carrying)
+
+the singed design is part of the coin. the singed design is boring. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.". bore-check is bore-singed-design rule.
+
+this is the bore-singed-design rule:
+	if current action is scaning:
+		let myc be a random thing incorporating singed design;
+		say "(You wind up scanning [the myc] instead.)";
+		try scaning myc instead;
+
+understand "designs" as singed design when mrlp is others
+
+check reading a cinos (this is the default to singed design rule) :
+	if singed design is not part of the noun, say "BUG: there should be a singed design to read, though it's not critical to the game." instead;
+	try reading singed design instead;
 
 book Rustic Citrus
 
@@ -20497,60 +20574,9 @@ does the player mean doing something with icons when icons are off-stage: it is 
 does the player mean doing something with coin when coin is off-stage: it is likely.
 does the player mean doing something with icon when icon is off-stage: it is likely.
 
-a coin is a thing. description is "The coin really looks more omen-y than money. Perhaps its value is only symbolic, and it could help you with the stuff money can't buy. There's a singed design on it, which is signed."
-
-a thing can be final-puz. a thing is usually not final-puz.
-
-check giving a final-puz thing to when mrlp is others:
-	if second noun is storage, try inserting noun into second noun instead;
-	if second noun is curtis:
-		if noun is tekno token, say "Curtis declines. 'Once you're all done, I trust you to give it back to me.'" instead;
-		say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
-	if second noun is len craig, say "[if noun is tekno token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
-	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter, say "[second noun] is probably interested in something much more obviously valuable." instead;
-	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
-
-a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "UNIQUE". coin is any-spoilable.
-
-section icon
-
-an icon is a thing. description is "The icon is designed to be too interesting to pitch but not important looking enough to be currency. There's a singed design on it, which is signed."
-
 section coins
 
-the coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
-
-a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?". coins are any-spoilable.
-
-section singed design
-
-the singed design is part of the coin. the singed design is boring. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.". bore-check is bore-singed-design rule.
-
-this is the bore-singed-design rule:
-	if current action is scaning:
-		let myc be a random thing incorporating singed design;
-		say "(You wind up scanning [the myc] instead.)";
-		try scaning myc instead;
-
-understand "designs" as singed design when mrlp is others
-
-definition: a thing (called myt) is iconic:
-	if myt is icon, yes;
-	if myt is icons, yes;
-	if myt is coin, yes;
-	if myt is coins, yes;
-	if myt is s-c, yes;
-	if myt is s-i, yes;
-	no;
-
-check reading (this is the default to singed design rule) :
-	if noun is iconic:
-		if singed design is not part of the noun, say "BUG: there should be a singed design to read." instead;
-		try reading singed design instead;
-
 section icons
-
-the icons are plural-named things. description is "The icons are designed to be too interesting to pitch but not important looking enough to be currency. Instead of someone important, they each have shattered musical notes on them. Each has a singed design, signed."
 
 check sbing coins: [can't find any way else to do this]
 	say "The settler is all over the place. Maybe it would be better to scan just one coin?";
@@ -20571,22 +20597,6 @@ check scaning coins:
 			now mytext is a-text of coin;
 		say "Your settler registers [spacies of mytext]." instead;
 
-a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "x[sp]-[sp]x[sp]-[sp]x".
-
-section sonic coins
-
-the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "sonic coins".
-
-understand "coin" and "sonic coin" as s-c when player has s-c.
-
-a-text of s-c is "YRYRR". b-text of s-c is "YRY??". parse-text of s-c is "I[sp]x[sp]O[sp]x[sp]x". s-c is parse-spoilable.
-
-section sonic icons
-
-the s-i are privately-named plural-named things. description of s-i is "The icons vibrate from the sound they make. They may have some hidden power. Or some trivial one.". understand "sonic/icons" and "sonic icons" as s-i. printed name of s-i is "sonic icons".
-
-understand "icon" and "sonic icon" as s-i when player has s-i.
-
 sonicing is an action applying to nothing.
 
 this is the make-slot-appear rule:
@@ -20596,7 +20606,7 @@ this is the make-slot-appear rule:
 	if player does not have So Great Storage, continue the action;
 	say "checking if slot is part of storage yet. [whether or not lost slot is part of so great storage].";
 	if lost slot is part of So Great Storage, continue the action;
-	say "The So-Great Storage begins to rattle by your [if player has s-i]icons[else if player has s-c]coins[else][bug-report][end if], and a lost slot appears in it.";
+	say "The So-Great Storage begins to rattle by your [my-cinos], and a lost slot appears in it.";
 	now lost slot is part of So Great Storage.
 
 check inserting into So Great Storage:
@@ -20633,8 +20643,6 @@ check scaning s-i when concisions are reflexive:
 	try scaning concisions instead;
 
 section final-puzness defined here after thing definitions so articles are right
-
-s-i is final-puz. s-c is final-puz. the coin is final-puz. the coins are final-puz. the icon is final-puz. the icons are final-puz. the tekno token is final-puz.
 
 chapter passport
 

@@ -1916,19 +1916,19 @@ this is the pre-gates-stage-flip rule:
 	if gates-score is 2, say "No need to over-study or over-think. Through the gates!" instead;
 
 this is the post-gates-stage-flip rule:
-	say "[gates-score] is current gates score.[line break]";
 	if gates-score is 2:
 		say "Man! Another simple reflection gives serious results[if noun is not fleeing feeling]. Hey, you don't have to do everything. There are people who make technology that makes things easier for others, and that's (wait for it) a sort of magic on its own[end if]. After all your struggles, you feel almost guilty the last bit was straightforward, but it passes. A tidy conclusion is, well, tidy.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others - 1]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 		if player has fleeing feeling:
 			moot fleeing feeling;
 			say "[line break]As a bonus, all that preparation puts to sleep the feeling you're a perp.";
 	else if gates-score is 1:
-		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else[if noun is not fleeing feeling]. Or perhaps people deserve convenience and simplicity even if they haven't rescued a magical land[end if].[paragraph break]You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
+		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was deliberately wrong about most everything else[if noun is not fleeing feeling]. Or perhaps people deserve convenience and simplicity even if they haven't rescued a magical land[end if].[paragraph break]You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
 		if player has fleeing feeling, say "[line break]Also, you feel a little less like a perp now. The fleeing feeling remains, but it's much weaker."
 	[an edge case bothered me here, so I want to write it out in case it ever bothers me again: if did-guru is false, we cannot min-up, because you may just use the arugula and then go win anyway. That'd be a bit silly on the player's part, but it's possible.]
 
 this is the post-perp-prep rule:
 	now fleeing feeling is reflexed;
+	process the post-gates-stage-flip rule;
 
 section others auxiliary
 
