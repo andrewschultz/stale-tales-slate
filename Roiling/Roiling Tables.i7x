@@ -39,8 +39,8 @@ meet bans	meet bans	false	608585586	798739	--	"basement"	"basement"	pre-meet-ban
 tables	tables	false	401610655	788499	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	270594	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from [the bins]. They're still covered with long numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 rifle	rifle	false	338451493	133424	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
-plates	staple	true	464657709	821265	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-plaster	stapler	true	549981512	952337	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"The psalter crumbles, with a stapler falling to the floor. You take the stapler[if plates are touchable] as the formerly stuck plates fall[end if]. Behind, you see an apertured departure, but it's not open enough to, well, depart. Yet."
+plates	staple	true	464657709	821265	--	"staple"	"staple"	--	--	"The plates [if plaster is fungible]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
+plaster	stapler	true	549981512	952337	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"The psalter crumbles, with a stapler falling to the floor. You take the stapler[if plates are fungible] as the formerly stuck plates fall[end if]. Behind, you see an apertured departure, but it's not open enough to, well, depart. Yet."
 Respect Specter	Respect Specter	false	640791549	950292	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
 
 this is the post-palm-lamp rule:
@@ -529,7 +529,7 @@ book presto
 table of presto anagrams
 the-from	the-to	taked	fullhash	binhash	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 lamb	lamb	false	138495715	6147	--	"blam"	"blam"	a rule	a rule	"You make pretend the gun noises as you point your finger at the poor little lamb. It runs off, scared. But the right kind of scared! And towards greener--well, less grey--pastures."
-hump	hump	false	287929218	1085568	Austerer Treasure	"umph"	"umph"	--	post-hump-umph rule	"You don't need to ham up 'Hup, ma!' to get over a hump, because it's enough just to try umph. The hump vanishes once you get over it[if Leo is touchable]. [l-n-r] follow, jumping unnecessarily[end if]."
+hump	hump	false	287929218	1085568	Austerer Treasure	"umph"	"umph"	--	post-hump-umph rule	"You don't need to ham up 'Hup, ma!' to get over a hump, because it's enough just to try umph. The hump vanishes once you get over it[if Leo is fungible]. [l-n-r] follow, jumping unnecessarily[end if]."
 tsar star	tsar star	true	286895605	917505	--	"rats"	"rats"	--	post-tsar-star rule	"The tsar star seems lodged in the tars. But you twist it around saying [b]RATS[r], and it seems to wiggle a bit. Just as you're about to give up, you give one more twiddle, and the tsar star pops in the air![paragraph break]You manage to juggle it before it falls in the tars again, and you just manage to swat it onto dry ground before it falls. You take time to wipe the remaining tars off the tsar star, and as you do, the main tars themselves schlurp into the ground.[paragraph break]Now the tsar star is clean, you see you can affix it to your clothes. So you do."
 dart	dart	true	211650728	655369	--	"drat"	"drat"	--	--	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."
 plebe	plebe	false	409310921	34834	--	"bleep"	"bleep"	pre-plebe-bleep rule	--	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing tsar star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[else]. It's no worse than his legions['] lingoes, but man, you said it with autority! How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. 'Reamin[']! Remain? Me, I ran!' (Don't worry, the plebe was getting bored and wanted an excuse to leave, anyway. You gave cover, in case they were being surveilled.)[paragraph break]You can go east now." [bold-ok]
@@ -562,7 +562,7 @@ fount	futon	false	377990806	1597472	--	"futon"	"futon"	--	--	"The fount turns in
 censer	computer screen	true	525123080	401428	--	"screen"	"screen"	--	post-censer-screen rule	"The black [censer] and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	16925723	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 TBA key	TBA key	false	123716741	524291	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
-Im Le Cop polemic	Im Le Cop polemic	false	465512068	55572	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is touchable]. The ALocalCo cola doesn't give enough energy[end if]."
+Im Le Cop polemic	Im Le Cop polemic	false	465512068	55572	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is fungible]. The ALocalCo cola doesn't give enough energy[end if]."
 peels speel	peels speel	false	487165982	296976	--	"sleep"	"sleep"	pre-peels-speel-sleep rule	--	"'Fun to...' you muse, looking at the futon. You lie down and immediately feel -- yes, a smarter armrest. That's a good sign! During this purest rest-up, you osmose the max-sleep examples, and even the smartest mattress would only have given smatters of what your subconscious soaks up via from-cot comfort. You lose fatigue and even a potential ague fit. 'Real day already?' you remark. 'Up, coder! Produce!'"
 trim socks	ROM sticks	true	636341092	939268	--	"rom sticks"	"romsticks/romstick" or "rom stick/sticks"	--	post-rom-sticks rule	"The socks unravel and re-ravel into a pair of ROM sticks that [if robot is reflexed]the [robot] takes after whizzing out from under the Labs Slab. In they go to Drive A, bfore your mechanical friend returns to its sleep under the slab. Your work will go faster now[else]will surely fit into the right place when you need them to[end if]."
 escaroles	casserole	false	682843772	411669	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
@@ -587,7 +587,7 @@ this is the pre-plebe-bleep rule:
 		do nothing instead;
 
 this is the pre-boing-bingo rule:
-	if player does not have the PG on up popgun and popgun is touchable:
+	if player does not have the PG on up popgun and popgun is fungible:
 		say "(taking the popgun first while you mess with the boing-go bin)[paragraph break]";
 		now player has popgun;
 
@@ -629,7 +629,7 @@ to say get-earring:
 		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab it! It falls from the wall, shrinking in the process into a quivering, smaller hoop. An angrier earring. Wow! Maybe you didn't get full style points, but you got what you needed";
 	else:
 		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, shrinking into an angrier earring. Wow";
-	say "[if leo is touchable]! [l-n-r] applaud your agility[end if]![paragraph break]The angrier earring quivers as you pick it up. You think of various epithets it might anagram to, but you can't find any. Maybe you should save it for later";
+	say "[if leo is fungible]! [l-n-r] applaud your agility[end if]![paragraph break]The angrier earring quivers as you pick it up. You think of various epithets it might anagram to, but you can't find any. Maybe you should save it for later";
 
 this is the pre-mazeltov rule:
 	if cur-score of presto < 3:
@@ -729,7 +729,7 @@ this is the pre-reboot rule:
 	if player has keyboard and keyboard is not on slab:
 		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
 		preef be troo e robot instead;
-	if keyboard is not touchable:
+	if keyboard is not fungible:
 		say "You have nothing to type with, so it doesn't do much good.";
 		preef be troo e robot instead;
 	if disk is not in Drive A:
@@ -741,7 +741,7 @@ this is the pre-reboot rule:
 	set the pronoun it to computer screen;
 
 this is the post-reboot rule:
-	if rom sticks are touchable, moot rom sticks;
+	if rom sticks are fungible, moot rom sticks;
 	now be troo e robot is scenery;
 	move peels speel to Hacks Shack;
 
@@ -758,14 +758,14 @@ this is the pre-yak-keyboard rule:
 
 this is the post-yak-keyboard rule:
 	moot leaf;
-	if labs slab is touchable, try putting keyboard on labs slab;
+	if labs slab is fungible, try putting keyboard on labs slab;
 
 this is the pre-polemic-compile rule:
 	if player is not in Hacks Shack:
 		say "There is no computer around. You probably want to go back to the [shack] for this.";
 		preef Im Le Cop polemic instead;
-	if keyboard is not touchable or computer screen is not touchable:
-		say "Good idea, but tough to program without something to [if computer screen is touchable]type on[else if keyboard is touchable]read code from[else]type on or read code from[end if].";
+	if keyboard is not fungible or computer screen is not fungible:
+		say "Good idea, but tough to program without something to [if computer screen is fungible]type on[else if keyboard is fungible]read code from[else]type on or read code from[end if].";
 		preef Im Le Cop polemic instead;
 	if keyboard is not on slab or computer screen is not on slab:
 		say "Good idea, but first, you probably want to put [list of slabbable things] on the slab. Do so now?";
@@ -796,7 +796,7 @@ this is the post-polemic-compile rule:
 	if starch charts are in Saps Pass, poss-d;
 
 this is the pre-peels-speel-sleep rule:
-	if futon is not touchable:
+	if futon is not fungible:
 		say "You haven't yet made anywhere comfortable to sleep.";
 		preef peels speel;
 		do nothing instead;
@@ -810,7 +810,7 @@ this is the post-rom-sticks rule:
 
 this is the pre-bub-dude-egg rule:
 	if ALocalCo Cola is not moot:
-		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is touchable]coal won't cut it. Too early 20th century[else]ALocalCo Cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
+		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is fungible]coal won't cut it. Too early 20th century[else]ALocalCo Cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
 		preef BUB DUDE EGG;
 		do nothing instead;
 
@@ -834,7 +834,7 @@ to say sub-bus:
 section presto auxiliary
 
 definition: a thing (called th) is slabbable:
-	unless th is touchable, no;
+	unless th is fungible, no;
 	if th is keyboard or th is computer screen, yes;
 	no;
 
@@ -870,7 +870,7 @@ cans	cans	false	186374877	270341	--	"scan"	"scan"	--	--	"You scan the cans, and 
 pest pets	pest pets	false	408656052	819216	--	"step"	"step"	--	post-step-pest-pets rule	"The pets do seem to follow you if you just walk aimlessly or with a purpose. So you mix it up a bit. A dance step here, a shimmy there. They start crying! They're supposed to be the ones that are pests to follow! It's all very upsetting. But don't worry. They won't be upset for long. They'll find someone else to cling to."	"The pills fall out of the bottle, attracting the attention of the pest pets. The bouncing pills bounce in place for a while before going off to a corner of the Dearths, taking the pets with them."
 eeks	eeks	false	404819362	263184	Lean Lane	"seek"	"seek"	--	post-seek-eeks rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."	"The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna shakes her head but invites you in."
 dent	dent	false	320852724	532504	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
-tea	tea	false	233103945	524305	--	"eat"	"eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tee-details].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"	"You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the [tea], too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel and don't know how. Not too much. Anyway, once you left, she kept muttering how she wanted to get rid of this Paw-R-Wrap to somebody before I popped it. So I snuck it for you.'"
+tea	tea	false	233103945	524305	--	"eat"	"eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is fungible] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is fungible]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tee-details].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"	"You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the [tea], too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel and don't know how. Not too much. Anyway, once you left, she kept muttering how she wanted to get rid of this Paw-R-Wrap to somebody before I popped it. So I snuck it for you.'"
 trout	trout	false	471002223	1720320	--	"tutor"	"tutor" or "tutor trout/tortu"	pre-tutor-trout rule	post-tutor-trout rule	"[trout-tut]."	"You drop a few pills, which bounce up and down. Pulling on some knowledge you didn't know you had, you show Tortu some surprisingly advanced martial arts techniques to time his attacks just right. Once he's got the hang of it, the pills aren't good for much. Aunt Tuna grinds them up and pours them down the sink. But the muscle memory stays."
 wipes	wipes	true	458473653	4489488	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bogus-trace	bogus-trace	false	337433333	655381	--	"trace"	"trace"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"	"The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from."
@@ -997,7 +997,7 @@ this is the post-tutor-trout rule:
 
 to say trout-tut:
 	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]"; [bold-ok]
-	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you Paw R Wrap wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tea at a tee is touchable]--and also jerks her head towards the [tee][end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are reflexive], though maybe you could sneak the wipes[end if][if dent is touchable]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
+	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you Paw R Wrap wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tea at a tee is fungible]--and also jerks her head towards the [tee][end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are reflexive], though maybe you could sneak the wipes[end if][if dent is fungible]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
 
 this is the pre-crate-react rule:
 	if bogus-trace is in Lapsin Plains:
@@ -1035,7 +1035,7 @@ this is the pre-snap-span-pans rule:
 
 this is the pre-warp-wrap rule:
 	now warp-try is true;
-	if Aunt Tuna is touchable:
+	if Aunt Tuna is fungible:
 		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved [']til you find the right person to annoy.";
 		preef ruby;
 		do nothing instead;
@@ -1048,7 +1048,7 @@ this is the post-warp-wrap rule:
 	moot sandier sardine;
 
 this is the pre-search-arches rule:
-	if sardine is touchable:
+	if sardine is fungible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.";
 		preef Achers Chaser Arches;
 		do nothing instead;
@@ -1152,7 +1152,7 @@ this is the post-tan-ant rule:
 	now Plasm Lamps is shunned;
 
 this is the pre-dialer-derail rule:
-	if yapper is touchable:
+	if yapper is fungible:
 		say "The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.";
 		preef bogus-derail;
 		do nothing instead;
@@ -1162,7 +1162,7 @@ this is the post-dialer-derail rule:
 	now pins are in tenfold;
 
 this is the pre-dialer-redial rule:
-	if pins are touchable:
+	if pins are fungible:
 		say "Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.";
 		preef bogus-redial;
 		do nothing instead;
@@ -1224,7 +1224,7 @@ mended mini denim	Eclairs	true	326810705	12568	--	"mined"	"mined"	--	--	"You hea
 bogus-dandier	bogus-dandier	false	371276262	139545	Treading Gradient	"dandier"	"dandier"	--	post-dandier rule	"You feel slightly more cheery about your prospects of getting out. You didn't fall that far. You remember that, although the exit is high above, the treading gradient was, well, a gradient. So you start crawling through various passages until you find one where--yes, there's a bit of sunlight. You could make it up through there. You start digging with your hands, and what do you know? There's a passage out. You fill it once aboveground, then you do the same for where the denim was. You didn't necessarily solve anything, but you showed you could respond positively when in trouble."
 raves saver	raves saver	false	472956780	16943121	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 sporties ripostes	sporties ripostes	false	709599244	966928	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
-strudel	strudel	false	592462631	1968152	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is touchable]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
+strudel	strudel	false	592462631	1968152	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is fungible]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 fissure	fissure	false	582291393	1442096	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--click! I guess the fissure was vulnerable to ... fursies."
 luck node	luck node	false	522953692	1076252	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. Somehow, as it pokes its bill at the luck node, it finds the right combination. Now that's luck!"
 dinger	solve a loaves	false	382846875	139609	--	"grained"	"grained"	--	post-dinger-grained rule	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'" [this is the end of the weird stuff for LLPs. The rest deals with the agnostic. ]
@@ -1322,7 +1322,7 @@ this is the post-strudel-rustled rule:
 	moot sled rut;
 
 this is the pre-fussier rule:
-	if duck is not touchable:
+	if duck is not fungible:
 		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
 		preef fries us fissure;
 		do nothing instead;
@@ -1340,7 +1340,7 @@ this is the post-yow-free rule:
 	now fissure is unfigured;
 
 this is the pre-unlocked rule:
-	if duck is not touchable:
+	if duck is not fungible:
 		say "You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, [b]UNLOCKED[r] should work. It just feels right.";
 		now node-preef is true;
 		preef luck node;
@@ -1440,7 +1440,7 @@ to say add-adj:
 
 section towers auxiliary
 
-check preferring sometimes abbreviated room descriptions (this is the override built in commands to make Marlon normal rule): if Marlon is touchable, try fliptoing Marlon instead;
+check preferring sometimes abbreviated room descriptions (this is the override built in commands to make Marlon normal rule): if Marlon is fungible, try fliptoing Marlon instead;
 
 book otters
 
@@ -1588,7 +1588,7 @@ this is the post-seacube-because rule:
 
 this is the pre-eels-else rule:
 	abide by the medal check rules for eels;
-	if sea cube is touchable:
+	if sea cube is fungible:
 		say "You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word." instead;
 		preef eels;
 
@@ -1682,7 +1682,7 @@ this is the post-perverse-preserve-flip rule:
 		say "The [b]IQ[r] medal you're wearing clanks against the [b]LUCKY[r] medal. It looks a bit clearer, now.";
 	else if nounsolve is 3:
 		move noun to location of player;
-		say "[line break]The [list of touchable southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your [b]IQ[r] medal looks very shiny now.";
+		say "[line break]The [list of fungible southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your [b]IQ[r] medal looks very shiny now.";
 		now random southy puzanimal not in perverse preserve is llpish;
 		d "[list of southy puzanimals not in perverse preserve].";
 		d "[random southy puzanimal not in perverse preserve] is now LLPish.";
@@ -1710,17 +1710,17 @@ this is the post-lamer-realm-flip rule:
 		say "The [b]LUCKY[r] medal you're wearing clanks against the [b]IQ[r] medal. It looks a bit clearer, now.";
 	else if adjsolve is 3:
 		move noun to location of player;
-		say "The [list of touchable reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of touchable reflexive animals] and shrug a bit, as if it can come along if it wants to. Your [b]LUCKY[r] medal looks very shiny now.";
+		say "The [list of fungible reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of fungible reflexive animals] and shrug a bit, as if it can come along if it wants to. Your [b]LUCKY[r] medal looks very shiny now.";
 		d "choosing llpish animal from [list of reflexive animals in lamer realm].";
 		now random reflexive animal in lamer realm is llpish;
 	move asyllabic lilac bays to minded midden;
 
 this is the pre-whistle-deeply rule:
-	if Elvira is touchable:
+	if Elvira is fungible:
 		say "Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.";
 		get-dead;
 		follow the shutdown rules instead;
-	if parrot is touchable:
+	if parrot is fungible:
 		say "The parrot still has the whistle. You can't play the whistle until it's yours.";
 		preef whistle;
 		do nothing instead;
@@ -1734,7 +1734,7 @@ this is the pre-medals-quickly rule:
 		say "You feel a surge, but not enough. [if medals-shiny is 0]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe there's a way to clean [if medals-shiny is 0]them[else]it[end if] up and restore [if medals-shiny is 0]their[else]its[end if] full power[med-unf].";
 		preef medals;
 		do nothing instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
-	if Merle is touchable:
+	if Merle is fungible:
 		say "That seems right, but not now. [e-n-m]'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals;
 		do nothing instead;
@@ -2537,9 +2537,9 @@ Lois the Hostile	"She complains[hostile-red]!"
 Hostile Is He Lot	"They complain[hostile-red]!"
 promise imposer	"The promise imposer seems to talk about everything except what you want to. It makes you see red. Maybe that evasiveness can be a hint."
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]Why, they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
-agnostic	"[if dinger is touchable][agnostic] would be too distracted for general conversation even without [dinger].[else if bot boat is touchable][agnostic] gestures to a bot boat. It could help you across Leak Lake![else if player is in obscurest subsector]That would confuse [agnostic]--you need to help Dr. Yow present things just a bit better.[else][agnostic] blinks a bit. 'I'm not really good with the whole general conversation thing. But I'll be glad to tell you technical stuff if we just [b]TALK[r].'[one of][paragraph break][i][bracket]NOTE: [b]TALK TO[r][i] [agnostic] will give the most information to start.[close bracket][r][or][stopping][end if]"
+agnostic	"[if dinger is fungible][agnostic] would be too distracted for general conversation even without [dinger].[else if bot boat is fungible][agnostic] gestures to a bot boat. It could help you across Leak Lake![else if player is in obscurest subsector]That would confuse [agnostic]--you need to help Dr. Yow present things just a bit better.[else][agnostic] blinks a bit. 'I'm not really good with the whole general conversation thing. But I'll be glad to tell you technical stuff if we just [b]TALK[r].'[one of][paragraph break][i][bracket]NOTE: [b]TALK TO[r][i] [agnostic] will give the most information to start.[close bracket][r][or][stopping][end if]"
 Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too absorbing[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is touchable]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]?[paragraph break]'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
+Tetris Sitter	"[if itster is not moot][The tetris sitter] has nothing to say. Her game is too absorbing[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if anodyne is fungible]St. Teri looks at you but can't help looking at [the anodyne][else if top opt pot is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]?[paragraph break]'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
 
@@ -2584,14 +2584,14 @@ racoon	"The racoon skitters around."
 snail	"Schlurrrp."
 owls	"They're too busy swooping at you to talk."
 raptor	"'Roooooooar.'"
-parrot	"[if Merle is touchable]Don't blow the parrot's cover![else]'Fear the feather! A bird, rabid!' Those revenge fantasies are pretty intense but won't happen in the parrot's current state. Or here.[end if]"
+parrot	"[if Merle is fungible]Don't blow the parrot's cover![else]'Fear the feather! A bird, rabid!' Those revenge fantasies are pretty intense but won't happen in the parrot's current state. Or here.[end if]"
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
 
 to say tho-need: if power-back is true, say ", though I feel you may not need the eels['] energy"
 
 to say tho-eels: if power-back is true, say ", though you wonder if you need a double-charge after talking to the eels"
 
-to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if holy nest is touchable][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[else]ignore you--you seem easy to push around[end if]"
+to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if holy nest is fungible][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[else]ignore you--you seem easy to push around[end if]"
 
 to say peep-on: say "'NO! Peep on!' [the noun] chides you, and you doubt the substance of what you said deserved such a nonsequitur. Maybe you could get rid of them somehow"
 
@@ -2613,8 +2613,8 @@ Respect Specter	"'I'll give you help if you [b]SCAN[r] me. But my bodily life an
 
 table of stores ask x about x
 askee	dialogue-text
-nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
-tokers	"[if store n is touchable]'Missing our friend, man!'[else]They're not bad people, but trust me, you don't want to give them such an invitation.[end if]" [bold-ok]
+nestor	"[if store k is fungible]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
+tokers	"[if store n is fungible]'Missing our friend, man!'[else]They're not bad people, but trust me, you don't want to give them such an invitation.[end if]" [bold-ok]
 blabber babbler	"You probably don't have to ask to hear the blabber babbler's personal anecdotes."
 Rehabs Basher	"'I'm nothing without [bab-name]'s help.' This continues for a minute, after which you sort of wish the Rehabs Basher WOULD be, or say, nothing. How [i]tedious[r]." [bold-ok]
 
@@ -2687,10 +2687,10 @@ mardier admirer	"'But enough about me! What about you?' You need a way to make t
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
 Tetris Sitter	"[if top opt pot is moot][The tetris sitter] thanks you for aiding her spiritual growth. In return, just go out and come back in if you need any help with the curst palace. She thinks she can help, even if she doesn't have exact answers[else if anodyne is moot]St. Teri looks almost perfectly ready to help, but she can't quite, yet[else if itster is moot]St. Teri still seems in a bit of a torpor. But she seems to want to help[else][The tetris sitter] ignores you, working on her high score[end if]."
-agnostic	"[if player is in obscurest subsector][agnostic] wants to hear [yow]. Maybe you can help [yow] give a neat lecture.[else if dinger is touchable][agnostic] seems to want to chat but is glued against [his-her] will to [dinger].[else]'[agnos-pos].'[end if]"
+agnostic	"[if player is in obscurest subsector][agnostic] wants to hear [yow]. Maybe you can help [yow] give a neat lecture.[else if dinger is fungible][agnostic] seems to want to chat but is glued against [his-her] will to [dinger].[else]'[agnos-pos].'[end if]"
 
 to say agnos-pos:
-	if bot boat is touchable:
+	if bot boat is fungible:
 		say "A bot boat is ready! I think";
 		continue the action;
 	else if yow is moot and agnostic does not have gizmo:
@@ -2756,13 +2756,13 @@ Rehabs Basher	blabber babbler	"The [Basher] nods enthusiastically."
 Rehabs Basher	Elvira	"'She didn't get to her position of power by using DRUGS.'"
 nestor	Elvira	"'So bogusly repressive!'"
 nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
-nestor	tokers	"[if tokers are touchable]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
+nestor	tokers	"[if tokers are fungible]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
 tokers	Store K	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 tokers	Elvira	"'A bummer of authoritarianism, dude! She says her personality is all the drug you need!'"
-tokers	nestor	"[if nestor is touchable]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
+tokers	nestor	"[if nestor is fungible]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
 tokers	mangiest steaming	"[if Cruelest Lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. Going through those fumes might provide experience, of a sort[end if]."
 blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which is all for the better."
-nestor	--	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are touchable]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
+nestor	--	"Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants [if tokers are fungible]to just hang with his pals, if that's okay[else]to find his pals, who were in a nearby store[end if]."
 
 table of routes matched item responses [ask x about thing they know about]
 askee	game-thing	dialogue-text
@@ -2802,8 +2802,8 @@ table of presto matched item responses
 askee	game-thing	dialogue-text
 lamb	Elvira	"The lamb looks even more paralyzed by fear. If only there were a way to get the lamb scared right, so it could run back home!"
 plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]."
-plebe	Leo	"[if leo is touchable]You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force[else]Leo would be more intimidating if he were nearby[end if]."
-plebe	Rand	"[if rand is touchable]You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force[else]Rand would be more intimidating if he were nearby[end if]."
+plebe	Leo	"[if leo is fungible]You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force[else]Leo would be more intimidating if he were nearby[end if]."
+plebe	Rand	"[if rand is fungible]You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force[else]Rand would be more intimidating if he were nearby[end if]."
 Rand	yak	"[pal-yak]" [chum=Leo]
 Rand	plebe	"[no-plebe]"
 Leo	hogs	"[if Saps Pass is unvisited]You haven't seen any hogs yet.[else if lawl wall is moot]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
@@ -2832,10 +2832,10 @@ hogs	Elvira	"They snicker and nod."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger."
 yak	--	"You yack about your quest. The yak's all C-ya, K? Nevertheless, it seems to have some rudimentary grasp of speech and words and meaning. Maybe because of the drab yoke it's wearing. Maybe if you got rid of the yoke, it might help you, and the yak would be happier, too."
 
-to say plebe-threat of (per - a person): say "[if per is touchable]You tell the plebe [per] might push [him-her] aside, but no dice. Maybe a brutish word, not brute force[else]The plebe wouldn't go AWOL over to [Dirge Ridge]. You can take care of them and [per] in any order[end if]."
+to say plebe-threat of (per - a person): say "[if per is fungible]You tell the plebe [per] might push [him-her] aside, but no dice. Maybe a brutish word, not brute force[else]The plebe wouldn't go AWOL over to [Dirge Ridge]. You can take care of them and [per] in any order[end if]."
 
 to say pal-yak:
-	say "'[if yak is touchable]'Dat thing looks sleepy but it'll bite your hand off[else if Leo-traveled is true]'Dat yak we saw is too heavy for us! But I bet even you could push it around yourself. No offense[else]'My mouf? Oh, a yak, not a yap[end if].'";
+	say "'[if yak is fungible]'Dat thing looks sleepy but it'll bite your hand off[else if Leo-traveled is true]'Dat yak we saw is too heavy for us! But I bet even you could push it around yourself. No offense[else]'My mouf? Oh, a yak, not a yap[end if].'";
 
 to say no-plebe: say "'I respect da military too much to push him outta da way. Plus I can't yell clever neither.'"
 
@@ -2884,7 +2884,7 @@ trout	carps	"[if player is in Anger Range]You can ask about them later. They're 
 trout	Elvira	"'I heard those carps and pikes liked her.'"
 trout	sausage	"'S-s-s-scary[if trout is reflexed], even after you helped me[end if]!'"
 trout	pikes	"[if player is in Anger Range]You can ask about them later. They're pretty clearly picking on him here[else if trout is reflexive]He gives a blank look of fear[else]He feels like he can handle them and their taunts now[end if]."
-trout	aunt tuna	"[if carps are touchable]The carps are already asking mean questions.[else]'She sure is grateful you rescued me.'[end if]"
+trout	aunt tuna	"[if carps are fungible]The carps are already asking mean questions.[else]'She sure is grateful you rescued me.'[end if]"
 trout	Casper	"'I don't like his books. Too violent. But Aunt Tuna thinks I read the dirty bits, anyway.'"
 aunt tuna	Casper Spacer	"'A vile man, I'm sure! And those BOOKS of his! Or so I've heard!'"
 aunt tuna	tea	"'[if tea is moot]Goodness! I cannot share the recipe[else]Try it! You'll like it[end if].'"
@@ -2978,7 +2978,7 @@ agnostic	curst palace	"'It's big and scary! But it'd be fun to live in if it wer
 agnostic	atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
 agnostic	hostile is he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
 agnostic	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
-agnostic	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is touchable]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
+agnostic	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is fungible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
 agnostic	gizmo	"[if gizmo is off-stage]'Wow! I could use a snazzy tool like that to build things!'[else if player has gizmo]'Wow! That is neat! But I don't have any ideas how to build something, yet.' You could probably [b]GIVE[r] it to the agnostic, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The agnostic'll use it better anyway."
 agnostic	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
 agnostic	toaster	"[if toaster is in Actionless Coastlines]'Gee, thanks for that! I'll do something cool to, I mean with, it!'[else if toaster is in Topside Deposit]You think back to the toaster [hereish of Topside Deposit]. It might be worth giving to [agnostic], as a nice gift, if you ever leave.[else]You show the toaster to [agnostic], who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
@@ -2991,14 +2991,14 @@ Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tu
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 lone duck	Elvira	"An unusually worried quack. It seems like it wants to hear a voice--but not yours."
 Tetris Sitter	Elvira	"'[if top opt pot is not moot]She drags us all down[else]I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need[end if]!'"
-Tetris Sitter	curst palace	"[if itster is touchable]The Tetris Sitter ignores you. But she must have something to say about something so close. You need to get rid of the distraction.[else if top opt pot is not moot]She seems to want to be enthusiastic, but she slumps back.[else]'It can be something super special. [3-random]?' You got no concrete clues, but St. Teri's observations were a boost in their own way, you hope[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside.[end if]"
-Tetris Sitter	crocus	"[if anodyne is touchable]'Flowers? I almost could... no offense, but I'm not quite in the right mood, yet.'[else if itster is not moot]'Flowers? Oh, I don't know. They're nice, but ... they only help so much.'[else if top opt pot is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
-Tetris Sitter	top opt pot	"[if anodyne is touchable]'Nice, yes, but...' You seem to need one more thing to change St. Teri's mood.[else if itster is not moot]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
+Tetris Sitter	curst palace	"[if itster is fungible]The Tetris Sitter ignores you. But she must have something to say about something so close. You need to get rid of the distraction.[else if top opt pot is not moot]She seems to want to be enthusiastic, but she slumps back.[else]'It can be something super special. [3-random]?' You got no concrete clues, but St. Teri's observations were a boost in their own way, you hope[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside.[end if]"
+Tetris Sitter	crocus	"[if anodyne is fungible]'Flowers? I almost could... no offense, but I'm not quite in the right mood, yet.'[else if itster is not moot]'Flowers? Oh, I don't know. They're nice, but ... they only help so much.'[else if top opt pot is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
+Tetris Sitter	top opt pot	"[if anodyne is fungible]'Nice, yes, but...' You seem to need one more thing to change St. Teri's mood.[else if itster is not moot]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if itster is not moot]'There's a name. I sort of miss him.'[else if top opt pot is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]"
 
 to say hostile-pal: say "Once it was unbearably showy! Now it is unbearable. Either way, we are right to scorn it and stop anyone who'd want to fix it"
 
-to say yow-around-gone: say "[if Dr Yow is touchable]around[else]gone"
+to say yow-around-gone: say "[if Dr Yow is fungible]around[else]gone"
 
 to say doc-on-lake:
 	if agnostic is in Obscurest Subsector:
@@ -3051,7 +3051,7 @@ Elvira	whiners	"You explain you got past [the whiners], and she shrugs. Henchmen
 Elvira	sly imp	"You explain you got past [the sly imp], and she shrugs. Henchmen these days. That's why they're henchmen and not leaders."
 sly imp	Elvira	"'Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here.'"
 whiners	Elvira	"They bang on about how Elvira would be furious if they let someone see the animals to the south."
-Gretta	Elvira	"[if players are touchable]Gretta cringes even more at hearing Elvira's name, but she can't do much with those [pla-ma]s around, and neither can you[else]You are already talking about Elvira[end if]."
+Gretta	Elvira	"[if players are fungible]Gretta cringes even more at hearing Elvira's name, but she can't do much with those [pla-ma]s around, and neither can you[else]You are already talking about Elvira[end if]."
 
 to say at-elvira:
 	say " at the name. You quickly give assurance where you stand"
@@ -3135,8 +3135,8 @@ book ordeal reload
 table of ordeal reload nowheres
 theloc	thereject
 Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond."
-Farming Framing	"No time for mooching around your means manse. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
-Highest Heights	"You can go back [b]IN[r] to the study, though you don't need to, or you could try [if pram is touchable]to get the pram out of the way[else]going [b]DOWN[r] the ramp[end if]."
+Farming Framing	"No time for mooching around your means manse. You probably need to take [if sitar is fungible]a[else]that[end if] secret passage in, or down."
+Highest Heights	"You can go back [b]IN[r] to the study, though you don't need to, or you could try [if pram is fungible]to get the pram out of the way[else]going [b]DOWN[r] the ramp[end if]."
 
 book stores
 
@@ -3152,7 +3152,7 @@ Same Mesa	"You try going [noun] and looking for that poison stripe--but it's inv
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you still somehow need to figure how to get on that boat."
-Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
+Harms Marsh	"Far into a rift? No. You can't [if darkness is fungible]see far enough to [end if]rely on directions, here[if darkness is fungible]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor."
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
 
@@ -3160,14 +3160,14 @@ book troves
 
 table of troves nowheres
 theloc	thereject
-Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]"
+Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is fungible]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]"
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where [cellar] must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red [first custom style]Ell Car[r] (Yorpwald public transport) rattle by[or]you ran into construction by [first custom style]LC Lear[r]--the name written in red[or]you ran into construction by [first custom style]Larlec[r], written in red[cycling][end if]." [bold-ok]
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to [b]SAD PIER[r] and end it all, maybe after eating a few rad pies that won't make you see red[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more right here."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!"
-Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out for no reason at all[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
+Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out for no reason at all[else if salt is fungible]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 
 book presto
 
@@ -3195,7 +3195,7 @@ Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin Plains	"With the sloppy polyps on most all sides, you can only go back south or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
 Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
-Horned Hedron	"The main exit is south, [if sausage is moot]and you daren't go west now the [sausage] took care of things[else if Rascal Craals is visited]though you can go back west to the Rascal Craals[else]though an area west is in disrepair[end if]. You can also go [b]IN[r] [if pol art portal is touchable]through the portal[else]past the ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
+Horned Hedron	"The main exit is south, [if sausage is moot]and you daren't go west now the [sausage] took care of things[else if Rascal Craals is visited]though you can go back west to the Rascal Craals[else]though an area west is in disrepair[end if]. You can also go [b]IN[r] [if pol art portal is fungible]through the portal[else]past the ol['] trap once you disarm it[end if][if walleyes are fungible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 End Den	"You're disoriented here, but you can go back [b]OUT[r] to get to the Horned Hedron."
 Plasm Lamps	"It's you against the ant! There's no running, but it can't be too hard to defeat."
@@ -3236,7 +3236,7 @@ book towers
 table of towers nowheres
 theloc	thereject
 Loftier Trefoil	"[if number of moot picaros < 3]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out[end if]."
-Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
+Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are fungible], and the dreads adders are in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"[if noun is southwest]You don't need to explore the natatorium or Hatchery[else]You can't get across Leak Lake without some sort of craft[like-boat][end if]."
 Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
@@ -3248,7 +3248,7 @@ Shaven Havens	"[one of]You wander off, but you hear hikers shriek 'Shrike! Shrik
 Rawest Waster Waters	"[if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
 Mislit Limits	"[if noun is south or noun is southwest]You don't want to go back across Leak Lake[else]The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[mislit-clue][end if]."
 
-to say like-boat: say "[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]"
+to say like-boat: say "[if bot boat is fungible], like the boat, which [agnostic-first] will let you enter[end if]"
 
 to say dogleg-other of (myd - a direction):
 	let NE be number of entries in dogleg-dirs;
@@ -3293,7 +3293,7 @@ book others
 table of others nowheres
 theloc	thereject
 Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else if moss cap is moot]The compass will help point you north. You should go that way[else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]."
-Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [and-pen], the only way to say I fled is to go back east[end if]."
+Filed Field	"[if barriers west are fungible and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [and-pen], the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabuses you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
@@ -3749,7 +3749,7 @@ bogus-psalm	"The plasm lamps flicker slightly."
 natant ant	"There must be a simple way to take down the ant. You haven't quite got it right yet, though."
 
 to say di-cli:
-	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if bogus-derail is touchable]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
+	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if bogus-derail is fungible]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
 
 table of towers spechelp
 xtrhelp	helptxt
@@ -3788,7 +3788,7 @@ realist tailers	"The realist tailers moan in exasperation, completely not sure w
 fluster self rut	"You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will."
 strudel	"You almost expect the strudel to hop up[if player does not have strudel] into your arms[end if], but the moment passes."
 ingrates	"The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up."
-fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is touchable], but the duck seems to look curiously at it[else], and you wonder who or what could tinker with it[end if]."
+fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is fungible], but the duck seems to look curiously at it[else], and you wonder who or what could tinker with it[end if]."
 bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!'" [bold-ok]
 stinger	"The stinger fizzles a bit."
 weeds	"The weeds almost seem to shrug."
@@ -4012,7 +4012,7 @@ Im Le Cop polemic	"After compiling, you often need to make small tweaks, but not
 peels speel	"You've had enough comforts from cots to do the programming you need. You might re-wake weaker."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 
-to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You need another way to say good-bye[else]With [l-n-r] gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
+to say no-rehash: say "[if leo is fungible]That'd be an awkward rehash. You need another way to say good-bye[else]With [l-n-r] gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
 
 table of oyster done rejects
 specdone	spectalk
@@ -4139,7 +4139,7 @@ plebe	"You can shout [b]BLEEP[r] at the plebe [now-once of whether or not the pl
 ether	"You can shout [b]THERE[r] [now-once of whether or not leo is eager and boing go bin is reflexed] you have the force to win the fight in the ether."
 drab yoke	"You can change the drab yoke to a [b]KEYBOARD[r] [now-once of whether or not yak is moot] it's free of the bored yak[if yak is moot and player is not in hacks shack], but go back to the [shack] first[end if]."
 be troo e robot	"You can have [the e robot] [b]REBOOT[r] [now-once of whether or not number of things on labs slab is 4] your computing parts are in place."
-peels speel	"You can [b]SLEEP[r] [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your coding task."
+peels speel	"You can [b]SLEEP[r] [now-once of whether or not (futon is fungible and cpuready)] you've gotten a good start on your coding task."
 Im Le Cop Polemic	"You can [b]COMPILE[r] [now-once of whether or not compile-yet] you've started coding."
 BUB DUDE EGG	"You weren't ready to [b]DEBUG[r] yet."
 
@@ -4228,7 +4228,7 @@ steel pad	"[dio-part]."
 brass crag	"[dio-part]."
 painting	"The painting clues all the ways out of the Dusty Study, but you don't need to do anything more to it."
 niche	"[one of]'My niche' above the diorama leads upwards.[plus][or]What is a household accoutrement that leads up? If you use the settler, you may know what the last letter is.[plus][or]'My niche' can be a chimney.[minus][cycling]"
-closest closets	"The closets [if closets are touchable]are[else]were[end if] just for transporting around the Means Manse quicker, to or from the Dusty Study."
+closest closets	"The closets [if closets are fungible]are[else]were[end if] just for transporting around the Means Manse quicker, to or from the Dusty Study."
 palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plus][or]It wouldn't be bright to stumble into the palm...[plus][or]...but changing the palm would be.[plus][or]If you wait around, you get some hints of what to do with the palm. Note the purposefully bad spelling.[plus][or]One four-letter shuffling of [b]PALM[r] is indicated. Hopefully.[plus][or]You can change the palm to a [b]LAMP[r] by just saying so.[minus][cycling]"
 lamp	"The lamp will last as long as you need it to."
 meet bans	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a [b]BASEMENT[r].[minus][cycling]"
@@ -4243,19 +4243,19 @@ ramp	"Just go down or in to walk down the ramp."
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
 ISBN Bins	"[if isbn bins are reflexed]You figured how to secure [the bins]. Nothing more to do.[else][one of]The [bins] are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a [b]SNIB[r].[minus][cycling][end if]"
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
-evac cave	"The evac-cave is your way out[if Elmo is touchable] once you get rid of Elmo[end if]."
+evac cave	"The evac-cave is your way out[if Elmo is fungible] once you get rid of Elmo[end if]."
 rifle	"[one of]The rifle's more powerful than words. [b]OR IS IT[r].[plus][or]The rifle makes you wonder if you're on a wanted poster or something.[plus][or]The rifle can become a much more harmless [b]FLIER[r].[minus][cycling]"
 Respect Specter	"[one of]The Respect Specter isn't necessary to solve the game, but it can help you with puzzles if you use cheat mode.[plus][or]First, the actual thing to change to is easy.[plus][or]Make, or ask for, a [b]SCEPTER[r]. Spelling is important. But you can do more.[plus][or]The specter may give more information about ambiguous readings if you scan it different ways.[minus][cycling]"
 plaster psalter	"[one of]Plaster generally covers up holes. You need to bust through that plaster.[plus][or]If you used the settler, you might notice it, uh, settles a lot about the plaster.[plus][or]The plaster becomes a [b]STAPLER[r].[minus][cycling]"
 palest pastel plates	"[one of]The plates are embedded, but they have a metal rim. Well, sort of.[plus][or]The plates are also square, with metal half-square rings.[plus][or]They become a [b]STAPLE[r].[minus][cycling]"
-staple	"[one of]What does a staple go in?[plus][or][if plaster is touchable]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
-stapler	"[one of]What goes in a stapler?[plus][or][if plates is touchable]Something the plates can change into.[else]The staple.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
+staple	"[one of]What does a staple go in?[plus][or][if plaster is fungible]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
+stapler	"[one of]What goes in a stapler?[plus][or][if plates is fungible]Something the plates can change into.[else]The staple.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 apertured departure	"[if stapler is moot]You can enter [the departure] to continue your adventure.[else][ap-dep][end if]"
 Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you to do something to the rifle."
 high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a [b]FLIER[r].[minus][cycling]"
 sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find them amusing."
 
-to say ap-dep: say "[one of]What does the apertured departure--with its design--remind you of?[plus][or]The [departure] is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is touchable or plates are touchable]You've got some work to do before you can do any stapling[else]You've got what you need to staple [the departure] and activate it[end if].[plus][or][b]STAPLE DEPARTURE[r][if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
+to say ap-dep: say "[one of]What does the apertured departure--with its design--remind you of?[plus][or]The [departure] is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is fungible or plates are fungible]You've got some work to do before you can do any stapling[else]You've got what you need to staple [the departure] and activate it[end if].[plus][or][b]STAPLE DEPARTURE[r][if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
 
 to say dio-part: say "Not a puzzle per se but helps you understand what to do with [if settler is off-stage]an analytical object you may uncover[else]the settler[end if]"
 
@@ -4438,7 +4438,7 @@ mug	"[if ALocalCo Cola is moot]You will be able to drink from the mug when the t
 skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a [b]DISK[r] now.[minus][cycling][else if skid has not been in Saps Pass]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 oper rope	"The oper rope isn't useful on its own, but it lets you [b]PULL[r] the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a [b]SKID[r].[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now-shack] you've got a full computer constructed."	--	"to make a [b]SKID[r]"
-keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is touchable]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
+keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is fungible]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 TBA key	"[if TBA key is reflexive]The tab key's what it needs to be.[else][one of]The [b]TBA[r] key is not a regular keyboard key. You can change it.[plus][or]The [b]TBA[r] key can become [b]TAB[r].[minus][cycling][end if]"
 signature	--	Im Le Cop polemic
@@ -4485,7 +4485,7 @@ to say once-now-shack: say "[if keyboard is on slab and disk is in Drive]now[els
 to say kboard-blah: say "[if keyboard is off-stage]You need to find a keyboard. An animal and its item may provide a clue[else]The keyboard you got from the yak's drab yoke will work[end if]"
 
 to say yak-worry:
-	say "You don't need to worry about the yak for a long time[if Leo is not touchable]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Saps Pass is not visited]. You need to go north of the gyre and the maze, first[end if]"
+	say "You don't need to worry about the yak for a long time[if Leo is not fungible]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Saps Pass is not visited]. You need to go north of the gyre and the maze, first[end if]"
 
 to say h-d: [??]
 	if disk is in drive:
@@ -4494,7 +4494,7 @@ to say h-d: [??]
 	if keyboard is on slab and screen is on slab:
 		say "You need to put the disk in the drive.";
 		continue the action;
-	say "[one of]You can put the disk in the drive, when you're done. You can also attach things to the drive or put things on the slab. Computery things.[plus][or][if yak is not moot]You need to get something to operate the computer with first, though.[else if keyboard is touchable and keyboard is not on slab]You can put the keyboard on the labs slab.[else if computer screen is touchable and computer screen is not on slab]You can put the computer screen on the labs slab.[else]You need to put find and put components on the labs slab to get the disk working.[end if][plus][or]You can push a button once you're done.[minus][cycling]"
+	say "[one of]You can put the disk in the drive, when you're done. You can also attach things to the drive or put things on the slab. Computery things.[plus][or][if yak is not moot]You need to get something to operate the computer with first, though.[else if keyboard is fungible and keyboard is not on slab]You can put the keyboard on the labs slab.[else if computer screen is fungible and computer screen is not on slab]You can put the computer screen on the labs slab.[else]You need to put find and put components on the labs slab to get the disk working.[end if][plus][or]You can push a button once you're done.[minus][cycling]"
 
 to say if-rand-gone:
 	say "[if rand is in Dirge Ridge]now[else]once[end if] [l-n-r] are gone"
@@ -4925,7 +4925,7 @@ Sagest Gate	"You need [if curtis-level < 2]more stuff from Curtis[else if player
 s-c	"[one of]The sonic coins aren't quite what you need. Nobody wants singing money.[plus][or]The coins can become [b]ICONS[r].[minus][cycling]"
 s-i	"[if concisions are not reflexed][one of]There's something you can anagram with the sonic icons before their more practical purpose. It's a word with two of each letter. It's not critical, though. Also...[paragraph break][or][stopping][end if][if player has So Great Storage]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
 concisions	"You shouldn't be able to see the concisions. If you do, well, you know what to do for a bonus point from the sonic icons, now."
-So Great Storage	"[if player has dollar]You can trade the dollar for the So-Great Storage.[else if player has storage and lost slot is touchable]You can put something in the box's slot.[else]There's a way to open the So-Great Storage. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
+So Great Storage	"[if player has dollar]You can trade the dollar for the So-Great Storage.[else if player has storage and lost slot is fungible]You can put something in the box's slot.[else]There's a way to open the So-Great Storage. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
 Art Erd	"[trader-clue]"
 Dr Tera	"[trader-clue]"
 droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to [greedy-s] in the Scape Space.[minus][cycling]"

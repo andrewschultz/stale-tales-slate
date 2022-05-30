@@ -152,7 +152,7 @@ to ply-table (tn - a table name):
 	let in-room be false;
 	repeat through tn:
 		if there is a this-item entry:
-			say "(item [this-item entry]) [this-cmd entry] [hashval entry] is [unless this-item entry is touchable]NOT [end if]a valid hash try.";
+			say "(item [this-item entry]) [this-cmd entry] [hashval entry] is [unless this-item entry is fungible]NOT [end if]a valid hash try.";
 			next;
 		if there is a this-rule entry:
 			process the this-rule entry;

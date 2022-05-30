@@ -4438,7 +4438,7 @@ this is the with-hippies rule:
 	the rule fails;
 
 this is the talk-in-bastion rule:
-	if poses posse are touchable, the rule succeeds;
+	if poses posse are fungible, the rule succeeds;
 	the rule fails;
 
 this is the in-mensa rule:
@@ -4449,11 +4449,11 @@ section resort rules
 
 this is the protest-rant rule:
 	if player is in Potshot Hotspot:
-		if riot is touchable or protest is touchable, the rule succeeds;
+		if riot is fungible or protest is fungible, the rule succeeds;
 	the rule fails;
 
 this is the burdell-taunt rule:
-	if Red Bull Burdell is touchable, the rule succeeds;
+	if Red Bull Burdell is fungible, the rule succeeds;
 	the rule fails;
 
 Shuffling Random Text ends here.

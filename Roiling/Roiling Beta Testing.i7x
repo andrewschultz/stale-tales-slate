@@ -88,9 +88,9 @@ understand "gret" as greting.
 carry out greting:
 	move player to Disowned Downside;
 	say "==CHEATING TO DEFEAT THE PLAYERS";
-	try fliptoing a random touchable pickup-line;
-	try fliptoing a random touchable pickup-line;
-	try fliptoing a random touchable pickup-line;
+	try fliptoing a random fungible pickup-line;
+	try fliptoing a random fungible pickup-line;
+	try fliptoing a random fungible pickup-line;
 	the rule succeeds;
 
 chapter blaaing
@@ -116,7 +116,7 @@ carry out blaaing:
 			say "[pe] has nothing to say!";
 	let found-chat be false;
 	say "=================asking people you can see about random stuff, the hydra and themselves[line break]";
-	repeat with pe running through touchable people:
+	repeat with pe running through fungible people:
 		if pe is not the player:
 			now found-chat is true;
 			say "[pe] about random stuff:";

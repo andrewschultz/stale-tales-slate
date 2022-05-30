@@ -19391,7 +19391,7 @@ blurb
 
 table of tokers nonsense [xxs6]
 blurb
-"'[n-t] Tokes. Take notes,' says [if nestor is touchable]Nestor[else]one of them[end if], and his pals all giggle." [x]
+"'[n-t] Tokes. Take notes,' says [if nestor is fungible]Nestor[else]one of them[end if], and his pals all giggle." [x]
 "'The A-Ok Toke! Ah!'"
 "'Ah, post: Host Pa has pot so phat!'" []
 "'Any pot? Pay not!' they tempt you, but things are mind-bending enough." [x]

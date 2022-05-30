@@ -163,7 +163,7 @@ understand the command "askthru" as something new.
 understand "askthru" as askthruing.
 
 carry out askthruing:
-	repeat with the-thingamabob running through the list of touchable things:
+	repeat with the-thingamabob running through the list of fungible things:
 		say "Asking about [the-thingamabob].";
 		try objasking gateman about the-thingamabob;
 	repeat with the-thingamabob running through the list of things in Busiest Subsite:
@@ -185,7 +185,7 @@ understand the command "xray" as something new.
 understand "xray" as xraying.
 
 carry out xraying:
-	repeat with a-thing running through touchable things:
+	repeat with a-thing running through fungible things:
 		if a-thing is flippable or a-thing is the location:
 			say "Xraying [a-thing]:";
 			try xmxing a-thing;
@@ -222,7 +222,7 @@ understand "sc1" as sc1ing.
 carry out sc1ing:
 	if player does not have tagged gadget, say "Giving you the gadget." instead;
 	now player has tagged gadget;
-	repeat with a-thing running through touchable things:
+	repeat with a-thing running through fungible things:
 		say "Scanning [a-thing]:[line break]";
 		try scaning a-thing;
 	the rule succeeds;
@@ -240,7 +240,7 @@ understand the command "xall" as something new.
 understand "xall" as xalling.
 
 carry out xalling:
-	repeat with this-item running through touchable things:
+	repeat with this-item running through fungible things:
 		say "[this-item]: [no line break]";
 		try examining this-item;
 	the rule succeeds;

@@ -93,7 +93,7 @@ a backdrop has a truth state called touched-yet.
 a backdrop has a region called drop-region.
 
 every turn (this is the tag backdrops for hinting rule):
-	repeat with BD running through touchable backdrops:
+	repeat with BD running through fungible backdrops:
 		now touched-yet of BD is true;
 
 chapter portal basics
@@ -228,7 +228,7 @@ chapter person/animal stuff
 
 definition: a person (called pe) is npcish:
 	if pe is the player, no;
-	if pe is touchable, yes;
+	if pe is fungible, yes;
 	decide no;
 
 chapter hint variables
@@ -362,7 +362,7 @@ does the player mean gotothinging a sameregion thing: it is likely.
 definition: a thing (called th) is sameregion:
 	if th is a backdrop, no;
 	if th is off-stage, no;
-	if th is touchable, no;
+	if th is fungible, no;
 	if mrlp is map region of location of th, yes;
 	no;
 
@@ -854,7 +854,7 @@ carry out exitsing:
 	if exits-text of location of player is not empty, say "[exits-text of location of player][line break]" instead;
 	if number of viable directions is 0:
 		d "This is the generic no-exits message, so you'll want to add exits-text for [location of player] in story.ni.";
-		say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of touchable enterable things > 0], and it looks like there's something to [b]ENTER[r][end if]." instead;
+		say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of fungible enterable things > 0], and it looks like there's something to [b]ENTER[r][end if]." instead;
 	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions]." instead;
 	say "There are [number of viable directions in words] unblocked exits: [list of viable directions].";
 	the rule succeeds;

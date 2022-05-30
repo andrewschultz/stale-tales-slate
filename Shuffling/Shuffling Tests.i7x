@@ -849,7 +849,7 @@ every turn when player has prep paper and show-prep is true (this is the prep-re
 chapter check HALing
 
 definition: a thing (called th) is mass-hint-appropriate:
-	unless th is touchable, no;
+	unless th is fungible, no;
 	if th is the player or th is pockets or th is dope tan notepad or th is toad pen or th is magenta nametag, no;
 	if th is part of the tagged gadget, no;
 	yes;

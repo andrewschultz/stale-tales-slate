@@ -134,7 +134,7 @@ test demodomemax with "z/demo dome mode/smell/listen/x me/s/s/n/xtrak/xab tripod
 volume definitions
 
 definition: a thing (called th) is mass-hint-appropriate: [this is a definition that the STS test file needs]
-	unless th is touchable, no;
+	unless th is fungible, no;
 	yes;
 
 chapter hint clashes
@@ -781,7 +781,7 @@ understand "xa" as xaing.
 
 carry out xaing:
 	now xraytrump is true;
-	repeat with xc running through all touchable things:
+	repeat with xc running through all fungible things:
 		if xc is not curst palace and xc is not the player:
 			say "[xc]:[line break]";
 			try xraying xc;
@@ -1553,7 +1553,7 @@ understand "nud" as nuding.
 to show-nudges (ta - a table name):
 	if ta is Table of No Nudges, continue the action;
 	repeat through ta:
-		if there is a this-item entry and this-item entry is not touchable, next;
+		if there is a this-item entry and this-item entry is not fungible, next;
 		if there is a this-rule entry:
 			process the this-rule entry;
 			unless the rule succeeded, next;

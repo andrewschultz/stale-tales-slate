@@ -20,7 +20,7 @@ book general
 
 understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can [b]SWITCH[r] something, or [b]PUT[r] something [b]IN[r]/[b]ON[r] something, or even [b]ATTACH[r] something to something. You can [b]PUSH[r] a button or [b]OPEN[r] something, as well. Specific items should clue you what to do if you [b]EXAMINE[r] them.")
 
-understand "get a man" as a mistake ("[if Notices Section is unvisited][reject][else if Trips Strip is visited]Tan Mage Nat Egam cannot help you now.[else if gateman is touchable]You already did[else]Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?[end if][note-great-guesses]").
+understand "get a man" as a mistake ("[if Notices Section is unvisited][reject][else if Trips Strip is visited]Tan Mage Nat Egam cannot help you now.[else if gateman is fungible]You already did[else]Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?[end if][note-great-guesses]").
 
 understand "scan" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
@@ -61,7 +61,7 @@ to say not-a-magnet:
 		say "Nothing happens. It'd be better to have someone, not something, to help you[if broad board is examined], as the broad board says[else]--the broad board may have more information[end if]. You see red as you strain to think what or who the nametag should be. It's as if you got it all wrong, but then again, knowing you got it all wrong is a clue, too.[run paragraph on]";
 		continue the action;
 	else if player is in Rested Desert:
-		say "A magnet [if goat is touchable]wouldn't have helped you[else]won't help you[end if] get past the (non-metallic) thickets[if goat is not touchable]. Right idea, though. Wrong item[end if].[run paragraph on]";
+		say "A magnet [if goat is fungible]wouldn't have helped you[else]won't help you[end if] get past the (non-metallic) thickets[if goat is not fungible]. Right idea, though. Wrong item[end if].[run paragraph on]";
 		continue the action;
 	else if player is in Thickest Thickets:
 		say "Magnets don't work on plants. Besides, you wonder if 'a' magnet is cheating a bit.[run paragraph on]";
@@ -76,7 +76,7 @@ understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you ha
 
 understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.[note-great-guesses]") when player is in Busiest Subsite.
 
-understand "magnet" as a mistake ("[not-a-magnet].[note-great-guesses]") when magenta nametag is touchable.
+understand "magnet" as a mistake ("[not-a-magnet].[note-great-guesses]") when magenta nametag is fungible.
 
 understand "peon" as a mistake ("You take a passive-aggressive stab at the person, now gone, who mocked you when you examined the passage. It felt good.[note-great-guesses]") when player is in Busiest Subsite and passage is examined.
 
@@ -95,13 +95,13 @@ understand "rood" as a mistake ("[if OR DO door is in Rested Desert]You already 
 
 chapter Thickest Thickets
 
-understand "believe" as a mistake ("Yes, but what do you believe you can do or change?[note-great-guesses]") when toga is touchable.
+understand "believe" as a mistake ("Yes, but what do you believe you can do or change?[note-great-guesses]") when toga is fungible.
 
-understand "ent" and "ents" as a mistake ("[if sent nets are touchable]While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers[else]That's a bit too magical for here and now. The nest is nice enough[end if].[note-great-guesses]") when player is in Thickest Thickets.
+understand "ent" and "ents" as a mistake ("[if sent nets are fungible]While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers[else]That's a bit too magical for here and now. The nest is nice enough[end if].[note-great-guesses]") when player is in Thickest Thickets.
 
 understand "erde" as a mistake ("There's enough earth around here, and this game's not in German.[note-great-guesses]") when player is in Thickest Thickets.
 
-understand "gato" as a mistake ("Nice try, but wrong language. [if goat is touchable]The goat already ate[else]Another animal would be more likely to eat[end if] through the thickets.[note-great-guesses]") when player is in Thickest Thickets.
+understand "gato" as a mistake ("Nice try, but wrong language. [if goat is fungible]The goat already ate[else]Another animal would be more likely to eat[end if] through the thickets.[note-great-guesses]") when player is in Thickest Thickets.
 
 understand "rede" as a mistake ("You probably don't want medieval-style advice. You don't need it. [b]HINT[r] should work better.[note-great-guesses]") when player is in Thickest Thickets.
 
@@ -109,19 +109,19 @@ chapter Notices Section
 
 understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.[note-great-guesses]") when player is in Notices Section and gateman is in Notices Section.
 
-understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.[note-great-guesses]") when phial is touchable.
+understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.[note-great-guesses]") when phial is fungible.
 
 understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.[note-great-guesses]") when cabinet is in location of player.
 
 understand "elastin" and "nailset" as a mistake ("That would make the saltine less edible.[note-great-guesses]") when player has saltine.
 
-understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.[note-great-guesses]") when show hows tag is touchable.
+understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not off-stage]wasn't[else]won't be[end if] that easy to get one. Besides, changing the tag will break the tagged gadget.[note-great-guesses]") when show hows tag is fungible.
 
 understand "mist" as a mistake ("No, those TMIs on the broad board are useful.[note-great-guesses]") when player is in Notices Section.
 
 understand "noetics" as a mistake ("There's enough information here.[note-great-guesses]") when player is in Notices Section.
 
-understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.[note-great-guesses]") when salient saltine is touchable.
+understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.[note-great-guesses]") when salient saltine is fungible.
 
 understand "tastic" as a mistake ("Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.") when player is in Notices Section.
 
@@ -147,19 +147,19 @@ understand "presto" as a mistake ("Your magic is not advanced enough to change S
 
 understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.[note-great-guesses]") when player is in Trips Strip and trade tread is in Trips Strip.
 
-understand "retros" as a mistake ("You mull hopping on over to ifdb.org, the interactive fiction database, to find even more fun text adventures. But only once you finish this first!") when player is in Trips Strip and Store R is touchable.
+understand "retros" as a mistake ("You mull hopping on over to ifdb.org, the interactive fiction database, to find even more fun text adventures. But only once you finish this first!") when player is in Trips Strip and Store R is fungible.
 
 understand "roesti" as a mistake ("You say to yourself, 'Self, what I could really use right now is a German-Swiss dish of fried potatoes!' Then you say to yourself, 'Self, there's probably no deli within a long way of here, so you'll have to wait. Hey, we can wait together and commiserate.'") when player is in Trips Strip and store i is in trips strip.
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![mistake-clue of store u][note-great-guesses]") when player is in Trips Strip.
 
-understand "sorter" as a mistake ("But you've already been picked! No need for further sorting.") when player is in Trips Strip and Store R is touchable.
+understand "sorter" as a mistake ("But you've already been picked! No need for further sorting.") when player is in Trips Strip and Store R is fungible.
 
 understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is moot]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].[note-great-guesses]") when player is in Trips Strip.
 
 understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.[note-great-guesses]") when player is in Trips Strip.
 
-understand "torres" and "tresor" as a mistake ("Grand, but unfortunately, not in English.") when player is in Trips Strip and Store R is touchable.
+understand "torres" and "tresor" as a mistake ("Grand, but unfortunately, not in English.") when player is in Trips Strip and Store R is fungible.
 
 understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[mistake-clue of store w][note-great-guesses]") when player is in Trips Strip.
 
@@ -173,13 +173,13 @@ understand "shoot [something] with [something]" and "shoot [something] at [somet
 
 chapter random forests / Softer Forest / Rest of Forest
 
-understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is touchable.
+understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is fungible.
 
-understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is touchable.
+understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is fungible.
 
-understand "tase" as a mistake ("This game is nonviolent--well, except for a few puns.") when teas is touchable.
+understand "tase" as a mistake ("This game is nonviolent--well, except for a few puns.") when teas is fungible.
 
-understand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is touchable.
+understand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is fungible.
 
 chapter Self-ID Fields
 
@@ -189,7 +189,7 @@ understand "leif" and "lief" as a mistake ("It is too late to help the line of n
 
 understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in Self ID Fields.
 
-understand "list" as a mistake ("There's a list inside the slit, so that's not what it could become.") when slit is touchable.
+understand "list" as a mistake ("There's a list inside the slit, so that's not what it could become.") when slit is fungible.
 
 understand "nile" as a mistake ("Wrong river for the underworld.") when player is in Self ID Fields.
 
@@ -204,11 +204,11 @@ chapter Flesh Shelf
 to say preef-silv:
 	preef silver;
 
-understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is touchable or maps are touchable.
+understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is fungible or maps are fungible.
 
-understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is touchable.
+understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is fungible.
 
-understand "debar" as a mistake ("If there are any lawyers here, they've already been debarred.") when player has beard or bread is touchable.
+understand "debar" as a mistake ("If there are any lawyers here, they've already been debarred.") when player has beard or bread is fungible.
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
 
@@ -218,9 +218,9 @@ understand "inks" as a mistake ("The skin sink bleeds no color.") when player is
 
 understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers.") when player is in Flesh Shelf.
 
-understand "schwandi" as a mistake ("Perhaps the sandwich is from a small village in Switzerland, but it may just be easier to [b]OPEN[r] the sandwich, instead.") when sandwich is touchable.
+understand "schwandi" as a mistake ("Perhaps the sandwich is from a small village in Switzerland, but it may just be easier to [b]OPEN[r] the sandwich, instead.") when sandwich is fungible.
 
-understand "silver" as a mistake ("The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.[paragraph break][ilb-later][preef-silv]") when livers are touchable.
+understand "silver" as a mistake ("The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.[paragraph break][ilb-later][preef-silv]") when livers are fungible.
 
 understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
 
@@ -230,13 +230,13 @@ understand "alerting" and "alertings" as a mistake ("There's nobody to alert her
 
 understand "altering" and "alterings" as a mistake ("No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.") when player is in Gnarliest Triangles.
 
-understand "enos" as a mistake ("A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.") when player has nose or ones are touchable.
+understand "enos" as a mistake ("A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.") when player has nose or ones are fungible.
 
-understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are touchable.
+understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are fungible.
 
 understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
 
-understand "gunshot" as a mistake ("[if noughts are touchable]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to [b]SHOOT[r] the gun[end if][if shotgun is touchable and silver is off-stage], but you don't have a bullet yet[else if shotgun is touchable and player has silver], but you need to load it first[end if].") when noughts are touchable or shotgun is touchable.
+understand "gunshot" as a mistake ("[if noughts are fungible]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to [b]SHOOT[r] the gun[end if][if shotgun is fungible and silver is off-stage], but you don't have a bullet yet[else if shotgun is fungible and player has silver], but you need to load it first[end if].") when noughts are fungible or shotgun is fungible.
 
 understand "integral" and "integrals" as a mistake ("I think this game is hard enough without bringing Calculus into it.") when player is in Gnarliest Triangles.
 
@@ -252,11 +252,11 @@ understand "tone" and "tones" as a mistake ("You aren't sure you need a booming 
 
 chapter Emptiness Sepiments
 
-understand "cliesh" and "cleish" as a mistake ("You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.") when liches are touchable.
+understand "cliesh" and "cleish" as a mistake ("You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.") when liches are fungible.
 
 understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Emptiness Sepiments and red asp is not moot.
 
-understand "parsed" as a mistake ("You can just read the [if drapes are touchable]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Emptiness Sepiments and red asp is not moot.
+understand "parsed" as a mistake ("You can just read the [if drapes are fungible]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Emptiness Sepiments and red asp is not moot.
 
 understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Emptiness Sepiments and red asp is not moot.
 
@@ -266,7 +266,7 @@ understand "spared" as a mistake ("That is too passive, to ask to be spared.") w
 
 chapter Ghouls' Slough
 
-understand "cluer" as a mistake ("[if player is in Ghouls Slough]This place is too stark to offer clues, and if it did, they'd probably be wrong anyway[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
+understand "cluer" as a mistake ("[if player is in Ghouls Slough]This place is too stark to offer clues, and if it did, they'd probably be wrong anyway[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is fungible or player is in Ghouls Slough.
 
 understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.[paragraph break]Oh, and you can undo this, too.[end-it]") when player is in Ghouls Slough.
 
@@ -274,7 +274,7 @@ understand "god" as a mistake ("You want to tempt the supernatural in somewhere 
 
 understand "lough" and "loughs" as a mistake("That would make things less intimidating and ugly, but you still wouldn't know where to go, and you might end up in the middle of the lake or lakes you made, anyway.") when player is in Ghouls Slough.
 
-understand "lucre" as a mistake ("[if player is in Ghouls Slough]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
+understand "lucre" as a mistake ("[if player is in Ghouls Slough]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is fungible or player is in Ghouls Slough.
 
 understand "ulcer" as a mistake ("Giving yourself or the cruel ones an ulcer would be pointless.") when player is in Ghouls Slough.
 
@@ -302,29 +302,29 @@ chapter kitchen
 
 understand "cato" as a mistake ("You don't need to know your classics, here.") when taco is enclosed by player or player carries coat.
 
-understand "keats" as a mistake ("This is wordplay, not poetry. [if skate is touchable]But the skate does glow red[else]The steak is what it needs to be[end if].") when skate is touchable or steak is touchable.
+understand "keats" as a mistake ("This is wordplay, not poetry. [if skate is fungible]But the skate does glow red[else]The steak is what it needs to be[end if].") when skate is fungible or steak is fungible.
 
-understand "limes" as a mistake ("I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.") when spear is touchable.
+understand "limes" as a mistake ("I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.") when spear is fungible.
 
 understand "littoral" as a mistake ("How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if r2 is prefigured or moor is visited]you know[else]maybe[end if] there's another way out.") when player is in kitchen and tortilla is not moot.
 
-understand "pears" as a mistake ("I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.") when spear is touchable.
+understand "pears" as a mistake ("I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.") when spear is fungible.
 
-understand "sauce" as a mistake ("Close, but you need the whole name of the sauce.") when cathouse is touchable.
+understand "sauce" as a mistake ("Close, but you need the whole name of the sauce.") when cathouse is fungible.
 
-understand "soutache" as a mistake ("The [if hotsauce is fungible]hot sauce[else]CATHOUSE[end if] doesn't need a decorative trimming.") when cathouse is touchable or hotsauce is touchable.
+understand "soutache" as a mistake ("The [if hotsauce is fungible]hot sauce[else]CATHOUSE[end if] doesn't need a decorative trimming.") when cathouse is fungible or hotsauce is fungible.
 
-understand "stake" as a mistake ("A stake would have no use here. So that might be a miskate. Err...") when steak is touchable or skate is touchable.
+understand "stake" as a mistake ("A stake would have no use here. So that might be a miskate. Err...") when steak is fungible or skate is fungible.
 
-understand "takes" as a mistake ("You do a take, then a double take, at how odd this all is.") when steak is touchable or skate is touchable.
+understand "takes" as a mistake ("You do a take, then a double take, at how odd this all is.") when steak is fungible or skate is fungible.
 
-understand "teaks" as a mistake ("Hm. An indoor forest. [if Sacred Cedars is unvisited]That would be neat to see. But this is a kitchen[else]But you've already seen one[end if].") when steak is touchable or skate is touchable.
+understand "teaks" as a mistake ("Hm. An indoor forest. [if Sacred Cedars is unvisited]That would be neat to see. But this is a kitchen[else]But you've already seen one[end if].") when steak is fungible or skate is fungible.
 
 chapter ROOM
 
-understand "hoes" as a mistake ("One, there's more than one [if hoses are touchable]hose[else]shoe[end if]. Two, this isn't that sort of game. Innuendo only, if you please!") when hoses are moot or hoses are touchable.
+understand "hoes" as a mistake ("One, there's more than one [if hoses are fungible]hose[else]shoe[end if]. Two, this isn't that sort of game. Innuendo only, if you please!") when hoses are moot or hoses are fungible.
 
-understand "shoe" as a mistake ("You need more than one shoe.") when hoses are touchable.
+understand "shoe" as a mistake ("You need more than one shoe.") when hoses are fungible.
 
 chapter Stiller Trellis
 
@@ -333,17 +333,17 @@ understand "tillers" as a mistake ("You aren't going to sea in this game.") when
 chapter MOOR
 
 [def=blackdoor]
-understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep religion out of it[if black door is touchable]--you have what you need[end if].") when roadblock is touchable or black door is touchable.
+understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep religion out of it[if black door is fungible]--you have what you need[end if].") when roadblock is fungible or black door is fungible.
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
-understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you. You consider ways to wipe them off the paper for good.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is touchable or woeful pat is moot.
+understand "mope" as a mistake ("[if woeful pat is fungible]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are fungible]You try, but the smilies on the poem prevent you. You consider ways to wipe them off the paper for good.[else if poem is fungible]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is fungible or woeful pat is moot.
 
 understand "nepal" as a mistake ("Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.") when plane-or-panel
 
-understand "otohs" as a mistake ("You start fruitlessly double- and triple- thinking whether you should change [if shoot button is touchable]back to [end if]the hoots button.") when shoot button is touchable or hoots button is touchable.
+understand "otohs" as a mistake ("You start fruitlessly double- and triple- thinking whether you should change [if shoot button is fungible]back to [end if]the hoots button.") when shoot button is fungible or hoots button is fungible.
 
-understand "peom" as a mistake ("Nigel Molesworth salutes your spelling technique, if not your tendency to play weedy wet text adventures.") when woeful pat is touchable or poem is touchable.
+understand "peom" as a mistake ("Nigel Molesworth salutes your spelling technique, if not your tendency to play weedy wet text adventures.") when woeful pat is fungible or poem is fungible.
 
 understand "reest" as a mistake ("You are noisily uncooperative for a minute. With what, I don't know. But you are.") when player is in moor and panel is part of silo.
 
@@ -351,19 +351,19 @@ understand "reset" and "reset button" as a mistake ("[reset-goof].") when player
 
 understand "rifle" as a mistake ("Shooting things up is not the answer.") when got-flier.
 
-understand "similes" as a mistake ("[if smilies are touchable]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is touchable]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[else][reject]") when smilies are touchable or missile is touchable.
+understand "similes" as a mistake ("[if smilies are fungible]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is fungible]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[else][reject]") when smilies are fungible or missile is fungible.
 
-understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is touchable or hoots button is touchable.
+understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is fungible or hoots button is fungible.
 
 understand "stere" as a mistake ("Units of measurements are abstract. We need something concrete.") when player is in moor and panel is part of silo.
 
-understand "tap [text]" as a mistake ("[pat-tap]") when woeful pat is touchable.
+understand "tap [text]" as a mistake ("[pat-tap]") when woeful pat is fungible.
 
-understand "terse" as a mistake ("[if trees button is touchable]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
+understand "terse" as a mistake ("[if trees button is fungible]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
 
 understand "trade" and "trade [text]" as a mistake ("Instead of trading, use [b]GIVE X TO Y[r].");
 
-understand "yah" as a mistake ("[if peasant is touchable]It's not nice to make fun of the peasant for having hay he doesn't want[else]You're glad you've got the hay, but you're not excited, and you can't fake it[end if].") when hay is touchable.
+understand "yah" as a mistake ("[if peasant is fungible]It's not nice to make fun of the peasant for having hay he doesn't want[else]You're glad you've got the hay, but you're not excited, and you can't fake it[end if].") when hay is fungible.
 
 chapter Sacred Cedars
 
@@ -385,7 +385,7 @@ book store m
 
 understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in Bassy Abyss]along with the beats[else if player is in The Ol Hotel or player is in Undesired Underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
 
-understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.") when beats are touchable or beast is touchable.
+understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.") when beats are fungible or beast is fungible.
 
 chapter Undesired Underside
 
@@ -426,11 +426,11 @@ understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't m
 
 chapter Obtains Boastin' Bastion
 
-understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when poses posse is touchable.
+understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when poses posse is fungible.
 
-understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when poses posse is touchable.
+understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when poses posse is fungible.
 
-understand "spose" as a mistake ("Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.") when poses posse is touchable.
+understand "spose" as a mistake ("Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.") when poses posse is fungible.
 
 chapter Fo' Real Florae
 
@@ -446,7 +446,7 @@ understand "trounce" and "trounce counter" as a mistake ("The faeries have very 
 
 chapter tramline terminal
 
-to say pig-or-opening: say "[if neon pig is touchable]stupid pig[else]opening you made[end if]"
+to say pig-or-opening: say "[if neon pig is fungible]stupid pig[else]opening you made[end if]"
 
 understand "asp" and "asps" as a mistake ("That's just what you need, a snake chasing you with everything else going on.") when player is in Elm Train Terminal.
 
@@ -468,22 +468,22 @@ understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not litera
 
 understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Elm Train Terminal.
 
-understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it above the cafe face with the velcro[end if].") when cafe face is touchable.
+understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it above the cafe face with the velcro[end if].") when cafe face is fungible.
 
 chapter Esoteric Coteries
 
 [def=nerd door e]
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Esoteric Coteries.
 
-understand "up til" and "uptil" as a mistake ("The [tulip] is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.") when lit up tulip is touchable.
+understand "up til" and "uptil" as a mistake ("The [tulip] is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.") when lit up tulip is fungible.
 
 chapter Bassy Abyss
 
-understand "reins" as a mistake ("Horsing around like that won't hold back the [if beast is touchable]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.") when player is in Bassy Abyss.
+understand "reins" as a mistake ("Horsing around like that won't hold back the [if beast is fungible]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.") when player is in Bassy Abyss.
 
-understand "rinse" as a mistake ("[if siren is touchable]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you get your hands dirty and slay the final enemy, here[end if].") when player is in Bassy Abyss.
+understand "rinse" as a mistake ("[if siren is fungible]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you get your hands dirty and slay the final enemy, here[end if].") when player is in Bassy Abyss.
 
-understand "risen" as a mistake ("You don't need [if siren is touchable]the siren's volume or [end if][if beast is touchable]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
+understand "risen" as a mistake ("You don't need [if siren is fungible]the siren's volume or [end if][if beast is fungible]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
 
 book store r
 
@@ -505,13 +505,13 @@ understand "diver" as a mistake ("But you just got by a lot of water. No need to
 
 understand "loot" as a mistake ("You don't have time for treasure with Red Bull Burdell waiting.") when player is in Rived Drive and tool shed is in Rived Drive.
 
-understand "pores" as a mistake ("[if ropes are touchable]No, you had it[else]Almost. But you don't need to create holes[end if].") when player is in Rived Drive.
+understand "pores" as a mistake ("[if ropes are fungible]No, you had it[else]Almost. But you don't need to create holes[end if].") when player is in Rived Drive.
 
-understand "poser" as a mistake ("[if ropes are touchable]You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near[else]You wonder if YOU are the poser, for not being able to figure what to do[end if].") when player is in Rived Drive.
+understand "poser" as a mistake ("[if ropes are fungible]You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near[else]You wonder if YOU are the poser, for not being able to figure what to do[end if].") when player is in Rived Drive.
 
-understand "prigs" as a mistake ("Grumbling about prigs, or showing those prigs, won't help now. You should probably [if grips are touchable]use the grips to climb[else]make the sprig into something useful[end if] instead.") when grips are touchable or sprig is touchable.
+understand "prigs" as a mistake ("Grumbling about prigs, or showing those prigs, won't help now. You should probably [if grips are fungible]use the grips to climb[else]make the sprig into something useful[end if] instead.") when grips are fungible or sprig is fungible.
 
-understand "prose" as a mistake ("There's not much of that left in this game, and more of it won't help you up the [p-s][if ropes are touchable]. The ropes will[else]. The spore can be something sturdier. You see red wondering what[end if].") when player is in Rived Drive.
+understand "prose" as a mistake ("There's not much of that left in this game, and more of it won't help you up the [p-s][if ropes are fungible]. The ropes will[else]. The spore can be something sturdier. You see red wondering what[end if].") when player is in Rived Drive.
 
 understand "repos" as a mistake ("You resolve to organize your programming code better once this adventure is over.") when player is in Rived Drive.
 
@@ -523,7 +523,7 @@ understand "achin" as a mistake ("You don't have the ability to dish out an achi
 
 understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in Potshot Hotspot and red bull burdell is in Potshot Hotspot.
 
-understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are touchable]Maybe they can get a purpose or become able to use those kilns[else]Give them something constructive to do[end if].") when player is in Potshot Hotspot and protest is in Potshot Hotspot.
+understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are fungible]Maybe they can get a purpose or become able to use those kilns[else]Give them something constructive to do[end if].") when player is in Potshot Hotspot and protest is in Potshot Hotspot.
 
 understand "i rot" as a mistake ("Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.") when player is in Potshot Hotspot and riot is in Potshot Hotspot.
 
@@ -533,11 +533,11 @@ understand "morans" and "moran" as a mistake ("A long-haired fellow wearing a St
 
 understand "retest" as a mistake ("Oh, wow! Do you really want to play through again? I'm flattered!") when player is in Potshot Hotspot and Red Bull Burdell is moot.
 
-understand "roister" as a mistake ("That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.") when protest is touchable.
+understand "roister" as a mistake ("That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.") when protest is fungible.
 
 understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in Potshot Hotspot and ransom manors are in Potshot Hotspot.
 
-understand "slink" as a mistake ("[if red bull burdell is touchable]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in Potshot Hotspot and links are not off-stage.
+understand "slink" as a mistake ("[if red bull burdell is fungible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in Potshot Hotspot and links are not off-stage.
 
 understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in Potshot Hotspot and potters are not moot.
 
