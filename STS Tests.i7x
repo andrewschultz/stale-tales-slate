@@ -6,6 +6,14 @@ Version 1/170918 of STS tests by Andrew Schultz begins here.
 
 include Full Monty Testing by Andrew Schultz.
 
+chapter jumpthrough stuff
+
+a region has a table name called jumpthrough-table.
+
+stop-jump-at-error is a truth state that varies.
+
+llps-in-jump is a truth state that varies. llps-in-jump is true.
+
 chapter bcheing - not for release
 
 bcheing is an action out of world.
@@ -591,6 +599,47 @@ carry out tabnexting:
 	increment current-chatter-index;
 	if current-chatter-index > number of rows in table of megachatter, now current-chatter-index is 1;
 	spill-row current-chatter-index;
+
+volume jumpthroughing
+
+jumpthroughing is an action applying to one number.
+jumpthroughalling is an action out of world.
+
+jump-region is a region that varies.
+
+jump-table is a table name that varies.
+
+jump-length is a number that varies.
+
+carry out jumpthroughalling: try jumpthroughing 0;
+
+check jumpthroughing (this is the reject undoable jumpthroughs rule):
+	if mrlp is not hub-region and hub-room is visited, say "You are too far along." instead;
+	if jump-region is orig-region and turn count > 1, say "You need a turn count of one to jump through the starting region." instead;
+	if jump-region is solved or jump-region is bypassed, say "You already got through [jump-region]." instead;
+	if last-loc of jump-region is visited, say "You've already been to [jump-region]." instead;
+
+carry out jumpthroughing:
+	let pts be the number understood;
+	if pts is 0, now pts is number of rows in jump-table;
+	let current-rows be 0;
+	let last-score be 0;
+	repeat through jump-table:
+		increment current-rows;
+		say "[second custom style]Row [current-rows]. Current score [cur-score of mrlp]. ";
+		if there is a place-to-go entry, say "Going to [place-to-go entry]. ";
+		if there is a dir-to-go entry, say "Going [dir-to-go entry]. ";
+		if there is a what-before entry, say "Processing [what-before entry]. ";
+		if there is a what-to-flip-to entry, say "Flipping [what-to-flip-to entry]. ";
+		say "[line break][r]";
+		if there is a place-to-go entry, try gotoing place-to-go entry;
+		if there is a dir-to-go entry, try going dir-to-go entry;
+		if there is a what-before entry, process the what-before entry;
+		if there is a what-to-flip-to entry, try fliptoing what-to-flip-to entry;
+		if cur-score of mrlp is last-score, say "[first custom style]WARNING did not gain point for this try.[r]";
+		now last-score is cur-score of mrlp;
+		process the notify score changes rule;
+		if current-rows is pts, break;
 
 STS tests ends here.
 
