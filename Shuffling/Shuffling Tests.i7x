@@ -861,6 +861,310 @@ definition: a thing (called th) is reflexed: no;
 definition: a thing (called th) is flip-irrelevant:
 	no;
 
+volume jumpthrough information
+
+understand "jf [number]" as jumpthroughing.
+understand "ji [number]" as jumpthroughing.
+understand "jm [number]" as jumpthroughing.
+understand "jr [number]" as jumpthroughing.
+understand "jo [number]" as jumpthroughing.
+understand "js [number]" as jumpthroughing.
+
+understand "jf" as jumpthroughalling.
+understand "ji" as jumpthroughalling.
+understand "jm" as jumpthroughalling.
+understand "jr" as jumpthroughalling.
+understand "jo" as jumpthroughalling.
+understand "js" as jumpthroughalling.
+
+the deduce region from first letter rule is listed first in the check jumpthroughing rules.
+
+check jumpthroughing (this is the deduce region from first letter rule):
+	if word number 1 in the player's command is "jf":
+		now jump-region is forest;
+		now jump-table is table of forest jumps;
+	else if word number 1 in the player's command is "ji":
+		now jump-region is sortie;
+		now jump-table is table of sortie jumps;
+	else if word number 1 in the player's command is "jm":
+		now jump-region is metros;
+		now jump-table is table of metros jumps;
+	else if word number 1 in the player's command is "jr":
+		now jump-region is resort;
+		now jump-table is table of resort jumps;
+	else if word number 1 in the player's command is "jo":
+		now jump-region is ordeal loader;
+		now jump-table is table of ordeal loader jumps;
+	else if word number 1 in the player's command is "js":
+		now jump-region is stores;
+		now jump-table is table of stores jumps;
+	else:
+		say "Unrecognized region." instead;
+	say "Jump region is now [jump-region].";
+	say "Jump table is now [jump-table].";
+
+table of ordeal loader jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+or do door	--	inside	a room	--	--
+bugle	--	--	--	false	true
+blot	--	--	--	true	false
+goat	--	--	--	true	false
+deer	--	--	--	false	true
+nest	--	--	--	true	--
+gateman	--	--	--	--	--
+attics	--	--	--	true	true
+
+table of stores jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+scented descent
+depots
+trade tread
+tenibac	--	--	--	true	true
+sorbet	--	--	--	true	true
+
+table of forest jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+--	first-guider-flip rule
+--	second-guider-flip rule
+nose	--	east
+shotgun
+shades
+silt	--	west	--	true	true
+maps	open-sandwich rule	west
+beard
+--	disguise-and-through rule
+chisel
+sliver	prepare-livers rule	--	flesh shelf
+drapes	--	--	emptiness sepiments
+has been	--	--	--	true	true
+silver	cut-drapes rule
+wolves	load-shotgun rule
+--	shoot-wolves rule
+
+this is the first-guider-flip rule:
+	try ts0ing;
+	try fliptoing scented descent;
+	try entering scented descent;
+	try going godir of a random fungible guider;
+
+this is the second-guider-flip rule:
+	try going godir of a random fungible guider;
+
+this is the open-sandwich rule:
+	try opening the sandwich;
+
+this is the disguise-and-through rule:
+	try putting shades on nose;
+	try putting beard on nose;
+	try going east;
+	try going north;
+
+this is the prepare-livers rule:
+	try peeling river ville liver with chisel;
+	try peeling viler liver with chisel;
+	try inserting river ville liver into grinder;
+	try inserting viler liver into grinder;
+
+this is the cut-drapes rule:
+	try cutting the drapes;
+
+this is the load-shotgun rule:
+	try inserting silver into shotgun;
+	try going inside;
+	try examining maps;
+
+this is the shoot-wolves rule:
+	try shooting the wolves;
+
+table of sortie jumps
+what-to-flip-to	what-before	dir-to-go	is-llp	is-alt-llp
+--	dial-fix rule
+teleporter	--	north
+tortilla
+parmesan
+steak
+hotsauce
+lettuce
+--	prepare-taco rule
+coat
+grits	open-fridge rule	--	true
+pancake	open-fridge rule	--	true
+shoes	kitchen-room rule
+sack
+straw
+teleporter	straw-in-sack rule
+peasant
+teleporter	hay-in-sack rule
+hallway	prepare-hallway rule
+soil	first-oils rule
+silo	second-oils rule
+missile
+panel	fold-poem rule
+black door
+shoot button	prepare-silo rule
+steer button
+--	final-shot rule
+
+this is the dial-fix rule:
+	try ts0ing;
+	try fliptoing depots;
+	try entering depots;
+	try numming 16;
+
+this is the prepare-taco rule:
+	try inserting parmesan into tortilla;
+	try inserting steak into tortilla;
+	try inserting hotsauce into tortilla;
+	try inserting lettuce into tortilla;
+
+this is the open-fridge rule:
+	try opening the fridge;
+
+this is the kitchen-room rule:
+	try going east;
+	try going south;
+
+this is the straw-in-sack rule:
+	if straw is fungible, try inserting straw into sack;
+
+this is the hay-in-sack rule:
+	if straw is fungible or straw is in sack:
+		now player has straw;
+		try giving straw to peasant;
+	if hay is fungible and peasant is not fungible, try inserting hay into sack;
+	try gotoing stiller trellis;
+
+this is the prepare-hallway rule:
+	try fliptoing teleporter;
+	try going north;
+	if hay is fungible, try inserting hay into wall;
+
+this is the first-oils rule:
+	try fliptoing cask;
+	try going east;
+	try pouring oils;
+	try gotoing moor;
+
+this is the second-oils rule:
+	try gotoing sacred cedars;
+	try pouring oils;
+	try gotoing moor;
+
+this is the fold-poem rule:
+	try folding the poem;
+
+this is the prepare-silo rule:
+	if black door is fungible, try putting black door on silo;
+	if panel is fungible, try putting panel on silo;
+	if missile is fungible, try inserting missile into silo;
+
+this is the final-shot rule:
+	if steer button is fungible, try pushing steer button;
+	if shoot button is fungible, try pushing shoot button;
+
+table of metros jumps
+what-to-flip-to	what-before	dir-to-go	is-llp	is-alt-llp
+gardenia	metros-prep rule
+velcro	--	north
+tomato	--	west
+--	emitter-loop rule
+rentals	--	--	true	true
+--	termites rule
+keycard
+controls	--	south
+sheath	pre-fairy-purchase rule
+barcode	--	west
+sword	--	west
+--	enter-coteries rule
+--	ask-nerds rule
+gin nope opening	to-terminal rule
+--	controls-in-slot rule
+resin	pre-resin rule
+beast
+--	kill-beast rule
+
+this is the metros-prep rule:
+	try ts0ing;
+	try fliptoing trade tread;
+	try entering trade tread;
+
+this is the emitter-loop rule: [ this goes beyond getting a point but we'd like to be by the bastion ]
+	try going east;
+	try going south;
+	try going west;
+	try throwing tomato at night thing;
+	try examining mattress;
+	try going east;
+	try going north;
+	try going north;
+
+this is the termites rule:
+	try switching on termite emitter;
+
+this is the pre-fairy-purchase rule:
+	try going east;
+	try taking brocade;
+	try giving gardenia to faeries;
+
+this is the enter-coteries rule:
+	try going east;
+	try going south;
+	try putting barcode on keycard;
+	try putting keycard on friend finder;
+	try going east;
+
+this is the ask-nerds rule:
+	try asking nerds about "darkness"
+
+this is the to-terminal rule:
+	try going south;
+	try going west;
+	try going south;
+
+this is the controls-in-slot rule:
+	try going up;
+	try inserting controls into gin nope opening;
+
+this is the pre-resin rule:
+	try going down;
+	try going east;
+
+this is the kill-beast rule:
+	try attacking beast;
+
+table of resort jumps
+what-to-flip-to	what-before	dir-to-go	is-llp	is-alt-llp
+teleporter	resort-prep rule
+lies	--	--	true	true
+cork	--	--	false	true
+wings	--	--	true	false
+toeholds	--	east	false	true
+grips	--	--	true	false
+ropes	--	--	true	false
+slope
+protest	--	east
+potters
+china	--	--	true
+kilns	--	--	true
+--	tug-toe rule
+--	exist-end rule
+
+this is the resort-prep rule:
+	try ts0ing;
+	now forest is solved;
+	now sortie is solved;
+	now metros are solved;
+	try fliptoing ogled lodge;
+	try entering ogled lodge;
+
+this is the tug-toe rule:
+	change the text of the player's command to "tug toe";
+	try tuging toe;
+
+this is the exist-end rule:
+	change the text of the player's command to "exist";
+	try existing;
+
 Shuffling Tests ends here.
 
 ---- DOCUMENTATION ----
