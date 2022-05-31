@@ -574,6 +574,8 @@ carry out tabnexting:
 
 volume jumpthroughing
 
+[ possible improvement: describe what each row does with an additional column ]
+
 jumpthroughing is an action applying to one number.
 jumpthroughalling is an action out of world.
 
@@ -598,22 +600,108 @@ carry out jumpthroughing:
 	if pts is 0, now pts is number of rows in jump-table;
 	let current-rows be 0;
 	let last-score be 0;
+	let failed-test be false;
 	repeat through jump-table:
 		increment current-rows;
+		if jumpthroughminimal is true:
+			if jumpthroughalt is false:
+				if there is an is-llp entry and is-llp entry is true, next;
+			else:
+				if there is an is-alt-llp entry:
+					if is-alt-llp entry is true, next;
+				else:
+					if there is an is-llp entry, say "We need both an is-llp and is-alt-llp entry.";
 		say "[second custom style]Row [current-rows]. Current score [cur-score of mrlp]. ";
 		if there is a place-to-go entry, say "Going to [place-to-go entry]. ";
 		if there is a dir-to-go entry, say "Going [dir-to-go entry]. ";
 		if there is a what-before entry, say "Processing [what-before entry]. ";
 		if there is a what-to-flip-to entry, say "Flipping [what-to-flip-to entry]. ";
 		say "[line break][r]";
-		if there is a place-to-go entry, try gotoing place-to-go entry;
+		if there is a place-to-go entry and place-to-go entry is not location of player, try gotoing place-to-go entry;
 		if there is a dir-to-go entry, try going dir-to-go entry;
 		if there is a what-before entry, process the what-before entry;
 		if there is a what-to-flip-to entry, try fliptoing what-to-flip-to entry;
-		if cur-score of mrlp is last-score, say "[first custom style]WARNING did not gain point for this try.[r]";
+		if cur-score of mrlp is last-score:
+			say "[first custom style]WARNING did not gain point for this try.[r]";
+			if jumpthroughbreak is true:
+				say "BREAK before end.";
+				now failed-test is true;
+				break;
 		now last-score is cur-score of mrlp;
 		process the notify score changes rule;
-		if current-rows is pts, break;
+
+chapter jtsing
+
+jumpthroughbreak is a truth state that varies.
+
+jtsing is an action out of world.
+
+understand the command "jts" as something new.
+
+understand "jts" as jtsing.
+
+carry out jtsing:
+	say "Jump through skip is [if jumpthroughbreak is true]already[else]now[end if] on. We work through errors.";
+	now jumpthroughbreak is true;
+	the rule succeeds;
+
+chapter jtbing
+
+jtbing is an action out of world.
+
+understand the command "jtb" as something new.
+
+understand "jtb" as jtbing.
+
+carry out jtbing:
+	say "Jump through break is [if jumpthroughbreak is false]already[else]now[end if] on. We stop at the first error.";
+	now jumpthroughbreak is true;
+	the rule succeeds;
+
+chapter jtmxing
+
+jumpthroughminimal is a truth state that varies.
+
+jtmxing is an action out of world.
+
+understand the command "jtmx" as something new.
+
+understand "jtmx" as jtmxing.
+
+carry out jtmxing:
+	say "We now do a maximal jump through.";
+	now jumpthroughminimal is false;
+	the rule succeeds;
+
+chapter jtm1ing
+
+jumpthroughalt is a truth state that varies.
+
+jtm1ing is an action out of world.
+
+understand the command "jtm1" as something new.
+
+understand "jtm1" as jtm1ing.
+
+carry out jtm1ing:
+	say "We now do a minimal jump through, via route 1.";
+	now jumpthroughminimal is true;
+	now jumpthroughalt is false;
+	the rule succeeds;
+
+chapter jtm1ing
+
+jtm2ing is an action out of world.
+
+understand the command "jtm2" as something new.
+
+understand "jtm2" as jtm2ing.
+
+carry out jtm2ing:
+	say "We now do a minimal jump through, via route 2.";
+	now jumpthroughminimal is true;
+	now jumpthroughalt is true;
+	the rule succeeds;
 
 STS tests ends here.
 

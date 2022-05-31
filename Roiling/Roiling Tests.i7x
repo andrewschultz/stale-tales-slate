@@ -1982,13 +1982,21 @@ this is the enter-aperture rule:
 table of stores jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
 store b	--	--	--	true	true
+tokers
+nestor
+suit ode	--	inside
 source course
+tastee estate
+odorant tornado
+barnacle balancer
+truster turrets
+solid idols
 
 table of routes jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
-worst ad	to-routes rule	--	--	true	true
-scripture picturers	--	outside
+scripture picturers	to-routes rule
 gast	see-ingredients rule
+worst ad	--	--	--	true	true
 side art
 rude n nuder
 u nerd endur redun
@@ -2026,9 +2034,9 @@ this is the check-with-horbert rule:
 
 table of troves jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
-Pa Egg Pea	to-troves rule	--	--	true	true
+eh at heat	to-troves rule
+Pa Egg Pea	--	--	--	true	true
 tears taser	--	--	--	true	true
-eh at heat
 Race Acre
 sob ever verbose
 mussier misuser	--	--	--	true	true
