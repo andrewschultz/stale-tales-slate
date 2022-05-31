@@ -45,7 +45,6 @@ Reverse psychology won't work on the signers' ingress, here.
 You can't change the hotel, but you could have a look around.
 
 #ttc-table-of-undesired-underside-nudges-etch
-#nudge for etch
 >ethc
 The tech-etch is pretty securely, um, etched on.
 
@@ -186,7 +185,7 @@ You don't have the skill to hack the friend finder.
 >doro
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 
-#renudge for theol
+#+ttc-table-of-metros-nudges-theol
 >theol
 You can't change the hotel, but you could have another look around.
 
@@ -327,7 +326,6 @@ You think of how to make the ketchup slightly classier. It doesn't bend, but may
 Nothing to change the mattress to, even if you could move the night thing off.
 
 >throw tomato at thing
-#notana
 by one point
 
 #+testcase-mistake-shuffling-smatters
@@ -341,12 +339,12 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >bupm
 Just search the bump instead.
 
-#renudge for mattress
+#+ttc-table-of-metros-nudges-mattress
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
 >x mattress
 
-#renudge for mattress
+#+ttc-table-of-metros-nudges-mattress
 >mattrsse
 Nothing to change the mattress to, and you already looted it
 
@@ -362,7 +360,7 @@ The mattress is in bad enough shape as it is. You got what you needed from it.
 
 >e
 
-#renudge for theol
+#+ttc-table-of-metros-nudges-theol
 >theol
 You can't change the hotel, and you got rid of the night thing, anyway.
 
@@ -495,7 +493,7 @@ Your score has just gone up by one point.
 >score
 You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#renudge for rental
+#+ttc-table-of-metros-nudges-rental
 >rentla
 No point bringing those tacky antlers back, or thinking about them any more
 
@@ -520,7 +518,6 @@ It isn't just any cake. It's dry cake.
 It isn't just any cake. It's dry cake.
 
 >switch emitter
-#notana
 Your score has just gone up by one point.
 >score
 You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -538,13 +535,6 @@ You take care not to let the cake tear as you pick it up.
 How the angst gnats taste doesn't matter.
 >tangs
 How the angst gnats taste doesn't matter.
-
-##nudge for lost
->ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
-##nudge for corn
->conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 >controls
 Your score has just gone up by one point.
@@ -722,7 +712,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 >noise bag
 by one point
-#altpath
+
 #ttc-table-of-metros-done-rejects-noise-bag
 >noisebga
 The noise bag rumbles ominously. Best not change it into something worse.
@@ -732,7 +722,7 @@ The noise bag rumbles ominously. Best not change it into something worse.
 
 >take heaths
 
-#renudge for heath
+#+ttc-table-of-metros-nudges-heath
 >heaht
 They are multiple heaths--so you should try to change just one.
 
@@ -831,7 +821,6 @@ The beats shift up for a second.
 What do you know? It works! The signers' ingress slides open!
 
 >e
-#notana
 /^Esoteric Coteries
 
 >score
@@ -849,7 +838,7 @@ The lit-up tulip will stay lit. No need to futz with its brand name.
 
 >w
 
-#renudge for friend
+#+ttc-table-of-metros-nudges-friend
 >friedn
 You don't need to futz further with the friend finder.
 
@@ -857,7 +846,7 @@ You don't need to futz further with the friend finder.
 >resign
 The ingress already did. You got by.
 
-#renudge for special
+#+ttc-table-of-metros-nudges-special
 >specila
 You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
 
@@ -874,7 +863,7 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 #ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
-#renudge for beats
+#+ttc-table-of-metros-nudges-beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
 
@@ -933,7 +922,6 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 
 >ask nerds about darkness
-#notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
 "Logical call. I go." You sneak out back west.
@@ -949,16 +937,14 @@ The signers' ingress is reinforced. The nerds made sure it was protected against
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
-
 #+testcase-mistake-shuffling-snores-snore
 >snores
 No need to put the sensor to sleep now you got what you want.
 
-#renudge for metallic
+#+ttc-table-of-metros-nudges-metallic
 >metallci
 You got to the Esoteric Coteries. You don't need any tricks like that.
-#renudge for signer
+#+ttc-table-of-metros-nudges-signer
 >signre
 You got to the Esoteric Coteries. You don't need any tricks like that.
 
@@ -1032,7 +1018,7 @@ But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which do
 >tramline
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#renudge for tulip
+#+ttc-table-of-metros-nudges-tulip
 >ulipt
 The tulip is handy as-is. It gives light. You can't ask for much more.
 
@@ -1144,7 +1130,6 @@ No matter how hard you try to convince yourself they are lovely, you're not smit
 No need. You made it above the cafe face with the velcro.
 
 >put controls in opening
-#notana
 
 >score
 You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -1152,12 +1137,12 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 #+ttc-table-of-readables-controls
 >read controls
 The opening isn't really an opening any more, what with the controls fitting in nicely.
-#renudge for gin
+#+ttc-table-of-metros-nudges-gin
 >gni
 You already transformed the neon pig to the gin-nope opening. And you put the controls in. Better not do any more.
 >openign
 You don't need to close up the opening. The controls are in, and they fill it well enough.
-#renudge for recess
+#+ttc-table-of-metros-nudges-recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
 
@@ -1247,7 +1232,7 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 #ttc-table-of-metros-done-rejects-beast
 >betsa
 You've changed the beats to something tangible, physically beatable.
-#renudge for aligns
+#+ttc-table-of-metros-nudges-aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beast.
 
@@ -1258,7 +1243,6 @@ No use messing with the aligns signal when you need to focus on the beast.
 The hilt serves a purpose, and besides, there's not much to change it to.
 
 >attack beast
-#notana
 
 /^Trips Strip
 

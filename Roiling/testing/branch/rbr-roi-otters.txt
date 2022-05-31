@@ -2523,7 +2523,7 @@ You already changed the leopard.
 You already changed the leopard.
 
 @max
-#retry pre-medals-quickly rule
+#+testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
 >quickly
 You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
 
@@ -3679,7 +3679,7 @@ The parrot can be changed back into a raptor, but not into anything new.
 /(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
 
 @max
-#more pre-medals-quickly rule
+#+testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
 >quickly
 #OK-APOSTROPHE
 /(Elmer and Merle|Merle and Elmer)'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
@@ -4119,7 +4119,6 @@ You decide, why not ROVE OVER?
 @!min
 >au 2
 >play whistle
-#notana
 by one point
 }}SCORE++
 Elmo and Gretta are waiting for you back at the Means Manse

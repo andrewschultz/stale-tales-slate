@@ -29,7 +29,7 @@ ALSO-IGNORE:t,c
 }}MAX=47
 }}CURMAX=47
 }}SCORE=0
-}}CURMIN=25
+}}CURMIN=26
 
 }$SCOS=You have {SCORE} of {MAX} total points for the post-Elvira Others region, though you only need {CURMIN} to win.
 }$SCONOFIND=You have {SCORE} of {MAX} total points for the post-Elvira Others region.\nThere are no fruits left to find or give back to Curtis.
@@ -1441,7 +1441,7 @@ Nothing specific to do here, but there are other places where you can make fruit
 >icons
 by one point
 }}SCORE++
-
+\\
 >score
 {$SCOS}
 
@@ -2681,11 +2681,13 @@ After all that work getting it to appear, you don't want to make the lost slot v
 
 >put icons in slot
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
-!Your score has just gone up by one point.
+Your score has just gone up by one point.
+}}SCORE++
 
 @min
 # with the icons in the slot, you can no longer get CONCISIONS
 }}CURMAX--
+
 >score
 {$SCOS}
 
@@ -3120,7 +3122,6 @@ You have more than one way to leave: north and south. So you'll need to specify 
 There are two unblocked exits: north and south to Swell Wells.
 
 >n
-#notana
 @!min,spoi
 by one point
 #bonus point for not usuing arugula

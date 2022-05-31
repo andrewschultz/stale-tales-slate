@@ -436,6 +436,7 @@ by one point
 >bugle
 }}SCORE++
 }}CURMIN++
+\\
 #testcase-postrule-table-of-ordeal-loader-anagrams-post-bulge-bugle-rule
 >score
 {$SCOS}
@@ -738,7 +739,7 @@ The deer is very peaceful. You dere-n't disturb it.
 >gota
 The goat is happy as-is. No need to go tag a ...
 \\
-#renudge for shrub
+#+ttc-table-of-ordeal-reload-nudges-shrub
 >shrbu
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
@@ -1167,7 +1168,7 @@ Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 
 @nud
-#renudge for notices
+#+ttc-table-of-ordeal-reload-nudges-notices
 >noticse
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
@@ -1291,9 +1292,11 @@ He shows you some calculations that any such writing can be expected to eliminat
 #ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
+\\
 #+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned..." His eyes grow mistened. "Ten dimes say it's end times. We've waited for an upturn to turn up..."
+\\
 #+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "The time for talk is over."
@@ -1449,6 +1452,18 @@ you could've changed the bulge into a BUGLE.
 /^Trips Strip
 
 @max
+[NOTE: Shuffling Around is configured to create an auto-save dialogue after each region you solve. This can be switched off with AVERSE or switched back on with RESAVE. You can also abort saving with no penalty. This nag will not reappear.]
+<debug mode skips game-saving dialogue so test runs are continued>
+\\
 #ttc-table-of-ranks-4
 >score
 You have the rank of benigner beginner.
+\\
+#here we test the AVERSE/RESAVE option fully
+>undo
+\\
+>averse
+\\
+>in
+!is configured to
+!debug mode skips

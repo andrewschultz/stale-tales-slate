@@ -84,7 +84,6 @@ Rev. Ali left, but with one final "character-building" challenge. The roads out 
 >x summary
 It was rumored Rev. Ali moved on to a new community to "help." His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow.
 
-#x list o toils
 >x toils
 Precise recipes
 
@@ -174,8 +173,12 @@ Your score has just gone up by one point
 
 >out
 
-#testcase-postrule-table-of-routes-anagrams-post-past-rule
+#testcase-postrule-table-of-routes-anagrams-post-seedpit-despite-rule
 >scan resto store
+You read what the settler says--and you realize you already took care of the resto store or something closely related.
+
+#testcase-postrule-table-of-routes-anagrams-post-past-rule
+>scan cravings carvings
 You read what the settler says--and you realize you already took care of the resto store or something closely related.
 
 >across

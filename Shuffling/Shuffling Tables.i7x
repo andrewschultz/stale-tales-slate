@@ -166,7 +166,7 @@ book Sortie
 
 table of Sortie anagrams [xxtia]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	fullhash	binhash	vanish	to-room
-t-n	teleporter	"kitchen"	"the nick"	--	--	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	533908	--	kitchen
+t-n	teleporter	"kitchen"	"the nick"	--	post-kitchen-nick rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	533908	--	kitchen
 warts	straw	"straw"	"warts"	--	post-warts-straw rule	"The warts quickly peel off and lengthen into straw."	false	394830378	5111809
 skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089	787473
 cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shreds before turning into a light green head of lettuce."	false	639757485	1574932
@@ -192,6 +192,12 @@ hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	--
 trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	--	post-trees-steer rule	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005	917520
 
 to say closed-note: if fridge is closed, say "you didn't even open yet "
+
+this is the post-kitchen-nick rule:
+	say "You notice some warts on your face. Stress causes them, you know, and between the centrifuge and the nick, you've had a bit lately.";
+	now warts are part of the player;
+	now startmod5 is the remainder after dividing (turn count + 4) by 5;
+	continue the action;
 
 this is the post-warts-straw rule:
 	pad-del "warts";

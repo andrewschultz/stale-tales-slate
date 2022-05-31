@@ -187,7 +187,7 @@ Your score has just gone up by one point
 #ttc-table-of-presto-anagrams-whassup
 You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
-/DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
+/DEBUG INFO: both (Leo and Rand|Rand and Leo) hinting\.
 
 >score
 Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
@@ -398,7 +398,6 @@ Score in a scenario: 26 out of 41 total points in the current region, Presto. Lo
 >push skid n
 >push skid n
 >push skid n
-#notmax
 Your score has just gone up by one point
 
 #ttc-table-of-presto-anagrams-keyboard
@@ -502,9 +501,6 @@ Score in a scenario: 37 out of 41 total points in the current region, Presto. Lo
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
->score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
-
 >score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 

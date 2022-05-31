@@ -243,7 +243,7 @@ There's nothing too tricky to do in the Demo Dome. You can THINK or request the 
 Meta-commands don't have any easter eggs, sadly.
 !This is a museum! Messing with the exhibits would be very bad form.
 \\
-##############################################nudges before and after are different
+##############################################note that nudges and mistakes shift up after examining the grate, so we flip the tests
 
 >x grate
 

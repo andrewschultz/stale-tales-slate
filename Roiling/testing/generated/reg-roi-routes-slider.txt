@@ -74,7 +74,6 @@ Score in a scenario: 1 out of 22 total points in the current region, Routes. Low
 
 >x list o toils
 
-#x list o toils
 >x toils
 Precise recipes
 

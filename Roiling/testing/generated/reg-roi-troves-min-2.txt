@@ -77,14 +77,6 @@ Your score has just gone up by one point
 Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
 
 >decide
-
->score
-Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
-
->undo
->undo
-
->decide
 Your score has just gone up by one point
 
 /^Boredom Bedroom
@@ -108,14 +100,6 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
-
->desire
-
->score
-Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
-
->undo
->undo
 
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.

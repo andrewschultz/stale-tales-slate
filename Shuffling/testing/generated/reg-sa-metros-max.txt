@@ -74,7 +74,6 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 /^The Ol' Hotel
 
 >throw tomato at thing
-#notana
 by one point
 
 >score
@@ -117,7 +116,6 @@ This would create quite a (negative) scene with people still in the bastion.
 dry cake -> keycard
 
 >switch emitter
-#notana
 Your score has just gone up by one point.
 >score
 You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -129,13 +127,6 @@ You take care not to let the cake tear as you pick it up.
 
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
-
-##nudge for lost
->ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
-##nudge for corn
->conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 >controls
 Your score has just gone up by one point.
@@ -174,6 +165,7 @@ by one point
 >open noise bag
 You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it.
 >sword
+
 #+testcase-prerule-table-of-metros-anagrams-pre-words-sword-rule
 The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.
 It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPEN it, though, being a noise bag.
@@ -249,7 +241,6 @@ You currently have 11 out of 18 total points for the Metros region. You have fou
 What do you know? It works! The signers' ingress slides open!
 
 >e
-#notana
 /^Esoteric Coteries
 
 >score
@@ -287,7 +278,6 @@ by one point
 >undo
 
 >ask nerds about darkness
-#notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
 "Logical call. I go." You sneak out back west.
@@ -296,8 +286,6 @@ by one point
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
-#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
 /^Elm Train Terminal
@@ -316,7 +304,6 @@ The Velcro strip is just the thing to climb the cafe face and reach the small re
 You climb back up the cafe face.
 
 >put controls in opening
-#notana
 
 >score
 You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -360,7 +347,6 @@ You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 --the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
-#notana
 
 /^Trips Strip
 

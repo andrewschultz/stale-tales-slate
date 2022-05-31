@@ -17,7 +17,6 @@
 >opt in
 
 >forest
-#notmax
 Your score has just gone up by one point.
 
 # start the default (which I picked at random) way through.
@@ -34,6 +33,7 @@ DEBUG INFO: Rect-text: S---H.
 DEBUG INFO: Cert-text: S----.
 >s
 #gadget test: stew to west
+
 #ttc-table-of-kibitzes-whiff-of-stew
 >rc stew
 You get to scanning, twiddling from certify to rectify and back.

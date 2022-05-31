@@ -886,7 +886,7 @@ You can't see anything like that here. If you're trying to view the room, L or L
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
 
 @nud
-#renudge for marquee
+#+ttc-table-of-stores-nudges-marquee
 >marquee
 You don't need to change the marquee now that you figured what it means.
 

@@ -17,7 +17,6 @@
 >opt in
 
 >forest
-#notmax
 Your score has just gone up by one point.
 
 #ttc-table-of-stores-done-rejects-scented-descent
@@ -26,6 +25,7 @@ The scented descent to the forest doesn't need to be changed.
 
 >rs sw
 >in
+
 #ttc-table-of-forest-nudges-whiff
 >whfif
 No, that's not the essence of the whiff of stew.
@@ -35,11 +35,11 @@ No, that's not the essence of the whiff of stew.
 >wets
 Getting lost in a swamp would be even worse than getting lost in a forest.
 >undo
-#renudge for norht
+#+ttc-table-of-forest-nudges-norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for souht
+#+ttc-table-of-forest-nudges-souht
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -48,7 +48,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
-#renudge for eats
+#+ttc-table-of-forest-nudges-eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -65,7 +65,7 @@ Unless a room has no way out, or your gadget spontaneously gives a reading, you 
 >ramblign
 No, that's not the essence of the rambling shout.
 >undo
-#renudge for norht
+#+ttc-table-of-forest-nudges-norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -74,11 +74,11 @@ You think you're on to something, but you still feel stuck.
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
 >undo
-#renudge for ewst
+#+ttc-table-of-forest-nudges-ewst
 >twes
 Your internal compass feels extra jumbled. You remember the whiff of stew, but there's probably a different challenge here.
 >undo
-#renudge for eats
+#+ttc-table-of-forest-nudges-eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -92,11 +92,13 @@ by one point
 
 >rs ne
 >in
+
 #ttc-table-of-forest-nudges-aroma
 >aroam
 No, that's not the essence of the aroma of teas.
 >undo
-#spectest for teas
+
+#ttc-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
@@ -120,7 +122,7 @@ You need the opposite of a seat, here. But at the same time, you're also very cl
 >tase
 This game is nonviolent--well, except for a few puns.
 >undo
-#renudge for eat
+#+ttc-table-of-forest-nudges-eat
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
@@ -133,20 +135,20 @@ You think you're on to something, but you still feel stuck.
 by one point
 /^Rest of Forest
 
-#spectest for thorn
+#+ttc-table-of-forest-nudges-north
 >ornth
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
 >undo
-#renudge for souht
+#+ttc-table-of-forest-nudges-souht
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for ewst
+#+ttc-table-of-forest-nudges-ewst
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
 
-#ttc-table-of-forest-nudges-east
+#+ttc-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
 >undo
@@ -160,38 +162,38 @@ by one point
 
 >sr ne
 >in
-#renudge for north
+#+ttc-table-of-forest-nudges-north
 >norht
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
 >undo
-#renudge for souht
+#+ttc-table-of-forest-nudges-souht
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for ewst
+#+ttc-table-of-forest-nudges-ewst
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for eats
+#+ttc-table-of-forest-nudges-eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
 >n
 by one point
 /^Rest of Forest
-#renudge for north
+#+ttc-table-of-forest-nudges-north
 >norht
 Your internal compass feels extra jumbled. You remember the thorn, but there's probably a different challenge here.
 >undo
-#renudge for souht
+#+ttc-table-of-forest-nudges-souht
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for ewst
+#+ttc-table-of-forest-nudges-ewst
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for east
+#+ttc-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
@@ -205,38 +207,38 @@ by one point
 
 >sr sw
 >in
-#renudge for norht
+#+ttc-table-of-forest-nudges-norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for souht
+#+ttc-table-of-forest-nudges-souht
 >souht
 Your internal compass feels extra jumbled. The shout wavers for a bit. Maybe you're on to something.
 >undo
-#renudge for ewst
+#+ttc-table-of-forest-nudges-ewst
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for eats
+#+ttc-table-of-forest-nudges-eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
 >s
 by one point
 /^Rest of Forest
-#renudge for norht
+#+ttc-table-of-forest-nudges-norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for souht
+#+ttc-table-of-forest-nudges-souht
 >souht
 Your internal compass feels extra jumbled. You remember the rambling shout, but there's probably a different challenge here.
 >undo
-#renudge for west
+#+ttc-table-of-forest-nudges-west
 >twes
 The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
-#renudge for eats
+#+ttc-table-of-forest-nudges-eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -296,7 +298,7 @@ It is too late to help the line of no life by showing love.
 >lief
 It is too late to help the line of no life by showing love.
 
-#renudge for forest
+#+ttc-table-of-forest-nudges-forest
 >forets
 You don't want to change a region drastically while you're in it
 
@@ -869,7 +871,7 @@ Cr-r-r-r-k.
 
 >e
 
-#renudge for liver
+#+ttc-table-of-forest-nudges-liver
 >livre
 Your thoughts go to the other liver.
 
@@ -906,7 +908,7 @@ Very good try. But you need to change the meats into something else entirely. So
 
 >put river ville in canister
 
-#renudge for liver
+#+ttc-table-of-forest-nudges-liver
 >livre
 C'mon. You put one liver where it needs to be. No need to futz with the remaining liver.
 
@@ -918,10 +920,10 @@ LIVERS.
 >score
 You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#renudge for canister
+#+ttc-table-of-forest-nudges-canister
 >canistre
 The canister has suffered enough abuse. No need to break it further.
-#renudge for hams
+#+ttc-table-of-forest-nudges-hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and in any case, you broke the canister, anyway.
 
@@ -947,6 +949,16 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #testcase-mistake-shuffling-silver
 >silver
 The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
+
+>sliver
+by one point
+
+>srelvi
+!The sliver seems to bend, but it snaps back.
+You already figured what to do here. PAD FLIPS for a refresher.
+>undo
+>undo
+>undo
 
 >sliver
 Your score has just gone up by one point.
@@ -1007,7 +1019,7 @@ Your score has just gone up by one point.
 >score
 You currently have 14 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#renudge for cloth
+#+ttc-table-of-forest-nudges-cloth
 >cloht
 No, the material of the drapes isn't important, here.
 
@@ -1214,15 +1226,15 @@ They won't be changed with magic. Thankfully, you've got something more direct.
 #ttc-table-of-frost-forts-nudges-lupine
 >lupien
 They are the lupine lineup from your notes, but for your purpose, they're wolves.
-#renudge for snow
+#+ttc-table-of-forest-nudges-snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha
 !Except those vowels.
-#renudge for icecap
+#+ttc-table-of-forest-nudges-icecap
 >icecpa
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.
-#renudge for iced
+#+ttc-table-of-forest-nudges-iced
 >icde
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.

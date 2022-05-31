@@ -16,7 +16,6 @@
 >poss
 
 >resort
-#notmax
 Your score has just gone up by one point
 
 #ttc-table-of-stores-done-rejects-ogled-lodge
@@ -73,7 +72,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #ttc-table-of-readables-tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
-#renudge for altar
+#+ttc-table-of-resort-nudges-altar
 >altra
 While you're sort of trapped here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 
@@ -128,7 +127,7 @@ Perhaps you can deal with the leis, or maybe you can use something else to escap
 >sadn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 
-#renudge for islet
+#+ttc-table-of-resort-nudges-islet
 >tilse
 That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave.
 
@@ -181,7 +180,7 @@ You currently have 3 out of 15 total points for the Resort region. Your minimum 
 >crko
 Your head swims then sinks as you realize the cork can't become much else.
 
-#renudge for oflat
+#+ttc-table-of-resort-nudges-oflat
 >aftol
 You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
 
@@ -206,11 +205,11 @@ You currently have 4 out of 15 total points for the Resort region. Your minimum 
 >winsg
 The wings should be able to propel you enough.
 
-#renudge for oflat
+#+ttc-table-of-resort-nudges-oflat
 >aftol
 You can just use either the cork or the wings to leave to the east.
 
-#renudge for eter
+#+ttc-table-of-resort-nudges-eter
 >eter
 The tree sits there.
 
@@ -466,7 +465,7 @@ You currently have 10 out of 15 total points for the Resort region. Your minimum
 >troi
 You can deal with three people. But you'll have to change their motivations.
 
-#renudge for clay
+#+ttc-table-of-resort-nudges-clay
 >clya
 No, the clay is a clue to what the trio really wants to do.
 
@@ -547,7 +546,6 @@ You don't have the ability to dish out an achin', but you see red from wanting t
 >china
 Your score has just gone up by one point.
 
-#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -585,7 +583,7 @@ You couldn't slink behind the kilns even if they were here.
 >brb
 You don't know him that well. No riffing on his initials!
 
-#renudge for hotsopt
+#+ttc-table-of-resort-nudges-hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
@@ -637,12 +635,11 @@ You slur out a few consonants--maybe you should work with something closer, lowe
 >getotu
 Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 
-#renudge for hotsopt
+#+ttc-table-of-resort-nudges-hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
 >tug toe
-#notana
 by one point
 
 Your score has just gone up by one point.
@@ -673,7 +670,7 @@ It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine,
 Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.
 On the other hand, if you're volunteering to test my other games, I could always use the help.
 
-#renudge for hotsopt
+#+ttc-table-of-resort-nudges-hotsopt
 >hotspto
 You don't want to make this place a hotspot again.
 
@@ -732,7 +729,6 @@ Even if they wouldn't, well, the Means Manse is for you and you alone. You earne
 You're not even up for THAT, now. You just want to BE.
 
 >exist
-#notana
 by one point
 My Adieu to You: Made It!
 

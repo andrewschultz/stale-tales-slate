@@ -78,7 +78,6 @@ Your score has just gone up by one point
 Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >reined
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
@@ -89,12 +88,10 @@ Score in a scenario: 7 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >pastier
 Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >n
 
 /^Anemic Cinema
@@ -103,7 +100,6 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >n
 
 /^Shaven Havens
@@ -118,12 +114,10 @@ Score in a scenario: 10 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >nerdiest
 Your score has just gone up by one point
 >score
 Score in a scenario: 12 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >e
 
 /^Artist Traits Strait
@@ -132,12 +126,10 @@ Score in a scenario: 12 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >holiest
 Your score has just gone up by one point
 >score
 Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >n
 
 /^Actionless Coastlines
@@ -145,7 +137,6 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >s
 >s
 
@@ -195,7 +186,6 @@ Score in a scenario: 19 out of 57 total points in the current region, Towers. Lo
 >revised
 
 >put dagger in deviser
-#notana
 by one point
 
 >score
@@ -210,11 +200,9 @@ Your score has just gone up by one point
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >ask agnostic about doctor yow
-#notana
 !Your score has just gone up by one point
 
 >rowdy
-#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
 >score

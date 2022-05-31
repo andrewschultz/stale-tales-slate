@@ -592,7 +592,6 @@ No vandalizing church property.
 >letman
 You can't change stuff like that by brute force. But you don't need to.
 
-#x list o toils
 >x toils
 Precise recipes
 
@@ -1105,7 +1104,6 @@ pipe soot
 Besides, you got the pipe soot
 \\
 #ttc-table-of-routes-done-rejects-pipe-soot
-#not a nudj for pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
 
@@ -1279,12 +1277,12 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 You can sit ASTRIDE the anti-sag sit-a-nag now you have a reason to.
 
 @nud
-#nudges for ides
->ides
+#ttc-table-of-same-mesa-nudges-ides
+>idse
 It's the whole side art you need to deal with.
->rat
-It's the whole side art you need to deal with.
->tar
+\\
+#ttc-table-of-same-mesa-nudges-tra
+>tra
 It's the whole side art you need to deal with.
 \\
 #+testcase-mistake-roiling-staider

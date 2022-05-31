@@ -179,7 +179,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
 
 >scan
-#notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -209,7 +208,6 @@ Your score has just gone up by one point
 Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
 
 >tend
-#notana 'nudge for dent'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -352,7 +350,6 @@ Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >clean
-#notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -444,7 +441,6 @@ by one point
 Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
 >ask haunter about ruby
-#notana
 by one point
 
 ascal Craals
@@ -511,7 +507,6 @@ by one point
 Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
 >tan
-#notana 'nudge for ant'
 Your score has just gone up by one point
 
 >score

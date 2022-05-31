@@ -222,7 +222,6 @@ by one point
 Score in a scenario: 24 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 41.
 
 >ask haunter about ruby
-#notana
 by one point
 
 ascal Craals

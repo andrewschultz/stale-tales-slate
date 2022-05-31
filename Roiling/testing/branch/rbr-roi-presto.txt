@@ -342,7 +342,6 @@ Well, maybe one or two mild swears would work somewhere around here.
 
 @min
 >pooh
-#notmax
 Your score has just gone up by one point
 Taking away a max point.
 DEBUG INFO: Taking away a max point.
@@ -370,11 +369,6 @@ You are done here in Austerer Treasure. The earring will change when the time is
 
 >score
 {$SCOS}
-
-@nud
-#nudges for earring
->rreagin
-The earring pulses a bit more, but you doubt you can do anything with it on your own.
 
 @mis
 #testcase-mistake-roiling-rangier-rearing
@@ -1391,7 +1385,6 @@ DEBUG INFO: Taking away a max point.
 >scan zo
 ###skip test checking
 >mazeltov
-#notmax
 Your score has just gone up by two points
 }}CURMIN++
 }}CURMAX--
@@ -1867,7 +1860,7 @@ Your score has just gone up by one point
 You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
-/DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
+/DEBUG INFO: both (Leo and Rand|Rand and Leo) hinting\.
 
 @max
 #testcase-postrule-table-of-presto-anagrams-post-rand-darn-rule
@@ -2040,7 +2033,7 @@ You don't need to combine them physically, but their physical strengths combined
 !by one point
 #don't let your pals get beaten up twice.
 THERE, you think, realizing you're not armed yet.
-#detour to test "efffectively" armed
+#finally, check with or without dart
 >banish dart
 >there
 THERE, you think, realizing you're not armed yet.
@@ -2580,7 +2573,7 @@ by one point
 \\
 #testcase-postrule-table-of-presto-anagrams-post-harpings-flip-rule
 >x ought letters
-Nothing (significant) like that is in the immediate vicinity or region.
+The letters seem dull now you said tough.
 \\
 >undo
 \\
@@ -2589,9 +2582,16 @@ by one point
 !Hut! Go!
 Dat was a good dust-up
 \\
+>x so long letters
+WRONG
+>undo
+\\
 #testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >later
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>x later letters
+WRONG
+>undo
 >undo
 >undo
 #######T L S below
@@ -3365,13 +3365,11 @@ You may wish to decipher the scratchings, instead.
 
 @max
 >give book to yak
-#notmax
 by one point
 >undo
 
 @nud
 >push skid s
-#notana
 Your score has just gone up by one point
 /^Hacks' Shack
 >undo
@@ -3383,7 +3381,6 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 >push skid n
 >push skid n
 >push skid n
-#notmax
 Your score has just gone up by one point
 }}SCORE++
 
@@ -3927,9 +3924,6 @@ You imagine it can't be too hard to open up the disk drive and put them in.
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
->score
-{$SCOS}
-
 }}SCORE++
 }}CURMIN++
 >score
@@ -4135,7 +4129,7 @@ DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
 >score
-{$SCOMAX}
+{$SCOS}
 Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
 
 @max

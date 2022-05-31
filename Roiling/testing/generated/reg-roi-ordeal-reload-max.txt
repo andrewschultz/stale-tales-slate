@@ -192,6 +192,9 @@ by one point
 >undo
 >undo
 
+>x stair
+It leads up to the Dusty Study.
+
 >stable
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 

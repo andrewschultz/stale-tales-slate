@@ -539,12 +539,10 @@ Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 
 >marginal
 The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 29 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >holiest
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -733,7 +731,6 @@ After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 >revised
 
 >put dagger in deviser
-#notana
 by one point
 
 >score
@@ -752,7 +749,6 @@ Your score has just gone up by one point
 Score in a scenario: 43 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
 >ask agnostic about doctor yow
-#notana
 !Your score has just gone up by one point
 
 Dr. Yow is versatile. You need him to be exciting around the agnostic.
@@ -785,7 +781,6 @@ Your score has just gone up by one point
 Score in a scenario: 45 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 57.
 
 >rowdy
-#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
 DEBUG INFO: I ZOMG Gizmo hinting.
@@ -930,7 +925,6 @@ Your score has just gone up by one point
 Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 >give pot to sitter
-#notana
 Your score has just gone up by one point
 >score
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.

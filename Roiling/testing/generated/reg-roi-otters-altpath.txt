@@ -508,7 +508,6 @@ Score in a scenario: 37 out of 38 total points in the current region, Otters. Th
 
 >au 2
 >play whistle
-#notana
 by one point
 Elmo and Gretta are waiting for you back at the Means Manse
 

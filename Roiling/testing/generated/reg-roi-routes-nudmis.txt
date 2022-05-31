@@ -386,7 +386,6 @@ No vandalizing church property.
 >letman
 You can't change stuff like that by brute force. But you don't need to.
 
-#x list o toils
 >x toils
 Precise recipes
 
@@ -692,7 +691,6 @@ Your score has just gone up by one point
 Besides, you got the pipe soot
 
 #ttc-table-of-routes-done-rejects-pipe-soot
-#not a nudj for pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
 
@@ -791,12 +789,12 @@ You can't hide from Ian Gast like that, right now.
 >tiraed
 There's more than one tirade
 
-#nudges for ides
->ides
+#ttc-table-of-same-mesa-nudges-ides
+>idse
 It's the whole side art you need to deal with.
->rat
-It's the whole side art you need to deal with.
->tar
+
+#ttc-table-of-same-mesa-nudges-tra
+>tra
 It's the whole side art you need to deal with.
 
 #+testcase-mistake-roiling-staider

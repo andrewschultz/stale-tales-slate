@@ -31,6 +31,13 @@ If you changed the pen,
 >enp
 If you changed the pen,
 
+>afos
+You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
+[NOTE: you found a great guess, but such a change wouldn't push the story forward. Still, if you find one, the responses are meant to either be amusing or provide a small clue.]
+
+>afos
+You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
+!great guess
 
 #ttc-table-of-general-nudges-northwest
 >northwets
@@ -376,7 +383,7 @@ You consider trying to mess with RETRY to wind up somewhere that will cut out a 
 
 >certify store f
 
-#renudge for yorpwald
+#+ttc-table-of-general-nudges-yorpwald
 >yorpwadl
 You'll need to change Yorpwald one anagram at a time.
 
@@ -396,13 +403,11 @@ Being able to RETRY is good enough. You don't want to do anything too weird. It 
 
 # verb anagram(s)
 
->averse
-
 #ttc-table-of-general-nudges-resave
 >resaev
 Alas, there is nothing between RESAVE and AVERSE to load a special game state.
 
-#mistake test for reaves
+#testcase-mistake-shuffling-reaves
 >reaves
 You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
 
@@ -410,7 +415,7 @@ You don't need to break anything up, medieval or otherwise. You're trying to bri
 
 >anme
 You need to act on the Means Manse in their entirety. Or the exits.
-[NOTE: you are on the right track, but you'll need an extra S for what you need to figure, here. This is a one-time nag, though the nudge messages should always implicitly state when things' or people's plurality is important.]
+[NOTE: you are on the right track, but the intended anagram has an extra S. This is a one-time nag, though the nudge messages should always implicitly state when things' or people's plurality, or an apostrophe-s, is important.]
 
 >anme
 You need to act on the Means Manse in their entirety. Or the exits.

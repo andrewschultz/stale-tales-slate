@@ -502,7 +502,7 @@ They're roped together and spin about as you look at them. The larger, barely ta
 >score
 Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
-#retry pre-medals-quickly rule
+#+testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
 >quickly
 You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
 
@@ -668,6 +668,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is 35. Maximum score available is 38.
 
+#testcase-postrule-table-of-otters-anagrams-post-ideas-aides-aside-rule
 >x holy nest
 It's only nominally holy. It's covered with writing you could sneak a look at.
 
@@ -703,7 +704,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
 
-#more pre-medals-quickly rule
+#+testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
 >quickly
 /(Elmer and Merle|Merle and Elmer)'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
 
@@ -777,7 +778,6 @@ Score in a scenario: 37 out of 38 total points in the current region, Otters. Th
 
 >au 2
 >play whistle
-#notana
 by one point
 Elmo and Gretta are waiting for you back at the Means Manse
 

@@ -73,7 +73,6 @@ You can only go back out to the Same Mesa.
 
 >x list o toils
 
-#x list o toils
 >x toils
 Precise recipes
 

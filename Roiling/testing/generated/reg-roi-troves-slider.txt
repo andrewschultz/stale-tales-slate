@@ -156,14 +156,6 @@ Score in a scenario: 12 out of 30 total points in the current region, Troves. Lo
 >lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->decide
-
->score
-Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
-
->undo
->undo
-
 >glare
 Your score has just gone up by one point
 >score
@@ -226,18 +218,8 @@ Score in a scenario: 18 out of 30 total points in the current region, Troves. Lo
 >idcsvore
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->desire
-
->score
-Score in a scenario: 19 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 29.
-
->undo
->undo
-
 >discover
 by one point
-
->score
 
 #testcase-slider-table-of-troves-anagrams-desire
 >ederis

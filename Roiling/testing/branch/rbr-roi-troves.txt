@@ -762,10 +762,9 @@ Nothing happens. You may need to look at the full SNORE SO ARENA.
 
 @max
 >believe
-#notmax
 Your score has just gone up by one point
+\\
 >reason
-#notmax
 Your score has just gone up by one point
 }}SCORE+=2
 }}CURMIN++
@@ -1053,8 +1052,8 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 Your eyes gloss over all but the red name, ERGAL AGLER.
 
 @max
+##balance undo
 #testcase-postrule-table-of-troves-anagrams-post-decide-rule
-
 >decide
 }}SCORE++
 }}CURMAX--
@@ -1478,7 +1477,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
 #testcase-postrule-table-of-troves-anagrams-post-desire-rule
-
 >desire
 }}SCORE++
 }}CURMAX--
@@ -1497,8 +1495,8 @@ by one point
 }}SCORE++
 }}CURMIN++
 
->score
 @mina,minb
+>score
 {$SCOS}
 
 @nud

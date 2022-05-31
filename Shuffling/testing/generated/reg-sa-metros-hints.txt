@@ -141,7 +141,6 @@ The only way you seem to be able to go is east to Undesired Underside.
 You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.
 
 >throw tomato at thing
-#notana
 by one point
 
 You see bugs crawling over rich people, while you sit in the center, smiling.
@@ -184,7 +183,6 @@ Your score has just gone up by one point.
 You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >switch emitter
-#notana
 Your score has just gone up by one point.
 >score
 You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -200,13 +198,6 @@ You see yourself taking a free sample of some cloth.
 
 >gt bastion
 You wouldn't be welcome.
-
-##nudge for lost
->ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
-##nudge for corn
->conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 #+ttc-table-of-metros-anagrams-lost-corn
 >xx lost corn
@@ -369,7 +360,6 @@ What do you know? It works! The signers' ingress slides open!
 Just go east.
 
 >e
-#notana
 /^Esoteric Coteries
 
 You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd.
@@ -395,7 +385,6 @@ The Earliest Ateliers are not for you to visit. You're more an adventurer than a
 You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >ask nerds about darkness
-#notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
 "Logical call. I go." You sneak out back west.
@@ -411,8 +400,6 @@ A hotel is west, a camp is north, the signers' ingress leads east, and some sort
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
-#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
 /^Elm Train Terminal
@@ -451,7 +438,6 @@ The Velcro strip is just the thing to climb the cafe face and reach the small re
 DEBUG: the gin-nope opening being objhinted.
 
 >put controls in opening
-#notana
 
 You see yourself (finally) walking east from Elm Train Terminal now that you have a light source.
 
@@ -522,7 +508,6 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 >take sword
 
 >attack beast
-#notana
 
 /^Trips Strip
 

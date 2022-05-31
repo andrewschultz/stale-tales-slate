@@ -25,7 +25,6 @@
 You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
 >forest
-#notmax
 Your score has just gone up by one point.
 
 # start the default (which I picked at random) way through.

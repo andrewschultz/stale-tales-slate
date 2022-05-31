@@ -468,6 +468,11 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@max
+#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
+>x mangiest steaming
+It hangs all around the tokers, a product of their, umm, activity. But it probably won't kill too many brain cells to ENTER it. You might even expand your consciousness.
+
 @verbs
 #verbcase listen-stores-if-noun-is-tokers
 >listen tokers
@@ -944,11 +949,6 @@ Your score has just gone up by one point
 #testcase-postrule-table-of-stores-anagrams-post-storeh-hoster-rule
 >pronouns
 At the moment, "it" means the Throes Hoster, "him" means the Throes Hoster, "her" means the Throes Hoster and "them" means the truster turrets.
-
-@max
-#testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
->x mangiest steaming
-It hangs all around the tokers, a product of their, umm, activity. But it probably won't kill too many brain cells to ENTER it. You might even expand your consciousness.
 
 @verbs
 #verbcase smell-stores-if-noun-is-throes-hoster

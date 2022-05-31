@@ -6406,11 +6406,6 @@ to say beepity-nick:
 	say ".[paragraph break]Your gadget seems to shake a bit";
 	set the pronoun it to gadget;
 
-after looking in kitchen for the first time:
-	say "You notice some warts on your face. Stress causes them, you know, and between the centrifuge and the nick, you've had a bit lately.";
-	now warts are part of the player;
-	now startmod5 is the remainder after dividing (turn count + 4) by 5;
-
 chapter scenery
 
 t-n is privately-named and proper-named boring scenery in the nick. description of t-n is "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N". t-n is abstract. bore-text is "You need to do something special with the nick."
@@ -7084,7 +7079,9 @@ before giving to peasant:
 	if noun is hay, say "He already has it." instead;
 	say "The peasant probably doesn't want any adventuring goodies. Maybe something more practical for him?" instead;
 
-before giving straw to peasant (this is the straw-peasant rule):
+the straw-peasant rule is listed first in the check giving it to rules.
+
+check giving straw to peasant (this is the straw-peasant rule):
 	ignore the can't give what you haven't got rule;
 	say "'Oh, thank you! Mean Old Mondale-Doleman stuck me with this hay when I needed much stronger material to re-patch my house. He pretended not to know the difference. But he did once!'[paragraph break]'Here's a little something I wrote. [i]He[r] said even an economist wouldn't put emoticons in a poem.'[paragraph break]He hands you a paper and heads off. You're sick of poetry, but with the hay weighing you down, you'll never catch the peasant.";
 	now player has the poem;
@@ -10678,7 +10675,9 @@ check cutwithing:
 
 part cuting
 
-before cutting:
+the block cutting rule is not listed in any rulebook.
+
+check cutting:
 	if player does not have sliver, say "You have nothing sharp enough to cut." instead;
 	if noun is spread, say "As you get close to the spread, it turns bright red and bursts into something else--a red asp! You jump away[red-to]." instead;
 	if noun is drapes:

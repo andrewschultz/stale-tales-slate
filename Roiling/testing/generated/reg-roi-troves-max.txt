@@ -123,10 +123,9 @@ by one point
 Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 30.
 
 >believe
-#notmax
 Your score has just gone up by one point
+
 >reason
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
@@ -188,7 +187,6 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
 
 #testcase-postrule-table-of-troves-anagrams-post-decide-rule
-
 >decide
 
 >score
@@ -259,7 +257,6 @@ At the moment, "it" means LEAD, All: a Deed, "him" means Si Reed, "her" means th
 Score in a scenario: 18 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
 
 #testcase-postrule-table-of-troves-anagrams-post-desire-rule
-
 >desire
 
 >score
@@ -270,8 +267,6 @@ Score in a scenario: 19 out of 30 total points in the current region, Troves. Lo
 
 >discover
 by one point
-
->score
 
 >desire
 Your score has just gone up by one point

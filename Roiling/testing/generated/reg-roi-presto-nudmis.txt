@@ -171,10 +171,6 @@ The earring pulses a bit more, but you doubt you can do anything with it on your
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-#nudges for earring
->rreagin
-The earring pulses a bit more, but you doubt you can do anything with it on your own.
-
 #testcase-mistake-roiling-rangier-rearing
 >rangier
 The earring shakes a bit more than usual, but maybe you're not in an area where it can be itself, or what it needs to be, yet.
@@ -525,7 +521,6 @@ You don't need to praise military activity and sacrifice too much. Countries whe
 >gonear runway
 >scan zo
 >mazeltov
-#notmax
 Your score has just gone up by two points
 >score
 Score in a scenario: 9 out of 41 total points in the current region, Presto. Lowest score to solve is 31. Maximum score available is 40.
@@ -1691,7 +1686,6 @@ You may wish to decipher the scratchings, instead.
 You may wish to decipher the scratchings, instead.
 
 >push skid s
-#notana
 Your score has just gone up by one point
 /^Hacks' Shack
 >undo
@@ -1699,7 +1693,6 @@ Your score has just gone up by one point
 >push skid n
 >push skid n
 >push skid n
-#notmax
 Your score has just gone up by one point
 
 >score
@@ -1984,9 +1977,6 @@ Score in a scenario: 37 out of 41 total points in the current region, Presto. Lo
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
->score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
-
 >score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 

@@ -78,7 +78,6 @@ Your score has just gone up by one point
 Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >rinsed
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
@@ -87,12 +86,10 @@ Score in a scenario: 7 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >saltier
 Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >e
 >w
 >n
@@ -101,36 +98,30 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >weariest
 Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >n
 >hastiest
 Your score has just gone up by one point
 >score
 Score in a scenario: 12 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >released
 Your score has just gone up by one point
 >score
 Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >e
 >holiest
 Your score has just gone up by one point
 >score
 Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >w
 >w
 >married
 Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
-#notmax
 >n
 >s
 >e
@@ -184,7 +175,6 @@ Score in a scenario: 19 out of 57 total points in the current region, Towers. Lo
 >revised
 
 >put dagger in deviser
-#notana
 by one point
 
 >score
@@ -199,11 +189,9 @@ Your score has just gone up by one point
 Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >ask agnostic about doctor yow
-#notana
 !Your score has just gone up by one point
 
 >rowdy
-#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
 >score

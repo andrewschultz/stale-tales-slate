@@ -283,7 +283,6 @@ The only way you seem to be able to go is west to Anger Range.
 Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
 
 >scan
-#notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -347,7 +346,6 @@ Your score has just gone up by one point
 Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
 
 >tend
-#notana 'nudge for dent'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -485,7 +483,6 @@ DEBUG INFO: min-up codepath
 Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 45.
 
 >clean
-#notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -625,7 +622,6 @@ by one point
 Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
 >ask haunter about ruby
-#notana
 by one point
 
 ascal Craals
@@ -763,7 +759,6 @@ Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lo
 You poke at the ant, which keeps it at bay. You need something more simple, violent and direct.
 
 >tan
-#notana 'nudge for ant'
 Your score has just gone up by one point
 
 >score

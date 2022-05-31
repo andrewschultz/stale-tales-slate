@@ -695,6 +695,10 @@ by one point
 >undo
 >undo
 
+@max
+>x stair
+It leads up to the Dusty Study.
+
 @nud
 #ttc-table-of-ordeal-reload-spechelp-tables
 >stabel

@@ -144,7 +144,6 @@ A couple things: some cartoony representation of EEKS and the cans (very blurry)
 #/A couple things: (the cans \(very blurry\) and some cartoony representation of EEKS|some cartoony representation of EEKS and the cans \(very blurry\)) are visible.
 
 >scan
-#notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -170,7 +169,6 @@ DEBUG INFO: trout hinting.
 Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
 
 >tend
-#notana 'nudge for dent'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -292,7 +290,6 @@ Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lo
 I can't give any artistic advice. They're--good enough, I guess. Better than before.
 
 >clean
-#notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -381,7 +378,6 @@ by one point
 Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
 >ask haunter about ruby
-#notana
 by one point
 
 ascal Craals
@@ -452,7 +448,6 @@ by one point
 Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
 
 >tan
-#notana 'nudge for ant'
 Your score has just gone up by one point
 
 DEBUG INFO: dialer hinting.

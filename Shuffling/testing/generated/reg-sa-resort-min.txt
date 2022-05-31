@@ -16,7 +16,6 @@
 >poss
 
 >resort
-#notmax
 Your score has just gone up by one point
 
 >enter resort
@@ -110,7 +109,6 @@ You currently have 8 out of 15 total points for the Resort region. Your final po
 !Your score has just
 
 >tug toe
-#notana
 by one point
 
 Your score has just gone up by one point.
@@ -132,7 +130,6 @@ You currently have 9 out of 15 total points for the Resort region. Your final po
 --the chain links could've become CHINA. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
 
 >exist
-#notana
 by one point
 My Adieu to You: Made It!
 

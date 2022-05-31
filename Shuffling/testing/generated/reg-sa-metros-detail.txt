@@ -203,7 +203,6 @@ The fairies buzz and give superior sniffs.
 "NYURGH! HUNGRY!" Easier to argue a grue away.
 
 >throw tomato at thing
-#notana
 by one point
 
 >score
@@ -249,7 +248,6 @@ Your score has just gone up by one point.
 You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >switch emitter
-#notana
 Your score has just gone up by one point.
 >score
 You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -262,13 +260,6 @@ You take care not to let the cake tear as you pick it up.
 #ttc-table-of-matched-thing-responses-deadbeat-beats
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, dude."
-
-##nudge for lost
->ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
-##nudge for corn
->conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 #gadget test: clover to velcro
 >rc clover
@@ -442,7 +433,6 @@ You currently have 11 out of 18 total points for the Metros region. You have fou
 What do you know? It works! The signers' ingress slides open!
 
 >e
-#notana
 /^Esoteric Coteries
 
 #ttc-table-of-unmatched-thing-responses-nerds
@@ -556,7 +546,6 @@ DEBUG INFO: Cert-text: -------S.
 #ttc-table-of-matched-topic-responses-nerds-darkness
 
 >ask nerds about darkness
-#notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
 "Logical call. I go." You sneak out back west.
@@ -565,8 +554,6 @@ DEBUG INFO: Cert-text: -------S.
 
 >score
 You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
-#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
 /^Elm Train Terminal
@@ -592,7 +579,6 @@ You currently have 14 out of 18 total points for the Metros region. You have fou
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
 
 >put controls in opening
-#notana
 
 >score
 You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -636,7 +622,6 @@ It cares not for conversation, only noise.
 >take sword
 
 >attack beast
-#notana
 
 /^Trips Strip
 

@@ -602,7 +602,7 @@ You currently have 4 out of 6 total points for the Stores region. Your minimum p
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
 
-#renudge for marquee
+#+ttc-table-of-stores-nudges-marquee
 >marquee
 You don't need to change the marquee now that you figured what it means.
 

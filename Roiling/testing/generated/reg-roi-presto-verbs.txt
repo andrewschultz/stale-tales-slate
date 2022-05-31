@@ -923,7 +923,6 @@ Only the shack seems to be a safe place to sleep, here.
 >push skid n
 >push skid n
 >push skid n
-#notmax
 Your score has just gone up by one point
 
 >score
@@ -1011,9 +1010,6 @@ Score in a scenario: 37 out of 41 total points in the current region, Presto. Lo
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
->score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
-
 >score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 

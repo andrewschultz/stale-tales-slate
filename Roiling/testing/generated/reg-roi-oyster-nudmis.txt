@@ -559,7 +559,7 @@ You get onto the frat raft.
 Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
-#altpath
+#here we branch to check the otherway over Saccade Cascade
 #ttc-table-of-oyster-done-rejects-frat-raft
 >ratf
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
@@ -568,7 +568,7 @@ Your score has just gone up by one point
 /^Anger Range
 >score
 Score in a scenario: 8 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
-#altpath
+
 >thisalt
 --you could've tried to BOAST to get the sabot boats' attention, then LEAP.
 >undo
@@ -881,7 +881,6 @@ There are no clothing stores around, nor is there anything physical to lead you 
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
 >scan
-#notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -965,7 +964,6 @@ Your score has just gone up by one point
 Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
 
 >tend
-#notana 'nudge for dent'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -1514,7 +1512,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 >undo
 
 >clean
-#notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -1778,7 +1775,6 @@ Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lo
 Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh) the walleyes who buried the ruby.
 
 >ask haunter about ruby
-#notana
 by one point
 
 ascal Craals
@@ -2029,7 +2025,6 @@ Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lo
 You did enough.
 
 >tan
-#notana 'nudge for ant'
 Your score has just gone up by one point
 
 >score

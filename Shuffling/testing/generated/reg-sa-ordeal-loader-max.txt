@@ -88,6 +88,7 @@ You haven't solved any regions yet. You have the rank of reduced deducer.
 by one point
 
 >bugle
+
 #testcase-postrule-table-of-ordeal-loader-anagrams-post-bulge-bugle-rule
 >score
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
@@ -234,6 +235,18 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 >in
 /^Trips Strip
 
+[NOTE: Shuffling Around is configured to create an auto-save dialogue after each region you solve. This can be switched off with AVERSE or switched back on with RESAVE. You can also abort saving with no penalty. This nag will not reappear.]
+<debug mode skips game-saving dialogue so test runs are continued>
+
 #ttc-table-of-ranks-4
 >score
 You have the rank of benigner beginner.
+
+#here we test the AVERSE/RESAVE option fully
+>undo
+
+>averse
+
+>in
+!is configured to
+!debug mode skips

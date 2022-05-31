@@ -48,7 +48,6 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 /^The Ol' Hotel
 
 >throw tomato at thing
-#notana
 by one point
 
 >score
@@ -65,7 +64,6 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 /^Obtains/Boastin' Bastion
 
 >switch emitter
-#notana
 Your score has just gone up by one point.
 >score
 You currently have 4 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
@@ -74,13 +72,6 @@ You currently have 4 out of 18 total points for the Metros region. Your minimum 
 You take care not to let the cake tear as you pick it up.
 
 >s
-
-##nudge for lost
->ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
-##nudge for corn
->conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 >controls
 Your score has just gone up by one point.
@@ -138,14 +129,12 @@ You currently have 10 out of 18 total points for the Metros region. Your final p
 What do you know? It works! The signers' ingress slides open!
 
 >e
-#notana
 /^Esoteric Coteries
 
 >score
 You currently have 11 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >ask nerds about darkness
-#notana
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
 "Logical call. I go." You sneak out back west.
@@ -154,8 +143,6 @@ You currently have 11 out of 18 total points for the Metros region. Your final p
 
 >score
 You currently have 12 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
-
-#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
 >s
 /^Elm Train Terminal
@@ -169,7 +156,6 @@ You currently have 13 out of 18 total points for the Metros region. Your final p
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
 
 >put controls in opening
-#notana
 
 >score
 You currently have 14 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
@@ -197,7 +183,6 @@ You currently have 16 out of 18 total points for the Metros region. Your final p
 --the antlers in the Obtains/Boastin' Bastion could've become RENTALS.
 
 >attack beast
-#notana
 
 /^Trips Strip
 

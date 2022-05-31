@@ -1706,12 +1706,10 @@ Whoah, A Roiling Original's pretty retro, but nothing that ancient. Besides, you
 
 >marginal
 The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 29 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >holiest
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -2330,7 +2328,6 @@ The diverse deviser is complicated enough. You probably just need to figure what
 You don't need duplicates of anything here. Besides, the diverse deviser looks complex enough. It will probably reject or accept what it needs to.
 
 >put dagger in deviser
-#notana
 by one point
 
 >score
@@ -2499,7 +2496,6 @@ Your score has just gone up by one point
 Score in a scenario: 43 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
 
 >ask agnostic about doctor yow
-#notana
 !Your score has just gone up by one point
 
 #ttc-table-of-towers-nudges-solve
@@ -2593,7 +2589,6 @@ The saver is hopelessly no-frills. It'll never be anything better. But you made 
 Scot is fully attentive. Don't ruin a good thing!
 
 >rowdy
-#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
 >score
@@ -3035,7 +3030,6 @@ Score in a scenario: 54 out of 57 total points in the current region, Towers. Lo
 St. Teri is just fine now, thanks to you.
 
 >give pot to sitter
-#notana
 Your score has just gone up by one point
 >score
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.

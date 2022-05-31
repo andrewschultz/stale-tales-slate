@@ -1006,7 +1006,7 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#altpath
+#here we branch to check the otherway over Saccade Cascade
 #ttc-table-of-oyster-done-rejects-frat-raft
 >ratf
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
@@ -1016,7 +1016,7 @@ Your score has just gone up by one point
 >score
 }}SCORE++
 {$SCOS}
-#altpath
+\\
 >thisalt
 --you could've tried to BOAST to get the sabot boats' attention, then LEAP.
 >undo
@@ -1585,7 +1585,6 @@ by one point
 
 @!min
 >scan
-#notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
@@ -1766,7 +1765,6 @@ by one point
 
 @!min
 >tend
-#notana 'nudge for dent'
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
@@ -2655,7 +2653,6 @@ by one point
 
 @!min
 >clean
-#notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
@@ -3233,7 +3230,6 @@ by one point
 Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh) the walleyes who buried the ruby.
 
 >ask haunter about ruby
-#notana
 by one point
 }}SCORE++
 
@@ -3775,7 +3771,6 @@ by one point
 
 @!min
 >tan
-#notana 'nudge for ant'
 Your score has just gone up by one point
 }}SCORE++
 

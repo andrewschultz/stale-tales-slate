@@ -47,7 +47,6 @@ Score in a scenario: 1 out of 22 total points in the current region, Routes. Low
 
 The spoon reflects back outside.
 
-#x list o toils
 >x toils
 Precise recipes
 

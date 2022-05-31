@@ -26,7 +26,6 @@ Your score has just gone up by one point
 Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
 
 >pooh
-#notmax
 Your score has just gone up by one point
 Taking away a max point.
 DEBUG INFO: Taking away a max point.
@@ -180,7 +179,6 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 >push skid n
 >push skid n
 >push skid n
-#notmax
 Your score has just gone up by one point
 
 >score
@@ -238,9 +236,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
 
->score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 33.
-
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
@@ -249,7 +244,7 @@ The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably beca
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 33.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
 
 >misses
 /^====Grey Gyre====

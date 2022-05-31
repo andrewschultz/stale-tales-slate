@@ -255,7 +255,7 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 !by one point
 #don't let your pals get beaten up twice.
 THERE, you think, realizing you're not armed yet.
-#detour to test "efffectively" armed
+#finally, check with or without dart
 >banish dart
 >there
 THERE, you think, realizing you're not armed yet.
@@ -332,7 +332,7 @@ by one point
 
 #testcase-postrule-table-of-presto-anagrams-post-harpings-flip-rule
 >x ought letters
-Nothing (significant) like that is in the immediate vicinity or region.
+The letters seem dull now you said tough.
 
 >undo
 
@@ -341,9 +341,16 @@ by one point
 !Hut! Go!
 Dat was a good dust-up
 
+>x so long letters
+WRONG
+>undo
+
 #testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >later
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>x later letters
+WRONG
+>undo
 >undo
 >undo
 >later
@@ -514,7 +521,6 @@ Score in a scenario: 26 out of 41 total points in the current region, Presto. Lo
 >put leaf on skid
 
 >give book to yak
-#notmax
 by one point
 >undo
 
@@ -524,7 +530,6 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 >push skid n
 >push skid n
 >push skid n
-#notmax
 Your score has just gone up by one point
 
 >score
@@ -712,9 +717,6 @@ DEBUG INFO: min-up codepath
 >x rom sticks
 You imagine it can't be too hard to open up the disk drive and put them in.
 
->score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
-
 #+testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
@@ -732,7 +734,7 @@ Your score has just gone up by one point
 It's an ordinary USB. Or it would be, around anyone but you.
 
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
 
 >misses
 !presto
@@ -752,14 +754,14 @@ That will provide transport from Hacks' Shack, but you could set more straight h
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
 
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
 >bus
 Your score has just gone up by one point

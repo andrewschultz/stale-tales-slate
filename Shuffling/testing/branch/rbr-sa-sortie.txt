@@ -177,7 +177,7 @@ You can probably just SWITCH something with two text settings.
 {$SCOS}
 
 @nud
-#renudge for part
+#+ttc-table-of-sortie-nudges-part
 >patr
 You don't want to go back to how the Trap Part was.
 \\
@@ -272,6 +272,10 @@ by one point
 }}SCORE++
 
 /^Kitchen
+
+@max
+#testcase-postrule-table-of-sortie-anagrams-post-kitchen-nick-rule
+You notice some warts on your face. Stress causes them, you know, and between the centrifuge and the nick, you've had a bit lately.
 
 @hin
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
@@ -419,6 +423,10 @@ DEBUG INFO: Cert-text: GRI--.
 >score
 {$SCOS}
 
+@max
+>i
+Those warts are still bugging you, too.
+
 @gle
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate, the cheesy spearman, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
@@ -483,7 +491,7 @@ A round den, unadorned. A lid lies where once the dial laid. Exits lie north and
 >aroundden
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#renudge for dial
+#+ttc-table-of-sortie-nudges-dial
 >dila
 The dial did its part for you.
 \\
@@ -557,7 +565,7 @@ Bam! A
 #ttc-table-of-sortie-done-rejects-grits
 >grist
 Best not to get too crazy with food preparation.
-#renudge for grief
+#+ttc-table-of-sortie-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something else inside it.
 
@@ -589,7 +597,7 @@ Bam! Another
 {$SFIXMAX}
 
 @nud
-#renudge for grief
+#+ttc-table-of-sortie-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better.
 \\
@@ -690,7 +698,6 @@ Your score has just gone up by one point.
 >undo
 >undo
 >hot sauce
-#notmax
 by one point
 
 @mis
@@ -889,7 +896,7 @@ DEBUG: taco being objhinted.
 {$SFIXMAX}
 
 @nud
-#renudge for rendin
+#+ttc-table-of-sortie-nudges-rendin
 >rendni
 You don't need to change the red inn. It supported your cooking efforts.
 \\
@@ -1636,7 +1643,7 @@ Nothing more to do here, other than pass between the moor and other rooms you ma
 >oorm
 The room sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 \\
-#renudge for kitchen
+#+ttc-table-of-sortie-nudges-kitchen
 >ketchin
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
@@ -1666,7 +1673,7 @@ You aren't going to sea in this game.
 >w
 
 @nud
-#renudge for kitchne
+#+ttc-table-of-sortie-nudges-kitchne
 >ketchni
 There's no room between the nick and kitchen. You already found a better way out, anyway.
 
@@ -1934,7 +1941,7 @@ That's inadvisable. The oils would leak out.
 #+testcase-mistake-shuffling-lois
 >lois
 Lois is silent. You must figure what to pour, where.
-#renudge for lois
+#+ttc-table-of-sortie-nudges-lois
 >oisl
 The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space.
 
@@ -2093,15 +2100,15 @@ You imagine a panel of experts critiquing the poem, before it was folded. Hm. Yo
 You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the roadblock, the folded paper plane and the oils for a few seconds.
 
 @nud
-#renudge for folded
+#+ttc-table-of-sortie-nudges-folded
 >foldde
 It's a plane, now, for sure.
 \\
-#renudge for paper
+#+ttc-table-of-sortie-nudges-paper
 >papre
 It's a plane, now, for sure.
 \\
-#renudge for papers
+#+ttc-table-of-sortie-nudges-papers
 >papesr
 It's a plane, now, for sure.
 \\
@@ -2200,7 +2207,7 @@ It's a rich foundation for a big, big place, you're sure. Stronger and denser th
 >soli
 The soil is there to support something, but not quite that.
 \\
-#renudge for were
+#+ttc-table-of-sortie-nudges-were
 >weer
 There's no other way to change the cask than to and from the sack. WERE-EWER just clued
 \\
@@ -2306,7 +2313,7 @@ The cask is already full of oils.
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the oils for a few seconds.
 
 @nud
-#renudge for oil
+#+ttc-table-of-sortie-nudges-oil
 >lio
 Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do.
 
@@ -2338,7 +2345,7 @@ Unless a room has no way out, or your gadget spontaneously gives a reading, you 
 >rubbel
 The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need.
 \\
-#renudge for trellis
+#+ttc-table-of-sortie-nudges-trellis
 >trellsi
 You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
 
@@ -2412,11 +2419,13 @@ The silo is quite an accomplishment. You wouldn't want to ruin it
 
 @nud
 >room
+\\
 ###skip test checking
 #+testcase-mistake-shuffling-lois
 >lois
 Lois may not hear you out here--she has left you to your own devices, but you must be close.
 >moor
+\\
 ###skip test checking
 #+ttc-table-of-sortie-done-rejects-soil
 >siol
@@ -2615,7 +2624,7 @@ You start fruitlessly double- and triple- thinking whether you should change bac
 Close...what you need to do will sooth, in a bit.
 
 @nud
-#renudge for button
+#+ttc-table-of-sortie-nudges-button
 >buttno
 It's the buttons' purposes that needed changing.
 \\

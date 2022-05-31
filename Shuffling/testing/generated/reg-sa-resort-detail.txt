@@ -16,7 +16,6 @@
 >poss
 
 >resort
-#notmax
 Your score has just gone up by one point
 
 >enter resort
@@ -195,7 +194,6 @@ You currently have 11 out of 15 total points for the Resort region. Your minimum
 >china
 Your score has just gone up by one point.
 
-#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -221,7 +219,6 @@ You currently have 13 out of 15 total points for the Resort region. You have fou
 "Ego? Tut!"
 
 >tug toe
-#notana
 by one point
 
 Your score has just gone up by one point.
@@ -233,7 +230,6 @@ You currently have 14 out of 15 total points for the Resort region. You have fou
 /^Means Manse
 
 >exist
-#notana
 by one point
 My Adieu to You: Made It!
 

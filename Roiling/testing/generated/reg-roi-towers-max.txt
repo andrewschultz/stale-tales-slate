@@ -440,6 +440,8 @@ strudel
 Your score has just gone up by one point
 >thisalt
 --you could've also RELEASED Lars Eede to give him a new outlook on life.
+
+#testcase-postrule-table-of-towers-anagrams-post-reeds-ale-rule
 >x lars eede
 Nothing (significant) like that is in the immediate vicinity or region.
 
@@ -550,12 +552,10 @@ Score in a scenario: 28 out of 57 total points in the current region, Towers. Lo
 >marginal
 #ttc-table-of-guardian-specific-taunts-hostile-is-he-lot-grailman
 The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 29 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
 >holiest
-#notmax
 Your score has just gone up by one point
 >score
 Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
@@ -732,7 +732,6 @@ The palace has receded a bit, but--well--that machine's got to be good for somet
 >revised
 
 >put dagger in deviser
-#notana
 by one point
 
 >score
@@ -751,7 +750,6 @@ Score in a scenario: 43 out of 57 total points in the current region, Towers. Lo
 Inscribed with "lo, save," they are not huge loaves and could probably fit in a small oven, like your toaster.
 
 >ask agnostic about doctor yow
-#notana
 !Your score has just gone up by one point
 
 #testcase-postrule-table-of-towers-anagrams-post-tentative-attentive-rule
@@ -772,7 +770,6 @@ Score in a scenario: 45 out of 57 total points in the current region, Towers. Lo
 !--you could've made Scot Agin ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.
 
 >rowdy
-#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
 >score
@@ -796,7 +793,7 @@ by one point
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
-#altpath
+#this checks the other two ways over leak lake. The other is checked before PUNIER later.
 /^Mislit Limits
 >thisalt
 --you'd have passed Rawest Waster Waters if you'd have made the blaster STABLER.
@@ -809,7 +806,6 @@ Your score has just gone up by one point
 >enter boat
 /^Rawest Waster Waters
 >nearest
-#notmax
 Your score has just gone up by one point
 /^Mislit Limits
 >thisalt
@@ -895,7 +891,6 @@ Your score has just gone up by one point
 Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 >give pot to sitter
-#notana
 Your score has just gone up by one point
 >score
 Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.

@@ -24,7 +24,6 @@
 You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around.
 
 >resort
-#notmax
 Your score has just gone up by one point
 
 You see yourself exploring the ogled lodge you created.
@@ -322,7 +321,6 @@ Your vision blurs a bit, and instead you see some china and also kilns, to bake 
 >china
 Your score has just gone up by one point.
 
-#testcase-postrule-table-of-resort-anagrams-post-chain-china-rule
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
@@ -357,7 +355,6 @@ He's saying GET OUT just to be obnoxious and intimidating.
 You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells "GET OUT." Maybe you could pull it...no, not pull...well, there are only six possibilities...
 
 >tug toe
-#notana
 by one point
 
 You see yourself walking east.
@@ -410,7 +407,6 @@ Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher o
 There's nowhere else you want to be.
 
 >exist
-#notana
 by one point
 My Adieu to You: Made It!
 

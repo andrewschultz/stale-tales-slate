@@ -39,6 +39,9 @@ by one point
 
 /^Kitchen
 
+#testcase-postrule-table-of-sortie-anagrams-post-kitchen-nick-rule
+You notice some warts on your face. Stress causes them, you know, and between the centrifuge and the nick, you've had a bit lately.
+
 >x fridge
 While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. It doesn't appear locked or anything. It may or may not be useful, but it looks easy to OPEN. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 # later we examine it and "i put soot on warts" is gone
@@ -54,6 +57,9 @@ You reopen and peer on. The grist and cake pan are still in the fridge.
 
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+
+>i
+Those warts are still bugging you, too.
 
 >x fridge
 While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. The grist and cake pan are still in the fridge, too, you remember. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.

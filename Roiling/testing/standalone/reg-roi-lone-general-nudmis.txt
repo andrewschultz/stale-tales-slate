@@ -386,3 +386,14 @@ There's no secret cheat between NO TIP and OPT IN.
 #ttc-table-of-general-nudges-resave
 >resaev
 Alas, there is nothing between RESAVE and AVERSE to load a special game state.
+
+>routes
+by one point
+
+>in
+
+>orsca
+you are on the right track, but the intended anagram has an extra S. This is a one-time nag, though the nudge messages should always implicitly state when things' or people's plurality, or an apostrophe-s, is important.
+
+>orsca
+!you are on the right track, but the intended anagram has an extra S

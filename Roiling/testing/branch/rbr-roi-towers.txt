@@ -1741,7 +1741,6 @@ The Wildest Wilteds are too dangerous any way but back north.
 
 @minh
 >reined
-#notmax
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1754,13 +1753,11 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >pastier
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >n
 \\
 /^Anemic Cinema
@@ -1770,7 +1767,6 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >n
 \\
 /^Shaven Havens
@@ -1786,13 +1782,11 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >nerdiest
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >e
 \\
 /^Artist Traits Strait
@@ -1802,13 +1796,11 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >holiest
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >n
 \\
 /^Actionless Coastlines
@@ -1817,7 +1809,6 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >s
 >s
 \\
@@ -1825,7 +1816,6 @@ Your score has just gone up by one point
 
 @mini
 >rinsed
-#notmax
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1836,13 +1826,11 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >saltier
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >e
 >w
 >n
@@ -1852,33 +1840,28 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >weariest
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >n
 >hastiest
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >released
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >e
 >holiest
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >w
 >w
 >married
@@ -1886,7 +1869,6 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-#notmax
 >n
 >s
 >e
@@ -3365,12 +3347,10 @@ Oh, the self-righteous backlash you'd get from Lois the Hostile!
 {--max}#ttc-table-of-guardian-specific-taunts-hostile-is-he-lot-grailman
 The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
 }}SCORE++
-#notmax
 Your score has just gone up by one point
 >score
 {$SCOS}
 >holiest
-#notmax
 }}SCORE++
 Your score has just gone up by one point
 >score
@@ -4491,7 +4471,6 @@ A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribut
 No, it must be useful for something!
 
 >put dagger in deviser
-#notana
 by one point
 }}SCORE++
 
@@ -4695,7 +4674,6 @@ Your score has just gone up by one point
 Inscribed with "lo, save," they are not huge loaves and could probably fit in a small oven, like your toaster.
 
 >ask agnostic about doctor yow
-#notana
 !Your score has just gone up by one point
 
 @hin
@@ -4837,7 +4815,6 @@ The saver is hopelessly no-frills. It'll never be anything better. But you made 
 Scot is fully attentive. Don't ruin a good thing!
 
 >rowdy
-#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 }}SCORE++
 
@@ -5164,7 +5141,7 @@ by one point
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
-#altpath
+#this checks the other two ways over leak lake. The other is checked before PUNIER later.
 /^Mislit Limits
 >thisalt
 --you'd have passed Rawest Waster Waters if you'd have made the blaster STABLER.
@@ -5177,7 +5154,6 @@ Your score has just gone up by one point
 >enter boat
 /^Rawest Waster Waters
 >nearest
-#notmax
 Your score has just gone up by one point
 /^Mislit Limits
 >thisalt
@@ -5670,7 +5646,6 @@ St. Teri is just fine now, thanks to you.
 
 @!minh,mini
 >give pot to sitter
-#notana
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++

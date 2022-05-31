@@ -228,9 +228,11 @@ He shows you some calculations that any such writing can be expected to eliminat
 #ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
+
 #+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned..." His eyes grow mistened. "Ten dimes say it's end times. We've waited for an upturn to turn up..."
+
 #+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "The time for talk is over."

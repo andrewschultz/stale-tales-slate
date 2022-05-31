@@ -106,7 +106,6 @@ You can't change the hotel, but you could have a look around.
 
 @nud
 #ttc-table-of-undesired-underside-nudges-etch
-#nudge for etch
 >ethc
 The tech-etch is pretty securely, um, etched on.
 \\
@@ -343,7 +342,7 @@ You don't have the skill to hack the friend finder.
 >doro
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 \\
-#renudge for theol
+#+ttc-table-of-metros-nudges-theol
 >theol
 You can't change the hotel, but you could have another look around.
 
@@ -671,7 +670,6 @@ You think of how to make the ketchup slightly classier. It doesn't bend, but may
 Nothing to change the mattress to, even if you could move the night thing off.
 
 >throw tomato at thing
-#notana
 by one point
 }}SCORE++
 
@@ -691,12 +689,12 @@ The mattress is in bad enough shape as it is. It should be easy enough to sift t
 >bupm
 Just search the bump instead.
 \\
-#renudge for mattress
+#+ttc-table-of-metros-nudges-mattress
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
 >x mattress
 \\
-#renudge for mattress
+#+ttc-table-of-metros-nudges-mattress
 >mattrsse
 Nothing to change the mattress to, and you already looted it
 
@@ -715,7 +713,7 @@ The mattress is in bad enough shape as it is. You got what you needed from it.
 >e
 
 @nud
-#renudge for theol
+#+ttc-table-of-metros-nudges-theol
 >theol
 You can't change the hotel, and you got rid of the night thing, anyway.
 
@@ -915,7 +913,7 @@ Your score has just gone up by one point.
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @nud
-#renudge for rental
+#+ttc-table-of-metros-nudges-rental
 >rentla
 No point bringing those tacky antlers back, or thinking about them any more
 \\
@@ -953,7 +951,6 @@ This would create quite a (negative) scene with people still in the bastion.
 dry cake -> keycard
 
 >switch emitter
-#notana
 Your score has just gone up by one point.
 }}SCORE++
 >score
@@ -992,13 +989,6 @@ You wouldn't be welcome.
 How the angst gnats taste doesn't matter.
 >tangs
 How the angst gnats taste doesn't matter.
-
-##nudge for lost
->ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
-##nudge for corn
->conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 @scan
 #gadget test: clover to velcro
@@ -1351,7 +1341,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 \\
 >noise bag
 by one point
-#altpath
+\\
 #ttc-table-of-metros-done-rejects-noise-bag
 >noisebga
 The noise bag rumbles ominously. Best not change it into something worse.
@@ -1368,6 +1358,7 @@ by one point
 >open noise bag
 You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it.
 >sword
+\\
 #+testcase-prerule-table-of-metros-anagrams-pre-words-sword-rule
 The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.
 It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPEN it, though, being a noise bag.
@@ -1424,7 +1415,7 @@ DEBUG: heaths being objhinted.
 >undo
 
 @nud
-#renudge for heath
+#+ttc-table-of-metros-nudges-heath
 >heaht
 They are multiple heaths--so you should try to change just one.
 \\
@@ -1631,7 +1622,6 @@ What do you know? It works! The signers' ingress slides open!
 Just go east.
 
 >e
-#notana
 /^Esoteric Coteries
 }}SCORE++
 
@@ -1775,7 +1765,7 @@ The lit-up tulip will stay lit. No need to futz with its brand name.
 @nud
 >w
 \\
-#renudge for friend
+#+ttc-table-of-metros-nudges-friend
 >friedn
 You don't need to futz further with the friend finder.
 \\
@@ -1783,7 +1773,7 @@ You don't need to futz further with the friend finder.
 >resign
 The ingress already did. You got by.
 \\
-#renudge for special
+#+ttc-table-of-metros-nudges-special
 >specila
 You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
 \\
@@ -1826,7 +1816,7 @@ The signers' ingress slides shut.
 #ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
-#renudge for beats
+#+ttc-table-of-metros-nudges-beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
 \\
@@ -1910,7 +1900,6 @@ by one point
 #ttc-table-of-matched-topic-responses-nerds-darkness
 
 >ask nerds about darkness
-#notana
 }}SCORE++
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
@@ -1940,18 +1929,16 @@ A hotel is west, a camp is north, the signers' ingress leads east, and some sort
 @!
 {$SFIXMAX}
 
-#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
-
 @mis
 #+testcase-mistake-shuffling-snores-snore
 >snores
 No need to put the sensor to sleep now you got what you want.
 
 @nud
-#renudge for metallic
+#+ttc-table-of-metros-nudges-metallic
 >metallci
 You got to the Esoteric Coteries. You don't need any tricks like that.
-#renudge for signer
+#+ttc-table-of-metros-nudges-signer
 >signre
 You got to the Esoteric Coteries. You don't need any tricks like that.
 
@@ -2041,7 +2028,7 @@ But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which do
 >tramline
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#renudge for tulip
+#+ttc-table-of-metros-nudges-tulip
 >ulipt
 The tulip is handy as-is. It gives light. You can't ask for much more.
 \\
@@ -2194,7 +2181,6 @@ No matter how hard you try to convince yourself they are lovely, you're not smit
 No need. You made it above the cafe face with the velcro.
 
 >put controls in opening
-#notana
 }}SCORE++
 
 @gle
@@ -2210,12 +2196,12 @@ You see yourself (finally) walking east from Elm Train Terminal now that you hav
 #+ttc-table-of-readables-controls
 >read controls
 The opening isn't really an opening any more, what with the controls fitting in nicely.
-#renudge for gin
+#+ttc-table-of-metros-nudges-gin
 >gni
 You already transformed the neon pig to the gin-nope opening. And you put the controls in. Better not do any more.
 >openign
 You don't need to close up the opening. The controls are in, and they fill it well enough.
-#renudge for recess
+#+ttc-table-of-metros-nudges-recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
 
@@ -2402,7 +2388,7 @@ The blue glow pulses with the beast's roars.
 #ttc-table-of-metros-done-rejects-beast
 >betsa
 You've changed the beats to something tangible, physically beatable.
-#renudge for aligns
+#+ttc-table-of-metros-nudges-aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beast.
 
@@ -2438,7 +2424,6 @@ You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 --the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
-#notana
 }}SCORE++
 
 /^Trips Strip

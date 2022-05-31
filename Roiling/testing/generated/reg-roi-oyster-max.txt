@@ -333,7 +333,6 @@ by one point
 >undo
 
 >scan
-#notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -376,7 +375,6 @@ by one point
 >undo
 
 >tend
-#notana 'nudge for dent'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -585,7 +583,6 @@ by one point
 >undo
 
 >clean
-#notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
@@ -773,7 +770,6 @@ by one point
 Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
 
 >ask haunter about ruby
-#notana
 by one point
 
 ascal Craals
@@ -909,7 +905,6 @@ by one point
 >undo
 
 >tan
-#notana 'nudge for ant'
 Your score has just gone up by one point
 
 +#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
