@@ -1936,15 +1936,48 @@ check jumpthroughing (this is the deduce region from first letter rule):
 		say "Unrecognized region." instead;
 	say "Jump region is now [jump-region].";
 	say "Jump table is now [jump-table].";
+	now in-jump-test is true;
+
+report jumpthroughing:
+	now in-jump-test is false;
 
 table of ordeal reload jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
-palm	intro-bit rule	a direction	a room	a truth state	a truth state
+lamp	intro-bit rule	a direction	a room	a truth state	a truth state
+letters settler
+tables
+abstract painting	--	--	--	true	true
+meet bans
+chimney	--	--	--	true	true
+ramp	--	up	--	true	true
+stair	--	down	--	true	true
+bins	--	--	--	true	true
+rifle	flier-prep rule	--
+staple	cavern-prep rule
+stapler
+respect specter	--	--	--	true	true
+--	enter-aperture rule
 
 this is the intro-bit rule:
 	try thinking;
 	try examining the bookshelf;
 	try examining the isolani liaison;
+	deliver the summary-quip quip;
+	deliver the leave-quip quip;
+	darken-study;
+
+this is the flier-prep rule:
+	try examining the settler;
+	try going inside;
+
+this is the cavern-prep rule:
+	now yn-auto is 2;
+	deliver the bye-Elmo-quip quip;
+	move-to-cavern;
+
+this is the enter-aperture rule:
+	try stapleing apertured departure;
+	try going inside;
 
 table of stores jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
@@ -1955,16 +1988,16 @@ table of routes jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
 worst ad	to-routes rule	--	--	true	true
 scripture picturers	--	outside
-sit a nag	see-ingredients rule
+gast	see-ingredients rule
 side art
-WOE BOW BELL
 rude n nuder
+u nerd endur redun
 adsorbing signboard
 stupor sprout
 lairage regalia	--	outside
 pipe soot
-a bev o be ova	check-with-horbert rule
-morf form
+morf form	check-with-horbert rule
+the bean
 the bean
 odd run on aura
 un road
@@ -1986,7 +2019,9 @@ this is the see-ingredients rule:
 	try going outside;
 
 this is the check-with-horbert rule:
+	try going outside;
 	try going inside;
+	process the horbert quest item return rule;
 	try going outside;
 
 table of troves jumps
@@ -2030,23 +2065,69 @@ this is the to-troves rule:
 
 table of presto jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
-ye hoop	to-presto rule
-hump	--	east
+hump	to-presto rule
+angrier earring	--
+maze walls	--	east
+lamb
 star	--	south
 leo	--	south
 rand
 wzup
 sods gone odes song	--	--	--	true	true
 dart	--	north
-lamb	--	north	--	true	true
-plebe
+plebe	--	north
 boing go bin	--	east
 sport ports	--	--	--	true	true
+ether	load-gun rule
+keys	--	north
+log ons letters
+alert letters
+hawt thaw	--	--	--	true	true
+starch charts	--	--	--	true	true
+caps lock	get-censer rule
+screen
+leaf
+skid
+keyboard	get-yak rule
+mug
+cola
+e robot	disk-in-drive rule
+drive a
+drive e
+futon
+tba key	--	--	--	true	true
+rom sticks	--	--	--	true	true
+casserole	--	--	--	true	true
+polemic
+speel
+BUB DUDE EGG
+USB
 
 this is the to-presto rule:
 	try tsing;
 	try fliptoing odorant tornado;
 	try entering odorant tornado;
+
+this is the load-gun rule:
+	try going west;
+	try inserting dart into popgun;
+
+this is the get-censer rule:
+	try going north;
+
+this is the get-yak rule:
+	try putting leaf on skid;
+	try pushing skid to south;
+	try pushing skid to south;
+	try pushing skid to south;
+	abide by the leaf-yak rule;
+	try pushing skid to north;
+	try pushing skid to north;
+	try pushing skid to north;
+	try fliptoing disk;
+
+this is the disk-in-drive rule:
+	try inserting disk into drive a;
 
 table of oyster jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
@@ -2056,13 +2137,67 @@ tines
 LOLstr trolls
 clam
 urn
+boats
+pale plea
 pikes
-snarled darnels	--	--	--	true	true
+pest pets	--	east
+cans	--	--	--	true	true
+eeks
+wipes	--	--	--	true	true
+dent	--	--	--	true	true
+trout
+tea
+snarled darnels	--	west	--	true	true
+bogus-trace	--	north
+crate
+skis
+knob
+span pans
+bogus-plains	--	--	--	true	true
+tubs	--	inside
+digger
+waste	--	--	--	true	true
+lance	--	--	--	true	true
+heaps	--	--	--	true	true
+ruby	hutlets-to-closures rule
+Achers Chaser Arches
+thin hint	sausage-prep rule
+sausage	--	--	Anger Range
+sausage
+--	tell-sausage rule
+pol art portal
+bogus-enlarge
+bogus-reangle	--	--	--	true	true
+papery yapper	avoid-dead-end rule
+lever	--	--	--	true	true
+templar ramplet	--	--	--	true	true
+bogus-psalm	--	--	--	true	true
+natant ant	--	--	--	true	true
+bogus-derail
+pins
+bogus-redial
 
 this is the to-oyster rule:
 	try tsing;
 	try fliptoing balancer barnacle;
 	try entering balancer barnacle;
+
+this is the hutlets-to-closures rule:
+	try going outside;
+	try going south;
+	try going west;
+	try taking inventory;
+
+this is the sausage-prep rule:
+	try going north;
+	try going west;
+
+this is the tell-sausage rule:
+	try objasking sausage about ruby;
+
+this is the avoid-dead-end rule:
+	try examining general gleaner;
+	try going inside;
 
 table of towers jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
@@ -2075,10 +2210,51 @@ what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
 recital article	--	--	--	true	true
 rodney
 dreads adders
-yurts	--	north
+brownies	--	north	--	true	true [from yurts]
 butlers
 deviser	--	west
+samiels	--	west	--	true	true
+bogus-rousted	--	--	--	true	true
 nereid	--	east
+diners	--	--	--	true	true
+keycar	--	--	--	true	true
+pirates	--	north
+docile old ice	--	--	--	true	true
+admirer	--	north
+ingrates	--	--	--	true	true
+strudel	--	west	--	true	true
+Reeds Ale	--	east	--	true	true
+promise imposer	--	south
+ragged dagger	--	east
+sweatier wait seer	--	--	--	true	true
+Eclairs	--	--	--	true	true
+bogus-dandier	--	down	--	true	true
+realist tailers	--	--	--	true	true
+fluster self rut	--	south	--	true	true
+organised ego drains	--	--	--	true	true
+raves saver	--	north	--	true	true
+resident trendies
+alarming grailman	--	east
+bonker	--	south
+stinger
+luck node	prepare-luck-node rule
+natives site van	--	west	--	true	true
+sporties ripostes	--	south	--	true	true
+hostile is he lot	--	--	artist traits strait
+asset hit atheists	--	north
+solve a loaves
+--	yow-teaches-agnostic rule
+atblock	--	--	--	true	true
+--	get-gizmo rule
+weirder red wire	--	--	--	true	true
+turbos
+blaster
+repents serpent	get-in-boat rule	--	--	true	true
+nastier stainer retinas	--	--	--	true	true
+succor crocus	--	--	--	true	true
+done any anodyne	--	west	--	true	true
+done any anodyne	--	--	--	true	true
+Curst Palace	go-to-limits rule
 
 this is the first-picaro-flip rule:
 	try tsing;
@@ -2089,14 +2265,41 @@ this is the first-picaro-flip rule:
 this is the picaro-flip rule:
 	try fliptoing a random fungible followy picaro;
 
+this is the prepare-luck-node rule:
+	try going east;
+	try wordying;
+	try pushing retape;
+	try gotoing anemic cinema;
+	try going north;
+	try pushing repeat;
+	try gotoing subsector;
+
+this is the yow-teaches-agnostic rule:
+	try gotoing coastlines;
+	try objasking agnostic about dr yow;
+	try rowdying;
+
+this is the get-gizmo rule:
+	try gotoing outer route;
+	try inserting dagger into deviser;
+	try gotoing coastlines;
+	try giving gizmo to agnostic;
+
+this is the get-in-boat rule:
+	try entering bot boat;
+
+this is the go-to-limits rule:
+	if player is in mesprise, try going outside;
+	if player is in coastlines, try entering a bot boat;
+
 table of otters jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
-bleary barley	to-otters rule
+nude dune	to-otters rule
 ed riley
 yer all a yell'r	--	west
 parleys splayer players
 --	any-pickup-line rule
-sea cube
+sea cube	gretta-chat-first rule
 eels
 sullenness us	--	--	--	true	true
 cult laya	--	south	--	true	true
@@ -2110,7 +2313,7 @@ leopard
 badger
 stray satyr
 ocelots
-jollity	to-cathedral rule
+jollity	realm-to-cathedral rule
 callosity
 parrot	--	south
 snipe
@@ -2118,7 +2321,7 @@ snail
 hornets
 racoon
 blase bales	--	--	minded midden
-atmo moat
+atmo moat	--	west
 pen o nope
 aside-llp	--	west
 holy nest
@@ -2135,16 +2338,25 @@ this is the to-otters rule:
 this is the any-pickup-line rule:
 	try fliptoing a random fungible pickup-line;
 
+this is the gretta-chat-first rule:
+	now yn-auto is 0;
+	deliver the gre-players-quip quip;
+	deliver the gre-go-quip quip;
+	process the end-gretta-convo rule;
+	try going north;
+
 this is the to-shrine rule:
 	try gotoing minded midden;
 	try going north;
 
-this is the to-cathedral rule:
+this is the realm-to-cathedral rule:
+	try going south;
 	try going south;
 	try going south;
 
 this is the west-if-needed rule:
 	if player is in disowned downside, try going west;
+	move parrot to reclusion inclosure;
 
 this is the win-the-game rule:
 	try going west;
@@ -2152,20 +2364,79 @@ this is the win-the-game rule:
 
 table of others jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
-pears
+pears	to-others rule
 limes
 grapes
 plums
 compass	x-circuits rule
 dates
+cherries
+blueberries
+cantaloupe
+maraschino cherry
+persimmon
+pomegranate
+tamarind
+apples	--	north
+apricot
+coconuts
+gooseberry
+mulberries
+orange	--	down
+rhubarb
+banana
+s-i	see-curtis rule
+tangerines	--	--	swell wells	true	true
+blackberries	--	west	--	true	true
+breadfruit	--	--	--	true	true
+cranberries	--	--	--	true	true
+grapefruit	--	--	--	true	true
+pineapple	--	--	--	true	true
+raspberry	--	--	--	true	true
+strawberries	--	--	--	true	true
+watermelon	--	--	--	true	true
+concisions	--	east	--	true	true
+mango	--	east	--	true	true
+nectarine	--	--	--	true	true
+peach	--	--	--	true	true
+olives	--	--	--	true	true
+quince	--	--	--	true	true
+kumquat	--	--	--	true	true
+melon	--	--	--	true	true
+papayas	--	--	--	true	true
+lemons	--	--	--	true	true
+--	get-storage rule
+guava	--	--	scape space	true	true
+--	go-to-gates rule
+searcher
+viewer
+--	--	north
 
 this is the to-others rule:
-	try tsing;
+	try roveovering;
 	try fliptoing hoster;
 	try entering hoster;
 
 this is the x-circuits rule:
+	process the curtis pleased rule;
 	try examining the ruts circuits;
+
+this is the see-curtis rule:
+	try going up;
+	try going south;
+	coin-eval;
+
+this is the get-storage rule:
+	try gotoing swell wells;
+	try going down;
+	try giving dollar to art erd;
+	try inserting s-i into lost slot;
+
+this is the go-to-gates rule:
+	try gotoing swell wells;
+	try going north;
+	try fruiing;
+
 
 Roiling Tests ends here.
 

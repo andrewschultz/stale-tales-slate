@@ -102,6 +102,8 @@ section undefine DEBUG
 
 understand the command "debug" as something new.
 
+in-jump-test is a truth state that varies.
+
 chapter region specs
 
 a region has a number called turns-spent. turns-spent of a region is usually -6. a region has a number called last-hint-turns. last-hint-turns of a region is usually 0. [15 moves til first spoiler nag, then 10 after each.]
@@ -315,7 +317,7 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: +1 PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 47. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.] altroutes of others is the others-alt rule. parse-rule of others is others-parse rule.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 47. min-score of others is 26. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint request rejects.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. matched item responses table of others is table of others matched item responses. readable table of others is table of others readables. unmatched topic responses table of others is table of others unmatched topic responses. ask x about x table of others is table of others ask x about x. misses-rule of others is others-misses rule. [preeftable of others is table of others prefigurings.] altroutes of others is the others-alt rule. parse-rule of others is others-parse rule.
 [There are so many possibilities for a minimum solution--about 39 choose 20, or 68.9 billion--I won't go through them all. Well, technically, take away 10c3*29c17 + 10c2*29c18 + 10c1*29c19 + 10c0*29c20 to get 68.4 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits. Best score is # of fruits (39) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.
 8 non fruit points, so max - 8 = total
@@ -2697,15 +2699,18 @@ after quipping when qbc_litany is the table of Perrot comments:
 	else if current quip is leave-quip:
 		lawnmower the table of Perrot comments;
 		terminate the conversation;
-		moot Report Porter Perrot;
-		now Dusty Study is dark;
-		if do-i-chat is true:
-			move Elmo to Largely All Grey Gallery;
-			move player to Largely All Grey Gallery;
-			moot rifle;
-			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Report Porter Perrot's dialogue]
+		darken-study;
 	else:
 		debug-fallthrough;
+
+to darken-study:
+	moot Report Porter Perrot;
+	now Dusty Study is dark;
+	if do-i-chat is true:
+		move Elmo to Largely All Grey Gallery;
+		move player to Largely All Grey Gallery;
+		moot rifle;
+		now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Report Porter Perrot's dialogue]
 
 after quipping when qbc_litany is the table of Elmo comments:
 	d "Went through [current quip], holdup = [hold-it-up].";
@@ -2843,17 +2848,20 @@ after quipping when qbc_litany is the table of Elmo comments:
 		terminate the conversation;
 		if player does not have gird grid and do-i-chat is false:
 			say "Hm. Maybe Elmo had some information for you that a conversation couldn't bring out. Well, it's all really just anagramming from here on out--you think/hope.";
-		moot Elmo;
-		now player has gird grid;
-		if do-i-chat is true: [this is a cheat bypass]
-			move player to Disowned Downside;
-			moot parleys splayer players;
-			now qbc_litany is table of Gretta comments;
-		else:
-			now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 4;
-			move the player to Carven Cavern;	[end Elmo's dialogue]
+		move-to-cavern;
 	else:
 		debug-fallthrough;
+
+to move-to-cavern:
+	moot Elmo;
+	now player has gird grid;
+	if do-i-chat is true: [this is a cheat bypass]
+		move player to Disowned Downside;
+		moot parleys splayer players;
+		now qbc_litany is table of Gretta comments;
+	else:
+		now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 4;
+		move the player to Carven Cavern;	[end Elmo's dialogue]
 
 after quipping (this is the usually don't undo convos rule):
 	now current quip is mowered;
@@ -6628,7 +6636,9 @@ chapter examining
 does the player mean examining a direction: it is very unlikely.
 does the player mean entering a direction: it is very unlikely.
 
-before examining (this is the mark as examined rule):
+the mark as examined rule is listed first in the check examining rules.
+
+check examining (this is the mark as examined rule):
 	if noun is inside, say "You need to specify the object you wish to look inside. You can also probably just [b]X[r]/[b]EXAMINE[r] it." instead;
 	if noun is up and be ova is fungible, say "Not quite [b]UP[r]." instead;
 	if noun is a direction, say "Looking in directions isn't supported in this game. Best to go where you want to look, or if a building is to the north, say [b]X BUILDING[r] instead." instead;
@@ -7487,7 +7497,7 @@ check fliptoing (this is the check off preconditions before flipping rule):
 		if noun is the-to entry and the-from entry is cromulent:
 			if the-from entry is reflexed and noun is not gast-affected, say "[reject]" instead;
 			if there is a pre-rule entry and flip-spill-flag is false:
-				if the hash of the player's command is fullhash entry or hash of word number 1 in the player's command is fullhash entry:
+				if in-jump-test is true or the hash of the player's command is fullhash entry or hash of word number 1 in the player's command is fullhash entry:
 					abide by the pre-rule entry;
 
 carry out fliptoing (this is the main fliptoing rule):
@@ -7569,7 +7579,7 @@ to store-min-adjust (th - a thing):
 
 The look around once light available rule is not listed in the for printing the announcement of light rulebook. [only used in Dusty Study]
 
-after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
+report fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
 		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Curtis turns away and starts humming and singing tidiest dietist ditties, dreaming up new ways of delegating and new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. Curtis seems pretty demanding and probably wants a lot more fruit than you could find or create here. How to find somewhere new?";
 		mootl list of all carried fruits;
@@ -7585,7 +7595,7 @@ after fliptoing when mrlp is stores (this is the reunite gang rule) :
 			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!' They offer an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
 	continue the action;
 
-after fliptoing (this is the fruit cue rule):
+after fliptoing when mrlp is others (this is the fruit cue rule):
 	unless noun is a fruit, continue the action;
 	let another-break be false;
 	let ncf be number of carried fruits;
@@ -10787,7 +10797,7 @@ exits-text of Cleric Circle is "[only-mesa].".
 
 to say only-mesa: say "You can only go back out to the Same Mesa"
 
-after looking in Cleric Circle:
+after printing the locale description of Cleric Circle (this is the horbert quest item return rule):
 	if number of held quest-items is 3:
 		mootl list of all quest-items;
 		say "'You have all the reagents! Wonderful!' Brother Horbert sniffs the pipe soot. 'Pope Otis brand! Wow! Even better than Opie Post or P. S. Pie too!'[paragraph break]The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Lag Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Lag Logan. That's an odd name. You write it down.";
@@ -12671,7 +12681,7 @@ outside-text of Hacks Shack is "No. You can't go out until the job here is done.
 
 shack-looked-yet is a truth state that varies.
 
-after looking in Hacks Shack (this is the implicitly change angrier earring and keyboard rule):
+report looking in Hacks Shack (this is the implicitly change angrier earring and keyboard rule):
 	if shack-looked-yet is false:
 		say "Yes. It is nice and quiet here. No need for interjections. Back to ... well, other ways to do things.";
 		if player has angrier earring, say "[line break]But the quiet is shattered for a moment! ";
@@ -13008,7 +13018,7 @@ check inserting it into (this is the disk in drive and wired computer rule):
 	if second noun is Drive A:
 		if noun is not disk, say "[if noun is rom sticks]You'll wait [']til you're ready to program[else]It's a disk drive. Only disks fit in there[end if]." instead;
 		if keyboard is off-stage, say "You don't have enough pieces to the computer to make it work. Specifically, no input device." instead;
-		if computer screen is off-stage, say "(Protip: you might want to get something like a screen to figure what's going on.)" instead;
+		if computer screen is off-stage, say "(Protip: you might want to get something like a monitor to figure what's going on.)" instead;
 
 chapter Drive E
 
@@ -14485,7 +14495,7 @@ the general gleaner is a thing. description is "[if bogus-enlarge is moot]You se
 
 gleaner-viewed is a truth state that varies.
 
-after examining gleaner when gleaner-viewed is false and bogus-enlarge is moot (this is the gleaner helps you through rule):
+report examining gleaner when gleaner-viewed is false and bogus-enlarge is moot (this is the gleaner helps you through rule):
 	if player is in end den:
 		say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
 		move player to Tenfold Teflond Den Loft;
@@ -16034,7 +16044,7 @@ a-text of recital article is "RYRRYYR". b-text of recital article is "RYRRYYR". 
 
 chapter picaros
 
-A picaro is a kind of person. a picaro is usually vanishing. a picaro can be leaderly. a picaro is usually not leaderly. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord. the plural of picaro is picaros.
+A picaro is a kind of person. a picaro is usually vanishing. a picaro can be followy or leaderly. a picaro is usually followy. a picaro can be pinko. a picaro is usually not pinko. a picaro is usually terse. a picaro has a number called pod-num. a picaro has a number called pod-ord. the plural of picaro is picaros.
 
 initial appearance of a picaro is "[the item described] looks to Rodney for orders, though he really should be lumped in with the rest."
 
@@ -17960,7 +17970,7 @@ gualoc of he lot is Artist Traits Strait. guadir of he lot is north. block-text 
 
 chapter rules for flipping guardians
 
-after fliptoing a guardian (this is the guardian taunt and track progress rule) :
+report fliptoing a guardian (this is the guardian taunt and track progress rule) :
 	if guar-here is 0:
 		if keycar is off-stage and player is not in Topside Deposit and player is not in Actionless Coastlines: [note you can avoid the keycar if you really want, even clearing other rooms of guardians without the keycar appearing, but the NW/SE rooms must eventually cause it to pop up if you try to clear everything. You can ignore the nereids and grailman to have maximum mobility, in fact]
 			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users. No kickbacks were proven.[paragraph break]Anyway, the keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
@@ -18147,7 +18157,7 @@ to decide which number is guard-hint-prio of (gu - a guardian): [I use "other-ro
 		decide on 6;
 	decide on 5; [the number values themselves don't matter. We want to direct the player to the most important areas.]
 
-after going (this is the guardian reposition after rule):
+report going (this is the guardian reposition after rule):
 	if mrlp is Towers:
 		now guardians-seen is 0;
 		reposition-guardians;
@@ -18240,7 +18250,7 @@ check scaning a two-of-threer:
 
 chapter turn rules
 
-after going (this is the parrot follows you rule):
+after going when parrot is not off-stage and parrot is not moot (this is the parrot follows you rule):
 	if parrot is in an adjacent room:
 		if location of player is not Bran Barn and location of player is not Loop Pool:
 			say "The parrot follows you.";
@@ -18666,19 +18676,22 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 	else if current quip is gre-animals-quip:
 		do nothing;
 	else if current quip is gre-go-quip:
+		process the end-gretta-convo rule;
 		terminate the conversation;
-		now the player wears medals;
-		move laya to disowned downside;
-		pad-del "asking";
-		moot Gretta;
-		if do-i-chat is true:
-			moot hydra;
-			now whistle is reflexed;
-			move player to Rancho Archon Anchor;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
 		do nothing;
 	else:
 		debug-fallthrough;
+
+this is the end-gretta-convo rule:
+	now the player wears medals;
+	move laya to disowned downside;
+	pad-del "asking";
+	moot Gretta;
+	if do-i-chat is true:
+		moot hydra;
+		now whistle is reflexed;
+		move player to Rancho Archon Anchor;
 
 chapter cut ya all cult laya
 
@@ -20257,7 +20270,7 @@ chapter ruts circuits
 
 the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope.[paragraph break]Some piece of writing called [hire recs], a weird omen prism, an id-mantra mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of fungible start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
-after examining ruts circuits (this is the reveal ruts circuits rule) :
+report examining ruts circuits (this is the reveal ruts circuits rule) :
 	move sated stead to Rustic Citrus;
 	move peanut cola to Rustic Citrus;
 	if pears are not off-stage, move megaton pear to Rustic Citrus;
@@ -20611,6 +20624,7 @@ check inserting into lost slot:
 	moot s-i;
 	now player has popstar passport;
 	process the retract halt lath rule;
+	reg-inc;
 	if concisions are reflexive, poss-d;
 	moot concisions;
 	the rule succeeds;
