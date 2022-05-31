@@ -12,10 +12,12 @@
 #ttc-table-of-general-nudges-notepad
 >notepda
 You mess around with all the possibilities for a bit
+[NOTE: this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.]
 
 #ttc-table-of-general-nudges-dope
 >doep
 You mess around with all the possibilities for a bit
+!this was the right idea
 
 #ttc-table-of-general-nudges-tan
 >tna
@@ -404,3 +406,12 @@ Alas, there is nothing between RESAVE and AVERSE to load a special game state.
 >reaves
 You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
 
+>gonear means manse
+
+>anme
+You need to act on the Means Manse in their entirety. Or the exits.
+[NOTE: you are on the right track, but you'll need an extra S for what you need to figure, here. This is a one-time nag, though the nudge messages should always implicitly state when things' or people's plurality is important.]
+
+>anme
+You need to act on the Means Manse in their entirety. Or the exits.
+!you are on the right track

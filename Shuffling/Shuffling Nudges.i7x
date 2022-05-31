@@ -88,6 +88,7 @@ chapter Notices Section
 table of Notices Section nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "notices"	534448609	--	--	"[loc-rej]."
+"notice"	438174643	--	--	"[loc-rej]."
 "borda"	201312192	--	--	"The broad board is just there to read."
 "newland"	450586644	--	--	"You will have to change the new land one item at a time."
 "tmi"	212178017	--	--	"The TMIs are there to help you."
@@ -100,7 +101,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "gateway"	498185490	--	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
 "oldman"	284365984	gateman	--	"He's too old to change. At least, in his present form."
 "dollhouse"	643830102	doll house	--	"Thinking that doesn't do much, but the [if static is fungible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
-"attic"	272406285	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
+"attic"	272406285	attics	--	"[seed-plural-nag]You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
 
 to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 
@@ -368,10 +369,11 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "figures"	518617129	--	--	"[vand-art]."
 "zeros"	506726073	noughts	--	"They're noughts, not zeros."
 "zeroes"	634532182	noughts	--	"They're noughts, not zeroes."
-"eon"	271066194	ones	--	"They're ones, not a one."
+"eon"	271066194	ones	--	"[seed-plural-nag]They're ones, not a one."
 "naught"	349193152	noughts	--	"[nau-zer-enuf]."
 "naughts"	445467118	noughts	--	"[nau-zer-enuf]."
-"nought"	421357911	noughts	--	"There's more than one nought."
+"nought"	421357911	noughts	--	"[seed-plural-nag]There's more than one nought."
+"dash"	156773172	dashes	--	"[seed-plural-nag]There's more than one dash."
 
 to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
 
@@ -441,6 +443,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "iced"	212833629	iced dice	--	"[froz-ha-ha]."
 "ice"	191804540	iced dice	--	"[froz-ha-ha]."
 "sleet"	508810041	--	--	"[froz-ha-ha]."
+"vowel"	471072118	--	--	"[seed-plural-nag]You need to deal with all the vowels."
 "werewolves"	1016216878	wolves	--	"They won't be changed with magic. Thankfully, you've got something more direct."
 "lupine"	482092068	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
 
@@ -452,28 +455,28 @@ chapter sortie
 
 table of Sortie nudges
 this-cmd	hashval	this-item	this-rule	this-clue
+"sixteen"	681664637	--	nick-visit rule	"You don't need to re-stop the centrifuge."
 "kitchen"	454037543	--	kitch-visit rule	"You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them."
 "mud"	190210049	--	drop-mud rule	"The mud is just there. You can't change it."
 "were"	448870794	cask	--	"[if sack is abrod]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is abrod]d[else]s[end if] it can be changed." [bold-ok]
 "burlap"	346316131	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
-"wart"	298556412	warts	--	"Why zap just one wart? Go for all of them!"
-"shoe"	335714951	hoses	--	"There's more than one hose here."
+"wart"	298556412	warts	--	"[seed-plural-nag]Why zap just one wart? Go for all of them!"
+"shoe"	335714951	hoses	--	"[seed-plural-nag]There's more than one hose here."
 "pair"	213970426	hoses	--	"Many things can be a pair, but these hoses--well, a pair of [b]HOSES[r] is kind of odd."
-"sheo"	335714951	--	got-shoes rule	"[pass-good-guess-note]But you're wearing the shoes. That might cause problems."
-"shoes"	431988917	--	got-shoes rule	"[pass-good-guess-note]But you're wearing the shoes. That might cause problems."
+"sheo"	335714951	--	got-shoes rule	"[skip-guess-note]But you're wearing the shoes. That might cause problems."
+"shoes"	431988917	--	got-shoes rule	"[skip-guess-note]But you're wearing the shoes. That might cause problems."
 "room"	298104110	--	rm-or-moor rule	"You almost feel something picking you up and pulling you somewhere else[if moor is visited and player is in roomroom]--you got here and can figure how to get back[else if moor is unvisited]--there are only so many ways to figure a new place[else]--you've been there and back, though, so you should know what to do[end if]."
 "expo"	396392726	expo flier	--	"[expo-or-anapest]."
 "expoflier"	734844219	expo flier	--	"[expo-or-anapest]."
 "flire"	338451493	expo flier	--	"[expo-or-anapest]."
+"hay"	161829369	hay	--	"Hay is not terribly magical. It's more for trading or building."
 "folded"	324545599	--	got-plane rule	"It's a plane, now, for sure."
 "paper"	378249648	--	got-plane rule	"It's a plane, now, for sure."
 "papers"	474523614	--	got-plane rule	"It's a plane, now, for sure."
 "graffiit"	366236825	red graffiti	--	"Hm, there has to be a clue in it."
 "redgraffiti"	600395826	red graffiti	--	"Hm, there has to be a clue in it."
-"oil"	173159262	oils	--	"[if caskfillings > 2]They're [b]OILS[r], but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing [b]YOU[r] can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things [b]YOU[r] can do[end if]."
+"oil"	173159262	oils	--	"[seed-plural-nag][if caskfillings > 2]They're [b]OILS[r], but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing [b]YOU[r] can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things [b]YOU[r] can do[end if]."
 "lois"	269433228	--	cedars-visited rule	"Changing Lois, or asking her to change, is unlikely and counterproductive. She has left you all you need[if silo is in moor]ed[end if]."
-"sixteen"	681664637	--	nick-visit rule	"You don't need to re-stop the centrifuge."
-"hay"	161829369	hay	--	"Hay is not terribly magical. It's more for trading or building."
 
 this is the kitch-visit rule:
 	if player is in kitchen:
@@ -612,6 +615,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "pome"	347699798	poem	--	"[peas-poe]."
 "poetyr"	594417718	poem	--	"[peas-poe]."
 "warhead"	383751709	missile	--	"You don't want to change the missile's message, which seems rather nice."
+"smilie"	431954759	--	--	"[seed-plural-nag]There are many smilies you need to manipulate."
 
 to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 
@@ -672,7 +676,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "mitten"	512001652	Velcro	--	"[mits-are]."
 "mittens"	608275618	Velcro	--	"[mits-are]."
 "beats"	347796816	--	no-beats rule	"The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here."
-"beta"	251522850	beats	--	"This racket isn't just one beat."
+"beta"	251522850	beats	--	"[seed-plural-nag]This racket isn't just one beat."
 "noise"	412333006	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
 "bag"	53206425	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
 "tulip"	388488469	tulip	--	"[if player has tulip]The tulip is handy as-is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked directly on the tulip, which it won't. The nerds might be able to help you with part of your quest, though[end if]."
@@ -771,7 +775,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "pose"	379898611	Poses Posse	--	"[no-poses]."
 "caek"	201932690	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	dry cake	--	"It isn't just any cake. It's dry cake."
-"rental"	441149095	--	--	"[if antlers are in Obtains Boastin Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else][pass-good-guess-note]No point bringing those tacky antlers back, or thinking about them any more[end if]."
+"rental"	441149095	--	--	"[if antlers are in Obtains Boastin Bastion][seed-plural-nag]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers. Oh, and strictly speaking, you don't need to act on both antlers[else][skip-guess-note]No point bringing those tacky antlers back, or thinking about them any more[end if]."
 
 to say no-poses: say "You can't change who they are. They probably can't, either. It's sad"
 
@@ -812,13 +816,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "tonr"	331693906	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "cue"	251917501	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "fairies"	428092284	--	--	"[faeries-back-worse]. With a little extra for your misspelling."
-"fairy"	281378615	--	--	"[fairy-back-worse]."
-"faery"	364191878	--	--	"[fairy-back-worse]."
-"trounce"	583611407	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
 "faeries"	510905547	--	--	"[faeries-back-worse]."
-"heath"	307668543	heaths	--	"[if player does not have heaths]Probably best not to do stuff to even one heath while the faeries have them[else]They are multiple heaths--so you should try to change just one[end if]."
+"fairy"	281378615	--	--	"[seed-plural-nag][fairy-back-worse]. With a little extra for your misspelling"
+"faery"	364191878	--	--	"[seed-plural-nag][fairy-back-worse]."
+"trounce"	583611407	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
+"heath"	307668543	heaths	--	"[seed-plural-nag][if player does not have heaths]Probably best not to do stuff to even one heath while the faeries have them[else]They are multiple heaths--so you should try to change just one[end if]."
 "stems"	487539212	heaths	--	"Deal with the whole flower, not just the stems."
-"begonia"	369265465	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
+"begonia"	369265465	begonias	--	"[seed-plural-nag][if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
 
 to say faeries-back-worse: say "They could CERTAINLY out-magic you back, even if anagramming could have an effect on them" [bold-ok]
 
@@ -832,13 +836,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "esoteric"	678671013	--	--	"[coterie-no]."
 "coterie"	582397047	--	--	"[coterie-no]."
 "nerd"	303066509	--	--	"[nerd-nah]."
-"nerds"	399340475	--	--	"[nerd-nah]."
+"nerds"	399340475	--	--	"[seed-plural-nag][nerd-nah]."
 "dorks"	329912613	--	--	"[nnww]."
 "geeks"	437419064	--	--	"[nnww]."
 "dork"	233638647	--	--	"[nnww]."
 "geek"	341145098	--	--	"[nnww]."
 "asknerds"	550735437	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
-"asknerd"	454461471	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
+"asknerd"	454461471	--	--	"[seed-plural-nag]'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
 "memo"	330308992	--	--	"[memo-tote-no]."
 "tote"	408378722	--	--	"[memo-tote-no]."
 "tome"	369343857	--	--	"[memo-tote-no]."
@@ -913,7 +917,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "astral"	342897262	--	--	"[astral-nudge]."
 "altar"	246623296	--	--	"[astral-nudge]."
 "flare"	295646465	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
-"tile"	329722812	--	--	"You need to deal with all the tiles."
+"tile"	329722812	--	--	"[seed-plural-nag]You need to deal with all the tiles."
 
 to say astral-nudge: say "While [if feral flare is fungible]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful"
 
@@ -922,7 +926,7 @@ chapter Leis Isle
 table of Leis Isle nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "leis"	322886760	--	--	"You already noticed the leis. Use something on the isle to escape it."
-"lie"	226612794	--	--	"[if l2 is not moot]Perhaps you can deal with the leis, or maybe you can use something else to escape the isle[else]You already noticed the leis. Use something on the isle to escape it[end if]."
+"lie"	226612794	--	--	"[seed-plural-nag][if l2 is not moot]Perhaps you can deal with the leis, or maybe you can use something else to escape the isle[else]You already noticed the leis. Use something on the isle to escape it[end if]."
 "woodland"	423607270	--	--	"The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway."
 "sand"	188398381	--	--	"[the-sand]."
 "and"	92124415	--	--	"[the-sand]."
@@ -970,6 +974,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "clay"	197366494	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is fungible]protest[else]trio[end if] really wants to do."
 "three"	481328338	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in Potshot Hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
+"link"	220647371	chain links	--	"[seed-plural-nag]There are many links, though strictly speaking, you could get by with assuming theree was one."
 "tugtoe"	546084231	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
 "red"	234159001	red bull burdell	--	"[cant-change-bull]"
 "bull"	231152390	red bull burdell	--	"[cant-change-bull]"
@@ -1013,8 +1018,10 @@ chapter Means Manse
 
 table of Means Manse nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"manse"	359250554	--	--	"[pass-good-guess-note]You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits."
-"extis"	484951020	--	--	"[pass-good-guess-note]That's not quite the right sort of nothing."
+"manse"	359250554	--	--	"[skip-guess-note]You'd like to feel more welcome in the Means Manse. Tweaking it directly seems to work. You could also find a way to ignore the exits."
+"extis"	484951020	--	--	"[skip-guess-note]That's not quite the right sort of nothing, or ignoring the exits, but maybe you could switch things up a bit."
+"exti"	388677054	--	--	"[seed-plural-nag]You need to act on the exits in their entirety. Or the Means Manse."
+"mean"	262976588	--	--	"[seed-plural-nag]You need to act on the Means Manse in their entirety. Or the exits."
 "marble"	351625627	--	--	"[ennui]."
 "spire"	435862683	--	--	"[ennui]."
 "toaster"	592164309	--	--	"[ennui]."

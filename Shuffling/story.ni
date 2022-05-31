@@ -375,14 +375,14 @@ to decide whether (nt - a table name) is hash-found:
 			if there is a this-rule entry:
 				process this-rule entry;
 				if the rule succeeded:
-					say "[this-clue entry][line break][note-good-guesses]";
+					say "[this-clue entry][line break][note-good-guesses][plural-nag]";
 					decide yes;
 			else if there is a this-item entry:
 				if this-item entry is fungible:
-					say "[this-clue entry][line break][note-good-guesses]";
+					say "[this-clue entry][line break][note-good-guesses][plural-nag]";
 					decide yes;
 			else:
-				say "[this-clue entry][line break][note-good-guesses]";
+				say "[this-clue entry][line break][note-good-guesses][plural-nag]";
 				decide yes;
 	decide no;
 

@@ -23,10 +23,6 @@ You don't need to, and can't, do anything drastic to the walls when inside. That
 >llaws
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
 
-#mistake for aliver
->aliver
-You don't want to risk anything that would make Elvira more powerful.
-
 #ttc-table-of-general-nudges-elvira
 >alvire
 Changing Elvira is impossible, and you certainly don't want to summon her.
@@ -51,6 +47,14 @@ You don't need to change the pedanto-notepad, except maybe by filling it up with
 
 >ts
 
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+[NOTE: you found a great guess, but such a change wouldn't push the story forward. Still, if you find one, the responses are meant to either be amusing or provide a small clue.]
+
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+!you found a great guess
+
 #ttc-table-of-general-nudges-yorpwald
 >yalpdrow
 You can't just unjumble Yorpwald with just one word. You need to deal with individual things.
@@ -58,10 +62,12 @@ You can't just unjumble Yorpwald with just one word. You need to deal with indiv
 #ttc-table-of-general-nudges-settler
 >ettlers
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+this was the right idea, though what you tried
 
 #ttc-table-of-general-nudges-which
 >whihc
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+!this was the right idea, though what you tried
 
 #ttc-table-of-general-nudges-whichs
 >whicsh
@@ -380,8 +386,3 @@ There's no secret cheat between NO TIP and OPT IN.
 #ttc-table-of-general-nudges-resave
 >resaev
 Alas, there is nothing between RESAVE and AVERSE to load a special game state.
-
-#mistake test for reaves
->reaves
-You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
-

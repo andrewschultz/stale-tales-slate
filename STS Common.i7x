@@ -574,6 +574,12 @@ great-guesses-noted is a truth state that varies.
 
 to say skip-guess-note: now pass-good-guess-note is true;
 
+may-plural-nag is a truth state that varies.
+
+already-plural-nag is a truth state that varies.
+
+to say seed-plural-nag: now may-plural-nag is true;
+
 to say note-good-guesses:
 	if pass-good-guess-note is true:
 		now pass-good-guess-note is false;
@@ -589,6 +595,14 @@ to say note-great-guesses:
 	ital-say "you found a great guess, but such a change wouldn't push the story forward. Still, if you find one, the responses are meant to either be amusing or provide a small clue.";
 	say "[run paragraph on]";
 	now great-guesses-noted is true;
+
+to say plural-nag:
+	if may-plural-nag is false, continue the action;
+	if already-plural-nag is true, continue the action;
+	say "[line break]";
+	ital-say "you are on the right track, but the intended anagram has an extra S. This is a one-time nag, though the nudge messages should always implicitly state when things['] or people's plurality, or an apostrophe-s, is important.";
+	say "[run paragraph on]";
+	now already-plural-nag is true;
 
 part hints
 
@@ -712,19 +726,19 @@ to say 2da: if screenread is false, say "--";
 
 to say 2dg of (rg - a region):
 	if rg is not tickedoff:
-		say "[eqls][b][printed name of rg in upper case][r][line break]";
+		say "[eqls][b][printed name of rg in upper case]:[r][line break]";
 		now rg is tickedoff;
 
 to say 2dmiss of (cr2 - a region):
-	if anything-missed is false:
-		say "[eqls][b][cr2][r]:[line break]";
+	say "[2dg of cr2]";
 	now anything-missed is true;
 	say "[2da]";
 
 miss-room is a room that varies.
 
 to say 2drm of (rr - a room):
-	if anything-missed is false, say "[2dg of map region of rr]";
+	say "[2dg of map region of rr]";
+	now anything-missed is true;
 	unless miss-room is rr, say "[eqls][b][rr][r][eqls][line break]";
 	now miss-room is rr;
 	say "[2da]";

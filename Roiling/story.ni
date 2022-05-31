@@ -3263,7 +3263,7 @@ to decide whether (tn - a table name) is hash-found:
 			say "[run paragraph on]";
 			process the this-rule entry;
 			unless the rule succeeded, next;
-		say "[this-clue entry][line break][roil-good-guesses]";
+		say "[this-clue entry][line break][if mrlp is not demo dome][note-good-guesses][plural-nag]";
 		if read-slider-after is true:
 			if cmdhash is hashval entry:
 				match-process the player's command and the this-cmd entry;
@@ -3272,8 +3272,6 @@ to decide whether (tn - a table name) is hash-found:
 		now read-slider-after is false;
 		decide yes;
 	decide no;
-
-to say roil-good-guesses: if mrlp is not demo dome, say "[note-good-guesses]";
 
 definition: a thing (called ge) is final-flipped:
 	if ge is coins or ge is s-c or ge is icons, no;
