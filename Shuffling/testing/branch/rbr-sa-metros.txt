@@ -73,6 +73,10 @@ Your vision blurs a bit, and instead you see a gardenia.
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
+@max
+>e
+The signers' ingress is closed. It's really intimidating. You probably don't close to have the tools you need to pass it. At least not yet.
+
 @gn
 #testcase-outside-undesired-underside
 >exit
@@ -1609,17 +1613,31 @@ The beats shift up for a second.
 @gle
 You see yourself putting the barcode and the keycard on the friend finder here. Nothing works until you put them together.
 
+@max
+>e
+The signers' ingress is closed. It's imposing but not that scary. You're not sure what you need to show it, but you sense you aren't totally at sea.
+
 >put barcode on keycard
 
 @gle
 You see yourself putting the barcode and the keycard on the friend finder here.
 !Nothing works
 
+@max
+>e
+The signers' ingress is closed. You may wish to check your inventory. You have what you need to get that stubborn signers' ingress to open.
+
 >put card on sensor
-What do you know? It works! The signers' ingress slides open!
+You hear a bunch of weird noises! There's a distinct lack of buzzers, which you take as a good sign. Then a tinny voice drones "Impression:
+ permission!" until it dies out. The signers' ingress opens slightly, to indicate you may enter now.
+[NOTE: Shuffling Around will just let you walk through the signers' ingress at will now, so don't worry about swiping the card again.]
 
 @hin
 Just go east.
+
+@max
+>put card on sensor
+You can just walk east.
 
 >e
 /^Esoteric Coteries
@@ -1632,6 +1650,17 @@ You see yourself asking the nerds about something before a lightbulb goes on ove
 DEBUG: nerds being objhinted.
 >xx nerds
 You suddenly feel darkness, along with an urge to ask the nerds about it.
+
+@max
+The signers' ingress slides shut quietly and efficiently.
+\\
+>w
+/^Undesired Underside
+The signers' ingress slides shut quietly and efficiently.
+>undo
+>put card on ingress
+You already passed the signers' ingress. You can just go back west.
+!Undesired Underside
 
 @gn
 #testcase-outside-esoteric-coteries
@@ -1779,18 +1808,6 @@ You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
 \\
 >e
 
-@max
->w
-/^Undesired Underside
-\\
->put card on sensor
-The signers' ingress slides open again.
-\\
->put card on sensor
-The signers' ingress is open. So you just walk east instead.
-\\
-/^Esoteric Coteries
-
 @nud
 #ttc-table-of-esoteric-coteries-nudges-esoteric
 >esoterci
@@ -1799,18 +1816,6 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 #ttc-table-of-esoteric-coteries-nudges-coterie
 >coterei
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
-
-@max
->w
-The signers' ingress slides shut.
->z
-\\
->open ingress
-\\
->e
-/^Esoteric Coteries
-You can also see a lit-up tulip here.
-The signers' ingress slides shut.
 
 @nud
 #ttc-table-of-esoteric-coteries-nudges-anticool

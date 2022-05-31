@@ -817,7 +817,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "cue"	251917501	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "fairies"	428092284	--	--	"[faeries-back-worse]. With a little extra for your misspelling."
 "faeries"	510905547	--	--	"[faeries-back-worse]."
-"fairy"	281378615	--	--	"[seed-plural-nag][fairy-back-worse]. With a little extra for your misspelling"
+"fairy"	281378615	--	--	"[seed-plural-nag][fairy-back-worse]. With a little extra for your misspelling."
 "faery"	364191878	--	--	"[seed-plural-nag][fairy-back-worse]."
 "trounce"	583611407	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
 "heath"	307668543	heaths	--	"[seed-plural-nag][if player does not have heaths]Probably best not to do stuff to even one heath while the faeries have them[else]They are multiple heaths--so you should try to change just one[end if]."

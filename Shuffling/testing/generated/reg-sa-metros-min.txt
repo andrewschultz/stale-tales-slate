@@ -126,7 +126,9 @@ You currently have 10 out of 18 total points for the Metros region. Your final p
 >put barcode on keycard
 
 >put card on sensor
-What do you know? It works! The signers' ingress slides open!
+You hear a bunch of weird noises! There's a distinct lack of buzzers, which you take as a good sign. Then a tinny voice drones "Impression:
+ permission!" until it dies out. The signers' ingress opens slightly, to indicate you may enter now.
+[NOTE: Shuffling Around will just let you walk through the signers' ingress at will now, so don't worry about swiping the card again.]
 
 >e
 /^Esoteric Coteries

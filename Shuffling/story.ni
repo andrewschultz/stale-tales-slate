@@ -375,7 +375,7 @@ to decide whether (nt - a table name) is hash-found:
 			if there is a this-rule entry:
 				process this-rule entry;
 				if the rule succeeded:
-					say "[this-clue entry][line break][note-good-guesses][plural-nag]";
+					say "[this-clue entry][line break][note-good-guesses][plural-nag]"; [this could be lumped together with identical code below, but line breaks work, and I don't want to break them.]
 					decide yes;
 			else if there is a this-item entry:
 				if this-item entry is fungible:
@@ -888,7 +888,7 @@ this is the metros-hinting rule:
 		if Bile Libe is not visited, say "You can go west from the camp to a library." instead;
 		if dry cake is in Obtains Boastin Bastion, say "You should try going [if Obtains Boastin Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Esoteric Coteries are not visited:
-			if keycard-put is true, say "Just go east." instead;
+			if permission-impression is true, say "Just go east." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			if player has brocade, try objhinting brocade instead;
 			if player has keycard:
@@ -7559,15 +7559,24 @@ book Undesired Underside
 Undesired Underside is a room in Metros. last-loc of metros is Undesired Underside. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west.". roomnud of Undesired Underside is table of Undesired Underside nudges.
 
 check going east in Undesired Underside:
-	process the bother-nerds rule;
-	if the rule failed, the rule succeeds;
-	if signers ingress is open, continue the action;
-	if player has the keycard and barcode is part of the keycard:
-		if Esoteric Coteries are unvisited, say "Hm, maybe your keycard will do the trick.[paragraph break]";
-		try putting keycard on friend finder;
+	abide by the bother-nerds rule;
+	if permission-impression is true:
+		say "The [ingress] slides open as you go east.";
 		continue the action;
+	if keycard-clue-level is 3:
+		say "The [ingress] is closed. You may wish to check your inventory. You have what you need to get that stubborn [ingress] to open.";
+	else if keycard-clue-level is 0:
+		say "The [ingress] is closed. It's really intimidating. You probably don't close to have the tools you need to pass it. At least not yet.";
 	else:
-		try opening the signers ingress instead;
+		say "The [ingress] is closed. It's imposing but not that scary. You're not sure what you need to show it, but you sense you aren't totally at sea.";
+	the rule fails;
+
+to decide which number is keycard-clue-level:
+	if player has the keycard and barcode is part of the keycard, decide on 3;
+	let temp be 0;
+	if player has keycard, increment temp;
+	if player has barcode, increment temp;
+	decide on temp;
 
 chapter tilting titling
 
@@ -7609,45 +7618,7 @@ chapter cramped red camp (scenery indicating what's north)
 
 the cramped red camp is useless scenery in Undesired Underside. "It's pretty dirty and meager[if Roarings Garrison is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
-chapter signers ingress (passage east)
-
-The signers ingress is a door. description is "It's very solid[if signers ingress is open] when it's closed[end if][if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if].". it is east of underside and west of Esoteric Coteries. printed name is "signers['] ingress".
-
-check putting keycard on signers ingress when player is in Undesired Underside: try putting keycard on friend finder instead;
-check putting keycard on signers ingress when player is in Esoteric Coteries: try going west instead;
-
-the initial appearance of the signers ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now, with a friend finder (sensor) attached to it[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no friend finder on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. It has a tech etch repelling any old chump from entering. There's also a [one of]sensor (call it a friend finder)[or]friend finder[stopping] off to the side[prob-reads][end if][stopping].". understand "metallic/door" and "metallic door" as signers ingress when player is in Undesired Underside.
-
-to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
-
-check opening the signers ingress:
-	if noun is open, say "But it already is. For now." instead;
-	if location of player is Esoteric Coteries:
-		say "The [ingress] slides open as you step near it.";
-		now signers ingress is open;
-		the rule succeeds;
-	process the bother-nerds rule;
-	if the rule failed, the rule succeeds;
-	if keycard-put is true:
-		say "You use the keycard to open the door again.";
-		try putting keycard on friend finder instead;
-	set the pronoun it to signers ingress;
-	if location of player is undesired and keycard is off-stage, say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
-	say "The [ingress] has no handle. It's probably operated by the friend finder[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
-
-section tech etch
-
-the tech etch is a part of the signers ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
-
-check taking the tech etch: say "Since it's part of the door, you take the tech etch in the metaphorical sense and vow not to act like the poor schelps depicted on it." instead;
-
-description of tech etch is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
-
-after examining tech etch for the first time:
-	say "The tech etch is, of course, drawn by one Chet Echt.";
-	continue the action;
-
-section friend finder (part of ingress)
+section friend finder (visible in underside, part of ingress--sort of)
 
 The friend finder is scenery in Undesired Underside. description of the friend finder is "It has a small optical beam, probably for detecting proper identification.". understand "sensor/senser" as friend finder.
 
@@ -7663,39 +7634,42 @@ check asking friend finder about:
 
 to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteric Coteries are visited]guard the tulip[else]want to see[end if]"
 
-keycard-put is a truth state that varies. keycard-put is usually false.
+this is the friend-finder-figured rule:
+	if permission-impression is true, say "You can just walk [ingress-dir]." instead;
 
 check putting barcode on friend finder:
+	abide by the friend-finder-figured rule;
 	if barcode is part of the keycard, try putting keycard on friend finder instead;
 	say "You try holding the barcode up to the friend finder, which pulses a bit. But the door doesn't seem to open. Perhaps the barcode needs to be a part of something." instead;
 
 check inserting into friend finder:
+	abide by the friend-finder-figured rule;
 	say "The friend finder isn't a container. So you go with putting it ON, instead."; [bold-ok]
 	try putting noun on second noun instead;
 
 check putting on the friend finder (this is the reject silly friend finder tries rule) :
 	ignore the can't put onto what's not a supporter rule;
+	abide by the friend-finder-figured rule;
 	if noun is gadget, say "The gadget is more for gauging than doing, but yeah, you probably need something high-tech. Oh, the gadget remains silent, too." instead;
 	if noun is the dry cake, say "Opening an electronic door is not such a piece of cake. Something more metallic." instead;
 	say "'Special place is special!' barks the friend finder. You'll probably need something more high-tech to slip, ace." instead;
 
 check putting keycard on friend finder:
-	process the bother-nerds rule;
-	if the rule failed, the rule succeeds;
+	abide by the bother-nerds rule;
+	abide by the friend-finder-figured rule;
 	if barcode is not part of keycard, say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
-	if signers ingress is open:
-		say "The [ingress] is open. So you just walk east instead.";
-		try going east instead;
-	if keycard-put is false:
-		say "What do you know? It works! The [ingress] slides open!";
-		now keycard-put is true;
+	if permission-impression is false:
+		say "You hear a bunch of weird noises! There's a distinct lack of buzzers, which you take as a good sign. Then a tinny voice drones 'Impression: permission!' until it dies out. The [ingress] opens slightly, to indicate you may enter now.";
 		now keycard is realized;
 		now friend finder is realized;
 		now signers ingress is realized;
 		now barcode is realized;
+		now permission-impression is true;
+		ital-say-lb "[this-game] will just let you walk through [the ingress] at will now, so don't worry about swiping the card again.";
 	else:
 		say "The [ingress] slides open again.";
-	now signers ingress is open instead;
+		try going ingress-dir;
+	the rule succeeds;
 
 section optical beam
 
@@ -8330,7 +8304,7 @@ after doing something with the night thing:
 	set the pronoun it to night thing;
 	continue the action;
 
-description of Night Thing is "It's grown wrong, a gigantic hairy eyeless potato clearly not the right girth. And it's wired weird, with a cruel ulcer for a mouth. It seems more in the mood for bellowing than fighting, but it still probably doesn't belong in the hotel. It's too big to fight and too fearsome to get near. It appears to be sitting on some sort of mattress."
+description of Night Thing is "It's grown wrong, a gigantic hairy eyeless potato clearly not the right girth. And it's wired weird, with a cruel ulcer for a mouth. It seems more in the mood for bellowing than fighting, but it still probably doesn't belong in the hotel. It's too big to fight and too fearsome to get near. It appears to be sitting on some sort of mattress.[paragraph break]A mindless terror like this requires a physical solution. Perhaps you can find something to fill it with fear and disgust."
 
 understand "potato" as night thing when night thing is fungible.
 
@@ -8457,7 +8431,7 @@ check switching on the termite emitter:
 
 book Esoteric Coteries
 
-Esoteric Coteries is a room in Metros. description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west.". roomnud of Esoteric Coteries is table of Esoteric Coteries nudges.
+Esoteric Coteries is a room in Metros. it is east of Undesired Underside. description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west.". roomnud of Esoteric Coteries is table of Esoteric Coteries nudges.
 
 to get-tulip:
 	now player has the lit up tulip;
@@ -8467,7 +8441,11 @@ to get-tulip:
 after printing the locale description for Esoteric Coteries when Esoteric Coteries is unvisited:
 	reg-inc;
 	say "Man! These nerds seem like the real deal. So smart that even (or especially) asking them about irrelevant stuff might help you figure what to do.[paragraph break]";
-	close-the-ingress;
+	continue the action;
+
+after printing the locale description (this is the trailing fake ingress shut rule):
+	if (player is in Esoteric Coteries and player was in Undesired Underside) or (player is in Undesired Underside and player was in Esoteric Coteries):
+		say "The [ingress] slides shut quietly and efficiently.";
 	continue the action;
 
 nerds-unwelcome is a truth state that varies.
@@ -8479,27 +8457,8 @@ this is the bother-nerds rule:
 	if player has lit up tulip:
 		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either. Probably mention how they're sure they could figure what you need to do, etc.";
 		the rule fails;
-	the rule succeeds;
 
 ever-shut is a truth state that varies.
-
-after printing the locale description when ingress is open and ingress is fungible:
-	close-the-ingress;
-	continue the action;
-
-every turn when signers ingress was open (this is the close signers ingress rule):
-	close-the-ingress;
-
-to close-the-ingress:
-	if signers ingress is fungible and signers ingress is open:
-		now signers ingress is closed;
-		say "The [ingress] slides shut.";
-		if ever-shut is false:
-			now ever-shut is true;
-			if player has tulip:
-				do nothing;
-			else:
-				say "[i][bracket]NOTE: the game will just let you walk east now, so don't worry about swiping the card again.[close bracket][r][paragraph break]";
 
 chapter nerds
 
@@ -8772,6 +8731,40 @@ this is the bore-resin rule:
 	if current action is dropping, say "You'll have to wash it off, and there's no running water nearby." instead;
 
 stickyhanded is a truth state that varies. stickyhanded is usually false.
+
+book backdrops
+
+The signers ingress is a backdrop. It is in Esoteric Coteries and Undesired Underside. description is "It's very solid[if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if][if permission-impression is true]. It's less intimidating now you know you can walk through it[end if].". printed name is "signers['] ingress".
+
+check examining signers ingress when player has lit up tulip: say "The [ingress] is impressive, but you don't need to worry about it any more. You got the lit-up tulip." instead;
+
+check putting keycard on signers ingress when player is in Undesired Underside: try putting keycard on friend finder instead;
+check putting keycard on signers ingress when player is in Esoteric Coteries: say "You already passed [the ingress]. You can just go back west." instead;
+
+the initial appearance of the signers ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now, with a friend finder (sensor) attached to it[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no friend finder on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. In addition to a lack of doorknobs or handles, it has a tech etch repelling any old chump from entering. There's also a [one of]sensor (call it a friend finder)[or]friend finder[stopping] off to the side[prob-reads][end if][stopping].". understand "metallic/door" and "metallic door" as signers ingress when player is in Undesired Underside.
+
+to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
+
+to decide which direction is ingress-dir:
+	if player is in coteries, decide on west;
+	decide on east;
+
+check opening the signers ingress:
+	say "It works automatically. [if permission-impression is true]You can just walk [ingress-dir] through it[else]You probably need to show identification or something to get access[end if]." instead;
+
+permission-impression is a truth state that varies.
+
+section tech etch
+
+the tech etch is a part of the signers ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
+
+check taking the tech etch: say "Since it's part of the door, you take the tech etch in the metaphorical sense and vow not to act like the poor schelps depicted on it." instead;
+
+description of tech etch is "It's a red circle with a line through it, below the text 'Special Place is Special.' The poor struck-through sods in the center appear to be stick-figure parodies of stupid people. You note one [one of]stuffing a metal fork in a toaster[or]moving a rook pawn to start a chess game[or]thought-bubbling that 8+8=17[or]picking his nose[or]with his arm around Clippy[or]reading a tabloid magazine[or]hitting a computer that is not plugged in[or]about to walk over an open manhole[or]about to misplace a square manhole[or]watching a sporting event on TV[or]with a barbell crushing his neck[or]carrying a boombox[or]driving an SUV[or]getting an easy Sudoku all wrong[or]wearing a baseball hat backwards[or]wearing a sports jersey[or]drinking and smoking[or]feeding a shark[or]getting a tattoo[in random order]. Then you lose where it was in all the dizzying variety."
+
+after examining tech etch for the first time:
+	say "The tech etch is, of course, drawn by one Chet Echt.";
+	continue the action;
 
 volume resort
 

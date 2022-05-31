@@ -1022,7 +1022,7 @@ gardenia	"[if player is in Fo Real Florae]Try GIVEing the gardenia to the faerie
 signers ingress	"[if nerds-unwelcome is true]You got through the [ingress], but you're not welcome back. Still, you got something useful[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
 tilting titling	"The tilting titling is just there for ambience."
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
-friend finder	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the friend finder and the signers['] ingress[end if]."
+friend finder	"[if permission-impression is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the friend finder and the signers['] ingress[end if]."
 optical beam	--	friend finder
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
 smartest mattress	"[if night thing is in The Ol Hotel]You need to get rid of the night thing[else if emitter is off-stage][b]EXAMINE[r] the mattress[else]Nothing left in the mattress[end if]."

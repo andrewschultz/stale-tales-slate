@@ -22,6 +22,9 @@ Your score has just gone up by one point
 
 /^Undesired Underside
 
+>e
+The signers' ingress is closed. It's really intimidating. You probably don't close to have the tools you need to pass it. At least not yet.
+
 >w
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
@@ -235,38 +238,37 @@ You currently have 11 out of 18 total points for the Metros region. You have fou
 
 >s
 
+>e
+The signers' ingress is closed. It's imposing but not that scary. You're not sure what you need to show it, but you sense you aren't totally at sea.
+
 >put barcode on keycard
 
+>e
+The signers' ingress is closed. You may wish to check your inventory. You have what you need to get that stubborn signers' ingress to open.
+
 >put card on sensor
-What do you know? It works! The signers' ingress slides open!
+You hear a bunch of weird noises! There's a distinct lack of buzzers, which you take as a good sign. Then a tinny voice drones "Impression:
+ permission!" until it dies out. The signers' ingress opens slightly, to indicate you may enter now.
+[NOTE: Shuffling Around will just let you walk through the signers' ingress at will now, so don't worry about swiping the card again.]
+
+>put card on sensor
+You can just walk east.
 
 >e
 /^Esoteric Coteries
 
->score
-You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+The signers' ingress slides shut quietly and efficiently.
 
 >w
 /^Undesired Underside
+The signers' ingress slides shut quietly and efficiently.
+>undo
+>put card on ingress
+You already passed the signers' ingress. You can just go back west.
+!Undesired Underside
 
->put card on sensor
-The signers' ingress slides open again.
-
->put card on sensor
-The signers' ingress is open. So you just walk east instead.
-
-/^Esoteric Coteries
-
->w
-The signers' ingress slides shut.
->z
-
->open ingress
-
->e
-/^Esoteric Coteries
-You can also see a lit-up tulip here.
-The signers' ingress slides shut.
+>score
+You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >switch emitter
 by one point
