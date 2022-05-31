@@ -1919,6 +1919,293 @@ understand "tdespairingly" as t-despairingly.
 
 understand "tindiscreetly" as t-indiscreetly.
 
+volume jumpthrough information
+
+understand "jh [number]" as jumpthroughing.
+understand "jo [number]" as jumpthroughing.
+understand "jp [number]" as jumpthroughing.
+understand "js [number]" as jumpthroughing.
+understand "jt [number]" as jumpthroughing.
+understand "ju [number]" as jumpthroughing.
+understand "jv [number]" as jumpthroughing.
+understand "jw [number]" as jumpthroughing.
+understand "jy [number]" as jumpthroughing.
+
+understand "jh" as jumpthroughalling.
+understand "jo" as jumpthroughalling.
+understand "jp" as jumpthroughalling.
+understand "js" as jumpthroughalling.
+understand "jt" as jumpthroughalling.
+understand "ju" as jumpthroughalling.
+understand "jv" as jumpthroughalling.
+understand "jw" as jumpthroughalling.
+understand "jy" as jumpthroughalling.
+
+the deduce region from first letter rule is listed first in the check jumpthroughing rules.
+
+check jumpthroughing (this is the deduce region from first letter rule):
+	if word number 1 in the player's command is "jh":
+		now jump-region is others;
+		now jump-table is table of others jumps;
+	else if word number 1 in the player's command is "jo":
+		now jump-region is ordeal reload;
+		now jump-table is table of ordeal reload jumps;
+	else if word number 1 in the player's command is "jp":
+		now jump-region is presto;
+		now jump-table is table of presto jumps;
+	else if word number 1 in the player's command is "js":
+		now jump-region is stores;
+		now jump-table is table of stores jumps;
+	else if word number 1 in the player's command is "jt":
+		now jump-region is otters;
+		now jump-table is table of otters jumps;
+	else if word number 1 in the player's command is "ju":
+		now jump-region is routes;
+		now jump-table is table of routes jumps;
+	else if word number 1 in the player's command is "jv":
+		now jump-region is troves;
+		now jump-table is table of troves jumps;
+	else if word number 1 in the player's command is "jw":
+		now jump-region is towers;
+		now jump-table is table of towers jumps;
+	else if word number 1 in the player's command is "jy":
+		now jump-region is oyster;
+		now jump-table is table of oyster jumps;
+	else:
+		say "Unrecognized region." instead;
+	say "Jump region is now [jump-region].";
+	say "Jump table is now [jump-table].";
+
+table of ordeal reload jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+palm	intro-bit rule	a direction	a room	a truth state	a truth state
+
+this is the intro-bit rule:
+	try thinking;
+	try examining the bookshelf;
+	try examining the isolani liaison;
+
+table of stores jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+store b	--	--	--	true	true
+source course
+
+table of routes jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+worst ad	to-routes rule	--	--	true	true
+scripture picturers	--	outside
+sit a nag	see-ingredients rule
+side art
+WOE BOW BELL
+rude n nuder
+adsorbing signboard
+stupor sprout
+lairage regalia	--	outside
+pipe soot
+a bev o be ova	check-with-horbert rule
+morf form
+the bean
+odd run on aura
+un road
+noon gag
+data dim mists
+thickness sketchins
+bent ewe
+hurt hog
+raptest patters	--	--	--	true	true
+yob den
+
+this is the to-routes rule:
+	try tsing;
+	try fliptoing source course;
+	try entering source course;
+
+this is the see-ingredients rule:
+	try examining list o toils;
+	try going outside;
+
+this is the check-with-horbert rule:
+	try going inside;
+	try going outside;
+
+table of troves jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+Pa Egg Pea	to-troves rule	--	--	true	true
+tears taser	--	--	--	true	true
+eh at heat
+Race Acre
+sob ever verbose
+mussier misuser	--	--	--	true	true
+stop post
+SNORE SO ARENA	--	--	--	false	true
+evil bee	--	--	--	true	false
+a sty tasty say	--	--	--	true	true
+L Clear Cellar
+diapers
+large regal lager	--	--	--	true	true
+Id Cede
+ME ARTS	--	--	--	false	true
+lobster	--	--	--	true	false
+pleaser leapers	--	--	--	true	true
+LEAD
+DIVORCES	--	--	--	true	true
+Si Reed
+praise spirea	--	--	--	false	true
+rivets	--	--	--	true	false
+sectarian craniates	--	--	--	true	true
+END PRONER POD
+red vees
+salt
+Sister Tressi Siters	--	--	--	true	false
+Marble Blamer Balmer	--	--	--	false	true
+Creationism Reactionism	--	--	--	true	true
+trance nectar
+
+this is the to-troves rule:
+	try tsing;
+	now mbb is marble blamer balmer;
+	try fliptoing tastee estate;
+	try entering tastee estate;
+
+table of presto jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+ye hoop	to-presto rule
+hump	--	east
+star	--	south
+leo	--	south
+rand
+wzup
+sods gone odes song	--	--	--	true	true
+dart	--	north
+lamb	--	north	--	true	true
+plebe
+boing go bin	--	east
+sport ports	--	--	--	true	true
+
+this is the to-presto rule:
+	try tsing;
+	try fliptoing odorant tornado;
+	try entering odorant tornado;
+
+table of oyster jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+gins sign	to-oyster rule
+tips pits
+tines
+LOLstr trolls
+clam
+urn
+pikes
+snarled darnels	--	--	--	true	true
+
+this is the to-oyster rule:
+	try tsing;
+	try fliptoing balancer barnacle;
+	try entering balancer barnacle;
+
+table of towers jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+--	first-picaro-flip rule
+--	picaro-flip rule
+--	picaro-flip rule
+--	picaro-flip rule	--	--	true	true
+--	picaro-flip rule	--	--	true	true
+--	picaro-flip rule	--	--	true	true
+recital article	--	--	--	true	true
+rodney
+dreads adders
+yurts	--	north
+butlers
+deviser	--	west
+nereid	--	east
+
+this is the first-picaro-flip rule:
+	try tsing;
+	try fliptoing truster turrets;
+	try entering truster turrets;
+	process the picaro-flip rule;
+
+this is the picaro-flip rule:
+	try fliptoing a random fungible followy picaro;
+
+table of otters jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+bleary barley	to-otters rule
+ed riley
+yer all a yell'r	--	west
+parleys splayer players
+--	any-pickup-line rule
+sea cube
+eels
+sullenness us	--	--	--	true	true
+cult laya	--	south	--	true	true
+ghoul hat	--	south	--	true	true
+gore ogre	--	--	--	true	true
+vow here	--	--	--	true	true
+motleyer	to-shrine rule
+butlery
+owls	--	north
+leopard
+badger
+stray satyr
+ocelots
+jollity	to-cathedral rule
+callosity
+parrot	--	south
+snipe
+snail
+hornets
+racoon
+blase bales	--	--	minded midden
+atmo moat
+pen o nope
+aside-llp	--	west
+holy nest
+parrot-flees	west-if-needed rule [can't use the location column since we haven't been to Reclusion Inclosure yet ]
+medals
+whistle
+--	win-the-game rule
+
+this is the to-otters rule:
+	try a5ing;
+	try fliptoing solid idols;
+	try entering solid idols;
+
+this is the any-pickup-line rule:
+	try fliptoing a random fungible pickup-line;
+
+this is the to-shrine rule:
+	try gotoing minded midden;
+	try going north;
+
+this is the to-cathedral rule:
+	try going south;
+	try going south;
+
+this is the west-if-needed rule:
+	if player is in disowned downside, try going west;
+
+this is the win-the-game rule:
+	try going west;
+	try playing whistle;
+
+table of others jumps
+what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
+pears
+limes
+grapes
+plums
+compass	x-circuits rule
+dates
+
+this is the to-others rule:
+	try tsing;
+	try fliptoing hoster;
+	try entering hoster;
+
+this is the x-circuits rule:
+	try examining the ruts circuits;
+
 Roiling Tests ends here.
 
 ---- DOCUMENTATION ----
