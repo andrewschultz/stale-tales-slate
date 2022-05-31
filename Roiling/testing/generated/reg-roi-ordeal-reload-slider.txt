@@ -10,6 +10,7 @@
 
 >au 2
 >posf
+>z
 
 >think
 You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
@@ -60,12 +61,6 @@ Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
->d
->stair
-by one point
->undo
->undo
-
 >stable
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
@@ -109,6 +104,8 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
 >in
+/^Dusty Study
+
 >u
 /^Highest Heights
 

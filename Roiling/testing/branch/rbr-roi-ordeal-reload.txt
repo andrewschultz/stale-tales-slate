@@ -37,6 +37,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >au 2
 >posf
+>z
 
 @verbs
 #no table entry for dusty-study: nowhere-ing is too complex, so it's in check going nowhere in Dusty Study
@@ -69,6 +70,11 @@ The tables will lead to a STABLE, once you need to escape.
 The (my) niche will open up a CHIMNEY, once you need to escape.
 \\
 Bangish bashing
+>undo
+>undo
+>undo
+>undo
+>undo
 
 @hin
 >monty hints
@@ -192,11 +198,10 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 >ablest
 No, it's a thing you can change the tables to. You didn't have to deal with adjectives in Shuffling Around, but maybe you will here, later. Much later.
 
-@!max
 >think
 You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
 
-@!max,nud
+@!nud
 >x bookshelf
 \\
 Whoah! Bangish bashing at the isolani liaison!
@@ -647,9 +652,54 @@ Your score has just gone up by two points
 {$SCOS}
 
 @max
-#testcase-prerule-table-of-ordeal-reload-anagrams-pre-meet-bans-basement-rule
+##balance undos
+# here we test knocking out the tables from the Farming Framing
 >d
-/^Largely All-Grey Gallery
+>stair
+by one point
+\\
+>u
+\\
+>in
+\\
+#+ttc-table-of-ordeal-reload-spechelp-tables
+>elstab
+The tables seem to shift a bit.
+\\
+>stable
+by one point
+>in
+Dusty Study
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+@max
+##balance undos
+# here we test a huge loop for a different warning message
+>chimney
+by one point
+>stable
+by one point
+>u
+>ramp
+by one point
+>d
+>stair
+by one point
+>u
+You've found all passages in your means manse, so there's nothing to explore. Do you still want to go back up?
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 >undo
 
 @verbs
@@ -688,16 +738,32 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a 
 >undo
 >undo
 
-@!min,nud
+@max
+##balance undos
+#this checks that we can pick off the stair from both sides
 >d
 >stair
 by one point
->undo
->undo
-
-@max
 >x stair
-It leads up to the Dusty Study.
+It leads up to somewhere new.
+>u
+CLIMB STAIR
+Dusty Study
+>undo
+>climb stair
+/^Farming Framing
+>x stair
+It leads down to the Largely All-Grey Gallery.
+>d
+>x stair
+It leads up to the Farming Framing.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 @nud
 #ttc-table-of-ordeal-reload-spechelp-tables
@@ -1011,6 +1077,8 @@ The stair helps you get around more easily, so it doesn't need to be changed bac
 
 @!min
 >in
+/^Dusty Study
+\\
 >u
 /^Highest Heights
 
@@ -1234,6 +1302,9 @@ You know what to change the steel pad back to: the pedestal. There's no third op
 \\
 >pedestal
 The steel pad intertwines into a marginally artistic pedestal.
+
+@max
+#testcase-prerule-table-of-ordeal-reload-anagrams-pre-meet-bans-basement-rule
 
 >d
 /^Largely All-Grey Gallery
@@ -1660,7 +1731,11 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >gt highest
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 \\
+# doubles as being able to check flipped words
 >gt framing farming
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+\\
+>gt farming framing
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
 @sli

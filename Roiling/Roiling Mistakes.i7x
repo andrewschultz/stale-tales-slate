@@ -57,15 +57,19 @@ understand "laredo" as a mistake ("If you want a Western game situated on the US
 
 chapter Dusty Study
 
+[note that examining the tables give "ablest bleats."]
+
 to say intro-warn: if Report Porter Perrot is off-stage, say "--well, once you've had an introductory dialogue with an NPC"
 
 understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying [b]STABLE[r][intro-warn][else]go [b]IN[r] to the stable[end if].") when player is in Dusty Study.
 
-understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.[note-great-guesses]") when tables are fungible.
+understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.[note-great-guesses]") when tables are fungible and tables are not examined.
 
 understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying [b]BASEMENT[r][intro-warn][else]go [b]DOWN[r] to enter the basement[end if].") when player is in Dusty Study.
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)[note-great-guesses]")
+
+understand "bleats" as a mistake ("Bleats might be too abstract to help you.[note-great-guesses]") when tables are fungible and tables are not examined.
 
 understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].[note-great-guesses]") when latches are not off-stage.
 

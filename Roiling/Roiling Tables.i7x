@@ -70,9 +70,9 @@ this is the post-pram-ramp rule:
 
 this is the post-sitar-or-stria-to-stair rule:
 	now Largely All Grey Gallery is mapped below Farming Framing;
-	now Farming Framing is mapped above Largely All Grey Gallery;
 	if meet bans are moot:
 		min-up;
+		ital-say "since there are two ways up, you will need to [b]CLIMB STAIR[r] to visit [if framing is visited]the Farming Framing[else]that new location[end if].";
 	else if niche is moot and pram is moot:
 		min-up; [check if passage is made via beams or chimney->pram]
 	moot stria;
@@ -113,6 +113,7 @@ this is the post-bins-snib rule:
 	move snib to Largely All Grey Gallery;
 
 this is the pre-specter-scepter rule:
+	if in-jump-test is true, continue the action;
 	if scepter-nag is false and Respect Specter is not bscanned:
 		now scepter-nag is true;
 		say "The Respect Specter coughs. 'You may wish to scan me in [if specter is ncscanned]cheat[else if specter is cscanned]non-cheat[else]cheat and non-cheat[end if] mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?'";

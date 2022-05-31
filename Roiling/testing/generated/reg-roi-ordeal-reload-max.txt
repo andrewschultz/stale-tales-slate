@@ -10,6 +10,7 @@
 
 >au 2
 >posf
+>z
 
 >painting
 There's no need to tidy your study up just now. Still, that seems right, so you file that idea away for later.
@@ -36,6 +37,18 @@ The tables will lead to a STABLE, once you need to escape.
 The (my) niche will open up a CHIMNEY, once you need to escape.
 
 Bangish bashing
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>think
+You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
+
+>x bookshelf
+
+Whoah! Bangish bashing at the isolani liaison!
 
 >open door
 
@@ -181,19 +194,77 @@ Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
-#testcase-prerule-table-of-ordeal-reload-anagrams-pre-meet-bans-basement-rule
->d
-/^Largely All-Grey Gallery
->undo
-
+# here we test knocking out the tables from the Farming Framing
 >d
 >stair
 by one point
+
+>u
+
+>in
+
+#+ttc-table-of-ordeal-reload-spechelp-tables
+>elstab
+The tables seem to shift a bit.
+
+>stable
+by one point
+>in
+Dusty Study
+
+>undo
+>undo
+>undo
+>undo
+>undo
 >undo
 >undo
 
+# here we test a huge loop for a different warning message
+>chimney
+by one point
+>stable
+by one point
+>u
+>ramp
+by one point
+>d
+>stair
+by one point
+>u
+You've found all passages in your means manse, so there's nothing to explore. Do you still want to go back up?
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+#this checks that we can pick off the stair from both sides
+>d
+>stair
+by one point
 >x stair
-It leads up to the Dusty Study.
+It leads up to somewhere new.
+>u
+CLIMB STAIR
+Dusty Study
+>undo
+>climb stair
+/^Farming Framing
+>x stair
+It leads down to the Largely All-Grey Gallery.
+>d
+>x stair
+It leads up to the Farming Framing.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >stable
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
@@ -240,6 +311,8 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
 >in
+/^Dusty Study
+
 >u
 /^Highest Heights
 
@@ -253,6 +326,8 @@ Score in a scenario: 9 out of 15 total points in the current region, Ordeal Relo
 >in
 /^Dusty Study
 >undo
+
+#testcase-prerule-table-of-ordeal-reload-anagrams-pre-meet-bans-basement-rule
 
 >d
 /^Largely All-Grey Gallery

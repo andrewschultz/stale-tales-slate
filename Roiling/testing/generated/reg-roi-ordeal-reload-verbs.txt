@@ -10,6 +10,7 @@
 
 >au 2
 >posf
+>z
 
 #no table entry for dusty-study: nowhere-ing is too complex, so it's in check going nowhere in Dusty Study
 >e
@@ -109,12 +110,6 @@ Score in a scenario: 4 out of 15 total points in the current region, Ordeal Relo
 >exits
 The only way you seem to be able to go is down.
 
->d
->stair
-by one point
->undo
->undo
-
 >stable
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
@@ -173,6 +168,8 @@ Score in a scenario: 8 out of 15 total points in the current region, Ordeal Relo
 No time for mooching around your means manse. You probably need to take that secret passage in, or down.
 
 >in
+/^Dusty Study
+
 >u
 /^Highest Heights
 
@@ -297,7 +294,11 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >gt highest
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
+# doubles as being able to check flipped words
 >gt framing farming
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+
+>gt farming framing
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
 #ttc-table-of-ordeal-reload-attacks-plaster

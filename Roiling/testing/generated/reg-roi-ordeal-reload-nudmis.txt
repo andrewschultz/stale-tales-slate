@@ -10,6 +10,7 @@
 
 >au 2
 >posf
+>z
 
 #prime the UNDO command later
 >z
@@ -591,6 +592,8 @@ You don't need a moving stair.
 The stair helps you get around more easily, so it doesn't need to be changed back.
 
 >in
+/^Dusty Study
+
 >u
 /^Highest Heights
 

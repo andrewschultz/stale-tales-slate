@@ -2753,7 +2753,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact elmomole-quip;
 		enact got-red-yellow-quip;
 		if (meet bans is escanned or beams are escanned) and meet bans is moot, now basement-quip is Elmo-av;
-		if tables are escanned and tables are moot, now stable-quip is Elmo-av;
+		if tables are escanned and tables are off-stage, now stable-quip is Elmo-av;
 		if pram is escanned and pram is moot, now ramp-quip is Elmo-av;
 		if giant pin is escanned and giant pin is moot, now painting-quip is Elmo-av;
 		if sitar is escanned or stria is escanned:
@@ -3348,7 +3348,7 @@ to say reject:
 						say "You need to [if Elmo carries rifle]disarm[else]talk to[end if] Elmo instead.";
 						continue the action;
 					if stuff-found < 3 and player is in Dusty Study:
-						say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.";
+						say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Maybe once you have a bit of motivation to do more, you'll be able to notice more details.";
 						continue the action;
 					if the-from entry is prefigured:
 						if the-from entry is disk and yak is not moot:
@@ -4252,15 +4252,12 @@ rule for printing a parser error when the latest parser error is the didn't unde
 		the rule succeeds;
 	continue the action;
 
-this is the perrot-moot rule:
-	if perrot is moot, the rule succeeds;
-
 to say pars-trub:
 	say "The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something[one of], in which case, one word (or a compound word) usually works[if player is in dusty study], though some of the diorama's contrived examples have spaces[end if][or][stopping].[paragraph break]So here is a one-time general guideline on what to do in this area: ";
 
 table of region long command messages
 thisreg	skip-warn-rule	specwarn
-Ordeal Reload	perrot-moot rule	"[pars-trub]You need to change certain things to other things."
+Ordeal Reload	waiting-for-perrot rule	"[pars-trub]You need to change certain things to other things."
 stores	--	"[pars-trub]you need to change the stores, here, like you changed the palm, rifle, plates and plaster psalter, and you just need one word."
 presto	--	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
 routes	--	"[pars-trub]one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six."
@@ -4270,6 +4267,10 @@ oyster	--	"[pars-trub]one word will work here, though this game should accept fu
 otters	--	"[pars-trub]while some words are rather long, you [if cur-score of otters is 0]will[else]probably[end if] see how to guess a letter or two even [if power-back is false]when[else]now[end if] you've got your powers back."
 others	others-skip-spacing rule	"[pars-trub]you may need a variety of tricks, here. One word is twelve letters long, but some are as short as five. You can even overlook twenty puzzles[if s-i are off-stage]. For one non-thematic item, you can do two anagrams at once with [b]<adjective> <noun>[r][end if]."
 demo dome	--	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
+
+this is the waiting-for-perrot rule:
+	if perrot is off-stage, the rule succeeds;
+	the rule fails;
 
 this is the others-skip-spacing rule:
 	if s-i is not off-stage or coins are not off-stage or coin is not off-stage or icon is not off-stage or icons are not off-stage or s-c are not off-stage, the rule succeeds;
@@ -5351,7 +5352,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	if location of player is study and study is dark:
 		if the player's command includes "palm", say "Hmm. It's not useful in its present state. You think back to how you changed that toga into a goat just by saying 'goat.' Maybe you can do something like that, again." instead;
 		say "You can't see much of anything here, and if you stumble around, that [i]palm[r] might poke your eye out." instead;
-	if word number 1 in the player's command is "go", say "That isn't a recognized way to go. You can [b]GO TO[r] (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot][b]GO IN[r] or [b]IN[r] or [b]GO TO FRAMING[r][else if meet bans are moot][b]GO DOWN[r] or [b]GO TO GALLERY[r][else][b]GO TO STUDY[r] or [b]GO UP[r]/[b]IN[r]/[b]DOWN[r][end if]." instead;
+	if word number 1 in the player's command is "go", say "That isn't a recognized way to go. You can [b]GO TO[r] (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are off-stage][b]GO IN[r] or [b]IN[r] or [b]GO TO FRAMING[r][else if meet bans are moot][b]GO DOWN[r] or [b]GO TO GALLERY[r][else][b]GO TO STUDY[r] or [b]GO UP[r]/[b]IN[r]/[b]DOWN[r][end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod", say "It's a digger, now." instead;
 	if word number 1 in the player's command is "consult":
@@ -7637,16 +7638,16 @@ to say think-cue:
 
 to decide which number is dusty-study-outs:
 	let q be 0;
-	if tables are moot, increment q;
+	if tables are off-stage, increment q;
 	if meet bans are moot, increment q;
 	if niche is moot, increment q;
 	decide on q.
 
 after printing the locale description when player is in Dusty Study and Report Porter Perrot is moot:
-	if tables are moot or meet bans are moot or niche is moot:
+	if tables are off-stage or meet bans are moot or niche is moot:
 		say "You take stock of your way[unless dusty-study-outs is 1]s[end if] out: ";
-		if tables are moot, say "You could probably go [b]IN[r], to the stable, with the tables gone. ";
-		if meet bans are moot, say "You [if tables are moot]also [end if]cleared a path [b]down[r]. ";
+		if tables are off-stage, say "You could probably go [b]IN[r], to the stable, with the tables gone. ";
+		if meet bans are moot, say "You [if tables are off-stage]also [end if]cleared a path [b]down[r]. ";
 		if niche is moot, say "There's [if dusty-study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
 	continue the action;
@@ -8003,42 +8004,6 @@ chapter ten beams
 the beams are auxiliary boring scenery in Dusty Study. "You count the beams. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they and the MEET-BANS be hiding?". bore-text is "The ten beams are too sturdy to mannipulate meaningfully.". understand "ten" and "ten beams" as beams when mrlp is Ordeal Reload. printed name of beams is "ten beams"
 
 a-text of beams is "RYRYRYRR". b-text of beams is "RYRYRYRR". parse-text of beams is "x[sp]A[sp]x[sp]E[sp]x[sp]E[sp]x[sp]x".
-
-chapter tables
-
-The tables are plural-named vanishing scenery in Dusty Study. understand "table" as tables.
-
-check taking tables: say "The tables are written on the wall." instead;
-
-table-warn is a truth state that varies.
-
-before doing something with tables when table-warn is false:
-	if the player's command includes "table":
-		now table-warn is true;
-		ital-say "it's important that the tables are plural, as you [if cur-score of Ordeal Reload is 0]may find[else]already found[end if].";
-	else:
-		continue the action;
-
-a-text of tables is "RRYRRY". b-text of tables is "RRYRRY". parse-text of tables is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
-
-description of tables is "[one of]They are tables of the ablest bleats--they look like outright vandalism, all in red, but you know you wrote them there a while ago, and you're sure there's a reason. Maybe if you look at them more, it'll be evident[or]They were verified by LabSet technologies with their BeLast algorithm--writing in red--with a bit more below[or]Instructions to eBlast the tables is written below in red[or]The data in the tables seems quite possibly shifted over a row[or]The more you look, the clearer it is the data is very un- ... oh, that would just open the barn door, to say it outright[cycling].";
-
-to decide whether you-can-stableize:
-	if tables are in Dusty Study, decide yes;
-	decide no.
-
-check going in Dusty Study:
-	let need-line-break be false;
-	if room noun of study is not nowhere:
-		if latches are in Dusty Study:
-			say "You take the latches--they must be useful for something[if player does not have treatise]. There's also a tear-stained paper bound up in them. You pull it out[end if].";
-			now player has latches;
-			now need-line-break is true;
-		if pedanto notepad is in Dusty Study:
-			if need-line-break is true, say "[line break]";
-			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald. It uncovers some sad ads, the sort which have sadly pervaded Yorpwald recently.";
-			now player has pedanto notepad;
-			now sad ads are in Dusty Study;
 
 chapter Report Porter Perrot
 
@@ -9150,7 +9115,21 @@ a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "
 
 check taking stria: say "Too high up." instead;
 
-the stair is a boring backdrop. drop-region of stair is Ordeal Reload. description of stair is "It leads [if player is in Largely All Grey Gallery]up[else]down[end if].". bore-text of stair is "Can't do much but go up or down a stair.".
+the stair is a boring backdrop. drop-region of stair is Ordeal Reload. description of stair is "It leads [where-stair-leads].". bore-text of stair is "Can't do much but go [b]UP[r] or [b]DOWN[r] a stair, or [b]CLIMB[r] it.". bore-check of stair is bore-stair rule.
+
+this is the bore-stair rule:
+	if current action is climbing or current action is entering:
+		if player is in farming framing, try going down instead;
+		if player is in largely all grey gallery:
+			if meet bans are not moot, try going up instead;
+			say "You climb up the stair you created.";
+			move player to Farming Framing instead;
+
+to say where-stair-leads:
+	if player is in farming framing:
+		say "down to [if gallery is visited]the [gallery][else]somewhere new[end if]";
+	else:
+		say "up to [if framing farming is visited]the [farming][else]somewhere new[end if]";
 
 does the player mean climbing the stair: it is very likely.
 
@@ -9173,6 +9152,9 @@ check going outside in Largely All Grey Gallery:
 
 check exiting in Largely All Grey Gallery: try going inside instead;
 
+check going inside in Farming Framing:
+	if tables are not off-stage, say "The tables block your way back in to the Dusty Study. Maybe there's something more appropriate to walk through than tables written on a wall." instead;
+
 check going in Farming Framing:
 	if noun is inside or noun is outside:
 		if backcheck is false:
@@ -9182,14 +9164,24 @@ check going in Farming Framing:
 			say "Ok, probably best to [if pram is not moot]find a way out. Clean out that pram, maybe[else]see about that ramp[end if]." instead;
 
 check going down in Farming Framing:
-	if stair is not touchable, say "There should be a way down. That sitar could trans-substantiate or be reincarnated as something more useful." instead;
+	if stair is not fungible, say "There should be a way down. That sitar could trans-substantiate or be reincarnated as something more useful." instead;
 	move player to Largely All Grey Gallery instead;
 
 check going up in Largely All Grey Gallery:
-	if stria are touchable and meet bans are in Dusty Study, say "Hmm. There should be a way back up. The stria could be disposable." instead;
+	if stria are in location of player and meet bans are in Dusty Study, say "Hmm. The ramp was one-way, but should be a way back up. The stria could be disposable. Or you could just move on without poking around your residence." instead; [chimney/ramp path]
+	if meet bans are not moot and stria are not moot, say "You've got no way out, but the stria may provide a clue." instead;
+	if meet bans are not moot:
+		say "(going up the stair)[paragraph break]";
+		try climbing stair instead;
+	else if stria are moot and meet bans are moot:
+		say "(going up to Dusty Study. [b]CLIMB STAIR[r] to go up the stair)[paragraph break]";
 	if backcheck is false:
 		now backcheck is true;
-		say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
+		say "This is a one-time nag to note that the way through is [b]IN[r]. ";
+		if reload-passages-found is 5:
+			say "You've found all passages in your means manse, so there's nothing to explore. Do you still want to go back up?";
+		else:
+			say "You shouldn't need to go back up from here unless you want to find all the passages. There are five, and you've found [reload-passages-found in words]. Do you want or need to look around more?";
 		if the player yes-consents:
 			now gallery-been is true;
 			now player is in Dusty Study instead;
@@ -9198,6 +9190,15 @@ check going up in Largely All Grey Gallery:
 	else:
 		say "You go back to the study.";
 		now player is in Dusty Study instead;
+
+to decide which number is reload-passages-found:
+	let temp be 0;
+	if meet bans are moot, increment temp;
+	if stria is moot, increment temp;
+	if tables are off-stage, increment temp;
+	if pram are moot, increment temp;
+	if niche is moot, increment temp;
+	decide on temp;
 
 settler-x-nag is a truth state that varies.
 
@@ -9653,15 +9654,15 @@ grid-topic (topic)	x-yet	reg-match	reg-blurb
 "m"	--	--	"You daydream back to solving Store M. Salad days!"
 "r"	--	--	"You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!"
 
-to say area-but: say " area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way thereZ"
+to say area-but: say " area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way there"
 
 book Farming Framing
 
-Farming Framing is an innie sideroom in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is fungible]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go back [b]IN[r] to the Dusty Study[note-study-out][end if].". roomnud of farming framing is table of farming framing nudges. missed-text of Farming Framing is "a room behind the tables in Dusty Study".
+Farming Framing is an innie sideroom in Ordeal Reload. It is stairy. "[if tables are off-stage]Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[else]Weird, you see a lot of tables (spreadsheety) written on a wall. They seem similar to the ones in the Dusty Study. Maybe you can do a bit of demolition work, to help practice the real questing ahead[end if][if stair is fungible]. The stair you made leads [b]DOWN[r][end if][if tables are off-stage]. You can go back [b]IN[r] to the Dusty Study[note-study-out][end if].". roomnud of farming framing is table of farming framing nudges. missed-text of Farming Framing is "a room behind the tables in Dusty Study".
 
 to say note-study-out: if sitar is not moot, say " or, since that's the only exit, [b]OUT[r] works, too"
 
-understand "stable" as Framing Farming when tables are moot or framing farming is visited.
+understand "stable" as Framing Farming when tables are off-stage or framing farming is visited.
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -9757,6 +9758,44 @@ check going down in Highest Heights:
 	now player is in Largely All Grey Gallery instead;
 
 check going inside in Highest Heights: try entering closets instead;
+
+book backdrops
+
+chapter tables
+
+The tables are a plural-named vanishing backdrop. They are in Dusty Study and Farming Framing. understand "table" as tables.
+
+check taking tables: say "The tables are written on the wall." instead;
+
+table-warn is a truth state that varies.
+
+before doing something with tables when table-warn is false:
+	if the player's command includes "table":
+		now table-warn is true;
+		ital-say "it's important that the tables are plural, as you [if cur-score of Ordeal Reload is 0]may find[else]already found[end if].";
+	else:
+		continue the action;
+
+a-text of tables is "RRYRRY". b-text of tables is "RRYRRY". parse-text of tables is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
+
+description of tables is "[one of]They are tables of the ablest bleats--they look like outright vandalism, all in red, but you know you wrote them there a while ago, and you're sure there's a reason. Maybe if you look at them more, it'll be evident[or]They were verified by LabSet technologies with their BeLast algorithm--writing in red--with a bit more below[or]Instructions to eBlast the tables is written below in red[or]The data in the tables seems quite possibly shifted over a row[or]The more you look, the clearer it is the data is very un- ... oh, that would just open the barn door, to say it outright[cycling].";
+
+to decide whether you-can-stableize:
+	if tables are in Dusty Study, decide yes;
+	decide no.
+
+check going in Dusty Study:
+	let need-line-break be false;
+	if room noun of study is not nowhere:
+		if latches are in Dusty Study:
+			say "You take the latches--they must be useful for something[if player does not have treatise]. There's also a tear-stained paper bound up in them. You pull it out[end if].";
+			now player has latches;
+			now need-line-break is true;
+		if pedanto notepad is in Dusty Study:
+			if need-line-break is true, say "[line break]";
+			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald. It uncovers some sad ads, the sort which have sadly pervaded Yorpwald recently.";
+			now player has pedanto notepad;
+			now sad ads are in Dusty Study;
 
 volume stores
 
