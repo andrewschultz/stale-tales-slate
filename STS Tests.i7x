@@ -615,9 +615,11 @@ carry out jumpthroughalling: try jumpthroughing 0;
 
 check jumpthroughing (this is the reject undoable jumpthroughs rule):
 	if mrlp is not hub-region and hub-room is visited, say "You are too far along." instead;
-	if jump-region is orig-region and turn count > 1, say "You need a turn count of one to jump through the starting region." instead;
+	if jump-region is orig-region:
+		if turn count > 1, say "You need a turn count of one to jump through the starting region." instead;
+	else if last-loc of jump-region is visited:
+		say "You've already been to [jump-region]." instead;
 	if jump-region is solved or jump-region is bypassed, say "You already got through [jump-region]." instead;
-	if last-loc of jump-region is visited, say "You've already been to [jump-region]." instead;
 
 carry out jumpthroughing:
 	let pts be the number understood;

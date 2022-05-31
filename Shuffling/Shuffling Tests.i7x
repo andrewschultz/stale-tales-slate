@@ -908,11 +908,14 @@ what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
 or do door	--	inside	a room	--	--
 bugle	--	--	--	false	true
 blot	--	--	--	true	false
-goat	--	--	--	true	false
-deer	--	--	--	false	true
+goat	inside-to-thickets rule	--	--	true	false
+deer	inside-to-thickets rule	--	--	false	true
 nest	--	--	--	true	--
-gateman	--	--	--	--	--
+gateman	--	inside	--	--	--
 attics	--	--	--	true	true
+
+this is the inside-to-thickets rule:
+	if player is not in Thickest Thickets, try going inside;
 
 table of stores jumps
 what-to-flip-to	what-before	dir-to-go	place-to-go	is-llp	is-alt-llp
