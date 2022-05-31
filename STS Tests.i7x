@@ -370,34 +370,6 @@ carry out pluraling:
 		say "[Q] = [if Q is plural-named]plural[else]singular[end if] and [if Q is fixed in place]fixed[else]takeable[end if].";
 	the rule succeeds;
 
-chapter scoing
-
-[*this tracks score-debugging. There are better ways. But it tells you what increased when in the debug file.]
-
-scoing is an action out of world.
-
-understand the command "sco" as something new.
-
-understand "sco" as scoing.
-
-carry out scoing:
-	now scotrack is whether or not scotrack is false;
-	say "Score-tracking in debug file is [scotrack].";
-	if scotrack is false:
-		now scotrack is true;
-	else:
-		now scotrack is false;
-	the rule succeeds;
-
-after fliptoing when scotrack is true (this is the score track debug rule):
-	process the score debug rule;
-	continue the action;
-
-scotrack is a truth state that varies.
-
-every turn when scotrack is true (this is the score debug rule) :
-	append "[mrlp] > [the player's command] [cur-score of mrlp] / [min-score of mrlp]-[poss-score of mrlp].[line break]" to the file of debuggery;
-
 chapter showtabing
 
 [ * showtab shows the random tables we are choosing ]

@@ -3680,8 +3680,6 @@ description of salient saltine is "It says [b]SLAINTE[r][one of] (pronounced sla
 Undo flag is a number variable. Undo flag is 0.
 
 rule for deciding whether to allow undo:
-	if helpdebugflag is true:
-		append "[b]UNDO[r]: (no hint)[line break]" to the file of gamehints;
 	if undo is prevented:
 		if undo-code is 1:
 			say "Un-eating the saltine entails a huge intent--to win it NOW.[paragraph break]";

@@ -1013,7 +1013,6 @@ sss is a truth state that varies.
 
 every turn when sss is true (this is the show blues rule): [this shows everything that looks odd or can be hinted without the player having to type it]
 	if player has settler and sss is true:
-		append ">[the player's command]: [no line break]" to the file of debuggery;
 		show-bluables;
 	continue the action;
 
@@ -2939,8 +2938,6 @@ to solve-region (sre - a region):
 	repeat through preeftable of mrlp:
 		now preflip entry is unfigured; [wipe stuff from flips]
 	say "Congratulations! [sre] node: done![paragraph break]";
-	if sre is otters and debug-state is true:
-		append "Test passed for Otters." to the file of debuggery;
 	repeat with po running through portals in Strip of Profits:
 		if go-region of po is sre, moot po;
 		check-the-store po;
@@ -7499,7 +7496,6 @@ carry out fliptoing (this is the main fliptoing rule):
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
 			if ff is true:
-				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
 			d "OK, [the-from entry] to [the-to entry].";
 			if the-from entry is reflexive, now the-from entry is reflexed;
@@ -8603,8 +8599,6 @@ icons	"the icons you made"
 to swi-say (sst - indexed text):
 	if sss is false:
 		say "[sst]";
-	else:
-		append "[sst][line break]" to the file of debuggery;
 
 definition: a thing (called candi) is bluable:
 	[say "[candi] [if candi is ghostly]invis[end if] [if candi is uncluing]uncluing[end if] [if candi is fungible] visible[end if].";]
@@ -20554,7 +20548,6 @@ check going north in Gates Stage:
 		min-and;
 		process the notify score changes rule;
 	now others is solved;
-	if debug-state is true, append "Test passed for Others.[line break]" to the file of debuggery;
 	store-h-end-adjust; [moved nearer the end table stuff so that if I need to make changes it will be less inconvenient]
 	the rule succeeds;
 

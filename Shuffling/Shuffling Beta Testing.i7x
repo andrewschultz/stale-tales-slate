@@ -84,12 +84,6 @@ northeast	thorn	teas
 southwest	shout	stew
 southeast	shout	teas
 
-section sring debug - not for release
-
-[* this needs to be separate, as the release version won't "know" the file of test results.]
-
-after sring: append "[random guider in sf] in Softer Forest, [random guider in rf] in Rest of Forest.[line break]" to the file of test results.
-
 chapter hahaing
 
 [* this shows what you can GLEAN and ANGLE every move ]

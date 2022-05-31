@@ -772,7 +772,6 @@ this is the max-reg-score rule:
 	repeat with this-reg running through solved regions:
 		if last-loc of this-reg is visited:
 			if cur-score of this-reg is not max-score of this-reg:
-				append "Region [this-reg] only has [cur-score of this-reg] of [max-score of this-reg] points.[line break]" to the file of test results;
 				now tempbool is false;
 	if tempbool is true, the rule succeeds;
 	the rule fails;
@@ -782,7 +781,6 @@ this is the trips-strip rule:
 	the rule fails.
 
 this is the in-means-manse rule:
-	append "Current score = [cur-score of resort] of [max-score of resort].[line break]" to the file of test results;
 	if player is in Means Manse, the rule succeeds;
 	the rule fails;
 

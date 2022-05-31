@@ -259,45 +259,6 @@ carry out booting:
 		say "[SI] before, [number of smackable pickup-lines] after.";
 	the rule succeeds;
 
-chapter coffing
-
-[* COFF 1 tests if you are in the Strip of Profits, handy if you want to test if something's solved, and forces you to the strip so you can do another test. It logs things, too.]
-
-coffing is an action applying to one number.
-
-understand the command "coff" as something new.
-
-understand "coff [number]" as coffing.
-
-coff1ing is an action applying to nothing.
-
-understand "coff" as coff1ing.
-
-carry out coff1ing: [disambig to 1 doesn't work]
-	try coffing 1 instead;
-
-carry out coffing:
-	if number understood is 1:
-		if location of player is not Strip of Profits:
-			append "Test failed for [mrlp] with [cur-score of mrlp] in [location of player], carried [list of carried things], unchanged [list of visible flippable things] reflexive [list of visible reflexive things].[line break]" to the file of debuggery;
-			move player to Strip of Profits;
-		else:
-			append "Test passed for [last-solved-region].[line break]" to the file of debuggery;
-	else if number understood is 2:
-		if cur-score of mrlp is max-score of mrlp:
-			append "Test passed for [mrlp]: maximum score achieved![line break]" to the file of debuggery;
-		else if cur-score of mrlp < max-score of mrlp:
-			append "Test failed for [mrlp]: only got [cur-score of mrlp] of [max-score of mrlp] points![line break]" to the file of debuggery;
-		else:
-			append "Test failed for [mrlp]: somehow got a whopping [cur-score of mrlp] of [max-score of mrlp] ponts![line break]" to the file of debuggery;
-	else if number understood >= 10 and number understood < 20:
-		if curtis-level is number understood - 10:
-			append "Test succeeded for Curtis's level: it is and should be [curtis-level][line break]." to the file of debuggery;
-		else:
-			append "Test failed for Curtis's level: it is [curtis-level] and should be [number understood - 10][line break]." to the file of debuggery;
-		append "[number understood] not a valid test." to the file of debuggery;
-	the rule succeeds;
-
 chapter sccing
 
 sccing is an action out of world.
