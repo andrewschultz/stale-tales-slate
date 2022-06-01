@@ -615,7 +615,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "pome"	347699798	poem	--	"[peas-poe]."
 "poetyr"	594417718	poem	--	"[peas-poe]."
 "warhead"	383751709	missile	--	"You don't want to change the missile's message, which seems rather nice."
-"smilie"	431954759	--	--	"[seed-plural-nag]There are many smilies you need to manipulate."
 
 to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 

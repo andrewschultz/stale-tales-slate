@@ -1060,16 +1060,18 @@ Things aren't THAT bad.
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
 
->misliel
-
 #testcase-misspellings-table-of-sortie-anagrams-smilies
+>misliel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
+!Looks like it's
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-moor-nudges-smilie
+#+testcase-misspellings-table-of-sortie-anagrams-smilies
 >smilei
-There are many smilies you need to manipulate.
+The smilies momentarily grow eyebrows that point aggressively, then vanish. Looks like it's not just one smilie.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #+testcase-mistake-shuffling-mope
 >mope

@@ -640,13 +640,17 @@ r2	"[m-r-almost]."
 m2	"[m-r-almost]."
 scraped wall	"Hm, yes, a haywall might become something more passable, if you muddle it right."
 anapest	"You think you had the right idea, but your execution was poor. Maybe be more workmanlike."
-smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish."
+smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish[smilies-plural-nag]."
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
 oils2	"[if player is not in moor][oils-need-purpose][else]The oils could change the moor into something more fertile, but not that[end if]."
 oils	"[if player is not in moor][oils-need-purpose][else]The soil is there to support something, but not quite that[end if]." [ this is for the edge case where someone types SSOIL or something. ]
 
 to say oils-need-purpose: say "The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space"
+
+to say smilies-plural-nag:
+	if the hash of the player's command is 431954759 or hash of word number 1 in the player's command is 431954759:
+		say ". Looks like it's not just one smilie[seed-plural-nag]";
 
 table of metros spechelp
 xtrhelp	helptxt
@@ -711,6 +715,7 @@ to say spec-help of (itm - a thing):
 	repeat through spechelp of mrlp:
 		if itm is xtrhelp entry:
 			now got-spec is true;
+			if add-plural-nag of itm, say "[seed-plural-nag]";
 			if point is true:
 				say "[helptxt entry][line break]";
 			if point is false or debug-state is true:
@@ -725,6 +730,10 @@ to say spec-help of (itm - a thing):
 		say "[i][bracket]NOTE: You can toggle detailed nudges when you're on the right track with [b]OPT IN[r][i] (to get them) and [b]NO TIP[r][i] (to hide them,) though they may give more hints than you want. You will always get this generic message, at least, in any case.[close bracket][roman type][line break]";
 		pad-rec "opt in/no tip";
 		now pointcue is true;
+
+to decide whether add-plural-nag of (itm - a thing):
+	if itm is smilies and hash of the player's command is 431954759, yes;
+	no;
 
 volume done rejects
 

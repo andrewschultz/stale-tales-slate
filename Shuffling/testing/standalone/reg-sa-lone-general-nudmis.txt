@@ -414,9 +414,9 @@ You don't need to break anything up, medieval or otherwise. You're trying to bri
 >gonear means manse
 
 >anme
-You need to act on the Means Manse in their entirety. Or the exits.
+You need to act on the Means Manse in its entirety. Or the exits.
 [NOTE: you are on the right track, but the intended anagram has an extra S. This is a one-time nag, though the nudge messages should always implicitly state when things' or people's plurality, or an apostrophe-s, is important.]
 
 >anme
-You need to act on the Means Manse in their entirety. Or the exits.
+You need to act on the Means Manse in its entirety. Or the exits.
 !you are on the right track
