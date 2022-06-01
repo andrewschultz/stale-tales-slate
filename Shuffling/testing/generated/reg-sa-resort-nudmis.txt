@@ -691,11 +691,11 @@ You don't need to change the manors. You just need to be able to get there.
 
 #ttc-table-of-means-manse-nudges-manse
 >mesna
-You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits.
+You'd like to feel more welcome in the Means Manse, but that's not quite how to switch things up. You could also find a way to ignore the exits.
 
 #ttc-table-of-means-manse-nudges-extis
 >extis
-That's not quite the right sort of nothing.
+You'd like to do nothing and ignore the exits, but not quite like that. Maybe switch things up a bit or work on the whole Means Manse.
 
 #ttc-table-of-means-manse-nudges-marble
 >marbel

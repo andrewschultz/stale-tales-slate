@@ -6,7 +6,7 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
 
-* intro-verbiage
+* _intro-verbiage
 
 >au 2
 
@@ -317,7 +317,7 @@ Hints are disabled for this session.
 
 #####################forest
 
-* forest-verbiage
+* _forest-verbiage
 
 >sr nw
 
@@ -461,7 +461,9 @@ The RECUSE button is for after you've solved two areas, but you haven't solved a
 >forest
 
 >about
-Shuffling Around is the first of three wordplay games in the Stale Tales Slate. It was inspired by replaying Nord and Bert Couldn't Make Head or Tail of It and then wondering if there was any way to riff on it. Here's what I came up with. I suspect Jeff O'Neil thought of it, too, but it would've been impossible to stuff any meaningful story in two 140k disks.
+Shuffling Around is the first of three wordplay games in the Stale Tales Slate. You can see information on the series with the STS command. It was inspired by replaying Nord and Bert Couldn't Make Head or Tail of It and then wondering if there was any way to riff on it. Here's what I came up with. I suspect Jeff O'Neil thought of it, too, but it would've been impossible to stuff any meaningful story in two 140k disks.
+
+Shuffling Around is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.
 
 >credits
 Tester Street (gofer forge?):
@@ -590,11 +592,16 @@ It's a deplorably generic fake beard. It has a couple little bits that hook, one
 
 >w
 >x river ville
->x meat
 It's ugly and frozen and stamped 100% amalgamatable.
+
+>x meat
+There are several kinds of meats here. You'll need to be specific.
+
 >x viler
->x meat
 It's ugly and frozen and stamped 100% amalgamatable.
+
+>x meat
+There are several kinds of meats here. You'll need to be specific.
 
 >x livers
 You will need to figure how to combine the livers. Until then, you will want to act on each individually.
@@ -808,7 +815,7 @@ Mention what you want to shoot
 >shoot wolves
 Trips Strip
 
-* forest-alt
+* _forest-alt
 
 >sr se
 
@@ -844,7 +851,7 @@ You're picking something up. Probably the aroma of teas.
 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 
-* sortie-verbiage
+* _sortie-verbiage
 
 >au 2
 
@@ -1293,6 +1300,8 @@ All sorts of flower-related semi-magical stuff spans the store. You wouldn't kno
 >wear velcro
 >s
 
+>put keycard on finder
+
 >e
 >ask nerds about darkness
 
@@ -1320,7 +1329,7 @@ You watch for the next Pa's PSA
 >cut beast with sword
 Trips Strip
 
-* resort-verbiage
+* _resort-verbiage
 
 >ts
 

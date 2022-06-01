@@ -1018,10 +1018,10 @@ chapter Means Manse
 
 table of Means Manse nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"manse"	359250554	--	--	"[skip-guess-note]You'd like to feel more welcome in the Means Manse. Tweaking it directly seems to work. You could also find a way to ignore the exits."
-"extis"	484951020	--	--	"[skip-guess-note]That's not quite the right sort of nothing, or ignoring the exits, but maybe you could switch things up a bit."
+"manse"	359250554	--	--	"[skip-guess-note]You'd like to feel more welcome in the Means Manse, but that's not quite how to switch things up. You could also find a way to ignore the exits."
+"extis"	484951020	--	--	"[skip-guess-note]You'd like to do nothing and ignore the exits, but not quite like that. Maybe switch things up a bit or work on the whole Means Manse."
 "exti"	388677054	--	--	"[seed-plural-nag]You need to act on the exits in their entirety. Or the Means Manse."
-"mean"	262976588	--	--	"[seed-plural-nag]You need to act on the Means Manse in their entirety. Or the exits."
+"mean"	262976588	--	--	"[seed-plural-nag]You need to act on the Means Manse in its entirety. Or the exits."
 "marble"	351625627	--	--	"[ennui]."
 "spire"	435862683	--	--	"[ennui]."
 "toaster"	592164309	--	--	"[ennui]."

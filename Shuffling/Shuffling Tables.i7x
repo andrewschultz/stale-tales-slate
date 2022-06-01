@@ -203,6 +203,7 @@ this is the post-warts-straw rule:
 	pad-del "warts";
 	if player carries sack:
 		say "You drop the straw into the sack before it falls out of your arms.";
+		now straw is in sack;
 	else:
 		say "The straw is too heavy to carry. You drop it.";
 

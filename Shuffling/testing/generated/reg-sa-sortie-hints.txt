@@ -161,7 +161,15 @@ No, you don't want to go back there.
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate, the cheesy spearman, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around
+the tall trio
+the bottle of CATHOUSE perfume
+the cult tee
+the skate
+the cheesy spearman
+the grist (faint)
+the cake pan (faint)
+for a few seconds. Your warts also tingle.
 
 >straw
 by one point
@@ -187,7 +195,15 @@ While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it
 /DEBUG: (skate|bottle of CATHOUSE perfume|cheesy spearman|cult tee|tall trio) being objhinted.
 
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate, the cheesy spearman, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around
+the cake pan (faint)
+the grist (faint)
+the tall trio
+the bottle of CATHOUSE perfume
+the cult tee
+the skate
+the cheesy spearman
+for a few seconds. Your warts also tingle.
 
 >grits
 Your score has just gone up by one point.

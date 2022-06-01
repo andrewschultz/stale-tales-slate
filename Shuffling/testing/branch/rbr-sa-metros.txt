@@ -346,7 +346,7 @@ You don't have the skill to hack the friend finder.
 >doro
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 \\
-#+ttc-table-of-metros-nudges-theol
+#+ttc-table-of-undesired-underside-nudges-theol
 >theol
 You can't change the hotel, but you could have another look around.
 
@@ -693,12 +693,12 @@ The mattress is in bad enough shape as it is. It should be easy enough to sift t
 >bupm
 Just search the bump instead.
 \\
-#+ttc-table-of-metros-nudges-mattress
+#+ttc-table-of-the-ol-hotel-nudges-mattress
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
 >x mattress
 \\
-#+ttc-table-of-metros-nudges-mattress
+#+ttc-table-of-the-ol-hotel-nudges-mattress
 >mattrsse
 Nothing to change the mattress to, and you already looted it
 
@@ -717,7 +717,7 @@ The mattress is in bad enough shape as it is. You got what you needed from it.
 >e
 
 @nud
-#+ttc-table-of-metros-nudges-theol
+#+ttc-table-of-undesired-underside-nudges-theol
 >theol
 You can't change the hotel, and you got rid of the night thing, anyway.
 
@@ -917,7 +917,7 @@ Your score has just gone up by one point.
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @nud
-#+ttc-table-of-metros-nudges-rental
+#+ttc-table-of-obtains-boastin-bastion-nudges-rental
 >rentla
 No point bringing those tacky antlers back, or thinking about them any more
 \\
@@ -1419,7 +1419,7 @@ DEBUG: heaths being objhinted.
 >undo
 
 @nud
-#+ttc-table-of-metros-nudges-heath
+#+ttc-table-of-fo-real-florae-nudges-heath
 >heaht
 They are multiple heaths--so you should try to change just one.
 \\
@@ -1794,7 +1794,7 @@ The lit-up tulip will stay lit. No need to futz with its brand name.
 @nud
 >w
 \\
-#+ttc-table-of-metros-nudges-friend
+#+ttc-table-of-undesired-underside-nudges-friend
 >friedn
 You don't need to futz further with the friend finder.
 \\
@@ -1802,7 +1802,7 @@ You don't need to futz further with the friend finder.
 >resign
 The ingress already did. You got by.
 \\
-#+ttc-table-of-metros-nudges-special
+#+ttc-table-of-undesired-underside-nudges-special
 >specila
 You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
 \\
@@ -1821,6 +1821,7 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 #ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
+\\
 #+ttc-table-of-metros-nudges-beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
@@ -1940,10 +1941,11 @@ A hotel is west, a camp is north, the signers' ingress leads east, and some sort
 No need to put the sensor to sleep now you got what you want.
 
 @nud
-#+ttc-table-of-metros-nudges-metallic
+#+ttc-table-of-undesired-underside-nudges-metallic
 >metallci
 You got to the Esoteric Coteries. You don't need any tricks like that.
-#+ttc-table-of-metros-nudges-signer
+\\
+#+ttc-table-of-undesired-underside-nudges-signer
 >signre
 You got to the Esoteric Coteries. You don't need any tricks like that.
 
@@ -2201,12 +2203,15 @@ You see yourself (finally) walking east from Elm Train Terminal now that you hav
 #+ttc-table-of-readables-controls
 >read controls
 The opening isn't really an opening any more, what with the controls fitting in nicely.
-#+ttc-table-of-metros-nudges-gin
+\\
+#+ttc-table-of-elm-train-terminal-nudges-gin
 >gni
 You already transformed the neon pig to the gin-nope opening. And you put the controls in. Better not do any more.
+\\
 >openign
 You don't need to close up the opening. The controls are in, and they fill it well enough.
-#+ttc-table-of-metros-nudges-recess
+\\
+#+ttc-table-of-elm-train-terminal-nudges-recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
 
@@ -2393,7 +2398,8 @@ The blue glow pulses with the beast's roars.
 #ttc-table-of-metros-done-rejects-beast
 >betsa
 You've changed the beats to something tangible, physically beatable.
-#+ttc-table-of-metros-nudges-aligns
+\\
+#+ttc-table-of-bassy-abyss-nudges-aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beast.
 
