@@ -3377,7 +3377,7 @@ Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between
 tears taser	true	false	false	false	"The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now."
 eh at heat	true	true	false	false	"Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted."
 race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
-sob ever verbose	true	false	false	false	"The question marks ... hmm. Oh, you get it now."
+sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 mussier misuser	true	false	false	false	"Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the mussier misuser isn't, either, really."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe [b]STOP[r] and [b]POST[r] are clashing."
 l clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."

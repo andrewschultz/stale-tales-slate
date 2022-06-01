@@ -264,6 +264,25 @@ You try and twist Elvira's words or poke holes where they're wrong...and you can
 >opde
 You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald.
 
+#testcase-mistake-roiling-cheat-on-off-teach-on-off
+>c
+
+>cheat on
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
+
+>cheat off
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
+
+>t
+
+>teach on
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
+
+>teach off
+Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
+
+>c
+
 #ttc-table-of-ordeal-reload-scannotes-tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
@@ -272,13 +291,9 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 >scan niche
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
 
-#ttc-table-of-ordeal-reload-scannotes-beams
->scan beams
-You fiddle with the cheat button and note that nothing happens to the reds and yellows
-
-#ttc-table-of-ordeal-reload-scannotes-meet-bans
->scan meet bans
-You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
+#ttc-table-of-ordeal-reload-scannotes-beams-net
+>scan beams net
+Oh dear. This is tricky. Three question marks out of eight. Maybe you can actually figure what they mean logically, or maybe you can figure what sort of thing would be below ground in a study, and then maybe you can use that to figure what the question marks mean.
 
 #testcase-mistake-roiling-palm
 >palm
@@ -305,13 +320,13 @@ Don't dwell on it. It's lies.
 
 #ttc-table-of-ordeal-reload-spechelp-meet-bans
 >basemetn
-The ten beams creak slightly. Maybe not all of them. But a few.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS. That's a decent omen.
+The laser part of the MEET-BANS beams net fizzes slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS beams net. That's a decent omen.
 
 #testcase-misspellings-table-of-ordeal-reload-spechelp-meet-bans
 >basemant
-The ten beams creak slightly. Maybe not all of them. But a few.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS. That's a decent omen.
+The laser part of the MEET-BANS beams net fizzes slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS beams net. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #testcase-mistake-roiling-net-net-beams-beams-net
@@ -325,7 +340,8 @@ But the net would still block you.
 #testcase-mistake-roiling-basement
 >gonear largely gallery
 >basement
-Well, if you want points for that, you'll need to go back to the study.
+Having already visited the Largely All-Grey Gallery below-ground, you pat yourself on the back for lateral thinking and generally exploring things thoroughly, as you realize the deeper nature of the MEET-BANS beams net despite how it's called something different.
+by two points
 
 #testcase-mistake-roiling-sitar
 >sitar
@@ -357,6 +373,14 @@ You need to work on the entire MEET-BANS beams net.
 >tne
 You need to work on the entire MEET-BANS beams net.
 
+#ttc-table-of-ordeal-reload-nudges-bans
+>bsna
+You need to work on the entire MEET-BANS beams net.
+
+#ttc-table-of-ordeal-reload-nudges-meet
+>teme
+You need to work on the entire MEET-BANS beams net.
+
 # let's take an alternate path to the Largely All-Grey Gallery to make sure "mistake" text works elsewhere
 >stable
 by one point
@@ -385,8 +409,8 @@ You need to work on the entire MEET-BANS beams net.
 >basement
 by two points
 
-#+ttc-table-of-ordeal-reload-nudges-tenbeams
->bemasant
+#ttc-table-of-ordeal-reload-nudges-tenbeams
+>bemesant
 Passage up is unimpeded. The MEET-BANS beams net is in the past.
 
 >undo
@@ -432,7 +456,7 @@ Dusty Study
 >basement zozimus
 You can just go DOWN to enter the basement.
 
-#ttc-table-of-ordeal-reload-nudges-tenbeams
+#+ttc-table-of-ordeal-reload-nudges-tenbeams
 >basemetn
 Passage down is unimpeded. The MEET-BANS beams net is in the past.
 >d
@@ -534,10 +558,6 @@ The pin wobbles.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-reload-readables-meet-bans
->read meet bans
-Some of the wooden beams are painted red. You could them. There are ten total, and it makes you see a bit red, too.
-
 #ttc-table-of-ordeal-reload-readables-giant-pin
 >read giant pin
 GNAT. I NIP is nonsensically written in red on the giant pin.
@@ -566,14 +586,6 @@ The books could use some changing. But you're better off making Yorpwald itself 
 >shefl
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
-#ttc-table-of-ordeal-reload-nudges-bans
->bsna
-You need to work on the entire MEET-BANS beams net.
-
-#ttc-table-of-ordeal-reload-nudges-meet
->teme
-You need to work on the entire MEET-BANS beams net.
-
 >painting
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
@@ -601,25 +613,6 @@ You don't need a safe home, right now. You need adventure.
 #ttc-table-of-ordeal-reload-done-rejects-letters-settler
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
-
-#testcase-mistake-roiling-cheat-on-off-teach-on-off
->c
-
->cheat on
-Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
-
->cheat off
-Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in cheat mode.
-
->t
-
->teach on
-Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
-
->teach off
-Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
-
->c
 
 #testcase-mistake-roiling-pace-paces
 >pace

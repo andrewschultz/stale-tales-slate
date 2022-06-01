@@ -2752,7 +2752,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact gulp-quip;
 		enact elmomole-quip;
 		enact got-red-yellow-quip;
-		if (meet bans is escanned or beams are escanned) and meet bans is moot, now basement-quip is Elmo-av;
+		if (meet bans is escanned or beams are escanned) and meet bans is off-stage, now basement-quip is Elmo-av;
 		if tables are escanned and tables are off-stage, now stable-quip is Elmo-av;
 		if pram is escanned and pram is moot, now ramp-quip is Elmo-av;
 		if giant pin is escanned and giant pin is moot, now painting-quip is Elmo-av;
@@ -2858,7 +2858,8 @@ to move-to-cavern:
 	if do-i-chat is true: [this is a cheat bypass]
 		move player to Disowned Downside;
 		moot parleys splayer players;
-		now qbc_litany is table of Gretta comments;
+		now all pickup-lines are in Meatier Emerita Emirate;
+		now qbc_litany is table of gretta comments;
 	else:
 		now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 4;
 		move the player to Carven Cavern;	[end Elmo's dialogue]
@@ -3667,8 +3668,8 @@ a rule	"Farce Facer"	"be in Ordeal Reload"
 --	"Reposed Deposer"	"defeat Elvira"
 h-available rule	"Errantries Restrainer"	"take on the Store H quest"
 h-available rule	"Procured Producer"	"get everything you can from Curtis"
-h-available rule	"Reprieval Prevailer"	"Win Store H"
-dome-seen rule	"Elites['] Listee / Greaten-Grantee / Derivin['] Diviner / Sharper Phraser"	"Visit Demo Dome"
+h-available rule	"Reprieval Prevailer"	"win Store H"
+dome-seen rule	"Elites['] Listee / Greaten-Grantee / Derivin['] Diviner / Sharper Phraser"	"visit Demo Dome"
 
 to say sol-by of (nu - a number):
 	say "[nu in words] of Stores P/T/U/V/W/Y solved"
@@ -9063,7 +9064,7 @@ rule for supplying a missing noun when entering:
 		now the noun is the evac cave.
 
 [x current room]
-the Largely All Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript underground hiding place. It's only largely all-grey because the paint is discolored in places, though you'll fix that after fixing Yorpwald.[paragraph break]The gallery stands regally, for all that, though it's full of [ISBN bins]. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are fungible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].". roomnud of Largely All Grey Gallery is table of largely all-grey gallery nudges. printed name of Largely All Grey Gallery is "Largely All-Grey Gallery".
+the Largely All Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript underground hiding place. It's only largely all-grey because the paint is discolored in places, though you'll fix that after fixing Yorpwald. The [meet bans] [if meet bans are off-stage]no longer[else]still[end if] block passage back [b]UP[r] to the Dusty Study[if meet bans are not off-stage], so you could tackle them as an exercise[end if].[paragraph break]The gallery stands regally, for all that, though it's full of [ISBN bins]. [one of]There's [if stria are moot]a stair you could [b]CLIMB[r] as well as [end if]an evac-cave that could help you sneak [b]OUT[r] of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are fungible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].". roomnud of Largely All Grey Gallery is table of largely all-grey gallery nudges. printed name of Largely All Grey Gallery is "Largely All-Grey Gallery".
 
 diorama is in Dusty Study and Largely All Grey Gallery. [this is written in here after defining the gallery as a room]
 
@@ -9605,7 +9606,7 @@ carry out xging:
 			if there is a reg-match entry:
 				if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel [if reg-match entry is bypassed]relieved you didn't have to deal with that[else]pleased with what you fixed[end if]." instead;
 			if there is a reg-match entry and mrlp is reg-match entry, say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what to do, and how[else]Hm. The hints make a bit more sense, now[end if].";
-			if x-yet entry is false:
+			if there is an x-yet entry and x-yet entry is false:
 				now x-yet entry is true;
 				increment grid-x;
 				if grid-x is 6:
@@ -18581,9 +18582,6 @@ check entering atmo moat: say "It's too gulfy. Things'd get fugly. You've no div
 
 after printing the locale description for Disowned Downside when Disowned Downside was unvisited:
 	if do-i-chat is true:
-		moot parleys splayer players;
-		now all pickup-lines are in Meatier Emerita Emirate;
-		try talking to gretta;
 		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know [pla-ma]s['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance.";
 	if debug-state is true:
@@ -18702,7 +18700,6 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 		do nothing;
 	else if current quip is gre-go-quip:
 		process the end-gretta-convo rule;
-		terminate the conversation;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
 		do nothing;
 	else:
@@ -18717,6 +18714,9 @@ this is the end-gretta-convo rule:
 		moot hydra;
 		now whistle is reflexed;
 		move player to Rancho Archon Anchor;
+		now qbc_litany is table of elvira comments;
+	else:
+		terminate the conversation;
 
 chapter cut ya all cult laya
 
@@ -19728,8 +19728,7 @@ after printing the locale description for Rancho Archon Anchor when Rancho Archo
 	say "'Gah, hag!' you say.[paragraph break]'Neat ante. Gas [']em, mages!' But they aren't there. 'Me, cry mercy?'[paragraph break]Stalemate. Lame state. Unless you have a way to kill her[if number of reflexive animals in Lamer Realm > 1 or number of pre-animal things in Perverse Preserve > 1]. Or round up more troops[end if].";
 	if do-i-chat is true:
 		now qbc_litany is litany of Elvira;
-	else:
-		try talking to Elvira;
+	try talking to Elvira;
 
 Rancho Archon Anchor is an innie room in Otters. Rancho Archon Anchor is west of Reclusion Inclosure. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east.". roomnud of Rancho Archon Anchor is table of Rancho Archon Anchor nudges.
 
@@ -19823,7 +19822,7 @@ prompt	response	enabled
 "Abhorsive behaviors! Nastiest titaness!"	abhor-quip	1
 "Strong will? Still wrong. At bay, ya bat."	strong-quip	1
 "Go bald, old bag!"	bald-quip	0
-"Sinister Insister. Hypno-phony. Reposed? Deposer."	sinister-quip	0
+"Sinister Insister. Hypno-phony."	sinister-quip	0
 "Plot is spoilt! Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
 
 chapter hydra
@@ -21315,9 +21314,11 @@ to say demo-to-do:
 to dome-wipe-final-questions:
 	if others is not solved:
 		choose row with final response rule of the show alternate paths rule in table of final question options;
-		blank out the final response rule entry;
+		blank out the whole row;
 		choose row with final response rule of the show what the player missed rule in table of final question options;
-		blank out the final response rule entry;
+		blank out the whole row;
+		choose row with final response rule of epilogue rule in table of final question options;
+		blank out the whole row;
 
 to say unex-left:
 	let Y be the number of unexamined things in Sparse Spares;
@@ -22162,11 +22163,9 @@ section bogus activities
 
 [bogus activities]
 
-part modified rule
+part modified rules
 
-the print the modified final question rule is listed before the print the final prompt rule in before handling the final question.
-
-the print the final question rule is not listed in any rulebook.
+the print the modified final question rule is listed instead of the print the final question rule in before handling the final question.
 
 to say satires-list:
 	if sparse spares is unvisited:

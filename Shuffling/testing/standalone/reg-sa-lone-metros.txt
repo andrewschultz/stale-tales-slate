@@ -108,6 +108,9 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >n
+
+>put keycard on friend finder
+
 >n
 >e
 

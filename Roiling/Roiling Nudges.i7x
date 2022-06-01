@@ -30,24 +30,24 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "closet"	474362094	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "beams"	308761951	meet bans	--	"[all-beam-ban]."
 "bans"	185788197	meet bans	--	"[all-beam-ban]."
-"meet"	422797389	--	--	"[all-beam-ban]."
+"meet"	422797389	meet bans	--	"[all-beam-ban]."
 "ban"	89514231	meet bans	--	"[seed-plural-nag][all-beam-ban]."
 "beam"	212487985	meet bans	--	"[seed-plural-nag][all-beam-ban]."
 "ten"	299823635	meet bans	--	"[all-beam-ban]."
 "table"	305336689	tables	--	"[seed-plural-nag]A bleat: 'tableS!'"
-"tenbeams"	608585586	--	study-see-basement rule	"Passage [if player is in dusty study]down[else]up[end if] is unimpeded. The [meet bans] are in the past."
-"stable"	401610655	--	study-see-stable rule	"[skip-guess-note]You probably just want to go [b]IN[r] to the stable."
+"tenbeams"	608585586	--	study-gallery-connected rule	"[skip-guess-note]Passage [if player is in dusty study]down[else]up[end if] is unimpeded. The [meet bans] is in the past."
+"stable"	401610655	--	study-framing-connected rule	"[skip-guess-note]You probably just want to go [b]IN[r] to the stable."
 
 to say not-the-reg: say "Trying to change the current region you're in all at once would be risky, or useless, or maybe both"
 
 to say all-beam-ban: say "You need to work on the entire [meet bans]"
 
-this is the study-see-basement rule:
-	unless player is in dusty study or player is in gallery, the rule fails;
+this is the study-gallery-connected rule:
+	unless player is in dusty study or player is in largely all grey gallery, the rule fails;
 	if beams net is off-stage, the rule succeeds;
 	the rule fails;
 
-this is the study-see-stable rule:
+this is the study-framing-connected rule:
 	unless player is in dusty study or player is in farming framing, the rule fails;
 	if tables are off-stage, the rule succeeds;
 	the rule fails;

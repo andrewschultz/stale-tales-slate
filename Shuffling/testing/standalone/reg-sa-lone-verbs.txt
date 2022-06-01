@@ -6,7 +6,7 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
 
-* _intro-verbiage
+* intro-verbiage
 
 >au 2
 
@@ -317,7 +317,7 @@ Hints are disabled for this session.
 
 #####################forest
 
-* _forest-verbiage
+* forest-verbiage
 
 >sr nw
 
@@ -815,7 +815,7 @@ Mention what you want to shoot
 >shoot wolves
 Trips Strip
 
-* _forest-alt
+* forest-alt
 
 >sr se
 
@@ -851,7 +851,7 @@ You're picking something up. Probably the aroma of teas.
 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 
-* _sortie-verbiage
+* sortie-verbiage
 
 >au 2
 
@@ -1329,7 +1329,7 @@ You watch for the next Pa's PSA
 >cut beast with sword
 Trips Strip
 
-* _resort-verbiage
+* resort-verbiage
 
 >ts
 
