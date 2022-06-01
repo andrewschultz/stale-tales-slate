@@ -4092,7 +4092,7 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	if first-good-scan is false:
 		now first-good-scan is true;
 		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is Ordeal Reload]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
-		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text , or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.";
+		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text, or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.";
 		pad-rec-q "spaces";
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
