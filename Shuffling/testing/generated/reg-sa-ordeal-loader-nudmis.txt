@@ -371,7 +371,7 @@ The deer is very peaceful. You dere-n't disturb it.
 >gota
 The goat is happy as-is. No need to go tag a ...
 
-#+ttc-table-of-ordeal-reload-nudges-shrub
+#+ttc-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
@@ -589,7 +589,7 @@ Here is one of several writings in red in the cabinet:
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 
-#+ttc-table-of-ordeal-reload-nudges-notices
+#+ttc-table-of-notices-section-nudges-notices
 >noticse
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
@@ -603,6 +603,10 @@ The saltine's there to help you. Changing it might work against you.
 #testcase-mistake-shuffling-stealin
 >stealin
 You're the good guy, here. You don't need to steal.
+
+#ttc-table-of-notices-section-nudges-notice
+>notiec
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 >in
 /^Trips Strip

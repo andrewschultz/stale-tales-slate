@@ -72,7 +72,8 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #ttc-table-of-readables-tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
-#+ttc-table-of-resort-nudges-altar
+
+#+ttc-table-of-astral-altars-nudges-altar
 >altra
 While you're sort of trapped here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 
@@ -127,7 +128,7 @@ Perhaps you can deal with the leis, or maybe you can use something else to escap
 >sadn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 
-#+ttc-table-of-resort-nudges-islet
+#+ttc-table-of-leis-isle-nudges-islet
 >tilse
 That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave.
 
@@ -180,7 +181,7 @@ You currently have 3 out of 15 total points for the Resort region. Your minimum 
 >crko
 Your head swims then sinks as you realize the cork can't become much else.
 
-#+ttc-table-of-resort-nudges-oflat
+#+ttc-table-of-leis-isle-nudges-oflat
 >aftol
 You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
 
@@ -205,11 +206,11 @@ You currently have 4 out of 15 total points for the Resort region. Your minimum 
 >winsg
 The wings should be able to propel you enough.
 
-#+ttc-table-of-resort-nudges-oflat
+#+ttc-table-of-leis-isle-nudges-oflat
 >aftol
 You can just use either the cork or the wings to leave to the east.
 
-#+ttc-table-of-resort-nudges-eter
+#+ttc-table-of-leis-isle-nudges-eter
 >eter
 The tree sits there.
 
@@ -465,7 +466,7 @@ You currently have 10 out of 15 total points for the Resort region. Your minimum
 >troi
 You can deal with three people. But you'll have to change their motivations.
 
-#+ttc-table-of-resort-nudges-clay
+#+ttc-table-of-potshot-hotspot-nudges-clay
 >clya
 No, the clay is a clue to what the trio really wants to do.
 
@@ -583,7 +584,7 @@ You couldn't slink behind the kilns even if they were here.
 >brb
 You don't know him that well. No riffing on his initials!
 
-#+ttc-table-of-resort-nudges-hotsopt
+#+ttc-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
@@ -635,7 +636,7 @@ You slur out a few consonants--maybe you should work with something closer, lowe
 >getotu
 Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 
-#+ttc-table-of-resort-nudges-hotsopt
+#+ttc-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
@@ -670,7 +671,7 @@ It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine,
 Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.
 On the other hand, if you're volunteering to test my other games, I could always use the help.
 
-#+ttc-table-of-resort-nudges-hotsopt
+#+ttc-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 You don't want to make this place a hotspot again.
 
@@ -685,6 +686,10 @@ You don't need to change the manors. You just need to be able to get there.
 #ttc-table-of-potshot-hotspot-nudges-ransom
 >ransmo
 You don't need to change the manors. You just need to be able to get there.
+
+#ttc-table-of-potshot-hotspot-nudges-link
+>ilnk
+There are many links, though strictly speaking, you could get by with assuming there was one.
 
 >e
 /^Means Manse
@@ -708,6 +713,14 @@ No more fancy anagrams. Well, maybe one more, based on the whole big picture her
 #ttc-table-of-means-manse-nudges-toaster
 >toastre
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
+
+#ttc-table-of-means-manse-nudges-exti
+>tixe
+You need to act on the exits in their entirety. Or the Means Manse.
+
+#ttc-table-of-means-manse-nudges-mean
+>emna
+You need to act on the Means Manse in its entirety. Or the exits.
 
 #testcase-mistake-shuffling-amen-name
 >amen

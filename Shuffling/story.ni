@@ -2369,9 +2369,6 @@ definition: a thing (called amiun) is unnecc:
 	decide no;
 
 definition: a thing (called cand) is angleable:
-	if cand is cake pan or cand is grist:
-		if player is in kitchen and fridge is open and cand is in fridge, yes;
-		no;
 	if cand is anapest, decide no;
 	if cand is beats, decide no;
 	if cand is words:
@@ -3783,7 +3780,7 @@ to read-gadget:
 	else if player is in moor:
 		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][else][rcn][bc][bc][gc][end if].";
 	else if player is in Means Manse:
-		say "When you wave your gadget at the exits, it shows [if gadget is cert][gcn][gc][gc][rc][rc][else][gcn][bc][bc][rc][bc][end if]. Elsewhere, it blinks a bit. [if gadget is cert]The first and fourth and fifth entries blink. Maybe there's more than one way to do things[else]There's all sorts of blinking. Hopefully, that means there's more than one thing to think up.";
+		say "When you wave your gadget at the exits, it shows [if gadget is cert][gcn][gc][gc][rc][rc][else][gcn][bc][bc][rc][bc][end if]. Elsewhere, it blinks a bit. [if gadget is cert]In particular, the first and fourth and fifth entries are unstable. Maybe there's more than one way to do things[else]There's all sorts of blinking. Hopefully, that means there's more than one way to achieve closure[end if].";
 	else:
 		say "[bug-report]";
 
@@ -7068,21 +7065,27 @@ check giving sack to peasant: say "No, wait, you might still need that, after. B
 
 check giving cask to peasant: say "No, wait, you might need that. But you could maybe give him something inside." instead;
 
-before showing to peasant:
+check showing to peasant (this is the peasant convert show to give rule):
 	ignore the can't show what you haven't got rule;
 	try giving the noun to the peasant instead;
 
-before giving to peasant:
+the peasant convert show to give rule is listed first in the check showing it to rules.
+
+check giving to peasant (this is the straw or sack to peasant rule):
+	if noun is straw, continue the action;
 	if noun is sack and straw is in sack:
 		say "(I'm assuming you meant the straw in the sack)";
 		try giving the straw to the peasant instead;
 	if noun is hay, say "He already has it." instead;
 	say "The peasant probably doesn't want any adventuring goodies. Maybe something more practical for him?" instead;
 
-the straw-peasant rule is listed first in the check giving it to rules.
+the straw or sack to peasant rule is listed first in the check giving it to rules.
+
+the straw-peasant rule is listed after the straw or sack to peasant rule in the check giving it to rules.
+
+a procedural rule while giving straw to peasant: if straw is in sack, ignore the carrying requirements rule;
 
 check giving straw to peasant (this is the straw-peasant rule):
-	ignore the can't give what you haven't got rule;
 	say "'Oh, thank you! Mean Old Mondale-Doleman stuck me with this hay when I needed much stronger material to re-patch my house. He pretended not to know the difference. But he did once!'[paragraph break]'Here's a little something I wrote. [i]He[r] said even an economist wouldn't put emoticons in a poem.'[paragraph break]He hands you a paper and heads off. You're sick of poetry, but with the hay weighing you down, you'll never catch the peasant.";
 	now player has the poem;
 	reg-inc;
@@ -8455,7 +8458,7 @@ this is the bother-nerds rule:
 		say "You aren't welcome back east[if keycard is moot], and besides, no keycard[end if].";
 		the rule fails;
 	if player has lit up tulip:
-		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either. Probably mention how they're sure they could figure what you need to do, etc.";
+		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either. Probably mention how they're sure they could figure what you need to do, etc., without any concrete advice.";
 		the rule fails;
 
 ever-shut is a truth state that varies.
@@ -9281,7 +9284,7 @@ carry out tuging:
 
 book Means Manse
 
-Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
+Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]A bunch of exits (labeled X-ITES in red) are around, but you feel there's a way to get used to your new place, somehow, by ignoring them and not going out.[paragraph break]And it's funny, but you feel like there are a couple possible things you could do to act on the whole Means Manse to make it really feel like home, as well[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges. [bold-ok]
 
 west of Means Manse is nowhere.
 
@@ -9654,10 +9657,13 @@ this is the forest-parse rule:
 		let XX be the player's command in lower case;
 		replace the regular expression "^chisel" in XX with "scrape";
 		change the text of the player's command to XX;
-	if the viler liver is fungible or the River Ville liver is fungible or livers are fungible or Spam is fungible:
+	if meats-nearby > 1:
 		if the player's command matches the regular expression "\bmeat(s)?\b", case insensitively:
 			say "There are several kinds of meats here. You'll need to be specific.";
 			reject the player's command;
+
+to decide which number is meats-nearby:
+	decide on boolval of (whether or not viler liver is fungible) + boolval of (whether or not River Ville liver is fungible) + boolval of (whether or not Spam is fungible);
 
 this is the sortie-parse rule:
 	if location of player is Trap Part:

@@ -770,6 +770,10 @@ I think this game is hard enough without bringing Calculus into it.
 \\
 >integrals
 I think this game is hard enough without bringing Calculus into it.
+\\
+#ttc-table-of-gnarliest-triangles-nudges-dash
+>dahs
+There's more than one dash.
 
 @mis
 #testcase-mistake-shuffling-reslating
@@ -1977,6 +1981,10 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 #ttc-table-of-frost-forts-nudges-bmup
 >bmup
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+\\
+#ttc-table-of-frost-forts-nudges-vowel
+>vowle
+You need to deal with all the vowels.
 
 @nud
 #ttc-table-of-forest-spechelp-vowels

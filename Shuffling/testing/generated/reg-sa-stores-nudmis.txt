@@ -433,10 +433,6 @@ Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#testcase-mistake-shuffling-reaves
->reaves
-You don't need to break anything up, medieval or otherwise. You're trying to bring things and people back together.
-
 #testcase-mistake-shuffling-roesti
 >roesti
 You say to yourself, "Self, what I could really use right now is a German-Swiss dish of fried potatoes!" Then you say to yourself, "Self, there's probably no deli within a long way of here, so you'll have to wait. Hey, we can wait together and commiserate."

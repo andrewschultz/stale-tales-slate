@@ -1182,6 +1182,10 @@ The saltine's there to help you. Changing it might work against you.
 #testcase-mistake-shuffling-stealin
 >stealin
 You're the good guy, here. You don't need to steal.
+\\
+#ttc-table-of-notices-section-nudges-notice
+>notiec
+Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
 @max
 #testcase-prerule-table-of-ordeal-loader-anagrams-pre-cabinet-bactine-rule

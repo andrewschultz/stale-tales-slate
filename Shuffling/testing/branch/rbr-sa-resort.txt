@@ -1382,6 +1382,10 @@ You don't need to change the manors. You just need to be able to get there.
 #ttc-table-of-potshot-hotspot-nudges-ransom
 >ransmo
 You don't need to change the manors. You just need to be able to get there.
+\\
+#ttc-table-of-potshot-hotspot-nudges-link
+>ilnk
+There are many links, though strictly speaking, you could get by with assuming there was one.
 
 @gt
 >gt isle
@@ -1424,6 +1428,14 @@ No more fancy anagrams. Well, maybe one more, based on the whole big picture her
 #ttc-table-of-means-manse-nudges-toaster
 >toastre
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
+\\
+#ttc-table-of-means-manse-nudges-exti
+>tixe
+You need to act on the exits in their entirety. Or the Means Manse.
+\\
+#ttc-table-of-means-manse-nudges-mean
+>emna
+You need to act on the Means Manse in its entirety. Or the exits.
 
 @mis
 #testcase-mistake-shuffling-amen-name
