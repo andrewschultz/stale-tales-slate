@@ -150,7 +150,7 @@ by one point
 by one point
 >undo
 
-* _01234
+* 01234
 
 >{include} _intro
 >{include} _0_to_1
@@ -170,7 +170,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 >{include} _3_to_4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* _01204
+* 01204
 
 >{include} _intro
 >{include} _0_to_1
@@ -186,7 +186,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul. "Do sail!" he exhorts you.
 Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
 
-* _01034
+* 01034
 
 >{include} _intro
 >{include} _0_to_1
@@ -201,7 +201,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 >{include} _3_to_4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* _01004
+* 01004
 
 >{include} _intro
 >{include} _0_to_1
@@ -213,7 +213,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 #ttc-table-of-curtis-rewards-1-4
 "Spurtin' turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with." Curtis, looking very pleased, hands you two coins and some sort of dollar.
 
-* _00234
+* 00234
 
 >{include} _intro
 >{include} _0_to_1
@@ -231,7 +231,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 >{include} _3_to_4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* _00204
+* 00204
 
 >{include} _intro
 >{include} _0_to_1
@@ -245,7 +245,7 @@ A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit c
 Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul.
 Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
 
-* _00034
+* 00034
 
 >{include} _intro
 >{include} _0_to_1
@@ -262,7 +262,7 @@ A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit c
 #ttc-table-of-curtis-rewards-3-4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
-* _00004
+* 00004
 
 >{include} _intro
 >{include} _0_to_1

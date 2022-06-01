@@ -18,6 +18,7 @@
 #ttc-table-of-general-nudges-lalw
 >llaw
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
+[NOTE: this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.]
 
 #ttc-table-of-general-nudges-walls
 >llaws
@@ -62,7 +63,6 @@ You can't just unjumble Yorpwald with just one word. You need to deal with indiv
 #ttc-table-of-general-nudges-settler
 >ettlers
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
-this was the right idea, though what you tried
 
 #ttc-table-of-general-nudges-which
 >whihc

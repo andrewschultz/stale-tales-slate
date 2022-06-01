@@ -20,7 +20,7 @@
 >staple departure
 >in
 
-* _cheat-routes
+* cheat-routes
 
 >gonear sonancy canyons
 >between
@@ -28,7 +28,7 @@
 >beyond
 /^Strip of Profits
 
-* _cheat-troves
+* cheat-troves
 
 >gonear upscale capsule
 >deserve
@@ -37,14 +37,14 @@
 >recant
 /^Strip of Profits
 
-* _cheat-presto
+* cheat-presto
 
 >gonear hacks' shack
 >purloin usb
 >bus
 /^Strip of Profits
 
-* _cheat-oyster
+* cheat-oyster
 
 >gonear tenfold
 >prepay
@@ -53,7 +53,7 @@
 >redial
 /^Strip of Profits
 
-* _cheat-towers
+* cheat-towers
 
 >gonear mislit limits
 >spectacular

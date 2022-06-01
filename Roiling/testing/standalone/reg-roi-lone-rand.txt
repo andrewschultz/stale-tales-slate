@@ -509,6 +509,7 @@ GO HUNT A HANGOUT
 
 >scrap
 >e
+>step
 >seek
 
 #ttc-table-of-megachatter-table-of-tuna-gossip

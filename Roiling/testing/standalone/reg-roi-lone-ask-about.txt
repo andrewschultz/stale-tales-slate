@@ -3231,39 +3231,39 @@ You Did Great
 >{include} _only-otters
 #>{include} _only-others
 
-* _only-ordeal-reload
+* only-ordeal-reload
 
 >{include} _ordeal-reload
 
-* _only-stores
+* only-stores
 
 >gonear strip
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* _only-troves
+* only-troves
 
 >gonear rathole
 >{include} _troves
 
-* _only-presto
+* only-presto
 
 >purloin settler
 >gonear gyre
 >{include} _presto
 
-* _only-oyster
+* only-oyster
 
 >ts
 >oyster
 >enter barnacle
 >{include} _oyster
 
-* _only-towers
+* only-towers
 
 >seed 1
 >gonear loftier trefoil
@@ -3275,7 +3275,7 @@ You Did Great
 >gonear minded midden
 >{include} _otters
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >{include} _others

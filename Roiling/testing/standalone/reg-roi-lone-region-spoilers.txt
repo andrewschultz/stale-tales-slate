@@ -6,7 +6,7 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
 
-* _spoil-all
+* spoil-all
 
 >au 0
 
@@ -249,6 +249,7 @@ So here is a one-time general guideline on what to do in this area: one word of 
 #ttc-table-of-region-spoilers-presto
 >n
 This region focuses on interjections.
+
 >au 0
 
 >gonear shack
@@ -263,7 +264,7 @@ This would give you the rank of Rifeness Finesser.
 >retry
 DEBUG INFO: retry failed since we're in Strip of Profits.
 
-/^Strip of Profits
+!/^Strip of Profits
 
 #ttc-table-of-region-skip-commands-destroy
 >destroy
@@ -520,6 +521,7 @@ Errantries Restrainer
 Reprieval Prevailer
 Elites' Listee / Greaten-Grantee / Derivin' Diviner / Sharper Phraser
 
+>undo
 
 >gonear dusty study
 

@@ -463,7 +463,7 @@ DEBUG INFO: current quip = elmomole-quip.
 [1] Check the scale that can flip to laces and back.
 [2] Recall the tables/stable flip.
 [3] Recall the my niche/chimney flip.
-[4] Recall the ten beams/basement flip.
+[4] Recall the MEET-BANS beams net/basement flip.
 [5] Oh, cool, I know what the reds and yellows are for, now.
 [6] Finish Fishin'.
 
@@ -484,7 +484,7 @@ Yellow: A E I O U
 
 [1] Recall the tables/stable flip.
 [2] Recall the my niche/chimney flip.
-[3] Recall the ten beams/basement flip.
+[3] Recall the MEET-BANS beams net/basement flip.
 [4] Recall the pram/ramp flip.
 [5] Oh, cool, I know what the reds and yellows are for, now.
 [6] Geez. I'm still busted. Kinda shaken by...well, the excitement.
@@ -500,7 +500,7 @@ Yellow: A E I O U
 >1
 DEBUG INFO: current quip = stable-quip.
 [1] Recall the my niche/chimney flip.
-[2] Recall the ten beams/basement flip.
+[2] Recall the MEET-BANS beams net/basement flip.
 [3] Recall the pram/ramp flip.
 [4] Recall the giant pin/painting flip.
 [5] Oh, cool, I know what the reds and yellows are for, now.
@@ -517,7 +517,7 @@ DEBUG INFO: current quip = stable-quip.
 #ttc-table-of-settler-letter-reasoning-y
 >1
 DEBUG INFO: current quip = chimney-quip.
-[1] Recall the ten beams/basement flip.
+[1] Recall the MEET-BANS beams net/basement flip.
 [2] Recall the pram/ramp flip.
 [3] Recall the giant pin/painting flip.
 [4] Recall the stair flip.

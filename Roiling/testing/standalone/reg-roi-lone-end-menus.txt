@@ -6,7 +6,7 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
 
-* _end-menus-bad-death
+* end-menus-bad-death
 
 # negative testing here
 >gonear seaside
@@ -50,7 +50,7 @@ Please give one of the answers above.
 >seed
 Please give one of the answers above.
 
-* _end-menus-otters
+* end-menus-otters
 
 # this tests fixed commands that should be seen everywhere. LN and such are not tested.
 
@@ -293,7 +293,7 @@ You will see one pickup line from pod 5 at random: blabbing maritally, speaking 
 You will see one pickup line from pod 6 at random: continuing to stare deeply, blabbing about drywalling, behaving emotionally and discoursing creatively.
 You will see one pickup line from pod 7 at random: redisplaying their "greatness" and wearing clothes shining iridescently.
 
-* _end-menus-others
+* end-menus-others
 
 >emy
 >endgame
@@ -336,7 +336,7 @@ Reprieval Prevailer: Win Store H
 Here are the pods for Rodney's prosaic picaros:
 Here are the pods for the parleys splayer players' pickup lines:
 
-* _end-menus-demo-dome
+* end-menus-demo-dome
 
 >au 2
 >demo dome
