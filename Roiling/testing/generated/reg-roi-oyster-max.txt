@@ -111,7 +111,6 @@ Score in a scenario: 1 out of 45 total points in the current region, Oyster. Low
 >undo
 >undo
 
-#balance undos
 >unset
 Your score has just gone up by one point
 
@@ -907,7 +906,7 @@ by one point
 >tan
 Your score has just gone up by one point
 
-+#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
+#+testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
 >x lance
 Nothing (significant) like that is in the immediate vicinity or region.
 

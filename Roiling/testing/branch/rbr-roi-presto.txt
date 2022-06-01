@@ -1318,7 +1318,7 @@ TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 \\
 #ttc-table-of-marines-seminar-remains-nudges-port
 >potr
-But there is more than one port.
+But there is more than one port to deal with.
 
 @!min
 >prost
@@ -1582,7 +1582,7 @@ by three points
 >undo
 
 @verbs
-#balance undo
+##balance undo
 >s
 >s
 >ole
@@ -1895,12 +1895,12 @@ Maybe something like that'd work with just one washup. But there are two.
 #ttc-table-of-presto-spechelp-wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
-/DEBUG ONLY: You feel a slight psychic push-pull coming from between (Rand and Leo|Leo and Rand). That's a decent omen.
+/DEBUG ONLY: You feel a slight psychic push-pull coming from both (Rand and Leo|Leo and Rand). That's a decent omen.
 \\
 #testcase-misspellings-table-of-presto-spechelp-wzup
 >whusapp
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
-/DEBUG ONLY: You feel a slight psychic push-pull coming from between (Rand and Leo|Leo and Rand). That's a decent omen.
+/DEBUG ONLY: You feel a slight psychic push-pull coming from both (Rand and Leo|Leo and Rand). That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #testcase-mistake-roiling-whasup-whasups
@@ -2018,7 +2018,7 @@ You don't need to combine them physically, but their physical strengths combined
 >n
 
 @max
-#balance undo
+##balance undo
 #continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
 #test cases: no gun, no loaded gun, first time, subsequent times
 >there
@@ -2045,9 +2045,14 @@ THERE, you think, realizing you're not armed yet.
 !by one point
 THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
+>undo
+>undo
+>undo
+>undo
+>undo
 
 @spoi
-#balance undo
+##balance undo
 >put dart in popgun
 It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could.
 >bingo
@@ -2275,6 +2280,10 @@ The lawl wall is too expansive for you to constructively (destructively?) use an
 \\
 #ttc-table-of-saps'-pass-nudges-ssap
 >sspa
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
+#ttc-table-of-saps'-pass-nudges-sap
+>aps
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
 #ttc-table-of-saps'-pass-nudges-mount
@@ -2583,14 +2592,14 @@ by one point
 Dat was a good dust-up
 \\
 >x so long letters
-WRONG
+Nothing (significant) like that is in the immediate vicinity or region.
 >undo
 \\
 #testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >later
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >x later letters
-WRONG
+Nothing (significant) like that is in the immediate vicinity or region.
 >undo
 >undo
 >undo
@@ -3522,7 +3531,7 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
 @max
-#balance undo
+##balance undo
 #+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 !Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
@@ -3924,6 +3933,8 @@ You imagine it can't be too hard to open up the disk drive and put them in.
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
+
+@!min
 }}SCORE++
 }}CURMIN++
 >score
@@ -3996,6 +4007,9 @@ The process of debugging is going to take a while. You will need some sort of en
 #ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
+\\
+>debug
+The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
 \\
 #+ttc-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
@@ -4126,11 +4140,11 @@ That will provide transport from Hacks' Shack, but you could set more straight h
 >derive
 by one point
 DEBUG INFO: min-up codepath
+Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
 }}SCORE++
 }}CURMIN++
 >score
 {$SCOS}
-Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
 
 @max
 >tab

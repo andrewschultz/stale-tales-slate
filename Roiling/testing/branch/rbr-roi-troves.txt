@@ -956,6 +956,10 @@ You don't need to riff on any location names to win the game, unless there's not
 >spidre
 The diapers, the Ires Pad--the spider only fits in as *a* spider.
 \\
+#ttc-table-of-drain-nadir-nudges-diaper
+>daiper
+All the diapers.
+\\
 #testcase-mistake-roiling-aspired
 >aspired
 Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!
@@ -2336,7 +2340,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. T
 
 @mina,minb
 >misses
-/^====Troves:
+/^====TROVES:
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
 /^====Loather Rathole====
 --you could've tried to STARE at the tears taser.

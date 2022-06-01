@@ -171,14 +171,14 @@ Your score has just gone up by one point
 >despite
 Your score has just gone up by one point
 
+#testcase-postrule-table-of-routes-anagrams-post-past-rule
+>scan cravings carvings
+You read what the settler says--and you realize you already took care of the cravings carvings or something closely related.
+
 >out
 
 #testcase-postrule-table-of-routes-anagrams-post-seedpit-despite-rule
 >scan resto store
-You read what the settler says--and you realize you already took care of the resto store or something closely related.
-
-#testcase-postrule-table-of-routes-anagrams-post-past-rule
->scan cravings carvings
 You read what the settler says--and you realize you already took care of the resto store or something closely related.
 
 >across

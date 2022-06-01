@@ -7568,7 +7568,7 @@ to store-min-adjust (th - a thing):
 
 The look around once light available rule is not listed in the for printing the announcement of light rulebook. [only used in Dusty Study]
 
-report fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
+after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
 		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Curtis turns away and starts humming and singing tidiest dietist ditties, dreaming up new ways of delegating and new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. Curtis seems pretty demanding and probably wants a lot more fruit than you could find or create here. How to find somewhere new?";
 		mootl list of all carried fruits;
@@ -11034,7 +11034,7 @@ check eating pipe soot: say "Well, it doesn't [b]SMELL[r] that bad, but...umm, n
 
 book Idle Deli
 
-Idle Deli is an innie room in Routes. "This restaurant has no customers and little ambience, not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa.[paragraph break]A seed pit gapes at you[unless stupor sprout is off-stage], but you already got the stupor sprout from there[end if].". roomnud of idle deli is table of idle deli nudges.
+Idle Deli is an innie room in Routes. "This restaurant has no customers and little ambience, not even pie crust pictures by Stu Price. But there are cravings carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa.[paragraph break]A seed pit gapes at you[unless stupor sprout is off-stage], but you already got the stupor sprout from there[end if].". roomnud of idle deli is table of idle deli nudges.
 
 exits-text of Idle Deli is "[only-mesa].".
 
@@ -18640,7 +18640,8 @@ before doing something when Gretta is fungible and parleys splayer players are n
 	if current action is examining, say "You should probably talk with Gretta Garett-Tatger a bit." instead;
 	if current action is attacking, say "She's on your side." instead;
 	if action is blathery, say "She's heard enough rambling conversation on others['] terms, here." instead;
-	if current action is discerning, say "That can wait until you've finished talking." instead;
+	if current action is discerning, say "Listening to Gretta is more important right now than anagram-munging." instead;
+	if current action is objhinting, say "Hints can wait until you've finished talking with Gretta." instead;
 	if current action is not talking to Gretta and current action is not QBC responding with:
 		say "[convoforce].";
 		reject the player's command;
@@ -19566,7 +19567,7 @@ Elmer is an aide in Reclusion Inclosure.
 Merle is an aide in Reclusion Inclosure. The chum of Merle is Elmer.
 
 to decide which number is elmer-merle-bonus:
-	decide on boolval of (whether or not aside-llp is in Reclusion Inclosure) + boolval of (whether or not holy nest is in Reclusion Inclosure);
+	decide on boolval of (whether or not aside-llp is moot) + boolval of (whether or not holy nest is moot);
 
 check scaning an aide:
 	if aside-llp is fungible:
@@ -19862,10 +19863,10 @@ chapter all the cinoses
 
 [the numbers here are arbitrary]
 
-to say my-cinos:
-	let nc be number of cinoses carried by player;
-	say "[list of cinoses carried by player]";
-	if nc is not 1, say " (BUG: should have exactly one CIONS item)";
+to decide which thing is my-cinos:
+	if player carries s-i, decide on s-i;
+	if player carries s-c, decide on s-c;
+	decide on random cinos carried by player; [should never happen]
 
 section coin (1)
 

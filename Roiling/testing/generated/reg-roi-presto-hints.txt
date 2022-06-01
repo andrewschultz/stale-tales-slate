@@ -219,7 +219,6 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 
 >n
 
-#balance undo
 >put dart in popgun
 It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could.
 >bingo
@@ -501,6 +500,7 @@ Score in a scenario: 37 out of 41 total points in the current region, Presto. Lo
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 

@@ -245,12 +245,12 @@ You have 23 of 47 total points for the post-Elvira Others region, though you onl
 
 #testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >sonic icons
-The So-Great Storage begins to rattle by your icons, and a lost slot appears in it.
+The So-Great Storage begins to rattle by your sonic icons, and a lost slot appears in it.
 >undo
 
-+#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+#+testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >sonic
-The So-Great Storage begins to rattle by your coins, and a lost slot appears in it.
+The So-Great Storage begins to rattle by your sonic coins, and a lost slot appears in it.
 by one point
 
 >icons
@@ -259,7 +259,7 @@ by one point
 >undo
 >undo
 
-+#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+#+testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >icons
 !The So-Great Storage begins to rattle
 >undo

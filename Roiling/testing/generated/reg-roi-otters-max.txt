@@ -196,7 +196,6 @@ by one point
 >undo
 >undo
 
-#balance undos
 >n
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
@@ -576,7 +575,7 @@ Score in a scenario: 24 out of 38 total points in the current region, Otters. Lo
 >hornets
 Your score has just gone up by one point
 
-+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+#+testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
 !The IQ medal you're wearing clanks against the LUCKY medal.
 
 >x medal
@@ -588,7 +587,7 @@ Score in a scenario: 25 out of 38 total points in the current region, Otters. Lo
 >racoon
 Your score has just gone up by one point
 
-+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+#+testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
 /^The (snail|hornets|racoon), (snail|hornets|racoon) and (snail|hornets|racoon) swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the pines\. Your IQ medal looks very shiny now\.$
 
 >x medal
@@ -604,7 +603,7 @@ Score in a scenario: 26 out of 38 total points in the current region, Otters. Lo
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
-+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+#+testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
 >x medal
 They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, unoxidized, says IQ.
 

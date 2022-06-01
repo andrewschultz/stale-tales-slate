@@ -493,6 +493,10 @@ You don't need to riff on any location names to win the game, unless there's not
 >spidre
 The diapers, the Ires Pad--the spider only fits in as *a* spider.
 
+#ttc-table-of-drain-nadir-nudges-diaper
+>daiper
+All the diapers.
+
 #testcase-mistake-roiling-aspired
 >aspired
 Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!

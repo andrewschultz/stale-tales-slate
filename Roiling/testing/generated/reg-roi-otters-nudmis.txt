@@ -561,7 +561,7 @@ by one point
 
 #ttc-table-of-otters-done-rejects-parleys-splayer-players
 >sparely
-You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
+You've already made the parleys splayer players talk a bit slower. Now you need to deal with their arguments.
 
 #ttc-table-of-disowned-downside-nudges-amcks
 >macsk
@@ -1390,7 +1390,7 @@ The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn
 
 #ttc-table-of-perverse-preserve-nudges-throne
 >throen
-There's more than one throne, but it doesn't matter, really, for what you need to do.
+There's more than one throne, though in this case, you could call up a single animal, and the others will follow.
 
 #ttc-table-of-otters-spechelp-thrones
 >thronse
@@ -1599,8 +1599,9 @@ You don't know if someone named Cornelius would help or hurt you.
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 
+#ttc-table-of-otters-nudges-eelmr
 >eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Even better, there's a way to get rid of them for good.
 
 #testcase-mistake-roiling-edisa-sadie
 >edisa
@@ -1610,12 +1611,16 @@ On the one hand, hooray for trying to fix a gender imbalance. On the other hand,
 
 >aside
 by one point
+
+#+ttc-table-of-otters-nudges-eelmr
 >eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there's another way to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there's another way to shut them up for a bit. Even better, there's a way to get rid of them for good.
 >honestly
 by one point
+
+#+ttc-table-of-otters-nudges-eelmr
 >eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), and you've really done all you can to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), and you've really done all you can to shut them up for a bit. Even better, there's a way to get rid of them for good.
 >undo
 >undo
 >undo
@@ -1628,10 +1633,6 @@ You can't change the inclosure. It's what's to the west that needs changing.
 #ttc-table-of-reclusion-inclosure-nudges-monastery
 >monasteyr
 You can't change the inclosure. It's what's to the west that needs changing.
-
-#ttc-table-of-otters-nudges-eelmr
->eelrm
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 
 #ttc-table-of-reclusion-inclosure-nudges-sober
 >sobre
@@ -1795,10 +1796,6 @@ You already pushed them aside.
 #ttc-table-of-otters-done-rejects-parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
-
-#+ttc-table-of-reclusion-inclosure-nudges-ideas
->aseid
-/(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
 
 >raptor
 Your score has just gone up by one point

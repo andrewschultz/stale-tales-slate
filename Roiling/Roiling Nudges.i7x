@@ -367,7 +367,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "poison"	440345433	--	--	"[not-stripe]."
 "stripe"	538972701	--	--	"[not-stripe]."
 "poisonstripe"	979318134	--	--	"[not-stripe]."
-"pat"	186763795	--	--	"[if Idle Deli is visited]No, you already went [b]PAST[r] to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
 "resto"	486866473	--	--	"[name-worry of idle deli]."
 "woe"	310093459	WOE BOW BELL	--	"[whole-woe]."
 "bow"	200706255	WOE BOW BELL	--	"[whole-woe]."
@@ -1755,7 +1754,7 @@ chapter dourest detours
 table of Dourest Detours nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "detour"	516727403	--	--	"[seed-plural-nag]This may technically be a detour, but since the area name is 'detours,' you need some way to negate ALL the detours."
-"samiel"	389149731	--	--	"[seed-plural-nag]There is more than one samiel to deal with, here, though you don't strictly have to."
+"samiel"	389149731	--	--	"[seed-plural-nag]There is more than one samiel to deal with, here, though doing so isn't critical to leaving here."
 
 book otters nudges
 
@@ -1809,7 +1808,7 @@ to say eelmry:
 		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is moot]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
 		continue the action;
 	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
-		say "You can't fully change [e-n-m], [if elmer-merle-bonus is 0]but there are ways[else if elmer-merle-bonus is 1]but there's another way[else]and you've really done all you can[end if] to shut them up for a bit. Maybe you could find a way to get rid of them";
+		say "You can't fully change [e-n-m], [if elmer-merle-bonus is 0]but there are ways[else if elmer-merle-bonus is 1]but there's another way[else]and you've really done all you can[end if] to shut them up for a bit. Even better, there's a way to get rid of them for good";
 		continue the action;
 	if Bran Barn is unvisited and Loop Pool is unvisited and Reclusion Inclosure is unvisited:
 		say "You shouldn't know about Merle, Elmer et al yet";
@@ -1987,7 +1986,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "critters"	664946148	--	--	"[restrictr]."
 "critter"	568672182	--	--	"[restrictr]."
 "raccoon"	343135453	--	--	"[if corona is fungible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important.[slider-activate][else]No need to tweak the rac(c)oon again. It's fine as is.[end if]" [slider test raccoon]
-"throne"	496782314	thrones	--	"[seed-plural-nag]There's more than one throne, but here it doesn't matter, really, for what you need to do."
+"throne"	496782314	thrones	--	"[seed-plural-nag]There's more than one throne, though in this case, you could call up a single animal, and the others will follow."
 
 this is the preserve-saved rule:
 	if player is in Perverse Preserve and nounsolve >= 3, the rule succeeds;
@@ -2027,11 +2026,11 @@ to say whole-citadel of (citplur - a number):
 	say "It'll take more to destroy the whole citadel and not just the alcove[plur of citplur] or coeval[plur of citplur]"
 
 this is the aside-yet rule:
-	if aside-llp is reflexed and Merle is fungible, the rule succeeds;
+	if aside-llp is moot and Merle is fungible, the rule succeeds;
 
 to say w-change: say "You can't change the inclosure. It's what's to the west that needs changing" [ic]
 
-to say e-m-aux: say "That's just focusing on the trappings of [e-n-m] being ideas aides[if aside-llp is reflexed], and anyway, you pushed [e-n-m] aside, already[end if]"
+to say e-m-aux: say "That's just focusing on the trappings of [e-n-m] being ideas aides[if aside-llp is moot], and anyway, you pushed [e-n-m] aside, already[end if]"
 
 to say no-lam: say "You can't change them, and even if you could, Elvira would probably be alerted"
 

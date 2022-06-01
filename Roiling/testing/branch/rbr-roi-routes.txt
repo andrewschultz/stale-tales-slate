@@ -209,7 +209,7 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 \\
 #ttc-table-of-same-mesa-nudges-pat
 >tpa
-That's not how to get into Pat'S, you reflect.
+Hm, it's Pat'S.
 \\
 #ttc-table-of-same-mesa-nudges-orcas
 >acros
@@ -353,13 +353,17 @@ You don't need to worry about art, here.
 Pat's is a local small business, not nameless, faceless real estate.
 
 @nud
-#testcase-mistake-roiling-ides-rat-tar
+#testcase-mistake-roiling-ides
+\\
 >ides
-It's the whole side art you need to deal with.
+Fortunately, it's not March 15th, and if you want a Caesar cipher, well, that's another (lesser-known) game of mine. You need to make an anagram for the whole side art.
+\\
+#testcase-mistake-roiling-rat-tar
 >rat
-It's the whole side art you need to deal with.
+The art is more complex than that. You need to make an anagram for the whole side art.
+\\
 >tar
-It's the whole side art you need to deal with.
+The art is more complex than that. You need to make an anagram for the whole side art.
 
 @max
 #testcase-prerule-table-of-routes-anagrams-pre-side-art-astride-rule
@@ -930,6 +934,11 @@ Brother Horbert will do his magic on the reagents at the right time.
 >tpa
 You don't need to do anything with Pat, especially now you got the stupor sprout.
 
+@max
+#testcase-postrule-table-of-routes-anagrams-post-past-rule
+>scan cravings carvings
+You read what the settler says--and you realize you already took care of the cravings carvings or something closely related.
+
 >out
 
 @verbs
@@ -939,10 +948,6 @@ You don't need to do anything with Pat, especially now you got the stupor sprout
 @max
 #testcase-postrule-table-of-routes-anagrams-post-seedpit-despite-rule
 >scan resto store
-You read what the settler says--and you realize you already took care of the resto store or something closely related.
-\\
-#testcase-postrule-table-of-routes-anagrams-post-past-rule
->scan cravings carvings
 You read what the settler says--and you realize you already took care of the resto store or something closely related.
 
 @spoi
@@ -1255,7 +1260,7 @@ You already leaned on the anti-sag sit-a-nag right. You look around it and wonde
 It's the whole side art you need to deal with.
 \\
 #ttc-table-of-same-mesa-nudges-tra
->tar
+>tra
 It's the whole side art you need to deal with.
 
 @nud
@@ -1277,14 +1282,6 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 You can sit ASTRIDE the anti-sag sit-a-nag now you have a reason to.
 
 @nud
-#ttc-table-of-same-mesa-nudges-ides
->idse
-It's the whole side art you need to deal with.
-\\
-#ttc-table-of-same-mesa-nudges-tra
->tra
-It's the whole side art you need to deal with.
-\\
 #+testcase-mistake-roiling-staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit.
@@ -1297,6 +1294,15 @@ Your score has just gone up by one point
 #ttc-table-of-routes-anagrams-below
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BELOW.
 
+@nud
+#+ttc-table-of-same-mesa-nudges-ides
+>idse
+It's the whole side art you needed to deal with.
+\\
+#+ttc-table-of-same-mesa-nudges-tra
+>tra
+It's the whole side art you needed to deal with.
+
 @max
 #testcase-postrule-table-of-routes-anagrams-post-side-art-astride-rule
 >x bell
@@ -1307,10 +1313,17 @@ You can only hear it. You can't help hearing it. But maybe if you LISTEN, it cou
 >hint side art
 You positioned yourself well to put up with Ian Gast's tirades. Time to try a new direction.
 
-@mis
-#+testcase-mistake-roiling-ides-rat-tar
+@nud
+#+testcase-mistake-roiling-ides
 >ides
-It's the whole side art you needed to deal with.
+Fortunately, it's not March 15th, and if you want a Caesar cipher, well, that's another (lesser-known) game of mine. You need to make an anagram for the whole side art.
+\\
+#+testcase-mistake-roiling-rat-tar
+>rat
+The art is more complex than that. You need to make an anagram for the whole side art.
+\\
+>tar
+The art is more complex than that. You need to make an anagram for the whole side art.
 \\
 #+testcase-mistake-roiling-staider
 >staider

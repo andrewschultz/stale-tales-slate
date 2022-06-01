@@ -804,6 +804,10 @@ The pest pets seem less persistent for a moment.
 The pest pets seem less persistent for a moment.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
+#ttc-table-of-hardest-trashed-dearths-nudges-pet
+>ept
+But there are many pets to deal with here.
+
 >step
 by one point
 
@@ -2054,6 +2058,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
+
+#ttc-table-of-den-loft-nudges-pin
+>inp
+You have many pins you must deal with.
 
 #ttc-table-of-oyster-spechelp-pins
 >spni

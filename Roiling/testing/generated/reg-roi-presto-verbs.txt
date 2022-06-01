@@ -620,7 +620,6 @@ While you're impressed with people who can navigate sport ports, you already sal
 >attack walls
 Brute force is ineffective. So, too, are all the swears often used with said brute force. You need to wipe out the whole volt maze, not just these walls.
 
-#balance undo
 >s
 >s
 >ole
@@ -1010,6 +1009,7 @@ Score in a scenario: 37 out of 41 total points in the current region, Presto. Lo
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
+
 >score
 Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 

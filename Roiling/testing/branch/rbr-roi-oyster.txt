@@ -530,7 +530,7 @@ by one point
 >undo
 
 @max
-#balance undos
+##balance undos
 >unset
 Your score has just gone up by one point
 \\
@@ -607,10 +607,11 @@ Perhaps you should've played it cool and fled, instead.
 \\
 >undo
 
+@!min
 >stroll
 by one point
 }}SCORE++
-
+\\
 /^Olde Lode
 
 @hin
@@ -1457,6 +1458,10 @@ The pest pets seem less persistent for a moment.
 >eepst
 The pest pets seem less persistent for a moment.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
+#ttc-table-of-hardest-trashed-dearths-nudges-pet
+>ept
+But there are many pets to deal with here.
 
 @sli
 #testcase-slider-table-of-oyster-anagrams-step
@@ -3778,7 +3783,7 @@ Your score has just gone up by one point
 DEBUG INFO: dialer hinting.
 
 @max
-+#testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
+#+testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
 >x lance
 Nothing (significant) like that is in the immediate vicinity or region.
 
@@ -3866,6 +3871,10 @@ You can REDIAL the dialer once the pins are not in your way.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#ttc-table-of-den-loft-nudges-pin
+>inp
+You have many pins you must deal with.
+\\
 #ttc-table-of-oyster-spechelp-pins
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.

@@ -124,7 +124,7 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 
 #ttc-table-of-same-mesa-nudges-pat
 >tpa
-That's not how to get into Pat'S, you reflect.
+Hm, it's Pat'S.
 
 #ttc-table-of-same-mesa-nudges-orcas
 >acros
@@ -255,13 +255,17 @@ You don't need to worry about art, here.
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
 
-#testcase-mistake-roiling-ides-rat-tar
+#testcase-mistake-roiling-ides
+
 >ides
-It's the whole side art you need to deal with.
+Fortunately, it's not March 15th, and if you want a Caesar cipher, well, that's another (lesser-known) game of mine. You need to make an anagram for the whole side art.
+
+#testcase-mistake-roiling-rat-tar
 >rat
-It's the whole side art you need to deal with.
+The art is more complex than that. You need to make an anagram for the whole side art.
+
 >tar
-It's the whole side art you need to deal with.
+The art is more complex than that. You need to make an anagram for the whole side art.
 
 >inside
 Your score has just gone up by one point
@@ -778,7 +782,7 @@ You already leaned on the anti-sag sit-a-nag right. You look around it and wonde
 It's the whole side art you need to deal with.
 
 #ttc-table-of-same-mesa-nudges-tra
->tar
+>tra
 It's the whole side art you need to deal with.
 
 #+testcase-mistake-roiling-under
@@ -789,14 +793,6 @@ You can't hide from Ian Gast like that, right now.
 >tiraed
 There's more than one tirade
 
-#ttc-table-of-same-mesa-nudges-ides
->idse
-It's the whole side art you need to deal with.
-
-#ttc-table-of-same-mesa-nudges-tra
->tra
-It's the whole side art you need to deal with.
-
 #+testcase-mistake-roiling-staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit.
@@ -804,9 +800,24 @@ Ian Gast fails to calm down. Perhaps you just need to position yourself correctl
 >astride
 Your score has just gone up by one point
 
-#+testcase-mistake-roiling-ides-rat-tar
->ides
+#+ttc-table-of-same-mesa-nudges-ides
+>idse
 It's the whole side art you needed to deal with.
+
+#+ttc-table-of-same-mesa-nudges-tra
+>tra
+It's the whole side art you needed to deal with.
+
+#+testcase-mistake-roiling-ides
+>ides
+Fortunately, it's not March 15th, and if you want a Caesar cipher, well, that's another (lesser-known) game of mine. You need to make an anagram for the whole side art.
+
+#+testcase-mistake-roiling-rat-tar
+>rat
+The art is more complex than that. You need to make an anagram for the whole side art.
+
+>tar
+The art is more complex than that. You need to make an anagram for the whole side art.
 
 #+testcase-mistake-roiling-staider
 >staider

@@ -131,10 +131,7 @@ Score in a scenario: 4 out of 38 total points in the current region, Otters. Low
 >blearily
 Your score has just gone up by one point.
 
-That can wait until you've finished talking.
-
-DEBUG INFO: Gretta Garett-Tatger hinting.
-Gretta has an important item for you once you finish chatting.
+Listening to Gretta is more important right now than anagram-munging.
 
 >score
 Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.

@@ -240,7 +240,6 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 
 >n
 
-#balance undo
 #continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
 #test cases: no gun, no loaded gun, first time, subsequent times
 >there
@@ -267,6 +266,11 @@ THERE, you think, realizing you're not armed yet.
 !by one point
 THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >bingo
 Your score has just gone up by one point
@@ -342,14 +346,14 @@ by one point
 Dat was a good dust-up
 
 >x so long letters
-WRONG
+Nothing (significant) like that is in the immediate vicinity or region.
 >undo
 
 #testcase-prerule-table-of-presto-anagrams-pre-harpings-flip-rule
 >later
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >x later letters
-WRONG
+Nothing (significant) like that is in the immediate vicinity or region.
 >undo
 >undo
 >undo
@@ -574,7 +578,6 @@ You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this v
 You add the information to your pedanto-notepad under FLIPS.
 >undo
 
-#balance undo
 #+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 !Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
@@ -717,6 +720,9 @@ DEBUG INFO: min-up codepath
 >x rom sticks
 You imagine it can't be too hard to open up the disk drive and put them in.
 
+>score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+
 #+testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
@@ -734,7 +740,7 @@ Your score has just gone up by one point
 It's an ordinary USB. Or it would be, around anyone but you.
 
 >score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 
 >misses
 !presto
@@ -753,15 +759,15 @@ That will provide transport from Hacks' Shack, but you could set more straight h
 >derive
 by one point
 DEBUG INFO: min-up codepath
->score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
+>score
+Score in a scenario: 39 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
 >bus
 Your score has just gone up by one point

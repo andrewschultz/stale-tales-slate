@@ -152,7 +152,7 @@ Your score has just gone up by one point
 Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >misses
-/^====Troves:
+/^====TROVES:
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page at any time.
 /^====Loather Rathole====
 --you could've tried to STARE at the tears taser.

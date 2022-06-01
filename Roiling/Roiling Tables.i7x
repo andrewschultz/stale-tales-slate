@@ -1117,13 +1117,13 @@ this is the post-unearth-haunter rule:
 this is the post-enlarge-gleaner rule:
 	if gleaner is examined:
 		say "[line break]You may wish to re-examine the gleaner now it's changed.";
-		now gleaner is unexamined;
 	now bogus-reangle is part of the gleaner;
 
 this is the pre-reangle-gleaner rule:
 	if gleaner-viewed is false:
 		say "Before re-angling, you decide to try something far less fancy: just examining the gleaner.[paragraph break]";
 		try examining the general gleaner;
+	now gleaner-viewed is true;
 
 this is the post-yapper-prepay rule:
 	if bogus-reangle is not reflexed, poss-d;
@@ -1371,7 +1371,7 @@ this is the pre-curst-palace-spectacular rule:
 	if player is not in Mislit Limits:
 		say "Your word, stupendous as it is, has no effect. Yet. You [if player is in Mesprise Premises]may just need to go back outside[else]are probably not close enough[end if].";
 		preef curst palace;
-		do nothing instead;
+		the rule fails;
 	abide by the region-done-check rule;
 
 this is the post-curstpalace-spectacular rule:
@@ -1637,7 +1637,7 @@ this is the post-gretta-help rule:
 	else:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for interceding. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
-		moot players;
+		moot parleys splayer players;
 		unless yer all a yell'r is in disowned downside, now yellr-figured is true;
 		moot yer all a yell'r;
 		mootl list of all pickup-lines;
@@ -1683,11 +1683,18 @@ this is the post-perverse-preserve-flip rule:
 		say "The [b]IQ[r] medal you're wearing clanks against the [b]LUCKY[r] medal. It looks a bit clearer, now.";
 	else if nounsolve is 3:
 		move noun to location of player;
-		say "[line break]The [list of fungible southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your [b]IQ[r] medal looks very shiny now.";
-		now random southy puzanimal not in perverse preserve is llpish;
+		let x be random southy puzanimal not in perverse preserve;
+		now x is llpish;
+		d "picking of [x] with predecessor [predecessor of x].";
+		say "[line break]The [list of fungible southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with [if predecessor of x is the player]the remaining thing here[else][the predecessor of x]. Your [b]IQ[r] medal looks very shiny now.";
 		d "[list of southy puzanimals not in perverse preserve].";
 		d "[random southy puzanimal not in perverse preserve] is now LLPish.";
 	move asyllabic lilac bays to minded midden;
+
+to decide which thing is predecessor of (itm - a thing):
+	repeat through regana of mrlp:
+		if itm is the-to entry, decide on the-from entry;
+	decide on the player;
 
 to say extra-c:
 	if word number 1 in the player's command is "raccoon":
@@ -1791,7 +1798,7 @@ to say go-ret-shack:
 
 section otters auxiliary
 
-after fliptoing a pickup-line (this is the weaken-players rule): [ i don't want to put this in every single entry for a pickup line. ]
+report fliptoing a pickup-line (this is the weaken-players rule): [ i don't want to put this in every single entry for a pickup line. ]
 	process the post-gretta-help rule;
 	continue the action;
 
@@ -2282,7 +2289,7 @@ raptor	"You'll need a bit of magic, not force, to tame the raptor."
 sea cube	"Bounce no cube."
 Elmer	"[att-elm]"
 Merle	"[att-elm]"
-educers us creed	"It'd hurt to bang your firsts on the [educers], so you resort to seeing red and whispering '[']Cused-er and [']cused-er!'"
+educers us creed	"It'd hurt to bang your fists on the [educers], so you resort to seeing red and whispering '[']Cused-er and [']cused-er!'"
 
 to say nice-to-animals: say "You didn't rescue [the noun] just to do that";
 
@@ -2302,6 +2309,7 @@ volume readables
 table of ordeal reload readables
 to-read	what-read	alt-read
 giant pin	"[first custom style]GNAT. I NIP[r] is nonsensically written in red on the giant pin."	a thing
+meet bans	"Some of the wooden beams are painted red. You could them. There are ten total, and it makes you see a bit red, too."
 sitar	"Oh, right. You bought it from [first custom style]Trisa Israt[r]. You see red at the money wasted."
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an [first custom style]Irelf-Efril[r] rifle."
 pastel plates	"[first custom style]EPSTAL[r] is written as an author's signature."

@@ -1117,7 +1117,7 @@ by one point
 \\
 #ttc-table-of-otters-done-rejects-parleys-splayer-players
 >sparely
-You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
+You've already made the parleys splayer players talk a bit slower. Now you need to deal with their arguments.
 \\
 #ttc-table-of-disowned-downside-nudges-amcks
 >macsk
@@ -1137,7 +1137,7 @@ You needed to deal with all the players to knock them back a peg.
 >undo
 
 @max
-#balance undos
+##balance undos
 >n
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
@@ -1261,11 +1261,7 @@ Your score has just gone up by one point.
 }}SCORE++
 
 @spoi
-That can wait until you've finished talking.
-
-@hin
-DEBUG INFO: Gretta Garett-Tatger hinting.
-Gretta has an important item for you once you finish chatting.
+Listening to Gretta is more important right now than anagram-munging.
 
 >score
 {$SCOS}
@@ -1627,12 +1623,11 @@ You already made it there, and you don't need to go back.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @alt
-#balance undos
+##balance undos
 >misses
 !--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
 --you didn't see an alternate recharging room south of Disowned Downside in Otters.
 --you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
-#balance undos
 >unless
 min-up
 >misses
@@ -1644,6 +1639,7 @@ min-up
 >misses
 --you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
 !--you didn't see an alternate recharging room south of Disowned Downside in Otters.
+>undo
 >undo
 >undo
 >undo
@@ -2933,7 +2929,7 @@ The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn
 \\
 #ttc-table-of-perverse-preserve-nudges-throne
 >throen
-There's more than one throne, but it doesn't matter, really, for what you need to do.
+There's more than one throne, though in this case, you could call up a single animal, and the others will follow.
 \\
 #ttc-table-of-otters-spechelp-thrones
 >thronse
@@ -3097,7 +3093,7 @@ Your score has just gone up by one point
 /DEBUG INFO: (pines|corona) hinting\.
 
 @max
-+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+#+testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
 !The IQ medal you're wearing clanks against the LUCKY medal.
 \\
 >x medal
@@ -3119,7 +3115,7 @@ You also feel there's something more to do here, if you want, but isn't critical
 DEBUG INFO: damsel medals hinting.
 
 @max
-+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+#+testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
 /^The (snail|hornets|racoon), (snail|hornets|racoon) and (snail|hornets|racoon) swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the pines\. Your IQ medal looks very shiny now\.$
 \\
 >x medal
@@ -3160,7 +3156,7 @@ DEBUG INFO: min-up codepath
 {--spoi}As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.\\!You also feel there's something more to do here, if you want, but isn't critical.
 
 @max
-+#testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
+#+testcase-postrule-table-of-otters-anagrams-post-perverse-preserve-flip-rule
 >x medal
 They're roped together and spin about as you look at them. The larger, untarnished, says LUCKY. The smaller, unoxidized, says IQ.
 
@@ -3397,8 +3393,9 @@ You don't know if someone named Cornelius would help or hurt you.
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 \\
+#ttc-table-of-otters-nudges-eelmr
 >eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Even better, there's a way to get rid of them for good.
 
 @verbs
 #ttc-table-of-otters-nowheres-reclusion-inclosure
@@ -3424,12 +3421,16 @@ On the one hand, hooray for trying to fix a gender imbalance. On the other hand,
 ##balance undos
 >aside
 by one point
+\\
+#+ttc-table-of-otters-nudges-eelmr
 >eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there's another way to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there's another way to shut them up for a bit. Even better, there's a way to get rid of them for good.
 >honestly
 by one point
+\\
+#+ttc-table-of-otters-nudges-eelmr
 >eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), and you've really done all you can to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), and you've really done all you can to shut them up for a bit. Even better, there's a way to get rid of them for good.
 >undo
 >undo
 >undo
@@ -3448,10 +3449,6 @@ You can't change the inclosure. It's what's to the west that needs changing.
 #ttc-table-of-reclusion-inclosure-nudges-monastery
 >monasteyr
 You can't change the inclosure. It's what's to the west that needs changing.
-\\
-#ttc-table-of-otters-nudges-eelmr
->eelrm
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 \\
 #ttc-table-of-reclusion-inclosure-nudges-sober
 >sobre
@@ -3673,10 +3670,6 @@ You already pushed them aside.
 #ttc-table-of-otters-done-rejects-parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
-\\
-#+ttc-table-of-reclusion-inclosure-nudges-ideas
->aseid
-/(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
 
 @max
 #+testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
@@ -3780,7 +3773,7 @@ It's not a misspelling you need, but a logical neologism. Also, it's not clear w
 @verbs
 #ttc-table-of-otters-attacks-educers-us-creed
 >attack us creed
-It'd hurt to bang your firsts on the Us Creed, so you resort to seeing red and whispering "'Cused-er and 'cused-er!"
+It'd hurt to bang your fists on the EDUCERS, US Creed, so you resort to seeing red and whispering "'Cused-er and 'cused-er!"
 
 @nudmis
 #ttc-table-of-otters-readables-educers-us-creed
@@ -3865,6 +3858,9 @@ by one point
 }}SCORE++
 
 >score
+@min
+{$SCOS}
+@!
 {$SCOMAX}
 
 #this is how we get rid of Elvira

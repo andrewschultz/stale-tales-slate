@@ -1856,7 +1856,7 @@ You're almost worried it will be too easy to figure things out, now. Too hard, t
 
 #ttc-table-of-dourest-detours-nudges-samiel
 >samile
-There is more than one samiel to deal with, here.
+There is more than one samiel to deal with, here, though doing so isn't critical to leaving here.
 
 #ttc-table-of-towers-spechelp-seismal-samiels
 >samiesl

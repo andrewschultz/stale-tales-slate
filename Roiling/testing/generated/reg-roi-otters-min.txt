@@ -214,7 +214,7 @@ The medals clink together. You feel infused with speed. Even your fats feel fast
 by one point
 
 >score
-Score in a scenario: 23 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
+Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 35.
 
 #this is how we get rid of Elvira
 >w

@@ -66,7 +66,6 @@ You have 4 of 47 total points for the post-Elvira Others region, though you only
 >compass
 Your score has just gone up by one point.
 
-#balance undos
 You can EXAMINE the ruts circuits to discover more things to change to fruits.
 >n
 >d
@@ -227,6 +226,11 @@ scru-it
 
 >n
 
+DEBUG INFO: coin hinting.
+#this is so the hints stay focused on the fruits and not the icon
+>icon
+by one point
+
 /DEBUG INFO: (stucco|green stain) hinting\.
 
 >coconuts
@@ -235,7 +239,7 @@ Your score has just gone up by one point.
 DEBUG INFO: green stain hinting.
 
 >score
-You have 17 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >tangerines
 Your score has just gone up by one point.
@@ -245,17 +249,12 @@ Falling through to check the fruit we would've hinted for test scripts...
 Nothing specific to do here, but there are other places where you can make fruits to give to Curtis.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
-
->icons
-by one point
-
->score
 You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >s
 
 You fiddle with the coin you got
+!by one point
 
 DEBUG INFO: icons hinting.
 >sonic
@@ -315,17 +314,10 @@ You have 25 of 47 total points for the post-Elvira Others region, though you onl
 
 >score
 
->icons
-by one point
-WRONG
-
->score
-You have 26 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
-
 >concisions
 Your score has just gone up by one point.
 >score
-You have 27 of 47 total points for the post-Elvira Others region, though you only need 29 to win.
+You have 26 of 47 total points for the post-Elvira Others region, though you only need 29 to win.
 
 >n
 
@@ -334,24 +326,24 @@ You have 27 of 47 total points for the post-Elvira Others region, though you onl
 Your score has just gone up by one point.
 /DEBUG INFO: (buried raft|pryer bars|rapt figure) hinting\.
 >score
-You have 28 of 47 total points for the post-Elvira Others region, though you only need 30 to win.
+You have 27 of 47 total points for the post-Elvira Others region, though you only need 30 to win.
 #strawberries = last with minimum at base
 
 >grapefruit
 Your score has just gone up by one point.
 /DEBUG INFO: (buried raft|pryer bars) hinting\.
 >score
-You have 29 of 47 total points for the post-Elvira Others region, though you only need 31 to win.
+You have 28 of 47 total points for the post-Elvira Others region, though you only need 31 to win.
 >raspberry
 Your score has just gone up by one point.
 DEBUG INFO: buried raft hinting.
 >score
-You have 30 of 47 total points for the post-Elvira Others region, though you only need 32 to win.
+You have 29 of 47 total points for the post-Elvira Others region, though you only need 32 to win.
 >breadfruit
 Your score has just gone up by one point.
 You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
 >score
-You have 31 of 47 total points for the post-Elvira Others region, though you only need 33 to win.
+You have 30 of 47 total points for the post-Elvira Others region, though you only need 33 to win.
 >e
 >e
 /^Clangier Clearing
@@ -362,22 +354,22 @@ You have 31 of 47 total points for the post-Elvira Others region, though you onl
 Your score has just gone up by one point.
 /DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
 >score
-You have 32 of 47 total points for the post-Elvira Others region, though you only need 34 to win.
+You have 31 of 47 total points for the post-Elvira Others region, though you only need 34 to win.
 >cinque
 Your score has just gone up by one point.
 /DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis) hinting\.
 >score
-You have 33 of 47 total points for the post-Elvira Others region, though you only need 35 to win.
+You have 32 of 47 total points for the post-Elvira Others region, though you only need 35 to win.
 >cheap
 Your score has just gone up by one point.
 /DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|prices precis) hinting\.
 >score
-You have 34 of 47 total points for the post-Elvira Others region, though you only need 36 to win.
+You have 33 of 47 total points for the post-Elvira Others region, though you only need 36 to win.
 >papayas
 Your score has just gone up by one point.
 /DEBUG INFO: (No Ammo Gang|lemons|melon|nectarine|prices precis) hinting\.
 >score
-You have 35 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
+You have 34 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
 
 >among
 Your score has just gone up by one point.
@@ -385,27 +377,27 @@ Your score has just gone up by one point.
 /DEBUG INFO: (lemons|melon|nectarine|prices precis) hinting\.
 
 >score
-You have 36 of 47 total points for the post-Elvira Others region, though you only need 38 to win.
+You have 35 of 47 total points for the post-Elvira Others region, though you only need 38 to win.
 >ancienter
 Your score has just gone up by one point.
 /DEBUG INFO: (lemons|melon|prices precis) hinting\.
 >score
-You have 37 of 47 total points for the post-Elvira Others region, though you only need 39 to win.
+You have 36 of 47 total points for the post-Elvira Others region, though you only need 39 to win.
 >solemn
 Your score has just gone up by one point.
 /DEBUG INFO: (melon|prices precis) hinting\.
 >score
-You have 38 of 47 total points for the post-Elvira Others region, though you only need 40 to win.
+You have 37 of 47 total points for the post-Elvira Others region, though you only need 40 to win.
 >len mo
 Your score has just gone up by one point.
 DEBUG INFO: prices precis hinting.
 >score
-You have 39 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
+You have 38 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
 >cripes
 Your score has just gone up by one point.
 You look around and don't see any way to bargain for more fruits here. Maybe there's more to do elsewhere.
 >score
-You have 40 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have 39 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
 
 >w
 
@@ -426,7 +418,7 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 Your score has just gone up by one point.
 
 >score
-You have 41 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have 40 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
 
 >z
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
@@ -438,21 +430,21 @@ the/(a) banna'
 >banana
 Your score has just gone up by one point.
 >score
-You have 42 of 47 total points for the post-Elvira Others region, though you only need 43 to win.
+You have 41 of 47 total points for the post-Elvira Others region, though you only need 43 to win.
 >go near
 Your score has just gone up by one point.
 >score
-You have 43 of 47 total points for the post-Elvira Others region, though you only need 44 to win.
+You have 42 of 47 total points for the post-Elvira Others region, though you only need 44 to win.
 >rhubarb
 Your score has just gone up by one point.
 >score
-You have 44 of 47 total points for the post-Elvira Others region, though you only need 45 to win.
+You have 43 of 47 total points for the post-Elvira Others region, though you only need 45 to win.
 >reversed
 Your score has just gone up by one point.
 You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
 Congratulations on finding all the fruits! Since you did so without using the arugula to GURU, you will get the final bonus point.
 >score
-You have 45 of 47 total points for the post-Elvira Others region.
+You have 44 of 47 total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 >u
@@ -473,7 +465,7 @@ by one point
 DEBUG INFO: viewer hinting.
 >score
 
-You have 46 of 47 total points for the post-Elvira Others region.
+You have 45 of 47 total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 >review
@@ -481,7 +473,7 @@ by one point
 
 >score
 
-You have 47 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+You have 46 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 >n
 by one point

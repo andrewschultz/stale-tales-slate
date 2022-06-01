@@ -479,7 +479,7 @@ Curtis continues to sing and hum the tidiest dietist ditties.
 The only way you seem to be able to go is north.
 
 @hin
-#balance undos
+##balance undos
 You can EXAMINE the ruts circuits to discover more things to change to fruits.
 >n
 >d
@@ -735,6 +735,14 @@ Nothing happens. Perhaps it's the whole item that's important.
 #ttc-table-of-rustic-citrus-nudges-eerie
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
+\\
+#ttc-table-of-rustic-citrus-nudges-blurb
+>bblur
+Nothing happens. Perhaps it's the whole item that's important.
+\\
+#ttc-table-of-rustic-citrus-nudges-eerieblurb
+>eerieblubr
+Every single last blurb.
 \\
 #ttc-table-of-others-readables-eerie-blurbs
 >read eerie blurbs
@@ -1281,7 +1289,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a d
 Maybe if you had more than one coin.
 
 @sli
-#balance undos
+##balance undos
 #detour for slider testing misses for "icon" and "icons"
 #testcase-slider-table-of-others-anagrams-icon
 >cino
@@ -1301,8 +1309,17 @@ DOUBLE PROBLEM FOR: sonic.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 #note if we switch to "cinso" above we don't undo PURLOINing the icons. I'm not sure what's going on here. Check this once test runs are more stable. ??
+>undo
+>undo
 
 >n
+
+@hin
+DEBUG INFO: coin hinting.
+#this is so the hints stay focused on the fruits and not the icon
+>icon
+by one point
+}}SCORE++
 
 @nud
 ##balance undo
@@ -1389,6 +1406,7 @@ by one point
 >undo
 
 @max
+##balance undos
 >icon
 Your score has just gone up by one point.
 {--hin}/DEBUG INFO: (stucco|green stain) hinting\.
@@ -1417,6 +1435,10 @@ DEBUG INFO: green stain hinting.
 {$SCOS}
 
 @nud
+##balance undos
+>icon
+by one point
+\\
 #ttc-table-of-others-done-rejects-icon
 >inco
 The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more.
@@ -1424,6 +1446,9 @@ The icon seems good as-is, yet ... you can't help think it could become more lat
 #+testcase-mistake-roiling-sonic
 >sonic
 Maybe if you had more than one icon.
+>undo
+>undo
+>undo
 
 >tangerines
 Your score has just gone up by one point.
@@ -1437,18 +1462,19 @@ Nothing specific to do here, but there are other places where you can make fruit
 }}SCORE++
 {$SCOS}
 
-@!max
+>s
+
+@hin
+You fiddle with the coin you got
+!by one point
+
+@!max,hin
 >icons
 by one point
 }}SCORE++
 \\
 >score
 {$SCOS}
-
->s
-
-@!max
-You fiddle with the coin you got
 
 @hin
 DEBUG INFO: icons hinting.
@@ -1690,6 +1716,15 @@ The barriers' westness is important.
 >foliaeg
 Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
 \\
+#ttc-table-of-filed-field-nudges-barrier
+>barrire
+There are multiple barriers west.
+\\
+#ttc-table-of-filed-field-nudges-barrierwest
+>barrirestew
+There are multiple barriers west.
+
+@nud
 #ttc-table-of-others-readables-mean-trowel
 >read mean trowel
 It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt.
@@ -1876,12 +1911,12 @@ Money, or something like it, should not be the guide of you.
 \\
 #testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >sonic icons
-The So-Great Storage begins to rattle by your icons, and a lost slot appears in it.
+The So-Great Storage begins to rattle by your sonic icons, and a lost slot appears in it.
 >undo
 \\
-+#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+#+testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >sonic
-The So-Great Storage begins to rattle by your coins, and a lost slot appears in it.
+The So-Great Storage begins to rattle by your sonic coins, and a lost slot appears in it.
 by one point
 \\
 >icons
@@ -1890,7 +1925,7 @@ by one point
 >undo
 >undo
 \\
-+#testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
+#+testcase-postrule-table-of-others-anagrams-post-sonic-flip-rule
 >icons
 !The So-Great Storage begins to rattle
 >undo
@@ -1925,15 +1960,6 @@ Money, or something like it, should not be the guide of you.
 #testcase-slider-table-of-others-anagrams-sonic
 >osicn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!max
->icons
-by one point
-WRONG
-\\
->score
-}}SCORE++
-{$SCOS}
 
 @!hin,max
 #hints were already done above, to test hinting code paths above
