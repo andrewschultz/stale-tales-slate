@@ -35,7 +35,7 @@ pram	ramp	false	233052733	167937	--	"ramp"	"ramp"	--	post-pram-ramp rule	"The pr
 sitar	stair	false	331888451	917761	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."
 stria	stair	false	331888451	917761	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The stria glow and cascade into a stair leading back up."
 my niche	chimney	false	484428752	16789908	--	"chimney"	"chimney"	--	post-my-niche-chimney rule	"The square saying [b]MY NICHE[r] rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
-meet bans	meet bans	false	608585586	798739	--	"basement"	"basement"	pre-meet-bans-basement rule	--	"[if Largely All Grey Gallery is visited]Having already visited the [gallery] below-ground, you pat yourself on the back for lateral thinking and generally exploring things thoroughly, as you realize the deeper nature of the [MEET BANS][else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to what must be a basement, even if it's called something different."
+meet bans	meet bans	false	608585586	798739	--	"basement"	"basement"	pre-meet-bans-basement rule	--	"[if Largely All Grey Gallery is visited]Having already visited the [gallery] below-ground, you pat yourself on the back for lateral thinking and generally exploring things thoroughly, as you realize the deeper nature of the [MEET BANS] despite how[else]You realize a basement is the sort of thing that would be below, even if, once you get there,[end if] it's called something different."
 tables	tables	false	401610655	788499	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	270594	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from [the bins]. They're still covered with long numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 rifle	rifle	false	338451493	133424	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
@@ -61,16 +61,16 @@ to say read-canflip:
 	say "[one of]. Reading the notice [if notice is examined]again[else]briefly[end if], you see that things won't be this flexible out in the real world[or][stopping]";
 
 this is the post-pram-ramp rule:
-	if tables are moot and sitar is moot:
+	if tables are off-stage and sitar is moot:
 		min-up;
-	else if meet bans are moot:
+	else if meet bans are off-stage:
 		min-up; [check if passage is already available via beams or stable->stair]
 	now dusty study is mapped inside highest heights;
 	now gallery is mapped below highest heights;
 
 this is the post-sitar-or-stria-to-stair rule:
 	now Largely All Grey Gallery is mapped below Farming Framing;
-	if meet bans are moot:
+	if meet bans are off-stage:
 		min-up;
 		ital-say "since there are two ways up, you will need to [b]CLIMB STAIR[r] to visit [if framing is visited]the Farming Framing[else]that new location[end if].";
 	else if niche is moot and pram is moot:
@@ -83,7 +83,7 @@ this is the post-sitar-or-stria-to-stair rule:
 this is the post-my-niche-chimney rule:
 	now Highest Heights are mapped above Dusty Study;
 	now Dusty Study is mapped below Highest Heights;
-	if meet bans are moot or tables are moot:
+	if meet bans are off-stage or tables are off-stage:
 		d "My niche -> chimney is a min-up because stable and/or basement are already accessible.";
 		min-up;
 
@@ -91,7 +91,7 @@ this is the pre-meet-bans-basement rule:
 	now Largely All Grey Gallery is mapped below study;
 	now study is mapped above Largely All Grey Gallery;
 	reg-inc-q;
-	if tables are moot or niche is moot:
+	if tables are off-stage or niche is moot:
 		d "Min point for tables or niche: we already have a way out of the study.";
 		min-up;
 	if sitar is moot or pram is moot:
@@ -102,7 +102,7 @@ this is the post-tables-stable rule:
 	now study is mapped inside Farming Framing;
 	now study is mapped outside Farming Framing;
 	now Farming Framing is mapped inside study;
-	if meet bans are moot or niche is moot:
+	if meet bans are off-stage or niche is moot:
 		d "My niche -> chimney is a min-up because stable and/or basement are already accessible.";
 		min-up;
 
@@ -3327,8 +3327,7 @@ thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 pram	false	false	false	true	"[cheatfid]."
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
-beams	false	false	false	true	"[cheatfid]."
-meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
+beams net	true	false	false	false	"Oh dear. This is tricky. Three question marks out of eight. Maybe you can actually figure what they mean logically, or maybe you can figure what sort of thing would be below ground in a study, and then maybe you can use that to figure what the question marks mean."
 palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is."
 Respect Specter	false	false	false	false	"'[respect-help].'"
 
@@ -3517,49 +3516,49 @@ book otters
 
 table of otters scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
-bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess."
-cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
-parleys splayer players	true	true	false	false	"The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data."
-yer all a yell'r	true	true	false	false	"Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very."
-t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
+bleary barley	true	false	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess."
+cinders	true	false	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
+parleys splayer players	true	false	false	false	"The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data."
+yer all a yell'r	true	false	false	false	"Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very."
+t-formally	true	false	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe [b]REALITY[r] can be bent a couple overwrought ways."
-t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
-t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
+t-steamily	true	false	false	false	"Well, you have a feeling you know what that question mark should be."
+t-silently	true	false	false	false	"Wow! Three things to consider here. This might be tricky."
 medals	true	false	false	false	"[if cheat-on is true]The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
 cut ya all cult laya	true	false	false	false	"The words of the [laya] certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading."
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 nope peon	true	false	false	false	"You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
-blase bales	true	true	false	false	"The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced."
-aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
-stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters."
-educers us creed	true	true	false	false	"This one's all over the place. You notice nothing registers over [the educers us creed]'s text, only the four words in the main bit."
+blase bales	true	false	false	false	"The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced."
+aside-llp	true	false	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
+stray satyr	true	false	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters."
+educers us creed	true	false	false	false	"This one's all over the place. You notice nothing registers over [the educers us creed]'s text, only the four words in the main bit."
 
 book others
 
 table of others scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
-sated stead	true	true	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
-hire recs re riches	true	true	false	false	"As [hire recs] recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!"
-id mantra mad train	true	true	false	false	"The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention."
+sated stead	true	false	false	false	"Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad."
+hire recs re riches	true	false	false	false	"As [hire recs] recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!"
+id mantra mad train	true	false	false	false	"The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention."
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice."
-s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
-pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
+s-c	true	false	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
+pipe panel lie pen app	true	false	false	false	"Hmm. There are a lot of P's. Maybe that helps."
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]. Just one possibility[else]. Just three possibilities[end if]."
-prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
+prices precis	true	false	false	false	"Whoah, only reds and greens. Interesting."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
-i solve voiles	true	true	false	false	"You make sure it's not just the [voiles] fluttering about that give such an ambiguous reading. No, it is not."
-ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
+i solve voiles	true	false	false	false	"You make sure it's not just the [voiles] fluttering about that give such an ambiguous reading. No, it is not."
+ammo gang	true	false	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
 a banna	false	false	false	false	"The message on the/a banna['] must be interfering with the/a banna['] itself." [scape space]
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
-Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'[paragraph break]Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities."
+Reserved Deserver Dr Severe	true	false	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'[paragraph break]Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities."
 concisions	false	true	false	false	"Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do."
 
 volume specific help for things you need to flip
 
 table of ordeal reload spechelp
 xtrhelp	helptxt
-meet bans	"The ten beams creak slightly. Maybe not all of them. But a few."
+meet bans	"The laser part of the [meet bans] fizzes slightly."
 palm	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 niche	"Hm, no, the niche--my niche--won't unfold that way."
 latches	"You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them."
@@ -4119,8 +4118,8 @@ to decide whether compile-yet:
 table of ordeal reload prefigurings
 preflip	pretodo
 giant pin	"The giant pin can become a [b]PAINTING[r][once-esc]."
-meet bans	"The ten beams in the MEET-BANS will lead to a [b]BASEMENT[r][once-esc]."
-tables	"The tables will lead to a [b]STABLE[r][once-esc]."
+meet bans	"The [meet bans] separate the Dusty Study from a [b]BASEMENT[r][once-esc]."
+tables	"The tables separate the Dusty Study from a [b]STABLE[r][once-esc]."
 niche	"The (my) niche will open up a [b]CHIMNEY[r][once-esc]."
 respect specter	"You can get a [b]SCEPTER[r] from the respect specter at any time."
 
@@ -4226,7 +4225,7 @@ a rich chair	"[if player does not have notepad]You can take the pedanto-notepad 
 Report Porter Perrot	"You can pump [perrot] for information if you want."
 isolani liaison	"The isolani liaison is just a door. It isn't there for any puzzles but just to communicate with the outside world[if Report Porter Perrot is not off-stage]. But after taking to Report Porter Perrot, it's not useful[end if]."
 notice	"For reading."
-beams	"[one of]It's important there are [b]TEN BEAMS[r].[plus][or]The ten beams lead somewhere below.[plus][or]What is a place that's below in a house?[plus][or]Open the [b]BASEMENT[r].[minus][cycling]"
+beams	"[one of]If you scan [the meet bans] in cheat mode, you get a mouthful. But there are clues.[plus][or]You can [b]READ[r] the [the meet bans] or recognize they lead down.[plus][or]What is a place that's below in a residence?[plus][or]Open the [b]BASEMENT[r].[minus][cycling]"
 platform	"[dio-part]."
 pavement	"[dio-part]."
 pedestal	"[dio-part]."
@@ -4240,7 +4239,6 @@ niche	"[one of]'My niche' above the diorama leads upwards.[plus][or]What is a ho
 closest closets	"The closets [if closets are fungible]are[else]were[end if] just for transporting around the Means Manse quicker, to or from the Dusty Study."
 palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plus][or]It wouldn't be bright to stumble into the palm...[plus][or]...but changing the palm would be.[plus][or]If you wait around, you get some hints of what to do with the palm. Note the purposefully bad spelling.[plus][or]One four-letter shuffling of [b]PALM[r] is indicated. Hopefully.[plus][or]You can change the palm to a [b]LAMP[r] by just saying so.[minus][cycling]"
 lamp	"The lamp will last as long as you need it to."
-meet bans	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a [b]BASEMENT[r].[minus][cycling]"
 tables	"[one of]The tables seem out of place in such a posh mansion.[plus][or]What's more posh than tables?[plus][or]The tables can be a [b]STABLE[r].[minus][cycling]"
 chimney	"You can [b]CLIMB[r] the chimney or go up it."
 stair	"You can go up or down the stair."

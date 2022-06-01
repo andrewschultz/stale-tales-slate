@@ -4097,7 +4097,7 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
 	let modnoun be scannote-idx of noun;
-	if extra-not-taxer is false, the rule succeeds;
+	if skip-scan-comments, the rule succeeds;
 	repeat through scannotes of mrlp:
 [	if noun is an thing-to-note in scannotes of mrlp: ?! doesn't work]
 		if modnoun is thing-to-note entry:
@@ -4108,13 +4108,20 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 				now modnoun is ncscanned;
 				now modnoun is cscanned;
 			if b-only entry is false or cheat-on is true: [if cheat is off and it's b-text only clue, ignore.]
-				say "[clue-only-once entry] [clued-yet entry].";
 				if clue-only-once entry is false or clued-yet entry is false:	[special clued-once text ignored]
 					now clued-yet entry is true;
 					say "[line break][postscanclue entry][line break]";
 			the rule succeeds;
 	the rule succeeds;
 
+to decide whether skip-scan-comments:
+	if extra-not-taxer is true, no;
+	if mrlp is ordeal reload:
+		if noun is specter, no;
+		if noun is pram, no;
+		if noun is tables, no;
+		if noun is niche, no;
+	yes;
 to decide which thing is scannote-idx of (th - a thing): [this used to be for N and S of the Midden. I may (very unlikely) need it in the future, so it stays, despite being trivial.]
 	decide on th;
 
@@ -7981,18 +7988,6 @@ understand "letter" as treatise.
 
 a-text of latches is "RYRRRYR". b-text of latches is "RGPPPGR". parse-text of latches is "[bug-report]".
 
-chapter MEET BANS
-
-The MEET BANS are plural-named vanishing boring scenery in Dusty Study. description of the meet bans is "The [MEET BANS] look very secure, but you could unlock them with the right, uh, combination.". bore-text is "The MEET-BANS are too solid to move physically and have no obvious flaws. That is no surprise, really.". printed name of MEET BANS is "MEET-BANS".
-
-a-text of meet bans is "RYRYRYRR". b-text of meet bans is "RYRYRYPR". parse-text of meet bans is "x[sp]A[sp]x[sp]E[sp]x[sp]E[sp]N[sp]x".
-
-chapter ten beams
-
-the beams are auxiliary boring scenery in Dusty Study. "You count the beams. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they and the MEET-BANS be hiding?". bore-text is "The ten beams are too sturdy to mannipulate meaningfully.". understand "ten" and "ten beams" as beams when mrlp is Ordeal Reload. printed name of beams is "ten beams"
-
-a-text of beams is "RYRYRYRR". b-text of beams is "RYRYRYRR". parse-text of beams is "x[sp]A[sp]x[sp]E[sp]x[sp]E[sp]x[sp]x".
-
 chapter Report Porter Perrot
 
 Report Porter Perrot is a terse male person. "Report Porter Perrot is here, but you shouldn't be seeing this text, so that's a bug. [bug-report]"
@@ -9109,7 +9104,6 @@ this is the bore-stair rule:
 	if current action is climbing or current action is entering:
 		if player is in farming framing, try going down instead;
 		if player is in largely all grey gallery:
-			if meet bans are not moot, try going up instead;
 			say "You climb up the stair you created.";
 			move player to Farming Framing instead;
 
@@ -9123,15 +9117,12 @@ does the player mean climbing the stair: it is very likely.
 
 after printing the locale description for Largely All Grey Gallery when Largely All Grey Gallery is unvisited:
 	if do-i-chat is false:
-		if tables are in Dusty Study and meet bans are in Dusty Study:
-			say "After your trip down the ramp, you note the stria--and the ten beams. Ten beams, basement--that makes sense. You could probably do something to the stria or visit the closets if you wanted, but you don't have to.";
-		else if tables are in Dusty Study:
-			say "The stria remind you of the stable you walled up a long time ago. It must have been behind the tables you scribbled on the wall so long ago. Maybe not worth going back to uncover.";
-		else if meet bans are in Dusty Study:
-			say "Okay. So that's what MEET-BANS in the study was for. You could dispel or uncover them if you were completionist that way.";
-		if possibles is false and min-alert is false:
-			ital-say "you don't need to do anything else in the Means Manse, but if you want to track what you can do, [b]POSS[i] will do so.";
-			now min-alert is true;
+		if reload-passages-found is 1:
+			say "You know there were other ways down, and you could probably find them if you want, but you may just want to get out of here.";
+		else if reload-passages-found is 5:
+			say "Every passage seemed to lead to here, except the chimney. It's about time to move on with your real adventure. You've prepared well.";
+		else:
+			say "There's probably even more secret passages than you found, but you also sort of want to get on with things.";
 		continue the action;
 
 check going outside in Largely All Grey Gallery:
@@ -9156,12 +9147,12 @@ check going down in Farming Framing:
 	move player to Largely All Grey Gallery instead;
 
 check going up in Largely All Grey Gallery:
-	if stria are in location of player and meet bans are in Dusty Study, say "Hmm. The ramp was one-way, but should be a way back up. The stria could be disposable. Or you could just move on without poking around your residence." instead; [chimney/ramp path]
-	if meet bans are not moot and stria are not moot, say "You've got no way out, but the stria may provide a clue." instead;
-	if meet bans are not moot:
+	if stria are in location of player and meet bans are not off-stage, say "Hmm. The ramp was one-way, but should be a way back up. The stria could be disposable. Or you could just move on without poking around your residence." instead; [chimney/ramp path]
+	if meet bans are not off-stage and stria are not moot, say "You've got no way out, but the stria may provide a clue." instead;
+	if meet bans are not off-stage:
 		say "(going up the stair)[paragraph break]";
 		try climbing stair instead;
-	else if stria are moot and meet bans are moot:
+	else if stria are moot and meet bans are off-stage:
 		say "(going up to Dusty Study. [b]CLIMB STAIR[r] to go up the stair)[paragraph break]";
 	if backcheck is false:
 		now backcheck is true;
@@ -9181,7 +9172,7 @@ check going up in Largely All Grey Gallery:
 
 to decide which number is reload-passages-found:
 	let temp be 0;
-	if meet bans are moot, increment temp;
+	if meet bans are off-stage, increment temp;
 	if stria is moot, increment temp;
 	if tables are off-stage, increment temp;
 	if pram are moot, increment temp;
@@ -9504,7 +9495,7 @@ prompt	response	enabled
 "Check the [b]PLUG[r] of nutrients that could become a [b]GULP[r] bottle."	gulp-quip	0
 "Recall the tables/stable flip."	stable-quip	0
 "Recall the my niche/chimney flip."	chimney-quip	0
-"Recall the ten beams/basement flip."	basement-quip	0
+"Recall the [meet bans]/basement flip."	basement-quip	0
 "Recall the pram/ramp flip."	ramp-quip	0
 "Recall the giant pin/painting flip."	painting-quip	0
 "Recall the stair flip."	stair-quip	0
@@ -9562,7 +9553,7 @@ gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the lette
 settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
 yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
 stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was a lot of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
-basement-quip	"You remember cheat mode did not change the ten beams when you scanned them before entering the basement. There were the same reds and yellows."
+basement-quip	"This one was weird. So many ambiguous readings in cheat mode. Elmo looks panicked at the description. 'Maybe someone can help you down the road. Maybe I'm just flaking here. But the alternate settings are a bit weird for me. One thing at a time, I guess. We got a good reading in teach mode.'"
 chimney-quip	"You remember cheat mode did not change the 'my niche' text when you scanned it before entering the chimney--[b]MY NICHE[r] was in red writing, which your pedanto-notepad says was wrong letters. But there were some yellows, too. And an orange. You suddenly realize the orange mapped to Y[y-know]."
 ramp-quip	"You recall red, yellow, red, red for the ramp, cheat or no."
 painting-quip	"You recall R Y Y R R Y R R for non-cheat mode, with the center two going purple in cheat mode. Figuring why only those two go purple would be big."
@@ -9748,6 +9739,12 @@ check going down in Highest Heights:
 check going inside in Highest Heights: try entering closets instead;
 
 book backdrops
+
+chapter meet bans beams net
+
+the MEET BANS beams net is vanishing boring backdrop. It is in Dusty Study and Largely All Grey Gallery. "The [beams net] is a complex conglomeration of actual wooden beams and laser beams that make it hard to pass and join you in the Dusty Study -- or whatever's next to it. But you had a special way to get by them, with just one word. What was it, again? You could try to [b]READ[r], not for a verbal hint, but there might be a clue.". bore-text is "You don't want to mess with the [meet bans] physically.". printed name of beams net is "MEET-BANS beams net".
+
+a-text of MEET BANS beams net is "RYRYRYRR". b-text of MEET BANS beams net is "?YRYRY??". parse-text of MEET BANS beams net is "x[sp]a[sp]x[sp]e[sp]x[sp]e[sp]n[sp]x".
 
 chapter tables
 
@@ -22520,8 +22517,8 @@ section actual misses rules
 
 this is the ordeal-reload-misses rule:
 	if giant pin is in Dusty Study, say "[2drm of dusty study]the giant pin could've become a [b]PAINTING[r].";
-	if meet bans are in Dusty Study, say "[2drm of dusty study]you could've made the ten beams/MEET-BANS into a [b]BASEMENT[r].";
-	if tables are in Dusty Study, say "[2drm of dusty study]you could've made the tables into a [b]STABLE[r] to unlock an alternate way/puzzle to the basement/gallery.";
+	if meet bans are not off-stage, say "[2drm of dusty study]you could've made [the meet bans] into a [b]BASEMENT[r].";
+	if tables are not off-stage, say "[2drm of dusty study]you could've made the tables into a [b]STABLE[r] to unlock an alternate way/puzzle to the basement/gallery.";
 	if sitar is not moot, say "[2drm of farming framing]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a [b]STAIR[r].";
 	if niche is in Dusty Study, say "[2drm of dusty study]you could've changed 'my niche' into a [b]CHIMNEY[r].";
 	if pram is in Highest Heights and highest heights is visited, say "[2drm of highest heights]you could've changed the pram into a [b]RAMP[r].";

@@ -12,6 +12,7 @@ when play begins (this is the debug by default when debugging rule) :
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
+	now extra-not-taxer is true; [see above]
 
 section monty rules
 

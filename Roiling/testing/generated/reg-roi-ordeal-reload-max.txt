@@ -32,9 +32,9 @@ Hm, well, that'd be a way to move around if you needed to sneak out. But you don
 #ttc-table-of-ordeal-reload-prefigurings-tables
 >pf
 The giant pin can become a PAINTING, once you need to escape.
-The ten beams in the MEET-BANS will lead to a BASEMENT, once you need to escape.
-The tables will lead to a STABLE, once you need to escape.
 The (my) niche will open up a CHIMNEY, once you need to escape.
+The MEET-BANS beams net separate the Dusty Study from a BASEMENT, once you need to escape.
+The tables separate the Dusty Study from a STABLE, once you need to escape.
 
 Bangish bashing
 >undo
@@ -145,7 +145,7 @@ PARSE processes the settler's data for you, but SPARE hides it.
 Apparently, appreciating her is what separates us from the animals. Well, according to Report Porter Perrot.
 
 >scan platform
-[NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
+[NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
 DEBUG: platform being scanned.
 
 #ttc-table-of-notepad-entries-diorama
@@ -189,36 +189,10 @@ Shortcut command to turn slider on.
 >c
 
 >basement
-Now you remember why there were ten beams. Of course, the ten beams lead down to what must be a basement, even if it's called something different.
+You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
-
-# here we test knocking out the tables from the Farming Framing
->d
->stair
-by one point
-
->u
-
->in
-
-#+ttc-table-of-ordeal-reload-spechelp-tables
->elstab
-The tables seem to shift a bit.
-
->stable
-by one point
->in
-Dusty Study
-
->undo
->undo
->undo
->undo
->undo
->undo
->undo
 
 # here we test a huge loop for a different warning message
 >chimney
@@ -229,6 +203,8 @@ by one point
 >ramp
 by one point
 >d
+
+#testcase-postrule-table-of-ordeal-reload-anagrams-post-sitar-or-stria-to-stair-rule
 >stair
 by one point
 >u

@@ -65,7 +65,7 @@ understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a m
 
 understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.[note-great-guesses]") when tables are fungible and tables are not examined.
 
-understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying [b]BASEMENT[r][intro-warn][else]go [b]DOWN[r] to enter the basement[end if].") when player is in Dusty Study.
+understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the [meet bans] by saying [b]BASEMENT[r][intro-warn][else]go [b]DOWN[r] to enter the basement[end if].") when player is in Dusty Study.
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)[note-great-guesses]")
 
@@ -85,6 +85,7 @@ understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's rej
 
 understand "rood" as a mistake ("[if Report Porter Perrot is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].[note-great-guesses]") when player is in Dusty Study.
 
+understand "teem" as a mistake ("You want to reduce [the meet bans], not make more.") when meet bans are in location of player.
 understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.[note-great-guesses]") when player has settler.
 
 chapter Largely All-Grey Gallery
@@ -204,6 +205,8 @@ understand "follow [text]" as a mistake ("[this-game] doesn't allow the [b]FOLLO
 
 chapter Same Mesa
 
+to say whole-side-art: say "You [if tirades are reflexed]already made[else]need to make[end if] an anagram for the whole side art"
+
 understand "aint gas" and "gas" as a mistake ("The [sit a nag] is plenty solid and will stay that way, independent of your efforts.") when anti sag sit a nag is fungible.
 
 understand "aint" as a mistake ("You don't need to make the [sit a nag] any sturdier. And calling it ain't-sag would be false advertising.") when anti sag sit a nag is fungible.
@@ -224,7 +227,9 @@ understand "car" as a mistake ("Oscar's Uhh-Tut Hut isn't much, but he'd be upse
 
 understand "gats" and "tags" as a mistake ("[this-game] is not violent enough for tags with gats.") when Gast is fungible.
 
-understand "ides" and "rat" and "tar" as a mistake ("It's the whole side art you need[if tirades are moot]ed[end if] to deal with.") when player is in Same Mesa and side art is in Same Mesa.
+understand "ides" as a mistake ("Fortunately, it's not March 15th, and if you want a Caesar cipher, well, that's another (lesser-known) game of mine. [whole-side-art].") when player is in Same Mesa.
+
+understand "rat" and "tar" as a mistake ("The art is more complex than that. [whole-side-art].") when player is in Same Mesa.
 
 understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is in location of player.
 

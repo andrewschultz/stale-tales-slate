@@ -28,8 +28,29 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ordeal"	364513235	--	degen-true rule	"[not-the-reg]."
 "closets"	570636060	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "closet"	474362094	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
+"beams"	308761951	meet bans	--	"[all-beam-ban]."
+"bans"	185788197	meet bans	--	"[all-beam-ban]."
+"meet"	422797389	--	--	"[all-beam-ban]."
+"ban"	89514231	meet bans	--	"[seed-plural-nag][all-beam-ban]."
+"beam"	212487985	meet bans	--	"[seed-plural-nag][all-beam-ban]."
+"ten"	299823635	meet bans	--	"[all-beam-ban]."
+"table"	305336689	tables	--	"[seed-plural-nag]A bleat: 'tableS!'"
+"tenbeams"	608585586	--	study-see-basement rule	"Passage [if player is in dusty study]down[else]up[end if] is unimpeded. The [meet bans] are in the past."
+"stable"	401610655	--	study-see-stable rule	"[skip-guess-note]You probably just want to go [b]IN[r] to the stable."
 
 to say not-the-reg: say "Trying to change the current region you're in all at once would be risky, or useless, or maybe both"
+
+to say all-beam-ban: say "You need to work on the entire [meet bans]"
+
+this is the study-see-basement rule:
+	unless player is in dusty study or player is in gallery, the rule fails;
+	if beams net is off-stage, the rule succeeds;
+	the rule fails;
+
+this is the study-see-stable rule:
+	unless player is in dusty study or player is in farming framing, the rule fails;
+	if tables are off-stage, the rule succeeds;
+	the rule fails;
 
 chapter dusty study
 
@@ -42,7 +63,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "isolani"	385521400	--	--	"You don't need to rearrange the isolani liaison. It's all that protects you from the outside world."
 "abstract"	429617931	abstract painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining."
 "latch"	215399559	latches	--	"Not one latch. All of them."
-"table"	305336689	--	--	"A bleat: 'tableS!'"
 "ceiling"	392118435	--	--	"[if niche is fungible]You wouldn't want to collapse the whole ceiling, but maybe the words [b]MY NICHE[r] could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
 "subpoena"	574518649	--	perrot-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
 "gape"	244059588	dope op ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
@@ -53,10 +73,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "itrash"	369170750	--	x-oped-m rule	"[vs-oped]."
 "herarts"	537307816	--	x-oped-f rule	"[vs-oped]."
 "billy"	293398681	--	x-oped rule	"[vs-oped]."
-"beams"	308761951	meet bans	--	"Not even one of the beams rattles. You count them up again--there are ten."
-"ban"	89514231	--	--	"[all-beam-ban]."
-"beam"	212487985	--	--	"[all-beam-ban]."
-"ten"	299823635	meet bans	--	"You change neither the number nor the makeup of the ten beams."
 "notice"	438174643	notice	--	"You can flip everything on the diorama except the notice."
 "diorama"	294149104	diorama	--	"Gateman Nat Egam assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though..."
 "bookshelf"	561748346	bookshelf	--	"The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway."
@@ -69,13 +85,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bowlingpin"	596386463	giant pin	--	"[g-pin]."
 "oped"	304653734	dope op ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
-"tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go [b]DOWN[r] to the [if Largely All Grey Gallery is visited]gallery[else]basement[end if]."
-"stable"	401610655	--	study-see-stable rule	"[skip-guess-note]You probably just want to go [b]IN[r] to the stable."
 "chair"	188792351	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	sad ads	--	"[w-twi]."
-
-to say all-beam-ban: say "[seed-plural-nag]You need to work on all the ten beams, or the MEET-BANS"
 
 to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is unsolved]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
@@ -112,14 +124,6 @@ this is the dark-study rule:
 to say dark-palm: say "[one of]You punch your fist as you realize DARK has no anagrams...right into the palm[or]Oh no, not again. Concentrate on the palm[stopping]"
 
 to say g-pin: say "It's more that it's a giant pin and not, like, a safety pin";
-
-this is the study-see-basement rule:
-	if player is in Dusty Study and meet bans is not in Dusty Study, the rule succeeds;
-	the rule fails;
-
-this is the study-see-stable rule:
-	if player is in Dusty Study and tables are not in Dusty Study, the rule succeeds;
-	the rule fails;
 
 to say w-twi: say "The ads have probably gone through enough word-twisting"
 
