@@ -457,7 +457,7 @@ report requesting the score for the first time: poss-display.
 
 to poss-display:
 	if possibles is false and min-alert is false and max-score of mrlp > 0:
-		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing [b]POSS[i]. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
+		ital-say "you can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing [b]POSS[i]. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
 		now min-alert is true;
 		pad-rec "poss";
 

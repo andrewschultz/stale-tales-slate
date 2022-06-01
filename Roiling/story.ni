@@ -1323,7 +1323,7 @@ to say full-monty of (myobj - a thing):
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
 		if extra-taxer-warn is false:
-			say ".[paragraph break]You can also disable clues for ambiguous/question mark settler-cheat readings with [b]TAXER[r] or [b]TAX ER[r]. You can recover them with [b]EXTRA[r]";
+			say ".[paragraph break]You can also enable clues for ambiguous/question mark settler-cheat readings with [b]EXTRA[r]. They give lateral-thinking hints that may be spoilers for some. You can disable them with [b]TAXER[r] or [b]TAX ER[r]. They are off by default";
 			now extra-taxer-warn is true;
 			pad-rec-q "extra/taxer";
 	now settler-space-warned is sw;
@@ -1353,7 +1353,7 @@ to say spacies of (INTE - indexed text):
 		else if THISCHAR is "*":
 			say "[if screenread is true]Asterisk[else]*[end if]";
 		else if THISCHAR is "?":
-			say "[if screenread is true]Question mark[else]?[end if]";
+			say "[if screenread is true]Question mark[else]?[run paragraph on][end if]";
 		if chtemp < chrs:
 			say " ";
 
@@ -4092,23 +4092,23 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	if first-good-scan is false:
 		now first-good-scan is true;
 		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is Ordeal Reload]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
-		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text if you are visually impaired, or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.";
+		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text , or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.";
 		pad-rec-q "spaces";
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
 	let modnoun be scannote-idx of noun;
-	if taxer-not-extra is true, the rule succeeds;
+	if extra-not-taxer is false, the rule succeeds;
 	repeat through scannotes of mrlp:
 [	if noun is an thing-to-note in scannotes of mrlp: ?! doesn't work]
 		if modnoun is thing-to-note entry:
 			if there is no postscanclue entry:
-				if cheat-on is true and give-generic-question-hint is true, ital-say "[b]PAD QUESTION MARK[i] should give generic question-mark hints, as a reminder. Toggle this nag with [b]QMH[i].";
 				the rule succeeds;
 			choose row with a thing-to-note of modnoun in scannotes of mrlp;
 			if bothscan entry is true:
 				now modnoun is ncscanned;
 				now modnoun is cscanned;
 			if b-only entry is false or cheat-on is true: [if cheat is off and it's b-text only clue, ignore.]
+				say "[clue-only-once entry] [clued-yet entry].";
 				if clue-only-once entry is false or clued-yet entry is false:	[special clued-once text ignored]
 					now clued-yet entry is true;
 					say "[line break][postscanclue entry][line break]";
@@ -4221,21 +4221,6 @@ this is the scan-others-loc rule:
 		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of Ammo Gang] on your settler." instead;
 	if location of player is Swell Wells:
 		if sorer bogey is fungible, try scaning sorer bogey instead;
-
-chapter qmhing
-
-qmhing is an action out of world.
-
-understand the command "qmh" as something new.
-
-understand "qmh" as qmhing when player has settler.
-
-give-generic-question-hint is a truth state that varies.
-
-carry out qmhing:
-	now give-generic-question-hint is whether or not give-generic-question-hint is false;
-	say "Generic question hinting for settler cheat mode is now [on-off of give-generic-question-hint].";
-	the rule succeeds;
 
 book begin-region hints
 
@@ -5550,7 +5535,7 @@ check taking inventory:
 	if mrlp is demo dome, say "You neither have nor need any questing items." instead;
 	say "Item time![line break]";
 	if debug-state is true:
-		say "[b]II[r] will give you states of carried things.";
+		say "NOT FOR RELEASE: [b]II[r] will give you states of carried things.";
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
 			say "Boy, this is a seedy area! You're worried you might get robbed of what you have.[line break]";
@@ -5643,7 +5628,7 @@ understand "iv" as iving.
 
 carry out iving:
 	now hows-show-tools is whether or not hows-show-tools is false;
-	say "Now [b]I[r]([b]INVENTORY[r]) [if hows-show-tools is true]show[else]hide[end if]s your general tools.";
+	say "Now [b]I[r]([b]INVENTORY[r]) [if hows-show-tools is true]show[else]hide[end if]s your general tools, settler excepted.";
 	the rule succeeds;
 
 chapter going (nowhere)
@@ -6813,14 +6798,14 @@ this is the settler-reject rule:
 
 carry out cheatoning:
 	abide by the settler-reject rule;
-	say "You [if cheat-on is true]already [end if]set a tech etcha['] mode on.";
+	say "You [if cheat-on is true]already [end if]set a tech etcha['] cheat mode on.";
 	now cheat-on is true;
 	check-parse-spare;
 	the rule succeeds;
 
 carry out cheatoffing:
 	abide by the settler-reject rule;
-	say "You [if cheat-on is false]already [end if]set a tech etcha['] mode off.";
+	say "You [if cheat-on is false]already [end if]set a tech etcha['] cheat mode off.";
 	now cheat-on is false;
 	check-parse-spare;
 	the rule succeeds;
@@ -6983,7 +6968,7 @@ carry out parseing:
 
 to say but-if-parse:
 	if cheat-on is false:
-		say ", but it isn't very effective with teach/cheat off"
+		say ", but it isn't very effective with cheat mode off"
 
 chapter spareing
 
@@ -7027,14 +7012,17 @@ setspace is a truth state that varies.
 
 spaceoning is an action out of world.
 
-understand the commands "spaceon/son" and "space on" as something new.
+understand the commands "spaceson/spaceon/son" and "spaces/space on" as something new.
 
-understand "spaceon" and "son" and "space on" as spaceoning.
+understand "spaceson" and "spaces on" and "spaceon" and "son" and "space on" as spaceoning.
 
 carry out spaceoning:
-	say "[if setspace is true]Spaces are already[else]Now spaces are[end if] on.";
+	say "Spaces between letters in the settler reading are [if setspace is true]already[else]now[end if] on.";
 	now setspace is true;
 	the rule succeeds;
+
+report screening:
+	if setspace is false, say "There will be spaces between words on your settler as long as you are in screen-reading mode, so that option is rendered irrelevant.";
 
 chapter nospaceing
 
@@ -7042,13 +7030,13 @@ chapter nospaceing
 
 nospaceing is an action out of world.
 
-understand the commands "nospace/nos" and "no space" as something new.
+understand the commands "nospaces/nospace/nos" and "no space/spaces" as something new.
 
-understand "nospace" and "nos" and "no space" as nospaceing.
+understand "nospaces" and "nospace" and "no spaces" and "nos" and "no space" as nospaceing.
 
 carry out nospaceing:
-	if screenread is true, say "No space mode is very problematic with a screen reader, so I have disabled your ability to do so. You can toggle screen reading with [b]SCR[r] or [b]SCREEN[r], if you want." instead;
-	say "[if setspace is false]Spaces are already[else]Now spaces are[end if] off.";
+	if screenread is true, say "[this-game] ignores no-space mode in screen reader mode, since it would combine words together." instead;
+	say "Spaces between letters in the settler reading are [if setspace is false]already[else]now[end if] off.";
 	now setspace is false;
 	the rule succeeds;
 
@@ -7300,8 +7288,8 @@ understand "extra" as extraing.
 
 carry out extraing:
 	now extra-taxer-warn is true;
-	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is false]already[else]now[end if] on. Change it back with [b]TAX ER[r] or [b]TAXER[r].";
-	now taxer-not-extra is false;
+	say "Extra question-mark information for cheat/teach mode on settler is [if extra-not-taxer is true]already[else]now[end if] on. Change it back with [b]TAX ER[r] or [b]TAXER[r].";
+	now extra-not-taxer is true;
 	the rule succeeds.
 
 chapter taxering
@@ -7316,13 +7304,13 @@ understand "tax er" as taxering.
 
 carry out taxering:
 	now extra-taxer-warn is true;
-	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is true]already[else]now[end if] off. Change it back with [b]EXTRA[r].";
-	now taxer-not-extra is true;
+	say "Extra question-mark information for cheat/teach mode on settler is [if extra-not-taxer is false]already[else]now[end if] off. Change it back with [b]EXTRA[r].";
+	now extra-not-taxer is false;
 	the rule succeeds.
 
 extra-taxer-warn is a truth state that varies.
 
-taxer-not-extra is a truth state that varies.
+extra-not-taxer is a truth state that varies.
 
 chapter opt in/no tip
 
@@ -21724,13 +21712,7 @@ check hinting when player is in Rancho Archon Anchor and tri-hint is false:
 check hinting when session-hints-off (this is the force hint blocking rule):
 	say "You temporarily turned hints off." instead;
 
-check objhinting when session-hints-off (this is the force objhint blocking rule):
-	say "You temporarily turned hints off." instead;
-
 check hinting when absolutely-no-hints is true:
-	say "You turned hints off for the remainder of the game." instead;
-
-check objhinting when absolutely-no-hints is true:
 	say "You turned hints off for the remainder of the game." instead;
 
 the force hint blocking rule is listed first in the check hinting rulebook.
@@ -21762,9 +21744,20 @@ chapter hinting (object)
 
 have-objhinted is a truth state that varies.
 
-before objhinting for the first time:
+check objhinting when session-hints-off (this is the force objhint blocking rule):
+	say "You temporarily turned hints off." instead;
+
+check objhinting when absolutely-no-hints is true (this is the permanent block objhinting rule):
+	say "You turned hints off for the remainder of the game." instead;
+
+check objhinting when have-objhinted is false (this is the warn against objhinting ambiguity rule):
 	now have-objhinted is true;
 	ital-say "a word of warning before hinting objects. It is possible but very unlikely that this may reveal items you do not know about yet if this is not used carefully.";
+
+the permanent block objhinting rule is listed first in the check objhinting rules.
+
+the force objhint blocking rule is listed after the permanent block objhinting rule in the check objhinting rules.
+the warn against objhinting ambiguity rule is listed after the force objhint blocking rule in the check objhinting rules.
 
 does the player mean objhinting a useless thing: it is unlikely.
 

@@ -9,32 +9,345 @@
 
 * misc-stuff
 
->x bookshelf
->think
->open door
->1
->5
+>z
+>ts
 
->lamp
+Strip of Profits
 
->stable
+>scan poster
+Your settler registers RRYRRY.
+!You can also enable clues
+!I guess it's a trope
+
+>cheat
+You set a tech etcha' cheat mode on.
+[NOTE: you can type PARSE for A Roiling Original to place information that can be deduced from a cheat-mode reading you more information at the top of the screen or SPARE to hide it. This is obviously a big spoiler, so PARSE is off by default.]
+
+>extra
+>scan poster
+!You can also enable clues for ambiguous/question mark settler-cheat readings
+>undo
+>undo
+
+>scan poster
+!Ta-dum! Datum!
+!if your interpreter
+Your settler registers ??YRRY--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
+
+You can also enable clues for ambiguous/question mark settler-cheat readings with EXTRA. They give lateral-thinking hints that may be spoilers for some. You can disable them with TAXER or TAX ER. They are off by default.
+
+!I guess it's a trope
+
+>extra
+Extra question-mark information for cheat/teach mode on settler is now on. Change it back with TAX ER or TAXER.
+
+>extra
+Extra question-mark information for cheat/teach mode on settler is already on. Change it back with TAX ER or TAXER.
+
+>scan poster
+!Ta-dum! Datum! It's not an odd DOA doodad!
+!if your interpreter
+Your settler registers ??YRRY.
+!You can also enable clues
+I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
+
+>taxer
+Extra question-mark information for cheat/teach mode on settler is now off. Change it back with EXTRA.
+
+>taxer
+Extra question-mark information for cheat/teach mode on settler is already off. Change it back with EXTRA.
+
+>scan poster
+!I guess it's a trope
+
+>extra
+Extra question-mark information for cheat/teach mode on settler is now on. Change it back with TAX ER or TAXER.
+
+>pestor
+You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+!Your settler throws out a bunch of beeps:  HIGH LOW LOW LOW LOW LOW.
+
+>sl
+You switch the slider on.
+
+>pestor
+Your settler throws out a bunch of beeps:  HIGH LOW LOW LOW LOW LOW.
+!You hear old forgotten magic words
+Ugh. Those high notes gave you a migraine mini-rage. You switch off the slider.
+You figure you can take that noise nine more times.
+
+>pestor
+You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+!Your settler throws out a bunch of beeps:  HIGH LOW LOW LOW LOW LOW.
+
+>sl
+You switch the slider on.
+
+>sl
+You switch the slider off.
+
+>xtra
+
+>pestor
+/^You feel a slight psychic push-pull coming from Store P\. That's a decent omen\.$
+!old forgotten
+
+>trax
+>pestor
+!^You feel a slight psychic push-pull coming from Store P
+old forgotten
+
+>trax
+>pestor
+/^You feel a slight psychic push-pull coming from Store P\. That's a decent omen\.$
+!old forgotten
+
+>xtra
+>pestor
+!^You feel a slight psychic push-pull coming from Store P
+old forgotten
+
+>access
+Accessibility mode is now on.
+>misses
+/^Store B could've given you some SORBET.
+/^Store K could've made some TOKERS.
+/^NESTOR was hiding in Store K.
+/^ROUTES were in Store U.
+/^TROVES were in Store V.
+/^PRESTO would've opened Store P.
+/^The OYSTER was in Store Y.
+/^TOWERS were in Store W.
+!/^--
+
+>access
+Accessibility mode is now off.
+>misses
+--Store B could've given you some SORBET.
+--Store K could've made some TOKERS.
+--NESTOR was hiding in Store K.
+--ROUTES were in Store U.
+--TROVES were in Store V.
+--PRESTO would've opened Store P.
+--The OYSTER was in Store Y.
+--TOWERS were in Store W.
+
+>iv
+Now I(INVENTORY) hides your general tools, settler excepted.
+
+>i
+Item time!
+You're carrying your letters settler, to help with hints. Cheat/teach mode is on, the idlers' slider is off, and you can put up with its beepings nine more times.
+You are carrying nothing from this region in particular.
+Your general tools are hidden. IV will turn them back on.
+
+>iv
+Now I(INVENTORY) shows your general tools, settler excepted.
+
+>i
+Item time!
+II will give you states of carried things.
+You're carrying your letters settler, to help with hints. Cheat/teach mode is on, the idlers' slider is off, and you can put up with its beepings nine more times.
+
+You are carrying nothing from this region in particular.
+
+Other things in your super purse include (toggle with IV):
+  Inducted Deductin'
+  a pedanto-notepad
+  a Gird Grid
+
+>t
+You set a tech etcha' cheat mode off.
+
+>t
+You already set a tech etcha' cheat mode off.
+
+>c
+You set a tech etcha' cheat mode on.
+
+>c
+You already set a tech etcha' cheat mode on.
+
+>t
+You set a tech etcha' cheat mode off.
+
+>space on
+Spaces between letters in the settler reading are now on.
+>scan poster
+Your settler registers R R Y R R Y.
+
+>space on
+Spaces between letters in the settler reading are already on.
+>scan poster
+Your settler registers R R Y R R Y.
+
+>no space
+Spaces between letters in the settler reading are now off.
+>scan poster
+Your settler registers RRYRRY.
+
+>no space
+Spaces between letters in the settler reading are already off.
+>scan poster
+Your settler registers RRYRRY.
+
+>son
+Spaces between letters in the settler reading are now on.
+>scan poster
+Your settler registers R R Y R R Y.
+
+>son
+Spaces between letters in the settler reading are already on.
+>scan poster
+Your settler registers R R Y R R Y.
+
+>scr
+Screen reader support is now on.
+>nos
+A Roiling Original ignores no-space mode in screen reader mode, since it would combine words together.
+>undo
+>undo
+
+>nos
+Spaces between letters in the settler reading are now off.
+>scan poster
+Your settler registers RRYRRY.
+
+>scr
+There will be spaces between words on your settler as long as you are in screen-reading mode, so that option is rendered irrelevant.
+>undo
+
+>nos
+Spaces between letters in the settler reading are already off.
+>scan poster
+Your settler registers RRYRRY.
+
+>poss
+Switching on minimum/maximum available point notification in the status line.
+[NOTE: this is a quasi-spoiler of sorts, since watching the maximum possible score drop means your most recent move precluded getting an easter egg. Or watching the minimum score increase may mean you found one.]
+
+>score
+You hear a points postin' piston rev up. It quickly drifts into background noise, fortunately not followed by the sound of combusting Pintos.
+Ol' Stat Totals:
+Score in a scenario: 0 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
+Won now: Ordeal Reload (0/15).
+This would give you the rank of Riled Idler.
+!this is a quasi
+
+>undo
+>undo
+
+>score
+You hear a points postin' piston rev up. It quickly drifts into background noise, fortunately not followed by the sound of combusting Pintos.
+Ol' Stat Totals:
+Score in a scenario: 0 out of 11 total points in the current region, Stores.
+Won now: Ordeal Reload (0/15).
+This would give you the rank of Riled Idler.
+[NOTE: you can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.]
+
+>poss
+Switching on minimum/maximum available point notification in the status line.
+
+>score
+Ol' Stat Totals:
+Score in a scenario: 0 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
+Won now: Ordeal Reload (0/15).
+This would give you the rank of Riled Idler.
+!you can toggle
+
+>no hint
+Hints are now shut off for this session. If you save and restore, you will get hints again.
+
+>hint poster
+!word of warning before hinting objects.
+
+You temporarily turned hints off.
+
+>undo
+>undo
+
+>nothin
+Disabling hints for the entirety of play is a drastic step, so NO HINT may be better than the drastic NOTHING. Do you still wish to disable hints completely?
+> y
+Okay. Hints are now disabled even if you save and restore.
+>hint poster
+You turned hints off for the remainder of the game.
+>undo
+>undo
+
+>teach
+
+>parse
+Parsing letters settler output is now on, but it isn't very effective with cheat mode off.
+
+>cheat
+>parse
+Parsing letters settler output is already on.
+
+>no space
+>scan poster
+Your settler registers ??YRRY. You figure out what you can: xxExxO.
+
+>parse
+Parsing letters settler output is already on.
+>space on
+>scan poster
+Your settler registers ? ? Y R R Y. You figure out what you can: xxExxO.
+
+>spare
+Parsing letters settler output is now off.
+>scan poster
+Your settler registers ? ? Y R R Y.
+!You figure out what you can
+
+>spare
+Parsing letters settler output is already off.
+>scan poster
+!You figure out what you can
+
+>no tip
+You switch to NO TIP at a region's start. OPT IN will reverse this.
+
+>no tip
+You already have NO TIP at a region's start. OPT IN will reverse this.
+
+>opt in
+You switch to OPT IN at a region's start. NO TIP reverse this.
+
+>opt in
+You already have OPT IN at a region's start. NO TIP reverse this.
+
+>routes
 >in
->sitar
->d
-/^Largely All-Grey Gallery
 
->basement
-Well, if you want points for that, you'll need to go back to the study.
+>towards
+Well, that was different from the standard directions. But there can't be too many other ways to go.
+>undo
+>no tip
+>towards
+!Well, that was different
 
->satchel
->x settler
+>au 0
+>gonear sonancy canyons
+>between
+by one point
+>through
+by one point
 
->cheat on
-Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
->cheat off
-Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
->teach on
-Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
->teach off
-Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>averse
+The auto-saving flag is now set to AVERSE, or off.
+>averse
+The auto-saving flag is already set to AVERSE, or off.
 
+>beyond
+!<debug mode skips game-saving dialogue so test runs are continued>
+
+>undo
+
+>resave
+The auto-saving flag is now set to RESAVE, or on.
+>resave
+The auto-saving flag is already set to RESAVE, or on.
+
+>beyond
+<debug mode skips game-saving dialogue so test runs are continued>
