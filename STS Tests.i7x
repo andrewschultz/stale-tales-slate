@@ -6,172 +6,54 @@ Version 1/170918 of STS tests by Andrew Schultz begins here.
 
 include Full Monty Testing by Andrew Schultz.
 
-chapter jumpthrough stuff
+volume basic stubs
 
-a region has a table name called jumpthrough-table.
+[the below should be commented out now that Roiling is relatively stable]
 
-stop-jump-at-error is a truth state that varies.
+[when play begins:
+	process the modified run property checks rule;
+]
 
-llps-in-jump is a truth state that varies. llps-in-jump is true.
+chapter mooting
 
-chapter bcheing - not for release
+[ * MOOT moots any item. You could just ABSTRACT, but yay saving keystrokes. Note BANISH is in ]
 
-bcheing is an action out of world.
+booting is an action applying to one visible thing.
 
-understand the command "bche" as something new.
+understand the command "moot [any thing]" as something new.
+understand the command "boot [any thing]" as something new.
 
-understand "bche" as bcheing.
+understand "moot [any thing]" as booting.
+understand "boot [any thing]" as booting.
 
-carry out bcheing:
-	repeat with Q running through boring things:
-		if Q is scenery, say "(scenery) ";
-		say "[Q] ~ [bore-check of q] ~ [bore-text of Q][line break]";
-	the rule succeeds.
-
-chapter etuing - not for release
-
-cmdtype is a number that varies.
-
-etuing is an action applying to one number.
-
-understand the command "etu" as something new.
-
-understand "etu [number]" as etuing.
-
-understand "etu" as etu0ing.
-
-etu0ing is an action out of world.
-
-carry out etu0ing:
-	try etuing 0 instead;
-
-maxtestnum is a number that varies.
-
-hint-divide is a number that varies.
-
-when play begins (this is the calculate maxtestnum and hintnum rule):
-	say "Calculating the max test number.";
-	now maxtestnum is 1;
-	let power be 1;
-	while power <= number of rows in table of cmds:
-		choose row power in table of cmds;
-		if testact entry is hinting, now hint-divide is maxtestnum;
-		now maxtestnum is maxtestnum * 2;
-		increment power;
-	decrement maxtestnum;
-
-carry out etuing:
-	let nu be number understood;
-	if nu is -1:
-		let power be 1;
-		repeat through table of cmds:
-			say "[power]: [testact entry].";
-			now power is power * 2;
-		the rule succeeds;
-	if nu < 0 or nu > maxtestnum, say "Need 1-[maxtestnum]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
-	let oldcmd be cmdtype;
-	now cmdtype is number understood;
-	if nu is 0:
-		say "[if oldcmd is 0]Already testing nothing[else]Resetting[end if]." instead;
+carry out booting:
+	say "[noun] moved to solved room.";
+	if noun is a backdrop:
+		remove noun from play;
 	else:
-		if hint-divide > 0 and remainder after dividing number understood by (hint-divide * 2) >= hint-divide, now first-hint-check is true;
-		say "Now [cur-act] every turn.";
+		moot noun;
 	the rule succeeds;
 
-to say cur-act:
-	if cmdtype is 0:
-		say "nothing";
-		continue the action;
-	let power be 1;
-	let gotyet be false;
-	let cmdtemp be cmdtype;
-	repeat through table of cmds:
-		if the remainder after dividing cmdtemp by (power * 2) is power:
-			now cmdtemp is cmdtemp - power;
-			if gotyet is true, say ", ";
-			now gotyet is true;
-			say "[testact entry]";
-			if cmdtemp is 0, continue the action;
-		now power is power * 2;
+chapter showtabing
 
-table of cmds
-testact
-smelling
-listening
-hinting
-tkalling
-taking inventory
-requesting the pronoun meanings
-thinking
+[ * showtab shows the random tables we are choosing along with the random text, to make sure they're being accessed ]
 
-every turn when cmdtype > 0 (this is the testrun rule):
-	let cmdtemp be cmdtype;
-	let power be 1;
-	repeat through table of cmds:
-		if the remainder after dividing cmdtemp by (power * 2) is power:
-			say "[bold type]======Carrying out [testact entry]======[roman type]";
-			try the testact entry;
-			now cmdtemp is cmdtemp - power;
-		now power is power * 2;
-		if cmdtemp is 0, continue the action;
-	continue the action;
+showtabing is an action out of world.
 
-after fliptoing (this is the redo cmd on debug rule):
-	if cmdtype > 0:
-		consider the testrun rule;
-	continue the action;
+understand the command "showtab" as something new.
 
-tkalling is an action applying to nothing.
+understand "showtab" as showtabing.
+understand "showtaby" as showtabing when showtabname is false.
+understand "showtabn" as showtabing when showtabname is true.
 
-carry out tkalling:
-	if location of player is not visited:
-		repeat with Q running through all visible things not held by player:
-			say "[Q]";
-			try taking Q;
-
-chapter nuling - not for release
-
-nuling is an action out of world.
-
-understand the command "nul" as something new.
-
-understand "nul" as nuling.
-
-carry out nuling:
-	ply-table regnud of mrlp;
+carry out showtabing:
+	now showtabname is whether or not showtabname is false;
+	say "Showing table names in random text is now [on-off of showtabname].";
 	the rule succeeds;
-
-chapter gnling - not for release
-
-gnling is an action out of world.
-
-understand the command "gnl" as something new.
-
-understand "gnl" as gnling.
-
-carry out gnling:
-	ply-table table of general nudges;
-	ply-table regnud of mrlp;
-	ply-table roomnud of location of player;
-	the rule succeeds;
-
-to ply-table (tn - a table name):
-	say "Here are nudges from [tn]:[paragraph break]";
-	let in-room be false;
-	repeat through tn:
-		if there is a this-item entry:
-			say "(item [this-item entry]) [this-cmd entry] [hashval entry] is [unless this-item entry is fungible]NOT [end if]a valid hash try.";
-			next;
-		if there is a this-rule entry:
-			process the this-rule entry;
-			say "(rule [this-rule entry]) [this-cmd entry] [hashval entry] is [unless the rule succeeded]NOT [end if]a valid hash try.";
-			next;
-		say "[this-cmd entry] [hashval entry] is universally valid.";
-	say "."
 
 chapter redefining Emily Short's property checking
 
-When play begins (this is the modified run property checks at the start of play rule):
+this is the modified run property checks rule:
 	if the description of the player is "As good-looking as ever.":
 		say "The player has the default description.";
 		increment undescribed-people;
@@ -215,7 +97,7 @@ A property-check rule for a room (called the target) (this is the modified rooms
 			increment undescribed-rooms;
 			say "[b]ROOM[r] [undescribed-rooms] [target] has no description.";
 
-volume verbs for testing
+volume verbs for focusing testing
 
 chapter cap
 
@@ -234,6 +116,24 @@ carry out caping:
 		if curidx entry > number understood, now curidx entry is number understood;
 	say "Capped all random table entries at [number understood].";
 	the rule succeeds;
+
+chapter pluraling
+
+[ * test for plurals ]
+
+pluraling is an action applying to nothing.
+
+understand the command "plural" as something new.
+
+understand "plural" as pluraling.
+
+carry out pluraling:
+	repeat with Q running through things:
+		if q is abstract, next;
+		say "[Q] = [if Q is plural-named]plural[else]singular[end if] and [if Q is fixed in place]fixed[else]takeable[end if].";
+	the rule succeeds;
+
+volume diagnostics
 
 chapter hintalling
 
@@ -332,60 +232,21 @@ Glimmr C&C is abstract.
 
 graphics-window is abstract.
 
-chapter hintvising
+chapter bcheing - not for release
 
-[* this hints everything visible. It is trumped by hintall but may be useful to the beta tester. ]
+[ * bche checks all boring items ]
 
-hintvising is an action out of world.
+bcheing is an action out of world.
 
-understand the command "hintvis" as something new.
+understand the command "bche" as something new.
 
-understand "hintvis" as hintvising.
+understand "bche" as bcheing.
 
-carry out hintvising:
-	repeat with vth running through all visible things:
-		if vth is vishintable:
-			say "Hinting [vth]: ";
-			try objhinting vth;
-	the rule succeeds;
-
-definition: a thing (called VT) is vishintable:
-	if VT is publically-named, decide yes;
-	if VT is unscannable, decide no;
-	decide yes;
-
-chapter pluraling
-
-[ * test for plurals ]
-
-pluraling is an action applying to nothing.
-
-understand the command "plural" as something new.
-
-understand "plural" as pluraling.
-
-carry out pluraling:
-	repeat with Q running through things:
-		if q is abstract, next;
-		say "[Q] = [if Q is plural-named]plural[else]singular[end if] and [if Q is fixed in place]fixed[else]takeable[end if].";
-	the rule succeeds;
-
-chapter showtabing
-
-[ * showtab shows the random tables we are choosing ]
-
-showtabing is an action out of world.
-
-understand the command "showtab" as something new.
-
-understand "showtab" as showtabing.
-understand "showtaby" as showtabing when showtabname is false.
-understand "showtabn" as showtabing when showtabname is true.
-
-carry out showtabing:
-	now showtabname is whether or not showtabname is false;
-	say "Showing table names in random text is now [on-off of showtabname].";
-	the rule succeeds;
+carry out bcheing:
+	repeat with Q running through boring things:
+		if Q is scenery, say "(scenery) ";
+		say "[Q] ~ [bore-check of q] ~ [bore-text of Q][line break]";
+	the rule succeeds.
 
 chapter missesing
 
@@ -400,32 +261,6 @@ understand "misses" as missesing.
 carry out missesing:
 	say "[miss-types].";
 	show-miss mrlp and false;
-	the rule succeeds;
-
-chapter specsing
-
-[ * SPECS tests the spec-help of all items in table of anagrams]
-
-specsing is an action out of world.
-
-understand the command "specs" as something new.
-
-understand "specs" as specsing.
-
-carry out specsing:
-	let qq be 0;
-	let reg be orig-region;
-	repeat with Q running through regions:
-		if Q is frivolous, next;
-		repeat through regana of Q:
-			unless the-from entry is spayshul:
-				increment qq;
-				if the-from entry is not a backdrop:
-					if the-from entry is not off-stage and the-from entry is not moot:
-						now reg is map region of location of the-from entry;
-				say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
-	if qq is 0:
-		say "Yay! All things are clued.";
 	the rule succeeds;
 
 chapter bouing
@@ -452,7 +287,9 @@ carry out bouing:
 	say "No bounding: [list of noboundy rooms].";
 	the rule succeeds.
 
-section check off nudge tables - not for release
+chapter check off nudge tables
+
+[ * this gives a bit more overhead to any testing so I don't want to run it at startup ]
 
 this is the check nudge tables rule:
 	repeat with X running through rooms:
@@ -486,7 +323,9 @@ carry out haling:
 		try objhinting myobj;
 	the rule succeeds.
 
-section monty stuff
+volume general monty testing
+
+[ * objhinting action applies to both Shuffling and Roiling ]
 
 table of monties (continued)
 montopic (topic)	on-off	test-title (text)	test-action	topic-as-text (text)
@@ -504,77 +343,19 @@ check montying:
 	if the topic understood matches "hint" or the topic understood matches "hints":
 		now first-hint-check is true;
 
-chapter hreging (hint through a region)
-
-to hintthru (th - a thing):
-	try objhinting th;
-	let count be 1;
-	if plus-after is false, continue the action;
-	while plus-after is true and count < 12:
-		try objhinting th;
-		increment count;
-	if count is 12:
-		say "WARNING: we have a nonterminating sequence of clues for [the th].";
-	if minus-after is false:
-		say "WARNNG: we never got to a minus in the hints for [the th].";
-
-hreging is an action out of world.
-
-understand the command "hreg" as something new.
-
-understand "hreg" as hreging.
-
-to brute-force-hints (tn - a table name):
-	say "We are brute-forcing our way through the hints for [tn].";
-	repeat through tn:
-		say "Hinting [hint-entry entry].";
-		hintthru hint-entry entry;
-
-carry out hreging:
-	now in-hint-testing is true;
-	brute-force-hints hintobjstable of mrlp;
-	if mrlp is hub-region, brute-force-hints table of general hintobjs; [ not orig-region as the TS command gives us some goodies worth hinting ]
-	now in-hint-testing is false;
-	the rule succeeds;
-
-volume tabpunc = table punctuation
-
-chapter tabpuncing
-
-current-chatter-index is a number that varies.
-
-tabpuncing is an action applying to one number.
-
-understand the command "tp" as something new.
-
-understand "tp [number]" as tabpuncing.
-
-carry out tabpuncing:
-	if number understood < 1 or number understood > number of rows in table of megachatter, say "You need 1-[number of rows in table of megachatter]." instead;
-	spill-row number understood;
-
-to spill-row (num - a number):
-	choose row num in table of megachatter;
-	let need-period be endpunc entry;
-	let tab-to-spill be mytab entry;
-	repeat through mytab entry:
-		say "[blurb entry][if need-period is true].[else][line break][end if]";
-	say "Finished dumping [tab-to-spill].";
-	say "That's row [num], if you're counting at home. Or if you lost count.";
-	the rule succeeds;
-
-tabnexting is an action out of world.
-
-understand "tp" as tabnexting.
-
-carry out tabnexting:
-	increment current-chatter-index;
-	if current-chatter-index > number of rows in table of megachatter, now current-chatter-index is 1;
-	spill-row current-chatter-index;
-
 volume jumpthroughing
 
 [ possible improvement: describe what each row does with an additional column ]
+
+chapter jumpthrough variables
+
+a region has a table name called jumpthrough-table.
+
+stop-jump-at-error is a truth state that varies.
+
+llps-in-jump is a truth state that varies. llps-in-jump is true.
+
+chapter the main command
 
 jumpthroughing is an action applying to one number.
 jumpthroughalling is an action out of world.
