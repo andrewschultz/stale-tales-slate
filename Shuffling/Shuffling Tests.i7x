@@ -4,6 +4,8 @@ Version 1/190606 of Shuffling Tests by Andrew Schultz begins here.
 
 volume testing commands - not for release
 
+[monty stuff: read prep paper? (already in a zarfscript)
+
 section start-of-play stuff
 
 when play begins (this is the debug version info that should not be in the release rule):
@@ -12,6 +14,13 @@ when play begins (this is the debug version info that should not be in the relea
 	now debug-print is true;
 
 [be sure to do stuff when you're not in the right room. This is CRITICAL to testing.]
+
+chapter defined in core, needs to be redefined with dummy variables to compile
+
+definition: a thing (called th) is reflexed: no;
+
+definition: a thing (called th) is flip-irrelevant:
+	no;
 
 part monty commands
 
@@ -231,7 +240,7 @@ test resortmin with "ts/tsf/opt in/poss/resort/enter resort/e/slope/toeholds/e/t
 
 test resortmax with "ts/tsf/opt in/poss/resort/enter resort/islet/lies/cork/wings/e/slope/toeholds/ropes/grips/e/trio/potters/china/china/kilns/get out/tug toe/e/exist/missed/alts/amens/alt/names/alts/alt".
 
-volume programmer testing commands - not for release
+volume programmer testing commands
 
 when play begins (this is the check objects and rooms rule):
 	if undescribed-objects is 0:
@@ -550,6 +559,8 @@ carry out booting:
 	moot noun;
 	the rule succeeds;
 
+volume metros specific testing
+
 chapter met
 
 [* MET gets you near the end of Metros for the final fight. There are test commands to plow through, but this is a jump.]
@@ -576,114 +587,6 @@ carry out meting:
 	try going east;
 	the rule succeeds;
 
-chapter scanalling
-
-[* this tries to scan all not inflexible things ]
-
-scanalling is an action applying to nothing.
-
-understand the command "scanall" as something new.
-
-understand "scanall" as scanalling.
-
-carry out scanalling:
-	let yay be 0;
-	let boo be 0;
-	let Z be indexed text;
-	now player has tagged gadget;
-	repeat with Q running through not inflexible things:
-		if Q is not off-stage and Q is not moot and Q is not a backdrop:
-			let Y be the map region of the location of Q;
-			if Y is sortie or Y is forest or Y is resort or Y is ordeal loader or Y is stores or Y is metros:
-				say "[Q]: [rgtext of Q].";
-				now Z is "[rgtext of Q]";
-				if Z matches the text "R":
-					increment yay;
-				else:
-					increment boo;
-					say "Boo, [Q].";
-	say "[yay] yay, [boo] boo.";
-	the rule succeeds;
-
-chapter scanvising
-
-[* this scans all visible things]
-
-scanvising is an action applying to nothing.
-
-understand the command "scanvis" as something new.
-
-understand "scanvis" as scanvising.
-
-carry out scanvising:
-	let yay be 0;
-	let boo be 0;
-	let Z be indexed text;
-	if player does not have gadget, say "Get the gadget first." instead;
-	repeat with Q running through visible things:
-		say "[Q]: ";
-		try scaning Q;
-	the rule succeeds;
-
-chapter debug printing
-
-[* toggles if I print debug stuff to file]
-
-dbprinting is an action out of world.
-
-understand the command "dp" as something new.
-
-understand "debug" and "dp" as dbprinting.
-
-carry out dbprinting:
-	now debug-print is whether or not debug-print is false;
-	say "Debug info printing [if debug-print is true]on[else]off[end if].";
-	the rule succeeds;
-
-chapter privsing
-
-[ * this is a script to find privately named stuff that you may feel a pulse from]
-
-privsing is an action out of world.
-
-understand the command "privs" as something new.
-
-understand "privs" as privsing.
-
-carry out privsing:
-	let privent be 0;
-	repeat through regana of mrlp:
-		if the-from entry is privately-named:
-			say "Checking [the-from entry] -> [the-to entry].";
-			if the-from entry is spayshul:
-				do nothing;
-			else:
-				say "[the-from entry] should have an entry in [spechelp of mrlp] for changing to [the-to entry].";
-				increment privent;
-	say "[privent] new entries needed.";
-	the rule succeeds;
-
-chapter evting
-
-[* this specifies what to do every turn ]
-
-ettest is a truth state that varies.
-
-evting is an action out of world.
-
-understand the command "evt" as something new.
-
-understand "evt" as evting.
-
-carry out evting:
-	now ettest is whether or not ettest is false;
-	say "Every-turn-test is now [if ettest is true]on[else]off[end if].";
-	the rule succeeds;
-
-every turn when ettest is true: [this can be varied based on the test we wish to run]
-	if missile is visible:
-		try shooting the missile;
-
 chapter bcoing
 
 [ lets the player put the barcode on the keycard ]
@@ -699,6 +602,8 @@ carry out bcoing:
 	now player has keycard;
 	try putting barcode on keycard;
 	the rule succeeds;
+
+volume forest specific testing
 
 chapter foing
 
@@ -722,36 +627,7 @@ carry out foing:
 	process the notify score changes rule;
 	the rule succeeds;
 
-chapter dscing
-
-[* DEBUG SCAN scans something before flipping it]
-
-dscing is an action out of world.
-
-understand the command "dsc" as something new.
-
-understand "dsc" as dscing.
-
-carry out dscing:
-	now debug-scan is whether or not debug-scan is false;
-	say "Debug-scanning is now [on-off of debug-scan].";
-	the rule succeeds;
-
-chapter dpaing
-
-[* DEBUG PARSE toggles whether we parse when we debug-scan]
-
-dpaing is an action out of world.
-
-understand the command "dpa" as something new.
-
-understand "dpa" as dpaing.
-
-carry out dpaing:
-	now debug-parse is whether or not debug-parse is false;
-	say "Debug-parsing is now [on-off of debug-parse].";
-	the rule succeeds;
-
+volume useful for testing if we made it somewhere
 chapter verif
 
 [* for use with rules verification extension: TEST X ]
@@ -783,81 +659,6 @@ this is the trips-strip rule:
 this is the in-means-manse rule:
 	if player is in Means Manse, the rule succeeds;
 	the rule fails;
-
-chapter shomising
-
-[ * shomis lets you see what the player missed after solving a region. It's obviously imperfect but it's useful for testing when I don't want to jump to the very end. ]
-
-shomising is an action applying to nothing.
-
-understand the command "shomis" as something new.
-
-understand "shomis" as shomising.
-
-carry out shomising:
-	process the show what the player missed rule;
-	say "[line break]ALTERNATE PATHS:[paragraph break]";
-	process the show alternate paths rule;
-	the rule succeeds;
-
-chapter tnting
-
-[ * tnt toggles if both hints are shown on something good. ]
-
-tnting is an action out of world.
-
-understand the command "tnt" as something new.
-
-understand "tnt" as tnting.
-
-carry out tnting:
-	now tnt is whether or not tnt is false;
-	say "Tip-no-tip is now [on-off of tnt].";
-	the rule succeeds;
-
-chapter apping
-
-[ * APP tests what is on the prep paper every move]
-
-apping is an action applying to nothing.
-
-understand the command "app" as something new.
-
-understand "app" as apping.
-
-show-prep is a truth state that varies.
-
-carry out apping:
-	if show-prep is false:
-		now show-prep is true;
-	else:
-		now show-prep is false;
-	say "We now [if show-prep is false]don't [end if]show the prep paper's contents every move.";
-	the rule succeeds;
-
-after fliptoing when show-prep is true: [general rule]
-	process the prep-rehash rule;
-	continue the action;
-
-every turn when player has prep paper and show-prep is true (this is the prep-rehash rule):
-	say "====PREP PAPER SAYS[line break]";
-	try examining prep paper;
-	say "====END PREP PAPER[line break]";
-
-chapter check HALing
-
-definition: a thing (called th) is mass-hint-appropriate:
-	unless th is fungible, no;
-	if th is the player or th is pockets or th is dope tan notepad or th is toad pen or th is magenta nametag, no;
-	if th is part of the tagged gadget, no;
-	yes;
-
-chapter defined in core
-
-definition: a thing (called th) is reflexed: no;
-
-definition: a thing (called th) is flip-irrelevant:
-	no;
 
 volume jumpthrough information
 

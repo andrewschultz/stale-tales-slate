@@ -4,6 +4,8 @@ Version 1/190606 of Roiling Tests by Andrew Schultz begins here.
 
 volume testing - not for release
 
+[ monty ideas: scan location every turn ]
+
 section debug flags at game start
 
 [needs to be near the top--well, could place it before all other when play begins rules]
@@ -232,6 +234,23 @@ carry out spamobjing:
 
 volume verbs
 
+chapter xtuing
+
+[this resets the xtra trax warning variable, for testing]
+
+xtuing is an action out of world.
+
+understand the command "xtu" as something new.
+
+understand "xtu" as xtuing.
+
+carry out xtuing:
+	say "The xtra-trax-warn variable is [if xtra-trax-warn is false]already[else]now[end if] false.";
+	say "The xtra-trax variable is [if xtra-trax is false]already[else]now[end if] false.";
+	now xtra-trax is false;
+	now xtra-trax-warn is false;
+	the rule succeeds;
+
 chapter booting - not for release
 
 [ * boot can tell the game to help Gretta ]
@@ -406,36 +425,6 @@ every turn when cuss-every-turn is true and mrlp is presto (this is the cheat an
 		now player has curst crust;
 	try eating curst crust;
 
-section scafing - not for release
-
-[ score after forcing/toggling ]
-
-scafing is an action out of world.
-
-understand the command "scaf" as something new.
-
-understand "scaf" as scafing.
-
-carry out scafing:
-	now score-after is whether or not score-after is false;
-	say "Printing score after gaining a point is now [on-off of score-after].";
-	the rule succeeds;
-
-scaying is an action out of world.
-
-understand the command "scay" as something new.
-
-understand "scay" as scaying.
-
-carry out scaying:
-	say "Printing score after gaining a point [if score-after is true]was already[else]is now[end if] on.";
-	now score-after is true;
-	the rule succeeds;
-
-report possing:
-	pad-rec-q "poss";
-	continue the action;
-
 section posfing - not for release
 
 [force possible point notification on]
@@ -452,113 +441,6 @@ carry out posfing:
 	pad-rec-q "poss";
 	the rule succeeds;
 
-chapter whiing
-
-[* WHI tracks hinting stuff in one region. It seems obsolete.]
-
-whiing is an action out of world.
-
-understand the command "whi" as something new.
-
-understand "whi" as whiing.
-
-carry out whiing:
-	repeat with ZQ running through things:
-		if map region of location of ZQ is mrlp:
-			if ZQ is not useless:
-				unless there is a hint-entry of ZQ in hintobjstable of mrlp:
-					d "You need to look at [ZQ].[line break]";
-	the rule succeeds;
-
-chapter fixtowing
-
-[* FIXTOW fixes certain picaros in Loftier Trefoil. The easiest ones. geno daryl blake eldon wade goldy]
-
-fixtowing is an action out of world.
-
-understand the command "fixtow" as something new.
-
-understand "fixtow" as fixtowing.
-
-carry out fixtowing:
-	if Loftier Trefoil is visited:
-		say "Note: you've visited the Trefoil, so anything goofy that happens is not really fixable. It's best to use this before doing so, so you can access trickier parts of Towers.";
-	repeat with WA running through picaros:
-		if WA is not rodney:
-			moot WA;
-	now geno is in Loftier Trefoil;
-	now wade is in Loftier Trefoil;
-	now goldy is in Loftier Trefoil;
-	now daryl is in Loftier Trefoil;
-	now blake is in Loftier Trefoil;
-	now eldon is in Loftier Trefoil;
-	the rule succeeds;
-
-chapter lsing
-
-[* LS toggles listen and smell every turn]
-
-lsing is an action out of world.
-
-understand the command "ls" as something new.
-
-understand "ls" as lsing.
-
-ls is a truth state that varies.
-
-carry out lsing:
-	if ls is false:
-		now ls is true;
-		say "Listen/smell is now on.";
-	else:
-		now ls is false;
-		say "Listen/smell is now off.";
-
-every turn (this is the stop and hear the roses rule):
-	if ls is true:
-		say "[b]LISTEN:[r]";
-		try listening;
-		say "[b]SMELL:[r]";
-		try smelling;
-
-chapter mising
-
-[* MIS shows what the player missed after visiting an area]
-
-mising is an action out of world.
-
-understand the command "mis" as something new.
-
-understand "mis" as mising.
-
-carry out mising:
-	process the show what the player missed rule;
-	the rule succeeds;
-
-chapter ieming
-
-ieming is an action out of world.
-
-[* IEM toggles inventory tracking every move, which creates a lot of debug garbage]
-
-understand the command "iem" as something new.
-
-understand "iem" as ieming.
-
-inv-every-move is a truth state that varies.
-
-every turn when inv-every-move is true:
-	try taking inventory;
-
-carry out ieming:
-	if inv-every-move is false:
-		say "Tracking inventory.";
-		now inv-every-move is true;
-	else:
-		say "No longer tracking inventory.";
-		now inv-every-move is false;
-	the rule succeeds;
-
 chapter liliing
 
 [* LILI lets you show a list by number in-game. LILI0 lets you see the list of activities. ]
@@ -568,48 +450,6 @@ understand the command "lili" as something new.
 understand "lili" as lili0ing.
 
 understand "lili [number]" as liliing.
-
-section extra diagnostic
-
-[* extra diagnostic: this adds a line to track lists the player does not need to see ]
-
-section crusting
-
-[* CRU tracks what happens if you eat the crust every move, useful in PRESTO ]
-
-cruing is an action out of world.
-
-understand the command "cru" as something new.
-
-understand "cru" as cruing.
-
-carry out cruing:
-	now track-crust is whether or not track-crust is true;
-	say "Now tracking crust is [on-off of track-crust].";
-	the rule succeeds;
-
-section saeing
-
-[* SAE toggles scanning the location every turn]
-
-saeing is an action out of world.
-
-sae is a truth state that varies.
-
-understand the command "sae" as something new.
-
-understand "sae" as saeing.
-
-carry out saeing:
-	now sae is whether or not sae is true;
-	say "Scanning location every turn is now [on-off of sae].";
-	the rule succeeds;
-
-every turn when sae is true and player has settler:
-	say "[b]AIR SCAN[r]: [no line break]";
-	try scaning the location;
-
-chapter tuting
 
 [* TUT allows you to see Elmo and alter the scannedness of everything. 1 = no more scans and 2 = all scans. Should change to 0 for no scans, 1=ncscan, 2=cscan, 3=allscan]
 
@@ -640,23 +480,71 @@ carry out tuting:
 	try fliptoing rifle;
 	the rule succeeds;
 
-chapter sssing
+volume troves specific hinting
 
-[* this tests settler tracking every move]
+chapter mbbing
 
-sssing is an action applying to nothing.
+[ * this changes who the Marble Blamer is ]
 
-understand the command "sss" as something new.
+mbbing is an action applying to nothing.
+mbbnuming is an action applying to one number.
 
-understand "sss" as sssing.
+understand the command "mbb" as something new.
 
-carry out sssing:
-	if sss is false:
-		now sss is true;
+understand "mbb" as mbbing.
+understand "mbb [number]" as mbbnuming.
+
+this is the blamer-moot rule:
+	if mbb is moot, say "Already mooted [mbb]." instead;
+
+carry out mbbing:
+	abide by the blamer-moot rule;
+	now mbb is off-stage;
+	say "[mbb] moved off-stage, and ";
+	if mbb is Marble Blamer Mr Beal:
+		now mbb is Marble Blamer Balmer;
 	else:
-		now sss is false;
-	say "Every-turn settler tracking is [on-off of sss].";
+		now mbb is Marble Blamer Mr Beal;
+	move mbb to upscale capsule;
+	now not-mbb is off-stage;
+	say "[mbb] moved to [location of mbb].";
+	the rule succeeds.
+
+carry out mbbnuming:
+	abide by the blamer-moot rule;
+	if number understood is 1:
+		now mbb is Marble Blamer Balmer;
+	else if number understood is 2:
+		now mbb is Marble Blamer Mr Beal;
+	else:
+		say "1 = Balmer, 2 = Mr Beal." instead;
+	move mbb to Upscale Capsule;
+	now not-mbb is off-stage;
+	say "Moved [mbb] to Upscale Capsule, [not-mbb] off-stage." instead;
 	the rule succeeds;
+
+volume otters specific hinting
+
+chapter powing
+
+powing is an action applying to one number.
+
+understand the command "pow" as something new.
+
+understand "pow [number]" as powing.
+
+carry out powing:
+	let pbprev be power-back;
+	if the number understood is 1:
+		now power-back is whether or not power-back is false;
+	else if the number understood is 0:
+		now power-back is false;
+	else if the number understood is 2:
+		now power-back is true;
+	say "You [if pbprev is power-back]already[else]now[end if] [if power-back is false]don't [end if]have your magic powers for Otters.";
+	the rule succeeds
+
+volume others specific testing
 
 chapter fruiing
 
@@ -721,67 +609,6 @@ to decide which thing is rev-item of (f - a fruit):
 		if the-to entry is f, decide on the-from entry;
 	decide on nothing;
 
-chapter xring
-
-understand the command "xr" as something new.
-
-understand "xr" as xring.
-understand "xr [something]" as xring.
-
-carry out xring:
-	now xraytrump is true;
-	try xraying the noun;
-	the rule succeeds;
-
-chapter xaing
-
-xaing is an action out of world.
-
-understand the command "xa" as something new.
-
-understand "xa" as xaing.
-
-carry out xaing:
-	now xraytrump is true;
-	repeat with xc running through all fungible things:
-		if xc is not curst palace and xc is not the player:
-			say "[xc]:[line break]";
-			try xraying xc;
-	now xraytrump is false;
-	the rule succeeds.
-
-chapter scaming
-
-[* SCAM enables scams for areas with hints that should only work once. Spoon Crust Pills Cinders (?) Xray (?) ]
-
-scaming is an action applying to one number.
-
-understand the command "scam" as something new.
-understand the command "scams" as something new.
-
-understand "scam [number]" as scaming.
-understand "scams [number]" as scaming.
-
-carry out scaming:
-	if number understood < 0 or number understood > 2, say "Scam toggling should be 0 (off), 1 (toggle) or 2 (on)." instead;
-	let prev-scam be scams;
-	if number understood is 1:
-		now scams is whether or not scams is false;
-	else if number understood is 2:
-		now scams is true;
-	else if number understood is 0:
-		now scams is false;
-	say "Scams is [if scams is prev-scam]already[else]now[end if] [on-off of scams].";
-	the rule succeeds;
-
-scambasing is an action out of world.
-
-carry out scambasing:
-	try scaming 1;
-
-understand "scam" as scambasing.
-understand "scams" as scambasing.
-
 chapter soning
 
 soning is an action applying to one number.
@@ -808,110 +635,79 @@ carry out soning:
 			now player has concisions;
 	the rule succeeds;
 
-chapter posting
+volume towers specific testing
 
-posting is an action out of world.
+chapter palcluing
 
-understand the command "post" as something new.
+palcluing is an action applying to nothing.
 
-understand "post" as posting.
+understand the command "palclu" as something new.
 
-carry out posting:
-	if location of player is Bustle Sublet, say "(Note--actual response for [b]POST[r] is subverted by a testing command. Try [b]OPST[r] if you want to test the nudge.)";
-	if location of player is not dusty study, say "Going to the post-script Others area is not available post-Dusty Study." instead;
-	try roveovering;
-	try fliptoing hoster;
-	try entering hoster;
-	say "[i][bracket]NOTE: [b]TESTING NOTE[i]: [b]SON[i] gives various stages of the coins. 1=coin 2=icon 3=coins 4=icons 5=sonic coins 6=sonic icons.[close bracket][r][line break]";
+understand "palclu" as palcluing.
+
+carry out palcluing:
+	say "Moving all palace clue items to Mislit Limits: [nextclue].";
+	repeat with NC running through nextclue:
+		now NC is in Mislit Limits;
+	the rule succeeds.
+
+chapter repling
+
+[* replaces guardians in TOWERS, otherwise, reject]
+
+repling is an action out of world.
+
+understand the command "repl" as something new.
+
+understand "repl" as repling.
+
+carry out repling:
+	if mrlp is towers:
+		now all red guardians are off-stage;
+		now all blue guardians are off-stage;
+		now atheists are off-stage;
+		now the-hostile is off-stage;
+		say "All red and blue guardians reinitialized. Side guardians (necessary or not) are still there.";
+		reposition-guardians;
+		the rule succeeds;
+	say "Doesn't apply here.";
+
+chapter coping
+
+[* repositions guardians, sends you to Scope Copse]
+
+coping is an action out of world.
+
+understand the command "cop" as something new.
+
+understand "cop" as coping.
+
+carry out coping:
+	move player to Scope Copse;
+	reposition-guardians;
 	the rule succeeds;
 
-chapter mowing
+chapter gzing
 
-[* MOW allows you to mow through all the options you haven't used yet in a dialogue]
+[* GZ zaps all the guardians.]
 
-mowing is an action out of world.
+gzing is an action out of world.
 
-understand the command "mow" as something new.
+understand the command "gz" as something new.
 
-understand "mow" as mowing.
+understand "gz" as gsing.
 
-carry out mowing:
-	let count be 0;
-	repeat through qbc_litany:
-		if response entry is not mowered and enabled entry is 0:
-			increment count;
-			if count is 6:
-				say "More than 5 choices still left. You may need to rerun.";
-				the rule succeeds;
-			now enabled entry is 1;
-	say "Enabled [count] new choice[if count is not 1]s[end if].";
-	the rule succeeds;
-
-chapter halling
-
-[* this hints everything that is still useful and not realized]
-
-halling is an action out of world.
-
-understand the command "hall" as something new.
-
-understand "hall" as halling.
-
-carry out halling:
-	repeat with thisthing running through visible not realized things:
-		say "[thisthing]: [run paragraph on]";
-		try objhinting thisthing;
-	the rule succeeds;
-
-chapter orfing
-
-[* ORF detects conversational orphans]
-
-orfing is an action out of world.
-
-understand the command "orf" as something new.
-
-understand "orf" as orfing.
-
-carry out orfing:
-	let this-found be false;
-	repeat with qi running through quips:
-		now this-found is false;
-		let qa be qi;
-		repeat through table of Elmo comments:
-			if response entry is qa:
-				now this-found is true;
-		repeat through table of Elvira comments:
-			if response entry is qa:
-				now this-found is true;
-		repeat through table of Perrot comments:
-			if response entry is qa:
-				now this-found is true;
-		if this-found is false:
-			say "[qa] is orphaned.";
-
-chapter romscan
-
-[* ROM scans everything you can scan in the manse. It doesn't, however, flip them. ]
-
-roming is an action out of world.
-
-understand the command "rom" as something new.
-
-understand "rom" as roming when mrlp is Ordeal Reload.
-
-carry out roming:
-	oscan niche;
-	oscan meet bans;
-	oscan beams;
-	oscan pram;
-	oscan giant pin;
-	oscan sitar;
-	oscan stria;
-	oscan tables;
-	repeat with rb running through ramabits:
-		oscan rb;
-	say "All things in Ordeal Reload are now scanned both ways.";
+carry out gzing:
+	repeat with myg running through guardians:
+		moot myg;
+		increment cur-score of towers;
+	now min-score of towers is 31;
+	if strudel is reflexed:
+		increment min-score of towers;
+	if old ice is reflexed:
+		increment min-score of towers;
+	if sporties ripostes are reflexed:
+		increment min-score of towers;
 
 chapter picpicing
 
@@ -961,18 +757,216 @@ carry out gforceing:
 	choose-new-hint-guardian;
 	say "(You may wish to [b]UNDO[r] once you see the debug text.)";
 
-chapter spbing
+chapter xring
 
-spbing is an action out of world.
+understand the command "xr" as something new.
 
-understand the command "spb" as something new.
+understand "xr" as xring.
+understand "xr [something]" as xring.
 
-understand "spb" as spbing.
+carry out xring:
+	now xraytrump is true;
+	try xraying the noun;
+	the rule succeeds;
 
-carry out spbing:
-	now spill-block is whether or not spill-block is false;
-	say "Blocking the consequences of [b]SPILL[r] is now [on-off of spill-block].";
+chapter xaing
+
+xaing is an action out of world.
+
+understand the command "xa" as something new.
+
+understand "xa" as xaing.
+
+carry out xaing:
+	now xraytrump is true;
+	repeat with xc running through all fungible things:
+		if xc is not curst palace and xc is not the player:
+			say "[xc]:[line break]";
+			try xraying xc;
+	now xraytrump is false;
 	the rule succeeds.
+
+volume superpower hinting
+
+chapter tkturbo
+
+[* TAKE ALL is allowed & applies to scenery as well]
+
+talling is an action out of world.
+
+understand the command "tall" as something new.
+
+understand "tall" as talling.
+
+carry out talling:
+	say "Now you can[if take-test is true]'t[end if] take all the things.";
+	now take-test is whether or not take-test is false;
+	the rule succeeds;
+
+take-test is a truth state that varies.
+
+check taking:
+	if take-test is true:
+		if noun is scenery, say "DEBUG: [noun]: Can't take scenery.";
+		if noun is fixed in place, say "DEBUG: [noun]: Fixed in place.";
+		if noun is a person, say "DEBUG: [noun]: Person.";
+
+The can't take what's fixed in place rule is not listed in the check taking rulebook.
+The can't take scenery rule is not listed in the check taking rulebook.
+
+[The exclude scenery from take all rule is not listed in the for deciding whether all includes rulebook.
+The exclude fixed in place things from take all rule is not listed in the for deciding whether all includes rulebook.
+The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
+
+Rule for deciding whether all includes scenery:
+	if take-test is true, it does;
+	it does not;
+
+Rule for deciding whether all includes people while taking:
+	if take-test is true, it does;
+	it does not;
+
+Rule for deciding whether all includes fixed in place things while taking:
+	if take-test is true, yes;
+	it does not;]
+
+chapter scams
+
+[* SCAM enables scams for areas with hints that should only work once. Spoon Crust Pills Cinders (?) Xray (?) ]
+
+scaming is an action applying to one number.
+
+understand the command "scam" as something new.
+understand the command "scams" as something new.
+
+understand "scam [number]" as scaming.
+understand "scams [number]" as scaming.
+
+carry out scaming:
+	if number understood < 0 or number understood > 2, say "Scam toggling should be 0 (off), 1 (toggle) or 2 (on)." instead;
+	let prev-scam be scams;
+	if number understood is 1:
+		now scams is whether or not scams is false;
+	else if number understood is 2:
+		now scams is true;
+	else if number understood is 0:
+		now scams is false;
+	say "Scams is [if scams is prev-scam]already[else]now[end if] [on-off of scams].";
+	the rule succeeds;
+
+scambasing is an action out of world.
+
+carry out scambasing:
+	try scaming 1;
+
+understand "scam" as scambasing.
+understand "scams" as scambasing.
+
+chapter deprefing
+
+[ * removes all prefiguring, for testing purposes]
+deprefing is an action out of world.
+
+understand the command "depref" as something new.
+
+understand "depref" as deprefing.
+
+carry out deprefing:
+	if number of not unfigured things is 0:
+		say "Nothing is prefigured.";
+	else:
+		say "De-prefiguring [list of prefigured things].";
+		now all prefigured things are unfigured;
+	the rule succeeds;
+
+volume male/female
+
+chapter gsing
+
+[* GS switches your sex.]
+
+gsing is an action out of world.
+
+understand the command "gs" as something new.
+
+understand "gs" as gsing.
+
+carry out gsing:
+	if player is male:
+		choose-female;
+	else:
+		choose-male;
+	say "Player is now [if player is female]fe[end if]male, and all associated NPCs['] genders have been swapped, too.";
+	the rule succeeds;
+
+volume misc
+
+chapter mowing
+
+[* MOW allows you to mow through all the options you haven't used yet in a dialogue]
+
+mowing is an action out of world.
+
+understand the command "mow" as something new.
+
+understand "mow" as mowing.
+
+carry out mowing:
+	let count be 0;
+	repeat through qbc_litany:
+		if response entry is not mowered and enabled entry is 0:
+			increment count;
+			if count is 6:
+				say "More than 5 choices still left. You may need to rerun.";
+				the rule succeeds;
+			now enabled entry is 1;
+	say "Enabled [count] new choice[if count is not 1]s[end if].";
+	the rule succeeds;
+
+chapter halling
+
+[* this hints everything that is still useful and not realized]
+
+halling is an action out of world.
+
+understand the command "hall" as something new.
+
+understand "hall" as halling.
+
+carry out halling:
+	repeat with thisthing running through fungible not realized things:
+		say "[thisthing]: [run paragraph on]";
+		try objhinting thisthing;
+	the rule succeeds;
+
+volume diagnostics
+
+chapter orfing
+
+[* ORF detects conversational orphans]
+
+orfing is an action out of world.
+
+understand the command "orf" as something new.
+
+understand "orf" as orfing.
+
+carry out orfing:
+	let this-found be false;
+	repeat with qi running through quips:
+		now this-found is false;
+		let qa be qi;
+		repeat through table of Elmo comments:
+			if response entry is qa:
+				now this-found is true;
+		repeat through table of Elvira comments:
+			if response entry is qa:
+				now this-found is true;
+		repeat through table of Perrot comments:
+			if response entry is qa:
+				now this-found is true;
+		if this-found is false:
+			say "[qa] is orphaned.";
 
 chapter mf
 
@@ -1022,6 +1016,8 @@ carry out puhing:
 		say "[X]: disrupt the [pla-ma]s [if pickup-description of X is empty]BLANK, FIX THIS[else][pickup-description of X][end if]."; [bold-ok]
 		say "Make the [pla-ma]s talk more [pickup-spoil of X].";
 	the rule succeeds.
+
+volume seeding
 
 chapter ploping
 
@@ -1187,65 +1183,6 @@ carry out palling:
 		now known entry is true;
 	say "Pad is now fully stocked. Have fun.";
 
-chapter gsing
-
-[* GS switches your sex.]
-
-gsing is an action out of world.
-
-understand the command "gs" as something new.
-
-understand "gs" as gsing.
-
-carry out gsing:
-	if player is male:
-		choose-female;
-	else:
-		choose-male;
-	say "Player is now [if player is female]fe[end if]male, and all associated NPCs['] genders have been swapped, too.";
-	the rule succeeds;
-
-chapter gzing
-
-[* GZ zaps all the guardians.]
-
-gzing is an action out of world.
-
-understand the command "gz" as something new.
-
-understand "gz" as gsing.
-
-carry out gzing:
-	repeat with myg running through guardians:
-		moot myg;
-		increment cur-score of towers;
-	now min-score of towers is 31;
-	if strudel is reflexed:
-		increment min-score of towers;
-	if old ice is reflexed:
-		increment min-score of towers;
-	if sporties ripostes are reflexed:
-		increment min-score of towers;
-
-chapter powing
-
-powing is an action applying to one number.
-
-understand the command "pow" as something new.
-
-understand "pow [number]" as powing.
-
-carry out powing:
-	let pbprev be power-back;
-	if the number understood is 1:
-		now power-back is whether or not power-back is false;
-	else if the number understood is 0:
-		now power-back is false;
-	else if the number understood is 2:
-		now power-back is true;
-	say "You [if pbprev is power-back]already[else]now[end if] [if power-back is false]don't [end if]have your magic powers for Otters.";
-	the rule succeeds
-
 chapter misseding
 
 [* MISSED shows what this area missed, and in the strip you get an added bonus of alternate ways through]
@@ -1302,208 +1239,6 @@ carry out thisalting:
 	process the altroutes of mrlp;
 	the rule succeeds;
 
-chapter elving
-
-[* what's everyone saying about Elvira?]
-
-elving is an action out of world.
-
-understand the command "elv" as something new.
-
-understand "elv" as elving.
-
-a person can be blah, elvonly, unelvy or elvy. a person is usually blah.
-
-carry out elving:
-	let elvies be true;
-	repeat through matched item responses table of mrlp:
-		if game-thing entry is Elvira:
-			if askee entry is unelvy:
-				now askee entry is elvy;
-			if askee entry is blah:
-				now askee entry is elvonly;
-		else:
-			if askee entry is blah:
-				now askee entry is unelvy;
-			else if askee entry is elvonly:
-				now askee entry is elvy;
-	repeat with PE running through unelvy people:
-		say "[PE] has nothing to say about Elvira.";
-		now elvies is true;
-	if elvies is false:
-		say "Everyone talks about Elvira.";
-	say "Elvy people: [list of elvy people].";
-	say "Blah people: [list of blah people].";
-	say "Elvonly people: [list of elvonly people].";
-	the rule succeeds.
-
-chapter skiing
-
-[* this puts you near the other side of the water.]
-
-skiing is an action out of world.
-
-understand the command "ski" as something new.
-
-understand "ski" as skiing.
-
-carry out skiing:
-	if mrlp is not towers:
-		say "You need to be in Towers for this test command.";
-	else:
-		mootl list of all guardians;
-		now agnostic is in Actionless Coastlines;
-		moot gizmo;
-		now bot boat is in Actionless Coastlines;
-		move player to Actionless Coastlines;
-		ital-say "moving south or west from here will make the game kind of goofy. Also, the score is wrong, because this is a test command. You pretty much want to get on the bot-boat once the Coasting Agnostic creates it." instead;
-	the rule succeeds;
-
-chapter tkturbo
-
-[* TAKE ALL is allowed & applies to scenery as well]
-
-talling is an action out of world.
-
-understand the command "tall" as something new.
-
-understand "tall" as talling.
-
-carry out talling:
-	say "Now you can[if take-test is true]'t[end if] take all the things.";
-	now take-test is whether or not take-test is false;
-	the rule succeeds;
-
-take-test is a truth state that varies.
-
-check taking:
-	if take-test is true:
-		if noun is scenery, say "DEBUG: [noun]: Can't take scenery.";
-		if noun is fixed in place, say "DEBUG: [noun]: Fixed in place.";
-		if noun is a person, say "DEBUG: [noun]: Person.";
-
-The can't take what's fixed in place rule is not listed in the check taking rulebook.
-The can't take scenery rule is not listed in the check taking rulebook.
-
-[The exclude scenery from take all rule is not listed in the for deciding whether all includes rulebook.
-The exclude fixed in place things from take all rule is not listed in the for deciding whether all includes rulebook.
-The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
-
-Rule for deciding whether all includes scenery:
-	if take-test is true, it does;
-	it does not;
-
-Rule for deciding whether all includes people while taking:
-	if take-test is true, it does;
-	it does not;
-
-Rule for deciding whether all includes fixed in place things while taking:
-	if take-test is true, yes;
-	it does not;]
-
-chapter rfxing
-
-[* sees all reflexive things ]
-rfxing is an action out of world.
-
-understand the command "rfx" as something new.
-
-understand "rfx" as rfxing.
-
-carry out rfxing:
-	repeat with RF running through reflexive things:
-		say "[RF] is reflexive.";
-	the rule succeeds;
-
-chapter repling
-
-[* replaces guardians in TOWERS, otherwise, reject]
-
-repling is an action out of world.
-
-understand the command "repl" as something new.
-
-understand "repl" as repling.
-
-carry out repling:
-	if mrlp is towers:
-		now all red guardians are off-stage;
-		now all blue guardians are off-stage;
-		now atheists are off-stage;
-		now the-hostile is off-stage;
-		say "All red and blue guardians reinitialized. Side guardians (necessary or not) are still there.";
-		reposition-guardians;
-		the rule succeeds;
-	say "Doesn't apply here.";
-
-chapter wwscaning
-
-[* scans wonga wagon every move in troves]
-
-wwscan is a truth state that varies.
-
-wwscaning is an action out of world.
-
-understand the command "wwscan" as something new.
-
-understand "wwscan" as wwscaning.
-
-carry out wwscaning:
-	if wwscan is false:
-		now wwscan is true;
-	else:
-		now wwscan is false;
-	say "[if wwscan is true]Scanning wonga wagon every move[else]No longer scanning each move[end if].";
-	the rule succeeds;
-
-every turn when wwscan is true:
-	say "Results of scanning wonga wagon:[line break]";
-	try scaning wonga wagon;
-
-chapter coping
-
-[* repositions guardians, sends you to Scope Copse]
-
-coping is an action out of world.
-
-understand the command "cop" as something new.
-
-understand "cop" as coping.
-
-carry out coping:
-	move player to Scope Copse;
-	reposition-guardians;
-	the rule succeeds;
-
-chapter eaing
-
-[* this checks for all exits displayed]
-
-eaing is an action out of world.
-
-understand the command "ea" as something new.
-
-understand "ea" as eaing.
-
-exitall is a truth state that varies.
-
-carry out eaing:
-	if exitall is false:
-		now exitall is true;
-		say "Now tracking exits every move.";
-	else:
-		now exitall is false;
-		say "Now not tracking exits every move.";
-	the rule succeeds;
-
-every turn when exitall is true:
-	try exitsing;
-	continue the action;
-
-after fliptoing when exitall is true:
-	try exitsing;
-	continue the action;
-
 chapter nuding
 
 nuding is an action out of world.
@@ -1528,94 +1263,6 @@ carry out nuding:
 	show-nudges roomnud of location of player;
 	if nudges is 0, say "Nothing can be nudged. Oh dear, that's wrong!";
 	else say "total nudge(s) [nudges]"
-
-chapter rejching
-
-[* this checks for adequate rejects]
-
-rejching is an action out of world.
-
-understand the command "rejch" as something new.
-
-understand "rejch" as rejching.
-
-temp-reg is a region that varies.
-
-carry out rejching:
-	repeat with QQ running through regions:
-		if QQ is not demo dome:
-			now temp-reg is QQ;
-			repeat through regana of QQ:
-				rej-analyze the-from entry;
-
-to rej-analyze (x - a thing):
-	choose row with the-from of x in regana of temp-reg;
-	let y be the-to entry;
-	unless x is an xtrhelp listed in spechelp of mrlp:
-		say "Whoops, [x] could also be in [spechelp of mrlp], to [y].";
-	unless x is a specdone listed in done reject table of mrlp:
-		if x is reflexive:
-			say "Strong possibility: [x] could also be in [done reject table of mrlp], to [y].";
-		else if x is not vanishing:
-			say "Weak possibility: [x] could also be in [done reject table of mrlp], to [y].";
-
-chapter deprefing
-
-[ * removes all prefiguring, for testing purposes]
-deprefing is an action out of world.
-
-understand the command "depref" as something new.
-
-understand "depref" as deprefing.
-
-carry out deprefing:
-	if number of not unfigured things is 0:
-		say "Nothing is prefigured.";
-	else:
-		say "De-prefiguring [list of prefigured things].";
-		now all prefigured things are unfigured;
-	the rule succeeds;
-
-chapter mbbing
-
-[ * this changes who the Marble Blamer is ]
-
-mbbing is an action applying to nothing.
-mbbnuming is an action applying to one number.
-
-understand the command "mbb" as something new.
-
-understand "mbb" as mbbing.
-understand "mbb [number]" as mbbnuming.
-
-this is the blamer-moot rule:
-	if mbb is moot, say "Already mooted [mbb]." instead;
-
-carry out mbbing:
-	abide by the blamer-moot rule;
-	now mbb is off-stage;
-	say "[mbb] moved off-stage, and ";
-	if mbb is Marble Blamer Mr Beal:
-		now mbb is Marble Blamer Balmer;
-	else:
-		now mbb is Marble Blamer Mr Beal;
-	move mbb to upscale capsule;
-	now not-mbb is off-stage;
-	say "[mbb] moved to [location of mbb].";
-	the rule succeeds.
-
-carry out mbbnuming:
-	abide by the blamer-moot rule;
-	if number understood is 1:
-		now mbb is Marble Blamer Balmer;
-	else if number understood is 2:
-		now mbb is Marble Blamer Mr Beal;
-	else:
-		say "1 = Balmer, 2 = Mr Beal." instead;
-	move mbb to Upscale Capsule;
-	now not-mbb is off-stage;
-	say "Moved [mbb] to Upscale Capsule, [not-mbb] off-stage." instead;
-	the rule succeeds;
 
 chapter srqing
 
@@ -1653,20 +1300,6 @@ understand "hr" as hring.
 carry out hring:
 	say "Recharged slider headaches to 50.";
 	now headaches is 50;
-	the rule succeeds.
-
-chapter palcluing
-
-palcluing is an action applying to nothing.
-
-understand the command "palclu" as something new.
-
-understand "palclu" as palcluing.
-
-carry out palcluing:
-	say "Moving all palace clue items to Mislit Limits: [nextclue].";
-	repeat with NC running through nextclue:
-		now NC is in Mislit Limits;
 	the rule succeeds.
 
 chapter ptsing
@@ -1729,52 +1362,8 @@ definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for 
 	if th is not-mbb, yes;
 	no;
 
-chapter twiding
 
-[* this lets the user twiddle a table early on to see how it roughly looks. It does not place it in context. ]
-
-twiding is an action out of world applying to one number.
-
-twid0ing is an action out of world.
-
-understand the command "twid" as something new.
-
-understand "twid" as twid0ing.
-
-understand "twid [number]" as twiding.
-
-cur-twid is a number that varies. cur-twid is usually 1.
-
-carry out twid0ing:
-	repeat with tempnum running from cur-twid + 1 to number of rows in table of megachatter:
-		choose row tempnum in table of megachatter;
-		if go-ahead entry is trivially false rule and reps entry > 1:
-			now cur-twid is tempnum;
-			try twiding tempnum instead;
-	now cur-twid is 40;
-	try twiding 40 instead;
-
-carry out twiding:
-	let chatrow be number of rows in table of megachatter;
-	if number understood > chatrow:
-		say "Number must be 1-[chatrow]." instead;
-	if debug-state is true:
-		say "(Turning debug state off)";
-		now debug-state is false; [for grepping, this is to see how a table looks earlier.]
-	choose row number understood in table of megachatter;
-	if go-ahead entry is not trivially false rule:
-		say "[mytab entry] follows [go-ahead entry] but needs to follow the trivially false rule. Try one of [list-of-randos]." instead;
-	let temp-tab be mytab entry;
-	say "[twiddle of temp-tab and 3]";
-	the rule succeeds;
-
-to say list-of-randos:
-	let comma-yet be false;
-	repeat with XX running from 1 to number of rows in table of megachatter:
-		choose row XX in table of megachatter;
-		if go-ahead entry is trivially false rule and reps entry > 1:
-			say " [if comma-yet is true],[end if][XX]";
-			now comma-yet is true;
+volume demo dome specific tests
 
 chapter xabing
 
@@ -1804,21 +1393,6 @@ carry out xtraking:
 	if sparse spares is visited:
 		say "[b]UNEXAMINED[r] in Sparse Spares: [list of unexamined things in sparse spares].";
 		say "[b]EXAMINED[r] in Sparse Spares: [list of examined things in sparse spares].";
-	the rule succeeds;
-
-chapter xtuing
-
-xtuing is an action out of world.
-
-understand the command "xtu" as something new.
-
-understand "xtu" as xtuing.
-
-carry out xtuing:
-	say "The xtra-trax-warn variable is [if xtra-trax-warn is false]already[else]now[end if] false.";
-	say "The xtra-trax variable is [if xtra-trax is false]already[else]now[end if] false.";
-	now xtra-trax is false;
-	now xtra-trax-warn is false;
 	the rule succeeds;
 
 volume synonyms for players actions
