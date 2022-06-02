@@ -491,7 +491,7 @@ carry out deededing:
 	now deededed is true;
 	now maximum score is number of dubrooms + number of flippables;
 	now the right hand status line is "[score]/[maximum score]";
-	ital-say "these final optional puzzles are meant to be difficult, and the words are a bit obscure. [if tats-stat is 0]If you prefer a more moderate challenge, now's a good time to use the [b]TATS[i][else]If you want a full challenge, you may wish to type [b]STAT[i] so there will be less trial and error[end if].";
+	say "[line break][i][bracket]NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. [if tats-stat is 0]If you prefer a more moderate challenge, now's a good time to use the [b]TATS[i][else]If you want a full challenge, you may wish to type [b]STAT[i] so there will be less trial and error[end if].[close bracket][r]";
 	the rule succeeds;
 
 chapter oning
@@ -537,7 +537,7 @@ carry out oning:
 	now init-hept-dir is up;
 	now on-start-room is location of player;
 	if zero-one-warn is false:
-		ital-say-lb "since the map of Tours Roust Torus is circular, you can use the verbs [b]0[i] and [b]1[i] to track the rooms as numbers to make things a bit easier, here.";
+		say "[line break][i][bracket]NOTE: since the map of Tours Roust Torus is circular, you can use the verbs [b]0[i] and [b]1[i] to track the rooms as numbers to make things a bit easier, here.[close bracket][r]";
 		now zero-one-warn is true;
 	the rule succeeds;
 

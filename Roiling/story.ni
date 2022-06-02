@@ -41,9 +41,9 @@ include Glimmr Drawing Commands by Erik Temple.
 
 include Glimmr Bitmap Font by Erik Temple.
 
-include undo output control by Erik Temple.
+include Undo Output Control by Erik Temple.
 
-include conditional undo by Jesse McGrew.
+include Conditional Undo by Jesse McGrew.
 
 include Bypass Disambiguation by Climbing Stars.
 
@@ -586,7 +586,7 @@ gua-warn is a truth state that varies.
 to any-guardian-hint: [note: we are assured there is > 1 guardian. This is a generic and deprecated way to find a hint. It's only used if my other code falls through.]
 	let Z be north;
 	if gua-warn is false:
-		say "[i][bracket]NOTE: in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to [b]HINT[i] (guardian) instead.[close bracket][r][line break]";
+		say "[line break][i][bracket]NOTE: in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to [b]HINT[i] (guardian) instead.[close bracket][r][line break]";
 		now gua-warn is true;
 	if guar-here is 1:
 		let myg be a random fungible guardian;
@@ -2867,7 +2867,7 @@ to move-to-cavern:
 after quipping (this is the usually don't undo convos rule):
 	now current quip is mowered;
 	if current quip is showset-quip:
-		say "[i][bracket]NOTE: if you didn't mean to do this, you can [b]UNDO[i] to get a bit more help from Elmo.[close bracket][r][line break]";
+		say "[line break][i][bracket]NOTE: if you didn't mean to do this, you can [b]UNDO[i] to get a bit more help from Elmo.[close bracket][r][line break]";
 	else:
 		if debug-state is false:
 			prevent undo;
@@ -3488,7 +3488,7 @@ after fliptoing (this is the make initial score comments rule):
 			if no-tip is false and done-yet entry is false:
 				say "[game-comment entry][line break]";
 				if tip-warn is false:
-					say "[i][bracket]NOTE: you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].[close bracket][r][line break]";
+					say "[line break][i][bracket]NOTE: you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].[close bracket][r][line break]";
 					now tip-warn is true;
 					pad-rec "opt in/no tip";
 				now done-yet entry is true;
@@ -5045,7 +5045,7 @@ after reading a command:
 		replace the regular expression "\b the\b" in XX with "";
 	if the player's command includes "scan" and the player's command includes "with" and player has settler:
 		if scanwith is false:
-			ital-say "you don't need the preposition [b]WITH[i]. You can just say [b]SCAN[i], as the settler is the only item that can scan.";
+			say "[i][bracket]NOTE: you don't need the preposition [b]WITH[i]. You can just say [b]SCAN[i], as the settler is the only item that can scan.[close bracket][r][line break]";
 			now scanwith is true;
 		replace the regular expression "with.*" in XX with "";
 		change the text of the player's command to XX;
@@ -5054,7 +5054,7 @@ after reading a command:
 			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. I couldn't find a way around it. Sorry. That said, normal commands will work okay.[wfak]";
 			now period-warned is true;
 	if number of words in player's command is 5 and long-sent-warn is false:
-		ital-say "you probably don't need more than four words per command. The most complex ones are [b]PUT X ON Y[i] or [b]ASK X ABOUT Y[i], and a compound item like [b]GIANT PIN[i] can use [b]GIANT[i] or [b]PIN[i]. Adjectives usually aren't necessary, and [b]GET ALL[i] will never take anything harmful or lethal.";
+		say "[i][bracket]NOTE: you probably don't need more than four words per command. The most complex ones are [b]PUT X ON Y[i] or [b]ASK X ABOUT Y[i], and a compound item like [b]GIANT PIN[i] can use [b]GIANT[i] or [b]PIN[i]. Adjectives usually aren't necessary, and [b]GET ALL[i] will never take anything harmful or lethal.[close bracket][r][line break]";
 		now long-sent-warn is true;
 		pad-rec "long commands";
 	abide by the parse-rule of mrlp;
@@ -5118,7 +5118,7 @@ medals-note is a truth state that varies.
 to otters-plurcheck:
 	if medals-note is false and player has medals:
 		if the player's command includes "iq" or the player's command includes "iq" or the player's command includes "medal":
-			ital-say "There are a lot of ways to refer to the medals, but they are identical except for their writing. So [b]IQ[i], [b]MEDAL[i] and [b]LUCKY[i] are all ways to shorten doing something with the medals in the future.";
+			say "[i][bracket]NOTE: There are a lot of ways to refer to the medals, but they are identical except for their writing. So [b]IQ[i], [b]MEDAL[i] and [b]LUCKY[i] are all ways to shorten doing something with the medals in the future.[close bracket][r][line break]";
 			now medals-note is true;
 
 definition: a guardian (called gu) is plurcheck:
@@ -5249,7 +5249,7 @@ this is the demo-dome-parse rule:
 	if player is in Evoc Cove and the player's command includes "page":
 		let XX be the player's command;
 		replace the regular expression "page" in XX with "";
-		ital-say "you don't need to say [b]PAGE[i] when reading a particular page. A number will do fine.";
+		say "[i][bracket]NOTE: you don't need to say [b]PAGE[i] when reading a particular page. A number will do fine.[close bracket][r][line break]";
 		change the text of the player's command to XX;
 
 section command reader booleans
@@ -5709,7 +5709,7 @@ check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles
 				if adobe is visited or deli is visited:
 					if adobe is visited and deli is visited:
 						if inwarn is false:
-							ital-say "if you want to get back to the adobe or deli, you have to go [b]ACROSS[i] or [b]PAST[i]. Sorry for the ambiguity.";
+							say "[i][bracket]NOTE: if you want to get back to the adobe or deli, you have to go [b]ACROSS[i] or [b]PAST[i]. Sorry for the ambiguity.[close bracket][r][line break]";
 							now inwarn is true;
 					else:
 						say "That isn't quite how to enter the church. Do you wish to go back to the [if adobe is visited]adobe[else]deli[end if]?";
@@ -6755,7 +6755,7 @@ carry out pointing it at:
 	if noun is patcher, try zaping second noun instead;
 	if noun is not settler, say "You can really only point [if player has settler]the settler[else]one thing[end if] at other objects." instead;
 	if point-warn is false:
-		ital-say "it's much easier to [b]SCAN[o] objects instead.";
+		say "[i][bracket]NOTE: it's much easier to [b]SCAN[o] objects instead.[close bracket][r][line break]";
 		now point-warn is true;
 	try scaning second noun instead;
 
@@ -7202,7 +7202,7 @@ carry out abouting:
 	say "[line break][trt], the third entry, is much shorter and was inspired by a Last Lousy Point in the post-Elvira area.";
 	say "[line break]You can see more abut the people who helped the game come to be by typing [b]CREDITS[r]. There are a lot of them!";
 	say "[line break][this-game] is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, but you don't get anything special for that beyond a feeling of accomplishment.";
-	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing [b]TRANSCRIPT[i] at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [ghsite]--no need for an account." instead;
+	say "[line break][i][bracket]NOTE: I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing [b]TRANSCRIPT[i] at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [ghsite]--no need for an account.[close bracket][r][line break]" instead;
 
 part releaseing
 
@@ -7625,8 +7625,8 @@ outside-text of Dusty Study is "You haven't made a way outside the Dusty Study. 
 to say tables-beams: if tables are in Dusty Study or meet bans are in Dusty Study, say ", [if tables are in Dusty Study]tables (the spreadsheety kind) on one wall[else]a way [b]OUT[r] where the tables were[end if], and [if meet bans are in Dusty Study]beams on another wall[else]a way down where those beams were[end if]".
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
-	ital-say "you may wish to type [b]ABOUT[i] or [b]VERBS[i] to see information about the game and what words work best.";
-	if debug-state is true, ital-say "The [b]POST[i] command sends you to Rustic Citrus. That, or [b]ROVE OVER[i].";
+	say "[i][bracket]NOTE: you may wish to type [b]ABOUT[i] or [b]VERBS[i] to see information about the game and what words work best.[close bracket][r][line break]";
+	if debug-state is true, say "[i][bracket]NOTE: The [b]POST[i] command sends you to Rustic Citrus. That, or [b]ROVE OVER[i].[close bracket][r][line break]";
 	continue the action;
 
 to say think-cue:
@@ -8422,7 +8422,7 @@ parse-warned is a truth state that varies.
 to check-parse-spare:
 	if parse-warned is false:
 		now parse-warned is true;
-		ital-say "you can type [b]PARSE[i] for [aro][i] to place information that can be deduced from a cheat-mode reading you more information at the top of the screen or [b]SPARE[i] to hide it. This is obviously a big spoiler, so [b]PARSE[i] is off by default.";
+		say "[line break][i][bracket]NOTE: you can type [b]PARSE[i] for [aro][i] to place information that can be deduced from a cheat-mode reading you more information at the top of the screen or [b]SPARE[i] to hide it. This is obviously a big spoiler, so [b]PARSE[i] is off by default.[close bracket][r][line break]";
 		pad-rec-q "parse";
 
 check pushing the tech etcha:
@@ -8463,7 +8463,7 @@ to show-bluables:
 	if set-sw is false:
 		now set-sw is true;
 		if the player's command does not include "ss":
-			ital-say "in the future, you can shorten this with [b]SS[i].";
+			say "[line break][i][bracket]NOTE: in the future, you can shorten this with [b]SS[i].[close bracket][r][line break]";
 			say "[line break]";
 	if QQ is 0:
 		swi-say "You see nothing unusual after shaking the settler.[line break]";
@@ -8623,7 +8623,7 @@ to toggle-slider-note:
 			now slider-toggle is true;
 			pad-rec-q "sl";
 			continue the action;
-		ital-say "You can type [b]SL[i] to toggle the slider in the future.";
+		say "[line break][i][bracket]NOTE: You can type [b]SL[i] to toggle the slider in the future.[close bracket][r][paragraph break]";
 		pad-rec-q "sl";
 		now slider-toggle is true;
 		continue the action;
@@ -8698,7 +8698,7 @@ description of pedanto notepad is "Other people have computers, but your notepad
 
 check examining pedanto notepad for the first time:
 	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].";
-	ital-say "to use the notepad, you can type [b]PAD[r] (subject) or [b]CONSULT PAD ABOUT[r] (subject). If you forget what you've written about, you can type [b]PAD[r] or [b]CONSULT PAD[r].";
+	say "[line break][i][bracket]NOTE: to use the notepad, you can type [b]PAD[r] (subject) or [b]CONSULT PAD ABOUT[r] (subject). If you forget what you've written about, you can type [b]PAD[r] or [b]CONSULT PAD[r].[close bracket][r][line break]";
 	if player does not have pedanto notepad:
 		now player has pedanto notepad;
 		check-sad-ads;
@@ -8881,7 +8881,7 @@ definition: a thing (called th) is flip-known:
 to say what-can-flip:
 	if pf-warn is false:
 		if word number 1 in the player's command is not "pf":
-			ital-say "you can abbreviate this with [b]PF[i] in the future.";
+			say "[line break][i][bracket]NOTE: you can abbreviate this with [b]PF[i] in the future.[close bracket][r][line break]";
 			now pf-warn is true;
 	if number of flip-known things is 0:
 		say "You have nothing [if ever-fig is true]else [end if]you figured in advance.[no line break]";
@@ -8956,7 +8956,7 @@ padding is an action applying to one topic.
 
 this is the notepad check rule:
 	if location of player is not dusty study and location of notepad is dusty study:
-		ital-say "taking your notepad. It should have been implicitly taken once you left Dusty Study, so this is a [b]BUG[r]. Email me at [email] to let me know how this happened!";
+		say "[i][bracket]NOTE: taking your notepad. It should have been implicitly taken once you left Dusty Study, so this is a [b]BUG[r]. Email me at [email] to let me know how this happened![close bracket][r][line break]";
 		now player has pedanto notepad;
 
 carry out padding:
@@ -9461,7 +9461,7 @@ check talking to Gretta:
 check talking to a person:
 	if litany of noun is table of no conversation:
 		if selftalk-warn is false:
-			ital-say "[b]ASK[i] ([b]PERSON[i]) [b]ABOUT[i] ([b]PERSON[i]/[b]THING[i]) or [b]A[i] ([b]THING[i]) is what [this-game] uses for detailed conversation. However, [b]TALK[i] is a shortcut to asking an NPC about themselves, which often has clues.";
+			say "[i][bracket]NOTE: [b]ASK[i] ([b]PERSON[i]) [b]ABOUT[i] ([b]PERSON[i]/[b]THING[i]) or [b]A[i] ([b]THING[i]) is what [this-game] uses for detailed conversation. However, [b]TALK[i] is a shortcut to asking an NPC about themselves, which often has clues.[close bracket][r][line break]";
 			pad-rec "talking";
 			now selftalk-warn is true;
 		try objasking noun about noun instead;
@@ -16031,9 +16031,9 @@ after printing the locale description for Loftier Trefoil when Loftier Trefoil w
 	say "The ambience here makes you think 'Lo, I fret.'";
 	if debug-state is true:
 		say "[line break]";
-		ital-say "For testing purposes, note [b]WARWAR[i] skips through the warriors.";
+		say "[i][bracket]NOTE: For testing purposes, note [b]WARWAR[i] skips through the warriors.[close bracket][r][line break]";
 		say "[line break]";
-		ital-say "Also, [b]PLOP[i] drops all the picaros here, but crazy things may happen if you move on from unit testing.";
+		say "[i][bracket]NOTE: Also, [b]PLOP[i] drops all the picaros here, but crazy things may happen if you move on from unit testing.[close bracket][r][line break]";
 	set the pronoun him to rodney;
 	set the pronoun them to w-p;
 	continue the action;
@@ -16098,7 +16098,7 @@ rod-hint is a truth state that varies.
 
 check objhinting a not leaderly picaro (this is the poke Rodney but don't spoil him rule):
 	if cur-score of towers > 3 and rod-hint is false:
-		ital-say "Rodney's vulnerable enough now, you can [b]HINT RODNEY[i] if you don't care about maximum points. I will simply plow through his comrades, otherwise.";
+		say "[line break][i][bracket]NOTE: Rodney's vulnerable enough now, you can [b]HINT RODNEY[i] if you don't care about maximum points. I will simply plow through his comrades, otherwise.[close bracket][r][line break]";
 		now rod-hint is true;
 
 check taking a picaro: say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
@@ -16767,7 +16767,7 @@ the savager ravages are boring bounding scenery in Shaven Havens. description of
 duck-goto-note is a truth state that varies.
 
 after printing the locale description for Shaven Havens when duck-goto-note is false:
-	ital-say "you may wish to [b]GO TO DUCK[i] or even [b]GT DUCK[i] to get back here with less hassle.";
+	say "[i][bracket]NOTE: you may wish to [b]GO TO DUCK[i] or even [b]GT DUCK[i] to get back here with less hassle.[close bracket][r][line break]";
 	now duck-goto-note is true;
 	continue the action;
 
@@ -16815,7 +16815,7 @@ a log gaol is bounding scenery in Obscurest Subsector. "It surrounds the subsect
 subsector-visit is a truth state that varies.
 
 after printing the locale description for Obscurest Subsector when subsector-visit is false:
-	ital-say "in the future, you may wish to [b]GO TO[i]/[b]GT GAOL[i] to get back here with less hassle.";
+	say "[i][bracket]NOTE: in the future, you may wish to [b]GO TO[i]/[b]GT GAOL[i] to get back here with less hassle.[close bracket][r][line break]";
 	now subsector-visit is true;
 	continue the action;
 
@@ -18320,7 +18320,7 @@ to get-dead:
 	else if location of player is Reclusion Inclosure:
 		do nothing;
 	else if joke-death is true:
-		ital-say "this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than [b]UNDO[i] and retry them.";
+		say "[i][bracket]NOTE: this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than [b]UNDO[i] and retry them.[close bracket][r][line break]";
 	d "Getting dead: [undo-code].[line break]";
 	end the story saying "[deth]";
 
@@ -18586,7 +18586,7 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 	say "[line break]But whatever they call themselves, you know [pla-ma]s['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance.";
 	if debug-state is true:
 		say "[line break]";
-		ital-say "For testing purposes, [b]PLOP[i] drops all the pickup lines here.";
+		say "[i][bracket]NOTE: For testing purposes, [b]PLOP[i] drops all the pickup lines here.[close bracket][r][line break]";
 	continue the action;
 
 chapter parleys splayer players
@@ -19678,7 +19678,7 @@ carry out playing:
 	say "That doesn't seem like a toy or an instrument." instead;
 	the rule succeeds;
 
-to note-denial: ital-say "also, [b]IGNORE REGION[i] sends you to the Strip of Profits, and [b]LEAD IN[i]/[b]LEADIN[i] ([b]DENIAL[i] or [b]NAILED[i] or both) sends you there with Otters available.";
+to note-denial: say "[line break][i][bracket]NOTE: also, [b]IGNORE REGION[i] sends you to the Strip of Profits, and [b]LEAD IN[i]/[b]LEADIN[i] ([b]DENIAL[i] or [b]NAILED[i] or both) sends you there with Otters available.[close bracket][r][line break]";
 
 to say lee-or-eels:
 	say "[wfak]";
@@ -21494,7 +21494,7 @@ book Hows Show
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder decor and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into [shuf] and [this-game]. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
-	ital-say "the whos-show is already under [b]CREDITS[i].";
+	say "[i][bracket]NOTE: the whos-show is already under [b]CREDITS[i].[close bracket][r][line break]";
 	continue the action;
 
 to decide whether nuf-hows-examined:
@@ -21724,12 +21724,12 @@ this is the hint-toggle-warn rule:
 	now have-objhinted is true;
 	if player is not in Rancho Archon Anchor:
 		say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
-		ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather [b]HINT[i] (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
+		say "[line break][i][bracket]NOTE: the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather [b]HINT[i] (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.[close bracket][r][line break]";
 		if the player yes-consents:
 			say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
 		else:
 			say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
-		ital-say "you can type [b]NO HINT[i] to disable hints for this session, or [b]NOTHIN[i] to disable them fully."
+		say "[line break][i][bracket]NOTE: you can type [b]NO HINT[i] to disable hints for this session, or [b]NOTHIN[i] to disable them fully.[close bracket][r][line break]"
 
 carry out hinting:
 	[if hintblock is true, say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
@@ -22895,7 +22895,7 @@ listpoke is a truth state that varies.
 
 to next-list-poke:
 	if listpoke is false:
-		ital-say "you can see the next list if you type [b]N[i], [b]NL[i] or [b]LN[i]";
+		say "[line break][i][bracket]NOTE: you can see the next list if you type [b]N[i], [b]NL[i] or [b]LN[i][close bracket][r][line break]";
 		now listpoke is true;
 
 this is the show a list by number rule:

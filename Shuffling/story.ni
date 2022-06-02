@@ -210,7 +210,7 @@ to solve-region (sre - a region):
 	if number of solved regions is 3 and player has gadget and gadget-secured is true:
 		say "Man! With the [b]SECURE[r] settings on your gadget, you can [b]RECUSE[r] if you want and hit Store R.";
 	if number of passed-up regions is 3:
-		ital-say "you unlocked a new command for if you want to see the endgame again. [b]LEADIN DENIAL[i] or [b]LEADIN NAILED[r] will put the game-state where you just have to tackle Store R. This is also doable with the warp commands from each store in order, but I hope this is easier to remember. You either nailed the lead-in, or you denied the game the chance to put you through the other three stores. Also, you can put a space in [b]LEAD IN[r]."
+		say "[line break][i][bracket]NOTE: you unlocked a new command for if you want to see the endgame again. [b]LEADIN DENIAL[i] or [b]LEADIN NAILED[r] will put the game-state where you just have to tackle Store R. This is also doable with the warp commands from each store in order, but I hope this is easier to remember. You either nailed the lead-in, or you denied the game the chance to put you through the other three stores. Also, you can put a space in [b]LEAD IN[r].[close bracket][r][line break]"
 
 to say espec-xtra:
 	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tin foil is in cabinet]. Well, except the tinfoil info lit[end if]";
@@ -1625,7 +1625,7 @@ the check for big quest item attachment rule is listed first in the check tying 
 
 check tying to (this is the check for big quest item attachment rule):
 	if tie-warn is false:
-		ital-say "while [this-game] generally maps [b]ATTACH[i] or [b]TIE X TO Y[i] to [b]PUT X ON Y[i] or [b]PUT X IN Y[i], the [b]PUT[i] syntax is generally recommended, since it is more specific.";
+		say "[i][bracket]NOTE: while [this-game] generally maps [b]ATTACH[i] or [b]TIE X TO Y[i] to [b]PUT X ON Y[i] or [b]PUT X IN Y[i], the [b]PUT[i] syntax is generally recommended, since it is more specific.[close bracket][r][line break]";
 		now tie-warn is true;
 	if noun is missile or noun is hay or noun is straw or noun is panel or noun is black door, try inserting noun into second noun instead;
 	if second noun is missile or second noun is hay or second noun is straw or second noun is panel or second noun is black door, try inserting second noun into noun instead;
@@ -1934,7 +1934,7 @@ understand "help" and "info" and "instructions" as instructionsing.
 carry out instructionsing:
 	say "[if location of player is Busiest Subsite]There's not much to do here, but if you [b]EXAMINE[r] different things may give you a clue what's going on[else if cur-score of Ordeal Loader is 0]You need to do something with the odor[else]What you did with the odor will clue the rest of the game[end if]. This is a part of most of the puzzles in the game, with some item-munging, but you'll have to do other things, too.";
 	if first-hint-check is false:
-		ital-say "if you want actual hints, you may wish to try [b]HINT[i] or [b]HINTS[i]. You also may wish to [b]HINT[i] a specific object, as generic hinting may point you to something you don't want spoiled yet.";
+		say "[line break][i][bracket]NOTE: if you want actual hints, you may wish to try [b]HINT[i] or [b]HINTS[i]. You also may wish to [b]HINT[i] a specific object, as generic hinting may point you to something you don't want spoiled yet.[close bracket][r][line break]";
 	the rule succeeds;
 
 chapter knocking
@@ -4494,7 +4494,7 @@ to say trips-bound: say "The stores are where it's at. You can go [b]IN[r] [if n
 
 after printing the locale description for Trips Strip when Trips Strip is unvisited:
 	if one-rigged is false and denial is false:
-		ital-say "if, for whatever reason you lose a save file or wish to replay, [b]IGNORE REGION[i] or [b]RIG ONE REGION[i] will skip the introduction you just played and give you all the goodies.";
+		say "[i][bracket]NOTE: if, for whatever reason you lose a save file or wish to replay, [b]IGNORE REGION[i] or [b]RIG ONE REGION[i] will skip the introduction you just played and give you all the goodies.[close bracket][r][line break]";
 	continue the action;
 
 definition: a portal (called PO) is discovered:
@@ -6169,7 +6169,7 @@ understand "tap [something]" as taping.
 
 to say pat-tap:
 	say "'Ah! You are TAPping your feet to my anapest beat!'[line break]";
-	ital-say "[b]TAP[i] is not a standard verb. [b]PUSH[i] may work better when not around Pat, but Pat will be gone by then.";
+	say "[line break][i][bracket]NOTE: [b]TAP[i] is not a standard verb. [b]PUSH[i] may work better when not around Pat, but Pat will be gone by then.[close bracket][r][line break]";
 
 rule for supplying a missing noun when taping:
 	if woeful pat is in location of player:
