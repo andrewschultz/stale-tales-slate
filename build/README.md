@@ -2,7 +2,9 @@ Building isn't really recommended, and I can't give much technical help, but I w
 
 I used the Inform 6G60 version of the Windows IDE to do so. It implicitly uses version 2/090402 by Graham Nelson.
 
-Full assembly of header files is left to the reader.
+Full assembly of header files is left to the reader. They are presented in alphabetical order of names (first name first, not last name) and then extension name.
+
+Special thanks to Dannii Willis for maintaining many of these libraries once the original authors relinquished them. Thanks to the original authors, too--I've come to learn even my own trivial libraries take time to keep up-to-date!
 
 # my stuff first
 
@@ -22,66 +24,48 @@ This should all go to an Andrew Schultz extension folder on your local computer,
 
 ### miscellaneous repository
 
-https://github.com/andrewschultz/miscellany/tree/main/i7x.
+https://github.com/andrewschultz/miscellany/tree/main/i7x is where these are.
 
-* Trivial Niceties
 * Bold Final Question Rows
 * First Word Retry
-* Punctuation Stripper
 * Full Monty Testing
 * Intro Restore Skip
-
-Jesse McGrew's Conditional Undo is version 3/080626.
-Flexible Windows version 11 by Jon Ingold (with contributions by Erik Temple)
-Erik Temple's Glulx Status Window Control version 1/100630
-Emily Short's Glulx Text Effects version 5
+* Punctuation Stripper
+* Old School Verb Total Carnage
+* Rules-Based Testing
+* Trivial Niceties
 
 # other stuff
 
 ## A Roiling Original
 
-Andrew Plotkin's Large Game Speedup https://github.com/erkyrath/i7-exts/
-Standard Rules version 2/090402 by Graham Nelson
-Reactable Quips version 10 by Michael Martin
-Quip-based Conversation version 5 by Michael Martin
-Glimmr Drawing Commands version 2/101030 by Erik Temple
-Undo Output Control version 3/110717 by Erik Temple
-Conditional Undo version 3/080626 by Jesse McGrew
-Bypass Disambiguation by Climbing Stars
-Flexible Windows version 11 by Jon Ingold (with contributions by Erik Temple)
-Fixed Point Maths version 5 by Michael Callaghan
-Glulx Text Effects - New version 5 by Emily Short
+Stuff from this repo:
+
+* Climbing Stars's Bypass Disambiguation
+
+Stuff from this repo, later versions at http://github.com/i7/extensions
+
+* Emily Short's Glulx Text Effects - New version 5
+* Erik Temple's Glimmr Drawing Commands version 2/101030 (current version 3/160626)
+* Erik Temple's Undo Output Control version 3/110717 (current version 5/170902)
+* Jesse McGrew's Conditional Undo version 3/080626
+* Jon Ingold's Flexible Windows version 11 (with contributions by Erik Temple) (Version 15/170131 at https://i7el.herokuapp.com/extensions/flexible-windows-by-jon-ingold
+* Michael Callaghan's Fixed Point Maths version 5 (I only found version 4 on the 'net)
+* Michael Martin's Reactable Quips version 10
+* Michael Martin's Quip-based Conversation version 5
+
+Stuff from others:
+
+* Andrew Plotkin's Large Game Speedup https://github.com/erkyrath/i7-exts/ (Version 4/140731, both here and there)
 
 ## Shuffling Around
 
-Glulx Status Window Control version 1/100630 by Erik Temple
-Standard Rules version 2/090402 by Graham Nelson
-Conditional Undo version 3/080626 by Jesse McGrew
-Flexible Windows version 11 by Jon Ingold (with contributions by Erik Temple)
-Rules-Based Testing version 1/120431 by Andrew Schultz
-First Word Retry version 1/220325 by Andrew Schultz
-Bold Final Question Rows version 1/140928 by Andrew Schultz
-Glulx Text Effects - New version 5 by Emily Short
-Trivial Niceties version 1/140928 by Andrew Schultz
-Bypass Disambiguation by Climbing Stars
-Full Monty Testing version 1/161019 by Andrew Schultz
-Punctuation Stripper version 1/200614 by Andrew Schultz
-
-Bypass Disambiguation by Climbing Stars
-
-STS Beta Testing version 1/211221 (testing only)
+* (!) Climbing Stars's Bypass Disambiguation
+* (!) Emily Short's Glulx Text Effects - New version 5
+* Erik Temple's Glulx Status Window Control version 1/100630
+* (!) Jesse McGrew's Conditional Undo version 3/080626
+* (!) Jon Ingold's Flexible Windows version 11 (with contributions by Erik Temple)
 
 ## Tours Roust Torus
 
-Old School Verb Total Carnage is in my miscellaneous repository.
-
-Undo Output Control by Erik Temple takes version 3/110717.
-
-Standard Rules version 2/090402 by Graham Nelson
-Tours Roust Torus Tests version 1/211030 by Andrew Schultz
-Trivial Niceties version 1/140928 by Andrew Schultz
-Bold Final Question Rows version 1/140928 by Andrew Schultz
-First Word Retry version 1/220325 by Andrew Schultz
-Undo Output Control version 3/110717 by Erik Temple
-Old School Verb Total Carnage version 1/181008 by Andrew Schultz
-Punctuation Stripper version 1/200614 by Andrew Schultz
+* (!) Erik Temple's Undo Output Control version 3/110717 (current version 5/170902)
