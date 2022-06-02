@@ -181,58 +181,24 @@ carry out grilling:
 	repeat through table of NPC and topic pairs:
 		if askee entry is noun, say "[askee entry] -> [dialogue-text entry][line break]";
 
-section spam
+volume game state manipulation
 
-spaming is an action applying to one topic.
+chapter deprefing
 
-understand the command "spam" as something new.
+[ * removes all prefiguring, for testing purposes]
+deprefing is an action out of world.
 
-understand "spam [text]" as spaming.
+understand the command "depref" as something new.
 
-carry out spaming:
-	let foundyet be false;
-	say "You are asking about a topic.";
-	repeat with PEO running through people:
-		now foundyet is false;
-		repeat through table of NPC and topic pairs:
-			if PEO is askee entry and topic understood matches topic entry:
-				say "[PEO] x this subject: [dialogue-text entry][line break]";
-				now foundyet is true;
-			if foundyet is false:
-				repeat through table of NPC and topic pairs:
-					if askee entry is PEO:
-						say "[PEO] x this subject: [dialogue-text entry][line break]";
-						now foundyet is true;
+understand "depref" as deprefing.
+
+carry out deprefing:
+	if number of not unfigured things is 0:
+		say "Nothing is prefigured.";
+	else:
+		say "De-prefiguring [list of prefigured things].";
+		now all prefigured things are unfigured;
 	the rule succeeds;
-
-section thingy/spamobj-ing
-
-spamobjing is an action applying to one visible thing.
-
-understand the command "thingy" as something new.
-
-understand "thingy [any thing]" as spamobjing.
-
-carry out spamobjing:
-	let foundyet be false;
-	say "You are asking about a thing.";
-	repeat with PEO running through people:
-		say "[PEO] is a person.";
-	repeat with PEO running through people:
-		say "Asking [PEO].";
-		repeat through matched item responses table of mrlp:
-			if askee entry is PEO and there is a game-thing entry and game-thing entry is noun:
-				say "Ask [PEO] about [noun]: [dialogue-text entry][line break]";
-				break;
-			if noun is PEO:
-				repeat through ask x about x table of mrlp:
-					if askee entry is noun:
-						say "Ask [PEO] about itself: [dialogue-text entry][line break]";
-						now foundyet is true;
-		try asking PEO about the topic understood;
-	the rule succeeds;
-
-volume verbs
 
 chapter xtuing
 
@@ -251,22 +217,22 @@ carry out xtuing:
 	now xtra-trax-warn is false;
 	the rule succeeds;
 
-chapter booting - not for release
+chapter unneging - not for release
 
-[ * boot can tell the game to help Gretta ]
+[ * unneg can tell the game to help Gretta ]
 
-booting is an action applying to nothing.
+unneging is an action applying to nothing.
 
-understand the command "boot" as something new.
+understand the command "unneg" as something new.
 
-understand "boot" as booting.
+understand "unneg" as unneging.
 
 definition: a pickup-line (called mi) is smackable:
 	if mi is not in Disowned Downside, no;
 	if mi is not reflexive, no;
 	yes;
 
-carry out booting:
+carry out unneging:
 	unless player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "Need the parleys splayer players around." instead;
 	let count be 0;
 	let SI be number of smackable pickup-lines;
@@ -275,115 +241,8 @@ carry out booting:
 		try fliptoing rmi;
 		increment count;
 	if count is 5:
-		say "Uh-oh! The test command to boot a random pickup line failed.";
+		say "Uh-oh! The test command to unneg a random pickup line failed.";
 		say "[SI] before, [number of smackable pickup-lines] after.";
-	the rule succeeds;
-
-chapter sccing
-
-sccing is an action out of world.
-
-understand the command "scc" as something new.
-
-understand "scc" as sccing.
-
-[* SCC tracks the scan text of things.]
-
-carry out sccing:
-	let unscan be 0;
-	let myl be a list of things;
-	repeat with Z running through not unspoilable things:
-		if Z is uncluing:
-			say "[Z] is not not-easy but it is uncluing. Fix this.";
-	repeat with Z running through not uncluing things:
-		if a-text of Z is "":
-			say "[Z] needs a-text.";
-			add Z to myl;
-			increment unscan;
-		if b-text of Z is "":
-			say "[Z] needs b-text.";
-		unless a-text of Z is "" or b-text of Z is "":
-			say "[Z]: [a-text of Z] [b-text of Z]. [Z] is [if Z is auxiliary]auxiliary[else]flippable[end if]. ";
-			say "[Z] is [if Z is unspoilable]unspoilable[else if z is any-spoilable]any-spoilable[else if Z is parse-spoilable]parse-spoilable[else]unknown: BUG[end if].";
-	if unscan > 0:
-		say "[unscan] things left to ID: [myl].";
-	else:
-		say "A-text/b-text complete!";
-	the rule succeeds;
-
-chapter hashchecking
-
-[* HASHCHECK makes sure that hashes check okay]
-
-hashchecking is an action out of world.
-
-understand the command "hashcheck" as something new.
-
-understand "hashcheck" as hashchecking.
-
-carry out hashchecking:
-	let my-bool be false;
-	let this-hash be 0;
-	repeat with QQ running through regions:
-		if QQ is not demo dome:
-			repeat through regana of QQ:
-				now this-hash is the hash of right-word entry;
-				 if fullhash entry is not this-hash:
-					say "Bad flip hash for [the-from entry]/[right-word entry]: [fullhash entry] should be [this-hash].";
-					now my-bool is true;
-	if my-bool is false:
-		say "Hooray! No bad hashes in tables of anagrams.";
-	now my-bool is false;
-	repeat through regnud of mrlp:
-		now this-hash is the hash of this-cmd entry;
-		if this-hash is not hashval entry:
-			say "Bad nudge hash for [this-cmd entry]: [hashval entry] should be [this-hash].";
-	if my-bool is false:
-		say "Hooray! No bad hashes in table of nudges.";
-
-chapter haing
-
-hinteachmove is a truth state that varies.
-
-haing is an action out of world.
-
-[* HA toggles hinting each move. In particular, hinting everything visible. ]
-
-understand the command "ha" as something new.
-
-understand "ha" as haing.
-
-carry out haing:
-	if hinteachmove is false:
-		now hinteachmove is true;
-	else:
-		now hinteachmove is false;
-	say "Showing hintability of all items in room each move is now [hinteachmove].";
-	the rule succeeds;
-
-every turn when hinteachmove is true:
-	try heing;
-
-chapter heing
-
-[* HE verifies that everything in the current room is hinted. Versus, say, hintall/hintvis, which tries to go hint a ton of stuff.]
-
-heing is an action out of world.
-
-understand the command "he" as something new.
-
-understand "he" as heing.
-
-carry out heing:
-	let ZXQ be false;
-	repeat with QXZ running through visible things:
-		if there is a hint-entry of QXZ in hintobjstable of mrlp or QXZ is useless or QXZ is cluey:
-			do nothing;
-		else:
-			say "BUG: [QXZ] needs to be a hint-entry in [hintobjstable of mrlp]. Or deemed useless, cluey or amusing.";
-			now ZXQ is true;
-	if ZXQ is false:
-		say "This room is all clear!";
 	the rule succeeds;
 
 chapter iiing
@@ -399,31 +258,6 @@ carry out iiing:
 	say "DEBUG: Special carried [list of regspecial things carried by player].";
 	say "DEBUG: Special held [list of regspecial things held by player].";
 	say "DEBUG: Special enclosed [list of regspecial things enclosed by player].";
-
-chapter ceming
-
-[* CEM makes you curse every move. ]
-
-ceming is an action out of world. ["curse every move"]
-
-understand the command "cem" as something new.
-
-understand "cem" as ceming.
-
-carry out ceming:
-	if cuss-every-turn is false:
-		now cuss-every-turn is true;
-	else:
-		now cuss-every-turn is false;
-	the rule succeeds;
-
-cuss-every-turn is a truth state that varies.
-
-every turn when cuss-every-turn is true and mrlp is presto (this is the cheat and swear rule) :
-	now swears is 2;
-	if curst crust is moot:
-		now player has curst crust;
-	try eating curst crust;
 
 section posfing - not for release
 
@@ -786,7 +620,54 @@ carry out xaing:
 	now xraytrump is false;
 	the rule succeeds.
 
+volume demo dome specific tests
+
+chapter xabing
+
+[x all but last row of an exhibit]
+
+understand the command "xab" as something new.
+
+understand "xab [something]" as xabing.
+
+chapter xtraking
+
+understand the command "xtrak" as something new.
+
+understand "xtrak" as xtraking.
+
+check going south in Peek Keep:
+	try xtraking;
+
+xtraking is an action out of world.
+
+after printing the name of an exhibit (called myx) when xtraking: say " ([location of myx])";
+
+carry out xtraking:
+	say "[b]UNNOTED[r] exhibits: [list of unnoted exhibits].";
+	say "[b]PERUSED[r] exhibits: [list of perused exhibits].";
+	say "[b]EXHAUSTED[r] exhibits: [list of exhausted exhibits].";
+	if sparse spares is visited:
+		say "[b]UNEXAMINED[r] in Sparse Spares: [list of unexamined things in sparse spares].";
+		say "[b]EXAMINED[r] in Sparse Spares: [list of examined things in sparse spares].";
+	the rule succeeds;
+
 volume superpower hinting
+
+chapter hring
+
+[ * hr = headache recharge is not a very good superpower but it still counts ]
+
+hring is an action applying to nothing.
+
+understand the command "hr" as something new.
+
+understand "hr" as hring.
+
+carry out hring:
+	say "Recharged slider headaches to 50.";
+	now headaches is 50;
+	the rule succeeds.
 
 chapter tkturbo
 
@@ -862,23 +743,6 @@ carry out scambasing:
 understand "scam" as scambasing.
 understand "scams" as scambasing.
 
-chapter deprefing
-
-[ * removes all prefiguring, for testing purposes]
-deprefing is an action out of world.
-
-understand the command "depref" as something new.
-
-understand "depref" as deprefing.
-
-carry out deprefing:
-	if number of not unfigured things is 0:
-		say "Nothing is prefigured.";
-	else:
-		say "De-prefiguring [list of prefigured things].";
-		now all prefigured things are unfigured;
-	the rule succeeds;
-
 volume male/female
 
 chapter gsing
@@ -940,6 +804,140 @@ carry out halling:
 	the rule succeeds;
 
 volume diagnostics
+
+chapter palling
+
+[* PALL lets you see all the pad]
+
+palling is an action out of world.
+
+understand the command "pall" as something new.
+
+understand "pall" as palling.
+
+carry out palling:
+	now player has pedanto notepad;
+	repeat through table of notepad entries:
+		now known entry is true;
+	say "Pad is now fully stocked. Have fun.";
+
+chapter misseding
+
+[* MISSED shows what this area missed, and in the strip you get an added bonus of alternate ways through]
+
+misseding is an action out of world.
+
+understand the command "missed" as something new.
+
+understand "missed" as misseding.
+
+carry out misseding:
+	say "[miss-types].[paragraph break]";
+	now mrlp is solved;
+	process the show what the player missed rule;
+	now mrlp is unsolved;
+	the rule succeeds;
+
+chapter missalt
+
+[* MISSALT shows alternate routes]
+
+missalting is an action out of world.
+
+understand the command "missalt" as something new.
+understand the command "alt" as something new.
+
+understand "missalt" as missalting.
+understand "alt" as missalting.
+
+carry out missalting:
+	say "[miss-types].[paragraph break]";
+	process the show alternate paths rule;
+	the rule succeeds;
+
+to say miss-types:
+	say "[b]MISSED[r] = all (solved) regions['] misses--not including the current region.";
+	say "[b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
+	say "[b]MISSALT[r] = show alternate mutually exclusive routes for solved regions.";
+	say "[b]THISALT[r] = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers).";
+	say "[paragraph break]========================Real stuff below";
+
+chapter thisalting
+
+[ * THISALT shows the alternate paths so far ]
+
+thisalting is an action out of world.
+
+understand the command "thisalt" as something new.
+
+understand "thisalt" as thisalting.
+
+carry out thisalting:
+	say "Looking at alternate routes, [mrlp] using [altroutes of mrlp]...";
+	process the altroutes of mrlp;
+	the rule succeeds;
+
+chapter sccing
+
+sccing is an action out of world.
+
+understand the command "scc" as something new.
+
+understand "scc" as sccing.
+
+[* SCC tracks the scan text of things.]
+
+carry out sccing:
+	let unscan be 0;
+	let myl be a list of things;
+	repeat with Z running through not unspoilable things:
+		if Z is uncluing:
+			say "[Z] is not not-easy but it is uncluing. Fix this.";
+	repeat with Z running through not uncluing things:
+		if a-text of Z is "":
+			say "[Z] needs a-text.";
+			add Z to myl;
+			increment unscan;
+		if b-text of Z is "":
+			say "[Z] needs b-text.";
+		unless a-text of Z is "" or b-text of Z is "":
+			say "[Z]: [a-text of Z] [b-text of Z]. [Z] is [if Z is auxiliary]auxiliary[else]flippable[end if]. ";
+			say "[Z] is [if Z is unspoilable]unspoilable[else if z is any-spoilable]any-spoilable[else if Z is parse-spoilable]parse-spoilable[else]unknown: BUG[end if].";
+	if unscan > 0:
+		say "[unscan] things left to ID: [myl].";
+	else:
+		say "A-text/b-text complete!";
+	the rule succeeds;
+
+chapter hashchecking
+
+[* HASHCHECK makes sure that hashes check okay]
+
+hashchecking is an action out of world.
+
+understand the command "hashcheck" as something new.
+
+understand "hashcheck" as hashchecking.
+
+carry out hashchecking:
+	let my-bool be false;
+	let this-hash be 0;
+	repeat with QQ running through regions:
+		if QQ is not demo dome:
+			repeat through regana of QQ:
+				now this-hash is the hash of right-word entry;
+				 if fullhash entry is not this-hash:
+					say "Bad flip hash for [the-from entry]/[right-word entry]: [fullhash entry] should be [this-hash].";
+					now my-bool is true;
+	if my-bool is false:
+		say "Hooray! No bad hashes in tables of anagrams.";
+	now my-bool is false;
+	repeat through regnud of mrlp:
+		now this-hash is the hash of this-cmd entry;
+		if this-hash is not hashval entry:
+			say "Bad nudge hash for [this-cmd entry]: [hashval entry] should be [this-hash].";
+	if my-bool is false:
+		say "Hooray! No bad hashes in table of nudges.";
 
 chapter orfing
 
@@ -1167,103 +1165,6 @@ carry out seeding: [100 = Balmer or Beal in Capsule, 200 = skip trefoil, 400 = s
 				place-warrior J and act-index;
 			pick-a-picaro;
 
-chapter palling
-
-[* PALL lets you see all the pad]
-
-palling is an action out of world.
-
-understand the command "pall" as something new.
-
-understand "pall" as palling.
-
-carry out palling:
-	now player has pedanto notepad;
-	repeat through table of notepad entries:
-		now known entry is true;
-	say "Pad is now fully stocked. Have fun.";
-
-chapter misseding
-
-[* MISSED shows what this area missed, and in the strip you get an added bonus of alternate ways through]
-
-misseding is an action out of world.
-
-understand the command "missed" as something new.
-
-understand "missed" as misseding.
-
-carry out misseding:
-	say "[miss-types].[paragraph break]";
-	now mrlp is solved;
-	process the show what the player missed rule;
-	now mrlp is unsolved;
-	the rule succeeds;
-
-chapter missalt
-
-[* MISSALT shows alternate routes]
-
-missalting is an action out of world.
-
-understand the command "missalt" as something new.
-understand the command "alt" as something new.
-
-understand "missalt" as missalting.
-understand "alt" as missalting.
-
-carry out missalting:
-	say "[miss-types].[paragraph break]";
-	process the show alternate paths rule;
-	the rule succeeds;
-
-to say miss-types:
-	say "[b]MISSED[r] = all (solved) regions['] misses--not including the current region.";
-	say "[b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
-	say "[b]MISSALT[r] = show alternate mutually exclusive routes for solved regions.";
-	say "[b]THISALT[r] = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers).";
-	say "[paragraph break]========================Real stuff below";
-
-chapter thisalting
-
-[ * THISALT shows the alternate paths so far ]
-
-thisalting is an action out of world.
-
-understand the command "thisalt" as something new.
-
-understand "thisalt" as thisalting.
-
-carry out thisalting:
-	say "Looking at alternate routes, [mrlp] using [altroutes of mrlp]...";
-	process the altroutes of mrlp;
-	the rule succeeds;
-
-chapter nuding
-
-nuding is an action out of world.
-
-understand the command "nud" as something new.
-
-understand "nud" as nuding.
-
-to show-nudges (ta - a table name):
-	if ta is Table of No Nudges, continue the action;
-	repeat through ta:
-		if there is a this-item entry and this-item entry is not fungible, next;
-		if there is a this-rule entry:
-			process the this-rule entry;
-			unless the rule succeeded, next;
-		say "[this-cmd entry] can be nudged.";
-
-carry out nuding:
-	let nudges be 0;
-	let showit be false;
-	show-nudges regnud of mrlp;
-	show-nudges roomnud of location of player;
-	if nudges is 0, say "Nothing can be nudged. Oh dear, that's wrong!";
-	else say "total nudge(s) [nudges]"
-
 chapter srqing
 
 [ * solve region quick ]
@@ -1289,20 +1190,9 @@ carry out srqing:
 	solve-region mrlp;
 	the rule succeeds;
 
-chapter hring
-
-hring is an action applying to nothing.
-
-understand the command "hr" as something new.
-
-understand "hr" as hring.
-
-carry out hring:
-	say "Recharged slider headaches to 50.";
-	now headaches is 50;
-	the rule succeeds.
-
 chapter ptsing
+
+[ this approximately shows the points you did ]
 
 ptsing is an action out of world.
 
@@ -1362,40 +1252,7 @@ definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for 
 	if th is not-mbb, yes;
 	no;
 
-
-volume demo dome specific tests
-
-chapter xabing
-
-[x all but last row of an exhibit]
-
-understand the command "xab" as something new.
-
-understand "xab [something]" as xabing.
-
-chapter xtraking
-
-understand the command "xtrak" as something new.
-
-understand "xtrak" as xtraking.
-
-check going south in Peek Keep:
-	try xtraking;
-
-xtraking is an action out of world.
-
-after printing the name of an exhibit (called myx) when xtraking: say " ([location of myx])";
-
-carry out xtraking:
-	say "[b]UNNOTED[r] exhibits: [list of unnoted exhibits].";
-	say "[b]PERUSED[r] exhibits: [list of perused exhibits].";
-	say "[b]EXHAUSTED[r] exhibits: [list of exhausted exhibits].";
-	if sparse spares is visited:
-		say "[b]UNEXAMINED[r] in Sparse Spares: [list of unexamined things in sparse spares].";
-		say "[b]EXAMINED[r] in Sparse Spares: [list of examined things in sparse spares].";
-	the rule succeeds;
-
-volume synonyms for players actions
+volume synonyms for items we don't want to be able to manipulate in release
 
 understand "tbossily" as t-bossily.
 

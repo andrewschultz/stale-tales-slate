@@ -305,23 +305,32 @@ this is the check nudge tables rule:
 			next;
 		say "Define table of nudges for [X].";
 
+volume room specific diagnostics
 
-chapter haling
+chapter nuding
 
-haling is an action applying to nothing.
+nuding is an action out of world.
 
-understand the command "hal" as something new.
+understand the command "nud" as something new.
 
-understand "hal" as haling.
+understand "nud" as nuding.
 
-carry out haling:
-	say "Mass hinting [list of all mass-hint-appropriate things].";
-	let count be 0;
-	repeat with myobj running through all mass-hint-appropriate things:
-		increment count;
-		say "([count])Mass-hinting [myobj]:[line break]";
-		try objhinting myobj;
-	the rule succeeds.
+to show-nudges (ta - a table name):
+	if ta is Table of No Nudges, continue the action;
+	repeat through ta:
+		if there is a this-item entry and this-item entry is not fungible, next;
+		if there is a this-rule entry:
+			process the this-rule entry;
+			unless the rule succeeded, next;
+		say "[this-cmd entry] can be nudged.";
+
+carry out nuding:
+	let nudges be 0;
+	let showit be false;
+	show-nudges regnud of mrlp;
+	show-nudges roomnud of location of player;
+	if nudges is 0, say "Nothing can be nudged. Oh dear, that's wrong!";
+	else say "total nudge(s) [nudges]"
 
 volume general monty testing
 

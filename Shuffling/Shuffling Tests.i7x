@@ -4,7 +4,7 @@ Version 1/190606 of Shuffling Tests by Andrew Schultz begins here.
 
 volume testing commands - not for release
 
-[monty stuff: read prep paper? (already in a zarfscript)
+[monty stuff: read prep paper? (already in a zarfscript)]
 
 section start-of-play stuff
 
@@ -31,6 +31,8 @@ after fliptoing (this is the monty after flipping rule):
 	continue the action;
 
 the monty after flipping rule is listed last in the after rules.
+
+volume test/with native commands
 
 part quick checks
 
@@ -242,6 +244,8 @@ test resortmax with "ts/tsf/opt in/poss/resort/enter resort/islet/lies/cork/wing
 
 volume programmer testing commands
 
+chapter automatic stuff (search for obvious missing descriptions)
+
 when play begins (this is the check objects and rooms rule):
 	if undescribed-objects is 0:
 		say "Yay! All objects accounted for and described.";
@@ -253,7 +257,7 @@ when play begins (this is the check objects and rooms rule):
 		say "Rooms remaining to describe: [undescribed-rooms].";
 
 to say miss-types: [this is different from Roiling]
-	say "[this-game] only offers [b]MISSES[r] = this region's misses (may provide nonsense/spoilers).";
+	say "[this-game] only offers [b]MISSES[r] = this region's misses (may provide nonsense/spoilers) and [b]ALT[r] = alternate paths.";
 	if mrlp is metros and nerd-sol > 1:
 		say "[2da]the other ways to get the tulip are to [alt-sols].";
 	say "If nothing else is below, you found everything";
@@ -277,7 +281,11 @@ carry out alting:
 		process the show alternate paths rule;
 	the rule succeeds;
 
-chapter yacking
+volume largely deprecated
+
+[ * mostly deprecated by ZarfScripts ]
+
+chapter yacking (low priority)
 
 [ * this goes through all the subjects]
 
@@ -494,7 +502,7 @@ to unsolve-ordeal-loader:
 
 chapter uaing
 
-[ * this resets a solved region, which is also quite risky]
+[ * this resets a solved region, which has risks, namely that I overlooked something ]
 
 uaing is an action applying to one number.
 
@@ -522,41 +530,6 @@ carry out uaing:
 		move player to Trips Strip, without printing a room description;
 		unsolve-forest instead;
 	say "Invalid number. 1=forest 2=sortie 3=metros";
-	the rule succeeds;
-
-chapter babbleing
-
-[ * This plows through everything you can ask someone about ]
-
-babbleing is an action applying to nothing.
-
-understand the command "babble" as something new.
-
-understand "babble" as babbleing.
-
-carry out babbleing: [Any way to pull out the topic?]
-	let X be indexed text;
-	repeat through table of matched topic responses:
-		say "============[location of asked-person entry]: [asked-person entry].";
-		move player to location of asked-person entry, without printing a room description;
-		try asking asked-person entry about topic entry;
-	the rule succeeds;
-
-chapter mooting
-
-[ * MOOT moots any item. You could just ABSTRACT, but yay saving keystrokes ]
-
-booting is an action applying to one visible thing.
-
-understand the command "moot [any thing]" as something new.
-understand the command "boot [any thing]" as something new.
-
-understand "moot [any thing]" as booting.
-understand "boot [any thing]" as booting.
-
-carry out booting:
-	say "[noun] mooted/moved to Emerita Emirate.";
-	moot noun;
 	the rule succeeds;
 
 volume metros specific testing
@@ -627,7 +600,8 @@ carry out foing:
 	process the notify score changes rule;
 	the rule succeeds;
 
-volume useful for testing if we made it somewhere
+volume useful for testing whether  we made it somewhere, with TEST, but superseded by ZarfScripts
+
 chapter verif
 
 [* for use with rules verification extension: TEST X ]
