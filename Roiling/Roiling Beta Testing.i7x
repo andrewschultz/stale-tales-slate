@@ -236,8 +236,8 @@ carry out a5ing:
 	now suppress-score is false;
 	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to Otters behind Store T. I also gave you the settler and purse and notepad, in case.";
 	process the notify score changes rule;
-	ital-say "you may wish to [b]SEED[i] 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation.";
-	ital-say "you may also wish to [b]OTWIN[i] to almost-win Otters.";
+	say "[i][bracket]NOTE: you may wish to [b]SEED[i] 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation.[close bracket][r][paragraph break]";
+	say "[i][bracket]NOTE: you may also wish to [b]OTWIN[i] to almost-win Otters.[close bracket][r][line break]";
 
 chapter endgameing
 
@@ -327,7 +327,7 @@ carry out otwining:
 		now oyster is solved;
 		now towers is solved;
 		now player is in Reclusion Inclosure;
-	ital-say "Otters endgame cheats are invoked! You can't win directly, because there are things worth testing. You will need to [b]QUICKLY[i] before attacking Elvira, although of course the insta-death if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[i] or it won't work in Rancho Archon Anchor. And for further testing, if you want, [otw2].";
+	say "[i][bracket]NOTE: Otters endgame cheats are invoked! You can't win directly, because there are things worth testing. You will need to [b]QUICKLY[i] before attacking Elvira, although of course the insta-death if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[i] or it won't work in Rancho Archon Anchor. And for further testing, if you want, [otw2].[close bracket][r][line break]";
 	the rule succeeds;
 
 Roiling Beta Testing ends here.

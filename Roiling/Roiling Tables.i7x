@@ -72,7 +72,7 @@ this is the post-sitar-or-stria-to-stair rule:
 	now Largely All Grey Gallery is mapped below Farming Framing;
 	if meet bans are off-stage:
 		min-up;
-		ital-say "since there are two ways up, you will need to [b]CLIMB STAIR[r] to visit [if framing is visited]the Farming Framing[else]that new location[end if].";
+		say "[i][bracket]NOTE: since there are two ways up, you will need to [b]CLIMB STAIR[r] to visit [if framing is visited]the Farming Framing[else]that new location[end if].[close bracket][r][line break]";
 	else if niche is moot and pram is moot:
 		min-up; [check if passage is made via beams or chimney->pram]
 	moot stria;
@@ -3379,7 +3379,7 @@ eh at heat	true	true	false	false	"Well, it's only four letters, and you're not s
 race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 mussier misuser	true	false	false	false	"Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the mussier misuser isn't, either, really."
-stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe [b]STOP[r] and [b]POST[r] are clashing."
+stop post	true	true	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe [b]STOP[r] and [b]POST[r] are clashing."
 l clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
 a sty tasty say	true	true	false	false	"Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't."
 pleaser leapers	true	false	false	false	"You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves."
@@ -3426,8 +3426,8 @@ book oyster
 table of oyster scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
-capers recaps	true	false	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
-casper spacer	true	false	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
+capers recaps	true	false	false	false	"[casper-capers]."
+casper spacer	true	false	false	false	"[casper-capers]."
 perma amper	true	false	false	false	"It's a perma-amper, so that might account for the twitchy light."
 Lil Ps Pills	true	false	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	false	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
@@ -3446,6 +3446,8 @@ papery yapper	true	false	false	false	"Oh no! Where is the orange/y? It'd be easi
 templar ramplet	true	false	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
 natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
 bogus-psalm	true	false	false	false	"Perhaps finding where the vowel is would be a good start."
+
+to say casper-capers: say "Casper Spacer and [recaps] may be linked. You could probably bulldoze through with the information from scanning both"
 
 book towers
 
@@ -3530,7 +3532,7 @@ atmo moat	false	true	false	true	"You feel sheepish having used the settler, but 
 nope peon	true	false	false	false	"You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 blase bales	true	false	false	false	"The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced."
-aside-llp	true	false	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
+aside-llp	true	false	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be that they are ideas aides."
 stray satyr	true	false	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters."
 educers us creed	true	false	false	false	"This one's all over the place. You notice nothing registers over [the educers us creed]'s text, only the four words in the main bit."
 

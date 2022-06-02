@@ -176,10 +176,9 @@ this is the find-blather rule:
 					say "[blurb entry][posties][line break]";
 					if chat-rand is true:
 						if talk-quiet is true:
-							say "[line break]";
-							ital-say "the above was random dialogue that won't be repeated since you have [b]HUSH[r] on. You can undo this with [b]UHHS[r].";
+							say "[line break][i][bracket]NOTE: the above was random dialogue that won't be repeated since you have [b]HUSH[i] on. You can undo this with [b]UHHS[i].[close bracket][r][line break]";
 						if quiet-warn is false:
-							ital-say "the above was random dialogue that can be turned off with [b]HUSH[r] or on with [b]UHHS[r]. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.";
+							say "[line break][i][bracket]NOTE: the above was random dialogue that can be turned off with [b]HUSH[i] or on with [b]UHHS[i]. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.[close bracket][r][line break]";
 							pad-rec-q "random dialogue";
 							now quiet-warn is true;
 					the rule succeeds;

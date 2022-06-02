@@ -586,7 +586,7 @@ gua-warn is a truth state that varies.
 to any-guardian-hint: [note: we are assured there is > 1 guardian. This is a generic and deprecated way to find a hint. It's only used if my other code falls through.]
 	let Z be north;
 	if gua-warn is false:
-		ital-say "in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to [b]HINT[i] (guardian) instead.";
+		say "[i][bracket]NOTE: in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to [b]HINT[i] (guardian) instead.[close bracket][r][line break]";
 		now gua-warn is true;
 	if guar-here is 1:
 		let myg be a random fungible guardian;
@@ -2192,7 +2192,7 @@ carry out reading:
 			now noun is read-yet;
 			the rule succeeds;
 		try reading alt-read entry instead;
-	ital-say "[b]READ[i]ing mapped to examining, because there is no puzzle-cluing text to read.";
+	say "[i][bracket]NOTE: [b]READ[i]ing mapped to examining, because there is no puzzle-cluing text to read.[close bracket][r][line break]";
 	try examining noun instead;
 
 does the player mean reading LEAD: it is very likely.
@@ -2867,7 +2867,7 @@ to move-to-cavern:
 after quipping (this is the usually don't undo convos rule):
 	now current quip is mowered;
 	if current quip is showset-quip:
-		ital-say "if you didn't mean to do this, you can [b]UNDO[i] to get a bit more help from Elmo.";
+		say "[i][bracket]NOTE: if you didn't mean to do this, you can [b]UNDO[i] to get a bit more help from Elmo.[close bracket][r][line break]";
 	else:
 		if debug-state is false:
 			prevent undo;
@@ -3488,7 +3488,7 @@ after fliptoing (this is the make initial score comments rule):
 			if no-tip is false and done-yet entry is false:
 				say "[game-comment entry][line break]";
 				if tip-warn is false:
-					ital-say "you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].";
+					say "[i][bracket]NOTE: you can turn this start-of-region hinting off with [b]NO TIP[i] and on again with [b]OPT IN[i].[close bracket][r][line break]";
 					now tip-warn is true;
 					pad-rec "opt in/no tip";
 				now done-yet entry is true;
@@ -4093,7 +4093,7 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	if first-good-scan is false:
 		now first-good-scan is true;
 		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is Ordeal Reload]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
-		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text, or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.";
+		say "[i][bracket]NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type [b]SPACE ON[i] or [b]SON[i] to space out the text, or [b]NO SPACE[i] or [b]NOS[i] to lump the text back. Also, [b]LA[i] repeats what you scanned last, if the window on top does not show it.[close bracket][r][line break]";
 		pad-rec-q "spaces";
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
