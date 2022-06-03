@@ -9,15 +9,36 @@
 
 * misc-stuff
 
+# note EXTRA mode is on by default, but CHEAT is off
+
 >z
 >ts
 
 Strip of Profits
 
+#first test something where a clue doesn't reappear, like the heat in TROVES
+
+>cheat
+>troves
+>in
+>scan heat
+Your settler registers ?YRY--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
+You can also enable clues for ambiguous/question mark settler-cheat readings with EXTRA. They give lateral-thinking hints that may be spoilers for some. You can disable them with TAXER or TAX ER. They are off by default.
+Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
+
+>scan heat
+Your settler registers ?YRY.
+!Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
+
+>undo
+>undo
+>undo
+>undo
+>undo
+
 >scan poster
 Your settler registers RRYRRY.
 !You can also enable clues
-!I guess it's a trope
 
 >cheat
 You set a tech etcha' cheat mode on.
@@ -36,10 +57,7 @@ Your settler registers ??YRRY--hmm. Some of the spaces are blinking as if the se
 
 You can also enable clues for ambiguous/question mark settler-cheat readings with EXTRA. They give lateral-thinking hints that may be spoilers for some. You can disable them with TAXER or TAX ER. They are off by default.
 
-!I guess it's a trope
-
->extra
-Extra question-mark information for cheat/teach mode on settler is now on. Change it back with TAX ER or TAXER.
+I guess it's a trope
 
 >extra
 Extra question-mark information for cheat/teach mode on settler is already on. Change it back with TAX ER or TAXER.

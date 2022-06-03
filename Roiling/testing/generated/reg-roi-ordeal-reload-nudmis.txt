@@ -381,6 +381,10 @@ You need to work on the entire MEET-BANS beams net.
 >teme
 You need to work on the entire MEET-BANS beams net.
 
+#ttc-table-of-ordeal-reload-readables-meet-bans
+>read meet bans
+Some of the wooden beams are painted red. You could them. There are ten total, and it makes you see a bit red, too.
+
 # let's take an alternate path to the Largely All-Grey Gallery to make sure "mistake" text works elsewhere
 >stable
 by one point

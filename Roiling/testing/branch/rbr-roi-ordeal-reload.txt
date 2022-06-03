@@ -686,7 +686,7 @@ You need to work on the entire MEET-BANS beams net.
 >listen
 Shouty youths.
 
-@nudmis
+@nud
 #ttc-table-of-ordeal-reload-readables-meet-bans
 >read meet bans
 Some of the wooden beams are painted red. You could them. There are ten total, and it makes you see a bit red, too.

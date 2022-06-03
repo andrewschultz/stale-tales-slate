@@ -1698,9 +1698,13 @@ You might be able to disrupt both of them, not just one.
 
 #ttc-table-of-otters-scannotes-aside-llp
 >scan elmer
-Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+/DEBUG: between (Merle and Elmer|Elmer and Merle) being scanned\.
+Hmm. The two yellows can't mean something like LREME. So it must be that they are ideas aides.
+
+# check persistence of extra hint
 >scan merle
-!Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+/DEBUG: between (Merle and Elmer|Elmer and Merle) being scanned\.
+Hmm. The two yellows can't mean something like LREME. So it must be that they are ideas aides.
 
 #ttc-table-of-otters-spechelp-aside-llp
 >aseid

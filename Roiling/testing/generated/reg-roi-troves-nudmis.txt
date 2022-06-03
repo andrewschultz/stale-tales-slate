@@ -310,11 +310,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That'
 >obserev
 You're already observing by reflex now. No need to tweak things.
 
-#ttc-table-of-troves-scannotes-stop-post
->scan stop post
-!Nothing happens until you move the settler away from the post and towards the sob ever verbose.
-Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
-
 #ttc-table-of-troves-scannotes-mussier-misuser
 >scan misuser
 Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the mussier misuser isn't, either, really.
@@ -323,6 +318,16 @@ Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the muss
 Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
+
+#ttc-table-of-troves-scannotes-stop-post
+>scan stop post
+?R??
+Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
+
+>scan stop post
+?R??
+!Well, that's a bit confusing.
+!Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 
 >spot
 Your score has just gone up by one point

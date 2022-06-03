@@ -216,12 +216,12 @@ Hmm. Whatever the variable colors are, you think you can do something with the f
 #ttc-table-of-oyster-scannotes-capers-recaps
 >scan capers recaps
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
-Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
+Casper Spacer and Capers Recaps may be linked. You could probably bulldoze through with the information from scanning both.
 
 #ttc-table-of-oyster-scannotes-casper-spacer
 >scan casper spacer
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
-!Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
+Casper Spacer and Capers Recaps may be linked. You could probably bulldoze through with the information from scanning both.
 
 #ttc-table-of-oyster-scannotes-perma-amper
 >scan perma amper

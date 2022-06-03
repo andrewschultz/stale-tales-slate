@@ -3182,16 +3182,6 @@ They're not just bottles! They're bottles of NERD-AID!
 >addneri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nud
-#+ttc-table-of-towers-scannotes-bogus-dandier
->scan
-Your settler registers ?YR?Y?R.
-# might as well test this appearing only once
-!You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
->dridane
-You feel slightly less depressed you tried something. You can't be too far off.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
-
 @spoi
 #ttc-table-of-towers-anagrams-dandier
 >xr dreadin
