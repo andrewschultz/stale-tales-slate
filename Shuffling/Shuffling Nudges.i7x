@@ -195,7 +195,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "storex"	599634554	store x	--	"[no-way of store x]."
 "storey"	609225725	store y	--	"[no-mb of store y]."
 "storez"	609836091	store z	--	"[no-way of store z]."
-"marquee"	596710416	--	--	"You don't need to change the marquee[unless sorbet is moot], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
+"marquee"	596710416	--	--	"You don't need to change the marquee[unless sorbet is moot], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if][also-q]."
 "depot"	407763752	posted depots	--	"You can't do anything to the depots besides [b]ENTER[r] them."
 "depots"	504037718	posted depots	--	"You can't do anything to the depots besides [b]ENTER[r] them."
 "scented"	563938384	scented descent 	--	"No way. It's your way down to [b]ENTER[r] the forest."
@@ -801,7 +801,7 @@ table of Bile Libe nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "bile"	245031699	--	--	"[loc-rej]."
 "librayr"	412420266	--	--	"[loc-rej]."
-"plaque"	454785149	--	--	"It's more, it's [b]A MOTTO[r]."
+"plaque"	454785149	--	--	"It's more, it's [b]A MOTTO[r][also-q]."
 "motto"	419000343	motto	--	"It's labeled [b]A MOTTO[r]. So you probably have to respect the creative license, such as it is, of whoever wrote it."
 "potaot"	438578967	motto	--	"The author twisted words enough. Perhaps you could concentrate on the motto."
 

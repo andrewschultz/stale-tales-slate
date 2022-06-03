@@ -67,7 +67,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "subpoena"	574518649	--	perrot-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
 "gape"	244059588	dope op ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	--	x-oped rule	"[vs-oped]."
-"questin"	630601871	--	x-oped rule	"[vs-oped]."
+"questin"	630601871	--	x-oped rule	"[vs-oped][also-q]."
 "moneyco"	550858761	--	x-oped rule	"[vs-oped]."
 "shatter"	555094031	--	x-oped rule	"[vs-oped]."
 "itrash"	369170750	--	x-oped-m rule	"[vs-oped]."
@@ -2100,7 +2100,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dollar"	290520965	dollar	--	"[count-enuf]."
 "feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, [b]PERP[r], [b]PERP[r], [b]PERP[r]."
 "guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it." [since the guava and kumquat come from a way-outside puzzle, they must be kept here and can't be taken from in the table of anagrams proper]
-"kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape. Just return it to Curtis."
+"kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape[q-u-dest-fruit of kumquat]. Just return it to Curtis."
 "arugula"	386324594	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 
 to say coin-icon:
@@ -2122,6 +2122,8 @@ this is the perp-moot rule:
 	the rule fails;
 
 to say count-enuf: say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
+
+to say q-u-dest-fruit of (th - a thing): if no-q-u, say ". Besides, not putting the u after the q might really mess up [the th]"
 
 chapter Rustic Citrus
 
@@ -2429,7 +2431,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "receptors"	800467929	settler	--	"[no-set]."
 "output"	572250186	settler	--	"[no-set]."
 "displya"	422122769	settler	--	"[no-set]."
-"equals"	469593156	settler	--	"[no-set]."
+"equals"	469593156	settler	--	"[no-set][also-q]."
 "logo"	235118695	settler	--	"[no-set]."
 "which"	246497802	settler	--	"[no-set]."
 "whichs"	342771768	settler	--	"[no-set]."

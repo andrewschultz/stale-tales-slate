@@ -512,8 +512,13 @@ Unless a room has no way out, or your gadget spontaneously gives a reading, you 
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
 \\
 #ttc-table-of-bile-libe-nudges-plaque
+>laqupe
+It's more, it's A MOTTO. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
+\\
+#ttc-table-of-bile-libe-nudges-plaque
 >plaqeu
 It's more, it's A MOTTO.
+!u right after the q
 \\
 #ttc-table-of-bile-libe-nudges-potaot
 >potaot
@@ -1331,7 +1336,7 @@ You should take the heaths if you want to work on them.
 !Your vision blurs
 
 @nud
-#balance undos
+##balance undos
 #ttc-table-of-metros-spechelp-begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
@@ -1352,9 +1357,10 @@ The noise bag rumbles ominously. Best not change it into something worse.
 >undo
 >undo
 >undo
+>undo
 
 @max
-#balance undos
+##balance undos
 >noise bag
 by one point
 >w

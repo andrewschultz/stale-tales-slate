@@ -21,7 +21,6 @@ Your score has just gone up by one point.
 
 # start the default (which I picked at random) way through.
 
-#balance undos
 >sr sw
 >in
 #gadget test: shout to south

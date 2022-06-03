@@ -420,3 +420,11 @@ You need to act on the Means Manse in its entirety. Or the exits.
 >anme
 You need to act on the Means Manse in its entirety. Or the exits.
 !you are on the right track
+
+>spuz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+[NOTE: also, as a trivial point, no point-gaining commands in the game contain the letter Z. Yes, I'm disappointed in myself too, what with my last name ending in Z and all.]
+
+>spuz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+!trivial point

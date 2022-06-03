@@ -18,6 +18,21 @@ to say that-those-is-are of (x - a thing):
 	else:
 		say "[if x is plural-named]Those are[else]That is[end if]";
 
+chapter Q and Z stuff
+
+to decide whether no-q-u:
+	unless the player's command matches the regular expression "qu", yes;
+	no;
+
+to say also-q: say "[if no-q-u]. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd[end if]"
+
+z-warn is a truth state that varies.
+
+to check-z-warn:
+	if z-warn is false and the player's command matches the regular expression "z":
+		ital-say-lb "also, as a trivial point, no point-gaining commands in the game contain the letter Z. Yes, I'm disappointed in myself too, what with my last name ending in Z and all.";
+		now z-warn is true;
+
 part game-dependent variables and super-stubs
 
 orig-region is a region that varies. [ordeal loader/ (means manse or ordeal reload)]

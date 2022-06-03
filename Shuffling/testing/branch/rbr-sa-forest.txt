@@ -347,7 +347,7 @@ Your vision blurs, and you see a compass rose pointed west.
 >undo
 
 @scan
-#balance undos
+##balance undos
 >sr sw
 >in
 #gadget test: shout to south

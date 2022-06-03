@@ -411,7 +411,8 @@ to say reject:
 	if regnud of mrlp is hash-found, continue the action;
 	if table of general nudges is hash-found, continue the action;
 	if found-misspelled-anagram, continue the action;
-	say "[verb-cue][warn-inc]."
+	say "[verb-cue][warn-inc].";
+	check-z-warn;
 
 to decide whether found-misspelled-anagram:
 	let quickcmd be the rough-hash of the player's command;

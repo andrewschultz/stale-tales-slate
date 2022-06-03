@@ -59,6 +59,10 @@ use authorial modesty.
 
 release along with cover art.
 
+release along with a website.
+
+release along with the "Parchment" interpreter.
+
 the release number is 4.
 
 [for the purposes of amusement, I'd like to list the release updates.
@@ -3392,6 +3396,7 @@ to say reject:
 			say "The only thing required here is to muck with the dialer right.";
 			continue the action;
 	say "[generic-reject]";
+	check-z-warn;
 	if Elmo is fungible, process the sign-imminent rule;
 
 to decide whether found-misspelled-anagram:

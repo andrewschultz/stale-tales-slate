@@ -1281,6 +1281,12 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 >quinec
 That certainly sounds foreign--but it doesn't seem to sway Len.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
+!no u right after the q
+
+#+ttc-table-of-others-spechelp-quince
+>qiunec
+That certainly sounds foreign--but it doesn't seem to sway Len, especially with no u right after the q.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
 
 #testcase-misspellings-table-of-others-spechelp-quince
 >quinece
@@ -1338,6 +1344,14 @@ You have 33 of 47 total points for the post-Elvira Others region, though you onl
 Your score has just gone up by one point.
 >score
 You have 34 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
+
+#ttc-table-of-others-done-rejects-quince
+>quicne
+The quince doesn't need any modifications.
+
+#+ttc-table-of-others-done-rejects-quince
+>qiucne
+The quince doesn't need any modifications, especially not anything drastic with the q and u out of place.
 
 #testcase-mistake-roiling-mango
 >mango
@@ -1464,7 +1478,7 @@ You got enough of a discount. Really.
 >lemosn
 You sour on changing the lemons further.
 
-#ttc-table-of-others-nudges-kumquat
+#ttc-table-of-others-done-rejects-kumquat
 >kumquta
 The kumquat is in good enough shape. Just return it to Curtis.
 
@@ -1472,7 +1486,7 @@ The kumquat is in good enough shape. Just return it to Curtis.
 >manog
 Snag mo' mangos? No mas, G.
 
-#ttc-table-of-others-done-rejects-kumquat
+#ttc-table-of-others-done-rejects-prices-precis
 >cripse
 You corrected the prices precis enough.
 

@@ -237,6 +237,11 @@ You try and twist Elvira's words or poke holes where they're wrong...and you can
 #ttc-table-of-dusty-study-nudges-questin
 >questni
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+!q without the u
+
+#+ttc-table-of-dusty-study-nudges-questin
+>eqistun
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh. Also, you're not quite sure how to pronounce that q without the u right after it. Things can't be THAT obscure.
 
 #ttc-table-of-dusty-study-nudges-moneyco
 >moneyoc

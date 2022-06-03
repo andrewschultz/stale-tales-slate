@@ -586,7 +586,12 @@ The hubs bush is too sturdy. You can't escape the Trips Strip.
 
 #ttc-table-of-stores-nudges-marquee
 >marqeue
+You don't need to change the marquee, but maybe it'd be fun to see what's inside. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
+
+#ttc-table-of-stores-nudges-marquee
+>quarmee
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
+!u right after the q
 
 >sorbet
 by one point

@@ -1894,6 +1894,11 @@ Score in a scenario: 35 out of 38 total points in the current region, Otters. Th
 The medals waver noiselessly. Hm, that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
 
+#+ttc-table-of-otters-spechelp-medals
+>qiuckyl
+The medals waver noiselessly. Maybe they'd do more if you placed the u right after the q.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
+
 #testcase-misspellings-table-of-otters-spechelp-medals
 >qquickyl
 The medals waver noiselessly. Hm, that's not quite it.
@@ -1966,7 +1971,12 @@ You don't want to risk anything that would make Elvira more powerful.
 
 #ttc-table-of-otters-done-rejects-medals
 >ickqlyu
-You already got a boost from the medals.
+You try to remember even a part of those solutions to society's big problems that flashed through your mind, but no dice. Not even going outside the box with where you place that q helps.
+
+#+ttc-table-of-otters-done-rejects-medals
+>ickquyl
+You try to remember even a part of those solutions to society's big problems that flashed through your mind, but no dice.
+!Not even going
 
 >deeply
 Your score has just gone up by one point

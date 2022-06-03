@@ -1516,7 +1516,7 @@ satyr	satyr	false	409254857	17694721	--	"artsy"	"artsy"	--	post-lamer-realm-flip
 lilac bays	lilac bays	false	413053868	17041671	--	"basically"	"basically"	--	--	"Nothing happens, until the asyllabic lilac bays bloom unexpectedly! Weird that such a flabby word would provide them with nourishment, but hey, plants already like plant food, which is weird enough. Well, you've prettified things."
 blase bales	blase bales	false	298500637	264211	--	"sable"	"sable"	--	--	"The blase bales rumble and pop, and suddenly, out flies a small sable that chatters as it runs around you several times. It seems to nod before running off, surely to get allies. It did not seem fearful--you've clearly put a dent in Elvira's power. But you still need to [if rancho archon anchor is visited]figure how to defeat[else]find[end if] her."
 weltish whistle	weltish whistle	false	534280357	16812056	--	"deeply"	"deeply"	pre-whistle-deeply rule	--	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."
-medals	medals	false	482616124	17894660	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]Oh, also, if you were waiting all game, wondering when you'd get to use the 'Q before U' factoid, I guess it just slipped in under the wire!"
+medals	medals	false	482616124	17894660	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]You run in place briefly as you reflect on everything you did to get here. Was this the first time you got to use the 'Q before U' factoid? Yes, yes it was! It just slipped in under the wire! Your mind races more quickly when you realize with a touch of regret that you never used a Z, though you did use an X before and maybe after defeating Red Bull Burdell (I can't say for sure. There were alternate final commands!)[paragraph break]You even have some surprisingly simple and clear ideas about solving world hunger and achieving world piece, but before you can really process them, your mind slows back to normal. However, you sense you will automatically call up this quickness in moments of great stress, when needed."
 
 this is the post-barley-barely rule:
 	now exits-text of Minded Midden is "";
@@ -3877,7 +3877,7 @@ ocelots	"The ocelots squint at you through their clip-ons."
 leopard	"The leopard almost seems to un-cuff its hands."
 badger	"The badger flexes imaginary suit lapels, then quickly goes back to brooding."
 satyr	"The satyr puts a hand on its chin as if pondering deeper things."
-medals	"The medals waver noiselessly. Hm, that's not quite it."
+medals	"The medals waver noiselessly. [if no-q-u]Maybe they'd do more if you placed the u right after the q[else]Hm, that's not quite it[end if]."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 
 to say imp-nag: say "The imp looks slightly annoyed for a second. You may be on the right track";
@@ -3925,7 +3925,7 @@ nectarine	"The nectarine seems a little less shiny and new. But not enough."
 peach	"The peach still looks too expensive."
 i solve voiles	"The [voiles] rustle slightly."
 prices precis	"Something glints off the prices precis."
-quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
+quince	"That certainly sounds foreign--but it doesn't seem to sway Len[if no-q-u], especially with no u right after the q[end if]."
 a banna	"The (a) banna['] flutters about for a bit."
 a brr hub	"The (a) brr hub seems to swirl closed for a bit."
 orange	"The orange seems a bit closer for a bit."
@@ -4064,14 +4064,15 @@ parleys splayer players	"You've already made the [players] talk a bit slower. No
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
-medals	"You already got a boost from the medals."
+medals	"You try to remember even a part of those solutions to society's big problems that flashed through your mind, but no dice[if no-q-u]. Not even going outside the box with where you place that q helps[end if]."
 
 table of others done rejects
 specdone	spectalk
 compass	"The compass is accurate enough. Changing it might ruin things."
 icon	"The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more."
 s-i	"The sonic icons seem right. No use meddling."
-kumquat	"You corrected the prices precis enough."
+prices precis	"You corrected the prices precis enough."
+quince	"The quince doesn't need any modifications[if no-q-u], especially not anything drastic with the q and u out of place[end if]."
 olives	"The olives are just find as they are. They're even pitted! No need to change them. I mean, what if they became SO EVIL?"
 lemons	"You sour on changing the lemons further."
 melon	"The melon is fine as-is. It's better than the one that was on display, for sure."

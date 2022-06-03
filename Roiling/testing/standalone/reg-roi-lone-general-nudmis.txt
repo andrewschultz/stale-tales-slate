@@ -112,6 +112,11 @@ You won't gain anything trying to magic the settler, or parts of it, about. All 
 #ttc-table-of-general-nudges-equals
 >quales
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+!q without the u
+
+#+ttc-table-of-general-nudges-equals
+>qaules
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 
 #ttc-table-of-general-nudges-logo
 >gool
@@ -397,3 +402,11 @@ you are on the right track, but the intended anagram has an extra S. This is a o
 
 >orsca
 !you are on the right track, but the intended anagram has an extra S
+
+>spuz
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+[NOTE: also, as a trivial point, no point-gaining commands in the game contain the letter Z. Yes, I'm disappointed in myself too, what with my last name ending in Z and all.]
+
+>spiz
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+!trivial point
