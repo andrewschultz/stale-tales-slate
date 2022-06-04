@@ -1862,9 +1862,9 @@ nectarine	nectarine	true	648047304	663829	--	"ancienter"	"ancienter"	--	--	"The 
 peach	peach	true	267747770	32917	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
 i solve voiles	olives	true	504404157	2378000	--	"olives"	"olives/olive"	--	--	"A siren goes off! 'You get the last jar of olives!' Len Craig cries, as he tears down the voiles. 'Congratulations!'[paragraph break]You take it. You remember a distant argument where you KNEW olives were a vegetable. You said they must be, and they would do, for a serving of vegetables. Plus, they didn't taste all sweet. You are older and wiser now, or at least you know not to push the issue while you're running errands here."
 quince	quince	true	450223472	1122580	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
-prices precis	kumquat	true	454868268	426260	--	"cripes"	"cripes"	--	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge and takes the prices precis down to look for other errors."
+prices precis	prices precis	false	454868268	426260	--	"cripes"	"cripes"	--	post-prices-precis rule	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge and takes the prices precis down to look for other errors."
 melon	melon	true	388955186	30736	--	"mo len"	"mo len" or "len mo"	--	--	"You prod Len and ask if that is really the last melon. You know salesmen's tricks. He smiles, then gives you a much nicer melon from a secret stash."
-auction caution	papayas	true	388128590	17072129	--	"papayas"	"papayas/papaya"	--	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your, um, ASAP yap."
+auction caution	auction caution	false	388128590	17072129	--	"papayas"	"papayas/papaya"	--	post-auction-caution rule	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your, um, ASAP yap."
 lemons	lemons	true	485229152	292880	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"
 a banna	small yellow banana	true	162797375	8195	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
 orange	orange	true	391177517	155729	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
@@ -1880,6 +1880,12 @@ s-c	s-i	false	303532482	286980	--	"icons"	"sonic icons" or "icons"	--	post-sonic
 viewer	viewer	false	601028460	6422800	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	393365	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 fleeing feeling	fleeing feeling	false	376061830	163856	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+
+this is the post-prices-precis rule:
+	now player has kumquat;
+
+this is the post-auction-caution rule:
+	now player has papayas;
 
 this is the post-moss-cap-compass rule:
 	now exits-text of Rustic Citrus is "";
@@ -4078,7 +4084,7 @@ lemons	"You sour on changing the lemons further."
 melon	"The melon is fine as-is. It's better than the one that was on display, for sure."
 peach	"You got enough of a discount. Really."
 mango	"Snag mo['] mangos? No mas, G."
-papayas	"You've already established yourself as a prompt payer."
+auction caution	"You've already established yourself as a prompt payer."
 fleeing feeling	"Don't want to over-prep[win-north]."
 searcher	"You've done enough researching[win-north]."
 viewer	"You've done enough reviewing[win-north]."

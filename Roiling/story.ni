@@ -19942,7 +19942,8 @@ this is the force-others-guru-point rule:
 		now got-forced-others-min is true;
 		min-up;
 
-after fliptoing a fruit (this is the check minimum fruits and score rule) :
+after fliptoing when mrlp is others (this is the check minimum fruits and score rule) :
+	unless noun is a fruit or noun is auction caution or noun is prices precis, continue the action;
 	if player is in Rustic Citrus:
 		coin-eval;
 	check-fruit-min;
@@ -20800,7 +20801,7 @@ the jar of olives is a fruit. "Some green (with and without pimentos,) some blac
 
 chapter prices precis
 
-the prices precis is reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
+the prices precis is reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if prices precis is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
 check taking prices precis: say "That'd leave everyone in the market confused[if prices precis is reflexed] and undo your help fixing the prices[end if]." instead;
 

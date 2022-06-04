@@ -2386,6 +2386,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. Th
 You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
+#ttc-table-of-others-done-rejects-auction-caution
+>papaysa
+You've already established yourself as a prompt payer.
 
 @!min
 >among
@@ -2514,9 +2518,9 @@ You got enough of a discount. Really.
 >lemosn
 You sour on changing the lemons further.
 \\
-#ttc-table-of-others-done-rejects-kumquat
+#ttc-table-of-others-nudges-kumquat
 >kumquta
-The kumquat is in good enough shape. Just return it to Curtis.
+The kumquat is in perfectly good shape. Just return it to Curtis.
 \\
 #ttc-table-of-others-done-rejects-mango
 >manog
@@ -2530,19 +2534,39 @@ You corrected the prices precis enough.
 >w
 
 @nud
-#doing this in front of the prices precis should give the same result.
-#+ttc-table-of-others-done-rejects-kumquat
->cripse
+##balance undo
+#this is a bunch of negative tests which may be objectively trivial but were one of the last things to fix ... I finally defined certain things as "reflexive" instead of flipping them to fruits, and I want to make sure this causes no core regressions
+#ttc-table-of-others-done-rejects-prices-precis
+>cripes
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
+\\
+#+ttc-table-of-others-nudges-papayas
+>papaysa
+The papayas are in perfectly good shape. Don't ruin them for Curtis.
+>s
+>gt clearing
+\\
+#+ttc-table-of-others-done-rejects-prices-precis
+>cripes
 You corrected the prices precis enough.
 \\
-#ttc-table-of-others-done-rejects-papayas
+#+ttc-table-of-others-done-rejects-auction-caution
 >papaysa
 You've already established yourself as a prompt payer.
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+\\
 >n
 \\
 #ttc-table-of-gates-stage-nudges-halt
 >ltha
-The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
+The halt lath remains firm. Maybe you need an actual item to open it.
+\\
 >undo
 >undo
 #need to undo and not just go south as there is a test for gates-stage being (not) visited
@@ -2951,10 +2975,6 @@ The gate needs to be unlocked some other way.
 #ttc-table-of-gates-stage-nudges-roping
 >rpigon
 You don't need to grapple with the roping, and you don't need the roping to grapple with you.
-\\
-#+ttc-table-of-gates-stage-nudges-halt
->ltha
-The halt lath is ineffective, now you have the passport.
 \\
 #ttc-table-of-gates-stage-nudges-arean
 >arean

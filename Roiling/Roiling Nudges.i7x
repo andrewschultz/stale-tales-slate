@@ -2100,7 +2100,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dollar"	290520965	dollar	--	"[count-enuf]."
 "feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, [b]PERP[r], [b]PERP[r], [b]PERP[r]."
 "guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it." [since the guava and kumquat come from a way-outside puzzle, they must be kept here and can't be taken from in the table of anagrams proper]
-"kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape[q-u-dest-fruit of kumquat]. Just return it to Curtis."
+"kumquat"	516923398	kumquat	--	"The kumquat is in perfectly good shape[q-u-dest-fruit of kumquat]. Just return it to Curtis."
+"papayas"	388128590	papayas	--	"The papayas are in perfectly good shape. Don't ruin them for Curtis."
 "arugula"	386324594	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 
 to say coin-icon:
@@ -2298,7 +2299,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gates"	361977613	--	--	"[no-gate]."
 "gate"	265703647	--	--	"[no-gate]."
 "sagest"	458251579	--	--	"[no-gate]."
-"halt"	196393974	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
+"halt"	196393974	halt lath	--	"The halt lath remains firm. Maybe you need an actual item to open it."
 "arean"	286413056	--	--	"[val-chg]."
 "nera"	284225238	--	--	"[val-chg]."
 "valence"	506691788	--	--	"[val-chg]."

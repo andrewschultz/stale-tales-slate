@@ -403,10 +403,15 @@ you are on the right track, but the intended anagram has an extra S. This is a o
 >orsca
 !you are on the right track, but the intended anagram has an extra S
 
->spuz
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+>hutz
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 [NOTE: also, as a trivial point, no point-gaining commands in the game contain the letter Z. Yes, I'm disappointed in myself too, what with my last name ending in Z and all.]
 
->spiz
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+>hotz
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !trivial point
+
+>hotz
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
+!trivial point
+Though it looks like you're a bit stuck. You may need to take a step back and examine things, maybe with SS, maybe looking again through your pedanto-notepad for general tips, to see what you can change. The trickier stuff should have more than one clue.
