@@ -20,13 +20,9 @@ TRIX = what I think are nice tricks that may be somewhere near the back of the I
 
 Rooms are divided into books, with each volume being a region.]
 
-[Build this at your own risk. I think you'll get the general idea, but really, it takes 30-45 seconds to build. Plus you may need special versions of certain modules. They can be found at
-
-Glulx Text Effects.i7x
-Flexible Windows.i7x
-
-Are the two modified, and there may be a problem with naming Flexible Windows.i7x / Glulx Text Effects.i7x and a 'new' version. So if Inform says there are 2 of one table, you may be reading Glulx Text Effects.i7x and Glulx Text Effects - New.i7x. This is mostly my laziness. But until then I want this caveat in.
-
+[I have the right (hopefully) versions of modules to build this at
+https://github.com/andrewschultz/stale-tales-slate/tree/main/build
+with instructions, but I'm unable to give much in the way of technical support.
 ]
 
 volume globals and initializers

@@ -330,6 +330,102 @@ carry out otwining:
 	say "[i][bracket]NOTE: Otters endgame cheats are invoked! You can't win directly, because there are things worth testing. You will need to [b]QUICKLY[i] before attacking Elvira, although of course the insta-death if you forget is relevant too. Also, you need to play the whistle [b]DEEPLY[i] or it won't work in Rancho Archon Anchor. And for further testing, if you want, [otw2].[close bracket][r][line break]";
 	the rule succeeds;
 
+chapter seed
+
+[* SEED seeds the towers or otters with option #N in a list]
+
+seeding is an action applying to one number.
+
+understand the command "seed" as something new.
+
+understand "seed [number]" as seeding.
+
+to place-warrior (myp - a number) and (myi - a number):
+	let temp-ord be 0;
+	let cur-war be Rodney;
+	let max-pod be 0;
+	repeat with QQ running through picaros:
+		if pod-num of QQ is myp:
+			if pod-ord of QQ > max-pod:
+				now max-pod is pod-ord of QQ;
+	let myi2 be myi;
+	if myi2 > max-pod:
+		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
+		now myi2 is max-pod;
+	repeat with QQ running through picaros:
+		if pod-num of QQ is myp and pod-ord of QQ is myi2:
+			if QQ is in Loftier Trefoil:
+				say "Oops, we placed [QQ] twice. [myp] [myi2].";
+			now QQ is in Loftier Trefoil;
+			say "[QQ] to Loftier Trefoil.";
+			the rule succeeds;
+
+to place-idea (myp - a number) and (myi - a number):
+	let temp-ord be 0;
+	let cur-idea be t-despairingly;
+	let max-pod be 0;
+	let myi2 be myi;
+	repeat with QQ running through pickup-lines:
+		if pod-num of QQ is myp:
+			if pod-ord of QQ > max-pod:
+				now max-pod is pod-ord of QQ;
+	if myi2 > max-pod:
+		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
+		now myi2 is max-pod;
+	repeat with QQ running through pickup-lines:
+		if pod-num of QQ is myp and pod-ord of QQ is myi2:
+			if QQ is in Disowned Downside:
+				say "Oops, placed [QQ] twice. [myp] [myi2].";
+			now QQ is in Disowned Downside;
+			say "[QQ] to Disowned Downside.";
+			the rule succeeds;
+	say "BUG: didn't get anything for pod [myp] index [myi2].";
+
+carry out seeding: [100 = Balmer or Beal in Capsule, 200 = skip trefoil, 400 = skip Disowned Downside. Most of the time we'll just need the non hundreds.]
+	let temp be 0;
+	let G be Rodney;
+	let found-yet be false;
+	let act-index be the remainder after dividing number understood by 100;
+	let seedflags be number understood / 100;
+	say "[b]USAGE NOTES[r]: SEED requires a number between 1 and 708, which seems kind of arbitrary, but the details are below.[paragraph break]100=Balmer 0=Mr Beal.[line break]200=ignore Trefoil seeding.[line break]400=ignore Downside seeding.[line break]The ones digit is the pod number, which is 1-8 for the players and 1-5 for the picaros. Anything above that is bumped down to the maximum pod number for that group of people.[paragraph break]You will probably just want to use 1-8.";
+	say "10s digit = unused as of now.";
+	if act-index > 8:
+		say "[b]WARNING: this is probably out of range, but we will round down.[r][line break]";
+		now act-index is 8;
+	if act-index < 1:
+		say "Need a positive act index.";
+		the rule fails;
+	if Upscale Capsule is visited and sister tressi is not off-stage:
+		say "We can't randomly allocate the marble blamer.";
+	else:
+		if the remainder after dividing seedflags by 2 is 1:
+			now mbb is Marble Blamer Balmer;
+		else:
+			now mbb is Marble Blamer Mr Beal;
+		say "[mbb] will be in [capsule].";
+	if seedflags < 4: [400 = skip downside]
+		if Disowned Downside is visited and gretta-score > 0: [next, seed the players' pickup lines in OTTERS]
+			say "Skipping Disowned Downside seeding because you already started wiping the players/macks out.";
+		else:
+			now all pickup-lines are off-stage;
+			repeat with J running from 1 to max-pod-num:
+				place-idea J and act-index;
+			if the remainder after dividing seedflags by 2 is 0:
+				assign-random-pickup-priority;
+			else:
+				assign-fixed-pickup-priority; [ 200 = skip trefoil]
+	if the remainder after dividing seedflags by 4 < 2:
+		if Loftier Trefoil is visited and number of moot picaros > 0: [first, seed the start of TOWERS]
+			say "Skipping Trefoil seeding as you've already disposed of [number of moot picaros] warrior[if number of moot picaros > 1]s[end if]. Restart if you wish to re-seed.";
+		else:
+			if act-index > 5:
+				say "Decreasing index to 5 for the Trefoil.";
+				now act-index is 5;
+			now all picaros are off-stage;
+			repeat with J running from 1 to 7:
+				place-warrior J and act-index;
+			pick-a-picaro;
+
 Roiling Beta Testing ends here.
 
 ---- DOCUMENTATION ----
