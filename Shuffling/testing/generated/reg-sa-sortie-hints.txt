@@ -261,10 +261,6 @@ You currently have 9 out of 27 total points for the Sortie region. You have foun
 >put steak on tortilla
 >put parmesan on tortilla
 >put hot sauce on tortilla
->undo
-
->put hotsauce on tortilla
-#notana
 Your score has just gone up by one point.
 
 DEBUG: taco being objhinted.

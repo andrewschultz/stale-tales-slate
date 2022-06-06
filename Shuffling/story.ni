@@ -1183,9 +1183,15 @@ check waving hands:
 
 chapter wearing
 
+check wearing the sack: say "It's for putting things in, not for wearing. Plus, you can't be bothered to make armholes." instead;
+
 check wearing:
 	if noun is not wearable, say "You don't need to wear [the noun]. Anything you need to wear temporarily will be slipped on implicitly." instead;
 	if noun is velcro, continue the action;
+	if noun is beard or noun is shades or noun is nose:
+		if emptiness sepiments is visited, say "You wore it when you needed, and you'll wear it if you need to cross back again." instead;
+		say "You will slip [the noun] on implicitly when you need to." instead;
+	if noun is worn, say "You're already wearing [the noun]." instead;
 	say "You don't need to wear [the noun]. I should have a better reason for this, but I don't. This is worth reporting as a bug, if you have the time." instead;
 
 the can't wear what's not clothing rule is not listed in any rulebook.
@@ -1465,8 +1471,9 @@ check inserting it into (this is the straw-hay insert rule):
 	if second noun is sack:
 		ignore the can't insert what's not held rule;
 		if noun is in sack, say "It already is." instead;
+		if noun is oils, say "The oils might leak through the sack. Maybe there is a more airtight container the sack could become, or return to being." instead;
 		if noun is missile or noun is panel or noun is door, say "That wouldn't fit in the sack[if straw is in sack or hay is in sack], even if the sack were empty[end if]." instead;
-		if noun is not straw and noun is not hay, say "[if straw is in sack or hay is in sack]You've already got something in there[else]The sack's probably better for stuff that might spill[end if]." instead;
+		if noun is not straw and noun is not hay, say "[if straw is in sack or hay is in sack]You've already got something in there[else]The sack's probably better for carrying bulky stuff that might spill[end if]." instead;
 	if noun is black door or noun is panel:
 		ignore the can't insert what's not held rule;
 		try putting noun on second noun instead;
@@ -1618,7 +1625,7 @@ to say tau: say "Tautology?! Got ya, lout!".
 
 check examining the panel:
 	if panel is not part of the silo, say "It looks kind of electrical. It doesn't seem to have wires, so hopefully you can just slip it where it needs to go." instead;
-	say "There are two buttons, on the left ([if trees button is not moot]TREES[else]STEER[end if]) and right ([if shoot button is not moot]SHOOT[else]HOOTS[end if] Both are an important shade of maroon, and you'll probably have to push them to figure what they do." instead; [bold-ok]
+	say "There are two buttons, on the left ([if trees button is not moot]TREES[else]STEER[end if]) and right ([if shoot button is not moot]SHOOT[else]HOOTS[end if]). Both are an important shade of maroon, and you'll probably have to push them to figure what they do." instead; [bold-ok]
 
 tie-warn is a truth state that varies.
 
@@ -2360,7 +2367,9 @@ after printing the name of an unnecc thing while angleing: say " (faint)". [unne
 rule for printing the name of protest when angleing: say "protest"
 
 definition: a thing (called amiun) is unnecc:
-	if amiun is LLPish, yes;
+	if amiun is LLPish:
+		if amiun is cabinet and tenibac is fungible, no;
+		yes;
 	if amiun is attics or amiun is static, yes;
 	if amiun is tool shed:
 		if sprig is moot and spore is moot, yes;
@@ -2406,7 +2415,7 @@ h-short is a number that varies. h-short-told is a truth state that varies.
 chapter point / opt in / no tip
 
 to set-optin-notip (ts - a truth state):
-	say "You are [if ts is point]already[else]now[end if] seeing extra hints when you guess the right collection of letters. ";
+	say "You are [if ts is point]already[else]now[end if] [if ts is false]not [end if]seeing extra hints when you guess the right collection of letters. ";
 	say "[if ts is false][b]OPT IN[r] will set this option on[else][b]NO TIP[r] will set this option off[end if].";
 	now point is ts;
 	now pointcue is true;
@@ -2546,7 +2555,7 @@ this is the r-rc-c umbrella check rule:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert][b]CERTIFY[r][else][b]RECTIFY[r][end if].";
 		now ever-scan is true;
 	abide by the r-rc-c general clues rule;
-	if noun is oils and player has oils2, now noun is oils;
+	if noun is oils and player has oils2, now noun is oils2;
 
 this is the r-rc-c general clues rule:
 	if noun is spout, say "The spout reads nothing, but [if spout is examined or caskfillings > 0]re[end if]examining it, perhaps the [b]OILS[r] it mentions have possibilities." instead;
@@ -3481,7 +3490,9 @@ to decide whether both-thickets-animals:
 
 for printing a locale paragraph about an animal in Thickest Thickets:
 	say "The [list of all npcish animals in Thickest Thickets] [if both-thickets-animals]are[else]is[end if] half-sleeping here. [if both-thickets-animals]They're[else]It is[end if] probably best left that way.";
-	now all animals are mentioned;
+	now deer is mentioned;
+	now goat is mentioned;
+	the rule succeeds;
 
 check waking an animal in thickest thickets: say "If [the noun] is having a bad dream, you'll probably get kicked at. If you interrupt a good dream, you'll probably get kicked at." instead;
 
@@ -3870,7 +3881,7 @@ to say lemon-melon:
 	if sr-acc is true:
 		say "[first custom style]L[second custom style]E[first custom style]M[second custom style]ON[r], two-way arrow, and [first custom style]M[second custom style]E[first custom style]L[second custom style]ON[r]. The m's and l's are red, but the other letters are green";
 	else:
-		say "[first custom style]L[second custom style]E[first custom style]M[second custom style]O[second custom style]N[r] <-> [first custom style]M[second custom style]E[first custom style]L[second custom style]O[second custom style]N[r][one of]. A little thought and you realize only two reds on the gadget makes things trivial[or][stopping]"
+		say "[first custom style]L[second custom style]E[first custom style]M[second custom style]O[second custom style]N[r] <-> [first custom style]M[second custom style]E[first custom style]L[second custom style]O[second custom style]N[r][one of]. A little thought and you realize only two reds on the gadget makes things trivial. You just swap the M and L[or][stopping]"
 
 to say paste-tapes:
 	if sr-acc is true:
@@ -3987,6 +3998,8 @@ description of PHAIL phial is "It looks glinty and[if phial is in cabinet], you 
 the blue lube is a boring thing. it is part of the phail phial. description of blue lube is "[if phial is in cabinet]You have to blink a couple times after looking at it, even from outside the cabinet. It has some weird powers, but you'd probably need to ask how to harness them[else if lube-asked is false]You sense it's powerful, but you need to look at it right[else]You remember what Nat Egam said. You can either [b]ANGLE[r] or [b]GLEAN[r] as you look at it, which may help your quest[end if].". bore-check of blue lube is bore-lube rule. bore-text of blue lube is "The lube's really only good for staring at."
 
 [Rule for deciding whether all includes blue lube while taking (this is the zap lube rule): rule fails.]
+
+rule for deciding whether all includes Mondale Doleman: it does not.
 
 cabinet-bit-me is a truth state that varies.
 
@@ -4495,7 +4508,7 @@ to say trips-bound: say "The stores are where it's at. You can go [b]IN[r] [if n
 
 after printing the locale description for Trips Strip when Trips Strip is unvisited:
 	if one-rigged is false and denial is false:
-		say "[i][bracket]NOTE: if, for whatever reason you lose a save file or wish to replay, [b]IGNORE REGION[i] or [b]RIG ONE REGION[i] will skip the introduction you just played and give you all the goodies.[close bracket][r][line break]";
+		say "[i][bracket]NOTE: if, for whatever reason you lose a save file or wish to replay, [b]IGNORE REGION[i] or [b]RIG ONE REGION[i] will skip the introduction you just played and give you all the goodies from the cabinet.[close bracket][r][line break]";
 	continue the action;
 
 definition: a portal (called PO) is discovered:
@@ -5435,6 +5448,7 @@ check putting it on(this is the disguise-piece creation rule):
 	if noun is a disguise-piece and second noun is a disguise-piece:
 		if elevation of second noun > elevation of noun, try putting second noun on noun instead;
 		say "The [noun] hook[if noun is not shades]s[end if] over the [second noun] easily and naturally.[opt-break]";
+		set the pronoun it to second noun;
 		now noun is part of second noun;
 		if shades are part of nose and nose is part of beard:
 			now shades are part of beard;
@@ -5630,10 +5644,12 @@ the beard is a disguise-piece. the beard is edible. the elevation of the beard i
 
 the printed name of the beard is "[beard-desc]".
 
+to decide which number is beard-prog: decide on number of things that are part of the beard;
+
 to say beard-desc:
-	if number of things that are part of the beard is 0:
+	if beard-prog is 0:
 		say "beard";
-	else if number of things that are part of beard is 1:
+	else if beard-prog is 1:
 		say "beard (with [a random thing that is part of the beard] hooked to it)";
 	else:
 		say "full-blown beard disguise";
@@ -5741,7 +5757,7 @@ check putting Spam on bread:
 	if bread is part of sandwich, say "Already is." instead;
 	say "No sense remaking the sandwich." instead;
 
-to say chiz-chiz: say ". But you look through your inventory, and that chisel [if number of glopmeats in Flesh Shelf is 2]looks made for scraping stuff. It easily peels the liver, which you take[else]looks up to the task again. It works[end if]"
+to say chiz-chiz: say ". But you look through your inventory, and that chisel [if number of glopmeats in Flesh Shelf is 2]looks made for scraping stuff. It easily peels the liver, which you take[else]looks up to the task again. And indeed, it improves to a commendable two-for-two when faced with liver-peeling challenges[end if]"
 
 chapter livers-sliver-silver
 
@@ -5933,7 +5949,7 @@ check going inside in Emptiness Sepiments:
 		the rule succeeds;
 	if player does not have maps and player does not have Spam, say "[dibb]It's probably dangerous to go there without some sort of guide." instead;
 	if player does not have shotgun, say "[dibb]You've got maps to help you, but man. That's scary. You need a weapon." instead;
-	if shotgun is not loaded, say "You don't know what's to the north. [if prep paper is examined]You remember something about a lupine lineup[else if player has prep paper]You read the prep paper to note something about a lupine lineup[else]Things will probably only get more creepy and dangerous[end if], and that unloaded shotgun won't be enough[if silver is off-stage], and you don't have anything that works against them[else], but maybe you can refashion what you have into a different sort of weapon[end if]." instead;
+	if shotgun is not loaded, say "You don't know what's to the north. [if prep paper is examined]You remember something about a lupine lineup[else if player has prep paper]You read the, err, a prep paper to note something about a lupine lineup[else]Things will probably only get more creepy and dangerous[end if], and that unloaded shotgun won't be enough[if silver is off-stage], and you don't have anything that works against them[else], but maybe you can refashion what you have into a different sort of weapon[end if]." instead;
 	say "As you stumble through, a gust of wind makes you turn your head and clutch your belongings. Your disguise goes flying off! Well, you won't need to fool anyone with it any more, anyway.";
 	moot nose;
 	moot shades;
@@ -6487,8 +6503,11 @@ for printing a locale paragraph about a tacoish thing (called xyzyx) when player
 	if xyzyx is a pregredient or xyzyx is an ingredient:
 		if xyzyx is not mentioned and xyzyx is not part of the tortilla:
 			say "The Red Inn contains things that [if nvp > 0 and number of separate-in-kitchen ingredients > 0]do and don't [else if number of fungible pregredients > 0]don't [end if]belong in a kitchen: ";
-			if nvp > 0, say "[a list of fungible pregredients]";
-			if nvp > 0 and nvi > 0, say ". It also contains, more suitably, ";
+			if nvp is 1:
+				say "only [a list of fungible pregredients] remains to be changed";
+			else if nvp > 0:
+				say "[a list of fungible pregredients]";
+			if nvp > 0 and nvi > 0, say ". The Red Inn also contains, more suitably, ";
 			if nvi > 0, say "[the list of separate-in-kitchen ingredients]";
 			say ".[paragraph break]";
 			now all pregredients are mentioned;
@@ -6591,7 +6610,12 @@ to say tort-desc:
 
 does the player mean doing something with the tortilla: it is likely.
 
+rule for deciding whether all includes an ingredient:
+	if current action is putting something on or current action is inserting into:
+		if second noun is tortilla, the rule succeeds;
+
 check putting something on the tortilla (this is the tortilla-onto rule):
+	if tortilla is moot, do nothing instead;
 	if noun is an ingredient:
 		tort-add noun;
 		the rule succeeds;
@@ -6855,7 +6879,7 @@ the straw-hay-oils drop rule is listed before the can't drop what's not held rul
 check dropping (this is the straw-hay-oils drop rule):
 	if noun is straw or noun is hay:
 		if noun is in sack:
-			say "No use making a mess. It's easier to lug around that way.";
+			say "No use making a mess. It's easier to lug around that way." instead;
 	if noun is oils and noun is in cask:
 		say "(assuming you meant [b]POUR OILS[r])[paragraph break]";
 		try pouring oils instead;
@@ -6924,7 +6948,9 @@ check entering scraped wall: say "The wall seems out of place, so there may be s
 
 check climbing trel-priv: say "No good handholds, and it goes up too high anyway." instead;
 
-check inserting into scraped wall: if noun is not straw and noun is not hay, say "That doesn't seem to fit. You need something stuffing-like." instead;
+check inserting into scraped wall:
+	if noun is panel, say "The panel is probably part of a more technologically advanced structure." instead;
+	if noun is not straw and noun is not hay, say "That doesn't seem to fit. You need something stuffing-like." instead;
 
 check throwing cask at scraped wall: say "The cask bounces off harmlessly, no worse for the wear. You take it back." instead;
 
@@ -7348,6 +7374,7 @@ before tying to (this is the tying tautology rule) :
 	if noun is second noun, say "[tau]" instead;
 
 before inserting into (this is the insert tautology and already done rule) :
+	if noun contains second noun, say "The [printed name of the noun] already contain[unless noun is plural-named]s[end if] [the second noun]." instead;
 	if second noun contains noun, say "The [printed name of the second noun] already contain[unless second noun is plural-named]s[end if] [the noun]." instead;
 	if second noun is doll house or second noun is attics, say "You'll have a great big residence at the end if you save Yorpwald. Trust me! No need to prettify the doll house." instead;
 	if noun is second noun, say "[tau]" instead;
@@ -7373,13 +7400,13 @@ check putting it on (this is the silo-put rule):
 	if noun is the panel and noun is part of the silo:
 		ignore the can't put what's not held rule;
 		say "The panel is where it needs to be." instead;
+	if (noun is black door and second noun is panel) or (noun is panel and second noun is black door):
+		if panel is part of the silo, try putting black door on silo instead;
+		if black door is part of the silo, try putting panel on silo instead;
+		say "The panel can't quite fit on the door. They might look good next to each other, though." instead;
 	if noun is the black door:
 		ignore the can't put what's not held rule;
 		if second noun is boundary, try putting black door on silo instead;
-		if second noun is panel:
-			say "Not on the panel, but next to it.";
-			if panel is part of the silo, try putting black door on silo instead;
-			say "[line break]The panel's not small, but it's not as big as the silo." instead;
 		if second noun is not silo, say "The black door probably needs to fit on, or in, a big structure." instead;
 	if second noun is rectangle:
 		if noun is panel, try putting noun on silo instead;
@@ -7489,11 +7516,11 @@ the oils are a plural-named thing in Sacred Cedars.
 
 lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L". rgtext of oils is "[rcn][rc][rc][rc]".
 
-the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
+the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work. But you have a feeling you can just [b]POUR[r] then or [b]FILL CASK[r] when needed[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
 understand "oil" as oils when oils are fungible.
 
-check taking oils: say "They'd go through your fingers[if player has cask]. You can pour the oils, or fill the cask, instead[end if]." instead;
+check taking oils: say "They'd go through your fingers[if player has cask]. You can pour the oils, or fill the cask, instead[else], so you'd need the right container[end if]." instead;
 
 rule for printing a locale paragraph about the oils: now oils are mentioned.
 
@@ -7542,8 +7569,8 @@ the spout is scenery in Sacred Cedars. description of spout is "It's stamped [b]
 the spout-put rule is listed before the can't put onto what's not a supporter rule in the check putting it on rules.
 
 this is the spout-put rule:
-	if noun is cask and second noun is spout, try pouring oils instead;
-	if second noun is cask and noun is spout, try pouring oils instead;
+	if (noun is cask or noun is sack) and second noun is spout, try pouring oils instead;
+	if (second noun is cask or second noun is sack) and noun is spout, try pouring oils instead;
 
 check switching on spout:
 	if player has cask, try filling the cask instead;
@@ -9932,7 +9959,6 @@ this is the basic scaning game state checks rule:
 this is the basic scaning item checks rule: [ this is for things that can cross regions ]
 	now scanned-for-gateman is true;
 	if noun is tin foil info lit, say "Nothing happens. Which just proves the paper's premise that this is all too ridiculous, amirite?" instead;
-	if noun is cabinet, say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about where it is acne-bit and red." instead;
 	if noun is part of the gadget, say "If that part of the gadget were detectable, you'd have gone crazy from the beeping by now." instead;
 	if noun is gadget:
 		if the player's command matches "scan":
@@ -9947,7 +9973,7 @@ this is the basic scaning item checks rule: [ this is for things that can cross 
 			say "Hm, the warts are registering. [no line break]";
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
-	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [the noun] around." instead;
+	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [the noun] around[if noun is cabinet] any more[end if]." instead;
 
 carry out scaning:
 	d "scaning [noun].";
@@ -10012,6 +10038,7 @@ motto	"Since Motto is only five letters, you wonder what's up, but it's labeled 
 tall trio	"You scanned each of the tall trio, and the readout didn't change."
 reading	"[read-drain] the drainage."
 drainage	"[read-drain] a reading."
+cabinet	"Odd, though--when you scanned the bumpy bits, you saw the gadget change readings[if current action is cring or gadget is cert]. The second entry, in particular, from red to green[end if][if current action is cring]. That was for certifying, but you saw changes when rectifying, too[end if][if current action is cring or gadget is rect]. The green entry, from the third slot to the fifth[end if]."
 
 to say read-drain: say "Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with"
 
@@ -10930,7 +10957,7 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Ordeal Loader is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Tomie Campf, DJ Hastings, Anthony Hope, Joey Jones, Paul Lee, Gavin Myers-Leman, John Nitchals, and Robert Patten. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: DrkStarr, Olaf Nowacki, Jason Orendorff, Toby Ott, Stefan Scheiffele, Sean M. Shore, Amanda W., Matt Weiner, and David Wilkins. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/.[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
+	say "[if cur-score of Ordeal Loader > 0]Tester Street (gofer forge?):[paragraph break][end if]Adri, Hulk Handsome ([if cur-score of Ordeal Loader > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[else][i]shout-out not spoiled [']til you score a point[r][end if],) Tomie Campf, DJ Hastings, Anthony Hope, Joey Jones, Paul Lee, Gavin Myers-Leman, John Nitchals, and Robert Patten. They found 700+ bugs. I suppose I can call them 'residents, no on tiredness.'[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: A. DiBianca, DrkStarr, Olaf Nowacki, Jason Orendorff, Toby Ott, Stefan Scheiffele, Sean M. Shore, Amanda W., Matt Weiner, and David Wilkins. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or [this-game]'s IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/.[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type [b]SITES[r] for a list of sites that helped[if cur-score of Ordeal Loader is 0], which will totally spoil things right now[end if]."; [bold-ok]
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:
@@ -11182,13 +11209,14 @@ chapter alt rules
 
 guider-dir is a truth state that varies.
 
-rule for printing the name of a guider (called gu) when guider-dir is true:
+after printing the name of a guider (called gu) when guider-dir is true:
 	say " ([godir of gu])";
+	continue the action;
 
 this is the forest-alt rule:
-	say "Since the forest had only two directions you had to choose, you'll probably not be surprised there were two other things that cued different ways.";
+	say "Since the first two forest rooms had only two directions you had to choose, you'll probably not be surprised there were two other things that cued different ways.";
 	now guider-dir is true;
-	say "[list of not moot guiders].";
+	say "You saw [list of not off-stage guiders], but you missed [list of off-stage guiders].";
 	now guider-dir is false;
 
 this is the metros-alt rule:

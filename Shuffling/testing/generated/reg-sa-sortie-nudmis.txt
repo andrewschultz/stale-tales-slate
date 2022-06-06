@@ -490,10 +490,6 @@ How frustrating! A shoreline doesn't appear. You're still stuck in here, but may
 >put steak on tortilla
 >put parmesan on tortilla
 >put hot sauce on tortilla
->undo
-
->put hotsauce on tortilla
-#notana
 Your score has just gone up by one point.
 
 >score

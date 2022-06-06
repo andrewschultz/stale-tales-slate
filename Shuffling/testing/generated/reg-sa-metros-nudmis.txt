@@ -256,12 +256,12 @@ It's labeled A MOTTO. So you probably have to respect the creative license, such
 
 #ttc-table-of-bile-libe-nudges-plaque
 >laqupe
-It's more, it's A MOTTO. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
-
-#ttc-table-of-bile-libe-nudges-plaque
->plaqeu
 It's more, it's A MOTTO.
 !u right after the q
+
+#+ttc-table-of-bile-libe-nudges-plaque
+>plaqeu
+It's more, it's A MOTTO. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 
 #ttc-table-of-bile-libe-nudges-potaot
 >potaot

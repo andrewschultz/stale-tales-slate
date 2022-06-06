@@ -588,7 +588,7 @@ The hubs bush is too sturdy. You can't escape the Trips Strip.
 >marqeue
 You don't need to change the marquee, but maybe it'd be fun to see what's inside. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 
-#ttc-table-of-stores-nudges-marquee
+#+ttc-table-of-stores-nudges-marquee
 >quarmee
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
 !u right after the q
@@ -606,6 +606,25 @@ You're briefly assaulted by the colors of every single colored Starburst and Ski
 #+ttc-table-of-stores-nudges-marquee
 >marquee
 You don't need to change the marquee now that you figured what it means.
+
+#testcase-mistake-shuffling-ban-ice-t
+>ban ice t
+No way! He has a brilliant Twitter game, and O.G. was an awesome album! Also, I remember that "May be unsuitable for squares and suckers" sticker on his third album. Classic stuff.
+
+#testcase-mistake-shuffling-can-i-bet-i-can-bet
+>can i bet
+No gambling! You need to be helpful to the cabinet, here.
+!You see red at what you saw and thought.
+
+#+testcase-mistake-shuffling-can-i-bet-i-can-bet
+>i can bet
+No gambling! You need to be helpful to the cabinet, here. You see red at what you saw and thought.
+
+>bactine
+by one point
+
+>score
+You currently have 5 out of 6 total points for the Stores region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >tsf
 WARNING

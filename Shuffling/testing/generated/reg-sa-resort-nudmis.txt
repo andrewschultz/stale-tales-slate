@@ -456,8 +456,16 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >i rot
 Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
 
+#testcase-mistake-shuffling-tori
+>tori
+Reducing the riot to one person is not feasible, even if they were named Tori. But you can get close.
+
 >trio
 Your score has just gone up by one point.
+
+#+testcase-mistake-shuffling-tori
+>tori
+Getting one of the protestor's names right won't lessen their disfavor.
 
 >score
 You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15

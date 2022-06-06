@@ -107,9 +107,16 @@ understand "rede" as a mistake ("You probably don't want medieval-style advice. 
 
 chapter Notices Section
 
+to say red-cabinet:
+	if word number 2 in the player's command is "can", say ". You see red at what you saw and thought"
+
 understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.[note-great-guesses]") when player is in Notices Section and gateman is in Notices Section.
 
 understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.[note-great-guesses]") when phial is fungible.
+
+understand "ban ice t" as a mistake ("No way! He has a brilliant Twitter game, and O.G. was an awesome album! Also, I remember that 'May be unsuitable for squares and suckers' sticker on his third album. Classic stuff[note-great-guesses].") when cabinet is touchable.
+
+understand "can i bet" and "i can bet" as a mistake ("No gambling! You need to be helpful to the cabinet, here[red-cabinet][note-great-guesses].") when cabinet is touchable.
 
 understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.[note-great-guesses]") when cabinet is in location of player.
 
@@ -207,6 +214,8 @@ to say preef-silv:
 understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is fungible or maps are fungible.
 
 understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is fungible.
+
+understand "certains" as a mistake ("You temporarily console yourself with positive things you know are true. For instance, a sweep with your tagged gadget shows you don't need to transfrom the canister. Eight letters would be pretty tricky!") when scantier canister is fungible.
 
 understand "debar" as a mistake ("If there are any lawyers here, they've already been debarred.") when player has beard or bread is fungible.
 
@@ -542,6 +551,8 @@ understand "slink" as a mistake ("[if red bull burdell is fungible]You couldn't 
 understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in Potshot Hotspot and potters are not moot.
 
 understand "tester" as a mistake ("Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.[paragraph break]On the other hand, if you're volunteering to test my other games, I could always use the help.") when player is in Potshot Hotspot and Red Bull Burdell is moot.
+
+understand "tori" as a mistake ("[if riot is fungible]Reducing the riot to one person is not feasible, even if they were named Tori. But you can get close[else]Getting one of the protestor's names right won't lessen their disfavor[end if].") when riot is fungible or protest is fungible.
 
 chapter Means Manse
 

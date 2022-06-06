@@ -110,6 +110,7 @@ this is the post-cabinet-bactine rule: [ic]
 	move cabinet to location of player;
 	move cratered bits to location of player;
 	moot cratered bits;
+	now cabinet is inflexible;
 
 book Forest
 
@@ -302,7 +303,7 @@ this is the pre-haywall-hallway rule:
 this is the pre-oils-silo rule:
 	if oils are not in cask:
 		if location of player is Sacred Cedars:
-			say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a better place to make a silo[end if].";
+			say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a better place to make a silo[oils-flip-clue][end if].";
 			preef-l silo;
 			do nothing instead;
 		if oils are fungible:
@@ -325,7 +326,7 @@ this is the post-oils-silo rule:
 this is the pre-oils-soil rule:
 	if oils are not in cask:
 		if location of player is Sacred Cedars:
-			say "[ilb-later][if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a place that could use soil, though[end if].[no line break]";
+			say "[ilb-later][if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a place that could use soil, though[oils-flip-clue][end if].[no line break]";
 			preef-l soil;
 			do nothing instead;
 		if oils are fungible:
@@ -346,6 +347,16 @@ this is the post-hoots-shoot rule:
 
 this is the post-trees-steer rule:
 	now steer button is part of panel;
+
+section auxiliary
+
+to say oils-flip-clue:
+	if player does not have cask:
+		say ", and you'd need a vessel to transport them with";
+	else if oils are not in cask:
+		say ", once they're safely contained for transport";
+	else:
+		say ", and you could change the oils there"
 
 book Metros
 
@@ -473,7 +484,7 @@ sprig	grips	"grips/grip"	"sprig"	--	post-ropes-grips rule	"The fragile sprig pop
 spore	ropes	"ropes/rope"	"spore"	--	post-ropes-grips rule	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414	442384
 poles	slope	"slope"	"poles"	--	post-poles-slope rule	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450	313360
 tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	--	post-toolshed-toeholds rule	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are fungible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474	805016
-riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244	672000
+riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. 'Dah, dah, dah, dah,' you mumble to yourself. You don't love them, they don't love you.[paragraph break]Then you realize something: you didn't notice the least enthusiastic people in the back leaving first! Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244	672000
 protest	potters	"potters/potter"	"protest" or "riot"	--	post-protest-potters rule	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are fungible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450	966672
 chain links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are fungible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is fungible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is fungible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links as well."	false	172376056	8581
 chain links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are fungible]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Wow, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337	273664

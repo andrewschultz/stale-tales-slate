@@ -15,7 +15,7 @@
 >score
 You haven't solved any regions yet.
 
-[NOTE: You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.]
+[NOTE: you can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.]
 
 #first let's look at the stuff in there from the start
 

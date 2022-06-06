@@ -851,7 +851,7 @@ The hubs bush is too sturdy. You can't escape the Trips Strip.
 >marqeue
 You don't need to change the marquee, but maybe it'd be fun to see what's inside. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 \\
-#ttc-table-of-stores-nudges-marquee
+#+ttc-table-of-stores-nudges-marquee
 >quarmee
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
 !u right after the q
@@ -890,8 +890,36 @@ You're briefly assaulted by the colors of every single colored Starburst and Ski
 >marquee
 You don't need to change the marquee now that you figured what it means.
 
-@max
-#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
+@scan
+#ttc-table-of-kibitzes-cabinet
+>c cabinet
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR (R = red, G = green).
+Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The second entry, in particular, from red to green.
+\\
+>r cabinet
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB (R = red, G = green, B = blue).
+Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The green entry, from the third slot to the fifth.
+\\
+>rc cabinet
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR.
+Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The second entry, in particular, from red to green. That was for certifying, but you saw changes when rectifying, too. The green entry, from the third slot to the fifth.
+
+@mis
+#testcase-mistake-shuffling-ban-ice-t
+>ban ice t
+No way! He has a brilliant Twitter game, and O.G. was an awesome album! Also, I remember that "May be unsuitable for squares and suckers" sticker on his third album. Classic stuff.
+\\
+#testcase-mistake-shuffling-can-i-bet-i-can-bet
+>can i bet
+No gambling! You need to be helpful to the cabinet, here.
+!You see red at what you saw and thought.
+\\
+#+testcase-mistake-shuffling-can-i-bet-i-can-bet
+>i can bet
+No gambling! You need to be helpful to the cabinet, here. You see red at what you saw and thought.
+
+@!min
 >bactine
 by one point
 }}CURMIN++
@@ -899,10 +927,23 @@ by one point
 \\
 >score
 {$SFIXMAX}
-\\
+
+@max
 #testcase-postrule-table-of-stores-anagrams-post-cabinet-bactine-rule
 >x bits
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
+
+@scan
+>rc cabinet
+The gadget buzzes.
+\\
+>c cabinet
+\\
+The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle the acne-bit cabinet around any more.
+\\
+>r cabinet
+\\
+The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle the acne-bit cabinet around any more.
 
 @max
 #ttc-table-of-warpcmds-logoi

@@ -1023,9 +1023,19 @@ The gadget beeps once. A series of lights comes across: RRRR.
 DEBUG INFO: Rect-text: T--O.
 DEBUG INFO: Cert-text: ----.
 
+@mis
+#testcase-mistake-shuffling-tori
+>tori
+Reducing the riot to one person is not feasible, even if they were named Tori. But you can get close.
+
 >trio
 Your score has just gone up by one point.
 }}SCORE++
+
+@mis
+#+testcase-mistake-shuffling-tori
+>tori
+Getting one of the protestor's names right won't lessen their disfavor.
 
 @gle
 You see the trio, happier now, discussing art and wearing dirty smocks.

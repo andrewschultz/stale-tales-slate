@@ -203,6 +203,11 @@ The gateman looks over to the mega ant and does some weird hand-fu. The ant scam
 The gateman pauses again, then asks if you had that bugle. It's something he'd been meaning to take up, but he wanted to give you more than one way to get here. You explain you lost it rolling down a hill to get here.
 "No worries. I'll get it when you're gone. You probably won't want to be around when I start practising, anyway. This time, I will. Being a nametag for a bit--or just replaced by one--gives a fellow motivation to do those things he's put off."
 
+#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
+>bactine
+That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.
+(That's worth noting in your notepad for later, so you do, under FLIPS.)
+
 >score
 You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 

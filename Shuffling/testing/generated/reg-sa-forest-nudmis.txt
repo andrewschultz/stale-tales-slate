@@ -935,6 +935,10 @@ You smile confidently. You'll figure how to use the grinder.
 >steam
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
 
+#testcase-mistake-shuffling-certains
+>certains
+You temporarily console yourself with positive things you know are true. For instance, a sweep with your tagged gadget shows you don't need to transfrom the canister. Eight letters would be pretty tricky!
+
 >put river ville in canister
 
 #+ttc-table-of-forest-nudges-liver

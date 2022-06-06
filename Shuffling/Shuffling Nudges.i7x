@@ -476,7 +476,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "graffiit"	366236825	red graffiti	--	"Hm, there has to be a clue in it."
 "redgraffiti"	600395826	red graffiti	--	"Hm, there has to be a clue in it."
 "oil"	173159262	oils	--	"[seed-plural-nag][if caskfillings > 2]They're [b]OILS[r], but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing [b]YOU[r] can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things [b]YOU[r] can do[end if]."
-"lois"	269433228	--	cedars-visited rule	"Changing Lois, or asking her to change, is unlikely and counterproductive. She has left you all you need[if silo is in moor]ed[end if]."
+"lois"	269433228	--	cedars-visited rule	"Changing Lois, or asking her to change, is unlikely and counterproductive. She has left you all you need[if silo is in moor]ed[end if][if player is not in Sacred Cedars] back in Sacred Cedars[end if]."
 
 this is the kitch-visit rule:
 	if player is in kitchen:

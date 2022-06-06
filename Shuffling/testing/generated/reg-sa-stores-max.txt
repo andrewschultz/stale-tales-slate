@@ -106,7 +106,6 @@ You currently have 4 out of 6 total points for the Stores region. Your minimum p
 >x sorbet
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
-#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
 >bactine
 by one point
 

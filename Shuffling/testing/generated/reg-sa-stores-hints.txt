@@ -158,3 +158,9 @@ by one point
 >score
 You currently have 4 out of 6 total points for the Stores region. Your minimum possible score on solving is 5, and the maximum is 6
 
+>bactine
+by one point
+
+>score
+You currently have 5 out of 6 total points for the Stores region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
