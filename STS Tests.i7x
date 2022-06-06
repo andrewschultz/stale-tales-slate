@@ -352,6 +352,78 @@ check montying:
 	if the topic understood matches "hint" or the topic understood matches "hints":
 		now first-hint-check is true;
 
+volume commands solely for reg-*-lone
+
+[ * this plows through the hint tables for a region and makes sure basic punctuation works ]
+
+chapter hreging (hint through a region)
+
+to hintthru (th - a thing):
+	try objhinting th;
+	let count be 1;
+	if plus-after is false, continue the action;
+	while plus-after is true and count < 12:
+		try objhinting th;
+		increment count;
+	if count is 12:
+		say "WARNING: we have a nonterminating sequence of clues for [the th].";
+	if minus-after is false:
+		say "WARNNG: we never got to a minus in the hints for [the th].";
+
+hreging is an action out of world.
+
+understand the command "hreg" as something new.
+
+understand "hreg" as hreging.
+
+to brute-force-hints (tn - a table name):
+	say "We are brute-forcing our way through the hints for [tn].";
+	repeat through tn:
+		say "Hinting [hint-entry entry].";
+		hintthru hint-entry entry;
+
+carry out hreging:
+	now in-hint-testing is true;
+	brute-force-hints hintobjstable of mrlp;
+	if mrlp is hub-region, brute-force-hints table of general hintobjs; [ not orig-region as the TS command gives us some goodies worth hinting ]
+	now in-hint-testing is false;
+	the rule succeeds;
+
+chapter tabpuncing
+
+[ * this is needed for the zarfscripts where we just plow through all the entries in random tables ]
+
+current-chatter-index is a number that varies.
+
+tabpuncing is an action applying to one number.
+
+understand the command "tp" as something new.
+
+understand "tp [number]" as tabpuncing.
+
+carry out tabpuncing:
+	if number understood < 1 or number understood > number of rows in table of megachatter, say "You need 1-[number of rows in table of megachatter]." instead;
+	spill-row number understood;
+
+to spill-row (num - a number):
+	choose row num in table of megachatter;
+	let need-period be endpunc entry;
+	let tab-to-spill be mytab entry;
+	repeat through mytab entry:
+		say "[blurb entry][if need-period is true].[else][line break][end if]";
+	say "Finished dumping [tab-to-spill].";
+	say "That's row [num], if you're counting at home. Or if you lost count.";
+	the rule succeeds;
+
+tabnexting is an action out of world.
+
+understand "tp" as tabnexting.
+
+carry out tabnexting:
+	increment current-chatter-index;
+	if current-chatter-index > number of rows in table of megachatter, now current-chatter-index is 1;
+	spill-row current-chatter-index;
+
 volume jumpthroughing
 
 [ possible improvement: describe what each row does with an additional column ]
