@@ -993,6 +993,10 @@ You're pretty sure you can get this one quickly. I mean, you've been given one o
 >soar
 !by one point
 The oars have no gas, or whatever they might run on
+\\
+#ttc-table-of-oyster-prefigurings-oars
+>pf
+You can SOAR once the frat raft is full of, umm, whatever powers it.
 
 @nud
 #ttc-table-of-oyster-scannotes-sabot-boats
@@ -1838,6 +1842,10 @@ Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 "Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
 Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
 !by one point
+\\
+#ttc-table-of-oyster-prefigurings-paw-r-wrap
+>pf
+You need to figure out where to WARP the Paw-R-Wrap.
 
 @nud
 #testcase-mistake-roiling-wrap-text
@@ -3020,6 +3028,8 @@ Now there's a good plan. But right now, that gang of walleyes might rough you up
 #ttc-table-of-oyster-prefigurings-ol-trap
 >pf
 You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
+>bury ruby
+You don't have anywhere to bury the ruby, and you might be seen. Perhaps burying it the right place would frame people who sort of deserve it.
 >w
 >banish digger
 \\
@@ -3029,7 +3039,8 @@ Nothing to bury anything with. Well, there's your fingers, but that'd take too l
 \\
 #ttc-table-of-oyster-prefigurings-ruby
 >pf
-You need to figure how and where to BURY the ruby.
+You will want to BURY the ruby once you have a digging implement.
+>undo
 >undo
 >undo
 >undo
@@ -3134,14 +3145,19 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@max
+#testcase-postrule-table-of-oyster-anagrams-post-bury-ruby-rule
+>x thin hint
+The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back.
+
 @nud
 #ttc-table-of-rascal-craals-nudges-hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
 \\
-#ttc-table-of-oyster-done-rejects-thin-hint
+#ttc-table-of-rascal-craals-nudges-yurb
 >yurb
-It was enough to bury the ruby.
+Now that the ruby's buried, you don't need to do anything more to it.
 
 >e
 

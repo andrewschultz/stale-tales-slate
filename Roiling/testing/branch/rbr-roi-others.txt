@@ -2347,6 +2347,15 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
+@max
+#testcase-postrule-table-of-others-anagrams-post-auction-caution-rule
+#testcase-postrule-table-of-others-anagrams-post-prices-precis-rule
+>i
+papaya
+kumquat
+!auction caution
+!prices precis
+
 @nud
 #ttc-table-of-others-done-rejects-quince
 >quicne
@@ -2536,11 +2545,11 @@ You corrected the prices precis enough.
 @nud
 ##balance undo
 #this is a bunch of negative tests which may be objectively trivial but were one of the last things to fix ... I finally defined certain things as "reflexive" instead of flipping them to fruits, and I want to make sure this causes no core regressions
-#ttc-table-of-others-done-rejects-prices-precis
+#+ttc-table-of-others-done-rejects-prices-precis
 >cripes
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 \\
-#+ttc-table-of-others-nudges-papayas
+#ttc-table-of-others-nudges-papayas
 >papaysa
 The papayas are in perfectly good shape. Don't ruin them for Curtis.
 >s

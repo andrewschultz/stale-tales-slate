@@ -141,6 +141,10 @@ That's not a way to sneak around and avoid the knock at the door.
 
 >5
 
+>event mpa
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
+So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
+
 #+testcase-mistake-roiling-text-stable-text-stable-text-text-stable
 >zozimus stable zozimus
 You can just change the tables by saying STABLE.
@@ -241,7 +245,7 @@ You try and twist Elvira's words or poke holes where they're wrong...and you can
 
 #+ttc-table-of-dusty-study-nudges-questin
 >eqistun
-You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh. Also, you're not quite sure how to pronounce that q without the u right after it. Things can't be THAT obscure.
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 
 #ttc-table-of-dusty-study-nudges-moneyco
 >moneyoc
@@ -342,8 +346,12 @@ But the net would still block you.
 >beams net
 But the net would still block you.
 
-#testcase-mistake-roiling-basement
+#testcase-mistake-roiling-basement-text-text-basement-text-text-basement
 >gonear largely gallery
+>basement xx
+You can just go UP with the MEET-BANS beams net gone.
+
+>undo
 >basement
 Having already visited the Largely All-Grey Gallery below-ground, you pat yourself on the back for lateral thinking and generally exploring things thoroughly, as you realize the deeper nature of the MEET-BANS beams net despite how it's called something different.
 by two points
@@ -356,7 +364,7 @@ Surely easy transport is more handy right now than music.
 >undo
 #!these previous mistake tests are a cheap cheat to pick off an obscure mistake
 
-#testcase-mistake-roiling-basement-text-text-basement-text-text-basement
+#+testcase-mistake-roiling-basement-text-text-basement-text-text-basement
 >basement zozimus
 You can just change the MEET-BANS beams net by saying BASEMENT.
 >zozimus basement zozimus
@@ -463,7 +471,7 @@ Dusty Study
 
 #+testcase-mistake-roiling-basement-text-text-basement-text-text-basement
 >basement zozimus
-You can just go DOWN to enter the basement.
+You can just go DOWN with the MEET-BANS beams net gone.
 
 #+ttc-table-of-ordeal-reload-nudges-tenbeams
 >basemetn
@@ -735,9 +743,6 @@ The ramp is useful now. Best keep it.
 
 >gt study
 /^Dusty Study
->event mpa
-The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works, though some of the diorama's contrived examples have spaces.
-So here is a one-time general guideline on what to do in this area: You need to change certain things to other things.
 
 #ttc-table-of-ordeal-reload-spechelp-pavement
 >event mpa

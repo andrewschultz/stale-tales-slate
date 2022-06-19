@@ -329,6 +329,14 @@ Your score has just gone up by one point.
 >score
 You have 34 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
 
+#testcase-postrule-table-of-others-anagrams-post-auction-caution-rule
+#testcase-postrule-table-of-others-anagrams-post-prices-precis-rule
+>i
+papaya
+kumquat
+!auction caution
+!prices precis
+
 >among
 Your score has just gone up by one point.
 

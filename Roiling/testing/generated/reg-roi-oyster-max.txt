@@ -218,6 +218,10 @@ Score in a scenario: 6 out of 45 total points in the current region, Oyster. Low
 !by one point
 The oars have no gas, or whatever they might run on
 
+#ttc-table-of-oyster-prefigurings-oars
+>pf
+You can SOAR once the frat raft is full of, umm, whatever powers it.
+
 #testcase-prerule-table-of-oyster-anagrams-pre-raft-fart-rule
 >fart
 Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
@@ -404,6 +408,10 @@ Score in a scenario: 16 out of 45 total points in the current region, Oyster. Lo
 "Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
 Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
 !by one point
+
+#ttc-table-of-oyster-prefigurings-paw-r-wrap
+>pf
+You need to figure out where to WARP the Paw-R-Wrap.
 
 >swipe wipes
 by one point
@@ -704,6 +712,8 @@ Now there's a good plan. But right now, that gang of walleyes might rough you up
 #ttc-table-of-oyster-prefigurings-ol-trap
 >pf
 You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
+>bury ruby
+You don't have anywhere to bury the ruby, and you might be seen. Perhaps burying it the right place would frame people who sort of deserve it.
 >w
 >banish digger
 
@@ -713,7 +723,8 @@ Nothing to bury anything with. Well, there's your fingers, but that'd take too l
 
 #ttc-table-of-oyster-prefigurings-ruby
 >pf
-You need to figure how and where to BURY the ruby.
+You will want to BURY the ruby once you have a digging implement.
+>undo
 >undo
 >undo
 >undo
@@ -733,6 +744,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+
+#testcase-postrule-table-of-oyster-anagrams-post-bury-ruby-rule
+>x thin hint
+The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back.
 
 >e
 

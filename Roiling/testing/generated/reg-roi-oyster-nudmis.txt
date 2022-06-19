@@ -1724,9 +1724,9 @@ Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lo
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
 
-#ttc-table-of-oyster-done-rejects-thin-hint
+#ttc-table-of-rascal-craals-nudges-yurb
 >yurb
-It was enough to bury the ruby.
+Now that the ruby's buried, you don't need to do anything more to it.
 
 >e
 
