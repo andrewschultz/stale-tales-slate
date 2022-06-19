@@ -57,6 +57,8 @@ understand "laredo" as a mistake ("If you want a Western game situated on the US
 
 chapter Dusty Study
 
+to say meet-bans-dir: say "[b][if player is in dusty study]DOWN[else]UP[end if][r]"
+
 [note that examining the tables give "ablest bleats."]
 
 to say intro-warn: if Report Porter Perrot is off-stage, say "--well, once you've had an introductory dialogue with an NPC"
@@ -65,27 +67,28 @@ understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a m
 
 understand "ablest" as a mistake ("No, it's a thing you can change the tables to. You didn't have to deal with adjectives in [shuf], but maybe you will here, later. Much later.[note-great-guesses]") when tables are fungible and tables are not examined.
 
-understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the [meet bans] by saying [b]BASEMENT[r][intro-warn][else]go [b]DOWN[r] to enter the basement[end if].") when player is in Dusty Study.
+understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change [the meet bans] by saying [b]BASEMENT[r][intro-warn][else]go [meet-bans-dir] with [the meet bans] gone[end if].") when player is in Dusty Study or player is in Largely All Grey Gallery.
 
-understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)[note-great-guesses]")
+understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)[note-great-guesses]") when beams net is fungible and player is in dusty study.
 
 understand "bleats" as a mistake ("Bleats might be too abstract to help you.[note-great-guesses]") when tables are fungible and tables are not examined.
 
 understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if player has latches]. Oh, and you don't have to switch that many letters, either[end if].[note-great-guesses]") when latches are not off-stage.
 
-understand "net" and "net beams" and "beams net" as a mistake ("But the net would still block you.[note-great-guesses]") when player is in Dusty Study and meet bans are in Dusty Study.
+understand "net" and "net beams" and "beams net" as a mistake ("But the net would still block you.[note-great-guesses]") when meet bans are fungible.
 
 understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.[note-great-guesses]") when player is in Dusty Study and giant pin is in Dusty Study.
 
 understand "odor" as a mistake ("[if Report Porter Perrot is off-stage]You'd stink as a host, trying that[else if Dusty Study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].[note-great-guesses]") when player is in Dusty Study.
 
-understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when player has lamp
+understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when player has lamp.
 
 understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].[note-great-guesses]") when player is in Dusty Study and op ed is in Dusty Study.
 
 understand "rood" as a mistake ("[if Report Porter Perrot is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].[note-great-guesses]") when player is in Dusty Study.
 
-understand "teem" as a mistake ("You want to reduce [the meet bans], not make more.") when meet bans are in location of player.
+understand "teem" as a mistake ("You want to reduce [the meet bans], not make more.") when meet bans are fungible.
+
 understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.[note-great-guesses]") when player has settler.
 
 chapter Largely All-Grey Gallery
@@ -93,8 +96,6 @@ chapter Largely All-Grey Gallery
 to say sitar-here-back: say "[if sitar is moot]back[else]down here[end if]"
 
 understand "astir" as a mistake ("[if stair is fungible]You don't need a moving stair[else]You need to change that to something else, then it'll be astir[end if].[note-great-guesses]") when stair is fungible or stria is in location of player or sitar is in location of player.
-
-understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All Grey Gallery and meet bans are in Dusty Study.
 
 understand "bsin" and "bs in" as a mistake ("Now, now! [this-game] is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the [bins][end if].[note-great-guesses]") when player is in Largely All Grey Gallery.
 
@@ -743,7 +744,9 @@ understand "redial" as a mistake ("[if papery yapper is fungible]You can't even 
 
 understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflond Den Loft and pins are in Tenfold Teflond Den Loft.
 
-book towers
+book Towers
+
+[ things are arranged here as follows: you start in the Topside Deposit, then work your way first west if you can, then north. Once you can't do that, you go back to the first place you can go east. So, down/up then left/right. ]
 
 understand "xray" and "x ray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
 
@@ -807,12 +810,6 @@ chapter Baldest Blasted Saltbed
 
 understand "fluters" as a mistake ("[this-game] has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.
 
-chapter Leveraged Everglade
-
-understand "organdies" as a mistake ("The ego-drains remain made of sturdy material.") when organised ego drains are fungible.
-
-understand "retail" and "retails" as a mistake ("The realist tailers have plenty to say about retail shopping, but you don't want to hear it.") when realist tailers are in location of player.
-
 chapter Anemic Cinema
 
 understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. Whether or not you need to go west, you can't [']til they're gone.") when angriest ingrates are fungible.
@@ -829,7 +826,11 @@ understand "refing" as a mistake ("You're not sure what sort of ref'ing would wo
 
 understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is fungible.
 
-chapter Unblest Sunbelt
+chapter Leveraged Everglade
+
+understand "organdies" as a mistake ("The ego-drains remain made of sturdy material.") when organised ego drains are fungible.
+
+understand "retail" and "retails" as a mistake ("The realist tailers have plenty to say about retail shopping, but you don't want to hear it.") when realist tailers are in location of player.
 
 chapter Treading Gradient
 
@@ -841,11 +842,11 @@ understand "parley" as a mistake ("The raves saver/replay player [if saver is re
 
 understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.") when weeds are fungible. [bold-ok]
 
-chapter shoals aslosh (backdrop)
+understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait seer is fungible.
+
+chapter Salted Deltas
 
 understand "kale" as a mistake ("'More kale, dear?' / 'Did I ASK for more kale, dear?'[paragraph break]Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is fungible.
-
-understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait seer is fungible.
 
 chapter Danger Garden
 
@@ -941,9 +942,9 @@ understand "deltaic" as a mistake ("Reorganizing the geography around the Edicta
 
 chapter Minded Midden
 
-understand "able" and "ables" as a mistake ("But you already gained your powers back! You're quite able enough as-is.") when blase bales are fungible.
-
 understand "beal" and "beals" as a mistake ("The bales can be transformed, but into something less unsightly.") when blase bales are fungible.
+
+understand "able" and "ables" as a mistake ("But you already gained your powers back! You're quite able enough as-is.") when blase bales are fungible.
 
 understand "dim den" as a mistake ("You remain outside in (relative) light.") when player is in Minded Midden and bleary barley is in Minded Midden.
 

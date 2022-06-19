@@ -210,7 +210,7 @@ carry out a5ing:
 			moot MI;
 			now lreg of MI is mrlp;
 	get-cool-stuff;
-	move player to Strip of Profits;
+	if player is not in Strip of Profits, move player to Strip of Profits;
 	now suppress-score is true;
 	let XXX be debug-state;
 	now debug-state is false;

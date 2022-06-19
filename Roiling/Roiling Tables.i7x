@@ -573,6 +573,8 @@ drive a	drive a	false	388504485	2228505	--	"avider"	"avider"	--	post-drive-flip 
 drive e	drive e	false	514122776	2228504	--	"derive"	"derive"	--	post-drive-flip rule	"You inspect Drive E and, with some educated guesswork, figure why it is out of whack. A few common-sense steps later, it's fixed."
 USB	USB	false	219798678	1310722	Strip of Profits	"sub"	"sub/bus"	pre-usb-sub-bus rule	--	"[sub-bus]!"
 
+to say robot-chirp: if e robot is not reflexed, say ". The [robot] chirps slightly"
+
 this is the post-hump-umph rule:
 	if Leo is in Grey Gyre:
 		process the Leo-Rand lackey rule;
@@ -729,10 +731,12 @@ this is the post-disk-skid rule:
 this is the pre-reboot rule:
 	if player has keyboard and keyboard is not on slab:
 		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
-		preef be troo e robot instead;
+		preef be troo e robot;
+		the rule fails;
 	if keyboard is not fungible:
 		say "You have nothing to type with, so it doesn't do much good.";
-		preef be troo e robot instead;
+		preef be troo e robot;
+		the rule fails;
 	if disk is not in Drive A:
 		say "It's risky to boot without a disk, like that [if disk is in Hacks Shack]disk right there[else]skid used to be[end if], in the disk drive. Much less reboot.";
 		preef be troo e robot instead;
@@ -780,7 +784,7 @@ this is the pre-polemic-compile rule:
 		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if]."; [bold-ok]
 		preef Im Le Cop polemic instead;
 	if be troo e robot is reflexive:
-		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
+		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help[robot-chirp].";
 		preef Im Le Cop polemic instead;
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping]."; [bold-ok]
@@ -879,8 +883,8 @@ crate	crate	false	337433333	655381	--	"react"	"react" or "react to crate"	pre-cr
 skis	skis	false	290473956	263424	--	"kiss"	"kiss"	pre-kiss-skis rule	--	"As you kiss them, they pull up--and dissolve."	"The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame."
 knob	knob	false	214612168	25602	--	"bonk"	"bonk"	pre-bonk-knob rule	--	"[b]BONK[r]! You hit the knob just right. It falls from between the pans and rolls off...well, somewhere."	"The pills gravitate to the knob and turn it forcefully. It won't act up again."
 span pans	span pans	false	248835251	303105	--	"snap"	"snap"	pre-snap-span-pans rule	--	"You snap your fingers. Then, for good measure, you go off on a random tangent about something that doesn't really matter but has always bothered you. You're not sure which action worked, or if they both worked together, but the result's what counts: the pans detach and clank and fall over and melt into the ground."	"The pills bounce up and down between the pans, which begin to vibrate and then shatter. Your way inside is now clear!"
-bogus-plains	bogus-plains	false	347641936	305409	--	"splain"	"splain"	--	--	"[if span pans are moot]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
-paw r wrap	ruby	false	276912353	4358145	--	"warp"	"warp"	pre-warp-wrap rule	post-warp-wrap rule	"You warp the Paw-R-Wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, the Paw-R-Wrap falls. He flees, and as you run after him, you step on the Paw-R-Wrap, causing it to tear and pop.[paragraph break]You ruined the Paw-R-Wrap, but you do notice a ruby inside. It seems valuable. So you take it."
+bogus-plains	bogus-plains	false	347641936	305409	--	"splain"	"splain"	--	--	"[if span pans are moot]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if crate-hit-me is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
+paw r wrap	paw r wrap	false	276912353	4358145	--	"warp"	"warp"	pre-warp-wrap rule	post-warp-wrap rule	"You warp the Paw-R-Wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, the Paw-R-Wrap falls. He flees, and as you run after him, you step on the Paw-R-Wrap, causing it to tear and pop.[paragraph break]You ruined the Paw-R-Wrap, but you do notice a ruby inside. It seems valuable. So you take it."
 Achers Chaser Arches	Achers Chaser Arches	false	367879580	393365	--	"search"	"search"	pre-search-arches rule	post-search-arches rule	"'Reach, acher,' you say, stretching a bit more to find something interesting."	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
 ol trap	pol art portal	false	400254014	706561	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	post-patrol-ol-trap rule	"You realize you need a sort of minesweeper, so you sneak back to the Rascal Craals and get the rigged digger. You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You hear a sound of slid lids from the ground--and the ol['] trap springs and cannibalizes the rigged digger. Well, you had nothing to re-dig, G.[paragraph break]As the ol['] trap vanishes, a pol-art portal appears in its place. Some of the political art is very bad indeed, but hey, you've got somewhere new to go."	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
 tubs	tubs	false	322908696	1835010	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside."
@@ -888,7 +892,7 @@ prod	digger	true	262171428	180232	--	"drop"	"drop"	--	--	"The prod rattles as yo
 waste	waste	false	437312684	4980753	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You make real effort to spruce up the waste. Maybe something nice will be buried in it. There is! As you pile the waste into heaps, you find a very dirty lance. Too dirty to take at the moment. Maybe you can clean it up, though."	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
 lance	lance	true	271720859	10261	--	"clean"	"clean"	pre-clean-lance rule	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."	"The pills stick to the lance, making it so gross you feel compelled to [b]CLEAN[r] the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it."
 heaps	heaps	false	345016151	295057	--	"shape"	"shape"	--	--	"You channel your inner artist and make something beautiful out of the heaps."	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
-ruby	thin hint	false	331207767	17956866	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
+ruby	ruby	false	331207767	17956866	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	post-bury-ruby rule	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
 HUNTER HUNT AREA	sausage	false	529723362	1712273	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. Your destruction of [the HUNTER HUNT AREA] has brought up ... a weird sausage! You scry a cry as scary: 'My lost ruby!'[paragraph break]After it whines on for a bit, you realize you are not dealing with any old sausage, but a hard-done-by [uss]. It will moan and carry on until satisfied."	"The pills slip into [the HUNTER HUNT AREA], flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? [b]UNEARTH[r]. It's a big weird undead sausage! The sausage cries for its lost ruby! It moans about the horrid things it's seen and endured. It must be a [uss]."
 sausage	sausage	false	462435186	1310801	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The [sausage] waits on your next move."	"The [sausage] reaches out to grab the pills, hoping they might ease its pain. But they pass through its fingers. Crushing! The [sausage] shakes its head sadly, but then shrugs. It knows you tried, and it seems to trust you more now."
 bogus-enlarge	bogus-enlarge	false	498444888	141393	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze.[paragraph break]Maybe if you were really interested, you could see everything, but it's probably not critical. You've got what you want."
@@ -902,9 +906,16 @@ pins	pins	false	291640279	303360	--	"spin"	"spin" or "spin pins"	--	--	"You fidd
 bogus-derail	bogus-derail	false	335153504	133401	--	"derail"	"derail" or "derail dialer"	pre-dialer-derail rule	post-dialer-derail rule	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the Horned Hedron! Another one of your pranks? Ha ha ha!'[paragraph break]Then her voice turns less saccharine. 'Not one of your best. So don't repeat it. I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins."	"You spill the pills on the dialer, and they change [b]DIALER[r] to enough of the 720 possibilities that they settle on [b]DERAIL[r]."
 bogus-redial	bogus-redial	false	335153504	133401	Strip of Profits	"redial"	"redial" or "redial dialer"	pre-dialer-redial rule	post-dialer-redial rule	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I WILL SEND A CHARGE BACK THROUGH THAT YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think."	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop. But you figure you'd better get going before the Horned Hedron crumbles." [bold-ok]
 
+crate-hit-me is a truth state that varies.
+
 to say hha: say "[b][hunt area][r]";
 
 to say uss: say "[b]USE-SAGA SAUSAGE[r]"; [bold-ok]
+
+to say craals-right-place:
+	if bury-right-place is false:
+		say ". But this looks like a good place to bury stuff if you wanted to frame someone";
+		now bury-right-place is true;
 
 this is the post-tunes-unset rule:
 	say "The perma-amper makes a pop and sparks and flames out. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect.";
@@ -942,8 +953,14 @@ this is the pre-sabot-boats-boast rule:
 	now frat raft is unfigured;
 
 this is the pre-oars-soar rule:
-	if raft is not reflexed, say "The oars have no gas, or whatever they might run on[if player is not on raft]. Plus you're not on the raft anyway[end if]." instead;
-	if player is not on raft, say "That'd leave the raft behind you. Get on it first." instead;
+	if raft is not reflexed:
+		say "The oars have no gas, or whatever they might run on[if player is not on raft]. Plus you're not on the raft anyway[end if].";
+		preef oars;
+		the rule fails;
+	if player is not on raft:
+		say "That'd leave the raft behind you. Get on it first.";
+		preef oars;
+		the rule fails;
 
 this is the pre-raft-fart rule:
 	if player is not on raft and raft is reflexive:
@@ -1010,15 +1027,15 @@ this is the pre-kiss-skis rule:
 	if bogus-trace is in Lapsin Plains:
 		say "[one of]That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef skis;
-		now bonkies is true;
+		now crate-hit-me is true;
 		the rule succeeds;
 	if crate is reflexive:
-		if bonkies is false:
+		if crate-hit-me is false:
 			say "You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. You need to do that first.";
 		else:
 			say "You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...";
 		preef skis;
-		now bonkies is true;
+		now crate-hit-me is true;
 		the rule succeeds;
 
 this is the pre-bonk-knob rule:
@@ -1038,15 +1055,16 @@ this is the pre-warp-wrap rule:
 	now warp-try is true;
 	if Aunt Tuna is fungible:
 		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved [']til you find the right person to annoy.";
-		preef ruby;
+		preef paw r wrap;
 		do nothing instead;
 	if player is not in Sclerous Closures:
 		say "That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.";
-		preef ruby;
+		preef paw r wrap;
 		do nothing instead;
 
 this is the post-warp-wrap rule:
 	moot sandier sardine;
+	now player has ruby;
 
 this is the pre-search-arches rule:
 	if sardine is fungible:
@@ -1089,8 +1107,19 @@ this is the post-clean-lance rule:
 
 this is the pre-bury-ruby rule:
 	if player does not have rigged digger:
-		if player has prod, say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+		if player has prod:
+			say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way.";
+		else:
+			say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping][craals-right-place].";
+		preef ruby;
+		the rule fails;
+	if player is not in Rascal Craals:
+		say "You don't have anywhere to bury the ruby, and you might be seen. Perhaps burying it the right place would frame people who sort of deserve it[craals-right-place].";
+		preef ruby;
+		the rule fails;
+
+this is the post-bury-ruby rule:
+	move thin hint to Rascal Craals;
 
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
@@ -1819,11 +1848,7 @@ a medal check rule for a thing (called x):
 			say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
 		else:
 			say "That feels right, but it also feels like you're getting way ahead of yourself, there.";
-		preef x;
-		[
-		preef ghoul hat;
-		preef sea cube;
-		]
+		preef x; [ this can be aany of the 4 conjunction puzzles ]
 		do nothing instead;
 
 book others
@@ -1877,9 +1902,11 @@ icons	s-i	false	303532482	286980	--	"sonic"	"sonic icons" or "sonic"	--	post-son
 coins	icons	false	303532482	286980	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
 coins	s-i	false	607064964	286980	--	"sonic icons"	"sonic icons" or "icons sonic"	pre-sonic-icons-double-flip rule	post-sonic-icons-double-flip rule	"You can't decide whether the coins should become sonic or icons first, but you know what? It doesn't matter. You just hope you've got enough brainpower, or whatever, to get a twofer. And you do!"
 s-c	s-i	false	303532482	286980	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
-viewer	viewer	false	601028460	6422800	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
-searcher	searcher	false	581009492	393365	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
-fleeing feeling	fleeing feeling	false	376061830	163856	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+viewer	viewer	false	601028460	6422800	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought[earn-assist]."
+searcher	searcher	false	581009492	393365	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought[earn-assist]."
+fleeing feeling	fleeing feeling	false	376061830	163856	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of the prep seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure[earn-assist]."
+
+to say earn-assist: say ". You figure you've earned the assistance"
 
 this is the post-prices-precis rule:
 	now player has kumquat;
@@ -4048,7 +4075,6 @@ heaps	"You figure the heaps are at a point where you can't change them for the b
 Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
 use saga sausage	"Don't oversell it! Just take [the sausage] to where it was probably (heh) the walleyes who buried the ruby."
-thin hint	"It was enough to bury the ruby."
 bogus-reangle	"You've exhausted the possibilities with the gleaner."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 
@@ -4145,7 +4171,7 @@ hurt hog	"You can go [b]THROUGH[r] [now-if-dealt of bent ewe] you've managed to 
 
 table of troves prefigurings
 preflip	pretodo
-stop post	"You should [b]SPOT[r] [now-if-dealt of sob ever verbose] you're able to focus better."
+stop post	"You should [b]SPOT[r] [now-if-dealt of sob ever verbose] you're more aware of your overall surroundings."
 l clear cellar	"You can [b]RECALL[r] the cellar [now-if-scored of bee-score] you're a little less distracted."
 LEAD	"You can [b]DEAL[r] [now-if-scored of bedroom-solve] you've gotten an emotional boost."
 trance nectar	"You can [b]RECANT[r] [now-if-scored of mbb-sis-points] you feel less watched."
@@ -4153,7 +4179,7 @@ trance nectar	"You can [b]RECANT[r] [now-if-scored of mbb-sis-points] you feel l
 table of presto prefigurings
 preflip	pretodo
 plebe	"You can shout [b]BLEEP[r] at the plebe [now-once of whether or not the player wears the tsar star] you look more authoritative."
-ether	"You can shout [b]THERE[r] [now-once of whether or not leo is eager and boing go bin is reflexed] you have the force to win the fight in the ether."
+ether	"You can shout [b]THERE[r] [now-once of whether or not leo is eager and boing go bin is reflexed] you have the firepower and assistance to win the fight in the ether."
 drab yoke	"You can change the drab yoke to a [b]KEYBOARD[r] [now-once of whether or not yak is moot] it's free of the bored yak[if yak is moot and player is not in hacks shack], but go back to the [shack] first[end if]."
 be troo e robot	"You can have [the e robot] [b]REBOOT[r] [now-once of whether or not number of things on labs slab is 4] your computing parts are in place."
 peels speel	"You can [b]SLEEP[r] [now-once of whether or not (futon is fungible and cpuready)] you've gotten a good start on your coding task."
@@ -4164,19 +4190,31 @@ table of oyster prefigurings
 preflip	pretodo
 LOLstr trolls	"You can [b]STROLL[r] past the LOLstr trolls [now-once of whether or not silly-acts is 3] you're not worth stopping."
 frat raft	"You can [if player is not on frat raft]get on the frat raft and [end if][b]FART[r]."
+oars	"You can [b]SOAR[r] [now-if-dealt of frat raft] the frat raft is full of, umm, whatever powers it."
 trout	"You should be able to [b]TUTOR[r] the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
 hunter hunt area	"You can [b]UNEARTH[r] the [b]HAUNTER[r] (from under the [b]HUNTER HUNT AREA[r]) with the right equipment."
 Achers Chaser Arches	"You can [b]SEARCH[r] the arches [now-if-dealt of sandier sardine] you've chased the sandier sardine away."
 crate	"You can [b]REACT[r] to the crate better [now-if-dealt of bogus-trace] you have more data."
 skis	"You can [b]KISS[r] the skis [now-if-dealt of bogus-trace] you are less distracted."
 span pans	"You can [b]SNAP[r] to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
-ruby	"You need to figure how and where to [b]BURY[r] the ruby."
+paw r wrap	"You need to figure out where to [b]WARP[r] the [wrap]."
+ruby	"You will want to [b]BURY[r] the ruby [ruby-bury-status]."
 ol trap	"You can [b]PATROL[r] to disable the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
 bogus-reangle	"You can [b]REANGLE[r] the general gleaner [now-if-dealt of bogus-enlarge] you've figured how to see something more basic in it."
 bogus-derail	"You can use the dialer to [b]DERAIL[r] [now-if-dealt of papery yapper] the papery yapper is gone."
 bogus-redial	"You can [b]REDIAL[r] the dialer [if pins are off-stage]once you've dialed successfully[else][now-if-dealt of pins] the pins are not in your way[end if]."
 lance	"You'll want to [b]CLEAN[r] the lance [now-once of whether or not player has wipes] you have something to wash it with."
 templar ramplet	"You can [b]TRAMPLE[r] the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
+
+bury-right-place is a truth state that varies.
+
+to say ruby-bury-status:
+	if player does not have rigged digger:
+		say "once you have a digging implement";
+	else if bury-right-place is false:
+		say "once you find the right place to do so";
+	else:
+		say "now you have a digging implement and identified the Rascal Craals as where to bury something"
 
 table of towers prefigurings
 preflip	pretodo
@@ -4561,7 +4599,7 @@ tea at a tee	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can 
 trout	"[if trout is in Anger Range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can [b]TUTOR[r] the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"	--	"[b]TUTOR[r] the trout"
 raw red drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or][b]SCAN[r] the cans.[minus][cycling]"
-ruby	"[one of]The ruby isn't yours. It's been stolen.[plus][or]The ruby belongs to the haunter in [anger range].[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can [b]BURY[r] the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"	--	"[b]BURY[r] the ruby" [NOTE: we say haunter not sausage here because you can't see the sausage until the ruby is buried]
+ruby	"[one of]The ruby isn't yours. It's been stolen.[plus][or]The ruby belongs to the haunter in [anger range].[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You need to [b]BURY[r] the ruby, though it requires a bit of planning.[plus][or][if player does not have digger]You need a digging implement before[else if rascal craals is unvisited]You need to visit somewhere you haven't explored before[else if player is not in rascal craals]You should go to Rascal Craals so[else]You're where you need to be, so[end if] you can [b]BURY[r] the ruby here.[minus][cycling]"	--	"[b]BURY[r] the ruby" [NOTE: we say haunter not sausage here because you can't see the sausage until the ruby is buried]
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Sclerous Closures will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to [b]WARP[r] the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or][b]WARP[r] the wrap by the sardine.[minus][cycling]"	--	"[b]WARP[r] the Paw-R-Wrap"
 span pans	"[one of]The span pans are a five-part puzzle. You may guess the final step, which consists of dissolving the pans.[plus][or]You need to dispose of the knob.[plus][or]You need to get rid of the skis.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues or, if you need help with the pans, see below.[plus][or]You can [b]SNAP[r].[minus][cycling]"	--	"[b]SNAP[r] at the span pans"
 shut huts	--	span pans
@@ -4576,7 +4614,7 @@ sausage	"[if sausage is reflexed][one of]Now you've gained its trust, you will w
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
 ol trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The [sausage] can take care of them.[plus][or]Once [the sausage] has scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or][b]PATROL[r].[minus][cycling]"	--	"[b]PATROL[r] the ol['] trap"
 pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or][b]ENLARGE[r] the gleaner to make the portal work for you.[minus][cycling]"
-thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The [if sausage is off-stage]haunter, once you find it,[else][sausage][end if] will be glad to see what is under the thin hint.[minus][cycling]"
+thin hint	"The thin hint is just a reminder so your in-game self knows where the ruby was buried. It isn't part of any puzzle."
 paler pearl	"[if tea at a tee is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or][b]EAT TEA[r].[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or][b]SEARCH[r].[minus][cycling][end if]"
 bogus-enlarge	"[one of]What could you do to make the [b]GLEANER[r] bigger and more easy to look into?[plus][or]The settler gives you where the vowels are.[plus][or][b]ENLARGE[r] the gleaner.[minus][cycling]"	--	"[b]ENLARGE[r] the gleaner"
 gleaner	"[if gleaner-viewed is false][b]EXAMINE[r] the general gleaner, now you've enlarged it.[else]You've done what you needed with the gleaner. The gleaner is useful narratively later on, and you don't need to act on it implicitly.[gleaner-extra][end if]"	--

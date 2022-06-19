@@ -1583,6 +1583,8 @@ chapter persuasions
 
 everpers is a truth state that varies.
 
+the persuasion disclaimer rule is listed first in the persuasion rules.
+
 persuasion rule for asking a person to try doing something when everpers is false (this is the persuasion disclaimer rule):
 	ital-say "you don't need to ask anyone to do anything to complete the game, and in fact it's almost never useful, though I tried some humorous rejects. You are better off ASKing people about things.";
 	now everpers is true;
@@ -2613,9 +2615,12 @@ to enact (myq - a quip):
 
 hold-it-up is a truth state that varies.
 
+elmo-go-warn is a truth state that varies.
+
 before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you back for hints rule):
-	if got-it-quip is not mowered and showset-quip is not mowered and still-no-gp-quip is not mowered:
-		say "Elmo checks you for a second. 'You sure you know how to use the settler?'";
+	if elmo-go-warn is false and got-it-quip is not mowered and showset-quip is not mowered and still-no-gp-quip is not mowered:
+		now elmo-go-warn is true;
+		say "Elmo checks you for [one of]a[or]another[stopping] second. 'You sure you know how to use the settler?'";
 		if the player dir-consents:
 			say "You nod. 'No clues counsel.'";
 			continue the action;
@@ -2717,6 +2722,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 	if hold-it-up is true:
 		choose row with response of bye-Elmo-quip in the table of Elmo comments;
 		now enabled entry is 1;
+		the rule succeeds;
 	if current quip is strip-quip:
 		pad-rec "asking";
 	if current quip is interr-quip:
@@ -4762,7 +4768,6 @@ to decide which thing is oyster-item:
 	if bogus-enlarge is fungible, decide on bogus-enlarge;
 	if player is in Rascal Craals:
 		if player has digger and player has ruby, decide on ruby;
-		if thin hint is fungible, decide on thin hint;
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
 		if yapper is fungible, decide on yapper;
@@ -7907,6 +7912,8 @@ to get-cool-stuff:
 	now player has inducted deductin;
 	now sad ads are in dusty study;
 	now autosave-known is true; [?? pad-rec-q stuff]
+	repeat through table of ordeal reload prefigurings: [ to cover an odd case where you might type PAINTING then IGNORE REGION ]
+		if preflip entry is prefigured, now preflip entry is unfigured;
 
 chapter isolani liaison
 
@@ -8885,29 +8892,32 @@ to say what-can-flip:
 			say "[line break][i][bracket]NOTE: you can abbreviate this with [b]PF[i] in the future.[close bracket][r][line break]";
 			now pf-warn is true;
 	if number of flip-known things is 0:
-		say "You have nothing [if ever-fig is true]else [end if]you figured in advance.[no line break]";
+		if ever-fig is true:
+			say "You've taken care of everything you figured in advance or, at any rate, you solved the regions they were in.";
+		else:
+			say "You haven't figured anything in advance, yet.";
 		continue the action;
 	if mrlp is demo dome:
 		say "This shouldn't have happened, but it did. BUG.";
 		continue the action;
-	say "Stuff you figured that may be handy later: [prefigured-things]";
+	say "Stuff where you figured out what to do but weren't prepared yet: [prefigured-things]";
 
 to say prefigured-things:
 	say "[list of not unfigured things with definite articles].";
 	repeat with pft running through not unfigured things:
-		let got-it be false;
+		let got-prefigured-table-entry be false;
 		repeat through preeftable of mrlp:
 			if pft is preflip entry:
 				say "[line break][pretodo entry]";
-				now got-it is true;
+				now got-prefigured-table-entry is true;
 				break;
-		if got-it is true, next;
+		if got-prefigured-table-entry is true, next;
 		d "you may wish to put [pft] in [preeftable of mrlp].";
-		if pft is a the-from listed in regana of mrlp:
-			choose row with the-from of pft in regana of mrlp;
-			say "[line break]To deal with [the the-from entry]: [b][right-word entry in upper case][r].";
-		else:
-			say "[line break]You remember you need to think [pft] at some time.";
+		repeat through regana of mrlp:
+			if the-from entry is pft:
+				say "[line break]To deal with [the the-from entry]: [b][right-word entry in upper case][r].";
+				continue the action;
+		say "[line break]You remember you weren't quite ready to deal with [the pft] yet. I should have more later, and it's a BUG i didn't track this as well as I did.";
 
 to say other-areas:
 	repeat through table of region spoilers:
@@ -8953,7 +8963,7 @@ understand "consult about [text]" as padding.
 understand the command "notepad/pedanto/pad" as something new.
 understand "notepad [text]" and "pedanto [text]" and "pad [text]" as padding.
 
-padding is an action applying to one topic.
+padding is an action out of world applying to one topic.
 
 this is the notepad check rule:
 	if location of player is not dusty study and location of notepad is dusty study:
@@ -13020,7 +13030,7 @@ description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump 
 
 chapter Be Troo E Robot
 
-The Be Troo E Robot is a boring reflexive thing in Hacks Shack. "A Be Troo E Robot waits here for an important order.". bore-text of Be Troo E Robot is "[if robot is reflexed]It needs a special command[else]The [robot] has no more work to do[end if].". bore-check of Be Troo E Robot is bore-robot rule. printed name is "Be-Troo E-Robot".
+The Be Troo E Robot is a boring reflexive thing in Hacks Shack. "A [robot] waits here, smiling [if robot is reflexed]at how it helped you[else]as eagerly a robot can, for an important order[end if].". bore-text of Be Troo E Robot is "The [robot] [if robot is reflexed]needs a special command[else]has no more work to do[end if].". bore-check of Be Troo E Robot is bore-robot rule. printed name is "Be-Troo E-Robot".
 
 this is the bore-robot rule:
 	if current action is taking, say "[if robot is reflexed]It's resting. Don't bother it[else]The [robot] inches away. It's a servant, not a pet[end if]." instead;
@@ -14633,7 +14643,7 @@ warp-try is a truth state that varies.
 After printing the name of the wrap while taking inventory:
 	if warp-try is true, say " (to warp in the right place)";
 
-some Paw R Wrap is a singular-named flippable thing. indefinite article of Paw R Wrap is "some". understand "bubble/bubbles" and "bubble wrap" as Paw R Wrap.
+some Paw R Wrap is a singular-named vanishing thing. indefinite article of Paw R Wrap is "some". understand "bubble/bubbles" and "bubble wrap" as Paw R Wrap.
 
 a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of paw r wrap is "?[sp]?[sp]x[sp]?". Paw R Wrap is any-spoilable.
 
@@ -14650,7 +14660,7 @@ understand "warp [something]" as warping.
 does the player mean warping the Paw R Wrap: it is very likely.
 
 carry out warping:
-	if noun is Paw R Wrap, try fliptoing ruby instead;
+	if noun is Paw R Wrap, try fliptoing Paw R Wrap instead;
 	if sardine is moot, say "You already warped what you needed to" instead;
 	say "There's only one thing you can warp, and [if noun is plural-named]those aren't[else]that's not[end if] it.";
 	the rule succeeds;
@@ -14888,8 +14898,6 @@ bonking is an action applying to one thing.
 understand the command "bonk [something]" as something new.
 
 understand "bonk [something]" as bonking.
-
-bonkies is a truth state that varies.
 
 carry out bonking:
 	if location of player is not Lapsin Plains, say "[reject]" instead;
@@ -18182,6 +18190,8 @@ to decide which number is guard-hint-prio of (gu - a guardian): [I use "other-ro
 		if other-room of gu is treading gradient or other-room of gu is anemic cinema or other-room of gu is danger garden, decide on 8; [all critical rooms]
 		decide on 6;
 	decide on 5; [the number values themselves don't matter. We want to direct the player to the most important areas.]
+
+the guardian reposition after rule is listed first in the report going rules.
 
 report going (this is the guardian reposition after rule):
 	if mrlp is Towers:

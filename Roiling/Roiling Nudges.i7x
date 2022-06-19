@@ -1264,6 +1264,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "craals"	258792829	--	--	"[locname]."
 "craal"	162518863	--	--	"[locname]."
 "hint"	254292671	thin hint	--	"The thin hint doesn't reveal anything else. You've hidden the ruby well enough."
+"yurb"	331207767	thin hint	--	"Now that the ruby's buried, you don't need to do anything more to it."
 
 chapter end den
 
