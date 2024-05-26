@@ -107,8 +107,7 @@ latches>satchel
 palm>lamp
 tables>stable
 my niche>chimney
-meet bans>basement
-beams~ten beams>basement
+meet bans beams net>basement
 ##diorama
 pavement>event map
 event map>pavement
@@ -620,7 +619,7 @@ fleeing feeling~perp>prep
 ###################stuff that is okay to be in scannotes even if the algorithm doesn't pick it up ASAP
 # it may be stuff without any ?s but we need to make a comment to clue the player, etc.
 #means manse
-AFT=pram,tables,niche,beams,meet bans
+AFT=pram,tables,niche
 #routes
 #troves
 AFT=rivets
