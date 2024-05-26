@@ -245,7 +245,7 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 		[
 		preef worst ad;
 		]
-		do nothing instead;
+		the rule fails;
 	if noun is reflexed: [this covers going back to the place]
 		if noun is picturers:
 			abide by the horbert-gone rule;
@@ -279,7 +279,7 @@ this is the pre-side-art-astride rule:
 	if Gast is not in Same Mesa:
 		say "You get astride the [sit a nag] for a while, but it's pointless with nobody around. Maybe later.";
 		preef side art;
-		the rule succeeds;
+		the rule fails;
 
 this is the post-side-art-astride rule:
 	now WOE BOW BELL is in Same Mesa;
@@ -315,7 +315,7 @@ this is the pre-hurt-hog-through rule:
 	if bent ewe is reflexive:
 		say "That could work later, but the hog and ewe don't trust you to go by yet.";
 		preef hurt hog;
-		do nothing instead;
+		the rule fails;
 
 this is the post-hurt-hog-through rule:
 	moot bent ewe;
@@ -384,7 +384,7 @@ this is the pre-spot-stop-post rule:
 	if sob ever verbose is in location of player:
 		say "That should work, but you--your eyes are wandering now. You're not taking it all in. Around the post, the sob ever verbose echoes aid distracts you. You must deal with it first!";
 		preef stop post;
-		do nothing instead;
+		the rule fails;
 
 this is the post-spot-stop-post rule:
 	now purse-stolen is false;
@@ -407,7 +407,7 @@ this is the pre-cellar-recall rule:
 	if bee-score is 0:
 		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
 		preef L Clear Cellar;
-		the rule succeeds;
+		the rule fails;
 
 this is the post-cellar-recall rule:
 	if bee-score < 2, poss-d;
@@ -437,7 +437,7 @@ this is the pre-deal rule:
 	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
 		say "That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the [b]ME ARTS[r].";
 		preef LEAD;
-		the rule succeeds;
+		the rule fails;
 
 this is the post-deal rule:
 	if pleaser leapers are not moot, poss-d;
@@ -587,7 +587,7 @@ this is the pre-plebe-bleep rule:
 	if player is not wearing tsar star:
 		say "You try and cuss, but the plebe is not intimidated by your civilian clothes[if Rand is in Grey Gyre] or even your companions[end if]. Perhaps you need something proclaiming your authority.";
 		preef plebe;
-		do nothing instead;
+		the rule fails;
 
 this is the pre-boing-bingo rule:
 	if player does not have the PG on up popgun and popgun is fungible:
@@ -675,11 +675,11 @@ this is the pre-ether-there rule:
 	if Leo is not in Grey Gyre:
 		say "You suspect someone is in the mist where the maze was. '[b]THERE[r]!' you yell. But you doubt you fooled or intimidated them. You need backup.";
 		preef ether;
-		do nothing instead;
+		the rule fails;
 	if player does not have popgun or popgun does not contain dart:
 		say "[one of][l-n-r] charge in. It's two-on-three, though, since [why-2-3]--and the enemies are bigger than you. 'Ha, bums! Ambush!' you hear, before taking a thumping.[paragraph break]You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' [l-n-r] shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need [if player does not have popgun]a weapon[else]to load that popgun[end if][or][b]THERE[r], you think, realizing you're not [if player has popgun]effectively [end if]armed yet[if player has popgun and boing go bin is reflexive]. You need to fix the popgun[end if][stopping].";
 		preef ether;
-		do nothing instead;
+		the rule fails;
 
 this is the post-ether-there rule:
 	now dart is in Grey Gyre;
@@ -759,7 +759,7 @@ this is the pre-yak-keyboard rule:
 		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
 		now try-keyboard is true;
 		preef drab yoke;
-		do nothing instead;
+		the rule fails;
 
 this is the post-yak-keyboard rule:
 	moot leaf;
@@ -804,11 +804,11 @@ this is the pre-peels-speel-sleep rule:
 	if futon is not fungible:
 		say "You haven't yet made anywhere comfortable to sleep.";
 		preef peels speel;
-		do nothing instead;
+		the rule fails;
 	if not cpuready:
 		say "Sleep on the futon? Wouldn't be fun to. You've got a big coding session ahead, and you haven't fully prepared. yet.";
 		preef peels speel;
-		do nothing instead;
+		the rule fails;
 
 this is the post-rom-sticks rule:
 	if be troo e robot is reflexed, moot rom sticks;
@@ -817,7 +817,7 @@ this is the pre-bub-dude-egg rule:
 	if ALocalCo Cola is not moot:
 		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is fungible]coal won't cut it. Too early 20th century[else]ALocalCo Cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
 		preef BUB DUDE EGG;
-		do nothing instead;
+		the rule fails;
 
 this is the post-bub-dude-egg rule:
 	now USB is in Hacks Shack;
@@ -930,7 +930,7 @@ this is the pre-trolls-stroll rule:
 	if silly-acts >= 3, continue the action;
 	say "The LOLstr trolls [if silly-acts is 0]seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty][else if silly-acts is 1]seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now[gloaty][else if silly-acts is 2]make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty].[paragraph break]Maybe one more disruption, and you won't be worth bothering with[end if].";
 	preef lolstr trolls;
-	the rule succeeds;
+	the rule fails;
 
 this is the post-trolls-stroll rule:
 	if flip-spill-flag is true:
@@ -966,7 +966,7 @@ this is the pre-raft-fart rule:
 	if player is not on raft and raft is reflexive:
 		say "Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.";
 		preef frat raft;
-		the rule succeeds;
+		the rule fails;
 
 this is the post-scrap-carps rule:
 	now trout is in Lean Lane;
@@ -1008,7 +1008,7 @@ this is the pre-tutor-trout rule:
 	if player is in Anger Range:
 		say "You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.";
 		preef trout;
-		do nothing instead;
+		the rule fails;
 
 this is the post-tutor-trout rule:
 	now player has Paw R Wrap;
@@ -1021,14 +1021,14 @@ this is the pre-crate-react rule:
 	if bogus-trace is in Lapsin Plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
 		preef crate;
-		the rule succeeds;
+		the rule fails;
 
 this is the pre-kiss-skis rule:
 	if bogus-trace is in Lapsin Plains:
 		say "[one of]That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef skis;
 		now crate-hit-me is true;
-		the rule succeeds;
+		the rule fails;
 	if crate is reflexive:
 		if crate-hit-me is false:
 			say "You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. You need to do that first.";
@@ -1036,7 +1036,7 @@ this is the pre-kiss-skis rule:
 			say "You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...";
 		preef skis;
 		now crate-hit-me is true;
-		the rule succeeds;
+		the rule fails;
 
 this is the pre-bonk-knob rule:
 	abide by the pre-kiss-skis rule;
@@ -1045,22 +1045,22 @@ this is the pre-snap-span-pans rule:
 	if crate is reflexive:
 		say "You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.";
 		preef span pans;
-		the rule succeeds;
+		the rule fails;
 	if knob is in Lapsin Plains or skis are in Lapsin Plains:
 		say "The pans rumble a bit but are held together by the [pan-block]. You'll need to unblock the pans for that to work.";
 		preef span pans;
-		the rule succeeds;
+		the rule fails;
 
 this is the pre-warp-wrap rule:
 	now warp-try is true;
 	if Aunt Tuna is fungible:
 		say "'Goodness me!' cries Aunt Tuna. 'I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved [']til you find the right person to annoy.";
 		preef paw r wrap;
-		do nothing instead;
+		the rule fails;
 	if player is not in Sclerous Closures:
 		say "That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.";
 		preef paw r wrap;
-		do nothing instead;
+		the rule fails;
 
 this is the post-warp-wrap rule:
 	moot sandier sardine;
@@ -1070,7 +1070,7 @@ this is the pre-search-arches rule:
 	if sardine is fungible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.";
 		preef Achers Chaser Arches;
-		do nothing instead;
+		the rule fails;
 
 this is the post-search-arches rule:
 	pearl-check;
@@ -1080,7 +1080,7 @@ this is the pre-patrol-ol-trap rule:
 	if walleyes are not moot:
 		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
 		preef ol trap;
-		do nothing instead;
+		the rule fails;
 
 this is the post-patrol-ol-trap rule:
 	moot rigged digger; [this could be in the "before" rules to save time, but if I slip a condition in ... it might vanish the digger.]
@@ -1100,7 +1100,7 @@ this is the pre-clean-lance rule:
 	if player does not have wipes:
 		say "Good idea, but you have nothing that could clean the lance effectively.";
 		preef lance;
-		do nothing instead;
+		the rule fails;
 
 this is the post-clean-lance rule:
 	moot wipes;
@@ -1126,18 +1126,18 @@ this is the pre-unearth-haunter rule:
 	if player does not have digger:
 		say "Nothing to unearth a haunter with.";
 		preef HUNTER HUNT AREA;
-		do nothing instead;
+		the rule fails;
 	d "Unearthing Failed. Has digger = [whether or not player has digger], Ruby moot = [whether or not ruby is moot].";
 	if sausage is not off-stage, say "You managed to unearth the haunter already." instead;
 	say "Ravage a grave!";
 	if ruby is off-stage:
 		say "[line break]You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'[paragraph break]You haven't found or discovered a jewel, yet.";
 		preef HUNTER HUNT AREA;
-		do nothing instead;
+		the rule fails;
 	if player has ruby:
 		say "[line break]As you begin to dig, you hear 'My...jewel...close...thieves...pay.'[paragraph break]It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.";
 		preef HUNTER HUNT AREA;
-		do nothing instead;
+		the rule fails;
 
 this is the post-unearth-haunter rule:
 	it-him-her sausage;
@@ -1185,7 +1185,7 @@ this is the pre-dialer-derail rule:
 	if yapper is fungible:
 		say "The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.";
 		preef bogus-derail;
-		do nothing instead;
+		the rule fails;
 
 this is the post-dialer-derail rule:
 	now bogus-redial is in tenfold;
@@ -1195,7 +1195,7 @@ this is the pre-dialer-redial rule:
 	if pins are fungible:
 		say "Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.";
 		preef bogus-redial;
-		do nothing instead;
+		the rule fails;
 	abide by the region-done-check rule;
 
 this is the post-dialer-redial rule:
@@ -1257,7 +1257,7 @@ sporties ripostes	sporties ripostes	false	709599244	966928	--	"prosiest"	"prosie
 strudel	strudel	false	592462631	1968152	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is fungible]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 fissure	fissure	false	582291393	1442096	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--click! I guess the fissure was vulnerable to ... fursies."
 luck node	luck node	false	522953692	1076252	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. Somehow, as it pokes its bill at the luck node, it finds the right combination. Now that's luck!"
-dinger	solve a loaves	false	382846875	139609	--	"grained"	"grained"	--	post-dinger-grained rule	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'" [this is the end of the weird stuff for LLPs. The rest deals with the agnostic. ]
+dinger	solve a loaves	false	382846875	139609	--	"grained"	"grained"	--	post-dinger-grained rule	"Suddenly, [dinger] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'" [this is the end of the weird stuff for LLPs. The rest deals with the agnostic. ]
 atblock	atblock	false	788195264	2629905	--	"attentive"	"attentive"	--	post-tentative-attentive rule	"[agnostic] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	1982466	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! [how-safe]."
 blaster	blaster	false	486934458	919571	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. [how-safe]."
@@ -1355,7 +1355,7 @@ this is the pre-fussier rule:
 	if duck is not fungible:
 		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
 		preef fries us fissure;
-		do nothing instead;
+		the rule fails;
 
 this is the post-yow-free rule:
 	say "[line break]The prison ropins slither to the ground and vanish, along with the luck node and fissure. Out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more.";
@@ -1374,7 +1374,7 @@ this is the pre-unlocked rule:
 		say "You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, [b]UNLOCKED[r] should work. It just feels right.";
 		now node-preef is true;
 		preef luck node;
-		do nothing instead;
+		the rule fails;
 
 this is the post-dinger-grained rule: [?? this should not be necessary if take entry is true]
 	now player has solve a loaves;
@@ -1634,7 +1634,7 @@ this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
 	else:
 		say "That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.";
 	preef atmo moat;
-	do nothing instead;
+	the rule fails;
 
 this is the post-moat-atom rule:
 	move Neon Pope to Disowned Downside;
@@ -1691,7 +1691,7 @@ this is the pre-parrot-raptor rule:
 	if location of player is not Reclusion Inclosure:
 		say "'Awk! I'd just kill you in that form. Try that around some bad guys.'";
 		preef parrot;
-		do nothing instead;
+		the rule fails;
 
 this is the post-parrot-raptor rule:
 	now player has whistle;
@@ -1760,25 +1760,25 @@ this is the pre-whistle-deeply rule:
 	if parrot is fungible:
 		say "The parrot still has the whistle. You can't play the whistle until it's yours.";
 		preef whistle;
-		do nothing instead;
+		the rule fails;
 	if number of NPCish people > 0:
 		say "That's the right idea, but your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot and player is not in Reclusion Inclosure] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if].";
 		preef whistle;
-		do nothing instead;
+		the rule fails;
 
 this is the pre-medals-quickly rule:
 	if medals-shiny < 2:
 		say "You feel a surge, but not enough. [if medals-shiny is 0]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe there's a way to clean [if medals-shiny is 0]them[else]it[end if] up and restore [if medals-shiny is 0]their[else]its[end if] full power[med-unf].";
 		preef medals;
-		do nothing instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
+		the rule fails; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 	if Merle is fungible:
 		say "That seems right, but not now. [e-n-m]'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals;
-		do nothing instead;
+		the rule fails;
 	if player is not in Reclusion Inclosure:
 		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf]. But there probably will be. The medals will help then.";
 		preef medals;
-		do nothing instead;
+		the rule fails;
 
 book general auxiliary rules
 
@@ -1800,7 +1800,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 			if Hacks Shack is not visited:
 				say "You might not be safe from Elvira's SHATTER-THREATS legislation here. And you're not sure what to do with that, yet. But that feels right.";
 				preef noun;
-				do nothing instead;
+				the rule fails;
 			if noun is disk and yak is moot:
 				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
 				if the player yes-consents:
@@ -1810,7 +1810,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 					continue the action;
 				else:
 					say "You can't see much more to do with the skid now, though.";
-					do nothing instead;
+					the rule fails;
 			if noun is keyboard and yak is moot:
 				say "You probably want to [go-ret-shack] before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
 				if the player yes-consents:
@@ -1820,7 +1820,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 					continue the action;
 			say "That stupid SHATTER-THREATS law might pick you up out here. [if noun is disk and yak is on skid]Anyway, the yak on the skid wouldn't appreciate it. [end if]Best to [go-ret-shack] and try again.";
 			preef noun;
-			do nothing instead;
+			the rule fails;
 
 to say go-ret-shack:
 	say "[if shack is unvisited]find a safe inside place[else]return to the [shack][end if]"
@@ -1849,7 +1849,7 @@ a medal check rule for a thing (called x):
 		else:
 			say "That feels right, but it also feels like you're getting way ahead of yourself, there.";
 		preef x; [ this can be aany of the 4 conjunction puzzles ]
-		do nothing instead;
+		the rule fails;
 
 book others
 
@@ -2438,6 +2438,7 @@ educers us creed	"RESCUED! RECUSED-SEDUCER-SECURED![paragraph break]For all Elvi
 
 table of others readables
 to-read	what-read	alt-read
+sated stead	"The brand-name, in red, is [first custom style]TEAS'D STADE[r]."
 hire recs re riches	"It's autographed in red, and pompously, by someone who's scribbled [first custom style]HERE'S RIC[r]."
 id mantra mad train	"The name of the train's creator is in red: [first custom style]DR. NIMATA[r]."
 eerie blurbs	"One reads [first custom style][one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order][r], and it makes you see red." [others]
@@ -2877,7 +2878,7 @@ yak	--	"You yack about your quest. The yak's all C-ya, K? Nevertheless, it seems
 to say plebe-threat of (per - a person): say "[if per is fungible]You tell the plebe [per] might push [him-her] aside, but no dice. Maybe a brutish word, not brute force[else]The plebe wouldn't go AWOL over to [Dirge Ridge]. You can take care of them and [per] in any order[end if]."
 
 to say pal-yak:
-	say "'[if yak is fungible]'Dat thing looks sleepy but it'll bite your hand off[else if Leo-traveled is true]'Dat yak we saw is too heavy for us! But I bet even you could push it around yourself. No offense[else]'My mouf? Oh, a yak, not a yap[end if].'";
+	say "'[if yak is fungible]Dat thing looks sleepy but it'll bite your hand off[else if Leo-traveled is true]Dat yak we saw is too heavy for us! But I bet even you could push it around yourself. No offense[else]My mouf? Oh, a yak, not a yap[end if].'";
 
 to say no-plebe: say "'I respect da military too much to push him outta da way. Plus I can't yell clever neither.'"
 
@@ -3360,7 +3361,7 @@ thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 pram	false	false	false	true	"[cheatfid]."
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
-beams net	true	false	false	false	"Oh dear. This is tricky. Three question marks out of eight. Maybe you can actually figure what they mean logically, or maybe you can figure what sort of thing would be below ground in a study, and then maybe you can use that to figure what the question marks mean."
+meet bans beams net	true	false	false	false	"Oh dear. This is tricky. Three question marks out of eight. Maybe you can actually figure what they mean logically, or maybe you can figure what sort of thing would be below ground in a study, and then maybe you can use that to figure what the question marks mean."
 palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is."
 Respect Specter	false	false	false	false	"'[respect-help].'"
 
