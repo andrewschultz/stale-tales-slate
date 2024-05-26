@@ -600,41 +600,9 @@ carry out foing:
 	process the notify score changes rule;
 	the rule succeeds;
 
-volume useful for testing whether  we made it somewhere, with TEST, but superseded by ZarfScripts
-
-chapter verif
-
-[* for use with rules verification extension: TEST X ]
-
-table of verification rules (continued)
-rule-short (topic)	rule-name	rule-description
-"ts"	trips-strip rule	"At Trips Strip e.g. solved area"
-"sco"	max-reg-score rule	"All solved region scores are maximum"
-"rm"	in-means-manse rule	"In Means Manse"
-"fi"	in-fields rule	"in [fields]"
-
-this is the in-fields rule:
-	if the player is in Self ID Fields, the rule succeeds;
-	the rule fails;
-
-this is the max-reg-score rule:
-	let tempbool be true;
-	repeat with this-reg running through solved regions:
-		if last-loc of this-reg is visited:
-			if cur-score of this-reg is not max-score of this-reg:
-				now tempbool is false;
-	if tempbool is true, the rule succeeds;
-	the rule fails;
-
-this is the trips-strip rule:
-	if the player is in Trips Strip, the rule succeeds;
-	the rule fails.
-
-this is the in-means-manse rule:
-	if player is in Means Manse, the rule succeeds;
-	the rule fails;
-
 volume jumpthrough information
+
+[this is in addition to what is in the STS Tests file]
 
 understand "jf [number]" as jumpthroughing.
 understand "ji [number]" as jumpthroughing.
@@ -650,7 +618,7 @@ understand "jr" as jumpthroughalling.
 understand "jo" as jumpthroughalling.
 understand "js" as jumpthroughalling.
 
-the deduce region from first letter rule is listed first in the check jumpthroughing rules.
+the deduce region from first letter rule is listed first in the check jumpthroughing rules. [game specific rules come first]
 
 check jumpthroughing (this is the deduce region from first letter rule):
 	if word number 1 in the player's command is "jf":

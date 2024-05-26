@@ -8,31 +8,26 @@ book Ordeal Loader
 
 table of Ordeal Loader anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	fullhash	binhash	vanish	to-room
-bulge	bugle	"bugle"	"bulge"	a rule	post-bulge-bugle rule	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is in Rested Desert]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	1050706	--	nowhere
+bulge	bugle	"bugle"	"bulge"	a rule	post-bugle-or-bolt rule	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is in Rested Desert]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	1050706	--	nowhere
 odor	OR DO door	"door"	"odor"	--	post-odor-door rule	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	147464
-bolt	blot	"blot"	"bolt"	--	post-bolt-blot rule	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	542722
+bolt	blot	"blot"	"bolt"	--	post-bugle-or-bolt rule	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	542722
 reed	deer	"deer"	"reed"	--	post-reed-deer rule	"The reed shudders and slowly pulls down into the ground, making legs and so forth. And it becomes a deer. The deer sees the delicious thickets and brambles and walks over.[paragraph break][goat-deer-eat]."	false	361965110	131096
 toga	goat	"goat"	"toga"	--	post-toga-goat rule	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break][goat-deer-eat]."	false	212250115	540737
-sent nets	nest	"nest"	"nets"	--	--	"The nets, seemingly stuck in the ground, pull up and fly around and compact themselves into a nice-sized nest. It looks a lot more in tune with the scenery. While you gained nothing practical other than the experience, you're glad you could use your powers to make things a bit nicer."	false	396097601	794640
+sent nets	nest	"nest"	"nets"	--	--	"The nets, seemingly stuck in the ground, pull up and fly around and compact themselves into a nice-sized nest. It looks a lot more in tune with the scenery. While this untangling didn't create a way to where you need to go, you're glad you could use your powers to make things a bit nicer, and you're that much more confident you're one of the good guys."	false	396097601	794640
 nametag	gateman	"gateman" or "gate man"	"nametag"	pre-nametag-gateman rule	post-nametag-gateman rule	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	536657	true
 static	attics	"attics" or "attic"	--	--	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is fungible]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	786693	true
 attics	static	"static"	--	--	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	786693	true
 acne bit cabinet	tenibac	"bactine"	"bactine"	pre-cabinet-bactine rule	--	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	532759	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.]
 
-this is the post-bulge-bugle rule:
-	if bolt is moot, min-up;
+this is the post-bugle-or-bolt rule:
+	if bolt is moot and bulge is moot, min-up;
 
 this is the post-odor-door rule:
 	if min-alert is false, poss-display;
 	move bulge to location of player;
 	move bolt to location of player;
 
-this is the post-bolt-blot rule:
-	if bulge is moot, min-up;
-
 this is the post-reed-deer rule:
-	set the pronoun him to deer;
-	set the pronoun her to deer;
 	deer-goat-min;
 
 to say goat-deer-eat:
@@ -44,8 +39,6 @@ this is the post-toga-goat rule:
 	if player has toga or player has goat:
 		move toga to location of player;
 		move goat to location of player;
-	set the pronoun him to goat;
-	set the pronoun her to goat;
 	deer-goat-min;
 
 this is the pre-nametag-gateman rule:
@@ -57,7 +50,7 @@ this is the pre-nametag-gateman rule:
 	if Notices Section is unvisited:
 		say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.";
 		preef-l gateman;
-		the rule succeeds;
+		the rule fails;
 	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
 	if player wears the nametag:
 		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
@@ -78,6 +71,8 @@ to say what-about-gate: say ". [if player has gadget]Not much left to do for you
 
 to deer-goat-min:
 	if reed is moot and toga is moot, min-up;
+	set the pronoun him to noun;
+	set the pronoun her to noun;
 
 book Stores
 
@@ -116,7 +111,7 @@ book Forest
 
 table of Forest anagrams [xxtfa]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	fullhash	binhash	vanish	to-room
-slit	silt	"silt"	"slit"	a rule	post-slit-silt rule	"The slit crumbles away. Sily comes pouring out of it, and at the same time, Corses Crosse squeezes it shut. There's no trace of the slit now."	true	298190669	788736
+slit	silt	"silt"	"slit"	a rule	post-slit-silt rule	"The slit crumbles away. Silt comes pouring out of it, and at the same time, Corses Crosse squeezes it shut. There's no trace of the slit now."	true	298190669	788736
 ones	nose	"nose"	"ones"	a rule	post-ones-nose rule	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160	286736
 dashes	shades	"shades"	"dashes"	--	post-dashes-shades rule	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247	262297
 noughts	shotgun	"shotgun"	"noughts"	--	post-noughts-shotgun rule	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877	1859776
@@ -146,16 +141,14 @@ to say process-sandwich:
 	if sandwich is fungible:
 		say "[if player has sandwich]You juggle the bread and spam, but neither part falls[else]You decide to pick up the sandwich so the other part doesn't fall[end if] to the floor. ";
 		moot sandwich;
-		if the player's command matches the text "beard":
-			now player has spam;
-		if the player's command matches the text "maps":
-			now player has bread;
+		if noun is beard, now player has spam;
+		if noun is spam, now player has bread;
 
 this is the pre-sliver-silver rule:
 	unless drapes are moot:
 		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
 		preef-l silver;
-		do nothing instead;
+		the rule fails;
 
 this is the post-liches-chisel rule:
 	now spread is in Emptiness Sepiments;
@@ -292,31 +285,31 @@ this is the pre-smilies-missile rule:
 		if player is not in moor:
 			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
 			preef-l missile;
-			do nothing instead;
+			the rule fails;
 
 this is the pre-haywall-hallway rule:
 	if scraped wall is not hayfilled:
 		say "Hm, that's possible, but you can't make the hallway until you add something to the wall.";
 		preef-l hallway;
-		do nothing instead;
+		the rule fails;
 
 this is the pre-oils-silo rule:
 	if oils are not in cask:
 		if location of player is Sacred Cedars:
 			say "[if silo is in moor]You've already built the silo, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a better place to make a silo[oils-flip-clue][end if].";
 			preef-l silo;
-			do nothing instead;
+			the rule fails;
 		if oils are fungible:
 			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type [b]UNDO[r] and send a transcript of what you did.";
 		continue the action;
 	if player is not in moor:
 		say "This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?";
 		preef-l silo;
-		do nothing instead;
+		the rule fails;
 	if soil is not in moor:
 		say "The moor's ground is not stable enough as-is. You need a foundation first.";
 		preef-l silo;
-		do nothing instead;
+		the rule fails;
 
 this is the post-oils-silo rule:
 	now oils are in Sacred Cedars;
@@ -328,13 +321,13 @@ this is the pre-oils-soil rule:
 		if location of player is Sacred Cedars:
 			say "[ilb-later][if soil is in moor]You've already poured the soil, and bragging does not impress Lois[else]That would really clog up the tap, changing the oils in it to a silo. Maybe there's a place that could use soil, though[oils-flip-clue][end if].[no line break]";
 			preef-l soil;
-			do nothing instead;
+			the rule fails;
 		if oils are fungible:
 			say "You've found a bug, somehow. I'm sorry about this. It's not game-breaking, but it's a bug. Please type [b]UNDO[r] and send a transcript of what you did.";
 	else if player is not in moor:
 		say "This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?";
 		preef-l soil;
-		do nothing instead;
+		the rule fails;
 	skip upcoming rulebook break;
 
 this is the post-oils-soil rule:
@@ -414,7 +407,7 @@ this is the pre-drycake-keycard rule:
 	if bastion-evac is false and dry cake is in location of player:
 		say "[one of]The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
 		preef-l keycard;
-		do nothing instead;
+		the rule fails;
 
 this is the post-antlers-rentals rule:
 	moot rentals;
@@ -660,7 +653,7 @@ oils	"[if player is not in moor][oils-need-purpose][else]The soil is there to su
 to say oils-need-purpose: say "The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space"
 
 to say smilies-plural-nag:
-	if the hash of the player's command is 431954759 or hash of word number 1 in the player's command is 431954759:
+	if i6cmdhash is 431954759 or i6fwhash is 431954759:
 		say ". Looks like it's not just one smilie[seed-plural-nag]";
 
 table of metros spechelp
@@ -743,7 +736,7 @@ to say spec-help of (itm - a thing):
 		now pointcue is true;
 
 to decide whether add-plural-nag of (itm - a thing):
-	if itm is smilies and hash of the player's command is 431954759, yes;
+	if itm is smilies and i6cmdhash is 431954759, yes;
 	no;
 
 volume done rejects

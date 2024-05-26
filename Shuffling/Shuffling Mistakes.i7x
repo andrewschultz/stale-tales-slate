@@ -114,9 +114,9 @@ understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Ega
 
 understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.[note-great-guesses]") when phial is fungible.
 
-understand "ban ice t" as a mistake ("No way! He has a brilliant Twitter game, and O.G. was an awesome album! Also, I remember that 'May be unsuitable for squares and suckers' sticker on his third album. Classic stuff[note-great-guesses].") when cabinet is touchable.
+understand "ban ice t" as a mistake ("No way! He has a brilliant Twitter game, and O.G. was an awesome album! Also, I remember that 'May be unsuitable for squares and suckers' sticker on his third album. Classic stuff[note-great-guesses].") when cabinet is fungible.
 
-understand "can i bet" and "i can bet" as a mistake ("No gambling! You need to be helpful to the cabinet, here[red-cabinet][note-great-guesses].") when cabinet is touchable.
+understand "can i bet" and "i can bet" as a mistake ("No gambling! You need to be helpful to the cabinet, here[red-cabinet][note-great-guesses].") when cabinet is fungible.
 
 understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.[note-great-guesses]") when cabinet is in location of player.
 
@@ -205,6 +205,8 @@ understand "olefin" as a mistake ("Organic chemistry involves shuffling things a
 understand "scores" as a mistake ("Yes, there are scores and scores in the line of no life.") when player is in Self ID Fields.
 
 understand "scorse" as a mistake ("You can't trade with the dead.") when player is in Self ID Fields.
+
+understand "sit still" as a mistake ("The list inside the slit is already motionless.") when slit is fungible.
 
 chapter Flesh Shelf
 
@@ -361,6 +363,8 @@ understand "reset" and "reset button" as a mistake ("[reset-goof].") when player
 understand "rifle" as a mistake ("Shooting things up is not the answer.") when got-flier.
 
 understand "similes" as a mistake ("[if smilies are fungible]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is fungible]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[else][reject]") when smilies are fungible or missile is fungible.
+
+understand "sane pat" as a mistake ("[if pat is moot]No, not even a sane version of Pat would be useful[else]Alas, the anapest would probably still drive you up the wall. Or Pat, once Pat saw how bad it was[end if]") when player is in moor.
 
 understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is fungible or hoots button is fungible.
 
