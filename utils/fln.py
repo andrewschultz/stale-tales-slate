@@ -8,6 +8,9 @@ from collections import defaultdict
 
 red_check = True
 
+def title_of(my_array):
+    return '/'.join([x.title() for x in my_array])
+
 def show_exacts(my_name, my_dict, my_description = "no description"):
     matches = []
     for x in my_dict:
@@ -51,7 +54,7 @@ def check_reds(wanted_string, firsts, lasts):
             match_string = f + l
             if any_match(wanted_string, match_string):
                 continue
-            print(colorama.Fore.RED + "  Red name:", f, l, colorama.Style.RESET_ALL)
+            print(colorama.Fore.RED + "  Potential red writing if you want it (e.g. no matches between parallel letters:)", f.title(), l.title(), colorama.Style.RESET_ALL)
 
 try:
     my_name = sys.argv[1]
@@ -72,6 +75,6 @@ for f in first_names:
         continue
     if poss_last not in last_names:
         continue
-    print("got", '/'.join(first_names[f]), '/'.join(last_names[poss_last]))
+    print("got", title_of(first_names[f]), title_of(last_names[poss_last]))
     if red_check:
         check_reds(my_name, first_names[f], last_names[poss_last])
