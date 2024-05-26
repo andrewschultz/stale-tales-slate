@@ -358,8 +358,7 @@ The shells don't move. Perhaps they are just a clue of what Store Y can become.
 #ttc-table-of-strip-of-profits-nudges-shells
 >shelsl
 The shells don't move. Perhaps they are just a clue of what Store Y can become.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-b
 >sorbte
 The smell from Store B becomes fruitier and more delicious.
@@ -447,8 +446,7 @@ Being a stoner isn't treason. Use his real name.
 #ttc-table-of-stores-done-rejects-nestor
 >nestro
 You rescued him, and that's enough.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-k
 >tokesr
 An odd sweet smell from Store K, for a second.
@@ -687,8 +685,7 @@ The slider, which is red (a nice touch--slider and idlers not having any letters
 #testcase-mistake-roiling-tortes
 >tortes
 There's no time for food! Especially fatty, non-brain food!
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-u
 >routse
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
@@ -737,8 +734,7 @@ You don't need to do anything with an individual route. Just go in.
 #ttc-table-of-strip-of-profits-nudges-courses
 >coursse
 You don't need to do anything with an individual route. Just go in.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-v
 >trovse
 A single paper currency flutters off from Store V, lost forever.
@@ -755,7 +751,6 @@ Your score has just gone up by one point
 }}SCORE++
 
 @verbs
-\\
 #+testcase-exits-strip-of-profits
 >exits
 There are no directional exits here, but you have multiple ex-stores you can enter.
@@ -797,8 +792,7 @@ The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
 #ttc-table-of-strip-of-profits-nudges-tasty
 >tasyt
 The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-w
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
@@ -907,8 +901,7 @@ Seawater scents from the balancer barnacle.
 #ttc-table-of-stores-done-rejects-balancer-barnacle
 >oystre
 You should just enter the balancer barnacle. No need or way to seal it back up.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-h
 >othesr
 Store H looks totally different for a second.
@@ -959,8 +952,7 @@ A mix of surprisingly nice smells from the Throes Hoster where Store H was.
 #ttc-table-of-stores-done-rejects-throes-hoster
 >othesr
 You should just enter the Throes Hoster. No need or way to seal it back up.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-p
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
@@ -1019,8 +1011,7 @@ But you already changed Store P.
 #ttc-table-of-stores-done-rejects-odorant-tornado
 >presot
 You should just enter the odorant tornado. No need or way to seal it back up.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-t
 >ottesr
 You hear various unrecognizable animal noises.
@@ -1047,10 +1038,6 @@ Your score has just gone up by one point
 ==!
 {$SCODONE}
 
-@min
->zap solid idols
-The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.
-
 @nud
 #ttc-table-of-stores-done-rejects-solid-idols
 >ottesr
@@ -1067,8 +1054,7 @@ The solid idols, being solid, are unchanged. They won't let you ENTER unless you
 #ttc-table-of-strip-of-profits-nudges-solid
 >soldi
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
-
-@nud
+\\
 #+testcase-mistake-roiling-ouster
 >ouster
 It's your job to be the ouster in the course source, but you'll need to warp out of the Strip.
@@ -1076,3 +1062,7 @@ It's your job to be the ouster in the course source, but you'll need to warp out
 #+testcase-mistake-roiling-tosher
 >tosher
 The Throes Hoster does look a bit weird, but you need to enter it, not change it.
+
+@min
+>zap solid idols
+The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.

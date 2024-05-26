@@ -246,8 +246,7 @@ Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last l
 #ttc-table-of-troves-done-rejects-pa-egg-pea
 >gaep
 You probably did what you could. Or not-did.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-tears-taser
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
@@ -449,8 +448,7 @@ The reastier arteries cannot be changed. They cannot even change you positively 
 #ttc-table-of-bustle-sublet-nudges-artery
 >arteyr
 The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
-
-@nud
+\\
 #ttc-table-of-bustle-sublet-nudges-sob
 >sbo
 No, you'll want to zone out the whole verbose distraction.
@@ -458,8 +456,7 @@ No, you'll want to zone out the whole verbose distraction.
 #ttc-table-of-bustle-sublet-nudges-veer
 >vere
 No, you'll want to zone out the whole verbose distraction.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-mussier-misuser
 >sumirse
 The mussier misuser looks around a bit, worried someone might be out-thinking them.
@@ -973,8 +970,7 @@ Now is not the time to fret solely on past dreams. Fret on the hopeless present 
 #testcase-mistake-roiling-praised
 >praised
 You would like to be, but you can't just want others to. Change comes from within.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
@@ -1103,8 +1099,7 @@ Ew--mild mildew. A mustier semi-rut.
 #ttc-table-of-drain-nadir-nudges-glare
 >glaer
 You stare into space some more but get distracted.
-
-@nud
+\\
 #testcase-mistake-roiling-snog
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
@@ -1112,8 +1107,7 @@ You're too busy for...THAT. You focus on the singer. Probably someone you'd like
 #ttc-table-of-drain-nadir-nudges-diapers
 >despari
 You already twisted yourself into and out of knots from despair. Time to move on!
-
-@nud
+\\
 #ttc-table-of-drain-nadir-nudges-song
 >sogn
 It's the full song name--I'd Cede.
@@ -1125,8 +1119,7 @@ It's the full song name--I'd Cede.
 #ttc-table-of-drain-nadir-nudges-cede
 >ceed
 It's the full song name--I'd Cede.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-id-cede
 >decied
 You try to groove to I'd Cede, but that's not quite it.
@@ -1248,8 +1241,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster.
 #ttc-table-of-troves-scannotes-bortles-lobster
 >scan bortles lobster
 Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
-
-@nud
+\\
 #### test altpath nudge for MASTER before BOLSTER
 >master
 by one point
@@ -1549,8 +1541,7 @@ The Miser Emirs' Mires are, well, mired. You need to focus on something else, or
 #ttc-table-of-browse-bowers-nudges-mires
 >mirse
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-si-reed
 >desier
 Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
@@ -1657,8 +1648,7 @@ The godlings' lodgings are a testament to the immovable power of the rich. They 
 #ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-praise-spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
@@ -1786,8 +1776,7 @@ Yes! You only need a chance! Once! To get inside! You're more than enthused enou
 #+ttc-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
-
-@nud
+\\
 #ttc-table-of-troves-done-rejects-rivets
 >striev
 You're striving too hard, now.
@@ -1947,8 +1936,7 @@ No dog walks along dragging Sebastian in their mouth.
 #ttc-table-of-upscale-capsule-nudges-upscale
 >upscael
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-red-vees
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
@@ -2055,8 +2043,7 @@ The votes vetos stove is just symbolic. The real voter suppression happens in th
 #ttc-table-of-upscale-capsule-nudges-vetos
 >ovets
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-salt
 >lats
 You don't quite draw inspiration from the salt, but there can't be that many alts.
@@ -2111,13 +2098,11 @@ You couldn't just run out on your company and your responsibilities like that! Y
 /You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
 >read creationism
 /You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
-
-@nud
+\\
 #ttc-table-of-upscale-capsule-nudges-salt
 >lats
 You've lasted long enough. There are new things to look at, now.
-
-@nud
+\\
 #testcase-mistake-roiling-ambler
 >ambler
 You see red slightly as Marble Blamer Balmer fails to look away.
@@ -2179,8 +2164,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Be
 >scan marble blamer mr beal
 Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
 >mbb 1
-
-@nud
+\\
+# okay, end MBB randomization
+\\
 #ttc-table-of-troves-spechelp-sister-tressi-siters
 >resits
 Sister Tressi seems a bit more upset than usual.
@@ -2331,8 +2317,7 @@ You already stopped thinking too much about Marble Blamer Balmer. If you try too
 #ttc-table-of-upscale-capsule-nudges-siters
 >sitesr
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
-
-@nud
+\\
 #ttc-table-of-troves-spechelp-trance-nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.

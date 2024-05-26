@@ -468,9 +468,6 @@ You will want to ASK others about themselves a lot. Elvira, too, maybe.
 >pad talking
 TALKing is the equivalent of asking someone about themselves.
 
-#this is because the Respect Specter's dialogue gets a bit tricky. There will be yes and no responses we need to twiddle.
->au 1
-
 # first basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
 #testcase-prerule-table-of-ordeal-reload-anagrams-pre-specter-scepter-rule
 >scepter

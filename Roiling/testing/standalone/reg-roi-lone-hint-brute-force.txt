@@ -1,4 +1,4 @@
-# reg-roi-hint-brute-force.txt
+## reg-roi-lone-hint-brute-force.txt
 # tests the hints exhaustively especially the +/+/- clues for obvious errors
 
 ** game: /home/andrew/prt/debug-roiling.ulx

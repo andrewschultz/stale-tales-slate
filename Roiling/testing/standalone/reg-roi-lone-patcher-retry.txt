@@ -1,6 +1,6 @@
 ###############################
 #
-#reg-roi-patcher-retry.txt
+## reg-roi-lone-patcher-retry.txt
 #
 #regression test for exhausting the patcher and retry
 #

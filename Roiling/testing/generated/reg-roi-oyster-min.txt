@@ -20,12 +20,14 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 
 >get pills
 Taken.
+
 >spill pills
 You briefly wonder if the pill jar might be better saved for later. Release the pills anyway?
 Okay.
 The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
 by one point
 
+#testcase-postrule-table-of-oyster-anagrams-post-trolls-stroll-rule
 >score
 Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
 

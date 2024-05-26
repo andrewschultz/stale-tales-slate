@@ -1,6 +1,6 @@
 ###############################
 #
-# reg-roi-lone-rand.txt
+## reg-roi-lone-rand.txt
 #
 # regression test for all the random text
 #

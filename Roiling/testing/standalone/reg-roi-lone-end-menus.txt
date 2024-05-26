@@ -1,4 +1,4 @@
-# reg-roi-end-menus.txt
+## reg-roi-lone-end-menus.txt
 # tests the end menus for random text
 # does not test AMUSING, just L # and LN
 

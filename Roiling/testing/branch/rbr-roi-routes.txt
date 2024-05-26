@@ -181,8 +181,7 @@ The anti-sag sit-a-nag is plenty solid and will stay that way, independent of yo
 \\
 >gas
 The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
-
-@nud
+\\
 #ttc-table-of-same-mesa-nudges-poison
 >posoni
 The poison stripe is too incorporeal to do bend to your will.
@@ -298,8 +297,7 @@ OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading
 #ttc-table-of-routes-scannotes-adsorbing-signboard
 >scan adsorbing signboard
 While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk.
-
-@nud
+\\
 #ttc-table-of-routes-spechelp-worst-ad
 >towarsd
 The ad seems slightly nearer, for a moment.
@@ -351,8 +349,7 @@ You don't need to worry about art, here.
 #testcase-mistake-roiling-apts
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
-
-@nud
+\\
 #testcase-mistake-roiling-ides
 \\
 >ides
@@ -689,8 +686,7 @@ Perhaps it's better and simpler to focus on the proper names instead.
 #ttc-table-of-same-mesa-nudges-resto
 >resot
 Perhaps it's better and simpler to focus on the proper names instead.
-
-@nud
+\\
 #ttc-table-of-routes-spechelp-adsorbing-signboard
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
@@ -731,8 +727,9 @@ DEBUG: not writing scripture picturers to pad because it was already reflexed.
 >undo
 >undo
 >undo
-
-@max
+\\
+##end balance undos
+\\
 # here we test that directions are sent to the pad
 ## balance undos
 >against
@@ -848,8 +845,7 @@ Pat doesn't need consolation for his lost business.
 #+testcase-mistake-roiling-apts
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
-
-@nud
+\\
 #ttc-table-of-routes-spechelp-seed-pit
 >despiet
 The seed pit seems to bubble slightly.
@@ -916,8 +912,7 @@ It's not the carvings that need changing. You got the stupor sprout from the see
 #+ttc-table-of-idle-deli-nudges-carving
 >cravign
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
-
-@nud
+\\
 #+ttc-table-of-routes-nudges-stupor
 >surpot
 Brother Horbert will work his magic with that.
@@ -1069,8 +1064,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That'
 The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-routes-readables-trashy-ashtray
 >read ashtray
 #OK-APOSTROPHE
@@ -1155,8 +1149,7 @@ No, you don't see any other way around the signboard to enter. You don't need on
 #ttc-table-of-routes-done-rejects-scripture-picturers
 >inseid
 The picturers were pretty strict about what they suggested. Not much else you can do with them.
-
-@nud
+\\
 #+ttc-table-of-same-mesa-nudges-orcas
 >ocras
 No, you found the way in, with the extra s.
@@ -1262,8 +1255,7 @@ It's the whole side art you need to deal with.
 #ttc-table-of-same-mesa-nudges-tra
 >tra
 It's the whole side art you need to deal with.
-
-@nud
+\\
 #+testcase-mistake-roiling-under
 >under
 You can't hide from Ian Gast like that, right now.
@@ -1328,8 +1320,7 @@ The art is more complex than that. You need to make an anagram for the whole sid
 #+testcase-mistake-roiling-staider
 >staider
 You already did your best with the tirades and side art.
-
-@nud
+\\
 #ttc-table-of-routes-done-rejects-side-art
 >astried
 You got on the anti-sag sit-a-nag right. Time to start ducking.
@@ -1337,13 +1328,11 @@ You got on the anti-sag sit-a-nag right. Time to start ducking.
 #+ttc-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
-
-@nud
+\\
 #+ttc-table-of-same-mesa-nudges-tirade
 >atired
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
-
-@nud
+\\
 #+ttc-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
@@ -1424,8 +1413,7 @@ You already tried this preposition. There must be others.
 #ttc-table-of-routes-done-rejects-rude-n-nuder
 >belwo
 You don't want the WOE BOW BELL to come back.
-
-@nud
+\\
 #ttc-table-of-same-mesa-nudges-giatn
 >igtan
 Ian Gast is too old and set in his ways. You may just need to listen to him from one more angle.
@@ -1817,8 +1805,7 @@ The whole odd run on aura.
 #??this wasn't flagged by nuch/hch
 >untli
 The underground is already lit. Un-unlit.
-
-@nud
+\\
 #ttc-table-of-harms-marsh-nudges-pyrites
 >pyrites
 not something you
@@ -1866,8 +1853,7 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 #ttc-table-of-harms-marsh-nudges-pyrite
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
-
-@nud
+\\
 #remember "all" bugs the Inform compiler
 \\
 #ttc-table-of-routes-spechelp-noon-gag
@@ -1955,8 +1941,7 @@ You'll have to deal with the whole data-dim mists.
 >read mist ad
 #OK-APOSTROPHE
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
-
-@nud
+\\
 #ttc-table-of-routes-spechelp-data-dim-mists
 >amidts
 Hmm, you almost see a way past the data-dim mists.
@@ -2207,8 +2192,7 @@ The ciphers cannot be dispelled.
 #ttc-table-of-sonancy-canyons-nudges-cipher
 >ciphre
 The ciphers cannot be dispelled.
-
-@nud
+\\
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
@@ -2291,12 +2275,13 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 #testcase-postrule-table-of-routes-anagrams-post-hurt-hog-through-rule
 >x ewe
 Nothing (significant) like that is in the immediate vicinity or region.
+\\
 >x hog
 Nothing (significant) like that is in the immediate vicinity or region.
+\\
 >x den
 You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?
-
-@max
+\\
 >au 0
 \\
 #testcase-prerule-table-of-routes-anagrams-pre-yob-den-beyond-rule
@@ -2369,13 +2354,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's 
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @min
+>au 0
+\\
 >misses
 /====ROUTES
 --you could've tried to go TOWARDS the worst ad.
 --you could've done WITHOUT the content of the raptest patters.
-
-@min
->au 0
 
 >beyond
 }}SCORE++

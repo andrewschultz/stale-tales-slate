@@ -86,4 +86,3 @@ Score in a scenario: 3 out of 11 total points in the current region, Stores. Low
 
 >zap solid idols
 The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.
-

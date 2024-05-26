@@ -1288,6 +1288,13 @@ Only one more piece of hardware is needed, and the computer will work.
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
+>s
+
+#+ttc-table-of-saps'-pass-nudges-yrnet
+>yrnte
+The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
+>n
+
 >rom sticks
 by one point
 
@@ -1314,13 +1321,6 @@ You'll know what to do with the sticks when you're ready to program
 >undo
 >undo
 >undo
-
->s
-
-#+ttc-table-of-saps'-pass-nudges-yrnet
->yrnte
-The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
->n
 
 #testcase-mistake-roiling-rived
 >rived

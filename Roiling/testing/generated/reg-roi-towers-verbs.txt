@@ -743,6 +743,10 @@ Any direction but back south might drive you too far from the palace.
 >unlocked
 by one point
 
+#+ttc-table-of-towers-attacks-dr-yow
+>attack dr yow
+You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you.
+
 >rowdy
 
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-rowdy
@@ -750,10 +754,6 @@ by one point
 Dr. Yow is yacking away noisily and enthusiastically.
 >undo
 >undo
-
-#+ttc-table-of-towers-attacks-dr-yow
->attack dr yow
-You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you.
 
 >score
 Score in a scenario: 40 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.

@@ -1,4 +1,4 @@
-# reg-roi-grid-deductin.txt
+## reg-roi-lone-grid-deductin.txt
 # tests the gird grid and inducted deductin'
 
 ** game: /home/andrew/prt/debug-roiling.ulx

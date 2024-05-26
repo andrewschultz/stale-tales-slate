@@ -96,21 +96,6 @@ The perma-amper makes a pop and sparks and flames out. The music warps and slows
 >undo
 >undo
 
->get pills
-Taken.
->spill pills
-You briefly wonder if the pill jar might be better saved for later. Release the pills anyway?
-Okay.
-The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
-by one point
-
->score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
-
-#testcase-postrule-table-of-oyster-anagrams-post-trolls-stroll-rule
->undo
->undo
-
 >unset
 Your score has just gone up by one point
 

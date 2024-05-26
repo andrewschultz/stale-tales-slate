@@ -130,12 +130,12 @@ you missed some extra stuff you can't go back for
 >undo
 >undo
 
+>au 0
+
 >misses
 /====ROUTES
 --you could've tried to go TOWARDS the worst ad.
 --you could've done WITHOUT the content of the raptest patters.
-
->au 0
 
 >beyond
 Your score has just gone up by one point

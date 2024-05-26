@@ -218,6 +218,7 @@ You have 24 of 47 total points for the post-Elvira Others region, though you onl
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
 Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
+
 >guru dr severe
 One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 >score

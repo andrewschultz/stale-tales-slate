@@ -72,8 +72,7 @@ If the Horned Hedron could be undermined or infiltrated, perhaps things would ge
 #ttc-table-of-notepad-entries-the-haunter
 >pad haunter
 The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it.
-
-@max
+\\
 ##balance undos
 #ttc-table-of-region-initial-scoring-commentary-oyster-1
 >spit tips
@@ -319,8 +318,7 @@ by one point
 There's no other way to disobey the sign.
 >undo
 >undo
-
-@nud
+\\
 #ttc-table-of-oyster-readables-stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
@@ -430,8 +428,7 @@ The pills can't be that fidgety. The particular brand must be a clue, too.
 #ttc-table-of-oyster-scannotes-lolstr-trolls
 >scan lolstr trolls
 Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
-
-@nud
+\\
 #ttc-table-of-oyster-nudges-storey
 >storye
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -507,9 +504,10 @@ The jukebox is already temporarily out of commission.
 >undo
 >undo
 
-@min,max
+@min
 >get pills
 Taken.
+\\
 >spill pills
 You briefly wonder if the pill jar might be better saved for later. Release the pills anyway?
 Okay.
@@ -517,17 +515,10 @@ The pills scatter all over the bar, leaving everyone to slip and fall. You make 
 by one point
 }}SCORE++
 }}CURMAX-=3
-
-@min,max
+\\
+#testcase-postrule-table-of-oyster-anagrams-post-trolls-stroll-rule
 >score
 {$SCOS}
-
-@max
-#testcase-postrule-table-of-oyster-anagrams-post-trolls-stroll-rule
-}}SCORE--
-}}CURMAX+=3
->undo
->undo
 
 @max
 ##balance undos
@@ -1002,8 +993,7 @@ You can SOAR once the frat raft is full of, umm, whatever powers it.
 #ttc-table-of-oyster-scannotes-sabot-boats
 >scan sabot boats
 It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!
-
-@nud
+\\
 >enter raft
 You get onto the frat raft.
 >fart
@@ -1351,13 +1341,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA
 You need a slightly more organized way to reveal what's under the ground, and you don't have a digging instrument, either.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-oyster-scannotes-HUNTER-HUNT-AREA
 >scan hunter hunt area
 You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying "You know, sometimes, that's more helpful than straight-up clues."
-
-@nud
+\\
 #ttc-table-of-oyster-readables-HUNTER-HUNT-AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
@@ -1365,8 +1353,7 @@ Etahn Ru. Near-Hut Haunter.
 #ttc-table-of-anger-range-nudges-scrawl
 >scralw
 It's a HUNTER HUNT AREA, which seems more important.
-
-@nud
+\\
 #ttc-table-of-anger-range-nudges-darnel
 >darnle
 If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
@@ -1732,8 +1719,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. Th
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-lean-lane-nudges-tuna
 >tuan
 She is a bit fussy, but she is more than okay as she is.
@@ -1822,8 +1808,7 @@ As for this piece of wrap, it's about two feet in diameter, all twisted up and t
 @hin
 #ttc-table-of-oyster-location-hint-checkoffs-lean-lane
 You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points here, but a generic HINT will not reveal them.
-
-@hin
+\\
 >hint
 You helped Tortu and got a paler pearl. That's all you need to do here.
 !There may be bonus points here
@@ -1878,8 +1863,7 @@ It's just wrap, really.
 #ttc-table-of-oyster-nudges-bubblewrap
 >bubblewrpa
 It's just wrap, really.
-
-@nud
+\\
 #ttc-table-of-lean-lane-nudges-wipe
 >wiep
 It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
@@ -2406,8 +2390,7 @@ The Shadier Airshed is immovable and unchangeable.
 #ttc-table-of-shuttle-hutlets-nudges-ubt
 >utb
 Clear ALL the tubs!
-
-@nud
+\\
 #ttc-table-of-oyster-spechelp-tubs
 >tusb
 Hm. The tubs shake slightly. Maybe if you were more forceful.
@@ -2658,8 +2641,7 @@ Good idea, but you have nothing that could clean the lance effectively.
 >undo
 >undo
 >undo
-
-@max
+\\
 >clean lance
 by one point
 >undo
@@ -2819,8 +2801,7 @@ A snider near-dis from the sardine keeps you in check. You'll need to get rid of
 #ttc-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
 You can SEARCH the arches once you've chased the sandier sardine away.
-
-@max
+\\
 >warp wrap
 by one point
 >undo
@@ -2845,8 +2826,7 @@ You can only go north to the Horned Hedron or east back to Anger Range. The Hand
 #+verbcase listen-oyster-if-player-is-in-sclerous-closures
 >listen
 Silence.
-
-@verbs
+\\
 #+testcase-outside-sclerous-closures
 >out
 You have more than one way to leave: north and east. So you'll need to specify which one.
@@ -2940,8 +2920,7 @@ You might be able to REANGLE after doing something more necessary with the glean
 #ttc-table-of-oyster-prefigurings-bogus-reangle
 >pf
 You can REANGLE the general gleaner once you've figured how to see something more basic in it.
-
-@max
+\\
 #testcase-postrule-table-of-oyster-anagrams-post-enlarge-gleaner-rule
 >enlarge gleaner
 by one point
@@ -3411,8 +3390,7 @@ You don't need to riff on any location names to win the game, unless there's not
 @hin
 >hint gleaner
 EXAMINE the general gleaner, now you've enlarged it.
-
-@hin
+\\
 >gt anger range
 \\
 #ttc-table-of-oyster-location-hint-checkoffs-anger-range
@@ -3540,8 +3518,7 @@ Mindless babble about mutually favorable transactions. Perhaps you can find one 
 #verbcase listen-oyster-if-noun-is-dialer
 >listen dialer
 You hear a hum from the dialer.
-
-@verbs
+\\
 #ttc-table-of-oyster-attacks-yapper
 >attack yapper
 Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
@@ -3832,8 +3809,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a 
 You look at the lever, wishing it would be a little more fun to pull.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 >dilrae
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
@@ -3901,8 +3877,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a d
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #testcase-mistake-roiling-nips
 >nips
 You see red at the thought of voluntarily pricking yourself with pins.

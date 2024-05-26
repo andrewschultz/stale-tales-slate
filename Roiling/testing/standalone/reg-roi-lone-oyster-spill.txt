@@ -1,4 +1,4 @@
-## reg-roi-oyster-hints.txt
+## reg-roi-lone-oyster-spill.txt
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

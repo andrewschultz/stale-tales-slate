@@ -1,4 +1,5 @@
-# reg-roi-region-spoilers.txt
+## reg-roi-lone-region-spoilers.txt
+#
 # checks the spoiler alerts if someone is struggling at the beginning of a region
 #
 

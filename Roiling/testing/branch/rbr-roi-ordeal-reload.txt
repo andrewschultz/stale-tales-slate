@@ -87,8 +87,7 @@ But you just woke up!
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-stuff-found-<-3
 >listen
 Peace and quiet. No adventure. Yet.
-
-@verbs
+\\
 #testcase-outside-dusty-study
 >exit
 You haven't made a way outside the Dusty Study. But one does exist. More than one. You just hid them a bit, so only your powers can activate them.
@@ -183,8 +182,7 @@ You need to work on the entire MEET-BANS beams net.
 #ttc-table-of-ordeal-reload-nudges-beam
 >emba
 You need to work on the entire MEET-BANS beams net.
-
-@nud
+\\
 >get notepad
 Good choice taking the notepad. It'll help you tame lots that's meta, mate.
 Taking the pedanto-notepad uncovered some sad ads on the chair.
@@ -259,8 +257,7 @@ So here is a one-time general guideline on what to do in this area: You need to 
 \\
 #verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
-
-@verbs
+\\
 #+testcase-outside-dusty-study
 >exit
 You haven't made a way outside the Dusty Study. But one does exist. More than one. You just hid them a bit, so only your powers can activate them.
@@ -289,8 +286,7 @@ You need a light source.
 #testcase-mistake-roiling-laredo
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
-
-@nud
+\\
 #ttc-table-of-dusty-study-nudges-dark
 >dakr
 You punch your fist as you realize DARK has no anagrams...right into the palm.
@@ -490,8 +486,7 @@ POSS toggles whether you can see the maximum/minimum score for a region. It is a
 [NOTE: You can type SL to toggle the slider in the future.]
 >pad sl
 Shortcut command to turn slider on.
-
-@max
+\\
 # turn cheats on
 >c
 
@@ -591,8 +586,7 @@ Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is curr
 Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is currently in non-cheat mode.
 \\
 >c
-
-@nud
+\\
 #ttc-table-of-ordeal-reload-scannotes-tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
@@ -627,8 +621,7 @@ Yep. It's probably part of Elvira's reject-and-retreat, insinuating something wi
 \\
 >pedo
 Don't dwell on it. It's lies.
-
-@nud
+\\
 #ttc-table-of-ordeal-reload-spechelp-meet-bans
 >basemetn
 The laser part of the MEET-BANS beams net fizzes slightly.
@@ -705,8 +698,7 @@ Shouty youths.
 #ttc-table-of-ordeal-reload-readables-meet-bans
 >read meet bans
 Some of the wooden beams are painted red. You could them. There are ten total, and it makes you see a bit red, too.
-
-@nud
+\\
 ##balance undos
 # let's take an alternate path to the Largely All-Grey Gallery to make sure "mistake" text works elsewhere
 >stable
@@ -973,8 +965,7 @@ You already built the chimney. If the ceiling caved, you'd be buried.
 #ttc-table-of-ordeal-reload-done-rejects-chimney
 >chimnye
 You probably just want to go UP the chimney.
-
-@nud
+\\
 #ttc-table-of-dusty-study-nudges-isolani
 >isolain
 You don't need to rearrange the isolani liaison. It's all that protects you from the outside world.
@@ -1049,8 +1040,7 @@ The painting really goes better with the study than the giant pin.
 >chalets
 You don't need a safe home, right now. You need adventure.
 !Oh, and you don't have to switch that many letters, either.
-
-@nud
+\\
 #+testcase-mistake-roiling-chalets
 >chalets
 You don't need a safe home, right now. You need adventure.
@@ -1261,8 +1251,7 @@ You can go back IN to the study, though you don't need to, or you could try goin
 #ttc-table-of-ordeal-reload-done-rejects-ramp
 >rapm
 The ramp is useful now. Best keep it.
-
-@nud
+\\
 >gt study
 /^Dusty Study
 \\
@@ -1326,8 +1315,7 @@ Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it
 \\
 >brass crag
 The crabgrass dries out and becomes a brass crag.
-
-@nud
+\\
 #ttc-table-of-ordeal-reload-spechelp-event-map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
@@ -1642,8 +1630,7 @@ It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 #verbcase listen-ordeal-reload-if-noun-is-elmo
 >listen elmo
 Awkward silence, what with Elmo holding that rifle.
-
-@verbs
+\\
 #ttc-table-of-ordeal-reload-attacks-elmo
 >attack elmo
 Elmo kind of has the upper hand here.
@@ -1752,8 +1739,7 @@ You probably want to talk to and examine everyone. Even hostile people drop clue
 >pad shatter threats
 It's that new law Elvira got passed, about how you couldn't flip things to their anagrams, because there are too few anagrams--things to change to things--left for you to save Yorpwald again. Well, outside your own house. Of course, if you protested, that would look suspicious.
 The title was based on a really convoluted acronym you can't remember.
-
-@max
+\\
 ##balance undos
 >scan specter
 DEBUG: Respect Specter being scanned.
@@ -1768,8 +1754,9 @@ EXTRA or TAX ER/TAXER toggles more advice for ambiguous/question mark hints. Thi
 >undo
 >undo
 >undo
-
-@max
+\\
+##end balance undo
+\\
 >pad xtra
 !XTRA TRAX
 >xtu
@@ -1791,8 +1778,7 @@ The respect specter shrugs respectfully. "A deferred success."
 !shrugs respectfully
 You feel a slight psychic push-pull coming from the Respect Specter. That's a decent omen.
 You can use the command XTRA TRAX to track the right combination of letters less generically. However, some hints might be a bit too pointed.
-
-@max
+\\
 #ttc-table-of-notepad-entries-xtra-trax
 >pad xtra
 You can use the command XTRA TRAX (or XTRA or TRAX) to toggle tracking the right combination of letters less generically. However, some hints might be a bit too pointed.
@@ -1913,8 +1899,7 @@ Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter a
 #ttc-table-of-ordeal-reload-done-rejects-staple
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
-
-@nud
+\\
 #ttc-table-of-ordeal-reload-spechelp-plaster
 >staplre
 The plaster crackles and shines slightly.
@@ -2010,10 +1995,6 @@ You will want to ASK others about themselves a lot. Elvira, too, maybe.
 >pad talking
 TALKing is the equivalent of asking someone about themselves.
 
-@max
-#this is because the Respect Specter's dialogue gets a bit tricky. There will be yes and no responses we need to twiddle.
->au 1
-
 @nud
 #ttc-table-of-ordeal-reload-scannotes-respect-specter
 >t
@@ -2028,6 +2009,9 @@ TALKing is the equivalent of asking someone about themselves.
 >undo
 
 @mis
+#this is because the Respect Specter's dialogue gets a bit tricky. There will be yes and no responses we need to twiddle.
+>au 1
+\\
 #testcase-mistake-roiling-spectre
 >spectre
 "Spelling matters, here. If I were a spectre, I'd give a different cheat reading. Slots six and seven would turn yellow and red, respectfully. Err, respectively," says the Respect Specter.
@@ -2066,8 +2050,9 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 >y
 by one point
 >undo
-
-@max
+\\
+##end balance undos
+\\
 ###################don't scan at all
 #testcase-postrule-table-of-ordeal-reload-anagrams-post-specter-scepter-rule
 >in
@@ -2189,8 +2174,7 @@ by one point
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
 by one point
 >undo
-
-@max
+\\
 >x spectre
 The Respect Specter winces slightly and opens its mouth as if to say "Er..."
 >scepter

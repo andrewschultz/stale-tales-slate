@@ -1162,6 +1162,9 @@ Nothing happens. You probably did what you needed.
 >undo
 >undo
 
+#this is because the Respect Specter's dialogue gets a bit tricky. There will be yes and no responses we need to twiddle.
+>au 1
+
 #testcase-mistake-roiling-spectre
 >spectre
 "Spelling matters, here. If I were a spectre, I'd give a different cheat reading. Slots six and seven would turn yellow and red, respectfully. Err, respectively," says the Respect Specter.

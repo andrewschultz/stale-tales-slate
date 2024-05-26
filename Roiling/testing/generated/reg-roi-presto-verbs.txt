@@ -620,6 +620,10 @@ While you're impressed with people who can navigate sport ports, you already sal
 >attack walls
 Brute force is ineffective. So, too, are all the swears often used with said brute force. You need to wipe out the whole volt maze, not just these walls.
 
+#ttc-table-of-presto-attacks-lamb
+>attack lamb
+Meanie. There's a better way to help it flee home.
+
 >s
 >s
 >ole
@@ -640,10 +644,6 @@ following.)
 >undo
 >undo
 >undo
-
-#ttc-table-of-presto-attacks-lamb
->attack lamb
-Meanie. There's a better way to help it flee home.
 
 >mazeltov
 Your score has just gone up by three points
@@ -799,6 +799,7 @@ The only way you seem to be able to go is south to Grey Gyre.
 #verbcase swear-presto-if-hogs-are-touchable
 >damn
 The hogs snicker at HOW you said that swear. But yet ... but yet, they seemed slightly irritated at that second-rate profanity!
+
 >bother
 The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off.
 

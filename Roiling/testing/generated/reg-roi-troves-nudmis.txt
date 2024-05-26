@@ -1228,6 +1228,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Be
 Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
 >mbb 1
 
+# okay, end MBB randomization
+
 #ttc-table-of-troves-spechelp-sister-tressi-siters
 >resits
 Sister Tressi seems a bit more upset than usual.

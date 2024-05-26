@@ -89,8 +89,7 @@ You try and cuss, but the plebe is not intimidated by your civilian clothes. Per
 #ttc-table-of-presto-prefigurings-plebe
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.
-
-@max
+\\
 #testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
 >mazeltov
 You're not messing around! You see the best way to destroy the maze, and you're going for it.
@@ -185,8 +184,7 @@ It's the maze you need to change, not the zany meter.
 #ttc-table-of-grey-gyre-nudges-meter
 >metre
 It's the maze you need to change, not the zany meter.
-
-@nud
+\\
 #ttc-table-of-presto-spechelp-hump
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
@@ -510,8 +508,7 @@ You try, but fail, to make something out of nothing.
 \\
 >x cistern
 You take a peek in--to see a dart in there.
-
-@nud
+\\
 #ttc-table-of-presto-spechelp-dart
 >drta
 The dart seems a bit closer, but...dang! Not quite.
@@ -646,6 +643,11 @@ The dart's just fine as-is.
 #ttc-table-of-presto-anagrams-bleep
 You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
+@verbs
+#verbcase swear-presto-if-plebe-is-touchable
+>damn
+The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting.
+
 @nud
 #ttc-table-of-presto-spechelp-plebe
 >blepe
@@ -667,11 +669,6 @@ Olav Metz and Zemo Valt were the main architects.
 >read volt maze
 #OK-APOSTROPHE
 It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
-
-@verbs
-#verbcase swear-presto-if-plebe-is-touchable
->damn
-The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting.
 
 @verbs
 #one trip through the maze!
@@ -1254,8 +1251,7 @@ The number's got more numerals than letters.
 #ttc-table-of-presto-nudges-number
 >numbre
 The number's got more numerals than letters.
-
-@nud
+\\
 #ttc-table-of-presto-spechelp-boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
@@ -1347,6 +1343,13 @@ You don't need to praise military activity and sacrifice too much. Countries whe
 >w
 
 @max
+##balance undos
+>mazeltov
+!You're not messing around! You see the best way to destroy the maze, and you're going for it.
+No point actually going through the maze when you can destroy it.
+by three points
+>undo
+\\
 >n
 >w
 \\
@@ -1359,13 +1362,6 @@ Grey Gyre
 >undo
 >undo
 >undo
->undo
-
-@max
->mazeltov
-!You're not messing around! You see the best way to destroy the maze, and you're going for it.
-No point actually going through the maze when you can destroy it.
-by three points
 >undo
 
 @min
@@ -1536,8 +1532,9 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
 >undo
 >undo
-
-@nud
+##end undos
+\\
+##balance undos
 #separate semi-forcing stuff
 >abstract tom avlez to runway
 \\
@@ -1582,6 +1579,10 @@ by three points
 >undo
 
 @verbs
+#ttc-table-of-presto-attacks-lamb
+>attack lamb
+Meanie. There's a better way to help it flee home.
+\\
 ##balance undo
 >s
 >s
@@ -1606,11 +1607,6 @@ following.)
 >undo
 >undo
 >undo
-
-@verbs
-#ttc-table-of-presto-attacks-lamb
->attack lamb
-Meanie. There's a better way to help it flee home.
 
 @max
 #+testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
@@ -1886,8 +1882,7 @@ Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've fo
 #+ttc-table-of-presto-nudges-leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
-
-@nud
+\\
 #ttc-table-of-dirge-ridge-nudges-whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
@@ -2332,10 +2327,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a d
 #verbcase swear-presto-if-hogs-are-touchable
 >damn
 The hogs snicker at HOW you said that swear. But yet ... but yet, they seemed slightly irritated at that second-rate profanity!
+\\
 >bother
 The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off.
-
-@verbs
+\\
 #ttc-table-of-presto-attacks-hogs
 >attack hogs
 If you were as strong as
@@ -2414,8 +2409,7 @@ You don't need to riff on any location names to win the game, unless there's not
 #ttc-table-of-saps'-pass-nudges-clump
 >clupm
 No, it's not just any clump, but hawt thaw.
-
-@nud
+\\
 #testcase-mistake-roiling-alter
 >alter
 Vandalism! For shame!
@@ -2544,8 +2538,7 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 #testcase-mistake-roiling-artel
 >artel
 /You, (Rand and Leo|Leo and Rand) have already engaged in a collective effort.
-
-@nud
+\\
 #first, test each done-reject individually
 ##balance undos
 >later
@@ -2747,17 +2740,6 @@ There are two unblocked exits: north and south to Grey Gyre.
 /^Hacks' Shack
 
 @max
-#testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
->romsticks
-by one point
-\\
->x rom sticks
-You imagine it can't be too hard to open up the disk drive and put them in.
-\\
->undo
->undo
-
-@max
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
 \\
@@ -2768,6 +2750,18 @@ A reminder that cussing won't make a computer work any better, and you need to g
 #ttc-table-of-notepad-entries-leo-and-rand
 >pad leo
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
+\\
+##balance undo
+\\
+#testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
+>romsticks
+by one point
+\\
+>x rom sticks
+You imagine it can't be too hard to open up the disk drive and put them in.
+\\
+>undo
+>undo
 
 @mis
 #testcase-mistake-roiling-a-elf
@@ -2847,6 +2841,13 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 {$SCOS}
 
 @nud
+>s
+\\
+#+ttc-table-of-saps'-pass-nudges-yrnet
+>yrnte
+The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
+>n
+\\
 ##balance undos
 >rom sticks
 by one point
@@ -2874,14 +2875,6 @@ You'll know what to do with the sticks when you're ready to program
 >undo
 >undo
 >undo
-
-@nud
->s
-\\
-#+ttc-table-of-saps'-pass-nudges-yrnet
->yrnte
-The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
->n
 
 @max
 >get polemic
@@ -3281,8 +3274,7 @@ You have nothing to type with, so it doesn't do much good.
 #ttc-table-of-presto-prefigurings-be-troo-e-robot
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
-
-@max
+\\
 #testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 #futon not made yet
 >sleep
@@ -3467,8 +3459,7 @@ It already is!
 #+ttc-table-of-hacks'-shack-nudges-computer
 >compuert
 You need to fix the program in the computer.
-
-@nud
+\\
 #ttc-table-of-presto-spechelp-be-troo-e-robot
 >reboto
 The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command like that must work.
@@ -3531,6 +3522,17 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
 @max
+#testcase-prerule-table-of-presto-anagrams-pre-disk-skid-rule
+>skid
+The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
+\\
+>sleep
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
+\\
+#ttc-table-of-notepad-entries-sleep
+>pad sleep
+SLEEP is only advisable in a protected area.
+\\
 ##balance undo
 #+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
@@ -3544,19 +3546,6 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >undo
 >undo
 >undo
-
-@max
-#testcase-prerule-table-of-presto-anagrams-pre-disk-skid-rule
->skid
-The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
-
-@max
->sleep
-You may need sleep later, but not now. Besides, you have nowhere to sleep.
-\\
-#ttc-table-of-notepad-entries-sleep
->pad sleep
-SLEEP is only advisable in a protected area.
 
 @spoi
 #ttc-table-of-presto-anagrams-reboot
@@ -3861,8 +3850,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's 
 The TBA key rattles within the keyboard a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-presto-spechelp-drive-a
 >drivea
 Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
@@ -3979,8 +3967,7 @@ You already did enough with the TAB key.
 #ttc-table-of-presto-done-rejects-tba-key
 >bta
 No, the TAB key is what it should be.
-
-@nud
+\\
 #ttc-table-of-presto-spechelp-bub-dude-egg
 >debgu
 Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
@@ -4134,8 +4121,7 @@ That will provide transport from Hacks' Shack, but you could set more straight h
 >sub
 That will provide transport from Hacks' Shack, but you could set more straight here if you wanted. Stay back and clean up everything?
 >undo
-
-@max
+\\
 #testcase-postrule-table-of-presto-anagrams-post-drive-flip-rule
 >derive
 by one point
@@ -4145,8 +4131,7 @@ Well, flipping Drive E didn't help speed up your programming, but hooray for gen
 }}CURMIN++
 >score
 {$SCOS}
-
-@max
+\\
 >tab
 by one point
 DEBUG INFO: min-up codepath
@@ -4154,8 +4139,7 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOMAX}
-
-@max
+\\
 >bus
 Your score has just gone up by one point
 Drive time

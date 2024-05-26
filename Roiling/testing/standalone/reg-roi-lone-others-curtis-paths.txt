@@ -1,4 +1,4 @@
-# reg-roi-others-curtis-paths.txt
+## reg-roi-lone-others-curtis-paths.txt
 #
 # this simply tests all possibilities of going back to curtis
 # there are 8 possible

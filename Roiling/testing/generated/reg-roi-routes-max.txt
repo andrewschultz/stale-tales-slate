@@ -345,8 +345,10 @@ Your score has just gone up by one point
 #testcase-postrule-table-of-routes-anagrams-post-hurt-hog-through-rule
 >x ewe
 Nothing (significant) like that is in the immediate vicinity or region.
+
 >x hog
 Nothing (significant) like that is in the immediate vicinity or region.
+
 >x den
 You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?
 

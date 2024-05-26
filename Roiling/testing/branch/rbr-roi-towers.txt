@@ -81,8 +81,7 @@ Deal with Rodney, not any part of his chosen sub-names.
 #ttc-table-of-loftier-trefoil-nudges-rend
 >redn
 Deal with Rodney, not any part of his chosen sub-names.
-
-@nud
+\\
 #ttc-table-of-towers-readables-recital-article
 >read article
 This version was written by some lovely chap named ALTERIC.
@@ -985,14 +984,18 @@ by one point
 >undo
 >undo
 >undo
-
-@max
+\\
+##end balance undos
+\\
 >yonder
 !by one point
 \\
 #+ttc-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER once he's lost enough followers.
+\\
+>undo
+>undo
 
 >bleak
 }}SCORE++
@@ -1034,8 +1037,7 @@ Your score has just gone up by one point
 {--hin}DEBUG INFO: Cedrick hinting.
 >score
 {$SCOS}
-
-@!minh,mini
+\\
 >cricked
 Your score has just gone up by one point
 }}SCORE++
@@ -1119,13 +1121,11 @@ You apparently can't scan the curst palace fully with the settler 'til you're al
 #ttc-table-of-notepad-entries-the-wildest-wilteds
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
-
-@max
+\\
 #testcase-postrule-table-of-towers-anagrams-post-rodney-rule
 >thisalt
 --you could also have made Rodney DRONEY.
-
-@max
+\\
 ##balance undos
 >gonear deltas
 >e
@@ -1360,8 +1360,7 @@ Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros 
 #testcase-mistake-roiling-dopiest
 >dopiest
 You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
-
-@nud
+\\
 #testing skip-aheads for scaning palace
 #ttc-table-of-towers-scannotes-curst-palace
 >scan palace
@@ -1984,8 +1983,7 @@ Your score has just gone up by one point
 \\
 >score
 {$SCOS}
-
-@!minh,mini
+\\
 >n
 \\
 /^Baldest Blasted Saltbed
@@ -2053,8 +2051,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. 
 The old ice seems to glimmer a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-towers-scannotes-docile-old-ice
 >scan docile old ice
 Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
@@ -2106,8 +2103,7 @@ The promise imposer seems a little less intimidating.
 #ttc-table-of-towers-attacks-promise-imposer
 >attack promise imposer
 That might be RIP-some.
-
-@verbs
+\\
 #testcase-outside-baldest-blasted-saltbed
 >out
 The only way to exit is south, so let's go that way.
@@ -2174,8 +2170,7 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-
-@!minh,mini
+\\
 >n
 \\
 /^Anemic Cinema
@@ -2417,8 +2412,7 @@ Work on the whole sled rut.
 #ttc-table-of-fringe-finger-nudges-rut
 >rtu
 Work on the whole sled rut.
-
-@nud
+\\
 #ttc-table-of-towers-spechelp-strudel
 >strudle
 You almost expect the strudel to hop up into your arms, but the moment passes.
@@ -2613,8 +2607,7 @@ Your score has just gone up by one point
 @max
 #ttc-table-of-towers-progress-comments-shaven-havens
 You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
-
-@max
+\\
 # no offical table test case, just verifying you can get to the Dourest Detours
 >e
 You get lost in the savager ravages a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.
@@ -2776,8 +2769,7 @@ Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 #ttc-table-of-towers-attacks-sweatier-wait-seer
 >attack sweatier wait seer
 You find it tough to get close to the sweatiness. "Ew...I...tears," you say, your eyes going red.
-
-@verbs
+\\
 ##balance undos
 # here we test salted deltas AND actionless coastlines at once.
 #testcase-outside-salted-deltas
@@ -3054,8 +3046,7 @@ The raves saver has limited functionality, alas.
 #ttc-table-of-towers-nudges-dagger
 >daggre
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
-
-@nud
+\\
 #ttc-table-of-towers-spechelp-mended-mini-denim
 >denmi
 The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
@@ -3231,8 +3222,7 @@ His full name, Liam Garn.
 #ttc-table-of-towers-nudges-garn
 >ganr
 His full name, Liam Garn.
-
-@nud
+\\
 >gt gradient
 ###skip test checking
 \\
@@ -3256,8 +3246,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailma
 #ttc-table-of-towers-scannotes-alarming-grailman
 >scan alarming grailman
 The one letter blinks between green and yellow.
-
-@nud
+\\
 #ttc-table-of-towers-readables-thearchy-hatchery
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
@@ -3419,8 +3408,7 @@ You'll need to deal with more than one native to make your way south.
 #ttc-table-of-towers-scannotes-natives-site-van
 >scan site van
 You get the feeling the natives can be swayed more than one way, here.
-
-@nud
+\\
 #ttc-table-of-towers-spechelp-natives-site-van
 >nativse
 The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
@@ -3818,8 +3806,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. 
 #ttc-table-of-towers-readables-bonker
 >read bonker
 The bonker was created by KB RENO.
-
-@nud
+\\
 #ttc-table-of-towers-scannotes-reb-nok-bonker
 >scan bonker
 Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse.
@@ -4081,8 +4068,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he can'
 #ttc-table-of-towers-scannotes-dr-yow
 >scan dr yow
 The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions.
-
-@nud
+\\
 ##balance undo
 >rowdy
 by one point
@@ -4139,8 +4125,7 @@ Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 #+ttc-table-of-obscurest-subsector-nudges-wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
-
-@nud
+\\
 #ttc-table-of-towers-spechelp-fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, and you wonder who or what could tinker with it.
@@ -4277,6 +4262,10 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
+#+ttc-table-of-towers-attacks-dr-yow
+>attack dr yow
+You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you.
+\\
 >rowdy
 \\
 #verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-rowdy
@@ -4285,11 +4274,6 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Dr. Yow is yacking away noisily and enthusiastically.
 >undo
 >undo
-
-@verbs
-#+ttc-table-of-towers-attacks-dr-yow
->attack dr yow
-You imagine Dr. Yow mouthing a dry "ow" and see red at such violence. You see further red on remembering a chap called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you.
 
 >score
 {$SCOS}
@@ -4449,8 +4433,7 @@ You don't need duplicates of anything here. Besides, the diverse deviser looks c
 @verbs
 >gt shoals
 Unfortunately, since the shoals aslosh can be seen from or in more than one place, I can't go there.
-
-@verbs
+\\
 #ttc-table-of-towers-attacks-campiest-campsite
 >attack campiest campsite
 A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything.
@@ -4547,8 +4530,7 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 >gs
 >l
 ###skip test checking, delete
-
-@nud
+\\
 >s
 \\
 #ttc-table-of-artist-traits-strait-nudges-strati
@@ -4845,8 +4827,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #testcase-slider-table-of-towers-anagrams-stabler
 >tsbaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@sli
+\\
 >gonear rawest waster waters
 \\
 #testcase-slider-table-of-towers-anagrams-nearest
@@ -4863,8 +4844,7 @@ You should probably act on what the instances are saying. You don't need to chan
 #ttc-table-of-actionless-coastlines-nudges-instances
 >instanecs
 You should probably act on what the instances are saying. You don't need to change anything back here any more.
-
-@nud
+\\
 ##balance undos
 >gonear rawest waters
 \\
@@ -4914,8 +4894,9 @@ You need more than one Neater to help you.
 >undo
 >undo
 >undo
-
-@nud
+\\
+##end balance undos
+\\
 #ttc-table-of-actionless-coastlines-nudges-bot
 >bto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
@@ -4941,8 +4922,9 @@ The wires are okay. They're just all organized WEIRDER.
 You need to deal with both turbos.
 >read blaster
 ALBERT'S.
-
-@nud
+\\
+##end balance undos
+\\
 ##balance undo
 >robust
 by one point
@@ -4982,12 +4964,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern 
 You feel less split from everyone else for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
->undo
 \\
 >undo
 >undo
-
-@nud
+>undo
+\\
+##end balance undos
+\\
 #ttc-table-of-towers-spechelp-turbos
 >turbso
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
@@ -5232,8 +5215,7 @@ You don't want to cross Leak Lake again.
 #+ttc-table-of-goto-sectioning-loftier-trefoil-1--
 >gt trefoil
 That's way in the past.
-
-@verbs
+\\
 #ttc-table-of-towers-nowheres-mislit-limits
 >n
 The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory. Maybe there is a clue to the west.
@@ -5254,8 +5236,7 @@ You don't have to go anywhere before changing the Curst Palace, although the ser
 #+ttc-table-of-towers-readables-curst-palace
 >read curst palace
 Both Castle Up Arc and Castle Arc Up are in red.
-
-@nud
+\\
 #ttc-table-of-mislit-limits-nudges-mislit
 >mislti
 The Curst Palace is right here! You should focus on it instead.
@@ -5548,8 +5529,7 @@ The only way to exit is east, so let's go that way.
 #testcase-exits-mesprise-premises
 >exits
 The only way you seem to be able to go is east to Mislit Limits.
-
-@verbs
+\\
 #ttc-table-of-towers-attacks-tetris-sitter
 >attack tetris sitter
 Rest it! (Feel free to see red at this.)

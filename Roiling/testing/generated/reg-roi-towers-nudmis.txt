@@ -2709,8 +2709,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern 
 You feel less split from everyone else for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
->undo
 
+>undo
 >undo
 >undo
 

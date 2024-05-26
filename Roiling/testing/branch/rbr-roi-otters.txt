@@ -179,8 +179,7 @@ As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can s
 
 @hin
 DEBUG INFO: Ed Riley hinting.
-
-@hin
+\\
 #here hint-every-turn is on, but now we don't want to ignore getting the answer. We want to test that the game knows when an answer was revealed, so you don't waste your cinders. We temporarily unset the thruhinting flag to make sure HINT then DISCERN doesn't waste the cinders. Then we reset the prevent-hinting flag.
 >ptf 0
 >z
@@ -281,8 +280,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's 
 #ttc-table-of-otters-scannotes-cinders
 >scan cinders
 Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely.
-
-@nud
+\\
 #ttc-table-of-minded-midden-nudges-steward
 >stewadr
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
@@ -302,8 +300,7 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #ttc-table-of-minded-midden-nudges-sandwich
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
-
-@nud
+\\
 #ttc-table-of-otters-spechelp-ed-riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
@@ -730,8 +727,7 @@ You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued 
 >listen
 Goodness! Yer All a Yell'r is a truly horrible song, but it captured a certain rubbish zeitgeist enough to get to #1 on the Yorpwaldian Top 40 charts for a while. You remember how everyone said it was the catchiest song ever, then they said it was old and played out.
 Sadly, now, with songs like Yeah, Hey, A Yeeha, Yah, some people see it as a beloved classic that music these days can't compare to. Even more sadly, they have a point.
-
-@verbs
+\\
 ##balance undos
 #verbcase listen-otters-if-noun-is-parleys-splayer-players
 >really
@@ -1338,8 +1334,7 @@ That seems like it should work, but you just can't summon the power. Someone aro
 #ttc-table-of-otters-prefigurings-atmo-moat
 >pf
 You can collapse the atmo moat to an ATOM once you have the power.
-
-@max
+\\
 #testcase-prerule-table-of-otters-anagrams-pre-medals-quickly-rule
 >quickly
 You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
@@ -1676,8 +1671,7 @@ DEBUG INFO: atmo-moat hinting.
 #+ttc-table-of-otters-nudges-ly
 >yl
 Yup, that's the idea here in Otters, even with your powers back.
-
-@nud
+\\
 #ttc-table-of-otters-nudges-iq
 >qi
 No, it's a combination of what's on both medals.
@@ -1778,16 +1772,14 @@ DEBUG INFO: min-up codepath
 #ttc-table-of-otters-prefigurings-gore-ogre
 >pf
 You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
-
-@max
+\\
 #the only thing in the rule is that we process a min-up, so we place this before the score check we were going to do anyway
 #testcase-postrule-table-of-otters-anagrams-post-ghoul-hat-although-rule
 
 @!min
 >score
 {$SCOS}
-
-@!min
+\\
 >ergo
 by one point
 }}SCORE++
@@ -3257,8 +3249,7 @@ You can't hear anything from the bays now
 #ttc-table-of-minded-midden-nudges-bale
 >aleb
 You need to deal with all the bales.
-
-@nudmis
+\\
 #ttc-table-of-otters-scannotes-blase-bales
 >scan blase bales
 The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced.
@@ -3511,8 +3502,7 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 #ttc-table-of-reclusion-inclosure-nudges-idea
 >idae
 You might be able to disrupt both of them, not just one.
-
-@nud
+\\
 #ttc-table-of-otters-scannotes-aside-llp
 >scan elmer
 /DEBUG: between (Merle and Elmer|Elmer and Merle) being scanned\.
@@ -3655,8 +3645,7 @@ DEBUG INFO: min-up codepath
 #ttc-table-of-otters-nudges-cinders
 >cindesr
 The cinders are gone for good.
-
-@nud
+\\
 #+ttc-table-of-reclusion-inclosure-nudges-ideas
 >edsia
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. You got them twice, and that's enough.
@@ -3665,8 +3654,7 @@ The cinders are gone for good.
 /Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 >scan merle
 /Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
-
-@nud
+\\
 #+ttc-table-of-reclusion-inclosure-nudges-idea
 >idae
 You already pushed them aside.

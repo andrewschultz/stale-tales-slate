@@ -1,4 +1,4 @@
-## reg-roi-seeding.txt: testing seeding for various puzzles
+## reg-roi-lone-seeding.txt: testing seeding for various puzzles
 ## specifically the towers/trefoil and otters/frontage
 ## the troves/upscale capsule randomization is here too
 ##

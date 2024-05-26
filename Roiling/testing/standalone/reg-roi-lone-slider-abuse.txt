@@ -1,6 +1,6 @@
 ###############################
 #
-#reg-roi-slider.txt
+## reg-roi-lone-slider-abuse.txt
 #
 # the individual instances that cause the slider to squeal are in the generated files
 #

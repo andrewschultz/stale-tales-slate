@@ -135,6 +135,12 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 
 >w
 
+>mazeltov
+!You're not messing around! You see the best way to destroy the maze, and you're going for it.
+No point actually going through the maze when you can destroy it.
+by three points
+>undo
+
 >n
 >w
 
@@ -147,12 +153,6 @@ Grey Gyre
 >undo
 >undo
 >undo
->undo
-
->mazeltov
-!You're not messing around! You see the best way to destroy the maze, and you're going for it.
-No point actually going through the maze when you can destroy it.
-by three points
 >undo
 
 #+testcase-prerule-table-of-presto-anagrams-pre-mazeltov-rule
@@ -429,16 +429,6 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 /^Hacks' Shack
 
-#testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
->romsticks
-by one point
-
->x rom sticks
-You imagine it can't be too hard to open up the disk drive and put them in.
-
->undo
->undo
-
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
 
@@ -449,6 +439,16 @@ A reminder that cussing won't make a computer work any better, and you need to g
 #ttc-table-of-notepad-entries-leo-and-rand
 >pad leo
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
+
+#testcase-postrule-table-of-presto-anagrams-post-rom-sticks-rule
+>romsticks
+by one point
+
+>x rom sticks
+You imagine it can't be too hard to open up the disk drive and put them in.
+
+>undo
+>undo
 
 >screen
 by one point
@@ -578,6 +578,17 @@ You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this v
 You add the information to your pedanto-notepad under FLIPS.
 >undo
 
+#testcase-prerule-table-of-presto-anagrams-pre-disk-skid-rule
+>skid
+The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
+
+>sleep
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
+
+#ttc-table-of-notepad-entries-sleep
+>pad sleep
+SLEEP is only advisable in a protected area.
+
 #+testcase-prerule-table-of-presto-anagrams-pre-peels-speel-sleep-rule
 >sleep
 !Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
@@ -590,17 +601,6 @@ Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
 >undo
 >undo
 >undo
-
-#testcase-prerule-table-of-presto-anagrams-pre-disk-skid-rule
->skid
-The disk is where it needs to be, and the skid has served its purpose. Changing the disk back would also destroy your workstation.
-
->sleep
-You may need sleep later, but not now. Besides, you have nowhere to sleep.
-
-#ttc-table-of-notepad-entries-sleep
->pad sleep
-SLEEP is only advisable in a protected area.
 
 >reboot
 Your score has just gone up by one point

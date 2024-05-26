@@ -1,7 +1,7 @@
-## reg-roi-askabout.txt
+## reg-roi-lone-ask-about.txt
 ##
 ## ASK X ABOUT Y for A Roiling Original
-## not to be confused with dialog, found in reg-roi-dialog.txt
+## not to be confused with numbered dialog in reg-lone-roi-dialog.txt
 ##
 ## stuff to search for: t argeted (remove space)
 ## * only-(region), * region

@@ -1,6 +1,6 @@
 ###############################
 #
-#reg-roi-dialog.txt
+## reg-roi-lone-dialog.txt
 #
 #regression test for checking that basic dialog works
 #
