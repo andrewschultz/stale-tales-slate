@@ -1,8 +1,6 @@
 ## reg-sa-ordeal-loader-max.txt
 ## GENERATOR FILE: rbr-sa-ordeal-loader.txt
 
-## maximum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -195,6 +193,13 @@ Your score has just gone up by one point.
 >score
 You currently have 7 out of 8 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
+>bactine
+That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.
+(That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
+
+>undo
+
 >gateman
 Your score has just gone up by one point.
 
@@ -202,11 +207,6 @@ Your score has just gone up by one point.
 The gateman looks over to the mega ant and does some weird hand-fu. The ant scampers off. "There. Should be able to walk in now. I mean, after you ask me for all the help you want."
 The gateman pauses again, then asks if you had that bugle. It's something he'd been meaning to take up, but he wanted to give you more than one way to get here. You explain you lost it rolling down a hill to get here.
 "No worries. I'll get it when you're gone. You probably won't want to be around when I start practising, anyway. This time, I will. Being a nametag for a bit--or just replaced by one--gives a fellow motivation to do those things he's put off."
-
-#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
->bactine
-That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.
-(That's worth noting in your notepad for later, so you do, under FLIPS.)
 
 >score
 You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
@@ -216,6 +216,7 @@ You have nothing else you figured in advance.
 !Stuff you figured, but you couldn't use it right away:
 !nametag -> gateman
 
+#+testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 (That's worth noting in your notepad for later, so you do, once again, under FLIPS.)

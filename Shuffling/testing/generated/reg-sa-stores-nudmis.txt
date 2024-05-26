@@ -1,8 +1,6 @@
 ## reg-sa-stores-nudmis.txt
 ## GENERATOR FILE: rbr-sa-stores.txt
 
-## walkthrough with all nudges and mistakes
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py

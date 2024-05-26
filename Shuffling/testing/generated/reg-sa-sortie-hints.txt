@@ -1,8 +1,6 @@
 ## reg-sa-sortie-hints.txt
 ## GENERATOR FILE: rbr-sa-sortie.txt
 
-## walkthrough with hints
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -257,10 +255,14 @@ You just need to combine ingredients you've already made and PUT them on each ot
 >score
 You currently have 9 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
->put lettuce on tortilla
 >put steak on tortilla
+Hm, a good start. The tortilla's not plain any more.
 >put parmesan on tortilla
+The tortilla's coming together.
 >put hot sauce on tortilla
+The tortilla's almost there!
+>put lettuce on tortilla
+You got it! A full-blown taco! You can't help but pick it up and admire it! It's too good to eat. You almost wish you could wear it.
 Your score has just gone up by one point.
 
 DEBUG: taco being objhinted.

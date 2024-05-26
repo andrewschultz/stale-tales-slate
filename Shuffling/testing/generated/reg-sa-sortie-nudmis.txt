@@ -1,8 +1,6 @@
 ## reg-sa-sortie-nudmis.txt
 ## GENERATOR FILE: rbr-sa-sortie.txt
 
-## walkthrough with all nudges and mistakes
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -486,10 +484,14 @@ Best not to get too crazy with food preparation.
 >littoral
 How frustrating! A shoreline doesn't appear. You're still stuck in here, but maybe there's another way out.
 
->put lettuce on tortilla
 >put steak on tortilla
+Hm, a good start. The tortilla's not plain any more.
 >put parmesan on tortilla
+The tortilla's coming together.
 >put hot sauce on tortilla
+The tortilla's almost there!
+>put lettuce on tortilla
+You got it! A full-blown taco! You can't help but pick it up and admire it! It's too good to eat. You almost wish you could wear it.
 Your score has just gone up by one point.
 
 >score

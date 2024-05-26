@@ -1,8 +1,6 @@
 ## reg-sa-metros-detail.txt
 ## GENERATOR FILE: rbr-sa-metros.txt
 
-## walkthrough with ask/scan/pad detail
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -435,6 +433,8 @@ You hear a bunch of weird noises! There's a distinct lack of buzzers, which you 
 [NOTE: Shuffling Around will just let you walk through the signers' ingress at will now, so don't worry about swiping the card again.]
 
 >e
+The signers' ingress slides open as you go east.
+The signers' ingress slides shut quietly and efficiently.
 /^Esoteric Coteries
 
 #ttc-table-of-unmatched-thing-responses-nerds

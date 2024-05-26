@@ -6,12 +6,14 @@
 #
 # we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
 #
-files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt,reg-sa-forest-hints.txt,reg-sa-forest-detail.txt
-~	max	t0
-~	min	t1
-~	nudges,nud,nu,mis,mi	t2
-~	hints,hin,sal,gle,gt,gn	t3
-~	ask,scan,pad	t4
+# note: perhaps RBR should have a check for if we want to merge GT and GN.
+#
+
+file=reg-sa-forest-max.txt,max,maximum walkthrough
+file=reg-sa-forest-min.txt,min,minimum walkthrough
+file=reg-sa-forest-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
+file=reg-sa-forest-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
+file=reg-sa-forest-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
 
 }}MAX=17
 }}CURMAX=17
@@ -26,8 +28,6 @@ ALSO-IGNORE:rs *,sr *
 
 ## *FILE
 ## *FORK
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -60,8 +60,7 @@ Your score has just gone up by one point.
 #ttc-table-of-stores-done-rejects-scented-descent
 >fretso
 The scented descent to the forest doesn't need to be changed.
-
-@nud
+\\
 ############################here we test west then south
 ##balance undos
 >rs sw
@@ -139,7 +138,7 @@ by one point
 >undo
 >undo
 
-@nud
+@nud+
 ############################here we test east then north
 ##balance undos
 >rs ne
@@ -216,7 +215,7 @@ by one point
 >undo
 >undo
 
-@nud
+@nud+
 ############################here we test north then east
 ##balance undos
 >sr ne
@@ -272,7 +271,7 @@ by one point
 >undo
 >undo
 
-@nud
+@nud+
 ############################here we test south then west
 ##balance undos
 >sr sw
@@ -879,8 +878,7 @@ That is no longer part of a puzzle.
 #ttc-table-of-forest-done-rejects-nose
 >noes
 Don't get that nose bent out of shape.
-
-@nud
+\\
 #testcase-mistake-shuffling-gat
 >gat
 Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
@@ -888,8 +886,7 @@ Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the
 #testcase-mistake-shuffling-gunshot
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
-
-@nud
+\\
 #ttc-table-of-forest-spechelp-noughts
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
@@ -900,8 +897,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-forest-spechelp-dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
@@ -956,8 +952,7 @@ You don't want to mess the muzzle up. You can fire bullets through it, and that'
 #ttc-table-of-forest-done-rejects-shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
-
-@nud
+\\
 #+testcase-mistake-shuffling-gunshot
 >gunshot
 You need to SHOOT the gun, but you don't have a bullet yet.
@@ -990,8 +985,7 @@ The only way to exit is east, so let's go that way.
 #testcase-exits-flesh-shelf
 >exits
 The only way you seem to be able to go is east to Self-ID Fields.
-
-@gn
+\\
 #ttc-table-of-nowheres-flesh-shelf
 >w
 It's too steep down every way except back east.
@@ -1036,13 +1030,11 @@ The ring does not bend.
 #ttc-table-of-flesh-shelf-nudges-hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
-
-@nud
+\\
 #testcase-mistake-shuffling-inks
 >inks
 The skin sink bleeds no color.
-
-@nud
+\\
 #testcase-mistake-shuffling-helf-helfs
 >helf
 While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
@@ -1055,13 +1047,11 @@ Whether you're hoping to see a deceased relative or send a relative you really, 
 \\
 >kins
 Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers.
-
-@nud
+\\
 #testcase-mistake-shuffling-debar
 >debar
 If there are any lawyers here, they've already been debarred.
-
-@nud
+\\
 #ttc-table-of-flesh-shelf-nudges-bleads
 >bleasd
 The blades, buried in the grinder, remain lifeless.
@@ -1118,13 +1108,11 @@ DEBUG INFO: Cert-text: ----.
 @nud
 >eat spam
 spasm
-
-@nud
+\\
 #testcase-mistake-shuffling-amps
 >amps
 You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
-
-@nud
+\\
 #ttc-table-of-forest-spechelp-spam
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
@@ -1147,8 +1135,7 @@ Your score has just gone up by one point.
 #ttc-table-of-forest-done-rejects-maps
 >masp
 The maps are probably right, you hope. No need to change them.
-
-@nud
+\\
 #testcase-mistake-shuffling-bared
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
@@ -1297,8 +1284,7 @@ You know the scoffer coffers and scoffin' coffins can't be changed, and the more
 #ttc-table-of-emptiness-sepiments-nudges-coffers
 >coffesr
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
-
-@nud
+\\
 #testcase-mistake-shuffling-padres
 >padres
 Bringing holy men down here would probably kill them.
@@ -1314,8 +1300,7 @@ James Spader is pretty cool, but he can't help with supernatural stuff. Okay, ma
 #testcase-mistake-shuffling-parsed
 >parsed
 You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
-
-@nud
+\\
 #ttc-table-of-forest-spechelp-banshee
 >hasbene
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
@@ -1468,8 +1453,7 @@ You smile confidently. You'll figure how to use the grinder.
 #testcase-mistake-shuffling-steam
 >steam
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
-
-@mis
+\\
 #testcase-mistake-shuffling-certains
 >certains
 You temporarily console yourself with positive things you know are true. For instance, a sweep with your tagged gadget shows you don't need to transfrom the canister. Eight letters would be pretty tricky!
@@ -1543,8 +1527,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 The livers seem to prick you for a moment, as if to say you're not quite right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
-
-@nud
+\\
 #testcase-mistake-shuffling-silver
 >silver
 The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
@@ -1599,8 +1582,7 @@ The sliver turns silver for a moment.
 
 @gle
 You see the spread fluttering as if outside an open window.
-
-@gle
+\\
 ##balance undos
 >n
 You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
@@ -1990,8 +1972,7 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 #ttc-table-of-frost-forts-nudges-vowel
 >vowle
 You need to deal with all the vowels.
-
-@nud
+\\
 #ttc-table-of-forest-spechelp-vowels
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
@@ -2024,8 +2005,7 @@ The gnash hangs would, err, shnag you.
 #testcase-exits-frost-forts
 >exits
 You're stuck here. This is the final battle!
-
-@gn
+\\
 #ttc-table-of-nowheres-frost-forts
 >e
 The gnash hangs would, err, shnag you.
@@ -2098,8 +2078,7 @@ The scenery here's mostly frozen that way. Ha ha ha.
 #ttc-table-of-forest-done-rejects-wolves
 >wolvse
 You can't change them back. But maybe you can get rid of them. You do have a weapon.
-
-@nud
+\\
 #testcase-mistake-shuffling-steel
 >steel
 You'd be crushed if the sleet turned to steel.

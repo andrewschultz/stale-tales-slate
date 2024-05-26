@@ -1,4 +1,4 @@
-## reg-sa-lone-metros-all.txt
+## reg-sa-lone-metros.txt
 ## this tests all the paths through METROS
 ##
 ## There are 5 total combinations of ways through. They are labeled in the titles below.

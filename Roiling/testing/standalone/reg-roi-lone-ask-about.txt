@@ -1129,10 +1129,10 @@ Your score has just gone up by one point
 
 #ttc-table-of-oyster-unmatched-topic-responses-pest-pets
 >ask pets about abcd
-They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something.
+They make garbled noises, but it's weird. Perhaps if you stepped back and tried to LISTEN, they might slow down and reveal something.
 
 >ask pets about elvira
-They make garbled noises, but it's weird. Perhaps if you stepped back and tried to [b]LISTEN[r], they might slow down and reveal something.
+They make garbled noises, but it's weird. Perhaps if you stepped back and tried to LISTEN, they might slow down and reveal something.
 
 >step
 Your score has just gone up by one point
@@ -2442,7 +2442,7 @@ must be important. You note it as further scenery in your pedanto-notepad.
 super special
 
 >spectacular
-[You add the information to your pedanto-notepad under FLIPS.]
+(You add the information to your pedanto-notepad under FLIPS.)
 
 >out
 You notice something else you wouldn't have seen without St. Teri's help. That
@@ -3228,24 +3228,24 @@ You Did Great
 #>{include} _only-presto
 #>{include} _only-oyster
 #>{include} _only-towers
->{include} _only-otters
+#>{include} _only-otters
 #>{include} _only-others
 
-* only-ordeal-reload
+* _only-ordeal-reload
 
 >{include} _ordeal-reload
 
-* only-stores
+* _only-stores
 
 >gonear strip
 >{include} _stores
 
-* only-routes
+* _only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* only-troves
+* _only-troves
 
 >gonear rathole
 >{include} _troves
@@ -3256,14 +3256,14 @@ You Did Great
 >gonear gyre
 >{include} _presto
 
-* only-oyster
+* _only-oyster
 
 >ts
 >oyster
 >enter barnacle
 >{include} _oyster
 
-* only-towers
+* _only-towers
 
 >seed 1
 >gonear loftier trefoil
@@ -3275,7 +3275,7 @@ You Did Great
 >gonear minded midden
 >{include} _otters
 
-* only-others
+* _only-others
 
 >gonear rustic citrus
 >{include} _others

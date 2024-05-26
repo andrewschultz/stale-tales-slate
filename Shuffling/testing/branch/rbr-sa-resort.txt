@@ -3,13 +3,14 @@
 # this covers maximum points, minimum points and nudges.
 #
 
-files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-sa-resort-hints.txt,reg-sa-resort-detail.txt
-~	max	t0
-~	min	t1
-~	nudges,nud,nu	t2
-~	mis,mi	t2
-~	hints,hin,sal,gle,gt,gn	t3
-~	ask,scan,pad	t4
+file=reg-sa-resort-max.txt,max,maximum walkthrough
+file=reg-sa-resort-min.txt,min,minimum walkthrough
+file=reg-sa-resort-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
+file=reg-sa-resort-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
+file=reg-sa-resort-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
+
+##--stable-file: this eventually says that the project is stable, and I shouldn't change the main/minimal file unless I really need to.
+#--strict-file: this says that the project requires strict section marking e.g. @all instead of ==t1.
 
 }}MAX=15
 }}CURMAX=15
@@ -850,8 +851,7 @@ The ropes are useful for climbing, which you need to do to get east.
 #ttc-table-of-rived-drive-nudges-rope
 >repo
 Those are already useful.
-
-@nud
+\\
 #ttc-table-of-resort-spechelp-sprig
 >grisp
 The sprig seems to grow less fragile for a moment.
@@ -923,8 +923,7 @@ No going back now.
 #+ttc-table-of-nowheres-potshot-hotspot
 >e
 That rabble seems mad at you. You'd better disperse them first.
-
-@gn
+\\
 #testcase-outside-potshot-hotspot
 >exit
 That rabble seems mad at you. You'd better disperse them first.
@@ -1077,8 +1076,7 @@ by one point
 They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose or become able to use those kilns.
 >undo
 >undo
-
-@nud
+\\
 #ttc-table-of-resort-spechelp-protest
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
@@ -1094,8 +1092,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #testcase-mistake-shuffling-roister
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
-
-@mis
+\\
 #testcase-mistake-shuffling-spotter
 >spotter
 No, you see 'em, you just need a better way to disperse 'em.
@@ -1143,8 +1140,7 @@ Picking one person out of a crowd never works.
 #ttc-table-of-resort-done-rejects-potters
 >pottesr
 You've changed the potters enough. Now you need to give them something interesting to do besides protest.
-
-@nud
+\\
 #ttc-table-of-potshot-hotspot-nudges-three
 >ethre
 The trio remains unmoved. Perhaps you can get the potters something to work with?
@@ -1413,7 +1409,7 @@ Your vision blurs a bit, and you see names and hear AMENs.
 
 @gt
 >gt isle
-But you want to NOT go anywhere. NOT take any exits.
+Go somewhere? Just the opposite. Those exits are repelling you to do stay in the Means Manse. To make it your own.
 
 @gle
 >angle
@@ -1484,8 +1480,7 @@ Seeing exits just makes you want to...
 #+ttc-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
-
-@gn
+\\
 #testcase-outside-means-manse
 >exit
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
@@ -1526,8 +1521,7 @@ My Adieu to You: Made It!
 #ttc-table-of-ranks-8
 #APOSTROPHE-OK
 Final rank: a smart gamin' anagrammist.
-
-@max
+\\
 >missed
 !====RESORT
 >alts

@@ -395,7 +395,7 @@ DEBUG INFO: prices precis hinting.
 You have 38 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
 >cripes
 Your score has just gone up by one point.
-You look around and don't see any way to bargain for more fruits here. Maybe there's more to do elsewhere.
+Nothing specific left to barter for here, though you will want to trade that dollar.
 >score
 You have 39 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
 

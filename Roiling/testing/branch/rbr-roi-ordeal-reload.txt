@@ -601,7 +601,7 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 >scan niche
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
 \\
-#ttc-table-of-ordeal-reload-scannotes-beams-net
+#ttc-table-of-ordeal-reload-scannotes-meet-bans-beams-net
 >scan beams net
 Oh dear. This is tricky. Three question marks out of eight. Maybe you can actually figure what they mean logically, or maybe you can figure what sort of thing would be below ground in a study, and then maybe you can use that to figure what the question marks mean.
 \\

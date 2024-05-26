@@ -1,15 +1,15 @@
-# rbr-sa-sortie.txt
+# rbr-sa-metros.txt
 #
 # this covers maximum points, minimum points and nudges.
 #
-# the nudmis file also covers two alternate ways through the sortie.
+# the nudmis file also covers two alternate ways through the metros.
 #
-files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt,reg-sa-metros-hints.txt,reg-sa-metros-detail.txt
-~	max	t0
-~	min	t1
-~	nudges,nud,mis,mi	t2
-~	hints,hin,gle,gt,gn	t3
-~	ask,scan,pad	t4
+
+file=reg-sa-metros-max.txt,max,maximum walkthrough
+file=reg-sa-metros-min.txt,min,minimum walkthrough
+file=reg-sa-metros-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
+file=reg-sa-metros-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
+file=reg-sa-metros-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
 
 }}MAX=18
 }}CURMAX=18
@@ -22,8 +22,6 @@ files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt,reg-s
 
 ## *FILE
 ## *FORK
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -140,8 +138,7 @@ You can't do much with or to the camp, here or north.
 #ttc-table-of-undesired-underside-nudges-camp
 >capm
 You can't do much with or to the camp, here or north.
-
-@nud
+\\
 #testcase-mistake-shuffling-refind
 >refind
 Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.
@@ -152,8 +149,7 @@ The senors you want to see are behind the signers' ingress.
 \\
 >senor
 The senors you want to see are behind the signers' ingress.
-
-@nud
+\\
 #ttc-table-of-undesired-underside-nudges-undesired
 >undesirde
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -237,7 +233,6 @@ On one of several pages, you see: an order that this all should be RED AGAIN (si
 #testcase-mistake-shuffling-grained
 >grained
 Good try, but we're looking for a noun. With an extra A.
-\\
 
 @gle
 >angle
@@ -270,8 +265,7 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RRRRRRRR.
 DEBUG INFO: Rect-text: G------A.
 DEBUG INFO: Cert-text: --------.
-
-@scan
+\\
 #gadget test: a reading to gardenia
 >purloin reading
 >rc a reading
@@ -298,7 +292,7 @@ beats -> beast
 >ask beats about aabbccdd
 Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act.
 
-@ask
+@ask+
 #first, take care of stuff that breaks our test pattern e.g. clue the drainage
 ##balance undos
 >gonear florae
@@ -483,8 +477,7 @@ You thought you saw a tomato whiz by "a motto," there.
 The gadget beeps once. A series of lights comes across: RRRRGG.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
 Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO.
-
-@scan
+\\
 #gadget test: a motto to tomato
 >rc motto
 You get to scanning, twiddling from certify to rectify and back.
@@ -523,8 +516,7 @@ It's more, it's A MOTTO. Also, even if you could do anything, you'd need the u r
 #ttc-table-of-bile-libe-nudges-potaot
 >potaot
 The author twisted words enough. Perhaps you could concentrate on the motto.
-
-@nud
+\\
 #ttc-table-of-metros-spechelp-motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
@@ -644,8 +636,7 @@ You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way 
 #testcase-mistake-shuffling-smatters
 >smatters
 The mattress is in bad enough shape as it is. It should be easy enough to sift through once the night thing is gone.
-
-@nud
+\\
 #ttc-table-of-the-ol-hotel-nudges-thelo
 >helot
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -713,8 +704,7 @@ Nothing to change the mattress to, and you already looted it
 #ttc-table-of-the-ol-hotel-nudges-emitter
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
-
-@nud
+\\
 #+testcase-mistake-shuffling-smatters
 >smatters
 The mattress is in bad enough shape as it is. You got what you needed from it.
@@ -791,8 +781,7 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 #ttc-table-of-metros-nudges-kernel
 >kernle
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
-
-@nud
+\\
 #ttc-table-of-metros-spechelp-lost-corn
 >controsl
 You thought you heard electronic beeping from the corn.
@@ -1040,8 +1029,7 @@ The controls stay as they are.
 #ttc-table-of-metros-nudges-control
 >contrlo
 You've already changed the lost corn into the controls, and you don't need to do more.
-
-@nud
+\\
 #ttc-table-of-metros-spechelp-dry-cake
 >keycadr
 You feel like you can almost identify what the cake can become.
@@ -1079,8 +1067,7 @@ It's the whole clover you need to change.
 #ttc-table-of-metros-nudges-fuzzy
 >fuzyz
 The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover.
-
-@nud
+\\
 #ttc-table-of-metros-spechelp-clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
@@ -1412,16 +1399,13 @@ You already took the begonias.
 @hin
 >xx begonias
 You already took the heaths.
-
-@hin
+\\
 >barcode
 by one point
-
-@hin
+\\
 You see a weapon at your side, as if tied to a belt.
 DEBUG: heaths being objhinted.
-
-@hin
+\\
 >undo
 
 @nud
@@ -1599,8 +1583,7 @@ DEBUG INFO: Cert-text: B--C-DE.
 #ttc-table-of-metros-done-rejects-barcode
 >barcoed
 The barcode does not shift.
-
-@nud
+\\
 #ttc-table-of-metros-nudges-ganst
 >ganst
 You don't get rid of angst with just a word.
@@ -1631,7 +1614,7 @@ You see yourself putting the barcode and the keycard on the friend finder here.
 
 @max
 >e
-The signers' ingress is closed. You may wish to check your inventory. You have what you need to get that stubborn signers' ingress to open.
+The signers' ingress is closed. You may wish to check your inventory. You have what you need to activate the friend finder and get that stubborn signers' ingress to open.
 
 >put card on sensor
 You hear a bunch of weird noises! There's a distinct lack of buzzers, which you take as a good sign. Then a tinny voice drones "Impression:
@@ -1646,6 +1629,8 @@ Just go east.
 You can just walk east.
 
 >e
+The signers' ingress slides open as you go east.
+The signers' ingress slides shut quietly and efficiently.
 /^Esoteric Coteries
 }}SCORE++
 
@@ -1796,8 +1781,7 @@ The lit-up tulip is useful for providing light for all-night sessions of playing
 #ttc-table-of-esoteric-coteries-nudges-utensil
 >utensli
 The lit-up tulip will stay lit. No need to futz with its brand name.
-
-@nud
+\\
 >w
 \\
 #+ttc-table-of-undesired-underside-nudges-friend
@@ -1813,8 +1797,7 @@ The ingress already did. You got by.
 You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
 \\
 >e
-
-@nud
+\\
 #ttc-table-of-esoteric-coteries-nudges-esoteric
 >esoterci
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
@@ -1822,8 +1805,7 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 #ttc-table-of-esoteric-coteries-nudges-coterie
 >coterei
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
-
-@nud
+\\
 #ttc-table-of-esoteric-coteries-nudges-anticool
 >anticolo
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -2096,8 +2078,7 @@ It's not just that it's neon, it's that it's a pig.
 #ttc-table-of-elm-train-terminal-nudges-pgi
 >pgi
 It's not just that it's a pig, it's that it's neon.
-
-@nud
+\\
 #ttc-table-of-readables-neon-pig
 >read neon pig
 Apparently the neon pig is a creation of one INPENGO.
@@ -2256,8 +2237,7 @@ No going back now. You came here to defeat the beats.
 #ttc-table-of-nowheres-bassy-abyss
 >n
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's an aligns signal, and it must be encompassing the whole abyss. It turns you back to face the beats.
-
-@gn
+\\
 #testcase-outside-bassy-abyss
 >exit
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's that aligns signal, again. It turns you back to face the beats.
@@ -2292,8 +2272,7 @@ You don't need the siren's volume or the beats' volume to have risen. Oh, no.
 #+testcase-mistake-shuffling-bates
 >bates
 You don't need to deal with a knife-wielding psycho along with the beats.
-
-@nud
+\\
 #ttc-table-of-bassy-abyss-nudges-bassy
 >bassy
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -2373,8 +2352,7 @@ The dust is dust now.
 #ttc-table-of-metros-done-rejects-resin
 >resni
 The dust is dust now.
-
-@nud
+\\
 #ttc-table-of-metros-spechelp-beats
 >betsa
 The beats shift up for a second.
@@ -2430,8 +2408,7 @@ The hilt serves a purpose, and besides, there's not much to change it to.
 >misses
 !====METROS
 !--the antlers in the Obtains Boastin Bastion could've become RENTALS.
-
-@max
+\\
 >alts
 While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
 You could have gotten the begonias from Fo' Real Florae Fare, Lo.

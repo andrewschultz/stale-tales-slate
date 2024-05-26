@@ -1,8 +1,6 @@
 ## reg-sa-sortie-max.txt
 ## GENERATOR FILE: rbr-sa-sortie.txt
 
-## maximum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -114,16 +112,67 @@ Your score has just gone up by one point.
 >score
 You currently have 9 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
->put lettuce on tortilla
->put steak on tortilla
->put parmesan on tortilla
->put hot sauce on tortilla
+# can't quite balance undos here but we want to try each ingredient as something final + put 1-4 of all on tortilla
+# we did lettuce with non-max
+# start with 4 = all
+>put all on tortilla
 Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+>undo
+
+>put lettuce on tortilla
+Hm, a good start. The tortilla's not plain any more.
+
+>put steak on tortilla
+The tortilla's coming together.
+
+>put parmesan on tortilla
+
+# hotsauce + 1 item
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
 
 >undo
 
 >put hotsauce on tortilla
 Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+
+>undo
+>undo
+
+# parmesan + 2 items
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+
+>undo
+
+>put hotsauce on tortilla
+The tortilla's almost there!
+>put parmesan on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+
+>undo
+>undo
+>undo
+
+# steak + 3 items
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+
+>undo
+
+>put hotsauce on tortilla
+The tortilla's coming together.
+>put parmesan on tortilla
+The tortilla's almost there!
+>put steak on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
 
 >score
 You currently have 10 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

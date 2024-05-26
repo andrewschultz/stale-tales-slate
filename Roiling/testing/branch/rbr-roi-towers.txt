@@ -3681,7 +3681,6 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
-\\
 
 @verbs
 #testcase-outside-lost-lots

@@ -1,6 +1,6 @@
 ###############################
 #
-#reg-sa-rand.txt
+## reg-sa-lone-random-text.txt
 #
 #regression test for all the random text
 #

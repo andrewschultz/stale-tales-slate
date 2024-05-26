@@ -1,4 +1,4 @@
-## reg-sa-verbs.txt
+## reg-sa-lone-verbs.txt
 ## tests for all the verbs and, well, other understand stuff too.
 ## this isn't really a walkthrough, but rather, an exhaustive yes/no check of verbs that would just bog down regular tests
 
@@ -292,9 +292,9 @@ You are already seeing extra hints when you guess the right collection of letter
 >forets
 That seemed right but not quite natural.
 >no tip
-You are now seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
+You are now not seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
 >no tip
-You are already seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
+You are already not seeing extra hints when you guess the right collection of letters. OPT IN will set this option on.
 >forets
 You feel a slight psychic push-pull coming from Store F. Keep at it.
 

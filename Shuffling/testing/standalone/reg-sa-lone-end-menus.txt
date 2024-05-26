@@ -1,4 +1,5 @@
-# reg-sa-end-menus.txt
+## reg-sa-lone-end-menus.txt
+#
 # tests the end menus for random text
 # does not test AMUSING, just L # and LN
 

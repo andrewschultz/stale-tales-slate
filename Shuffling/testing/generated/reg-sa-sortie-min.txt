@@ -1,8 +1,6 @@
 ## reg-sa-sortie-min.txt
 ## GENERATOR FILE: rbr-sa-sortie.txt
 
-## minimum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -70,10 +68,14 @@ Your score has just gone up by one point.
 >score
 You currently have 7 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
->put lettuce on tortilla
 >put steak on tortilla
+Hm, a good start. The tortilla's not plain any more.
 >put parmesan on tortilla
+The tortilla's coming together.
 >put hot sauce on tortilla
+The tortilla's almost there!
+>put lettuce on tortilla
+You got it! A full-blown taco! You can't help but pick it up and admire it! It's too good to eat. You almost wish you could wear it.
 Your score has just gone up by one point.
 
 >score

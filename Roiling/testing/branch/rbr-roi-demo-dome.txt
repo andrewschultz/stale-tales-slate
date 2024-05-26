@@ -312,7 +312,6 @@ This is a museum! Messing with the exhibits would be very bad form.
 #ttc-table-of-peek-keep-nudges-tripdo
 >tripod
 This is a museum! Messing with the exhibits would be very bad form.
-\\
 
 @max
 >turn dial

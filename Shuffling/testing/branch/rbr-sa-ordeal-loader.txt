@@ -4,14 +4,12 @@
 #
 # hch.py to check help-stuff, mist.py to check mistakes, nuch.py to check nudges
 #
-files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-loader-nudmis.txt,reg-sa-ordeal-loader-hints.txt,reg-sa-ordeal-loader-detail.txt
-~	max	t0
-~	min	t1
-~	nud	t2
-~	mis	t2
-~	nudmis	t2
-~	hints,hin,sal,gle,gt,gn	t3
-~	ask,scan,pad	t4
+
+file=reg-sa-ordeal-loader-max.txt,max,maximum walkthrough
+file=reg-sa-ordeal-loader-min.txt,min,minimum walkthrough
+file=reg-sa-ordeal-loader-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
+file=reg-sa-ordeal-loader-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
+file=reg-sa-ordeal-loader-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
 
 ## *FILE
 ## *FORK
@@ -24,8 +22,6 @@ files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-lo
 }$SCOS=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
 }$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 }$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your final possible score is fixed. You missed something you can't go back for.
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -148,8 +144,7 @@ You take a passive-aggressive stab at the person, now gone, who mocked you when 
 #testcase-mistake-shuffling-pone
 >pone
 The meals here are much more highfalutin' than that!
-
-@nudmis
+\\
 #ttc-table-of-busiest-subsite-nudges-eopn
 >eopn
 The passage looks unblocked already, so you don't need to look for any other possibilities.
@@ -213,8 +208,7 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 #testcase-mistake-shuffling-rc-text
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-
-@nud
+\\
 #ttc-table-of-busiest-subsite-nudges-busiest
 >busiets
 You may need to change a room later, but you'll have a hint device to do so.
@@ -305,7 +299,7 @@ You start a small mental conversation to take stock of your surroundings and wha
 @pad
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
-#brackets ok
+\\
 (That's worth noting in your notepad for later, so you do, under FLIPS.)
 >pf
 Stuff you figured, but you couldn't use it right away:
@@ -319,8 +313,7 @@ You may need to change a room later, but you'll have a hint device to do so.
 #testcase-mistake-shuffling-deters
 >deters
 No! You're trying to make progress here.
-
-@nud
+\\
 #ttc-table-of-rested-desert-nudges-breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
@@ -328,8 +321,7 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 #ttc-table-of-rested-desert-nudges-smlel
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
-
-@nud
+\\
 #ttc-table-of-ordeal-loader-spechelp-odor
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
@@ -388,8 +380,7 @@ You haven't solved any regions yet. You have the rank of reduced deducer.
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
 !The one you can probably go through.
-
-@gn
+\\
 #+testcase-outside-rested-desert
 >exit
 You'd just get even more lost. Going IN that door looks like a safer bet.
@@ -496,8 +487,7 @@ The bugle emits a sad "don't change me back" noise.
 #ttc-table-of-rested-desert-nudges-horn
 >honr
 No, the bugle is a bugle, not just a horn. It's been changed enough.
-
-@nud
+\\
 #ttc-table-of-ordeal-loader-spechelp-bolt
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
@@ -591,8 +581,7 @@ While ents are definitely organic, they wouldn't feel quite natural here. Someth
 #ttc-table-of-thickest-thickets-nudges-net
 >nte
 There's something you can do with all the nets, if you think about it.
-
-@nud
+\\
 #ttc-table-of-ordeal-loader-spechelp-sent-nets
 >etns
 The sent nets rustle slightly.
@@ -635,8 +624,7 @@ That's a bit too magical for here and now. The nest is nice enough.
 #ttc-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The shrub and brush waver, then point towards the toga.
-
-@nud
+\\
 #ttc-table-of-ordeal-loader-spechelp-reed
 >eder
 The reed blows in an unseen breeze.
@@ -645,8 +633,7 @@ The reed blows in an unseen breeze.
 >redd
 The reed blows in an unseen breeze.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-ordeal-loader-spechelp-toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
@@ -661,8 +648,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 #ttc-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
-
-@nud
+\\
 #testcase-mistake-shuffling-believe
 >believe
 Yes, but what do you believe you can do or change?
@@ -976,6 +962,14 @@ Mt. Egana
 >xx nametag
 Well, you probably just need to get through with things. You take a bite of the saltine, then you think "How do I get through that gate, man?" Hmm...
 
+@max
+#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
+>bactine
+That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.
+(That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
+\\
+>undo
+
 >gateman
 Your score has just gone up by one point.
 
@@ -995,12 +989,6 @@ The gateman looks over to the mega ant and does some weird hand-fu. The ant scam
 The gateman pauses again, then asks if you had that bugle. It's something he'd been meaning to take up, but he wanted to give you more than one way to get here. You explain you lost it rolling down a hill to get here.
 "No worries. I'll get it when you're gone. You probably won't want to be around when I start practising, anyway. This time, I will. Being a nametag for a bit--or just replaced by one--gives a fellow motivation to do those things he's put off."
 
-@max
-#testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
->bactine
-That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.
-(That's worth noting in your notepad for later, so you do, under FLIPS.)
-
 @!min
 >score
 You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
@@ -1017,9 +1005,9 @@ You have nothing else you figured in advance.
 !Stuff you figured, but you couldn't use it right away:
 !nametag -> gateman
 \\
+#+testcase-prerule-table-of-stores-anagrams-pre-cabinet-bactine-rule
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
-#brackets ok
 (That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
 #ttc-table-of-preflip-clues-tenibac
 >pf
@@ -1030,13 +1018,11 @@ cabinet -> Bactine
 #+testcase-mistake-shuffling-get-a-man
 >get a man
 "Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions."
-
-@nud
+\\
 #testcase-mistake-shuffling-almond
 >almond
 "Don't try anything too nutty!" booms Nat Egam.
-
-@nud
+\\
 #ttc-table-of-ordeal-loader-done-rejects-gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
@@ -1081,7 +1067,7 @@ You currently have {MAX} out of {MAX} total points for the Ordeal Loader region.
 >ask gateman about blue lube
 "Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 "If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
-#brackets ok
+\\
 (You record the information about lube/angle/glean in multiple entries in your dope tan notepad.)
 >undo
 >undo
@@ -1105,8 +1091,7 @@ The cabinet's doors seem to waver a bit, but they don't slam on you.
 You stare into the blue lube for a bit. You see a small story unfold.
 You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...
 And a few seconds later, he does. Well, the clairvoyance bit seems to work.
-
-@gle
+\\
 >z
 You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...
 And a few seconds later, he does. Again. Hooray for double-checking, I think.
@@ -1128,8 +1113,7 @@ You reckon you can wait
 #testcase-mistake-shuffling-remove-something-from-something
 >remove phial from cabinet
 To keep things simple for you (and, okay, for my coding efforts,) I recommend TAKE X instead of REMOVE/FROM. REMOVE defaults to carried or worn items, and I'm too lazy to tweak that.
-
-@mis
+\\
 #testcase-mistake-shuffling-angel
 >angel
 You've got enough practical help. You don't need anything supernatural.
@@ -1172,8 +1156,7 @@ Here is one of several writings in red in the cabinet:
 >read cabinet
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
-
-@nud
+\\
 #+ttc-table-of-notices-section-nudges-notices
 >noticse
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
@@ -1269,7 +1252,7 @@ Nat Egam pauses. "There's so much in the world we all want to understand. But un
 >ask gateman about redness
 "Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
-#brackets ok
+\\
 (You record the information about red in your notepad.)
 \\
 #ttc-table-of-matched-thing-responses-gateman-board

@@ -1,8 +1,6 @@
 ## reg-sa-ordeal-loader-detail.txt
 ## GENERATOR FILE: rbr-sa-ordeal-loader.txt
 
-## walkthrough with ask/scan/pad detail
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -29,6 +27,7 @@ You start a small mental conversation to take stock of your surroundings and wha
 
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
+
 (That's worth noting in your notepad for later, so you do, under FLIPS.)
 >pf
 Stuff you figured, but you couldn't use it right away:
@@ -121,6 +120,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 >ask gateman about blue lube
 "Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 "If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
+
 (You record the information about lube/angle/glean in multiple entries in your dope tan notepad.)
 >undo
 >undo
@@ -196,6 +196,7 @@ Nat Egam pauses. "There's so much in the world we all want to understand. But un
 >ask gateman about redness
 "Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
+
 (You record the information about red in your notepad.)
 
 #ttc-table-of-matched-thing-responses-gateman-board

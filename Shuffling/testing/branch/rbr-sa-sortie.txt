@@ -4,12 +4,12 @@
 #
 # the nudmis file also covers two alternate ways through the sortie.
 #
-files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-sa-sortie-hints.txt,reg-sa-sortie-detail.txt
-~	max	t0
-~	min	t1
-~	nudges,nud,mis,mi	t2
-~	hints,hin,gle,gt,gn	t3
-~	ask,scan,pad	t4
+
+file=reg-sa-sortie-max.txt,max,maximum walkthrough
+file=reg-sa-sortie-min.txt,min,minimum walkthrough
+file=reg-sa-sortie-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
+file=reg-sa-sortie-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
+file=reg-sa-sortie-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
 
 ## *FILE
 ## *FORK
@@ -22,8 +22,6 @@ files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-s
 }$SCOS=You currently have {SCORE} out of {MAX} total points for the Sortie region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
 }$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 }$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Sortie region. Your final possible score is fixed. You missed something you can't go back for.
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -202,8 +200,7 @@ Your vision swirls, and you see a kitchen.
 #ttc-table-of-nowheres-the-nick
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
-
-@gn
+\\
 #testcase-outside-the-nick
 >exit
 You're trapped. If only the nick could be changed to something more to your taste.
@@ -362,8 +359,7 @@ No, you don't want to go back there.
 The gadget beeps once. A series of lights comes across: GRRRRRRR.
 You scanned each of the tall trio, and the readout didn't change.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
-
-@scan
+\\
 #gadget test: tall trio to tortilla
 >rc tall trio
 You get to scanning, twiddling from certify to rectify and back.
@@ -438,8 +434,7 @@ the cheesy spearman
 the grist (faint)
 the cake pan (faint)
 for a few seconds. Your warts also tingle.
-
-@gle
+\\
 >straw
 by one point
 You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes.
@@ -508,8 +503,7 @@ The dial did its part for you.
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 \\
 >n
-
-@nud
+\\
 #ttc-table-of-kitchen-nudges-kitchne
 >ketchin
 Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
@@ -585,8 +579,7 @@ Best not to get too crazy with food preparation.
 #+ttc-table-of-kitchen-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something else inside it.
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-cake-pan
 >pancaek
 It's a cake pan, backwards and forwards.
@@ -621,8 +614,7 @@ The fridge has taken enough abuse and can't be changed for the better.
 #ttc-table-of-sortie-done-rejects-pancake
 >pancaek
 Best not to get too crazy with food preparation.
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-tall-trio
 >tortilal
 The tall trio seem to look interested for a minute.
@@ -784,8 +776,7 @@ Your score has just gone up by one point.
 #ttc-table-of-sortie-done-rejects-parmesan
 >parmesna
 Best not to get too crazy with food preparation.
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
@@ -892,18 +883,81 @@ Best not to get too crazy with food preparation.
 >littoral
 How frustrating! A shoreline doesn't appear. You're still stuck in here, but maybe there's another way out.
 
->put lettuce on tortilla
+@!max
 >put steak on tortilla
+Hm, a good start. The tortilla's not plain any more.
 >put parmesan on tortilla
+The tortilla's coming together.
 >put hot sauce on tortilla
+The tortilla's almost there!
+>put lettuce on tortilla
+You got it! A full-blown taco! You can't help but pick it up and admire it! It's too good to eat. You almost wish you could wear it.
 Your score has just gone up by one point.
-}}SCORE++
 
 @max
+# can't quite balance undos here but we want to try each ingredient as something final + put 1-4 of all on tortilla
+# we did lettuce with non-max
+# start with 4 = all
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+>undo
+\\
+>put lettuce on tortilla
+Hm, a good start. The tortilla's not plain any more.
+\\
+>put steak on tortilla
+The tortilla's coming together.
+\\
+>put parmesan on tortilla
+\\
+# hotsauce + 1 item
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+\\
 >undo
 \\
 >put hotsauce on tortilla
 Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+\\
+>undo
+>undo
+\\
+# parmesan + 2 items
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+\\
+>undo
+\\
+>put hotsauce on tortilla
+The tortilla's almost there!
+>put parmesan on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+\\
+>undo
+>undo
+>undo
+\\
+# steak + 3 items
+>put all on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+\\
+>undo
+\\
+>put hotsauce on tortilla
+The tortilla's coming together.
+>put parmesan on tortilla
+The tortilla's almost there!
+>put steak on tortilla
+Your score has just gone up by one point.
+!can't reach into Emerita Emirate.
+
+}}SCORE++
 
 @hin
 DEBUG: taco being objhinted.
@@ -975,8 +1029,7 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 >dumdum
 The mud is stuck that way. You don't need to change it.
 !Besides, you already figured how to get out.
-
-@mis
+\\
 #+testcase-mistake-shuffling-cato
 >cato
 You don't need to know your classics, here.
@@ -1094,8 +1147,7 @@ Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd
 #ttc-table-of-sortie-nudges-wart
 >wrat
 Why zap just one wart? Go for all of them!
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-warts
 >strwa
 The warts itch slightly.
@@ -1162,14 +1214,12 @@ The straw remains motionless.
 #ttc-table-of-sortie-nudges-shoe
 >heos
 There's more than one hose here.
-
-@nud
+\\
 #testcase-mistake-shuffling-shoe
 >shoe
 You need more than one shoe.
 >undo
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-hoses
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
@@ -1359,8 +1409,7 @@ You decide against rectifying as well, since certifying didn't turn up anything 
 "Of course, that thing, whatever it is, cannot recognize why I deserve to be called SANE PAT despite my wondrous visions. But perhaps it will help your less creative mind appreciate my wellsprings of verbal virtuosity."
 The gadget beeps once. A series of lights comes across: RRRRRRG.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBGBR.
-
-@scan
+\\
 #gadget test: anapest to peasant
 >rc anapest
 You get to scanning, twiddling from certify to rectify and back.
@@ -1579,8 +1628,7 @@ Your gadget's not near anything, but it's registering RBBG.
 #testcase-mistake-shuffling-yah
 >yah
 It's not nice to make fun of the peasant for having hay he doesn't want
-
-@mis
+\\
 #testcase-mistake-shuffling-trade-trade-text
 >trade
 Instead of trading, use GIVE X TO Y.
@@ -1683,8 +1731,7 @@ The mud is stuck that way. You don't need to change it. Besides, you already fig
 The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
 >dum dum
 The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
-
-@mis
+\\
 #testcase-mistake-shuffling-tillers
 >tillers
 You aren't going to sea in this game.
@@ -1789,8 +1836,7 @@ You see yourself building a huge structure in the moor without saying anything.
 #+ttc-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room or, since you opened the hallway, east.
-
-@gn
+\\
 #testcase-outside-stiller-trellis
 >exit
 You have more than one way to leave: south, east and west. So you'll need to specify which one.
@@ -1826,8 +1872,7 @@ The only way to exit is west, so let's go that way.
 #testcase-exits-sacred-cedars
 >exits
 The only way you seem to be able to go is west to Stiller Trellis.
-
-@gn
+\\
 #ttc-table-of-nowheres-sacred-cedars
 >n
 There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
@@ -2395,8 +2440,7 @@ You can't go back there.
 
 @nud
 you muse once again
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-oils2
 >soli
 The soil is there to support something, but not quite that.
@@ -2442,8 +2486,7 @@ You can't see anything like that here. If you're trying to view the room, L or L
 #+ttc-table-of-sortie-done-rejects-soil
 >soli
 The silo is quite an accomplishment. You wouldn't want to ruin it
-
-@nud
+\\
 >room
 \\
 ###skip test checking
@@ -2522,8 +2565,7 @@ No, you're overthinking it. Just the text.
 #ttc-table-of-moor-nudges-treesbutton
 >tresebutton
 No, you're overthinking it. Just the text.
-
-@nud
+\\
 #ttc-table-of-sortie-spechelp-trees-button
 >teres
 Hmm, that doesn't work, but you bet you can bull your way through things.
@@ -2657,8 +2699,7 @@ It's the buttons' purposes that needed changing.
 #ttc-table-of-sortie-done-rejects-steer-button
 >stree
 No, the steer button HAS to be right.
-
-@nud
+\\
 #ttc-table-of-sortie-done-rejects-shoot-button
 >shtoo
 No, the shoot button HAS to be right.
@@ -2671,7 +2712,7 @@ No, the shoot button HAS to be right.
 >undo
 >undo
 
-@max
+@max+
 #testcase-postrule-table-of-sortie-anagrams-post-hoots-shoot-rule
 >get shoot
 That seems to be a part of the panel.

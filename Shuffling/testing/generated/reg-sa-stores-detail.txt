@@ -1,8 +1,6 @@
 ## reg-sa-stores-detail.txt
 ## GENERATOR FILE: rbr-sa-stores.txt
 
-## walkthrough with ask/scan/pad detail
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -102,11 +100,11 @@ You currently have 4 out of 6 total points for the Stores region. Your minimum p
 
 #ttc-table-of-kibitzes-cabinet
 >c cabinet
-You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR (R = red, G = green).
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR.
 Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The second entry, in particular, from red to green.
 
 >r cabinet
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB (R = red, G = green, B = blue).
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
 Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The green entry, from the third slot to the fifth.
 
 >rc cabinet

@@ -9,12 +9,11 @@
 # note that store f/m/i/r spechelp are in rbr-sa-(their region) and not here
 #
 
-files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt,reg-sa-stores-hints.txt,reg-sa-stores-detail.txt
-~	max	t0
-~	min	t1
-~	nudmis,nud,mis	t2
-~	hints,hin,sal,gle,gt,gn	t3
-~	scan,ask,pad	t4
+file=reg-sa-stores-max.txt,max,maximum walkthrough
+file=reg-sa-stores-min.txt,min,minimum walkthrough
+file=reg-sa-stores-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
+file=reg-sa-stores-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
+file=reg-sa-stores-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
 
 ## *FILE
 ## *FORK
@@ -27,8 +26,6 @@ files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt,reg-s
 }$SCOS=You currently have {SCORE} out of {MAX} total points for the Stores region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
 }$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Stores region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 }$SCOMAX=You currently have {SCORE} out of {MAX} total points for the Stores region. You don't really have anything critical remaining to do here.
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes	## walkthrough with hints	## walkthrough with ask/scan/pad detail
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -469,13 +466,11 @@ The badge just has general information. It's not useful on its own.
 #ttc-table-of-stores-nudges-flier
 >flire
 The flier's just there to tell you if you're done or not.
-
-@nud
+\\
 #+testcase-mistake-shuffling-get-a-man
 >get a man
 Tan Mage Nat Egam cannot help you now.
-
-@nud
+\\
 #ttc-table-of-stores-nudges-roadsign
 >roadsing
 Hmm...you get the feeling the store itself holds more adventure.
@@ -656,8 +651,7 @@ No way. It's your way down to ENTER the forest.
 Red writing:
 RISE TO RITES, O! OR TIES.
 RISE TO TIES OR RITES, O!
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-i
 >sortei
 Store I shakes a bit. "RISE TO..." you think, as you see red. Rise to what?
@@ -689,8 +683,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store B. Keep at it.
-
-@nud
+\\
 #ttc-table-of-stores-nudges-depot
 >depto
 You can't do anything to the depots besides ENTER them.
@@ -711,8 +704,7 @@ Summoning Red Bull Burdell would be unwise. Best not try it again.
 Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ...
 So 'dept.
 >undo
-
-@nud
+\\
 #ttc-table-of-stores-nudges-subway
 >subwya
 No, it's a map of something behind Store M, it looks like.
@@ -720,8 +712,7 @@ No, it's a map of something behind Store M, it looks like.
 #ttc-table-of-stores-nudges-subwaymap
 >subwaympa
 No, it's a map of something behind Store M, it looks like.
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-m
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
@@ -732,8 +723,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
-
-@nud
+\\
 #ttc-table-of-stores-spechelp-store-r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
@@ -845,8 +835,7 @@ The hubs bush is too sturdy. You can't escape the Trips Strip.
 #ttc-table-of-stores-nudges-buh
 >bhu
 The hubs bush is too sturdy. You can't escape the Trips Strip.
-
-@nud
+\\
 #ttc-table-of-stores-nudges-marquee
 >marqeue
 You don't need to change the marquee, but maybe it'd be fun to see what's inside. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
@@ -893,11 +882,11 @@ You don't need to change the marquee now that you figured what it means.
 @scan
 #ttc-table-of-kibitzes-cabinet
 >c cabinet
-You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR (R = red, G = green).
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR.
 Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The second entry, in particular, from red to green.
 \\
 >r cabinet
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB (R = red, G = green, B = blue).
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
 Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The green entry, from the third slot to the fifth.
 \\
 >rc cabinet

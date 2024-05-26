@@ -1661,7 +1661,7 @@ You suspect someone is in the mist where the maze was. "THERE!" you yell. But yo
 \\
 #ttc-table-of-presto-prefigurings-ether
 >pf
-You can shout THERE once you have the force to win the fight in the ether.
+You can shout THERE once you have the firepower and assistance to win the fight in the ether
 
 @nud
 >blma

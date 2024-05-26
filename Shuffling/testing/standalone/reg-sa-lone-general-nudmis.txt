@@ -1,4 +1,5 @@
-## reg-sa-nudges.txt
+## reg-sa-lone-general-nudmis.txt
+##
 ## nudges for Shuffling Around: the big test
 ##
 ## nudgeleft.txt is the file to look for

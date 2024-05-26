@@ -1,8 +1,6 @@
 ## reg-sa-metros-hints.txt
 ## GENERATOR FILE: rbr-sa-metros.txt
 
-## walkthrough with hints
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -362,6 +360,8 @@ You hear a bunch of weird noises! There's a distinct lack of buzzers, which you 
 Just go east.
 
 >e
+The signers' ingress slides open as you go east.
+The signers' ingress slides shut quietly and efficiently.
 /^Esoteric Coteries
 
 You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd.

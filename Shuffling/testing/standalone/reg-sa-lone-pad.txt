@@ -1,7 +1,7 @@
-## reg-roi-others.txt
-## testing all possible passages through others, e.g. how much you can give Curtis, when
+## reg-sa-lone-pad.txt
 ##
-## also tests nudges
+## tests all things you can put/read in your notepad
+##
 ##
 
 ** game: /home/andrew/prt/debug-shuffling.ulx

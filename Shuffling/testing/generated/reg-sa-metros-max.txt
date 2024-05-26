@@ -1,8 +1,6 @@
 ## reg-sa-metros-max.txt
 ## GENERATOR FILE: rbr-sa-metros.txt
 
-## maximum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -243,7 +241,7 @@ The signers' ingress is closed. It's imposing but not that scary. You're not sur
 >put barcode on keycard
 
 >e
-The signers' ingress is closed. You may wish to check your inventory. You have what you need to get that stubborn signers' ingress to open.
+The signers' ingress is closed. You may wish to check your inventory. You have what you need to activate the friend finder and get that stubborn signers' ingress to open.
 
 >put card on sensor
 You hear a bunch of weird noises! There's a distinct lack of buzzers, which you take as a good sign. Then a tinny voice drones "Impression:
@@ -254,6 +252,8 @@ You hear a bunch of weird noises! There's a distinct lack of buzzers, which you 
 You can just walk east.
 
 >e
+The signers' ingress slides open as you go east.
+The signers' ingress slides shut quietly and efficiently.
 /^Esoteric Coteries
 
 The signers' ingress slides shut quietly and efficiently.

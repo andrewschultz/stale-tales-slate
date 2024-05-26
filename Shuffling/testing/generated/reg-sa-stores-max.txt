@@ -1,8 +1,6 @@
 ## reg-sa-stores-max.txt
 ## GENERATOR FILE: rbr-sa-stores.txt
 
-## maximum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
