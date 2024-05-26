@@ -12,7 +12,7 @@ are modified versions.
 You may have some problems with Glulx Text Effects.i7x / Glulx Text Effects - New.i7x naming and getting duplicate tables. If you are getting an already defined table, make sure other extensions all point to one of the two. This is the big hurdle to building. I may need to sort this out or update modules if there are new ones. I'm not sure about copyright issues and whether you can put others' Inform extensions in your repository.
 ]
 
-[Given that the main source is 680000+ bytes, the headers are 380000+ bytes, and the common files this shares with A Roiling Original and, in part, Tours Roust Torus are alomst 60000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some search markers repeatedly when I needed to change something in this game. Code is roughly arranged by region, then the order rooms appear in the region.
+[Given that the main source is 680000+ bytes, the headers are 380000+ bytes, and the common files this shares with A Roiling Original and, in part, Tours Roust Torus are almost 60000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some search markers repeatedly when I needed to change something in this game. Code is roughly arranged by region, then the order rooms appear in the region.
 
 Shuffling Mistakes.i7x includes all the repiles for great guesses. By great guesses I mean stuff that should definitely give a coherent response, because they are words. It is probably the most fun to look at.
 
@@ -128,10 +128,6 @@ include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
 
-include Rules-Based Testing by Andrew Schultz.
-
-include Shuffling Tests by Andrew Schultz. [must come after rules-based testing]
-
 include STS Common by Andrew Schultz.
 
 include First Word Retry by Andrew Schultz.
@@ -139,6 +135,10 @@ include First Word Retry by Andrew Schultz.
 include Bold Final Question Rows by Andrew Schultz.
 
 section test module(s) - not for release
+
+include Rules-Based Testing by Andrew Schultz.
+
+include Shuffling Tests by Andrew Schultz. [must come after rules-based testing]
 
 include STS Tests by Andrew Schultz
 
@@ -1584,7 +1584,6 @@ definition: a thing (called itm) is regspecial:
 check taking inventory:
 	if the first thing held by the player is nothing, say "Not very 'in.'" instead;
 [	say "Regspecial [list of regspecial enclosed by player].";
-	say "Warpable [list of warpable things enclosed by player].";]
 	say "Item time! [run paragraph on]";
 	if mrlp is Ordeal Loader or mrlp is stores, continue the action;
 	if the number of regspecial things enclosed by the player is 0:
@@ -6606,13 +6605,15 @@ the tortilla is an ingredient. understand "taco" as tortilla.
 to say tort-desc:
 	say "tortilla";
 	if tortilla is fungible:
-		say " ([if ingredients-in-tort is 0]nothing on it[else if ingredients-in-tort is 1]too plain to eat[else if ingredients-in-tort is 2]edible looking, but could be better[else if ingredients-in-tort is 3]almost perfect[else]BUG[end if])";
+		say " ([if ingredients-in-tort is 0]nothing on it[else if ingredients-in-tort is 1]still too plain to eat[else if ingredients-in-tort is 2]edible looking, but could be better[else if ingredients-in-tort is 3]almost perfect[else]BUG[end if])";
 
 does the player mean doing something with the tortilla: it is likely.
 
-rule for deciding whether all includes an ingredient:
+rule for deciding whether all includes an ingredient: [x y z and w are ingredients]
 	if current action is putting something on or current action is inserting into:
-		if second noun is tortilla, the rule succeeds;
+		if second noun is tortilla:
+			if noun is part of the tortilla, the rule fails;
+			the rule succeeds;
 
 check putting something on the tortilla (this is the tortilla-onto rule):
 	if tortilla is moot, do nothing instead;
@@ -6637,7 +6638,8 @@ to tort-add (x - a thing):
 	set the pronoun it to the tortilla;
 	if ingredients-in-tort is 4:
 		set the pronoun it to the taco;
-		now player has the taco.
+		now player has the taco;
+		alter the multiple object list to {};
 
 to say now-taco:
 	moot tortilla;
@@ -7514,7 +7516,7 @@ chapter oils
 
 the oils are a plural-named thing in Sacred Cedars.
 
-lgth of oils is 4. gpos of oils is 4. rpos of oils is 3. cert-text of oils is "-[d1][d1][d1]". rect-text of oils is "S[d1][d1][ast]L". rgtext of oils is "[rcn][rc][rc][rc]".
+lgth of oils is 4. gpos of oils is 4. rpos of oils is 1. cert-text of oils is "-[ast]I[ast]L[d1]". rect-text of oils is "S[d1][d1][ast]O". rgtext of oils is "[rcn][gc][gc][rc]".
 
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work. But you have a feeling you can just [b]POUR[r] then or [b]FILL CASK[r] when needed[else]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 
@@ -7524,11 +7526,11 @@ check taking oils: say "They'd go through your fingers[if player has cask]. You 
 
 rule for printing a locale paragraph about the oils: now oils are mentioned.
 
-section oils2 (dummy item)
+section oils2 (dummy item to be changed to SOIL)
 
 the oils2 are a privately-named thing.
 
-lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 1. cert-text of oils2 is "-[ast]I[ast]L[d1]". rect-text of oils2 is "S[d1][d1][ast]O". rgtext of oils2 is "[rcn][gc][gc][rc]".
+lgth of oils2 is 4. gpos of oils2 is 4. rpos of oils2 is 3. cert-text of oils2 is "-[d1][d1][d1]". rect-text of oils2 is "S[d1][d1][ast]L". rgtext of oils2 is "[rcn][rc][rc][rc]".
 
 chapter lois
 
@@ -7595,7 +7597,7 @@ check going east in Undesired Underside:
 		say "The [ingress] slides open as you go east.";
 		continue the action;
 	if keycard-clue-level is 3:
-		say "The [ingress] is closed. You may wish to check your inventory. You have what you need to get that stubborn [ingress] to open.";
+		say "The [ingress] is closed. You may wish to check your inventory. You have what you need to activate the friend finder and get that stubborn [ingress] to open.";
 	else if keycard-clue-level is 0:
 		say "The [ingress] is closed. It's really intimidating. You probably don't close to have the tools you need to pass it. At least not yet.";
 	else:
@@ -8463,6 +8465,9 @@ check switching on the termite emitter:
 book Esoteric Coteries
 
 Esoteric Coteries is a room in Metros. it is east of Undesired Underside. description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west.". roomnud of Esoteric Coteries is table of Esoteric Coteries nudges.
+
+check going west in Esoteric Coteries:
+	say "The [ingress] slides open as you go west.";
 
 to get-tulip:
 	now player has the lit up tulip;
@@ -10620,8 +10625,8 @@ this is the metros-goto rule:
 	if player is in Bassy Abyss, say "No going back now. You came here to defeat the [b-b]." instead; [end metros]
 
 this is the resort-goto rule:
-	if red bull burdell is in Potshot Hotspot, say "He's saying GET OUT just to be obnoxious and intimidating." instead;
-	if player is in Means Manse, say "But you want to NOT go anywhere. NOT take any exits." instead;
+	if red bull burdell is in Potshot Hotspot, say "He's saying [b]GET OUT[r] just to be obnoxious and intimidating. But perhaps his taunting is a clue to his vulnerability!" instead;
+	if player is in Means Manse, say "Just the opposite. Those exits are repelling you to do something else. Something related to your Means Manse." instead;
 	if red bull burdell is moot, say "But you beat Red Bull Burdell! Just go east!" instead;
 	say "Gotta [if player is in astral altars]go[else]keep going[end if] forward." instead;
 
@@ -10631,13 +10636,13 @@ carry out gotoing:
 	move player to noun;
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the straighten out go to rule) :
-	if word number 1 in the player's command is "x" or word number 1 in the player's command is "examine":
+	if action-to-be is the examining action:
 		if the player's command includes "livers" and player is in flesh shelf and number of glopmeats in flesh shelf > 1:
 			say "You will need to figure how to combine the livers. Until then, you will want to act on each individually.";
 			the rule succeeds;
 		say "[l-or-look-prompt].";
 		the rule succeeds;
-	if word number 1 in the player's command is "go" or word number 1 in the player's command is "gt":
+	if action-to-be is the gotothinging action:
 		say "That wasn't a room in the current region that you've visited. You can only go to rooms, not objects.";
 		the rule succeeds;
 	if the player's command matches the regular expression "^(hint|hints|info)\b", case insensitively:

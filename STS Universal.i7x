@@ -6,6 +6,24 @@ volume stuff all three games have
 
 include Punctuation Stripper by Andrew Schultz.
 
+include STS I6 hash stuff by Andrew Schultz.
+
+volume i6 based hashing
+
+book command hashes
+
+to decide which number is i6cmdhash:
+	(- i6hash(true) -)
+
+to decide which number is i6fwhash:
+	(- i6hash(false) -)
+
+to decide which number is i6cmdrough:
+	(- i6rough(true) -)
+
+to decide which number is i6fwrough:
+	(- i6rough(false) -)
+
 volume command hashing -- thanks to Uncle David
 
 part hash codes and values
