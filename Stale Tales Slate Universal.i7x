@@ -1,4 +1,4 @@
-Version 1/211107 of STS Universal by Andrew Schultz begins here.
+Version 1/211107 of Stale Tales Slate Universal by Andrew Schultz begins here.
 
 [this is a collection of hashes and trivial stubs common to all three Stale Tales Slate games. Stale Tales Slate Common captures the code that applies only to the two main games.]
 
@@ -6,7 +6,7 @@ volume stuff all three games have
 
 include Punctuation Stripper by Andrew Schultz.
 
-include STS I6 hash stuff by Andrew Schultz.
+include Stale Tales Slate I6 hash stuff by Andrew Schultz.
 
 volume i6 based hashing
 
@@ -161,4 +161,4 @@ carry out stsing:
 	say "[line break]Details for a specific game may be found with the [b]RELEASE[r] command.";
 	the rule succeeds;
 
-STS Universal ends here.
+Stale Tales Slate Universal ends here.

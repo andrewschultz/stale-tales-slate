@@ -128,7 +128,7 @@ include Shuffling Nudges by Andrew Schultz.
 
 include Shuffling Mistakes by Andrew Schultz.
 
-include STS Common by Andrew Schultz.
+include Stale Tales Slate Common by Andrew Schultz.
 
 include First Word Retry by Andrew Schultz.
 
@@ -140,7 +140,7 @@ include Rules-Based Testing by Andrew Schultz.
 
 include Shuffling Tests by Andrew Schultz. [must come after rules-based testing]
 
-include STS Tests by Andrew Schultz
+include Stale Tales Slate Tests by Andrew Schultz
 
 section beta testing module - not for release
 

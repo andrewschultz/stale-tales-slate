@@ -1,4 +1,4 @@
-Version 1/230717 of STS i6 hash stuff by Andrew Schultz begins here.
+Version 1/230717 of Stale Tales Slate I6 Hash Stuff by Andrew Schultz begins here.
 
 include (-
 
@@ -61,4 +61,4 @@ Array ors --> 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536
 
 -)
 
-STS i6 hash stuff ends here.
+Stale Tales Slate I6 Hash Stuff ends here.

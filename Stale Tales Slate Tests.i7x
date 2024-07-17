@@ -1,4 +1,4 @@
-Version 1/170918 of STS tests by Andrew Schultz begins here.
+Version 1/170918 of Stale Tales Slate tests by Andrew Schultz begins here.
 
 "Tracks various testing commands that can be used by Shuffling Around or A Roiling Original"
 
@@ -565,6 +565,6 @@ carry out jtm2ing:
 	now jumpthroughalt is true;
 	the rule succeeds;
 
-STS tests ends here.
+Stale Tales Slate tests ends here.
 
 ---- DOCUMENTATION ----

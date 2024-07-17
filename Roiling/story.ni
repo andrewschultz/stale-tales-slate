@@ -76,9 +76,7 @@ include Roiling Mistakes by Andrew Schultz.
 
 include Roiling Tables by Andrew Schultz.
 
-include Rules-Based Testing by Andrew Schultz.
-
-include STS Common by Andrew Schultz.
+include Stale Tales Slate Common by Andrew Schultz.
 
 include First Word Retry by Andrew Schultz.
 
@@ -92,7 +90,7 @@ section game specific testing includes - not for release
 
 include Roiling Tests by Andrew Schultz. [must come after rules-based testing]
 
-include STS tests by Andrew Schultz.
+include Stale Tales Slate tests by Andrew Schultz.
 
 section beta testing - not for release
 

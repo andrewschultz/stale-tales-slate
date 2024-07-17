@@ -20,7 +20,7 @@ include Tours Roust Torus Tests by Andrew Schultz.
 
 include Trivial Niceties by Andrew Schultz.
 
-include STS Universal by Andrew Schultz.
+include Stale Tales Slate Universal by Andrew Schultz.
 
 include Tours Roust Torus Tables by Andrew Schultz.
 

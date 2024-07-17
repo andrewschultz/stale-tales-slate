@@ -1,8 +1,8 @@
-Version 1/190507 of STS Common by Andrew Schultz begins here.
+Version 1/190507 of Stale Tales Slate Common by Andrew Schultz begins here.
 
 [this is a collection of functions common to A Roiling Original and Shuffling Around, two games from the Stale Tales Slate with common code.]
 
-include STS Universal by Andrew Schultz.
+include Stale Tales Slate Universal by Andrew Schultz.
 
 part trivial stubs
 
@@ -929,4 +929,4 @@ check going nowhere in hub-room:
 
 to say if-bush: say "[if hubs bush is in location of player]. The hubs bush that sprang up when you tried to escape still blocks your way out[end if]"
 
-STS Common ends here.
+Stale Tales Slate Common ends here.
