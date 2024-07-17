@@ -488,7 +488,7 @@ to decide whether the action is procedural: [aip]
 	if smelling, yes;
 	if listening, yes;
 	if xabing, yes;
-	if qbc_litany is table of no conversation: [we can goto something boring with no problen]
+	if qbc_litany is table of no conversation: [we can goto something boring with no problem]
 		if gotoing, yes;
 		if gotothinging, yes;
 	if xring, yes; [this is a debug command]
@@ -4396,7 +4396,7 @@ this is the others-hinting rule:
 		if So Great Storage is in Scape Space and player has droll dollar, try objhinting So Great Storage instead;
 	abide by the fruit-hint rule;
 	if player is in Rustic Citrus and ruts circuits are fungible, say "You can [b]EXAMINE[r] the ruts circuits to discover more things to change to fruits." instead;
-	say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 4], but there are other places where you can make fruits to give to Curtis[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[end if].";
+	say "Nothing specific left to do here[if curtis-level < 4], but there are other places where you can make fruits to give to Curtis[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[end if].";
 	the rule succeeds;
 
 to say fruits-to-clear: say "[if fruits-left-here is 1]is[else]are[end if] [fruits-left-here in words] fruit[if fruits-left-here > 1]s[end if]"
@@ -6584,7 +6584,8 @@ this is the sleep-presto rule:
 	if peels speel is reflexed, say "You already got the sleep you needed." instead;
 	pad-rec-q "sleep";
 	if player is in Hacks Shack:
-		if peels speel is in Hacks Shack, try fliptoing peels speel instead;
+		if peels speel is in Hacks Shack:
+			try fliptoing peels speel instead;
 		if peels speel is off-stage:
 			say "[if futon is off-stage]You may need sleep later, but not now. Besides, you have nowhere to sleep[else]Sleep on the futon? Wouldn't be fun to. Or necessary. Yet[end if]." instead;
 	if Hacks Shack is visited, say "Only the shack seems to be a safe place to sleep, here." instead;
@@ -7185,7 +7186,7 @@ understand "credits" as creditsing.
 
 carry out creditsing:
 	abide by the no-meta-in-convo rule;
-	say "I must direct credit to a large gofer forge of people who helped make sure this game wasn't mega (redacted).[paragraph break]Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [ghsite]." instead;
+	say "I must direct credit to a large gofer forge of people who helped make sure this game wasn't mega (redacted).[paragraph break]Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Toaster font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [ghsite]." instead;
 
 chapter abouting
 
@@ -8914,7 +8915,9 @@ to say prefigured-things:
 		repeat through regana of mrlp:
 			if the-from entry is pft:
 				say "[line break]To deal with [the the-from entry]: [b][right-word entry in upper case][r].";
-				continue the action;
+				now got-prefigured-table-entry is true;
+				break;
+		if got-prefigured-table-entry is true, next;
 		say "[line break]You remember you weren't quite ready to deal with [the pft] yet. I should have more later, and it's a BUG i didn't track this as well as I did.";
 
 to say other-areas:
@@ -19254,7 +19257,6 @@ for printing a locale paragraph about a reflexed puzanimal (called th) in Lamer 
 	if x > 0, say "Just seeing the animal[if X > 1]s[end if] you helped leaves a peaceful feeling--you have allies nearby against Elvira. You note [list of fungible reflexed puzanimals].";
 	if y > 0 and x > 0, say "[line break]";
 	if y > 0, say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of fungible reflexive puzanimals].";
-	now all puzanimals in Lamer Realm are mentioned;
 	now all puzanimals in Lamer Realm are mentioned;
 
 after choosing notable locale objects when player is in Lamer Realm (this is the group animals in lamer realm rule):

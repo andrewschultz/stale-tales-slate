@@ -10626,7 +10626,7 @@ this is the metros-goto rule:
 
 this is the resort-goto rule:
 	if red bull burdell is in Potshot Hotspot, say "He's saying [b]GET OUT[r] just to be obnoxious and intimidating. But perhaps his taunting is a clue to his vulnerability!" instead;
-	if player is in Means Manse, say "Just the opposite. Those exits are repelling you to do something else. Something related to your Means Manse." instead;
+	if player is in Means Manse, say "Go somewhere? Just the opposite. Those exits are repelling you to do stay in the Means Manse. To make it your own." instead;
 	if red bull burdell is moot, say "But you beat Red Bull Burdell! Just go east!" instead;
 	say "Gotta [if player is in astral altars]go[else]keep going[end if] forward." instead;
 
@@ -10636,7 +10636,7 @@ carry out gotoing:
 	move player to noun;
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the straighten out go to rule) :
-	if action-to-be is the examining action:
+	if action-to-be is the examining action or action-to-be is the xrooming action:
 		if the player's command includes "livers" and player is in flesh shelf and number of glopmeats in flesh shelf > 1:
 			say "You will need to figure how to combine the livers. Until then, you will want to act on each individually.";
 			the rule succeeds;

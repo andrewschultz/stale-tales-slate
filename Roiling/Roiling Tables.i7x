@@ -2489,15 +2489,15 @@ table of presto unmatched topic responses
 askee	dialogue-text
 lamb	"It's a baaaaad conversationalist."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
-Lev Tzoma	"[left-here].'"
-Zo Mavelt	"[left-here].'"
-Tom Avlez	"[left-here].'"
+Lev Tzoma	"'[left-here].'"
+Zo Mavelt	"'[left-here].'"
+Tom Avlez	"'[left-here].'"
 hogs	"They snort and laugh as if you are beneath speaking to or even wasting harsh words at."
 bored yak	"The yak, not being very yakety, does not give small talk back."
 Leo	"[lrduh]"
 Rand	"[lrduh]"
 
-to say left-here: say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
+to say left-here: say "I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
 
 to say lrduh: say "'I dunno much about that. I like do stuff not think stuff.'";
 
@@ -3448,7 +3448,7 @@ alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the
 starch charts	true	false	false	false	"Starch is calorically and consonantally (if that's a word) heavy. This must help."
 Clack Ops Locs Pack	true	false	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
 be troo e robot	true	false	false	false	"You wonder if you need a step back to take a new look at the ambiguous clues."
-Im Le Cop polemic	true	false	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
+Im Le Cop polemic	true	false	false	false	"Well! You can probably figure what the undefined color is, and maybe reading the polemic will provide more clues."
 bub dude egg	true	false	false	false	"Only one color for sure? And you don't even get any clues from [bub dude egg]? Well, perhaps there is some detective work here."
 USB	true	false	false	false	"Hm, [b]USB[r] seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both [b]DRIVE E[r] and [b]E DRIVE[r], you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
