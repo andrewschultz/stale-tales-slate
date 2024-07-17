@@ -387,9 +387,9 @@ to decide whether (nt - a table name) is hash-found:
 	decide no;
 
 to say reject:
-	now fullcmd is the hash of the player's command;
-	now firstword is the hash of word number 1 in the player's command;
-	d "The hash of the command is [fullcmd]. The hash of word #1 is [firstword].";
+	now fullcmd is the i6cmdhash;
+	now firstword is the i6fwhash;
+	d "The command hash is [fullcmd]. The first word's hash is [firstword].";
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
 			if firstword is the fullhash entry or fullcmd is the fullhash entry:
@@ -415,8 +415,8 @@ to say reject:
 	check-z-warn;
 
 to decide whether found-misspelled-anagram:
-	let quickcmd be the rough-hash of the player's command;
-	let quickfirstword be the rough-hash of word number 1 in the player's command;
+	let quickcmd be i6cmdrough;
+	let quickfirstword be i6fwrough;
 	d "[quickcmd] / [quickfirstword] for binary hash.";
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
@@ -1583,7 +1583,7 @@ definition: a thing (called itm) is regspecial:
 
 check taking inventory:
 	if the first thing held by the player is nothing, say "Not very 'in.'" instead;
-[	say "Regspecial [list of regspecial enclosed by player].";
+	say "Regspecial [list of regspecial enclosed by player].";
 	say "Item time! [run paragraph on]";
 	if mrlp is Ordeal Loader or mrlp is stores, continue the action;
 	if the number of regspecial things enclosed by the player is 0:
@@ -9413,8 +9413,8 @@ this is the writing-warn rule:
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error: [verb guess]
 	abide by the writing-warn rule;
-	let myh be the hash of the player's command;
-	let myh2 be the hash of word number 1 in the player's command;
+	let myh be i6cmdhash;
+	let myh2 be i6fwhash;
 	repeat through regana of mrlp:	[this code vacuums up the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
 		if myh is fullhash entry or myh2 is fullhash entry:
 			[d "[myh] [the-from entry] [the-to entry] try.";]
@@ -9482,8 +9482,7 @@ long-word-warned is a truth state that varies. long-word-warned is false.
 
 Rule for printing a parser error when the latest parser error is didn't understand error:
 	abide by the writing-warn rule;
-	[let hop be hash of the player's command;
-	d "[hop] = [the player's command].";]
+	[d "[l6cmdhash] = [the player's command].";]
 	if long-word-warned is false:
 		if the player's command matches the regular expression "^<a-z>{9}", case insensitively:
 			now long-word-warned is true;
@@ -9654,7 +9653,7 @@ this is the ordeal-loader-parse rule:
 		if deer is in location of player and the player's command matches the regular expression "\bdeer\b":
 			say "[one of]The deer is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
 			reject the player's command;
-	else if player is in notices section and gateman is in notices section and cabinet-flip-try is false and hash of the player's command is 384428789:
+	else if player is in notices section and gateman is in notices section and cabinet-flip-try is false and i6cmdhash is 384428789:
 		say "'Kind of you to try to help the cabinet, but its wounds are too recent,' says Nat Egam.";
 		now cabinet-flip-try is true;
 

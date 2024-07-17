@@ -1357,18 +1357,14 @@ to say spacies of (INTE - indexed text):
 
 chapter transcripting
 
-[main code is in Trivial Niceties]
-
 when play begins (this is the intro-hashes rule):
 	let wnum be 0;
 	repeat with QQ running through regions:
 		if QQ is not demo dome:
 			repeat through regana of QQ:
 				if the-from entry is uncluing:
+					d "[the-from entry] could be flippable.";
 					now the-from entry is flippable;
-				if there is no fullhash entry or fullhash entry is 0:
-					now fullhash entry is the hash of the printed name of the-from entry;
-					d "full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [fullhash entry].[line break]";
 
 chapter undo allows
 
@@ -3130,7 +3126,6 @@ check entering a portal (this is the first portal entry rule):
 	let try-recover be false;
 	if noun is never-entered:
 		d "First visit to [grn]. Can't try recovering items yet.";
-		add-errs grn;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "Forcing Towers repositioning!";
 		move player to last-loc of grn, without printing a room description;
@@ -3142,23 +3137,6 @@ check entering a portal (this is the first portal entry rule):
 	if noun is ever-entered, recover-items;
 	now noun is ever-entered;
 	the rule succeeds;
-
-to add-errs (reg - a region):
-	scan-hash-errors regnud of reg;
-	repeat with X running through rooms in reg:
-		scan-hash-errors roomnud of X;
-
-to scan-hash-errors (tn - a table name):
-	repeat through tn:
-		if there is a this-item entry and this-item entry is a room, d "[this-item entry] wrongly listed as a room in [tn], [this-cmd entry].";
-		if there is no this-reg entry or this-reg entry is a region:
-			if there is no hashval entry or hashval entry is 0:
-				let XYZ be the hash of this-cmd entry;
-				now hashval entry is XYZ;
-				d "Making hashval entry [XYZ] for [this-cmd entry] in [tn].[line break]";
-			else:
-				continue the action;
-				[d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";]
 
 to recover-items:
 	if debug-state is true:
@@ -3307,9 +3285,9 @@ slider-specter is a truth state that varies.
 to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
 		process the show blues rule;
-	now cmdhash is the hash of the player's command;
-	now firstwordhash is the hash of word number 1 in the player's command;
-	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
+	now cmdhash is the i6cmdhash;
+	now firstwordhash is i6fwhash;
+	d "The full command hash is [cmdhash]. The first word's hash is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
 		if cmdhash is the fullhash entry or firstwordhash is the fullhash entry:
 			if the-to entry is not the-from entry and the-to entry is final-flipped and the-to entry is fungible:
@@ -3388,9 +3366,9 @@ to say reject:
 		say "There's nothing too tricky to do in the Demo Dome. You can [b]THINK[r] or request the [b]SCORE[r] to see if there's anything you missed. [b]VERBS[r] has limited utility, since there are no puzzles here.";
 		continue the action;
 	if player is in Tenfold Teflond Den Loft and yapper is not in Tenfold Teflond Den Loft:
-		if hash of the player's command is 335153504:
+		if cmdhash is 335153504:
 			do nothing;
-		else if hash of the player's command is 291640279 and pins are reflexive:
+		else if cmdhash is 291640279 and pins are reflexive:
 			do nothing;
 		else:
 			say "The only thing required here is to muck with the dialer right.";
@@ -3400,8 +3378,8 @@ to say reject:
 	if Elmo is fungible, process the sign-imminent rule;
 
 to decide whether found-misspelled-anagram:
-	let quickcmd be the rough-hash of the player's command;
-	let quickfirstword be the rough-hash of word number 1 in the player's command;
+	let quickcmd be i6cmdrough;
+	let quickfirstword be i6fwrough;
 	d "[quickcmd] / [quickfirstword] for binary hash.";
 	repeat through regana of mrlp:
 		if the-from entry is fungible:
@@ -3756,7 +3734,6 @@ when play begins (this is the basic initialization rule):
 		now poss-score of Q is max-score of Q;
 	move Edictal Citadel backdrop to all ominous rooms;
 	move the curst palace backdrop to all towery rooms;
-	add-errs Ordeal Reload;
 	let convo-holes be false;
 	let temp be 0;
 	if debug-state is true:
@@ -7499,7 +7476,7 @@ check fliptoing (this is the check off preconditions before flipping rule):
 		if noun is the-to entry and the-from entry is cromulent:
 			if the-from entry is reflexed and noun is not gast-affected, say "[reject]" instead;
 			if there is a pre-rule entry and flip-spill-flag is false:
-				if in-jump-test is true or the hash of the player's command is fullhash entry or hash of word number 1 in the player's command is fullhash entry:
+				if in-jump-test is true or i6cmdhash is fullhash entry or i6fwhash is fullhash entry:
 					abide by the pre-rule entry;
 
 carry out fliptoing (this is the main fliptoing rule):

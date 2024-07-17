@@ -16,6 +16,21 @@ when play begins (this is the debug by default when debugging rule) :
 	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
 	now extra-not-taxer is true; [see above]
 
+section hash checks
+
+when play begins:
+	let errs be 0;
+	repeat with QQ running through regions:
+		if QQ is not demo dome:
+			repeat through regana of QQ:
+				if there is no fullhash entry or fullhash entry is 0:
+					now fullhash entry is the hash of the printed name of the-from entry;
+					say "Full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [fullhash entry].[line break]";
+					increment errs;
+	if errs > 0:
+		say "You need to fill in [errs] hash[if errs > 1]es[end if].";
+
+
 section monty rules
 
 after fliptoing (this is the monty after flipping rule):
