@@ -7,16 +7,13 @@
 
 # note to self: MBB 1 = Balmer, MBB 2 = Mr Beal
 
-files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,reg-roi-troves-nudmis.txt,reg-roi-troves-slider.txt,reg-roi-troves-hints.txt,reg-roi-troves-verbs.txt
-~	max	t0
-~	mina	t1
-~	minb	t2
-~	nudges,nud,nu,mis	t3
-~	sli	t4
-~	slider	t4
-~	hints,hin,spoi	t5
-~	verbs	t6
-#~	pad	t5
+file=reg-roi-troves-max.txt,max,maximum walkthrough
+file=reg-roi-troves-min-1.txt,mina,minimum walkthrough with first alternate
+file=reg-roi-troves-min-2.txt,minb,minimum walkthrough with second alternate
+file=reg-roi-troves-nudmis.txt,nudges/nud/nu/mis,walkthrough with all nudges
+file=reg-roi-troves-slider.txt,sli/slider,walkthrough with slider readings
+file=reg-roi-troves-hints.txt,hints/hin/spoi/pad,walkthrough with hints
+file=reg-roi-troves-verbs.txt,verbs,walkthrough testing verbs
 
 }}MAX=30
 }}CURMAX=30
@@ -30,8 +27,6 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 ALSO-IGNORE:mbb *,t,c
 
 ## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

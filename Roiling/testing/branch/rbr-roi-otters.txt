@@ -5,15 +5,13 @@
 #--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,reg-roi-otters-altpath.txt,reg-roi-otters-slider.txt,reg-roi-otters-hints.txt,reg-roi-otters-verbs.txt
-
-~	max	t0
-~	min	t1
-~	nudmis,nudges,nud,nu,mis	t2
-~	alt	t3
-~	sli	t4
-~	hints,hin,spoi	t5
-~	verbs	t6
+file=reg-roi-otters-max.txt,max,maximum walkthrough
+file=reg-roi-otters-min.txt,min,minimum walkthrough
+file=reg-roi-otters-nudmis.txt,nudmis/nudges/nud/nu/mis,walkthrough with all nudges
+file=reg-roi-otters-altpath.txt,alt,alternate path
+file=reg-roi-otters-slider.txt,sli,walkthrough with slider readings
+file=reg-roi-otters-hints.txt,hints/hin/spoi,walkthrough with hints
+file=reg-roi-otters-verbs.txt,verbs,walkthrough testing verbs
 
 }}MAX=38
 }}CURMAX=38
@@ -26,8 +24,6 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ALSO-IGNORE:t
 
 ## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## alternate path	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

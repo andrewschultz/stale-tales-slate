@@ -14,15 +14,13 @@
 # if we need to add another fruit, we will need to re-check the hint commands once we have returned to Curtis and he says "Nice going."
 # Then remember to CURMIN++ there.
 
-files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,reg-roi-others-slider.txt,reg-roi-others-hints.txt,reg-roi-others-spoiler.txt,reg-roi-others-verbs.txt
-
-~	max	t0
-~	min	t1
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin	t4
-~	spoi,spo	t5
-~	verbs	verbs
+file=reg-roi-others-max.txt,max,maximum walkthrough
+file=reg-roi-others-min.txt,min,minimum walkthrough
+file=reg-roi-others-nudmis.txt,nudges/nud/nu/mis,walkthrough with all nudges
+file=reg-roi-others-slider.txt,sli,walkthrough with slider readings
+file=reg-roi-others-hints.txt,hints/hin,walkthrough with hints
+file=reg-roi-others-spoiler.txt,spoi/spo,walkthrough with arugula spoiler
+file=reg-roi-others-verbs.txt,verbs,walkthrough testing verbs
 
 ALSO-IGNORE:t,c
 
@@ -36,8 +34,6 @@ ALSO-IGNORE:t,c
 }$SCOVERYLAST=You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 ## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough with arugula spoiler	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -1451,7 +1447,7 @@ Your score has just gone up by one point.
 @hin
 You can go back to Curtis for another reward.
 Falling through to check the fruit we would've hinted for test scripts...
-Nothing specific to do here, but there are other places where you can make fruits to give to Curtis.
+Nothing specific left to do here, but there are other places where you can make fruits to give to Curtis.
 
 >score
 }}SCORE++
@@ -2479,7 +2475,7 @@ Your score has just gone up by one point.
 {$SCOS}
 >cripes
 Your score has just gone up by one point.
-{--hin}Nothing specific left to barter for here, though you will want to trade that dollar.
+{--hin}Nothing specific left to do here, though you will want to trade that dollar.
 >score
 }}SCORE++
 }}CURMIN++

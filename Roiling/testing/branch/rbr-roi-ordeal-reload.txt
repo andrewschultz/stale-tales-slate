@@ -5,19 +5,16 @@
 #--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi-ordeal-reload-max.txt,reg-roi-ordeal-reload-min.txt,reg-roi-ordeal-reload-nudmis.txt,reg-roi-ordeal-reload-slider.txt,reg-roi-ordeal-reload-hints.txt,reg-roi-ordeal-reload-verbs.txt
-~	max	t0
-~	min	t1
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin	t4
-~	verbs	t5
+file=reg-roi-ordeal-reload-max.txt,max,maximum walkthrough
+file=reg-roi-ordeal-reload-min.txt,min,minimum walkthrough
+file=reg-roi-ordeal-reload-nudmis.txt,nudges/nud/nu/mis,walkthrough with all nudges and mistakes
+file=reg-roi-ordeal-reload-slider.txt,sli,slider testing
+file=reg-roi-ordeal-reload-hints.txt,hints/hin,walkthrough with hints
+file=reg-roi-ordeal-reload-verbs.txt,verbs,walkthrough testing verbs
 
 ALSO-IGNORE:c,t
 
 ## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## slider testing	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

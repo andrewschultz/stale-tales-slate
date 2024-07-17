@@ -1,8 +1,4 @@
-#~	pad	t5
-
 ## reg-roi-troves-nudmis.txt
-
-## walkthrough with all nudges
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

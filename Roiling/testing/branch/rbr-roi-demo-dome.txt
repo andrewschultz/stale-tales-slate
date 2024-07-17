@@ -7,14 +7,10 @@
 
 # test cases are a bit squashed: MAX tries all the odd verbs, but NUD tried the nudges
 
-files=reg-roi-demo-dome-max.txt,reg-roi-demo-dome-nudmis.txt
-
-~	max,verbs	max
-~	nudges,nud,nu,mis	nudmis
+file=reg-roi-demo-dome-max.txt,max/verbs,maximum walkthrough
+file=reg-roi-demo-dome-nudmis.txt,nudges/nud/nu/mis,walkthrough with nudges
 
 ## *FILE
-
-TSV:## maximum walkthrough	## walkthrough with nudges
 
 ###############################
 #

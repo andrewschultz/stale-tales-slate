@@ -7,15 +7,13 @@
 
 # stylistic notes: spechelp sections should be right before @!minh,mini or I may get false-positive errors
 
-files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,reg-roi-towers-nudmis.txt,reg-roi-towers-slider.txt,reg-roi-towers-hints.txt,reg-roi-towers-verbs.txt
-
-~	max	max
-~	h,minh	min-h
-~	i,mini	min-i
-~	nudges,nud,nu,mis	nudmis
-~	sli	slider
-~	hints,hin,spoi	hints
-~	verbs	verbs
+file=reg-roi-towers-max.txt,max,maximum walkthrough
+file=reg-roi-towers-min-h.txt,minh,minimum walkthrough h
+file=reg-roi-towers-min-i.txt,mini,minimum walkthrough i
+file=reg-roi-towers-nudmis.txt,nudges/nud/nu/mis,walkthrough with all nudges
+file=reg-roi-towers-slider.txt,sli,walkthrough with slider readings
+file=reg-roi-towers-hints.txt,hints/hin/spoi,walkthrough with hints
+file=reg-roi-towers-verbs.txt,verbs,walkthrough testing verbs
 
 }}MAX=57
 }}CURMAX=57
@@ -29,8 +27,6 @@ ALSO-IGNORE:cheat,t,c
 
 ## *FILE
 ## *FORK
-
-TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

@@ -1,7 +1,5 @@
 ## reg-roi-demo-dome-max.txt
 
-## maximum walkthrough
-
 #
 #reg-roi-demo-dome.txt
 #

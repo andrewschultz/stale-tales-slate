@@ -1,7 +1,5 @@
 ## reg-roi-others-hints.txt
 
-## walkthrough with hints
-
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -246,7 +244,7 @@ Your score has just gone up by one point.
 
 You can go back to Curtis for another reward.
 Falling through to check the fruit we would've hinted for test scripts...
-Nothing specific to do here, but there are other places where you can make fruits to give to Curtis.
+Nothing specific left to do here, but there are other places where you can make fruits to give to Curtis.
 
 >score
 You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
@@ -395,7 +393,7 @@ DEBUG INFO: prices precis hinting.
 You have 38 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
 >cripes
 Your score has just gone up by one point.
-Nothing specific left to barter for here, though you will want to trade that dollar.
+Nothing specific left to do here, though you will want to trade that dollar.
 >score
 You have 39 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
 

@@ -1,8 +1,4 @@
-#~	pad	t5
-
 ## reg-roi-troves-min-2.txt
-
-## minimum walkthrough with second alternate
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

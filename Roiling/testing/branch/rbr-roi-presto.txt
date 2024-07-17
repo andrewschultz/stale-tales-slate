@@ -7,14 +7,12 @@
 
 ################need to flip drive etc. AFTER max
 
-files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,reg-roi-presto-slider.txt,reg-roi-presto-hints.txt,reg-roi-presto-verbs.txt
-
-~	min	min
-~	max	max
-~	nudges,nud,nu,mis	nudmis
-~	sli	slider
-~	hints,hin,spoi	hints
-~	verbs	verbs
+file=reg-roi-presto-max.txt,max,maximum walkthrough
+file=reg-roi-presto-min.txt,min,minimum walkthrough
+file=reg-roi-presto-nudmis.txt,nudges/nud/nu/mis,walkthrough with all nudges
+file=reg-roi-presto-slider.txt,sli,walkthrough with slider readings
+file=reg-roi-presto-hints.txt,hints/hin/spoi,walkthrough with hints
+file=reg-roi-presto-verbs.txt,verbs,walkthrough testing verbs
 
 }}MAX=41
 }}CURMAX=41
@@ -28,8 +26,6 @@ files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,re
 ALSO-IGNORE:t
 
 ## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings	## walkthrough with hints	## walkthrough testing verbs
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -3075,8 +3071,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs P
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
 \\
 #ttc-table-of-presto-scannotes-im-le-cop-polemic
->scan i'm le cop polemic
-Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues.
+>scan polemic
+Well! You can probably figure what the undefined color is, and maybe reading the polemic will provide more clues.
 \\
 #ttc-table-of-presto-scannotes-drive-e
 >scan drive e

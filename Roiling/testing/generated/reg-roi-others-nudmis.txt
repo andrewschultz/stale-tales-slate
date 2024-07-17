@@ -1,7 +1,5 @@
 ## reg-roi-others-nudmis.txt
 
-## walkthrough with all nudges
-
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py

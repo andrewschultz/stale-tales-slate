@@ -1,7 +1,5 @@
 ## reg-roi-demo-dome-nudmis.txt
 
-## walkthrough with nudges
-
 #
 #reg-roi-demo-dome.txt
 #
