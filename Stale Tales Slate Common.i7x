@@ -28,9 +28,15 @@ to say also-q: say "[if no-q-u]. Also, even if you could do anything, you'd need
 
 z-warn is a truth state that varies.
 
+to decide whether z-in-command:
+	[if the player's command matches the text "z", yes]
+	[the above is a bit slower but more readable. If the below ever has a problem, I'll go back to the above.]
+	if i6cmdrough >= 33554432, yes;
+	no;
+
 to check-z-warn:
-	if z-warn is false and the player's command matches the regular expression "z":
-		ital-say-lb "also, as a trivial point, no point-gaining commands in the game contain the letter Z. Yes, I'm disappointed in myself too, what with my last name ending in Z and all.";
+	if z-warn is false and z-in-command:
+		ital-say-lb "also, as a trivial point, no point-gaining commands in [this-game] contain the letter Z. I'm a bit bummed by this, what with my last name ending in Z and all, but that may mean less confusion for you.";
 		now z-warn is true;
 
 part game-dependent variables and super-stubs
@@ -227,6 +233,7 @@ to min-and-q:
 	d "min-and-q codepath: maybe adding an additional point for especially neat actions";
 
 to reg-inc:
+	increment the turn count;
 	reg-inc-q;
 	score-notify;
 
