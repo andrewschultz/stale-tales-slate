@@ -899,7 +899,7 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "So close! Just one letter off. Or one too much. You [if score > 0]probably know[else]can maybe guess[end if] which one.";
+	say "So close! Just one letter off. Or one too much. You [if score > 0]probably know[else]can maybe guess[end if] which specific letter.";
 	the rule succeeds;
 
 volume endgame
@@ -1066,14 +1066,6 @@ rule for printing a parser error when the latest parser error is the i beg your 
 	say "[umm-urr].";
 	now murmur-yet is true;
 
-cmdhash is a number that varies.
-
-firstwordhash is a number that varies.
-
-rufhash is a number that varies.
-
-ruffirst is a number that varies.
-
 to decide whether tat-cheat-regular:
 	if the remainder after dividing tats-stat by 2 is 1, yes;
 	no;
@@ -1133,20 +1125,16 @@ to decide which number is onehash:
 	decide on sts-hash of location of player.
 
 to say reject:
-	now cmdhash is the hash of the player's command;
-	now rufhash is the rough-hash of the player's command;
-	now firstwordhash is the hash of word number 1 in the player's command;
-	now ruffirst is the rough-hash of word number 1 in the player's command;
-	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash]. Location hash is [sts-hash of location of player].[line break]";
-	d "The rough-hash of the command is [rufhash]. Hash of word 1 is [ruffirst].[line break]";
-	if cmdhash is onehash or firstwordhash is onehash:
+	d "The hash of the command is [i6cmdhash]. Hash of word 1 is [i6fwhash]. Location hash is [sts-hash of location of player].[line break]";
+	d "The rough-hash of the command is [i6cmdrough]. Hash of word 1 is [i6fwrough].[line break]";
+	if i6cmdhash is onehash or i6fwhash is onehash:
 		if location is solved:
 			say "You already figured what to do here.";
 		else:
 			say "[if tats-stat > 0]The stat tats seem to halfway make something, but no[else]You felt like whatever you just did or thought wasn't enough. Somehow you have to do more[end if].";
 		check-for-spaces;
 		continue the action;
-	if cmdhash is dubhash or firstwordhash is dubhash:
+	if i6cmdhash is dubhash or i6fwhash is dubhash:
 		if location is solved:
 			say "You already figured what to do here.";
 		else if tats-stat is 0:
@@ -1156,7 +1144,7 @@ to say reject:
 		check-for-spaces;
 		continue the action;
 	repeat through table of nudge hashes:
-		if cmd-hash entry is cmdhash or cmd-hash entry is firstwordhash:
+		if cmd-hash entry is i6cmdhash or cmd-hash entry is i6fwhash:
 			if there is a cmd-loc entry:
 				if location of player is not cmd-loc entry, next;
 				if location of player is solved, next;
@@ -1167,7 +1155,7 @@ to say reject:
 			check-for-spaces;
 			continue the action;
 	repeat through table of rough hashes:
-		if cmd-hash entry is ruffirst or cmd-hash entry is ruffirst:
+		if cmd-hash entry is i6fwrough or cmd-hash entry is i6fwrough:
 			if there is a cmd-loc entry:
 				if location of player is not cmd-loc entry, next;
 				if location of player is solved, next;
@@ -1177,16 +1165,16 @@ to say reject:
 			say "[nudge-text entry][line break]";
 			check-for-spaces;
 			continue the action;
-	if rufhash is uniq-hash of location of player or ruffirst is uniq-hash of location of player:
+	if i6cmdrough is uniq-hash of location of player or i6fwrough is uniq-hash of location of player:
 		say "You sense a small, weird instability. You feel as though you're slightly out of proportion, even if you're very much on the right track. Perhaps you need to check your thoughts and the area name.";
 		continue the action;
 	let itmhash be 0;
 	repeat with itm running through flippables in location of player:
-		now itmhash is the hash of the printed name of itm;
-		if cmdhash is itmhash / 2:
+		now itmhash is sts-hash of itm;
+		if i6cmdhash is itmhash / 2:
 			say "No, no half-measures here.";
 			continue the action;
-		else if cmdhash is itmhash:
+		else if i6cmdhash is itmhash:
 			if tats-stat > 0:
 				now last-clue-thing is itm;
 				say "[how-many-right of the player's command]";
@@ -1194,7 +1182,7 @@ to say reject:
 				say "Hmm, [the itm] seem[if itm is not plural-named]s[end if] to waver a bit. You must be on the right track to change [the itm], here.";
 			check-for-spaces;
 			continue the action;
-		if rufhash is uniq-hash of itm or ruffirst is uniq-hash of itm:
+		if i6cmdrough is uniq-hash of itm or i6fwrough is uniq-hash of itm:
 			say "Man! You had all the right letters for [the itm], you think, but they didn't come together.";
 			continue the action;
 	say "[this-game] doesn't have a deep bench of standard verbs, though in each area of the torus, you need to find one specific word (no spaces) to do or say or think. For a general list of verbs, type [b]VERBS[r].";
