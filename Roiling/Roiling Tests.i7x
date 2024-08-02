@@ -16,21 +16,6 @@ when play begins (this is the debug by default when debugging rule) :
 	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
 	now extra-not-taxer is true; [see above]
 
-section hash checks
-
-when play begins:
-	let errs be 0;
-	repeat with QQ running through regions:
-		if QQ is not demo dome:
-			repeat through regana of QQ:
-				if there is no fullhash entry or fullhash entry is 0:
-					now fullhash entry is the hash of the printed name of the-from entry;
-					say "Full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [fullhash entry].[line break]";
-					increment errs;
-	if errs > 0:
-		say "You need to fill in [errs] hash[if errs > 1]es[end if].";
-
-
 section monty rules
 
 after fliptoing (this is the monty after flipping rule):
@@ -923,36 +908,6 @@ carry out sccing:
 	else:
 		say "A-text/b-text complete!";
 	the rule succeeds;
-
-chapter hashchecking
-
-[* HASHCHECK makes sure that hashes check okay]
-
-hashchecking is an action out of world.
-
-understand the command "hashcheck" as something new.
-
-understand "hashcheck" as hashchecking.
-
-carry out hashchecking:
-	let my-bool be false;
-	let this-hash be 0;
-	repeat with QQ running through regions:
-		if QQ is not demo dome:
-			repeat through regana of QQ:
-				now this-hash is the hash of right-word entry;
-				 if fullhash entry is not this-hash:
-					say "Bad flip hash for [the-from entry]/[right-word entry]: [fullhash entry] should be [this-hash].";
-					now my-bool is true;
-	if my-bool is false:
-		say "Hooray! No bad hashes in tables of anagrams.";
-	now my-bool is false;
-	repeat through regnud of mrlp:
-		now this-hash is the hash of this-cmd entry;
-		if this-hash is not hashval entry:
-			say "Bad nudge hash for [this-cmd entry]: [hashval entry] should be [this-hash].";
-	if my-bool is false:
-		say "Hooray! No bad hashes in table of nudges.";
 
 chapter orfing
 
