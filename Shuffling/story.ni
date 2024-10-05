@@ -2572,7 +2572,9 @@ carry out cring:
 	now kibitz-on-scan is false;
 	say "You get to scanning, twiddling from [if gadget is cert]certify to rectify[else]rectify to certify[end if] and back.";
 	now first-scan-okay is false;
+	say "[the noun] [first-scan-okay].";
 	try scaning the noun;
+	say "[the noun] [first-scan-okay].";
 	if first-scan-okay is false, say "You decide against [if gadget is cert]rectifying[else]certifying[end if] as well, since [if gadget is rect]rectifying[else]certifying[end if] didn't turn up anything just now." instead;
 	gadflip;
 	try scaning the noun;
@@ -3487,10 +3489,11 @@ to decide whether both-thickets-animals:
 	if goat is fungible and deer is fungible, yes;
 	no;
 
-for printing a locale paragraph about an animal in Thickest Thickets:
-	say "The [list of all npcish animals in Thickest Thickets] [if both-thickets-animals]are[else]is[end if] half-sleeping here. [if both-thickets-animals]They're[else]It is[end if] probably best left that way.";
-	now deer is mentioned;
-	now goat is mentioned;
+for printing a locale paragraph about an animal (called an) in Thickest Thickets:
+	if an is not mentioned:
+		say "The [list of all npcish animals in Thickest Thickets] [if both-thickets-animals]are[else]is[end if] half-sleeping here. [if both-thickets-animals]They're[else]It is[end if] probably best left that way.";
+		now deer is mentioned;
+		now goat is mentioned;
 	the rule succeeds;
 
 check waking an animal in thickest thickets: say "If [the noun] is having a bad dream, you'll probably get kicked at. If you interrupt a good dream, you'll probably get kicked at." instead;
@@ -3791,7 +3794,7 @@ to read-gadget:
 	else if player is in moor:
 		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][else][rcn][bc][bc][gc][end if].";
 	else if player is in Means Manse:
-		say "When you wave your gadget at the exits, it shows [if gadget is cert][gcn][gc][gc][rc][rc][else][gcn][bc][bc][rc][bc][end if]. Elsewhere, it blinks a bit. [if gadget is cert]In particular, the first and fourth and fifth entries are unstable. Maybe there's more than one way to do things[else]There's all sorts of blinking. Hopefully, that means there's more than one way to achieve closure[end if].";
+		say "[ok-scan]When you wave your gadget at the exits, it shows [if gadget is cert][gcn][gc][gc][rc][rc][else][gcn][bc][bc][rc][bc][end if]. Elsewhere, it blinks a bit. [if gadget is cert]In particular, the first and fourth and fifth entries are unstable. Maybe there's more than one way to do things[else]There's all sorts of blinking. Hopefully, that means there's more than one way to achieve closure[end if].";
 	else:
 		say "[bug-report]";
 
@@ -8038,7 +8041,7 @@ check going south in Obtains Boastin Bastion when bastion-evac is true:
 
 chapter poses posse
 
-the poses posse are plural-named auxiliary scenery in Obtains Boastin Bastion. understand "poso" and "pose posse" as poses posse.
+the poses posse are plural-named scenery in Obtains Boastin Bastion. understand "poso" and "pose posse" as poses posse.
 
 Include (-
 	has transparent animate
@@ -9819,6 +9822,8 @@ check scaning location (this is the air scan rule):
 		if player has gadget, try examining gadget instead;
 
 before scaning (this is the take gadget if you can rule):
+	if gadget is moot:
+		say "But you got rid of the gadget! You'll have to restrt to get it again." instead;
 	if player is in Potshot Hotspot and burdell is in Potshot Hotspot: [yeah, could be its own rule, but I'd have to shuffle the rules and blah blah blah]
 		if show hows tag is not part of the gadget, say "You disabled it, remember?" instead;
 		if gadget is in Potshot Hotspot, say "You can't reach the gadget, but you remember six reds, then [bcn][rc][gc][bc][bc][bc]." instead;
@@ -9828,7 +9833,8 @@ before scaning (this is the take gadget if you can rule):
 		if gadget is fungible:
 			say "(Taking the gadget first)";
 			try taking the gadget;
-		if player does not have gadget, say "Oops, you should've automatically taken the gadget. This is a bug." instead;
+		if player does not have gadget:
+			if player is not in Notices Section, say "Oops, you should've automatically taken, or been given, the gadget. This is a bug I'm not sure how to resolve. Please let me know how it happened, if you can: [email] or [ghsite]." instead;
 	if player has tagged gadget and gadget is broken, say "You broke it when you cut off the tag." instead;
 
 rgb-yet is a truth state that varies.
@@ -9977,7 +9983,11 @@ this is the basic scaning item checks rule: [ this is for things that can cross 
 			say "Hm, the warts are registering. [no line break]";
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
+[	if noun is x ites exits and exits-scan-warn is false:
+		say "You got this one. It's the final puzzle. It'd be nice to solve it on your own, but there's no penalty for doing so.";]
 	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [the noun] around[if noun is cabinet] any more[end if]." instead;
+
+exits-scan-warn is a truth state that varies.
 
 carry out scaning:
 	d "scaning [noun].";
@@ -9992,6 +10002,8 @@ carry out scaning:
 	now last-was-cert is whether or not gadget is cert;
 	now last-obj is noun;
 	if noun is nametag, abide by the nametag scanning rule;
+	if noun is not inflexible and (rpos of noun is 0 or gpos of noun is 0):
+		say "You've found a very, very trivial bug where I forgot to sync up item properties. If you can let me know that scanning [the noun] failed, at [email] or [ghsite], it'd be much appreciated! Sorry for the inconvenience. It is fortunately not game-breaking." instead;
 	if gadget is cert:
 		say "[if noun is begonias or noun is roadblock or noun is acne bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping][if parse-output is true]. Hmm, that means [cert-text of noun][end if].";
 		kibitz noun;

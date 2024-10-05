@@ -13643,6 +13643,8 @@ chapter stein
 
 a stein is a thing in Posh Hops Shop. initial appearance is "You see a stein here by some tines. It looks like it'd almost fit in."
 
+check taking stein: say "[if cur-score of oyster >= 3]You could've done something with it, but you need to leave now[else]You need to figure what to do with it[end if]." instead;
+
 check inserting stein into tines:
 	say "It almost fits when you try to insert it. About five-sixths of the way. Perhaps you could find some other way to do things." instead;
 
@@ -13926,7 +13928,9 @@ carry out spilling:
 			tag-spill-cheated the-from entry;
 			if debug-state is true, say "DEBUG: MISSES will show [endgame-spill-instead].";
 			now flip-spill-flag is false;
-			if produce-redo-cup is false, moot pills;
+			if scams is false, prevent undo;
+			if produce-redo-cup is false:
+				moot pills;
 			the rule succeeds;
 	say "WARNING could not flip-from [oi].";
 	now flip-spill-flag is false;
@@ -17401,6 +17405,8 @@ chapter top opt pot
 the top opt pot is a container. description of top opt pot is "A top opt pot is sturdy (a welt-proof top opt pot, if you will) and conducive to giving life. The [if bulb is in top opt pot]blub bulb[else]succor crocus you found under the ur pine[end if] rests inside."
 
 check examining top opt pot: ignore the examine containers rule;
+
+rule for whether all includes blub bulb: it does not.
 
 the blub bulb is a boring thing. description of blub bulb is "One look makes you b blu and not bubl. But maybe it can become something cheerier some day. Or it can irrigate a much cheerier seedling.". the top opt pot contains the blub bulb. bore-text of blub bulb is "You don't want to mess with the blub bulb. Maybe it could become, or help something else become, something better. It's fragile but safe in the top opt pot."
 

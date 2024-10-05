@@ -489,7 +489,8 @@ part bugtracking
 
 to say bug-report:
 	abort-if-bugfind;
-	say "BUG. You should not have seen this. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite], because this is something I want to fix. Use up arrow to see previous commands. Or use [b]UNDO[r] several times and hit [b]TRANSCRIPT[r] to show me how you got here, what your inventory was, etc.[paragraph break]You can also report reproducible bugs at [ghsite]. Thanks so much for taking the time!"
+	say "Oops! You've found a small bug, which is nothing critical, but I forgot to organize everything perfectly.[paragraph break]It's likely you're scanning something for hints, and it probably just means that I forgot to assign a property to a non-game-critical item when I revamped the code.";
+	say "[line break]Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite], because this is something I want to fix, though it is not critical to the game. Use up arrow to see previous commands. Or use [b]UNDO[r] several times and hit [b]TRANSCRIPT[r] to show me how you got here, what your inventory was, etc.[paragraph break]You can also report reproducible bugs at [ghsite]. Thanks so much for taking the time!"
 
 bugsquash is a truth state that varies.
 

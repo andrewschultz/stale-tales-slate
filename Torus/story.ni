@@ -376,7 +376,7 @@ volume flippables
 
 book hams
 
-the hams are physical plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted. Someone serious about bridging cultural and religious gaps, for instance, someone willing to work for others and not take attention away. Perhaps even a little old-school.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 199819236. uniq-hash of hams is 266369. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general. You get the sense they might be tougher customers than whatever you can [b]LISTEN[r] to.". printed name is "hams, hams"
+the hams are physical plural-named flippables. description is "Both sorts of hams. Jokesters carrying hams. You suppose more food is always good, but you'd really like something more dignified and helpful, someone who doesn't force their 'excitement' on you so you're distracted. Someone serious about bridging cultural and religious gaps, for instance, someone willing to work for others and not take attention away. Perhaps even a little old-school.". guess-right-text is "The hams throw their hands up in the air. 'Well, if you want someone less exciting than us, it's your life! Not that you really HAVE a life.' A shammash replaces them. They look ready to get down to business, but in a helping people way, not in a 'rip them off' sort of way.". sts-hash of hams is 399638472. uniq-hash of hams is 266369. word-to-include is "shammash". "Hams carry hams around here. While you guess having food is nice, maybe the sort of jokes they wish to foist off on you would be counterproductive. Maybe you can make them into something more serious, though you may just want to clear out the scene in general. You get the sense they might be tougher customers than whatever you can [b]LISTEN[r] to.". printed name is "hams, hams"
 
 book item time
 
@@ -484,14 +484,14 @@ deededed is a truth state that varies.
 
 carry out deededing:
 	if deededed is true, say "You already took on an additional challenge." instead;
-	say "Regardless of what [b]DEEDED[r] may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to do, but there's a lot to do! Oh, you can also still figure out what to do with [scene scene].";
+	say "Regardless of what [b]DEEDED[r] may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area ([scene scene]) still offers something.";
 	repeat with fl running through flippables:
 		move fl to Scene Scene;
 	try looking;
 	now deededed is true;
 	now maximum score is number of dubrooms + number of flippables;
 	now the right hand status line is "[score]/[maximum score]";
-	say "[line break][i][bracket]NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. [if tats-stat is 0]If you prefer a more moderate challenge, now's a good time to use the [b]TATS[i][else]If you want a full challenge, you may wish to type [b]STAT[i] so there will be less trial and error[end if].[close bracket][r]";
+	say "[line break][i][bracket][b]NOTE[r]: these final optional puzzles are meant to be difficult, and the words are a bit obscure. [if tats-stat is 0]If you prefer a more moderate challenge, now's a good time to use the [b]STAT[i][else]However, if you want a full challenge, you may still revert to [b]TATS[i][end if].[close bracket][r]";
 	the rule succeeds;
 
 chapter oning
@@ -637,7 +637,9 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "[this-game] is installment 3 in [tsts].";
+	say "[this-game] is installment 3 in [tsts]. It was written for Spring Thing 2022.";
+	say "Release 1 was in April of 2022, for Spring Thing.";
+	say "Release 2 was in August of 2024. I was updating the two games before it in the series, and I remembered I had some touchups to add. It's still the same game with no new content added, though there are minor bug fixes. The big under-the-hood change is that nonstandard parsing was converted to I6 and thus sped up.";
 	say "[line break]";
 	if big-details is false:
 		say "[b]CREDITS[r] will give thanks to people who helped in [this-game]. This includes cover art, testing and those who keep the community active and those who give general resources.";

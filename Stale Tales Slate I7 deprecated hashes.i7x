@@ -6,9 +6,15 @@ volume command hashing counting repeated letters -- thanks to Uncle David
 
 [David White aka Uncle David has helped a lot of authors with tricky technical stuff. And he's helped well! One such effort he helped with is Chandler Groover's Midnight. Swordfight. So his help is, indeed, helpful!
 
-His giving me hash tables and tipping me off to why there wasn't much overlap was a big piece of the puzzle. While I went with i6 10+ years later, I'd never have gone down that path without his initial help, and I kept the hash values for each letter in the initial table.
+His giving me hash tables and tipping me off to why there wasn't much overlap was a big piece of the puzzle. The TLDR is that I said "some words almost have to match, since there are 250k^2/2 pairs and 32 bits of possible hash numbers" and my proposed a=1 b=2 c=4 etc. ran into SIS equaling IT or MOM equaling NO. Then he pointed me to how the density would be low. I wrote a PERL script months later to verify this.
 
-This is legacy code now, but it's important enough to me. So I want it saved in some form, especially if something goes wrong with my own code.]
+While I went with i6 10+ years later, I'd never have gone down that path without his initial help, and I kept the hash values for each letter in the i6 arrays I created.
+
+David's "what number is the hash" code helped me a lot when I needed to verify that hash value were, indeed, correct. But I found I didn't need that, because I just worked with the actual command.
+
+Technically, it's stood the test of time, and it's clear and concise. However, I've seen speedups of 40% in the parsing code when someone puts in a nonstandard verb, and the parser error rules search for what the player tried to anagram, both in the immediate room and all carried items. This really adds up in Roiling, especially in the web version. It's made testing go faster, too.
+
+So this is legacy code now, but it's important enough to me to save in some form. There's also a small possibility something goes wrong with my own code, or I need the actual original "hash" function.]
 
 part hash codes and values
 

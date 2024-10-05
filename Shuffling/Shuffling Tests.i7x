@@ -8,6 +8,12 @@ volume testing commands - not for release
 
 section start-of-play stuff
 
+when play begins:
+	repeat with th running through things:
+		if (gpos of th is 0) or (rpos of th is 0):
+			if th is not inflexible:
+				say "[th] should maybe be marked as inflexible, since gpos=[gpos of th] and rpos=[rpos of th].";
+
 when play begins (this is the debug version info that should not be in the release rule):
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]

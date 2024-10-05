@@ -23,16 +23,16 @@ volume i6 based hashing
 
 book command hashes
 
-to decide which number is i6cmdhash:
+to decide which number is i6cmdhash: [hash of whole command]
 	(- i6hash(true) -)
 
-to decide which number is i6fwhash:
+to decide which number is i6fwhash: [hash of first word]
 	(- i6hash(false) -)
 
-to decide which number is i6cmdrough:
+to decide which number is i6cmdrough: [hash of unique letters of whole command]
 	(- i6rough(true) -)
 
-to decide which number is i6fwrough:
+to decide which number is i6fwrough: [hash of unique letters of first word]
 	(- i6rough(false) -)
 
 volume game order/name abbreviation stubs
