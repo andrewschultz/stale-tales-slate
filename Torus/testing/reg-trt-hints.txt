@@ -1,4 +1,5 @@
 ## reg-trt-hints.txt
+## GENERATOR FILE: rbr-trt-thru.txt
 
 ## walkthrough with hints
 
@@ -338,10 +339,10 @@ The path to the cylinder is solid. The door blows open as you get there. You wal
 When you wake up and take stock, things are different. You feel you've seen this place before, even though you haven't. You still can't get the voices saying "RESTRAIN!" out of your head. Who were they? Why did they leave? Wait ... wait. It makes sense now. You know where this is.
 
 >deeded
-You're not sure what to do, but there's a lot to do!
+Regardless of what DEEDED may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area (Scene Scene) still offers something.
 !You already took on an additional challenge.
 
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the STAT.]
 
 >shammash
 by one point

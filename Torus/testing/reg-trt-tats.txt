@@ -1,6 +1,7 @@
 ## reg-trt-tats.txt
+## GENERATOR FILE: rbr-trt-thru.txt
 
-## tats testing
+## tats testing using CHEATY
 
 ** game: /home/andrew/prt/debug-tours-roust-torus.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -267,10 +268,10 @@ The stat tats show two numbers: 3 of 10.
 The stat tats show two numbers: 280 of 1023.
 
 >deeded
-You're not sure what to do, but there's a lot to do!
+Regardless of what DEEDED may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area (Scene Scene) still offers something.
 !You already took on an additional challenge.
 
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you want a full challenge, you may wish to type STAT so there will be less trial and error.]
+#tats uses a testing-cheat command which warps things, so noting the final optional puzzle is counterintuitive. It's getting tested more than enough elsewhere.
 
 >aahhmmss
 The stat tats show two numbers: 2 of 8.

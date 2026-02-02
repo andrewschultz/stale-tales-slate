@@ -4,21 +4,20 @@
 #
 #
 
-files=reg-trt-max.txt,reg-trt-min-a.txt,reg-trt-min-b.txt,reg-trt-nudmis.txt,reg-trt-hints.txt,reg-trt-alt.txt,reg-trt-tats.txt
-
-~	max	t0
-~	mina,min-a	t1
-~	minb,min-b	t2
-~	nudmis,nudges,nud,nu,mis	t3
-~	hints,hin	t4
-~	alt	t5
-~	tats,tat	t6
-
-## *FILE
+file=reg-trt-max.txt,max,maximum walkthrough
+file=reg-trt-min-a.txt,mina/min-a,minimum walkthrough a
+file=reg-trt-min-b.txt,minb/min-b,minimum walkthrough b tries partial alternates at end
+file=reg-trt-nudmis.txt,nudmis/nudges/nud/nu/mis,walkthrough with all nudges
+file=reg-trt-hints.txt,hints/hin,walkthrough with hints
+file=reg-trt-alt.txt,alt,alternate paths/solutions
+file=reg-trt-tats.txt,tats/tat,tats testing using CHEATY
 
 ALSO_IGNORE:a,b,aa,bb,aaa,bbb
 
-TSV:## maximum walkthrough	## minimum walkthrough a	## minimum walkthrough b	## walkthrough with all nudges	## walkthrough with hints	## alternate paths/solutions	## tats testing
+## *FILE
+## *FORK
+
+## *DESCRIPTION
 
 ** game: /home/andrew/prt/debug-tours-roust-torus.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -118,7 +117,7 @@ You have seen most of the rest of the torus. Everything else will probably be to
 
 @max
 >xyzzy
-So close! Just one letter off. Or one too much. You can maybe guess which one.
+So close! Just one letter off. Or one too much. You can maybe guess which specific letter.
 
 @nud
 #ttc-table-of-one-time-warnings-sys-eye
@@ -172,7 +171,7 @@ That snarky "Ah-ah" then "Ha-ha" again! You'll need to do something special to g
 >undo
 >in
 
-@hints
+@hints+
 >l
 \\
 #ttc-table-of-center-statuses-1
@@ -191,7 +190,7 @@ No, you can't lackadaisically go along with what's there. You need to invent, or
 >x voice
 NOTE: if there's a voice in the room description, you just need to LISTEN.
 
-@nud
+@nud+
 #ttc-table-of-nudge-hashes-tours
 >tousr
 You don't need to act on the whole torus, here.
@@ -478,7 +477,7 @@ While lots of snappy noises come to mind, you can't do anything with the smell o
 
 @max
 >xyzzy
-So close! Just one letter off. Or one too much. You probably know which one.
+So close! Just one letter off. Or one too much. You probably know which specific letter.
 
 @hin
 #ttc-table-of-cylinder-descriptions-2
@@ -517,27 +516,27 @@ You don't need to deal with pronouns. Besides, you already did what you needed, 
 You don't need to consort with thieves.
 !Besides
 
-@mis
+@mis+
 #testcase-mistake-tours-roust-torus-reap
 >reap
 Perhaps there is something to reap once you figure what to do here. In a weird way, you feel you're halfway there, though.
 
-@mis
+@mis+
 #testcase-mistake-tours-roust-torus-perp
 >perp
 That doesn't take care of the whole area.
 
-@mis
+@mis+
 #testcase-mistake-tours-roust-torus-pear
 >pear
 You already got fruits for Curtis in Rustic Citrus long ago. In a weird way, you feel you're halfway there, though.
 
-@mis
+@mis+
 #testcase-mistake-tours-roust-torus-rape
 >rape
 Tours Roust Torus is about light-hearted jokes, and there's nothing light-hearted about that. So, yeah, don't try it again.
 
-@mis
+@mis+
 #testcase-mistake-tours-roust-torus-earp
 >earp
 No daredevil gunman appears to help you out.
@@ -557,7 +556,7 @@ Act on the whole area, here.
 >arae
 Act on the whole area, here.
 
-@nud
+@nud+
 #ttc-table-of-pre-brushoffs-prep-area-(prep|area)
 >prep me
 You're not sure what you are prepping--a thing or an action. But once you do, things will become clearer.
@@ -642,23 +641,22 @@ The cylinder in the center of the torus probably has something in it, but you ha
 >rapparee
 You don't need to consort with thieves. Besides, you already did what you needed, here.
 
-@mis
+@mis+
 #mistake retest for reap
 >reap
 Perhaps there is something to reap once you figure what to do here. Besides, you already did what you needed, here.
 
-@mis
+@mis+
 #mistake retest for perp
 >perp
 Tours Roust Torus doesn't have a deep bench of standard verbs, though in each area of the torus, you need to find one specific word (no spaces) to do or say or think. For a general list of verbs, type VERBS.
 #PREP AREA is now nothing, so we get the standard response, but it's worth testing
 
-@mis
+@mis+
 #mistake retest for pear
 >pear
 You already got fruits for Curtis in Rustic Citrus long ago. Besides, you already did what you needed, here.
-
-@mis
+\\
 #mistake retest for earp
 >earp
 No daredevil gunman appears to help you out. Besides, you already did what you needed, here.
@@ -889,14 +887,14 @@ You mentally show off your anagramming skills in languages other than English. P
 >tien
 You're missing an (s) to make things plural, here.
 
-@nud
+@nud+
 #ttc-table-of-pre-brushoffs-tines-inset-(tines|inset)
 >spin tines
 The tines aren't budging. Not in their present form. But what could they become?
 >inset insults
 The tines aren't budging. Not in their present form. But what could they become?
 
-@nud
+@nud+
 #testcase-mistake-tours-roust-torus-nineties-st
 >nineties st
 You don't want to think about your own nineties, but yeah, the nineties were a great time for text adventures, weren't they?
@@ -1314,7 +1312,7 @@ There's no extra option to restart. Just ON.
 >undo
 >undo
 
-@nud
+@nud+
 #ttc-table-of-rough-hashes-buh
 >bhuh
 The content of the "Buh" is not so important. It may provide a clue if you are on the right track.
@@ -1387,7 +1385,7 @@ You already are.
 >ceen
 You're missing an (s) to make things plural, here.
 
-@nud
+@nud+
 #ttc-table-of-pre-brushoffs-scene-scene-scene
 >make a scene
 You know what to do here. You may not be as sharp as you were younger, but you see the pattern. You may not see how to go through with it right away, but you see it.
@@ -1415,26 +1413,76 @@ A voice whispers DEEDED ... DEEDED ... you're torn between just figuring what to
 >eded
 You don't need to provide any variant on DEEDED. Just saying it will get you extra puzzles.
 
+@alt
+##balance undos
+>stat
+Your tats are now in stat-giving mode. STAT again will give even more potentially revealing stats when you make guesses. TATS will get rid of stat-giving mode.
+\\
+>deeded
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. However, if you want a full challenge, you may still revert to TATS.]
+\\
+>undo
+>undo
+
 @!min-a,min-b
 >deeded
-You're not sure what to do, but there's a lot to do!
+Regardless of what DEEDED may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area (Scene Scene) still offers something.
 !You already took on an additional challenge.
 
-@!min-a,min-b,tats
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
-
 @tats
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you want a full challenge, you may wish to type STAT so there will be less trial and error.]
+#tats uses a testing-cheat command which warps things, so noting the final optional puzzle is counterintuitive. It's getting tested more than enough elsewhere.
+
+@!min-a,min-b,tats
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the STAT.]
 
 @nud
 #+ttc-table-of-rough-hashes-ed
 >eded
 You don't need to provide any variant on DEEDED. It got you extra puzzles.
 
+@alt
+##balance undos
+>shammash
+by one point
+\\
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+\\
+>undo
+>insciences
+by one point
+\\
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+\\
+>undo
+>mesosome
+by one point
+\\
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+\\
+>undo
+>mimetite
+by one point
+\\
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+\\
+>undo
+>undo
+>undo
+>undo
+>undo
+
 @max
 >deeded
 You already took on an additional challenge.
-!You're not sure what to do, but there's a lot to do!
+!Regardless of what DEEDED may or may not mean
 
 @mis
 #testcase-mistake-tours-roust-torus-science-sin-sin-science
@@ -1596,26 +1644,15 @@ by one point
 >prepress
 by one point
 
-@min-b
->deeded
-You're not sure what to do, but there's a lot to do!
-\\
->shammash
-by one point
-
 >senescence
 by one point
 
 @min-a
-#should be ttc-table-of-progress-8 but the script can't handle that yet as it goes to max
+#ttc-table-of-progress-8
 That's all. You've found a new home, one where you don't have to do anything, but you'd like to. That stuff that wasn't DEEDED, well, you can take care of it later.
 
-@min-b
-#should be ttc-table-of-progress-8 but the script can't handle that yet as it goes to max
-You made a good start at changing things right here, right now, but there's no rush
-
 @max
-#ttc-table-of-progress-8
+#+ttc-table-of-progress-8
 That's all. You've found a new home, one where you don't have to do anything, but you'd like to. You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more. And yet the lessons you applied ruling Yorpwald will work here in the Strainer Terrains, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later.
 \\
 >rejects
@@ -1644,7 +1681,7 @@ Here are some rejected words:
 >amusing
 If you are wondering whether you missed any cute responses or anagrams, you can look in the Tours Roust Torus Mistakes.i7x file that should come with the distributable from itch.io.
 
-@max
+@max+
 >missed
 You started so quickly, you missed a chance to have a friendly NPC help you. If you visited all the areas without solving any of the rooms, one would help you and continue to help you until you scored a point. I won't spoil it, as it's easy enough to traverse the rooms.
 

@@ -1,4 +1,5 @@
 ## reg-trt-nudmis.txt
+## GENERATOR FILE: rbr-trt-thru.txt
 
 ## walkthrough with all nudges
 
@@ -569,10 +570,10 @@ A voice whispers DEEDED ... DEEDED ... you're torn between just figuring what to
 You don't need to provide any variant on DEEDED. Just saying it will get you extra puzzles.
 
 >deeded
-You're not sure what to do, but there's a lot to do!
+Regardless of what DEEDED may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area (Scene Scene) still offers something.
 !You already took on an additional challenge.
 
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the STAT.]
 
 #+ttc-table-of-rough-hashes-ed
 >eded

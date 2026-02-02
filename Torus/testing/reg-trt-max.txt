@@ -1,4 +1,5 @@
 ## reg-trt-max.txt
+## GENERATOR FILE: rbr-trt-thru.txt
 
 ## maximum walkthrough
 
@@ -13,7 +14,7 @@
 >z
 
 >xyzzy
-So close! Just one letter off. Or one too much. You can maybe guess which one.
+So close! Just one letter off. Or one too much. You can maybe guess which specific letter.
 
 >a
 >a
@@ -34,7 +35,7 @@ The cylinder in the center of the torus contracts. No, it stops wobbling so much
 You already figured what to do here.
 
 >xyzzy
-So close! Just one letter off. Or one too much. You probably know which one.
+So close! Just one letter off. Or one too much. You probably know which specific letter.
 
 >a
 
@@ -120,14 +121,14 @@ The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
 You already are.
 
 >deeded
-You're not sure what to do, but there's a lot to do!
+Regardless of what DEEDED may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area (Scene Scene) still offers something.
 !You already took on an additional challenge.
 
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the STAT.]
 
 >deeded
 You already took on an additional challenge.
-!You're not sure what to do, but there's a lot to do!
+!Regardless of what DEEDED may or may not mean
 
 >aahhmmss
 Hmm, the hams, hams seem to waver a bit. You must be on the right track to change the hams, hams, here.
@@ -173,7 +174,7 @@ by one point
 >senescence
 by one point
 
-#ttc-table-of-progress-8
+#+ttc-table-of-progress-8
 That's all. You've found a new home, one where you don't have to do anything, but you'd like to. You felt back to your old adventuring self, being able to anagram everything in sight that could be, no matter how obscure, eager for more. And yet the lessons you applied ruling Yorpwald will work here in the Strainer Terrains, too. You wonder if you should give your successors a call, to see if the Torus would benefit from being a part of something bigger. You can make that decision later.
 
 >rejects

@@ -1,4 +1,5 @@
 ## reg-trt-alt.txt
+## GENERATOR FILE: rbr-trt-thru.txt
 
 ## alternate paths/solutions
 
@@ -276,11 +277,57 @@ The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
 >in
 /^Scene Scene
 
+>stat
+Your tats are now in stat-giving mode. STAT again will give even more potentially revealing stats when you make guesses. TATS will get rid of stat-giving mode.
+
 >deeded
-You're not sure what to do, but there's a lot to do!
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. However, if you want a full challenge, you may still revert to TATS.]
+
+>undo
+>undo
+
+>deeded
+Regardless of what DEEDED may or may not mean, you think the word. You say the word. New things and people pop up. You're not sure what to wrestle with first! And, of course, the general area (Scene Scene) still offers something.
 !You already took on an additional challenge.
 
-[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the TATS.]
+[NOTE: these final optional puzzles are meant to be difficult, and the words are a bit obscure. If you prefer a more moderate challenge, now's a good time to use the STAT.]
+
+>shammash
+by one point
+
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+
+>undo
+>insciences
+by one point
+
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+
+>undo
+>mesosome
+by one point
+
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+
+>undo
+>mimetite
+by one point
+
+#+ttc-table-of-progress-8
+>senescence
+You made a good start at changing things right here, right now, but there's no rush
+
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >shammash
 by one point

@@ -1,6 +1,7 @@
 ## reg-trt-min-b.txt
+## GENERATOR FILE: rbr-trt-thru.txt
 
-## minimum walkthrough b
+## minimum walkthrough b tries partial alternates at end
 
 ** game: /home/andrew/prt/debug-tours-roust-torus.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -86,16 +87,7 @@ The voice changes from "Uhh hubbub" to a crescendo. "Hub! HUB! HUB!!!!!"
 >in
 /^Scene Scene
 
->deeded
-You're not sure what to do, but there's a lot to do!
-
->shammash
-by one point
-
 >senescence
 by one point
-
-#should be ttc-table-of-progress-8 but the script can't handle that yet as it goes to max
-You made a good start at changing things right here, right now, but there's no rush
 
 *** Feats! Fates-Feast! Taffetases! ***
