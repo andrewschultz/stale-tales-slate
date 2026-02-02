@@ -536,7 +536,7 @@ You're tired. There's that Trance Nectar which can help you be more productive. 
 
 
 
-STORE U is the one with the fewest puzzles needed to get a maximum score. It may be easier than Store V, because of the type of word needed. But I am sorting the regions based on number of point-scoring commands.
+STORE U is the one with the fewest puzzles needed to get a maximum score. It may be easier than Store V, because of the type of word needed. But I am sorting the regions based on number of needed point-scoring commands.
 
 > ROUTES
 
@@ -2160,6 +2160,8 @@ Drive A and Drive E can also be enhanced. Drive A becomes NIVQRE, while you can 
 ROUTES:
 
 Go GBJNEQF the worst ad before leaving the Same Mesa.
+
+Regale the drudging ruin in Ripe Pier with QHEVAT. (Mysterious ROT13!)
 
 You can also be JVGUBHG the raptest patters any time in the Sonancy Canyons.
 

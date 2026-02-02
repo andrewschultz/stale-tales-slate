@@ -1,4 +1,4 @@
-# first last name generator from a string
+# python first and last name generator from a string
 # so much quicker than PERL!
 # it takes a word, pulls a first name from it, then checks if the remaining string is in the "last words" dict
 
